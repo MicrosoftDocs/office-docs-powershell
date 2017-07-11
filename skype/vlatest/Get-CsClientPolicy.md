@@ -181,13 +181,9 @@ Accept wildcard characters: False
 
 ### -Tenant
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose client policies are being returned.
-For example:
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
+You can return the tenant ID for each of your Skype for Business Online tenants by running this command:  `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -246,7 +242,7 @@ The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsClientPolicy]()
-[New-CsClientPolicy]()
-[Remove-CsClientPolicy]()
-[Set-CsClientPolicy]()
+[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
+[New-CsClientPolicy](New-CsClientPolicy.md)
+[Remove-CsClientPolicy](Remove-CsClientPolicy.md)
+[Set-CsClientPolicy](Set-CsClientPolicy.md)
