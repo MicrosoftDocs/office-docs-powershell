@@ -6,29 +6,15 @@ schema: 2.0.0
 # Get-CsClientPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
 Returns information about the client policies configured for use in your organization.
-Among other things, client policies help determine the features of Microsoft Lync 2010 that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
-
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about the client policies configured for use in your organization.
-Among other things, client policies help determine the features of Lync that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
-This cmdlet was introduced in Lync Server 2010.
+Among other things, client policies help determine the features of Skype for Business that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
 **Below Content Applies To:** Skype for Business Online
 
 Get-CsClientPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 Get-CsClientPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the client policies configured for use in your organization.
-Among other things, client policies help determine the features of Skype for Business Server 2015 that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -50,7 +36,7 @@ Get-CsClientPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+**Below Content Applies To:** Lync Server 2010 & 2013
 
 In Lync Server 2010, client policies replace the Group Policy settings used in previous versions of the product.
 In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
@@ -73,34 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientPolicy"}
 
-**Below Content Applies To:** Lync Server 2013
-
-In Lync Server, client policies replace the Group Policy settings used in previous versions of the product.
-In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
-
-As useful as Group Policy is, however, the technology does have some limitations when applied to Lync Server.
-For one thing, Group Policy is designed to be applied on a per-domain or per-organizational unit (OU) basis; that makes it difficult to target policies toward a more select group of users (for example, all the users who work in a particular department, or all the users who have a particular job title).
-For another, Group Policy is only applied to users who log on to the domain and who log on using a computer; Group Policy is not applied to users who access the system over the Internet or by using a mobile phone.
-This means that the same user can have a different experience depending on the device he or she uses to log on, and where he or she logs on from.
-
-To help address these inconsistencies Lync Server uses client management policies instead of Group Policy.
-Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
-In addition, client policies, like other Lync Server policies, can readily be targeted to selected groups of users.
-You can even create a custom policy that gets assigned to a single user.
-
-Client policies can be configured at the global, site, and per-user scopes.
-The Get-CsClientPolicy cmdlet enables you to return information about all the client policies that have been configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsClientPolicy cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientPolicy"}
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill in the Description}}
-
-**Below Content Applies To:** Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015 & Online
 
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
 In addition, client policies, like other Skype for Business Server 2015 policies, can readily be targeted to selected groups of users.
@@ -113,39 +72,15 @@ The Get-CsClientPolicy cmdlet enables you to return information about all the cl
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 --------------------------
 ```
 Get-CsClientPolicy
-```
-
-In the preceding example, Get-CsClientPolicy is called without any additional parameters; this returns a collection of all the client policies configured for use in your organization.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 In Example 1, Get-CsClientPolicy is called without any additional parameters; this returns a collection of all the client policies configured for use in your organization.
 
-Get-CsClientPolicy
 
-### Example 1 (Skype for Business Online)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, the Get-CsClientPolicy cmdlet is called without any additional parameters; this returns a collection of all the client policies configured for use in your organization.
-
-Get-CsClientPolicy
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsClientPolicy -Identity SalesPolicy
 ```
@@ -153,27 +88,7 @@ Get-CsClientPolicy -Identity SalesPolicy
 In Example 2, Get-CsClientPolicy is used to return the per-user client policy that has an Identity SalesPolicy.
 Because identities are unique, this command will never return more than one item.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, Get-CsClientPolicy is used to return the per-user client policy that has an Identity SalesPolicy.
-Because identities are unique, this command will never return more than one item.
-
-Get-CsClientPolicy -Identity SalesPolicy
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, the Get-CsClientPolicy cmdlet is used to return the per-user client policy that has an Identity SalesPolicy.
-Because identities are unique, this command will never return more than one item.
-
-Get-CsClientPolicy -Identity SalesPolicy
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsClientPolicy -Filter "tag:*"
 ```
@@ -181,27 +96,7 @@ Get-CsClientPolicy -Filter "tag:*"
 Example 3 uses the Filter parameter to return all the client policies that have been configured at the per-user scope.
 The filter value "tag:*" tells Get-CsClientPolicy to return only those policies that have an Identity that begins with the string value "tag:".
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 uses the Filter parameter to return all the client policies that have been configured at the per-user scope.
-The filter value "tag:*" tells Get-CsClientPolicy to return only those policies that have an Identity that begins with the string value "tag:".
-
-Get-CsClientPolicy -Filter "tag:*"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 uses the Filter parameter to return all the client policies that have been configured at the per-user scope.
-The filter value "tag:*" tells the Get-CsClientPolicy cmdlet to return only those policies that have an Identity that begins with the string value "tag:".
-
-Get-CsClientPolicy -Filter "tag:*"
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True}
 ```
@@ -210,29 +105,7 @@ The preceding command returns a collection of all the client policies where the 
 To do this, Get-CsClientPolicy is first called without any parameters in order to return a collection of all the client policies configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those policies where the DisableSavingIM property is equal to True.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 4 returns a collection of all the client policies where the DisableSavingIM property is True.
-To do this, Get-CsClientPolicy is first called without any parameters in order to return a collection of all the client policies configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those policies where the DisableSavingIM property is equal to True.
-
-Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True}
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 4 returns a collection of all the client policies where the DisableSavingIM property is True.
-To do this, the Get-CsClientPolicy cmdlet is first called without any parameters in order to return a collection of all the client policies configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those policies where the DisableSavingIM property is equal to True.
-
-Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True}
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True -and $_.EnableIMAutoArchiving -eq $False}
 ```
@@ -242,31 +115,7 @@ To do this, the command first calls Get-CsClientPolicy in order to return a coll
 That collection is then piped to Where-Object, which picks out only those policies that meet both of the following criteria: DisableSavingIM must be equal to True and EnableIMAutoArchiving must be equal to False.
 The -and operator tells Where-Object that only objects that meet all the specified criteria should be selected.
 
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 5, the only client policies returned are the policies that meet two criteria: the DisableSavingIM property must be True and the EnableIMAutoArchiving property must be False.
-To do this, the command first calls Get-CsClientPolicy in order to return a collection of all the client policies configured for use in the organization.
-That collection is then piped to Where-Object, which picks out only those policies that meet both of the following criteria: DisableSavingIM must be equal to True and EnableIMAutoArchiving must be equal to False.
-The -and operator tells Where-Object that only objects that meet all the specified criteria should be selected.
-
-Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True -and $_.EnableIMAutoArchiving -eq $False}
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 5, the only client policies returned are the policies that meet two criteria: the DisableSavingIM property must be True and the EnableIMAutoArchiving property must be False.
-To do this, the command first calls the Get-CsClientPolicy cmdlet in order to return a collection of all the client policies configured for use in the organization.
-That collection is then piped to the Where-Object cmdlet, which picks out only those policies that meet both of the following criteria: DisableSavingIM must be equal to True and EnableIMAutoArchiving must be equal to False.
-The -and operator tells the Where-Object cmdlet that only objects that meet all the specified criteria should be selected.
-
-Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True -and $_.EnableIMAutoArchiving -eq $False}
-
-### -------------------------- Example 6 -------------------------- (Lync Server 2010)
+### -------------------------- Example 6 --------------------------
 ```
 Get-CsClientPolicy | Where-Object {$_.DisableSavingIM -eq $True -or $_.EnableIMAutoArchiving -eq $False}
 ```
@@ -276,28 +125,6 @@ This time, however, policies are selected as long as they meet at least one of t
 To accomplish this task, the command first calls Get-CsClientPolicy to return a collection of all the client policies configured for use in the organization.
 That collection is then piped to Where-Object, which picks out only those policies that meet at least one of the following criteria: DisableSavingIM is equal to True and/or EnableIMAutoArchiving is equal to False.
 The -or operator tells Where-Object that any object that meets at least one of the specified conditions should be selected.
-
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 6 is a variation of the command shown in Example 5.
-This time, however, policies are selected as long as they meet at least one of the following criteria: either the DisableSavingIM property is True and/or the EnableIMAutoArchiving property is False.
-To accomplish this task, the command first calls Get-CsClientPolicy to return a collection of all the client policies configured for use in the organization.
-That collection is then piped to Where-Object, which picks out only those policies that meet at least one of the following criteria: DisableSavingIM is equal to True and/or EnableIMAutoArchiving is equal to False.
-The -or operator tells Where-Object that any object that meets at least one of the specified conditions should be selected.
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 6 is a variation of the command shown in Example 5.
-This time, however, policies are selected as long as they meet at least one of the following criteria: either the DisableSavingIM property is True and/or the EnableIMAutoArchiving property is False.
-To accomplish this task, the command first calls the Get-CsClientPolicy cmdlet to return a collection of all the client policies configured for use in the organization.
-That collection is then piped to the Where-Object cmdlet, which picks out only those policies that meet at least one of the following criteria: DisableSavingIM is equal to True and/or EnableIMAutoArchiving is equal to False.
-The -or operator tells the Where-Object cmdlet that any object that meets at least one of the specified conditions should be selected.
 
 ## PARAMETERS
 
