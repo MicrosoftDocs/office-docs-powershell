@@ -6,7 +6,7 @@ Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# skype Module
+# Skype Cmdlet Reference
 ## Description
 {{Manually Enter Description Here}}
 
