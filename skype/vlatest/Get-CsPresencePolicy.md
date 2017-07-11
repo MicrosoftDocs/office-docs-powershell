@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsPresencePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the presence policies configured for use in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the presence policies configured for use in your organization.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsPresencePolicy \[\[-Identity\] \<XdsIdentity\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
@@ -42,7 +42,7 @@ Get-CsPresencePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsPresencePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -94,11 +94,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPresencePolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -245,7 +245,7 @@ Get-CsPresencePolicy | Where-Object {$_.MaxPromptedSubscriber -le 100}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the presence policy to be retrieved.
 To return the global policy, use this syntax: -Identity global.
@@ -257,13 +257,13 @@ If neither the Identity nor the Filter parameters are specified, then Get-CsPres
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the presence policy to be retrieved.
 To return the global policy, use this syntax:
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the policy (or policies) to be returned.
 For example, this syntax returns all the presence policies configured at the site scope: -Filter "site:*".
@@ -320,13 +320,13 @@ The Filter and Identity parameters cannot be used in the same command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the policy (or policies) to be returned.
 For example, this syntax returns all the presence policies configured at the site scope:
@@ -351,13 +351,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the presence policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsRoutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a list of voice routes.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies a list of voice routes.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsRoutingConfiguration [-Instance <PSObject>] [-Route <PSListModifier>] [-Fo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice routes contain instructions that tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 With this cmdlet you can modify the settings of any voice route defined within a Lync Server 2010 deployment.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRoutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 With this cmdlet you can modify the settings of any voice route defined within a Lync Server deployment.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRoutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 With this cmdlet you can modify the settings of any voice route defined within a Skype for Business Server 2015 deployment.
@@ -184,14 +184,14 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A routing configuration (Microsoft.Rtc.Management.WritablConfig.Policy.Voice.PstnRoutingSettings) object.
 An object of this type can be retrieved by calling Get-CsRoutingConfiguration.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A routing configuration (Microsoft.Rtc.Management.WritablConfig.Policy.Voice.PstnRoutingSettings) object.
 An object of this type can be retrieved by calling the Get-CsRoutingConfiguration cmdlet.
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Route
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A list of all voice routes (Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route objects) defined for the Lync Server deployment.
 
@@ -221,7 +221,7 @@ That is the recommended way of modifying routes in this list.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A list of all voice routes (Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route objects) defined for the Skype for Business Server 2015 deployment.
 

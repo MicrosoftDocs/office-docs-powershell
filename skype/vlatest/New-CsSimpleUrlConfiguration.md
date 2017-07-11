@@ -6,19 +6,19 @@ schema: 2.0.0
 # New-CsSimpleUrlConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences.
 They also make it easier for Administrators to sign in to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences.
@@ -35,7 +35,7 @@ New-CsSimpleUrlConfiguration [-Identity] <XdsIdentity> [-SimpleUrl <PSListModifi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -107,7 +107,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -253,7 +253,7 @@ New-CsSimpleUrlConfiguration -Identity "site:Redmond" -SimpleUrl @{Add=$simpleUr
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the new simple URL configuration collection.
 Because new collections can only be created at the site scope, the Identity must be the prefix "site:" followed by the name of the site.
@@ -261,7 +261,7 @@ For example, this syntax creates a new collection for the Redmond site: -Identit
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the new simple URL configuration collection.
 Because new collections can only be created at the site scope, the Identity must be the prefix "site:" followed by the name of the site.
@@ -285,14 +285,14 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleUrl
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Simple URLs that have been configured for this collection.
 These URLs must be created by using the New-SimpleUrl and New-SimpleUrlEntry cmdlets.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Simple URLs that have been configured for this collection.
 These URLs must be created by using the New-SimpleUrl cmdlet and the New-SimpleUrlEntry cmdlet.
@@ -313,14 +313,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -357,13 +357,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new Simple URL configuration settings are being created.
 For example:
@@ -376,7 +376,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new Simple URL configuration settings are being created.
 For example:

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsDialInConferencingLanguageList
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns a list of languages and dialects supported for use with Microsoft Lync Server 2010 dial-in conferences.
 These languages are used to relay audio messages and instructions to users participating in a conference by using a telephone.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns a list of languages, including regional/minority languages, supported for use with Lync Server dial-in conferences.
 These languages are used to relay audio messages and instructions to users participating in a conference by using a telephone.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns a list of languages, including regional/minority languages, supported for use with Skype for Business Server 2015 dial-in conferences.
 These languages are used to relay audio messages and instructions to users participating in a conference by using a telephone.
@@ -38,7 +38,7 @@ Get-CsDialInConferencingLanguageList [-Filter <String>] [-LocalStore] [<CommonPa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to join conferences by using a telephone; these dial-in users cannot view video or exchange instant messages, but they can participate fully in the audio portion of the meeting.
 When users connect to a conference over the phone, they first hear a welcome message and then are given instructions on how to join the meeting.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDialInConferencingLanguageList"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to join conferences by using a telephone; these dial-in users cannot view video or exchange instant messages, but they can participate fully in the audio portion of the meeting.
 When users connect to a conference over the phone, they first hear a welcome message and then are given instructions on how to join the meeting.
@@ -78,7 +78,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDialInConferencingLanguageList"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to join conferences by using a telephone; these dial-in users cannot view video or exchange instant messages, but they can participate fully in the audio portion of the meeting.
 When users connect to a conference over the phone, they first hear a welcome message and then are given instructions on how to join the meeting.
@@ -175,7 +175,7 @@ After the information has been returned, standard "dot notation" (the object nam
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the dial-in conferencing language list to be returned.
 At this point in time there is only one such object: global.
@@ -183,7 +183,7 @@ Because of this, you do not need to include this parameter when calling Get-CsDi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the dial-in conferencing language list to be returned.
 At this point in time there is only one such object: global.

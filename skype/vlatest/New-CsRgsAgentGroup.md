@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsRgsAgentGroup
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group agent group.
 An agent group is a collection of agents assigned to a Response Group queue.
 Agents are the users assigned to answer calls directed to a particular queue.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group agent group.
 An agent group is a collection of agents assigned to a Response Group queue.
@@ -31,7 +31,7 @@ New-CsRgsAgentGroup [-Parent] <RgsIdentity> -Name <String> [-AgentAlertTime <Int
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -47,7 +47,7 @@ New agent groups are created by using the New-CsRgsAgentGroup cmdlet.
 Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsRgsAgentGroup cmdlet locally: RTCUniversalServerAdmins.
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -65,7 +65,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsAgentGroup"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -187,7 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -AgentAlertTime
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Represents the amount of time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent.
 The AgentAlertTime can be set to any integer value between 10 and 600 seconds (10 minutes), inclusive.
@@ -195,7 +195,7 @@ The default value is 20 seconds.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Represents the amount of time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent.
 The AgentAlertTime can be set to any integer value between 10 and 600 seconds (10 minutes), inclusive.
@@ -220,14 +220,14 @@ Accept wildcard characters: False
 ```
 
 ### -AgentsByUri
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to individually add agents to an agent group.
 New agents are identified using their SIP addresses.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to individually add agents to an agent group.
 New agents are identified using their SIP addresses.
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the method used to route new calls to agents.
 The RoutingMethod must be set to one of the following values:
@@ -321,7 +321,7 @@ The default routing method is Parallel.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the method used to route new calls to agents.
 The RoutingMethod must be set to one of the following values:
@@ -341,7 +341,7 @@ The default routing method is Parallel.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the method used to route new calls to agents.
 The RoutingMethod must be set to one of the following values:
@@ -391,14 +391,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -419,13 +419,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Prompts you for confirmation before running the cmdlet.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
@@ -445,14 +445,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Move-CsConferenceDirectory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves an existing conference directory from one pool to another.
 Conference directories are used to help dial-in conferencing users locate conference information.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves an existing conference directory from one pool to another.
 Conference directories are used to help dial-in conferencing users locate conference information.
@@ -27,7 +27,7 @@ Move-CsConferenceDirectory [-Identity] <XdsGlobalRelativeIdentity> -TargetPool <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult to translate to devices that are not SIP-aware; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsConferenceDirectory"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult to translate to devices that are not SIP-aware; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsConferenceDirectory"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult to translate to devices that are not SIP-aware; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When present, moves the conference directory even if the target pool is currently unavailable.
 By default, Move-CsConferenceDirectory will not move directories if the target pool cannot be contacted.
@@ -210,7 +210,7 @@ Dbimpexp.exe can be found in the root folder of the Lync Server installation med
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, moves the conference directory even if the target pool is currently unavailable.
 By default, the Move-CsConferenceDirectory cmdlet will not move directories if the target pool cannot be contacted.

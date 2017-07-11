@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsRgsQueue
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about the Response Group queues in use in your organization.
 With the Response Group application, phone calls are put in a queue and calls are placed on hold until a Response Group agent is available to answer that call.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves information about the Response Group queues in use in your organization.
 With the Response Group application, phone calls are put in a queue and calls are placed on hold until a Response Group agent is available to answer that call.
@@ -27,7 +27,7 @@ Get-CsRgsQueue [[-Identity] <RgsIdentity>] [-Name <String>] [-Owner <RgsIdentity
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When someone calls a phone number associated with the Response Group application, one of two things typically happens: either the call is transferred to a question that the caller must answer in order to continue (for example, "Press 1 for hardware support; press 2 for software support") or the call is placed in a queue until a Response Group agent is available to answer the call.
 
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsRgsQueue"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When someone calls a phone number associated with the Response Group application, one of two things typically happens: either the call is transferred to a question that the caller must answer in order to continue (for example, "Press 1 for hardware support; press 2 for software support") or the call is placed in a queue until a Response Group agent is available to answer the call.
 
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsRgsQueue"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When someone calls a phone number associated with the Response Group application, one of two things typically happens: either the call is transferred to a question that the caller must answer in order to continue (for example, "Press 1 for hardware support; press 2 for software support") or the call is placed in a queue until a Response Group agent is available to answer the call.
 

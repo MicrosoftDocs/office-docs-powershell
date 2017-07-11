@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsClientVersionPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing client version policy.
 Client version policies enable you to specify which clients (such as Microsoft Office Communicator 2007 R2) will be allowed to log on to your Microsoft Lync Server 2010 system.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing client version policy.
 Client version policies enable you to specify which clients (such as Microsoft Office Communicator 2007 R2) will be allowed to log on to your Lync Server system.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing client version policy.
 Client version policies enable you to specify which clients (such as Microsoft Office Communicator 2007 R2) will be allowed to log on to your Skype for Business Server 2015 system.
@@ -40,7 +40,7 @@ Set-CsClientVersionPolicy [-Instance <PSObject>] [-Description <String>] [-Rules
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -102,7 +102,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -190,7 +190,7 @@ Set-CsClientVersionPolicy -Identity site:Redmond -Rules $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the policy to be modified.
 To modify the global policy, use this syntax: -Identity global.
@@ -205,7 +205,7 @@ If this parameter is not included, then Set-CsClientVersionPolicy will modify th
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the policy to be modified.
 To modify the global policy, use this syntax: -Identity global.
@@ -220,7 +220,7 @@ If this parameter is not included, then Set-CsClientVersionPolicy will modify th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the policy to be modified.
 To modify the global policy, use this syntax: -Identity global.

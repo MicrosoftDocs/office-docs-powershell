@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsRoutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the routing configuration object, which contains a list of all voice routes defined within a Microsoft Lync Server 2010 deployment.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves the routing configuration object, which contains a list of all voice routes defined within a Lync Server deployment.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves the routing configuration object, which contains a list of all voice routes defined within a Skype for Business Server 2015 deployment.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsRoutingConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice routes contain instructions that tell Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet is used to retrieve the global instance that holds a list of all voice routes defined within the Lync Server 2010 deployment.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsRoutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet is used to retrieve the global instance that holds a list of all voice routes defined within the Lync Server deployment.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsRoutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet is used to retrieve the global instance that holds a list of all voice routes defined within the Skype for Business Server 2015 deployment.

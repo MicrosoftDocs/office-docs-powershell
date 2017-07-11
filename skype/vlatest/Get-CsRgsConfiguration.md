@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsRgsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about configuration settings for the Response Group application.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about configuration settings for the Response Group application.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsRgsConfiguration [-Identity] <RgsIdentity> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be directly routed to the appropriate set of Response Group agents.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsRgsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be directly routed to the appropriate set of Response Group agents.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsRgsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be directly routed to the appropriate set of Response Group agents.

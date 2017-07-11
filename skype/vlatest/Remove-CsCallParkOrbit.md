@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsCallParkOrbit
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a specific call park orbit range.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a specific call park orbit range.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsCallParkOrbit [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The Remove-CsCallParkOrbit cmdlet deletes the call park orbit range with the name passed to the Identity parameter (this parameter is required).
 Each call park orbit within an organization must have a unique range of numbers.
@@ -37,7 +37,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsCallParkOrbit"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Remove-CsCallParkOrbit cmdlet deletes the call park orbit range with the name passed to the Identity parameter (this parameter is required).
 Each call park orbit within an organization must have a unique range of numbers.

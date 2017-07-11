@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsUnassignedNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new range of unassigned numbers and the routing rules that apply to those numbers.
 Running this cmdlet will add an entry to the unassigned number routing table.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new range of unassigned numbers and the routing rules that apply to those numbers.
 Running this cmdlet will add an entry to the unassigned number routing table.
@@ -36,7 +36,7 @@ New-CsUnassignedNumber [-Identity] <XdsGlobalRelativeIdentity> [-NumberRangeStar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Microsoft Lync Server 2010 can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUnassignedNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Lync Server can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUnassignedNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Skype for Business Server 2015 can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -191,21 +191,21 @@ New-CsUnassignedNumber -Identity UNSet2 -NumberRangeStart "+14255552100" -Number
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique name for the range of unassigned numbers being created.
 All unassigned number ranges have a global scope, so the name specified here must be unique throughout the Lync Server 2010 deployment.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A unique name for the range of unassigned numbers being created.
 All unassigned number ranges have a global scope, so the name specified here must be unique throughout the Lync Server deployment.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A unique name for the range of unassigned numbers being created.
 All unassigned number ranges have a global scope, so the name specified here must be unique throughout the Skype for Business Server 2015 deployment.
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExUmAutoAttendantPhoneNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The phone number of the Exchange UM Auto Attendant to route calls in this range to.
 This field is required only if you are not using an Announcement Service (in which case you do not supply values for the AnnouncementService or AnnouncementName parameters).
@@ -267,7 +267,7 @@ The Exchange UM Auto Attendant contact must already be set up in order to assign
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The phone number of the Exchange Auto Attendant to route calls in this range to.
 This field is required only if you are not using an Announcement Service (in which case you do not supply values for the AnnouncementService or AnnouncementName parameters).
@@ -332,14 +332,14 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 It is possible for unassigned number ranges to overlap. 
 If a number falls within more than one range, the range with the highest priority will take effect.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 It is possible for unassigned number ranges to overlap.
 If a number falls within more than one range, the range with the highest priority will take effect.
@@ -376,14 +376,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

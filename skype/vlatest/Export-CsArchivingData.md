@@ -6,16 +6,16 @@ schema: 2.0.0
 # Export-CsArchivingData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to export records that have been stored in the Microsoft Lync Server 2010 Archiving database.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to export records that have been stored in the Lync Server Archiving database.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to export records that have been stored in the Skype for Business Server 2015 Archiving database.
 This cmdlet was introduced in Lync Server 2010.
@@ -53,7 +53,7 @@ Export-CsArchivingData -Identity <XdsIdentity> -OutputFolder <String> -StartDate
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
 Other organizations find it mandatory to keep such transcripts.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Export-CsArchivingData"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
 Other organizations find it mandatory to keep such transcripts.
@@ -89,7 +89,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsArchivingData"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
 Other organizations find it mandatory to keep such transcripts.
@@ -199,14 +199,14 @@ Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" 
 ## PARAMETERS
 
 ### -DBInstance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Path to the SQL Server database instance where archiving data is recorded.
 For example: "atl-sql-001\Archinst".
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Path to the SQL Server database instance where archiving data is recorded.
 For example: "atl-sql-001\Archinst".
@@ -216,7 +216,7 @@ If you are using export-CsArchivingData on Microsoft Lync Server 2013 Preview yo
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the SQL Server database instance where archiving data is recorded.
 For example: "atl-sql-001\Archinst".
@@ -240,14 +240,14 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Full path to the folder where the exported data should be stored (for example, C:\ArchivingExports).
 If this folder does not exist, then Export-CsArchivingData will create it.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Full path to the folder where the exported data should be stored (for example, C:\ArchivingExports).
 If this folder does not exist, then the Export-CsArchivingData cmdlet will create it.
@@ -328,14 +328,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeWebConfArchive
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Instructs Export-CsArchivingData to only export instant messaging records.
 By default, the cmdlet exports both IM and conferencing records.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Instructs the Export-CsArchivingData cmdlet to only export instant messaging records.
 By default, the cmdlet exports both IM and conferencing records.
@@ -405,19 +405,19 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTrustedApplication
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Include data for trusted applications (CAA/CAS)
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When included, instructs Export-CsArchivingData to include data logged by trusted applications when exporting records.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When included, instructs the Export-CsArchivingData cmdlet to include data logged by trusted applications when exporting records.
 

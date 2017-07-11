@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsClsScenario
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new centralized logging configuration scenario.
 A scenario represents a particular Microsoft Lync Server 2013 Preview component or situation (such as IM and presence) that administrators can enable or disable for tracing.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new centralized logging configuration scenario.
 A scenario represents a particular Skype for Business Server 2015 component or situation (such as IM and presence) that administrators can enable or disable for tracing.
@@ -35,7 +35,7 @@ New-CsClsScenario -Name <String> -Parent <String> [-Confirm] [-Force] [-InMemory
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -53,7 +53,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClsScenario"}
 
 Lync Server Control Panel: The functions carried out by the New-CsClsScenario cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -204,14 +204,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,23 +6,23 @@ schema: 2.0.0
 # Get-CsMeetingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Get-CsMeetingConfiguration enables you to return information about the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, and control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Get-CsMeetingConfiguration enables you to return information about the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, and control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 The Get-CsMeetingConfiguration cmdlet enables you to return information about the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, and determine such things as how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsMeetingConfiguration cmdlet enables you to return information about the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, and control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
@@ -49,7 +49,7 @@ Get-CsMeetingConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Meetings (also called "conferences") are an integral part of Microsoft Lync Server 2010.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create, and determine how meetings handle anonymous users and dial-in conferencing users.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsMeetingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Meetings (also called "conferences") are an integral part of Lync Server.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create, and determine how meetings handle anonymous users and dial-in conferencing users.
@@ -79,7 +79,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsMeetingConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Meetings (also called "conferences") are an integral part of Skype for Business Online.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create, and determine how meetings handle anonymous users and dial-in conferencing users.
@@ -87,7 +87,7 @@ For example, you can configure meetings so that anyone dialing in over the publi
 Alternatively, you can configure meetings so that dial-in users are not automatically admitted the meeting, but are instead routed to the meeting lobby.
 These dial-in users remain on hold in the lobby until a presenter admits them to the meeting.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Meetings (also called "conferences") are an integral part of Skype for Business Server 2015.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create, and determine how meetings handle anonymous users and dial-in conferencing users.
@@ -222,7 +222,7 @@ Get-CsMeetingConfiguration | Where-Object {$_.AdmitAnonymousUsersByDefault -eq $
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the unique identifier for the collection of meeting configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -236,7 +236,7 @@ If you need to use wildcards, then include the Filter parameter instead.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Specifies the collection of meeting configuration settings to be returned.
 Because each tenant is limited to a single, global collection of meeting configuration settings there is no need include this parameter when calling the Get-CsMeetingConfiguration cmdlet.
@@ -247,7 +247,7 @@ Get-CsMeetingConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Ident
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of meeting configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcard characters in order to return a collection (or collections) of meeting configuration settings.
 To return a collection of all the settings configured at the site scope, use this syntax: -Filter site:*.
@@ -283,7 +283,7 @@ To return a collection of all the settings that have the string value "EMEA" som
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Enables you to use wildcard characters in order to return a collection of meeting configuration settings.
 Because each tenant is limited to a single, global collection of meeting configuration settings there is no need to use the Filter parameter.
@@ -293,7 +293,7 @@ Get-CsMeetingConfiguration " -Filter "g*"
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcard characters in order to return a collection (or collections) of meeting configuration settings.
 To return a collection of all the settings configured at the site scope, use this syntax, -Filter site:*.
@@ -315,13 +315,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not applicable to the on-premises version of Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose meeting configuration settings are to be retrieved.
 
@@ -335,7 +335,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Online, Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose meeting configuration settings are to be retrieved.
 
@@ -367,13 +367,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the meeting configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online
 

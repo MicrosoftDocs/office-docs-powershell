@@ -6,11 +6,11 @@ schema: 2.0.0
 # Reset-CsDeviceUpdateRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Rejects a device update rule that has been imported to the system.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Rejects a device update rule that has been imported to the system.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Reset-CsDeviceUpdateRule [-Instance <PSObject>] [-WhatIf] [-Confirm] [-Force] [<
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 uses device update rules as a way to provide firmware updates to devices that run Lync 2010 Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server 2010.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Reset-CsDeviceUpdateRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server uses device update rules as a way to provide firmware updates to devices that run Lync Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Reset-CsDeviceUpdateRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 uses device update rules as a way to provide firmware updates to devices that run Skype for Business Phone Edition.
 Periodically, administrators upload a set of device update rules to Skype for Business Server 2015.
@@ -269,13 +269,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

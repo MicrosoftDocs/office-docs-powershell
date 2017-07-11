@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsClientVersionPolicyRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new client version policy rule.
 Client version policy rules help determine whether users can use a specific client application to log on to Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new client version policy rule.
 Client version policy rules help determine whether users can use a specific client application to log on to Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new client version policy rule.
 Client version policy rules help determine whether users can use a specific client application to log on to Skype for Business Server 2015.
@@ -45,7 +45,7 @@ New-CsClientVersionPolicyRule [-MajorVersion <UInt16>] [-MinorVersion <UInt16>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version policy rules are used to determine which client applications are allowed to log on to Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -94,7 +94,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsClientVersionPolicyRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version policy rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -143,7 +143,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClientVersionPolicyRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version policy rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -310,7 +310,7 @@ Set-CsClientVersionPolicyRule -Instance $z
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the client version policy rule to be created.
 The Identity of a client version policy rule consists of the scope where the rule has been configured plus a globally unique identifier (GUID).
@@ -320,7 +320,7 @@ Instead of using the Identity parameter you can use the Parent and RuleId parame
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the client version policy rule to be created.
 The Identity of a client version policy rule consists of the scope where the rule has been configured plus a globally unique identifier (GUID).
@@ -533,7 +533,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Scope information for the new rule.
 To use the Parent parameter and create a new rule for the global policy, use this syntax:  -Parent global.
@@ -545,7 +545,7 @@ You must use either the Identity parameter or both the Parent and RuleId paramet
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Scope information for the new rule.
 To use the Parent parameter and create a new rule for the global policy, use this syntax: -Parent global.
@@ -642,14 +642,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -702,13 +702,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserAgentFullName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill UserAgentFullName Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provide a friendly name for the user agent.
 For example, instead of relying on the user agent UCCP to identify the agent administrators might spell the name out in full: Microsoft Unified Communications Client.

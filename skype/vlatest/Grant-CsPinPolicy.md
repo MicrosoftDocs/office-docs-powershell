@@ -6,18 +6,18 @@ schema: 2.0.0
 # Grant-CsPinPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a client personal identification number (PIN) policy to a user or group of users.
 PIN authentication enables users to access Microsoft Lync Server 2010 by providing a PIN instead of a user name and password.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Assigns a client personal identification number (PIN) policy to a user or group of users.
 PIN authentication enables users to access Lync Server by providing a PIN instead of a user name and password.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Assigns a client personal identification number (PIN) policy to a user or group of users.
 PIN authentication enables users to access Skype for Business Server 2015 by providing a PIN instead of a user name and password.
@@ -33,7 +33,7 @@ Grant-CsPinPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-Domai
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsPinPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsPinPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
@@ -225,7 +225,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
@@ -248,14 +248,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to specify the fully qualified domain name of a domain (FQDN) controller to be contacted when assigning the new policy.
 If this parameter is not specified then Grant-CsPinPolicy will contact the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name of a domain (FQDN) controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsPinPolicy cmdlet will contact the first available domain controller.

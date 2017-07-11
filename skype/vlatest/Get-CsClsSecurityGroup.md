@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsClsSecurityGroup
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the centralized logging configuration security groups in use in the organization.
 Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
 Security groups are intended for use with the Office 365 version of Lync Server.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the centralized logging configuration security groups in use in the organization.
 Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
@@ -33,7 +33,7 @@ Get-CsClsSecurityGroup [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClsSecurityGroup"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsClsSecurityGroup cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the centralized logging security group to be returned.
 A security group identity consists of the scope where the group was created followed by the group name.
@@ -179,7 +179,7 @@ If this parameter is not specified then Get-CsClsSecurityGroup returns informati
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the centralized logging security group to be returned.
 A security group identity consists of the scope where the group was created followed by the group name.

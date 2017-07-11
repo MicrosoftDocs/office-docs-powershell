@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsExUmContact
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more hosted Exchange Unified Messaging (UM) contact objects.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more hosted Exchange Unified Messaging (UM) contact objects.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ Get-CsExUmContact [[-Identity] <UserIdParameter>] [-Filter <String>] [-LdapFilte
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -37,7 +37,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsExUmContact"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsExUmContact"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on Lync Server 2010-specific attributes.
 For example, you can limit returned data to contacts that have line URIs beginning with "tel:555".
@@ -224,7 +224,7 @@ For example, a filter that returns only contacts who have been enabled for Enter
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on Lync Server-specific attributes.
 For example, you can limit returned data to contacts that have line URIs beginning with "tel:555".
@@ -234,7 +234,7 @@ For example, a filter that returns only contacts who have been enabled for Enter
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
 For example, you can limit returned data to contacts that have line URIs beginning with "tel:555".
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to limit the returned data by filtering "generic" Active Directory attributes (that is, attributes that are not specific to Lync Server).
 
@@ -266,7 +266,7 @@ The LdapFilter parameter uses LDAP query language when creating filters.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering "generic" Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 

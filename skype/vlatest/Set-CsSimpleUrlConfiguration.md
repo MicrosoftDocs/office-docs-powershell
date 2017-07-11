@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsSimpleUrlConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Skype for Business Server Control Panel.
@@ -40,7 +40,7 @@ Set-CsSimpleUrlConfiguration [-Instance <PSObject>] [-SimpleUrl <PSListModifier>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -85,7 +85,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -130,7 +130,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -334,7 +334,7 @@ Set-CsSimpleUrlConfiguration -Identity "site:Redmond" -SimpleUrl @{Remove=$simpl
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of simple URLs to be modified.
 To modify the global collection, use this syntax: -Identity global.
@@ -344,7 +344,7 @@ If this parameter is not specified then the global collection will be modified.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of simple URLs to be modified.
 To modify the global collection, use this syntax:
@@ -389,14 +389,14 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleUrl
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Simple URLs configured for this collection.
 These URLs must be created by using the New-SimpleUrl and New-SimpleUrlEntry cmdlets.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Simple URLs configured for this collection.
 These URLs must be created by using the New-SimpleUrl cmdlet and the New-SimpleUrlEntry cmdlet.
@@ -433,13 +433,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose Simple URL configuration settings are to be modified.
 For example:
@@ -452,7 +452,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Simple URL configuration settings are to be modified.
 For example:

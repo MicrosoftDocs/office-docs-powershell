@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsAddressBookConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of Address Book configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing collection of Address Book configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -38,7 +38,7 @@ Set-CsAddressBookConfiguration [-Instance <PSObject>] [-EnableFileGeneration <Bo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Address Book servers are intermediaries between AD DS and Microsoft Lync Server 2010.
 The Address Book server ensures that the user information stored in Lync Server 2010 is in synch with the user information stored in AD DS.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAddressBookConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between AD DS and Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in AD DS.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAddressBookConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between AD DS and Skype for Business Server 2015.
 The Address Book server ensures that the user information stored in Skype for Business Server 2015 is in synch with the user information stored in AD DS.
@@ -196,7 +196,7 @@ Get-CsAddressBookConfiguration | Where-Object {$_.KeepDuration -lt 30} | Set-CsA
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier assigned to the collection of Address Book settings.
 To refer to the global settings, use this syntax: -Identity global.
@@ -207,7 +207,7 @@ If this parameter is omitted, then Set-CsAddressBookConfiguration will modify th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier assigned to the collection of Address Book settings.
 To refer to the global settings, use this syntax: -Identity global.
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileGeneration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True (the default value) the Address Book server generates Address Book index files that can be downloaded by clients.
 When set to False, these index files are not generated.
@@ -256,7 +256,7 @@ That means that client applications will have to use the Address Book Web Query 
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True (the default value) the Address Book server generates Address Book index files that can be downloaded by clients.
 When set to False, these index files are not generated.
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreGenericRules
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Lync Server 2010.
@@ -287,7 +287,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Lync Server.
@@ -296,7 +296,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Skype for Business Server 2015.
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeepDuration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the amount of time (in days) that Address Book servers will keep change files.
 Change files older than the value of the KeepDuration property will be deleted.
@@ -328,7 +328,7 @@ The default value is 7 days.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Specifies the amount of time (in days) that Address Book servers will keep change files.
 Change files older than the value of the KeepDuration property will be deleted.
@@ -351,7 +351,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDeltaFileSizePercentage
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When changes are made to Active Directory (such as a new user being enabled for Lync Server), the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information;  Lync 2010 can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -362,7 +362,7 @@ MaxDeltaFileSizePercentage must be entered as a percentage value between 1 and 1
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When changes are made to Active Directory (such as a new user being enabled for Lync Server), the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information; Lync can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -373,7 +373,7 @@ MaxDeltaFileSizePercentage must be entered as a percentage value between 1 and 1
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When changes are made to Active Directory (such as a new user being enabled for Skype for Business Server 2015), the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information; Skype for Business Server 2015 can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -398,7 +398,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunTimeOfDay
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the time of day when the servers generate new Address Book files.
 The RunTimeOfDay property is based on a 24-hour clock (hours:minutes:seconds), with 00:00:00 representing midnight and 23:59:00 representing 11:00 P.M..
@@ -407,7 +407,7 @@ The default value is 01:30:00 (1:30 A.M.).
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the time of day when the servers generate new Address Book files.
 The RunTimeOfDay property is based on a 24-hour clock (hours:minutes:seconds), with 00:00:00 representing midnight and 23:59:00 representing 11:59 P.M..

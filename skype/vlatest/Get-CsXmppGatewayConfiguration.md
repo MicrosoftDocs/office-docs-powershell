@@ -6,14 +6,14 @@ schema: 2.0.0
 # Get-CsXmppGatewayConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the XMPP gateway configuration settings in use in the organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
 XMPP gateways enable Microsoft Lync Server 2013 Preview users to exchange instant message and presence information with users belonging to IM and presence providers that employ XMPP.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the XMPP gateway configuration settings in use in the organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -35,7 +35,7 @@ Get-CsXmppGatewayConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<Commo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -58,7 +58,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsXmppGatewayConfiguratio
 
 Lync Server Control Panel: The functions carried out by the Get-CsXmppGatewayConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the XMPP gateway configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling Get-CsXmppGatewayConfiguration.
@@ -136,7 +136,7 @@ If you prefer, however, you can use the following syntax to reference the global
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the XMPP gateway configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsXmppGatewayConfiguration cmdlet.

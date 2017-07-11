@@ -6,16 +6,16 @@ schema: 2.0.0
 # Publish-CsTopology
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Publishes the Microsoft Lync Server 2010 topology retrieved by using the Get-CsTopology cmdlet.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Publishes the Lync Server topology retrieved by using the Get-CsTopology cmdlet.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Publishes the Skype for Business Server 2015 topology retrieved by using the Get-CsTopology cmdlet.
 This cmdlet was introduced in Lync Server 2010.
@@ -43,7 +43,7 @@ Publish-CsTopology [-BackupFileName <String>] [-GlobalCatalog <Fqdn>] [-GlobalSe
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 After you have installed Lync Server 2010, you will eventually need to make changes to the Lync Server infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -65,7 +65,7 @@ In order to give RTCUniversalServerAdmins the right to actually use the Publish-
 Note that this restriction also applies to enabling a topology through Topology Builder.
 If you have not delegated permissions by using Set-CsSetupPermission, then only a domain administrator will be able to publish a topology through Topology Builder.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 After you have installed Lync Server, you will eventually need to make changes to the Lync Server infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -87,7 +87,7 @@ In order to give RTCUniversalServerAdmins the right to actually use the Publish-
 Note that this restriction also applies to enabling a topology through Topology Builder.
 If you have not delegated permissions by using Set-CsSetupPermission, then only a domain administrator will be able to publish a topology through Topology Builder.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 After you have installed Skype for Business Server 2015, you will eventually need to make changes to the Skype for Business Server 2015 infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackupFileName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Full path to the backup file automatically created when you run Publish-CsTopology.
 If this parameter is not specified, then Publish-CsTopology will create a backup file in your Temp folder (%temp%) similar to this: Publish-CsTopology-Backup-\[2010_10_01\]\[08_30_00\].
@@ -171,7 +171,7 @@ In addition, 08_30_00 represents the time of day when publication took place: ho
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Full path to the backup file automatically created when you run the Publish-CsTopology cmdlet.
 If this parameter is not specified, then the Publish-CsTopology cmdlet will create a backup file in your Temp folder (%temp%) similar to this: Publish-CsTopology-Backup-\[2010_10_01\]\[08_30_00\].
@@ -211,14 +211,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Publish-CsTopology on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Publish-CsTopology cmdlet on a computer with an account in your domain.
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS), then this parameter must point to the root domain controller.
@@ -247,7 +247,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services, then this parameter must point to the root domain controller.
@@ -334,20 +334,20 @@ Accept wildcard characters: False
 ```
 
 ### -FinalizeUninstall
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill FinalizeUninstall Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Used only when uninstall Lync Server.After the Central Management Server has been removed, use Publish-CsTopology and the FinalizeUninstall parameter to publish an empty topology.
 Among other things, this removes all the Active Directory entries for the Central Management Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Used only when uninstalling Skype for Business Server 2015.After the Central Management Server has been removed, use Publish-CsTopology and the FinalizeUninstall parameter to publish an empty topology.
 Among other things, this removes all the Active Directory entries for the Central Management Server.

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsOutboundTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
@@ -26,7 +26,7 @@ Remove-CsOutboundTranslationRule [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call this cmdlet to remove an existing outbound translation rule.
 Microsoft Lync Server 2010 normalizes phone numbers to E.164 format.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsOutboundTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call this cmdlet to remove an existing outbound translation rule.
 Lync Server normalizes phone numbers to E.164 format.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsOutboundTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call this cmdlet to remove an existing outbound translation rule.
 Skype for Business Server 2015 normalizes phone numbers to E.164 format.

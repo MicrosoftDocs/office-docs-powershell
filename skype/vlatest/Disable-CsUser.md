@@ -6,18 +6,18 @@ schema: 2.0.0
 # Disable-CsUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the Active Directory account of the specified user or users; this modification prevents users from using Microsoft Lync Server 2010 clients such as Microsoft Lync 2010.
 Disable-CsUser only restricts activity related to Lync Server 2010; it does not disable or remove a user's Active Directory account.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the Active Directory account of the specified user or users; this modification prevents users from using Lync Server clients such as Microsoft Lync 2013 Preview.
 Disable-CsUser only restricts activity related to Lync Server; it does not disable or remove a user's Active Directory account.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the Active Directory account of the specified user or users; this modification prevents users from using Skype for Business Server 2015 clients such as Skype for Business.
 The Disable-CsUser cmdlet only restricts activity related to Skype for Business Server 2015; it does not disable or remove a user's Active Directory account.
@@ -33,7 +33,7 @@ Disable-CsUser [-Identity] <UserIdParameter> [-DomainController <Fqdn>] [-PassTh
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Disable-CsUser cmdlet deletes all the attribute information related to Lync Server from an Active Directory user account; this prevents the user from logging on to Lync Server.
 When you run Disable-CsUser all the Lync Server-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Disable-CsUser"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Disable-CsUser cmdlet deletes all the attribute information related to Lync Server from an Active Directory user account; this prevents the user from logging on to Lync Server.
 When you run Disable-CsUser all the Lync Server-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Disable-CsUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Disable-CsUser cmdlet deletes all the attribute information related to Skype for Business Server 2015 from an Active Directory user account; this prevents the user from logging on to Skype for Business Server 2015.
 When you run the Disable-CsUser cmdlet all the Skype for Business Server 2015-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.

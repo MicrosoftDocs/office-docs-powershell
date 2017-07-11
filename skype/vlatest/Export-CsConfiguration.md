@@ -6,18 +6,18 @@ schema: 2.0.0
 # Export-CsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Exports your Microsoft Lync Server 2010 topology, policies, and configuration settings to a file.
 Among other things, this file can then be used to restore this information to the Central Management store after an upgrade, a hardware failure, or some other issue has resulted in data loss.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Exports your Lync Server topology, policies, and configuration settings to a file.
 Among other things, this file can then be used to restore this information to the Central Management store after an upgrade, a hardware failure, or some other issue has resulted in data loss.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Exports your Skype for Business Server 2015 topology, policies, and configuration settings to a file.
 Among other things, this file can then be used to restore this information to the Central Management store after an upgrade, a hardware failure, or some other issue has resulted in data loss.
@@ -38,7 +38,7 @@ Export-CsConfiguration [-AsBytes] [-Force] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Computers that run Lync Server 2010 services or server roles must have a copy of the current topology, current configuration settings, and current policies before they can function in their appointed role.
 Lync Server  is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Export-CsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Computers that run Lync Server services or server roles must have a copy of the current topology, current configuration settings, and current policies before they can function in their appointed role.
 Lync Server is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Computers that run Skype for Business Server 2015 services or server roles must have a copy of the current topology, current configuration settings, and current policies before they can function in their appointed role.
 Skype for Business Server 2015 is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -122,7 +122,7 @@ Export-CsConfiguration -FileName "C:\Config.zip"
 ## PARAMETERS
 
 ### -FileName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Path to the .ZIP file to be created when you run Export-CsConfiguration.
 For example: -FileName "C:\Config.zip".
@@ -130,7 +130,7 @@ Note that you must include either the FileName or the AsBytes parameters, but no
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the .ZIP file to be created when you run the Export-CsConfiguration cmdlet.
 For example: -FileName "C:\Config.zip".

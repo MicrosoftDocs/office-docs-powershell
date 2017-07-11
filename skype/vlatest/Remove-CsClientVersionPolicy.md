@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsClientVersionPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified client version policy.
 Client version policies enable you to specify which clients (such as Microsoft Office Communicator 2007 R2) will be able to log on to your Microsoft Lync Server 2010 system.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified client version policy.
 Client version policies enable you to specify which clients (such as Microsoft Office Communicator 2007 R2) will be able to log on to your Lync Server system.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified client version policy.
 Client version policies enable you to specify which clients will be able to log on to your Skype for Business Server 2015 system.
@@ -33,7 +33,7 @@ Remove-CsClientVersionPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Conf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -103,7 +103,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -196,7 +196,7 @@ Get-CsClientVersionPolicy -Filter tag:* | Remove-CsClientVersionPolicy
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the policy to be deleted.
 To remove a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -208,7 +208,7 @@ To remove per-user policies, use syntax similar to this: -Identity "SalesDepartm
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier for the policy to be deleted.
 To remove a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond".

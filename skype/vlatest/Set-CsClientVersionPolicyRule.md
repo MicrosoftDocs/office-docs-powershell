@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsClientVersionPolicyRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies one or more client version policy rules currently configured for use in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies one or more client version policy rules currently configured for use in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -38,7 +38,7 @@ Set-CsClientVersionPolicyRule [-Instance <PSObject>] [-Action <Action>] [-Action
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version rules are used to determine which client applications are allowed to log on to Microsoft Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -85,7 +85,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionPolicyRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -132,7 +132,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionPolicyRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -582,13 +582,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserAgentFullName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill UserAgentFullName Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provide a friendly name for the user agent.
 For example, instead of relying on the user agent UCCP to identify the agent administrators might spell the name out in full: Microsoft Unified Communications Client.

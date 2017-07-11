@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsPresencePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new presence policy at either the site scope or the per-user scope.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new presence policy at either the site scope or the per-user scope.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ New-CsPresencePolicy [-Identity] <XdsIdentity> [-MaxCategorySubscription <UInt16
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsPresencePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPresencePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -201,7 +201,7 @@ Set-CsPresencePolicy -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the new presence policy.
 To create a new per-user policy, use syntax similar to this: -Identity "RedmondPresencePolicy".
@@ -212,7 +212,7 @@ In addition, your command will fail if the site in question already hosts a pres
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the new presence policy.
 To create a new per-user policy, use syntax similar to this:
@@ -298,14 +298,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -358,13 +358,13 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Description Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provide additional text to accompany a presence policy.
 For example, the Description might include information about the users the policy should be assigned to.

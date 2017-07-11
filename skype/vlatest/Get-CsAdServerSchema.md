@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsAdServerSchema
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information indicating whether your Active Directory schema has been correctly configured to allow for the installation of Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information indicating whether your Active Directory schema has been correctly configured to allow for the installation of Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information indicating whether your Active Directory schema has been correctly configured to allow for the installation of Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Get-CsAdServerSchema [-Report <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 cannot be installed until your Active Directory schema has been properly extended; that means that objects and attributes specific to Lync Server must be added to Active Directory Domain Services (AD DS) before installation can take place.
 For example, user account objects must be modified to allow for attributes that do such things as indicate the voice policy assigned to a user or report whether or not that account has been enabled for Enterprise Voice.
@@ -46,7 +46,7 @@ Get-CsAdServerSchema performs the same function as the following Microsoft Offic
 Who can run this cmdlet: By default, any user who has read permissions to Active Directory can run the Get-CsAdServerSchema cmdlet locally.
 Typically all domain members have this permission.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server cannot be installed until your Active Directory schema has been properly extended; that means that objects and attributes specific to Lync Server must be added to Active Directory Domain Services (AD DS) before installation can take place.
 For example, user account objects must be modified to allow for attributes that do such things as indicate the voice policy assigned to a user or report whether or not that account has been enabled for Enterprise Voice.
@@ -63,7 +63,7 @@ Get-CsAdServerSchema performs the same function as the following Microsoft Offic
 Who can run this cmdlet: By default, any user who has read permissions to Active Directory can run the Get-CsAdServerSchema cmdlet locally.
 Typically all domain members have this permission.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 cannot be installed until your Active Directory schema has been properly extended; that means that objects and attributes specific to Skype for Business Server 2015 must be added to Active Directory Domain Services before installation can take place.
 For example, user account objects must be modified to allow for attributes that do such things as indicate the voice policy assigned to a user or report whether or not that account has been enabled for Enterprise Voice.

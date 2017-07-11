@@ -6,20 +6,20 @@ schema: 2.0.0
 # Grant-CsConferencingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a conferencing policy at the per-user scope.
 Conferencing policies determine the features and capabilities that can be used in a conference.
 This includes everything from whether or not the meeting can include IP audio and video to the maximum number of people who can attend a meeting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Assigns a conferencing policy at the per-user scope.
 Conferencing policies determine the features and capabilities that can be used in a conference.
 This includes everything from whether or not the meeting can include IP audio and video to the maximum number of people who can attend a meeting.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Grant-CsConferencingPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -33,7 +33,7 @@ Grant-CsConferencingPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Conferencing is an important part of Microsoft Lync Server 2010: conferencing enables groups of users (as few as two people to as many as 250 people) to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsConferencingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Conferencing is an important part of Lync Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -85,11 +85,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsConferencingPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Conferencing is an important part of Skype for Business Server 2015: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -239,7 +239,7 @@ Get-CsUser -LdapFilter "Department=Human Resources" | Grant-CsConferencingPolicy
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer). 
@@ -250,7 +250,7 @@ For example, the Identity "* Smith" returns all the users with a display name th
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -261,7 +261,7 @@ For example, the Identity "* Smith" returns all the users with a display name th
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
@@ -291,7 +291,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
@@ -301,7 +301,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PolicyName Description}}
 
@@ -321,20 +321,20 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then Grant-CsConferencingPolicy will contact the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsConferencingPolicy cmdlet will contact the first available domain controller.
@@ -355,14 +355,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsConferencingPolicy cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
@@ -382,13 +382,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -409,13 +409,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Update-CsAdminRole
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Updates the role-based access control (RBAC) definitions stored in the Central Management database without affecting any other database tables.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Updates the role-based access control (RBAC) definitions stored in the Central Management database without affecting any other database tables.
 This cmdlet was introduced in Lync Server 2013.
@@ -25,7 +25,7 @@ Update-CsAdminRole [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Update-CsAdminRole cmdlet provides a way for you to update the RBAC role definitions stored in the Central Management database.
 This cmdlet is typically used in coexistence/migration scenarios where the Central Management database is currently located in a Microsoft Lync Server 2010 pool.
@@ -36,7 +36,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsAdminRole"}
 
 Lync Server Control Panel: The functions carried out by the Update-CsAdminRole cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Update-CsAdminRole cmdlet provides a way for you to update the RBAC role definitions stored in the Central Management database.
 This cmdlet is typically used in coexistence/migration.

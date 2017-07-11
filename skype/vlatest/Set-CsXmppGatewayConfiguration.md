@@ -6,14 +6,14 @@ schema: 2.0.0
 # Set-CsXmppGatewayConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the XMPP gateway configuration settings in use in the organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
 XMPP gateways enable Microsoft Lync Server 2013 Preview users to exchange instant message and presence information with users from IM and presence providers that employ XMPP.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the XMPP gateway configuration settings in use in the organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -41,7 +41,7 @@ Set-CsXmppGatewayConfiguration [-Confirm] [-ConnectionLimit <UInt32>] [-Dialback
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -64,7 +64,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsXmppGatewayConfiguratio
 
 Lync Server Control Panel: The functions carried out by the Set-CsXmppGatewayConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -159,7 +159,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableLoggingAllMessageBodies
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync Server 2013 Preview will log the actual content of all instant messages.
 For privacy reasons, message content is typically deleted and only information about the communicating endpoints is included in the log files.
@@ -168,7 +168,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business Server 2015 will log the actual content of all instant messages.
 For privacy reasons, message content is typically deleted and only information about the communicating endpoints is included in the log files.
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the XMPP gateway configuration settings to be modified.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling Set-CsXmppGatewaySettings.
@@ -217,7 +217,7 @@ If you prefer, however, you can use the following syntax to reference the global
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the XMPP gateway configuration settings to be modified.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Set-CsXmppGatewayConfiguration cmdlet.

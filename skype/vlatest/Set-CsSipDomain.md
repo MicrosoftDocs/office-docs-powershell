@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsSipDomain
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify property values for the SIP domains in your organization.
 SIP domains are domains authorized to send and receive SIP traffic, and are used when assigning SIP addresses to users.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify property values for the SIP domains in your organization.
 SIP domains are domains authorized to send and receive SIP traffic, and are used when assigning SIP addresses to users.
@@ -27,7 +27,7 @@ Set-CsSipDomain [[-Identity] <XdsGlobalRelativeIdentity>] [-IsDefault <Boolean>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to configure SIP addresses for your users (and thus enable them to use SIP-related software such as Microsoft Lync 2010), you need two pieces of information: a user ID (for example, Ken.Myer) and a SIP domain (for example, litwareinc.com).
 The SIP domain used to construct a SIP address must be a domain located within your Active Directory forest that is authorized to send and receive SIP traffic.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSipDomain"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to configure SIP addresses for your users (and thus enable them to use SIP-related software such as Microsoft Lync 2013 Preview), you need two pieces of information: a user ID (for example, Ken.Myer) and a SIP domain (for example, litwareinc.com).
 The SIP domain used to construct a SIP address must be a domain located within your Active Directory forest that is authorized to send and receive SIP traffic.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSipDomain"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to configure SIP addresses for your users (and thus enable them to use SIP-related software such as Skype for Business), you need two pieces of information: a user ID (for example, Ken.Myer) and a SIP domain (for example, litwareinc.com).
 The SIP domain used to construct a SIP address must be a domain located within your Active Directory forest that is authorized to send and receive SIP traffic.
@@ -105,14 +105,14 @@ Set-CsSipDomain -Identity fabrikam.com -IsDefault $True
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the SIP domain to be configured as the default domain.
 For example: -Identity fabrikam.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the SIP domain to be configured as the default domain.
 For example:
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether the domain is the default SIP domain, the domain used by Lync Server 2010 any time a domain name is not explicitly stated.
 If set to True, the new domain will become the new default domain.
@@ -143,7 +143,7 @@ You cannot set this value to False because that would leave you without a defaul
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the domain is the default SIP domain, the domain used by Lync Server any time a domain name is not explicitly stated.
 If set to True, the new domain will become the new default domain.
@@ -153,7 +153,7 @@ If you change the default SIP domain you will need to restart the RTCCAA and RTC
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the domain is the default SIP domain, the domain used by Skype for Business Server 2015 any time a domain name is not explicitly stated.
 If set to True, the new domain will become the new default domain.

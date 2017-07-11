@@ -6,23 +6,23 @@ schema: 2.0.0
 # Remove-CsExternalAccessPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to remove an existing external access policy.
 External access policies determine whether or not your users can: 1) communicate with users who have 
 Session Initiation Protocol (SIP) accounts with a federated  organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Microsoft Lync Server 2010 over the Internet, without having to log on to your internal network.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to remove an existing external access policy.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Lync Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Remove-CsExternalAccessPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to remove an existing external access policy.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Skype for Business Server 2015 over the Internet, without having to log on to your internal network.
@@ -38,7 +38,7 @@ Remove-CsExternalAccessPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you install Lync Server 2010 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
 In addition, users are not allowed to access Lync Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsExternalAccessPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you install Lync Server your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
 In addition, users are not allowed to access Lync Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
@@ -106,11 +106,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsExternalAccessPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you install Skype for Business Server 2015 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
 In addition, users are not allowed to access Skype for Business Server 2015 over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Skype for Business Server 2015.
@@ -292,7 +292,7 @@ Get-CsExternalAccessPolicy | Where-Object {$_.EnableFederationAccess -eq $True -
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier for the external access policy to be removed.
 External access policies can be configured at the global, site, or per-user scopes.
@@ -305,7 +305,7 @@ Note that wildcards are not allowed when specifying an Identity.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -325,13 +325,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -351,13 +351,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -378,13 +378,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -420,13 +420,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the external access policy is being removed.
 For example:

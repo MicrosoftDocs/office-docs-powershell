@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsImFilterConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified instant messaging (IM) filter configuration.
 (IM filter settings are used to prevent users from sending instant messages that contain hyperlinks.)
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified instant messaging (IM) filter configuration.
 (IM filter settings are used to prevent users from sending instant messages that contain hyperlinks.) This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsImFilterConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular web site or share.
 Microsoft Lync Server 2010 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsImFilterConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular website or share.
 Lync Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsImFilterConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular website or share.
 Skype for Business Server 2015 can be configured so that hyperlinks with certain prefixes are blocked or are not active.

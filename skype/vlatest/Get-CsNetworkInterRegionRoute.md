@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsNetworkInterRegionRoute
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more routes that connect network regions within a call admission control (CAC) configuration.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more routes that connect network regions within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsNetworkInterRegionRoute [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Every region within a CAC configuration must have some way to access every other region.
 While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkInterRegionRoute"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Every region within a CAC configuration must have some way to access every other region.
 While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
@@ -215,13 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the network inter-region route information from the local replica of the Central Management store, rather than the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the network interregion route information from the local replica of the Central Management store, rather than the Central Management store itself.
 

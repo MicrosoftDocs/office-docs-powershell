@@ -6,14 +6,14 @@ schema: 2.0.0
 # New-CsXmppAllowedPartner
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new XMPP allowed partner.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
 An allowed partner is an IM and presence provider whose users have been authorized to exchange instant messages and presence information with your Lync Server 2013 Preview users.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new XMPP allowed partner.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -41,7 +41,7 @@ New-CsXmppAllowedPartner [-Identity] <XdsGlobalRelativeIdentity> [-AdditionalDom
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -56,7 +56,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsXmppAllowedPartner"}
 
 Lync Server Control Panel: To create a new XMPP allowed partner using Lync Server Control Panel, click External User Access, click XMPP Federated Partners, and then click New.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -PartnerType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the relationship between Lync Server 2013 Preview and the XMPP partner.
 Allowed values are:
@@ -292,7 +292,7 @@ The default value is PublicUnverified.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the relationship between Skype for Business Server 2015 and the XMPP partner.
 Allowed values are:
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -SaslNegotiation
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates support for the Simple Authentication and Security Layer protocol, a protocol used for server authentication.
 
@@ -351,7 +351,7 @@ The default value is Required.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates support for the Simple Authentication and Security Layer protocol, a protocol used for server authentication.
 
@@ -381,7 +381,7 @@ Accept wildcard characters: False
 ```
 
 ### -SupportDialbackNegotiation
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether dialback negotiation will be supported.
 With dialback negotiation, when Server A contacts Server B communication is not immediately established.
@@ -394,7 +394,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether dialback negotiation will be supported.
 With dialback negotiation, when Server A contacts Server B communication is not immediately established.
@@ -421,7 +421,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsNegotiation
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates support for the Transport Layer Security protocol, a protocol used to encrypt server-to-server data streams.
 
@@ -433,7 +433,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates support for the Transport Layer Security protocol, a protocol used to encrypt server-to-server data streams.
 

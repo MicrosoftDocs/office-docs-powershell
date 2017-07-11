@@ -6,14 +6,14 @@ schema: 2.0.0
 # Get-CsPersistentChatCategory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Persistent Chat categories in use in your organization.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms.
 Each chat room must be associated with a category.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Persistent Chat categories in use in your organization.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms.
@@ -35,7 +35,7 @@ Get-CsPersistentChatCategory [-AsObject] [-PersistentChatPoolFqdn <String>] [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -54,7 +54,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatCategory"
 
 Lync Server Control Panel: To view Persistent Chat categories in Lync Server Control Panel, click Persistent Chat and then click Category.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

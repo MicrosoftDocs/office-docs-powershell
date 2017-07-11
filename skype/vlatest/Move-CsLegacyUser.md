@@ -6,16 +6,16 @@ schema: 2.0.0
 # Move-CsLegacyUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Migrates one or more user accounts from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Migrates one or more user accounts from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Migrates one or more user accounts from Microsoft Office Communications Server 2007 R2 to Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -33,7 +33,7 @@ Move-CsLegacyUser [-Identity] <UserIdParameter> [-Target] <Fqdn> [-DomainControl
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations that install Lync Server 2010 are also running an earlier version of the software (either Office Communications Server 2007 R2 or Office Communications Server 2007).
 Fortunately, this does not present a problem: you can run both the latest version of the software and an earlier version of the software simultaneously.
@@ -65,7 +65,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsLegacyUser"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations that install Lync Server are also running an earlier version of the software (either Office Communications Server 2007 R2 or Office Communications Server 2007).
 Fortunately, this does not present a problem: you can run both the latest version of the software and an earlier version of the software simultaneously.
@@ -97,7 +97,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsLegacyUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations that install Skype for Business Server 2015 are also running an earlier version of the software.
 Fortunately, this does not present a problem: you can run both the latest version of the software and an earlier version of the software simultaneously.
@@ -402,14 +402,14 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This parameter is used only with Microsoft Lync Online 2010.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only with Communications Server 2007 R2.
 It should not be used with an on-premises implementation of Skype for Business Server 2015.
@@ -515,13 +515,13 @@ Accept wildcard characters: False
 ```
 
 ### -HostedMigrationOverrideUrl
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for the hosted migration service used when moving a user to the Office 365 version of Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the hosted migration service used when moving a user to the Office 365 version of Skype for Business Server 2015.
 

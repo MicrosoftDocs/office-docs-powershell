@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsExUmContact
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Auto Attendant or Subscriber Access contact object for hosted Exchange Unified Messaging (UM).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Auto Attendant or Subscriber Access contact object for hosted Exchange Unified Messaging (UM).
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ New-CsExUmContact -SipAddress <String> -RegistrarPool <Fqdn> -DisplayNumber <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created with this cmdlet to apply the Auto Attendant and Subscriber Access functionality.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsExUmContact"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created with this cmdlet to apply the Auto Attendant and Subscriber Access functionality.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsExUmContact"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on-premises), contact objects must be created with this cmdlet to apply the Auto Attendant and Subscriber Access functionality.
@@ -140,7 +140,7 @@ New-CsExUmContact -SipAddress sip:exumaa1@fabrikam.com -RegistrarPool RedmondPoo
 ## PARAMETERS
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The SIP address of the contact.
 This must be a new address that does not already exist as a user or contact in Active Directory Domain Services (AD DS).
@@ -148,7 +148,7 @@ This value must begin with the string sip: followed by the SIP address.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The SIP address of the contact.
 This must be a new address that does not already exist as a user or contact in Active Directory Domain Services.
@@ -170,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPool
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The fully qualified domain name (FQDN) of the pool on which the Registrar service is running.
 
@@ -180,7 +180,7 @@ Full data type: Microsoft.Rtc.Management.Deploy.Fqdn
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The fully qualified domain name (FQDN) of the pool on which the Registrar service is running.
 
@@ -190,7 +190,7 @@ Full data type: Microsoft.Rtc.Management.Deploy.Fqdn
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The fully qualified domain name (FQDN) of the pool on which the Registrar service is running.
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAttendant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies whether this contact object is an Auto Attendant.
 (Auto Attendant provides a set of voice prompts that allow callers to navigate the phone system and reach the desired party.)
@@ -261,7 +261,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Specifies whether this contact object is an Auto Attendant.
 (Auto Attendant provides a set of voice prompts that allow callers to navigate the phone system and reach the intended party.)

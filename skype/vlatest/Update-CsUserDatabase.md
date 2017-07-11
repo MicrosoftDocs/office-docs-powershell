@@ -6,18 +6,18 @@ schema: 2.0.0
 # Update-CsUserDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Forces the back-end user database to clear its replication status with Active Directory.
 This causes the database to re-read all the user-related information stored in Active Directory Domain Services (AD DS).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Forces the back-end user database to clear its replication status with Active Directory.
 This causes the database to re-read all the user-related information stored in Active Directory Domain Services (AD DS).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Forces the back-end user database to clear its replication status with Active Directory.
 This causes the database to re-read all the user-related information stored in Active Directory Domain Services.
@@ -32,7 +32,7 @@ Update-CsUserDatabase [[-Fqdn] <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Microsoft Lync Server 2010 user database holds detailed information about such things as contacts, groups, and access permissions.
 As such, the database is required to periodically synch its contents with the information stored in Active Directory.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsUserDatabase"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Lync Server user database holds detailed information about such things as contacts, groups, and access permissions.
 As such, the database is required to periodically synch its contents with the information stored in Active Directory.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsUserDatabase"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Skype for Business Server 2015 user database holds detailed information about such things as contacts, groups, and access permissions.
 As such, the database is required to periodically synch its contents with the information stored in Active Directory.
@@ -132,14 +132,14 @@ Update-CsUserDatabase -Fqdn atl-cs-001.litwareinc.com
 ## PARAMETERS
 
 ### -Fqdn
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the computer hosting the user database.
 If this parameter is not specified then Update-CsUserDatabase will update the user database for the pool that the local computer belongs to.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the computer hosting the user database.
 If this parameter is not specified then the Update-CsUserDatabase cmdlet will update the user database for the pool that the local computer belongs to.

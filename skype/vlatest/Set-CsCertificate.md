@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsCertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to assign a certificate to a Microsoft Lync Server 2010 server or server role.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to assign a certificate to a Lync Server server or server role.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to assign a certificate to a Skype for Business Server 2015 server or server role.
 This cmdlet was introduced in Lync Server 2010.
@@ -45,7 +45,7 @@ Set-CsCertificate -Identity <XdsIdentity> -Path <String> -Type <CertType[]> [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Lync Server, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCertificate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Lync Server, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCertificate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Skype for Business Server 2015, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Reference
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Object reference to a certificate configured for use with Lync Server.
 The following command returns an object reference (the variable $x) representing a certificate with the thumbprint B142918E463981A76503828BB1278391B716280987B:
@@ -165,7 +165,7 @@ $x = Get-CsCertificate | Where-Object {$_.Thumbprint -eq "B142918E463981A7650382
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Object reference to a certificate configured for use with Skype for Business Server 2015.
 The following command returns an object reference (the variable $x) representing a certificate with the thumbprint B142918E463981A76503828BB1278391B716280987B:
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Type of certificate being assigned.
 Certificate types include, but are not limited to, the following:
@@ -242,7 +242,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of certificate being assigned.
 Certificate types include, but are not limited to, the following:
@@ -283,7 +283,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of certificate being assigned.
 Certificate types include, but are not limited to, the following:
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to record detailed information about the procedures carried out by Set-CsCertificate.
 The parameter value should be the full path to the HTML file to be generated; for example: -Report C:\Logs\Certificates.html.
@@ -375,7 +375,7 @@ If the specified file already exists it will automatically be overwritten with t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to record detailed information about the procedures carried out by the Set-CsCertificate cmdlet.
 The parameter value should be the full path to the HTML file to be generated; for example: -Report C:\Logs\Certificates.html.

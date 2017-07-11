@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about all the users in your organization who have been enabled for Microsoft Lync Server 2010 or a previous version of the software (such as Microsoft Office Communications Server 2007 R2).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about all the users in your organization who have been enabled for Lync Server or a previous version of the software (such as Microsoft Office Communications Server 2007 R2).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about all the users in your organization who have been enabled for Skype for Business Server 2015 or a previous version of the software.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Get-CsUser [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [-Domain
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Used together, the cmdlets Get-CsAdUser and Get-CsUser enable you to return detailed information about all of your Active Directory user accounts.
 Get-CsAdUser returns information about all your user accounts, including users who have been enabled for Lync Server 2010 or Office Communications Server and users who have not been enabled for Lync Server or Office Communications Server.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsUser\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Used together, the cmdlets Get-CsAdUser and Get-CsUser enable you to return detailed information about all of your Active Directory user accounts.
 Get-CsAdUser returns information about all your user accounts, including users who have been enabled for Lync Server or Office Communications Server and users who have not been enabled for Lync Server or Office Communications Server.
@@ -88,7 +88,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUser\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Used together, the Get-CsAdUser cmdlet and the Get-CsUser cmdlet enable you to return detailed information about all of your Active Directory user accounts.
 The Get-CsAdUser cmdlet returns information about all your user accounts, including users who have been enabled for Skype for Business Server 2015 and users who have not been enabled for Skype for Business Server 2015.
@@ -443,7 +443,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to run the Get-CsUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to the Windows does not have the necessary privileges required to work with user objects.
@@ -453,7 +453,7 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to the Windows does not have the necessary privileges required to work with user objects.
@@ -494,7 +494,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on Lync Server-specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
@@ -506,7 +506,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on Lync Server-specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
@@ -518,7 +518,7 @@ For example, a filter that returns only users who have been enabled for Enterpri
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
 For example, you can limit returned data to users who have been assigned a specific voice policy, or users who have not been assigned a specific voice policy.
@@ -544,14 +544,14 @@ Accept wildcard characters: False
 ```
 
 ### -OnOfficeCommunicationServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns a collection of users homed on a previous version of Lync Server (for example, Office Communications Server 2007 R2).
 Users with accounts on the current version of the software will not be returned when you use this parameter.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns a collection of users homed on Office Communications Server 2007.
 Users with accounts on the current version of the software will not be returned when you use this parameter.
@@ -572,14 +572,14 @@ Accept wildcard characters: False
 ```
 
 ### -OnLyncServer
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns a collection of users homed on Lync Server 2010.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns a collection of users homed on Lync Server.
 Users with accounts on previous versions of the software will not be returned when you use this parameter.
@@ -600,7 +600,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to return information about user accounts in a specific organizational unit (OU) or container.
 The OU parameter returns data from both the specified OU and any of its child OUs.
@@ -611,7 +611,7 @@ To return user accounts from the Users container, use this syntax: -OU "cn=Users
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to return information about user accounts in a specific organizational unit (OU) or container.
 The OU parameter returns data from both the specified OU and any of its child OUs.
@@ -660,7 +660,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
@@ -670,7 +670,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
@@ -680,7 +680,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to users who work in a specific department, or users who have a specified manager or job title.
@@ -704,14 +704,14 @@ Accept wildcard characters: False
 ```
 
 ### -UnAssignedUser
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to return a collection of all the users who have been enabled for Lync Server but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to Lync Server unless they are assigned to a Registrar pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to return a collection of all the users who have been enabled for Skype for Business Server 2015 but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to Skype for Business Server 2015 unless they are assigned to a Registrar pool.
@@ -732,14 +732,14 @@ Accept wildcard characters: False
 ```
 
 ### -UnAssignedUser
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to return a collection of all the users who have been enabled for Lync Server but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to Lync Server unless they are assigned to a Registrar pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to return a collection of all the users who have been enabled for Skype for Business Server 2015 but are not currently assigned to a Registrar pool.
 Users are not allowed to log on to Skype for Business Server 2015 unless they are assigned to a Registrar pool.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsPersistentChatComplianceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of Persistent Chat compliance configuration settings at the site or the service scope.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Persistent Chat compliance configuration settings at the site or the service scope.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
@@ -31,7 +31,7 @@ New-CsPersistentChatComplianceConfiguration [-Identity] <XdsIdentity> [-AdapterN
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -48,7 +48,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatComplianc
 
 Lync Server Control Panel: The functions carried out by the New-CsPersistentChatComplianceConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdapterType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the format that compliance information will be saved to.
 Lync Server 2013 Preview supports the following adapter types (and thus the following compliance formats):
@@ -180,7 +180,7 @@ If you do not specify an adapter type Persistent Chat will not save compliance d
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the fully qualified name of a .Net managed type that implements the Microsoft.Rtc.Internal.Chat.Server.Compliance.IComplianceAdapter interface.
 This adapter is supplied by a third-party or can be set to the internal XML adapter, "Microsoft.Rtc.Internal.Chat.Server.Compliance.XmlAdapter,compliance".
@@ -203,7 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddChatRoomDetails
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, additional details about each chat room are recorded in the non-compliance database.
 This has the ability to greatly increase the size of that database.
@@ -212,7 +212,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional details about each chat room are provided to the adapter.
 This has the potential to greatly increase the size of the compliance data.
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddUserDetails
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, additional details about each chat room user are recorded in the non-compliance database.
 This has the ability to greatly increase the size of that database.
@@ -244,7 +244,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional details about each chat room user are provided to the adapter.
 This has the potential to greatly increase the size of the compliance data.
@@ -283,14 +283,14 @@ Accept wildcard characters: False
 ```
 
 ### -CreateFileAttachmentsManifest
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, additional output files will be created to track file transfers within chat rooms.
 These files will have the file extension .ATTACH.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional output files will be created to track file transfers within chat rooms.
 These files will have the file extension .ATTACH and are placed in the location specified by the AdapterOutputDirectory.
@@ -311,14 +311,14 @@ Accept wildcard characters: False
 ```
 
 ### -CustomConfiguration
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 XSLT transform script that enables Persistent Chat to save compliance data in a custom format of your design.
 This property should only be configured if you are using one of these scripts.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 XSLT transform script that enables Persistent Chat to save compliance data in a custom format of your design.
 

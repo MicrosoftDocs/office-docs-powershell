@@ -6,12 +6,12 @@ schema: 2.0.0
 # Convert-CsUserData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Converts exported user data to the data format used by either Microsoft Lync Server 2010 or Microsoft Lync Server 2013 Preview.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Converts exported user data to the data format used by either Microsoft Lync Server 2010 or Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2013.
@@ -26,7 +26,7 @@ Convert-CsUserData -InputFile <String> -OutputFile <String> -TargetVersion <Conv
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Convert-CsUserData cmdlet data exported by using the Export-CsUserData cmdlet and then converts that data, as needed, to the user data format used by either Microsoft Lync Server 2010 or Microsoft Lync Server 2013 Preview.
 In turn, that enables the Import-CsUserData cmdlet to import that data to the appropriate version of Lync Server.
@@ -37,7 +37,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Convert-CsUserData"}
 
 Lync Server Control Panel: The functions carried out by the Convert-CsUserData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Convert-CsUserData cmdlet takes data exported by using the Export-CsUserData cmdlet and then converts that data to the user data format used by either Microsoft Lync Server 2010 or Skype for Business Server 2015.
 In turn, that enables the Import-CsUserData cmdlet to import that data to the appropriate server version.
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFile
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Full path to the file that will store the converted data.
 If you are outputting the data using the Microsoft Lync Server 2010 format then the output file must use a .XML file extension; for example:
@@ -123,7 +123,7 @@ If you are using the Microsoft Lync Server 2013 Preview format, the output file 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Full path to the file that will store the converted data.
 If you are outputting the data using the Microsoft Lync Server 2010 format then the output file must use a .XML file extension; for example:

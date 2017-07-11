@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsVoiceRoute
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new voice route.
 Voice routes contain instructions that tell Microsoft Lync Server 2010  how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new voice route.
 Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new voice route.
 Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
@@ -43,7 +43,7 @@ New-CsVoiceRoute -Name <String> [-AlternateCallerId <String>] [-Description <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Use this cmdlet to create a new voice route.
 All voice routes are created at the Global scope.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceRoute"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Use this cmdlet to create a new voice route.
 All voice routes are created at the Global scope.
@@ -185,7 +185,7 @@ New-CsVoiceRoute -Identity Route1 -PstnUsages @{add=$x}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A name that uniquely identifies the voice route.
 Voice routes can be defined only at the global scope, so the identity is simply the name you want to give the route.
@@ -196,7 +196,7 @@ The value of the Identity will be assigned to the Name.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A name that uniquely identifies the voice route.
 Voice routes can be defined only at the global scope, so the identity is simply the name you want to give the route.
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -PstnGatewayList
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Lync Server 2010 a Mediation Server can be associated with multiple gateways.
 This parameter contains a list of gateways associated with this voice route.
@@ -330,7 +330,7 @@ However, if you leave this parameter blank when creating a new voice route, you'
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server a Mediation Server can be associated with multiple gateways.
 This parameter contains a list of gateways associated with this voice route.
@@ -346,7 +346,7 @@ However, if you leave this parameter blank when creating a new voice route, you'
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015 a Mediation Server can be associated with multiple gateways.
 This parameter contains a list of gateways associated with this voice route.
@@ -432,14 +432,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsDialPlan
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new dial plan.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new dial plan.
 This cmdlet was introduced in Lync Server 2010.
@@ -27,7 +27,7 @@ New-CsDialPlan [-Identity] <XdsIdentity> [-Description <String>] [-DialinConfere
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet creates a new dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDialPlan"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a new dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -NormalizationRules
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A list of normalization rules that are applied to this dial plan.
 
@@ -269,7 +269,7 @@ You can create a new normalization rule by calling the New-CsVoiceNormalizationR
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A list of normalization rules that are applied to this dial plan.
 
@@ -285,7 +285,7 @@ You can create a new normalization rule by calling the New-CsVoiceNormalizationR
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A list of normalization rules that are applied to this dial plan.
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A friendly name for the dial plan.
 This name must be unique among all dial plans within the Lync Server deployment.
@@ -352,7 +352,7 @@ The default for a per-user dial plan is the Identity of the dial plan.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A display name for the dial plan.
 This name must be unique among all dial plans within the Lync Server deployment.
@@ -370,7 +370,7 @@ The default for a per-user dial plan is the Identity of the dial plan.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A display name for the dial plan.
 This name must be unique among all dial plans within the Skype for Business Server 2015 deployment.
@@ -466,14 +466,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

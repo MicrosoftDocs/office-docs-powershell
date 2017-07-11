@@ -6,17 +6,17 @@ schema: 2.0.0
 # Enable-CsUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables one or more users for Microsoft Lync Server 2010.
 Users cannot use Microsoft Lync 2010 or other Lync Server 2010 clients until their user accounts have been enabled for Lync Server.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables one or more users for Lync Server.
 Users cannot use Microsoft Lync 2013 Preview or other Lync Server clients until their user accounts have been enabled for Lync Server.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables one or more users for Skype for Business Server 2015.
 Users cannot use Skype for Business or other Skype for Business Server 2015 clients until their user accounts have been enabled for Skype for Business Server 2015.
@@ -33,7 +33,7 @@ Enable-CsUser [-Identity] <UserIdParameter> [-RegistrarPool <Fqdn>] [-SipAddress
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Before a user can log on to Lync Server, that user must meet two requirements: he or she must have a valid Active Directory account, and that account must be enabled for Lync Server.
 One way to enable a user account for Lync Server  is to use the Enable-CsUser cmdlet.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Enable-CsUser"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Before a user can log on to Lync Server, that user must meet two requirements: he or she must have a valid Active Directory account, and that account must be enabled for Lync Server.
 One way to enable a user account for Lync Server is to use the Enable-CsUser cmdlet.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Enable-CsUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Before a user can log on to Skype for Business Server 2015, that user must meet two requirements: he or she must have a valid Active Directory account, and that account must be enabled for Skype for Business Server 2015.
 One way to enable a user account for Skype for Business Server 2015 is to use the Enable-CsUser cmdlet.
@@ -216,7 +216,7 @@ Get-CsAdUser -Filter {Enabled -ne $True} | Enable-CsUser -RegistrarPool "atl-cs-
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity of the user account to be enabled for Lync Server.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -227,7 +227,7 @@ For example, the Identity "* Smith" returns all the user who have a display name
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the user account to be enabled for Skype for Business Server 2015.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -252,13 +252,13 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPool
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Registrar pool where the user's Lync Server account will be homed.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Registrar pool where the user's Skype for Business Server 2015 account will be homed.
 
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddressType
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Instructs Lync Server to auto-generate a SIP address for the new user.
 In order to have  Lync Server auto-generate the SIP address, you must include the SipAddressType parameter and use one of the following parameter values:
@@ -303,7 +303,7 @@ The SipAddressType parameter is not required if you use the SIPAddress parameter
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Instructs Lync Server to auto-generate a SIP address for the new user.
 In order to have Lync Server auto-generate the SIP address, you must include the SipAddressType parameter and use one of the following parameter values:
@@ -328,7 +328,7 @@ The SipAddressType parameter is not required if you use the SIPAddress parameter
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Instructs Skype for Business Server 2015 to auto-generate a SIP address for the new user.
 In order to have Skype for Business Server 2015 auto-generate the SIP address, you must include the SipAddressType parameter and use one of the following parameter values:
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipDomain
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The SIP domain for the user account being enabled.
 This parameter is required if you use the SIPAddressType parameter to have Lync Server auto-generate a SIP address for the user and you based SIP addresses on the SamAccountName or the user's first name and last name.
@@ -375,7 +375,7 @@ This parameter is not required if you base SIP addresses on the user's email add
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The SIP domain for the user account being enabled.
 This parameter is required if you use the SipAddressType parameter to have Skype for Business Server 2015 auto-generate a SIP address for the user and you based SIP addresses on the SamAccountName or the user's first name and last name.
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to assign the user a specific SIP address.
 When specifying the SIP address, preface the address with "sip:".
@@ -412,7 +412,7 @@ Instead, you must auto-generate SIP address for those users by using the SipAddr
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to assign the user a specific SIP address.
 When specifying the SIP address, preface the address with "sip:".
@@ -441,21 +441,21 @@ Accept wildcard characters: False
 ```
 
 ### -HostingProviderProxyFqdn
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is used only for Microsoft Lync Online 2010.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter is used only for Lync Online.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for Skype for Business Online.
 It should not be used with an on-premises implementation of Skype for Business Server 2015.
@@ -476,21 +476,21 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is used only for Lync Online 2010.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter is used only for Lync Online.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for Skype for Business Online.
 It should not be used with an on-premises implementation of Skype for Business Online.
@@ -528,14 +528,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to pass a user object through the pipeline that represents the user account being enabled for Lync Server.
 By default, the Enable-CsUser cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to pass a user object through the pipeline that represents the user account being enabled for Skype for Business Server 2015.
 By default, the Enable-CsUser cmdlet does not pass objects through the pipeline.

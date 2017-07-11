@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsAdminRole
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing role-based access control (RBAC) role.
 RBAC roles are used to specify the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing role-based access control (RBAC) role.
 RBAC roles are used to specify the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
@@ -37,7 +37,7 @@ Remove-CsAdminRole -Sid <String> [-Force] [-WhatIf] [-Confirm] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 RBAC enables administrators to delegate control of specific management tasks in Microsoft Lync Server 2010.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -108,7 +108,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAdminRole"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 RBAC enables administrators to delegate control of specific management tasks in Lync Server.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -179,7 +179,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAdminRole"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 RBAC enables administrators to delegate control of specific management tasks in Skype for Business Server 2015.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sid
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to use a Security Identifier (SID) to specify the RBAC role to be deleted.
 SIDs are assigned by Lync Server 2010 at the time that the RBAC role is created; and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.
@@ -382,7 +382,7 @@ The SID for a given RBAC role can be retrieved by using the Get-CsAdminRole cmdl
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to use a Security Identifier (SID) to specify the RBAC role to be deleted.
 SIDs are assigned by Lync Server at the time that the RBAC role is created; and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.
@@ -390,7 +390,7 @@ The SID for a given RBAC role can be retrieved by using the Get-CsAdminRole cmdl
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use a Security Identifier (SID) to specify the RBAC role to be deleted.
 SIDs are assigned by Skype for Business Server 2015 at the time that the RBAC role is created; and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.

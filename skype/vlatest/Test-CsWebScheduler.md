@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsWebScheduler
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies whether or not a user can employ the Microsoft Lync Server 2013 Preview Web scheduler to schedule an online meeting.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies whether or not a user can employ the Skype for Business Web scheduler to schedule an online meeting.
 This cmdlet was introduced in Lync Server 2013.
@@ -42,7 +42,7 @@ Test-CsWebScheduler -TargetUri <String> [-Authentication <AuthenticationMechanis
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Web Scheduler provides a way for users who are not running Microsoft Outlook to schedule online meetings.
 Among other things, this new feature (which incorporates the functionality found in the Web Scheduler tool that shipped with the Microsoft Lync Server 2010 resource kit) enables users to:
@@ -67,7 +67,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsWebScheduler"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsWebScheduler cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Web Scheduler provides a way for users who are not running Microsoft Outlook to schedule online meetings.
 Among other things, this new feature (which incorporates the functionality found in the Web Scheduler tool that shipped with the Microsoft Lync Server 2010 resource kit) enables users to:

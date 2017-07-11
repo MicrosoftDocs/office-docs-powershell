@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsDialPlan
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests a telephone number against a dial plan (formerly known as a location profile) and returns the normalization rule that will be applied to the number as well as the translated number after the normalization rule has been applied.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Tests a telephone number against a dial plan (formerly known as a location profile) and returns the normalization rule that will be applied to the number as well as the translated number after the normalization rule has been applied.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Test-CsDialPlan -DialedNumber <PhoneNumber> -Dialplan <LocationProfile> [<Common
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet allows you to see the results of applying a dial plan to a given telephone number.
 Dial plans provide information, including how normalization rules are applied, required to enable Enterprise Voice users to make telephone calls.
@@ -37,7 +37,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDialPlan"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet allows you to see the results of applying a dial plan to a given telephone number.
 Dial plans provide information, including how normalization rules are applied, required to enable Enterprise Voice users to make telephone calls.

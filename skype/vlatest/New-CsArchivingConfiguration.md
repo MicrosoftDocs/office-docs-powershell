@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsArchivingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new set of instant messaging (IM) archiving settings.
 These settings can be used to enable or disable the automatic saving of IM sessions; these settings also enable you to block any instant messages that cannot be archived.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new set of instant messaging (IM) archiving settings.
 These settings can be used to enable or disable the automatic saving of IM sessions; these settings also enable you to block any instant messages that cannot be archived.
@@ -30,7 +30,7 @@ New-CsArchivingConfiguration [-Identity] <XdsIdentity> [-ArchiveDuplicateMessage
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users.
 For other organizations, it's mandatory to keep such transcripts; for example, many organizations in the financial world are required by law to keep copies of all their electronic communications.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsArchivingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users.
 For other organizations, it's mandatory to keep such transcripts; for example, many organizations in the financial world are required by law to keep copies of all their electronic communications.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsArchivingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users.
 For other organizations, it's mandatory to keep such transcripts; for example, many organizations in the financial world are required by law to keep copies of all their electronic communications.
@@ -164,14 +164,14 @@ Set-CsArchivingConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier to be assigned to the new collection of archiving configuration settings.
 Because you can only create new collections at the site scope, the Identity will always be the prefix "site:" followed by the site name; for example "site:Redmond".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier to be assigned to the new collection of archiving configuration settings.
 In Skype for Business Server 2015 you can create new collections at the site scope or at the service scope.
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -CachePurgingInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates how often (in hours) the system is purged of transcripts where none of the participants have been enabled for archiving.
 By design, all group IM sessions and conferencing sessions are recorded when they take place.
@@ -248,7 +248,7 @@ The default value is 24.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates how often (in hours) the system is purged of transcripts where none of the participants have been enabled for archiving.
 By design, all group IM sessions and conferencing sessions are recorded when they take place.
@@ -393,14 +393,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -453,7 +453,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeArchiving
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync Server 2013 Preview instant message and conferencing transcripts are stored in Microsoft Exchange Server 2013 Preview rather than a separate SQL Server database.
 Note that if you enable Exchange archiving then users will be managed by the Exchange archiving policies instead of Lync Server archiving policies.
@@ -462,7 +462,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business Server 2015 instant message and conferencing transcripts are stored in Exchange rather than a separate SQL Server database.
 Note that if you enable Exchange archiving then users will be managed by the Exchange archiving policies instead of Skype for Business Server 2015 archiving policies.

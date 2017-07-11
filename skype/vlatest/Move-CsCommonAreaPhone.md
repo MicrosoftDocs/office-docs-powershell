@@ -6,11 +6,11 @@ schema: 2.0.0
 # Move-CsCommonAreaPhone
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves one or more common area phones to a new Registrar pool.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves one or more common area phones to a new Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
@@ -41,7 +41,7 @@ Move-CsCommonAreaPhone [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerF
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsCommonAreaPhone"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -83,7 +83,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsCommonAreaPhone"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -278,21 +278,21 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is used only for Microsoft Lync Online 2010.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter is used only for Lync Online.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for Skype for Business Online.
 It should not be used with an on-premises implementation of Skype for Business Server 2015.

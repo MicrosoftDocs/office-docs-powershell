@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsPresenceProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes a presence provider previously configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes a presence provider previously configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
@@ -27,7 +27,7 @@ Remove-CsPresenceProvider [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
@@ -41,7 +41,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPresenceProvider"}
 
 Lync Server Control Panel: The functions carried out by the Remove-CsPresenceProvider cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.

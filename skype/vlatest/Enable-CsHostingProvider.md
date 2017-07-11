@@ -6,20 +6,20 @@ schema: 2.0.0
 # Enable-CsHostingProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables a hosting provider for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables a hosting provider for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables a hosting provider for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
@@ -42,7 +42,7 @@ Enable-CsHostingProvider [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2010.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Enable-CsHostingProvider"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2013 Preview.
@@ -94,7 +94,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Enable-CsHostingProvider"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.

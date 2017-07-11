@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsFIPSConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of Federal Information Processing Standards (FIPS) configuration settings.
 The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Federal Information Processing Standards (FIPS) configuration settings.
 The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
@@ -28,7 +28,7 @@ New-CsFIPSConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-InMemory
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the United States government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
 (See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Lync Server 2013 provides an option that enables the software to use only algorithms that meet the FIPS standards.
@@ -47,7 +47,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsFIPSConfiguration"}
 
 Lync Server Control Panel: The functions carried out by the New-CsFIPSConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the United States government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
 (See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Skype for Business Server 2015 provides an option that enables the software to use only algorithms that meet the FIPS standards.
@@ -101,7 +101,7 @@ Set-CsFIPSConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the new collection of FIPS configuration settings.
 Because Lync Server 2013 Preview only supports a single, global collection of FIPS settings, the only way you can use this parameter is to create a "new" global collection that exists only in memory.
@@ -109,7 +109,7 @@ You will also need to use the InMemory parameter in order to do that.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the new collection of FIPS configuration settings.
 Because Skype for Business Server 2015 only supports a single, global collection of FIPS settings, the only way you can use this parameter is to create a "new" global collection that exists only in memory.
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireFIPSCompliantMedia
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync Server 2013 Preview will only allow media sessions with entities that use FIPS compliant algorithms for authentication and authorization.
 
@@ -191,7 +191,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business Server 2015 will only allow media sessions with entities that use FIPS compliant algorithms for authentication and authorization.
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new FIPS configuration settings are being created.
 For example:
@@ -229,7 +229,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new FIPS configuration settings are being created.
 For example:

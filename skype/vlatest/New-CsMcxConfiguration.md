@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsMcxConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of Microsoft Lync Server 2013 Preview Mobility Service configuration settings at the site or the service scope.
 The Mobility Service enables users of mobile phones such as iPhones and Windows Phones to do such things as exchange instant messages and presence information; store and retrieve voice mail internally instead of with their wireless provider; and take advantage of Lync Server capabilities such as Call via Work and dial-out conferencing.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Skype for Business Server 2015 Mobility Service configuration settings at the site or the service scope.
 The Mobility Service enables users of mobile phones such as iPhones and Windows Phones to do such things as exchange instant messages and presence information; store and retrieve voice mail internally instead of with their wireless provider; and take advantage of Skype for Business Server 2015 capabilities such as Call via Work and dial-out conferencing.
@@ -29,7 +29,7 @@ New-CsMcxConfiguration [-Identity] <XdsIdentity> [-Confirm] [-ExposedWebURL <Exp
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Mobility Service extends many of the capabilities of Lync Server to mobile devices such as Apple iPhones, Windows Phone, Android phones, and Nokia phones.
 Among other things, users can use these phones to exchange instant message and presence information, and to receive notifications of new voice mails.
@@ -44,7 +44,7 @@ When you install Lync Server, a single collection of Mobility Service configurat
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsMcxConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Mobility Service extends many of the capabilities Skype for Business to mobile devices such as Apple iPhones, Windows Phone, Android phones, and Nokia phones.
 Among other things, users can use these phones to exchange instant message and presence information, and to receive notifications of new voice mails.
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionExpirationInterval
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Length of time, in seconds, of a mobile session for iPhone or Widows Phone users.
 If Lync is running in the background on these phones, users will receive push notifications as long as the session expiration interval has not expired.
@@ -273,7 +273,7 @@ Note that the value of the SessionExpirationInterval property must be greater th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Length of time, in seconds, of a mobile session for iPhone or Widows Phone users.
 If Skype for Business is running in the background on these phones, users will receive push notifications as long as the session expiration interval has not expired.
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -SessionShortExpirationInterval
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Length of time, in seconds, of a mobile session for Android or Nokia phone users.
 
@@ -314,7 +314,7 @@ Note that the value of the SessionExpirationInterval property must be greater th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Length of time, in seconds, of a mobile session for Android or Nokia phone users.
 

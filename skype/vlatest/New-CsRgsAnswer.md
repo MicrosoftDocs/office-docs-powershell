@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsRgsAnswer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group answer.
 Response Group answers are used to associate a caller response with the appropriate action.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group answer.
 Response Group answers are used to associate a caller response with the appropriate action.
@@ -27,7 +27,7 @@ New-CsRgsAnswer -Action <CallAction> [-DtmfResponse <String>] [-Name <String>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the customer response.
 For example, the service might ask a caller to press 1 for English or press 2 for Spanish.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsAnswer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the customer response.
 For example, the service might ask a caller to press 1 for English or press 2 for Spanish.
@@ -79,7 +79,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsAnswer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the customer response.
 For example, the service might ask a caller to press 1 for English or press 2 for Spanish.

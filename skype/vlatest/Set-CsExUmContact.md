@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsExUmContact
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing Auto Attendant or Subscriber Access contact object for hosted Exchange Unified Messaging (UM).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing Auto Attendant or Subscriber Access contact object for hosted Exchange Unified Messaging (UM).
 This cmdlet was introduced in Lync Server 2010.
@@ -27,7 +27,7 @@ Set-CsExUmContact [-Identity] <UserIdParameter> [-AutoAttendant <Boolean>] [-Des
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsExUmContact"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsExUmContact"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 When Exchange UM is provided as a hosted service (rather than on premises), contact objects must be created by using Windows PowerShell to apply the Auto Attendant and Subscriber Access functionality.
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not the contact has been enabled for Lync Server 2010.
 Setting this parameter to False will disable the contact, and the Auto Attendant or Subscriber Access associated with this contact will no longer function.
@@ -223,7 +223,7 @@ If you later re-enable the account using the Enable parameter, the associated ac
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the contact has been enabled for Lync Server.
 Setting this parameter to False will disable the contact, and the Auto Attendant or Subscriber Access associated with this contact will no longer function.
@@ -233,7 +233,7 @@ If you later re-enable the account using the Enable parameter, the associated ac
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the contact has been enabled for Skype for Business Server 2015.
 Setting this parameter to False will disable the contact, and the Auto Attendant or Subscriber Access associated with this contact will no longer function.
@@ -274,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The SIP address of the contact.
 This must be a new address that does not already exist as a user or contact in Active Directory Domain Services (AD DS).
@@ -286,7 +286,7 @@ When calling that cmdlet, the new SipAddress will be used; queries for the old S
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The SIP address of the contact.
 This must be a new address that does not already exist as a user or contact in Active Directory Domain Services.
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
@@ -390,7 +390,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:

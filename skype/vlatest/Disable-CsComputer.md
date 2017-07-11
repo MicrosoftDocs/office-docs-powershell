@@ -6,16 +6,16 @@ schema: 2.0.0
 # Disable-CsComputer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Disables a service or server role that has been removed from a computer running Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Disables a service or server role that has been removed from a computer running Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Disables a service or server role that has been removed from a computer running Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Disable-CsComputer [-Scorch] [-GlobalCatalog <Fqdn>] [-Report <String>] [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removing a service or server role from a computer does not automatically update the Lync Server 2010 topology.
 Instead, that service or role must be disabled before the changes are fully updated in the topology.
@@ -40,7 +40,7 @@ Unless you use the Scorch parameter, the Disable-CsComputer cmdlet does not unin
 
 Who can run this cmdlet: You must be a local administrator and a member of the domain in order to run the Disable-CsComputer cmdlet locally.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removing a service or server role from a computer does not automatically update the Lync Server topology.
 Instead, that service or role must be disabled before the changes are fully updated in the topology.
@@ -50,7 +50,7 @@ Unless you use the Scorch parameter, the Disable-CsComputer cmdlet does not unin
 
 Who can run this cmdlet: You must be a local administrator and a member of the domain in order to run the Disable-CsComputer cmdlet locally.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removing a service or server role from a computer does not automatically update the Skype for Business Server 2015 topology.
 Instead, that service or role must be disabled before the changes are fully updated in the topology.
@@ -121,19 +121,19 @@ Disable-CsComputer -Report C:\Logs\Disable.html
 ## PARAMETERS
 
 ### -Scorch
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Uninstalls all Lync Server 2010 services and server roles for the local computer.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Uninstalls all Lync Server services and server roles for the local computer.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Uninstalls all Skype for Business Server 2015 services and server roles for the local computer.
 
@@ -153,14 +153,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Disable-CsComputer on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Disable-CsComputer cmdlet on a computer with an account in your domain.
@@ -246,13 +246,13 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill GlobalSettingsDomainController Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS), then this parameter must point to the root domain controller.
@@ -260,7 +260,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services, then this parameter must point to the root domain controller.

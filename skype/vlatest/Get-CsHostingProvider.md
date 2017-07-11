@@ -6,26 +6,26 @@ schema: 2.0.0
 # Get-CsHostingProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the hosting providers configured for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the hosting providers configured for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsHostingProvider \[\[-Identity\] \<XdsGlobalRelativeIdentity\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 Get-CsHostingProvider \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the hosting providers configured for use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
@@ -53,7 +53,7 @@ Get-CsHostingProvider [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filte
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Lync 2010.
@@ -78,7 +78,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsHostingProvider"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Lync.
@@ -103,11 +103,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsHostingProvider"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.
@@ -315,7 +315,7 @@ Get-CsHostingProvider | Select-Object *
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the hosting provider to be returned.
 The Identity might be the fully qualified domain name (FQDN) of the hosting provider (for example, fabrikam.com) or perhaps the name of the company providing the services (Fabrikam, Inc.).
@@ -324,13 +324,13 @@ If this parameter is not specified, Get-CsHostingProvider will return a collecti
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the hosting provider to be returned.
 The Identity might be the fully qualified domain name (FQDN) of the hosting provider (for example, fabrikam.com) or perhaps the name of the company providing the services (Fabrikam, Inc.).
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to use wildcard values to return one or more hosting providers.
 For example, to return all the hosting providers that have an identity that ends with the string value ".com" use this syntax: -Filter "*.com".
@@ -374,7 +374,7 @@ To return all the hosting providers that have an Identity that begins with the s
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -394,13 +394,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the hosting provider data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsPstnUsage
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a set of strings that identify the allowed public switched telephone network (PSTN) usages.
 This cmdlet can be used to add usages to the list of PSTN usages or remove usages from the list.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies a set of strings that identify the allowed public switched telephone network (PSTN) usages.
 This cmdlet can be used to add usages to the list of PSTN usages or remove usages from the list.
@@ -34,7 +34,7 @@ Set-CsPstnUsage [-Instance <PSObject>] [-Usage <PSListModifier>] [-Force] [-What
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 PSTN usages are string values that are used for call authorization.
 A PSTN usage links a voice policy to a route.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPstnUsage"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 PSTN usages are string values that are used for call authorization.
 A PSTN usage links a voice policy to a route.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPstnUsage"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 PSTN usages are string values that are used for call authorization.
 A PSTN usage links a voice policy to a route.
@@ -198,14 +198,14 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A reference to a PSTN usage object.
 This object must be of type PstnUsages and can be retrieved by calling Get-CsPstnUsage.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A reference to a PSTN usage object.
 This object must be of type PstnUsages and can be retrieved by calling the Get-CsPstnUsage cmdlet.

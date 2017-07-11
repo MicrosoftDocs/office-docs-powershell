@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsVoiceTestConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a voice test configuration that was used to test phone numbers against specified routes and rules.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a voice test configuration that was used to test phone numbers against specified routes and rules.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsVoiceTestConfiguration [-Identity] <XdsGlobalRelativeIdentity> [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 When you're done with those tests and won't need them again, use this cmdlet to remove them.
@@ -35,7 +35,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoiceTestConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 When you're done with those tests and won't need them again, use this cmdlet to remove them.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Import-CsDeviceUpdate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Imports a set of device update rules downloaded from Microsoft.com.
 Device update rules associate firmware version updates with hardware devices running Microsoft Lync 2010 Phone Edition.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Imports a set of device update rules downloaded from the Microsoft website.
 Device update rules associate firmware version updates with hardware devices running Lync Phone Edition.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Imports a set of device update rules downloaded from the Microsoft website.
 Device update rules associate firmware version updates with hardware devices running Skype for Business Phone Edition.
@@ -33,7 +33,7 @@ Import-CsDeviceUpdate [-Identity] <XdsIdentity> -FileName <String> [-Force] [-Wh
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Periodically, Microsoft releases a new set of device update rules for Lync 2010 Phone Edition.
 These rules represent firmware updates for devices that run Lync 2010 Phone Edition.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Import-CsDeviceUpdate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Periodically, Microsoft releases a new set of device update rules for Lync Phone Edition.
 These rules represent firmware updates for devices that run Lync Phone Edition.
@@ -87,7 +87,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsDeviceUpdate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Periodically, Microsoft releases a new set of device update rules for Skype for Business Phone Edition.
 These rules represent firmware updates for devices that run Skype for Business Phone Edition.
@@ -200,14 +200,14 @@ Get-CsService -WebServer | ForEach-Object {Import-CsDeviceUpdate -Identity $_.Id
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the service instance where the new update rules will be applied.
 For example: -Identity "service:WebServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the service instance where the new update rules will be applied.
 For example: -Identity "service:WebServer:atl-cs-001.litwareinc.com".

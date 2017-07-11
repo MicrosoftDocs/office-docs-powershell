@@ -6,12 +6,12 @@ schema: 2.0.0
 # Copy-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Copies an existing per-user voice policy to an Office 365 tenant.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Copy-CsVoicePolicy \[\[-Identity\] \<XdsIdentity\>\] -PolicyName \<string\> -Tenant \<guid\> \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[\<CommonParameters\>\]
 
@@ -25,7 +25,7 @@ Copy-CsVoicePolicy [[-Identity] <XdsIdentity>] -PolicyName <String> -Tenant <Gui
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Copy-CsVoicePolicy allows you to take an existing per-user voice policy and then assign a copy of that policy to an Office 365 tenant.
 When using this cmdlet, keep in mind that you are creating and assigning a copy of the per-user policy in question.
@@ -39,7 +39,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Copy-CsVoicePolicy"}
 
 Lync Server Control Panel: The functions carried out by the Copy-CsVoicePolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
@@ -66,7 +66,7 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Identity of the per-user policy being copied.
 For example:
@@ -79,7 +79,7 @@ Note that you do not have to include the "tag:" prefix when specifying the Polic
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PolicyName Description}}
 
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the tenant account where the policy will be copied.
 For example:
@@ -112,7 +112,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
@@ -132,13 +132,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -158,14 +158,14 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Scope for the copied policy.
 Because the only allowed value is "global" you can omit this parameter when calling Copy-CsVoicePolicy.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -185,13 +185,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves the voice policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

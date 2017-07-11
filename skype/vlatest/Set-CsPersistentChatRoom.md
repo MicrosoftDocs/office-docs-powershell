@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsPersistentChatRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies and existing Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies and existing Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
@@ -43,7 +43,7 @@ Set-CsPersistentChatRoom [-Instance] <ChatRoom> [-Addin <String>] [-AsObject] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -61,7 +61,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatRoom"}
 
 Lync Server Control Panel: To modify an existing Persistent Chat chat room using the Lync Server Control Panel, click Persistent Chat, click Room, then double-click the chat room to be modified.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

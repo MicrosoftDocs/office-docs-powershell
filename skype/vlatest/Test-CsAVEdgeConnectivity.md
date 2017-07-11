@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsAVEdgeConnectivity
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies connectivity through the A/V Edge server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies connectivity through the A/V Edge server.
 This cmdlet was introduced in Lync Server 2013.
@@ -37,7 +37,7 @@ Test-CsAVEdgeConnectivity [[-TargetFqdn] <String>] -UserCredential <PSCredential
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsAVEdgeConnectivity cmdlet verifies that a user can connect to the AV Edge Server assigned to a Registrar pool.
 
@@ -47,7 +47,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsAVEdgeConnectivity"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsAVEdgeConnectivity cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsAVEdgeConnectivity cmdlet verifies that a user can connect to the AV Edge Server assigned to a Registrar pool.
 

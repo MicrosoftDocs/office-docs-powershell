@@ -6,12 +6,12 @@ schema: 2.0.0
 # Invoke-CsCdrDatabasePurge
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Manually purges records from the Call Detail records (CDR) database.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Manually purges records from the Call Detail records (CDR) database.
 This cmdlet was introduced in Lync Server 2013.
@@ -34,7 +34,7 @@ Invoke-CsCdrDatabasePurge [-PurgeCallDetailDataOlderThanDays] <Int32>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -59,7 +59,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsCdrDatabasePurge"}
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsCdrDatabasePurge cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeCallDetailDataOlderThanDays
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the age (in days) of the call detail records to be purged from the database; any records older than this value will be deleted.
 Call detail records represent user/session reports.
@@ -186,7 +186,7 @@ PurgeCallDetailDataOlderThanDays can be set to any integer value between 1 and 2
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the age (in days) of the call detail records to be purged from the database; any records older than this value will be deleted.
 Call detail records represent user/session reports.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -PurgeDiagnosticDataOlderThanDays
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the age (in days) of the diagnostic data records to be purged from the database; any records older than this value will be deleted.
 Diagnostic data reports are diagnostic logs uploaded by client applications such as Lync 2013 Preview.
@@ -219,7 +219,7 @@ PurgeDiagnosticDataOlderThanHours can be set to any integer value between 1 and 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the age (in days) of the diagnostic data records to be purged from the database; any records older than this value will be deleted.
 Diagnostic data reports are diagnostic logs uploaded by client applications such as Skype for Business.

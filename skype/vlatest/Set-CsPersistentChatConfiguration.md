@@ -6,14 +6,14 @@ schema: 2.0.0
 # Set-CsPersistentChatConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing collection of Persistent Chat configuration settings.
 Persistent Chat configuration settings are used to manage the Persistent Chat service.
 For example, these settings allow you to specify the maximum number of users who can participate in a chat room.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing collection of Persistent Chat configuration settings.
 Persistent Chat configuration settings are used to manage the Persistent Chat service.
@@ -39,7 +39,7 @@ Set-CsPersistentChatConfiguration [-Confirm] [-DefaultChatHistory <Int16>] [-For
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -54,7 +54,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatConfigura
 
 Lync Server Control Panel: To modify an existing collection of Persistent Chat configuration settings using the Lync Server Control Panel, click Persistent Chat, click Persistent Chat Configuration, then double-click the collection to be modified.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the Persistent Chat configuration settings to be modified.
 To modify a collection of settings configured at the site scope, use syntax similar to this:
@@ -229,7 +229,7 @@ If you do not include the Identity parameter Set-CsPersistentChatConfiguration w
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Persistent Chat configuration settings to be modified.
 To modify a collection of settings configured at the site scope, use syntax similar to this:

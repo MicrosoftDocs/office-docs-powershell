@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsArchivingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about your instant messaging (IM) session archiving policies.
 Archiving policies enable you to archive all IM and web conferencing sessions that take place between internal users and/or between internal users and external users.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about your instant messaging (IM) session archiving policies.
 Archiving policies enable you to archive all IM and web conferencing sessions that take place between internal users and/or between internal users and external users.
@@ -32,7 +32,7 @@ Get-CsArchivingPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<Common
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Microsoft Lync Server 2010, you must perform two steps.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsArchivingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Lync Server, you must perform two steps.
@@ -88,7 +88,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsArchivingPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Skype for Business Server 2015, you must perform two steps.

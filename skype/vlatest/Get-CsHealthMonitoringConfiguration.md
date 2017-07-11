@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsHealthMonitoringConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the health monitoring configuration settings currently in use in your organization.
 These settings enable administrators to run quality assurance tests without having to supply user names and passwords for the required test accounts.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the health monitoring configuration settings currently in use in your organization.
 These settings enable administrators to run quality assurance tests without having to supply user names and passwords for the required test accounts.
@@ -33,7 +33,7 @@ Get-CsHealthMonitoringConfiguration [-Filter <String>] [-LocalStore] [<CommonPar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Synthetic transactions are used in Microsoft Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsHealthMonitoringConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsHealthMonitoringConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -213,7 +213,7 @@ Get-CsHealthMonitoringConfiguration | Where-Object {$_.FirstTestUserSipUri -eq "
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the pool where the health monitoring configuration settings have been assigned.
 For example: -Identity atl-cs-001.litwareinc.com.
@@ -222,7 +222,7 @@ If this parameter is not included, then Get-CsHealthMonitoringConfiguration will
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the pool where the health monitoring configuration settings have been assigned.
 For example: -Identity atl-cs-001.litwareinc.com.

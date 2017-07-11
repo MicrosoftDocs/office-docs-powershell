@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsTestDevice
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about the device update management test devices that have been configured for use in your organization.
 Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves information about the device update management test devices that have been configured for use in your organization.
 Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
@@ -32,7 +32,7 @@ Get-CsTestDevice [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 By identifying specific Microsoft Lync 2010 Phone Edition-compatible phones or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to all the relevant devices in the organization.
 When device update rules are imported to Microsoft Lync Server 2010, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsTestDevice"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 By identifying specific phones compatible with Lync Phone Edition or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to all the relevant devices in the organization.
 When device update rules are imported to Lync Server, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTestDevice"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 By identifying specific phones compatible with Skype for Business or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to all the relevant devices in the organization.
 When device update rules are imported to Skype for Business Server 2015, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -191,7 +191,7 @@ Get-CsTestDevice -Filter site:*
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity of the test device to be returned.
 To refer to an individual device named UCPhone (stored in the global collection), use this syntax: -Identity global/UCPhone.
@@ -203,7 +203,7 @@ Note that you cannot use wildcards when specifying an Identity.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the test device to be returned.
 To refer to an individual device named UCPhone (stored in the global collection), use this syntax:
@@ -237,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Provides a way for you to use wildcard characters when specifying the test device (or devices) to be returned.
 For example, to return all the test device collections that have been configured at the site scope, use this syntax: -Filter "site:*".
@@ -246,7 +246,7 @@ Note that Filter acts only on the Identity of the test device collection; you ca
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Provides a way for you to use wildcard characters when specifying the test device (or devices) to be returned.
 For example, to return all the test device collections that have been configured at the site scope, use this syntax:

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsAnalogDevice
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the analog devices you can manage by using Microsoft Lync Server 2010.
 An analog device is a telephone or other device that is connected to the public switched telephone network.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the analog devices you can manage by using Lync Server.
 An analog device is a telephone or other device that is connected to the public switched telephone network.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the analog devices you can manage by using Skype for Business Server 2015.
 An analog device is a telephone or other device that is connected to the public switched telephone network.
@@ -34,7 +34,7 @@ Get-CsAnalogDevice [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAnalogDevice"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAnalogDevice"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -420,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server 2010.
 For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -432,7 +432,7 @@ For example, a filter that returns only fax machines would look like this, with 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -444,7 +444,7 @@ For example, a filter that returns only fax machines would look like this, with 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
 For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -470,7 +470,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server 2010).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
@@ -484,7 +484,7 @@ In the preceding filter, "l" represents the Active Directory attribute (locality
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
@@ -498,7 +498,7 @@ In the preceding filter, "l" represents the Active Directory attribute (locality
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
@@ -526,7 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to return contact objects from a specific Active Directory organizational unit (OU).
 This returns data from both the specified OU and any of its child OUs.
@@ -536,7 +536,7 @@ When specifying an OU, use the distinguished name of that container; for example
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to return contact objects from a specific Active Directory organizational unit (OU).
 This returns data from both the specified OU and any of its child OUs.

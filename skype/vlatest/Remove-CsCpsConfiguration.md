@@ -6,14 +6,14 @@ schema: 2.0.0
 # Remove-CsCpsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing Call Park service configuration.
 Call parking is a service that allows a user to "park" an incoming phone call.
 Parking a call transfers it to a number in a specified range, or orbit, and then immediately places the call on hold.
 Anyone (not just the person who originally answered the call) can resume the conversation from any telephone simply by entering the correct number.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing Call Park service configuration.
 Call parking is a service that allows a user to "park" an incoming phone call.
@@ -30,7 +30,7 @@ Remove-CsCpsConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet is used to remove a Call Park service configuration.
 A Call Park service configuration specifies what happens to a call after it's parked.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsCpsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet is used to remove a Call Park service configuration.
 A Call Park service configuration specifies what happens to a call after it has been parked.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsCpsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet is used to remove a Call Park service configuration.
 A Call Park service configuration specifies what happens to a call after it has been parked.

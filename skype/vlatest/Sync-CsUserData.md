@@ -6,12 +6,12 @@ schema: 2.0.0
 # Sync-CsUserData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Synchronizes user data between a pair of Microsoft Lync Server 2013 Preview pools.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Synchronizes user data between a pair of Skype for Business Server 2015 pools.
 This cmdlet was introduced in Lync Server 2013.
@@ -25,7 +25,7 @@ Sync-CsUserData -PoolFqdn <Fqdn> [-LocalStore] [-RoutingGroup <String>] [-Target
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Sync-CsUserData cmdlet synchronizes user data between a Registrar pool and its assigned backup pool.
 Note that any call to this cmdlet will fail if the backup service has not been activated the pool in question.
@@ -36,7 +36,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Sync-CsUserData"}
 
 Lync Server Control Panel: The functions carried out by the Sync-CsUserData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Sync-CsUserData cmdlet synchronizes user data between a Registrar pool and its assigned backup pool.
 Note that any call to this cmdlet will fail if the backup service has not been activated the pool in question.
@@ -68,7 +68,7 @@ Sync-CsUserData -PoolFqdn "atl-cs-001.litwareinc.com"
 ## PARAMETERS
 
 ### -PoolFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the primary Lync Server 2013 Preview pool.
 For example:
@@ -77,7 +77,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the primary Skype for Business Server 2015 pool.
 For example:

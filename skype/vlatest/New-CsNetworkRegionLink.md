@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsNetworkRegionLink
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a link between two regions configured for call admission control (CAC).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a link between two regions configured for call admission control (CAC).
 This cmdlet was introduced in Lync Server 2010.
@@ -33,7 +33,7 @@ New-CsNetworkRegionLink -NetworkRegionID1 <String> -NetworkRegionID2 <String> -N
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet defines a link between two regions and sets the bandwidth limitations on audio and video connections between these regions.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkRegionLink"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet defines a link between two regions and sets the bandwidth limitations on audio and video connections between these regions.
@@ -201,14 +201,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsHostedVoicemailPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a hosted voice mail policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a hosted voice mail policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsHostedVoicemailPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet removes a policy that specifies how to route unanswered calls to the user to a hosted Exchange Unified Messaging (UM) service.
 
@@ -34,7 +34,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsHostedVoicemailPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet removes a policy that specifies how to route unanswered calls to the user to a hosted Exchange Unified Messaging (UM) service.
 
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the hosted voicemail policy being deleted.
 For example:
@@ -179,7 +179,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the hosted voicemail policy being deleted.
 For example:

@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsDialInConferencingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about how Microsoft Lync Server 2010 responds when users join or leave a dial-in conference.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves information about how Lync Server responds when users join or leave a dial-in conference.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves information about how Skype for Business Server 2015 responds when users join or leave a dial-in conference.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsDialInConferencingConfiguration [-Filter <String>] [-LocalStore] [<CommonP
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When users join (or leave) a dial-in conference, Lync Server 2010 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When users join (or leave) a dial-in conference, Lync Server can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When users join (or leave) a dial-in conference, Skype for Business Server 2015 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -194,7 +194,7 @@ Get-CsDialInConferencingConfiguration | Where-Object {$_.EnableNameRecording -eq
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity of the dial-in conferencing configuration settings to be retrieved.
 To refer to the global settings, use this syntax: -Identity global.
@@ -206,7 +206,7 @@ If called without any parameters Get-CsDialInConferencingConfiguration returns i
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the dial-in conferencing configuration settings to be retrieved.
 To refer to the global settings, use this syntax: -Identity global.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Enable-CsTopology
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables the most recently published Microsoft Lync Server 2010 topology.
 After you have made changes to your topology, the changes will not take effect until they have been both published and enabled.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables the most recently published Lync Server topology.
 After you have made changes to your topology, the changes will not take effect until they have been both published and enabled.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables the most recently published Skype for Business Server 2015 topology.
 After you have made changes to your topology, the changes will not take effect until they have been both published and enabled.
@@ -33,7 +33,7 @@ Enable-CsTopology [-GlobalCatalog <Fqdn>] [-GlobalSettingsDomainController <Fqdn
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 After you have installed Lync Server 2010 you will eventually need to make changes to the infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -68,7 +68,7 @@ However, a local administrator will then need to add the share-level security pe
 
 To verify that setup permissions have been delegated, run the Test-CsSetupPermission cmdlet against any Active Directory containers containing computers running Lync Server services.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 After you have installed Lync Server you will eventually need to make changes to the infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -103,7 +103,7 @@ However, a local administrator will then need to add the share-level security pe
 
 To verify that setup permissions have been delegated, run the Test-CsSetupPermission cmdlet against any Active Directory containers containing computers running Lync Server services.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 After you have installed Skype for Business Server 2015 you will eventually need to make changes to the infrastructure; for example, you might need to add a new site, delete an existing Registrar pool, or add an additional Archiving Server.
 These infrastructure changes must be made by using Topology Builder.
@@ -157,14 +157,14 @@ Enable-CsTopology
 ## PARAMETERS
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Enable-CsTopology on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Enable-CsTopology cmdlet on a computer with an account in your domain.
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS), then this parameter must point to the root domain controller.
@@ -193,7 +193,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services, then this parameter must point to the root domain controller.
@@ -215,13 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPrepareCheck
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If set to True ($True) Enable-CsTopology will skip its initial preparation check.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True ($True) the Enable-CsTopology cmdlet will skip its initial preparation check.
 

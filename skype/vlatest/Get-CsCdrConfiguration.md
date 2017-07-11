@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsCdrConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about your call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about your call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
@@ -32,7 +32,7 @@ Get-CsCdrConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server 2010 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsCdrConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call detail recording (CDR) provides a way for you to track usage of Lync Server capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsCdrConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -203,7 +203,7 @@ Get-CsCdrConfiguration | Where-Object {$_.KeepCallDetailForDays -lt 30}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the unique identifier for the collection of CDR configuration settings you want to return.
 To refer to the global settings, use this syntax:  -Identity global.
@@ -215,7 +215,7 @@ If this parameter is not specified then Get-CsCdrConfiguration returns a collect
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the unique identifier for the collection of CDR configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -227,7 +227,7 @@ If this parameter is not specified then Get-CsCdrConfiguration returns a collect
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of CDR configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to use wildcard characters in order to return a collection of CDR configuration settings.
 For example, to return a collection of all the settings configured at the site scope, use this syntax:  -Filter site:*.
@@ -261,7 +261,7 @@ To return a collection of all the settings that have the string value "Western" 
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to use wildcard characters in order to return a collection of CDR configuration settings.
 For example, to return a collection of all the settings configured at the site scope, use this syntax: -Filter site:*.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsMeetingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Remove-CsMeetingConfiguration enables you to delete an existing collection of meeting configuration settings.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, as well as control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Remove-CsMeetingConfiguration enables you to delete an existing collection of meeting configuration settings.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, as well as control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Remove-CsMeetingConfiguration cmdlet enables you to delete an existing collection of meeting configuration settings.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, as well as control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
@@ -33,7 +33,7 @@ Remove-CsMeetingConfiguration [-Identity] <XdsIdentity> [-Force] [-Tenant <Guid>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Online meetings (also called conferences) are an integral part of Microsoft Lync Server 2010.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create as well as determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsMeetingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Online meetings (also called conferences) are an integral part of Lync Server.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create as well as determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsMeetingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Online meetings (also called conferences) are an integral part of Skype for Business Server 2015.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create as well as determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -222,13 +222,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the meeting configuration settings being deleted.
 For example:
@@ -241,7 +241,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the meeting configuration settings being deleted.
 For example:

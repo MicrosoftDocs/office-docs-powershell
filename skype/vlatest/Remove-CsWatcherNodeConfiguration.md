@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsWatcherNodeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing collection of watcher node configuration settings.
 Watcher nodes are computers that periodically use System Center Operations Manager and Microsoft Lync Server 2013 Preview synthetic transactions to verify that Lync Server components are working as expected.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing collection of watcher node configuration settings.
 Watcher nodes are computers that periodically use System Center Operations Manager and Skype for Business Server 2015 synthetic transactions to verify that Skype for Business Server 2015 components are working as expected.
@@ -27,7 +27,7 @@ Remove-CsWatcherNodeConfiguration [-Identity] <XdsGlobalRelativeIdentity> [-Conf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you are using Microsoft System Center Operations Manager to monitor Lync Server 2013 Preview then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Lync Server is working as expected.
 Watcher nodes are assigned to pools, and are managed using the CsWatcherNodeConfiguration cmdlets.
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsWatcherNodeConfigura
 
 Lync Server Control Panel: The functions carried out by the Remove-CsWatcherNodeConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you are using Microsoft System Center Operations Manager to monitor Skype for Business Server 2015 then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Skype for Business Server 2015 is working as expected.
 Watcher nodes are assigned to pools, and are managed using the CsWatcherNodeConfiguration cmdlets.

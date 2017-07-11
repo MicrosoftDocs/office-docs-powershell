@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsManagementStoreReplicationStatus
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Microsoft Lync Server 2010 replication process; this includes information on whether replication is currently up to date for your Lync Server 2010 computers.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Lync Server replication process; this includes information on whether replication is currently up to date for your Lync Server computers.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Skype for Business Server 2015 replication process; this includes information on whether replication is currently up to date for your Skype for Business Server 2015 computers.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsManagementStoreReplicationStatus [[-ReplicaFqdn] <String>] [-CentralManage
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When an administrator makes a change of some kind to Lync Server (for example, when an administrator creates a new voice policy or changes the Address Book Server configuration settings) that change is recorded in the Central Management store.
 In turn, the change must then be replicated to all the computers running Lync Server services or server roles.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsManagementStoreReplicationStatus"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When an administrator makes a change of some kind to Lync Server (for example, when an administrator creates a new voice policy or changes the Address Book Server configuration settings) that change is recorded in the Central Management store.
 In turn, the change must then be replicated to all the computers running Lync Server services or server roles.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsManagementStoreReplicationStatus"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When an administrator makes a change of some kind to Skype for Business Server 2015 (for example, when an administrator creates a new voice policy or changes the Address Book Server configuration settings) that change is recorded in the Central Management store.
 In turn, the change must then be replicated to all the computers running Skype for Business Server 2015 services or server roles.
@@ -247,7 +247,7 @@ Get-CsManagementStoreReplicationStatus -CentralManagementStoreStatus
 ## PARAMETERS
 
 ### -ReplicaFqdn
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the computer for which the replication status is to be checked.
 For example: -ReplicaFqdn "atl-cs-001.litwareinc.com".
@@ -256,7 +256,7 @@ If this parameter is not included, then replication status information for all y
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the computer for which the replication status is to be checked.
 For example: -ReplicaFqdn "atl-cs-001.litwareinc.com".

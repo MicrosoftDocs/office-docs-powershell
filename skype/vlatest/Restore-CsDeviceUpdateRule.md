@@ -6,13 +6,13 @@ schema: 2.0.0
 # Restore-CsDeviceUpdateRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to "roll back" a device update rule that has been approved for use in the organization.
 When you restore a device update rule, the approved version of that rule is reset to reflect the update that was in use before the rule was approved.
 In turn, client devices that log on to the system will automatically uninstall the most recent update, and then download and reinstall the previous version of that update.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to "roll back" a device update rule that has been approved for use in the organization.
 When you restore a device update rule, the approved version of that rule is reset to reflect the update that was in use before the rule was approved.
@@ -34,7 +34,7 @@ Restore-CsDeviceUpdateRule [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 uses device update rules as a way to provide firmware updates to devices that run Lync 2010 Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server 2010; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices the next time those devices connect to the system.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Restore-CsDeviceUpdateRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server uses device update rules as a way to provide firmware updates to devices that run Lync Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices the next time those devices connect to the system.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Restore-CsDeviceUpdateRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 uses device update rules as a way to provide firmware updates to devices that run Skype for Business Phone Edition.
 Periodically, administrators upload a set of device update rules to Skype for Business Server 2015; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices the next time those devices connect to the system.

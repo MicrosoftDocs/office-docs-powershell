@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsAudioTestServiceApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify the property values for any of the Audio Test service application contacts currently in use in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify the property values for any of the Audio Test service application contacts currently in use in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Set-CsAudioTestServiceApplication [-Identity] <UserIdParameter> [-Enabled <Boole
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Audio Test service enables Microsoft Lync 2010 users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Lync 2010 Options dialog box.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAudioTestServiceApplication"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Audio Test service enables Lync Server users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Lync Options dialog box.
@@ -65,7 +65,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAudioTestServiceApplication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Audio Test service enables Skype for Business Server 2015 users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Skype for Business Options dialog box.
@@ -194,21 +194,21 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not the contact object has been enabled for Lync Server 2010.
 If you set this value to False ($False), the contact will no longer be able to log on to Lync Server; setting this value to True ($True) re-enables the contact's logon privileges.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the contact object has been enabled for Lync Server.
 If you set this value to False ($False), the contact will no longer be able to log on to Lync Server; setting this value to True ($True) re-enables the contact's logon privileges.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the contact object has been enabled for Skype for Business Server 2015.
 If you set this value to False ($False), the contact will no longer be able to log on to Skype for Business Server 2015; setting this value to True ($True) re-enables the contact's logon privileges.
@@ -332,21 +332,21 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier that allows the contact object to communicate by using SIP devices such as Lync 2010.
 The SIP address must be prefaced by sip:; for example: -SipAddress "sip:kenmyer@litwareinc.com".
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier that allows the contact object to communicate by using SIP devices such as Lync.
 The SIP address must be prefaced by sip:; for example: -SipAddress "sip:kenmyer@litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is currently disabled.
 You cannot change the SIP address using Set-CsAudioTestServiceApplication.
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
@@ -461,7 +461,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:

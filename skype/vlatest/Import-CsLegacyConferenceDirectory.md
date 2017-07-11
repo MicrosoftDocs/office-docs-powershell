@@ -6,18 +6,18 @@ schema: 2.0.0
 # Import-CsLegacyConferenceDirectory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Import-CsLegacyConferenceDirectory enables you to import conference directories from Microsoft Office Communications Server 2007 R2 to Microsoft Lync Server 2010.
 This helps provide interoperability between Lync Server 2010 and Office Communications Server 2007 R2.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Import-CsLegacyConferenceDirectory enables you to import conference directories from Microsoft Office Communications Server 2007 R2 to Lync Server.
 This helps provide interoperability between Lync Server and Office Communications Server 2007 R2.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Import-CsLegacyConferenceDirectory cmdlet enables you to import conference directories from Microsoft Office Communications Server 2007 R2 to Skype for Business Server 2015.
 This helps provide interoperability between Skype for Business Server 2015 and Office Communications Server 2007 R2.
@@ -32,7 +32,7 @@ Import-CsLegacyConferenceDirectory [-Report <String>] [-Force] [-WhatIf] [-Confi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Import-CsLegacyConferenceDirectory is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from Office Communications Server 2007 R2 to Lync Server 2010.
 Import-CsLegacyConfiguration imports conferencing directories from  Communications Server 2007 R2 to Lync Server.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Import-CsLegacyConferenceDirectory"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Import-CsLegacyConferenceDirectory is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from Office Communications Server 2007 R2 to Lync Server.
 Import-CsLegacyConfiguration imports conferencing directories from Communications Server 2007 R2 to Lync Server.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsLegacyConferenceDirectory"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Import-CsLegacyConferenceDirectory cmdlet is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from Office Communications Server 2007 R2 to Skype for Business Server 2015.
 The Import-CsLegacyConfiguration cmdlet imports conferencing directories from Communications Server 2007 R2 to Skype for Business Server 2015.

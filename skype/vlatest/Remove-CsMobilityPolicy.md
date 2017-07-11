@@ -6,17 +6,17 @@ schema: 2.0.0
 # Remove-CsMobilityPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing mobility policy.
 Mobility policies determine whether or not a user can use Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Remove-CsMobilityPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing mobility policy.
 Mobility policies determine whether or not a user can use Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
@@ -33,7 +33,7 @@ Remove-CsMobilityPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Mobile is a client application that enables users to run Lync on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -56,11 +56,11 @@ In this case, that means enabling Call via Work.
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsMobilityPolicy cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Mobile is a client application that enables users to run Skype for Business on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -165,7 +165,7 @@ Get-CsMobilityPolicy | Where-Object {$_.EnableOutsideVoice -eq $False} | Remove-
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier for the client policy to be removed.
 To "remove" the global policy, use the following syntax:
@@ -187,7 +187,7 @@ You cannot use wildcards when specifying a policy Identity.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -207,13 +207,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If this parameter is present, the policy will be removed even if it is currently assigned to at least one user.
 If this parameter is not present, then Remove-CsMobilityPolicy will not automatically remove a per-user policy that is assigned to at least one user.
@@ -244,13 +244,13 @@ This parameter applies only to per-user policies.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is present, the policy will be removed even if it is currently assigned to at least one user.
 If this parameter is not present, then the Remove-CsMobilityPolicy cmdlet will not automatically remove a per-user policy that is assigned to at least one user.
@@ -275,13 +275,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -318,13 +318,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the mobility policy is being removed.
 For example:

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Move-CsMeetingRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Moves a Microsoft Lync Server 2013 Preview meeting room object from one Registrar pool to another.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Moves a Skype for Business Server 2015 meeting room object from one Registrar pool to another.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
@@ -43,7 +43,7 @@ Move-CsMeetingRoom [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <I
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -68,7 +68,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsMeetingRoom"}
 
 Lync Server Control Panel: The functions carried out by the Move-CsMeetingRoom cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -203,14 +203,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When present, instructs Move-CsMeetingRoom to ignore all errors that might occur when carrying out the move operation.
 As a general rule, you should avoid using the Force parameter unless absolutely necessary.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, instructs the Move-CsMeetingRoom cmdlet to ignore all errors that might occur when carrying out the move operation.
 As a general rule, you should avoid using the Force parameter unless absolutely necessary.
@@ -264,13 +264,13 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter is not used with the on-premises version of Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is not used with the on-premises version of Skype for Business Online.
 

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsAutodiscoverConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes a collection of Autodiscover configuration settings.
 The Autodiscover service provides a way for client applications such as Lync Web Access or Microsoft Lync Mobile to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes a collection of Autodiscover configuration settings.
 The Autodiscover service provides a way for client applications to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
@@ -27,7 +27,7 @@ Remove-CsAutodiscoverConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For client applications to make the most effective use of Lync Server those applications need to know the location of key Lync Server components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.
@@ -52,7 +52,7 @@ In that case, however, the global settings will not be removed; however, any Aut
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsAutoDiscoverConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For client applications to make the most effective use of Skype for Business Server 2015 those applications need to know the location of key Skype for Business Server 2015 components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.

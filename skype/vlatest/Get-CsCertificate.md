@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsCertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about certificates on the local computers that have been configured for use with Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about certificates on the local computers that have been configured for use with Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about certificates on the local computers that have been configured for use with Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsCertificate [-Type <CertType[]>] [-NetportId <String>] [-Report <String>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server, and vice versa.
 In order to fully implement Lync Server you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -41,7 +41,7 @@ If a certificate has not been configured for use with Lync Server (by using the 
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsCertificate cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server, and vice versa.
 In order to fully implement Lync Server you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -52,7 +52,7 @@ If a certificate has not been configured for use with Lync Server (by using the 
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsCertificate cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server, and vice versa.
 In order to fully implement Skype for Business Server 2015 you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -226,7 +226,7 @@ Get-CsCertificate | Where-Object {$_.Subject -eq "CN=atl-cs-001.litwareinc.com"}
 ## PARAMETERS
 
 ### -Type
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Type of certificate being requested.
 Certificate types include, but are not limited to, the following:
@@ -263,7 +263,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of certificate being requested.
 Certificate types include, but are not limited to, the following:
@@ -304,7 +304,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of certificate being requested.
 Certificate types include, but are not limited to, the following:
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to record detailed information about the procedures carried out by Get-CsCertificate.
 The parameter value should be the full path to the HTML file that will be generated; for example: -Report C:\Logs\Certificates.html.
@@ -384,7 +384,7 @@ If the specified file already exists, it will automatically be overwritten with 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to record detailed information about the procedures carried out by the Get-CsCertificate cmdlet.
 The parameter value should be the full path to the HTML file that will be generated; for example: -Report C:\Logs\Certificates.html.

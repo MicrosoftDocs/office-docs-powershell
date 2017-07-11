@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsConferenceDirectory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the conference directories configured for use in your organization.
 Conference directories are used to help dial-in conferencing users locate conference information.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the conference directories configured for use in your organization.
 Conference directories are used to help dial-in conferencing users locate conference information.
@@ -32,7 +32,7 @@ Get-CsConferenceDirectory [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult for  devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsConferenceDirectory"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult for devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsConferenceDirectory"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult for devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
@@ -163,14 +163,14 @@ Get-CsConferenceDirectory | Where-Object {$_.ServiceID -match "UserServer:atl-cs
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Numeric identifier (for example, 7) of the conference directory to be returned.
 If this parameter is omitted, then Get-CsConferenceDirectory returns information about all the conference directories in use in your organization.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Numeric identifier (for example, 7) of the conference directory to be returned.
 If this parameter is omitted, then the Get-CsConferenceDirectory cmdlet returns information about all the conference directories in use in your organization.

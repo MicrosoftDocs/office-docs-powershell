@@ -6,14 +6,14 @@ schema: 2.0.0
 # Remove-CsUserServicesPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Deletes an existing User Services policy.
 User Services policies determine whether or not a user's contacts are stored in Microsoft Lync Server 2013 Preview or in the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Microsoft Lync 2013 Preview, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Deletes an existing User Services policy.
 User Services policies determine whether or not a user's contacts are stored in Skype for Business Server 2015 or in the Unified Contact Store.
@@ -30,7 +30,7 @@ Remove-CsUserServicesPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tena
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Microsoft Lync 2013 Preview.
 (Alternatively, you can continue to store contacts in Lync Server 2013 Preview.
@@ -51,7 +51,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserServicesPolicy"}
 
 Lync Server Control Panel: The functions carried out by the Remove-CsUserServicesPolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unified contact store introduced in Lync Server 2013 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web App as well as in Skype for Business.
 (Alternatively, you can continue to store contacts in Skype for Business Server 2015.
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the user services policy assigned to the specified Office 365 tenant.
 When removing a policy assigned to a tenant, you must also include the Identity parameter along with the parameter value "global":
@@ -210,7 +210,7 @@ When removing a policy assigned to a tenant, you must also include the Identity 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the user services policy assigned to the specified Skype for Business Online tenant.
 When removing a policy assigned to a tenant, you must also include the Identity parameter along with the parameter value "global":

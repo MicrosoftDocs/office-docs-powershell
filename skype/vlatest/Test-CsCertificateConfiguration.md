@@ -6,16 +6,16 @@ schema: 2.0.0
 # Test-CsCertificateConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Microsoft Lync Server 2010 certificates being used on the local computer.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Lync Server certificates being used on the local computer.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Skype for Business Server 2015 certificates being used on the local computer.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Test-CsCertificateConfiguration [-Report <String>] [-Verbose] [<CommonParameters
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsCertificateConfiguration is an example of a "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -42,7 +42,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsCertificateConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsCertificateConfiguration is an example of a "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -55,7 +55,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsCertificateConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsCertificateConfiguration cmdlet is an example of a "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).

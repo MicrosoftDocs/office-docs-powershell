@@ -6,18 +6,18 @@ schema: 2.0.0
 # Disable-CsAdDomain
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Undoes the domain preparation tasks carried out by the Enable-CsAdDomain cmdlet.
 This cmdlet is typically used only if you are uninstalling Microsoft Lync Server 2010 from a domain.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Undoes the domain preparation tasks carried out by the Enable-CsAdDomain cmdlet.
 This cmdlet is typically used only if you are uninstalling Lync Server from a domain.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Undoes the domain preparation tasks carried out by the Enable-CsAdDomain cmdlet.
 This cmdlet is typically used only if you are uninstalling Skype for Business Server 2015 from a domain.
@@ -33,7 +33,7 @@ Disable-CsAdDomain [-Domain <Fqdn>] [-DomainController <Fqdn>] [-GlobalCatalog <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you install Lync Server 2010 in a domain, that domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Lync Server as well as assigning the required Access Control Entries to the universal groups needed for managing and operating Lync Server.
 If you later decide to uninstall Lync Server (or if you encounter problems during the setup process), you might need to roll back these domain-level changes.
@@ -45,7 +45,7 @@ Lcscmd.exe /domain /action:DomainUnprep
 
 Who can run this cmdlet: You must be a domain administrator in order to run the Disable-CsAdDomain cmdlet locally.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you install Lync Server in a domain, that domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Lync Server as well as assigning the required Access Control Entries to the universal groups needed for managing and operating Lync Server.
 If you later decide to uninstall Lync Server (or if you encounter problems during the setup process), you might need to roll back these domain-level changes.
@@ -57,7 +57,7 @@ Lcscmd.exe /domain /action:DomainUnprep
 
 Who can run this cmdlet: You must be a domain administrator in order to run the Disable-CsAdDomain cmdlet locally.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you install Skype for Business Server 2015 in a domain, that domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Skype for Business Server 2015 as well as assigning the required Access Control Entries to the universal groups needed for managing and operating Skype for Business Server 2015.
 If you later decide to uninstall Skype for Business Server 2015 (or if you encounter problems during the setup process), you might need to roll back these domain-level changes.
@@ -185,14 +185,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Disable-CsAdDomain on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Disable-CsAdDomain cmdlet on a computer with an account in your domain.
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS) this parameter must point to the root domain controller.
@@ -221,7 +221,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services this parameter must point to the root domain controller.
@@ -243,14 +243,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If present rollback will occur even if Disable-CsAdDomain determines that at least one Front End, conferencing, or Web Services server is still active in the domain.
 If not present then the command will fail if a Front End, Conferencing, or Web Services server is still active in the domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If present rollback will occur even if the Disable-CsAdDomain cmdlet determines that at least one Front End, conferencing, or Web Services server is still active in the domain.
 If not present then the command will fail if a Front End, Conferencing, or Web Services server is still active in the domain.

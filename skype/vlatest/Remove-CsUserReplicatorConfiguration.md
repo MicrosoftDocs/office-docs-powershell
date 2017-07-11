@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsUserReplicatorConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Skype for Business Server 2015.
@@ -33,7 +33,7 @@ Remove-CsUserReplicatorConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Lync Server 2010 maintains its own database of user accounts and user account data, Lync Server still strongly on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server maintains its own database of user accounts and user account data, Lync Server still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -95,7 +95,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 maintains its own database of user accounts and user account data, Skype for Business Server 2015 still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -153,7 +153,7 @@ Remove-CsUserReplicatorConfiguration -Identity global
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier of the User Replicator configuration settings to be removed.
 To remove settings at the service scope, use syntax similar to this: -Identity "service:Registrar:atl-cs-001.litwareinc.com".
@@ -163,7 +163,7 @@ You cannot use wildcards when specifying an Identity.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier of the User Replicator configuration settings to be removed.
 To remove settings at the service scope, use syntax similar to this: -Identity "service:Registrar:atl-cs-001.litwareinc.com".
@@ -173,7 +173,7 @@ You cannot use wildcards when specifying an Identity.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the User Replicator configuration settings to be removed.
 To remove settings at the service scope, use syntax similar to this:

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsInterTrunkRouting
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies the route and the PSTN usage used when routing a phone call made from a specified SIP trunk.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies the route and the PSTN usage used when routing a phone call made from a specified SIP trunk.
 This cmdlet was introduced in Lync Server 2013.
@@ -26,7 +26,7 @@ Test-CsInterTrunkRouting -TargetNumber <PhoneNumber> -TrunkConfiguration <TrunkC
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsInterTrunkRouting verifies that calls can be routed from one SIP to another.
 To do this, the cmdlet is given a phone number and a trunk configuration; Test-CsInterTrunkRouting will then report back matching routes and matching PSTN usages for the specified number.
@@ -38,7 +38,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsInterTrunkRouting"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsInterTrunkRouting cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsInterTrunkRouting verifies that calls can be routed from one SIP to another.
 To do this, the cmdlet is given a phone number and a trunk configuration; Test-CsInterTrunkRouting will then report back matching routes and matching PSTN usages for the specified number.

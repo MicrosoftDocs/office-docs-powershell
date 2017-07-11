@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsLisConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the Location Information Server (LIS) configuration.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Tests the Location Information Server (LIS) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -45,7 +45,7 @@ Test-CsLisConfiguration -TargetUri <String> -UserSipAddress <String> [-BssId <St
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet determines whether the Location Information Server (LIS) web service can be contacted based on the information in the supplied parameters.
 If the web service can be contacted and a location is found that corresponds to any of the supplied parameters, the test is considered to have passed and the location will be displayed.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet determines whether the Location Information Server (LIS) web service can be contacted based on the information in the supplied parameters.
 If the web service can be contacted and a location is found that corresponds to any of the supplied parameters, the test is considered to have passed and the location will be displayed.
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUri
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The Uniform Resource Identifier (URI) of the Location Information service.
 You can retrieve the URI of the Location Information service by running the following command: Get-CsService -WebServer | Select-Object LIServiceInternalUri
@@ -306,7 +306,7 @@ This parameter is required unless you specify the TargetFqdn parameter.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Uniform Resource Identifier (URI) of the Location Information service.
 You can retrieve the URI of the Location Information service by running the following command: Get-CsService -WebServer | Select-Object LisServiceInternalUri
@@ -561,13 +561,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
@@ -592,7 +592,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used in the test.
 Allowed values are:
@@ -604,7 +604,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used in the test.
 Allowed values are:

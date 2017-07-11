@@ -6,23 +6,23 @@ schema: 2.0.0
 # Get-CsExternalAccessPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the external access policies that have been configured for use in your organization.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated  organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Microsoft Lync Server 2010 over the Internet, without having to log on to your internal network.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the external access policies that have been configured for use in your organization.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Lync Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Returns information about the external access policies that have been configured for use in your organization.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; and, 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the external access policies that have been configured for use in your organization.
 External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as Windows Live; and, 3) access Skype for Business Server 2015 over the Internet, without having to log on to your internal network.
@@ -49,7 +49,7 @@ Get-CsExternalAccessPolicy [[-Identity] <Object>] [-ApplicableTo <Object>] [-Byp
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you install Lync Server 2010 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
 In addition, users are not allowed to access Lync Server 2010 over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsExternalAccessPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you install Lync Server your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
 In addition, users are not allowed to access Lync Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
@@ -105,7 +105,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsExternalAccessPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 When you first configure Skype for Business Online your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your organization.
 That might be sufficient to meet your communication needs.
@@ -122,7 +122,7 @@ Communicate with people who have SIP accounts with a public instant messaging se
 
 The Get-CsExternalAccessPolicy cmdlet provides a way for you to return information about all of the external access policies that have been configured for use in your organization.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you install Skype for Business Server 2015 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
 In addition, users are not allowed to access Skype for Business Server 2015 over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Skype for Business Server 2015.
@@ -377,7 +377,7 @@ Get-CsExternalAccessPolicy -ApplicableTo "kenmyer@litwareinc.com"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique Identity assigned to the policy when it was created.
 External access policies can be assigned at the global, site, or per-user scope.
@@ -392,7 +392,7 @@ If neither the Identity nor Filter parameters are specified, then Get-CsExternal
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Unique Identity assigned to the policy when it was created.
 External access policies can be assigned at the global scope or at the per-user scope.
@@ -406,7 +406,7 @@ If neither the Identity nor Filter parameters are specified, then the Get-CsExte
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identity assigned to the policy when it was created.
 External access policies can be assigned at the global, site, or per-user scope.
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to do a wildcard search for external access policies.
 For example, to find all the policies configured at the site scope, use this Filter: site:*.
@@ -444,7 +444,7 @@ Note that the Filter parameter can only be applied to the policy Identity.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Enables you to do a wildcard search for external access policies.
 For example, to find all the policies configured at the per-user scope, use this Filter:
@@ -473,13 +473,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the external access policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 

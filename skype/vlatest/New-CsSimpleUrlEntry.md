@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsSimpleUrlEntry
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new simple URL entry, an element needed when creating a simple URL.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new simple URL entry, an element needed when creating a simple URL.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for Administrators to log on to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new simple URL entry, an element needed when creating a simple URL.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for Administrators to log on to the Skype for Business Server Control Panel.
@@ -32,7 +32,7 @@ New-CsSimpleUrlEntry -Url <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSimpleUrlEntry"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -120,7 +120,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSimpleUrlEntry"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -303,7 +303,7 @@ Set-CsSimpleUrlConfiguration -Identity "site:Redmond" -SimpleUrl @{Add=$simpleUr
 ## PARAMETERS
 
 ### -Url
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 URL to be added to the SimpleUrlEntry property of a simple URL.
 For example: -Url "https://meet.litwareinc.com".
@@ -311,7 +311,7 @@ URLs must start with the "https:" prefix.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL to be added to the SimpleUrlEntry property of a simple URL.
 For example:

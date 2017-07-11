@@ -6,25 +6,25 @@ schema: 2.0.0
 # Set-CsMeetingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Set-CsMeetingConfiguration enables you to modify the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called conferences) that users can create, and also control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Set-CsMeetingConfiguration enables you to modify the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called conferences) that users can create, and also control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 Note that these settings only affect scheduled meetings; they do not affect ad-hoc meetings created by clicking the Meet Now option in Microsoft Lync.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 The Set-CsMeetingConfiguration cmdlet enables you to modify the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called conferences) that users can create, and also control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 Note that these settings only affect scheduled meetings; they do not affect ad-hoc meetings created by clicking the Meet Now option in Skype for Business client.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Set-CsMeetingConfiguration enables you to modify the meeting configuration settings currently in use in your organization.
 Meeting configuration settings help dictate the type of meetings (also called conferences) that users can create, and also control how (or even if) anonymous users and dial-in conferencing users can join these meetings.
@@ -65,7 +65,7 @@ Set-CsMeetingConfiguration [[-Identity] <Object>] [-AdmitAnonymousUsersByDefault
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Meetings (also called conferences) are an integral part of Microsoft Lync Server 2010.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMeetingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Meetings (also called conferences) are an integral part of Lync Server.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -99,7 +99,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMeetingConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Meetings (also called conferences) are an integral part of Skype for Business Online.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -113,7 +113,7 @@ This will occur regardless of how you have configured your meeting settings usin
 
 The Set-CsMeetingConfiguration cmdlet enables you to modify any of the meeting configuration settings currently in use in your organization.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Meetings (also called conferences) are an integral part of Skype for Business Server 2015.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -239,7 +239,7 @@ Get-CsMeetingConfiguration | Where-Object {$_.AdmitAnonymousUsersByDefault -eq $
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the unique identifier for the collection of meeting configuration settings you want to modify.
 To refer to the global settings, use this syntax: -Identity global.
@@ -250,7 +250,7 @@ If this parameter is not specified, then Set-CsMeetingConfiguration will modify 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates the unique identifier for the collection of meeting configuration settings you want to modify.
 Because each tenant is only allowed a single collection of meeting configuration settings there is no need to use the Identity parameter when calling Set-CsMeetingConfiguration.
@@ -260,7 +260,7 @@ If you do choose to use this parameter, the only allowed Identity is global:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of meeting configuration settings you want to modify.
 To refer to the global settings, use this syntax: -Identity global.
@@ -285,13 +285,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.MeetingConfiguration and can be retrieved by calling the Get-CsMeetingConfiguration cmdlet.
@@ -435,13 +435,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Microsoft Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the meeting configuration settings are being modified.
 For example:
@@ -454,7 +454,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Globally unique identifier (GUID) of the tenant account for which the meeting configuration settings are being modified.
 For example:
@@ -471,7 +471,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose meeting configuration settings are being modified.
 
@@ -599,14 +599,14 @@ Accept wildcard characters: False
 ```
 
 ### -RequireRoomSystemsAuthorization
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True ($True) all users must be authenticated before they can join a meeting using the Lync Room System.
 The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Online, Skype for Business Server 2015
 
 When set to True ($True) all users must be authenticated before they can join a meeting using the Skype for Business Room System.
 The default value is False ($False).

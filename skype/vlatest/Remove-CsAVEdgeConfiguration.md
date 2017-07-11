@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsAVEdgeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to remove an existing collection of configuration settings applied to computers running the Access Edge service (these computers are also known as A/V Edge servers).
 An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to remove an existing collection of configuration settings applied to computers running the Access Edge service (these computers are also known as A/V Edge servers).
 An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
@@ -26,7 +26,7 @@ Remove-CsAVEdgeConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Conf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Microsoft Lync Server 2010 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAVEdgeConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Lync Server across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAVEdgeConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Skype for Business Server 2015 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.

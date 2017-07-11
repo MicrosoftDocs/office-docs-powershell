@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsUserServicesConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
@@ -42,7 +42,7 @@ Set-CsUserServicesConfiguration [-Instance <PSObject>] [-AnonymousUserGracePerio
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServicesConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServicesConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -210,7 +210,7 @@ Get-CsUserServicesConfiguration | Where-Object {$_.MaxContacts -gt 300} | Set-Cs
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the User Services configuration settings to be modified.
 To modify the global settings, use this syntax: -Identity global.
@@ -219,7 +219,7 @@ To modify settings at the service level, use syntax like this: -Identity service
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the User Services configuration settings to be modified.
 To modify the global settings, use this syntax:
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousUserGracePeriod
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
@@ -277,7 +277,7 @@ The grace period can be set to any value between 0 second and 1 day; the default
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
@@ -289,7 +289,7 @@ The grace period can be set to any value between 0 second and 1 day; the default
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
@@ -534,13 +534,13 @@ Accept wildcard characters: False
 ```
 
 ### -MinSubscriptionExpiration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill MinSubscriptionExpiration Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Subscriptions are created any time a user makes a request for data such as presence information.
 When the request is made, the user (or, more correctly, the user's client application) can request the length of time that the subscription remains valid before it must be renewed.

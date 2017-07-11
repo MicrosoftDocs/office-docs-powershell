@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsUserDatabaseState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables or disables one or more Microsoft Lync Server 2010 user databases.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables or disables one or more Lync Server user databases.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables or disables one or more Skype for Business Server 2015 user databases.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ Set-CsUserDatabaseState [-Online] <Boolean> -RegistrarPool <Fqdn> [-Force] [-Wha
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 employs the user database (also known as the user store) to maintain presence and routing information for Lync Server users.
 The Set-CsUserDatabaseState cmdlet provides a way for you change the state of one or more user databases: you can use the cmdlet to take a database offline or to bring a disabled database back online.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserDatabaseState"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server employs the user database (also known as the user store) to maintain presence and routing information for Lync Server users.
 The Set-CsUserDatabaseState cmdlet provides a way for you change the state of one or more user databases: you can use the cmdlet to take a database offline or to bring a disabled database back online.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserDatabaseState"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 employs the user database (also known as the user store) to maintain presence and routing information for Skype for Business Server 2015 users.
 The Set-CsUserDatabaseState cmdlet provides a way for you change the state of one or more user databases: you can use the cmdlet to take a database offline or to bring a disabled database back online.
@@ -180,7 +180,7 @@ Get-CsUserDatabaseState | Where-Object {$_.Online -eq $False} | ForEach-Object {
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the user database whose online status is to be modified.
 For example: -Identity "UserDatabase:atl-sql-001.litwareinc.com".
@@ -189,7 +189,7 @@ You cannot use both Identity and RegistrarPool in the same command, nor can you 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the user database whose online status is to be modified.
 For example:
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPool
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the Registrar pool hosting the user databases whose online status is to be modified.
 For example: -RegistrarPool atl-cs-001.litwareinc.com.
@@ -240,7 +240,7 @@ You cannot use both -Identity and -RegistrarPool in the same command, nor can yo
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the Registrar pool hosting the user databases whose online status is to be modified.
 For example:

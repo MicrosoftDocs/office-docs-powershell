@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsPool
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the pools used in your deployment of Microsoft Lync Server 2010.
 Pools are a collection of computers in a site that all run the same set of Lync Server 2010 services.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the pools used in your deployment of Lync Server.
 Pools are a collection of computers in a site that all run the same set of Lync Server services.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the pools used in your deployment of Skype for Business Server 2015.
 Pools are a collection of computers in a site that all run the same set of Skype for Business Server 2015 services.
@@ -38,7 +38,7 @@ Get-CsPool [-Filter <String>] [-Site <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Lync Server 2010, a pool is one or more computers in the same site that run the same set of services.
 For example, if you have one server running the Mediation Server service in the Redmond site, then you would have a Mediation Server pool consisting of that one computer.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsPool"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, a pool is one or more computers in the same site that run the same set of services.
 For example, if you have one server running the Mediation Server service in the Redmond site, then you would have a Mediation Server pool consisting of that one computer.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPool"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, a pool is one or more computers in the same site that run the same set of services.
 For example, if you have one server running the Mediation Server service in the Redmond site, then you would have a Mediation Server pool consisting of that one computer.
@@ -231,7 +231,7 @@ Get-CsPool | Where-Object {$_.Services.Count -eq 0}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of the pool to be returned.
 For example: -Identity atl-cs-001.litwareinc.com.
@@ -240,7 +240,7 @@ If this parameter is not present, then all the pools in your organization will b
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the pool to be returned.
 For example:
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the Identity of the pool (or pools) to be returned.
 For example, this syntax returns all the pools that have an Identity that ends with the string value ".fabrikam.com": -Filter "*.fabrikam.com".
@@ -274,7 +274,7 @@ Note that you cannot use both the Filter and the Identity parameters in the same
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the Identity of the pool (or pools) to be returned.
 For example, this syntax returns all the pools that have an Identity that ends with the string value ".fabrikam.com":
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns all the pools found on the specified site.
 The site in question should be referenced using the site's DisplayName (for example, Redmond) rather than the site Identity (for example, site:Redmond).
@@ -310,7 +310,7 @@ Get-CsSite | Select-Object Identity, DisplayName
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns all the pools found on the specified site.
 The site in question should be referenced using the site's DisplayName (for example, Redmond) rather than the site Identity (for example, site:Redmond).

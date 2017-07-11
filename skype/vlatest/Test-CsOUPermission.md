@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsOUPermission
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Verifies that the required permissions needed to manage users, computers, and other objects have been set on the specified Active Directory container.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Verifies that the required permissions needed to manage users, computers, and other objects have been set on the specified Active Directory container.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Test-CsOUPermission -ObjectType <ObjectType> -OU <String> [-Domain <Fqdn>] [-Dom
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If you have locked down your Active Directory domain (that is, if you have disabled permission inheritance), then the domain preparation that takes place when you install Microsoft Lync Server 2010 will not be able to add the permissions needed to manage users, computers, contacts, application contacts, and InetOrg persons.
 (Domain administrators will still be able to manage these objects, but no one else, including members of the RTCUniversalServerAdmins group, will have management permissions.) In that case, you will need to use the Grant-CsOUPermission cmdlet to grant the RTCUniversalServerAdmins group the appropriate permissions.
@@ -39,7 +39,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsOUPermission"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you have locked down your Active Directory domain (that is, if you have disabled permission inheritance), then the domain preparation that takes place when you install Lync Server will not be able to add the permissions needed to manage users, computers, contacts, application contacts, and InetOrg persons.
 (Domain administrators will still be able to manage these objects, but no one else, including members of the RTCUniversalServerAdmins group, will have management permissions.) In that case, you will need to use the Grant-CsOUPermission cmdlet to grant the RTCUniversalServerAdmins group the appropriate permissions.
@@ -53,7 +53,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsOUPermission"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you have locked down your Active Directory domain (that is, if you have disabled permission inheritance), then the domain preparation that takes place when you install Skype for Business Server 2015 will not be able to add the permissions needed to manage users, computers, contacts, application contacts, and InetOrg persons.
 (Domain administrators will still be able to manage these objects, but no one else, including members of the RTCUniversalServerAdmins group, will have management permissions.) In that case, you will need to use the Grant-CsOUPermission cmdlet to grant the RTCUniversalServerAdmins group the appropriate permissions.
@@ -95,7 +95,7 @@ Test-CsOUPermission -OU "ou=Redmond,dc=litwareinc,dc=com" -ObjectType "user"
 ## PARAMETERS
 
 ### -ObjectType
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Type of object to be checked.
 Valid values are:
@@ -114,7 +114,7 @@ To check multiple objects in the same kind, separate the object types by using c
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of object to be checked.
 Valid values are:
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Distinguished name of the organizational unit (OU) to be checked.
 For example: -OU "ou=Redmond,dc=litwareinc,dc=com".
@@ -158,7 +158,7 @@ Note that you can only check a single OU per command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Distinguished name of the organizational unit (OU) to be checked.
 For example:
@@ -183,14 +183,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the domain where the OU to be checked is located.
 If this parameter is not included, then Test-CsOUPermission will look for the OU on the current domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the domain where the OU to be checked is located.
 If this parameter is not included, then the Test-CsOUPermission cmdlet will look for the OU on the current domain.
@@ -211,14 +211,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a domain controller in your domain.
 This parameter is not required if you are running Test-CsOUPermission on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a domain controller in your domain.
 This parameter is not required if you are running the Test-CsOUPermission cmdlet on a computer with an account in your domain.
@@ -239,14 +239,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Test-CsOUPermission on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Test-CsOUPermission cmdlet on a computer with an account in your domain.
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example: -Report "C:\Logs\OUPermissions.html".
@@ -275,7 +275,7 @@ If this file already exists, it will be overwritten when you run the cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example:

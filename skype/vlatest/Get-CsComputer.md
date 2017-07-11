@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsComputer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the computers that perform service roles within your Microsoft Lync Server 2010 infrastructure.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the computers that perform service roles within your Lync Server infrastructure.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the computers that perform service roles within your Skype for Business Server 2015 infrastructure.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsComputer [-Filter <String>] [-Pool <String>] [-Local] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Get-CsComputer provides a way to quickly identify computers that are running Lync Server 2010 services or server roles.
 Called without any parameters, Get-CsComputer returns a collection of all the computers that are running Lync Server 2010 services or server roles; this collection includes the Identity, pool name, and fully qualified domain name (FQDN) for each computer.
@@ -43,7 +43,7 @@ Alternatively, you can use optional parameters such as Identity, Filter, or Pool
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsComputer cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Get-CsComputer provides a way to quickly identify computers that are running Lync Server services or server roles.
 Called without any parameters, Get-CsComputer returns a collection of all the computers that are running Lync Server services or server roles; this collection includes the Identity, pool name, and fully qualified domain name (FQDN) for each computer.
@@ -51,7 +51,7 @@ Alternatively, you can use optional parameters such as Identity, Filter, or Pool
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsComputer cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsComputer cmdlet provides a way to quickly identify computers that are running Skype for Business Server 2015 services or server roles.
 Called without any parameters, the Get-CsComputer cmdlet returns a collection of all the computers that are running Skype for Business Server 2015 services or server roles; this collection includes the Identity, pool name, and fully qualified domain name (FQDN) for each computer.
@@ -167,7 +167,7 @@ Get-CsComputer -Pool "atl-cs-001.litwareinc.com"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of the computer to be returned.
 For example: -Identity "atl-cs-001.litwareinc.com".
@@ -176,7 +176,7 @@ If this parameter is not specified, all of the computers running Lync Server 201
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of the computer to be returned.
 For example: -Identity "atl-cs-001.litwareinc.com".
@@ -185,7 +185,7 @@ If this parameter is not specified, all of the computers running Lync Server wil
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the computer to be returned.
 For example: -Identity "atl-cs-001.litwareinc.com".
@@ -225,21 +225,21 @@ Accept wildcard characters: False
 ```
 
 ### -Pool
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of a Lync Server 2010 pool.
 When you use this parameter, information about all the computers in the specified pool will be returned.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of a Lync Server pool.
 When you use this parameter, information about all the computers in the specified pool will be returned.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a Skype for Business Server 2015 pool.
 When you use this parameter, information about all the computers in the specified pool will be returned.

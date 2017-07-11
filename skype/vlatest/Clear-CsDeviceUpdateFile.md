@@ -6,11 +6,11 @@ schema: 2.0.0
 # Clear-CsDeviceUpdateFile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Deletes any rejected device update files that are no longer associated with a device.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Deletes any rejected device update files that are no longer associated with a device.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Clear-CsDeviceUpdateFile [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Each time new device updates are uploaded to the system, a corresponding device update rule is created.
 By default, these new device update rules are assigned to the Pending state; that means that the rules can be downloaded and installed on test devices, but not on production devices.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Clear-CsDeviceUpdateFile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Each time new device updates are uploaded to the system, a corresponding device update rule is created.
 By default, these new device update rules are assigned to the Pending state; that means that the rules can be downloaded and installed on test devices, but not on production devices.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsDeviceUpdateFile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Each time new device updates are uploaded to the system, a corresponding device update rule is created.
 By default, these new device update rules are assigned to the Pending state; that means that the rules can be downloaded and installed on test devices, but not on production devices.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsPartnerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new partner application.
 A partner application is any application that Microsoft Lync Server 2013 Preview can directly exchange security tokens with, without having to go through a third-party security token server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new partner application.
 A partner application is any application that Skype for Business Server 2015 can directly exchange security tokens with, without having to go through a third-party security token server.
@@ -55,7 +55,7 @@ New-CsPartnerApplication [[-Identity] <XdsGlobalRelativeIdentity>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -71,7 +71,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPartnerApplication"}
 
 Lync Server Control Panel: The functions carried out by the New-CsPartnerApplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out by using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -132,14 +132,14 @@ New-CsPartnerApplication -Identity "MicrosoftExchange" -ApplicationIdentifier "m
 ## PARAMETERS
 
 ### -ApplicationIdentifier
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the partner application.
 The ApplicationIdentifier is provided by the server application.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the partner application.
 The ApplicationIdentifier is provided by the server application.
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationTrustLevel
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the level of trust between Lync Server 2013 Preview and the partner application.
 Allowed values are:
@@ -174,7 +174,7 @@ The default value is Full.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the level of trust between Skype for Business Server 2015 and the partner application.
 Allowed values are:
@@ -377,14 +377,14 @@ Accept wildcard characters: False
 ```
 
 ### -Realm
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Server-to-server security container.
 By default, Lync Server 2013 Preview uses your default SIP domain as its OAuth realm.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Server-to-server security container.
 By default, Skype for Business Server 2015 uses your default SIP domain as its OAuth realm.
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new partner application is being created.
 For example:
@@ -431,7 +431,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new partner application is being created.
 For example:

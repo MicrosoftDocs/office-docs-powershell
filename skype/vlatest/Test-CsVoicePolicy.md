@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests a telephone number against a voice policy and determines which voice route would be used against that policy for that number.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Tests a telephone number against a voice policy and determines which voice route would be used against that policy for that number.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Test-CsVoicePolicy -TargetNumber <PhoneNumber> -VoicePolicy <VoicePolicy>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice policies are tied to voice routes through public switched telephone network (PSTN) usages.
 A call from a user who has been assigned a particular voice policy can only be sent through a route that has a PSTN usage matching a usage on the policy as well as a number pattern that matches the number dialed.
@@ -36,7 +36,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoicePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice policies are tied to voice routes through public switched telephone network (PSTN) usages.
 A call from a user who has been assigned a particular voice policy can only be sent through a route that has a PSTN usage matching a usage on the policy and also a number pattern that matches the number dialed.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice policies are tied to voice routes through public switched telephone network (PSTN) usages.
 A call from a user who has been assigned a particular voice policy can only be sent through a route that has a PSTN usage matching a usage on the policy and also a number pattern that matches the number dialed.
@@ -161,7 +161,7 @@ Get-CsVoicePolicy | Test-CsVoicePolicy -TargetNumber "+12065559999"
 ## PARAMETERS
 
 ### -TargetNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The phone number against which to run the test.
 This number should be in E.164 format (such as +14255551212).
@@ -170,7 +170,7 @@ Full data type: Microsoft.Rtc.Management.Voice.PhoneNumber
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The phone number against which to run the test.
 This number should be in E.164 format (such as +14255551212).
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoicePolicy
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A reference to the voice policy object against which to run the test.
 Voice policy objects can be retrieved by calling the Get-CsVoicePolicy cmdlet.
@@ -200,7 +200,7 @@ Full data type: Microsoft.Rtc.Management.WritableConfig.Policy.Voice.VoicePolicy
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A reference to the voice policy object against which to run the test.
 Voice policy objects can be retrieved by calling the Get-CsVoicePolicy cmdlet.
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteSettings
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Route settings against which to run the test.
 The route settings can be retrieved with a call to the Get-CsRoutingConfiguration cmdlet.
@@ -230,7 +230,7 @@ Full data type: Microsoft.Rtc.Management.WritableConfig.Policy.Voice.PstnRouting
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Route settings against which to run the test.
 The route settings can be retrieved with a call to the Get-CsRoutingConfiguration cmdlet.
@@ -251,13 +251,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

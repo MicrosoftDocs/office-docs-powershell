@@ -6,16 +6,16 @@ schema: 2.0.0
 # Test-CsPhoneBootstrap
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Verifies that a user can log on to Microsoft Lync Server 2010 using a Microsoft Lync 2010 Phone Edition-compatible device.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that a user can log on to Lync Server using a Lync Phone Edition-compatible device.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that a user can log on to Skype for Business Server 2015 using a Phone Edition-compatible device.
 This cmdlet was introduced in Lync Server 2010.
@@ -31,7 +31,7 @@ Test-CsPhoneBootstrap [[-TargetFqdn] <String>] -PhoneOrExt <String> -PIN <String
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to connect to Lync Server 2010, Lync 2010 Phone Edition-compatible devices need to use Dynamic Host Configuration Protocol (DHCP) to retrieve the address of a Lync Server Registrar; these devices must also provide a valid phone number and associated personal identification number (PIN) in order to be authenticated by the system.
 (This process is known as "bootstrapping".) The Test-CsPhoneBootstrap cmdlet enables administrators to verify that a given user -- using the phone number and PIN assigned to him or her -- is able to log on to the system from a Lync 2010 Phone Edition-compatible device.
@@ -46,7 +46,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPhoneBootstrap"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to connect to Lync Server, Lync Phone Edition-compatible devices need to use Dynamic Host Configuration Protocol (DHCP) to retrieve the address of a Lync Server Registrar; these devices must also provide a valid phone number and associated personal identification number (PIN) in order to be authenticated by the system.
 (This process is known as "bootstrapping".) The Test-CsPhoneBootstrap cmdlet enables administrators to verify that a given user -- using the phone number and PIN assigned to him or her -- is able to log on to the system from a Lync Phone Edition-compatible device.
@@ -61,7 +61,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPhoneBootstrap"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to connect to Skype for Business Server 2015, Phone Edition-compatible devices need to use Dynamic Host Configuration Protocol (DHCP) to retrieve the address of a Skype for Business Server 2015 Registrar; these devices must also provide a valid phone number and associated personal identification number (PIN) in order to be authenticated by the system.
 (This process is known as "bootstrapping".) The Test-CsPhoneBootstrap cmdlet enables administrators to verify that a given user -- using the phone number and PIN assigned to him or her -- is able to log on to the system from a Phone Edition-compatible device.
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP address for the user account used in the text; for example: -UserSipAddress "sip:kenmyer@litwareinc.com".
 The UserSIPAddress parameter must reference the supplied phone number and PIN; the test will fail if the included phone number and PIN do not belong to the user specified by the UserSipAddress parameter.
@@ -227,7 +227,7 @@ Note that the SIP address must include the "sip:" prefix.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address for the user account used in the text; for example: -UserSipAddress "sip:kenmyer@litwareinc.com".
 The UserSipAddress parameter must reference the supplied phone number and PIN; the test will fail if the included phone number and PIN do not belong to the user specified by the UserSipAddress parameter.
@@ -235,7 +235,7 @@ Note that the SIP address must include the "sip:" prefix.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the user account used in the text; for example:
 
@@ -292,13 +292,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

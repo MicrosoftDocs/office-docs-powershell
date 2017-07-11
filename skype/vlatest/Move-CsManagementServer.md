@@ -6,11 +6,11 @@ schema: 2.0.0
 # Move-CsManagementServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves the Central Management Server from one pool to another.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves the Central Management Server from one pool to another.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Move-CsManagementServer [-ConfigurationFileName <String>] [-Confirm] [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Move-CsManagementServer cmdlet enables administrators to move the Central Management Server (and the accompanying Central Management store) from one pool to another.
 Because there is always the potential for data loss, not to mention service interruption, any time you move the Central Management Server, it is recommended that you do not make such a transfer unless:
@@ -94,7 +94,7 @@ Note that the Move-CsManagementServer cmdlet must be run locally; it cannot be c
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsManagementServer cmdlet locally: RTCUniversalServerAdmins.
 You must also be a local administrator on the computer where the cmdlet is being run.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Move-CsManagementServer cmdlet enables administrators to move the Central Management Server (and the accompanying Central Management store) from one pool to another.
 Because there is always the potential for data loss, not to mention service interruption, any time you move the Central Management Server, it is recommended that you do not make such a transfer unless:
@@ -156,7 +156,7 @@ Note that the Move-CsManagementServer cmdlet must be run locally; it cannot be c
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsManagementServer cmdlet locally: RTCUniversalServerAdmins.
 You must also be a local administrator on the computer where the cmdlet is being run.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Move-CsManagementServer cmdlet enables administrators to move the Central Management Server (and the accompanying Central Management store) from one pool to another.
 Because there is always the potential for data loss, not to mention service interruption, any time you move the Central Management Server, it is recommended that you do not make such a transfer unless:
@@ -281,21 +281,21 @@ Move-CsManagementServer -ConfigurationFileName "C:\CsConfiguration.zip" -LisConf
 ## PARAMETERS
 
 ### -ConfigurationFileName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Full path to the Lync Server 2010 configuration backup file created by running the Export-CsConfiguration cmdlet.
 This parameter should only be used in a disaster recovery scenario.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Full path to the Lync Server configuration backup file created by running the Export-CsConfiguration cmdlet.
 This parameter should only be used in a disaster recovery scenario.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Full path to the Skype for Business Server 2015 configuration backup file created by running the Export-CsConfiguration cmdlet.
 This parameter should only be used in a disaster recovery scenario.
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Forces the Central Management Server move even if the existing store is offline; this parameter is required in a disaster recovery scenario.
 Note that there is the potential for some data loss any time you force the movement of the Central Management Server.
@@ -342,7 +342,7 @@ The Force parameter can also be used if your previous attempts at calling Move-C
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Forces the Central Management Server move even if the existing store is offline; this parameter is required in a disaster recovery scenario.
 Note that there is the potential for some data loss any time you force the movement of the Central Management Server.

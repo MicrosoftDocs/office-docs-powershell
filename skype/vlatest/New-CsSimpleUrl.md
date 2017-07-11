@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsSimpleUrl
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new simple URL, which can then be added to a simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new simple URL, which can then be added to a simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for administrators to log on to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new simple URL, which can then be added to a simple URL configuration collection.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for administrators to log on to the Skype for Business Server Control Panel.
@@ -33,7 +33,7 @@ New-CsSimpleUrl -Component <String> -Domain <String> [-SimpleUrlEntry <PSListMod
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSimpleUrl\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -121,7 +121,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSimpleUrl\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -226,7 +226,7 @@ Set-CsSimpleUrlConfiguration -Identity "site:Redmond" -SimpleUrl @{Add=$simpleUr
 ## PARAMETERS
 
 ### -Component
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the type of simple URL being created.
 Valid values are:
@@ -241,7 +241,7 @@ For example: -Component "Meet".
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the type of simple URL being created.
 Valid values are:
@@ -256,7 +256,7 @@ For example: -Component "Meet".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the type of simple URL being created.
 Valid values are:
@@ -287,14 +287,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP domain for the simple URL.
 For example: -Domain "litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP domain for the simple URL.
 For example:
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUrl
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the URL that is actually to be accessed by users.
 The SimpleUrlEntry property can contain multiple URLs, but only one of those URLs can be active at a given time.
@@ -348,7 +348,7 @@ For example: -ActiveUrl https://meet.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the URL that is actually to be accessed by users.
 The SimpleUrlEntry property can contain multiple URLs, but only one of those URLs can be active at a given time.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Import-CsLisConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Imports an Enterprise Voice Enhanced 9-1-1 (E9-1-1) configuration from a backup file.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Imports an Enterprise Voice Enhanced 9-1-1 (E9-1-1) configuration from a backup file.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Import-CsLisConfiguration [-FileName] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Implementing E9-1-1 in an organization can, depending on the size of the organization, involve mapping thousands of subnets, ports, switches, and wireless access points to locations.
 An E9-1-1 configuration also includes information about the Location Information Server (LIS) provided by the E9-1-1 Network Routing Provider, and about locations and civic addresses and whether or not they've been validated.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsLisConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Implementing E9-1-1 in an organization can, depending on the size of the organization, involve mapping thousands of subnets, ports, switches, and wireless access points to locations.
 An E9-1-1 configuration also includes information about the Location Information Server (LIS) provided by the E9-1-1 Network Routing Provider, and about locations and civic addresses and whether or not they've been validated.

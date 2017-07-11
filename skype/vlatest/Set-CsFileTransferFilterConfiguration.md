@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsFileTransferFilterConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a collection of file transfer filter configuration settings.
 File transfer filter settings are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) by using Microsoft Lync Server 2010 clients.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies a collection of file transfer filter configuration settings.
 File transfer filter settings are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) by using Lync Server clients.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies a collection of file transfer filter configuration settings.
 File transfer filter settings are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) by using Skype for Business Server 2015 clients.
@@ -40,7 +40,7 @@ Set-CsFileTransferFilterConfiguration [-Instance <PSObject>] [-Action <FileFilte
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When sending instant messages, users can attach files and send them to the other participants in the conversation.
 Lync Server 2010 can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent from the client.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsFileTransferFilterConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When sending instant messages, users can attach files and send them to the other participants in the conversation.
 Lync Server can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent from the client.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsFileTransferFilterConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When sending instant messages, users can attach files and send them to the other participants in the conversation.
 Skype for Business Server 2015 can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent from the client.
@@ -267,7 +267,7 @@ Set-CsFileTransferFilterConfiguration -Instance $a
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the file transfer configuration you want to modify.
 This value will be either global or site:\<site name\>, where \<site name\> is the name of the site to which the settings apply, such as site:Redmond.
@@ -276,7 +276,7 @@ If this parameter is not specified, then Set-CsFileTransferFilterConfiguration w
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the file transfer configuration you want to modify.
 This value will be either global or site:\<site name\>, where \<site name\> is the name of the site to which the settings apply, such as site:Redmond.
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -Extensions
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 List of file extensions that will be blocked.
 If you attempt to use a Lync Server 2010 client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.
@@ -368,7 +368,7 @@ By default, the following file extensions are included in the Extensions propert
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 List of file extensions that will be blocked.
 If you attempt to use a Lync Server client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.
@@ -380,7 +380,7 @@ By default, the following file extensions are included in the Extensions propert
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 List of file extensions that will be blocked.
 If you attempt to use a Skype for Business Server 2015 client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.

@@ -6,20 +6,20 @@ schema: 2.0.0
 # Set-CsUserServicesPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing User Services policy.
 User Services policies determine whether or not a user's contacts are stored in Microsoft Lync Server 2013 Preview or in the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Microsoft Lync 2013 Preview, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsUserServicesPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-UcsAllowed \<bool\>\] \[-MigrationDelayInDays \<int\>\] \[-EnableAwaySinceIndication \<bool\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 Set-CsUserServicesPolicy \[-Tenant \<guid\>\] \[-UcsAllowed \<bool\>\] \[-MigrationDelayInDays \<int\>\] \[-EnableAwaySinceIndication \<bool\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing User Services policy.
 User Services policies determine whether or not a user's contacts are stored in Skype for Business Server 2015 or in the Unified Contact Store.
@@ -51,7 +51,7 @@ Set-CsUserServicesPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Microsoft Lync 2013 Preview.
 (Alternatively, you can continue to store contacts in Lync Server 2013 Preview.
@@ -72,11 +72,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServicesPolicy"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsUserServicesPolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unified contact store introduced in Lync Server 2013 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web Access as well as.
 (Alternatively, you can continue to store contacts in Skype for Business Server 2015.
@@ -149,14 +149,14 @@ Get-CsUserServicesPolicy -Filter "site:*" | Set-CsUserServicesPolicy -UcsAllowed
 ## PARAMETERS
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -176,13 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the policy to be modified.
 To modify the global policy, use this syntax:
@@ -223,13 +223,13 @@ If this parameter is not included then Set-CsUserServicesPolicy will automatical
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the policy to be modified.
 To modify the global policy, use this syntax:
@@ -277,13 +277,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Instance Description}}
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the user services policy being modified.
 For example:
@@ -329,13 +329,13 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the user services policy being modified.
 For example:
@@ -362,20 +362,20 @@ Accept wildcard characters: False
 ```
 
 ### -UcsAllowed
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True (the default value) users affected by the policy will automatically be migrated to the unified contact store (assuming that they have an account on Microsoft Exchange Server 2013 Preview and that they log on using Lync 2013 Preview).
 When set to False, users can be removed from the unified contact store, but only if they are "manually" removed by the Invoke-CsUcsRollback cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill UcsAllowed Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) users affected by the policy will automatically be migrated to the unified contact store (assuming that they have an account on Exchange and that they log on using Skype for Business).
 When set to False, users can be removed from the unified contact store, but only if they are "manually" removed by the Invoke-CsUcsRollback cmdlet.
@@ -396,13 +396,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -439,13 +439,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAwaySinceIndication
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableAwaySinceIndication Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 PARAMVALUE: $true | $false
 
@@ -465,13 +465,13 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationDelayInDays
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MigrationDelayInDays Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the number of days the system will wait before beginning a migration to or from the unified contact store.
 MigrationDelayInDays can be set to any value between 0 and 180, inclusive.

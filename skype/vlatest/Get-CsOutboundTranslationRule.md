@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsOutboundTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more outbound translation rules.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems and public switched telephone network (PSTN) gateways.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more outbound translation rules.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems and public switched telephone network (PSTN) gateways.
@@ -32,7 +32,7 @@ Get-CsOutboundTranslationRule [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call this cmdlet to retrieve an existing outbound translation rule.
 Microsoft Lync Server 2010 normalizes phone numbers to E.164 format.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsOutboundTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call this cmdlet to retrieve an existing outbound translation rule.
 Lync Server normalizes phone numbers to E.164 format.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsOutboundTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call this cmdlet to retrieve an existing outbound translation rule.
 Skype for Business Server 2015 normalizes phone numbers to E.164 format.
@@ -197,13 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the outbound translation rule from the local replica of the Central Management store, rather than the Central Management store  itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the outbound translation rule from the local replica of the Central Management store, rather than the Central Management store itself.
 

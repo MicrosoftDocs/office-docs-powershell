@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsConfigurationStoreLocation
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Reports back the location of the Active Directory service control point for the Central Management store.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Reports back the location of the Active Directory service control point for the Central Management store.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Get-CsConfigurationStoreLocation [-GlobalSettingsDomainController <Fqdn>] [-Repo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Active Directory Domain Services (AD DS) uses service control points (SCP) to help computers locate services.
 For example, when you install Microsoft Lync Server 2010, a service control point is created that provides location information for the Central Management store used to maintain Lync Server 2010 data.
@@ -33,7 +33,7 @@ Computers that need access to the database connect to Active Directory and use t
 
 The Get-CsConfigurationStoreLocation cmdlet is used to report back the SQL Server path (for example, atl-sql-001.litwareinc.com/rtc) to the computer running the Central Management store.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Active Directory Domain Services (AD DS) uses service control points (SCP) to help computers locate services.
 For example, when you install Lync Server, a service control point is created that provides location information for the Central Management store used to maintain Lync Server data.
@@ -41,7 +41,7 @@ Computers that need access to the database connect to Active Directory and use t
 
 The Get-CsConfigurationStoreLocation cmdlet is used to report back the SQL Server path (for example, atl-sql-001.litwareinc.com/rtc) to the computer running the Central Management store.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Active Directory Domain Services uses service control points (SCP) to help computers locate services.
 For example, when you install Skype for Business Server 2015, a service control point is created that provides location information for the Central Management store used to maintain Skype for Business Server 2015 data.

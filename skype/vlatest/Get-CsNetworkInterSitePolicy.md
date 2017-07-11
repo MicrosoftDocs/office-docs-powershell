@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsNetworkInterSitePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more network inter-site policies, which define bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more network inter-site policies, which define bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsNetworkInterSitePolicy [-Filter <String>] [-LocalStore] [<CommonParameters
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet retrieves one or more network site policies that associate bandwidth limitation settings with directly connected sites.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkInterSitePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet retrieves one or more network site policies that associate bandwidth limitation settings with directly connected sites.

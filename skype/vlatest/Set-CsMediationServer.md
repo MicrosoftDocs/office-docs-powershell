@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsMediationServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify the properties of one or more Mediation Servers.
 Mediation Servers are used to route traffic between your internal Enterprise Voice infrastructure and a public switched telephone network (PSTN) gateway or a SIP trunk.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify the properties of one or more Mediation Servers.
 Mediation Servers are used to route traffic between your internal Enterprise Voice infrastructure and a public switched telephone network (PSTN) gateway or a SIP trunk.
@@ -28,7 +28,7 @@ Set-CsMediationServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AudioPortCount
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Mediation Servers act as a bridge between your internal Enterprise Voice configuration and either a PSTN gateway, IP-PBX, or a SIP trunk; in turn, this provides a way for your Enterprise Voice users (who are using Voice over Internet Protocol (VoIP) devices) to communicate with people using standard land-line telephones or mobile phones.
 The Set-CsMediationServer cmdlet provides a way for you to make changes to an existing Mediation Server.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMediationServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Mediation Servers act as a bridge between your internal Enterprise Voice configuration and either a PSTN gateway, IP-PBX, or a SIP trunk; in turn, this provides a way for your Enterprise Voice users (who are using Voice over Internet Protocol (VoIP) devices) to communicate with people using standard land-line telephones or mobile phones.
 The Set-CsMediationServer cmdlet provides a way for you to make changes to an existing Mediation Server.
@@ -229,7 +229,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipClientTlsPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Listening port used for communicating with gateway peers using the Transport Layer Security (TLS) protocol.
 By default, SipClientTlsPort is configured to use port 5067. 
@@ -237,7 +237,7 @@ If you change the SipClientTlsPort you will need to restart the Mediation Server
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Listening port used for communicating with gateway peers using the Transport Layer Security (TLS) protocol.
 By default, SipClientTlsPort is configured to use port 5067.
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipServerPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Listening port used for communicating with Front End Servers.
 By default, SipServerPort is configured to use port 5070. 
@@ -267,7 +267,7 @@ If you change the SipServerPort, you will need to restart the Mediation Server s
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Listening port used for communicating with Front End Servers.
 By default, SipServerPort is configured to use port 5070.

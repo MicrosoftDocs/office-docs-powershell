@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010, Skype for Business Online
+**Below Content Applies To:** Lync Server 2010, Skype for Business Online
 
 Returns information about one or more voice policies configured for your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about one or more voice policies configured for your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -36,7 +36,7 @@ Get-CsVoicePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <O
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet retrieves voice policy information.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Online, Skype for Business Server 2015
 
 This cmdlet retrieves voice policy information.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -166,14 +166,14 @@ Get-CsVoicePolicy -Filter tag*
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A unique identifier specifying the scope, and in some cases the name, of the policy.
 If this parameter is omitted, all voice policies for the organization are returned.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 A unique identifier specifying the scope and, in some cases the name, of the policy.
 If this parameter is omitted, all voice policies for the organization are returned.
@@ -194,14 +194,14 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 This parameter accepts a wildcard string and returns all voice policies with identities matching that string.
 For example, a Filter value of site:* will return all voice policies defined at the site level.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter accepts a wildcard string and returns all voice policies with identities matching that string.
 For example, a Filter value of tag:* will return all voice policies defined at the per-user level.
@@ -222,13 +222,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the voice policy from the local replica of the Central Management store, rather than the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose voice policy is to be retrieved.
 For example:
@@ -261,7 +261,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Globally unique identifier (GUID) of the tenant account whose voice policy is to be retrieved.
 For example:
@@ -278,7 +278,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voice policy is to be retrieved.
 For example:

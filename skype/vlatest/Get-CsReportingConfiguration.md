@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsReportingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the reporting configuration settings in use in the organization.
 Reporting configuration settings are used to specify the URL used for accessing Microsoft Lync Server 2013 Preview Monitoring Reports.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the reporting configuration settings in use in the organization.
 Reporting configuration settings are used to specify the URL used for accessing Skype for Business Server 2015 Monitoring Reports.
@@ -33,7 +33,7 @@ Get-CsReportingConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonP
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reporting configuration settings are used to specify the home page for the Microsoft Lync Server 2013 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsReportingConfiguration
 
 Lync Server Control Panel: The functions carried out by the Get-CsReportingConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reporting configuration settings are used to specify the home page for the Skype for Business Server 2015 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Service Identity of the monitoring database associated with the reporting configuration settings.
 For example:
@@ -166,7 +166,7 @@ If you do not include either the Identity parameter or the Filter parameter in y
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service Identity of the monitoring database associated with the reporting configuration settings.
 For example:

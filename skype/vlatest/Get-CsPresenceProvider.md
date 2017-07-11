@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPresenceProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the presence providers configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the presence providers configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
@@ -33,7 +33,7 @@ Get-CsPresenceProvider [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPresenceProvider"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsPresenceProvider cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the presence provider.
 The Identity of a presence provider is composed of two parts: the scope (Parent) where the provider has been applied (for example, service:UserServer:atl-cs-001.litwareinc.com) and the provider's fully qualified domain name.
@@ -180,7 +180,7 @@ If neither the Identity nor the Filter parameters are included, then Get-CsPrese
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the presence provider.
 The Identity of a presence provider is composed of two parts: the scope (Parent) where the provider has been applied (for example, service:UserServer:atl-cs-001.litwareinc.com) and the provider's fully qualified domain name.

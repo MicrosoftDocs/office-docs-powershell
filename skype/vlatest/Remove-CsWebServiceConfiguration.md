@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsWebServiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes one or more collections of Web Services configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes one or more collections of Web Services configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsWebServiceConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Microsoft Lync Server 2010components are web-based: these components either use web services or webpages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsWebServiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components are web-based: these components either use web services or webpages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsWebServiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components are web-based: these components either use web services or webpages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -182,7 +182,7 @@ Get-CsWebServiceConfiguration | Where-Object {$_.EnableGroupExpansion -eq $False
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Web Services configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -194,7 +194,7 @@ To reset the global collection, use this syntax: -Identity global.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Web Services configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this:

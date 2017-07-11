@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsNetworkBandwidthPolicyProfile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new network bandwidth policy profile.
 This cmdlet can also be used to set the bandwidth policies within the profile.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network bandwidth policy profile.
 This cmdlet can also be used to set the bandwidth policies within the profile.
@@ -28,7 +28,7 @@ New-CsNetworkBandwidthPolicyProfile [-Identity] <XdsGlobalRelativeIdentity> [-Au
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Microsoft Lync Server 2010, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Lync Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Skype for Business Server 2015, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
@@ -268,14 +268,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

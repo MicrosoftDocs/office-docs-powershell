@@ -6,19 +6,19 @@ schema: 2.0.0
 # New-CsMeetingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of meeting configuration settings at the site or service scope.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, in addition to controlling how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of meeting configuration settings at the site or service scope.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, in addition to controlling how (or even if) anonymous users and dial-in conferencing users can join these meetings.
 Note that these settings only affect scheduled meetings; they do not affect ad-hoc meetings created by clicking the Meet Now option in Microsoft Lync.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of meeting configuration settings at the site or service scope.
 Meeting configuration settings help dictate the type of meetings (also called "conferences") that users can create, in addition to controlling how (or even if) anonymous users and dial-in conferencing users can join these meetings.
@@ -38,7 +38,7 @@ New-CsMeetingConfiguration [-Identity] <XdsIdentity> [-AdmitAnonymousUsersByDefa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Meetings (also called "conferences") are an integral part of Microsoft Lync Server 2010.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsMeetingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Meetings (also called "conferences") are an integral part of Lync Server.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsMeetingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Meetings (also called "conferences") are an integral part of Skype for Business Server 2015.
 The CsMeetingConfiguration cmdlets enable administrators to control the type of meetings that users can create and to determine how meetings deal with anonymous users and dial-in conferencing users.
@@ -220,7 +220,7 @@ Set-CsMeetingConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the new collection of meeting configuration settings.
 Meeting configuration settings can only be created at the site or service scope.
@@ -231,7 +231,7 @@ Note that the call to New-CsMeetingConfiguration will fail if the specified site
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the new collection of meeting configuration settings.
 Meeting configuration settings can only be created at the site or service scope.
@@ -365,14 +365,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -393,13 +393,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new meeting configuration settings are being created.
 For example:
@@ -412,7 +412,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new meeting configuration settings are being created.
 For example:
@@ -535,14 +535,14 @@ Accept wildcard characters: False
 ```
 
 ### -RequireRoomSystemsAuthorization
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True ($True) all users must be authenticated before they can join a meeting using the Lync Room System.
 The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True) all users must be authenticated before they can join a meeting using the Skype for Business Room System.
 The default value is False ($False).

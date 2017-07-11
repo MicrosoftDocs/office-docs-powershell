@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsSipProxyRealm
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Used to assign the default realm (SIP Communications Service) to a collection of proxy configuration settings.
 Realms (also known as protection domains) are used to authenticate user credentials during logon.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Used to assign the default realm (SIP Communications Service) to a collection of proxy configuration settings.
 Realms (also known as protection domains) are used to authenticate user credentials during logon.
@@ -26,7 +26,7 @@ New-CsSipProxyRealm -RealmChoice <IRealmChoice> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Proxy servers provide a way for users outside your internal network to access resources on your internal network.
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSipProxyRealm"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Proxy servers provide a way for users outside your internal network to access resources on your internal network.
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSipProxyRealm"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Proxy servers provide a way for users outside your internal network to access resources on your internal network.
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.

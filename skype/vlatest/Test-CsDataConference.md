@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsDataConference
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies whether or not a pair of users can participate in a Microsoft Lync Server 2013 Preview data collaboration conference.
 A data collaboration conference is an online meeting that includes activities such as whiteboards or pools.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies whether or not a pair of users can participate in a Skype for Business Server 2015 web conference that includes activities such as sharing or viewing PowerPoint slides, whiteboards, or polls.
 The cmdlet also verifies that the Skype for Business Server 2015 web conferencing service can discover Office Web Apps Server and that a client can upload a PowerPoint file for broadcast by Office Web Apps Server.
@@ -39,7 +39,7 @@ Test-CsDataConference [-TargetFqdn] <String> [-Authentication <AuthenticationMec
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, a data conference is any conference where collaborative activities such as whiteboarding or annotations are used.
 The Test-CsDataConference cmdlet enables you to verify that a pair of users are able to take part in a data conference.
@@ -53,7 +53,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDataConference"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsDataConference cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, a data conference is any conference where collaborative activities such as whiteboarding or annotations are used.
 The Test-CsDataConference cmdlet enables you to verify that a pair of users are able to take part in a data conference.

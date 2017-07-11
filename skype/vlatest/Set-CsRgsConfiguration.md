@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsRgsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies configuration settings for the Response Group application.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies configuration settings for the Response Group application.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsRgsConfiguration [-Instance] <ServiceSettings> [-Force] [-WhatIf] [-Confir
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Set-CsRgsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRgsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultMusicOnHoldFile
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Represents the music that, by default, will be played any time a caller is placed on hold.
 The default music will play only if a Response Group workflow has not defined its own music on hold.
@@ -267,7 +267,7 @@ If DefaultMusicOnHold is equal to a null value (the default value) and if a work
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Represents the music that, by default, will be played any time a caller is placed on hold.
 The default music will play only if a Response Group workflow has not defined its own music on hold.
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCallContext
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If set to False (the default value), each agent is able to see the call context (information such as caller wait time as well as workflow questions and answers) whenever a call received.
 (This information is visible from within Microsoft Lync 2010.) If set to True, call context information is not relayed to agents when a call is received.
@@ -301,7 +301,7 @@ Note that the call context is only used with IVR queues.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If set to False (the default value), each agent is able to see the call context (information such as caller wait time or workflow questions and answers) whenever a call received.
 (This information is visible from within Lync.) If set to True, call context information is not relayed to agents when a call is received.
@@ -310,7 +310,7 @@ Note that the call context is only used with IVR queues.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to False (the default value), each agent is able to see the call context (information such as caller wait time or workflow questions and answers) whenever a call received.
 (This information is visible from within Skype for Business.) If set to True, call context information is not relayed to agents when a call is received.

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsRgsWorkflow
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing Response Group workflow.
 Workflows determine the actions that are taken when the Response Group application receives a phone call.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing Response Group workflow.
 Workflows determine the actions that are taken when the Response Group application receives a phone call.
@@ -26,7 +26,7 @@ Set-CsRgsWorkflow [-Instance] <Workflow> [-Force] [-WhatIf] [-Confirm] [<CommonP
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Workflows are perhaps the key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Set-CsRgsWorkflow"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Workflows are perhaps the key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRgsWorkflow"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Workflows are perhaps the key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.

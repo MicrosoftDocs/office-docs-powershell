@@ -6,16 +6,16 @@ schema: 2.0.0
 # Install-CsDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Installs one or more Microsoft Lync Server 2010 databases.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Installs one or more Lync Server databases.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Installs one or more Skype for Business Server 2015 databases.
 This cmdlet was introduced in Lync Server 2010.
@@ -57,7 +57,7 @@ Install-CsDatabase [-Clean] [-DatabasePaths <String[]>] [-ForDefaultInstance] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 makes extensive use of SQL Server databases, ranging from the Central Management store to the Archiving database.
 As a general rule, these databases are set up at the same time you install Lync Server 2010 or at the same time you install a Lync Server 2010 role (such as Monitoring Server) that requires a database back end.
@@ -131,7 +131,7 @@ Who can run this cmdlet: You must be a member of the domain, a member of the RTC
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Install-CsDatabase"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server makes extensive use of SQL Server databases, ranging from the Central Management store to the Archiving database.
 As a general rule, these databases are set up at the same time you install Lync Server or at the same time you install a Lync Server role (such as Monitoring Server) that requires a database back end.
@@ -203,7 +203,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Install-CsDatabase"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 makes extensive use of SQL Server databases, ranging from the Central Management store to the Archiving database.
 As a general rule, these databases are set up at the same time you Skype for Business Server 2015 or at the same time you install a Skype for Business Server 2015 role (such as Monitoring Server) that requires a database back end.
@@ -330,21 +330,21 @@ Install-CsDatabase -CentralManagementDatabase -SqlServerFqdn atl-sql-001.litware
 ## PARAMETERS
 
 ### -CentralManagementDatabase
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If this parameter is included, Install-CsDatabase will use the SqlServerFqdn parameter to install the Central Management store on the specified computer.
 This parameter is typically used only by  Topology Builder, and is generally called just once, during initial setup.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If this parameter is included, Install-CsDatabase will use the SqlServerFqdn parameter to install the Central Management store on the specified computer.
 This parameter is typically used only by Topology Builder, and is generally called just once, during initial setup.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is included, the Install-CsDatabase cmdlet will use the SqlServerFqdn parameter to install the Central Management store on the specified computer.
 This parameter is typically used only by Topology Builder, and is generally called just once, during initial setup.
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -Clean
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If this parameter is included, Install-CsDatabase will delete and reinstall databases as needed.
 If this parameter is not included, Install-CsDatabase will not overwrite any existing databases.
@@ -373,7 +373,7 @@ You cannot use both Clean and Update in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is included, the Install-CsDatabase cmdlet will delete and reinstall databases as needed.
 If this parameter is not included, the Install-CsDatabase cmdlet will not overwrite any existing databases.
@@ -411,21 +411,21 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredDatabases
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Reads information from the Lync Server 2010 topology, and installs the required databases on the specified SQL Server computer or SQL Server cluster.
 Administrators who need to call Install-CsDatabase will almost always use this parameter when specifying the databases to be installed.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reads information from the Lync Server topology, and installs the required databases on the specified SQL Server computer or SQL Server cluster.
 Administrators who need to call Install-CsDatabase will almost always use this parameter when specifying the databases to be installed.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reads information from the Skype for Business Server 2015 topology, and installs the required databases on the specified SQL Server computer or SQL Server cluster.
 Administrators who need to call the Install-CsDatabase cmdlet will almost always use this parameter when specifying the databases to be installed.
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to install a specific database on a specific SQL Server computer or SQL Server cluster.
 As a general rule, administrators should not run Install-CsDatabase with the DatabaseType parameter unless instructed otherwise by Microsoft support personnel.
@@ -483,7 +483,7 @@ User
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to install a specific database on a specific SQL Server computer or SQL Server cluster.
 As a general rule, administrators should not run Install-CsDatabase with the DatabaseType parameter unless instructed otherwise by Microsoft support personnel.
@@ -516,7 +516,7 @@ User
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to install a specific database on a specific SQL Server computer or SQL Server cluster.
 As a general rule, administrators should not run the Install-CsDatabase cmdlet with the DatabaseType parameter unless instructed otherwise by Microsoft support personnel.
@@ -583,14 +583,14 @@ Accept wildcard characters: False
 ```
 
 ### -ForDefaultInstance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When specified, instructs Install-CsDatabase to only act against the default SQL Server instance.
 You cannot use both ForDefaultInstance and ForInstance in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, instructs the Install-CsDatabase cmdlet to only act against the default SQL Server instance.
 You cannot use both ForDefaultInstance and ForInstance in the same command.
@@ -611,14 +611,14 @@ Accept wildcard characters: False
 ```
 
 ### -ForInstance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When specified, instructs Install-CsDatabase to only act against the specified SQL Server instance.
 You cannot use both ForInstance and ForDefaultInstance in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, instructs the Install-CsDatabase cmdlet to only act against the specified SQL Server instance.
 You cannot use both ForInstance and ForDefaultInstance in the same command.
@@ -639,14 +639,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Install-CsDatabase on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Install-CsDatabase cmdlet on a computer with an account in your domain.
@@ -667,7 +667,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS), then this parameter must point to the root domain controller.
@@ -675,7 +675,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services, then this parameter must point to the root domain controller.
@@ -697,19 +697,19 @@ Accept wildcard characters: False
 ```
 
 ### -LocalDatabases
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If this parameter is included, Install-CsDatabase will read in the Lync Server 2010 topology and install databases and stores as needed on the local computer.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If this parameter is included, Install-CsDatabase will read in the Lync Server topology and install databases and stores as needed on the local computer.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is included, the Install-CsDatabase cmdlet will read in the Skype for Business Server 2015 topology and install databases and stores as needed on the local computer.
 
@@ -729,13 +729,13 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPrepareCheck
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When present, causes Install-CsDatabase to forego its initial preparation checks.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, causes the Install-CsDatabase cmdlet to forego its initial preparation checks.
 
@@ -755,7 +755,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlInstanceName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.
@@ -763,7 +763,7 @@ If this parameter is omitted, Install-CsDatabase will use the default SQL Server
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.
@@ -802,14 +802,14 @@ Accept wildcard characters: False
 ```
 
 ### -Update
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When present, updates the existing database.
 You cannot use Update and Clean in the same command.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, updates the existing database.
 You cannot use Update and Clean in the same command.

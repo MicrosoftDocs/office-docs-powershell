@@ -6,18 +6,18 @@ schema: 2.0.0
 # Test-CsVoiceRoute
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests a telephone number against a voice route number pattern and returns a Boolean (true/false) value stating whether the supplied number matches the number pattern for the route.
 Number pattern is just one of the properties used by voice routes to tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests a telephone number against a voice route number pattern and returns a Boolean (true/false) value stating whether the supplied number matches the number pattern for the route.
 Number pattern is just one of the properties used by voice routes to tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests a telephone number against a voice route number pattern and returns a Boolean (true/false) value stating whether the supplied number matches the number pattern for the route.
 Number pattern is just one of the properties used by voice routes to tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
@@ -32,7 +32,7 @@ Test-CsVoiceRoute -Route <Route> -TargetNumber <PhoneNumber> [-Force] [<CommonPa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
 This cmdlet verifies whether or not a given telephone number will be routed through a specified voice route based on the number pattern of the route (the NumberPattern property).
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceRoute"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
 This cmdlet verifies whether or not a given telephone number will be routed through a specified voice route based on the number pattern of the route (the NumberPattern property).
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceRoute"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
 This cmdlet verifies whether or not a given telephone number will be routed through a specified voice route based on the number pattern of the route (the NumberPattern property).
@@ -272,13 +272,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

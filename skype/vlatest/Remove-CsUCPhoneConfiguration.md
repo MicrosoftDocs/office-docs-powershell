@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsUCPhoneConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of Microsoft Lync 2010 Phone Edition configuration settings.
 These settings include such things as the required security mode as well as whether the phone should automatically be locked after a specified period of inactivity.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified collection of Lync Phone Edition configuration settings.
 These settings include such things as the required security mode and whether the phone should automatically be locked after a specified period of inactivity.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified collection of UC phone configuration settings.
 These settings include such things as the required security mode and whether the phone should automatically be locked after a specified period of inactivity.
@@ -32,7 +32,7 @@ Remove-CsUCPhoneConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync 2010 Phone Edition represents the merging of the telephone and Microsoft Lync 2010.
 Lync 2010 Phone Edition uses special hardware (that is, a Lync 2010-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Phone Edition represents the merging of the telephone and Lync Server.
 Lync Phone Edition uses special hardware (that is, a Lync-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 UC phones represent the merging of the telephone and Skype for Business Server 2015.
 UC phones use special hardware (that is, a Skype for Business-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -239,7 +239,7 @@ Get-CsUCPhoneConfiguration | Where-Object {$_.SIPSecurityMode -ne "High"} | Remo
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of UC phone configuration settings to be removed.
 To remove a site collection use syntax similar to this: -Identity "site:Redmond".
@@ -248,7 +248,7 @@ Note that you cannot use wildcards when specifying a policy Identity.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of UC phone configuration settings to be removed.
 To remove a site collection use syntax similar to this:

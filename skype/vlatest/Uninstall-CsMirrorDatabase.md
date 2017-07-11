@@ -6,13 +6,13 @@ schema: 2.0.0
 # Uninstall-CsMirrorDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Uninstalls a Microsoft Lync Server 2013 Preview mirror database.
 A database mirror enables you to simultaneously maintain two copies of a database, each copy residing on a different server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Uninstalls a Skype for Business Server 2015 mirror database.
 A database mirror enables you to simultaneously maintain two copies of a database, each copy residing on a different server.
@@ -28,7 +28,7 @@ Uninstall-CsMirrorDatabase -DatabaseType <DatabaseNameType> -SqlServerFqdn <Fqdn
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Mirror databases enable you to simultaneously maintain two copies of a database: when data is written to Database A a copy of that data is also written to its mirror database.
 This provides the ability to instantly replace Database A should that database become unavailable: you can "failover" to the mirror database with minimal disruption to your users and with minimal data loss.
@@ -42,7 +42,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Uninstall-CsMirrorDatabase"}
 
 Lync Server Control Panel: The functions carried out by the Uninstall-CsMirrorDatabase cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Mirror databases enable you to simultaneously maintain two copies of a database: when data is written to Database A, a copy of that data is also written to its mirror database.
 This provides the ability to instantly replace Database A should that database become unavailable: you can "failover" to the mirror database with minimal disruption to your users and with minimal data loss.
@@ -79,7 +79,7 @@ Uninstall-CsMirrorDatabase -SqlServerFqdn "atl-mirror-001.litwareinc.com" -SqlIn
 ## PARAMETERS
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of mirror database to be installed.
 Allowed values are:
@@ -110,7 +110,7 @@ CentralMgmt
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of mirror database to be installed.
 Allowed values are:
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlServerFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name (FQDN) of the computer containing the database is to be uninstalled.
 For example:
@@ -166,7 +166,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the computer containing the database is to be uninstalled.
 For example:
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example: -
@@ -232,7 +232,7 @@ Report "C:\Logs\UnInstallDatabaseMirror.html"
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example:
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlInstanceName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.
@@ -263,7 +263,7 @@ If this parameter is omitted, Install-CsMirrorDatabase will use the default SQL 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.

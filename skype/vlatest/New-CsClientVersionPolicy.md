@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsClientVersionPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new client version policy.
 Client version policies enable you to specify which versions of clients (such as Microsoft Office Communicator 2007 R2) will be able to log on to your Microsoft Lync Server 2010 system.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new client version policy.
 Client version policies enable you to specify which versions of clients (such as Microsoft Office Communicator 2007 R2) will be able to log on to your Lync Server system.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new client version policy.
 Client version policies enable you to specify which versions of clients (such as Microsoft Office Communicator 2007 R2) will be able to log on to your Skype for Business Server 2015 system.
@@ -33,7 +33,7 @@ New-CsClientVersionPolicy [-Identity] <XdsIdentity> [-Description <String>] [-Ru
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -184,7 +184,7 @@ Get-CsSite | Select-Object Identity | ForEach-Object {New-CsClientVersionPolicy 
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the policy to be created.
 To create a policy at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -196,7 +196,7 @@ To create a per-user policy, use syntax similar to this: -Identity "SalesDepartm
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier for the policy to be created.
 To create a policy at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rules
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Collection of client version policy rules.
 You can add and remove rules from a policy by using the New-CsClientVersionPolicyRule and the Remove-CsClientVersionPolicyRule cmdlets.
@@ -250,7 +250,7 @@ New-CsClientVersionPolicy -Identity "RedmondClientVersionPolicy" -Rules @{Add=$x
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Collection of client version policy rules.
 You can add and remove rules from a policy by using the New-CsClientVersionPolicyRule cmdlet and the Remove-CsClientVersionPolicyRule cmdlet.
@@ -291,14 +291,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

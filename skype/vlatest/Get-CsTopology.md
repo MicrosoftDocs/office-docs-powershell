@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsTopology
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about your Microsoft Lync Server 2010 infrastructure, including internal domains, sites, clusters, computers, services, and back-end instances of SQL Server.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about your Lync Server infrastructure, including internal domains, sites, clusters, computers, services, and back-end instances of SQL Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about your Skype for Business Server 2015 infrastructure, including internal domains, sites, clusters, computers, services, and back-end instances of SQL Server.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Get-CsTopology [-AsXml] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Get-CsTopology cmdlet returns information about how Lync Server 2010 has been set up and configured.
 Called without any additional parameters, the cmdlet provides an overview of your Lync Server infrastructure; in that scenario, the cmdlet gives you an overall view of such things as your domains, your sites, and the computers running Lync Server services and server roles.
@@ -42,7 +42,7 @@ You can also use the AsXml parameter to return detailed information about your e
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsTopology cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsTopology cmdlet returns information about how Lync Server has been set up and configured.
 Called without any additional parameters, the cmdlet provides an overview of your Lync Server infrastructure; in that scenario, the cmdlet gives you an overall view of such things as your domains, your sites, and the computers running Lync Server services and server roles.
@@ -55,7 +55,7 @@ You can also use the AsXml parameter to return detailed information about your e
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsTopology cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsTopology cmdlet returns information about how Skype for Business Server 2015 has been set up and configured.
 Called without any additional parameters, the cmdlet provides an overview of your Skype for Business Server 2015 infrastructure; in that scenario, the cmdlet gives you an overall view of such things as your domains, your sites, and the computers running Skype for Business Server 2015 services and server roles.
@@ -163,14 +163,14 @@ Get-CsTopology -AsXML | Out-File C:\Logs\Topology.xml
 ## PARAMETERS
 
 ### -AsXml
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns topology information in XML format.
 By combining Get-CsTopology, the AsXml parameter, and the Out-File cmdlet, you can export your topology to an XML file.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns topology information in XML format.
 By combining the Get-CsTopology cmdlet, the AsXml parameter, and the Out-File cmdlet, you can export your topology to an XML file.

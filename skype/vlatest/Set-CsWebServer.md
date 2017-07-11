@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsWebServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies one or more of the Web Server services used by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies one or more of the Web Server services used by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies one or more of the Web Server services used by Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -41,7 +41,7 @@ Set-CsWebServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AppSharingPortCount 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 makes extensive use of Web servers and web services.
 For example, Address Book queries can be conducted using web services (the Address Book Query Web service).
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsWebServer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server makes extensive use of Web servers and web services.
 For example, Address Book queries can be conducted using web services (the Address Book Query Web service).
@@ -79,7 +79,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsWebServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 makes extensive use of Web servers and web services.
 For example, Address Book queries can be conducted using web services (the Address Book Query Web service).
@@ -165,7 +165,7 @@ Get-CsService -WebServer | ForEach-Object {Set-CsWebServer -Identity $_.Identity
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Web Services pool.
 For example: -Identity "WebServer:atl-cs-001.litwareinc.com".
@@ -175,7 +175,7 @@ For example: -Identity "atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Web Services pool.
 For example:
@@ -239,14 +239,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalFqdn
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) used by people connecting to the Web Services pool from outside the internal network.
 For example: -ExternalFqdn "www.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) used by people connecting to the Web Services pool from outside the internal network.
 For example:
@@ -371,14 +371,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service ID for the User Services pool associated with the Web Services pool.
 For example: -UserServer "UserServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service ID for the User Services pool associated with the Web Services pool.
 For example:
@@ -449,13 +449,13 @@ Accept wildcard characters: False
 ```
 
 ### -InternalFqdn
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill InternalFqdn Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Fully qualified domain name for the Mobility Services.
 The InternalFqdn should only be accessible from inside the organization's firewall.
@@ -476,13 +476,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublishedExternalHttpPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill PublishedExternalHttpPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port number for the published external HTTP port.
 
@@ -502,13 +502,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublishedExternalHttpsPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill PublishedExternalHttpsPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 External port for the Mobility service.
 
@@ -528,13 +528,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublishedPrimaryHttpPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill PublishedPrimaryHttpPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port number for the published primary HTTP port.
 
@@ -554,13 +554,13 @@ Accept wildcard characters: False
 ```
 
 ### -PublishedPrimaryHttpsPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill PublishedPrimaryHttpsPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Internal port for the Mobility service.
 

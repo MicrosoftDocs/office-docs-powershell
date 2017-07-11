@@ -6,16 +6,16 @@ schema: 2.0.0
 # Test-CsWebAppAnonymous
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill in the Synopsis}}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that anonymous users can use the Microsoft Lync Web App to join a Lync Server conference.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that anonymous users can use the Skype for Business Web App to join a Skype for Business Server 2015 conference.
 This cmdlet was introduced in Lync Server 2010.
@@ -46,11 +46,11 @@ Test-CsWebAppAnonymous [-Force] [-OutVerboseVariable <String>] -TargetUri <Strin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill in the Description}}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsWebAppAnonymous cmdlet enables administrators to verify that anonymous users can employ the Lync Web App in order to join conferences.
 When you run Test-CsWebAppAnonymous, the cmdlet attempts to obtain an anonymous web ticket by using the Web Ticket service.
@@ -64,7 +64,7 @@ These test users represent a pair of user accounts that have been preconfigured 
 Alternatively, administrators can run Test-CsWebAppAnonymous using an actual user account.
 If you decide to conduct the test using an actual user account you will need to supply the logon name and password for that account.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsWebAppAnonymous cmdlet enables administrators to verify that anonymous users can employ Skype for Business Web App in order to join conferences.
 When you run the Test-CsWebAppAnonymous cmdlet, the cmdlet attempts to obtain an anonymous web ticket by using the Web Ticket service.
@@ -140,13 +140,13 @@ Test-CsWebAppAnonymous -TargetFqdn atl-cs-001.litwareinc.com -UserSipAddress "si
 ## PARAMETERS
 
 ### -External
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill External Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When present, causes Test-CsWebAppAnonymous to test the Reach server's external web relay.
 If this parameter is not present, the cmdlet will test the internal web relay.
@@ -154,7 +154,7 @@ The web relay serves as an intermediary between the internal network and the Int
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, causes the Test-CsWebAppAnonymous cmdlet to test the Reach server's external web relay.
 If this parameter is not present, the cmdlet will test the internal web relay.
@@ -176,13 +176,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
@@ -202,13 +202,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax
@@ -219,7 +219,7 @@ Do not prepend a $ character when specifying the variable name.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
@@ -244,13 +244,13 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill RegistrarPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP port used by the Registrar service.
 This parameter is not required if the Registrar uses the default port 5061.
@@ -271,13 +271,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetFqdn
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill TargetFqdn Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the pool to be tested.
 For example:
@@ -313,13 +313,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUri
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill TargetUri Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Uniform Resource Identifier (URI) of the Reach server.
 For example:
@@ -344,13 +344,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill UserCredential Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 User credentials object for the first of the two user accounts to be tested.
 The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
@@ -378,13 +378,13 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill UserSipAddress Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP address for the first of the two user accounts to be tested.
 For example:
@@ -422,13 +422,13 @@ Accept wildcard characters: False
 ```
 
 ### -WebCredential
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill WebCredential Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 User credential object for the user account to be used in the test.
 The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.

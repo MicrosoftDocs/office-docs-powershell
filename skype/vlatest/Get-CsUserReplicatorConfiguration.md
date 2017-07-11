@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsUserReplicatorConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the User Replicator configuration settings currently employed in your organization.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the User Replicator configuration settings currently employed in your organization.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the User Replicator configuration settings currently employed in your organization.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Skype for Business Server 2015.
@@ -38,7 +38,7 @@ Get-CsUserReplicatorConfiguration [-Filter <String>] [-LocalStore] [<CommonParam
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Lync Server 2010 maintains its own database of user accounts and user account data, Lync Server still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server maintains its own database of user accounts and user account data, Lync Server still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -94,7 +94,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 maintains its own database of user accounts and user account data, Skype for Business Server 2015 still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -149,7 +149,7 @@ Get-CsUserReplicatorConfiguration
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier of the User Replicator configuration settings to be returned.
 To return settings at the service scope, use syntax similar to this: -Identity "service:Registrar:atl-cs-001.litwareinc.com".
@@ -159,7 +159,7 @@ If this parameter is not specified then all the User Replicator configurations s
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier of the User Replicator configuration settings to be returned.
 To return settings at the service scope, use syntax similar to this: -Identity "service:Registrar:atl-cs-001.litwareinc.com".
@@ -169,7 +169,7 @@ If this parameter is not specified then all the User Replicator configurations s
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the User Replicator configuration settings to be returned.
 To return settings at the service scope, use syntax similar to this:
@@ -199,14 +199,14 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the collection (or collections) of User Replicator configuration settings to be returned.
 For example, this command returns all the settings configured at the service scope: -Filter "service:*".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the collection (or collections) of User Replicator configuration settings to be returned.
 For example, this command returns all the settings configured at the service scope:

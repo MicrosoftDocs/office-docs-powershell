@@ -6,16 +6,16 @@ schema: 2.0.0
 # Move-CsUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves one or more user accounts enabled for Microsoft Lync Server 2010 to a new Registrar pool.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Moves one or more user accounts enabled for Lync Server to a new Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Moves one or more user accounts enabled for Skype for Business Server 2015 to a new Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
@@ -47,7 +47,7 @@ Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Move-CsUser cmdlet enables you to move a user account enabled for Lync Server 2010 from one Registrar pool to another.
 Move-CsUser affects only the user's Lync Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsUser"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Move-CsUser cmdlet enables you to move a user account enabled for Lync Server from one Registrar pool to another.
 Move-CsUser affects only the user's Lync Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
@@ -85,7 +85,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Move-CsUser cmdlet enables you to move a user account enabled for Skype for Business Server 2015 from one Registrar pool to another.
 The Move-CsUser cmdlet affects only the user's Skype for Business Server 2015 account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The FQDN (for example, atl-cs-001.litwareinc.com) of the Registrar pool where the user account should be moved.
 In addition to a Registrar pool, the Target can also be the FQDN of a legacy Office Communications Server Front End Server or a hosting provider.
@@ -223,7 +223,7 @@ For example, any conferences the user has scheduled will be deleted and will not
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The FQDN (for example, atl-cs-001.litwareinc.com) of the Registrar pool where the user account should be moved.
 In addition to a Registrar pool, the Target can also be the FQDN of a legacy Office Communications Server Front End Server or a hosting provider.
@@ -263,21 +263,21 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is used only for Microsoft Lync Online 2010.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter is used only for Lync Online.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for Skype for Business Server 2015.
 It should not be used with an on-premises implementation of Skype for Business Server 2015.
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to run the Move-CsUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -381,7 +381,7 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Move-CsUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -405,13 +405,13 @@ Accept wildcard characters: False
 ```
 
 ### -HostedMigrationOverrideUrl
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for the hosted migration service used when moving a user to the Office 365 version of Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the hosted migration service used when moving a user to Skype for Business Online.
 

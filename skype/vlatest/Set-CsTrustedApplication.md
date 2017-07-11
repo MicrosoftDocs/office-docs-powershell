@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsTrustedApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the settings for a trusted application.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the settings for a trusted application.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Set-CsTrustedApplication [[-Identity] <ExternalApplicationIdentity>] [-Port <Int
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Microsoft Lync Server 2010 but that is not a built-in part of the product.
 This cmdlet allows you to modify the port number that the external service that runs the application is using.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -matches "Set-CsTrustedApplication\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Lync Server but that is not a built-in part of the product.
 This cmdlet allows you to modify the port number that the external service that runs the application is using.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -matches "Set-CsTrustedApplication\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server 2015 but that is not a built-in part of the product.
 This cmdlet allows you to modify the port number that the external service that runs the application is using.

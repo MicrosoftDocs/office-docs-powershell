@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsLocationPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about how (or if) the Enhanced 9-1-1 (E9-1-1) Location Information service has been configured.
 The E9-1-1 service enables those who answer emergency calls to determine the caller's geographic location.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about how (or if) the Enhanced 9-1-1 (E9-1-1) Location Information service has been configured.
 The E9-1-1 service enables those who answer emergency calls to determine the caller's geographic location.
@@ -32,7 +32,7 @@ Get-CsLocationPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonP
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -44,7 +44,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsLocationPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -176,7 +176,7 @@ Get-CsLocationPolicy | Where-Object {$_.EnhancedEmergencyServicesEnabled -eq $Fa
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The unique identifier of the location policy you want to retrieve.
 To retrieve the global location policy, use a value of Global.
@@ -185,7 +185,7 @@ For a policy created at the per-user scope, this value will simply be the name o
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unique identifier of the location policy you want to retrieve.
 To retrieve the global location policy, use a value of Global.
@@ -194,7 +194,7 @@ For a policy created at the per-user scope, this value will simply be the name o
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unique identifier of the location policy you want to retrieve.
 To retrieve the global location policy, use a value of Global.

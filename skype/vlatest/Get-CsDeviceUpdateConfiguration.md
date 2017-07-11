@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsDeviceUpdateConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the device update configuration settings currently deployed in your organization.
 These settings help manage the Device Update Web service, a Microsoft Lync Server 2010 component that enables administrators to distribute firmware updates to telephones and other devices running Microsoft Lync 2010 Phone Edition.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the device update configuration settings currently deployed in your organization.
 These settings help manage the Device Update Web service, a Lync Server component that enables administrators to distribute firmware updates to telephones and other devices running Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the device update configuration settings currently deployed in your organization.
 These settings help manage the Device Update Web service, a Skype for Business Server 2015 component that enables administrators to distribute firmware updates to telephones and other devices running Skype for Business.
@@ -38,7 +38,7 @@ Get-CsDeviceUpdateConfiguration [-Filter <String>] [-LocalStore] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Lync 2010 Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server 2010.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Lync Server.
 Periodically, administrators upload a set of device update rules to Lync Server.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Skype for Business.
 Periodically, administrators upload a set of device update rules to Skype for Business Server 2015.

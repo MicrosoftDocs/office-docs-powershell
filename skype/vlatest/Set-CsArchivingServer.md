@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsArchivingServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to specify a new database location for one or more Archiving Servers.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to specify a new database location for one or more Archiving Servers.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Set-CsArchivingServer [[-Identity] <XdsGlobalRelativeIdentity>] [-ArchivingDatab
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Archiving Servers provide a way for you to save complete transcripts of the instant messaging (IM) sessions that take place in your organization.
 In some organizations, it can be useful to have copies of these IM sessions.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsArchivingServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Archiving Servers provide a way for you to save complete transcripts of the instant messaging (IM) sessions that take place in your organization.
 In some organizations, it can be useful to have copies of these IM sessions.

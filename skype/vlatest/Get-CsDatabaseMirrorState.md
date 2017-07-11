@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsDatabaseMirrorState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about whether database mirroring has been implemented for a specified database on a specified pool.
 Database mirroring enables you to simultaneously maintain two copies of a database, with each copy residing on a different server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about whether database mirroring has been implemented for a specified database on a specified pool.
 Database mirroring enables you to simultaneously maintain two copies of a database, with each copy residing on a different server.
@@ -28,7 +28,7 @@ Get-CsDatabaseMirrorState -PoolFqdn <Fqdn> [-DatabaseType <DatabaseNameType>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsDatabaseMirrorState cmdlet returns information about the mirror databases configured for a pool; this includes information about the mirror databases that might (or might not) have been configured for the Front End server database, the Location Information Service database, the call detail recording and Quality of Experience databases, and so on.
 For each database the cmdlet will report back the synchronization status for both the primary database and the mirror database.
@@ -52,7 +52,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDatabaseMirrorState"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsDatabaseMirrorState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsDatabaseMirrorState cmdlet returns information about the mirror databases configured for a pool; this includes information about the mirror databases that might (or might not) have been configured for the Front End server database, the Location Information Service database, the call detail recording and Quality of Experience databases, and so on.
 For each database the cmdlet will report back the synchronization status for both the primary database and the mirror database.
@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of database whose mirror state is being checked.
 Allowed values are:
@@ -135,7 +135,7 @@ User
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of database whose mirror state is being checked.
 Allowed values are:

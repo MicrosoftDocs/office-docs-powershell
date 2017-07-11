@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsClientPinInfo
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about the personal identification number (PIN) assigned to a user.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves information about the personal identification number (PIN) assigned to a user.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsClientPinInfo [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<CommonP
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.
@@ -44,7 +44,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientPinInfo"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientPinInfo"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.

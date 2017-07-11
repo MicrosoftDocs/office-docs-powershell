@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsPersistentChatMessage
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Replaces one or more Persistent Chat messages in the Persistent Chat database with a default message or with an administrator-provided message.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Replaces one or more Persistent Chat messages in the Persistent Chat database with a default message or with an administrator-provided message.
 This cmdlet was introduced in Lync Server 2013.
@@ -35,7 +35,7 @@ Remove-CsPersistentChatMessage -Identity <String> -ReplaceMessage <String> [-Cas
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -53,7 +53,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatMessag
 
 Lync Server Control Panel: The functions carried out by the Remove-CsPartnerApplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -213,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Keywords that can be used to help identify the messages to be deleted.
 For example, to search for all messages that include the keyword "Fabrikam" use this syntax:
@@ -229,7 +229,7 @@ To look for messages using any one of the provided keywords, use the MatchClause
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Keywords that can be used to help identify the messages to be deleted.
 For example, to search for all messages that include the keyword "Fabrikam" use this syntax:
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchClause
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies how Remove-CsPersistentChatMessage handles multiple keywords.
 Allowed values are:
@@ -274,7 +274,7 @@ For example, this syntax searches for messages that have the exact phrase "For i
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies how the Remove-CsPersistentChatMessage cmdlet handles multiple keywords.
 Allowed values are:

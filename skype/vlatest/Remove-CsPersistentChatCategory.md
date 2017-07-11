@@ -6,14 +6,14 @@ schema: 2.0.0
 # Remove-CsPersistentChatCategory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing Persistent Chat category.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms, and each chat room must be associated with a category.
 This cmdlet was introduced in Lync Server 2013 Preview.
 Note that categories cannot be removed unless they are empty (that is, all the rooms within that category must be removed before you can remove the category).
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing Persistent Chat category.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms, and each chat room must be associated with a category.
@@ -35,7 +35,7 @@ Remove-CsPersistentChatCategory [-Instance] <Category> [-Confirm] [-WhatIf] [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -59,7 +59,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatCatego
 Lync Server Control Panel: To remove a Persistent Chat category using the Lync Server Control Panel, click Persistent Chat and then click Category.
 Select the category to be removed, click Edit and then click Delete.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsMonitoringServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to configure new locations for the Monitoring Server database and reporting pack.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to configure new locations for the Monitoring Server database and reporting pack.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Set-CsMonitoringServer [[-Identity] <XdsGlobalRelativeIdentity>] [-MonitoringDat
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Monitoring Server provides you with two important capabilities.
 For one, it enables you to maintain information about how, and how often, Enterprise Voice is used in your organization.
@@ -44,7 +44,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMonitoringServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Monitoring Server provides you with two important capabilities.
 For one, it enables you to maintain information about how, and how often, Enterprise Voice is used in your organization.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Invoke-CsStorageServiceFlush
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Flushes the Lync Server Storage Service database on each Front End server in a pool.
 Flushing a database involves writing all the queued data to disk, and then clearing the database cache.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Flushes the Skype for Business Server 2015 Storage Service database on each Front End server in a pool.
 Flushing a database involves writing all the queued data to disk, and then clearing the database queue.
@@ -28,7 +28,7 @@ Invoke-CsStorageServiceFlush -FlushType <FlushType> -PoolFqdn <Fqdn> [-Binding <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Lync Server Storage Service provides a common interface and infrastructure for managing Lync Server data, including session data for monitoring, archiving, and conversation history, as well as for integrating with the Microsoft Exchange Server 2013 Preview storage system.
 Like other databases, the Storage Service caches data in memory and then, as system resources permit, periodically writes that data to disk.
@@ -49,7 +49,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsStorageServiceFlush"
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsStorageServiceFlush cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Skype for Business Server 2015 Storage Service provides a common interface and infrastructure for managing Skype for Business Server 2015 data, including session data for monitoring, archiving, and conversation history, as well as for integrating with the Exchange storage system.
 Like other databases, the Storage Service caches data in memory and then, as system resources permit, periodically writes that data to disk.
@@ -93,7 +93,7 @@ Invoke-CsStorageServiceFlush -PoolFqdn "atl-cs-001.litwareinc.com" -FlushType "S
 ## PARAMETERS
 
 ### -FlushType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the type of storage flush to be performed.
 Allowed values are:
@@ -103,7 +103,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the type of storage flush to be performed.
 Allowed values are:
@@ -146,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -Binding
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Windows Communication Foundation (WCF) binding.
 A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
@@ -157,7 +157,7 @@ valid values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Windows Communication Foundation (WCF) binding.
 A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
@@ -199,14 +199,14 @@ Accept wildcard characters: False
 ```
 
 ### -HostNameStorageService
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the server where the Lync Server Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the server where the Skype for Business Server 2015 Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.

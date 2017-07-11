@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsDiagnosticConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the diagnostic configuration settings currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Microsoft Lync Server 2010 log files.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the diagnostic configuration settings currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Lync Server log files.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the diagnostic configuration settings currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Skype for Business Server 2015 log files.
@@ -38,7 +38,7 @@ Get-CsDiagnosticConfiguration [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If you enable logging for Lync Server 2010, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you enable logging for Lync Server, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you enable logging for Skype for Business Server 2015, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -291,13 +291,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the diagnostic configuration data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the diagnostic configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 

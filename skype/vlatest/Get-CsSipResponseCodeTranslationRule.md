@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsSipResponseCodeTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about SIP response code translation rules.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about SIP response code translation rules.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about SIP response code translation rules.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Skype for Business Server 2015.
@@ -38,7 +38,7 @@ Get-CsSipResponseCodeTranslationRule [-Filter <String>] [-LocalStore] [<CommonPa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Lync Server 2010, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsSipResponseCodeTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Lync Server, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSipResponseCodeTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Skype for Business Server 2015, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -230,7 +230,7 @@ Get-CsSipResponseCodeTranslationRule | Where-Object {$_.ReceivedISUPCauseValue -
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the translation rule.
 The identity for a translation rule consists of two parts: the scope where the rule was configured, and the name given to the rule when it was created.
@@ -247,7 +247,7 @@ If this parameter is omitted, Get-CsSipResponseCodeTranslationRule returns a col
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the translation rule.
 The identity for a translation rule consists of two parts: the scope where the rule was configured, and the name given to the rule when it was created.
@@ -297,13 +297,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the SIP response code translation rule data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the SIP response code translation rule data from the local replica of the Central Management store rather than from the Central Management store itself.
 

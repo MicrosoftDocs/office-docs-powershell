@@ -6,11 +6,11 @@ schema: 2.0.0
 # Debug-CsLisConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Displays the Enhanced 9-1-1 (E9-1-1) Location Information service (LIS) configuration in XML format.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Displays the Enhanced 9-1-1 (E9-1-1) Location Information service (LIS) configuration in XML format.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Debug-CsLisConfiguration [-Force] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The LIS configuration for an Enterprise Voice E9-1-1 implementation is stored in compressed format.
 This cmdlet un-compresses the configuration and displays it in XML format.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Debug-CsLisConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The LIS configuration for an Enterprise Voice E9-1-1 implementation is stored in compressed format.
 This cmdlet un-compresses the configuration and displays it in XML format.

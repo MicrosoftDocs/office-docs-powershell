@@ -6,13 +6,13 @@ schema: 2.0.0
 # Update-CsClsLogging
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Updates the duration time for all active centralized logging scenarios.
 Centralized logging provides a way for administrators to simultaneously enable or disable Microsoft Lync Server 2013 Preview tracing on multiple computers.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Updates the duration time for all active centralized logging scenarios.
 Centralized logging provides a way for administrators to simultaneously enable or disable Skype for Business Server 2015 tracing on multiple computers.
@@ -28,7 +28,7 @@ Update-CsClsLogging -Duration <String> [-AsXml] [-Computers <String[]>] [-Pools 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -43,7 +43,7 @@ It is also possible to define custom scenarios by using the New-CsClsScenario cm
 By default, logging operations run for 4 hours (240 minutes) before automatically stopping; however, administrators have the option of specifying a different duration time when they begin logging.
 In addition, administrators can also use the Update-CsClsLogging cmdlet to change the duration time for all the scenarios currently being logged.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -103,7 +103,7 @@ Update-CsClsLogging -Duration 60 -Pools "atl-cs-001.litwareinc.com"
 ## PARAMETERS
 
 ### -Duration
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Amount of time that the logging operation should run.
 For example, this syntax causes the logging operation to run for 2 hours (120 minutes) and then stop:
@@ -122,7 +122,7 @@ The default value is 30 minites.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Amount of time that the logging operation should run.
 For example, this syntax causes the logging operation to run for 2 hours (120 minutes) and then stop:

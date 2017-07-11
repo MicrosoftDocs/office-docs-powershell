@@ -6,13 +6,13 @@ schema: 2.0.0
 # Install-CsMirrorDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Associates a mirror database with a Microsoft Lync Server 2013 Preview database.
 A database mirror enables you to simultaneously maintain two copies of a database, each copy residing on a different server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Associates a mirror database with a Skype for Business Server 2015 database.
 A database mirror enables you to simultaneously maintain two copies of a database, each copy residing on a different server.
@@ -37,7 +37,7 @@ Install-CsMirrorDatabase -DatabaseType <DatabaseNameType> -FileShare <String> -S
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Mirror databases enable you to simultaneously maintain two copies of a database: when data is written to Database A a copy of that data is also written to its mirror database.
 This provides the ability to instantly replace Database A should that database become unavailable: you can "failover" to the mirror database with minimal disruption to your users and with minimal data loss.
@@ -53,7 +53,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Install-CsMirrorDatabase"}
 
 Lync Server Control Panel: The functions carried out by the Install-CsMirrorDatabase cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Mirror databases enable you to simultaneously maintain two copies of a database: when data is written to Database A, a copy of that data is also written to its mirror database.
 This provides the ability to instantly replace Database A should that database become unavailable: you can "failover" to the mirror database with minimal disruption to your users and with minimal data loss.
@@ -92,13 +92,13 @@ Install-CsMirrorDatabase -ConfiguredDatabases -FileShare "\\\\atl-fs-001\DbBacku
 ## PARAMETERS
 
 ### -ConfiguredDatabases
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reads information from the Lync Server topology, and installs the required mirror databases on the specified SQL Server computer or SQL Server cluster.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reads information from the Skype for Business Server 2015 topology, and installs the required mirror databases on the specified SQL Server computer or SQL Server cluster.
 
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of mirror database to be installed.
 Allowed values are:
@@ -149,7 +149,7 @@ CentralMgmt
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of mirror database to be installed.
 Allowed values are:
@@ -196,14 +196,14 @@ Accept wildcard characters: False
 ```
 
 ### -FileShare
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 UNC path to the shared folder on the "witness" server.
 A database witness (which must be installed using SQL Server Management Studio) makes failover automatic any time the principal SQL store fails.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 UNC path to the database shared folder.
 The file share is used to export of databases from the primary SQL Server and import those databases onto the mirror.
@@ -316,14 +316,14 @@ Accept wildcard characters: False
 ```
 
 ### -ForDefaultInstance
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, instructs Install-CsMirrorDatabase to only act against the default SQL Server instance.
 You cannot use both ForDefaultInstance and ForInstance in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, instructs the Install-CsMirrorDatabase cmdlet to only act against the default SQL Server instance.
 You cannot use both ForDefaultInstance and ForInstance in the same command.
@@ -344,14 +344,14 @@ Accept wildcard characters: False
 ```
 
 ### -ForInstance
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, instructs Install-CsMirrorDatabase to only act against the specified SQL Server instance.
 You cannot use both ForInstance and ForDefaultInstance in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, instructs the Install-CsMirrorDatabase cmdlet to only act against the specified SQL Server instance.
 You cannot use both ForInstance and ForDefaultInstance in the same command.
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example: -
@@ -381,7 +381,7 @@ Report "C:\Logs\InstallDatabaseMirror.html"
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example:
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlInstanceName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.
@@ -412,7 +412,7 @@ If this parameter is omitted, Install-CsMirrorDatabase will use the default SQL 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the database instance where the database is to be installed.
 A database instance is simply a set of running processes that provides access to database files.

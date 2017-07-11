@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsUserReplicatorConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory Domain Services (AD DS) and then synchronizes the new information with the current user data stored by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory Domain Services (AD DS) and then synchronizes the new information with the current user data stored by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory Domain Services and then synchronizes the new information with the current user data stored by Skype for Business Server 2015.
@@ -42,7 +42,7 @@ Set-CsUserReplicatorConfiguration [-Instance <PSObject>] [-ADDomainNamingContext
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Lync Server 2010 maintains its own database of user accounts and user account data, Lync Server 2010 still strongly on AD DS as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such the Active Directory display name).
@@ -70,7 +70,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server maintains its own database of user accounts and user account data, Lync Server still relies on AD DS as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such the Active Directory display name).
@@ -98,7 +98,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 maintains its own database of user accounts and user account data, Skype for Business Server 2015 still relies on AD DS as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such the Active Directory display name).
@@ -261,14 +261,14 @@ Set-CsUserReplicatorConfiguration -Identity global -ADDomainNamingContextList @{
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the User Replicator configuration settings to be modified.
 To modify the global settings, use this syntax: -Identity global.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the User Replicator configuration settings to be modified.
 To modify the global settings, use this syntax:

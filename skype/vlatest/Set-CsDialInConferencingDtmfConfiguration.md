@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsDialInConferencingDtmfConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the dual-tone multifrequency (DTMF) signaling settings used for dial-in conferencing.
 DTMF enables users who dial in to a conference to control conference settings (such as muting and unmuting themselves or locking and unlocking the conference) by using the keypad on their telephone.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the dual-tone multifrequency (DTMF) signaling settings used for dial-in conferencing.
 DTMF enables users who dial in to a conference to control conference settings (such as muting and unmuting themselves or locking and unlocking the conference) by using the keypad on their telephone.
@@ -40,7 +40,7 @@ Set-CsDialInConferencingDtmfConfiguration [-Instance <PSObject>] [-AdmitAll <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 enables users to join conferences by dialing in over the telephone.
 Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingDtmfConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to join conferences by dialing in over the telephone.
 Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
@@ -98,7 +98,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingDtmfConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to join conferences by dialing in over the telephone.
 Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
@@ -250,7 +250,7 @@ Get-CsDialInConferencingDtmfConfiguration -Filter "site:*" | Set-CsDialInConfere
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the unique identifier for the collection of DTMF settings you want to modify.
 To refer to the global settings, use this syntax: -Identity global.
@@ -261,7 +261,7 @@ If this parameter is not specified, then Set-CsDialInConferencingDtmfConfigurati
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of DTMF settings you want to modify.
 To refer to the global settings, use this syntax: -Identity global.
@@ -405,14 +405,14 @@ Accept wildcard characters: False
 ```
 
 ### -MuteUnmuteCommand
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the key to be pressed to mute or unmute yourself; the same key is used to toggle back and forth between muting and unmuting).
 The default key is 6.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the key to be pressed to mute or unmute yourself; the same key is used to toggle back and forth between muting and unmuting.
 The default key is 6.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsSipProxyUseDefaultCert
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates an object reference to the default certificate used by Microsoft Lync Server 2010.
 This object reference can then be used to configure a static route to use Transport Layer Security (TLS) as its transport protocol.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates an object reference to the default certificate used by Lync Server.
 This object reference can then be used to configure a static route to use Transport Layer Security (TLS) as its transport protocol.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference to the default certificate used by Skype for Business Server 2015.This object reference can then be used to configure a static route to use Transport Layer Security (TLS) as its transport protocol.
 This cmdlet was introduced in Lync Server 2010.
@@ -31,7 +31,7 @@ New-CsSipProxyUseDefaultCert [-Verbose] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send a SIP message to someone, that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSipProxyUseDefaultCert"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send a SIP message to someone, that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSipProxyUseDefaultCert"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send a SIP message to someone, that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.

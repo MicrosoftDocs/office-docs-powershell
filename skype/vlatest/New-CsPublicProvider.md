@@ -6,20 +6,20 @@ schema: 2.0.0
 # New-CsPublicProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a federation relationship with a new public provider.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
 Microsoft Lync Server 2010 ships with three public providers configured but not enabled: Yahoo!; AOL; and MSN.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a federation relationship with a new public provider.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
 Lync Server ships with three public providers configured but not enabled: Yahoo; AIM (AOL); and Messenger (MSN).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a federation relationship with a new public provider.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
@@ -37,7 +37,7 @@ New-CsPublicProvider [-Identity] <XdsGlobalRelativeIdentity> -ProxyFqdn <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2010.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsPublicProvider"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2013 Preview.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPublicProvider"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.
@@ -183,7 +183,7 @@ Set-CsPublicProvider -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the public provider to be created.
 The Identity typically the name of the website providing the services (for example, Yahoo!; AOL; MSN; etc.).
@@ -194,7 +194,7 @@ Your command will fail if a public provider or a hosting provider with that Iden
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the public provider to be created.
 The Identity typically the name of the website providing the services (for example, Yahoo!, AOL, or MSN.).
@@ -205,7 +205,7 @@ Your command will fail if a public provider or a hosting provider with that Iden
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the public provider to be created.
 The Identity typically the name of the website providing the services.
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates whether or not the federation relationship between your organization and the public provider is active.
 If set to True, users in your organization will be able to exchange instant messages and presence information with users who have accounts hosted on the public provider.
@@ -259,7 +259,7 @@ You can enable and disable federation relationships at any time by using the Ena
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the federation relationship between your organization and the public provider is active.
 If set to True, users in your organization will be able to exchange instant messages and presence information with users who have accounts hosted on the public provider.
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -VerificationLevel
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates how (or if) messages sent from a public provider are verified to ensure that they were sent from that provider.
 The VerificationLevel must be set to one of the following values:
@@ -304,7 +304,7 @@ If the verification information is missing the message will be rejected.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates how (or if) messages sent from a public provider are verified to ensure that they were sent from that provider.
 The VerificationLevel must be set to one of the following values:
@@ -328,7 +328,7 @@ This value has been deprecated for use in Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates how (or if) messages sent from a public provider are verified to ensure that they were sent from that provider.
 The VerificationLevel must be set to one of the following values:
@@ -382,14 +382,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -458,13 +458,13 @@ Accept wildcard characters: False
 ```
 
 ### -NameDecorationDomain
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Default domain name used for Microsoft Skype contacts.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 PARAMVALUE: String
 

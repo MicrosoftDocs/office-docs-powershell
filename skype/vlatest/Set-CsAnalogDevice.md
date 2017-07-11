@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsAnalogDevice
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing device in the collection of analog devices that can be managed by using Microsoft Lync Server 2010.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing device in the collection of analog devices that can be managed by using Lync Server.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing device in the collection of analog devices that can be managed by using Skype for Business Server 2015.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
@@ -35,7 +35,7 @@ Set-CsAnalogDevice [-Identity] <UserIdParameter> [-Gateway <Fqdn>] [-AnalogFax <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (that is, the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAnalogDevice"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (that is, the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAnalogDevice"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (that is, the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -149,7 +149,7 @@ Get-CsAnalogDevice -Filter {Gateway -eq "192.168.0.240"} | Set-CsAnalogDevice -G
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the analog device being modified.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.
@@ -158,7 +158,7 @@ This means you might find it easier to retrieve devices by using the Get-CsAnalo
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the analog device being modified.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.
@@ -167,7 +167,7 @@ This means you might find it easier to modify analog devices by using the Get-Cs
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the analog device being modified.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier that allows the analog device to communicate with SIP devices such as Microsoft Lync 2010.
 The SIP address must be prefaced by the prefix "sip:".
@@ -250,7 +250,7 @@ For example: sip:bldg14lobby@litwareinc.com.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier that allows the analog device to communicate with SIP devices such as Microsoft Lync 2013 Preview.
 The SIP address must be prefaced by the prefix "sip:".
@@ -258,7 +258,7 @@ For example: sip:bldg14lobby@litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier that allows the analog device to communicate with SIP devices such as Skype for Business Server 2015.
 The SIP address must be prefaced by the prefix "sip:".
@@ -296,21 +296,21 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNumber
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Phone number as displayed in Lync 2010.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; etc.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Phone number as displayed in Lync.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; etc.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Phone number as displayed in Skype for Business.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; etc.
@@ -413,19 +413,19 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Enabled Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True ($True) the analog device can be used with Lync.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True) the analog device can be used with Skype for Business.
 
@@ -445,7 +445,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
@@ -457,7 +457,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:

@@ -6,16 +6,16 @@ schema: 2.0.0
 # Move-CsRgsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to migrate Response Group configuration settings from Microsoft Office Communications Server 2007 R2 to Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to migrate Response Group configuration settings from Microsoft Office Communications Server 2007 R2 or Microsoft Lync Server 2010 to Microsoft Lync Server 2013 Preview.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to migrate Response Group configuration settings from Microsoft Office Communications Server 2007 R2 or Microsoft Lync Server 2010 to Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Move-CsRgsConfiguration [-Source] <String> [-Destination] <String> [-Force] [-Re
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsRgsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsRgsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application provides a way for you to automatically route phone calls to entities such as a help desk or customer support line.
 When someone calls a designated phone number, that call can be automatically routed to the appropriate set of Response Group agents.
@@ -138,19 +138,19 @@ Move-CsRgsConfiguration -Source atl-ocsrgs-001.litwareinc.com -Destination redmo
 ## PARAMETERS
 
 ### -Destination
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of the computer where the Lync Server 2010 Response Group application is to be hosted (the "copy to" location).
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of the computer where the Lync Server 2013 Preview Response Group application is to be hosted (the "copy to" location).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the computer where the Skype for Business Server Response Group application is to be hosted (the "copy to" location).
 
@@ -170,19 +170,19 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of the pool where the Office Communications Server 2007 R2 Response Group application is currently hosted (the "copy from" location).
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of the pool where the Office Communications Server 2007 R2 or Lync Server 2010 Response Group application is currently hosted (the "copy from" location).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the pool where the Office Communications Server 2007 R2 or Lync Server 2010Response Group application is currently hosted (the "copy from" location).
 

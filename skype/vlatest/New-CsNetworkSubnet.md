@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsNetworkSubnet
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new network subnet.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network subnet.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ New-CsNetworkSubnet -MaskBits <Int32> -SubnetID <String> [-Description <String>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSubnet"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSubnet"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
@@ -324,14 +324,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

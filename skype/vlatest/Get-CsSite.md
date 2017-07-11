@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsSite
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the sites created as part of your Microsoft Lync Server 2010 infrastructure.
 Sites represent a collection of Lync Server 2010 pools and are typically designed around geographic regions.
 Lync Server includes two types of sites: data center sites and remote sites (branch sites).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the sites created as part of your Lync Server infrastructure.
 Sites represent a collection of Lync Server pools and are typically designed around geographic regions.
 Lync Server includes two types of sites: data center sites and remote sites (branch sites).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the sites created as part of your Skype for Business Server 2015 infrastructure.
 Sites represent a collection of Skype for Business Server 2015 pools and are typically designed around geographic regions.
@@ -41,7 +41,7 @@ Get-CsSite [-Filter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 introduces a new concept to the Lync Server topology: sites.
 Sites (which should not be confused with Active Directory sites or Microsoft Exchange Server sites) are a collection of Lync Server pools and servers that are typically organized according to geography and network bandwidth.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsSite"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server 2010 introduced a new concept to the Lync Server topology: sites.
 Sites (which should not be confused with Active Directory sites or Microsoft Exchange Server sites) are a collection of Lync Server pools and servers that are typically organized according to geography and network bandwidth.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSite"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Lync Server 2010 introduced a new concept to the topology: sites.
 Sites (which should not be confused with Active Directory sites or Exchange sites) are a collection of Skype for Business Server 2015 pools and servers that are typically organized according to geography and network bandwidth.
@@ -203,7 +203,7 @@ Get-CsSite -Identity "Redmond" | Select-Object -ExpandProperty Pools
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the site to be returned.
 Note that you should specify just the site name; for example: -Identity "Redmond".
@@ -211,7 +211,7 @@ Do not use the format "site:Redmond" when specifying the Identity.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the site to be returned.
 Note that you should specify just the site name; for example:
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the Identity of the site (or sites) to be returned.
 For example, this syntax returns all the pools that have an Identity that include the string value "Dublin": -Filter "*Dublin*".
@@ -245,7 +245,7 @@ Note that you cannot use both Filter and Identity in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the Identity of the site (or sites) to be returned.
 For example, this syntax returns all the pools that have an Identity that include the string value "Dublin":

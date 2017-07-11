@@ -6,16 +6,16 @@ schema: 2.0.0
 # Import-CsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Imports your Microsoft Lync Server 2010 topology, policies, and configuration settings to either the Central Management store or to the local computer.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Imports your Lync Server topology, policies, and configuration settings to either the Central Management store or to the local computer.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Imports your Skype for Business Server 2015 topology, policies, and configuration settings to either the Central Management store or to the local computer.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Import-CsConfiguration [-FileName] <String> [-Force] [-LocalStore] [<CommonParam
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Computers that run Lync Server 2010 services or server roles must have a copy of the current topology, current configuration settings, current policies, and so on before they can function in their appointed role.
 Lync Server  is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Import-CsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Computers that run Lync Server services or server roles must have a copy of the current topology, current configuration settings, current policies, and so on before they can function in their appointed role.
 Lync Server is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -75,7 +75,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Computers that run Skype for Business Server 2015 services or server roles must have a copy of the current topology, current configuration settings, current policies, and so on before they can function in their appointed role.
 Skype for Business Server 2015 is responsible for ensuring that this information is passed along to each computer that needs it.
@@ -194,7 +194,7 @@ Import-CsConfiguration -ByteInput $x -LocalStore
 ## PARAMETERS
 
 ### -ByteInput
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Reads topology information from a byte array stored in a variable.
 This byte array is created by using the ByteInput parameter when calling Export-CsConfiguration.
@@ -203,7 +203,7 @@ You cannot use both the ByteInput parameter and the FileName parameter in the sa
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reads topology information from a byte array stored in a variable.
 This byte array is created by using the ByteInput parameter when calling the Export-CsConfiguration cmdlet.
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Path to the .ZIP file created by Export-CsConfiguration.
 For example: -FileName "C:\Config.zip".
@@ -234,7 +234,7 @@ Note that you must include either the FileName or the ByteInput parameter, but n
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the .ZIP file created by Export-CsConfiguration.
 For example: -FileName "C:\Config.zip".

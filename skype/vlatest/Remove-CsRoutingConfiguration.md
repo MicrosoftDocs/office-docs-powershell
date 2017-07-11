@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsRoutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Resets the routing configuration to its default settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Resets the routing configuration to its default settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsRoutingConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice routes contain instructions that tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Lync Server 2010 deployment.
@@ -38,7 +38,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRoutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Lync Server deployment.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRoutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Skype for Business Server 2015 deployment.

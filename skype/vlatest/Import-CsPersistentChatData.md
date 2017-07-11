@@ -6,13 +6,13 @@ schema: 2.0.0
 # Import-CsPersistentChatData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to import data exported from a Microsoft Lync Server 2010 Group Chat database into a Microsoft Lync Server 2013 Preview Persistent Chat database.
 This data must have previously been exported from the Group Chat database by using the Export-CsPersistentChatData cmdlet.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to import data exported from a Microsoft Lync Server 2010 Group Chat database into a Skype for Business Server 2015 Persistent Chat database.
 This data must have previously been exported from the Group Chat database by using the Export-CsPersistentChatData cmdlet.
@@ -35,7 +35,7 @@ Import-CsPersistentChatData -DBInstance <String> -FileName <String> [-Confirm] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -52,7 +52,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsPersistentChatData"}
 
 Lync Server Control Panel: The functions carried out by the Import-CsPersistentChatData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -DBInstance
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name and name of the SQL Server instance where the Lync Server 2013 Preview Persistent Chat database is located.
 For example, this syntax specifies the database found in the RTC database instance on the server atl-sql-001.litwareinc.com:
@@ -115,7 +115,7 @@ For example, this syntax specifies the database found in the RTC database instan
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name and name of the SQL Server instance where the Skype for Business Server 2015 Persistent Chat database is located.
 For example, this syntax specifies the database found in the RTC database instance on the server atl-sql-001.litwareinc.com:

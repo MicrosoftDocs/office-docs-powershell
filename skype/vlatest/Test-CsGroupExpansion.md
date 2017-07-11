@@ -6,20 +6,20 @@ schema: 2.0.0
 # Test-CsGroupExpansion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability of a user to employ group expansion.
 Microsoft Lync Server 2010 enables users to configure an Active Directory distribution group as a contact.
 When you "expand" a group you will see the name and presence information for each member of the group.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of a user to employ group expansion.
 Lync Server enables users to configure an Active Directory distribution group as a contact.
 When you "expand" a group you will see the name and presence information for each member of the group.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of a user to employ group expansion.
 Skype for Business Server 2015 enables users to configure an Active Directory distribution group as a contact.
@@ -55,7 +55,7 @@ Test-CsGroupExpansion -GroupEmailAddress <String> -TargetUri <String> -UserSipAd
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
 In recognition of this, Lync Server 2010 allows you to configure a distribution group as a contact.
@@ -77,7 +77,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupExpansion"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
 In recognition of this, Lync Server allows you to configure a distribution group as a contact.
@@ -99,7 +99,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupExpansion"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
 In recognition of this, Skype for Business Server 2015 allows you to configure a distribution group as a contact.
@@ -278,14 +278,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address of the user to be used in the test.
 If this parameter is not specified, then Test-CsGroupExpansion will conduct its checks using the account of the logged-on user.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address of the user to be used in the test.
 If this parameter is not specified, then the Test-CsGroupExpansion cmdlet will conduct its checks using the account of the logged-on user.
@@ -351,13 +351,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
@@ -382,13 +382,13 @@ Accept wildcard characters: False
 ```
 
 ### -WebCredential
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill WebCredential Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 An object containing user credentials for accessing the Location Information service.
 This object can be retrieved by calling the Get-Credential cmdlet and supplying the appropriate credentials.

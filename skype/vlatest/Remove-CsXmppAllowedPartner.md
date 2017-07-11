@@ -6,14 +6,14 @@ schema: 2.0.0
 # Remove-CsXmppAllowedPartner
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing XMPP allowed partner.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
 An allowed partner is an IM and presence provider whose users are allowed to exchange instant messages and presence information with your Lync Server 2013 Preview users.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing XMPP allowed partner.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -30,7 +30,7 @@ Remove-CsXmppAllowedPartner [-Identity] <XdsGlobalRelativeIdentity> [-Confirm] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsXmppAllowedPartner"}
 Lync Server Control Panel: To remove an XMPP allowed partner using the Lync Server Control Panel, click External User Access and then click XMPP Federated Partners.
 Select the partner to be removed, click Edit, and then click Delete.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.

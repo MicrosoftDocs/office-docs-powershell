@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsLocationPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new location policy for use with location identification for the Enhanced 9-1-1 (E9-1-1) service and general client location.
 The E9-1-1 service enables those who answer 911 calls to determine the caller's geographic location.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new location policy for use with location identification for the Enhanced 9-1-1 (E9-1-1) service and general client location.
 The E9-1-1 service enables those who answer 911 calls to determine the caller's geographic location.
@@ -31,7 +31,7 @@ New-CsLocationPolicy [-Identity] <XdsIdentity> [-ConferenceMode <ConferenceModeE
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The location policy is used to apply settings that relate to E9-1-1 functionality and location settings to users or contacts.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsLocationPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The location policy is used to apply settings that relate to E9-1-1 functionality and location settings to users or contacts.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -75,7 +75,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsLocationPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The location policy is used to apply settings that relate to E9-1-1 functionality and location settings to users or contacts.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -173,7 +173,7 @@ New-CsLocationPolicy -Identity Reno -Description "All users located at the Reno 
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique identifier for the location policy.
 This cmdlet can be used to create policies at the site or per-user scope.
@@ -183,7 +183,7 @@ A policy created at the per-user scope can be assigned any string value, such as
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A unique identifier for the location policy.
 This cmdlet can be used to create policies at the site or per-user scope.
@@ -193,7 +193,7 @@ A policy created at the per-user scope can be assigned any string value, such as
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A unique identifier for the location policy.
 This cmdlet can be used to create policies at the site or per-user scope.
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceMode
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If a value is specified for the ConferenceUri parameter, the ConferenceMode parameter determines whether a third party can participate in the call or can only listen in.
 Available values are:
@@ -227,7 +227,7 @@ Available values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If a value is specified for the ConferenceUri parameter, the ConferenceMode parameter determines whether a third party can participate in the call or can only listen in.
 Available values are:
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnhancedEmergencyServicesEnabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies whether the users associated with this policy are enabled for E9-1-1.
 Set the value to True to enable E9-1-1 so Lync Server 2010 clients will retrieve location information on registration and include that information when an emergency call is made.
@@ -344,7 +344,7 @@ Default Value: False
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies whether the users associated with this policy are enabled for E9-1-1.
 Set the value to True to enable E9-1-1 so Lync Server clients will retrieve location information on registration and include that information when an emergency call is made.
@@ -353,7 +353,7 @@ Default Value: False
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies whether the users associated with this policy are enabled for E9-1-1.
 Set the value to True to enable E9-1-1 so Skype for Business Server 2015 clients will retrieve location information on registration and include that information when an emergency call is made.
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationRequired
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If the client was unable to retrieve a location from the location configuration database, the user can be prompted to manually enter a location.
 This parameter accepts the following values:
@@ -390,7 +390,7 @@ Users will not be prompted for location information.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 If the client was unable to retrieve a location from the location configuration database, the user can be prompted to manually enter a location.
 This parameter accepts the following values:
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationUri
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 One or more SIP URIs to be notified when an emergency call is made.
 For example, the company security office could be notified through an instant message whenever an emergency call is made.
@@ -432,7 +432,7 @@ The string must be from 1 to 256 characters in length and must begin with the pr
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 One or more SIP URIs to be notified when an emergency call is made.
 For example, the company security office could be notified through an instant message whenever an emergency call is made.
@@ -446,7 +446,7 @@ The string must be from 1 to 256 characters in length and must begin with the pr
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 One or more SIP URIs to be notified when an emergency call is made.
 For example, the company security office could be notified through an instant message whenever an emergency call is made.
@@ -495,21 +495,21 @@ Accept wildcard characters: False
 ```
 
 ### -UseLocationForE911Only
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Location information can be used by the Microsoft Lync 2010 client for various reasons (such as notifying teammates of current location).
 Set this value to True to ensure location information is available only for use with an emergency call.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Location information can be used by the Lync client for various reasons (such as notifying teammates of current location).
 Set this value to True to ensure location information is available only for use with an emergency call.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Location information can be used by the Skype for Business Server 2015 client for various reasons (such as notifying teammates of current location).
 Set this value to True to ensure location information is available only for use with an emergency call.
@@ -546,14 +546,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -606,7 +606,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnhancedEmergencyServiceDisclaimer
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Text value containing information that will be displayed to users who are connected from locations that cannot be resolved by the location mapping (wiremap) who choose not to enter their location manually.
 To remove a service disclaimer from a location policy set this property to a null value:
@@ -619,7 +619,7 @@ By using location policies to set these disclaimers, you can create different di
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Text value containing information that will be displayed to users who are connected from locations that cannot be resolved by the location mapping (wiremap) who choose not to enter their location manually.
 To remove a service disclaimer from a location policy set this property to a null value:

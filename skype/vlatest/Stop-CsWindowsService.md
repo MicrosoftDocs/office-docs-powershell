@@ -6,16 +6,16 @@ schema: 2.0.0
 # Stop-CsWindowsService
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Stop-CsWindowsService enables you to stop a Microsoft Lync Server 2010 service.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Stop-CsWindowsService enables you to stop a Lync Server service.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Stop-CsWindowsService enables you to stop a Skype for Business Server 2015 service.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ Stop-CsWindowsService [-Graceful] [-InputObject <NTService>] [-NoWait] [-Force] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Lync Server 2010 components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If you need to stop a Lync Server service, you can do so by using the Stop-CsWindowsService cmdlet.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Stop-CsWindowsService"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If you need to stop a Lync Server service, you can do so by using the Stop-CsWindowsService cmdlet.
@@ -91,7 +91,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Stop-CsWindowsService"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If you need to stop a Skype for Business Server 2015 service, you can do so by using the Stop-CsWindowsService cmdlet.
@@ -209,7 +209,7 @@ Get-CsWindowsService | Where-Object {$_.DisplayName -like "*Call Park*"} | Stop-
 ## PARAMETERS
 
 ### -Name
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Name of the Lync Server service you want to stop.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -221,7 +221,7 @@ For those services, you might be able to use the Windows PowerShell  Stop-Servic
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the Lync Server service you want to stop.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -233,7 +233,7 @@ For those services, you might be able to use the Windows PowerShell Stop-Service
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the Skype for Business Server 2015 service you want to stop.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -259,21 +259,21 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Name of the remote computer running the service to be stopped; if this parameter is not included, then Stop-CsWindowsService will stop the specified service on the local computer.
 The remote computer should be referenced using its  FQDN; for example, atl-mcs-001.litwareinc.com.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the remote computer running the service to be stopped; if this parameter is not included, then Stop-CsWindowsService will stop the specified service on the local computer.
 The remote computer should be referenced using its FQDN; for example, atl-mcs-001.litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the remote computer running the service to be stopped; if this parameter is not included, then the Stop-CsWindowsService cmdlet will stop the specified service on the local computer.
 The remote computer should be referenced using its FQDN; for example, atl-mcs-001.litwareinc.com.
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to stop a service using an object reference rather than a service name.
 For example, if you use Get-CsWindowsService to return information about a service, and if you store the returned object in a variable named $x, you can then stop the service using this command:
@@ -322,7 +322,7 @@ Stop-CsWindowsService -InputObject $x.Name
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to stop a service using an object reference rather than a service name.
 For example, if you use the Get-CsWindowsService cmdlet to return information about a service, and if you store the returned object in a variable named $x, you can then stop the service using this command:
@@ -429,13 +429,13 @@ Accept wildcard characters: False
 ```
 
 ### -LeaveClsAgentRunning
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, stops all the Lync Server services except for the centralized logging agent service.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, stops all the Skype for Business Server 2015 services except for the centralized logging agent service.
 

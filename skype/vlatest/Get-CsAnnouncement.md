@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsAnnouncement
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Microsoft Lync Server 2010 announcements configured for use in your organization.
 Announcements are played when users dial a valid but unassigned phone number.
 An announcement can be a message (such as "This number is temporarily out of service") or a busy signal.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Lync Server announcements configured for use in your organization.
 Announcements are played when users dial a valid but unassigned phone number.
 An announcement can be a message (such as "This number is temporarily out of service") or a busy signal.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Skype for Business Server 2015 announcements configured for use in your organization.
 Announcements are played when users dial a valid but unassigned phone number.
@@ -41,7 +41,7 @@ Get-CsAnnouncement [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 An organization can own phone numbers that are not assigned to users or phones, but that are still valid numbers that can be called.
 By default, when someone dials one of those numbers, that person will receive a busy signal and the call may result in an error returned to the SIP client.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAnnouncement"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An organization can own phone numbers that are not assigned to users or phones, but that are still valid numbers that can be called.
 By default, when someone dials one of those numbers, that person will receive a busy signal and the call may result in an error returned to the SIP client.

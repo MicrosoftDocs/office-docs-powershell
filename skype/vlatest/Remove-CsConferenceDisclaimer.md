@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsConferenceDisclaimer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Clears the text from the header and body of the conference disclaimer used in your organization.
 The conference disclaimer is a message that is displayed to users who join the conference by using a hyperlink (for example, users who paste a link to the conference into a browser such as Windows Internet Explorer).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Clears the text from the header and body of the conference disclaimer used in your organization.
 The conference disclaimer is a message that is displayed to users who join the conference by using a hyperlink (for example, users who paste a link to the conference into a browser such as Windows Internet Explorer).
@@ -26,7 +26,7 @@ Remove-CsConferenceDisclaimer [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When configuring conferencing settings, administrators can include a legal disclaimer to display to participants when these people join conferences hosted by Lync Server 2010.
 This disclaimer is typically used to explain legal and intellectual property laws regarding the conference.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsConferenceDisclaimer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When configuring conferencing settings, administrators can include a legal disclaimer to display to participants when these people join conferences hosted by Lync Server.
 This disclaimer is typically used to explain legal and intellectual property laws regarding the conference.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsConferenceDisclaimer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When configuring conferencing settings, administrators can include a legal disclaimer to display to participants when these people join conferences hosted by Skype for Business Server 2015.
 This disclaimer is typically used to explain legal and intellectual property laws regarding the conference.
@@ -101,14 +101,14 @@ Remove-CsConferenceDisclaimer -Identity global
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique Identity of the conference disclaimer to be removed.
 Although you can only have a single, global instance of the conference disclaimer, you must still use the Identity parameter when calling Remove-CsConferenceDisclaimer: -Identity global.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identity of the conference disclaimer to be removed.
 Although you can only have a single, global instance of the conference disclaimer, you must still use the Identity parameter when calling the Remove-CsConferenceDisclaimer cmdlet.

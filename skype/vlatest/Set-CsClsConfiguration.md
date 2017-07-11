@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsClsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing collection of centralized logging configuration settings.
 Centralized logging provides a way for administrators to simultaneously enable or disable tracing on multiple computers.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing collection of centralized logging configuration settings.
 Centralized logging provides a way for administrators to simultaneously enable or disable tracing on multiple computers.
@@ -45,7 +45,7 @@ Set-CsClsConfiguration [-CacheFileLocalFolders <String>] [-CacheFileLocalMaxDisk
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -67,7 +67,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClsConfiguration"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsClsConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumClsAgentServiceVersion
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the minimum version of the centralized logging service agent to be used when logging data; any computers with an agent version lower than the minimum value will be excluded from the logging operations.
 The default value is 6, representing Lync Server 2013 Preview.
@@ -370,7 +370,7 @@ This parameter is intended for use with the Office 365 version of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the minimum version of the centralized logging service agent to be used when logging data; any computers with an agent version lower than the minimum value will be excluded from the logging operations.
 The default value is 6, representing Skype for Business Server 2015.
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -Regions
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Collection of regions defined for the centralized logging configuration settings.
 Regions are defined using the New-CsClsRegion cmdlet.
@@ -401,7 +401,7 @@ This parameter is intended for use with the Office 365 version of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Collection of regions defined for the centralized logging configuration settings.
 Regions are defined using the New-CsClsRegion cmdlet.
@@ -458,7 +458,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroups
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Security groups who are allowed to access the log files.
 
@@ -466,7 +466,7 @@ This parameter is intended for use with the Office 365 version of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Security groups who are allowed to access the log files.
 
@@ -488,14 +488,14 @@ Accept wildcard characters: False
 ```
 
 ### -TmfFileSearchPath
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Search path for TMF (trace message format) files.
 TMF files convert binary trace messages to a human-readable format.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Search path for TMF (trace message format) files.
 TMF files convert binary trace messages to a human-readable format.

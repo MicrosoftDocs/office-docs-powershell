@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsDiagnosticHeaderConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new diagnostic header configuration setting collection.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information that can be useful in troubleshooting and error reporting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new diagnostic header configuration setting collection.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information that can be useful in troubleshooting and error reporting.
@@ -28,7 +28,7 @@ New-CsDiagnosticHeaderConfiguration [-Identity] <XdsIdentity> [-SendToExternalNe
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Administrators have the option of attaching an ms-diagnostic header to each SIP message sent in an organization.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection issues or in reporting errors.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsDiagnosticHeaderConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Administrators have the option of attaching an ms-diagnostic header to each SIP message sent in an organization.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection issues or in reporting errors.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDiagnosticHeaderConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Administrators have the option of attaching an ms-diagnostic header to each SIP message sent in an organization.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection issues or in reporting errors.
@@ -224,14 +224,14 @@ Accept wildcard characters: False
 ```
 
 ### -SendToExternalNetworks
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, diagnostic headers will be attached to messages sent to users on external networks (such as users in a federated domain).
 The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, diagnostic headers will be attached to messages sent to external users.
 
@@ -286,14 +286,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

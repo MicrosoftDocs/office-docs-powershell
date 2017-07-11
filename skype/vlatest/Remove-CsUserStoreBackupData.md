@@ -6,7 +6,7 @@ schema: 2.0.0
 # Remove-CsUserStoreBackupData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes outdated information from the specified user store.
 "Outdated information" refers user data from a Registrar pool no longer paired with the specified user store.
@@ -14,7 +14,7 @@ For example, suppose Pools A and B were once paired; now, however, that associat
 When run against Pool A, the Remove-CsUserStoreBackupData cmdlet will remove information about users from Pool B.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes outdated information from the specified user store.
 "Outdated information" refers user data from a Registrar pool no longer paired with the specified user store.
@@ -31,7 +31,7 @@ Remove-CsUserStoreBackupData -PoolFqdn <Fqdn> [-Confirm] [-Force] [-WhatIf] [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Microsoft Lync Server 2013 Preview enables you to associate a pair of pools.
 When you do this, each pool maintains two sets of user information: information about the users homed on the pool in question and information about the users homed on the associated pool.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserStoreBackupData"
 
 Lync Server Control Panel: The functions carried out by the Remove-CsUserStoreBackupData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables you to associate a pair of pools.
 When you do this, each pool maintains two sets of user information: information about the users homed on the pool in question and information about the users homed on the associated pool.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsOutboundCallingNumberTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing outbound calling number translation rule.
 An outbound calling number translation rule converts the E.164 phone numbers used by Microsoft Lync Server 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing outbound calling number translation rule.
 An outbound calling number translation rule converts the E.164 phone numbers used by Skype for Business Server 2015 to a format that can be used by trunking peers that do not support E.164 numbers.
@@ -35,7 +35,7 @@ Set-CsOutboundCallingNumberTranslationRule [-Confirm] [-Description <String>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Outbound calling number translation rules convert the E.164 phone numbers used by Microsoft Lync 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
 
@@ -52,7 +52,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsOutboundCallingNumberTr
 Lync Server Control Panel: To edit an existing outbound calling number translation rule using the Lync Server Control Panel, click Voice Routing, click Trunk Configuration, and then double-click the configuration settings containing the rule to be modified.
 In the Edit Trunk Configuration dialog box, scroll down to the section labeled Calling number translation rules and then double-click the rule to be modified.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Outbound calling number translation rules convert the E.164 phone numbers used by Skype for Business to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
 

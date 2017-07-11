@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsFIPSConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more collections of Federal Information Processing Standards (FIPS) configuration settings.
 The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more collections of Federal Information Processing Standards (FIPS) configuration settings.
 The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
@@ -28,7 +28,7 @@ Remove-CsFIPSConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenan
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the United States government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
 (See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Lync Server 2013 provides an option that enables the software to use only algorithms that meet the FIPS standards.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsFIPSConfiguration
 
 Lync Server Control Panel: The functions carried out by the Remove-CsFIPSConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the United States government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
 (See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Skype for Business Server 2015 provides an option that enables the software to use only algorithms that meet the FIPS standards.
@@ -85,7 +85,7 @@ Remove-CsFIPSConfiguration -Identity "Global"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique Identity of the FIPS configuration settings to be removed.
 Because Lync Server 2013 Preview only supports a single, global collection of FIPS settings, the only collection that can be deleted is the global collection:
@@ -97,7 +97,7 @@ Instead, the lone property in that collection - RequireFIPSCompliantMedia - will
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identity of the FIPS configuration settings to be removed.
 Because Skype for Business Server 2015 only supports a single, global collection of FIPS settings, the only collection that can be deleted is the global collection:
@@ -155,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the FIPS configuration settings being deleted.
 For example:
@@ -168,7 +168,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Server 2015 tenant account for the FIPS configuration settings being deleted.
 For example:

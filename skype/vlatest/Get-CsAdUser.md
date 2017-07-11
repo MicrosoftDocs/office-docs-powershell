@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsAdUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about all the user accounts in Active Directory Domain Services (AD DS).
 This includes user accounts that have been enabled for Microsoft Lync Server 2010 as well as accounts that have not been enabled for Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about all the user accounts in Active Directory Domain Services (AD DS).
 This includes user accounts that have been enabled for Lync Server as well as accounts that have not been enabled for Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about all the user accounts in Active Directory Domain Services.
 This includes user accounts that have been enabled for Skype for Business Server 2015 as well as accounts that have not been enabled for Skype for Business Server 2015.
@@ -35,7 +35,7 @@ Get-CsAdUser [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [-Doma
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Get-CsAdUser returns information about all the user accounts in Active Directory, including user accounts that have been enabled for as well as user accounts that have not enabled for Lync Server.
 This differs from Get-CsUser, which returns information only for users whose accounts have been enabled for Lync Server or an earlier version of the software (such as Microsoft Office Communications Server 2007 R2).
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAdUser"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Get-CsAdUser returns information about all the user accounts in Active Directory, including user accounts that have been enabled for as well as user accounts that have not enabled for Lync Server.
 This differs from Get-CsUser, which returns information only for users whose accounts have been enabled for Lync Server or an earlier version of the software (such as Microsoft Office Communications Server 2007 R2).
@@ -113,7 +113,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsAdUser cmdlet returns information about all the user accounts in Active Directory, including user accounts that have been enabled for as well as user accounts that have not enabled for Skype for Business Server 2015.
 This differs from the Get-CsUser cmdlet, which returns information only for users whose accounts have been enabled for Skype for Business Server 2015 or an earlier version of the software.
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to run the Get-CsAdUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -339,7 +339,7 @@ For details, see the Get-Credential Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsAdUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -380,7 +380,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 
@@ -389,7 +389,7 @@ For example, a filter that returns only users who are not enabled for Lync Serve
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 
@@ -398,7 +398,7 @@ For example, a filter that returns only users who are not enabled for Lync Serve
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
 
@@ -464,7 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -LDAPFilter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to users who work in a specific department or users who have a specific manager or job title.
@@ -474,7 +474,7 @@ For example, a filter that returns only users who work in the city of Redmond wo
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to users who work in a specific department or users who have a specific manager or job title.

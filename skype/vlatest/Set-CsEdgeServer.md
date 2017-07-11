@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsEdgeServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values for one or more Edge Servers.
 Edge Servers are used to provide connectivity between your internal network and the Internet.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the property values for one or more Edge Servers.
 Edge Servers are used to provide connectivity between your internal network and the Internet.
@@ -33,7 +33,7 @@ Set-CsEdgeServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AccessEdgeClientSip
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Connectivity with the outside world (that is, with the Internet) is an important aspect of Microsoft Lync Server 2010.
 Without this connectivity, users would have to log on to the internal network in order to access Lync Server 2010.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsEdgeServer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Connectivity with the outside world (that is, with the Internet) is an important aspect of Lync Server.
 Without this connectivity, users would have to log on to the internal network in order to access Lync Server.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsEdgeServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Connectivity with the outside world (that is, with the Internet) is an important aspect of Skype for Business Server 2015.
 Without this connectivity, users would have to log on to the internal network in order to access Skype for Business Server 2015.
@@ -162,14 +162,14 @@ Accept wildcard characters: False
 ```
 
 ### -AccessEdgeClientSipPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Port used for SIP communications between the Edge Server and client devices.
 The default value is 5061.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for SIP communications between the Edge Server and client devices.
 The initial value is set in Topology Builder but can be changed by specifying a new value for this parameter.
@@ -224,14 +224,14 @@ Accept wildcard characters: False
 ```
 
 ### -DataPsomClientPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Port used for Persistent Shared Object Model (PSOM) communications between the Edge Server and client devices.
 The default value is 443.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for Persistent Shared Object Model (PSOM) communications between the Edge Server and client devices.
 The initial value is set in Topology Builder but can be changed by specifying a new value for this parameter.
@@ -268,14 +268,14 @@ Accept wildcard characters: False
 ```
 
 ### -MediaCommunicationPortCount
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Total number of ports allocated for media communications.
 The default value is 10000.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Total number of ports allocated on the external Edge for media communications.
 The default value is 10000.
@@ -296,14 +296,14 @@ Accept wildcard characters: False
 ```
 
 ### -MediaCommunicationPortStart
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Starting port number for media communications.
 The default value is 50000.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Starting port number on the external Edge for media communications.
 The default value is 50000.
@@ -341,14 +341,14 @@ Accept wildcard characters: False
 ```
 
 ### -MediaRelayExternalTurnTcpPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Port used for external media relay traffic using the Transmission Control Protocol (TCP).
 The default value is 444.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for external media relay traffic using the Transmission Control Protocol (TCP).
 The default value is 444 if your Edge server has a single IP address.
@@ -487,7 +487,7 @@ Accept wildcard characters: False
 ```
 
 ### -XmppInternalPort
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Port used for internal XMPP traffic.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -496,7 +496,7 @@ The default value is 5098.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Port used for internal XMPP traffic.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.

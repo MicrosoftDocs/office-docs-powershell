@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsLocationPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Runs a test to determine the location policy that will be used based on the criteria specified in the parameter values.
 The location policy contains the settings that will determine whether and how Enhanced 9-1-1 (E9-1-1) will be applied.
 E9-1-1 enables those who answer 911 emergency calls to determine the caller's geographic location.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Runs a test to determine the location policy that will be used based on the criteria specified in the parameter values.
 The location policy contains the settings that will determine whether and how Enhanced 9-1-1 (E9-1-1) will be applied.
@@ -38,7 +38,7 @@ Test-CsLocationPolicy [[-TargetFqdn] <String>] [-RegistrarPort <Int32>] [-Subnet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The location policy is used to apply settings that relate to E9-1-1 functionality and client location.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsLocationPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The location policy is used to apply settings that relate to E9-1-1 functionality and client location.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -322,14 +322,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 An object containing the user ID and password of the user account where the location policy is being tested.
 A credential object can be retrieved by calling the Windows PowerShell cmdlet Get-Credential, filling in the appropriate information, and saving the output to a variable.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An object containing the user ID and password of the user account where the location policy is being tested.
 A credential object can be retrieved by calling the Get-Credential cmdlet, filling in the appropriate information, and saving the output to a variable.
@@ -396,13 +396,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

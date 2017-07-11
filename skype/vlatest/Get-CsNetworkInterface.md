@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsNetworkInterface
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the network interfaces in use on computers running Microsoft Lync Server 2010 services or server roles.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the network interfaces in use on computers running Lync Server services or server roles.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the network interfaces in use on computers running Skype for Business Server 2015 services or server roles.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsNetworkInterface [-Filter <String>] [-ComputerFqdn <Fqdn>] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order for information to be transmitted from one computer to another, computers need network interfaces: connections between a computer and the network.
 Computers running Lync Server 2010 services or server roles must have at least one network interface; otherwise they will not be able to communicate with other computers.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsNetworkInterface"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order for information to be transmitted from one computer to another, computers need network interfaces: connections between a computer and the network.
 Computers running Lync Server services or server roles must have at least one network interface; otherwise they will not be able to communicate with other computers.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkInterface"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order for information to be transmitted from one computer to another, computers need network interfaces: connections between a computer and the network.
 Computers running Skype for Business Server 2015 services or server roles must have at least one network interface; otherwise they will not be able to communicate with other computers.
@@ -244,7 +244,7 @@ Get-CsNetworkInterface | Where-Object {$_.Interface -eq "External"}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the network interface to be returned. 
 A network interface Identity consists of three parts:
@@ -266,7 +266,7 @@ If neither the Identity, ComputerFqdn, nor Filter parameters are used, then Get-
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the network interface to be returned.
 A network interface Identity consists of three parts:
@@ -288,7 +288,7 @@ If neither the Identity, ComputerFqdn, nor Filter parameters are used, then Get-
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the network interface to be returned.
 A network interface Identity consists of three parts:
@@ -326,14 +326,14 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the network interface (or interfaces) to be returned.
 For example, this syntax returns information about the Primary network interface used on all of your computers running a Lync Server service or server role: -Filter "*/Primary/*".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the network interface (or interfaces) to be returned.
 For example, this syntax returns information about the Primary network interface used on all of your computers running a Skype for Business Server 2015 service or server role:
@@ -356,14 +356,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerFqdn
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of the computer for which network interface information is to be returned.
 For example, to return network interface information for the computer atl-cs-001.litwareinc.com (and only for that computer) use this syntax: -ComputerFqdn atl-cs-001.litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the computer for which network interface information is to be returned.
 For example, to return network interface information for the computer atl-cs-001.litwareinc.com (and only for that computer) use this syntax:

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsTrunkConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Validates a trunk configuration against a phone number.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Validates a trunk configuration against a phone number.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Test-CsTrunkConfiguration -DialedNumber <PhoneNumber> -TrunkConfiguration <Trunk
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Use this cmdlet to verify that a trunking configuration performs as expected against a dialed phone number.
 Each configuration contains specific settings defining the relationship and capabilities between the Mediation Server and the public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
@@ -36,7 +36,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsTrunkConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Use this cmdlet to verify that a trunking configuration performs as expected against a dialed phone number.
 Each configuration contains specific settings defining the relationship and capabilities between the Mediation Server and the public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.

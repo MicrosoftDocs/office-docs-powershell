@@ -6,18 +6,18 @@ schema: 2.0.0
 # Test-CsRegistration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability of a user to log on to Microsoft Lync Server 2010.
 Test-CsRegistration is a "synthetic transaction": a simulation of common Lync Server 2010 activities used for health and performance monitoring.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of a user to log on to Lync Server.
 Test-CsRegistration is a "synthetic transaction": a simulation of common Lync Server activities used for health and performance monitoring.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of a user to log on to Skype for Business Server 2015.
 The Test-CsRegistration cmdlet is a "synthetic transaction": a simulation of common Skype for Business Server 2015 activities used for health and performance monitoring.
@@ -42,7 +42,7 @@ Test-CsRegistration [[-TargetFqdn] <String>] [-RegistrarPort <Int32>] -UserCrede
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsRegistration is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -76,7 +76,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsRegistration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsRegistration is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -110,7 +110,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsRegistration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsRegistration cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 User credential object for the account to be tested.
 The value passed to UserCredential must be an object reference obtained by using the Get-Credential cmdlet.
@@ -292,7 +292,7 @@ This parameter is not required if you are conducting the test under the health m
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 User credentials object for the account to be tested.
 The value passed to UserCredential must be an object reference obtained by using the Get-Credential cmdlet.
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address for user account to be tested; for example: -UserSipAddress "sip:kenmyer@litwareinc.com".
 The UserSipAddress parameter must reference the same user account as UserCredential.
@@ -327,7 +327,7 @@ This parameter is not required if you are conducting the test under the health m
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for user account to be tested; for example:
 
@@ -397,13 +397,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
@@ -428,7 +428,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used in the test.
 Allowed values are:
@@ -440,7 +440,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used in the test.
 Allowed values are:

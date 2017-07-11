@@ -6,16 +6,16 @@ schema: 2.0.0
 # Grant-CsDialPlan
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a dial plan to one or more users or groups.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Assigns a dial plan to one or more users or groups.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Grant-CsDialPlan \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -29,7 +29,7 @@ Grant-CsDialPlan [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-Domain
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet assigns an existing user-specific dial plan to a user.
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -46,11 +46,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsDialPlan"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet assigns an existing user-specific dial plan to a user.
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -132,7 +132,7 @@ Get-CsUser -LDAPFilter "l=Redmond" | Grant-CsDialPlan -PolicyName RedmondDialPla
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The Identity (unique identifier) of the user to whom the dial plan is being assigned.
 
@@ -145,7 +145,7 @@ Full data type: Microsoft.Rtc.Management.AD.UserIdParameter
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The Identity value of the dial plan to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
@@ -173,7 +173,7 @@ Per-user dial plan identities include a prefix of tag: that should not be includ
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PolicyName Description}}
 
@@ -193,14 +193,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
@@ -220,14 +220,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
@@ -247,13 +247,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -274,13 +274,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

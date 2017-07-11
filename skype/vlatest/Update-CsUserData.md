@@ -6,12 +6,12 @@ schema: 2.0.0
 # Update-CsUserData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Uses previously-exported user information to update Lync Server user data.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Uses previously-exported user information to update Skype for Business Server 2015 user data.
 This cmdlet was introduced in Lync Server 2013.
@@ -27,7 +27,7 @@ Update-CsUserData [-FileName] <String> [-Confirm] [-DomainController <Fqdn>] [-F
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Update-CsUserData cmdlet enables administrators to update user data for a specified user or set of users.
 (Note that this data must have previously been exported by using the Export-CsUserData cmdlet.) This updating is typically done in order to restore lost data to a logged-on user.
@@ -38,7 +38,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsUserData"}
 
 Lync Server Control Panel: The functions carried out by the Update-CsUserData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Update-CsUserData cmdlet enables administrators to update user data for a specified user or set of users.
 (Note that this data must have previously been exported by using the Export-CsUserData cmdlet.) This updating is typically done in order to restore lost data to a logged-on user.
@@ -125,14 +125,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to specify the FQDN of the domain controller to be used when running Update-CsUserData.
 If not specified, the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to specify the FQDN of the domain controller to be used when running the Update-CsUserData cmdlet.
 If not specified, the cmdlet will use the first available domain controller.

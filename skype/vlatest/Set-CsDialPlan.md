@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsDialPlan
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing dial plan.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing dial plan.
 This cmdlet was introduced in Lync Server 2010.
@@ -36,7 +36,7 @@ Set-CsDialPlan [-Instance <PSObject>] [-Description <String>] [-DialinConferenci
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet modifies an existing dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialPlan"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet modifies an existing dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A friendly name for the dial plan.
 Dial plan names must be unique among all dial plans within a Microsoft Lync Server 2010 deployment.
@@ -269,7 +269,7 @@ Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A friendly name for the dial plan.
 Dial plan names must be unique among all dial plans within a Lync Server deployment.
@@ -279,7 +279,7 @@ Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A friendly name for the dial plan.
 Dial plan names must be unique among all dial plans within a Skype for Business Server 2015 deployment.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsServerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of an existing server application.
 Server applications are applications that are hosted by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the property values of an existing server application.
 Server applications are applications that are hosted by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the property values of an existing server application.
 Server applications are applications that are hosted by Skype for Business Server 2015.
@@ -41,7 +41,7 @@ Set-CsServerApplication [-Instance <PSObject>] [-Critical <Boolean>] [-Enabled <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Server applications refer to the individual programs that run under the Lync Server 2010.
 The Set-CsServerApplication cmdlet provides a way for administrators to modify the property values of any application running as part Lync Server.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsServerApplication"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Server applications refer to the individual programs that run under the Lync Server.
 The Set-CsServerApplication cmdlet provides a way for administrators to modify the property values of any application running as part Lync Server.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsServerApplication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Server applications refer to the individual programs that run under the Skype for Business Server 2015.
 The Set-CsServerApplication cmdlet provides a way for administrators to modify the property values of any application running as part of Skype for Business Server 2015.
@@ -169,14 +169,14 @@ Accept wildcard characters: False
 ```
 
 ### -Critical
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If set to True (the default value), then Lync Server will not start unless the application in question can be started.
 If False, then Lync Server will start regardless of whether or not the application can be started.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True (the default value), then Skype for Business Server 2015 will not start unless the application in question can be started.
 If False, then Skype for Business Server 2015 will start regardless of whether or not the application can be started.

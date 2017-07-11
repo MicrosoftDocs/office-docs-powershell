@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsAddressBookConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of Address Book configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified collection of Address Book configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsAddressBookConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Address Book servers are intermediaries between AD DS and Microsoft Lync Server 2010.
 The Address Book server ensures that the user information stored in Lync Server 2010 is in synch with the user information stored in AD DS.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAddressBookConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between AD DS and Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in AD DS.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAddressBookConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between AD DS and Skype for Business Server 2015.
 The Address Book server ensures that the user information stored in Skype for Business Server 2015 is in synch with the user information stored in AD DS.

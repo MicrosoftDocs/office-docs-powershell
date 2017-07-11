@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsNetworkRegionLink
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a link between two regions configured for call admission control (CAC).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a link between two regions configured for call admission control (CAC).
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsNetworkRegionLink [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-Wh
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet does not impact any physical connections, but it does remove the link from the CAC configuration.
@@ -35,7 +35,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkRegionLink"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet does not impact any physical connections, but it does remove the link from the CAC configuration.

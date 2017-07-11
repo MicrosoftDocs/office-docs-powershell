@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsExUMVoiceMail
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that a user can connect to Exchange Unified Messaging and leave a voice mail message for another user.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that a user can connect to Exchange Unified Messaging and leave a voice mail message for another user.
 This cmdlet was introduced in Lync Server 2013.
@@ -36,7 +36,7 @@ Test-CsExUMVoiceMail [-TargetFqdn] <String> [-Authentication <AuthenticationMech
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsExUMVoiceMail cmdlet enables administrators to verify that a user can access, and make use of, the Microsoft Exchange Server 2013 Preview unified messaging service.
 To do this, the cmdlet connects to the unified messaging service and leaves a voice mail in the specified mailbox.
@@ -48,7 +48,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsExUMVoiceMail"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsExUMVoiceMail cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsExUMVoiceMail cmdlet enables administrators to verify that a user can access, and make use of, the Exchange unified messaging service.
 To do this, the cmdlet connects to the unified messaging service and leaves a voice mail in the specified mailbox.
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -WaveFile
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Path to .WAV audio file that can be used when testing the voice mail service.
 If this parameter is included, Test-CsExUMVoiceMail will play the specified .WAV file when connecting to Exchange voicemail.
@@ -386,7 +386,7 @@ If this parameter is not included, a default audio file will be played instead.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to .WAV audio file that can be used when testing the voice mail service.
 If this parameter is included, the Test-CsExUMVoiceMail cmdlet will play the specified .WAV file when connecting to Exchange voicemail.

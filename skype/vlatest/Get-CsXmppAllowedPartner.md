@@ -6,14 +6,14 @@ schema: 2.0.0
 # Get-CsXmppAllowedPartner
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about XMPP partners authorized to communicate with your organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
 Allowed partners are IM and presence providers that have been authorized to exchange instant messages and presence information with your Lync Server 2013 Preview users.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about XMPP partners authorized to communicate with your organization.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -35,7 +35,7 @@ Get-CsXmppAllowedPartner [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsXmppAllowedPartner"}
 
 Lync Server Control Panel: To view information about your XMPP allowed partners in the Lync Server Control Panel, click External User Access and then click XMPP Federated Partners.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.

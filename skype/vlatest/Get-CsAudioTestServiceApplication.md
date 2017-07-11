@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsAudioTestServiceApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to return information about the Audio Test service application used in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to return information about the Audio Test service application used in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -27,7 +27,7 @@ Get-CsAudioTestServiceApplication [[-Identity] <UserIdParameter>] [-Credential <
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Audio Test service enables Microsoft Lync 2010 users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Lync 2010 Options dialog box.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAudioTestServiceApplication"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Audio Test service enables Lync Server users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Lync Server Options dialog box.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAudioTestServiceApplication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Audio Test service enables Skype for Business Server 2015 users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Skype for Business Server 2015 Options dialog box.
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to run the cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -190,7 +190,7 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering for attributes specific to Lync Server 2010.
 For example, you can limit returned data to audio test contact objects that have a specific display name or use a particular language.
@@ -228,7 +228,7 @@ You cannot use both the Filter and the Identity parameters in the same command.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering for attributes specific to Lync Server.
 For example, you can limit returned data to audio test contact objects that have a specific display name or use a particular language.
@@ -242,7 +242,7 @@ You cannot use both the Filter and the Identity parameters in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering for attributes specific to Skype for Business Server 2015.
 For example, you can limit returned data to audio test contact objects that have a specific display name or use a particular language.
@@ -312,13 +312,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill DomainController Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to connect to the specified domain controller in order to retrieve contact information.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-cs-001) or its fully qualified domain name (FQDN) (for example, atl-cs-001.litwareinc.com).

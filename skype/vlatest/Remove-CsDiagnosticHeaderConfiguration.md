@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsDiagnosticHeaderConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes one or more of the diagnostic header configuration setting collections currently in use in your organization.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information that can be useful in troubleshooting and error reporting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes one or more of the diagnostic header configuration setting collections currently in use in your organization.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information that can be useful in troubleshooting and error reporting.
@@ -27,7 +27,7 @@ Remove-CsDiagnosticHeaderConfiguration [-Identity] <XdsIdentity> [-Force] [-What
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Administrators have the option of attaching an ms-diagnostic header to each SIP message sent in their organization.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection problems or in reporting errors.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDiagnosticHeaderConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Administrators have the option of attaching an ms-diagnostic header to each SIP message sent in their organization.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection problems or in reporting errors.
@@ -170,7 +170,7 @@ Get-CsDiagnosticHeaderConfiguration | Where-Object {$_.SendToExternalNetworks -e
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the diagnostic header configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -181,7 +181,7 @@ Note, however, that the global settings will not actually be removed; instead, t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the diagnostic header configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".

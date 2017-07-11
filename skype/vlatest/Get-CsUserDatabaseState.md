@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsUserDatabaseState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the online status (True or False) of one or more Microsoft Lync Server 2010 user databases.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the online status (True or False) of one or more Lync Server user databases.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the online status (True or False) of one or more Skype for Business Server 2015 user databases.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsUserDatabaseState [-RegistrarPool <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 employs the user database (also known as the user store) to maintain presence and routing information for Lync Server users.
 The Get-CsUserDatabaseState cmdlet provides a way to verify the current status (either online or offline) for any of the user databases currently in use in your organization.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsUserDatabaseState"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server employs the user database (also known as the user store) to maintain presence and routing information for Lync Server users.
 The Get-CsUserDatabaseState cmdlet provides a way to verify the current status (either online or offline) for any of the user databases currently in use in your organization.
@@ -67,7 +67,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUserDatabaseState"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 employs the user database (also known as the user store) to maintain presence and routing information for Skype for Business Server 2015 users.
 The Get-CsUserDatabaseState cmdlet provides a way to verify the current status (either online or offline) for any of the user databases currently in use in your organization.
@@ -194,7 +194,7 @@ Get-CsUserDatabaseState | Where-Object {$_.Online -eq $True}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the user database whose online status is to be returned.
 For example: -Identity "UserDatabase:atl-sql-001.litwareinc.com".
@@ -204,7 +204,7 @@ If both parameters are omitted Get-CsUserDatabaseState returns information about
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the user database whose online status is to be returned.
 For example:
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPool
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name of the Registrar pool hosting the user databases whose online status is to be returned.
 For example: -RegistrarPool "atl-cs-001.litwareinc.com".
@@ -240,7 +240,7 @@ If both parameters are omitted Get-CsUserDatabaseState returns information about
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the Registrar pool hosting the user databases whose online status is to be returned.
 For example:

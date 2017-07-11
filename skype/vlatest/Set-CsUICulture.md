@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsUICulture
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify the culture (that is, the language and regional settings) used by the Lync Server Management Shell.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to modify the culture (that is, the language and regional settings) used by the Lync Server Management Shell.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to modify the culture (that is, the language and regional settings) used by the Skype for Business Server Management Shell.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Set-CsUICulture [-Culture] <String> [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Microsoft Lync Server 2010 is available in multiple languages, the software is not a true Multilingual User Interface (MUI) application.
 Among other things, this means that the user interface for the Lync Server Management Shell does not change languages any time you change the operating system language.
@@ -50,7 +50,7 @@ For example, if you originally installed an Italian version of Lync Server, then
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUICulture cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server is available in multiple languages, the software is not a true Multilingual User Interface (MUI) application.
 Among other things, this means that the user interface for the Lync Server Management Shell does not change languages any time you change the operating system language.
@@ -71,7 +71,7 @@ For example, if you originally installed an Italian version of Lync Server, then
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUICulture cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 is available in multiple languages, the software is not a true Multilingual User Interface (MUI) application.
 Among other things, this means that the user interface for the Skype for Business Server Management Shell does not change languages any time you change the operating system language.
@@ -156,7 +156,7 @@ Set-CsUICulture -Culture "default"
 ## PARAMETERS
 
 ### -Culture
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to specify the culture used for the Lync Server Management Shell.
 Set the culture to "en-US" for U.S.
@@ -164,7 +164,7 @@ English, or set the culture to "default" to use the language used when you origi
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify the culture used for the Lync Server Management Shell.
 Set the culture to "en-US" for U.S.
@@ -172,7 +172,7 @@ English, or set the culture to "default" to use the language used when you origi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the culture used for the Lync Server Management Shell.
 Set the culture to "en-US" for U.S.

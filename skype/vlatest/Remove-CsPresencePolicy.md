@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsPresencePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified presence policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified presence policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsPresencePolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPresencePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -81,7 +81,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPresencePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -201,7 +201,7 @@ Get-CsPresencePolicy | Where-Object {$_.MaxPromptedSubscriber -gt 500} | Remove-
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the presence policy to be removed.
 To remove a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -213,7 +213,7 @@ Instead, the properties within that policy will be reset to their default values
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the presence policy to be removed.
 To remove a policy configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -241,14 +241,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If present, causes Remove-CsPresencePolicy to delete the per-user policy even if the policy is currently assigned to at least one user.
 If not present, you will be asked to confirm the deletion request before a policy still in use will be removed.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If present, causes the Remove-CsPresencePolicy cmdlet to delete the per-user policy even if the policy is currently assigned to at least one user.
 If not present, you will be asked to confirm the deletion request before a policy still in use will be removed.

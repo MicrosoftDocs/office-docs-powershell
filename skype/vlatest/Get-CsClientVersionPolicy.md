@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsClientVersionPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about which clients (such as Microsoft Office Communicator 2007 R2) are supported in your Microsoft Lync Server 2010 environment.
 Client version policies enable you to specify which clients (such as Office Communicator 2007 R2) will be able to log on to your Lync Server 2010 system.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about which clients (such as Microsoft Office Communicator 2007 R2) are supported in your Lync Server environment.
 Client version policies enable you to specify which clients (such as Office Communicator 2007 R2) will be able to log on to your Lync Server system.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about which clients (such as Microsoft Office Communicator 2007 R2) are supported in your Skype for Business Server 2015 environment.
 Client version policies enable you to specify which clients (such as Office Communicator 2007 R2) will be able to log on to your Skype for Business Server 2015 system.
@@ -38,7 +38,7 @@ Get-CsClientVersionPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server 2010.
 When a user attempts to log on to Lync Server 2010, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Lync Server.
 When a user attempts to log on to Lync Server, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientVersionPolicy\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client version policies represent a collection of client version rules; in turn, client version rules are used to determine which client applications are allowed to log on to Skype for Business Server 2015.
 When a user attempts to log on to Skype for Business Server 2015, his or her client application sends a SIP header to the server; this header includes detailed information about the application itself, including the software's major version, minor version, and build number.

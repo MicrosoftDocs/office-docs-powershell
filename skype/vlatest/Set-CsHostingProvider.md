@@ -6,20 +6,20 @@ schema: 2.0.0
 # Set-CsHostingProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a hosting provider currently in use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies a hosting provider currently in use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
 Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies a hosting provider currently in use in your organization.
 A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
@@ -46,7 +46,7 @@ Set-CsHostingProvider [-Instance <PSObject>] [-Enabled <Boolean>] [-EnabledShare
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Lync 2010.
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostingProvider"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2013 Preview.
@@ -100,7 +100,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostingProvider"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.
@@ -293,7 +293,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostsOCSUsers
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, indicates that the hosting provider is used to host Lync Server 2010 accounts.
 If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
@@ -301,7 +301,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, indicates that the hosting provider is used to host Lync Server accounts.
 If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
@@ -309,7 +309,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, indicates that the hosting provider is used to host Skype for Business Server 2015 accounts.
 If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
@@ -331,14 +331,14 @@ Accept wildcard characters: False
 ```
 
 ### -IsLocal
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If True, indicates that the proxy server used by the hosting provider is contained within your own Lync Server topology.
 The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, indicates that the proxy server used by the hosting provider is contained within your own Skype for Business Server 2015 topology.
 The default value is False.
@@ -438,14 +438,14 @@ Accept wildcard characters: False
 ```
 
 ### -AutodiscoverUrl
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for the autodiscover service used by a hosting provider that hosts Lync Server accounts.
 The autodiscover service enables client applications such as Microsoft Lync Mobile to determine how to access resources such as a user's home pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the autodiscover service used by a hosting provider that hosts Skype for Business Server 2015 accounts.
 The autodiscover service enables client applications such as Microsoft Lync Mobile to determine how to access resources such as a user's home pool.

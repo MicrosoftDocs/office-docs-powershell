@@ -6,16 +6,16 @@ schema: 2.0.0
 # Grant-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a voice policy to one or more users or groups.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Assigns a voice policy to one or more users or groups.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Assigns a per-user voice policy to one or more users.
 
@@ -29,7 +29,7 @@ Grant-CsVoicePolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-Dom
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet assigns an existing per-user voice policy to a user.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This cmdlet assigns an existing per-user voice policy to a user.
 Voice policies are used to manage Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -56,7 +56,7 @@ For example:
 
 Get-CsOnlineUser "Ken Myer" | Select-Object VoicePolicy
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet assigns an existing per-user voice policy to a user.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -150,7 +150,7 @@ Get-CsUser -OU "ou=Finance,ou=North America,dc=litwareinc,dc=com" | Grant-CsVoic
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The Identity (unique identifier) of the user to whom the policy is being assigned.
 
@@ -163,7 +163,7 @@ Full Data Type: Microsoft.Rtc.Management.AD.UserIdParameter
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 The Identity (unique identifier) of the user to whom the policy is being assigned.
 
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The name (Identity) of the voice policy to be assigned to the user.
 (Note that this includes only the name portion of the Identity.
@@ -193,7 +193,7 @@ Per-user policy identities include a prefix of tag: that should not be included 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 The name (Identity) of the voice policy to be assigned to the user.
 Note that this includes only the name portion of the Identity.
@@ -218,14 +218,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to specify a domain controller.
 If no domain controller is specified, the first available will be used.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 
@@ -245,14 +245,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Returns the results of the command.
 By default, this cmdlet does not generate any output.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, the Grant-CsVoicePolicy cmdlet does not pass objects through the pipeline.

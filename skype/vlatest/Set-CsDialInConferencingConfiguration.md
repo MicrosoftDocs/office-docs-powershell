@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsDialInConferencingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies settings that determine how Microsoft Lync Server 2010 responds when users join or leave a dial-in conference.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies settings that determine how Lync Server responds when users join or leave a dial-in conference.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies settings that determine how Skype for Business Server 2015 responds when users join or leave a dial-in conference.
 This cmdlet was introduced in Lync Server 2010.
@@ -41,7 +41,7 @@ Set-CsDialInConferencingConfiguration [-Instance <PSObject>] [-EnableNameRecordi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When users join (or leave) a dial-in conference, Lync Server 2010 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When users join (or leave) a dial-in conference, Lync Server can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When users join (or leave) a dial-in conference Skype for Business Server 2015 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -282,13 +282,13 @@ Accept wildcard characters: False
 ```
 
 ### -EntryExitAnnouncementsEnabledByDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill EntryExitAnnouncementsEnabledByDefault Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 If set to True announcements will be played each time a participant enters or exits a conference.
 If set to False (the default value), entry and exit announcements will not be played.
@@ -309,13 +309,13 @@ Accept wildcard characters: False
 ```
 
 ### -EntryExitAnnouncementsType
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill EntryExitAnnouncementsType Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the action taken by the system any time a participant enters or leaves a conference.
 (Announcements are made only if the EntryExitAnnouncementsEnabledByDefault is set to True.) Valid values are:

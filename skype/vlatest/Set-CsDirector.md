@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsDirector
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the properties of one or more Directors.
 Directors can be used to authenticate user requests, but do not host user accounts.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the properties of one or more Directors.
 Directors can be used to authenticate user requests, but do not host user accounts.
@@ -29,7 +29,7 @@ Set-CsDirector [[-Identity] <XdsGlobalRelativeIdentity>] [-ArchivingServer <Stri
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The Director authenticates users and responds to user requests without actually hosting user accounts.
 Directors are typically used for organizations that allow external access to the network through Edge Servers.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDirector"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Director authenticates users and responds to user requests without actually hosting user accounts.
 Directors are typically used for organizations that allow external access to the network through Edge Servers.
@@ -295,13 +295,13 @@ Accept wildcard characters: False
 ```
 
 ### -SipHealthPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill SipHealthPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for monitoring server health.
 
@@ -321,13 +321,13 @@ Accept wildcard characters: False
 ```
 
 ### -SipServerTcpPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill SipServerTcpPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP listening port.
 The default value is 5060.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsKerberosAccount
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Kerberos account used for Internet Information Services (IIS) authentication.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Kerberos account used for Internet Information Services (IIS) authentication.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ New-CsKerberosAccount [-ContainerDN <String>] -UserAccount <String> [-Force] [-R
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsKerberosAccount\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsKerberosAccount\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -132,7 +132,7 @@ Enable-CsTopology
 ## PARAMETERS
 
 ### -ContainerDN
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Distinguished name of the Active Directory container where the new account is to be created.
 For example: -ContainerDN "ou=Finance,dc=litwareinc,dc=com".
@@ -140,7 +140,7 @@ If this parameter is not specified, then New-CsKerberosAccount will create the n
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Distinguished name of the Active Directory container where the new account is to be created.
 For example: -ContainerDN "ou=Finance,dc=litwareinc,dc=com".
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccount
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Account name for the new account, using the format domain_name\user_name.
 For example: -UserAccount "litwareinc\kerberostest".
@@ -172,7 +172,7 @@ Note, too that, despite the name UserAccount, the account created by running New
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Account name for the new account, using the format domain_name\user_name.
 For example: -UserAccount "litwareinc\kerberostest".

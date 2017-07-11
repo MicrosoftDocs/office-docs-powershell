@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsAutodiscoverConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing collection of Autodiscover configuration settings.
 The Autodiscover service provides a way for client applications such as Lync Web Access or Microsoft Lync Mobile to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing collection of Autodiscover Service configuration settings.
 The Autodiscover Service provides a way for client applications such as Lync Web App or Lync Mobile to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
@@ -37,7 +37,7 @@ Set-CsAutodiscoverConfiguration [-Confirm] [-ExternalSipClientAccessFqdn <String
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For client applications to make the most effective use of Lync Server those applications need to know the location of key Lync Server components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.
@@ -62,7 +62,7 @@ From there, you can use the Set-CsAutoDiscoverConfiguration cmdlet to add or rem
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAutoDiscoverConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For client applications to make the most effective use of Skype for Business Server 2015 those applications need to know the location of key Skype for Business Server 2015 components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.
@@ -224,13 +224,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalSipClientAccessFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the server used for external client access.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the server that is used for external client access.
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the collection of Autodiscover configuration settings to be modified.
 To modify to the global collection, use this syntax:
@@ -297,7 +297,7 @@ If this parameter is not specified, then Set-CsAutoDiscoverConfiguration will au
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of Autodiscover configuration settings to be modified.
 To modify to the global collection, use this syntax:

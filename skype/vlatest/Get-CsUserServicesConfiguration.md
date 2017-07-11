@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsUserServicesConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the User Services configuration settings in use in your organization.
 The User Services service helps maintain presence information and manage conferencing.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the User Services configuration settings in use in your organization.
 The User Services service helps maintain presence information and manage conferencing.
@@ -32,7 +32,7 @@ Get-CsUserServicesConfiguration [-Filter <String>] [-LocalStore] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services settings at the global, site, and service scope.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsUserServicesConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services settings at the global, site, and service scope.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUserServicesConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services settings at the global, site, and service scope.
@@ -222,7 +222,7 @@ Get-CsUserServicesConfiguration | Where-Object {$_.AnonymousUserGracePeriod -gt 
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the User Services configuration settings to be returned.
 To return the global settings, use this syntax: -Identity global.
@@ -233,7 +233,7 @@ If this parameter is omitted then Get-CsUserServicesConfiguration returns all th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the User Services configuration settings to be returned.
 To return the global settings, use this syntax:.
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when retrieving one or more collections of User Services configuration settings.
 For example, to return all the settings configured at the site scope, use this syntax: -Filter "site:*".
@@ -274,7 +274,7 @@ To return all the settings configured at the service scope, use this syntax: -Fi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when retrieving one or more collections of User Services configuration settings.
 For example, to return all the settings configured at the site scope, use this syntax:
@@ -301,13 +301,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the User Services configuration data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the User Services configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 

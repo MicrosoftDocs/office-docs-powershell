@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsConferencingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010, Skype for Business Online
+**Below Content Applies To:** Lync Server 2010, Skype for Business Online
 
 Returns information about the conferencing policies that have been configured for use in your organization.
 Conferencing policies determine the features and capabilities that can be used in a conference; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the conferencing policies that have been configured for use in your organization.
 Conferencing policies determine the features and capabilities that can be used in a conference; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
@@ -38,7 +38,7 @@ Get-CsConferencingPolicy [[-Identity] <Object>] [-ApplicableTo <Object>] [-Bypas
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Conferencing is an important part of Microsoft Lync Server 2010: conferencing enables groups of users (as few as two people to as many as 250 people) to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsConferencingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Conferencing is an important part of Lync Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -86,7 +86,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsConferencingPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Conferencing is an important part of Skype for Business Online: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -105,7 +105,7 @@ This provides administrators with enormous flexibility when it comes to deciding
 
 The Get-CsConferencingPolicy cmdlet provides a way for you to return information about all the conferencing policies that have been configured for use in your organization.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Conferencing is an important part of Skype for Business Server 2015: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -390,7 +390,7 @@ Get-CsConferencingPolicy -ApplicableTo "kenmyer@litwareinc.com"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the conferencing policy to be retrieved.
 Conferencing policies can be configured at the global, site, or per-user scopes.
@@ -405,7 +405,7 @@ Use the Filter parameter if you need to use wildcards when specifying a conferen
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Unique identifier for the conferencing policy to be retrieved.
 Conferencing policies can be configured at the global scope or at the per-user scope.
@@ -419,7 +419,7 @@ Use the Filter parameter if you need to use wildcards when specifying a conferen
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the conferencing policy to be retrieved.
 Conferencing policies can be configured at the global, site, or per-user scopes.
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcard characters when specifying the conferencing policy (or policies) to be returned.
 For example, this syntax returns all the policies configured at the site scope: -Filter "site:*".
@@ -456,7 +456,7 @@ To return a collection of all the policies configured at the per-user scope, use
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Enables you to use wildcard characters when specifying the conferencing policy (or policies) to be returned.
 For example, this syntax returns all the policies configured at the per-user scope
@@ -465,7 +465,7 @@ For example, this syntax returns all the policies configured at the per-user sco
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcard characters when specifying the conferencing policy (or policies) to be returned.
 For example, this syntax returns all the policies configured at the site scope, -Filter site:*.
@@ -487,13 +487,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the conferencing policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 

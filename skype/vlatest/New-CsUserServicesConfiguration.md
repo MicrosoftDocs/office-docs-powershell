@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsUserServicesConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of  User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
@@ -32,7 +32,7 @@ New-CsUserServicesConfiguration [-Identity] <XdsIdentity> [-AnonymousUserGracePe
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsUserServicesConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUserServicesConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -177,7 +177,7 @@ Set-CsUserServicesConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the User Services configuration settings to be created.
 To create settings at the site scope, use syntax similar to this:  -Identity site:Redmond.
@@ -185,7 +185,7 @@ To create settings at the service level, use syntax like this:  -Identity servic
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the User Services configuration settings to be created.
 To create settings at the site scope, use syntax similar to this: -Identity site:Redmond.
@@ -193,7 +193,7 @@ To create settings at the service level, use syntax like this: -Identity service
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the User Services configuration settings to be created.
 To create settings at the site scope, use syntax similar to this:
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousUserGracePeriod
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
@@ -231,7 +231,7 @@ The grace period can be set to any value between 0 second and 1 day; the default
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
@@ -396,7 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSubscriptions
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The maximum number of SIP subscribe dialogs a user can have open at any one time.
 A subscribe dialog represents a request for SIP resources.
@@ -404,7 +404,7 @@ The default value is 200.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The maximum number of SIP subscribe dialogs that a user can have open at any one time.
 A subscribe dialog represents a request for SIP resources.
@@ -460,14 +460,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -520,13 +520,13 @@ Accept wildcard characters: False
 ```
 
 ### -MinSubscriptionExpiration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill MinSubscriptionExpiration Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Subscriptions are created any time a user makes a request for data such as presence information.
 When the request is made, the user (or, more correctly, the user's client application) can request the length of time that the subscription remains valid before it must be renewed.

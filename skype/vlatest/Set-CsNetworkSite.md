@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsNetworkSite
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -34,7 +34,7 @@ Set-CsNetworkSite [-Instance <PSObject>] [-BWPolicyProfileID <String>] [-BypassI
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet modifies the settings on an existing site.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkSite"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet modifies the settings on an existing site.
@@ -147,14 +147,14 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A reference to a network site object (an object of type  Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.DisplayNetworkSiteType).
 This object can be retrieved by calling the Get-CsNetworkSite cmdlet.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 A reference to a network site object (an object of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.DisplayNetworkSiteType).
 This object can be retrieved by calling the Get-CsNetworkSite cmdlet.
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
@@ -209,7 +209,7 @@ If you manually enter a value, you will receive a confirmation prompt to verify 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
@@ -224,7 +224,7 @@ If you manually enter a value, you will receive a confirmation prompt to verify 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.

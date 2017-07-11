@@ -6,18 +6,18 @@ schema: 2.0.0
 # Disable-CsAdForest
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Undoes the forest preparation tasks carried out by the Enable-CsAdForest cmdlet.
 This cmdlet is typically used only if you are uninstalling Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Undoes the forest preparation tasks carried out by the Enable-CsAdForest cmdlet.
 This cmdlet is typically used only if you are uninstalling Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Undoes the forest preparation tasks carried out by the Enable-CsAdForest cmdlet.
 This cmdlet is typically used only if you are uninstalling Skype for Business Server 2015.
@@ -34,7 +34,7 @@ Disable-CsAdForest [-GroupDomain <Fqdn>] [-GroupDomainController <Fqdn>] [-Globa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you install Lync Server 2010, you make a number of forest-level changes to Active Directory Domain Services (AD DS).
 These changes (which can be carried out by using the Enable-CsAdForest cmdlet) include creating objects and display specifiers that are specific to Lync Server 2010, creating universal security groups needed to manage Lync Server 2010, and granting global settings object access permissions to these groups.
@@ -47,7 +47,7 @@ Lcscmd.exe /forest /action:ForestUnprep
 
 Who can run this cmdlet: You must be an enterprise administrator in order to run the Disable-CsAdForest cmdlet locally.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you install Lync Server, you make a number of forest-level changes to Active Directory Domain Services (AD DS).
 These changes (which can be carried out by using the Enable-CsAdForest cmdlet) include creating objects and display specifiers that are specific to Lync Server, creating universal security groups needed to manage Lync Server, and granting global settings object access administrative rights and permissions to these groups.
@@ -60,7 +60,7 @@ Lcscmd.exe /forest /action:ForestUnprep
 
 Who can run this cmdlet: You must be an enterprise administrator in order to run the Disable-CsAdForest cmdlet locally.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you install Skype for Business Server 2015, you make a number of forest-level changes to Active Directory Domain Services.
 These changes (which can be carried out by using the Enable-CsAdForest cmdlet) include creating objects and display specifiers that are specific to Skype for Business Server 2015, creating universal security groups needed to manage Skype for Business Server 2015, and granting global settings object access administrative rights and permissions to these groups.
@@ -133,21 +133,21 @@ Disable-CsAdForest -Force
 ## PARAMETERS
 
 ### -GroupDomain
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Fully qualified domain name (FQDN) of the domain where the Lync Server 2010 universal groups were created (for example, -GroupDomain asia.litwareinc.com).
 If this parameter is not included, Disable-CsAdForest will look for the universal groups in the local domain.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name (FQDN) of the domain where the Lync Server universal groups were created (for example, -GroupDomain asia.litwareinc.com).
 If this parameter is not included, Disable-CsAdForest will look for the universal groups in the local domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the domain where the Skype for Business Server 2015 universal groups were created (for example, -GroupDomain asia.litwareinc.com).
 If this parameter is not included, the Disable-CsAdForest cmdlet will look for the universal groups in the local domain.
@@ -184,14 +184,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Disable-CsComputer on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Disable-CsComputer cmdlet on a computer with an account in your domain.
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS), then this parameter must point to the root domain controller.
@@ -220,7 +220,7 @@ If global settings are stored in the Configuration container, then any domain co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services, then this parameter must point to the root domain controller.
@@ -275,21 +275,21 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If present, forces the rollback of the forest preparation steps even if Disable-CsAdForest detects that at least one of the domains in the forest is still prepared for Lync Server 2010.
 If not present, the command will fail if Disable-CsAdForest detects that at least one of the domains in the forest is still prepared for Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If present, forces the rollback of the forest preparation steps even if Disable-CsAdForest detects that at least one of the domains in the forest is still prepared for Lync Server.
 If not present, the command will fail if Disable-CsAdForest detects that at least one of the domains in the forest is still prepared for Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If present, forces the rollback of the forest preparation steps even if the Disable-CsAdForest cmdlet detects that at least one of the domains in the forest is still prepared for Skype for Business Server 2015.
 If not present, the command will fail if the Disable-CsAdForest cmdlet detects that at least one of the domains in the forest is still prepared for.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsFileTransferFilterConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new file transfer filter configuration.
 File transfer filter configurations are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) using a Microsoft Lync Server 2010 client.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new file transfer filter configuration.
 File transfer filter configurations are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) using a Lync Server client.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new file transfer filter configuration.
 File transfer filter configurations are used to block a user's ability to transfer certain types of files (for example, files with a .vbs or .ps1 file extension) using a Skype for Business Server 2015 client.
@@ -34,7 +34,7 @@ New-CsFileTransferFilterConfiguration [-Identity] <XdsIdentity> [-Action <FileFi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When sending instant messages, users can attach and send files to the other participants in the conversation.
 Lync Server 2010 can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent using a Lync Server 2010 client.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsFileTransferFilterConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When sending instant messages, users can attach and send files to the other participants in the conversation.
 Lync Server can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent using a Lync Server client.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsFileTransferFilterConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When sending instant messages, users can attach and send files to the other participants in the conversation.
 Skype for Business Server 2015 can be configured so that files with certain extensions--typically extensions of file types that could potentially prove harmful--are not allowed to be sent using a Skype for Business Server 2015 client.
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables or disables file transfer filtering.
 If this parameter is set to True, files with the specified extensions (or all files, depending on the value of the Action property) cannot be transferred by a Lync Server 2010 client.
@@ -299,7 +299,7 @@ Default: True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables or disables file transfer filtering.
 If this parameter is set to True, files with the specified extensions (or all files, depending on the value of the Action property) cannot be transferred by a Lync Server client.
@@ -309,7 +309,7 @@ Default: True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables or disables file transfer filtering.
 If this parameter is set to True, files with the specified extensions (or all files, depending on the value of the Action property) cannot be transferred by a Skype for Business Server 2015 client.
@@ -333,7 +333,7 @@ Accept wildcard characters: False
 ```
 
 ### -Extensions
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 List of file extensions that will be blocked.
 If you attempt to use a Lync Server 2010 client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.
@@ -345,7 +345,7 @@ By default, the following file extensions are included in the Extensions propert
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 List of file extensions that will be blocked.
 If you attempt to use a Lync Server client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.
@@ -357,7 +357,7 @@ By default, the following file extensions are included in the Extensions propert
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 List of file extensions that will be blocked.
 If you attempt to use a Skype for Business Server 2015 client to transfer a file that has a file extension matching one of the extensions in this list, that transfer will be blocked and the file will not be transferred.
@@ -399,14 +399,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

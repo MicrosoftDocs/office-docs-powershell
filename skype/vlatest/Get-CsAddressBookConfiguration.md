@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsAddressBookConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about Address Book configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about Address Book configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsAddressBookConfiguration [-Filter <String>] [-LocalStore] [<CommonParamete
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Address Book servers are intermediaries between Active Directory Domain Services (AD DS) and Microsoft Lync Server 2010.
 The Address Book server ensures that the user information stored in Lync Server 2010 is in synch with the user information stored in Active Directory.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAddressBookConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between Active Directory Domain Services (AD DS) and Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in Active Directory.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAddressBookConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between Active Directory Domain Services and Skype for Business Server 2015.
 The Address Book server ensures that the user information stored in Skype for Business Server 2015 is in synch with the user information stored in Active Directory.
@@ -207,7 +207,7 @@ Get-CsAddressBookConfiguration | Where-Object {$_.UseNormalizationRules -eq $Tru
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of Address Book settings to be returned.
 To refer to the global settings, use this syntax: -Identity global.
@@ -220,7 +220,7 @@ If this parameter is not specified, then Get-CsAddressBookConfiguration returns 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of Address Book settings to be returned.
 To refer to the global settings, use this syntax: -Identity global.
@@ -265,13 +265,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the Address Book configuration data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the Address Book configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 

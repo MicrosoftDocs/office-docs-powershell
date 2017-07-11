@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsClsProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new centralized logging trace provider.
 Trace providers are application components that generate trace messages or trace events useful in troubleshooting problems with Lync Server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new centralized logging trace provider.
 Trace providers are application components that generate trace messages or trace events useful in troubleshooting problems with Skype for Business Server 2015.
@@ -28,7 +28,7 @@ New-CsClsProvider -Flags <String> -Level <ProviderLevel> -Name <String> -Type <P
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClsProvider"}
 
 Lync Server Control Panel: The functions carried out by the New-CsClsProvider cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tracing level for events recorded by the provider: Allowed values are:
 
@@ -162,7 +162,7 @@ Tracing level for events recorded by the provider: Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tracing level for events recorded by the provider: Allowed values are:
 
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of tracing used by the provider.
 Allowed values are:
@@ -216,7 +216,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of tracing used by the provider.
 Allowed values are:
@@ -259,14 +259,14 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server server role for the provider.
 For example, FE for Front End server or Edge for Edge Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 server role for the provider.
 For example, FE for Front End server or Edge for Edge Server.

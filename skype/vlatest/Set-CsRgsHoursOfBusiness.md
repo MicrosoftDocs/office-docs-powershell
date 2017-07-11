@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsRgsHoursOfBusiness
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Configures an existing set of Response Group business hours.
 Business hour sets are used to indicate the days of the week and the times of day when Response Group agents are typically available to answer phone calls.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Configures an existing set of Response Group business hours.
 Business hour sets are used to indicate the days of the week and the times of day when Response Group agents are typically available to answer phone calls.
@@ -26,7 +26,7 @@ Set-CsRgsHoursOfBusiness [-Instance] <BusinessHours> [-Force] [-WhatIf] [-Confir
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and hours of the day that agents are available to answer calls.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Set-CsRgsHoursOfBusiness"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and hours of the day that agents are available to answer calls.
@@ -112,7 +112,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRgsHoursOfBusiness"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and hours of the day that agents are available to answer calls.

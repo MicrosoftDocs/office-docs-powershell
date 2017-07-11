@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsCallParkOrbit
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Gets the call park orbit range settings for the organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Gets the call park orbit range settings for the organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -31,7 +31,7 @@ Get-CsCallParkOrbit [-Filter <String>] [-LocalStore] [-Type <OrbitType>] [<Commo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet retrieves the settings for the call park orbits defined for an organization.
 You can retrieve a single call park orbit range (specified by the Identity parameter) or you can call Get-CsCallParkOrbit with no parameters to retrieve all the call park orbit ranges defined for an organization.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsCallParkOrbit"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet retrieves the settings for the call park orbits defined for an organization.
 You can retrieve a single call park orbit range (specified by the Identity parameter) or you can call the Get-CsCallParkOrbit cmdlet with no parameters to retrieve all the call park orbit ranges defined for an organization.

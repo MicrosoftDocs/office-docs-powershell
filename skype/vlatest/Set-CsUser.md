@@ -6,22 +6,22 @@ schema: 2.0.0
 # Set-CsUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies Microsoft Lync Server 2010 properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies Lync Server properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Modifies Skype for Business Online properties for an existing user account.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies Skype for Business Server 2015 properties for an existing user account.
 Properties can be modified only for accounts that have been enabled for use with Skype for Business Server 2015.
@@ -42,7 +42,7 @@ Set-CsUser [-Identity] <UserIdParameter> [-AudioVideoDisabled <Boolean>] [-Enabl
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Set-CsUser enables you to modify the Lync Server-related user account attributes that are stored in Active Directory Domain Services (AD DS).
 For example, you can disable or re-enable a user for Lync Server; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers.
@@ -56,13 +56,13 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUser\b"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 The Set-CsUser cmdlet enables you to modify property values for one or more Skype for Business Online user accounts; for example, you can disable or re-enable a user for Skype for Business Online.
 However, the only attributes you can modify using the Set-CsUser cmdlet are attributes related to Skype for Business Online.
 Other user account attributes, such as the user's job title or department, cannot be modified by using this cmdlet.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Set-CsUser cmdlet enables you to modify the Skype for Business Server 2015-related user account attributes that are stored in Active Directory Domain Services.
 For example, you can disable or re-enable a user for Skype for Business Server 2015; enable or disable a user for audio/video (A/V) communications; or modify a user's private line and line URI numbers.
@@ -164,7 +164,7 @@ Get-CsUser -LdapFilter "Department=Finance" | Set-CsUser -EnterpriseVoiceEnabled
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity of the user account to be modified.
 User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -175,14 +175,14 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates the Identity of the user account to be modified.
 User Identities can be specified using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the user account to be modified.
 User Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -AudioVideoDisabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether the user is allowed to make audio/visual (A/V) calls by using Lync 2010.
 If set to True, the user will largely be restricted to sending and receiving instant messages.
@@ -216,7 +216,7 @@ You cannot disable A/V communications if a user is currently enabled for remote 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the user is allowed to make audio/visual (A/V) calls by using Lync.
 If set to True, the user will largely be restricted to sending and receiving instant messages.
@@ -225,7 +225,7 @@ You cannot disable A/V communications if a user is currently enabled for remote 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates whether the user is allowed to make audio/visual (A/V) calls by using Skype for Business client.
 If set to True, the user will largely be restricted to sending and receiving instant messages.
@@ -234,7 +234,7 @@ You cannot disable A/V communications if a user is currently enabled for remote 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the user is allowed to make audio/visual (A/V) calls by using Skype for Business.
 If set to True, the user will largely be restricted to sending and receiving instant messages.
@@ -257,7 +257,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates whether or not the user has been enabled for Lync Server.
 If you set this value to False, the user will no longer be able to log on to Lync Server; setting this value to True re-enables the user's logon privileges.
@@ -269,7 +269,7 @@ When you run Disable-CsUser, all the Lync Server data associated with that accou
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates whether or not the user has been enabled for Skype for Business Online.
 If you set this value to False, the user will no longer be able to log on to Skype for Business Online; setting this value to True re-enables the user's logon privileges.
@@ -279,7 +279,7 @@ If you later re-enable the account by using the Enabled parameter, the associate
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the user has been enabled for Skype for Business Server 2015.
 If you set this value to False, the user will no longer be able to log on to Skype for Business Server 2015; setting this value to True re-enables the user's logon privileges.
@@ -305,14 +305,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to specify a domain controller to connect to when modifying a user account.
 If this parameter is not included then the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 
@@ -332,14 +332,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnterpriseVoiceEnabled
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether the user has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates whether the user has been enabled for Enterprise Voice, the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, users can make telephone calls using the Internet rather than using the standard telephone network.
@@ -360,28 +360,28 @@ Accept wildcard characters: False
 ```
 
 ### -HostedVoiceMail
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Lync 2010 users to directly place a call to another user's voice mail.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Lync users to directly place a call to another user's voice mail.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Exchange.
 In addition, setting this option to True enables users to directly place a call to another user's voice mail.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, enables a user's voice mail calls to be routed to a hosted version of Microsoft Exchange Server.
 In addition, setting this option to True enables Skype for Business users to directly place a call to another user's voice mail.
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineURI
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Phone number assigned to the user.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
@@ -411,7 +411,7 @@ Any extension number should be added to the end of the line URI, for example: TE
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Phone number assigned to the user.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
@@ -426,13 +426,13 @@ Conversely, dialing just the extension (51297) or using Lync to dial the number 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used in Skype for Business Online
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Phone number assigned to the user.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
@@ -461,7 +461,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineServerURI
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The URI of the remote call control telephone gateway assigned to the user.
 The LineServerUri is the gateway URI, prefaced by "sip:".
@@ -469,7 +469,7 @@ For example: sip:rccgateway@litwareinc.com
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used in Skype for Business Online
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLine
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Phone number for the user's private telephone line.
 A private line is a phone number that is not published in Active Directory Domain Services (AD DS) and, as a result, is not readily available to other people.
@@ -501,13 +501,13 @@ For example: TEL:+14255551297.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used in Skype for Business Online
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Phone number for the user's private telephone line.
 A private line is a phone number that is not published in Active Directory Domain Services and, as a result, is not readily available to other people.
@@ -533,7 +533,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteCallControlTelephonyEnabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether the user has been enabled for remote call control telephony.
 When enabled for remote call control, a user can employ Lync Server to answer phone calls made to his or her desk phone.
@@ -546,7 +546,7 @@ To be enabled for remote call control, a user must have both a LineUri and a Lin
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the user has been enabled for remote call control telephony.
 When enabled for remote call control, a user can employ Lync Server to answer phone calls made to his or her desk phone.
@@ -559,13 +559,13 @@ To be enabled for remote call control, a user must have both a LineUri and a Lin
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used in Lync Online.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the user has been enabled for remote call control telephony.
 When enabled for remote call control, a user can employ Skype for Business to answer phone calls made to his or her desk phone.
@@ -592,28 +592,28 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Lync 2010.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: -SipAddress sip:kenmyer@litwareinc.com.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Lync.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: -SipAddress sip:kenmyer@litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Skype for Business client.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: -SipAddress sip:kenmyer@litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier (similar to an email address) that allows the user to communicate using SIP devices such as Skype for Business.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example: -SipAddress sip:kenmyer@litwareinc.com.
@@ -683,21 +683,21 @@ Accept wildcard characters: False
 ```
 
 ### -AcpInfo
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to assign one or more third-party audio conferencing providers to a user.
 However, it is recommended that you use the  Set-UserAcp cmdlet to assign Audio conferencing providers.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Online
+**Below Content Applies To:** Lync Server 2013, Skype for Business Online
 
 Enables you to assign one or more third-party audio conferencing providers to a user.
 However, it is recommended that you use the Set-UserAcp cmdlet to assign Audio conferencing providers.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to assign one or more third-party audio conferencing providers to a user.
 However, it is recommended that you use the Set-CsUserAcp cmdlet to assign Audio conferencing providers.
@@ -718,7 +718,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013, Skype for Business Online
+**Below Content Applies To:** Lync Server 2013, Skype for Business Online
 
 Indicates where the user's instant messaging sessions are archived.
 Allowed values are:
@@ -730,7 +730,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates where the user's instant messaging sessions are archived.
 Allowed values are:

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsTrustedApplicationPool
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves settings for one or more pools that contain the computers that host trusted applications.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves settings for one or more pools that contain the computers that host trusted applications.
 This cmdlet was introduced in Lync Server 2010.
@@ -31,7 +31,7 @@ Get-CsTrustedApplicationPool [-Filter <String>] [-PoolFqdn <String>] [<CommonPar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 It is recommended that computers that are running trusted applications within a Microsoft Lync Server 2010 deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
@@ -42,7 +42,7 @@ To return a list of the role-based access control (RBAC) roles this cmdlet has b
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrustedApplicationPool"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 It is recommended that computers that are running trusted applications within a Lync Server deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
@@ -53,7 +53,7 @@ To return a list of the role-based access control (RBAC) roles this cmdlet has b
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrustedApplicationPool"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 It is recommended that computers that are running trusted applications within a Skype for Business Server 2015 deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.

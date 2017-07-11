@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsPoolBackupRelationship
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the backup pool associated with a Microsoft Lync Server 2013 Preview pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the backup pool associated with a Skype for Business Server 2015 pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -25,7 +25,7 @@ Get-CsPoolBackupRelationship -PoolFqdn <Fqdn> [-Force] [-LocalStore] [<CommonPar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsPoolBackupRelationship cmdlet returns the fully qualified domain name of the backup pool associated with a Registar pool.
 Note that this is read-only information: there is no corresponding Set-CsPoolBackupRelationship cmdlet that lets you use Windows PowerShell to create a backup association.
@@ -37,7 +37,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPoolBackupRelationship"
 
 Lync Server Control Panel: The functions carried out by the Get-CsPoolBackupRelationship cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsPoolBackupRelationship cmdlet returns the fully qualified domain name of the backup pool associated with a Registrar pool.
 Note that this is read-only information: there is no corresponding Set-CsPoolBackupRelationship cmdlet that lets you use the Windows PowerShell command-line interface to create a backup association.

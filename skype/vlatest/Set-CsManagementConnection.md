@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsManagementConnection
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the management connection to the Central Management store.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the management connection to the Central Management store.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Set-CsManagementConnection [-StoreProvider] <StoreProvider> [-Connection] <Strin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Configuration data for Microsoft Lync 2010 is stored in the Central Management store.
 It is crucial that both Windows PowerShell and the management replica services be able to locate this database.
@@ -47,7 +47,7 @@ You cannot use Set-CsManagementConnection to change the management connection on
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsManagementConnection cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Configuration data for Lync Server is stored in the Central Management store.
 It is crucial that both Windows PowerShell and the management replica services be able to locate this database.
@@ -69,7 +69,7 @@ You cannot use Set-CsManagementConnection to change the management connection on
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsManagementConnection cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Configuration data for Skype for Business Server 2015 is stored in the Central Management store.
 It is crucial that both Windows PowerShell and the management replica services be able to locate this database.
@@ -146,7 +146,7 @@ Set-CsManagementConnection -StoreProvider FileSystem -Connection "C:\TestTopolog
 ## PARAMETERS
 
 ### -Connection
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Location information for the SQL Server instance or the file system folder being used as the management connection.
 
@@ -157,7 +157,7 @@ If the folder does not exist, Set-CsManagementConnection will create it.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Location information for the SQL Server instance or the file system folder being used as the management connection.
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -StoreProvider
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the type of back-end store used for configuration information.
 To store configuration data in SQL Server, set the StoreProvider like this: -StoreProvider Sql.
@@ -192,7 +192,7 @@ You should not modify the StoreProvider property unless instructed to do so by M
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the type of back-end store used for configuration information.
 For example, to store configuration data in SQL Server, set the StoreProvider like this: -StoreProvider Sql.

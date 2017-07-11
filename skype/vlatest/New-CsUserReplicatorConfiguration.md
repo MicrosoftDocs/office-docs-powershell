@@ -6,19 +6,19 @@ schema: 2.0.0
 # New-CsUserReplicatorConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Microsoft Lync Server 2010.
 This cmdlet is designed for use with Microsoft Lync Online 2010 and will not work with the on-premises version of Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Lync Server.
 This cmdlet is designed for use with Lync Online and will not work with the on-premises version of Lync Server.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of User Replicator configuration settings.
 The User Replicator periodically retrieves up-to-date user account information from Active Directory and then synchronizes the new information with the current user data stored by Skype for Business Server 2015.
@@ -35,7 +35,7 @@ New-CsUserReplicatorConfiguration [-Identity] <XdsIdentity> [-ADDomainNamingCont
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Lync Server 2010 maintains its own database of user accounts and user account data, Lync Server still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server maintains its own database of user accounts and user account data, Lync Server still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -87,7 +87,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUserReplicatorConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 maintains its own database of user accounts and user account data, Skype for Business Server 2015 still relies on Active Directory as the ultimate source for user information.
 For example, when a new Active Directory user account is created, you must supply basic information about the user account (such as the Active Directory display name).
@@ -174,7 +174,7 @@ New-CsUserReplicatorConfiguration -Identity "service:Registrar:atl-cs-001.litwar
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier of the User Replicator configuration settings to be created.
 Settings can only be created at the service scope, and only for the Registrar service.
@@ -184,7 +184,7 @@ Note that this applies only to Lync Online 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier of the User Replicator configuration settings to be created.
 Settings can only be created at the service scope, and only for the Registrar service.
@@ -194,7 +194,7 @@ Note that this applies only to Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the User Replicator configuration settings to be created.
 Settings can only be created at the service scope, and only for the Registrar service.
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -ADDomainNamingContextList
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Distinguished names of the Active Directory domains that the User Replicator must synchronize with.
 For example, to add a domain to the list use syntax similar to this:
@@ -237,7 +237,7 @@ If this property is not null then the replicator will only synchronize with the 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Distinguished names of the Active Directory domains that the User Replicator must synchronize with.
 For example, to add a domain to the list use syntax similar to this:
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationCycleInterval
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Represents the amount of time that the User Replicator waits before checking for user account updates in Active Directory.
 The replication cycle interval can be any time value between 1 second, and 23 hours, 59 minutes, and 59 seconds; the default value is 1 minute.
@@ -277,7 +277,7 @@ For example, this syntax sets to time interval to one hour and 15 minutes: -Repl
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Represents the amount of time that the User Replicator waits before checking for user account updates in Active Directory.
 The replication cycle interval can be any time value between 1 second, and 23 hours, 59 minutes, and 59 seconds; the default value is 1 minute.
@@ -318,14 +318,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

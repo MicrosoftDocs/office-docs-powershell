@@ -6,12 +6,12 @@ schema: 2.0.0
 # Import-CsUserData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Imports user data previously exported using the Export-CsUserData cmdlet.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Imports user data previously exported by using the Export-CsUserData cmdlet.
 This cmdlet was introduced in Lync Server 2013.
@@ -35,7 +35,7 @@ Import-CsUserData -FileName <String> -PoolFqdn <Fqdn> [-ConfDirectoryFilter <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Import-CsUserData cmdlet is used to import previously-saved user data and/or conference directory data to a Lync Server.
 Note that this data must have been exported by using the Export-CsUserData cmdlet.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsUserData"}
 
 Lync Server Control Panel: The functions carried out by the Import-CsUserData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Import-CsUserData cmdlet is used to import previously-saved user data and/or conference directory data to Skype for Business Server 2015.
 Note that this data must have been exported by using the Export-CsUserData cmdlet.
@@ -160,14 +160,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to specify the FQDN of the domain controller to be used when running Import-CsUserData.
 If not specified, the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to specify the FQDN of the domain controller to be used when running the Import-CsUserData cmdlet.
 If not specified, the cmdlet will use the first available domain controller.
@@ -220,14 +220,14 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingGroupFilter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the imported data to users who belong to the same routing group.
 Routing groups are used by Lync Server to determine the Front End server that users register with.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the imported data to users who belong to the same routing group.
 Routing groups are used by Skype for Business Server 2015 to determine the Front End server that users register with.

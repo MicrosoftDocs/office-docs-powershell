@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsAdContact
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In a multi-forest topology, returns information about user accounts from forests other than your home forest; these are users who have been replicated as contact objects by Microsoft Forefront Identity Manager 2010 (or a previous version of the product).
 Get-CsAdContact returns any user who has a value configured for the msRTCSIP-OriginatorSid attribute.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In a multi-forest topology, returns information about user accounts from forests other than your home forest; these are users who have been replicated as contact objects by Microsoft Forefront Identity Manager 2010 (or a previous version of the product).
 Get-CsAdContact returns any user who has a value configured for the msRTCSIP-OriginatorSid attribute.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In a multi-forest topology, returns information about user accounts from forests other than your home forest; these are users who have been replicated as contact objects by Microsoft Forefront Identity Manager 2010 (or a previous version of the product).
 The Get-CsAdContact cmdlet returns any user who has a value configured for the msRTCSIP-OriginatorSid attribute.
@@ -35,7 +35,7 @@ Get-CsAdContact [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [-D
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In a multi-forest topology, users from other forests are represented as contacts.
 These contacts are not equivalent to Active Directory contacts; if you use Active Directory Users and Computers to create a new contact, that user will not be returned by the Get-CsAdContact cmdlet.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAdContact"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In a multi-forest topology, users from other forests are represented as contacts.
 These contacts are not equivalent to Active Directory contacts; if you use Active Directory Users and Computers to create a new contact, that user will not be returned by the Get-CsAdContact cmdlet.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdContact"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In a multi-forest topology, users from other forests are represented as contacts.
 These contacts are not equivalent to Active Directory contacts; if you use Active Directory Users and Computers to create a new contact, that user will not be returned by the Get-CsAdContact cmdlet.
@@ -227,7 +227,7 @@ Get-CsAdContact -Credential $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the Identity of the contact to be returned.
 Contact Identities can be specified by using one of formats: 1) the contact's SIP address; 2) the contact's Active Directory distinguished name; and, 3) the contact's Active Directory display name (for example, Ken Myer).
@@ -237,7 +237,7 @@ For example, the Identity "* Smith" returns all the contacts with a display name
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the contact to be returned.
 Contact Identities can be specified by using one of three formats: 1) the contact's SIP address; 2) the contact's Active Directory distinguished name; and, 3) the contact's Active Directory display name (for example, Ken Myer).
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on attributes specific to Microsoft Lync Server 2010.
 
@@ -306,7 +306,7 @@ For example, a filter that returns only contacts who have a SIP address that end
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 
@@ -315,7 +315,7 @@ For example, a filter that returns only contacts who have a SIP address that end
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
 
@@ -381,13 +381,13 @@ Accept wildcard characters: False
 ```
 
 ### -LDAPFilter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill LDAPFilter Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes.
 For example, you can limit returned data to contacts who work in a specific department, or contacts that have a specified manager or job title.

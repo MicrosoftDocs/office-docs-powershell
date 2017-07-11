@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsExStorageConnectivity
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that the Lync Server Storage Service is working on a Front End server; this is done by creating a test email message in the specified Exchange Server mailbox and then optionally deleting that message at the end of the text.
 Test-CsExStroageConnectivity also verifies that Exchange archiving is working as expected.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that the Skype for Business Server 2015 Storage Service is working on a Front End Server.
 This is done by creating a test email message in the specified Exchange mailbox and then optionally deleting that message at the end of the text.
@@ -29,7 +29,7 @@ Test-CsExStorageConnectivity [-SipUri] <String> [-Binding <String>] [-DeleteItem
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsExStorageConnectivity cmdlet is used to verify that server-to-server authentication is working between Microsoft Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview.
 To verify server-to-server authentication, the cmdlet logs on to Microsoft Exchange, writes an item to the Conversation History folder in the specified mailbox, and then deletes that item.
@@ -42,7 +42,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsExStorageConnectivity"
 
 Lync Server Control Panel: The functions carried out by the Test-CsExStorageConnectivity cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsExStorageConnectivity cmdlet is used to verify that server-to-server authentication is working between Skype for Business Server 2015 and Exchange.
 To verify server-to-server authentication, the cmdlet logs on to Exchange writes an item to the Conversation History folder in the specified mailbox, and then deletes that item.
@@ -101,13 +101,13 @@ Test-CsExStorageConnectivity -SipUri "sip:kenmyer@litwareinc.com" -Binding "NetN
 ## PARAMETERS
 
 ### -SipUri
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address of the Exchange Server mailbox where the test item should be created.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address of the Exchange mailbox where the test item should be created.
 
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -Binding
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Windows Communication Foundation (WCF) binding.
 A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
@@ -138,7 +138,7 @@ valid values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Windows Communication Foundation (WCF) binding.
 A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Folder
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the Exchange 2013 Preview archiving folder that the cmdlet should connect to.
 Allowed values are:
@@ -191,7 +191,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the Exchange archiving folder that the cmdlet should connect to.
 Allowed values are:
@@ -234,14 +234,14 @@ Accept wildcard characters: False
 ```
 
 ### -HostNameStorageService
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the server where the Lync Server Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the server where the Skype for Business Server 2015 Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.

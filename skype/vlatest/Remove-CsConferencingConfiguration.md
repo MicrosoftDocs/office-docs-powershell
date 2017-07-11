@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsConferencingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of conference configuration settings.
 Conference settings determine such things as the maximum-allowed size for conference content and handouts; the content grace period; and the URLs for the internal and external downloads of the supported client.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified collection of conference configuration settings.
 Conference settings determine such things as the maximum-allowed size for conference content and handouts; the content grace period; and the URLs for the internal and external downloads of the supported client.
@@ -26,7 +26,7 @@ Remove-CsConferencingConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsConferencingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -86,7 +86,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsConferencingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -211,7 +211,7 @@ Get-CsConferencingConfiguration | Where-Object {$_.Organization -ne "Litwareinc"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the collection of conferencing configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -222,7 +222,7 @@ In that case, however, those settings will not be removed; instead, all the prop
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the collection of conferencing configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".

@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsAdminRole
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new role-based access control (RBAC) role.
 RBAC roles are used to define the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new role-based access control (RBAC) role.
 RBAC roles are used to define the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
@@ -31,7 +31,7 @@ New-CsAdminRole [-Identity] <String> -Template <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Microsoft Lync Server 2010.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; the right to manage only archiving and Archiving Server.
@@ -106,7 +106,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsAdminRole"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Lync Server.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; the right to manage only archiving and Archiving Server.
@@ -181,7 +181,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAdminRole"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Skype for Business Server 2015.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; the right to manage only archiving and Archiving Server.
@@ -409,7 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigScopes
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Used to limit the scope of the cmdlet to configuration settings within the specified site.
 To limit the cmdlet scope to a single site, use syntax similar to this: -ConfigScopes site:Redmond. 
@@ -425,7 +425,7 @@ You must specify a value for either (or both) the ConfigScopes and UserScopes pr
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Used to limit the scope of the cmdlet to configuration settings within the specified site.
 To limit the cmdlet scope to a single site, use syntax similar to this: -ConfigScopes site:Redmond.
@@ -493,14 +493,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cmdlets
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify the cmdlets that will be available to users who hold the new RBAC role.
 For example, to create a new role that provides access only to one cmdlet (Export-CsArchivingData) use syntax like this:
@@ -566,7 +566,7 @@ To allow access to multiple cmdlets, separate the cmdlet names using commas:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the cmdlets that will be available to users who hold the new RBAC role.
 For example, to create a new role that provides access only to one cmdlet (the Export-CsArchivingData cmdlet) use syntax like this:
@@ -593,7 +593,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScriptModules
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify a function within a Windows PowerShell script that will then be available to users who hold the new RBAC role.
 For example, this syntax provides access to a function named Reset in a script named UpDatabase.ps1 :
@@ -602,7 +602,7 @@ For example, this syntax provides access to a function named Reset in a script n
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify a function within a Windows PowerShell script that will then be available to users who hold the new RBAC role.
 For example, this syntax provides access to a function named Reset in a script named UpdateDatabase.ps1 :

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsPushNotificationConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Deletes an existing collection of push notification settings.
 The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices such as iPhones and Windows Phones, even if the Lync application on those devices is currently suspended or running in the background.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Deletes an existing collection of push notification settings.
 The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices such as iPhones and Windows Phones, even if the Skype for Business application on those devices is currently suspended or running in the background.
@@ -28,7 +28,7 @@ Remove-CsPushNotificationConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Fo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Apple Push Notification Service and the Microsoft Push Notification Service enable users running Lync on their Apple iPhone or Windows Phone to receive notifications about Lync events even when Lync is suspended or running in the background.
 For example, users can receive notice for events such as these:
@@ -52,7 +52,7 @@ In this case, that means that push notifications will be disabled from both the 
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsPushNotificationConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Apple Push Notification Service and the Microsoft Push Notification Service enable users running Skype for Business on their Apple iPhone or Windows Phone to receive notifications about Skype for Business Server 2015 events even when Skype for Business is suspended or running in the background.
 For example, users can receive notice for events such as these:
@@ -204,7 +204,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the push notification configuration settings being deleted.
 For example:
@@ -217,7 +217,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the push notification configuration settings being deleted.
 For example:

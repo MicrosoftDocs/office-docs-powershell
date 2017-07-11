@@ -6,18 +6,18 @@ schema: 2.0.0
 # Merge-CsLegacyTopology
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Merge-CsLegacyTopology enables you to migrate topology information from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Microsoft Lync Server 2010.
 This helps provide interoperability between Lync Server 2010 and earlier versions of the software.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Merge-CsLegacyTopology enables you to migrate topology information from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Lync Server.
 This helps provide interoperability between Lync Server and earlier versions of the software.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Merge-CsLegacyTopology cmdlet enables you to migrate topology information from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Skype for Business Server 2015.
 This helps provide interoperability between Skype for Business Server 2015 and earlier versions of the software.
@@ -40,7 +40,7 @@ Merge-CsLegacyTopology [[-UserInputFileName] <String>] [-Force] [-Report <String
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Merge-CsLegacyTopology cmdlet is the first tool to use when migrating from an earlier version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Lync Server 2010.
 Merge-CsLegacyTopology is used to migrate trusted service entries and topology information for the following components: domains, user services, Registrar, Mediation Server, and Edge Server.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Merge-CsLegacyTopology"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Merge-CsLegacyTopology cmdlet is the first tool to use when migrating from an earlier version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Lync Server.
 Merge-CsLegacyTopology is used to migrate trusted service entries and topology information for the following components: domains, user services, Registrar, Mediation Server, and Edge Server.
@@ -102,7 +102,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Merge-CsLegacyTopology"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Merge-CsLegacyTopology cmdlet is the first tool to use when migrating from an earlier version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Skype for Business Server 2015.
 The Merge-CsLegacyTopology cmdlet is used to migrate trusted service entries and topology information for the following components: domains, user services, Registrar, Mediation Server, and Edge Server.
@@ -194,7 +194,7 @@ Merge-CsLegacyTopology -TopologyXmlFileName C:\New_Topology.xml -UserInputFileNa
 ## PARAMETERS
 
 ### -TopologyXmlFileName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Path to the output file to be created when Merge-CsLegacyTopology is run.
 Note that this file differs from the file specified using the Report parameter; the latter file is used for recording error information while the Topology XML file contains your newly created Lync Server topology.
@@ -204,7 +204,7 @@ If the specified file already exists, it will be overwritten when you run Merge-
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the output file to be created when the Merge-CsLegacyTopology cmdlet is run.
 Note that this file differs from the file specified using the Report parameter; the latter file is used for recording error information while the Topology XML file contains your newly created Skype for Business Server 2015 topology.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserInputFileName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Path to the XML file used to import Edge Server data from an earlier version of Office Communications Server.
 This XML file (which you must create following the guidelines detailed in the Lync Server 2010 Deployment Guide) is required because Edge Server settings are not stored in Active Directory Domain Services (AD DS).
@@ -238,7 +238,7 @@ If this parameter is not used, remote and external access features (including fe
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Path to the XML file used to import Edge Server data from an earlier version of Office Communications Server.
 This XML file (which you must create following the guidelines detailed in the Lync Server Deployment Guide) is required because Edge Server settings are not stored in Active Directory Domain Services (AD DS).
@@ -248,7 +248,7 @@ If this parameter is not used, remote and external access features (including fe
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the XML file used to import Edge Server data from an earlier version of Skype for Business Server 2015.
 This XML file (which you must create following the guidelines detailed in the Skype for Business Server 2015 Deployment Guide) is required because Edge Server settings are not stored in Active Directory Domain Services.
@@ -337,13 +337,13 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Reserved Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to merge the topology using a topology object instead of a topology XML file.
 

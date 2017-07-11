@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsNetworkConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves global settings for call admission control (CAC), Enhanced 9-1-1 (E9-1-1), and media bypass.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves global settings for call admission control (CAC), Enhanced 9-1-1 (E9-1-1), and media bypass.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsNetworkConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
@@ -42,7 +42,7 @@ Get-CsNetworkConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Microsoft Lync Server 2010 deployment, including whether or not that configuration has been enabled.
 You can use this cmdlet to retrieve these configurations and settings.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Lync Server deployment, including whether or not that configuration has been enabled.
 You can use this cmdlet to retrieve these configurations and settings.
@@ -66,11 +66,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Skype for Business Server 2015 deployment, including whether or not that configuration has been enabled.
 You can use this cmdlet to retrieve these configurations and settings.
@@ -150,13 +150,13 @@ This command first retrieves that configuration by calling the Get-CsNetworkConf
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 This will always be Global.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -189,13 +189,13 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Because there will only ever be one network configuration, you do not need this parameter for this cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -215,13 +215,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the network configuration from the local replica of the Central Management store, rather than the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsVoicemailReroutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies settings that provide public switched telephone network (PSTN) phone numbers to access Exchange Unified Messaging (UM) Subscriber Access and Auto Attendant features.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies settings that provide public switched telephone network (PSTN) phone numbers to access Exchange UM Subscriber Access and Auto Attendant features.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies settings that provide public switched telephone network (PSTN) phone numbers to access Exchange Subscriber Access and Auto Attendant features.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ Set-CsVoicemailReroutingConfiguration [-Instance <PSObject>] [-AutoAttendantNumb
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet allows you to modify settings that determine where Auto Attendant and Subscriber Access calls are rerouted to when IP connectivity to an Exchange UM server is lost.
 
@@ -53,7 +53,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoicemailReroutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet allows you to modify settings that determine where Auto Attendant and Subscriber Access calls are rerouted to when IP connectivity to an Exchange UM server is lost.
 
@@ -69,7 +69,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoicemailReroutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet allows you to modify settings that determine where Auto Attendant and Subscriber Access calls are rerouted to when IP connectivity to an Exchange server is lost.
 
@@ -154,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
@@ -162,7 +162,7 @@ This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.Exu
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 

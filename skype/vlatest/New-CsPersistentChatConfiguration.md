@@ -6,14 +6,14 @@ schema: 2.0.0
 # New-CsPersistentChatConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of Persistent Chat configuration settings at the site or service scope.
 Persistent Chat configuration settings are used to manage the Persistent Chat service.
 For example, these settings allow you to specify the maximum number of users who can participate in a chat room.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Persistent Chat configuration settings at the site or service scope.
 Persistent Chat configuration settings are used to manage the Persistent Chat service.
@@ -31,7 +31,7 @@ New-CsPersistentChatConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Default
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatConfigura
 
 Lync Server Control Panel: To create a new collection of Persistent Chat configuration settings using the Lync Server Control Panel, click Persistent Chat, click Persistent Chat Configuration, click New, and then click either Site configuration or Pool configuration.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

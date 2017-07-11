@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsDiagnosticConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes one or more of the diagnostic configuration settings collections currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Microsoft Lync Server 2010 log files.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more of the diagnostic configuration settings collections currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Lync Server log files.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more of the diagnostic configuration settings collections currently in use in your organization.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Skype for Business Server 2015 log files.
@@ -32,7 +32,7 @@ Remove-CsDiagnosticConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If you enable logging for Lync Server 2010, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you enable logging for Lync Server, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -78,7 +78,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you enable logging for Skype for Business Server 2015, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -190,7 +190,7 @@ Get-CsDiagnosticConfiguration | Remove-CsDiagnosticConfiguration
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the diagnostic configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -200,7 +200,7 @@ However, the global settings will not actually be removed; instead, the properti
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the diagnostic configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsLisLocation
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more locations in the location configuration database for Enhanced 9-1-1 (E9-1-1).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more locations in the location configuration database for Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsLisLocation [-Unreferenced] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Microsoft Lync Server 2010 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
@@ -38,7 +38,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsLisLocation"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Lync Server the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsLisLocation"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Skype for Business Server 2015 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
@@ -158,21 +158,21 @@ Get-CsLisLocation | Where-Object {$_.Location -ceq "NorthCampus"}
 ## PARAMETERS
 
 ### -Unreferenced
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Including this parameter will retrieve only the locations that were not associated with a port, subnet, switch, or wireless access point.
 In other words, including this cmdlet retrieves all locations that either were created by calling Set-CsLisLocation or that were assigned to a Location Information Server (LIS) port, subnet, switch, or wireless access point that no longer exists.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Including this parameter will retrieve only the locations that were not associated with a port, subnet, switch, or wireless access point.
 In other words, including this parameter retrieves all locations that either were created by calling Set-CsLisLocation or that were assigned to a Location Information Server (LIS) port, subnet, switch, or wireless access point that no longer exists.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Including this parameter will retrieve only the locations that were not associated with a port, subnet, switch, or wireless access point.
 In other words, including this parameter retrieves all locations that either were created by calling the Set-CsLisLocation cmdlet or that were assigned to a Location Information Server (LIS) port, subnet, switch, or wireless access point that no longer exists.

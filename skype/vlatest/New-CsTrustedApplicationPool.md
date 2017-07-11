@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsTrustedApplicationPool
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new pool that will contain the computers that host trusted applications.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new pool that will contain the computers that host trusted applications.
 This cmdlet was introduced in Lync Server 2010.
@@ -28,7 +28,7 @@ New-CsTrustedApplicationPool [-Identity] <XdsGlobalRelativeIdentity> [-AppSharin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 It is recommended that the computers that are running trusted applications within a Microsoft Lync Server 2010 deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplicationPool"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 We recommend that the computers that are running trusted applications within a Lync Server deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplicationPool"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 We recommend that the computers that are running trusted applications within a Skype for Business Server 2015 deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
@@ -322,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequiresReplication
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Determines whether replication is required for this pool.
 Set this value to False if replication is not required.
@@ -332,7 +332,7 @@ Default: True
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Determines whether replication is required for this pool.
 Set this value to False if replication is not required.
@@ -356,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The Site ID of the site on which this pool is homed.
 Call the Get-CsSite cmdlet to retrieve the SiteId property of a site.
@@ -370,7 +370,7 @@ If the pool doesn't exist, this parameter is required.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Site ID of the site on which this pool is homed.
 Call the Get-CsSite cmdlet to retrieve the SiteId property of a site.

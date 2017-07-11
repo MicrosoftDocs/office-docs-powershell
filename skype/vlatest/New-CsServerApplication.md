@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsServerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new server application.
 Server applications are applications that are hosted by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new server application.
 Server applications are applications that are hosted by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new server application.
 Server applications are applications that are hosted by Skype for Business Server 2015.
@@ -42,7 +42,7 @@ New-CsServerApplication -Parent <String> -Name <String> -Uri <String> [-Enabled 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Server applications refer to the individual programs that run under Microsoft Lync Server 2010.
 The New-CsServerApplication cmdlet provides a way for administrators to configure new server applications.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsServerApplication"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Server applications refer to the individual programs that run under Lync Server.
 The New-CsServerApplication cmdlet provides a way for administrators to configure new server applications.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsServerApplication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Server applications refer to the individual programs that run under Skype for Business Server 2015.
 The New-CsServerApplication cmdlet provides a way for administrators to configure new server applications.
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Specifies the service that will host the new server application.
 If you use the Identity parameter, then you do not need to use either the Parent or the Name parameters; that's because the application Identity combines the values of the Parent and Name properties.
@@ -190,7 +190,7 @@ In that case, the Parent parameter would need to look something like this: -Pare
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the service that will host the new server application.
 If you use the Identity parameter, then you do not need to use either the Parent or the Name parameters; that's because the application Identity combines the values of the Parent and Name properties.
@@ -269,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -Critical
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If set to True, then Lync Server will not start unless the application in question can be started.
 If False, then Lync Server will start regardless of whether or not the application can be started.
@@ -277,7 +277,7 @@ If this parameter is not specified the Critical property will be set to True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True, then Skype for Business Server 2015 will not start unless the application in question can be started.
 If False, then Skype for Business Server 2015 will start regardless of whether or not the application can be started.
@@ -340,14 +340,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

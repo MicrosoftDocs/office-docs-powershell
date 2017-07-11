@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsRegistrarConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Registrar configuration settings currently in use in your organization.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the Registrar configuration settings currently in use in your organization.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
@@ -32,7 +32,7 @@ Get-CsRegistrarConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Registrar is perhaps the most important component in Microsoft Lync Server 2010; after all, without a Registrar, users would not be able to log on to the system, and Lync Server 2010 would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsRegistrarConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Registrar is perhaps the most important component in Lync Server; after all, without a Registrar, users would not be able to log on to the system, and Lync Server would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsRegistrarConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Registrar is perhaps the most important component in Skype for Business Server 2015; after all, without a Registrar, users would not be able to log on to the system, and Skype for Business Server 2015 would not be able to keep track of users and their current status.
 When a user logs on to Skype for Business Server 2015, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -222,7 +222,7 @@ Get-CsRegistrarConfiguration | Where-Object {$_.MaxEndpointsPerUser -gt 8}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Registrar configuration settings to be returned.
 To return the global settings, use this syntax: -Identity global.
@@ -233,7 +233,7 @@ If this parameter is omitted then Get-CsRegistrarConfiguration returns all of th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Registrar configuration settings to be returned.
 To return the global settings, use this syntax:
@@ -266,7 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards in order to return one or more collections of Registrar configuration settings.
 For example, to return all the settings configured at the site scope, use this syntax: -Filter "site:*".
@@ -274,7 +274,7 @@ To return all the settings configured at the service scope, use this syntax: -Fi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards in order to return one or more collections of Registrar configuration settings.
 For example, to return all the settings configured at the site scope, use this syntax:

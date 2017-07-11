@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsDiagnosticHeaderConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the diagnostic header configuration settings currently in use in your organization.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information.
 This information can be useful in troubleshooting and error reporting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the diagnostic header configuration settings currently in use in your organization.
 Diagnostic header configuration settings determine whether SIP messages are accompanied by header information.
@@ -34,7 +34,7 @@ Get-CsDiagnosticHeaderConfiguration [-Filter <String>] [-LocalStore] [<CommonPar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send SIP (Session Initiation Protocol) messages, you have the option of attaching an ms-diagnostics header to each message.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection problems or in reporting errors.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDiagnosticHeaderConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send SIP (Session Initiation Protocol) messages, you have the option of attaching an ms-diagnostics header to each message.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection problems or in reporting errors.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDiagnosticHeaderConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send SIP (Session Initiation Protocol) messages, you have the option of attaching an ms-diagnostics header to each message.
 This message (which is not visible to end users) contains information that might be useful in troubleshooting connection problems or in reporting errors.
@@ -304,13 +304,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the diagnostic header configuration data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the diagnostic header configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 

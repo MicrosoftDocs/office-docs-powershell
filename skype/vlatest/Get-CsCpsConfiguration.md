@@ -6,14 +6,14 @@ schema: 2.0.0
 # Get-CsCpsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Call Park service.
 Call parking is a service that allows a user to "park" an incoming phone call.
 Parking a call transfers it to a number in a specified range, or orbit, and then immediately places the call on hold.
 Anyone (not just the person who originally answered the call) can resume the conversation from any telephone in the system by entering the correct number.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the Call Park service.
 Call parking is a service that allows a user to "park" an incoming phone call.
@@ -36,7 +36,7 @@ Get-CsCpsConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet is used to retrieve one or more Call Park service configurations.
 A Call Park service configuration specifies what happens to a call once it's parked.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsCpsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet is used to retrieve one or more Call Park service configurations.
 A Call Park service configuration specifies what happens to a call once it's parked.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsStaticRoutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the static routing configuration settings used in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the static routing configuration settings used in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsStaticRoutingConfiguration [-Filter <String>] [-LocalStore] [<CommonParame
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsStaticRoutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsStaticRoutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -238,7 +238,7 @@ Get-CsStaticRoutingConfiguration | Select-Object -ExpandProperty Route | Where-O
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the static routing configuration collection.
 To return information about the global collection, use this syntax: -Identity global.
@@ -250,7 +250,7 @@ If you do not include either the Identity or the Filter parameters then Get-CsSt
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the static routing configuration collection.
 To return information about the global collection, use this syntax:
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the static routing configuration collection (or collections) to be returned.
 For example, this syntax returns all the static routing collections configured at the service scope: -Filter "service:*".
@@ -291,7 +291,7 @@ Note that you cannot use both the Identity and the Filter parameters in the same
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the static routing configuration collection (or collections) to be returned.
 For example, this syntax returns all the static routing collections configured at the service scope:

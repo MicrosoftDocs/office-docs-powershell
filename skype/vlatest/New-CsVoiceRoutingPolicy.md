@@ -6,14 +6,14 @@ schema: 2.0.0
 # New-CsVoiceRoutingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new voice routing policy.
 Voice routing policies manage PSTN usages for users of hybrid voice.
 Hybrid voice enables users homed on Office 365 to take advantage of the Enterprise Voice capabilities available in an on-premises installation of Microsoft Lync Server 2013 Preview.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new voice routing policy.
 Voice routing policies manage PSTN usages for users of hybrid voice.
@@ -30,7 +30,7 @@ New-CsVoiceRoutingPolicy [-Identity] <XdsIdentity> [-Confirm] [-Description <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Microsoft Lync Server 2013 Preview and other users are homed on the Office 365 version of Lync Server.
 Assigning your Office 365 users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
@@ -44,7 +44,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceRoutingPolicy"}
 
 Lync Server Control Panel: The functions carried out by the New-CsVoiceRoutingPolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Skype for Business Server 2015 and other users are homed on Skype for Business Online.
 Assigning your Skype for Business Online users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.

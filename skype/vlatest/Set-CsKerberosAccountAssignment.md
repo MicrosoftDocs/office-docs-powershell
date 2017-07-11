@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsKerberosAccountAssignment
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Associates a Kerberos account, which is used for IIS Internet Information Services (IIS) authentication, with a site.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Associates a Kerberos account, which is used for IIS Internet Information Services (IIS) authentication, with a site.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsKerberosAccountAssignment [-UserAccount <String>] [-Instance <PSObject>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -150,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAccount
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Account name for the account to be assigned, using the format domain_name\user_name.
 For example: -UserAccount "litwareinc\kerberostest".
@@ -159,7 +159,7 @@ Note that, despite the name UserAccount, the account is actually a computer acco
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Account name for the account to be assigned, using the format domain_name\user_name.
 For example: -UserAccount "litwareinc\kerberostest".

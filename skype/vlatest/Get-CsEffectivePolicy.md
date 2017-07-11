@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-CsEffectivePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns the "effective policies" for the specified user or users.
 This simply means that, if a user has been a per-user policy, the Identity of that policy will be displayed.
@@ -14,7 +14,7 @@ If a user has not been assigned a per-user policy, then Get-CsEffectivePolicy wi
 This enables you to determine exactly which policy is being used to manage a given user.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns the "effective policies" for the specified user or users.
 This simply means that, if a user has been a per-user policy, the Identity of that policy will be displayed.
@@ -32,7 +32,7 @@ Get-CsEffectivePolicy [-Identity] <UserIdParameter> [-Credential <PSCredential>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Among other things, the Get-CsUser cmdlet returns information about the Microsoft Lync Server policies that are used to govern a user's behavior.
 For example:
@@ -70,7 +70,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsEffectivePolicy"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsEffectivePolicy cmdlet are not directly available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Among other things, the Get-CsUser cmdlet returns information about the Microsoft Lync Server policies that are used to govern a user's behavior.
 For example:
@@ -236,7 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to run the Get-CsEffectivePolicy cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -246,7 +246,7 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsEffectivePolicy cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.

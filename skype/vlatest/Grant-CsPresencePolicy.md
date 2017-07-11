@@ -6,11 +6,11 @@ schema: 2.0.0
 # Grant-CsPresencePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Grants a per-user presence policy to a user or group of users.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Grants a per-user presence policy to a user or group of users.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Grant-CsPresencePolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsPresencePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -79,7 +79,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsPresencePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Identity of the per-user policy to be assigned; for example: -PolicyName "RedmondPresencePolicy".
 The PolicyName is the Identity of the policy minus the "tag:" prefix.
@@ -252,7 +252,7 @@ For example, a policy with the Identity "tag:NorthAmericaPresencePolicy" has a P
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Identity of the per-user policy to be assigned; for example:
 
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified name of the domain (FQDN) controller to be contacted when assigning the policy.
 For example: -DomainController atl-dc-001.litwareinc.com.
@@ -286,7 +286,7 @@ If not specified, Grant-CsPresencePolicy will contact the nearest available doma
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified name of the domain (FQDN) controller to be contacted when assigning the policy.
 For example:

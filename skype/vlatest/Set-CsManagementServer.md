@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsManagementServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the replication port used by the Microsoft Lync Server 2010 Central Management service.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the replication port used by the Lync Server Central Management service.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the replication port used by the Skype for Business Server 2015 Central Management service.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Set-CsManagementServer [[-Identity] <XdsGlobalRelativeIdentity>] [-ReplicationSe
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Central Management service is responsible for replicating data between the Central Management store and computers running Lync Server 2010 services or server roles.
 The Central Management service runs on a single Front End pool (or a single Standard Edition server) and facilitates replication throughout the Lync Server infrastructure.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsManagementServer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Central Management service is responsible for replicating data between the Central Management store and computers running Lync Server services or server roles.
 The Central Management service runs on a single Front End pool (or a single Standard Edition server) and facilitates replication throughout the Lync Server infrastructure.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsManagementServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Central Management service is responsible for replicating data between the Central Management store and computers running Skype for Business Server 2015 services or server roles.
 The Central Management service runs on a single Front End pool (or a single Standard Edition server) and facilitates replication throughout the Skype for Business Server 2015 infrastructure.

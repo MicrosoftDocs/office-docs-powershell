@@ -6,14 +6,14 @@ schema: 2.0.0
 # Get-CsWatcherNodeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the watcher node configuration settings in use in your organization.
 Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Microsoft Lync Server 2013 Preview synthetic transactions to verify that Lync Server components are working as expected.
 The watcher node configuration settings let you know which pools have been associated with a watcher node.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the watcher node configuration settings in use in your organization.
 Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Skype for Business Server 2015 synthetic transactions to verify that Skype for Business Server 2015 components are working as expected.
@@ -35,7 +35,7 @@ Get-CsWatcherNodeConfiguration [[-Identity] <XdsGlobalRelativeIdentity>] [-Local
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you are using Microsoft System Center Operations Manager to monitor Lync Server 2013 Preview then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Lync Server is working as expected.
 Watcher nodes are assigned to pools, and are managed using the CsWatcherNodeConfiguration cmdlets.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsWatcherNodeConfiguratio
 
 Lync Server Control Panel: The functions carried out by the Get-CsWatcherNodeConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you are using Microsoft System Center Operations Manager to monitor Skype for Business Server 2015 then you have the option of setting up "watcher nodes": computers that periodically, and automatically, run synthetic transactions in order to verify that Skype for Business Server 2015 is working as expected.
 Watcher nodes are assigned to pools, and are managed using the CsWatcherNodeConfiguration cmdlets.
@@ -167,7 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the pool that the watcher node has been assigned to.
 For example:
@@ -178,7 +178,7 @@ If this parameter is not specified then Get-CsWatcherNodeConfiguration will retu
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the pool that the watcher node has been assigned to.
 For example:

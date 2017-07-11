@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsUnifiedContactStore
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies whether or not a user's contacts can be accessed through the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Microsoft Lync, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies whether or not a user's contacts can be accessed through the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Outlook, and/or Outlook Web App.
@@ -37,7 +37,7 @@ Test-CsUnifiedContactStore [[-TargetFqdn] <String>] -UserCredential <PSCredentia
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Lync 2013 Preview.
 (Alternatively, you can continue to store contacts in Lync Server.
@@ -57,7 +57,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsUnifiedContactStore"}
 
 Lync Server Control Panel: The functions carried out by the Test-csUnifiedContactStore cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unified contact store introduced in Lync Server 2013 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web Access as well as in Skype for Business.
 (Alternatively, you can continue to store contacts in Skype for Business Server 2015.
@@ -110,13 +110,13 @@ Test-CsUnifiedContactStore -TargetFqdn "atl-cs-001.litwareinc.com" -UserSipAddre
 ## PARAMETERS
 
 ### -TargetFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name (FQDN) of the Persistant Chat pool to be tested.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the pool to be tested.
 

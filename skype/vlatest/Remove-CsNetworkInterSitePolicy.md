@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsNetworkInterSitePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsNetworkInterSitePolicy [-Identity] <XdsGlobalRelativeIdentity> [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet removes a network site policy that associates a bandwidth limitation policy with two directly connected sites.
@@ -35,7 +35,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkInterSitePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet removes a network site policy that associates a bandwidth limitation policy with two directly connected sites.

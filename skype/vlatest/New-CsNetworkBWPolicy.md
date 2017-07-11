@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsNetworkBWPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a bandwidth policy in memory that can be applied to the bandwidth policy profile.
 In Microsoft Lync Server 2010, the policy applies to either audio or video bandwidth.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a bandwidth policy in memory that can be applied to the bandwidth policy profile.
 In Lync Server, the policy applies to either audio or video bandwidth.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a bandwidth policy in memory that can be applied to the bandwidth policy profile.
 In Skype for Business Server 2015, the policy applies to either audio or video bandwidth.
@@ -33,7 +33,7 @@ New-CsNetworkBWPolicy -BWLimit <UInt32> -BWPolicyModality <BWPolicyModality> -BW
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet creates a new bandwidth policy.
 A bandwidth policy is used to define bandwidth limitations for certain modalities.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBWPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet creates a new bandwidth policy.
 A bandwidth policy is used to define bandwidth limitations for certain modalities.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBWPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a new bandwidth policy.
 A bandwidth policy is used to define bandwidth limitations for certain modalities.

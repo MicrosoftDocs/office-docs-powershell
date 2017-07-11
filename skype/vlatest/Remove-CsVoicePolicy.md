@@ -6,16 +6,16 @@ schema: 2.0.0
 # Remove-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified voice policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified voice policy.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Resets the global voice policy.
 
@@ -29,7 +29,7 @@ Remove-CsVoicePolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [-T
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet removes an existing voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -41,13 +41,13 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
 This cmdlet enables you to reset the global voice policy.
 When you run the Remove-CsVoicePolicy cmdlet the global the policy will not actually be removed; instead, the policy settings will be reset to their default values.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet removes an existing voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -126,13 +126,13 @@ Get-CsVoicePolicy -Filter tag* | Remove-CsVoicePolicy
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A unique identifier specifying the scope, and in some cases the name, of the policy to be removed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 A unique identifier specifying the voice policy to be removed.
 The only allowed value is "global".
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the voice policy being deleted.
 For example:
@@ -215,7 +215,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the voice policy being deleted.
 For example:
@@ -232,7 +232,7 @@ The Tenant parameter is primarily for use in a hybrid deployment.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the voice policy being deleted.
 For example:

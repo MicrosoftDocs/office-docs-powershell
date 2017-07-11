@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsNetworkRegion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing network region.
 Network regions represent network hubs or backbones in an enterprise network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing network region.
 Network regions represent network hubs or backbones in an enterprise network.
@@ -36,7 +36,7 @@ Set-CsNetworkRegion [-Instance <PSObject>] [-AudioAlternatePath <Boolean>] [-BWA
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkRegion\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -207,21 +207,21 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A reference to a network region object.
 This object must be of type  Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkRegionType and can be retrieved by calling Get-CsNetworkRegion.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A reference to a network region object.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkRegionType and can be retrieved by calling Get-CsNetworkRegion.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A reference to a network region object.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkRegionType and can be retrieved by calling the Get-CsNetworkRegion cmdlet.
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -AudioAlternatePath
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -253,7 +253,7 @@ If you supply a value for this parameter you cannot specify a value for the BWAl
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A globally unique identifier (GUID).
 This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
@@ -311,7 +311,7 @@ You will receive a confirmation prompting you to verify that you want to manuall
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
@@ -373,7 +373,7 @@ Accept wildcard characters: False
 ```
 
 ### -VideoAlternatePath
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -384,7 +384,7 @@ If you supply a value for this parameter you cannot specify a value for the BWAl
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 

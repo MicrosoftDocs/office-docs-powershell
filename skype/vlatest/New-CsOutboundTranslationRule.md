@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsOutboundTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
@@ -34,7 +34,7 @@ New-CsOutboundTranslationRule -Parent <String> -Name <String> [-Description <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call this cmdlet to create a new outbound translation rule.
 Microsoft Lync Server 2010 normalizes phone numbers to E.164 format.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsOutboundTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call this cmdlet to create a new outbound translation rule.
 Lync Server normalizes phone numbers to E.164 format.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsOutboundTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call this cmdlet to create a new outbound translation rule.
 Skype for Business Server 2015 normalizes phone numbers to E.164 format.
@@ -161,7 +161,7 @@ New-CsOutboundTranslationRule -Parent global -Name SeattleSevenDigit -Descriptio
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique identifier for the outbound translation rule.
 The Identity includes the scope at which the rule is applied and the name of the rule, and must be either at the site scope or the service (PSTNGateway only) scope.
@@ -171,7 +171,7 @@ If the Identity parameter is specified, you cannot specify values for the Name o
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 A unique identifier for the outbound translation rule.
 The Identity includes the scope at which the rule is applied and the name of the rule, and must be at the global, site, or service (PSTNGateway only) scope.
@@ -318,14 +318,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsSimpleUrlConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes one or more of the simple URL configuration collections currently in use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more of the simple URL configuration collections currently in use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more of the simple URL configuration collections currently in use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Skype for Business Server Control Panel.
@@ -33,7 +33,7 @@ Remove-CsSimpleUrlConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-C
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -105,7 +105,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -202,7 +202,7 @@ Get-CsSimpleUrlConfiguration -Filter "site:*" | Remove-CsSimpleUrlConfiguration
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of simple URLs to be removed.
 To remove a collection from the site scope, use syntax similar to this: -Identity "site:Redmond." Note that you cannot use wildcards when specifying an Identity.
@@ -213,7 +213,7 @@ Instead, all the Simple URLs within that collection will be deleted.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of simple URLs to be removed.
 To remove a collection from the site scope, use syntax similar to this:
@@ -293,13 +293,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the Simple URL configuration settings being deleted.
 For example:
@@ -312,7 +312,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the Simple URL configuration settings being deleted.
 For example:

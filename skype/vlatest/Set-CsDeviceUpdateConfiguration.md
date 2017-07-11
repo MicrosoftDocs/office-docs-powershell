@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsDeviceUpdateConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a collection of Device Update Web service configuration settings.
 These settings are used to manage the Device Update Web service, a Microsoft Lync Server 2010 component that enables administrators to distribute firmware updates to telephones and other devices running Microsoft Lync 2010 Phone Edition.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies a collection of Device Update Web service configuration settings.
 These settings are used to manage the Device Update Web service, a Lync Server component that enables administrators to distribute firmware updates to telephones and other devices running Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies a collection of Device Update Web service configuration settings.
 These settings are used to manage the Device Update Web service, a Skype for Business Server 2015 component that enables administrators to distribute firmware updates to telephones and other devices running Skype for Business Phone Edition.
@@ -44,7 +44,7 @@ Set-CsDeviceUpdateConfiguration [-Instance <PSObject>] [-LogCleanUpInterval <Tim
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Microsoft Lync 2010 Phone Edition.
 Periodically, administrators upload a set of device update rules to Microsoft Lync Server 2010.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDeviceUpdateConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Lync Phone Edition.
 Periodically, administrators upload a set of device update rules to Lync Server.
@@ -78,7 +78,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDeviceUpdateConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Device Update Web service provides a way for administrators to distribute firmware updates to devices that run Skype for Business Phone Edition.
 Periodically, administrators upload a set of device update rules to Skype for Business Server 2015.
@@ -419,7 +419,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidLogFileExtensions
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the valid log file extensions that can be used with the Device Update Web service.
 This list can be modified; however, there is no reason to modify the list unless you have a Lync 2010 Phone Edition-compatible device that creates log files that use a different file extension.
@@ -428,7 +428,7 @@ Default: .dmp, .clg, .clg2, .bak, .kdmp, .dat, .bin, .cat, .xml, .txt, .hex
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the valid log file extensions that can be used with the Device Update Web service.
 This list can be modified; however, there is no reason to modify the list unless you have a Lync Phone Edition-compatible device that creates log files that use a different file extension.
@@ -437,7 +437,7 @@ Default: .dmp, .clg, .clg2, .bak, .kdmp, .dat, .bin, .cat, .xml, .txt, .hex
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the valid log file extensions that can be used with the Device Update Web service.
 This list can be modified; however, there is no reason to modify the list unless you have a Lync Phone Edition compatible device that creates log files that use a different file extension.
@@ -460,7 +460,7 @@ Accept wildcard characters: False
 ```
 
 ### -ValidLogFileTypes
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the log file types retained by the device update system.
 The default file types include the following:
@@ -483,7 +483,7 @@ For example, if you do not want to store CELog files then you can remove the CEL
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the log file types retained by the device update system.
 The default file types include the following:
@@ -500,7 +500,7 @@ For example, if you do not want to store CELog files then you can remove the CEL
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the log file types retained by the device update system.
 The default file types include the following:

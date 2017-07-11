@@ -6,17 +6,17 @@ schema: 2.0.0
 # Invoke-CsUcsRollback
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes a user's contacts from the Unified Contact Store and, instead, stores that contact information in Microsoft Lync Server 2013 Preview.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Lync 2013 Preview, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Invoke-CsUcsRollback \[-Identity\] \<UserIdParameter\> \[-Force\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes a user's contacts from the Unified Contact Store and, instead, stores that contact information in Skype for Business Server 2015.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Microsoft Outlook, and/or Microsoft Outlook Web Access.
@@ -32,7 +32,7 @@ Invoke-CsUcsRollback [-Identity] <UserIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Microsoft Lync 2013 Preview.
 (Alternatively, you can continue to store contacts in Lync Server.
@@ -56,11 +56,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsUcsRollback"}
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsUcsRollback cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unified contact store introduced in Skype for Business Server 2015 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Skype for Business.
 (Alternatively, you can continue to store contacts in Skype for Business Server 2015.
@@ -136,7 +136,7 @@ Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Invoke-CsUc
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the user account to be rolled back.
 User Identities are typically specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -148,7 +148,7 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 To prevent a confirmation prompt from appearing each time you roll back a user account use this syntax:
@@ -177,7 +177,7 @@ To prevent a confirmation prompt from appearing each time you roll back a user a
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -197,14 +197,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to connect to the specified domain controller in order to retrieve user information.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-dc-001) or its fully qualified domain name (FQDN) (for example, atl-dc-001.litwareinc.com).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
@@ -224,13 +224,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -250,14 +250,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a user object through the pipeline that represents the user account being removed from the Unified Contact Store.
 By default, the Invoke-CsUcsRollback cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
@@ -277,13 +277,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

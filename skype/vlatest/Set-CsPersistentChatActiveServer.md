@@ -6,14 +6,14 @@ schema: 2.0.0
 # Set-CsPersistentChatActiveServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Manages the list of active Persistent Chat servers.
 An active server is Persistent Chat server (in a specified Persistent Chat service pool) that is fully operational and can accept new client connections.
 Servers in the pool that have not been marked as active servers might be operational, but are currently unable to accept new client connections.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Manages the list of active Persistent Chat servers.
 An active server is Persistent Chat server (in a specified Persistent Chat service pool) that is fully operational and can accept new client connections.
@@ -38,7 +38,7 @@ Set-CsPersistentChatActiveServer [[-Identity] <XdsGlobalRelativeIdentity>] [-Swa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Set-CsPersistentChatActiveServer cmdlet allows administrators to essentially enable or disable the Persistent Chat service on one or more servers in a Persistent Chat pool.
 Servers that appear on the active servers list are able to accept new client connections.
@@ -54,7 +54,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatActiveSer
 
 Lync Server Control Panel: The functions carried out by the Set-CsPersistentChatActiveServer cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Set-CsPersistentChatActiveServer cmdlet allows administrators to essentially enable or disable the Persistent Chat service on one or more servers in a Persistent Chat pool.
 Servers that appear on the active servers list are able to accept new client connections.
@@ -203,14 +203,14 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique Identity for the collection of active servers.
 Note that you can only have a single, global collection of Persistent Chat servers.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identity for the collection of active servers.
 Note that you can only have a single collection of Persistent Chat servers.

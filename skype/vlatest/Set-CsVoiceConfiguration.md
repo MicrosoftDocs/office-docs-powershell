@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsVoiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a list of voice test configurations.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies a list of voice test configurations.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsVoiceConfiguration [-Instance <PSObject>] [-VoiceTestConfigurations <PSLis
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet can be used to modify voice test configurations from a list containing all the voice test configurations for a Microsoft Lync Server 2010 deployment.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet can be used to modify voice test configurations from a list containing all the voice test configurations for a Lync Server deployment.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet can be used to modify voice test configurations from a list containing all the voice test configurations for a Skype for Business Server 2015 deployment.
@@ -217,7 +217,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceTestConfigurations
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A list of all voice test configurations (Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration objects) defined for the Lync Server 2010 deployment.
 
@@ -226,7 +226,7 @@ That is the recommended way of modifying configurations in this list.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A list of all voice test configurations (Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration objects) defined for the Lync Server deployment.
 
@@ -235,7 +235,7 @@ That is the recommended way of modifying configurations in this list.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A list of all voice test configurations (Microsoft.Rtc.Management.WritableConfig.Policy.Voice.TestConfiguration objects) defined for the Skype for Business Server 2015 deployment.
 

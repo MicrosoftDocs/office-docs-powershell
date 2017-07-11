@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsNetworkSite
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsNetworkSite [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet removes a site from the CAC or E9-1-1 configuration.
@@ -34,7 +34,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkSite"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet removes a site from the CAC or E9-1-1 configuration.

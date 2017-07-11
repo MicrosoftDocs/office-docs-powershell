@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsPrivacyConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
@@ -29,7 +29,7 @@ New-CsPrivacyConfiguration [-Identity] <XdsIdentity> [-AutoInitiateContacts <Boo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync 2010 gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsPrivacyConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPrivacyConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -181,7 +181,7 @@ Set-CsPrivacyConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the privacy configuration settings to be created.
 To create a new collection of settings at the site scope, use syntax similar to this: -Identity site:Redmond.
@@ -194,7 +194,7 @@ Likewise, your command will fail if you attempt to create a new collection of gl
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the privacy configuration settings to be created.
 To create a new collection of settings at the site scope, use syntax similar to this:
@@ -227,21 +227,21 @@ Accept wildcard characters: False
 ```
 
 ### -AutoInitiateContacts
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, Lync 2010 will automatically add all of your team members to your Contacts list.
 The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, Lync will automatically add your manager and your direct reports to your Contacts list.
 The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, Skype for Business will automatically add your manager and your direct reports to your Contacts list.
 The default value is True.
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPublishedPhotoDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, the user's photo will automatically be published in Lync 2010.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -270,7 +270,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, the user's photo will automatically be published in Lync.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -278,7 +278,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, the user's photo will automatically be published in Skype for Business.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishLocationDataDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, location data will automatically be published in Lync 2010.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -327,7 +327,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, location data will automatically be published in Lync.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -335,7 +335,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, location data will automatically be published in Skype for Business.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -373,14 +373,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -401,13 +401,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new privacy configuration settings are being created.
 For example:
@@ -420,7 +420,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new privacy configuration settings are being created.
 For example:

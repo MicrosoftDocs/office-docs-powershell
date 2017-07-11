@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsStaticRoutingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of static routing configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing collection of static routing configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsStaticRoutingConfiguration [-Instance <PSObject>] [-Route <PSListModifier>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsStaticRoutingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsStaticRoutingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -238,7 +238,7 @@ Set-CsStaticRoutingConfiguration -Identity service:Registrar:atl-cs-001.litwarei
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the static routing configuration collection to be modified.
 To modify the global collection, use this syntax: -Identity global.
@@ -249,7 +249,7 @@ If this parameter is not included Set-CsStaticRoutingConfiguration will automati
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the static routing configuration collection to be modified.
 To modify the global collection, use this syntax:

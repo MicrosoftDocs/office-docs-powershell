@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsNetworkRegionLink
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more links between network regions configured for call admission control (CAC).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more links between network regions configured for call admission control (CAC).
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsNetworkRegionLink [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet retrieves one or more region links that are defined within the network configuration settings for a Microsoft Lync Server 2010 deployment.
@@ -40,7 +40,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkRegionLink"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet retrieves one or more region links that are defined within the network configuration settings for a Lync Server deployment.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkRegionLink"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet retrieves one or more region links that are defined within the network configuration settings for a Skype for Business Server 2015 deployment.

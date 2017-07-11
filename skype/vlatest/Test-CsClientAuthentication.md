@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsClientAuthentication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Determines whether or not a user can log on to Lync Server by using a certificate downloaded from the certificate provisioning service.
 This cmdlet was introduced in Lync Server 2013 Preview.
 It replaces the Test-CsClientAuth cmdlet used in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Determines whether or not a user can log on to Skype for Business Server 2015 by using a certificate downloaded from the certificate provisioning service.
 This cmdlet was introduced in Lync Server 2013.
@@ -28,7 +28,7 @@ Test-CsClientAuthentication [[-TargetFqdn] <String>] -UserCredential <PSCredenti
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client certificates provide an alternate way for users to be authenticated by Lync Server.
 In order to determine whether or not a user can log on to the system by using a client certificate, you can run the Test-CsClientAuthentication cmdlet.
@@ -43,7 +43,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsClientAuthentication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client certificates provide an alternate way for users to be authenticated by Skype for Business Server 2015.
 In order to determine whether or not a user can log on to the system by using a client certificate, you can run the Test-CsClientAuthentication cmdlet.
@@ -246,14 +246,14 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUri
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL of the certificate provisioning service.
 If this parameter is not included then the Test-CsClientAuthentication will use the certificate provisioning service configured for the Registrar pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL of the certificate provisioning service.
 If this parameter is not included then the Test-CsClientAuthentication cmdlet will use the certificate provisioning service configured for the Registrar pool.

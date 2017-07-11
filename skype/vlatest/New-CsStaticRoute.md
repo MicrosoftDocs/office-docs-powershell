@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsStaticRoute
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new static phone route.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new static phone route.
 This cmdlet was introduced in Lync Server 2010.
@@ -33,7 +33,7 @@ New-CsStaticRoute -Destination <String> -MatchUri <String> [-Enabled <Boolean>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsStaticRoute"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsStaticRoute"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send a SIP message to someone that message might need to traverse multiple subnets and networks before it is delivered; the path traveled by the message is often referred to as a route.
 In networking, there are two types of routes: dynamic and static.
@@ -200,7 +200,7 @@ Set-CsStaticRoutingConfiguration -Identity global -Route @{Add=$x}
 ## PARAMETERS
 
 ### -Destination
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If the route uses Transport Layer Security (TLS) as the transport protocol, then the Destination is the fully qualified domain name (FQDN) of the next hop server.
 For example: -Destination "atl-proxy-001.litwareinc.com".
@@ -210,7 +210,7 @@ For example: -Destination "192.168.0.240".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If the route uses Transport Layer Security (TLS) as the transport protocol, then the Destination is the fully qualified domain name (FQDN) of the next hop server.
 For example: -Destination "atl-proxy-001.litwareinc.com"
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If set to True  then the route is enabled, and any messages matching the MatchURI pattern will be routed to the next hop server.
 If set to False, the route is disabled and will not be used in routing messages.
@@ -264,7 +264,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If set to True then the route is enabled, and any messages matching the MatchURI pattern will be routed to the next hop server.
 If set to False, the route is disabled and will not be used in routing messages.
@@ -272,7 +272,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True, then the route is enabled, and any messages matching the MatchURI pattern will be routed to the next hop server.
 If set to False, the route is disabled and will not be used in routing messages.
@@ -311,14 +311,14 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Port number used for SIP routing.
 For example: -Port 7742.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Port number used for SIP routing.
 For example: -Port 7742
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -TLSCertSerialNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Serial number of the TLS certificate to be used in the static route.
 Serial numbers must be passed as a byte array; this means you must pass the serial number as an array of two-character values.
@@ -405,7 +405,7 @@ If you include the TLSCertSerialNumber parameter then you must also use the TLSC
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Serial number of the TLS certificate to be used in the static route.
 Serial numbers must be passed as a byte array; this means you must pass the serial number as an array of two-character values.
@@ -447,7 +447,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultCertificate
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Configures the route to use your default Lync Server 2010 certificate as its authentication certificate.
 If you do not want to use the default certificate then you must specify a different certificate by using the TLSCertIssuer and TLSCertSerialNumber parameters.
@@ -458,7 +458,7 @@ Get-CsCertificate | Where-Object {$_.Use -eq "urn:certref:Default"}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Configures the route to use your default Lync Server certificate as its authentication certificate.
 If you do not want to use the default certificate then you must specify a different certificate by using the TLSCertIssuer and TLSCertSerialNumber parameters.
@@ -469,7 +469,7 @@ Get-CsCertificate | Where-Object {$_.Use -eq "urn:certref:Default"}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Configures the route to use your default Skype for Business Server 2015 certificate as its authentication certificate.
 If you do not want to use the default certificate then you must specify a different certificate by using the TLSCertIssuer and TLSCertSerialNumber parameters.

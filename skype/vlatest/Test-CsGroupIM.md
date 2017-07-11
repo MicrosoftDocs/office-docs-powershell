@@ -6,18 +6,18 @@ schema: 2.0.0
 # Test-CsGroupIM
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability of two users to conduct an instant messaging (IM) conference.
 Test-CsGroupIM is a "synthetic transaction": a simulation of common Microsoft Lync Server 2010 activities used for health and performance monitoring.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of two users to conduct an instant messaging (IM) conference.
 Test-CsGroupIM is a "synthetic transaction": a simulation of common Lync Server activities used for health and performance monitoring.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of two users to conduct an instant messaging (IM) conference.
 The Test-CsGroupIM cmdlet is a "synthetic transaction": a simulation of common Skype for Business Server 2015 activities used for health and performance monitoring.
@@ -44,7 +44,7 @@ Test-CsGroupIM [[-TargetFqdn] <String>] -ReceiverCredential <PSCredential> -Rece
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsGroupIM is an example of a Lync Server 2010 synthetic transaction.
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -83,7 +83,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupIM"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsGroupIM is an example of a Lync Server synthetic transaction.
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -122,7 +122,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupIM"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsGroupIM cmdlet is an example of a Skype for Business Server 2015 synthetic transaction.
 Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiverSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP address for the first of the two user accounts to be tested.
 For example: -ReceiverSipAddress "sip:pilar@litwareinc.com".
@@ -324,7 +324,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP address for the first of the two user accounts to be tested.
 For example: -ReceiverSipAddress "sip:pilar@litwareinc.com".
@@ -402,7 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP address for the second of the two user accounts to be tested.
 For example: -SenderSipAddres "sip:kenmyer@litwareinc.com".
@@ -412,7 +412,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP address for the second of the two user accounts to be tested.
 For example: -SenderSipAddres "sip:kenmyer@litwareinc.com".
@@ -481,13 +481,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

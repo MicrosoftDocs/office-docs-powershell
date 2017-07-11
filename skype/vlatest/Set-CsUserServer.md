@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsUserServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify an existing User Services pool.
 Among other things, the User Services pool provides presence information and helps to manage conferences.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify an existing User Services pool.
 Among other things, the User Services pool provides presence information and helps to manage conferences.
@@ -28,7 +28,7 @@ Set-CsUserServer [[-Identity] <XdsGlobalRelativeIdentity>] [-ConferenceServer <S
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 User Services is a catch-all component that performs a number of key Microsoft Lync Server 2010 roles; for example, User Services provides presence information; helps to manage conferences (through the Focus and Focus Factory); handles user authorization and user-level routing; and serves as the primary interface to the back-end database.
 User Services also assists with provisioning user accounts.
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 User Services is a catch-all component that performs a number of key Lync Server roles; for example, User Services provides presence information; helps to manage conferences (through the Focus and Focus Factory); handles user authorization and user-level routing; and serves as the primary interface to the back-end database.
 User Services also assists with provisioning user accounts.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 User Services is a catch-all component that performs a number of key Skype for Business Server 2015 roles; for example, User Services provides presence information; helps to manage conferences (through the Focus and Focus Factory); handles user authorization and user-level routing; and serves as the primary interface to the back-end database.
 User Services also assists with provisioning user accounts.
@@ -152,7 +152,7 @@ Get-CsService -UserServer | ForEach-Object {Set-CsUserServer -Identity $_.Identi
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the User Services pool to be modified.
 For example: -Identity "UserServer:atl-cs-001.litwareinc.com".
@@ -162,7 +162,7 @@ For example: -Identity "atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the User Services pool to be modified.
 For example:
@@ -190,14 +190,14 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service ID for the conferencing server associated with the User Services pool.
 For example: -ConferenceServer "ConferenceServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service ID for the conferencing server associated with the User Services pool.
 For example:
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -McuFactorySipPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Port used for connecting to the Focus Factory (McuFactory).
 The Focus Factory allocates media control units (MCUs) in order to add specific media types such as audio to conferences.
@@ -228,7 +228,7 @@ The default value is 444.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for connecting to the Focus Factory (McuFactory).
 The Focus Factory allocates media control units (MCUs) in order to add specific media types such as audio to conferences.
@@ -249,14 +249,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserDatabase
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service ID for the user database associated with the User Services pool.
 For example: -UserDatabase "UserDatabase:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service ID for the user database associated with the User Services pool.
 For example:

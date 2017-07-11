@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsUserServicesPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the User Services policies configured for use in the organization.
 User Services policies determine whether or not a user's contacts are stored in Microsoft Lync Server 2013 Preview or in the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Microsoft Lync 2013 Preview, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsUserServicesPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 Get-CsUserServicesPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the User Services policies configured for use in the organization.
 User Services policies determine whether or not a user's contacts are stored in Skype for Business Server 2015 or in the Unified Contact Store.
@@ -47,7 +47,7 @@ Get-CsUserServicesPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Fi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Microsoft Lync 2013 Preview.
 (Alternatively, you can continue to store contacts in Lync Server 2013 Preview.
@@ -68,11 +68,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUserServicesPolicy"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsUserServicesPolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unified contact store introduced in Skype for Business Server 2015 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web App as well as in Skype for Business.
 (Alternatively, you can continue to store contacts in Skype for Business Server 2015.
@@ -181,7 +181,7 @@ Get-CsUserServicesPolicy | Where-Object {$_.UcsAllowed -eq $False}
 ## PARAMETERS
 
 ### -Filter
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the policy (or policies) to be retrieved.
 For example, this syntax returns all the policies that have been configured at the site scope:
@@ -196,7 +196,7 @@ You cannot use both the Filter and the Identity parameters in the same command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -216,7 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the policy to be returned.
 To return the global policy, use this syntax:
@@ -238,13 +238,13 @@ If this parameter is not included then all of the user services policies configu
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the policy to be returned.
 To return the global policy, use this syntax:
@@ -297,13 +297,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the user services policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When used, retrieves the user services policy for the specified Office 365 tenant.
 For example:
@@ -334,13 +334,13 @@ You should not use the Tenant parameter and the Identity parameter in the same c
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When used, retrieves the user services policy for the specified Skype for Business Online tenant.
 For example:

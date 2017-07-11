@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsRgsCallAction
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group call action.
 The Response Group application uses call actions to determine what the system does when a call is received.
 For example, a call action might specify that a call be transferred to another queue; that a specific Response Group question be asked; or that the call be terminated.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group call action.
 The Response Group application uses call actions to determine what the system does when a call is received.
@@ -29,7 +29,7 @@ New-CsRgsCallAction -Action <Action> [-Prompt <Prompt>] [-Question <Question>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When someone calls a phone number associated with the fea, the application looks up the workflow that corresponds to the telephone number called.
 After the workflow is found, the service checks to see if the call was received outside of business hours or on a holiday.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsCallAction"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When someone calls a phone number associated with the Response Group application, the application looks up the workflow that corresponds to the telephone number called.
 After the workflow is found, the service checks to see if the call was received outside business hours or on a holiday.
@@ -81,7 +81,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsCallAction"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When someone calls a phone number associated with the Response Group application, the application looks up the workflow that corresponds to the telephone number called.
 After the workflow is found, the service checks to see if the call was received outside business hours or on a holiday.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPartnerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about all the partner applications configured for use in the organization.
 A partner application is any application that Microsoft Lync Server 2013 Preview can directly exchange security tokens with, without having to exchange those tokens by using a third-party security token server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about all the partner applications configured for use in the organization.
 A partner application is any application that Skype for Business Server 2015 can directly exchange security tokens with, without having to exchange those tokens by using a third-party security token server.
@@ -34,7 +34,7 @@ Get-CsPartnerApplication [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPartnerApplication"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsPartnerApplication cmdlet are not available in theLync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the partner application.
 For example:
@@ -179,7 +179,7 @@ If neither the identity parameter nor the Filter parameter are included in the c
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the partner application.
 For example:
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account where whose partner application settings are to be retrieved.
 
@@ -234,7 +234,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account where whose partner application settings are to be retrieved.
 

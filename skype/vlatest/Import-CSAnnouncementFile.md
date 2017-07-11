@@ -6,11 +6,11 @@ schema: 2.0.0
 # Import-CSAnnouncementFile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Imports an announcement file to the Announcement service audio library.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Imports an announcement file to the Announcement service audio library.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Import-CSAnnouncementFile [-Parent] <String> -FileName <String> -Content <Byte[]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet imports an audio file as a byte array to the Announcement service audio library.
 This makes the file available for playback as an announcement for unassigned numbers.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsAnnouncementFile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet imports an audio file as a byte array to the Announcement service audio library.
 This makes the file available for playback as an announcement for unassigned numbers.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsAnnouncementFile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet imports an audio file as a byte array to the Announcement service audio library.
 This makes the file available for playback as an announcement for unassigned numbers.

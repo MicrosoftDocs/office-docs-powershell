@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsHostedVoicemailPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies a hosted voice mail policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies a hosted voice mail policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsHostedVoicemailPolicy [-Instance <PSObject>] [-Description <String>] [-Des
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet modifies a policy that configures a user account enabled for Microsoft Lync Server 2010 or Microsoft Office Communications Server to use an Exchange Unified Messaging (UM) hosted voice mail service.
 The policy determines how to route unanswered calls to the user to a hosted Exchange UM service.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostedVoicemailPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet modifies a policy that configures a user account enabled for Lync Server or Microsoft Office Communications Server to use an Exchange Unified Messaging (UM) hosted voice mail service.
 The policy determines how to route unanswered calls to the user to a hosted Exchange UM service.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostedVoicemailPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet modifies a policy that configures a user account enabled for Skype for Business Server 2015 to use an Exchange Unified Messaging (UM) hosted voice mail service.
 The policy determines how to route unanswered calls to the user to a hosted Exchange UM service.
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The value assigned to this parameter is the fully qualified domain name (FQDN) of the hosted Exchange UM service.
 
@@ -239,7 +239,7 @@ This just means it should be in the form of an FQDN, such as server.litwareinc.c
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The value assigned to this parameter is the fully qualified domain name (FQDN) of the hosted Exchange UM service.
 Note that the chosen destination must be trusted for routing.
@@ -265,21 +265,21 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter contains a comma-separated list of the Exchange tenants that contain Lync Server 2010 users.
 Each tenant must be specified as an FQDN of the tenant on the hosted Exchange Service.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter contains a comma-separated list of the Exchange tenants that contain Lync Server users.
 Each tenant must be specified as an FQDN of the tenant on the hosted Exchange Service.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter contains a comma-separated list of the Exchange tenants that contain Skype for Business Server 2015 users.
 Each tenant must be specified as an FQDN of the tenant on the hosted Exchange Service.
@@ -348,7 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which hosted voicemail policy being modified.
 For example:
@@ -361,7 +361,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Server 2015 tenant account for which hosted voicemail policy being modified.
 For example:

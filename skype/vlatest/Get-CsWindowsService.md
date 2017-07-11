@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsWindowsService
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Get-CsWindowsService returns detailed information about Microsoft Lync Server 2010 components that run as Windows services.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Get-CsWindowsService returns detailed information about Lync Server components that run as Windows services.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Get-CsWindowsService returns detailed information about Skype for Business Server 2015 components that run as Windows services.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsWindowsService [[-Name] <String>] [-ComputerName <String>] [-ExcludeActivi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Lync Server 2010 components run as standard Windows services; for example, the Lync Server Conferencing Attendant application is actually a service named  RTCCAA.
 The Get-CsWindowsService cmdlet enables you to retrieve detailed information about these Lync Server services and only these services.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsWindowsService"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components run as standard Windows services; for example, the Lync Server Conferencing Attendant application is actually a service named RTCCAA.
 The Get-CsWindowsService cmdlet enables you to retrieve detailed information about these Lync Server services and only these services.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsWindowsService"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components run as standard Windows services; for example, the Skype for Business Server 2015 Conferencing Attendant application is actually a service named RTCCAA.
 The Get-CsWindowsService cmdlet enables you to retrieve detailed information about these Skype for Business Server 2015 services and only these services.
@@ -364,7 +364,7 @@ Get-CsWindowsService | Where-Object {$_.RoleName -contains "ApplicationServer"}
 ## PARAMETERS
 
 ### -Name
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the service you want to return information for.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -377,7 +377,7 @@ If you do not include this parameter, Get-CsWindowsService will return informati
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the service you want to return information for.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -404,14 +404,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the remote computer from which service information is to be retrieved; if this parameter is not included, Get-CsWindowsService will return information about the Lync Server services running on the local computer.
 The remote computer should be referenced by using its fully qualified domain name (FQDN); for example, atl-mcs-001.litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the remote computer from which service information is to be retrieved; if this parameter is not included, the Get-CsWindowsService cmdlet will return information about the Skype for Business Server 2015 services running on the local computer.
 The remote computer should be referenced by using its fully qualified domain name (FQDN); for example, atl-mcs-001.litwareinc.com.
@@ -432,13 +432,13 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeActivityLevel
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If included, this parameter causes Get-CsWindowsService to return only the service status and not the service activity level.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If included, this parameter causes the Get-CsWindowsService cmdlet to return only the service status and not the service activity level.
 

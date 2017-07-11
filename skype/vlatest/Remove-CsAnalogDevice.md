@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsAnalogDevice
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing device from the collection of analog devices that can be managed by using Microsoft Lync Server 2010.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing device from the collection of analog devices that can be managed by using Lync Server.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing device from the collection of analog devices that can be managed by using Skype for Business Server 2015.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
@@ -32,7 +32,7 @@ Remove-CsAnalogDevice [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<Commo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication devices for the deaf (TTY/TDD) devices connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAnalogDevice"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsAnalogDevice"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
@@ -217,7 +217,7 @@ Get-CsAnalogDevice -Filter {AnalogFax -eq $True} | Remove-CsAnalogDevice
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier for the analog device to be removed.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.
@@ -226,7 +226,7 @@ Because of that you might find it easier to retrieve analog devices by using the
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the analog device to be removed.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.
@@ -235,7 +235,7 @@ Because of that you might find it easier to retrieve analog devices by using the
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the analog device to be removed.
 Analog devices are identified by using the Active Directory distinguished name (DN) of the associated contact object.

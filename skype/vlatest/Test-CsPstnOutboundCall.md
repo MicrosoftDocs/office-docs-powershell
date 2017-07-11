@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsPstnOutboundCall
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability of a user to make a call to a phone number located on the public switched telephone network (PSTN).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Tests the ability of a user to make a call to a phone number located on the public switched telephone network (PSTN).
 This cmdlet was introduced in Lync Server 2010.
@@ -34,7 +34,7 @@ Test-CsPstnOutboundCall [[-TargetFqdn] <String>] -TargetPstnPhoneNumber <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsPstnOutboundCall is an example of a Microsoft Lync Server 2010 "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -63,7 +63,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPstnOutboundCall"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsPstnOutboundCall is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -92,7 +92,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPstnOutboundCall"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsPstnOutboundCall cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -273,7 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetPstnPhoneNumber
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 PSTN telephone number to be called when conducting the test.
 The target phone number is best specified using the E.164 format, which means that the number will look something like this "+14255551298", with that number containing a plus sign (+) followed by the country/region calling code (1), the area code (425) and the phone number (5551298).
@@ -285,7 +285,7 @@ If the number cannot be normalized then the call cannot be placed and the test w
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 PSTN telephone number to be called when conducting the test.
 The target phone number is best specified using the E.164 format, which means that the number will look something like this "+14255551298", with that number containing a plus sign (+) followed by the country/region calling code (1), the area code (425) and the phone number (5551298).
@@ -297,7 +297,7 @@ If the number cannot be normalized then the call cannot be placed and the test w
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 PSTN telephone number to be called when conducting the test.
 The target phone number is best specified using the E.164 format, which means that the number will look something like this "+14255551298", with that number containing a plus sign (+) followed by the country/region calling code (1), the area code (425) and the phone number (5551298).
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCredential
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 User credential object for the account to be tested.
 The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
@@ -339,7 +339,7 @@ In that case, Lync Server 2010 will attempt to authenticate the user by using ce
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 User credentials object for the account to be tested.
 The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
@@ -355,7 +355,7 @@ In that case, Lync Server will attempt to authenticate the user by using certifi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 User credentials object for the account to be tested.
 The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
@@ -385,7 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address for the user account to be tested.
 For example: -SenderSipAddress "sip:kenmyer@litwareinc.com".
@@ -395,7 +395,7 @@ This parameter is not needed if the command is using test users configured by us
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the user account to be tested.
 For example:
@@ -484,13 +484,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

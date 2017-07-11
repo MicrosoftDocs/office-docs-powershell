@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsClientAccessLicense
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about client license usage in your organization.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about client license usage in your organization.
 This cmdlet was introduced in Lync Server 2013.
@@ -32,7 +32,7 @@ Get-CsClientAccessLicense -LicenseBasedType <String> -LicenseName <String> -Moni
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsClientAccessLicense cmdlet enables administrators to monitor use of their Microsoft Lync Server 2013 Preview client licenses; this is done by showing client license usage (based on user registrations) during a specified period of time.
 Note that the cmdlet does not manage your client licenses for you; for example, it will not tell you that you need additional licenses.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientAccessLicense"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsClientAccessLicense cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsClientAccessLicense cmdlet enables administrators to monitor use of their Skype for Business Server 2015 client licenses; this is done by showing client license usage (based on user registrations) during a specified period of time.
 Note that the cmdlet does not manage your client licenses for you; for example, it will not tell you that you need additional licenses.
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -LicenseBasedType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the license is UserBased or DeviceBased.
 With UserBased licenses, each user who accesses Lync Server is required to have a client access license, regardless of the number of devices he or she uses to access Lync Server.
@@ -128,7 +128,7 @@ Device-based licensing is aimed at on-site users who typically access Lync Serve
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the license is UserBased or DeviceBased.
 With UserBased licenses, each user who accesses Skype for Business Server 2015 is required to have a client access license, regardless of the number of devices he or she uses to access Skype for Business Server 2015.

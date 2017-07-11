@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsRgsAgentGroup
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing Response Group agent group.
 An agent group is a collection of agents assigned to a Response Group queue.
 Agents are the users assigned to answer calls directed to a particular queue.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing Response Group agent group.
 An agent group is a collection of agents assigned to a Response Group queue.
@@ -28,7 +28,7 @@ Set-CsRgsAgentGroup [-Instance] <AgentGroup> [-Force] [-WhatIf] [-Confirm] [<Com
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When someone calls a phone number associated with the Response Group application, the service starts by determining which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Set-CsRgsAgentGroup"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When someone calls a phone number associated with the Response Group application, the service starts by determining which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRgsAgentGroup"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When someone calls a phone number associated with the Response Group application, the service starts by determining which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -299,7 +299,7 @@ Set-CsRgsAgentGroup -Instance $x
 ## PARAMETERS
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Object reference to the Response Group agent group to be modified.
 An object reference is typically retrieved by using the Get-CsRgsAgentGroup cmdlet and assigning the returned value to a variable; for example, this command returns an object reference to the Help Desk agent group and stores that object reference in a variable named $x:
@@ -308,7 +308,7 @@ $x = Get-CsRgsAgentGroup -Identity service:ApplicationServer:atl-cs-001.litwarei
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Object reference to the Response Group agent group to be modified.
 An object reference is typically retrieved by using the Get-CsRgsAgentGroup cmdlet and assigning the returned value to a variable; for example, this command returns an object reference to the Help Desk agent group and stores that object reference in a variable named $x:

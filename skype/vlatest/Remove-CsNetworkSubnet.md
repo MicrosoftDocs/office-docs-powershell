@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsNetworkSubnet
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing network subnet.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing network subnet.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsNetworkSubnet [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to remove a network subnet.
@@ -35,7 +35,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkSubnet"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to remove a network subnet.

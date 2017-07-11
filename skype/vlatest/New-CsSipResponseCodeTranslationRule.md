@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsSipResponseCodeTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new SIP response code translation rule.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new SIP response code translation rule.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new SIP response code translation rule.
 These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Skype for Business Server 2015.
@@ -42,7 +42,7 @@ New-CsSipResponseCodeTranslationRule -TranslatedResponseCode <Int32> -Name <Stri
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Lync Server 2010, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSipResponseCodeTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Lync Server, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -94,7 +94,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSipResponseCodeTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
 In Skype for Business Server 2015, the Mediation Server uses trunking peers to interact with the PSTN network.
@@ -201,21 +201,21 @@ Accept wildcard characters: False
 ```
 
 ### -TranslatedResponseCode
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Value of the Lync Server 2010 SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
 Translated response codes can be any integer value between 400 and 699, inclusive.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Value of the Lync Server SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
 Translated response codes can be any integer value between 400 and 699, inclusive.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Value of the Skype for Business Server 2015 SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
 Translated response codes can be any integer value between 400 and 699, inclusive.
@@ -256,7 +256,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Scope where the new translation rule is to be assigned.
 To assign a rule to the global scope, use this syntax: -Parent global.
@@ -267,7 +267,7 @@ The Parent parameter must always be used in conjunction with the Name parameter.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Scope where the new translation rule is to be assigned.
 To assign a rule to the global scope, use this syntax:
@@ -338,14 +338,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -414,13 +414,13 @@ Accept wildcard characters: False
 ```
 
 ### -ReceivedISUPCauseValue
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill ReceivedISUPCauseValue Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Value of the ISDN User Part (ISUP) code that must be present in the SIP response message used by a gateway when responding to an INVITE message.
 A value of -1 indicates that only the SIP response code will be used when executing the translation rule; the ISUP cause code will be ignored.

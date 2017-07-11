@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsDialInConferencingAccessNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone, cell phone or other device on the public switched telephone network (PSTN) to join the audio portion of a conference.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone, cell phone or other device on the public switched telephone network (PSTN) to join the audio portion of a conference.
@@ -49,7 +49,7 @@ New-CsDialInConferencingAccessNumber -DisplayNumber <String> -LineURI <String> -
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Dial-in conferencing enables users to use any kind of telephone (such as standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Dial-in conferencing enables users to use any kind of telephone (such as standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -97,7 +97,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Dial-in conferencing enables users to use any kind of telephone (such as standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -207,7 +207,7 @@ New-CsDialInConferencingAccessNumber -PrimaryUri "sip:RedmondDialIn@litwareinc.c
 ## PARAMETERS
 
 ### -PrimaryUri
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique SIP address to be assigned to the new contact object.
 When specifying the PrimaryUri you must include the "sip:" prefix.
@@ -215,7 +215,7 @@ For example: -PrimaryUri "sip:RedmondDialIn@litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique SIP address to be assigned to the new contact object.
 When specifying the PrimaryUri you must include the "sip:" prefix.
@@ -238,21 +238,21 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Microsoft Lync 2010 as well as the name that appears in meeting invitations and in the dial-in conferencing webpage.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Lync.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Skype for Business.
@@ -451,13 +451,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new dial-in conferencing access number is being created.
 For example:
@@ -470,7 +470,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new dial-in conferencing access number is being created.
 For example:

@@ -6,19 +6,19 @@ schema: 2.0.0
 # Get-CsService
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the services and server roles being used in your Microsoft Lync Server 2010 infrastructure.
 A service is an instance of a role that has been deployed in a Lync Server 2010 pool. 
 For example, you might have a pool of computers all running the Monitoring Server service.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the services and server roles being used in your Lync Server infrastructure.
 A service is an instance of a role that has been deployed in a Lync Server pool.
 For example, you might have a pool of computers all running the Monitoring Server service.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the services and server roles being used in your Skype for Business Server 2015 infrastructure.
 A service is an instance of a role that has been deployed in a Skype for Business Server 2015 pool.
@@ -190,7 +190,7 @@ Get-CsService [-PoolFqdn <String>] [-VideoInteropServer] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The capabilities found in Lync Server 2010 are typically expressed as services or as server roles.
 For example, you can configure Lync Server to automatically save a transcript of every instant messaging session that takes place in your organization.
@@ -220,7 +220,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsService"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The capabilities found in Lync Server are typically expressed as services or as server roles.
 For example, you can configure Lync Server to automatically save a transcript of every instant messaging session that takes place in your organization.
@@ -250,7 +250,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsService"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The capabilities found in Skype for Business Server 2015 are typically expressed as services or as server roles.
 For example, you can configure Skype for Business Server 2015 to automatically save a transcript of every instant messaging session that takes place in your organization.
@@ -436,14 +436,14 @@ Get-CsService | Where-Object {$_.DependentServiceList -like "*Registrar*"}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the specific service or server role to be returned.
 For example: -Identity "Registrar:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the specific service or server role to be returned.
 For example:
@@ -551,21 +551,21 @@ Accept wildcard characters: False
 ```
 
 ### -CentralManagement
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the  Central Management service used in your organization.
 The Central Management service is used to send configuration data to computers running Lync Server 2010 services.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Central Management service used in your organization.
 The Central Management service is used to send configuration data to computers running Lync Server services.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Central Management service used in your organization.
 The Central Management service is used to send configuration data to computers running Skype for Business Server 2015 services.
@@ -586,14 +586,14 @@ Accept wildcard characters: False
 ```
 
 ### -CentralManagementDatabase
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns information about the Central Management store used in your organization.
 The Central Management store maintains configuration information for Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Central Management store used in your organization.
 The Central Management store maintains configuration information for Skype for Business Server 2015.
@@ -666,14 +666,14 @@ Accept wildcard characters: False
 ```
 
 ### -FileStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns information about the File Stores used in your organization.
 The File Store is used to maintain Lync Server files, such as audio files used by the Announcement service.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the File Stores used in your organization.
 The File Store is used to maintain Skype for Business Server 2015 files, such as audio files used by the Announcement service.
@@ -694,14 +694,14 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementServer
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the  Central Management Server used in your organization.
 The  Central Management Server is commonly collocated with the Front End Servers and is responsible for accessing information in the Central Management store.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the Central Management Server used in your organization.
 The Central Management Server is commonly collocated with the Front End Servers and is responsible for accessing information in the Central Management store.

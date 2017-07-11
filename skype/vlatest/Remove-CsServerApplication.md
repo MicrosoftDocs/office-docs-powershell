@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsServerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing server application.
 Server applications are applications that are hosted by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing server application.
 Server applications are applications that are hosted by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing server application.
 Server applications are applications that are hosted by Skype for Business Server 2015.
@@ -32,7 +32,7 @@ Remove-CsServerApplication [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confir
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Server applications refer to the individual programs that run under Lync Server 2010.
 The Remove-CsServerApplication cmdlet provides a way for administrators to remove any application running as part of Lync Server.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsServerApplication }
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Server applications refer to the individual programs that run under Lync Server.
 The Remove-CsServerApplication cmdlet provides a way for administrators to remove any application running as part of Lync Server.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsServerApplication }
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Server applications refer to the individual programs that run under Skype for Business Server 2015.
 The Remove-CsServerApplication cmdlet provides a way for administrators to remove any application running as part of Skype for Business Server 2015.

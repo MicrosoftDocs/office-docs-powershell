@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsIssuedCertId
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to assign an existing certificate to a SipProxy.TLS object.
 In turn, that object can be used configure a static route to use Transport Layer Security (TLS) as its transport protocol.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to assign an existing certificate to a SipProxy.TLS object.
 In turn, that object can be used configure a static route to use Transport Layer Security (TLS) as its transport protocol.
@@ -26,7 +26,7 @@ New-CsIssuedCertId -Issuer <String> -SerialNumber <Byte[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When you send a Session Initiation Protocol (SIP) message to someone, that message might need to traverse multiple subnets and networks before it is delivered.
 The path traveled by the message is often referred to as a route.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsIssuedCertId"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When you send a Session Initiation Protocol (SIP) message to someone, that message might need to traverse multiple subnets and networks before it is delivered.
 The path traveled by the message is often referred to as a route.
@@ -98,7 +98,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsIssuedCertId"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When you send a Session Initiation Protocol (SIP) message to someone, that message might need to traverse multiple subnets and networks before it is delivered.
 The path traveled by the message is often referred to as a route.

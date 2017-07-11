@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsSipProxyCustom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Used to assign a custom realm (SIP Communications Service) to a collection of proxy configuration settings.
 Realms (also known as protection domains) are used to authenticate user credentials during logon.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Used to assign a custom realm (SIP Communications Service) to a collection of proxy configuration settings.
 Realms (also known as protection domains) are used to authenticate user credentials during logon.
@@ -26,7 +26,7 @@ New-CsSipProxyCustom -CustomValue <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.
 By default, Microsoft Lync Server 2010 uses SIP Communications Service as its default realm; however, it is possible to change the realm used by a proxy server.
@@ -38,7 +38,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSipProxyCustom"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.
 By default, Lync Server uses SIP Communications Service as its default realm; however, it is possible to change the realm used by a proxy server.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSipProxyCustom"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Each proxy server must be associated with a realm; realms (also known as protection domains) indicate where a user's logon credentials should be processed.
 By default, Skype for Business Server 2015 uses SIP Communications Service as its default realm; however, it is possible to change the realm used by a proxy server.

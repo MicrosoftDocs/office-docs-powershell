@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsPresencePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing presence policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing presence policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -34,7 +34,7 @@ Set-CsPresencePolicy [-Instance <PSObject>] [-MaxCategorySubscription <UInt16>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPresencePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -88,7 +88,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPresencePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Presence information (which, among other things, lets you know whether a contact is available to take part in an instant messaging conversation) is invaluable.
 At the same time, however, there is a cost associated with presence information: the more presence subscriptions you have the more network bandwidth must be devoted to updating presence information.
@@ -213,7 +213,7 @@ Get-CsPresencePolicy | Where-Object {$_.MaxPromptedSubscriber -gt 300} | Set-CsP
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the presence policy to be modified.
 To modify the global policy, use this syntax: -Identity global.
@@ -222,7 +222,7 @@ To modify a per-user policy, use syntax like this: -Identity "RedmondPresencePol
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the presence policy to be modified.
 To modify the global policy, use this syntax:
@@ -288,7 +288,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPromptedSubscriber
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The maximum number of prompted subscribers a user can have at any one time.
 By default, any time you are added to another user's Contacts list a notification dialog appears on screen informing you of this fact, and giving you the chance to do such things as add the person to your own Contacts list or block the person from viewing your presence.
@@ -299,7 +299,7 @@ If you set this value to 0, users will not receive any notifications when they a
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The maximum number of prompted subscribers a user can have at any one time.
 By default, any time you are added to another user's Contacts list a notification dialog is displayed informing you of this fact, and giving you the chance to do such things as add the person to your own Contacts list or block the person from viewing your presence.
@@ -372,13 +372,13 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Description Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provide additional text to accompany a presence policy.
 For example, the Description might include information about the users the policy should be assigned to.

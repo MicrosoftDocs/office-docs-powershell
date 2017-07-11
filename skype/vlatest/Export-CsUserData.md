@@ -6,13 +6,13 @@ schema: 2.0.0
 # Export-CsUserData
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Exports user data in a format that can be imported into Microsoft Exchange Server 2013 Preview.
 The data will be exported as a .ZIP file containing a pair of XML documents.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Exports user data in a format that can be imported into Skype for Business Server 2015.
 The data will be exported as a .ZIP file containing a pair of XML documents.
@@ -44,7 +44,7 @@ Export-CsUserData -FileName <String> -SqlInstanceName <String> [-ConfDirectoryFi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Export-CsUserData cmdlet provides a way for administrators to export user data and/or conference directory for a Lync Server pool.
 That data, which can be saved in the user data format used by either Lync Server 2013 Preview or Microsoft Lync Server 2010 can then be imported by using the Import-CsUserData cmdlet.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsUserData"}
 
 Lync Server Control Panel: The functions carried out by the Export-CsUserData cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Export-CsUserData cmdlet provides a way for administrators to export user data and/or conference directory for a Skype for Business Server 2015 pool.
 That data, which can be saved in the user data format used by either Skype for Business Server 2015 or Microsoft Lync Server 2010 can then be imported by using the Import-CsUserData cmdlet.
@@ -87,7 +87,7 @@ Export-CsUserData -PoolFqdn "atl-cs-001.litwareinc.com" -FileName "C:\Logs\Expor
 ## PARAMETERS
 
 ### -FileName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Full path to the .ZIP file that Export-CsUserData will create; this file will contain the exported user data.
 For example:
@@ -96,7 +96,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Full path to the .ZIP file that the Export-CsUserData cmdlet will create; this file will contain the exported user data.
 For example:
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfDirectoryFilter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, allows you to import conference directory information for the specified conference directory.
 For example, to import data from the conference directory with the ID 13 use this syntax:
@@ -174,7 +174,7 @@ Get-CsConferenceDirectory
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, allows you to export conference directory information for the specified conference directory.
 For example, to export data from the conference directory with the ID 13 use this syntax:
@@ -201,14 +201,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to specify the FQDN of the domain controller to be used when running Export-CsUserData.
 If not specified, the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to specify the FQDN of the domain controller to be used when running the Export-CsUserData cmdlet.
 If not specified, the cmdlet will use the first available domain controller.

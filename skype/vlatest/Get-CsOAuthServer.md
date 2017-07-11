@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsOAuthServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Open Authorization (OAuth) servers configured for use by the organization.
 OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Open Authorization (OAuth) servers configured for use by the organization.
 OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
@@ -33,7 +33,7 @@ Get-CsOAuthServer [[-Identity] <XdsGlobalRelativeIdentity>] [-LocalStore] [-Tena
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -49,7 +49,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsOAuthServer"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsOAuthServer cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the OAuth server to be returned.
 For example:
@@ -134,7 +134,7 @@ If neither the Identity parameter nor the Filter parameter is included in the co
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the OAuth server to be returned.
 For example:
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose OAuth server settings are to be retrieved.
 
@@ -189,7 +189,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose OAuth server settings are to be retrieved.
 

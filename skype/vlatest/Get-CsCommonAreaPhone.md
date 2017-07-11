@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsCommonAreaPhone
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the common area phones managed by using Microsoft Lync Server 2010.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the common area phones managed by using Lync Server.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the common area phones managed by using Skype for Business Server 2015.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
@@ -34,7 +34,7 @@ Get-CsCommonAreaPhone [[-Identity] <UserIdParameter>] [-Credential <PSCredential
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsCommonAreaPhone"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsCommonAreaPhone"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to run the Get-CsCommonAreaPhone cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -312,7 +312,7 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsCommonAreaPhone cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -353,7 +353,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server 2010.
 For example, you can limit returned data to common area phone contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -362,7 +362,7 @@ The Filter parameter uses the same Windows PowerShell filtering syntax that is u
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 For example, you can limit returned data to common area phone contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -371,7 +371,7 @@ The Filter parameter uses the same Windows PowerShell filtering syntax that is u
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
 For example, you can limit returned data to common area phone contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
@@ -394,7 +394,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server 2010).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
@@ -408,7 +408,7 @@ In the preceding filter, "l" (a lowercase L) represents the Active Directory att
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
@@ -422,7 +422,7 @@ In the preceding filter, "l" (a lowercase L) represents the Active Directory att
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.

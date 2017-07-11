@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsServerVersion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill in the Synopsis}}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns server licensing information for a computer running Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns server licensing information for a computer running Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,11 +29,11 @@ Get-CsServerVersion [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill in the Description}}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server comes in two different versions: an evaluation version (which will eventually expire) and a fully-licensed version.
 The Get-CsServerVersion cmdlet provides a way for administrators to determine which version of Lync Server is running on a computer.
@@ -50,7 +50,7 @@ That no license key is required for the components installed on the local comput
 
 If an error occurs, Get-CsServerVersion will report that the license type and version information could not be retrieved, and recommend that you reinstall the Lync Server components.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 comes in two different versions: an evaluation version (which will eventually expire) and a fully-licensed version.
 The Get-CsServerVersion cmdlet provides a way for administrators to determine which version of Skype for Business Server 2015 is running on a computer.

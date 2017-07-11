@@ -6,19 +6,19 @@ schema: 2.0.0
 # Get-CsVoiceRoutingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the voice routing policies configured for use in your organization.
 Voice routing policies manage PSTN usages for users of hybrid voice.
 Hybrid voice enables users homed on Office 365 to take advantage of the Enterprise Voice capabilities available in an on-premises installation of Microsoft Lync Server 2013 Preview.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Use the Get-CsVoiceRoutingPolicy cmdlet to return information about the voice routing policies configured for use in your organization.
 In Skype for Business Online, voice routing policies are used to determine if users can make international calls as well as taking advantage of the other Enterprise Voice capabilities available in an on-premises installation of Skype for Business Server 2015.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the voice routing policies configured for use in your organization.
 Voice routing policies manage PSTN usages for users of hybrid voice.
@@ -46,7 +46,7 @@ Get-CsVoiceRoutingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Fi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Microsoft Lync Server 2013 Preview and other users are homed on the Office 365 version of Lync Server.
 Assigning your Office 365 users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
@@ -60,7 +60,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsVoiceRoutingPolicy"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsVoiceRoutingPolicy cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Skype for Business Server 2015 and other users are homed on Skype for Business Online.
 
@@ -74,7 +74,7 @@ One allows international calls and the other doesn't.
 They are named respectively InternationalCallsAllowed, and InternationalCallsDisallowed.
 Granting one of these policies to a user will either allow or disallow international calling for that user.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice routing policies are used in "hybrid" scenarios: when some of your users are homed on the on-premises version of Skype for Business Server 2015 and other users are homed on Skype for Business Online.
 Assigning your Skype for Business Online users a voice routing policy enables those users to receive and to place phones calls to the public switched telephone network by using your on-premises SIP trunks.
@@ -238,7 +238,7 @@ Get-CsVoiceRoutingPolicy | Where-Object {$_.PstnUsages -notcontains "Long Distan
 ## PARAMETERS
 
 ### -Filter
-Below Content Applies To: Lync Server 2013, Skype for Business Online
+**Below Content Applies To:** Lync Server 2013, Skype for Business Online
 
 Enables you to use wildcards when retrieving one or more voice routing policies.
 For example, to return all the policies configured at the per-user scope, use this syntax:
@@ -247,7 +247,7 @@ For example, to return all the policies configured at the per-user scope, use th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 {{Fill Filter Description}}
 
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier of the voice routing policy to be retrieved.
 To return the global policy, use this syntax:
@@ -284,7 +284,7 @@ If neither the Identity nor the Filter parameters are specified, then Get-CsVoic
 
 
 
-Below Content Applies To: Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Online, Skype for Business Server 2015
 
 Unique identifier of the voice routing policy to be retrieved.
 To return the global policy, use this syntax:

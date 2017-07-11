@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsWebServiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about all the Web Services configuration settings in use in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about all the Web Services configuration settings in use in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsWebServiceConfiguration [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Microsoft Lync Server 2010 components are web-based: these components either use web services or web pages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsWebServiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components are web-based: these components either use web services or webpages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsWebServiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components are web-based: these components either use web services or webpages to carry out their tasks.
 For example, users employ a web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -220,7 +220,7 @@ Get-CsWebServiceConfiguration | Where-Object {$_.MaxGroupSizeToExpand -gt 100}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Web Services configuration settings to be returned.
 To return the global settings, use this syntax: -Identity global.
@@ -231,7 +231,7 @@ If you do not specify either parameter, Get-CsWebServiceConfiguration will retur
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Web Services configuration settings to be returned.
 To return the global settings, use this syntax:
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when specifying the Web Services configuration settings collection (or collections) to be returned.
 For example, this syntax returns all the settings configured at the site scope: -Filter "site:*".
@@ -274,7 +274,7 @@ You cannot use both the Filter and the Identity parameters in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when specifying the Web Services configuration settings collection (or collections) to be returned.
 For example, this syntax returns all the settings configured at the site scope:
@@ -299,13 +299,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the Web Services configuration data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the Web Services configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 

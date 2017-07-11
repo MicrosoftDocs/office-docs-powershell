@@ -6,11 +6,11 @@ schema: 2.0.0
 # Move-CsApplicationEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves an endpoint to a different Registrar pool.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves an endpoint to a different Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ Move-CsApplicationEndpoint [-Identity] <UserIdParameter> [-TargetApplicationPool
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet moves an existing endpoint contact object in Active Directory Domain Services (AD DS) from a Microsoft Office Communications Server 2007 R2 application pool to a Microsoft Lync Server 2010 application pool, or from one Lync Server 2010 application pool to another.
 The application associated with the given endpoint must exist on the target pool.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsApplicationEndpoint"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet moves an existing endpoint contact object in Active Directory Domain Services (AD DS) from a Microsoft Office Communications Server 2007 R2 application pool to a Lync Server application pool, or from one Lync Server application pool to another.
 The application associated with the given endpoint must exist on the target pool.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsApplicationEndpoint"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet moves an existing endpoint contact object in Active Directory Domain Services to a Skype for Business Server 2015 application pool.
 The application associated with the given endpoint must exist on the target pool.
@@ -185,21 +185,21 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This flag is required if you are moving a Microsoft Unified Communications Managed API (UCMA) 2.0 contact object to the same pool but on a Lync Server 2010 deployment.
 This will force routing to occur through the Lync Server 2010 Registrar.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This flag is required if you are moving a Microsoft Unified Communications Managed API (UCMA) 2.0 contact object to the same pool but on a Lync Server deployment.
 This will force routing to occur through the Lync Server Registrar.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This flag is required if you are moving a Microsoft Unified Communications Managed API (UCMA) 2.0 contact object to the same pool but on a Skype for Business Server 2015 deployment.
 This will force routing to occur through the Skype for Business Server 2015 Registrar.

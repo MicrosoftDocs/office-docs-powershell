@@ -6,16 +6,16 @@ schema: 2.0.0
 # Enable-CsComputer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables new or newly-updated services or server roles on a computer running Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables new or newly-updated services or server roles on a computer running Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables new or newly-updated services or server roles on a computer running Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,14 +30,14 @@ Enable-CsComputer [-GlobalCatalog <Fqdn>] [-Report <String>] [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Installing the required software does not automatically cause a computer to adopt a new service role; instead, that computer must be enabled before it actually begins to function in its new role.
 The Enable-CsComputer cmdlet provides a way for administrators to enable newly updated services or server roles on the local computer.
 
 Who can run this cmdlet: You must be a local administrator and a member of the domain in order to run the Enable-CsComputer cmdlet locally.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Installing the required software does not automatically cause a computer to adopt a new service role; instead, that computer must be enabled before it actually begins to function in its new role.
 The Enable-CsComputer cmdlet provides a way for administrators to enable newly updated services or server roles on the local computer.
@@ -102,14 +102,14 @@ Enable-CsComputer -Verbose
 ## PARAMETERS
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Enable-CsComputer on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Enable-CsComputer cmdlet on a computer with an account in your domain.
@@ -195,13 +195,13 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill GlobalSettingsDomainController Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory, then this parameter must point to the root domain controller.

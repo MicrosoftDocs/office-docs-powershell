@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsClientVersionConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about the specified collection of client version configuration settings in use in your organization.
 Client version configuration settings determine whether or not Microsoft Lync Server 2010 checks the version number of each client application that logs on to the system.
 If client version filtering is enabled the ability of that client application to access the system will be based on settings configured in the relevant client version policy.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves information about the specified collection of client version configuration settings in use in your organization.
 Client version configuration settings determine whether or not Lync Server checks the version number of each client application that logs on to the system.
 If client version filtering is enabled the ability of that client application to access the system will be based on settings configured in the relevant client version policy.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves information about the specified collection of client version configuration settings in use in your organization.
 Client version configuration settings determine whether or not Skype for Business Server 2015 checks the version number of each client application that logs on to the system.
@@ -41,7 +41,7 @@ Get-CsClientVersionConfiguration [-Filter <String>] [-LocalStore] [<CommonParame
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Lync Server 2010 by using Microsoft Lync 2010; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
@@ -67,7 +67,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientVersionConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Lync Server by using Lync; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
@@ -93,7 +93,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientVersionConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Skype for Business Server 2015 by using Skype for Business; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
@@ -239,7 +239,7 @@ Get-CsClientVersionConfiguration | Where-Object {$_.Enabled -eq $False}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the unique identifier for the collection of client version configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -251,7 +251,7 @@ If this parameter is not specified then Get-CsClientVersionConfiguration   retur
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the unique identifier for the collection of client version configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.
@@ -263,7 +263,7 @@ If this parameter is not specified then Get-CsClientVersionConfiguration returns
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of client version configuration settings you want to return.
 To refer to the global settings, use this syntax: -Identity global.

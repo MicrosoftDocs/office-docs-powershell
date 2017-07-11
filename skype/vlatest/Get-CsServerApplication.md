@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsServerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the server applications in use in your organization.
 Server applications are applications that are hosted by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the server applications in use in your organization.
 Server applications are applications that are hosted by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the server applications in use in your organization.
 Server applications are applications that are hosted by Skype for Business Server 2015.
@@ -38,7 +38,7 @@ Get-CsServerApplication [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Server applications refer to the individual programs that run under Lync Server 2010.
 The Get-CsServerApplication cmdlet provides a way for administrators to return information about any (or all) of the applications running as part of Lync Server.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsServerApplication"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Server applications refer to the individual programs that run under Lync Server.
 The Get-CsServerApplication cmdlet provides a way for administrators to return information about any (or all) of the applications running as part of Lync Server.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsServerApplication"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Server applications refer to the individual programs that run under Skype for Business Server 2015.
 The Get-CsServerApplication cmdlet provides a way for administrators to return information about any (or all) of the applications running as part of Skype for Business Server 2015.
@@ -312,7 +312,7 @@ Get-CsServerApplication | Where-Object {$_.ScriptName -ne $Null}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the server application to be retrieved.
 Server application Identities are composed of the service where the application is hosted plus the application name.
@@ -326,7 +326,7 @@ If this parameter is omitted, then all the server applications will be returned 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the server application to be retrieved.
 Server application Identities are composed of the service where the application is hosted plus the application name.
@@ -354,14 +354,14 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcards when returning a server application or set of server applications.
 For example, to return all the server applications that have the string value "IIMFilter" somewhere in their Identity use this syntax: -Filter "*IIMFilter*".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcards when returning a server application or set of server applications.
 For example, to return all the server applications that have the string value "IIMFilter" somewhere in their Identity use this syntax:

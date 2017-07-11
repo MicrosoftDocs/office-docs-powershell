@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsUCPhoneConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of settings used to manage Microsoft Lync 2010 Phone Edition.
 These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of settings used to manage Lync Phone Edition.
 These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of settings used to manage UC phone configuration settings.
 These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
@@ -35,7 +35,7 @@ New-CsUCPhoneConfiguration [-Identity] <XdsIdentity> [-CalendarPollInterval <Tim
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync 2010 Phone Edition represents the merging of the telephone and Microsoft Lync 2010.
 Lync 2010 Phone Edition uses special hardware (that is, a Lync 2010-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC roles this cmdlet )h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Phone Edition represents the merging of the telephone and Lync Server.
 Lync Phone Edition uses special hardware (that is, a Lync Phone Edition-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -89,7 +89,7 @@ To return a list of all the role-based access control (RBAC roles this cmdlet )h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 UC phones represent the merging of the telephone and Skype for Business Server 2015.
 UC phones use special hardware (that is, a Skype for Business-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -224,7 +224,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPollInterval
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates how often the UC device retrieves information from your Microsoft Outlook calendar.
 The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax: -CalendarPollInterval "01:00:00".
@@ -232,7 +232,7 @@ The default value is 3 minutes (00:03:00).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates how often the UC device retrieves information from your Outlook calendar.
 The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax:
@@ -359,7 +359,7 @@ Accept wildcard characters: False
 ```
 
 ### -Voice8021p
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Server 2010 deployment.
 
@@ -369,7 +369,7 @@ The default value is 0.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Serverdeployment.
 
@@ -379,7 +379,7 @@ The default value is 0.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Skype for Business Server 2015 deployment.
 
@@ -439,14 +439,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

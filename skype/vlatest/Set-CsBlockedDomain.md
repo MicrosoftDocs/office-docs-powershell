@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsBlockedDomain
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the Comment property for one or more of the domains included on the list of domains that are blocked for federation.
 By definition, your users are not allowed to use Microsoft Lync Server 2010 applications to communicate with people from the blocked domain; for example, users cannot employ Microsoft Lync 2010 to exchange instant messages with anyone with a SIP account in a domain that appears on the blocked list.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the Comment property for one or more of the domains included on the list of domains that are blocked for federation.
 By definition, your users are not allowed to use Lync Server applications to communicate with people from the blocked domain; for example, users cannot employ Lync to exchange instant messages with anyone with a SIP account in a domain that appears on the blocked list.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the Comment property for one or more of the domains included on the list of domains that are blocked for federation.
 By definition, your users are not allowed to use Skype for Business Server 2015 applications to communicate with people from the blocked domain; for example, users cannot employ Skype for Business to exchange instant messages with anyone with a SIP account in a domain that appears on the blocked list.
@@ -40,7 +40,7 @@ Set-CsBlockedDomain [-Instance <PSObject>] [-Comment <String>] [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Lync 2010.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsBlockedDomain"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Lync Server.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsBlockedDomain"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Skype for Business.

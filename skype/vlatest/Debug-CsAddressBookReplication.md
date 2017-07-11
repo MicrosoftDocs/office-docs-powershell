@@ -6,12 +6,12 @@ schema: 2.0.0
 # Debug-CsAddressBookReplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies replication between Active Directory and the Microsoft Lync Server 2013 Preview Address book service.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies replication between Active Directory and the Skype for Business Server 2015 Address book service.
 This cmdlet was introduced in Lync Server 2013.
@@ -27,7 +27,7 @@ Debug-CsAddressBookReplication [-DomainController <String>] [-Force] [-OutLogger
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between Active Directory Domain Services (AD DS) and Microsoft Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in Active Directory.
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Debug-CsAddressBookReplicatio
 
 Lync Server Control Panel: The functions carried out by the Debug-CsAddressBookReplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between Active Directory Domain Services (AD DS) and Microsoft Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in Active Directory.
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutLoggerVariable
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 This variable includes a pair of methods - ToHTML and ToXML - that can then be used to save that output to either an HTML or an XML file.
@@ -192,7 +192,7 @@ $TestOutput.ToXML() \> C:\Logs\TestOutput.xml
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 {{Fill OutLoggerVariable Description}}
 
@@ -233,14 +233,14 @@ Accept wildcard characters: False
 ```
 
 ### -PoolFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the pool being checked.
 If this parameter is not included then Debug-CsAddressBookReplication will verify the current pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the pool being checked.
 If this parameter is not included then the Debug-CsAddressBookReplication cmdlet will verify the current pool.
@@ -278,14 +278,14 @@ Accept wildcard characters: False
 ```
 
 ### -VerifyNormalization
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If specified, detailed information will be returned for any user accounts where Address book normalization failed.
 Normalization rules are used to convert phone numbers to the E.164 format used by Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If specified, detailed information will be returned for any user accounts where Address book normalization failed.
 Normalization rules are used to convert phone numbers to the E.164 format used by Skype for Business Server 2015.
@@ -306,14 +306,14 @@ Accept wildcard characters: False
 ```
 
 ### -VerifyReplication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, Debug-CsAddressBookReplication will modify the specified user account in Active Directory and then verify that the changes are replicated to the Address book.
 Note that the user account modification is for testing purposes only, and will not actually change the property values of that account.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, the Debug-CsAddressBookReplication cmdlet will modify the specified user account in Active Directory and then verify that the changes are replicated to the Address book.
 Note that the user account modification is for testing purposes only, and will not actually change the property values of that account.

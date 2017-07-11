@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsImFilterConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns the instant messaging (IM) link filters configured in your organization.
 These filters are used to prevent users from sending instant messages that contain hyperlinks with specific prefixes (for example, links with an http or telnet prefix).
 Depending on your settings, this means that any Uniform Resource Identifier (URI) prefaced with one of these schemes will be converted to a non-clickable hyperlink or removed altogether.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns the instant messaging (IM) link filters configured in your organization.
 These filters are used to prevent users from sending instant messages that contain hyperlinks with specific prefixes (for example, links with an http or telnet prefix).
 Depending on your settings, this means that any Uniform Resource Identifier (URI) prefaced with one of these schemes will be converted to a non-clickable hyperlink or removed altogether.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsImFilterConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
@@ -46,7 +46,7 @@ Get-CsImFilterConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When sending instant messages, users can embed a URI within the text of that message to refer other participants in the conversation to a particular web site or share.
 Microsoft Lync Server 2010 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsImFilterConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When sending instant messages, users can embed a URI within the text of that message to refer other participants in the conversation to a particular web site or share.
 Lync Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -76,11 +76,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsImFilterConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When sending instant messages, users can embed a URI within the text of that message to refer other participants in the conversation to a particular web site or share.
 Skype for Business Server 2015 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -222,7 +222,7 @@ That tells Windows PowerShell to first carry out the command enclosed in parenth
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The unique identifier of the settings you want to retrieve.
 This will be either global or site:\<site name\>, where \<site name\> is the name of the site to which these settings apply, such as site:Redmond.
@@ -231,7 +231,7 @@ Full Data Type: Microsoft.Rtc.Management.Xds.XdsIdentity
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -264,14 +264,14 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Performs a wildcard search for configurations matching a given Identity pattern.
 For example, returns all settings with identities beginning with site* (all site-specific settings).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -291,13 +291,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the IM filter configuration from the local replica of the Central Management store, rather than the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

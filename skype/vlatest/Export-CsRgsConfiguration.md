@@ -6,13 +6,13 @@ schema: 2.0.0
 # Export-CsRgsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Exports data from an existing Response Group application configuration.
 This data, saved as a .ZIP file, can later be imported using the Import-CsRgsConfiguration cmdlet.
 The ability to export and import Response Group configuration data is particularly useful disaster recovery scenarios.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Exports data from an existing Response Group application configuration.
 This data, saved as a .ZIP file, can later be imported using the Import-CsRgsConfiguration cmdlet.
@@ -29,7 +29,7 @@ Export-CsRgsConfiguration -FileName <String> -Source <RgsIdentity> [-Force] [-Ow
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Export-CsRgsConfiguration and Import-CsRgsConfiguration cmdlets enable you to export data about your current implementation of the Response Group application (including such things as workflows, queues, agent groups, holiday sets and business hours, as well as audio files and service configuration settings) and then later import (or re-import) that information.
 This can be extremely useful in a disaster recovery scenario (for example, in a case where the server hosting the Response Group application has failed) or if you simply need to transfer the Response Group application to a different pool.
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsRgsConfiguration"}
 
 Lync Server Control Panel: The functions carried out by the Export-CsRgsConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Export-CsRgsConfiguration cmdlet and the Import-CsRgsConfiguration cmdlet enable you to export data about your current implementation of the Response Group application (including such things as workflows, queues, agent groups, holiday sets and business hours, as well as audio files and service configuration settings) and then later import (or re-import) that information.
 This can be extremely useful in a disaster recovery scenario (for example, in a case where the server hosting the Response Group application has failed) or if you simply need to transfer the Response Group application to a different pool.
@@ -78,7 +78,7 @@ Export-CsRgsConfiguration -Source "ApplicationServer:atl-rgs-001.litwareinc.com"
 ## PARAMETERS
 
 ### -FileName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Path to the .ZIP file to be created when you run Export-CsRgsConfiguration.
 For example:
@@ -89,7 +89,7 @@ Note that your command will fail if this file already exists.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the .ZIP file to be created when you run the Export-CsRgsConfiguration cmdlet.
 For example:
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Identity of the ResponseGroup instance whose configuration settings are being exported.
 For example:
@@ -123,7 +123,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Identity of the Response Group instance whose configuration settings are being exported.
 For example:

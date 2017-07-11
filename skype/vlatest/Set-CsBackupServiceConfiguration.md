@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsBackupServiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves the backup service configuration settings for Microsoft Lync Server 2013 Preview.
 These settings include information about the maximum number of simultaneous Windows Communication Framework calls that can be made to the backup service as well as the backup service synchronization interval.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves the backup service configuration settings for Skype for Business Server 2015.
 These settings include information about the maximum number of simultaneous Windows Communication Framework calls that can be made to the backup service as well as the backup service synchronization interval.
@@ -39,7 +39,7 @@ Set-CsBackupServiceConfiguration [-AuthorizedLocalAccounts <String>] [-Authorize
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The backup service configuration settings are used to manage pool backups in Microsoft Lync Server 2013 Preview.
 Note that Lync Server allows only for a single, global collection of backup configuration settings.
@@ -51,7 +51,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsBackupServiceConfigurat
 
 Lync Server Control Panel: The functions carried out by the Set-CsBackupServiceConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The backup service configuration settings are used to manage pool backups in Skype for Business Server 2015.
 Note that Skype for Business Server 2015 allows only for a single, global collection of backup configuration settings.
@@ -188,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the backup service configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling Set-CsBackupServiceConfiguration.
@@ -198,7 +198,7 @@ If you prefer, however, you can use the following syntax to reference the global
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the backup service configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Set-CsBackupServiceConfiguration cmdlet.
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -SyncInterval
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the amount of time that the service waits before synchronizing a pool with its backup pool.
 The default value is 30 seconds (00:00:30, or 00 hours, 00 minutes, 30 seconds).
@@ -314,7 +314,7 @@ The SyncInterval can be configured to any value between 5 seconds (00:00:05) and
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the amount of time that the service waits before synchronizing a pool with its backup pool.
 The default value is 2 minutes (00:02:00, or 00 hours, 02 minutes, 00 seconds).

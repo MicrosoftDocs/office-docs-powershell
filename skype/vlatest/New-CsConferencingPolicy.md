@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsConferencingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new conferencing policy for use in your organization.
 Conferencing policies determine the features and capabilities that can be used in a conference; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new conferencing policy for use in your organization.
 Conferencing policies determine the features and capabilities that can be used in a conference; this includes everything from whether or not the conference can include IP audio and video to the maximum number of people who can attend a meeting.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 New-CsConferencingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-AllowIPAudio \<bool\>\] \[-AllowIPVideo \<bool\>\] \[-AllowMultiView \<bool\>\] \[-Description \<string\>\] \[-AllowParticipantControl \<bool\>\] \[-AllowAnnotations \<bool\>\] \[-DisablePowerPointAnnotations \<bool\>\] \[-AllowUserToScheduleMeetingsWithAppSharing \<bool\>\] \[-ApplicationSharingMode \<string\>\] \[-AllowNonEnterpriseVoiceUsersToDialOut \<bool\>\] \[-AllowAnonymousUsersToDialOut \<bool\>\] \[-AllowAnonymousParticipantsInMeetings \<bool\>\] \[-AllowFederatedParticipantJoinAsSameEnterprise \<bool\>\] \[-AllowExternalUsersToSaveContent \<bool\>\] \[-AllowExternalUserControl \<bool\>\] \[-AllowExternalUsersToRecordMeeting \<bool\>\] \[-AllowPolls \<bool\>\] \[-AllowSharedNotes \<bool\>\] \[-AllowQandA \<bool\>\] \[-AllowOfficeContent \<bool\>\] \[-EnableDialInConferencing \<bool\>\] \[-EnableAppDesktopSharing \<EnableAppDesktopSharing\>\] \[-AllowConferenceRecording \<bool\>\] \[-EnableP2PRecording \<bool\>\] \[-EnableFileTransfer \<bool\>\] \[-EnableP2PFileTransfer \<bool\>\] \[-EnableP2PVideo \<bool\>\] \[-AllowLargeMeetings \<bool\>\] \[-EnableOnlineMeetingPromptForLyncResources \<bool\>\] \[-EnableDataCollaboration \<bool\>\] \[-MaxVideoConferenceResolution \<MaxVideoConferenceResolution\>\] \[-MaxMeetingSize \<uint32\>\] \[-AudioBitRateKb \<uint32\>\] \[-VideoBitRateKb \<long\>\] \[-AppSharingBitRateKb \<long\>\] \[-FileTransferBitRateKb \<long\>\] \[-TotalReceiveVideoBitRateKb \<long\>\] \[-EnableMultiViewJoin \<bool\>\] \[-CloudRecordingServiceSupport \<CloudRecordingServiceSupport\>\] \[-EnableReliableConferenceDeletion \<bool\>\] \[-InMemory\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -48,7 +48,7 @@ New-CsConferencingPolicy [-Identity] <XdsIdentity> [-AllowAnnotations <Boolean>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Conferencing is an important part of Microsoft Lync Server 2010: conferencing enables groups of users (as few as two people to as many as 250 people) to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -74,7 +74,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsConferencingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Conferencing is an important part of Lync Server: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -100,11 +100,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsConferencingPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Conferencing is an important part of Skype for Business Server 2015: conferencing enables groups of users to come together online to view slides and video, share applications, exchange files, and otherwise communicate and collaborate.
 
@@ -198,7 +198,7 @@ New-CsConferencingPolicy -Identity site:Redmond -MaxMeetingSize 100 -AllowPartic
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier for the conferencing policy to be created.
 Conferencing policies can be created at the site or per-user scopes.
@@ -207,7 +207,7 @@ To create a per-user policy, use syntax similar to this: -Identity SalesConferen
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnnotations
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not participants are allowed to make on-screen annotations on any content shared during the meeting; in addition, this setting determines whether or not whiteboarding is allowed in the conference.
 The default value is True.
@@ -239,7 +239,7 @@ However, the user can participate in other conferences where annotations are all
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowAnnotations Description}}
 
@@ -259,7 +259,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousParticipantsInMeetings
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates whether anonymous users are allowed to participate in the meeting.
 If set to False then only authenticated users (that is, users logged on to your Active Directory Domain Services (AD DS) or the Active Directory of a federated partner) are allowed to attend the meeting.
@@ -270,13 +270,13 @@ However, the user can take part in other conferences where anonymous participant
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowAnonymousParticipantsInMeetings Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether anonymous users are allowed to participate in the meeting.
 If set to False then only authenticated users (that is, users logged on to your Active Directory Domain Services or the Active Directory of a federated partner) are allowed to attend the meeting.
@@ -301,7 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousUsersToDialOut
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not anonymous users (unauthenticated users) are allowed to join a conference using dial-out phoning.
 With dial-out phoning, the conferencing server telephones the user; when the user answers the phone, he or she will be joined to the conference.
@@ -315,7 +315,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not anonymous users (unauthenticated users) are allowed to join a conference using dial-out phoning.
 With dial-out phoning, the conferencing server telephones the user; when the user answers the phone, he or she will be joined to the conference.
@@ -329,7 +329,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowAnonymousUsersToDialOut Description}}
 
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConferenceRecording
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether users are allowed to record the meeting.
 The default value is False.
@@ -358,7 +358,7 @@ This setting applies to all users taking part in the conference.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowConferenceRecording Description}}
 
@@ -378,7 +378,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExternalUserControl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether external users (either anonymous users or federated users) are allowed to take control of shared applications or desktops.
 The default value is False.
@@ -388,7 +388,7 @@ That means that some users in a session might be allowed to give up control of a
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether external users (either anonymous users or federated users) are allowed to take control of shared applications or desktops.
 The default value is False.
@@ -398,7 +398,7 @@ That means that some users in a session might be allowed to give up control of a
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowExternalUserControl Description}}
 
@@ -418,7 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExternalUsersToSaveContent
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether external users (that is, users not currently logged-on to your network) are allowed to save handouts, slides, and other meeting content.
 The default value is True.
@@ -428,7 +428,7 @@ However, the user can take part in other conferences where external users are al
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowExternalUsersToSaveContent Description}}
 
@@ -448,7 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIPAudio
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not computer audio is allowed in the meeting.
 The default value is True.
@@ -458,7 +458,7 @@ However, the user can take part in other conferences where IP audio is allowed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowIPAudio Description}}
 
@@ -478,7 +478,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIPVideo
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not computer video is allowed in the meeting.
 The default value is True.
@@ -488,7 +488,7 @@ However, the user can take part in other conferences where IP video is allowed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowIPVideo Description}}
 
@@ -508,7 +508,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowParticipantControl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not meeting participants are allowed to take control of applications shared during the meeting.
 The default value is True.
@@ -518,7 +518,7 @@ That means that some users in a conference might be allowed to take control of a
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not meeting participants are allowed to take control of applications or desktops shared during the meeting.
 The default value is True.
@@ -528,7 +528,7 @@ However, the user can take part in other conferences where participant control i
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowParticipantControl Description}}
 
@@ -548,7 +548,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPolls
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not users are allowed to conduct online polls during a meeting.
 The default value is True.
@@ -558,7 +558,7 @@ However, the user can take part in other conferences where polls are allowed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowPolls Description}}
 
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUserToScheduleMeetingsWithAppSharing
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not users are allowed to organize meetings that include application sharing.
 The default value is True.
@@ -588,7 +588,7 @@ However, the user can take part in other conferences where application sharing i
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowUserToScheduleMeetingsWithAppSharing Description}}
 
@@ -608,14 +608,14 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provider explanatory text about the conferencing policy.
 For example, the Description might indicate the users the policy should be assigned to.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Description Description}}
 
@@ -635,7 +635,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAppDesktopSharing
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether participants are allowed to share applications (or their desktop) during the course of a meeting.
 Allowed values are:
@@ -656,7 +656,7 @@ The default value is Desktop.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableAppDesktopSharing Description}}
 
@@ -676,7 +676,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDataCollaboration
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether users can organize meetings that include data collaboration activities such as whiteboarding and annotations.
 
@@ -685,7 +685,7 @@ However, the user can take part in other conferences where data collaboration is
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableDataCollaboration Description}}
 
@@ -705,7 +705,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDialInConferencing
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether users are able to join the meeting by dialing in with a public switched telephone network (PSTN) telephone.
 The default value is True.
@@ -715,7 +715,7 @@ However, the user can take part in other conferences where dial-in conferencing 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableDialInConferencing Description}}
 
@@ -735,7 +735,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFileTransfer
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether file transfers to all the meeting participants are allowed during the meeting.
 The default value is True.
@@ -745,7 +745,7 @@ However, the user can take part in other conferences where file transfers are al
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableFileTransfer Description}}
 
@@ -765,7 +765,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PFileTransfer
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether peer-to-peer file transfers (that is, file transfers that do not involve all participants) are allowed during the meeting.
 The default value is True.
@@ -775,7 +775,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableP2PFileTransfer Description}}
 
@@ -795,7 +795,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PRecording
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 If True, users will be able to record peer-to-peer conferencing sessions.
 The default value is False.
@@ -805,7 +805,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableP2PRecording Description}}
 
@@ -825,7 +825,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableP2PVideo
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 If True, users will be able to take part in peer-to-peer video conferencing sessions.
 The default value is False.
@@ -835,7 +835,7 @@ That means that one user in a peer-to-peer communication session might be allowe
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableP2PVideo Description}}
 
@@ -855,7 +855,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMeetingSize
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the maximum number of people who are allowed to attend a meeting.
 After the maximum number of participants has been reached, anyone else who tries to join the meeting will be turned away with the notice that the meeting is full.
@@ -866,7 +866,7 @@ However, the user can take part in other conferences where additional participan
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the maximum number of people who are allowed to attend a meeting.
 After the maximum number of participants has been reached, anyone else who tries to join the meeting will be turned away with the notice that the meeting is full.
@@ -880,7 +880,7 @@ However, the user can take part in other conferences where additional participan
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MaxMeetingSize Description}}
 
@@ -900,7 +900,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxVideoConferenceResolution
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates the maximum resolution for meeting video.
 Allowed values are:
@@ -915,7 +915,7 @@ The default value is VGA.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MaxVideoConferenceResolution Description}}
 
@@ -935,13 +935,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -961,20 +961,20 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill InMemory Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -995,13 +995,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -1022,13 +1022,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -1048,13 +1048,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExternalUsersToRecordMeeting
-Below Content Applies To: Lync Server 2010, Skype for Business Online
+**Below Content Applies To:** Lync Server 2010, Skype for Business Online
 
 {{Fill AllowExternalUsersToRecordMeeting Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether external users (either anonymous users or federated users) are allowed to record the meeting.
 The default value is False.
@@ -1080,21 +1080,21 @@ Accept wildcard characters: False
 ```
 
 ### -AppSharingBitRateKb
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Bit rate (in kilobytes) used for application sharing.
 The default value is 50000.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Bit rate (in kilobits) used for application sharing.
 The default value is 50000.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AppSharingBitRateKb Description}}
 
@@ -1114,27 +1114,27 @@ Accept wildcard characters: False
 ```
 
 ### -AudioBitRateKb
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Bit rate (in kilobytes) used for audio transmissions.
 The audio bit rate can be any whole number between 20 and 200, inclusive; the default value is 200.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Bit rate (in kilobits) used for audio transmissions.
 The audio bit rate can be any whole number between 20 and 200, inclusive; the default value is 200.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AudioBitRateKb Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Bit rate (in kilobits) used for audio transmissions.
 The audio bit rate can be any whole number between 20 and 200, inclusive; the default value is 200.
@@ -1157,21 +1157,21 @@ Accept wildcard characters: False
 ```
 
 ### -FileTransferBitRateKb
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Bit rate (in kilobytes) used for file transfers.
 The default value is 50000.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Bit rate (in kilobits) used for file transfers.
 The default value is 50000.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill FileTransferBitRateKb Description}}
 
@@ -1191,27 +1191,27 @@ Accept wildcard characters: False
 ```
 
 ### -VideoBitRateKb
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Bit rate (in kilobytes) used for video transmissions.
 The default value is 50000.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Bit rate (in kilobits) used for video transmissions.
 The default value is 50000.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill VideoBitRateKb Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Bit rate (in kilobits) used for video transmissions.
 The default value is 50000.
@@ -1234,7 +1234,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLargeMeetings
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True, all online meetings are treated as "large meeting." With a large meeting, restrictions are placed on the number of notifications that are sent to participants as well as the size of the meeting roster that is transmitted by default.
 
@@ -1242,7 +1242,7 @@ The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowLargeMeetings Description}}
 
@@ -1262,7 +1262,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMultiView
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True (the default value) enables users to schedule conferences that allow multiview; that is, clients can receive multiple video streams during a given conference.
 This setting applies to the user who organizes the conference: if set to False, no conference created by a user affected by this policy can include multiview.
@@ -1270,7 +1270,7 @@ However, the user can participate in other conferences where multiview is allowe
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowMultiView Description}}
 
@@ -1290,7 +1290,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNonEnterpriseVoiceUsersToDialOut
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or users who have not been enabled for Enterprise Voice are allowed to join a conference using dial-out phoning.
 With dial-out phoning the conferencing server will telephone the user; when the user answers the phone, he or she will be joined to the conference.
@@ -1304,7 +1304,7 @@ The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowNonEnterpriseVoiceUsersToDialOut Description}}
 
@@ -1324,13 +1324,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSharedNotes
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True (the default value) any open OneNote notebooks linked to the conference will automatically be updated with information such as conference participants and details about content shared during the conference.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowSharedNotes Description}}
 
@@ -1350,7 +1350,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePowerPointAnnotations
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True ($True) users will not be able to add annotations to PowerPoint slides used in a conference.
 However (depending on the value of the AllowAnnotations property), users will still have access to other whiteboarding features.
@@ -1358,7 +1358,7 @@ The default value is False, meaning that PowerPoint annotations are allowed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePowerPointAnnotations Description}}
 
@@ -1378,7 +1378,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMultiViewJoin
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True (the default value) clients will attempt to join a conference using multiview (which allows the client to receive multiple video streams during the conference).
 This parameter will be ignored if multiview is not allowed in the conference being joined.
@@ -1387,7 +1387,7 @@ That means that some users in a session might be allowed to have multiple video 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableMultiViewJoin Description}}
 
@@ -1407,20 +1407,20 @@ Accept wildcard characters: False
 ```
 
 ### -TotalReceiveVideoBitRateKb
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the maximum allowed bitrate (in kilobytes per second) for all the video used in a conference; that is, the combined total for all the video streams.
 The default value is 6000 kilobytes per second.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill TotalReceiveVideoBitRateKb Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the maximum allowed bitrate (in kilobytes per second) for all the video used in a conference; that is, the combined total for all the video streams.
 The default value is 50000 kilobytes per second.
@@ -1441,13 +1441,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowFederatedParticipantJoinAsSameEnterprise
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowFederatedParticipantJoinAsSameEnterprise Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True), allows federated meeting participants to join the meeting as though they were internal users rather than external users.
 
@@ -1467,13 +1467,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOfficeContent
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowOfficeContent Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to False, prevents users from using Office content in their conferences.
 
@@ -1493,13 +1493,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowQandA
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowQandA Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) the user will be able to include the Questions and Answers Manager in any online conference that he or she organizes.
 When set to False, the user will be prohibited from including Questions and Answers Manager in any of his or her conferences.
@@ -1572,13 +1572,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineMeetingPromptForLyncResources
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableOnlineMeetingPromptForLyncResources Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users will be prompted any time they schedule a meeting in Outlook that includes invitees (such as a meeting room) that would benefit from having the meeting held online.
 The default value is False.
@@ -1615,13 +1615,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new conferencing policy is being created.
 For example:

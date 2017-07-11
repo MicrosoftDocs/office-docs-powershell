@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsKerberosAccountAssignment
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Kerberos account assignments configured for use in the organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the Kerberos account assignments configured for use in the organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsKerberosAccountAssignment [-Filter <String>] [-LocalStore] [<CommonParamet
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -204,7 +204,7 @@ Get-CsKerberosAccountAssignment | Where-Object {$_.UserAccount -match "litwarein
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the site where the Kerberos account was assigned; for example: -Identity "site:Redmond".
 (Note that this is the Identity of the site, not of the computer account.) You cannot use wildcards when specifying the site identity.
@@ -214,7 +214,7 @@ If neither the Identity nor the Filter parameter is included, then Get-CsKerbero
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the site where the Kerberos account was assigned; for example: -Identity "site:Redmond".
 (Note that this is the Identity of the site, not of the computer account.) You cannot use wildcards when specifying the site identity.

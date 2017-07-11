@@ -6,16 +6,16 @@ schema: 2.0.0
 # Revoke-CsSetupPermission
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Revokes the Microsoft Lync Server 2010 setup permissions that have been granted on an Active Directory organizational unit (OU).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Revokes the Lync Server setup rights that have been granted on an Active Directory organizational unit (OU).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Revokes the Skype for Business Server 2015 setup rights that have been granted on an Active Directory organizational unit (OU).
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Revoke-CsSetupPermission -ComputerOU <String> [-Domain <Fqdn>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The domain preparation that takes place when you install Lync Server 2010 does not automatically add the permissions that enable members of the RTCUniversalServerAdmins group to run the Enable-CsTopology cmdlet.
 That means that, by default, you must be a domain administrator in order to enable a topology.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Revoke-CsSetupPermission"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The domain preparation that takes place when you install Lync Server does not automatically add the rights that enable members of the RTCUniversalServerAdmins group to run the Enable-CsTopology cmdlet.
 That means that, by default, you must be a domain administrator in order to enable a topology.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Revoke-CsSetupPermission"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The domain preparation that takes place when you install Skype for Business Server 2015 does not automatically add the rights that enable members of the RTCUniversalServerAdmins group to run the Enable-CsTopology cmdlet.
 That means that, by default, you must be a domain administrator in order to enable a topology.
@@ -105,7 +105,7 @@ Revoke-CsSetupPermission -ComputerOU "ou=CsServers,dc=litwareinc,dc=com"
 ## PARAMETERS
 
 ### -ComputerOU
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Distinguished name of the OU that contains the accounts for the computers where Lync Server will be (or has been) installed.
 For example: -ComputerOU "ou=CsServers,dc=litwareinc,dc=com".
@@ -117,7 +117,7 @@ For example:
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Distinguished name (DN) of the OU that contains the accounts for the computers where Lync Server will be (or has been) installed.
 For example: -ComputerOU "ou=CsServers,dc=litwareinc,dc=com".
@@ -129,7 +129,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Distinguished name (DN) of the OU that contains the accounts for the computers where Skype for Business Server 2015 will be (or has been) installed.
 For example:
@@ -157,14 +157,14 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the domain where the OU is located.
 If this parameter is not included, then Revoke-CsSetupPermission will look for the OU in the current domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the domain where the OU is located.
 If this parameter is not included, then the Revoke-CsSetupPermission cmdlet will look for the OU in the current domain.
@@ -185,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified name of the domain controller to be contacted when assigning the policy.
 For example: -DomainController atl-dc-001.litwareinc.com.
@@ -194,7 +194,7 @@ If not specified, Revoke-CsSetupPermission will contact the nearest available do
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified name of the domain controller to be contacted when assigning the policy.
 For example:
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified name of the global catalog server to be contacted when assigning the policy.
 For example: -GlobalCatalog atl-dc-001.litwareinc.com.
@@ -228,7 +228,7 @@ If not specified, Revoke-CsSetupPermission will contact the nearest available gl
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified name of the global catalog server to be contacted when assigning the policy.
 For example:
@@ -269,14 +269,14 @@ Accept wildcard characters: False
 ```
 
 ### -Report
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example: -Report "C:\Logs\OUPermissions.html"
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example:

@@ -6,14 +6,14 @@ schema: 2.0.0
 # Set-CsRgsHolidaySet
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of an existing Response Group holiday set.
 A Response Group holiday set is a collection of holidays.
 For example, you might have one holiday set for a United States (U.S.)-based queue (a set that might include a holiday for the Fourth of July) and a different set for a queue based in France.
 The latter queue might define a holiday for Bastille Day but not for the Fourth of July.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the property values of an existing Response Group holiday set.
 A Response Group holiday set is a collection of holidays.
@@ -30,7 +30,7 @@ Set-CsRgsHolidaySet [-Instance] <HolidaySet> [-Force] [-WhatIf] [-Confirm] [<Com
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application you can define business hours, which indicate the days of the week and hours of the day that agents are available to answer calls.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Set-CsRgsHolidaySet"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application you can define business hours, which indicate the days of the week and hours of the day that agents are available to answer calls.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRgsHolidaySet"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application you can define business hours, which indicate the days of the week and hours of the day that agents are available to answer calls.

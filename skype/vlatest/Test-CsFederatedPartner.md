@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsFederatedPartner
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Verifies the ability to connect to a federated domain.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Verifies the ability to connect to a federated domain.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ Test-CsFederatedPartner [-TargetFqdn] <String> [-Domain] <String> [-Certificate 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Test-CsFederatedPartner verifies your ability to connect to the domain of a federated partner.
 In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
@@ -36,7 +36,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsFederatedPartner"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Test-CsFederatedPartner verifies your ability to connect to the domain of a federated partner.
 In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
@@ -197,13 +197,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

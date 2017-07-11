@@ -6,20 +6,20 @@ schema: 2.0.0
 # Revoke-CsClientCertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client certificates provide a way for users to be authenticated when logging on to Microsoft Lync Server 2010.
 Certificates are particularly useful for telephones and other devices running Microsoft Lync 2010 Phone Edition where it is difficult to enter a user name and/or password.
 The Revoke-CsClientCertificate provides a way for administrators to revoke client certificates that have been issued to a user.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client certificates provide a way for users to be authenticated when logging on to Lync Server.
 Certificates are particularly useful for telephones and other devices running Lync Mobile where it is difficult to enter a user name and/or password.
 The Revoke-CsClientCertificate provides a way for administrators to revoke client certificates that have been issued to a user.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client certificates provide a way for users to be authenticated when logging on to Skype for Business Server 2015.
 Certificates are particularly useful for telephones and other devices running Skype for Business where it is difficult to enter a user name and/or password.
@@ -35,7 +35,7 @@ Revoke-CsClientCertificate [-Identity] <UserIdParameter> [-Force] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client certificates provide an alternate way for users to be authenticated by  Lync Server 2010.
 Instead of providing a user name and password, users present the system with an X.509 certificate.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Revoke-CsClientCertificate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client certificates provide an alternate way for users to be authenticated by Lync Server.
 Instead of providing a user name and password, users present the system with an X.509 certificate.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Revoke-CsClientCertificate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client certificates provide an alternate way for users to be authenticated by Skype for Business Server 2015.
 Instead of providing a user name and password, users present the system with an X.509 certificate.

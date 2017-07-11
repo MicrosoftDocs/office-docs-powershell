@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsArchivingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about how (or if) instant messaging (IM) sessions are archived in your organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about how (or if) instant messaging (IM) sessions are archived in your organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsArchivingConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users (or a selected subset of users).
 For other organizations, it's mandatory to keep such transcripts.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsArchivingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users (or a selected subset of users).
 For other organizations, it's mandatory to keep such transcripts.
@@ -82,7 +82,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsArchivingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users (or a selected subset of users).
 For other organizations, it's mandatory to keep such transcripts.
@@ -225,7 +225,7 @@ Get-CsArchivingConfiguration | Where-Object {$_.EnableArchiving -ne "None"}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the unique identifier for the collection of archiving settings you want to return.
 To refer to the global settings use this syntax: -Identity global.
@@ -237,7 +237,7 @@ If this parameter is not specified, then Get-CsArchivingConfiguration returns a 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique identifier for the collection of archiving settings you want to return.
 To refer to the global settings use this syntax: -Identity global.

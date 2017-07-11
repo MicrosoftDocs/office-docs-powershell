@@ -6,20 +6,20 @@ schema: 2.0.0
 # Set-CsSite
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the properties for any of your Microsoft Lync Server 2010 sites.
 Sites represent a collection of Lync Server 2010 pools and are typically designed around geographic regions.
 Lync Server includes two types of sites: data center sites and remote sites (branch office).
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the properties for any of your Lync Server sites.
 Sites represent a collection of Lync Server pools and are typically designed around geographic regions.
 Lync Server includes two types of sites: data center sites and remote sites (branch office).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the properties for any of your Skype for Business Server 2015 sites.
 Sites represent a collection of Skype for Business Server 2015 pools and are typically designed around geographic regions.
@@ -37,7 +37,7 @@ Set-CsSite [[-Identity] <XdsGlobalRelativeIdentity>] [-Description <String>] [-D
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 introduces a new concept to the Lync Server topology: sites.
 Sites (which should not be confused with Active Directory sites or Microsoft Exchange Server sites) are a collection of Lync Server pools and servers that are typically organized according to geography and network bandwidth.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSite"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server 2010 introduced a new concept to the Lync Server topology: sites.
 Sites (which should not be confused with Active Directory sites or Microsoft Exchange Server sites) are a collection of Lync Server pools and servers that are typically organized according to geography and network bandwidth.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsSite"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Lync Server 2010 introduced a new concept to the topology: sites.
 Sites (which should not be confused with Active Directory sites or Exchange sites) are a collection of Skype for Business Server 2015 pools and servers that are typically organized according to geography and network bandwidth.
@@ -171,14 +171,14 @@ Get-CsSite | Where-Object {$_.Description -eq $Null} | ForEach-Object {Set-CsSit
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the site to be modified; for example: -Identity "Redmond".
 Do not use the format "site:Redmond" when specifying the identity.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the site to be modified; for example:
 
@@ -219,14 +219,14 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Friendly name for the site.
 For example: -DisplayName "North America and South America".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Friendly name for the site.
 For example:
@@ -249,14 +249,14 @@ Accept wildcard characters: False
 ```
 
 ### -FederationRoute
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Edge Server used to provide a bridge between your internal network and the Internet.
 For example: -FederationRoute "EdgeServer:atl-edge-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Edge Server used to provide a bridge between your internal network and the Internet.
 For example:
@@ -311,13 +311,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

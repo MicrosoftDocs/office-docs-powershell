@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsDialInConferencingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes one or more collections of dial-in conferencing configuration settings.
 These settings determine how Microsoft Lync Server 2010 responds when users join or leave a dial-in conference.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more collections of dial-in conferencing configuration settings.
 These settings determine how Lync Server responds when users join or leave a dial-in conference.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more collections of dial-in conferencing configuration settings.
 These settings determine how Skype for Business Server 2015 responds when users join or leave a dial-in conference.
@@ -33,7 +33,7 @@ Remove-CsDialInConferencingConfiguration [-Identity] <XdsIdentity> [-Force] [-Wh
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When users join (or leave) a dial-in conference, Lync Server 2010 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When users join (or leave) a dial-in conference, Lync Server can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDialInConferencingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When users join (or leave) a dial-in conference, Skype for Business Server 2015 can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference itself.

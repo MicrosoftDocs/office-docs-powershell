@@ -6,20 +6,20 @@ schema: 2.0.0
 # New-CsAnnouncement
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Microsoft Lync Server 2010 announcement.
 Announcements are played when users dial a valid but unassigned phone number.
 An announcement can be a message (such as "This number is temporarily out of service") or a busy signal.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new Lync Server announcement.
 Announcements are played when users dial a valid but unassigned phone number.
 An announcement can be a message (such as "This number is temporarily out of service") or a busy signal.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new Skype for Business Server 2015 announcement.
 Announcements are played when users dial a valid but unassigned phone number.
@@ -45,7 +45,7 @@ New-CsAnnouncement -Parent <String> -Name <String> [-AudioFilePrompt <String>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 An organization can own phone numbers that are not assigned to users or phones, but that are still valid numbers that can be called.
 By default when someone dials one of those numbers, that person will receive a busy signal and the call may result in an error returned to the SIP client.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAnnouncement"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An organization can own phone numbers that are not assigned to users or phones, but that are still valid numbers that can be called.
 By default when someone dials one of those numbers, that person will receive a busy signal and the call may result in an error returned to the SIP client.
@@ -300,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A descriptive name for the Announcement.
 This name must be unique within the service.
@@ -308,7 +308,7 @@ This name will be used in the call to New-CsUnassignedNumber or Set-CsUnassigned
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A descriptive name for the Announcement.
 This name must be unique within the service.
@@ -350,7 +350,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The language in which the text-to-speech (TTS) prompt will be played.
 If a value is entered for TextToSpeechPrompt, this parameter is required.
@@ -360,7 +360,7 @@ The following is a list of valid values, followed by the language and locale in 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The language in which the text-to-speech (TTS) prompt will be played.
 If a value is entered for TextToSpeechPrompt, this parameter is required.
@@ -370,7 +370,7 @@ The following is a list of valid values, followed by the language and locale in 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The language in which the text-to-speech (TTS) prompt will be played.
 If a value is entered for TextToSpeechPrompt, this parameter is required.
@@ -448,14 +448,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

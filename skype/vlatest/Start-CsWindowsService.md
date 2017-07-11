@@ -6,16 +6,16 @@ schema: 2.0.0
 # Start-CsWindowsService
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Start-CsWindowsService enables you to start a Microsoft Lync Server 2010 service.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Start-CsWindowsService enables you to start a Lync Server service.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Start-CsWindowsService cmdlet enables you to start a Skype for Business Server 2015 service.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ Start-CsWindowsService [-InputObject <NTService>] [-NoWait] [-Force] [-Report <S
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Lync Server 2010 components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If one of your Lync Server services is currently stopped, you can restart that service by using the Start-CsWindowsService cmdlet.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Start-CsWindowsService"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If one of your Lync Server services is currently stopped, you can restart that service by using the Start-CsWindowsService cmdlet.
@@ -83,7 +83,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Start-CsWindowsService"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components run as standard Windows services; for example, the Conferencing Attendant application is actually a service named RTCCAA.
 If one of your Skype for Business Server 2015 services is currently stopped, you can restart that service by using the Start-CsWindowsService cmdlet.
@@ -228,7 +228,7 @@ Get-CsWindowsService | Where-Object {$_.Status -ne "Running"} | Start-CsWindowsS
 ## PARAMETERS
 
 ### -Name
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the Lync Server service you want to start.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -240,7 +240,7 @@ For those services, you might be able to use the Windows PowerShell Start-Servic
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the Skype for Business Server 2015 service you want to start.
 Note that you must use the service name (for example, RTCCAA) and not the service display name.
@@ -266,14 +266,14 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the remote computer hosting the service to be started; if this parameter is not included, then Start-CsWindowsService will start the specified service (or services) on the local computer.
 The remote computer should be referenced using its FQDN; for example, atl-cs-001.litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the remote computer hosting the service to be started; if this parameter is not included, then the Start-CsWindowsService cmdlet will start the specified service (or services) on the local computer.
 The remote computer should be referenced using its FQDN; for example, atl-cs-001.litwareinc.com.
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to start a service using an object reference rather than a service name.
 For example, if you use Get-CsWindowsService to return information about a service, and if you store the returned object in a variable named $x, you can then start the service using this command:
@@ -305,7 +305,7 @@ Start-CsWindowsService -InputObject $x.Name
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to start a service using an object reference rather than a service name.
 For example, if you use the Get-CsWindowsService cmdlet to return information about a service, and if you store the returned object in a variable named $x, you can then start the service using this command:

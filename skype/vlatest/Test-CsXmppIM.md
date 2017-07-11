@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsXmppIM
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies whether or not an instant message can be sent across an XMPP gateway.
 XMPP gateways enable Microsoft Lync Server 2013 Preview users to exchange instant message and presence information with users belonging to IM and presence providers that employ the extensible Messaging and Presence Protocol (XMPP).
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies whether or not an instant message can be sent across an XMPP gateway.
 XMPP gateways enable Skype for Business Server 2015 users to exchange instant message and presence information with users belonging to IM and presence providers that employ the extensible Messaging and Presence Protocol (XMPP).
@@ -37,7 +37,7 @@ Test-CsXmppIM [[-TargetFqdn] <String>] -Receiver <String> -UserCredential <PSCre
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsXmppIM"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsXmppIM cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Extensible Messaging and Presence Protocol (XMPP) is a standard communications protocol (based on XML) used for sending messages across the Internet.
 XMPP was originally named Jabber, and is supported by a number of Internet messaging and communication applications, including Google Talk and Facebook Chat.

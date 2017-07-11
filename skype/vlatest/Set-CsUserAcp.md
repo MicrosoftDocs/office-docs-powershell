@@ -6,16 +6,16 @@ schema: 2.0.0
 # Set-CsUserAcp
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Adds a new audio conferencing provider to a user or group of users, or modifies an existing audio conferencing provider already assigned to a user.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Adds a new audio conferencing provider to a user or group of users, or modifies an existing audio conferencing provider already assigned to a user.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsUserAcp \[-Identity\] \<UserIdParameter\> -TollNumber \<string\> -ParticipantPasscode \<string\> -Domain \<string\> -Name \<string\> \[-TollFreeNumbers \<string\[\]\>\] \[-Url \<string\>\] \[-IsDefault \<bool\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -30,7 +30,7 @@ Set-CsUserAcp [-Identity] <UserIdParameter> -Domain <String> -Name <String> -Par
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers offer a way for users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserAcp"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers offer a way for users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
@@ -84,11 +84,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserAcp"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers offer a way for users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
@@ -217,7 +217,7 @@ Set-CsUserAcp -Identity "Ken Myer" -TollNumber "14255551298" -ParticipantPassCod
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity of the user account to be modified.
 You can specify a user's identity using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory Domain Services (AD DS) display name (for example, Ken Myer).
@@ -228,13 +228,13 @@ For example, the Identity "* Smith" returns all the users with a display name th
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the user account to be modified.
 You can specify a user's identity using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory Domain Services display name (for example, Ken Myer).
@@ -259,20 +259,20 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Domain name of the audio conferencing provider.
 For example: -Domain "fabrikam.com".
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Domain Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Domain name of the audio conferencing provider.
 For example:
@@ -297,20 +297,20 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the audio conferencing provider.
 For example: -Name "Fabrikam Conference Services".
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Name Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the audio conferencing provider.
 For example:
@@ -333,20 +333,20 @@ Accept wildcard characters: False
 ```
 
 ### -ParticipantPasscode
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Passcode required when connecting to a conference by using the audio conferencing provider.
 For example: -PassCode "0712".
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ParticipantPasscode Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Passcode required when connecting to a conference by using the audio conferencing provider.
 For example:
@@ -369,20 +369,20 @@ Accept wildcard characters: False
 ```
 
 ### -TollNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Non-toll-free phone number used for audio conferences.
 For example: -TollNumber "14255551298".
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill TollNumber Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Non-toll-free phone number used for audio conferences.
 For example:
@@ -405,14 +405,14 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not this is the default audio conferencing provider for the user.
 Each user can only have one default provider.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill IsDefault Description}}
 
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 ```
 
 ### -TollFreeNumbers
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Collection of toll-free phone number used for audio conferences.
 For example: -TollFreeNumbers "18005551298".
@@ -440,13 +440,13 @@ To add multiple toll-free numbers, separate the individual numbers by using comm
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill TollFreeNumbers Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Collection of toll-free phone number used for audio conferences.
 For example:
@@ -473,20 +473,20 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Web URL for the audio conferencing provider; for example: -Url "http://acp.fabrikam.com".
 The web URL enables audio conferencing providers to point users to a webpage containing additional dial-in phone numbers, as well as information about the services offered by the audio conferencing provider.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Url Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Web URL for the audio conferencing provider; for example:
 
@@ -510,20 +510,20 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to pass a user object through the pipeline that represents the user having the audio conferencing provider removed.
 By default, the Set-CsUserAcp cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to pass an object through the pipeline that represents the user whose account properties are being configured.
 The PassThru parameter is required in such cases because, by default, the Set-CsUserAcp cmdlet does not pass objects through the pipeline.
@@ -544,13 +544,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -571,13 +571,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

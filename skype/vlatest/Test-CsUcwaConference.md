@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsUcwaConference
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of a pair of users to conduct an online conference using the Unified Communications Web API (UCWA).
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of a pair of users to schedule, join, and then conduct an online conference using the Unified Communications Web API (UCWA).
 This cmdlet was introduced in Lync Server 2013.
@@ -42,7 +42,7 @@ Test-CsUcwaConference [-Authentication <AuthenticationMechanism>] [-Force] [-Out
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsUcwaConference cmdlet verifies that a pair of test users can participant in an online conference using the Unified Communications Web API (UCWA).
 To do this, the cmdlet uses the Lync Server web ticket service to authenticate the two test users and register them with Lync Server.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsUcwaConference"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsUcwaConference cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsUcwaConference cmdlet verifies that a pair of test users can schedule, join, and then conduct an online conference using the Unified Communications Web API (UCWA).
 To do this, the cmdlet uses the Skype for Business Server 2015 web ticket service to authenticate the two test users and register them with Skype for Business Server 2015.
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used when running the test.
 Allowed values are:
@@ -224,7 +224,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used when running the test.
 Allowed values are:
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -ParticipantSipAddress
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address for the meeting participant.
 For example: -ParticipantSipAddress "sip:kenmyer@litwareinc.com".
@@ -364,7 +364,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the meeting participant.
 For example: -ParticipantSipAddress "sip:kenmyer@litwareinc.com".

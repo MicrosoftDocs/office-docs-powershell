@@ -6,16 +6,16 @@ schema: 2.0.0
 # Install-CsAdServerSchema
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Extends the Active Directory schema to allow for the installation of Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Extends the Active Directory schema to allow for the installation of Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Extends the Active Directory schema to allow for the installation of Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Install-CsAdServerSchema [-GlobalCatalog <Fqdn>] [-GlobalSettingsDomainControlle
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Lync Server 2010 stores most of its configuration information in its own database, the software also relies on Active Directory Domain Services (AD DS) as a storage location; for example, user-related information is stored as part of the user's Active Directory account.
 In order to do this, Lync Server 2010 must store these values in attributes that are not part of the typical Active Directory user account.
@@ -50,7 +50,7 @@ Lcscmd.exe /forest /action:SchemaPrep /SchemaType:Server
 
 Who can run this cmdlet: You must be an Active Directory schema administrator in the root domain and a local administrator on the schema master computer in order to run the Install-CsAdServerSchema cmdlet locally.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server stores most of its configuration information in its own database, the software also relies on Active Directory Domain Services (AD DS) as a storage location; for example, user-related information is stored as part of the user's Active Directory account.
 In order to do this, Lync Server must store these values in attributes that are not part of the typical Active Directory user account.
@@ -70,7 +70,7 @@ Lcscmd.exe /forest /action:SchemaPrep /SchemaType:Server
 
 Who can run this cmdlet: You must be an Active Directory schema administrator in the root domain and a local administrator on the schema master computer in order to run the Install-CsAdServerSchema cmdlet locally.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 stores most of its configuration information in its own database, the software also relies on Active Directory Domain Services as a storage location; for example, user-related information is stored as part of the user's Active Directory account.
 In order to do this, Skype for Business Server 2015 must store these values in attributes that are not part of the typical Active Directory user account.
@@ -144,14 +144,14 @@ Install-CsAdServerSchema -Ldf "C:\Schemas"
 ## PARAMETERS
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Install-CsAdServerSchema on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Install-CsAdServerSchema cmdlet on a computer with an account in your domain.
@@ -172,14 +172,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a domain controller in your domain.
 This parameter is not required if you are running Install-CsAdServerSchema on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller in your domain.
 This parameter is not required if you are running the Install-CsAdServerSchema cmdlet on a computer with an account in your domain.
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -Ldf
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Path to the folder containing the .LDF file to be imported; the .LDF (LDAP Data Interchange Format) file contains the required updates for the Active Directory schema.
 If this parameter is not included, Install-CsAdServerSchema will look for the file in the Lync Server 2010 installation path recorded in the registry.
@@ -208,7 +208,7 @@ The installation path will typically be C:\Program Files\Microsoft Lync Server 2
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Path to the folder containing the .LDF file to be imported; the .LDF (LDAP Data Interchange Format) file contains the required updates for the Active Directory schema.
 If this parameter is not included, Install-CsAdServerSchema will look for the file in the Lync Server installation path recorded in the registry.
@@ -216,7 +216,7 @@ The installation path will typically be C:\Program Files\Microsoft Lync Server 2
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Path to the folder containing the .LDF file to be imported; the .LDF (LDAP Data Interchange Format) file contains the required updates for the Active Directory schema.
 If this parameter is not included, the Install-CsAdServerSchema cmdlet will look for the file in the Skype for Business Server 2015 installation path recorded in the registry.

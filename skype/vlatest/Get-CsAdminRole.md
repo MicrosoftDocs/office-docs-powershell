@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsAdminRole
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the role-based access control (RBAC) roles used in your organization.
 RBAC roles are used to specify the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the role-based access control (RBAC) roles used in your organization.
 RBAC roles are used to specify the management tasks that users are allowed to carry out, and to determine the scope in which users will be allowed to perform these tasks.
@@ -37,7 +37,7 @@ Get-CsAdminRole [[-Sid] <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Microsoft Lync Server 2010.
 For example, instead of granting your organization's help desk full administrator privileges, you can give these employees very specific rights, such as the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -103,7 +103,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdminRole\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Lync Server.
 For example, instead of granting your organization's help desk full administrator privileges, you can give these employees very specific rights, such as the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -169,7 +169,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdminRole\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks in Skype for Business Server 2015.
 For example, instead of granting your organization's help desk full administrator privileges, you can give these employees very specific rights, such as the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 ```
 
 ### -Sid
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to use a security identifier (SID) to specify the RBAC role to be retrieved.
 SIDs are assigned by Lync Server 2010 at the time that the RBAC role is created and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.
@@ -492,7 +492,7 @@ This same SID can also be found on the corresponding Active Directory security g
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to use a security identifier (SID) to specify the RBAC role to be retrieved.
 SIDs are assigned by Lync Server at the time that the RBAC role is created, and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.
@@ -501,7 +501,7 @@ This same SID can also be found on the corresponding Active Directory security g
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use a security identifier (SID) to specify the RBAC role to be retrieved.
 SIDs are assigned by Skype for Business Server 2015 at the time that the RBAC role is created, and look similar to this: S-1-5-21-1573807623-1597889489-1765977225-1145.
@@ -524,13 +524,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the RBAC data from the local replica of the  Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the RBAC data from the local replica of the Central Management store rather than from the Central Management store itself.
 

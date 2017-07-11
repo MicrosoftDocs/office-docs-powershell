@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsPrivacyConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing set of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing set of privacy configuration settings.
 Privacy configuration settings help determine how much information users make available to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsPrivacyConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-EnablePrivacyMode \<bool\>\] \[-AutoInitiateContacts \<bool\>\] \[-PublishLocationDataDefault \<bool\>\] \[-DisplayPublishedPhotoDefault \<bool\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
@@ -50,7 +50,7 @@ Set-CsPrivacyConfiguration [[-Identity] <Object>] [-AutoInitiateContacts <Object
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPrivacyConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -92,11 +92,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPrivacyConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 gives users the opportunity to share a wealth of presence information with other people: they can publish a photograph of themselves; they can provide detailed location information; they can have presence information automatically made available to everyone in the organization (as opposed to having this information available only to people on their Contacts list).
 
@@ -219,7 +219,7 @@ Get-CsPrivacyConfiguration | Where-Object {$_.EnablePrivacyMode -eq $False} | Se
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the privacy configuration settings to be modified.
 To modify the global settings, use this syntax: -Identity global.
@@ -232,13 +232,13 @@ If this parameter is not specified then the global settings will be updated when
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the privacy configuration settings to be modified.
 To modify the global settings, use this syntax:
@@ -287,13 +287,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Instance Description}}
 
@@ -326,27 +326,27 @@ Accept wildcard characters: False
 ```
 
 ### -AutoInitiateContacts
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, Lync 2010 will automatically add all of your team members to your Contacts list.
 The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, Lync will automatically add your manager and your direct reports to your Contacts list.
 The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AutoInitiateContacts Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, Skype for Business will automatically add your manager and your direct reports to your Contacts list.
 The default value is True.
@@ -367,7 +367,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPublishedPhotoDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, the user's photo will automatically be published in Lync 2010.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -375,7 +375,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, the user's photo will automatically be published in Lync.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -383,13 +383,13 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisplayPublishedPhotoDefault Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, the user's photo will automatically be published in Skype for Business.
 If False, the user's photo will not be available unless he or she explicitly selects the option Let others see my photo.
@@ -411,7 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePrivacyMode
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 If True, gives users the opportunity to enable the advanced privacy mode.
 In advanced privacy mode, only people on your Contacts list will be allowed to view your presence information.
@@ -420,7 +420,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnablePrivacyMode Description}}
 
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishLocationDataDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If True, location data will automatically be published in Lync 2010.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -448,7 +448,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If True, location data will automatically be published in Lync Server.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -456,13 +456,13 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PublishLocationDataDefault Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, location data will automatically be published in Skype for Business.
 If False, location data will not be available unless the user explicitly selects the option Show Contacts My Location.
@@ -484,13 +484,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -510,13 +510,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the privacy configuration settings being modified.
 For example:
@@ -529,13 +529,13 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the privacy configuration settings being modified.
 For example:
@@ -566,13 +566,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -593,13 +593,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

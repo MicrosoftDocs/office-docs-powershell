@@ -6,17 +6,17 @@ schema: 2.0.0
 # Set-CsMeetingRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the property values of an existing a Microsoft Lync Server 2013 Preview meeting room.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsMeetingRoom \[-Identity\] \<UserIdParameter\> \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[-LineServerURI \<string\>\] \[-AudioVideoDisabled \<bool\>\] \[-RemoteCallControlTelephonyEnabled \<bool\>\] \[-PrivateLine \<string\>\] \[-AcpInfo \<MultiValuedProperty\[AcpInfo\]\>\] \[-HostedVoiceMail \<bool\>\] \[-EnterpriseVoiceEnabled \<bool\>\] \[-ExchangeArchivingPolicy \<ExchangeArchivingPolicyOptionsEnum\>\] \[-LineURI \<string\>\] \[-SipAddress \<string\>\] \[-Enabled \<bool\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the property values of an existing Skype for Business Server 2015 meeting room.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
@@ -36,7 +36,7 @@ Set-CsMeetingRoom [-Identity] <UserIdParameter>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -61,11 +61,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMeetingRoom"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsMeetingRoom cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -188,7 +188,7 @@ Get-CsMeetingRoom | Set-CsMeetingRoom -ExchangeArchivingPolicy "UseLyncArchiving
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the meeting room to be modified.
 Meeting room Identities are typically specified using one of four formats: 1) the room's SIP address; 2) the room's user principal name (UPN); 3) the room's domain name and logon name, in the form domain\logon (for example, litwareinc\room14); and, 4) the room's Active Directory display name (for example, Room 14).
@@ -196,7 +196,7 @@ You can also reference a room account by using the room's Active Directory disti
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -216,20 +216,20 @@ Accept wildcard characters: False
 ```
 
 ### -AcpInfo
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to assign one or more third-party audio conferencing providers to a meeting room.
 However, it is recommended that you use the Set-UserAcp cmdlet to assign Audio conferencing providers.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AcpInfo Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to assign one or more third-party audio conferencing providers to a meeting room.
 However, it is recommended that you use the Set-CsUserAcp cmdlet to assign Audio conferencing providers.
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -AudioVideoDisabled
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the room is allowed to make audio/visual (A/V) calls by using Microsoft Lync 2013 Preview.
 If set to True, the room will largely be restricted to sending and receiving instant messages.
@@ -259,13 +259,13 @@ You cannot disable A/V communications if a room is currently enabled for remote 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AudioVideoDisabled Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the room is allowed to make audio/video (A/V) calls by using Skype for Business.
 If set to True, the room will largely be restricted to sending and receiving instant messages.
@@ -288,13 +288,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -314,14 +314,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to connect to the specified domain controller in order to retrieve meeting room information.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-dc-001) or its fully qualified domain name (FQDN) (for example, atl-dc-001.litwareinc.com).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
@@ -341,7 +341,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the room has been enabled for Lync Server 2013 Preview.
 If you set this value to False, the room will no longer be able to log on to Lync Server; setting this value to True re-enables the meeting room's logon privileges.
@@ -353,13 +353,13 @@ When you run Disable-CsMeetingRoom, all the Lync Server data associated with tha
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Enabled Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the room has been enabled for Skype for Business Server 2015.
 If you set this value to False, the room will no longer be able to log on to Skype for Business Server 2015; setting this value to True re-enables the meeting room's logon privileges.
@@ -385,14 +385,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnterpriseVoiceEnabled
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether the room has been enabled for Enterprise Voice, which is the Microsoft implementation of Voice over Internet Protocol (VoIP).
 With Enterprise Voice, rooms can make telephone calls using the Internet rather than using the standard telephone network.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnterpriseVoiceEnabled Description}}
 
@@ -412,7 +412,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates how (and where) the room's instant messaging and conferencing sessions will be archived.
 Allowed values are:
@@ -424,13 +424,13 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ExchangeArchivingPolicy Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates how (and where) the room's instant messaging and conferencing sessions will be archived.
 Allowed values are:
@@ -459,20 +459,20 @@ Accept wildcard characters: False
 ```
 
 ### -HostedVoiceMail
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, enables a room's voice mail calls to be routed to a hosted version of Microsoft Exchange Server 2013 Preview.
 In addition, setting this option to True enables rooms to directly place a call to another user's voice mail.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill HostedVoiceMail Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, enables a room's voice mail calls to be routed to a hosted version of Exchange.
 In addition, setting this option to True enables rooms to directly place a call to another user's voice mail.
@@ -493,7 +493,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineServerURI
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The URI of the remote call control telephone gateway assigned to the room.
 The LineServerUri is the gateway URI, prefaced by "sip:".
@@ -503,7 +503,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LineServerURI Description}}
 
@@ -523,7 +523,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineURI
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Phone number assigned to the room.
 The line Uniform Resource Identifier (URI) must be specified using the E.164 format and use the "TEL:" prefix.
@@ -537,7 +537,7 @@ Any extension number should be added to the end of the line URI, for example:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LineURI Description}}
 
@@ -557,14 +557,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a meeting room object through the pipeline that represents the meeting room being modified.
 By default, the Set-CsMeetingRoom cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
@@ -584,7 +584,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateLine
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Phone number for the room private telephone line.
 A private line is a phone number that is not published in Active Directory Domain Services (AD DS) and, as a result, is not readily available to other people.
@@ -598,7 +598,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PrivateLine Description}}
 
@@ -618,7 +618,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteCallControlTelephonyEnabled
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the room has been enabled for remote call control telephony.
 When enabled for remote call control, a room can employ Lync Server 2013 Preview to answer phone calls made to his or her desk phone.
@@ -631,13 +631,13 @@ To be enabled for remote call control, a room must also have both a LineUri and 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RemoteCallControlTelephonyEnabled Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the room has been enabled for remote call control telephony.
 When enabled for remote call control, a room can employ Skype for Business Server 2015 to answer phone calls made to his or her desk phone.
@@ -664,7 +664,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier (similar to an email address) that allows the room to communicate using SIP devices such as Lync 2013 Preview.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example:
@@ -673,13 +673,13 @@ The SIP address must use the sip: prefix as well as a valid SIP domain; for exam
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SipAddress Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier (similar to an email address) that allows the room to communicate using SIP devices such as Skype for Business.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example:
@@ -702,13 +702,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

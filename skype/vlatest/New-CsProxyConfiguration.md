@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsProxyConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of proxy configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of proxy configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ New-CsProxyConfiguration [-Identity] <XdsIdentity> [-AcceptClientCompression <Bo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 enables you to manage your proxy servers through proxy server configuration settings.
 These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsProxyConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables you to manage your proxy servers through proxy server configuration settings.
 These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsProxyConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables you to manage your proxy servers through proxy server configuration settings.
 These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
@@ -168,7 +168,7 @@ Set-CsProxyConfiguration -Instance $x
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the proxy server configuration settings to be created.
 Proxy server configuration settings can only be created at the service scope, and only for the Edge Server and Registrar services.
@@ -179,7 +179,7 @@ To specify the Identity for your new proxy server settings, use syntax similar t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the proxy server configuration settings to be created.
 Proxy server configuration settings can only be created at the service scope, and only for the Edge Server and Registrar services.
@@ -356,14 +356,14 @@ Accept wildcard characters: False
 ```
 
 ### -UseKerberosForClientToProxyAuth
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True (the default value), client endpoints will be allowed to use the Kerberos protocol for authentication.
 Although Kerberos is a more secure protocol than NTLM, it cannot be used if the client belongs to a different domain than the server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value), client endpoints will be allowed to use the Kerberos protocol for authentication.
 Although Kerberos is a more secure protocol than NTLM, it cannot be used if the client belongs to a different realm than the server.
@@ -418,14 +418,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -478,21 +478,21 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNtlmFor2010AndLaterClients
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, users logging on from Microsoft Lync 2010 must use the Kerberos protocol for authentication.
 The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, users logging on from Lync must use the Kerberos protocol for authentication.
 The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users logging on from Skype for Business must use the Kerberos protocol for authentication.
 The default value is False.
@@ -513,20 +513,20 @@ Accept wildcard characters: False
 ```
 
 ### -DnsCacheRecordCount
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill DnsCacheRecordCount Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Maximum number of records that can be maintained in the DNS record cache.
 The default value is 30000.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Maximum number of records that can be maintained in the DNS record cache.
 The default value is 3000.

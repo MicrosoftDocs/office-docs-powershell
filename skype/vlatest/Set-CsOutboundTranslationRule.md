@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsOutboundTranslationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing outbound translation rule.
 An outbound translation rule converts phone numbers to the local dialing format for interaction with private branch exchange (PBX) systems.
@@ -34,7 +34,7 @@ Set-CsOutboundTranslationRule [-Instance <PSObject>] [-Description <String>] [-P
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 normalizes phone numbers to E.164 format.
 However, many private branch exchange (PBX) systems aren't able to work with this format.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsOutboundTranslationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server normalizes phone numbers to E.164 format.
 However, many private branch exchange (PBX) systems aren't able to work with this format.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsOutboundTranslationRule"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 normalizes phone numbers to E.164 format.
 However, many private branch exchange (PBX) systems aren't able to work with this format.
@@ -207,21 +207,21 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 An object reference to an outbound translation rule. 
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.TranslationRule, which can be retrieved by calling Get-CsOutboundTranslationRule.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 An object reference to an outbound translation rule.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.TranslationRule, which can be retrieved by calling Get-CsOutboundTranslationRule.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An object reference to an outbound translation rule.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.TranslationRule, which can be retrieved by calling the Get-CsOutboundTranslationRule cmdlet.

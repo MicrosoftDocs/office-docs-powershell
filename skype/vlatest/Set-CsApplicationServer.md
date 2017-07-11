@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsApplicationServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify configuration properties of one or more servers running the Application service.
 These servers (also known as Application Servers) host software programs, such as the Call Park application, that were developed using the Microsoft Unified Communications Managed API (UCMA) set.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify configuration properties of one or more servers running the Application service.
 These servers (also known as Application Servers) host software programs, such as the Call Park application, that were developed using the Microsoft Unified Communications Managed API (UCMA) set.
@@ -31,7 +31,7 @@ Set-CsApplicationServer [[-Identity] <XdsGlobalRelativeIdentity>] [-ApplicationD
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Application service hosts a number of Microsoft Lync Server 2010 programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
 The Application service takes these programs and fully integrates them into the Lync Server 2010 environment.
@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsApplicationServer"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Application service hosts a number of Lync Server programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
 The Application service takes these programs and fully integrates them into the Lync Server environment.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsApplicationServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Application service hosts a number of Skype for Business Server 2015 programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
 The Application service takes these programs and fully integrates them into the Skype for Business Server 2015 environment.
@@ -480,13 +480,13 @@ Accept wildcard characters: False
 ```
 
 ### -Registrar
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Registrar Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Fully qualified domain name of the Registrar associated with the Policy Decision Point Server.
 

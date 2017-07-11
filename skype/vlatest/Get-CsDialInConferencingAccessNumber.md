@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsDialInConferencingAccessNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about all the dial-in conferencing access numbers configured for use in your organization.
 Dial-in conferencing provides a way for users to use a "regular" telephone mobile phone, or device on the public switched telephone network (PSTN) to join the audio portion of an online conference.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about all the dial-in conferencing access numbers configured for use in your organization.
 Dial-in conferencing provides a way for users to use a "regular" telephone mobile phone, or device on the public switched telephone network (PSTN) to join the audio portion of an online conference.
@@ -43,7 +43,7 @@ Get-CsDialInConferencingAccessNumber [-Credential <PSCredential>] [-DomainContro
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -85,7 +85,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -378,7 +378,7 @@ Get-CsDialInConferencingAccessNumber | Where-Object {$_.SecondaryLanguages -cont
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address of the dial-in conferencing access number (that is, the contact object that represents the number) to be retrieved.
 You must include the "sip:" prefix when specifying the Identity; for example: -Identity sip:RedmondDialIn@litwareinc.com.
@@ -387,7 +387,7 @@ If this parameter is not specified, then Get-CsDialInConferencingAccessNumber wi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address of the dial-in conferencing access number (that is, the contact object that represents the number) to be retrieved.
 You must include the "sip:" prefix when specifying the Identity; for example: -Identity sip:RedmondDialIn@litwareinc.com.
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to run the Get-CsDialInConferencingAccessNumber cmdlet under alternate credentials; this might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
 
@@ -419,7 +419,7 @@ For details, see the Get-Credential Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsDialInConferencingAccessNumber cmdlet under alternate credentials; this might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
 
@@ -479,7 +479,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on specific attributes for Microsoft Lync Server 2010.
 For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
@@ -489,7 +489,7 @@ For example, a filter that returns only access numbers that have the 1-800 prefi
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on specific attributes for Lync Server.
 For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
@@ -499,7 +499,7 @@ For example, a filter that returns only access numbers that have the 1-800 prefi
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on specific attributes for Skype for Business Server 2015.
 For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
@@ -543,7 +543,7 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Returns all the dial-in conferencing access numbers associated with the specified dial plan region.
 For example, to return all the dial-in numbers for the Northwest region, use this syntax: -Region Northwest.
@@ -561,7 +561,7 @@ For details, see the Set-CsDialInConferencingAccessNumber Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns all the dial-in conferencing access numbers associated with the specified dial plan region.
 For example, to return all the dial-in numbers for the Northwest region, use this syntax: -Region Northwest.

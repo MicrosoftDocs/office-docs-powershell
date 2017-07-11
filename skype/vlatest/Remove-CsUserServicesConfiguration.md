@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsUserServicesConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
@@ -26,7 +26,7 @@ Remove-CsUserServicesConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserServicesConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUserServicesConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
 In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
@@ -172,7 +172,7 @@ Get-CsUserServicesConfiguration | Where-Object {$_.MaxContacts -gt 250} | Remove
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the User Services configuration settings to be removed.
 To delete settings configured at the site scope, use syntax similar to this: -Identity site:Redmond.
@@ -184,7 +184,7 @@ Instead, all the properties in that collection will be reset to their default va
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the User Services configuration settings to be removed.
 To delete settings configured at the site scope, use syntax similar to this:

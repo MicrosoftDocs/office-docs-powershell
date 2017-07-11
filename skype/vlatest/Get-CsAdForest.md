@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsAdForest
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information indicating whether your Active Directory forest has been correctly configured to allow for the installation of Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information indicating whether your Active Directory forest has been correctly configured to allow for the installation of Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information indicating whether your Active Directory forest has been correctly configured to allow for the installation of Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsAdForest [-GlobalCatalog <Fqdn>] [-GlobalSettingsDomainController <Fqdn>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Before you can install Lync Server 2010, you must make a number of forest-level changes to Active Directory Domain Services (AD DS).
 This includes creating display specifiers and objects specific to Lync Server, creating the universal security groups that are needed to manage Lync Server, and granting global settings object access permissions to these groups.
@@ -50,7 +50,7 @@ Typically all domain members have this permission.
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAdForest"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Before you can install Lync Server, you must make a number of forest-level changes to Active Directory Domain Services (AD DS).
 This includes creating display specifiers and objects specific to Lync Server, creating the universal security groups that are needed to manage Lync Server, and granting global settings object access permissions to these groups.
@@ -70,7 +70,7 @@ Typically all domain members have this permission.
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdForest"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Before you can install Skype for Business Server 2015, you must make a number of forest-level changes to Active Directory Domain Services.
 This includes creating display specifiers and objects specific to Skype for Business Server 2015, creating the universal security groups that are needed to manage Skype for Business Server 2015, and granting global settings object access permissions to these groups.
@@ -144,14 +144,14 @@ Get-CsAdForest -Report C:\Logs\ForestState.html
 ## PARAMETERS
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running Get-CsAdForest on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of a global catalog server in your domain.
 This parameter is not required if you are running the Get-CsAdForest cmdlet on a computer with an account in your domain.
@@ -223,13 +223,13 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPrepareCheck
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill SkipPrepareCheck Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True ($True), causes Get-CsAdForest to run without first doing its initial preparation checks.
 

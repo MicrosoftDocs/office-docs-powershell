@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsAddressBookConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of Address Book configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of Address Book configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -28,7 +28,7 @@ New-CsAddressBookConfiguration [-Identity] <XdsIdentity> [-EnableFileGeneration 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Address Book servers are intermediaries between AD DS and Microsoft Lync Server 2010.
 The Address Book server ensures that the user information stored in Lync Server 2010 is in synch with the user information stored in AD DS.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsAddressBookConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between AD DS and Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in AD DS.
@@ -74,7 +74,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAddressBookConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between AD DS and Skype for Business Server 2015.
 The Address Book server ensures that the user information stored in Skype for Business Server 2015 is in synch with the user information stored in AD DS.
@@ -262,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreGenericRules
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Lync Server 2010.
@@ -271,7 +271,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Lync Server.
@@ -280,7 +280,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the Address Book server ignores the generic normalization rules used when parsing phone numbers.
 Generic rules are the rules that are built into Skype for Business Server 2015.
@@ -303,7 +303,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeepDuration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the amount of time (in days) that Address Book servers will keep change files.
 Change files older than the value of the KeepDuration property will be deleted.
@@ -312,7 +312,7 @@ The default value is 7 days.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Specifies the amount of time (in days) that Address Book servers will keep change files.
 Change files older than the value of the KeepDuration property will be deleted.
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDeltaFileSizePercentage
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When changes are made to Active Directory (such as a new user being enabled for Lync Server) the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information; Lync 2010 can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -346,7 +346,7 @@ MaxDeltaFileSizePercentage must be entered as a percentage value, from 1 to 100,
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When changes are made to Active Directory (such as a new user being enabled for Lync Server) the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information; Lync can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -357,7 +357,7 @@ MaxDeltaFileSizePercentage must be entered as a percentage value, from 1 to 100,
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When changes are made to Active Directory (such as a new user being enabled for Skype for Business Server 2015) the Address Book server typically records these changes in a "delta file," a file consisting only of the updated information; Skype for Business can then download the delta files rather than a complete Address Book file.
 The MaxDeltaFileSizePercentage property determines how large the delta files can get before they are incorporated into the complete Address Book file.
@@ -454,14 +454,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsAudioConferencingProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests to see if a user can connect to his or her audio conferencing provider.
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers enable users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests to see if a user can connect to his or her audio conferencing provider.
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
@@ -40,7 +40,7 @@ Test-CsAudioConferencingProvider [[-TargetFqdn] <String>] -UserCredential <PSCre
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers enable users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
@@ -62,7 +62,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsAudioConferencingProvider"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An audio conferencing provider is a third-party company that provides organizations with conferencing services.
 Among other things, audio conferencing providers enable users located off site, and not connected to the corporate network or the Internet, to participate in the audio portion of a conference or meeting.
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -DialoutUserSipAddress
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address for the dialout user account to be tested.
 For example: -DialoutUserSipAddress "sip:pilar@litwareinc.com".
@@ -247,7 +247,7 @@ The DaloutUserSipAddress parameter must reference the same user account as Dialo
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the dialout user account to be tested.
 For example: -DialoutUserSipAddress "sip:pilar@litwareinc.com".

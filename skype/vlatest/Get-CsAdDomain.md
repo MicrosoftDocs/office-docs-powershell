@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsAdDomain
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information indicating whether Active Directory Domain Services (AD DS) has been correctly configured to allow for the installation of Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information indicating whether Active Directory Domain Services (AD DS) has been correctly configured to allow for the installation of Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information indicating whether Active Directory Domain Services has been correctly configured to allow for the installation of Skype for Business Server 2015.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsAdDomain [-Domain <Fqdn>] [-DomainController <Fqdn>] [-GlobalCatalog <Fqdn
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Before you can install Lync Server 2010 your domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Lync Server,  as well as assigning the required Access Control Entries to the universal groups used for managing and operating Lync Server.
 The Get-CsAdDomain cmdlet returns a single value that tells you whether or not Lync Server can be installed on a domain.
@@ -50,7 +50,7 @@ Typically all domain members have this permission.
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAdDomain"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Before you can install Lync Server your domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Lync Server, in addition to assigning the required Access Control Entries to the universal groups used for managing and operating Lync Server.
 The Get-CsAdDomain cmdlet returns a single value that tells you whether or not Lync Server can be installed on a domain.
@@ -70,7 +70,7 @@ Typically all domain members have this permission.
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdDomain"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Before you can install Skype for Business Server 2015 your domain must be correctly prepared, a process that includes extending the Active Directory schema to allow for the addition of attributes specific to Skype for Business Server 2015, in addition to assigning the required Access Control Entries to the universal groups used for managing and operating Skype for Business Server 2015.
 The Get-CsAdDomain cmdlet returns a single value that tells you whether or not Skype for Business Server 2015 can be installed on a domain.
@@ -192,14 +192,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables administrators to specify the FQDN of the domain controller to be used when running Get-CsAdDomain.
 If not specified, the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to specify the FQDN of the domain controller to be used when running the Get-CsAdDomain cmdlet.
 If not specified, the cmdlet will use the first available domain controller.
@@ -220,21 +220,21 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Get-CsAdDomain  on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Get-CsAdDomain on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Get-CsAdDomain cmdlet on a computer with an account in your domain.

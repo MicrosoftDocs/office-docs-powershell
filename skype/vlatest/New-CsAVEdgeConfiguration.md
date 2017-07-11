@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsAVEdgeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of configuration settings for computers running the A/V Edge service (these computers are also known as A/V Edge servers).
 An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of configuration settings for computers running the A/V Edge service (these computers are also known as A/V Edge servers).
 An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
@@ -27,7 +27,7 @@ New-CsAVEdgeConfiguration [-Identity] <XdsIdentity> [-MaxTokenLifetime <TimeSpan
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Microsoft Lync Server 2010 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsAVEdgeConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Lync Server across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
@@ -71,7 +71,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAVEdgeConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
 Among other things, this enables users to use Skype for Business Server 2015 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
@@ -233,14 +233,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

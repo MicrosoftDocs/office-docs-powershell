@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsCommonAreaPhone
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of a common area phone managed by Microsoft Lync Server 2010.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the property values of a common area phone managed by Lync Server.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the property values of a common area phone managed by Skype for Business Server 2015.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
@@ -35,7 +35,7 @@ Set-CsCommonAreaPhone [-Identity] <UserIdParameter> [-Enabled <Boolean>] [-Descr
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCommonAreaPhone"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -90,7 +90,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCommonAreaPhone"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
@@ -214,7 +214,7 @@ Get-CsCommonAreaPhone -Filter {Description -eq $Null} | Set-CsCommonAreaPhone -D
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the common area phone.
 Common area phones are identified using the Active Directory distinguished name of the associated contact object.
@@ -223,7 +223,7 @@ Because of that you might find it easier to retrieve common area phones by using
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the common area phone.
 Common area phones are identified using the Active Directory distinguished name of the associated contact object.
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether or not the contact object for the common area phone has been enabled for Lync Server 2010.
 
@@ -255,7 +255,7 @@ If you later re-enable the account by using the Enabled parameter, the associate
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether or not the contact object for the common area phone has been enabled for Lync Server.
 
@@ -264,7 +264,7 @@ If you later re-enable the account by using the Enabled parameter, the associate
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether or not the contact object for the common area phone has been enabled for Skype for Business Server 2015.
 
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNumber
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Phone number as displayed in Microsoft Lync 2010.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
@@ -329,7 +329,7 @@ When choosing a display number, keep in mind that this number will be shown on t
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Phone number as displayed in Lync.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
@@ -338,7 +338,7 @@ When choosing a display number, keep in mind that this number will be shown on t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Phone number as displayed in Skype for Business.
 The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
@@ -395,7 +395,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unique identifier that allows the common area phone to communicate with SIP devices such as Lync 2010.
 The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
@@ -403,7 +403,7 @@ For example: sip:bldg14lobby@litwareinc.com.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier that allows the common area phone to communicate with SIP devices such as Lync.
 The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
@@ -411,7 +411,7 @@ For example: sip:bldg14lobby@litwareinc.com.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier that allows the common area phone to communicate with SIP devices such as Skype for Business.
 The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
@@ -500,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
@@ -512,7 +512,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:

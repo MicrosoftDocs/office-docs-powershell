@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsAccessEdgeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of an existing collection of Access Edge configuration settings for computers running the Access Edge service.
 The Access Edge service running on these computers (also known as Edge servers) provides a way for users outside your internal network to communicate with users inside that internal network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the property values of an existing collection of Access Edge configuration settings for computers running the Access Edge service.
 The Access Edge service running on these computers (also known as Edge servers) provides a way for users outside your internal network to communicate with users inside that internal network.
@@ -69,7 +69,7 @@ Set-CsAccessEdgeConfiguration [-AllowAnonymousUsers <Boolean>] [-AllowFederatedU
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Microsoft Lync Server 2010 to people who are not logged on to your internal network.
 For example, if you have remote users, authenticated users who log on to Lync Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
@@ -87,7 +87,7 @@ To return a list of all the role-based access control RBAC roles this cmdlet has
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAccessEdgeConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Lync Server to people who are not logged on to your internal network.
 For example, if you have remote users, authenticated users who log on to Lync Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
@@ -105,7 +105,7 @@ To return a list of all the role-based access control RBAC roles this cmdlet has
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAccessEdgeConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Skype for Business Server 2015 to people who are not logged on to your internal network.
 For example, if you have remote users, authenticated users who log on to Skype for Business Server 2015 over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
@@ -206,7 +206,7 @@ Set-CsAccessEdgeConfiguration -UseDnsSrvRouting -EnablePartnerDiscovery $True
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the Access Edge configuration settings to be returned.
 Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling Set-CsAccessEdgeConfiguration.
@@ -214,7 +214,7 @@ However, if you prefer, you can use the following syntax to modify the global se
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the Access Edge configuration settings to be returned.
 Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the Set-CsAccessEdgeConfiguration cmdlet.
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOutsideUsers
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates whether users can access Lync Server across the Internet.
 This includes both anonymous users and remote users who are trying to log on to the system.
@@ -295,7 +295,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether users can access Skype for Business Server 2015 across the Internet.
 This includes both anonymous users and remote users who are trying to log on to the system.
@@ -317,14 +317,14 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultRouteFqdn
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Fully qualified domain name (FQDN) of the server used for federation requests.
 This parameter is required if you use default routing.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Fully qualified domain name (FQDN) of the server used for federation requests.
 This parameter is required if you use default routing.
@@ -365,7 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePartnerDiscovery
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If True, Lync Server will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
 If False, Lync Server will only federate with domains found on the AllowedDomains list.
@@ -374,7 +374,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If True, Skype for Business Server 2015 will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
 If False, Skype for Business Server 2015 will only federate with domains found on the AllowedDomains list.
@@ -575,13 +575,13 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultRouting
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill UseDefaultRouting Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates that administrators must specify the fully qualified domain name of the server used to send and receive federation requests.
 If you include the UseDefaultRouting parameter then you must also include the DefaultRouteFqdn parameter.
@@ -671,13 +671,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDiscoveredPartnerContactsLimit
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The default value is true ($True).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value), enables user enumeration protection for Discovered Partner federated peers.
 

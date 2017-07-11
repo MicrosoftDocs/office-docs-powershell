@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsMobilityPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves information about the mobility policies currently in use in an organization.
 Mobility policies determine whether or not a user can use Lync Mobile.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsMobilityPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Include \<PolicyFilter\>\] \[-ApplicableTo \<UserIdParameter\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 Get-CsMobilityPolicy \[-Tenant \<guid\>\] \[-Include \<PolicyFilter\>\] \[-ApplicableTo \<UserIdParameter\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves information about the mobility policies currently in use in an organization.
 Mobility policies determine whether or not a user can use Skype for Business Mobile.
@@ -48,7 +48,7 @@ Get-CsMobilityPolicy [[-Identity] <Object>] [-ApplicableTo <Object>] [-BypassDua
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Mobile is a client application that enables users to run Lync on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -63,11 +63,11 @@ Mobility policies can be configured at the global, site, or the per-user scope, 
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsMobilityPolicy cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Mobile is a client application that enables users to run Skype for Business on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -177,7 +177,7 @@ Get-CsMobilityPolicy | Where-Object {$_.EnableOutsideVoice -eq $False}
 ## PARAMETERS
 
 ### -Filter
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 For example, to return all the policies configured at the site scope use this syntax:
@@ -190,7 +190,7 @@ To return a collection of all the per-user policies, use this syntax:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -210,7 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier of the mobility policy to be returned.
 To refer to the global policy, use this syntax:
@@ -229,13 +229,13 @@ If this parameter is not specified, then Get-CsMobilityPolicy returns a collecti
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the mobility policy to be returned.
 To refer to the global policy, use this syntax:
@@ -281,13 +281,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the mobility policy data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 

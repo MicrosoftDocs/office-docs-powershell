@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsCdrConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
 This usage data includes information about who called whom, when they called, and how long they talked.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified collection of call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
@@ -28,7 +28,7 @@ Remove-CsCdrConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server 2010 capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging; file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.(However, CDR does not make a recording of the call itself.)
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsCdrConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call detail recording (CDR) provides a way for you to track usage of Lync Server capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging; file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -77,7 +77,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsCdrConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging; file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.

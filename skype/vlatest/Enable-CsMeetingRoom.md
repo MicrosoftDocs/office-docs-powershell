@@ -6,7 +6,7 @@ schema: 2.0.0
 # Enable-CsMeetingRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables a Microsoft Lync Server 2013 Preview meeting room.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
@@ -14,11 +14,11 @@ To enable a meeting room you must first create an Active Directory user account 
 Note that, although meeting room objects are based on user accounts, these objects will not show up when you run the Get-CsUser cmdlet.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Enable-CsMeetingRoom \[-Identity\] \<UserIdParameter\> \[-RegistrarPool \<Fqdn\>\] \[-SipAddressType \<AddressType\>\] \[-SipDomain \<Fqdn\>\] \[-SipAddress \<string\>\] \[-HostingProviderProxyFqdn \<Fqdn\>\] \[-OriginatorSid \<SecurityIdentifier\>\] \[-ProxyPool \<Fqdn\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables a Skype for Business Server 2015 meeting room.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
@@ -38,7 +38,7 @@ Enable-CsMeetingRoom [-Identity] <UserIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -63,11 +63,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Enable-CsMeetingRoom"}
 
 Lync Server Control Panel: The functions carried out by the Enable-CsMeetingRoom cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -146,7 +146,7 @@ Get-CsAdUser -OU "OU=MeetingRooms,dc=litwareinc,dc=com" | Enable-CsMeetingRoom -
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the Identity of the user account to be configured as a meeting room.
 Identities are typically specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\room14); and, 4) the user's Active Directory display name (for example, Room 14).
@@ -158,13 +158,13 @@ For example, the Identity "* Smith" returns all the user who have a display name
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the user account to be configured as a meeting room.
 Identities are typically specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\room14); and, 4) the user's Active Directory display name (for example, Room 14).
@@ -190,13 +190,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -216,14 +216,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to connect to the specified domain controller in order to enable a meeting room.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-dc-001) or its fully qualified domain name (FQDN) (for example, atl-dc-001.litwareinc.com).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
@@ -243,20 +243,20 @@ Accept wildcard characters: False
 ```
 
 ### -HostingProviderProxyFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the hosting provider proxy server.
 This parameter is used only with Microsoft Lync Online Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill HostingProviderProxyFqdn Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the hosting provider proxy server.
 This parameter is used only with Skype for Business Online.
@@ -277,7 +277,7 @@ Accept wildcard characters: False
 ```
 
 ### -OriginatorSid
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Value of the msRTCSIP-OriginatorSID attribute.
 This Active Directory attribute is used to enable single sign-on.
@@ -285,13 +285,13 @@ This parameter is used only with Microsoft Lync Online Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill OriginatorSid Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Value of the msRTCSIP-OriginatorSID attribute.
 This Active Directory attribute is used to enable single sign-on.
@@ -313,20 +313,20 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to pass a meeting room object through the pipeline that represents the meeting room being enabled for Lync Server.
 By default, the Enable-CsMeetingRoom cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to pass a meeting room object through the pipeline that represents the meeting room being enabled for Skype for Business Server 2015.
 By default, the Enable-CsMeetingRoom cmdlet does not pass objects through the pipeline.
@@ -347,20 +347,20 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Proxy pool name.
 This parameter is used only with Microsoft Lync Online Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ProxyPool Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Proxy pool name.
 This parameter is used only with Skype for Business Online.
@@ -381,19 +381,19 @@ Accept wildcard characters: False
 ```
 
 ### -RegistrarPool
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the Registrar pool where the meeting room's Lync Server account will be homed.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RegistrarPool Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Registrar pool where the meeting room's Skype for Business Server 2015 account will be homed.
 
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to assign the meeting room a specific SIP address.
 When specifying the SIP address, preface the address with "sip:".
@@ -428,13 +428,13 @@ Instead, you must auto-generate SIP address for those rooms by using the SipAddr
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SipAddress Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to assign the meeting room a specific SIP address.
 When specifying the SIP address, preface the address with "sip:".
@@ -463,7 +463,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddressType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Instructs Lync Server to auto-generate a SIP address for the new meeting room.
 In order to have Lync Server auto-generate the SIP address, you must include the SipAddressType parameter and use one of the following parameter values:
@@ -476,13 +476,13 @@ The SipAddressType parameter is not required if you use the SIPAddress parameter
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SipAddressType Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Instructs Skype for Business Server 2015 to auto-generate a SIP address for the new meeting room.
 In order to have Skype for Business Server 2015 auto-generate the SIP address, you must include the SipAddressType parameter and use one of the following parameter values:
@@ -519,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipDomain
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The SIP domain for the meeting room being enabled.
 This parameter is required if you use the SIPAddressType parameter to have Lync Server auto-generate a SIP address for the user and you based SIP addresses on the SamAccountName or the user's first name and last name.
@@ -527,13 +527,13 @@ This parameter is not required if you base SIP addresses on the user's email add
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SipDomain Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The SIP domain for the meeting room being enabled.
 This parameter is required if you use the SIPAddressType parameter to have Skype for Business Server 2015 auto-generate a SIP address for the user and you based SIP addresses on the SamAccountName or the user's first name and last name.
@@ -555,13 +555,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

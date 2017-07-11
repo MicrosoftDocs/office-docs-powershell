@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsPersistentChatAddin
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to configure a new Persistent Chat add-in.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to configure a new Persistent Chat add-in.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
@@ -27,7 +27,7 @@ New-CsPersistentChatAddin -Name <String> -Url <String> [-PersistentChatPoolFqdn 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -45,7 +45,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatAddin"}
 
 Lync Server Control Panel: To create a new Persistent Chat add-in using the Lync Server Control Panel, click Persistent Chat, click Add-in, and then click New.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -86,14 +86,14 @@ New-CsPersistentChatAddin -Name "ITPersistentChatAddin" -PersistentChatPoolFqdn 
 ## PARAMETERS
 
 ### -Name
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Friendly name to be given to the Persistent Chat add-in.
 Names must be unique per Persistent Chat pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Friendly name to be given to the Persistent Chat add-in.
 Names must be unique per Persistent Chat Server pool.
@@ -114,13 +114,13 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL of the Web page to be displayed by the Persistent Chat add-in.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL of the webpage to be displayed by the Persistent Chat add-in.
 
@@ -140,13 +140,13 @@ Accept wildcard characters: False
 ```
 
 ### -PersistentChatPoolFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the Persistent Chat pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the Persistent Chat Server pool.
 

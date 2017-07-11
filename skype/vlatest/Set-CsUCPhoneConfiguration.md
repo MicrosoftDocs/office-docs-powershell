@@ -6,24 +6,24 @@ schema: 2.0.0
 # Set-CsUCPhoneConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify management options for Microsoft Lync 2010 Phone Edition.
 This includes such things as the required security mode and whether or not the phone should automatically be locked after a specified period of inactivity.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to modify management options for Lync Phone Edition.
 This includes such things as the required security mode and whether or not the phone should automatically be locked after a specified period of inactivity.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsUCPhoneConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-CalendarPollInterval \<timespan\>\] \[-EnforcePhoneLock \<bool\>\] \[-PhoneLockTimeout \<timespan\>\] \[-MinPhonePinLength \<byte\>\] \[-SIPSecurityMode \<SIPSecurityMode\>\] \[-VoiceDiffServTag \<byte\>\] \[-Voice8021p \<byte\>\] \[-LoggingLevel \<LoggingLevel\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 Set-CsUCPhoneConfiguration \[-Tenant \<guid\>\] \[-CalendarPollInterval \<timespan\>\] \[-EnforcePhoneLock \<bool\>\] \[-PhoneLockTimeout \<timespan\>\] \[-MinPhonePinLength \<byte\>\] \[-SIPSecurityMode \<SIPSecurityMode\>\] \[-VoiceDiffServTag \<byte\>\] \[-Voice8021p \<byte\>\] \[-LoggingLevel \<LoggingLevel\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to modify management options for UC phones.
 This includes such things as the required security mode and whether or not the phone should automatically be locked after a specified period of inactivity.
@@ -58,7 +58,7 @@ Set-CsUCPhoneConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync 2010 Phone Edition represents the merging of the telephone and Microsoft Lync 2010.
 Lync 2010 Phone Edition uses special hardware (that is, a Lync 2010-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -81,7 +81,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Phone Edition represents the merging of the telephone and Lync Server.
 Lync Phone Edition uses special hardware (that is, a Lync-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -104,11 +104,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUCPhoneConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 UC phones represent the merging of the telephone and Skype for Business Server 2015.
 UC phones use special hardware (that is, a Skype for Business-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
@@ -292,7 +292,7 @@ Get-CsUCPhoneConfiguration | Where-Object {$_.PhoneLockTimeout -lt "00:10:00"} |
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Represents the unique identifier assigned to the collection of UC phone configuration settings.
 To refer to the global settings, use this syntax: -Identity global.
@@ -303,13 +303,13 @@ If this parameter is omitted, then Set-CsUCPhoneConfiguration will modify the gl
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Represents the unique identifier assigned to the collection of UC phone configuration settings.
 To refer to the global settings, use this syntax:
@@ -353,13 +353,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Instance Description}}
 
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPollInterval
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates how often the UC device retrieves information from your Microsoft Outlook calendar.
 The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax: -CalendarPollInterval "01:00:00".
@@ -400,13 +400,13 @@ The default value is 3 minutes (00:03:00).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill CalendarPollInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates how often the UC device retrieves information from your Outlook calendar.
 The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax: -CalendarPollInterval "01:00:00".
@@ -428,14 +428,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnforcePhoneLock
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Determines whether or not UC phones are automatically locked after the number of minutes specified by PhoneLockTimeout.
 The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnforcePhoneLock Description}}
 
@@ -455,7 +455,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoggingLevel
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables logging on the UC device.
 Valid values are Off; Low; Medium; and High.
@@ -463,7 +463,7 @@ The default value is Off.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LoggingLevel Description}}
 
@@ -483,7 +483,7 @@ Accept wildcard characters: False
 ```
 
 ### -MinPhonePinLength
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Specifies the minimum number of digits required for personal identification numbers (PINs).
 
@@ -495,7 +495,7 @@ Default: 6
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MinPhonePinLength Description}}
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneLockTimeout
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Specifies the length of time, in minutes, that a UC phone will remain idle before automatically locking.
 
@@ -524,7 +524,7 @@ The default value is 00:10:00 (10 minutes).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PhoneLockTimeout Description}}
 
@@ -544,7 +544,7 @@ Accept wildcard characters: False
 ```
 
 ### -SIPSecurityMode
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Specifies the level of security that the server applies to SIP sessions initiated by a UC phone.
 
@@ -560,7 +560,7 @@ The default value is High.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SIPSecurityMode Description}}
 
@@ -580,7 +580,7 @@ Accept wildcard characters: False
 ```
 
 ### -Voice8021p
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Server  deployment.
 
@@ -590,7 +590,7 @@ The default value is 0.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Server deployment.
 
@@ -600,13 +600,13 @@ The default value is 0.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Voice8021p Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the user priority value (the 802.1p value) for voice traffic within the Skype for Business Server 2015 deployment.
 
@@ -630,7 +630,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceDiffServTag
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Specifies the decimal representation of the 6-bit DiffServ Code Point (DSCP) priority marking.
 This marking defines the Per Hop Behavior (PHB) for IP packets passed by the UC phones that are managed by this server.
@@ -640,7 +640,7 @@ The default value is 40.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill VoiceDiffServTag Description}}
 
@@ -660,13 +660,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -686,13 +686,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -713,13 +713,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Request-CsCertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Provides a way to request certificates for use with Microsoft Lync Server 2010 servers and server roles.
 Also provides a way to check the status of existing certificate requests and, if needed, to cancel any (or all) of those requests.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Provides a way to request certificates for use with servers running Lync Server and server roles.
 Also provides a way to check the status of existing certificate requests and, if needed, to cancel any (or all) of those requests.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Provides a way to request certificates for use with servers running Skype for Business Server 2015 and server roles.
 Also provides a way to check the status of existing certificate requests and, if needed, to cancel any (or all) of those requests.
@@ -56,7 +56,7 @@ Request-CsCertificate [-Retrieve] [-Force] [-Report <String>] [-WhatIf] [-Confir
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Lync Server, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -83,7 +83,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Request-CsCertificate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Lync Server, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -110,7 +110,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Request-CsCertificate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 uses certificates as a way for servers and server roles to verify their identities; for example, an Edge Server uses certificates to verify that the computer it is communicating with really is a Front End Server and vice versa.
 In order to fully implement Skype for Business Server 2015, you will need to have the appropriate certificates assigned to the appropriate server roles.
@@ -317,7 +317,7 @@ Request-CsCertificate -New -Type AccessEdgeExternal,DataEdgeExternal,AudioVideoA
 ## PARAMETERS
 
 ### -Type
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Type of certificate being requested.
 Certificate types include (but are not limited to):
@@ -354,7 +354,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of certificate being requested.
 Certificate types include (but are not limited to):
@@ -395,7 +395,7 @@ You can specify multiple types in a single command by separating the certificate
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of certificate being requested.
 Certificate types include (but are not limited to):
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -CaAccount
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Account name of the user requesting the new certificate, using the format domain_name\user_name.
 For example: -CaAccount "litwareinc\kenmyer".
@@ -480,7 +480,7 @@ If not specified, Request-CsCertificate will use the credentials of the logged-o
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Account name of the user requesting the new certificate, using the format domain_name\user_name.
 For example: -CaAccount "litwareinc\kenmyer".
@@ -534,13 +534,13 @@ Accept wildcard characters: False
 ```
 
 ### -Clear
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When present, deletes any pending certificate requests made by using Request-CsCertificate.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, deletes any pending certificate requests made by using the Request-CsCertificate cmdlet.
 
@@ -578,7 +578,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerFqdn
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of the computer for which the certificate is being requested.
 When present, this parameter forces Request-CsCertificate to connect to the  Central Management store in order to locate the specified computer.
@@ -587,7 +587,7 @@ The Request-CsCertificate cmdlet will automatically add the pool name to the Sub
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of the computer for which the certificate is being requested.
 When present, this parameter forces Request-CsCertificate to connect to the Central Management store in order to locate the specified computer.
@@ -596,7 +596,7 @@ The Request-CsCertificate cmdlet will automatically add the pool name to the Sub
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the computer for which the certificate is being requested.
 When present, this parameter forces the Request-CsCertificate cmdlet to connect to the Central Management store in order to locate the specified computer.
@@ -635,13 +635,13 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Name of your Active Directory domain.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Comma-separated list of fully-qualified domain names that should be added to the certificate's Subject Alternative Name field.
 For example:
@@ -680,14 +680,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running Request-CsCertificate on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Request-CsCertificate cmdlet on a computer with an account in your domain.
@@ -708,14 +708,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 FQDN of a domain controller where global settings are stored If global settings are stored in the System container in Active Directory Domain Services (AD DS) then this parameter must point to the root domain controller.
 If global settings are stored in the Configuration container then any domain controller can be used and this parameter can be omitted.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services (AD DS) then this parameter must point to the root domain controller.
@@ -723,7 +723,7 @@ If global settings are stored in the Configuration container then any domain con
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of a domain controller where global settings are stored.
 If global settings are stored in the System container in Active Directory Domain Services then this parameter must point to the root domain controller.
@@ -790,13 +790,13 @@ Accept wildcard characters: False
 ```
 
 ### -List
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When present, lists any pending certificate requests made by using Request-CsCertificate.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, lists any pending certificate requests made by using the Request-CsCertificate cmdlet.
 
@@ -900,13 +900,13 @@ Accept wildcard characters: False
 ```
 
 ### -Retrieve
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When present, retrieves any pending certificate requests made by using Request-CsCertificate and attempts to complete the operation and import the requested certificate.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, retrieves any pending certificate requests made by using the Request-CsCertificate cmdlet and attempts to complete the operation and import the requested certificate.
 

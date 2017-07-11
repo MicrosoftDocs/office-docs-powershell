@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsRgsQuestion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group question.
 The Response Group application uses questions to provide callers with choices, and then takes action based on those choices.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group question.
 The Response Group application uses questions to provide callers with choices, and then takes action based on those choices.
@@ -27,7 +27,7 @@ New-CsRgsQuestion -Prompt <Prompt> [-AnswerList <PSListModifier>] [-InvalidAnswe
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the caller's response.
 For example, the service might ask a caller to press 1 for English or to press 2 for Spanish.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsQuestion"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the caller's response.
 For example, the service might ask a caller to press 1 for English or to press 2 for Spanish.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsQuestion"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to process calls, the Response Group application often makes a statement or poses a question, then takes action based on the caller's response.
 For example, the service might ask a caller to press 1 for English or to press 2 for Spanish.

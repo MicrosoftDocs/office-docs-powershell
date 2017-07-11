@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsPersistentChatRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more Persistent Chat chat rooms.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more Persistent Chat chat rooms.
 A chat room is a discussion forum that typically revolves around a specific topic.
@@ -33,7 +33,7 @@ Remove-CsPersistentChatRoom [-Instance] <ChatRoom> [-Confirm] [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -51,7 +51,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatRoom"}
 Lync Server Control Panel: To delete an existing Persistent Chat chat room using the Lync Server Control Panel, click Persistent Chat, click Room, and then select the room to be deleted.
 To delete the room, click Edit, and then click Delete.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsWebTrustedCACertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new certificate ID object based on an existing certification authority (CA) certificate.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new certificate ID object based on an existing certification authority (CA) certificate.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ New-CsWebTrustedCACertificate -Thumbprint <String> -CAStore <CAStore> [<CommonPa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Web Services  configuration settings are used to help manage Microsoft Lync Server 2010 Web servers and Web Services.
 Among the property values that can be managed using these settings is the TrustedCACerts property, which represents a collection of certification authorities trusted by Microsoft Lync 2010 Phone Edition.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsWebTrustedCACertificate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Web Services configuration settings are used to help manage Lync Server Web servers and Web Services.
 Among the property values that can be managed using these settings is the TrustedCACerts property, which represents a collection of certification authorities trusted by Lync Phone Edition.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsWebTrustedCACertificate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Web Services configuration settings are used to help manage Skype for Business Server 2015 Web servers and Web Services.
 Among the property values that can be managed using these settings is the TrustedCACerts property, which represents a collection of certification authorities trusted by Skype for Business Phone Edition.
@@ -126,7 +126,7 @@ Set-CsWebServiceConfiguration -Identity site:Redmond -TrustedCACerts @{Add=$x}
 ## PARAMETERS
 
 ### -Thumbprint
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Thumbprint of the certificate which should be trusted by Lync 2010 Phone Edition.
 You can retrieve certificate issuer and thumbprint values by running this command:
@@ -135,7 +135,7 @@ Get-CsCertificate | Select-Object Issuer, Thumbprint.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Thumbprint of the certificate which should be trusted by Lync Phone Edition .
 You can retrieve certificate issuer and thumbprint values by running this command:
@@ -144,7 +144,7 @@ Get-CsCertificate | Select-Object Issuer, Thumbprint.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Thumbprint of the certificate which should be trusted by Lync Phone Edition.
 You can retrieve certificate issuer and thumbprint values by running this command:

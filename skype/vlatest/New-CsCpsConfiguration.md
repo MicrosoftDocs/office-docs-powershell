@@ -6,14 +6,14 @@ schema: 2.0.0
 # New-CsCpsConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of Call Park service settings.
 Call parking is a service that allows a user to "park" an incoming phone call.
 Parking a call transfers it to a number in a specified range, or orbit, and immediately places the call on hold.
 Anyone (not just the person who originally answered the call) can resume the conversation from any telephone by entering the correct number.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of Call Park service settings.
 Call parking is a service that allows a user to "park" an incoming phone call.
@@ -32,7 +32,7 @@ New-CsCpsConfiguration [-Identity] <XdsIdentity> [-CallPickupTimeoutThreshold <T
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet is used to create a new Call Park service configuration.
 When Call Park service is installed, global settings are configured by default and can be updated but cannot be removed.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsCpsConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet is used to create a new Call Park service configuration.
 When Call Park service is installed, global settings are configured by default and can be updated but cannot be removed.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsCpsConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet is used to create a new Call Park service configuration.
 When Call Park service is installed, global settings are configured by default and can be updated but cannot be removed.
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMusicOnHold
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Determines whether music plays for the caller while a call is parked.
 
@@ -230,7 +230,7 @@ Default: True
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Determines whether music plays for the caller while a call is parked.
 
@@ -241,7 +241,7 @@ Default: True
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Determines whether music plays for the caller while a call is parked.
 
@@ -322,14 +322,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

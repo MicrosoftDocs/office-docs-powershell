@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsReportingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the reporting URL for an existing collection of reporting configuration settings.
 Reporting configuration settings are used to specify the URL used to access Microsoft Lync Server 2013 Preview Monitoring Reports.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the reporting URL for an existing collection of reporting configuration settings.
 Reporting configuration settings are used to specify the URL used to access Skype for Business Server 2015 Monitoring Reports.
@@ -35,7 +35,7 @@ Set-CsReportingConfiguration [-Confirm] [-Force] [-Instance <PSObject>] [-Report
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reporting configuration settings are used to specify the home page for the Microsoft Lync Server 2013 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 
@@ -58,7 +58,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsReportingConfiguration"
 
 Lync Server Control Panel: The functions carried out by the Set-CsReportingConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reporting configuration settings are used to specify the home page for the Skype for Business Server 2015 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 
@@ -171,13 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### -ReportingUrl
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for the Lync Server 2013 Preview Monitoring Reports.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the Skype for Business Server 2015 Monitoring Reports.
 

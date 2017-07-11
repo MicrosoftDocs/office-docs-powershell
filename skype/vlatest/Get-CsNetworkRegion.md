@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsNetworkRegion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more network regions.
 Network regions represent network hubs or backbones in an enterprise network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more network regions.
 Network regions represent network hubs or backbones in an enterprise network.
@@ -32,7 +32,7 @@ Get-CsNetworkRegion [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkRegion"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.

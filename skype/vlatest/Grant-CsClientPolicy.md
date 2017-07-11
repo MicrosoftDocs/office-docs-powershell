@@ -6,23 +6,23 @@ schema: 2.0.0
 # Grant-CsClientPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Microsoft Lync 2010 that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Lync Server that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Skype for Business that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Assigns a client policy to a user or a group of users.
 Among other things, client policies help determine the features of Skype for Business Server 2015 that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
@@ -38,7 +38,7 @@ Grant-CsClientPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-Do
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Lync Server 2010, client policies replace the Group Policy settings used in previous versions of the product.
 In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsClientPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, client policies replace the Group Policy settings used in previous versions of the product.
 In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
@@ -84,14 +84,14 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsClientPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Skype for Business Online uses client policies to help determine the features and capabilities that are available to users.
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
 In addition, client policies, like other policies, can readily be targeted to selected groups of users.
 You can even create a custom policy that gets assigned to a single user.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
 In addition, client policies, like other Skype for Business Server 2015 policies, can readily be targeted to selected groups of users.
@@ -314,7 +314,7 @@ Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsCli
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -325,7 +325,7 @@ For example, the Identity "* Smith" returns all the users who have a display nam
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Indicates the Identity of the user account the policy should be assigned to.
 User Identities can be specified by using one of the following formats: 1) the user's SIP address; 2) the user's user principal name (UPN); or, 3) the user's Active Directory display name (for example, Ken Myer).
@@ -346,7 +346,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope ("tag:").
@@ -359,7 +359,7 @@ Grant-CsClientPolicy -Identity "Ken Myer" -PolicyName $Null
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope ("tag:").
@@ -386,14 +386,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to specify a domain controller to connect to when assigning the policy.
 If this parameter is not included then the cmdlet will use the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 This parameter is not used with Skype for Business Online.
 
@@ -413,14 +413,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, Grant-CsClientPolicy does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online, Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Online, Skype for Business Server 2015
 
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, the Grant-CsClientPolicy cmdlet does not pass objects through the pipeline.

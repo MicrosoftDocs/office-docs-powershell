@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsUserPoolInfo
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the Registrar pool, backup Registrar pool, and User Services pool that a user has been assigned to.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the Registrar pool, backup Registrar pool, and User Services pool that a user has been assigned to.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsUserPoolInfo [-Identity] <UserIdParameter> [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When a user is enabled for Microsoft Lync Server 2010, he or she must be homed on a Registrar pool.
 This pool is responsible for authenticating the user and for keeping track of his or her current status and location.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsUserPoolInfo"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When a user is enabled for Lync Server, he or she must be homed on a Registrar pool.
 This pool is responsible for authenticating the user and for keeping track of his or her current status and location.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUserPoolInfo"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When a user is enabled for Skype for Business Server 2015, he or she must be homed on a Registrar pool.
 This pool is responsible for authenticating the user and for keeping track of his or her current status and location.
@@ -270,7 +270,7 @@ Expanding a property means that all of the values stored in that property are di
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the Identity of the user whose user pool information is to be retrieved.
 Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's  Active Directory Domain Services (AD DS) display name (for example, Ken Myer).
@@ -281,7 +281,7 @@ For example, the Identity "* Smith" returns information for users who have a las
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the Identity of the user whose user pool information is to be retrieved.
 Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory Domain Services (AD DS) display name (for example, Ken Myer).
@@ -292,7 +292,7 @@ For example, the Identity "* Smith" returns information for users who have a las
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity of the user whose user pool information is to be retrieved.
 Identities can be specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory Domain Services display name (for example, Ken Myer).
@@ -317,13 +317,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the user pool information from the local replica of the  Central Management store rather than from the  Central Management store itself.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the user pool information from the local replica of the Central Management store rather than from the Central Management store itself.
 

@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsRgsWorkflow
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group workflow.
 Workflows determine the actions that are taken when the Response Group application receives a phone call.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group workflow.
 Workflows determine the actions that are taken when the Response Group application receives a phone call.
@@ -33,7 +33,7 @@ New-CsRgsWorkflow [-Parent] <RgsIdentity> -Name <String> -PrimaryUri <Uri> [-Act
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Workflows are a key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsWorkflow"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Workflows are a key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsWorkflow"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Workflows are a key element in the Response Group application.
 Each workflow is uniquely associated with a phone number; when someone calls that number, the workflow determines how the call will be handled.
@@ -311,7 +311,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables administrators to add additional information about a Response Group workflow.
 For example, the Description might include contact information for the owner of the workflow.
@@ -319,7 +319,7 @@ This description appears in the Microsoft Lync 2010 contact card for the workflo
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to add additional information about a Response Group workflow.
 For example, the Description might include contact information for the owner of the workflow.
@@ -327,7 +327,7 @@ This description appears in the Lync contact card for the workflow.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to add additional information about a Response Group workflow.
 For example, the Description might include contact information for the owner of the workflow.
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNumber
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Phone number for the workflow as displayed in Lync 2010.
 The DisplayNumber can formatted any way you want; for example:
@@ -362,7 +362,7 @@ The DisplayNumber can formatted any way you want; for example:
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Phone number for the workflow as displayed in Lync.
 The DisplayNumber can be formatted any way you want; for example:
@@ -375,7 +375,7 @@ The DisplayNumber can be formatted any way you want; for example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Phone number for the workflow as displayed in Skype for Business.
 The DisplayNumber can be formatted any way you want; for example:
@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Language that is used to read workflow text-to-speech prompts.
 The language parameter is optional as long as the operating system is using one of the supported languages shown in the list below.
@@ -510,7 +510,7 @@ For example: -Language "nl-NL".
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Language that is used to read workflow text-to-speech prompts.
 The language parameter is optional as long as the operating system is using one of the supported languages shown in the list below.
@@ -584,7 +584,7 @@ For example: -Language "nl-NL".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Language that is used to read workflow text-to-speech prompts.
 The language parameter is optional as long as the operating system is using one of the supported languages shown in the list below.
@@ -740,14 +740,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -768,13 +768,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Prompts you for confirmation before running the cmdlet.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
@@ -811,14 +811,14 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 

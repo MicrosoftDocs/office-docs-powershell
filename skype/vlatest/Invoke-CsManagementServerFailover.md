@@ -6,13 +6,13 @@ schema: 2.0.0
 # Invoke-CsManagementServerFailover
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Invokes the process by which the Microsoft Lync Server 2013 Preview Central Management store is failed over.
 When the Central Management store is failed over the primary database will be replaced by either a pre-assigned mirror database or a specified backup database.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Invokes the process by which the Skype for Business Server 2015 Central Management Store (CMS) is failed over to another pool.
 When the Central Management store is failed over the primary database will be replaced by either a preassigned database or a specified backup database.
@@ -37,7 +37,7 @@ Invoke-CsManagementServerFailover [-Confirm] [-Report <String>] [-Restore] [-Wha
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Invoke-CsManagementServerFailover cmdlet enables administrators to "failover" the Central Managament Server (CMS).
 Invoke-CsManagementServerFailover provides two different methodsfor failing over the CMS: 1) you can failover to a specified backup instance of SQL Server, or, 2) you can failover to a preassigned mirror database.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsManagementServerFail
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsManagementServerFailover cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Invoke-CsManagementServerFailover cmdlet enables administrators to "failover" the Central Management Server (CMS).
 You can only invoke the failover to the database defined in the Topology Builder.
@@ -100,14 +100,14 @@ Invoke-CsManagementServerFailover -BackupSqlServerFqdn "redmond-cs-001.litwarein
 ## PARAMETERS
 
 ### -BackupSqlServerFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the computer hosting the SQL Server backup database.
 This parameter is required if you are running Invoke-CsManagementServerFailover in disaster recovery mode.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the computer hosting the SQL Server backup database.
 This parameter is required if you are running the Invoke-CsManagementServerFailover cmdlet in disaster recovery mode.
@@ -128,14 +128,14 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 This parameter is required if you are running Invoke-CsManagementServerFailover in disaster recovery mode.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 This parameter is required if you are running the Invoke-CsManagementServerFailover cmdlet in disaster recovery mode.

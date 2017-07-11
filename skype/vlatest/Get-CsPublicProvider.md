@@ -6,20 +6,20 @@ schema: 2.0.0
 # Get-CsPublicProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the public providers configured for use in your organization.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
 Microsoft Lync Server 2010 ships with three public providers configured but not enabled: Yahoo!; AOL; and MSN.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the public providers configured for use in your organization.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
 Lync Server ships with three public providers configured but not enabled: Yahoo!, AIM (AOL), and Messenger (MSN).
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the public providers configured for use in your organization.
 A public provider is an organization that provides instant messaging, presence, and related services to the general public.
@@ -40,7 +40,7 @@ Get-CsPublicProvider [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2010.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsPublicProvider"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2013 Preview.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPublicProvider"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.
@@ -245,7 +245,7 @@ Get-CsPublicProvider | Where-Object {$_.VerificationLevel -ne "AlwaysVerifiable"
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the public provider to be returned.
 The Identity is typically the name of the web site providing the services (for example, Yahoo!; AOL; MSN; etc.).
@@ -255,7 +255,7 @@ To use wildcards to return one or more public providers, use the Filter paramete
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the public provider to be returned.
 The Identity is typically the name of the web site providing the services.
@@ -279,7 +279,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcard values in order to return one or more public providers.
 For example, to return a collection of all the public providers that have an Identity that begins with the letter Y, use this syntax: -Filter "Y*".
@@ -287,7 +287,7 @@ To return a collection of all the public providers that include the string value
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcard values in order to return one or more public providers.
 For example, to return a collection of all the public providers that have an Identity that begins with the letter Y, use this syntax:

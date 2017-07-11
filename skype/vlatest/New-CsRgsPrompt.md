@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsRgsPrompt
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new workflow prompt for the Response Group application.
 A workflow prompt is either an audio file that is played or text that is read aloud in order to supply callers with additional information.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new workflow prompt for the Response Group application.
 A workflow prompt is either an audio file that is played or text that is read aloud in order to supply callers with additional information.
@@ -26,7 +26,7 @@ New-CsRgsPrompt [-TextToSpeechPrompt <String>] [-AudioFilePrompt <AudioFile>] [<
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Keeping callers well informed about what's going on, and why, is an important part of a Response Group workflow.
 For example, you might have the workflow configured to answer the phone and then immediately place the call on hold until an agent is available.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsPrompt"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Keeping callers well informed about what's going on, and why, is an important part of a Response Group workflow.
 For example, you might have the workflow configured to answer the phone and then immediately place the call on hold until an agent is available.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsPrompt"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Keeping callers well informed about what's going on, and why, is an important part of a Response Group workflow.
 For example, you might have the workflow configured to answer the phone and then immediately place the call on hold until an agent is available.

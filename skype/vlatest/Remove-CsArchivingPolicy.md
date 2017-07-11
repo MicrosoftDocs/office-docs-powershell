@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsArchivingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified instant messaging (IM) archiving policy.
 IM archiving policies determine whether Microsoft Lync Server 2010 will automatically save all IM sessions that take place between internal users, and/or all IM sessions between internal users and federated partners.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified instant messaging (IM) archiving policy.
 IM archiving policies determine whether Lync Server will automatically save all IM sessions that take place between internal users, and/or all IM sessions between internal users and federated partners.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified instant messaging (IM) archiving policy.
 IM archiving policies determine whether Skype for Business Server 2015 will automatically save all IM sessions that take place between internal users, and/or all IM sessions between internal users and federated partners.
@@ -33,7 +33,7 @@ Remove-CsArchivingPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep an archive of all of the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Lync Server 2010, you must perform two steps.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsArchivingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep an archive of all of the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Lync Server, you must perform two steps.
@@ -99,7 +99,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsArchivingPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep an archive of all of the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Skype for Business Server 2015, you must perform two steps.
@@ -255,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If this parameter is present, the policy will automatically be removed even if it is currently assigned to at least one use.
 If this parameter is not present, then Remove-CsArchivingPolicy will not automatically remove a per-user policy that is assigned to at least one user.
@@ -264,7 +264,7 @@ You must answer yes (by pressing the Y key) before the command will continue and
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is present, the policy will automatically be removed even if it is currently assigned to at least one use.
 If this parameter is not present, then the Remove-CsArchivingPolicy cmdlet will not automatically remove a per-user policy that is assigned to at least one user.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsCdrConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new set of call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
 This usage data includes information about who called whom, when they called, and how long they talked.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new set of call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
@@ -30,7 +30,7 @@ New-CsCdrConfiguration [-Identity] <XdsIdentity> [-EnableCDR <Boolean>] [-Enable
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server 2010 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsCdrConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Call detail recording (CDR) provides a way for you to track usage of Lync Server capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsCdrConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
@@ -251,7 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeepErrorReportForDays
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
 CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2010.
@@ -261,7 +261,7 @@ The default value is 60.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
 CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2013 Preview.
@@ -271,7 +271,7 @@ The default value is 60.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
 CDR error reports are diagnostic reports uploaded by client applications such as Skype for Business.
@@ -335,14 +335,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

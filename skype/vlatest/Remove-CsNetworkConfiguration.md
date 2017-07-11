@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsNetworkConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Resets all the network configuration settings for a Microsoft Lync Server 2010 deployment to the default values.
 This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Resets all the network configuration settings for a Lync Server deployment to the default values.
 This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Resets all the network configuration settings for a Skype for Business Server 2015 deployment to the default values.
 This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
@@ -32,7 +32,7 @@ Remove-CsNetworkConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 WARNING: Running this cmdlet will delete an entire network configuration, including CAC, E9-1-1 regions and sites, and media bypass.
 
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 WARNING: Running this cmdlet will delete an entire network configuration, including CAC, E9-1-1 regions and sites, and media bypass.
 

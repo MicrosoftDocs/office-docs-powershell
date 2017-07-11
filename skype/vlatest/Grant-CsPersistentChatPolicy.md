@@ -6,13 +6,13 @@ schema: 2.0.0
 # Grant-CsPersistentChatPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Assigns a per-user Persistent Chat policy to a user.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Assigns a per-user Persistent Chat policy to a user.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
@@ -28,7 +28,7 @@ Grant-CsPersistentChatPolicy [-Identity] <UserIdParameter> [[-PolicyName] <Strin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -46,7 +46,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsPersistentChatPolicy"
 Lync Server Control Panel: To assign a Persistent Chat policy to a user in the Lync Server Control Panel, double-click the appropriate user account.
 In the Edit Lync Server User dialog box, select a policy from the Persistent Chat policy dropdown list and then click Commit.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -192,14 +192,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify the fully qualified domain name of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then Grant-CsPersistentChatPolicy will contact the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsPersistentChatPolicy cmdlet will contact the first available domain controller.

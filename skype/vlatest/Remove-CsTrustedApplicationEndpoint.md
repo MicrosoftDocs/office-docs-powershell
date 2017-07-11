@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsTrustedApplicationEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a trusted application endpoint.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a trusted application endpoint.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsTrustedApplicationEndpoint [-Identity] <UserIdParameter> [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet removes an existing endpoint contact object from Active Directory Domain Services (AD DS).
@@ -34,7 +34,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsTrustedApplicationEndpoint"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet removes an existing endpoint contact object from Active Directory Domain Services.

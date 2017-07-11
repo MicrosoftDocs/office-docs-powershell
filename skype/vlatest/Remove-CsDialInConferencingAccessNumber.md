@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsDialInConferencingAccessNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone or mobile phone (that is, a device on the public switched telephone network (PSTN)) to join the audio portion of a conference.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone or mobile phone (that is, a device on the public switched telephone network (PSTN)) to join the audio portion of a conference.
@@ -26,7 +26,7 @@ Remove-CsDialInConferencingAccessNumber [-Identity] <UserIdParameter> [-WhatIf] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line," a mobile phone, or a Voice over Internet Protocol phone) to join the audio portion of a conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -44,7 +44,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line," a mobile phone, or a Voice over Internet Protocol phone) to join the audio portion of a conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.

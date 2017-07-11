@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPersistentChatRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Persistent Chat chat rooms configured for use in your organization.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Persistent Chat chat rooms configured for use in your organization.
 A chat room is a discussion forum that typically revolves around a specific topic.
@@ -36,7 +36,7 @@ Get-CsPersistentChatRoom [[-Identity] <String>] [-AsObject] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -53,7 +53,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatRoom"}
 
 Lync Server Control Panel: To view Persistent Chat chat rooms in the Lync Server Control Panel, click Persistent Chat and then click Room.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique Identifier for the Persistent Chat chat room being returned.
 The Identity for a chat room consists of the Persistent Chat pool where the room has been configured plus the name of the room; for example:
@@ -247,7 +247,7 @@ If you call Get-CsPersistentChatRoom without any parameters the cmdlet will retu
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identifier for the Persistent Chat chat room being returned.
 The Identity for a chat room consists of the Persistent Chat pool where the room has been configured plus the name of the room; for example:
@@ -273,13 +273,13 @@ Accept wildcard characters: False
 ```
 
 ### -Invitations
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns chat rooms that use invitations (by using the parameter value Inherit) or chat rooms that do not use inivtations (by using the parameter value False).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns chat rooms that use invitations (by using the parameter value Inherit) or chat rooms that do not use invitations (by using the parameter value False).
 

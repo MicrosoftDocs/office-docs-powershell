@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsAdminRoleAssignment
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns the role-based access control (RBAC) roles assigned to a user.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns the role-based access control (RBAC) roles assigned to a user.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsAdminRoleAssignment [-Identity] <String> [-Force] [-LocalStore] [<CommonPa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks for Microsoft Lync Server 2010.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -37,7 +37,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAdminRoleAssignment"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks for Lync Server.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.
@@ -50,7 +50,7 @@ To return a list of all the RBAC roles this cmdlet has been assigned to (includi
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdminRoleAssignment"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Role-based access control (RBAC) enables administrators to delegate control of specific management tasks for Skype for Business Server 2015.
 For example, instead of granting your organization's help desk full administrator privileges you can give these employees very specific rights: the right to manage only user accounts; the right to manage only Enterprise Voice components; and the right to manage only archiving and Archiving Server.

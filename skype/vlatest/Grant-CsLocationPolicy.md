@@ -6,12 +6,12 @@ schema: 2.0.0
 # Grant-CsLocationPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns an Enhanced 9-1-1 (E9-1-1) location policy to individual users or groups.
 The E9-1-1 service enables those who answer 911 calls to determine the caller's geographic location.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Assigns an Enhanced 9-1-1 (E9-1-1) location policy to individual users or groups.
 The E9-1-1 service enables those who answer 911 calls to determine the caller's geographic location.
@@ -27,7 +27,7 @@ Grant-CsLocationPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so, what the behavior is of an emergency call.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsLocationPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so, what the behavior is of an emergency call.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsLocationPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so, what the behavior is of an emergency call.

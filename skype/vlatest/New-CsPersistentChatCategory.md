@@ -6,7 +6,7 @@ schema: 2.0.0
 # New-CsPersistentChatCategory
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new Persistent Chat category.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms.
@@ -16,7 +16,7 @@ Instead, existing rooms must later be assigned to a category by using the Set-Cs
 However, new chat rooms can be assigned to the category at the same time the room is created.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new Persistent Chat category.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms.
@@ -36,7 +36,7 @@ New-CsPersistentChatCategory -Name <String> [-Description <String>] [-EnableFile
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatCategory"
 
 Lync Server Control Panel: To create a new Persistent Chat category using the Lync Server Control Panel, click Persistent Chat, click Category, and then click New.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

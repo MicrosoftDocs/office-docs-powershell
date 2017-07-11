@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsArchivingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing instant messaging (IM) archiving policy.
 An archiving policy gives you the ability to archive all IM sessions and conferences that take place between internal users; you can also archive sessions that take place between internal users and federated partners.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing instant messaging (IM) archiving policy.
 An archiving policy gives you the ability to archive all IM sessions and conferences that take place between internal users; you can also archive sessions that take place between internal users and federated partners.
@@ -34,7 +34,7 @@ Set-CsArchivingPolicy [-Instance <PSObject>] [-ArchiveExternal <Boolean>] [-Arch
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in.
 Other organizations are legally required to keep such an archive.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsArchivingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in.
 Other organizations are legally required to keep such an archive.
@@ -86,7 +86,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsArchivingPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in.
 Other organizations are legally required to keep such an archive.
@@ -215,14 +215,14 @@ Accept wildcard characters: False
 ```
 
 ### -ArchiveExternal
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates whether external IM sessions are archived.
 (An external IM session is one in which at least one of the participants is an unauthenticated user who does not have an Active Directory account within your organization.)  The default value is False, which means that IM sessions that include external users are not archived.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether external IM sessions are archived.
 (An external IM session is one in which at least one of the participants is an unauthenticated user who does not have an Active Directory account within your organization.) The default value is False, which means that IM sessions that include external users are not archived.

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Debug-CsInterPoolReplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that replication is working between a Registrar pool and its assigned backup pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that replication is working between a Registrar pool and its assigned backup pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -27,7 +27,7 @@ Debug-CsInterPoolReplication -PoolFqdn <Fqdn> [-BackupModule <BackupModules>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server 2013 Preview each Registrar pool can be associated with a backup pool.
 The backup pool maintains a copy of all the data stored on the primary pool.
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Debug-CsInterPoolReplication"
 
 Lync Server Control Panel: The functions carried out by the Debug-CsInterPoolReplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015 each Registrar pool can be associated with a backup pool.
 The backup pool maintains a copy of all the data stored on the primary pool.
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackupModule
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables administrators to specify the data store to be verified.
 Allowed values are:
@@ -131,7 +131,7 @@ The default value is All.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to specify the data store to be verified.
 Allowed values are:

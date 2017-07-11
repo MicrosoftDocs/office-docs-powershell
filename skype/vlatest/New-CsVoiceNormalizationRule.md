@@ -6,24 +6,24 @@ schema: 2.0.0
 # New-CsVoiceNormalizationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new voice normalization rule.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new voice normalization rule.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 New-CsVoiceNormalizationRule \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-Pattern \<string\>\] \[-Translation \<string\>\] \[-IsInternalExtension \<bool\>\] \[-Priority \<int\>\] \[-InMemory\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 New-CsVoiceNormalizationRule -Parent \<string\> -Name \<string\> \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-Pattern \<string\>\] \[-Translation \<string\>\] \[-IsInternalExtension \<bool\>\] \[-Priority \<int\>\] \[-InMemory\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new voice normalization rule.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, dialing 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server 2015.
@@ -56,7 +56,7 @@ New-CsVoiceNormalizationRule [[-Identity] <Object>] [-BypassDualWrite <Object>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet creates a named voice normalization rule.
 These rules are a required part of phone authorization and call routing.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceNormalizationRule"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet creates a named voice normalization rule.
 These rules are a required part of phone authorization and call routing.
@@ -88,11 +88,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceNormalizationRule"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a named voice normalization rule.
 These rules are a required part of phone authorization and call routing.
@@ -215,7 +215,7 @@ New-CsVoiceNormalizationRule -Parent SeattleUser -Name SeattleFourDigit -Descrip
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A unique identifier for the rule.
 The Identity specified must include the scope followed by a slash and then the name; for example: site:Redmond/Rule1, where site:Redmond is the scope and Rule1 is the name.
@@ -231,7 +231,7 @@ You cannot include the Identity parameter and the Parent parameter in the same c
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The name of the rule.
 This parameter is required if a value has been specified for the Parent parameter.
@@ -274,7 +274,7 @@ The Name parameter and the Identity parameter cannot be used in the same command
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Name Description}}
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The scope at which the new normalization rule will be created.
 This value must be global; site:\<sitename\>, where \<sitename\> is the name of the Lync Server site; PSTN Gateway or Registrar service, such as PSTNGateway:redmond.litwareinc.com; or a string designating a per user rule.
@@ -319,7 +319,7 @@ If you include the Parent parameter, the Name parameter is also required.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The scope at which the new normalization rule will be created.
 This value must be global; site:\<sitename\>, where \<sitename\> is the name of the Lync Server site; PSTN gateway or Registrar service, such as PSTNGateway:redmond.litwareinc.com; or a string designating a per user rule.
@@ -331,13 +331,13 @@ If you include the Parent parameter, the Name parameter is also required.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Parent Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The scope at which the new normalization rule will be created.
 This value must be global; site:\<sitename\>, where \<sitename\> is the name of the Skype for Business Server 2015 site; PSTN gateway or Registrar service, such as PSTNGateway:redmond.litwareinc.com; or a string designating a per user rule.
@@ -376,7 +376,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A friendly description of the normalization rule.
 
@@ -384,7 +384,7 @@ Maximum string length: 512 characters.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Description Description}}
 
@@ -404,7 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsInternalExtension
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 If True, the result of applying this rule will be a number internal to the organization.
 If False, applying the rule results in an external number.
@@ -414,7 +414,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill IsInternalExtension Description}}
 
@@ -434,7 +434,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pattern
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A regular expression that the dialed number must match in order for this rule to be applied.
 
@@ -442,7 +442,7 @@ Default: ^(\d{11})$ (The default represents any set of numbers up to 11 digits.)
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Pattern Description}}
 
@@ -462,7 +462,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The order in which rules are applied.
 A phone number might match more than one rule.
@@ -470,7 +470,7 @@ This parameter sets the order in which the rules are tested against the number.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Priority Description}}
 
@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -Translation
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The regular expression pattern that will be applied to the number to convert it to E.164 format.
 
@@ -498,7 +498,7 @@ Default: +$1 (The default prefixes the number with a plus sign \[+\].)
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Translation Description}}
 
@@ -518,13 +518,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts that would otherwise be displayed before making changes.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -544,20 +544,20 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill InMemory Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -578,13 +578,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -605,13 +605,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 

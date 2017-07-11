@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsPersistentChatEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new Persistent Chat endpoint.
 A Persistent Chat endpoint is an Active Directory contact object provides a friendly URL for a Microsoft Lync Server 2013 Preview Persistent Chat pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new Persistent Chat endpoint.
 A Persistent Chat endpoint is an Active Directory contact object provides a friendly URL for a Skype for Business Server 2015 Persistent Chat pool.
@@ -28,7 +28,7 @@ New-CsPersistentChatEndpoint -PersistentChatPoolFqdn <Fqdn> -SipAddress <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -43,7 +43,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatEndpoint"
 
 Lync Server Control Panel: The functions carried out by the New-CsPersistentChatEndpoint cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier that allows the endpoint to communicate with SIP devices such as Microsoft Lync 2013 Preview.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example:
@@ -109,7 +109,7 @@ The SIP address must use the sip: prefix as well as a valid SIP domain; for exam
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier that allows the endpoint to communicate with SIP devices such as Skype for Business.
 The SIP address must use the sip: prefix as well as a valid SIP domain; for example:

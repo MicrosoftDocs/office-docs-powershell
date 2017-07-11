@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsPersistentChatState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the state of a Persistent Chat service pool.
 Persistent Chat pools can be in one of two states: Normal, in which the pool uses its primary databases; or FailedOver, in which the pool uses the backup databases defined in the topology.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the state of a Persistent Chat service pool.
 Persistent Chat pools can be in one of two states: Normal, in which the pool uses its primary databases; or FailedOver, in which the pool uses the backup databases defined in the topology.
@@ -35,7 +35,7 @@ Set-CsPersistentChatState [-Confirm] [-Force] [-Instance <PSObject>] [-PoolState
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsPersistentChatState cmdlet returns the state of one or more Persistent Chat pools.
 Persistent Chat pools can be in either the Normal state (in which the pool uses its primary databases) or in a FailedOver state, in which the pool uses its backup databases.
@@ -48,7 +48,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatState"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsPersistentChatState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsPersistentChatState cmdlet returns the state of one or more Persistent Chat pools.
 Persistent Chat pools can be in either the Normal state (in which the pool uses its primary databases) or in a FailedOver state, in which the pool uses its backup databases.

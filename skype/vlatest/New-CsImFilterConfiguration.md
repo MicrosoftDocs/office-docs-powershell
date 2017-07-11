@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsImFilterConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new instant messaging (IM) filter configuration.
 IM filters are used to prevent users from sending instant messages that contain active hyperlinks.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new instant messaging (IM) filter configuration.
 IM filters are used to prevent users from sending instant messages that contain active hyperlinks.
@@ -28,7 +28,7 @@ New-CsImFilterConfiguration [-Identity] <XdsIdentity> [-Action <UrlFilterAction>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular web site or share.
 Microsoft Lync Server 2010 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsImFilterConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular website or share.
 Lync Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsImFilterConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular website or share.
 Skype for Business Server 2015 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
@@ -184,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
 
@@ -203,7 +203,7 @@ Full Data Type: Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.UrlFil
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
 
@@ -222,7 +222,7 @@ Full Data Type: Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.UrlFil
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
 
@@ -382,14 +382,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

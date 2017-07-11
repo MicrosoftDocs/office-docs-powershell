@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPoolFabricState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns the Windows Fabric state for Microsoft Lync Server 2013 Preview pool.
 Windows Fabric is a Microsoft technology used for creating highly reliable, distributable, and scalable applications.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns the Windows Fabric state for a Skype for Business Server 2015 pool.
 Windows Fabric is a Microsoft technology used for creating highly reliable, distributable, and scalable applications.
@@ -50,7 +50,7 @@ Get-CsPoolFabricState [-UserUri] <UserIdParameter> [-Confirm] [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsPoolFabricstate cmdlet returns the Windows Fabric state for a Lync Server 2013 Preview pool.
 This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Lync Server Storage Service.
@@ -61,7 +61,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPoolFabricState"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsPoolFabricState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsPoolFabricState cmdlet returns the Windows Fabric state for a Skype for Business Server 2015 pool.
 This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Skype for Business Server 2015 Storage Service.
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the service type to be returned.
 Allowed values are:
@@ -194,7 +194,7 @@ You can only specify a single type per command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 {{Fill Type Description}}
 

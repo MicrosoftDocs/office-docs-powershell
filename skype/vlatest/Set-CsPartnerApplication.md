@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsPartnerApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing partner application.
 A partner application is any application that Microsoft Lync Server 2013 Preview can directly exchange security tokens with, without having to go through a third-party security token server.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing partner application.
 A partner application is any application that Skype for Business Server 2015 can directly exchange security tokens with, without having to go through a third-party security token server.
@@ -63,7 +63,7 @@ Set-CsPartnerApplication [-Confirm] [-Force] [-Instance <PSObject>] [-WhatIf] [<
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -79,7 +79,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPartnerApplication"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsPartnerApplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
@@ -281,7 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationTrustLevel
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the level of trust between Lync Server 2013 Preview and the partner application.
 Allowed values are:
@@ -294,7 +294,7 @@ The default value is Full.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the level of trust between Skype for Business Server 2015 and the partner application.
 Allowed values are:
@@ -337,14 +337,14 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the partner application is available for use with Lync Server 2013 Preview.
 When set to False the partner application will continue to run, but will not be able to communicate with Lync Server until the Enabled property has been set to True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the partner application is available for use with Skype for Business Server 2015.
 When set to False the partner application will continue to run, but will not be able to communicate with Skype for Business Server 2015 until the Enabled property has been set to True.
@@ -397,7 +397,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for the partner application being modified.
 For example:
@@ -410,7 +410,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the partner application being modified.
 For example:

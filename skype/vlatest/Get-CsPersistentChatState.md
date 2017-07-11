@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPersistentChatState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns the state of one or more Persistent Chat service pools.
 Persistent Chat pools can be in one of two states: Normal, in which the pool uses its primary databases; or FailedOver, in which the pool uses the backup databases defined in the topology.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns the state of one or more Persistent Chat service pools.
 Persistent Chat pools can be in one of two states: Normal, in which the pool uses its primary databases; or FailedOver, in which the pool uses the backup databases defined in the topology.
@@ -33,7 +33,7 @@ Get-CsPersistentChatState [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonPara
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsPersistentChatState cmdlet returns the state of one or more Persistent Chat pools.
 Persistent Chat pools can be in either the Normal state (in which the pool uses its primary databases) or in a FailedOver state, in which the pool uses its backup databases.
@@ -45,7 +45,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatState"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsPersistentChatState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsPersistentChatState cmdlet returns the state of one or more Persistent Chat pools.
 Persistent Chat pools can be in either the Normal state (in which the pool uses its primary databases) or in a FailedOver state, in which the pool uses its backup databases.
@@ -157,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the Persistent Chat pool.
 For example:
@@ -168,7 +168,7 @@ If this parameter is omitted then Get-CsPersistentChatState returns information 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Persistent Chat pool.
 For example:

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsMediaConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of media settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing collection of media settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -38,7 +38,7 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet modifies a collection of settings that define media configuration.
 These actions relate to audio and video calls between client endpoints.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMediaConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet modifies a collection of settings that define media configuration.
 These actions relate to audio and video calls between client endpoints.
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 An instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
 You can retrieve this object by calling Get-CsMediaConfiguration with a specific Identity.
@@ -144,7 +144,7 @@ You can then assign new values to the properties of that object, and then save t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
 You can retrieve this object by calling the Get-CsMediaConfiguration cmdlet with a specific Identity.
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter enables or disables Quality of Service (QoS) marking on the Mediation Server.
 QoS monitors the quality of voice signals over a network.
@@ -177,7 +177,7 @@ But if you are unsure of bandwidth capacity, setting this parameter to True assu
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 QoS monitors the quality of voice signals over a network.
 
@@ -197,21 +197,21 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSiren
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 By default, the Mediation Server does not negotiate Siren between itself and other Unified Communications endpoints. 
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Unified Communications endpoints.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and other Lync clients.
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Lync clients.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and other clients.
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other clients.
@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The level of encryption between Unified Communications entities.
 
@@ -251,7 +251,7 @@ Default: RequireEncryption
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The level of encryption between unified communications devices.
 

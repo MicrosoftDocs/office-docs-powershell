@@ -6,12 +6,12 @@ schema: 2.0.0
 # Clear-CsPersistentChatRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes all the content from a Persistent Chat chat room beginning with the oldest item in the room and continuing through the specified end date.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes all the content from a Persistent Chat chat room beginning with the oldest item in the room and continuing through the specified end date.
 This cmdlet was introduced in Lync Server 2013.
@@ -31,7 +31,7 @@ Clear-CsPersistentChatRoom [-Instance] <ChatRoom> -EndDate <DateTime> [-Confirm]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -52,7 +52,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Clear-CsPersistentChatRoom"}
 
 Lync Server Control Panel: The functions carried out by the Clear-CsPersistentChatRoom cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -120,7 +120,7 @@ Get-CsPersistentChatRoom | Clear-CsPersistentChatRoom -EndDate "3/1/2012" -Confi
 ## PARAMETERS
 
 ### -EndDate
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the last date for which content should be removed.
 For example, if you specify an EndDate of 3/1/2012 (March 1, 2012 in US English) then all the Persistent Chat content added to the room on or before 3/1/2012 will be deleted.
@@ -129,7 +129,7 @@ You must specify an EndDate when running Clear-CsPersistentChatRoom.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the last date for which content should be removed.
 For example, if you specify an EndDate of 3/1/2012 (March 1, 2012 in US English) then all the Persistent Chat content added to the room on or before 3/1/2012 will be deleted.

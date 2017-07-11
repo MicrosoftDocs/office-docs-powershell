@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsNetworkRegion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new network region.
 Network regions represent network hubs or backbones in an enterprise network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network region.
 Network regions represent network hubs or backbones in an enterprise network.
@@ -37,7 +37,7 @@ New-CsNetworkRegion -CentralSite <String> -NetworkRegionID <String> [-AudioAlter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsNetworkRegion"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkRegion"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -AudioAlternatePath
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -264,7 +264,7 @@ Set this parameter to False only if you need to turn off the offload to the Inte
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A globally unique identifier (GUID).
 This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
@@ -327,7 +327,7 @@ If you supply a value for this parameter, you'll receive a confirmation prompt a
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
@@ -371,7 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -VideoAlternatePath
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -385,7 +385,7 @@ Set this parameter to False only if you need to turn off the offload to the Inte
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -431,14 +431,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

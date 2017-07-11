@@ -6,7 +6,7 @@ schema: 2.0.0
 # New-CsRgsTimeRange
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group time range.
 Time ranges are used by the Response Group application to specify opening and closing times for a business day.
@@ -15,7 +15,7 @@ to 5:00 P.M.
 on Sundays, then you would create a time range for Sunday that had an opening time of 12:00 P.M.
 and a closing time of 5:00 P.M.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group time range.
 Time ranges are used by the Response Group application to specify opening and closing times for a business day.
@@ -34,7 +34,7 @@ New-CsRgsTimeRange -CloseTime <TimeSpan> -OpenTime <TimeSpan> [-Name <String>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application uses business hour collections to keep track of the days of the week and the times of day that agents are typically available to answer phones.
 For example, suppose your help desk is open every Monday from 7:00 A.M.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control roles (RBAC) roles this cm
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsTimeRange"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application uses business hour collections to keep track of the days of the week and the times of day that agents are typically available to answer phones.
 For example, suppose your help desk is open every Monday from 7:00 A.M.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control roles (RBAC) roles this cm
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsTimeRange"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application uses business hour collections to keep track of the days of the week and the times of day that agents are typically available to answer phones.
 For example, suppose your help desk is open every Monday from 7:00 A.M.

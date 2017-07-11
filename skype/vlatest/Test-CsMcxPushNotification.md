@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsMcxPushNotification
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that the push notification service is working.
 The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices like iPhones and Windows Phones, even if the Lync application on those devices is currently suspended or running in the background.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that the push notification service is working.
 The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices like iPhones and Windows Phones, even if the Skype for Business application on those devices is currently suspended or running in the background.
@@ -28,7 +28,7 @@ Test-CsMcxPushNotification [-AccessEdgeFqdn] <String> [-Certificate <X509Certifi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Apple Push Notification Service and the Lync Server Push Notification Service enable users running Lync on their Apple iPhone or Windows Phone to receive notifications about Lync events even when Lync Server is suspended or running in the background.
 For example, users can receive notice for events such as these:
@@ -43,7 +43,7 @@ The Test-CsMcxPushNotification cmdlet provides a way for administrators to verif
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsMcxPushNotification cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Apple Push Notification Service and the Skype for Business Server 2015 Push Notification Service enable users running Skype for Business on their Apple iPhone or Windows Phone to receive notifications about Skype for Business events even when the application is suspended or running in the background.
 For example, users can receive notice for events such as these:

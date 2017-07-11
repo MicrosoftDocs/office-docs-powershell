@@ -6,12 +6,12 @@ schema: 2.0.0
 # Invoke-CsQoEDatabasePurge
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Manually purges records from the Quality of Experience (QoE) database.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Manually purges records from the Quality of Experience (QoE) database.
 This cmdlet was introduced in Lync Server 2013.
@@ -33,7 +33,7 @@ Invoke-CsQoEDatabasePurge [-PurgeQoEDataOlderThanDays] <Int32> -SqlServerFqdn <S
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Quality of Experience (QoE) metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
 These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsQoEDatabasePurge"}
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsQoEDatabasePurge cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Quality of Experience (QoE) metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
 These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Debug-CsIntraPoolReplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies the synchronous replication of a pool by comparing the data stored for a specified user on a primary Front End server with data for that same user stored on replica Front End servers.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies the synchronous replication of a pool by comparing the data stored for a specified user on a primary Front End server with data for that same user stored on replica Front End servers.
 This cmdlet was introduced in Lync Server 2013.
@@ -37,7 +37,7 @@ Debug-CsIntraPoolReplication [-PoolFqdn] <XdsGlobalRelativeIdentity> [-Force] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Debug-CsIntraPoolReplication cmdlet provides a way for administrators to verify that replication is taking place between a primary Front End server and its replica Front End servers.
 This can be done in one of two ways: 1) by verifying that the data for a specified user is identical on the Front End server and all its replica servers; or, 2) by verifying that the data for a conference directory is identical on the Front End server and all its replica servers.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Debug-CsIntraPoolReplication"
 
 Lync Server Control Panel: The functions carried out by the Debug-CsIntraPoolReplication cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Debug-CsIntraPoolReplication cmdlet provides a way for administrators to verify that replication is taking place between a primary Front End server and its replica Front End servers.
 This can be done in one of two ways: 1) by verifying that the data for a specified user is identical on the Front End server and all its replica servers; or, 2) by verifying that the data for a conference directory is identical on the Front End server and all its replica servers.
@@ -197,7 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserUri
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address of the user account employed in testing intra-pool replication.
 For example:
@@ -208,7 +208,7 @@ You cannot use the ConferenceDirectory parameter and the UserUri parameter in th
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address of the user account employed in testing intra-pool replication.
 For example:

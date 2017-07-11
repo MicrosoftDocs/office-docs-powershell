@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPersistentChatEligiblePrincipal
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns the eligible principals for a Persistent Chat category or chat room.
 Eligible principals include allowed members or managers (for a category of chat room) as well as allowed presenters (chat room only).
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns the eligible principals for a Persistent Chat category or chat room.
 Eligible principals include allowed members or managers (for a category of chat room) as well as allowed presenters (chat room only).
@@ -35,7 +35,7 @@ Get-CsPersistentChatEligiblePrincipal -Room <String> [-Filter <String>] [-Persis
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -56,7 +56,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatEligibleP
 
 Lync Server Control Panel: The functions carried out by the Get-CsPersistentChatEligiblePrincipal cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -137,14 +137,14 @@ Get-CsPersistentChatEligiblePrincipal -PersistentChatPoolFqdn "atl-persistentcha
 ## PARAMETERS
 
 ### -Category
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the Group Chat category for which eligible principals are to be returned.
 You must use either the Category or the Room parameter when calling Get-CsPersistentChatEligiblePrincipal; however, you cannot use both of those parameters in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the Group Chat category for which eligible principals are to be returned.
 You must use either the Category or the Room parameter when calling the Get-CsPersistentChatEligiblePrincipal cmdlet; however, you cannot use both of those parameters in the same command.
@@ -165,14 +165,14 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the Group Chat room for which eligible principals are to be returned.
 You must use either the Category or the Room parameter when calling Get-CsPersistentChatEligiblePrincipal; however, you cannot use both of those parameters in the same command.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the Group Chat room for which eligible principals are to be returned.
 You must use either the Category or the Room parameter when calling the Get-CsPersistentChatEligiblePrincipal cmdlet; however, you cannot use both of those parameters in the same command.
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -Presenters
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When included in the command, returns the eligible presenters for a Persistent Chat chat room.
 When not included in the command, Get-CsPersistentChatEligiblePrincipal returns eligible members and managers instead.
@@ -242,7 +242,7 @@ This parameter can only be used along with the Room parameter, and can only retu
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When included in the command, returns the eligible presenters for a Persistent Chat chat room.
 When not included in the command, the Get-CsPersistentChatEligiblePrincipal cmdlet returns eligible members and managers instead.

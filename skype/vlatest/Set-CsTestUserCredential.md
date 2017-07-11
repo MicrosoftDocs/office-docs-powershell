@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsTestUserCredential
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new watcher node test user.
 Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Microsoft Lync Server 2013 Preview synthetic transactions to verify that Lync Server components are working as expected.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new watcher node test user.
 Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Skype for Business Server 2015 synthetic transactions to verify that Skype for Business Server 2015 components are working as expected.
@@ -35,7 +35,7 @@ Set-CsTestUserCredential [-SipAddress] <String> -Password <String> -UserName <St
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you are using System Center Operations Manager in conjunction with Microsoft Lync Server 2013 Preview, you have the option of configuring "watcher node" computers.
 Watcher nodes are computers that periodically (and automatically) run synthetic transactions.
@@ -55,7 +55,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsTestUserCredential"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsTestUserCredential cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you are using System Center Operations Manager in conjunction with Skype for Business Server 2015, you have the option of configuring "watcher node" computers.
 Watcher nodes are computers that periodically (and automatically) run synthetic transactions.

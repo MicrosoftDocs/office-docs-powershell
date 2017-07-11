@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsReportingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing collection of reporting configuration settings.
 Reporting configuration settings are used to specify the URL for installations of Microsoft Lync Server 2013 Preview Monitoring Reports.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing collection of reporting configuration settings.
 Reporting configuration settings are used to specify the URL for installations of Skype for Business Server 2015 Monitoring Reports.
@@ -27,7 +27,7 @@ Remove-CsReportingConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reporting configuration settings are used to specify the home page for the Microsoft Lync Server 2013 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 
@@ -37,7 +37,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsReportingConfigurati
 
 Lync Server Control Panel: The functions carried out by the Remove-CsReportingConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reporting configuration settings are used to specify the home page for the Skype for Business Server 2015 Monitoring Reports; if you are not using Monitoring Reports then there is no reason for you to modify the reporting configuration settings.
 

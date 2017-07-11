@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsPstnPeerToPeerCall
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability a pair of users to conduct a peer-to-peer call over the public switched telephone network (PSTN) gateway.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Tests the ability a pair of users to conduct a peer-to-peer call over the public switched telephone network (PSTN) gateway.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Test-CsPstnPeerToPeerCall [[-TargetFqdn] <String>] -ReceiverCredential <PSCreden
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsPstnPeerToPeerCall is an example of a Microsoft Lync Server 2010 "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -64,7 +64,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPstnPeerToPeerCall"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsPstnPeerToPeerCall is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -93,7 +93,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPstnPeerToPeerCall"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsPstnPeerToPeerCall cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -306,7 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiverSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP address for the first of the two user accounts to be tested.
 For example: -ReceiverSipAddress "sip:pilar@litwareinc.com".
@@ -316,7 +316,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address for the first of the two user accounts to be tested.
 For example: -ReceiverSipAddress "sip:pilar@litwareinc.com".
@@ -326,7 +326,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the first of the two user accounts to be tested.
 For example:
@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -SenderSipAddress
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 SIP address for the second of the two user accounts to be tested.
 For example: -SenderSipAddress "sip:kenmyer@litwareinc.com".
@@ -417,7 +417,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 SIP address for the second of the two user accounts to be tested.
 For example: -SenderSipAddress "sip:kenmyer@litwareinc.com".
@@ -427,7 +427,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the second of the two user accounts to be tested.
 For example:
@@ -499,13 +499,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
@@ -530,7 +530,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used in the test.
 Allowed values are:
@@ -542,7 +542,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used in the test.
 Allowed values are:

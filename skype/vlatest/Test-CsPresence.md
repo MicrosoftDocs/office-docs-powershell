@@ -6,16 +6,16 @@ schema: 2.0.0
 # Test-CsPresence
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests the ability of a user to log on to Microsoft Lync Server 2010, publish his or her presence information, and then subscribe to the presence information published by a second user.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of a user to log on to Lync Server, publish his or her presence information, and then subscribe to the presence information published by a second user.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of a user to log on to Skype for Business Server 2015, publish his or her presence information, and then subscribe to the presence information published by a second user.
 This cmdlet was introduced in Lync Server 2010.
@@ -47,7 +47,7 @@ Test-CsPresence [-Authentication <AuthenticationMechanism>] [-Force] [-OutLogger
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsPresence is an example of a Lync Server 2010 synthetic transaction.
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -72,7 +72,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPresence"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsPresence is an example of a Lync Server synthetic transaction.
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -97,7 +97,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPresence"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsPresence cmdlet is an example of a Skype for Business Server 2015 synthetic transaction.
 Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
@@ -275,7 +275,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublisherSipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address for the first of the two user accounts to be tested.
 For example: -PublisherSipAddress "sip:kenmyer@litwareinc.com".
@@ -285,7 +285,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the first of the two user accounts to be tested.
 For example:
@@ -349,7 +349,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriberSipAddress
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 SIP address for the second of the two user accounts to be tested.
 For example: -SubscriberSipAddress "sip:pilar@litwareinc.com".
@@ -359,7 +359,7 @@ The SIP address is not required if you are running the test under the health mon
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 SIP address for the second of the two user accounts to be tested.
 For example:
@@ -448,13 +448,13 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill OutVerboseVariable Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:

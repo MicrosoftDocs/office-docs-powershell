@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsRegistrarConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing collection of Registrar configuration settings.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing collection of Registrar configuration settings.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
@@ -26,7 +26,7 @@ Remove-CsRegistrarConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-C
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Registrar is perhaps the most important component in Microsoft Lync Server 2010; after all, without a Registrar, users would not be able to log on to the system, and Lync Server 2010 would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRegistrarConfiguration e"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Registrar is perhaps the most important component in Lync Server; after all, without a Registrar, users would not be able to log on to the system, and Lync Server would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -76,7 +76,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRegistrarConfiguration e"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Registrar is perhaps the most important component in Skype for Business Server 2015; after all, without a Registrar, users would not be able to log on to the system, and Skype for Business Server 2015 would not be able to keep track of users and their current status.
 When a user logs on to Skype for Business Server 2015, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -196,7 +196,7 @@ Get-CsRegistrarConfiguration | Where-Object {$_.EnableDHCPServer -eq $True} | Re
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Registrar configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity site:Redmond.
@@ -208,7 +208,7 @@ Instead, all the properties in the global collection will be reset to their defa
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Registrar configuration settings to be removed.
 To remove settings configured at the site scope, use syntax similar to this: -Identity site:Redmond.

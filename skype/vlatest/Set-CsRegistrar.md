@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsRegistrar
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to modify the properties of one or more Registrars.
 Registrars are used to authenticate logon requests, and to maintain information about user status and availability.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to modify the properties of one or more Registrars.
 Registrars are used to authenticate logon requests, and to maintain information about user status and availability.
@@ -34,7 +34,7 @@ Set-CsRegistrar [[-Identity] <XdsGlobalRelativeIdentity>] [-ArchivingServer <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Registrar is perhaps the most important component in Microsoft Lync Server 2010; without a Registrar, users would not be able to log on to the system, and Lync Server 2010 would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from (be it a computer, a mobile phone, or some other device) sends a REGISTER request to the registration server; in turn the server responds by challenging the client device for authentication credentials.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrar\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Registrar is perhaps the most important component in Lync Server; without a Registrar, users would not be able to log on to the system, and Lync Server would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from (be it a computer, a mobile phone, or some other device) sends a REGISTER request to the registration server; in turn the server responds by challenging the client device for authentication credentials.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrar\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Registrar is perhaps the most important component in Skype for Business Server 2015; without a Registrar, users would not be able to log on to the system, and Skype for Business Server 2015 would not be able to keep track of users and their current status.
 When a user logs on to Skype for Business Server 2015, the endpoint the user is logging on from (be it a computer, a mobile phone, or some other device) sends a REGISTER request to the registration server; in turn the server responds by challenging the client device for authentication credentials.
@@ -165,7 +165,7 @@ Set-CsRegistrar -Identity "Registrar:atl-cs-001.litwareinc.com" -BackupRegistrar
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Registrar to be modified.
 For example: -Identity "Registrar:atl-cs-001.litwareinc.com".
@@ -175,7 +175,7 @@ For example: -Identity "atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Registrar to be modified.
 For example:
@@ -203,14 +203,14 @@ Accept wildcard characters: False
 ```
 
 ### -ArchivingServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Archiving Server to be associated with the Registrar.
 For example: -ArchivingServer "ArchivingServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Archiving Server to be associated with the Registrar.
 For example:
@@ -233,14 +233,14 @@ Accept wildcard characters: False
 ```
 
 ### -BackupRegistrar
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Registrar to be used if this Registrar is not available.
 For example: -BackupRegistrar "Registrar:dublin-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Registrar to be used if this Registrar is not available.
 For example:
@@ -263,14 +263,14 @@ Accept wildcard characters: False
 ```
 
 ### -EdgeServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Edge Server to be associated with the Registrar.
 For example: -EdgeServer "EdgeServer:atl-edge-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Edge Server to be associated with the Registrar.
 For example:
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailbackDetectionInterval
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Specifies the amount of time that the system will wait before checking to see if a Registrar that had become unavailable is now available.
 If you have set EnableAutomaticFailover to True, the system will "failover" to the backup Registrar any time a Registrar becomes unavailable.
@@ -333,7 +333,7 @@ This parameter cannot be used unless you have specified a backup Registrar.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the amount of time that the system will wait before checking to see if a Registrar that had become unavailable is now available.
 If you have set EnableAutomaticFailover to True, the system will "failover" to the backup Registrar any time a Registrar becomes unavailable.
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailureDetectionInterval
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Specifies the time interval that the system will wait before deciding that a Registrar is unavailable.
 If EnableAutomaticFailover has been set to True, the system will then attempt to log users on to the backup Registrar instead.
@@ -381,7 +381,7 @@ This parameter cannot be used unless you have specified a backup Registrar.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the time interval that the system will wait before deciding that a Registrar is unavailable.
 If EnableAutomaticFailover has been set to True, the system will then attempt to log users on to the backup Registrar instead.
@@ -409,14 +409,14 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Monitoring Server to be associated with the Registrar.
 For example: -MonitoringServer "MonitoringServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Monitoring Server to be associated with the Registrar.
 For example:
@@ -455,14 +455,14 @@ Accept wildcard characters: False
 ```
 
 ### -UserServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the User Services server to be associated with the Registrar.
 For example: -UserServer "UserServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the User Services server to be associated with the Registrar.
 For example:
@@ -501,14 +501,14 @@ Accept wildcard characters: False
 ```
 
 ### -WebServer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Service location of the Web Server to be associated with the Registrar.
 For example: -WebServer "WebServer:atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Service location of the Web Server to be associated with the Registrar.
 For example:
@@ -579,13 +579,13 @@ Accept wildcard characters: False
 ```
 
 ### -Registrar
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Registrar Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Service location of the Registrar.
 
@@ -605,13 +605,13 @@ Accept wildcard characters: False
 ```
 
 ### -SipHealthPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill SipHealthPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Port used for monitoring server health.
 
@@ -631,13 +631,13 @@ Accept wildcard characters: False
 ```
 
 ### -SipServerTcpPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill SipServerTcpPort Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 SIP listening port.
 The default value is 5060.
@@ -810,7 +810,7 @@ Accept wildcard characters: False
 ```
 
 ### -WinFabReplicationPort
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Port used for Windows Fabric replication.
 Lync Server 2013 Preview uses Windows Fabric to replicate conference directories to all the Front End servers within a Registrar pool.
@@ -818,7 +818,7 @@ The default value is 5094.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Port used for Windows Fabric replication.
 Skype for Business Server 2015 uses Windows Fabric to replicate conference directories to all the Front End servers within a Registrar pool.
@@ -840,7 +840,7 @@ Accept wildcard characters: False
 ```
 
 ### -XmppGatewaySipPort
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Port used by the XMPP gateway associated with the Registrar.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.
@@ -849,7 +849,7 @@ The default value is 5098.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Port used by the XMPP gateway associated with the Registrar.
 The extensible Messaging and Presence Protocol (XMPP) is an open-standard communications protocol for exchanging messages using XML.

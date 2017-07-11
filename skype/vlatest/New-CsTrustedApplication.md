@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsTrustedApplication
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Adds a trusted application to a pool.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Adds a trusted application to a pool.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ New-CsTrustedApplication -ApplicationId <String> -Port <Int32> -TrustedApplicati
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Microsoft Lync Server 2010 but that is not a built-in part of the product.
 This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplication\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Lync Server but that is not a built-in part of the product.
 This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
@@ -82,7 +82,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplication\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server 2015 but that is not a built-in part of the product.
 This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The name of the application.
 This must be a string that is unique within the pool that is specified in the TrustedApplicationPoolFqdn parameter.
@@ -203,7 +203,7 @@ You cannot specify an ApplicationId and an Identity.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The name of the application.
 This must be a string that is unique within the pool that is specified in the TrustedApplicationPoolFqdn parameter.

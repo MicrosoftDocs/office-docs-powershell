@@ -6,18 +6,18 @@ schema: 2.0.0
 # New-CsPinPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new client personal identification number (PIN) policy.
 PIN authentication enables users to access Microsoft Lync Server 2010 by providing a PIN instead of a user name and password.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new client personal identification number (PIN) policy.
 PIN authentication enables users to access Lync Server by providing a PIN instead of a user name and password.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new client personal identification number (PIN) policy.
 PIN authentication enables users to access Skype for Business Server 2015 by providing a PIN instead of a user name and password.
@@ -34,7 +34,7 @@ New-CsPinPolicy [-Identity] <XdsIdentity> [-Description <String>] [-MaximumLogon
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -50,7 +50,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsPinPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPinPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -254,7 +254,7 @@ New-CsPinPolicy -Identity "site:Paris" -MinPasswordLength $x.MinPasswordLength
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the unique Identity to be assigned to the policy.
 PIN policies can be created at the site or per-user scope.
@@ -263,7 +263,7 @@ To create a policy at the per-user scope, use syntax similar to this: -Identity 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique Identity to be assigned to the policy.
 PIN policies can be created at the site or per-user scope.
@@ -308,7 +308,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumLogonAttempts
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -332,7 +332,7 @@ MaximumLogonAttempts can be set to any whole number between 1 and 999, inclusive
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -359,7 +359,7 @@ This typically provides the most security.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -476,14 +476,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -536,13 +536,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCommonPatterns
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill AllowCommonPatterns Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not "common patterns" are allowed in PINs.
 Common patterns include repeating digits (222222); four or more consecutive digits (123456); and PINs that match a user's phone number or extension number.

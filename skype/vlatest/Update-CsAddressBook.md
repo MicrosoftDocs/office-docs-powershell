@@ -6,11 +6,11 @@ schema: 2.0.0
 # Update-CsAddressBook
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Forces the specified Address Book servers to synchronize their contents with the User database.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Forces the specified Address Book servers to synchronize their contents with the User database.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Update-CsAddressBook [[-Fqdn] <Fqdn>] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Address Book servers are intermediaries between Active Directory and Microsoft Lync Server 2010.
 The Address Book server ensures that the user information stored in Lync Server 2010 is in synch with the user information stored in Active Directory.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsAddressBook"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Address Book servers are intermediaries between Active Directory and Lync Server.
 The Address Book server ensures that the user information stored in Lync Server is in synch with the user information stored in Active Directory.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Update-CsAddressBook"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Address Book servers are intermediaries between Active Directory and Skype for Business Server 2015.
 The Address Book server ensures that the user information stored in Skype for Business Server 2015 is in synch with the user information stored in Active Directory.
@@ -142,13 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Backup-CsPool
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a backup copy of the specified Microsoft Lync Server 2013 Preview pool.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a backup copy of the specified Skype for Business Server 2015 pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -26,7 +26,7 @@ Backup-CsPool -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Confirm] [-FailedO
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
 If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
@@ -36,7 +36,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Lync Server Control Panel: The functions carried out by the Backup-CsPool cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
 If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to select the Lync Server modules that will be backed up; if this parameter is not present then all the modules will be backed up.
 Allowed values are:
@@ -116,7 +116,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to select the Skype for Business Server 2015 modules that will be backed up; if this parameter is not present then all the modules will be backed up.
 Allowed values are:

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsClsRegion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes one or more centralized logging configuration regions.
 Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
 Centralized logging regions are intended for use with Lync Online Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes one or more centralized logging configuration regions.
 Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
@@ -27,7 +27,7 @@ Remove-CsClsRegion [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf] [<Com
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
@@ -44,7 +44,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsClsRegion"}
 
 Lync Server Control Panel: The functions carried out by the Remove-CsClsRegion cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.

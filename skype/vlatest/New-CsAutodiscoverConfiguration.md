@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsAutodiscoverConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of Autodiscover configuration settings at the site scope.
 The Autodiscover service provides a way for client applications such as Lync Web Access or Microsoft Lync Mobile to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Autodiscover configuration settings at the site scope.
 The Autodiscover service provides a way for client applications such as Microsoft Lync Mobile to locate key resources such as a user's home pool or the URL for joining a dial-in conference.
@@ -29,7 +29,7 @@ New-CsAutodiscoverConfiguration [-Identity] <XdsIdentity> [-Confirm] [-ExternalS
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For client applications to make the most effective use of Lync Server those applications need to know the location of key Lync Server components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.
@@ -53,7 +53,7 @@ When you install Lync Server a global collection of settings will be created for
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsAutoDiscoverConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For client applications to make the most effective use of Skype for Business Server 2015 those applications need to know the location of key Skype for Business Server 2015 components.
 For example, authenticated users must be able to locate their home pool; after all, they can only be authenticated by that home pool.

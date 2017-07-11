@@ -6,18 +6,18 @@ schema: 2.0.0
 # Grant-CsMobilityPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Grants a per-user mobility policy to a user or group of users.
 Mobility policies determine whether or not a user can use Lync Mobile.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Grant-CsMobilityPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Grants a per-user mobility policy to a user or group of users.
 Mobility policies determine whether or not a user can use a mobile device (such as a cell phone) to connect to Skype for Business Server 2015.
@@ -35,7 +35,7 @@ Grant-CsMobilityPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Mobile is a client application that enables users to run Lync on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -67,11 +67,11 @@ Get-CsUser "Ken Myer" | Select-Object DisplayName, MobilityPolicy
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Grant-CsMobilityPolicy cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Mobile is a client application that enables users to run Skype for Business Server 2015 on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -205,7 +205,7 @@ Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsMob
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the user account to be assigned the per-user mobility policy.
 User Identities are typically specified using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -216,7 +216,7 @@ For example, the Identity "* Smith" will assign the policy to all the users who 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -236,13 +236,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -262,20 +262,20 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then Grant-CsMobilityPolicy will contact the first available domain controller.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsMobilityPolicy cmdlet will contact the first available domain controller.
@@ -296,14 +296,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsMobilityPolicy cmdlet does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PassThru Description}}
 
@@ -323,7 +323,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
@@ -338,7 +338,7 @@ To unassign a per-user policy previously assigned to a user, set the PolicyName 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PolicyName Description}}
 
@@ -358,13 +358,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.

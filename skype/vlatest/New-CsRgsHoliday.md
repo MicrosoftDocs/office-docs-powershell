@@ -6,13 +6,13 @@ schema: 2.0.0
 # New-CsRgsHoliday
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new Response Group holiday.
 In the Response Group application, a holiday represents a day when the agents assigned to a queue, who would typically be working that day, will not be working and will not be available to answer calls.
 For example, if United States (U.S.)-based workers are given Thanksgiving Day off, then a holiday would be configured for November 24, 2011.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group holiday.
 In the Response Group application, a holiday represents a day when the agents assigned to a queue, who would typically be working that day, will not be working and will not be available to answer calls.
@@ -28,7 +28,7 @@ New-CsRgsHoliday [-Name <String>] -EndDate <DateTime> -StartDate <DateTime> [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application uses business hour collections to indicate the days of the week, and the times of day, when agents are typically available to answer phone calls.
 For example, suppose your help desk is usually staffed from 7:00 A.M.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsRgsHoliday\b"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application uses business hour collections to indicate the days of the week, and the times of day, when agents are typically available to answer phone calls.
 For example, suppose your help desk is usually staffed from 7:00 A.M.
@@ -88,7 +88,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsHoliday\b"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application uses business hour collections to indicate the days of the week, and the times of day, when agents are typically available to answer phone calls.
 For example, suppose your help desk is usually staffed from 7:00 A.M.
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Ending date for the holiday.
 The format for the ending date depends on your Regional and Language Options.
@@ -209,7 +209,7 @@ on July 5, 2011.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Ending date for the holiday.
 The format for the ending date depends on your Regional and Language Options.
@@ -233,7 +233,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Starting date for the holiday.
 The format for the starting date depends on your Regional and Language Options.
@@ -243,7 +243,7 @@ on July 4, 2011.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Starting date for the holiday.
 The format for the starting date depends on your Regional and Language Options.

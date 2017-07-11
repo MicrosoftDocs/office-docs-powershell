@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsNetworkBandwidthPolicyProfile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a network bandwidth policy profile.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a network bandwidth policy profile.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Remove-CsNetworkBandwidthPolicyProfile [-Identity] <XdsGlobalRelativeIdentity> [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Microsoft Lync Server 2010, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet removes a container profile for these policies.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Lync Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet removes a container profile for these policies.
@@ -53,7 +53,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Skype for Business Server 2015, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet removes a container profile for these policies.

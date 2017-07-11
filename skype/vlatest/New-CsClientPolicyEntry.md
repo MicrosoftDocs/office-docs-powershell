@@ -6,16 +6,16 @@ schema: 2.0.0
 # New-CsClientPolicyEntry
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Adds new options to Microsoft Lync Server 2010 client policies.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Adds new options to Lync Server client policies.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Adds new options to Skype for Business Server 2015 client policies.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ New-CsClientPolicyEntry -Name <String> -Value <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client policies are the primary mechanism used by Lync Server 2010 to manage client software such as Microsoft Lync 2010.
 When you create or configure a client policy, you have numerous options available to you; for example, you can specify whether or not photos should be used in Lync 2010, whether or not emoticons are allowed in instant messages, and whether or not Lync 2010 automatically saves transcripts of instant messaging sessions.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsClientPolicyEntry"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client policies are the primary mechanism used by Lync Server to manage client software such as Lync.
 When you create or configure a client policy, you have numerous options available to you; for example, you can specify whether or not photos should be used in Lync, whether or not emoticons are allowed in instant messages, and whether or not Lync automatically saves transcripts of instant messaging sessions.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClientPolicyEntry"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client policies are the primary mechanism used by Skype for Business Server 2015 to manage client software such as Skype for Business.
 When you create or configure a client policy, you have numerous options available to you; for example, you can specify whether or not photos should be used in Skype for Business, whether or not emoticons are allowed in instant messages, and whether or not Skype for Business automatically saves transcripts of instant messaging sessions.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Invoke-CsPoolFailOver
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Invokes the failover process for a Microsoft Lync Server 2013 Preview pool.
 Failover refers to the process that occurs when a pool fails and the current users of that pool are then signed on to a backup pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Invokes the failover process for a Skype for Business Server 2015 pool.
 Failover refers to the process that occurs when a pool fails and the current users of that pool are then signed on to a backup pool.
@@ -29,7 +29,7 @@ Invoke-CsPoolFailOver -PoolFqdn <Fqdn> [-Confirm] [-DisasterMode] [-FlushStorage
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The pool failover process provides a way for administrators to quickly restore service to users if the Registrar pool they have logged on to should suddenly become unavailable.
 If a pool fails, users will automatically be signed off from Microsoft Lync Server 2013 Preview; if they immediately try to log back on, that logon will be rejected if their home pool is still unavailable.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsPoolFailover"}
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsPoolFailover cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The pool failover process provides a way for administrators to quickly restore service to users if the Registrar pool they have logged on to should suddenly become unavailable.
 If a pool fails, users will automatically be signed off from Skype for Business Server 2015; if they immediately try to log back on, they will be redirected to their specified backup pool.
@@ -110,7 +110,7 @@ Invoke-CsPoolFailOver -PoolFqdn "atl-cs-001.litwareinc.com" -DisasterMode
 ## PARAMETERS
 
 ### -PoolFqdn
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the pool being failed over.
 For example:
@@ -119,7 +119,7 @@ For example:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the pool being failed over from.
 For example:
@@ -158,14 +158,14 @@ Accept wildcard characters: False
 ```
 
 ### -DisasterMode
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When present, indicates that failover is being performed in "disaster mode." Disaster mode indicates that the pool is no longer accessible and that the failover occurred unexpectedly, typically because of a hardware failure.
 If this parameter is not present that means that the pool is still up and running and that failover occurred by administrator choice; for example, the pool might temporarily be failed over in order to do hardware or software upgrades on the server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When present, indicates that failover is being performed in "disaster mode." If a pool is no longer accessible the only way to restore full functionality to users in that pool is to fail over the pool by using the DisasterMode parameter.
 
@@ -187,14 +187,14 @@ Accept wildcard characters: False
 ```
 
 ### -FlushStorageService
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, Invoke-CsPoolFailover will both fail over all the users in the pool, and call the Invoke-CsStorageServiceFlush cmdlet to flush the storage service database on each Front End server in the pool.
 Flushing a database involves writing all the queued data to disk, and then clearing the database cache.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, the Invoke-CsPoolFailOver cmdlet will both fail over all the users in the pool, and call the Invoke-CsStorageServiceFlush cmdlet to flush the storage service database on each Front End server in the pool.
 Flushing a database involves writing all the queued data to disk, and then clearing the database cache.

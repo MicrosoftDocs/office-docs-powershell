@@ -6,18 +6,18 @@ schema: 2.0.0
 # Import-CsLegacyConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Import-CsLegacyConfiguration enables you to import a number of configuration settings from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Microsoft Lync Server 2010.
 This helps provide interoperability between Lync Server 2010 and your earlier installation of Office Communications Server 2007 R2 or Office Communications Server 2007.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Import-CsLegacyConfiguration enables you to import a number of configuration settings from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Lync Server.
 This helps provide interoperability between Lync Server and your earlier installation of Office Communications Server 2007 R2 or Office Communications Server 2007.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Import-CsLegacyConfiguration cmdlet enables you to import a number of configuration settings from Microsoft Office Communications Server 2007 R2 or Microsoft Office Communications Server 2007 to Skype for Business Server 2015.
 This helps provide interoperability between Skype for Business Server 2015 and your earlier installation of Office Communications Server 2007 R2 or Office Communications Server 2007.
@@ -33,7 +33,7 @@ Import-CsLegacyConfiguration [-ReplaceExisting] [-Force] [-Report <String>] [-Wh
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Import-CsLegacyConfiguration is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from a previous version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Lync Server 2010. 
 Import-CsLegacyConfiguration is used to import voice policies; location profiles (for instance, dial plans); voice routes; voice normalization rules; meeting policies; external access policies; archiving policies; presence policies; Communicator Web Access  URL settings; and dial-in conferencing access numbers.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Import-CsLegacyConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Import-CsLegacyConfiguration is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from a previous version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Lync Server.
 Import-CsLegacyConfiguration is used to import voice policies; location profiles (for instance, dial plans); voice routes; voice normalization rules; meeting policies; external access policies; archiving policies; presence policies; Communicator Web Access URL settings; and dial-in conferencing access numbers.
@@ -93,7 +93,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsLegacyConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Import-CsLegacyConfiguration cmdlet is used in conjunction with the Merge-CsLegacyTopology cmdlet to enable organizations to migrate from a previous version of Office Communications Server (either Office Communications Server 2007 R2 or Office Communications Server 2007) to Skype for Business Server 2015.
 The Import-CsLegacyConfiguration cmdlet is used to import voice policies; location profiles (for instance, dial plans); voice routes; voice normalization rules; meeting policies; external access policies; archiving policies; presence policies; Communicator Web Access URL settings; and dial-in conferencing access numbers.
@@ -187,13 +187,13 @@ Import-CsLegacyConfiguration -ReplaceExisting
 ## PARAMETERS
 
 ### -ReplaceExisting
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If present, this parameter instructs Import-CsLegacyConfiguration to overwrite any previously imported policies or settings that have changed since the last time the cmdlet was run.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If present, this parameter instructs the Import-CsLegacyConfiguration cmdlet to overwrite any previously imported policies or settings that have changed since the last time the cmdlet was run.
 

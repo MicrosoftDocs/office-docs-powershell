@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsExUMConnectivity
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that a test user can connect to Exchange Unified Messaging.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that a test user can connect to Exchange Unified Messaging.
 This cmdlet was introduced in Lync Server 2013.
@@ -35,7 +35,7 @@ Test-CsExUMConnectivity [[-TargetFqdn] <String>] -UserCredential <PSCredential>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsExUMConnectivity cmdlet verifies that the specified user can connect to the Microsoft Exchange Server 2013 Preview unified messaging service.
 Note that this cmdlet only verifies that a connection can be made to the service; it does not test the service itself.
@@ -47,7 +47,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsExUMConnectivity"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsExUMConnectivity cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsExUMConnectivity cmdlet verifies that the specified user can connect to the Exchange unified messaging service.
 Note that this cmdlet only verifies that a connection can be made to the service; it does not test the service itself.
@@ -201,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used when running the test.
 Allowed values are:
@@ -213,7 +213,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used when running the test.
 Allowed values are:

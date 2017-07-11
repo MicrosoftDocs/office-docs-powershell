@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsVoiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves the voice configuration object, which contains a full list of all voice test configurations defined for the Microsoft Lync Server 2010 deployment.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Retrieves the voice configuration object, which contains a full list of all voice test configurations defined for the Lync Server deployment.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Retrieves the voice configuration object, which contains a full list of all voice test configurations defined for the Skype for Business Server 2015 deployment.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,7 +35,7 @@ Get-CsVoiceConfiguration [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet is used to retrieve the global instance that holds a list of all voice test configurations defined within the Lync Server 2010 deployment.
@@ -46,7 +46,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsVoiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet is used to retrieve the global instance that holds a list of all voice test configurations defined within the Lync Server deployment.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsVoiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet is used to retrieve the global instance that holds a list of all voice test configurations defined within the Skype for Business Server 2015 deployment.

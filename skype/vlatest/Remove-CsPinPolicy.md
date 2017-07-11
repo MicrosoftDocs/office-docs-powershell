@@ -6,18 +6,18 @@ schema: 2.0.0
 # Remove-CsPinPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified personal identification number (PIN) policy.
 PIN authentication and PIN policies enable users to access Microsoft Lync Server 2010 by providing a PIN instead of a user name and password.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified personal identification number (PIN) policy.
 PIN authentication and PIN policies enable users to access Lync Server by providing a PIN instead of a user name and password.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified personal identification number (PIN) policy.
 PIN authentication and PIN policies enable users to access Skype for Business Server 2015 by providing a PIN instead of a user name and password.
@@ -33,7 +33,7 @@ Remove-CsPinPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [-Ten
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPinPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -83,7 +83,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPinPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -234,7 +234,7 @@ Get-CsPinPolicy | Remove-CsPinPolicy
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier assigned to the policy when it was created.
 PIN policies can be assigned at the global, site, or per-user scope.
@@ -244,7 +244,7 @@ To refer to a policy at the per-user scope, use syntax similar to this: -Identit
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier assigned to the policy when it was created.
 PIN policies can be assigned at the global, site, or per-user scope.

@@ -6,16 +6,16 @@ schema: 2.0.0
 # New-CsVoiceRegex
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a regular expression pattern and translation for translating phone numbers to different formats.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a regular expression pattern and translation for translating phone numbers to different formats.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 New-CsVoiceRegex -ExactLength \<int\> \[-StartsWith \<string\>\] \[-DigitsToStrip \<int\>\] \[-DigitsToPrepend \<string\>\] \[\<CommonParameters\>\]
 
@@ -44,7 +44,7 @@ New-CsVoiceRegex [-AtLeastLength <Object>] [-DigitsToPrepend <Object>] [-DigitsT
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Regular expressions are used to match character patterns.
 Microsoft Lync Server 2010 uses regular expressions for converting phone numbers to and from various formats, including dialed numbers, E.164, and local private branch exchange (PBX) and public switched telephone network (PSTN) formats.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceRegex"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Regular expressions are used to match character patterns.
 Lync Server uses regular expressions for converting phone numbers to and from various formats, including dialed numbers, E.164, and local private branch exchange (PBX) and public switched telephone network (PSTN) formats.
@@ -72,11 +72,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoiceRegex"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Regular expressions are used to match character patterns.
 Skype for Business Server 2015 uses regular expressions for converting phone numbers to and from various formats, including dialed numbers, E.164, and local private branch exchange (PBX) and public switched telephone network (PSTN) formats.
@@ -196,7 +196,7 @@ New-CsVoiceNormalizationRule "global/internal rule" -Pattern $regex.Pattern -Tra
 ## PARAMETERS
 
 ### -AtLeastLength
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The minimum length required for the string (phone number) to match the expression.
 For example, if you're defining a normalization rule that affects only numbers that must be at least 7 digits (or characters) in length, specify a value of 7 for this parameter.
@@ -206,7 +206,7 @@ You cannot enter values for both.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AtLeastLength Description}}
 
@@ -239,7 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExactLength
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The length the string (phone number) must be to match the regular expression.
 For example, if you want a normalization rule to affect only 10-digit numbers, specify a value of 10 for this parameter.
@@ -249,7 +249,7 @@ You cannot enter values for both.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ExactLength Description}}
 
@@ -282,7 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -DigitsToPrepend
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 A string specifying the characters or numbers to add to the beginning of the phone number.
 The value entered for this parameter will impact the Translation value, prepending characters to the number matching the regular expression Pattern.
@@ -290,7 +290,7 @@ For example, if the number matching the pattern is 5551212 and the DigitsToPrepe
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DigitsToPrepend Description}}
 
@@ -310,14 +310,14 @@ Accept wildcard characters: False
 ```
 
 ### -DigitsToStrip
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The number of characters to strip from the beginning of the string (phone number).
 For example, if the number 2065551212 is entered and the DigitsToStrip is 3, the number will be translated to 5551212
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DigitsToStrip Description}}
 
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartsWith
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The first character of the string (phone number).
 The string will not match the regular expression unless it begins with the string specified in the StartsWith parameter.
@@ -347,7 +347,7 @@ For example, if you've specified an ExactLength of 10 and a StartsWith string of
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill StartsWith Description}}
 

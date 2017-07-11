@@ -6,16 +6,16 @@ schema: 2.0.0
 # Uninstall-CsDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Deletes the specified Microsoft Lync Server 2010 database.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Deletes the specified Lync Server database.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Deletes the specified Skype for Business Server 2015 database.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ Uninstall-CsDatabase -SqlServerFqdn <Fqdn> -DatabaseType <DatabaseNameType> [-De
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 makes extensive use of SQL Server databases such as the Central Management store and the Archiving database.
 These databases are set up at the same time you install Lync Server 2010 or at the same time you install a Lync Server 2010 role (such as Monitoring Server) that requires a database back end.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Uninstall-CsDatabase"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server makes extensive use of SQL Server databases such as the Central Management store and the Archiving database.
 These databases are set up at the same time you install Lync Server or at the same time you install a Lync Server role that requires a database back end.
@@ -65,7 +65,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Uninstall-CsDatabase"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 makes extensive use of SQL Server databases such as the Central Management store and the Archiving database.
 These databases are set up at the same time you install Skype for Business Server 2015 or at the same time you install a Skype for Business Server 2015 role that requires a database back end.
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Database to be deleted.
 Valid values are:
@@ -187,7 +187,7 @@ To delete the Central Management store, use the CentralManagementDatabase parame
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Database to be deleted.
 Valid values are:
@@ -218,7 +218,7 @@ To delete the Central Management store, use the CentralManagementDatabase parame
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Database to be deleted.
 Valid values are:

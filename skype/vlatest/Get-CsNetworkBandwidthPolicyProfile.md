@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsNetworkBandwidthPolicyProfile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more network bandwidth policy profiles.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more network bandwidth policy profiles.
 This cmdlet was introduced in Lync Server 2010.
@@ -31,7 +31,7 @@ Get-CsNetworkBandwidthPolicyProfile [-Filter <String>] [-LocalStore] [<CommonPar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Microsoft Lync Server 2010, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet retrieves one or more container profiles for these policies.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Lync Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet retrieves one or more container profiles for these policies.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkBandwidthPolicyProfile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
 (In Skype for Business Server 2015, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet retrieves one or more container profiles for these policies.

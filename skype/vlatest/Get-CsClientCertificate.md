@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsClientCertificate
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the client certificates that have been issued to a user.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the client certificates that have been issued to a user.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsClientCertificate [-Identity] <UserIdParameter> [-WhatIf] [-Confirm] [<Com
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Client certificates provide an alternate way for users to be authenticated by Lync Server 2010.
 Instead of providing a user name and password, users present the system with an X.509 certificate.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientCertificate"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Client certificates provide an alternate way for users to be authenticated by Lync Server.
 Instead of providing a user name and password, users present the system with an X.509 certificate.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsClientCertificate"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client certificates provide an alternate way for users to be authenticated by Skype for Business Server 2015.
 Instead of providing a user name and password, users present the system with an X.509 certificate.

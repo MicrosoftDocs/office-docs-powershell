@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsMediaConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of media settings.
 These settings can be used to specify such things as the supported level of encryption and the maximum allowed video resolution.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of media settings.
 These settings can be used to specify such things as the supported level of encryption and the maximum allowed video resolution.
@@ -30,7 +30,7 @@ New-CsMediaConfiguration [-Identity] <XdsIdentity> [-EnableQoS <Boolean>] [-Enab
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet creates a new collection of settings that define behaviors for specific media actions.
 
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsMediaConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a new collection of settings that define behaviors for specific media actions.
 
@@ -109,7 +109,7 @@ New-CsMediaConfiguration -Identity MediationServer:pool0.litwareinc.com -EnableS
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique identifier specifying the scope at which this configuration is applied (site or service).
 A configuration at the site scope would be entered as site:\<site name\>, such as site:Redmond.
@@ -120,7 +120,7 @@ Media configurations created at the service scope can be created only for the Co
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 A unique identifier specifying the scope at which this configuration is applied (site or service).
 A configuration at the site scope would be entered as site:\<site name\>, such as site:Redmond.
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter enables or disables Quality of Service (QoS) marking on the Mediation Server.
 QoS monitors the quality of voice signals over a network.
@@ -158,7 +158,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 QoS monitors the quality of voice signals over a network.
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSiren
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 By default, the Mediation Server does not negotiate Siren between itself and other Microsoft Unified Communications endpoints. 
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Unified Communications endpoints.
@@ -189,7 +189,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and other Lync clients.
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Lync clients.
@@ -198,7 +198,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and clients.
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other clients.
@@ -221,7 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The level of encryption between  Unified Communications entities.
 
@@ -237,7 +237,7 @@ Default: RequireEncryption
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The level of encryption between unified communications devices.
 
@@ -311,14 +311,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

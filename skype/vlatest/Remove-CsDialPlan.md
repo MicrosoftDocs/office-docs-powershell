@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsDialPlan
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified dial plan.
 This cmdlet can also be used to remove the global dial plan.
 If you remove the global dial plan, however, the dial plan will not actually be removed; instead, the settings will simply be reset to their default values.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified dial plan.
 This cmdlet can also be used to remove the global dial plan.
@@ -28,7 +28,7 @@ Remove-CsDialPlan [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] [<Comm
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet removes an existing dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsDialPlan"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet removes an existing dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.

@@ -6,16 +6,16 @@ schema: 2.0.0
 # New-CsNetworkMediaBypassConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates new global settings for media bypass.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates new global settings for media bypass.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 New-CsNetworkMediaBypassConfiguration \[-Enabled \<bool\>\] \[-InternalBypassMode \<BypassModeEnumType\>\] \[-ExternalBypassMode \<BypassModeEnumType\>\] \[-AlwaysBypass \<bool\>\] \[-BypassID \<string\>\] \[-EnabledForAudioVideoConferences \<bool\>\] \[-Tenant \<guid\>\] \[-EnableDefaultBypassID \<bool\>\] \[\<CommonParameters\>\]
 
@@ -31,7 +31,7 @@ New-CsNetworkMediaBypassConfiguration [-AlwaysBypass <Boolean>] [-BypassID <Stri
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet creates global settings for media bypass of audio connections.
 
@@ -47,7 +47,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkMediaBypassConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet creates global settings for media bypass of audio connections.
 
@@ -63,11 +63,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkMediaBypassConfiguration"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates global settings for media bypass of audio connections.
 
@@ -211,7 +211,7 @@ Set-CsNetworkConfiguration -MediaBypassSettings $a
 ## PARAMETERS
 
 ### -AlwaysBypass
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Setting this parameter to True will attempt media bypass on all calls.
 
@@ -232,7 +232,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AlwaysBypass Description}}
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The media bypass ID.
 If the AlwaysBypass parameter is set to True and a value is supplied for this parameter, this BypassID will be associated with all subnets.
@@ -264,7 +264,7 @@ This value is automatically generated when Enabled is set to True and either: 1)
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill BypassID Description}}
 
@@ -284,7 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Set this parameter to True to enable media bypass.
 At that point bypass decisions will be based on the value of the AlwaysBypass setting as follows:
@@ -296,7 +296,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Enabled Description}}
 
@@ -316,7 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDefaultBypassID
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This value applies only when AlwaysBypass is set to False.
 
@@ -331,7 +331,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This value applies only when AlwaysBypass is set to False.
 
@@ -346,7 +346,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableDefaultBypassID Description}}
 
@@ -366,7 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalBypassMode
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Reserved for future use.
 External media bypass is not supported in Lync Server 2010.
@@ -375,7 +375,7 @@ Default: Off
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Reserved for future use.
 External media bypass is not supported in Lync Server.
@@ -384,13 +384,13 @@ Default: Off
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ExternalBypassMode Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Reserved for future use.
 External media bypass is not supported in Skype for Business Server 2015.
@@ -413,7 +413,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalBypassMode
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The value of this parameter controls when clients connecting from inside the organization's network can try to perform media bypass.
 If Enabled is set to True, this value will automatically be changed to Any.
@@ -423,7 +423,7 @@ Default: Off
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill InternalBypassMode Description}}
 
@@ -443,14 +443,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForAudioVideoConferences
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether media bypass should be used for audio/video conferences.
 The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnabledForAudioVideoConferences Description}}
 

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsPersistentChatComplianceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing collection of Persistent Chat compliance configuration settings.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing collection of Persistent Chat compliance configuration settings.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
@@ -28,7 +28,7 @@ Remove-CsPersistentChatComplianceConfiguration [-Identity] <XdsIdentity> [-Confi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -45,7 +45,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatCompli
 
 Lync Server Control Panel: The functions carried out by the Remove-CsPersistentChatComplianceConfiguration cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -129,7 +129,7 @@ Get-CsPersistentChatComplianceConfiguration | Where-Object {$_.AddUserDetals -eq
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the Persistent Chat compliance settings to be removed.
 To remove a collection of settings configured at the site scope, use syntax similar to this:
@@ -148,7 +148,7 @@ Instead, all the properties within that collection will be reset to their defaul
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Persistent Chat compliance settings to be removed.
 To remove a collection of settings configured at the site scope, use syntax similar to this:

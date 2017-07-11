@@ -6,16 +6,16 @@ schema: 2.0.0
 # Get-CsUICulture
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the culture (that is, the language and regional settings) used by the Lync Server Management Shell.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the culture (that is, the language and regional settings) used by the Lync Server Management Shell.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the culture (that is, the language and regional settings) used by the Skype for Business Server Management Shell.
 This cmdlet was introduced in Lync Server 2010.
@@ -29,7 +29,7 @@ Get-CsUICulture [-Verbose] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Although Microsoft Lync Server 2010 is available in multiple languages, the software is not a true MUI (multilingual user interface) application.
 Among other things, this means that the user interface for the Lync Server Management Shell does not change languages any time you change the operating system language.
@@ -44,7 +44,7 @@ The Get-CsUICulture cmdlet provides a way for you to determine the culture curre
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsUICulture cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Although Lync Server is available in multiple languages, the software is not a true MUI (multilingual user interface) application.
 Among other things, this means that the user interface for the Lync Server Management Shell does not change languages any time you change the operating system language.
@@ -59,7 +59,7 @@ The Get-CsUICulture cmdlet provides a way for you to determine the culture curre
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsUICulture cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Although Skype for Business Server 2015 is available in multiple languages, the software is not a true MUI (multilingual user interface) application.
 Among other things, this means that the user interface for the Skype for Business Server 2015 does not change languages any time you change the operating system language.

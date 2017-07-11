@@ -6,11 +6,11 @@ schema: 2.0.0
 # Move-CsExUmContact
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Moves one or more Exchange Unified Messaging (UM) contacts to a new Registrar pool.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves one or more Exchange Unified Messaging (UM) contacts to a new Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
@@ -40,7 +40,7 @@ Move-CsExUmContact [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <I
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Microsoft Lync Server 2010 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 Move-CsExUmContact provides a way for you to move an existing Exchange UM contact object to a new Registrar pool.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsExUmContact"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 Move-CsExUmContact provides a way for you to move an existing Exchange UM contact object to a new Registrar pool.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsExUmContact"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 works with Exchange UM to provide several voice-related capabilities, including Auto Attendant and Subscriber Access.
 The Move-CsExUmContact cmdlet provides a way for you to move an existing Exchange UM contact object to a new Registrar pool.
@@ -253,14 +253,14 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This parameter is used only for hosted instances of Lync Server.
 It should not be used with an on-premises implementation of Lync Server.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for hosted instances of Skype for Business Server 2015.
 It should not be used with an on-premises implementation of Skype for Business Server 2015.

@@ -6,20 +6,20 @@ schema: 2.0.0
 # Set-CsMobilityPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies an existing mobility policy.
 Mobility policies determine whether or not a user can use Lync Mobile.
 These policies also manage a user's ability to employ Call via Work, a feature that enables users to make and receive phone calls on their mobile phone by using their work phone number instead of their mobile phone number.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsMobilityPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-EnableOutsideVoice \<bool\>\] \[-EnableMobility \<bool\>\] \[-EnableIPAudioVideo \<bool\>\] \[-RequireWIFIForIPVideo \<bool\>\] \[-AllowCustomerExperienceImprovementProgram \<bool\>\] \[-RequireWiFiForSharing \<bool\>\] \[-AllowSaveCallLogs \<bool\>\] \[-AllowExchangeConnectivity \<bool\>\] \[-AllowSaveIMHistory \<bool\>\] \[-AllowSaveCredentials \<bool\>\] \[-EnablePushNotifications \<bool\>\] \[-EncryptAppData \<bool\>\] \[-AllowDeviceContactsSync \<bool\>\] \[-RequireIntune \<bool\>\] \[-AllowAutomaticPstnFallback \<bool\>\] \[-VoiceSettings \<string\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 Set-CsMobilityPolicy \[-Tenant \<guid\>\] \[-Description \<string\>\] \[-EnableOutsideVoice \<bool\>\] \[-EnableMobility \<bool\>\] \[-EnableIPAudioVideo \<bool\>\] \[-RequireWIFIForIPVideo \<bool\>\] \[-AllowCustomerExperienceImprovementProgram \<bool\>\] \[-RequireWiFiForSharing \<bool\>\] \[-AllowSaveCallLogs \<bool\>\] \[-AllowExchangeConnectivity \<bool\>\] \[-AllowSaveIMHistory \<bool\>\] \[-AllowSaveCredentials \<bool\>\] \[-EnablePushNotifications \<bool\>\] \[-EncryptAppData \<bool\>\] \[-AllowDeviceContactsSync \<bool\>\] \[-RequireIntune \<bool\>\] \[-AllowAutomaticPstnFallback \<bool\>\] \[-VoiceSettings \<string\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies an existing mobility policy.
 Mobility policies determine whether or not a user can use Skype for Business Mobile.
@@ -64,7 +64,7 @@ Set-CsMobilityPolicy [[-Identity] <Object>] [-AllowAutomaticPstnFallback <Object
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Mobile is a client application that enables users to run Lync on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -87,11 +87,11 @@ To use Call via Work, users must be managed by a voice policy that allows simult
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsMobilityPolicy cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Mobile is a client application that enables users to run Skype for Business on their mobile phones.
 Call via Work provides a way for users to make calls on their mobile phone and yet have it appear as though the call originated from their work phone number instead of their mobile phone number.
@@ -196,13 +196,13 @@ Get-CsMobilityPolicy | Where-Object {$_.Description -eq $Null} | Set-CsMobilityP
 ## PARAMETERS
 
 ### -Confirm
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -222,14 +222,14 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables administrators to provide additional text to accompany a mobility policy.
 For example, the Description might include information about the users the policy should be assigned to.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Description Description}}
 
@@ -249,7 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIPAudioVideo
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to False, prohibits the user from making voice over IP (VoIP) calls using the mobile device.
 The default value is True, meaning that VoIP calls are allowed.
@@ -258,13 +258,13 @@ This parameter was introduced in Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableIPAudioVideo Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to False, prohibits the user from making voice over IP (VoIP) calls using the mobile device.
 The default value is True, meaning that VoIP calls are allowed.
@@ -287,19 +287,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMobility
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, users are allowed to use Lync Mobile.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableMobility Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users are allowed to use Skype for Business Mobile.
 
@@ -319,7 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOutsideVoice
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True, enables users to take advantage of Call via Work.
 When set to False, users cannot use Call via Work.
@@ -328,7 +328,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableOutsideVoice Description}}
 
@@ -348,13 +348,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might occur when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -374,7 +374,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier assigned to the policy when it was created.
 Mobility policies can be assigned at the global, site, or per-user scope.
@@ -394,13 +394,13 @@ If you do not specify an Identity, then Set-CsMobilityPolicy will modify the glo
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier assigned to the policy when it was created.
 Mobility policies can be assigned at the global, site, or per-user scope.
@@ -447,13 +447,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Instance Description}}
 
@@ -486,7 +486,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPAudio
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the user can use IP audio in calls only if his or her mobile device is connected to a WiFi network.
 The default value is False.
@@ -495,7 +495,7 @@ This parameter was introduced in Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the user can use IP audio in calls made when his or her mobile device is connected to a WiFi network.
 That means that the user will only be allowed to make audio calls using Wi-Fi, and will not be able to use the standard cellular phone network.
@@ -519,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWIFIForIPVideo
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the user can use IP video in calls only if his or her mobile device is connected to a WiFi network.
 The default value is False.
@@ -528,13 +528,13 @@ This parameter was introduced in Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RequireWIFIForIPVideo Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the user can use IP video only in calls made when mobile device is connected to a Wi-Fi network.
 If mobile device goes outside of Wi-Fi range, then video calls will be received as audio calls only.
@@ -558,13 +558,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -601,13 +601,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCustomerExperienceImprovementProgram
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowCustomerExperienceImprovementProgram Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) mobile users will be allowed to participate in the Microsoft Customer Experience Improvement Program.
 
@@ -643,13 +643,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowExchangeConnectivity
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowExchangeConnectivity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) users will be allowed to connect to Exchange by using their mobile device.
 
@@ -669,13 +669,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSaveCallLogs
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowSaveCallLogs Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) users will be allowed to save a call log of calls made from or received by their mobile device.
 
@@ -697,13 +697,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSaveCredentials
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowSaveCredentials Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) users will be allowed to save credentials information (such as passwords) on their mobile device.
 This information can then be applied to auto-logon scenarios.
@@ -724,13 +724,13 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSaveIMHistory
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AllowSaveIMHistory Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) users will be allowed to save transcripts of IM and conferencing sessions on their mobile devices.
 
@@ -814,13 +814,13 @@ Accept wildcard characters: False
 ```
 
 ### -RequireWiFiForSharing
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RequireWiFiForSharing Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, mobile users must use a WiFi connection in order to participate in an application sharing session.
 When set to False (the default value) mobile users can participate in application sharing by using either a WiFi connection or a cellular (3G/4G) connection.
@@ -844,13 +844,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the mobility policy is being modified.
 For example:

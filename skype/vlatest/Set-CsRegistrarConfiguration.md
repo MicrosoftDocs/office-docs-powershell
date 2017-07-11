@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsRegistrarConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values in an existing collection of Registrar configuration settings.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the property values in an existing collection of Registrar configuration settings.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
@@ -40,7 +40,7 @@ Set-CsRegistrarConfiguration [-Instance <PSObject>] [-DefaultEndpointExpiration 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Registrar is perhaps the most important component in Microsoft Lync Server 2010; after all, without a Registrar, users would not be able to log on to the system, and Lync Server 2010 would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrarConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Registrar is perhaps the most important component in Lync Server; after all, without a Registrar, users would not be able to log on to the system, and Lync Server would not be able to keep track of users and their current status.
 When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -72,7 +72,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrarConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Registrar is perhaps the most important component in Skype for Business Server 2015; after all, without a Registrar, users would not be able to log on to the system, and Skype for Business Server 2015 would not be able to keep track of users and their current status.
 When a user logs on to Skype for Business Server 2015, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
@@ -183,7 +183,7 @@ Get-CsRegistrarConfiguration -Filter "site:*"| Set-CsRegistrarConfiguration -Ena
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Registrar configuration settings to be modified.
 To modify the global settings, use this syntax: -Identity global.
@@ -194,7 +194,7 @@ An error message will occur if you try to apply these settings to any other serv
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Registrar configuration settings to be modified.
 To modify the global settings, use this syntax:
@@ -302,7 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxEndpointsPerUser
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
 For example, a user who is logged on to Lync Server 2010 with both a computer and a mobile phone would be using two endpoints.
@@ -311,7 +311,7 @@ The default value is 8.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
 For example, a user who is logged on to Lync Server with both a computer and a mobile phone would be using two endpoints.
@@ -320,7 +320,7 @@ The default value is 8.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
 For example, a user who is logged on to Skype for Business Server 2015 with both a computer and a mobile phone would be using two endpoints.
@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUserCount
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the maximum number of users that can simultaneously be logged on to a Registrar pool.
 MaxUserCount can be set to any integer value between 2000 and 100000, inclusive.
@@ -444,7 +444,7 @@ The default value is 12000.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the maximum number of users that can simultaneously be logged on to a Registrar.
 MaxUserCount can be set to any integer value between 2000 and 100000, inclusive.

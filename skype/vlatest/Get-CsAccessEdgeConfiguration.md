@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsAccessEdgeConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the configuration settings for computers running the Access Edge service in your organization (also known as Access Edge servers).
 Access Edge servers provide a way for users outside your internal network to communicate with users inside your internal network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the configuration settings for computers running the Access Edge service in your organization (also known as Access Edge servers).
 Access Edge servers provide a way for users outside your internal network to communicate with users inside your internal network.
@@ -32,7 +32,7 @@ Get-CsAccessEdgeConfiguration [-Filter <String>] [-LocalStore] [<CommonParameter
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Access Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Microsoft Lync Server 2010 to people who are not logged on to your internal network.
 For example, if you have remote users -- authenticated users who log on to Lync Server 2010 over the Internet rather than through the internal network -- you will need to set up an Access Edge server.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAccessEdgeConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Access Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Lync Server to people who are not logged on to your internal network.
 For example, if you have remote users -- authenticated users who log on to Lync Server over the Internet rather than through the internal network -- you will need to set up an Access Edge server.
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAccessEdgeConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Access Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Skype for Business Server 2015 to people who are not logged on to your internal network.
 For example, if you have remote users -- authenticated users who log on to Skype for Business Server 2015 over the Internet rather than through the internal network -- you will need to set up an Access Edge server.
@@ -181,7 +181,7 @@ After all the property values have been returned, standard "dot notation" (the o
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier of the Access Edge configuration settings to be returned.
 Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling Get-CsAccessEdgeConfiguration.
@@ -189,7 +189,7 @@ However, you can use the following syntax to retrieve the global settings: -Iden
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier of the Access Edge configuration settings to be returned.
 Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the Get-CsAccessEdgeConfiguration cmdlet.

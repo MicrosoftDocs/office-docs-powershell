@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing voice policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing voice policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -46,7 +46,7 @@ Set-CsVoicePolicy [-Instance <PSObject>] [-AllowCallForwarding <Boolean>] [-Allo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet modifies an existing voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -57,7 +57,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet modifies an existing voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -529,7 +529,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNVoicemailEscapeTimer
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Lync Server will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
 If no response is received before the time interval is reached then the call will be allowed to proceed.
@@ -538,7 +538,7 @@ The default value is 1500 milliseconds.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Skype for Business Server 2015 will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
 If no response is received before the time interval is reached then the call will be allowed to proceed.
@@ -561,7 +561,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose voice policy is to be modified.
 For example:
@@ -574,7 +574,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose voice policy is to be modified.
 For example:

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsLocationPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified location policy.
 (Location policies are used with the Enhanced 9-1-1 service to enable those who answer 911 calls to determine the caller's geographic location based on the phone number of the telephone or device used to make the call.)
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes the specified location policy.
 (Location policies are used with the Enhanced 9-1-1 service to enable those who answer 911 calls to determine the caller's geographic location based on the phone number of the telephone or device used to make the call.) This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ Remove-CsLocationPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsLocationPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The location policy is used to apply settings that relate to E9-1-1 functionality.
 The location policy determines whether a user is enabled for E9-1-1, and if so what the behavior is of an emergency call.
@@ -127,7 +127,7 @@ Get-CsLocationPolicy | Where-Object {$_.EnhancedEmergencyServicesEnabled -eq $fa
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The unique identifier of the location policy you want to remove.
 To remove the global location policy (which simply resets that policy to its default values), use a value of Global.
@@ -136,7 +136,7 @@ For a policy created at the per-user scope, this value will simply be the name o
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The unique identifier of the location policy you want to remove.
 To remove the global location policy (which simply resets that policy to its default values), use a value of Global.
@@ -145,7 +145,7 @@ For a policy created at the per-user scope, this value will simply be the name o
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The unique identifier of the location policy you want to remove.
 To remove the global location policy (which simply resets that policy to its default values), use a value of Global.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsNetworkBWAlternatePath
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates new settings that define whether media can be routed to alternate paths through the Internet for bandwidth-constrained connections.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates new settings that define whether media can be routed to alternate paths through the Internet for bandwidth-constrained connections.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ New-CsNetworkBWAlternatePath -AlternatePath <Boolean> -BWPolicyModality <BWPolic
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Within a call admission control (CAC) configuration in Microsoft Lync Server 2010, there are two possible modalities: audio and video.
 Bandwidth limitations can be set on each of these modalities.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBWAlternatePath"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Within a call admission control (CAC) configuration in Lync Server, there are two possible modalities: audio and video.
 Bandwidth limitations can be set on each of these modalities.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBWAlternatePath"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Within a call admission control (CAC) configuration in Skype for Business Server 2015, there are two possible modalities: audio and video.
 Bandwidth limitations can be set on each of these modalities.

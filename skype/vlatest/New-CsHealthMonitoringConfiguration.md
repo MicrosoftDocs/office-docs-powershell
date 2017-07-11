@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsHealthMonitoringConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of health monitoring configuration settings for use in your organization.
 These settings enable administrators to run quality assurance tests without having to supply the user names and passwords for the required test accounts.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of health monitoring configuration settings for use in your organization.
 These settings enable administrators to run quality assurance tests without having to supply the user names and passwords for the required test accounts.
@@ -36,7 +36,7 @@ New-CsHealthMonitoringConfiguration -TargetFqdn <String> [-FirstTestSamAccountNa
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Synthetic transactions are used in Microsoft Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -66,7 +66,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsHealthMonitoringConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -96,7 +96,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsHealthMonitoringConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted "manually" by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -212,7 +212,7 @@ foreach ($i in $x)
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of the pool where the health monitoring configuration settings are to be assigned (for example: -Identity atl-cs-001.litwareinc.com).
 Your command will fail if the specified pool already hosts a collection of health monitoring configuration settings.
@@ -223,7 +223,7 @@ If you leave out both parameters, New-CsHealthMonitoringConfiguration will promp
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the pool where the health monitoring configuration settings are to be assigned (for example: -Identity atl-cs-001.litwareinc.com).
 Your command will fail if the specified pool already hosts a collection of health monitoring configuration settings.
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetFqdn
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 FQDN of the pool where the health monitoring configuration settings are to be assigned (for example: -TargetFqdn atl-cs-001.litwareinc.com).
 Your command will fail if the specified pool already hosts a collection of health monitoring configuration settings.
@@ -259,7 +259,7 @@ If you leave out both parameters, New-CsHealthMonitoringConfiguration will promp
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 FQDN of the pool where the health monitoring configuration settings are to be assigned (for example: -TargetFqdn atl-cs-001.litwareinc.com).
 Your command will fail if the specified pool already hosts a collection of health monitoring configuration settings.
@@ -374,14 +374,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

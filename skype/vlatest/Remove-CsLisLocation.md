@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsLisLocation
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes a location from the location configuration database for Enhanced 9-1-1 (E9-1-1).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes a location from the location configuration database for Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -36,7 +36,7 @@ Remove-CsLisLocation [-City <String>] [-CompanyName <String>] [-Country <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Microsoft Lync Server 2010 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
@@ -55,7 +55,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsLisLocation"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Lync Server the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
@@ -74,7 +74,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsLisLocation"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
 In Skype for Business Server 2015 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.

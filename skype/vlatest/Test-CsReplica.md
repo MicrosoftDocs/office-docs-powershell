@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsReplica
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies the status of the replica service on the local computer.
 The replica service is used to replicate information among all the Microsoft Lync Server 2013 Preview computers in your topology.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies the status of the replica service on the local computer.
 The replica service is used to replicate information among all the Skype for Business Server 2015 computers in your topology.
@@ -28,7 +28,7 @@ Test-CsReplica [-GlobalCatalog <Fqdn>] [-GlobalSettingsDomainController <Fqdn>] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsReplica cmdlet verifies that the Lync Server 2013 Preview replica service is running on the local computer.
 Test-CsReplica performs such tasks as: checking the status of the Replicator Agent and Centralized Logging Agent services; verifying that the required ports have been opened in the Windows Firewall; and ensuring that the necessary Active Directory and local computer security groups exist.
@@ -38,7 +38,7 @@ There are no options for running Test-CsReplica against a remote server.
 
 Lync Server Control Panel: The functions carried out by the Test-CsReplica cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsReplica cmdlet verifies that the Skype for Business Server 2015 replica service is running on the local computer.
 The Test-CsReplica cmdlet performs such tasks as: checking the status of the Replicator Agent and Centralized Logging Agent services; verifying that the required ports have been opened in the Windows Firewall; and ensuring that the necessary Active Directory and local computer security groups exist.
@@ -101,14 +101,14 @@ Test-CsReplica -Verbose -Report C:\Logs\ReplicaTest.html
 ## PARAMETERS
 
 ### -GlobalCatalog
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of a global catalog server in your domain.
 This parameter is not required if you are running Test-CsReplica on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of a global catalog server in your domain.
 This parameter is not required if you are running the Test-CsReplica cmdlet on a computer with an account in your domain.
@@ -129,14 +129,14 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalSettingsDomainController
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of a domain controller in your domain.
 This parameter is not required if you are running Test-CsReplica on a computer with an account in your domain.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of a domain controller in your domain.
 This parameter is not required if you are running the Test-CsReplica cmdlet on a computer with an account in your domain.

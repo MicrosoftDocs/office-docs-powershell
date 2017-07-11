@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsTrunkConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing trunk configuration that describes the settings for a trunking peer entity such as a public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing trunk configuration that describes the settings for a trunking peer entity such as a public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
 This cmdlet was introduced in Lync Server 2010.
@@ -48,7 +48,7 @@ Set-CsTrunkConfiguration [-Instance <PSObject>] [-ConcentratedTopology <Boolean>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Use this cmdlet to modify a trunking configuration applicable to PSTN gateway entities.
 Each configuration contains specific settings for a trunking peer entity such as a PSTN gateway, IP-PBX, or SBC at the service provider.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsTrunkConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Use this cmdlet to modify a trunking configuration applicable to PSTN gateway entities.
 Each configuration contains specific settings for a trunking peer entity such as a PSTN gateway, IP-PBX, or SBC at the service provider.
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBypass
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The value of this parameter determines whether media bypass is enabled for this trunk.
 Set this value to True to enable bypass.
@@ -284,7 +284,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The value of this parameter determines whether media bypass is enabled for this trunk.
 Set this value to True to enable bypass.
@@ -308,7 +308,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The value of this parameter determines whether media bypass is enabled for this trunk.
 Set this value to True to enable bypass.
@@ -431,7 +431,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSignalBoost
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When this parameter is set to True the PSTN gateway, IP-PBX, or SBC at the service provider will boost the audio volume in voice streams that are sent to the Mediation Server or Microsoft Lync Server 2010 clients.
 If this value is set to False, audio will be boosted either at the Mediation Server (for non-bypass calls) or in Lync Server 2010 clients (for bypass calls).
@@ -440,7 +440,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When this parameter is set to True the PSTN gateway, IP-PBX, or SBC at the service provider will boost the audio volume in voice streams that are sent to the Mediation Server or Lync Server clients.
 If this value is set to False, audio will be boosted either at the Mediation Server (for non-bypass calls) or in Lync Server clients (for bypass calls).
@@ -449,7 +449,7 @@ Default: False
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When this parameter is set to True the PSTN gateway, IP-PBX, or SBC at the service provider will boost the audio volume in voice streams that are sent to the Mediation Server or Skype for Business Server 2015 clients.
 If this value is set to False, audio will be boosted either at the Mediation Server (for non-bypass calls) or in Skype for Business Server 2015 clients (for bypass calls).
@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutboundTranslationRulesList
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A collection of phone number translation rules that apply to calls handled by Outbound Routing (calls routed to PBX or PSTN destinations).
 
@@ -500,7 +500,7 @@ To modify the trunk configuration by adding a new outbound translation rule, cal
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A collection of phone number translation rules that apply to calls handled by Outbound Routing (calls routed to PBX or PSTN destinations).
 
@@ -510,7 +510,7 @@ To modify the trunk configuration by adding a new outbound translation rule, cal
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A collection of phone number translation rules that apply to calls handled by Outbound Routing (calls routed to PBX or PSTN destinations).
 
@@ -552,7 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -RTCPActiveCalls
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This parameter determines whether RTCP packets are sent from the PSTN gateway, IP-PBX, or SBC at the service provider for active calls.
 An active call in this context is a call where media is allowed to flow in at least one direction.
@@ -564,7 +564,7 @@ Default: True
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter determines whether RTCP packets are sent from the PSTN gateway, IP-PBX, or SBC at the service provider for active calls.
 An active call in this context is a call where media is allowed to flow in at least one direction.
@@ -590,7 +590,7 @@ Accept wildcard characters: False
 ```
 
 ### -RTCPCallsOnHold
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This parameter determines whether RTCP packets continue to be sent across the trunk for calls that have been placed on hold and no media packets are expected to flow in either direction.
 If Music on Hold is enabled at either the Lync Server client or the trunk, the call will be considered to be active and this property will be ignored.
@@ -602,7 +602,7 @@ Default: True
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter determines whether RTCP packets continue to be sent across the trunk for calls that have been placed on hold and no media packets are expected to flow in either direction.
 If Music on Hold is enabled at either the Skype for Business Server 2015 client or the trunk, the call will be considered to be active and this property will be ignored.
@@ -628,7 +628,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipResponseCodeTranslationRulesList
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A list of SIP response code translation rules that apply to response codes received from a PSTN gateway, IP-PBX, or SBC at the service provider.
 These rules allow the administrator to map SIP response codes with values between 400 and 699 received over a trunk to new values more consistent with Lync Server.
@@ -639,7 +639,7 @@ That cmdlet will create the rule and assign it to the trunk configuration with t
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A list of SIP response code translation rules that apply to response codes received from a PSTN gateway, IP-PBX, or SBC at the service provider.
 These rules allow the administrator to map SIP response codes with values between 400 and 699 received over a trunk to new values more consistent with Lync Server.
@@ -650,7 +650,7 @@ That cmdlet will create the rule and assign it to the trunk configuration with t
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A list of SIP response code translation rules that apply to response codes received from a PSTN gateway, IP-PBX, or SBC at the service provider.
 These rules allow the administrator to map SIP response codes with values between 400 and 699 received over a trunk to new values more consistent with Skype for Business Server 2015.
@@ -675,7 +675,7 @@ Accept wildcard characters: False
 ```
 
 ### -SRTPMode
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The value of this parameter determines the level of support for SRTP to protect media traffic between the Mediation Server and the PSTN gateway, IP-PBX, or SBC at the service provider.
 For media bypass cases, this value must be compatible with the EncryptionLevel setting in the media configuration.
@@ -694,7 +694,7 @@ Default: Required
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The value of this parameter determines the level of support for SRTP to protect media traffic between the Mediation Server and the PSTN gateway, IP-PBX, or SBC at the service provider.
 For media bypass cases, this value must be compatible with the EncryptionLevel setting in the media configuration.
@@ -813,7 +813,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineVoice
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates whether the SIP trunks support online voice.
 With online voice, users have an on-premises Lync Server account but have their voicemail hosted by Office 365.
@@ -821,7 +821,7 @@ The default value is False ($False).
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates whether the SIP trunks support online voice.
 With online voice, users have an on-premises Lync Server account but have their voicemail hosted by Skype for Business Online.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Set-CsPresenceProvider
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies a presence provider configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies a presence provider configured for use in the organization.
 Presence providers represent the PresenceProviders property of a collection of user services configuration settings.
@@ -33,7 +33,7 @@ Set-CsPresenceProvider [-Confirm] [-Force] [-Instance <PSObject>] [-WhatIf] [<Co
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.
@@ -47,7 +47,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPresenceProvider"}
 
 Lync Server Control Panel: The functions carried out by the Set-CsPresenceProvider cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The CsPresenceProvider cmdlets are used to manage the PresenceProviders property found in the User Services configuration settings.
 Among other things, these settings are used to maintain presence information, including a collection of authorized presence providers.

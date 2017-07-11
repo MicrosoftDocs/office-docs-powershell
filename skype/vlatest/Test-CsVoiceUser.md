@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsVoiceUser
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Identifies the route that a phone call from a given user would take to be completed based on voice rules, routes, and policies.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Identifies the route that a phone call from a given user would take to be completed based on voice rules, routes, and policies.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Test-CsVoiceUser -DialedNumber <PhoneNumber> -SipUri <UserIdParameter> [-Force] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When a user makes a phone call, the route the call takes to reach its destination depends on the policies and dial plans assigned to that user.
 Given a user's SIP address and a phone number, this cmdlet returns the number translated to E.164 format (based on the user's dial plan), the normalization rule that supplied that translation, the first route (based on route Priority) with a number pattern matching that phone number, and the phone usage that would link the voice policy of that user to the voice route.
@@ -36,7 +36,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceUser"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When a user makes a phone call, the route the call takes to reach its destination depends on the policies and dial plans assigned to that user.
 Given a user's SIP address and a phone number, this cmdlet returns the number translated to E.164 format (based on the user's dial plan), the normalization rule that supplied that translation, the first route (based on route Priority) with a number pattern matching that phone number, and the phone usage that would link the voice policy of that user to the voice route.
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipUri
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The SIP URI of the user against which the test is taking place.
 This is the Identity of the user as used in the CsUser cmdlets.
@@ -169,7 +169,7 @@ Note that the SAMAccountName cannot be used as an identity.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The SIP URI of the user against which the test is taking place.
 This is the Identity of the user as used in the CsUser cmdlets.
@@ -192,13 +192,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Force Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
 

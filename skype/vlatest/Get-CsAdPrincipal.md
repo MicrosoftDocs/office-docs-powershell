@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsAdPrincipal
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about Active Directory principals.
 These principals include Active Directory objects such as users, groups, contacts, containers, and organizational units.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about Active Directory principals.
 These principals include Active Directory objects such as users, groups, contacts, containers, and organizational units.
@@ -29,7 +29,7 @@ Get-CsAdPrincipal [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsAdPrincipal cmdlet returns a collection of Active Directory principals that can be used when constructing Persistent Chat membership lists (see the help information for the AllowedMembers and DeniedMembers parameters for the Set-CsPersistentChatCategory cmdlet for more details).
 Get-CsPrincipal returns information for Active Directory objects such as:
@@ -57,7 +57,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdPrincipal"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsAdPrincipal cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsAdPrincipal cmdlet returns a collection of Active Directory principals that can be used when constructing Persistent Chat membership lists (see the help information for the AllowedMembers and DeniedMembers parameters for the Set-CsPersistentChatCategory cmdlet for more details).
 Get-CsAdPrincipal returns information for Active Directory objects such as:
@@ -148,7 +148,7 @@ Get-CsAdPrincipal | Where-Object {$_.ObjectClass -contains "contact"}
 ## PARAMETERS
 
 ### -Credential
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to run the Get-CsAdPrincipal cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -158,7 +158,7 @@ For details, see the Get-Credential Help topic.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsAdPrincipal cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -199,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on attributes specific to Lync Server.
 
@@ -213,7 +213,7 @@ Enabled represents the Active Directory attribute, -ne represents the comparison
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
 
@@ -263,7 +263,7 @@ Accept wildcard characters: False
 ```
 
 ### -LDAPFilter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to principals who belong to a specific department or who have a specific manager or job title.
@@ -277,7 +277,7 @@ In that example, the "l" (a lowercase L) represents the Active Directory attribu
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to principals who belong to a specific department or who have a specific manager or job title.

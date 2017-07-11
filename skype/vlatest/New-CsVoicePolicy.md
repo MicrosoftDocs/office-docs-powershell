@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsVoicePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new voice policy.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new voice policy.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ New-CsVoicePolicy [-Identity] <XdsIdentity> [-AllowCallForwarding <Boolean>] [-A
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This cmdlet creates a new voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -43,7 +43,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsVoicePolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This cmdlet creates a new voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoicePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a new voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
@@ -171,7 +171,7 @@ New-CsVoicePolicy site:Redmond -PstnUsages @{add = $a.Usage}
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique identifier specifying the scope or the name of the policy.
 Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Microsoft Lync Server 2010 site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
@@ -179,7 +179,7 @@ A global policy exists by default.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A unique identifier specifying the scope or the name of the policy.
 Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Lync Server site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
@@ -187,7 +187,7 @@ A global policy exists by default.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A unique identifier specifying the scope or the name of the policy.
 Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Skype for Business Server 2015 site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
@@ -405,7 +405,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A friendly name describing this policy.
 
@@ -413,7 +413,7 @@ Default: DefaultPolicy
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 A displayable name describing this policy.
 
@@ -435,7 +435,7 @@ Accept wildcard characters: False
 ```
 
 ### -PreventPSTNTollBypass
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 PSTN tolls are more commonly known as long-distance charges.
 Organizations can sometimes bypass these tolls by implementing a Voice over Internet Protocol (VoIP) solution that enables branch offices to connect via network calls.
@@ -445,7 +445,7 @@ Default: False
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 PSTN tolls are more commonly known as long-distance charges.
 Organizations can sometimes bypass these tolls by implementing a Voice over Internet Protocol (VoIP) solution that enables branch offices to connect by using network calls.
@@ -508,14 +508,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -568,7 +568,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallForwardingSimulRingUsageType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Provides a way for administrators to manage call forwarding and simultaneous ringing.
 Allowed values are:
@@ -579,7 +579,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Provides a way for administrators to manage call forwarding and simultaneous ringing.
 Allowed values are:
@@ -653,7 +653,7 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNVoicemailEscapeTimer
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Lync Server will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
 If no response is received before the time interval is reached then the call will be allowed to proceed.
@@ -661,7 +661,7 @@ The default value is 1500 milliseconds.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Skype for Business Server 2015 will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
 If no response is received before the time interval is reached then the call will be allowed to proceed.
@@ -683,7 +683,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new voice policy is being created.
 For example:
@@ -696,7 +696,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new voice policy is being created.
 For example:

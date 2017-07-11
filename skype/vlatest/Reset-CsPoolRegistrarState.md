@@ -6,12 +6,12 @@ schema: 2.0.0
 # Reset-CsPoolRegistrarState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Resets the Registrar and Windows fabric services for the specified Registrar pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Resets the Registrar and Windows fabric services for the specified Registrar pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -27,7 +27,7 @@ Reset-CsPoolRegistrarState -PoolFqdn <Fqdn> [-Confirm] [-Force] [-MachineFqdn <F
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Reset-CsPoolRegistrarState cmdlet enables you to reset the Windows Fabric service (FabricHostSvc) and the Lync Server Registrar service (RtcSrv) for a Registrar pool; this might be required if the pool has become non-responsive or fails to start.
 (Typically that means that the Registrar service will remain stuck in the Start Pending state.) Running this cmdlet will, by default, stop and then restart all the relevant services on the pool.
@@ -40,7 +40,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Reset-CsPoolRegistrarState"}
 
 Lync Server Control Panel: The functions carried out by the Reset-CsPoolRegistrarState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Reset-CsPoolRegistrarState cmdlet enables you to reset the Windows Fabric service (FabricHostSvc) and the Skype for Business Server 2015 Registrar service (RtcSrv) for a Registrar pool; this might be required if the pool has become non-responsive or fails to start.
 (Typically that means that the Registrar service will remain stuck in the Start Pending state.) Running this cmdlet will, by default, stop and then restart all the relevant services on the pool.
@@ -263,13 +263,13 @@ Accept wildcard characters: False
 ```
 
 ### -ResetLocalDatabases
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When specified, stops and restarts the local Lync Server databases in addition to the local Lync Server services.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When specified, stops and restarts the local Skype for Business Server 2015 databases in addition to the local Skype for Business Server 2015 services.
 
@@ -289,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of reset to be performed.
 Allowed values are:
@@ -301,7 +301,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of reset to be performed.
 Allowed values are:

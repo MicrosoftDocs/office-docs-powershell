@@ -6,12 +6,12 @@ schema: 2.0.0
 # New-CsTestDevice
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new device update management test device.
 Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new device update management test device.
 Test devices provide a way for administrators to test firmware updates before those updates are distributed to all the devices in an organization.
@@ -34,7 +34,7 @@ New-CsTestDevice -Identifier <String> -IdentifierType <IdentifierType> -Name <St
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 By identifying specific Microsoft Lync 2010 Phone Edition-compatible phones or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to the relevant devices in the organization.
 When device update rules are imported to Microsoft Lync Server 2010, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -51,7 +51,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsTestDevice"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 By identifying specific phones that are compatible with Lync Phone Edition or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to the relevant devices in the organization.
 When device update rules are imported to Lync Server, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -68,7 +68,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTestDevice"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 By identifying specific phones that are compatible with Skype for Business or other devices as test devices, administrators can verify and approve firmware updates before those updates are rolled out to the relevant devices in the organization.
 When device update rules are imported to Skype for Business Server 2015, they are marked as "pending," which means that the updates corresponding to these rules will not automatically be downloaded and installed by the affected devices.
@@ -152,7 +152,7 @@ New-CsTestDevice -Parent "site:Redmond" -Name UCPhone -IdentifierType SerialNumb
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the Identity for the new test device.
 An Identity consists of both the scope where the test device is to be assigned (for example, site:Redmond) and the name for the new device (for example, UCPhone).
@@ -160,7 +160,7 @@ To assign a test device named UCPhone to the Redmond site, your Identity paramet
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the Identity for the new test device.
 An Identity consists of both the scope where the test device is to be assigned (for example, site:Redmond) and the name for the new device (for example, UCPhone).
@@ -250,7 +250,7 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Name of the scope (for example, site:Redmond) where the new test device is to be assigned.
 If you use the Parent parameter then you must also use the Name parameter; for example: -Parent site:Redmond -Name UCPhone.
@@ -258,7 +258,7 @@ If you use the Parent parameter then you should not use  the Identity parameter,
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the scope (for example, site:Redmond) where the new test device is to be assigned.
 If you use the Parent parameter then you must also use the Name parameter; for example: -Parent site:Redmond -Name UCPhone.
@@ -266,7 +266,7 @@ If you use the Parent parameter then you should not use the Identity parameter, 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the scope (for example, site:Redmond) where the new test device is to be assigned.
 If you use the Parent parameter then you must also use the Name parameter; for example:
@@ -307,14 +307,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

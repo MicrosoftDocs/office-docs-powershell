@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsTrunk
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the SIP trunks employed by your organization.
 SIP trunks connect Microsoft Lync Server 2013 Preview's Voice over IP phone network with the Public Switched Telephone Network.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the SIP trunks employed by your organization.
 SIP trunks connect the Skype for Business Server 2015 Voice over IP phone network with the Public Switched Telephone Network.
@@ -33,7 +33,7 @@ Get-CsTrunk [[-Identity] <XdsGlobalRelativeIdentity>] [-PoolFqdn <String>] [<Com
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2010, trunks were used to route outbound calls from a Mediation Server to a PSTN gateway.
 Each gateway was limited to a single trunk; among other things this made it difficult for administrators to provide resiliency for outbound calls.
@@ -54,7 +54,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrunk"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsTrunk cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, trunks were used to route outbound calls from a Mediation Server to a PSTN gateway.
 Each gateway was limited to a single trunk; among other things this made it difficult for administrators to provide resiliency for outbound calls.
@@ -173,7 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identifier for the SIP trunk to be returned.
 For example:
@@ -187,7 +187,7 @@ If this parameter is not specified, then Get-CsTrunk returns a collection of all
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 {{Fill Identity Description}}
 

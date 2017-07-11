@@ -6,13 +6,13 @@ schema: 2.0.0
 # Test-CsExStorageNotification
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies that the Lync Server Storage Service running on a Front End server can subscribe to the Microsoft Exchange Server 2013 Preview mailbox notification service.
 This is done by having the cmdlet subscribe to the service, create an item, verify that notification of the new item is received, and then, optionally, delete that item unsubscribe from the service.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies that the Skype for Business Server 2015 Storage Service running on a Front End server can subscribe to the Exchange mailbox notification service.
 This is done by having the cmdlet subscribe to the service, create an item, verify that notification of the new item is received, and then, optionally, delete that item unsubscribe from the service.
@@ -28,7 +28,7 @@ Test-CsExStorageNotification -SipUri <String> [-Binding <String>] [-DeleteItem] 
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsExStorageNotification cmdlet is used to verify that the Microsoft Exchange Server 2013 Preview notification service is able to notify Microsoft Lync Server 2013 Preview any time updates are made to a user's Contact List.
 This cmdlet is valid only if you are using the unified contact store.
@@ -39,7 +39,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsExStorageNotification"
 
 Lync Server Control Panel: The functions carried out by the Test-CsExStorageNotification cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsExStorageNotification cmdlet is used to verify that the Exchange notification service is able to notify Skype for Business Server 2015 any time updates are made to a user's Contact List.
 This cmdlet is valid only if you are using the unified contact store.
@@ -142,14 +142,14 @@ Accept wildcard characters: False
 ```
 
 ### -HostNameStorageService
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Fully qualified domain name of the server where the Lync Server Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the server where the Skype for Business Server 2015 Storage Service is running.
 This parameter is required if the Binding is set to NetTCP.

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsTrustedApplicationEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves information about one or more trusted application endpoints.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves information about one or more trusted application endpoints.
 This cmdlet was introduced in Lync Server 2010.
@@ -27,7 +27,7 @@ Get-CsTrustedApplicationEndpoint [[-Identity] <UserIdParameter>] [-Filter <Strin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet retrieves one or more existing endpoint contact objects in Active Directory Domain Services (AD DS).
@@ -37,7 +37,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrustedApplicationEndpoint"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet retrieves one or more existing endpoint contact objects in Active Directory Domain Services.
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to limit the returned data by filtering on specific attributes for Microsoft Lync Server 2010.
 For example, you can limit returned data to contacts whose display names or SIP addresses match a certain wildcard pattern.
@@ -193,7 +193,7 @@ For example, a filter that returns only contacts that have been enabled for  Ent
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on specific attributes for Lync Server.
 For example, you can limit returned data to contacts whose display names or SIP addresses match a certain wildcard pattern.
@@ -203,7 +203,7 @@ For example, a filter that returns only contacts that have been enabled for Ente
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on specific attributes for Skype for Business Server 2015.
 For example, you can limit returned data to contacts whose display names or SIP addresses match a certain wildcard pattern.

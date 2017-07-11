@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsConferenceServer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the properties of an A/V Conferencing Server (also known as a Conference Server).
 The Conference Server provides audio and video (A/V) capabilities to your conferences.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the properties of an A/V Conferencing Server (also known as a Conference Server).
 The Conference Server provides audio and video (A/V) capabilities to your conferences.
@@ -30,7 +30,7 @@ Set-CsConferenceServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AppSharingSip
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Conference Servers (also known as A/V Conferencing Servers) are used to provide audio and video capabilities to conferences.
 In turn, the Set-CsConferenceServer cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic, and application sharing.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferenceServer"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Conference Servers (also known as A/V Conferencing Servers) are used to provide audio and video capabilities to conferences.
 In turn, the Set-CsConferenceServer cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic, and application sharing.
@@ -113,7 +113,7 @@ Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -Iden
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Service location of the Conference Server to be modified.
 For example: -Identity "ConferenceServer:atl-cs-001.litwareinc.com".
@@ -123,7 +123,7 @@ For example: -Identity "atl-cs-001.litwareinc.com".
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Service location of the Conference Server to be modified.
 For example: -Identity "ConferencingServer:atl-cs-001.litwareinc.com".

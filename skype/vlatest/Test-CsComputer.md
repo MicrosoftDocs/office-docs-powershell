@@ -6,18 +6,18 @@ schema: 2.0.0
 # Test-CsComputer
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsComputer verifies the status of the Microsoft Lync Server 2010 services running on the local computer.
 The cmdlet also verifies that the appropriate Lync Server 2010 Active Directory groups have been added to the corresponding local groups on the computer, and that the necessary computer firewall ports have been opened.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsComputer verifies the status of the Lync Server services running on the local computer.
 The cmdlet also verifies that the appropriate Lync Server Active Directory groups have been added to the corresponding local groups on the computer, and that the necessary computer firewall ports have been opened.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsComputer cmdlet verifies the status of the Skype for Business Server 2015 services running on the local computer.
 The cmdlet also verifies that the appropriate Skype for Business Server 2015 Active Directory groups have been added to the corresponding local groups on the computer, and that the necessary computer firewall ports have been opened.
@@ -32,7 +32,7 @@ Test-CsComputer [-Report <String>] [-Verbose] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Test-CsComputer is an example of a Lync Server 2010 "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be run automatically by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -41,7 +41,7 @@ Test-CsComputer, which can be run only on the local computer, verifies the statu
 The cmdlet also checks to see if the appropriate firewall ports have been opened on the computer, and determines whether or not the Active Directory groups created when you installed Lync Server 2010 have been added to the corresponding local groups.
 For example, Test-CsComputer will verify that the Active Directory group RTCUniversalUserAdmins has been added to the local Administrators group.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Test-CsComputer is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be run automatically by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
@@ -50,7 +50,7 @@ Test-CsComputer, which can be run only on the local computer, verifies the statu
 The cmdlet also checks to see if the appropriate firewall ports have been opened on the computer, and determines whether or not the Active Directory groups created when you installed Lync Server have been added to the corresponding local groups.
 For example, Test-CsComputer will verify that the Active Directory group RTCUniversalUserAdmins has been added to the local Administrators group.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsComputer cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be run automatically by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).

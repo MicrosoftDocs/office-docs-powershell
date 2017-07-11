@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsASConference
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the ability of a pair of users to take part in an application sharing conference.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the ability of a pair of users to take part in an application sharing conference.
 This cmdlet was introduced in Lync Server 2013.
@@ -36,7 +36,7 @@ Test-CsASConference [-TargetFqdn] <String> [-Authentication <AuthenticationMecha
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsASConference cmdlet verifies that a pair of test users can participate in an online conference that includes application sharing.
 To do this, the cmdlet registers the two users with Microsoft Lync Server 2013 Preview, and then it uses one of the user accounts to create a new conference that includes applications sharing.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsASConference"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsASConference cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsASConference cmdlet verifies that a pair of test users can participate in an online conference that includes application sharing.
 To do this, the cmdlet registers the two users with Skype for Business Server 2015, and then it uses one of the user accounts to create a new conference that includes applications sharing.

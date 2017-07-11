@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsMcxConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified collection of Microsoft Lync Server 2013 Preview Mobility Service configuration settings.
 The Mobility Service enables users of mobile phones such as iPhones and Windows Phones to do such things as exchange instant messages and presence information; store and retrieve voice mail internally instead of with their wireless provider; and take advantage of Lync Server capabilities such as Call via Work and dial-out conferencing.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified collection of Skype for Business Server 2015 Mobility Service configuration settings.
 The Mobility Service enables users of mobile phones such as iPhones and Windows Phones to do such things as exchange instant messages and presence information; store and retrieve voice mail internally instead of with their wireless provider; and take advantage of Skype for Business Server 2015 capabilities such as Call via Work and dial-out conferencing.
@@ -27,7 +27,7 @@ Remove-CsMcxConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Mobility Service extends many of the capabilities of Lync Server to mobile devices such as Apple iPhones, Windows Phone, Android phones, and Nokia phones.
 Among other things, users can use these phones to exchange instant message and presence information, and to receive notifications of new voice mails.
@@ -49,7 +49,7 @@ Instead, the properties in the global collection will simply be reset to their d
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsMcxConfiguration cmdlet locally: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Mobility Service extends many of the capabilities of Skype for Business Server 2015 to mobile devices such as Apple iPhones, Windows Phone, Android phones, and Nokia phones.
 Among other things, users can use these phones to exchange instant message and presence information, and to receive notifications of new voice mails.

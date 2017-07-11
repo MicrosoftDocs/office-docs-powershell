@@ -6,12 +6,12 @@ schema: 2.0.0
 # Invoke-CsArchivingDatabasePurge
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Manually purges records from the Archiving database.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Manually purges records from the Archiving database.
 This cmdlet was introduced in Lync Server 2013.
@@ -35,7 +35,7 @@ Invoke-CsArchivingDatabasePurge [-PurgeArchivingDataOlderThanHours] <Int32>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users (or a selected subset of users).
 For other organizations, it's mandatory to keep such transcripts.
@@ -59,7 +59,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsArchivingDatabasePur
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsArchivingDatabasePurge cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep a transcript of all the IM sessions carried out by their users (or a selected subset of users).
 For other organizations, it's mandatory to keep such transcripts.

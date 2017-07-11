@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsDiagnosticConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies existing diagnostic configuration settings.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Microsoft Lync Server 2010 log files.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies existing diagnostic configuration settings.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Lync Server log files.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies existing diagnostic configuration settings.
 Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Skype for Business Server 2015 log files.
@@ -40,7 +40,7 @@ Set-CsDiagnosticConfiguration [-Instance <PSObject>] [-Filter <Filter>] [-Loggin
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If you enable logging for Lync Server 2010, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -60,7 +60,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If you enable logging for Lync Server, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDiagnosticConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If you enable logging for Skype for Business Server 2015, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
@@ -275,7 +275,7 @@ Set-CsDiagnosticConfiguration -Identity global -Filter $Null
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the diagnostics configuration settings to be modified.
 To modify settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -285,7 +285,7 @@ If this parameter is not specified, then Set-CsDiagnosticConfiguration will auto
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the diagnostics configuration settings to be modified.
 To modify settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -325,7 +325,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Collection of domains and URIs whose traffic will be logged.
 The Filter property consists of three separate items, and must be created using the New-CsDiagnosticsFilter cmdlet:
@@ -343,7 +343,7 @@ Enabled - Indicates whether or not the filter should be activated.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Collection of domains and URIs whose traffic will be logged.
 The Filter property consists of three separate items, and must be created using the New-CsDiagnosticsFilter cmdlet:

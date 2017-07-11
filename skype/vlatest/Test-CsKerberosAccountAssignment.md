@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsKerberosAccountAssignment
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Verifies the configuration of the Kerberos account assigned to a site.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Verifies the configuration of the Kerberos account assigned to a site.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Test-CsKerberosAccountAssignment -Identity <XdsIdentity> [-Report <String>] [-Ve
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -38,7 +38,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
@@ -52,7 +52,7 @@ Who can run this cmdlet: To return a list of all the role-based access control (
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsKerberosAccountAssignment"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.

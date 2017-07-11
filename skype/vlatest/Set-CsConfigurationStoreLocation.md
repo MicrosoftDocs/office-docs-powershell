@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsConfigurationStoreLocation
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Sets the Active Directory service control point for the Central Management store.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Sets the Active Directory service control point for the Central Management store.
 This cmdlet was introduced in Lync Server 2010.
@@ -26,7 +26,7 @@ Set-CsConfigurationStoreLocation -SqlServerFqdn <Fqdn> [-GlobalSettingsDomainCon
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Active Directory Domain Services (AD DS) uses service control points (SCP) to help computers locate services.
 For example, when you install Microsoft Lync Server 2010, a service control point is created that provides location information for the Central Management store used to maintain Lync Server 2010 data.
@@ -40,7 +40,7 @@ The cmdlet then sets the store location to the FQDN of that computer.
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsConfigurationStoreLocation cmdlet: RTCUniversalServerAdmins.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Active Directory Domain Services (AD DS) uses service control points (SCP) to help computers locate services.
 For example, when you install Lync Server, a service control point is created that provides location information for the Central Management store used to maintain Lync Server data.
@@ -54,7 +54,7 @@ The cmdlet then sets the store location to the FQDN of that computer.
 
 Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsConfigurationStoreLocation cmdlet: RTCUniversalServerAdmins.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Active Directory Domain Services uses service control points (SCP) to help computers locate services.
 For example, when you install Skype for Business Server 2015, a service control point is created that provides location information for the Central Management store used to maintain Skype for Business Server 2015 data.
@@ -170,14 +170,14 @@ Accept wildcard characters: False
 ```
 
 ### -SqlInstanceName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Name of the SQL Server instance containing the Lync Server tables and data.
 For example: -SqlInstanceName "rtc".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the SQL Server instance containing the Skype for Business Server 2015 tables and data.
 For example: -SqlInstanceName "rtc".
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLookup
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If this parameter is included then Set-CsConfigurationStoreLocation will not verify that the specified computer and the specified instance of SQL Server are available.
 Instead, it will simply change the service control point.
@@ -207,7 +207,7 @@ If this parameter is not included then both the specified computer and the speci
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If this parameter is included then the Set-CsConfigurationStoreLocation cmdlet will not verify that the specified computer and the specified instance of SQL Server are available.
 Instead, it will simply change the service control point.
@@ -295,14 +295,14 @@ Accept wildcard characters: False
 ```
 
 ### -MirrorSqlInstanceName
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Name of the SQL Server instance containing the Lync Server mirror database tables and data.
 For example: -SqlInstanceName "rtc".
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Name of the SQL Server instance containing the Skype for Business Server 2015 mirror database tables and data.
 For example: -SqlInstanceName "rtc".

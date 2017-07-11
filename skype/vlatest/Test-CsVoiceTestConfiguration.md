@@ -6,11 +6,11 @@ schema: 2.0.0
 # Test-CsVoiceTestConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Runs test voice configurations to ensure voice routing and policies work as expected.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Runs test voice configurations to ensure voice routing and policies work as expected.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Test-CsVoiceTestConfiguration [-Dialplan <LocationProfile>] -TestCaseInputObject
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 Running this cmdlet with the appropriate parameter settings allows you to run these tests.
@@ -48,7 +48,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceTestConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 Running this cmdlet with the appropriate parameter settings allows you to run these tests.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceTestConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 Running this cmdlet with the appropriate parameter settings allows you to run these tests.
@@ -320,7 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouteSettings
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A reference to an object containing all the voice routes available on the Microsoft Lync Server 2010 installation.
 You can retrieve this object by calling the Get-CsRoutingConfiguration cmdlet.
@@ -329,7 +329,7 @@ You can use this parameter with either the DialedNumber parameter or with the Te
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A reference to an object containing all the voice routes available on the Lync Server installation.
 You can retrieve this object by calling the Get-CsRoutingConfiguration cmdlet.
@@ -338,7 +338,7 @@ You can use this parameter with either the DialedNumber parameter or with the Te
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A reference to an object containing all the voice routes available on the Skype for Business Server 2015 installation.
 You can retrieve this object by calling the Get-CsRoutingConfiguration cmdlet.

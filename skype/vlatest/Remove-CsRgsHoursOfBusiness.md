@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsRgsHoursOfBusiness
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing set of Response Group business hours.
 Business hours are used to indicate the days of the week and the times of day when Response Group agents are typically available to answer phone calls.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing set of Response Group business hours.
 Business hours are used to indicate the days of the week and the times of day when Response Group agents are typically available to answer phone calls.
@@ -26,7 +26,7 @@ Remove-CsRgsHoursOfBusiness [-Force] [-WhatIf] [-Confirm] -Instance <BusinessHou
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and the hours of the day that agents are available to answer calls.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Remove-CsRgsHoursOfBusiness"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and the hours of the day that agents are available to answer calls.
@@ -82,7 +82,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRgsHoursOfBusiness"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In order to provide callers with the best possible experience, the Response Group application makes it possible for you to clearly define when Response Group agents are available to answer calls and when they are not available to answer calls.
 With the Response Group application, you can define business hours; these hours indicate the days of the week and the hours of the day that agents are available to answer calls.
@@ -286,13 +286,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill Instance Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Object reference pointing to the business hours set to be removed.
 When piping workflow objects to Remove-CsRgsHoursOfBusiness you can leave off the Instance parameter.

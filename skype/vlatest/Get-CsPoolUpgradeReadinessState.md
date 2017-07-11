@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPoolUpgradeReadinessState
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information indicating whether or not your Microsoft Lync Server 2013 Preview Registrar pools are ready to be upgraded.
 The upgrade readiness state for a pool is based on the upgrade domains that have been configured for that pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information indicating whether or not your Skype for Business Server 2015 Registrar pools are ready to be upgraded.
 The upgrade readiness state for a pool is based on the upgrade domains that have been configured for that pool.
@@ -28,7 +28,7 @@ Get-CsPoolUpgradeReadinessState [-Confirm] [-Force] [-WhatIf] [-SkipIdleSecondar
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsPoolUpgradeReadinessState cmdlet returns information about the upgrade readiness for a Lync Server 2013 Preview pool.
 The returned information includes the number of Front End servers assigned to the pool; the number of currently active Front End servers; the name of the upgrade domain; and a True/False value that indicates whether the current state of the pool allows it to be upgraded.
@@ -37,7 +37,7 @@ There are no options enabling you to run Get-CsPoolUpgradeReadinessState remotel
 
 Lync Server Control Panel: The functions carried out by the Get-CsPoolUpgradeReadinessState cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsPoolUpgradeReadinessState cmdlet returns information about the upgrade readiness for a Skype for Business Server 2015 pool.
 The returned information includes the number of Front End servers assigned to the pool; the number of currently active Front End servers; the name of the upgrade domain; and a True/False value that indicates whether the current state of the pool allows it to be upgraded.

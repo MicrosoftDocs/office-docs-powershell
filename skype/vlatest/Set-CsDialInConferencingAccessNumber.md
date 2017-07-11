@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsDialInConferencingAccessNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of an existing dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone, mobile phone or other device on the public switched telephone network (PSTN) to join the audio portion of a conference.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies the property values of an existing dial-in conferencing access number.
 Dial-in conferencing provides a way for users to use a "regular" telephone, mobile phone or other device on the public switched telephone network (PSTN) to join the audio portion of a conference.
@@ -44,7 +44,7 @@ Set-CsDialInConferencingAccessNumber [-Instance] <AccessNumber> [-ScopeToGlobal]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Dial-in conferencing enables users to use any kind of telephone (for example, a standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of a conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -64,7 +64,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Dial-in conferencing enables users to use any kind of telephone (for example, a standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of a conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -84,7 +84,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingAccessNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Dial-in conferencing enables users to use any kind of telephone (for example, a standard "land line," a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of a conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
@@ -365,21 +365,21 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Microsoft Lync 2010 and the name that appears in meeting invitations and in the dial-in conferencing Web page.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Lync.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Active Directory display name for the new contact object.
 This is the name that will also be displayed in Skype for Business.
@@ -436,7 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryLanguage
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Primary language used for making dial-in conferencing announcements.
 The language must be configured by using one of the available dial-in conferencing language codes; for example, en-US for U.S.
@@ -447,7 +447,7 @@ Get-CsDialInConferencingLanguageList | Select-Object -ExpandProperty Languages.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Primary language used for making dial-in conferencing announcements.
 The language must be configured by using one of the available dial-in conferencing language codes; for example, en-US for U.S.
@@ -472,7 +472,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to change the order in which dial-in conferencing numbers are presented to users in meeting invitations or when they access the dial-in conferencing Web page.
 Lower numbers are given a higher priority; to have a number appear at the beginning of the list set the priority to 0.
@@ -480,7 +480,7 @@ Note that if you change the priority of a given number you must also use the Reo
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to change the order in which dial-in conferencing numbers are presented to users in meeting invitations or when they access the Dial-In Conferencing Settings webpage.
 Lower numbers are given a higher priority; to have a number appear at the beginning of the list set the priority to 0.
@@ -620,13 +620,13 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill PassThru Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a contact object through the pipeline that represents the modified dial-in conferencing access number.
 By default, the Set-CsDialInConferencingAccessNumber cmdlet does not pass objects through the pipeline.

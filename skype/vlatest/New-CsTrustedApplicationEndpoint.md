@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsTrustedApplicationEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new endpoint contact for a trusted application.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new endpoint contact for a trusted application.
 This cmdlet was introduced in Lync Server 2010.
@@ -28,7 +28,7 @@ New-CsTrustedApplicationEndpoint -ApplicationId <String> -TrustedApplicationPool
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet creates a new endpoint contact object in Active Directory Domain Services (AD DS) for a specified application.
@@ -38,7 +38,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplicationEndpoint"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet creates a new endpoint contact object in Active Directory Domain Services for a specified application.
@@ -257,14 +257,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The globally unique identifier (GUID) of the object.
 This parameter is not used for on-premises deployments.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account for which the new trusted application pool endpoint is being created.
 For example:
@@ -277,7 +277,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new trusted application pool endpoint is being created.
 For example:

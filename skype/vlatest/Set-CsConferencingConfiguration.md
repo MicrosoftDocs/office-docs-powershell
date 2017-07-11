@@ -6,12 +6,12 @@ schema: 2.0.0
 # Set-CsConferencingConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing collection of conferencing configuration settings.
 Conference settings determine such things as the maximum allowed size for meeting content and handouts; the content grace period (that is, the amount of time content will be stored before being deleted); and the URLs for the internal and external downloads of the supported client.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing collection of conferencing configuration settings.
 Conference settings determine such things as the maximum allowed size for meeting content and handouts; the content grace period (that is, the amount of time content will be stored before being deleted); and the URLs for the internal and external downloads of the supported client.
@@ -50,7 +50,7 @@ Set-CsConferencingConfiguration [-Instance <PSObject>] [-ClientAppSharingPort <U
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferencingConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -96,7 +96,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferencingConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
@@ -304,7 +304,7 @@ Get-CsConferencingConfiguration | Where-Object {$_.Organization -ne "Fabrikam"} 
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of conferencing configuration settings to be modified.
 To refer to the global collection, use this syntax: -Identity global.
@@ -316,7 +316,7 @@ If this parameter is not specified, then Set-CsConferencingConfiguration will au
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of conferencing configuration settings to be modified.
 To refer to the global collection, use this syntax: -Identity global.
@@ -466,7 +466,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientMediaPort
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Represents the starting port number used for client media.
 The ClientMediaPort must be a value port number between 1024 and 65535, inclusive.
@@ -474,7 +474,7 @@ The default value is 5350.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Represents the starting port number used for client media.
 Use this parameter for Microsoft Office Communicator 2007 R2 clients.
@@ -497,7 +497,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientMediaPortRange
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the total number of ports available for client media.
 (The default value is 40.) To determine the actual ports used for client media, use this value and the ClientMediaPort value.
@@ -505,7 +505,7 @@ For example, if ClientMediaPort is set to 5350 and ClientMediaPortRange is set t
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the total number of ports available for client media.
 (The default value is 40.) Use this parameter for Office Communicator 2007 R2 clients.
@@ -617,20 +617,20 @@ Accept wildcard characters: False
 ```
 
 ### -ConsoleDownloadExternalUrl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 URL where external users can download a supported client.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL where external users can download a supported client such as Microsoft Lync 2013 Preview.
 Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Lync Server pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL where external users can download a supported client such as Skype for Business.
 Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server 2015 pool.
@@ -651,20 +651,20 @@ Accept wildcard characters: False
 ```
 
 ### -ConsoleDownloadInternalUrl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 URL where internal users can download a supported client.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL where internal users can download a supported client such as Microsoft Lync 2013 Preview.
 Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Lync Server pool.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL where internal users can download a supported client such as Skype for Business.
 Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server 2015 pool.
@@ -685,7 +685,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentGracePeriod
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates how long conference content will remain on the server following the end of the conference.
 The ContentGracePeriod must be specified using the format Days.Hours:Minutes:Seconds.
@@ -696,7 +696,7 @@ The default value is 15 days (15.00:00:00).
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates how long conference content will remain on the server following the end of the conference.
 The ContentGracePeriod must be specified using the format Days.Hours:Minutes:Seconds.

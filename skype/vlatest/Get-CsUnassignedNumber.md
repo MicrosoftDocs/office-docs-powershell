@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsUnassignedNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Retrieves one or more ranges of unassigned numbers and the routing rules that apply to those numbers.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves one or more ranges of unassigned numbers and the routing rules that apply to those numbers.
 This cmdlet was introduced in Lync Server 2010.
@@ -30,7 +30,7 @@ Get-CsUnassignedNumber [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Microsoft Lync Server 2010 can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -41,7 +41,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUnassignedNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Lync Server can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -52,7 +52,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsUnassignedNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Skype for Business Server 2015 can be set up to route calls to appropriate destinations when an unassigned number is called.

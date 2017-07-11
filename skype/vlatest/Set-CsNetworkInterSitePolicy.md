@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsNetworkInterSitePolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsNetworkInterSitePolicy [-Instance <PSObject>] [-BWPolicyProfileID <String>
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet modifies a network inter-site policy that associates a bandwidth limitation policy with two directly connected sites.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkInterSitePolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet modifies a network inter-site policy that associates a bandwidth limitation policy with two directly connected sites.
@@ -100,14 +100,14 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 An object reference to a site policy that has been modified in memory.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType, and can be retrieved by calling Get-CsNetworkInterSitePolicy.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 An object reference to a site policy that has been modified in memory.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType, and can be retrieved by calling the Get-CsNetworkInterSitePolicy cmdlet.

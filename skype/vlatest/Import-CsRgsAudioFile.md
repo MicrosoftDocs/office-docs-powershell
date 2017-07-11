@@ -6,11 +6,11 @@ schema: 2.0.0
 # Import-CsRgsAudioFile
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Imports a new audio file for use with the Response Group application.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Imports a new audio file for use with the Response Group application.
 This cmdlet was introduced in Lync Server 2010.
@@ -25,7 +25,7 @@ Import-CsRgsAudioFile [-Identity] <RgsIdentity> -Content <Byte[]> -FileName <Str
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Response Group application can use audio files (.WAV or .WMA formats only) in at least two different ways.
 For one, the service can play music (or an announcement of some type) any time callers are placed on hold.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Import-CsRgsAudioFile"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Response Group application can use audio files (.WAV or .WMA formats only) in at least two different ways.
 For one, the service can play music (or an announcement of some type) any time callers are placed on hold.
@@ -59,7 +59,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Import-CsRgsAudioFile"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Response Group application can use audio files (.WAV or .WMA formats only) in at least two different ways.
 For one, the service can play music (or an announcement of some type) any time callers are placed on hold.

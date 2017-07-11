@@ -6,22 +6,22 @@ schema: 2.0.0
 # Test-CsVoiceNormalizationRule
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Tests a telephone number against a voice normalization rule and returns the number after the normalization rule has been applied.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, you must dial 9 to access an outside line) to the E.164 phone number format used by Microsoft Lync Server 2010.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests a telephone number against a voice normalization rule and returns the number after the normalization rule has been applied.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, you must dial 9 to access an outside line) to the E.164 phone number format used by Lync Server.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Test-CsVoiceNormalizationRule -DialedNumber \<PhoneNumber\> -NormalizationRule \<NormalizationRule\> \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests a telephone number against a voice normalization rule and returns the number after the normalization rule has been applied.
 Voice normalization rules are used to convert a telephone dialing requirement (for example, you must dial 9 to access an outside line) to the E.164 phone number format used by Skype for Business Server 2015.
@@ -37,7 +37,7 @@ Test-CsVoiceNormalizationRule -DialedNumber <PhoneNumber> -NormalizationRule <No
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 This cmdlet allows you to see the results of applying a voice normalization rule to a given telephone number.
 Voice normalization rules are a required part of phone authorization and call routing.
@@ -49,11 +49,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsVoiceNormalizationRule"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet allows you to see the results of applying a voice normalization rule to a given telephone number.
 Voice normalization rules are a required part of phone authorization and call routing.
@@ -178,7 +178,7 @@ Get-CsVoiceNormalizationRule | Test-CsVoiceNormalizationRule -DialedNumber 20655
 ## PARAMETERS
 
 ### -DialedNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The phone number against which you want to test the normalization rule specified in the NormalizationRule parameter.
 
@@ -186,7 +186,7 @@ Full Data Type: Microsoft.Rtc.Management.Voice.PhoneNumber
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DialedNumber Description}}
 
@@ -206,7 +206,7 @@ Accept wildcard characters: False
 ```
 
 ### -NormalizationRule
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 An object containing a reference to the normalization rule against which you want to test the number specified in the DialedNumber parameter.
 
@@ -214,7 +214,7 @@ You can retrieve voice normalization rules by calling the Get-CsVoiceNormalizati
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill NormalizationRule Description}}
 

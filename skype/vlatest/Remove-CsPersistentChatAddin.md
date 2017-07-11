@@ -6,13 +6,13 @@ schema: 2.0.0
 # Remove-CsPersistentChatAddin
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes an existing Persistent Chat add-in.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes an existing Persistent Chat add-in.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
@@ -33,7 +33,7 @@ Remove-CsPersistentChatAddin [-Instance] <Addin> [-Confirm] [-Force] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -52,7 +52,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatAddin"
 Lync Server Control Panel: To remove a Persistent Chat add-in using the Lync Server Control Panel, click Persistent Chat and then click Add-in.
 Select the add-in to be removed, click Edit, and then click Delete.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.

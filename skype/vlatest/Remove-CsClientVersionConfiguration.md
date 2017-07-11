@@ -6,20 +6,20 @@ schema: 2.0.0
 # Remove-CsClientVersionConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes the specified collection of client version configuration settings.
 Client version configuration settings determine whether or not Microsoft Lync Server 2010 checks the version number of each client application that logs on to the system.
 If client version filtering is enabled, then the ability of that client application to access the system will be based on settings configured in the appropriate client version policy.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Removes the specified collection of client version configuration settings.
 Client version configuration settings determine whether or not Lync Server checks the version number of each client application that logs on to the system.
 If client version filtering is enabled, then the ability of that client application to access the system will be based on settings configured in the appropriate client version policy.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Removes the specified collection of client version configuration settings.
 Client version configuration settings determine whether or not Skype for Business Server 2015 checks the version number of each client application that logs on to the system.
@@ -36,7 +36,7 @@ Remove-CsClientVersionConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Lync Server 2010 by using Microsoft Lync 2010; from a technical standpoint, there is nothing to prevent people from logging on by using Microsoft Office Communicator 2007 R2.
@@ -58,7 +58,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsClientVersionConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Lync Server by using Lync; from a technical standpoint, there is nothing to prevent people from logging on by using Microsoft Office Communicator 2007 R2.
@@ -80,7 +80,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsClientVersionConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
 For example, there is no technical reason that requires users to log on to Skype for Business Server 2015 by using Skype for Business; from a technical standpoint, there is nothing to prevent people from logging on by using Microsoft Office Communicator 2007 R2.

@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPersistentChatPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Persistent Chat policies configured for use in your organization.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Persistent Chat policies configured for use in your organization.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
@@ -33,7 +33,7 @@ Get-CsPersistentChatPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <G
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatPolicy"}
 
 Lync Server Control Panel: To view Persistent Chat policy information in the Lync Server Control Panel, click Persistent Chat and then click Persistent Chat Policy.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique identity assigned to the policy when it was created.
 Persistent Chat policies can be assigned at the global, site, or per-user scope.
@@ -192,7 +192,7 @@ If neither the Identity nor the Filter parameter is specified Get-CsPersistentCh
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identity assigned to the policy when it was created.
 Persistent Chat policies can be assigned at the global, site, or per-user scope.

@@ -6,18 +6,18 @@ schema: 2.0.0
 # Get-CsSimpleUrlConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the simple URLs configured for use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, as well as making it easier for Administrators to log on to the Microsoft Lync Server 2010 Control Panel.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the simple URLs configured for use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for Administrators to log on to the Lync Server Control Panel.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the simple URLs configured for use in your organization.
 Simple URLs make it easier for users to join meetings and conferences, and also make it easier for Administrators to log on to the Skype for Business Server Control Panel.
@@ -38,7 +38,7 @@ Get-CsSimpleUrlConfiguration [-Filter <String>] [-Tenant <Guid>] [-LocalStore] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -73,7 +73,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -108,7 +108,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsSimpleUrlConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Microsoft Office Communications Server 2007 R2, meetings had URLs similar to this:
 
@@ -294,7 +294,7 @@ Get-CsSimpleUrlConfiguration | Select-Object -ExpandProperty SimpleUrl | Where-O
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the collection of simple URLs to be returned.
 To return the global collection, use this syntax: -Identity global.
@@ -305,7 +305,7 @@ Calling Get-CsSimpleUrlConfiguration without any parameters returns all the simp
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the collection of simple URLs to be returned.
 To return the global collection, use this syntax:
@@ -337,7 +337,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Enables you to use wildcard characters to specify the simple URL collection (or collections) to be returned.
 For example, this syntax returns all the simple URL collections that have been configured at the site scope: -Filter "site:*".
@@ -346,7 +346,7 @@ Note that you cannot use both the Filter and the Identity parameters in the same
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to use wildcard characters to specify the simple URL collection (or collections) to be returned.
 For example, this syntax returns all the simple URL collections that have been configured at the site scope:
@@ -371,13 +371,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 This parameter is not used with the on-premises version of Lync Server 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account where whose Simple URL configuration settings are to be retrieved.
 For example:
@@ -390,7 +390,7 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account where whose Simple URL configuration settings are to be retrieved.
 For example:

@@ -6,11 +6,11 @@ schema: 2.0.0
 # Get-CsManagementConnection
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Returns information about the management connection to the Central Management store.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Returns information about the management connection to the Central Management store.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Get-CsManagementConnection [-Verbose] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Configuration data for Microsoft Lync 2010 is stored in the Central Management store; it is crucial that both Windows PowerShell and the management replica services be able to locate this database.
 When you install Microsoft Lync Server 2010, a service control point is created in Active Directory Domain Services (AD DS) that provides location information for this database.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsManagementConnection"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Configuration data for Lync Server is stored in the Central Management store; it is crucial that both Windows PowerShell and the management replica services be able to locate this database.
 When you install Lync Server, a service control point is created in Active Directory Domain Services (AD DS) that provides location information for this database.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsManagementConnection"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Configuration data for Skype for Business Server 2015 is stored in the Central Management store; it is crucial that both Windows PowerShell and the management replica services be able to locate this database.
 When you install Skype for Business Server 2015, a service control point is created in Active Directory Domain Services that provides location information for this database.

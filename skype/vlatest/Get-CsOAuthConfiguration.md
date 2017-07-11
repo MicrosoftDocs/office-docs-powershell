@@ -6,19 +6,19 @@ schema: 2.0.0
 # Get-CsOAuthConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Open Authorization (OAuth) configuration settings currently in use in the organization.
 OAuth is a standard protocol used for server-to-server authentication and authorization.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsOAuthConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 Get-CsOAuthConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Open Authorization (OAuth) configuration settings currently in use in the organization.
 OAuth is a standard protocol used for server-to-server authentication and authorization.
@@ -45,7 +45,7 @@ Get-CsOAuthConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Fi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
 OAuth is always on in Lync Server 2013 Preview; there is no need (or even any way) to enable or disable the protocol.
@@ -61,11 +61,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsOAuthConfiguration"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsOAuthConfiguration cmdlet are not available in theLync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
 OAuth is always on in Skype for Business Server 2015; there is no need (or even any way) to enable or disable the protocol.
@@ -109,7 +109,7 @@ Get-CsOAuthConfiguration
 ## PARAMETERS
 
 ### -Filter
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to use wildcard values when referencing a collection of OAuth configuration settings.
 Because you can only have a single, global instance of these settings there is no reason to use the Filter parameter.
@@ -121,7 +121,7 @@ That syntax brings back all the OAuth configuration settings that have an Identi
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unique Identity of the OAuth configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling Get-CsOAuthConfiguration.
@@ -151,13 +151,13 @@ If you prefer, however, you can use the following syntax to reference the global
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique Identity of the OAuth configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsOAuthConfiguration cmdlet.
@@ -194,13 +194,13 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Retrieves the OAuth configuration data from the local replica of the Central Management store rather than from the Central Management store itself.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LocalStore Description}}
 
@@ -220,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Globally unique identifier (GUID) of the Office 365 tenant account whose OAuth configuration settings are to be retrieved.
 
@@ -234,13 +234,13 @@ Get-CsTenant | Select-Object DisplayName, TenantID
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose OAuth configuration settings are to be retrieved.
 

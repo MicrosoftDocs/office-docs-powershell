@@ -6,17 +6,17 @@ schema: 2.0.0
 # Get-CsMeetingRoom
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about all the Microsoft Lync Server 2013 Preview meeting rooms configured for use in the organization.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Get-CsMeetingRoom \[\[-Identity\] \<UserIdParameter\>\] \[-Filter \<string\>\] \[-LdapFilter \<string\>\] \[-OU \<OUIdParameter\>\] \[-DomainController \<Fqdn\>\] \[-Credential \<pscredential\>\] \[-ResultSize \<Unlimited\[uint32\]\>\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about all the Skype for Business Server 2015 meeting rooms configured for use in the organization.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
@@ -34,7 +34,7 @@ Get-CsMeetingRoom [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -59,11 +59,11 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsMeetingRoom"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsMeetingRoom cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
@@ -156,7 +156,7 @@ Get-CsMeetingRoom -Filter {VoicePolicy -eq "RedmondVoicePolicy"}
 ## PARAMETERS
 
 ### -Credential
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to run the Get-CsMeetingRoom cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -166,13 +166,13 @@ For details, see the Get-Credential cmdlet Help topic.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Credential Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Get-CsMeetingRoom cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
@@ -196,14 +196,14 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to connect to the specified domain controller in order to retrieve meeting room information.
 To connect to a particular domain controller, include the DomainController parameter followed by the computer name (for example, atl-dc-001) or its fully qualified domain name (FQDN) (for example, atl-dc-001.litwareinc.com).
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DomainController Description}}
 
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on Lync Server-specific attributes.
 For example, you can limit returned data to meeting rooms that have been assigned a specific voice policy, or rooms that have not been assigned a specific voice policy.
@@ -235,13 +235,13 @@ For example, a filter that returns only rooms that have been assigned the voice 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Filter Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
 For example, you can limit returned data to meeting rooms that have been assigned a specific voice policy, or rooms that have not been assigned a specific voice policy.
@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the Identity of the meeting room to be retrieved.
 Meeting room Identities are typically specified using one of four formats: 1) the room's SIP address; 2) the room's user principal name (UPN); 3) the room's domain name and logon name, in the form domain\logon (for example, litwareinc\room14); and, 4) the room's Active Directory display name (for example, Room 14).
@@ -279,7 +279,7 @@ For example, the Identity "*Redmond*" returns all the rooms that have a display 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -299,7 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 For example, you can limit returned data to meeting rooms belonging to a specific department.The LdapFilter parameter uses the LDAP query language when creating filters.
@@ -311,13 +311,13 @@ In that syntax, "l" (a lowercase L) represents the Active Directory attribute (l
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill LdapFilter Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 For example, you can limit returned data to meeting rooms belonging to a specific department.The LdapFilter parameter uses the LDAP query language when creating filters.
@@ -343,7 +343,7 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to return information about meeting rooms in a specific organizational unit (OU) or container.
 The OU parameter returns data from both the specified OU and any of its child OUs.
@@ -355,13 +355,13 @@ When specifying an OU, use the distinguished name (DN) of that container; for ex
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill OU Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to return information about meeting rooms in a specific organizational unit (OU) or container.
 The OU parameter returns data from both the specified OU and any of its child OUs.
@@ -387,7 +387,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to limit the number of records returned by the cmdlet.
 For example, to return seven meeting rooms (regardless of the number of meeting rooms that are in your forest) include the ResultSize parameter and set the parameter value to 7.
@@ -399,7 +399,7 @@ If you set the ResultSize to 7 but you have only three meeting rooms in your for
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ResultSize Description}}
 

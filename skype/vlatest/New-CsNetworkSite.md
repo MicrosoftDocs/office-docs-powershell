@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsNetworkSite
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new network site for use with call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network site for use with call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -34,7 +34,7 @@ New-CsNetworkSite -NetworkSiteID <String> [-BWPolicyProfileID <String>] [-Bypass
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet creates a new site and optionally associates it with a region.
@@ -49,7 +49,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSite"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet creates a new site and optionally associates it with a region.
@@ -61,7 +61,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSite"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet creates a new site and optionally associates it with a region.
@@ -161,7 +161,7 @@ New-CsNetworkSite -Identity Paris -NetworkRegionID EMEA -BWPolicyProfileID LowBW
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A unique identifier for the newly created network site.
 Sites are created only at the global scope, so this identifier does not need to specify a scope.
@@ -169,7 +169,7 @@ Instead, it contains a string that is unique among all network sites within the 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A unique identifier for the newly created network site.
 Sites are created only at the global scope, so this identifier does not need to specify a scope.
@@ -177,7 +177,7 @@ Instead, it contains a string that is unique among all network sites within the 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A unique identifier for the newly created network site.
 Sites are created only at the global scope, so this identifier does not need to specify a scope.
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
@@ -251,7 +251,7 @@ If you manually enter a value, you will receive a confirmation prompt to verify 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
@@ -350,14 +350,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.

@@ -6,12 +6,12 @@ schema: 2.0.0
 # Get-CsBackupServiceStatus
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the current state of the backup service for a specified pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the current state of the backup service for a specified pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -25,7 +25,7 @@ Get-CsBackupServiceStatus -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Force]
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Get-CsBackupServiceStatus cmdlet enables administrators to verify that the backup service for a specified Registrar pool has been configured and is working properly.
 Note that, by default, only users who belong to the RTCUniversalServerAdmins group are allowed to run this cmdlet and check the backup status for a pool.
@@ -37,7 +37,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsBackupServiceStatus"}
 
 Lync Server Control Panel: The functions carried out by the Get-CsBackupServiceStatus cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Get-CsBackupServiceStatus cmdlet enables administrators to verify that the backup service for a specified Registrar pool has been configured and is working properly.
 Note that, by default, only users who belong to the RTCUniversalServerAdmins group are allowed to run this cmdlet and check the backup status for a pool.

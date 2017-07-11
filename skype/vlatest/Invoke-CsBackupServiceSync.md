@@ -6,13 +6,13 @@ schema: 2.0.0
 # Invoke-CsBackupServiceSync
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Manually invokes backup synchronization between a Microsoft Lync Server 2013 Preview pool and its designated backup pool.
 This allows administrators to synchronize data without waiting for Lync Server replication.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Manually invokes backup synchronization between a Skype for Business Server 2015 pool and its designated backup pool.
 This allows administrators to synchronize data without waiting for Skype for Business Server 2015 replication.
@@ -27,7 +27,7 @@ Invoke-CsBackupServiceSync -PoolFqdn <Fqdn> [-BackupModule <String>] [-Force] [<
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Invoke-CsBackupServiceSync cmdlet enables administrators to synchronize the data between a Registrar pool and its backup pool.
 Invoke-CsBackupServiceSync will only copy as much data as needed in order to bring the two pools into sync.
@@ -38,7 +38,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsBackupServiceSync"}
 
 Lync Server Control Panel: The functions carried out by the Invoke-CsBackupServiceSync cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Invoke-CsBackupServiceSync cmdlet enables administrators to synchronize the data between a Registrar pool and its backup pool.
 The Invoke-CsBackupServiceSync cmdlet will only copy as much data as needed in order to bring the two pools into sync.
@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -BackupModule
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the type of data to be synchronized.
 Valid values are:
@@ -100,7 +100,7 @@ Valid values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the type of data to be synchronized.
 Valid values are:

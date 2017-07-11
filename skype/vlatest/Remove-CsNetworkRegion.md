@@ -6,12 +6,12 @@ schema: 2.0.0
 # Remove-CsNetworkRegion
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Removes an existing network region.
 Network regions represent network hubs or backbones in an enterprise network.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Removes an existing network region.
 Network regions represent network hubs or backbones in an enterprise network.
@@ -27,7 +27,7 @@ Remove-CsNetworkRegion [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkRegion"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.

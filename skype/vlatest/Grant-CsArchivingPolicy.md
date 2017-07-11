@@ -6,12 +6,12 @@ schema: 2.0.0
 # Grant-CsArchivingPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Enables you to assign instant messaging (IM) session archiving policies to users or sets of users.
 These policies give you the ability to archive all IM sessions that take place between internal users, and/or to archive all IM sessions that take place between internal users and external partners.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Enables you to assign instant messaging (IM) session archiving policies to users or sets of users.
 These policies give you the ability to archive all IM sessions that take place between internal users, and/or to archive all IM sessions that take place between internal users and external partners.
@@ -27,7 +27,7 @@ Grant-CsArchivingPolicy [-Identity] <UserIdParameter> [[-PolicyName] <String>] [
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Microsoft Lync Server 2010, you must perform two steps.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsArchivingPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Lync Server, you must perform two steps.
@@ -81,7 +81,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsArchivingPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many organizations find it useful to keep an archive of all the IM sessions that their users take part in; other organizations are legally required to keep such an archive.
 In order to archive IM sessions with Skype for Business Server 2015, you must perform two steps.
@@ -356,14 +356,14 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, Grant-CsArchivingPolicy does not pass objects through the pipeline.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If present, causes the cmdlet to pass the user object (or objects) through the Windows PowerShell pipeline.
 By default, the Grant-CsArchivingPolicy cmdlet does not pass objects through the pipeline.

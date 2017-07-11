@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsNetworkSubnet
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing network subnet.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing network subnet.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsNetworkSubnet [-Instance <PSObject>] [-Description <String>] [-MaskBits <I
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to modify the associated network site, change the description of the subnet, or modify the mask bits for the subnet.
@@ -42,7 +42,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkSubnet"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to modify the associated network site, change the description of the subnet, or modify the mask bits for the subnet.
@@ -145,21 +145,21 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 A reference to a network subnet object that you want to modify.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.SubnetType, which can be retrieved by calling Get-CsNetworkSubnet.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 A reference to the network subnet object that you want to modify.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.SubnetType, which can be retrieved by calling Get-CsNetworkSubnet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 A reference to the network subnet object that you want to modify.
 This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.SubnetType, which can be retrieved by calling the Get-CsNetworkSubnet cmdlet.

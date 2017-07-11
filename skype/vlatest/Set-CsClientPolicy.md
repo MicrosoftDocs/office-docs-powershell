@@ -6,24 +6,24 @@ schema: 2.0.0
 # Set-CsClientPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies the property values of an existing client policy.
 Among other things, client policies help determine the features of Microsoft Lync 2010 that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies the property values of an existing client policy.
 Among other things, client policies help determine the features of Lync Server that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Set-CsClientPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-PolicyEntry \<pslistmodifier\>\] \[-Description \<string\>\] \[-AddressBookAvailability \<AddressBookAvailability\>\] \[-AttendantSafeTransfer \<bool\>\] \[-AutoDiscoveryRetryInterval \<timespan\>\] \[-BlockConversationFromFederatedContacts \<bool\>\] \[-CalendarStatePublicationInterval \<uint32\>\] \[-CustomizedHelpUrl \<string\>\] \[-CustomLinkInErrorMessages \<string\>\] \[-CustomStateUrl \<string\>\] \[-DGRefreshInterval \<timespan\>\] \[-DisableCalendarPresence \<bool\>\] \[-DisableContactCardOrganizationTab \<bool\>\] \[-DisableEmailComparisonCheck \<bool\>\] \[-DisableEmoticons \<bool\>\] \[-DisableFeedsTab \<bool\>\] \[-DisableFederatedPromptDisplayName \<bool\>\] \[-DisableFreeBusyInfo \<bool\>\] \[-DisableHandsetOnLockedMachine \<bool\>\] \[-DisableMeetingSubjectAndLocation \<bool\>\] \[-DisableHtmlIm \<bool\>\] \[-DisableInkIM \<bool\>\] \[-DisableOneNote12Integration \<bool\>\] \[-DisableOnlineContextualSearch \<bool\>\] \[-DisablePhonePresence \<bool\>\] \[-DisablePICPromptDisplayName \<bool\>\] \[-DisablePoorDeviceWarnings \<bool\>\] \[-DisablePoorNetworkWarnings \<bool\>\] \[-DisablePresenceNote \<bool\>\] \[-DisableRTFIM \<bool\>\] \[-DisableSavingIM \<bool\>\] \[-DisplayPhoto \<DisplayPhoto\>\] \[-EnableAppearOffline \<bool\>\] \[-EnableCallLogAutoArchiving \<bool\>\] \[-EnableClientAutoPopulateWithTeam \<bool\>\] \[-EnableClientMusicOnHold \<bool\>\] \[-EnableConversationWindowTabs \<bool\>\] \[-EnableEnterpriseCustomizedHelp \<bool\>\] \[-EnableEventLogging \<bool\>\] \[-EnableExchangeContactSync \<bool\>\] \[-EnableExchangeDelegateSync \<bool\>\] \[-EnableExchangeContactsFolder \<bool\>\] \[-EnableFullScreenVideo \<bool\>\] \[-EnableHighPerformanceConferencingAppSharing \<bool\>\] \[-EnableHotdesking \<bool\>\] \[-EnableIMAutoArchiving \<bool\>\] \[-EnableMediaRedirection \<bool\>\] \[-EnableMeetingEngagement \<bool\>\] \[-EnableNotificationForNewSubscribers \<bool\>\] \[-EnableServerConversationHistory \<bool\>\] \[-EnableSkypeUI \<bool\>\] \[-EnableSQMData \<bool\>\] \[-EnableTracing \<bool\>\] \[-EnableURL \<bool\>\] \[-EnableUnencryptedFileTransfer \<bool\>\] \[-EnableVOIPCallDefault \<bool\>\] \[-ExcludedContactFolders \<string\>\] \[-HotdeskingTimeout \<timespan\>\] \[-IMWarning \<string\>\] \[-MAPIPollInterval \<timespan\>\] \[-MaximumDGsAllowedInContactList \<uint32\>\] \[-MaximumNumberOfContacts \<uint16\>\] \[-MaxPhotoSizeKB \<uint32\>\] \[-MusicOnHoldAudioFile \<string\>\] \[-P2PAppSharingEncryption \<P2PAppSharingEncryption\>\] \[-EnableHighPerformanceP2PAppSharing \<bool\>\] \[-PlayAbbreviatedDialTone \<bool\>\] \[-RequireContentPin \<string\>\] \[-SearchPrefixFlags \<uint16\>\] \[-ShowRecentContacts \<bool\>\] \[-ShowManagePrivacyRelationships \<bool\>\] \[-ShowSharepointPhotoEditLink \<bool\>\] \[-SPSearchInternalURL \<string\>\] \[-SPSearchExternalURL \<string\>\] \[-SPSearchCenterInternalURL \<string\>\] \[-SPSearchCenterExternalURL \<string\>\] \[-TabURL \<string\>\] \[-TracingLevel \<TracingLevel\>\] \[-TelemetryTier \<string\>\] \[-PublicationBatchDelay \<uint32\>\] \[-EnableViewBasedSubscriptionMode \<bool\>\] \[-WebServicePollInterval \<timespan\>\] \[-HelpEnvironment \<string\>\] \[-RateMyCallDisplayPercentage \<uint16\>\] \[-RateMyCallAllowCustomUserFeedback \<bool\>\] \[-IMLatencySpinnerDelay \<uint32\>\] \[-IMLatencyErrorThreshold \<uint32\>\] \[-SupportModernFilePicker \<bool\>\] \[-EnableOnlineFeedback \<bool\>\] \[-EnableOnlineFeedbackScreenshots \<bool\>\] \[-ConferenceIMIdleTimeout \<timespan\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
 Set-CsClientPolicy \[-Tenant \<guid\>\] \[-PolicyEntry \<pslistmodifier\>\] \[-Description \<string\>\] \[-AddressBookAvailability \<AddressBookAvailability\>\] \[-AttendantSafeTransfer \<bool\>\] \[-AutoDiscoveryRetryInterval \<timespan\>\] \[-BlockConversationFromFederatedContacts \<bool\>\] \[-CalendarStatePublicationInterval \<uint32\>\] \[-CustomizedHelpUrl \<string\>\] \[-CustomLinkInErrorMessages \<string\>\] \[-CustomStateUrl \<string\>\] \[-DGRefreshInterval \<timespan\>\] \[-DisableCalendarPresence \<bool\>\] \[-DisableContactCardOrganizationTab \<bool\>\] \[-DisableEmailComparisonCheck \<bool\>\] \[-DisableEmoticons \<bool\>\] \[-DisableFeedsTab \<bool\>\] \[-DisableFederatedPromptDisplayName \<bool\>\] \[-DisableFreeBusyInfo \<bool\>\] \[-DisableHandsetOnLockedMachine \<bool\>\] \[-DisableMeetingSubjectAndLocation \<bool\>\] \[-DisableHtmlIm \<bool\>\] \[-DisableInkIM \<bool\>\] \[-DisableOneNote12Integration \<bool\>\] \[-DisableOnlineContextualSearch \<bool\>\] \[-DisablePhonePresence \<bool\>\] \[-DisablePICPromptDisplayName \<bool\>\] \[-DisablePoorDeviceWarnings \<bool\>\] \[-DisablePoorNetworkWarnings \<bool\>\] \[-DisablePresenceNote \<bool\>\] \[-DisableRTFIM \<bool\>\] \[-DisableSavingIM \<bool\>\] \[-DisplayPhoto \<DisplayPhoto\>\] \[-EnableAppearOffline \<bool\>\] \[-EnableCallLogAutoArchiving \<bool\>\] \[-EnableClientAutoPopulateWithTeam \<bool\>\] \[-EnableClientMusicOnHold \<bool\>\] \[-EnableConversationWindowTabs \<bool\>\] \[-EnableEnterpriseCustomizedHelp \<bool\>\] \[-EnableEventLogging \<bool\>\] \[-EnableExchangeContactSync \<bool\>\] \[-EnableExchangeDelegateSync \<bool\>\] \[-EnableExchangeContactsFolder \<bool\>\] \[-EnableFullScreenVideo \<bool\>\] \[-EnableHighPerformanceConferencingAppSharing \<bool\>\] \[-EnableHotdesking \<bool\>\] \[-EnableIMAutoArchiving \<bool\>\] \[-EnableMediaRedirection \<bool\>\] \[-EnableMeetingEngagement \<bool\>\] \[-EnableNotificationForNewSubscribers \<bool\>\] \[-EnableServerConversationHistory \<bool\>\] \[-EnableSkypeUI \<bool\>\] \[-EnableSQMData \<bool\>\] \[-EnableTracing \<bool\>\] \[-EnableURL \<bool\>\] \[-EnableUnencryptedFileTransfer \<bool\>\] \[-EnableVOIPCallDefault \<bool\>\] \[-ExcludedContactFolders \<string\>\] \[-HotdeskingTimeout \<timespan\>\] \[-IMWarning \<string\>\] \[-MAPIPollInterval \<timespan\>\] \[-MaximumDGsAllowedInContactList \<uint32\>\] \[-MaximumNumberOfContacts \<uint16\>\] \[-MaxPhotoSizeKB \<uint32\>\] \[-MusicOnHoldAudioFile \<string\>\] \[-P2PAppSharingEncryption \<P2PAppSharingEncryption\>\] \[-EnableHighPerformanceP2PAppSharing \<bool\>\] \[-PlayAbbreviatedDialTone \<bool\>\] \[-RequireContentPin \<string\>\] \[-SearchPrefixFlags \<uint16\>\] \[-ShowRecentContacts \<bool\>\] \[-ShowManagePrivacyRelationships \<bool\>\] \[-ShowSharepointPhotoEditLink \<bool\>\] \[-SPSearchInternalURL \<string\>\] \[-SPSearchExternalURL \<string\>\] \[-SPSearchCenterInternalURL \<string\>\] \[-SPSearchCenterExternalURL \<string\>\] \[-TabURL \<string\>\] \[-TracingLevel \<TracingLevel\>\] \[-TelemetryTier \<string\>\] \[-PublicationBatchDelay \<uint32\>\] \[-EnableViewBasedSubscriptionMode \<bool\>\] \[-WebServicePollInterval \<timespan\>\] \[-HelpEnvironment \<string\>\] \[-RateMyCallDisplayPercentage \<uint16\>\] \[-RateMyCallAllowCustomUserFeedback \<bool\>\] \[-IMLatencySpinnerDelay \<uint32\>\] \[-IMLatencyErrorThreshold \<uint32\>\] \[-SupportModernFilePicker \<bool\>\] \[-EnableOnlineFeedback \<bool\>\] \[-EnableOnlineFeedbackScreenshots \<bool\>\] \[-ConferenceIMIdleTimeout \<timespan\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies the property values of an existing client policy.
 Among other things, client policies help determine the features of Skype for Business that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
@@ -149,7 +149,7 @@ Set-CsClientPolicy [[-Identity] <Object>] [-AddressBookAvailability <Object>] [-
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 In Lync Server 2010, client policies replace the Group Policy settings used in previous versions of the product.
 In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
@@ -172,7 +172,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 In Lync Server, client policies replace the Group Policy settings used in previous versions of the product.
 In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
@@ -195,11 +195,11 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientPolicy"}
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill in the Description}}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
 In addition, client policies, like other Skype for Business Server 2015 policies, can readily be targeted toward selected groups of users.
@@ -345,7 +345,7 @@ Get-CsClientPolicy | Where-Object {$_.MaxPhotoSizeKb -gt 10} | Set-CsClientPolic
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Unique identifier assigned to the new policy.
 To reference the global policy, use this syntax: -Identity global.
@@ -354,7 +354,7 @@ To reference a per-user policy, use syntax similar to this: -Identity SalesClien
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Identity Description}}
 
@@ -387,13 +387,13 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Instance Description}}
 
@@ -426,7 +426,7 @@ Accept wildcard characters: False
 ```
 
 ### -AddressBookAvailability
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates how users are allowed to access information in the Address Book server (that is, by using the Address Book Web Query service and/or by downloading a copy of the Address Book to their local computer).
 AddressBookAvailability must be set to one of the following values:
@@ -439,7 +439,7 @@ FileDownloadOnly
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AddressBookAvailability Description}}
 
@@ -459,27 +459,27 @@ Accept wildcard characters: False
 ```
 
 ### -AttendantSafeTransfer
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, Microsoft Lync 2010 Attendant operates in "safe transfer" mode; this means that transferred calls that do not reach the intended recipient will reappear in the incoming area along with a "Failed Transfer" notice.
 When set to False, transferred calls that fail to reach the intended recipient will not reappear in the incoming area.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, UNRESOLVED_TOKEN_VAL(nm-client-w15-attendant-short) operates in "safe transfer" mode; this means that transferred calls that do not reach the intended recipient will reappear in the incoming area along with a "Failed Transfer" notice.
 When set to False, transferred calls that fail to reach the intended recipient will not reappear in the incoming area.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AttendantSafeTransfer Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business Attendant operates in "safe transfer" mode; this means that transferred calls that do not reach the intended recipient will reappear in the incoming area along with a "Failed Transfer" notice.
 When set to False, transferred calls that fail to reach the intended recipient will not reappear in the incoming area.
@@ -500,7 +500,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDiscoveryRetryInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 After a failed connection attempt, specifies the amount of time Lync 2010 waits before again trying to connect to Lync Server.
 The AutoDiscoveryRetryInterval can be set to any integer value between 15 and 480 minutes (8 hours), inclusive.
@@ -510,7 +510,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 After a failed connection attempt, specifies the amount of time Lync waits before again trying to connect to Lync Server.
 The AutoDiscoveryRetryInterval can be set to value between 1 second and 60 minutes (1 hour), inclusive.
@@ -524,13 +524,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill AutoDiscoveryRetryInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 After a failed connection attempt, specifies the amount of time Skype for Business waits before again trying to connect to Skype for Business Server 2015.
 The AutoDiscoveryRetryInterval can be set to value between 1 second and 60 minutes (1 hour), inclusive.
@@ -556,7 +556,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockConversationFromFederatedContacts
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, contacts from outside your organization will not be allowed to initiate instant message conversations with any user that this policy applies to.
 However, outside users will be able to participate in conversations as long the internal user initiates that conversation.
@@ -566,13 +566,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill BlockConversationFromFederatedContacts Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, contacts from outside your organization will not be allowed to initiate instant message conversations with any user that this policy applies to.
 However, outside users will be able to participate in conversations as long the internal user initiates that conversation.
@@ -594,7 +594,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarStatePublicationInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the amount of time, in seconds, that Lync 2010 waits before retrieving calendar information from Microsoft Outlook and adding this data to your presence information.
 
@@ -602,7 +602,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the amount of time, in seconds, that Lync waits before retrieving calendar information from Microsoft Outlook and adding this data to your presence information.
 
@@ -614,13 +614,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill CalendarStatePublicationInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the amount of time, in seconds, that Skype for Business waits before retrieving calendar information from Outlook and adding this data to your presence information.
 
@@ -644,13 +644,13 @@ Accept wildcard characters: False
 ```
 
 ### -ConferenceIMIdleTimeout
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the number of minutes that a user can remain in an instant messaging session without either sending or receiving an instant message.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates the number of minutes that a user can remain in an instant messaging session without either sending or receiving an instant message.
 
@@ -661,7 +661,7 @@ For example, this syntax sets the timeout value to 45 minutes:
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ConferenceIMIdleTimeout Description}}
 
@@ -681,7 +681,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomizedHelpUrl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 URL for custom Lync 2010 help set up by an organization.
 This help, rather than the default product help, will be displayed any time a user clicks the Help menu in Lync 2010.
@@ -692,7 +692,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for custom Lync help set up by an organization.
 This help, rather than the default product help, will be displayed any time a user clicks the Help menu in Lync.
@@ -704,13 +704,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill CustomizedHelpUrl Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for custom Skype for Business help set up by an organization.
 This parameter has been deprecated for use with Skype for Business Server 2015.
@@ -733,7 +733,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomLinkInErrorMessages
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 URL for the website that can be added to error messages that appear in Lync 2010.
 If a URL is specified, that URL will appear at the bottom of any error message that occurs in Lync 2010.
@@ -741,7 +741,7 @@ Users can then click that link and be taken to a custom website that contains ad
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 URL for the website that can be added to error messages that appear in Lync.
 If a URL is specified, that URL will appear at the bottom of any error message that occurs in Lync.
@@ -749,13 +749,13 @@ Users can then click that link and be taken to a custom website that contains ad
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill CustomLinkInErrorMessages Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the website that can be added to error messages that appear in Skype for Business.
 If a URL is specified, that URL will appear at the bottom of any error message that occurs in Skype for Business.
@@ -777,7 +777,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomStateUrl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the location of the XML file used to add custom presence states to Lync 2010.
 (Lync 2010 allows up to four custom presence states in addition to the built-in states such as Available, Busy, and Do Not Disturb.) The location of the XML file should be specified using the HTTPS protocol.
@@ -786,7 +786,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the location of the XML file used to add custom presence states to Lync.
 (Lync allows up to four custom presence states in addition to the built-in states such as Available, Busy, and Do Not Disturb.) The location of the XML file should be specified using the HTTPS protocol.
@@ -795,13 +795,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill CustomStateUrl Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the location of the XML file used to add custom presence states to Skype for Business.
 (Skype for Business allows up to four custom presence states in addition to the built-in states such as Available, Busy, and Do Not Disturb.) The location of the XML file should be specified using the HTTPS protocol.
@@ -822,14 +822,14 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Allows administrators to provide additional information about a policy.
 For example, the Description might indicate the users that the policy should be assigned to.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Description Description}}
 
@@ -849,7 +849,7 @@ Accept wildcard characters: False
 ```
 
 ### -DGRefreshInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the amount of time Lync 2010 waits before automatically refreshing the membership list of any distribution group that has been "expanded" in the Contacts list.
 (Expanding a distribution group means displaying all the members in that group.) DGRefreshInterval can be set to any integer value between 30 seconds and 28,800 seconds (8 hours), inclusive.
@@ -859,7 +859,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the amount of time Lync waits before automatically refreshing the membership list of any distribution group that has been "expanded" in the Contacts list.
 (Expanding a distribution group means displaying all the members in that group.) DGRefreshInterval can be set to any integer value between 30 seconds and 28,800 seconds (8 hours), inclusive.
@@ -869,13 +869,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DGRefreshInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the amount of time Skype for Business waits before automatically refreshing the membership list of any distribution group that has been "expanded" in the Contacts list.
 (Expanding a distribution group means displaying all the members in that group.) DGRefreshInterval can be set to any integer value between 30 seconds and 28,800 seconds (8 hours), inclusive.
@@ -897,7 +897,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCalendarPresence
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, calendar data taken from Microsoft Outlook will not be included in your presence information.
 When set to False, calendar data will be included in your presence information.
@@ -907,13 +907,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableCalendarPresence Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, calendar data taken from Outlook will not be included in your presence information.
 When set to False, calendar data will be included in your presence information.
@@ -935,27 +935,27 @@ Accept wildcard characters: False
 ```
 
 ### -DisableContactCardOrganizationTab
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the contact card organization tab is not visible within the Lync 2010 user interface.
 When set to False, the contact card organization tab is available in Lync 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the contact card organization tab is not visible within the Lync user interface.
 When set to False, the contact card organization tab is available in Lync.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableContactCardOrganizationTab Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the contact card organization tab is not visible within the Skype for Business user interface.
 When set to False, the contact card organization tab is available in Skype for Business.
@@ -976,7 +976,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmailComparisonCheck
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, Lync 2010 will not attempt to verify that any currently running instance of Microsoft Outlook belongs to the same user running Lync 2010; for example, the software will not verify that both Outlook and Lync 2010 are running under Ken Myer's user account.
 Instead, it will be assumed that the two applications are running under the same account and, in turn, will include contact and calendar data in Outlook with Lync 2010.
@@ -986,7 +986,7 @@ If the SMTP addresses do not match then contact and calendar data in Outlook wil
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync will not attempt to verify that any currently running instance of Microsoft Outlook belongs to the same user running Lync; for example, the software will not verify that both Outlook and Lync are running under Ken Myer's user account.
 Instead, it will be assumed that the two applications are running under the same account and, in turn, will include contact and calendar data in Outlook with Lync.
@@ -996,13 +996,13 @@ If the SMTP addresses do not match then contact and calendar data in Outlook wil
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableEmailComparisonCheck Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business will not attempt to verify that any currently running instance of Outlook belongs to the same user running Skype for Business; for example, the software will not verify that both Outlook and Skype for Business are running under Ken Myer's user account.
 Instead, it will be assumed that the two applications are running under the same account and, in turn, will include contact and calendar data in Outlook with Skype for Business.
@@ -1026,7 +1026,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableEmoticons
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, users will not be able to send or receive emoticons in their instant messages; instead they will be see the text equivalent of those emoticons.
 For example, instead of seeing a graphical "smiley face" users will see the text equivalent:
@@ -1039,13 +1039,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableEmoticons Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users will not be able to send or receive emoticons in their instant messages; instead they will be see the text equivalent of those emoticons.
 For example, instead of seeing a graphical "smiley face" users will see the text equivalent:
@@ -1070,7 +1070,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFederatedPromptDisplayName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, any notification dialog generated when you are added to a federated user's Contacts list will use the federated user's SIP address (for example, sip:kenmyer@fabrikam.com).
 When set to False, the notification dialog will use the federated user's display name (for example, Ken Myer) instead.
@@ -1079,13 +1079,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableFederatedPromptDisplayName Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, any notification dialog generated when you are added to a federated user's Contacts list will use the federated user's SIP address (for example, sip:kenmyer@fabrikam.com).
 When set to False, the notification dialog will use the federated user's display name (for example, Ken Myer) instead.
@@ -1106,27 +1106,27 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFeedsTab
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the activity feeds tab will not be displayed in Lync 2010.
 When set to False, the feeds tab will be available within Lync 2010.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the activity feeds tab will not be displayed in Lync.
 When set to False, the feeds tab will be available within Lync.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableFeedsTab Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the activity feeds tab will not be displayed in Skype for Business.
 When set to False, the feeds tab will be available within Skype for Business.
@@ -1147,7 +1147,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFreeBusyInfo
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, free/busy information retrieved from Microsoft Outlook will not be displayed in your contact card.
 When set to False, free/busy information is displayed in your contact card.
@@ -1159,13 +1159,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableFreeBusyInfo Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, free/busy information retrieved from Microsoft Outlook will not be displayed in your contact card.
 When set to False, free/busy information is displayed in your contact card.
@@ -1189,7 +1189,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHandsetOnLockedMachine
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, users will not be able to use their phone running Lync Phone Edition if the computer that the phone is connected to is locked.
 To use the phone, users will first have to unlock the computer.
@@ -1200,7 +1200,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, users will not be able to use their Polycom handset if the computer that the handset is connected to is locked.
 To use the handset, users will first have to unlock the computer.
@@ -1211,13 +1211,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableHandsetOnLockedMachine Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users will not be able to use their Polycom handset if the computer that the handset is connected to is locked.
 To use the handset, users will first have to unlock the computer.
@@ -1240,7 +1240,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableHtmlIm
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, any HTML text copied from a webpage will be converted to plain text when pasted into an instant message.
 When set to False, HTML formatting (such as font size and color, dropdown lists and buttons, etc.) will be retained when pasted into an instant message.
@@ -1252,7 +1252,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True, any HTML text copied from a webpage will be converted to plain text when pasted into an instant message.
 When set to False, HTML formatting (such as font size and color, drop-down lists and buttons, etc.) will be retained when pasted into an instant message.
@@ -1264,7 +1264,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableHtmlIm Description}}
 
@@ -1303,7 +1303,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableInkIM
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, users will not be allowed to receive instant messages containing Tablet PC ink.
 (Ink is a technology that enables you to insert handwritten notes into a document.) When set to False, users will be allowed to receive messages that contain Table PC ink.
@@ -1312,13 +1312,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableInkIM Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users will not be allowed to receive instant messages containing Tablet PC ink.
 (Ink is a technology that enables you to insert handwritten notes into a document.) When set to False, users will be allowed to receive messages that contain Table PC ink.
@@ -1339,7 +1339,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOneNote12Integration
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the ability to launch Microsoft OneNote from within Lync 2010  (and the ability to automatically link instant message sessions and OneNote notes) is disabled.
 When set to False, the option Take Notes Using One Note is enabled in Lync 2010.
@@ -1349,7 +1349,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the ability to start Microsoft OneNote from within Lync (and the ability to automatically link instant message sessions and OneNote notes) is disabled.
 When set to False, the option Take Notes Using One Note is enabled in Lync.
@@ -1359,13 +1359,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableOneNote12Integration Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the ability to start OneNote from within Skype for Business (and the ability to automatically link instant message sessions and OneNote notes) is disabled.
 When set to False, the option Take Notes Using One Note is enabled in Skype for Business.
@@ -1387,7 +1387,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableOnlineContextualSearch
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, disables the Find Previous Conversations menu option that appears when you right-click a user in your Contacts list.
 (This option enables you to search the Microsoft Outlook Conversation History folder for previous instant messaging sessions involving the user in question.) When set to False, the Find Previous Conversations option will be available when you right-click a user in your Contacts list.
@@ -1401,13 +1401,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableOnlineContextualSearch Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, disables the Find Previous Conversations menu option that appears when you right-click a user in your Contacts list.
 (This option enables you to search the Outlook Conversation History folder for previous instant messaging sessions involving the user in question.) When set to False, the Find Previous Conversations option will be available when you right-click a user in your Contacts list.
@@ -1433,7 +1433,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePhonePresence
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, Lync 2010 does not take phone calls into consideration when determining your current status.
 When set to False, phone calls are taken into consideration when determining your status.
@@ -1443,7 +1443,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync does not take phone calls into consideration when determining your current status.
 When set to False, phone calls are taken into consideration when determining your status.
@@ -1453,13 +1453,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePhonePresence Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business does not take phone calls into consideration when determining your current status.
 When set to False, phone calls are taken into consideration when determining your status.
@@ -1481,7 +1481,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePICPromptDisplayName
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, any notification dialog box generated when you are added to the Contacts list of a user with an account on a public instant messaging service such as MSN will display that person's SIP address (for example, sip:kenmyer@litwareinc.com).
 When set to False, the notification dialog box will use the person's display name (for example, Ken Myer) instead.
@@ -1490,13 +1490,13 @@ This setting is equivalent to the Communications Server 2007 R2 Group Policy set
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePICPromptDisplayName Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, any notification dialog box generated when you are added to the Contacts list of a user with an account on a public instant messaging service such as MSN will display that person's SIP address (for example, sip:kenmyer@litwareinc.com).
 When set to False, the notification dialog box will use the person's display name (for example, Ken Myer) instead.
@@ -1517,27 +1517,27 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePoorDeviceWarnings
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, Lync 2010 will not issue warnings (upon startup, in the Tuning Wizard, in the Conversation window, etc.) if an audio or video device is not working correctly.
 When set to False, these warnings will be issued.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, Lync will not issue warnings (upon startup, in the Tuning Wizard, in the Conversation window, etc.) if an audio or video device is not working correctly.
 When set to False, these warnings will be issued.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePoorDeviceWarnings Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business will not issue warnings (upon startup, in the Tuning Wizard, in the Conversation window, etc.) if an audio or video device is not working correctly.
 When set to False, these warnings will be issued.
@@ -1558,25 +1558,25 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePoorNetworkWarnings
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the network status indicator (which reports the network strength and quality during a Lync 2010 call) does not appear in the Lync 2010 interface.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the network status indicator (which reports the network strength and quality during a Lync call) does not appear in the Lync interface.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePoorNetworkWarnings Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, Skype for Business will not display warnings about poor network quality.
 
@@ -1596,7 +1596,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisablePresenceNote
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, any Out of Office message you configure in Microsoft Outlook will not be displayed as part of your presence information.
 When set to False, your Out of Office message will be displayed any time a user holds the mouse over your name in their Contacts list.
@@ -1605,13 +1605,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisablePresenceNote Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, any Out of Office message you configure in Outlook will not be displayed as part of your presence information.
 When set to False, your Out of Office message will be displayed any time a user holds the mouse over your name in their Contacts list.
@@ -1632,7 +1632,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableRTFIM
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When both this setting and the DisableHtmlIm settings are set to True, prevents rich text formatting (for example, different fonts, font sizes, and font colors) from being used in instant messages; instead, all messages sent and received will be converted to plain text format.
 When set to False, rich text formatting will be allowed in instant messages.
@@ -1641,13 +1641,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableRTFIM Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When both this setting and the DisableHtmlIm settings are set to True, prevents rich text formatting (for example, different fonts, font sizes, and font colors) from being used in instant messages; instead, all messages sent and received will be converted to plain text format.
 When set to False, rich text formatting will be allowed in instant messages.
@@ -1668,7 +1668,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableSavingIM
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the options for saving an instant message session  are removed from the menu bar in the Lync 2010 Conversation window.
 When set to False, these options are available in the Conversation window.
@@ -1680,7 +1680,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, the options for saving an instant message session are removed from the menu bar in the Lync Conversation window.
 When set to False, these options are available in the Conversation window.
@@ -1692,13 +1692,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisableSavingIM Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, the options for saving an instant message session are removed from the menu bar in the Skype for Business Conversation window.
 When set to False, these options are available in the Conversation window.
@@ -1722,7 +1722,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayPhoto
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Determines whether or not photos (of both the user and his or her contacts) will be displayed in Lync 2010.
 Valid settings are:
@@ -1737,7 +1737,7 @@ The default value is AllPhotos.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Determines whether or not photos (of both the user and his or her contacts) will be displayed in Lync.
 Valid settings are:
@@ -1752,13 +1752,13 @@ The default value is AllPhotos.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill DisplayPhoto Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Determines whether or not photos (of both the user and his or her contacts) will be displayed in Skype for Business.
 Valid settings are:
@@ -1787,7 +1787,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAppearOffline
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True an additional presence state -- Appear Offline -- is available in Lync 2010.
 This state makes it appear as though the user is offline; however, he or she will actually be online and available to answer phone calls, respond to instant messages, etc.
@@ -1797,7 +1797,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True an additional presence state -- Appear Offline -- is available in Lync.
 This state makes it appear as though the user is offline; however, he or she will actually be online and available to answer phone calls, respond to instant messages, etc.
@@ -1807,13 +1807,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableAppearOffline Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True an additional presence state -- Appear Offline -- is available in Skype for Business.
 This state makes it appear as though the user is offline; however, he or she will actually be online and available to answer phone calls, respond to instant messages, etc.
@@ -1835,7 +1835,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableCallLogAutoArchiving
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, information about your incoming and outgoing phone calls is automatically saved to the Conversation History folder in Microsoft Outlook.
 (The actual call itself is not recorded.
@@ -1845,13 +1845,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableCallLogAutoArchiving Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, information about your incoming and outgoing phone calls is automatically saved to the Conversation History folder in Outlook.
 (The actual call itself is not recorded.
@@ -1873,7 +1873,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableClientMusicOnHold
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 When set to True, music will be played any time a caller is placed on hold.
 When set to False, music will not be played any time a caller is placed on hold.
@@ -1881,7 +1881,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableClientMusicOnHold Description}}
 
@@ -1901,7 +1901,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableConversationWindowTabs
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, supplemental information related to an instant messaging session will be displayed in a separate browser window.
 This type of information is available only for custom applications that use the Microsoft Unified Communications Managed API (UCMA).
@@ -1914,7 +1914,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, supplemental information related to an instant messaging session will be displayed in a separate browser window.
 This type of information is available only for custom applications that use the Microsoft Unified Communications Managed API (UCMA).
@@ -1927,13 +1927,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableConversationWindowTabs Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, supplemental information related to an instant messaging session will be displayed in a separate browser window.
 
@@ -1957,7 +1957,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnterpriseCustomizedHelp
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, users who click the Help menu in Lync 2010 will be given custom help set up by the organization.
 When set to False, users who click the Help menu will be given the default Lync 2010 product help.
@@ -1967,7 +1967,7 @@ If this parameter is not specified, or if the URL is not valid, then users will 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, users who click the Help menu in Lync will be given custom help set up by the organization.
 When set to False, users who click the Help menu will be given the default Lync product help.
@@ -1979,13 +1979,13 @@ This parameter has been deprecated for use with Lync Server 2013 Preview.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableEnterpriseCustomizedHelp Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users who click the Help menu in Skype for Business will be given custom help set up by the organization.
 When set to False, users who click the Help menu will be given the default product help.
@@ -2008,7 +2008,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEventLogging
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, detailed information about Lync 2010 will be recorded in the Application event log.
 When set to False, only major events (such as the failure to connect to Lync Server) are recorded in the event log.
@@ -2017,7 +2017,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, detailed information about Lync will be recorded in the Application event log.
 When set to False, only major events (such as the failure to connect to Lync Server) are recorded in the event log.
@@ -2026,13 +2026,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableEventLogging Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, detailed information about Skype for Business will be recorded in the Application event log.
 When set to False, only major events (such as the failure to connect to Skype for Business Server 2015) are recorded in the event log.
@@ -2053,25 +2053,25 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactSync
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True (the default value) Lync 2010 creates a corresponding personal contact in Microsoft Outlook for each person on a user's Lync 2010 Contacts list.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True (the default value) Lync creates a corresponding personal contact in Microsoft Outlook for each person on a user's Lync Contacts list.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableExchangeContactSync Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value) Skype for Business creates a corresponding personal contact in Outlook for each person on a user's Skype for Business Contacts list.
 
@@ -2091,19 +2091,19 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeDelegateSync
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, delegates a user that has configured in Microsoft Exchange will be allowed to schedule meetings for that user.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableExchangeDelegateSync Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, a user that has been configured in Outlook will be allowed to schedule online Lync Calendar meetings for that user (this happens via Lync UCMAPI delegation, without the need of the Enterprise Voice feature).
 
@@ -2123,7 +2123,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableFullScreenVideo
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, this parameter does two things: 1) enables full-screen video (with the correct aspect ratio) for Lync 2010 calls; and, 2) disables video preview for Lync 2010 calls.
 When set to False then full-screen video is not available in Lync 2010, but video preview is available.
@@ -2132,7 +2132,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, this parameter does two things: 1) enables full-screen video (with the correct aspect ratio) for Lync calls; and, 2) disables video preview for Lync calls.
 When set to False then full-screen video is not available in Lync, but video preview is available.
@@ -2141,13 +2141,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableFullScreenVideo Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, this parameter does two things: 1) enables full-screen video (with the correct aspect ratio) for Skype for Business calls; and, 2) disables video preview for Skype for Business calls.
 When set to False then full-screen video is not available in Skype for Business, but video preview is available.
@@ -2168,7 +2168,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHotdesking
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, enables users to log on to a phone running Lync 2010 Phone Edition in a shared workspace by using their Lync Server account.
 (Among other things, this provides the user access to his or her contacts.) When set to False, users not allowed to log on to a phone by using their own credentials.
@@ -2179,7 +2179,7 @@ When set to False, no one will be allowed to log on to a common area phone where
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, enables users to log on to a phone running Lync Phone Edition in a shared workspace by using their Lync Server account.
 (Among other things, this provides the user access to his or her contacts.) When set to False, users are not allowed to log on to a phone in a shared workspace by using their own credentials.
@@ -2190,13 +2190,13 @@ When set to False, no one will be allowed to log on to that phone.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableHotdesking Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, enables users to log on to a phone running Skype for Business Phone Edition in a shared workspace by using their Skype for Business Server 2015 account.
 (Among other things, this provides the user access to his or her contacts.) When set to False, users are not allowed to log on to a phone in a shared workspace by using their own credentials.
@@ -2221,7 +2221,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableIMAutoArchiving
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, a transcript of every instant message session that a user takes part in will be saved to the Conversation History folder in Microsoft Outlook.
 When set to False, these transcripts will not be saved automatically.
@@ -2231,13 +2231,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableIMAutoArchiving Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, a transcript of every instant message session that a user takes part in will be saved to the Conversation History folder in Outlook.
 When set to False, these transcripts will not be saved automatically.
@@ -2259,7 +2259,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSQMData
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 The Customer Experience Improvement Program (CEIP) is designed to help Microsoft collect data on the real-world use of Lync 2010.
 When a user is enrolled in CEIP, then each time the user runs Lync 2010 information about what that user does, and how often they do it, will be sent back to Microsoft, stored in a database, and then analyzed to help identify usage trends.
@@ -2279,7 +2279,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Note: This setting has been deprecated for Lync Server 2013 Preview.
 
@@ -2301,13 +2301,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableSQMData Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When EnableSQMData is set to True, the user will not automatically be enrolled in the Customer Experience Improvement Program.
 However, Skype for Business will provide the user with the option to join the program.
@@ -2331,7 +2331,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableTracing
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, software tracing will be enabled in Lync 2010; when set to False software tracing will be disabled.
 Software tracing involves keeping an extremely detailed record of everything that a program does (including tracking API calls).
@@ -2341,7 +2341,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, software tracing will be enabled in Lync; when set to False software tracing will be disabled.
 Software tracing involves keeping an extremely detailed record of everything that a program does (including tracking API calls).
@@ -2351,13 +2351,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableTracing Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, software tracing will be enabled in Skype for Business; when set to False software tracing will be disabled.
 Software tracing involves keeping an extremely detailed record of everything that a program does (including tracking API calls).
@@ -2379,7 +2379,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableUnencryptedFileTransfer
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, users will be allowed to exchange files with external users whose instant messaging software does not support encrypted file transfers.
 When set to False, users will only be able to exchange files with external users who have software that supports encrypted file transfers.
@@ -2388,13 +2388,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableUnencryptedFileTransfer Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users will be allowed to exchange files with external users whose instant messaging software does not support encrypted file transfers.
 When set to False, users will only be able to exchange files with external users who have software that supports encrypted file transfers.
@@ -2415,13 +2415,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableVOIPCallDefault
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, a Lync 2010 call will be placed any time a user employs the click-to-call feature.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, a Lync call will be placed any time a user employs the click-to-call feature.
 
@@ -2431,13 +2431,13 @@ After a user has modified the click-to-call setting that setting will remain in 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableVOIPCallDefault Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, a Skype for Business call will be placed any time a user employs the click-to-call feature.
 
@@ -2461,27 +2461,27 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludedContactFolders
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates which Microsoft Outlook contact folders (if any) should not be searched any time Lync 2010 searches for new contacts.
 Multiple folders can be specified by separating the folder names using semicolons; for example: -ExcludedContactFolders "SenderPhotoContacts;OtherContacts".
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates which Microsoft Outlook contact folders (if any) should not be searched any time Lync searches for new contacts.
 Multiple folders can be specified by separating the folder names using semicolons; for example: -ExcludedContactFolders "SenderPhotoContacts;OtherContacts".
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ExcludedContactFolders Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates which Outlook contact folders (if any) should not be searched any time Skype for Business searches for new contacts.
 Multiple folders can be specified by separating the folder names using semicolons; for example: -ExcludedContactFolders "SenderPhotoContacts;OtherContacts".
@@ -2502,7 +2502,7 @@ Accept wildcard characters: False
 ```
 
 ### -HotdeskingTimeout
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Timeout interval for a user logged on to a "hot-desk" phone.
 (A hot-desk phone is a phone running Lync Phone Edition that is located in a shared workspace, and that users can log on to using their Lync Server account.) The hot-desk timeout specifies the number of minutes that can elapse before a user is automatically logged off of a hot-desk phone.
@@ -2511,7 +2511,7 @@ Note that this policy setting applies only to common area phones and not to user
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Timeout interval for a user logged on to a "hot-desk" phone.
 (A hot-desk phone is a phone running Lync Phone Edition that is located in a shared workspace, and that users can log on to using their Lync Server account.) The hot-desk timeout specifies the number of minutes that can elapse before a user is automatically logged off of a hot-desk phone.
@@ -2525,13 +2525,13 @@ The default value is 5 minutes (00:05:00), and the minimum value is 30 seconds (
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill HotdeskingTimeout Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Timeout interval for a user logged on to a "hot-desk" phone.
 (A hot-desk phone is a phone running Skype for Business Phone Edition that is located in a shared workspace, and that users can log on to using their Skype for Business Server 2015 account.) The hot-desk timeout specifies the number of minutes that can elapse before a user is automatically logged off of a hot-desk phone.
@@ -2559,7 +2559,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMWarning
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When configured, the specified message appears in the Conversation window each time a user takes part in an instant messaging session.
 For example, if IMWarning is set to "All information is the property of Litware, Inc." then that message will appear in the Conversation window each time a user takes part in an instant messaging session.
@@ -2570,7 +2570,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When configured, the specified message appears in the Conversation window each time a user takes part in an instant messaging session.
 For example, if IMWarning is set to "All information is the property of Litwareinc" then that message will appear in the Conversation window each time a user takes part in an instant messaging session.
@@ -2584,13 +2584,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill IMWarning Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When configured, the specified message appears in the Conversation window each time a user takes part in an instant messaging session.
 For example, if IMWarning is set to "All information is the property of Litwareinc" then that message will appear in the Conversation window each time a user takes part in an instant messaging session.
@@ -2616,7 +2616,7 @@ Accept wildcard characters: False
 ```
 
 ### -MAPIPollInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 For users of Microsoft Exchange Server 2003, MAPIPollInterval specifies how often Lync 2010 retrieves calendar data from the Exchange public folders.
 MAPIPollInterval can be set to any integer value between 5 minutes and 480 minutes (8 hours); inclusive.
@@ -2629,7 +2629,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Important: This parameter has been deprecated for use with Lync Server 2013 Preview.
 
@@ -2647,13 +2647,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MAPIPollInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Important: This parameter has been deprecated for use with Skype for Business Server 2015.
 
@@ -2680,7 +2680,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumDGsAllowedInContactList
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates the maximum number of distribution groups that a user can configure as a contact.
 MaximumDGsAllowedInContactList can be set to any integer value between 0 and 64, inclusive.
@@ -2688,7 +2688,7 @@ The default value is 10.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MaximumDGsAllowedInContactList Description}}
 
@@ -2708,7 +2708,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumNumberOfContacts
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Indicates the maximum number of contacts a user is allowed to have.
 The maximum contacts can be set to any integer value between 0 and 1000, inclusive.
@@ -2718,13 +2718,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MaximumNumberOfContacts Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the maximum number of contacts a user is allowed to have.
 The maximum contacts can be set to any integer value between 0 and 1000, inclusive.
@@ -2746,7 +2746,7 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldAudioFile
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Path to the audio file to be played when a caller is placed on hold.
 If a value is configured for this property then music on hold will be enabled and users will not be allowed to disable the feature.
@@ -2754,7 +2754,7 @@ If no value is configured for this property then users can specify their own mus
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MusicOnHoldAudioFile Description}}
 
@@ -2774,7 +2774,7 @@ Accept wildcard characters: False
 ```
 
 ### -P2PAppSharingEncryption
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not desktop and application sharing data exchanged during a peer-to-peer conversation is encrypted.
 Allowed values are:
@@ -2791,7 +2791,7 @@ Desktop and application sharing data will not be encrypted.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill P2PAppSharingEncryption Description}}
 
@@ -2811,7 +2811,7 @@ Accept wildcard characters: False
 ```
 
 ### -PlayAbbreviatedDialTone
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, a 3-second dial tone will be played any time a Lync 2010-compatible handset is taken off the hook.
 (A Lync 2010-compatible handset looks like a standard telephone, but plugs into a USB port on your computer and is used to make Lync 2010 calls rather than "regular" phone calls.) When set to False, a 30-second dial tone is played any time a Lync 2010-compatible handset is taken off the hook.
@@ -2820,7 +2820,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, a 3-second dial tone will be played any time a Lync-compatible handset is taken off the hook.
 (A Lync-compatible handset looks like a standard telephone, but plugs into a USB port on your computer and is used to make Lync calls rather than "regular" phone calls.) When set to False, a 30-second dial tone is played any time a Lync-compatible handset is taken off the hook.
@@ -2829,13 +2829,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PlayAbbreviatedDialTone Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, a 3-second dial tone will be played any time a Skype for Business-compatible handset is taken off the hook.
 (A Skype for Business-compatible handset looks like a standard telephone, but plugs into a USB port on your computer and is used to make Skype for Business calls rather than "regular" phone calls.) When set to False, a 30-second dial tone is played any time a Skype for Business-compatible handset is taken off the hook.
@@ -2856,7 +2856,7 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyEntry
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Provides a way to add settings not covered by the default parameters.
 For example, in the pre-beta version of Lync 2010 it was possible to add a Send Feedback option to Lync 2010.
@@ -2868,7 +2868,7 @@ For more details and examples, see the New-CsClientPolicyEntry help topic.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions Microsoft Lync Server 2010 it was possible to add a Send Feedback option to Microsoft Lync 2010.
@@ -2880,13 +2880,13 @@ For more details and examples, see the New-CsClientPolicyEntry help topic.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill PolicyEntry Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Provides a way to add settings not covered by the default parameters.
 For example, when testing pre-release versions Microsoft Lync Server 2010 it was possible to add a Send Feedback option to Microsoft Lync 2010.
@@ -2914,7 +2914,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchPrefixFlags
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Represents the Address Book attributes that should be used any time a user searches for a new contact.
 The search prefix flags are constructed as a binary number such as 11101111, in which a 1 indicates that the attribute should be searched and a 0 indicates that the attribute should not be searched.
@@ -2946,13 +2946,13 @@ To convert a binary number to a decimal number you can use the following Windows
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SearchPrefixFlags Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Represents the Address Book attributes that should be used any time a user searches for a new contact.
 The search prefix flags are constructed as a binary number such as 11101111, in which a 1 indicates that the attribute should be searched and a 0 indicates that the attribute should not be searched.
@@ -2998,7 +2998,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowManagePrivacyRelationships
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, shows the Relationships option in the Lync 2010 Contacts list window.
 When set to False, hides the Relationships option.
@@ -3007,7 +3007,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, shows the Relationships option in the Lync Contacts list window.
 When set to False, hides the Relationships option.
@@ -3016,13 +3016,13 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ShowManagePrivacyRelationships Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, shows the Relationships option in the Lync Contacts list window.
 When set to False, hides the Relationships option.
@@ -3048,7 +3048,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowRecentContacts
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True, the Contacts list will include an auto-generated category named Frequent Contacts.
 When set to False, the Frequent Contacts category will not be auto-generated.
@@ -3057,13 +3057,13 @@ The default value is True.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter has no effect on the client.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ShowRecentContacts Description}}
 
@@ -3083,27 +3083,27 @@ Accept wildcard characters: False
 ```
 
 ### -ShowSharepointPhotoEditLink
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If set to True, Lync 2010 will include a link that enables users to edit the personal photo stored on their SharePoint MySite.
 The default value is False, which means that Lync 2010 will not include a link to the SharePoint MySite.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If set to True, Lync will include a link that enables users to edit the personal photo stored on their SharePoint MySite.
 The default value is False, which means that Lync will not include a link to the SharePoint MySite.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill ShowSharepointPhotoEditLink Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True, Skype for Business will include a link that enables users to edit the personal photo stored on SharePoint.
 The default value is False, which means that Skype for Business will not include a link to SharePoint.
@@ -3124,7 +3124,7 @@ Accept wildcard characters: False
 ```
 
 ### -SPSearchCenterExternalURL
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Lync 2010.
@@ -3136,7 +3136,7 @@ The parameter SPSearchCenterInternalURL is for users who log on from inside the 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Lync.
@@ -3148,13 +3148,13 @@ The parameter SPSearchCenterInternalURL is for users who log on from inside the 
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SPSearchCenterExternalURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Skype for Business.
@@ -3180,7 +3180,7 @@ Accept wildcard characters: False
 ```
 
 ### -SPSearchCenterInternalURL
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Lync 2010.
@@ -3192,7 +3192,7 @@ The parameter SPSearchCenterExternalURL is for users who log on from outside the
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Lync.
@@ -3204,13 +3204,13 @@ The parameter SPSearchCenterExternalURL is for users who log on from outside the
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SPSearchCenterInternalURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 This URL will appear at the bottom of any keyword search results that appear in Skype for Business.
@@ -3236,27 +3236,27 @@ Accept wildcard characters: False
 ```
 
 ### -SPSearchExternalURL
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 Lync 2010 will use the SharePoint site located at this URL any time an external user (that is, a user who has accessed the system from outside the organization's firewall) conducts a keyword search.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 Lync will use the SharePoint site located at this URL any time an external user (that is, a user who has accessed the system from outside the organization's firewall) conducts a keyword search.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SPSearchExternalURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 External URL for the SharePoint site used for keyword searches (also known as expert searches).
 Skype for Business will use the SharePoint site located at this URL any time an external user (that is, a user who has accessed the system from outside the organization's firewall) conducts a keyword search.
@@ -3277,27 +3277,27 @@ Accept wildcard characters: False
 ```
 
 ### -SPSearchInternalURL
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 Lync 2010 will use the SharePoint site located at this URL any time an internal user (that is, a user who has logged on from inside the organization's firewall) conducts a keyword search.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 Lync will use the SharePoint site located at this URL any time an internal user (that is, a user who has logged on from inside the organization's firewall) conducts a keyword search.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill SPSearchInternalURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Internal URL for the SharePoint site used for keyword searches (also known as expert searches).
 Skype for Business will use the SharePoint site located at this URL any time an internal user (that is, a user who has logged on from inside the organization's firewall) conducts a keyword search.
@@ -3318,7 +3318,7 @@ Accept wildcard characters: False
 ```
 
 ### -TabURL
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Specifies the location of the XML file used to create custom tabs located at the bottom of the Lync 2010 Contacts list window.
 Custom tabs provide access to webpages (for example, help desk webpages) from within Lync 2010.
@@ -3327,7 +3327,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Specifies the location of the XML file used to create custom tabs located at the bottom of the Lync Contacts list window.
 Custom tabs provide access to webpages (for example, help desk webpages) from within Lync.
@@ -3337,13 +3337,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill TabURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the location of the XML file used to create custom tabs located at the bottom of the Skype for Business Contacts list window.
 This parameter has been deprecated for use with Skype for Business Server 2015.
@@ -3364,7 +3364,7 @@ Accept wildcard characters: False
 ```
 
 ### -WebServicePollInterval
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 For users of Microsoft Exchange Server 2007 or later, WebServicePollInterval specifies how often Lync 2010 retrieves calendar data from Exchange Web Services.
 WebServicePollInterval can be set to any integer value between 5 minutes and 480 minutes (8 hours); inclusive.
@@ -3377,7 +3377,7 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 For users of Microsoft Exchange Server 2007 and later versions of the product, WebServicePollInterval specifies how often Lync retrieves calendar data from Microsoft Exchange Server Web Services.
 WebServicePollInterval can be set to any value between 1 second and 1 hour; inclusive.
@@ -3393,13 +3393,13 @@ This setting is equivalent to the Communications Server 2007 R2 Group Policy set
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill WebServicePollInterval Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 For users of Microsoft Exchange Server 2007 and later versions of the product, WebServicePollInterval specifies how often Skype for Business retrieves calendar data from Microsoft Exchange Server Web Services.
 WebServicePollInterval can be set to any value between 1 second and 1 hour; inclusive.
@@ -3427,13 +3427,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Suppresses the display of any non-fatal error message that might arise when running the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Force Description}}
 
@@ -3453,13 +3453,13 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
@@ -3480,13 +3480,13 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Below Content Applies To: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 Prompts you for confirmation before running the cmdlet.
 
@@ -3506,13 +3506,13 @@ Accept wildcard characters: False
 ```
 
 ### -DisableMeetingSubjectAndLocation
-Below Content Applies To: Lync Server 2010, Skype for Business Online
+**Below Content Applies To:** Lync Server 2010, Skype for Business Online
 
 {{Fill DisableMeetingSubjectAndLocation Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True, detailed information about a meeting -- namely, the meeting subject and the location where the meeting is being held -- will be displayed as a tooltip when you view free/busy information in a contact card.
 When set the False, this detailed information will not be displayed.
@@ -3522,7 +3522,7 @@ This setting is equivalent to the Communications Server 2007 R2 Group Policy set
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to False, detailed information about a meeting -- namely, the meeting subject and the location where the meeting is being held -- will be displayed as a tooltip when you view free/busy information in a contact card.
 When set to True, this detailed information will not be displayed.
@@ -3544,13 +3544,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNotificationForNewSubscribers
-Below Content Applies To: Lync Server 2010, Skype for Business Online
+**Below Content Applies To:** Lync Server 2010, Skype for Business Online
 
 {{Fill EnableNotificationForNewSubscribers Description}}
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True you will receive notification any time you are added to someone else's Contacts list.
 In addition, the notification dialog box will provide options for you to add that person to your Contacts list, or to block them from viewing your presence information.
@@ -3571,7 +3571,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableURL
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 When set to True, hyperlinks embedded in an instant message will be "clickable;" that is, users can click that link and their web browser will open to the specified location.
 When set to False, hyperlinks appear in instant messages as plain text.
@@ -3581,13 +3581,13 @@ This setting is equivalent to the Office Communications Server 2007 R2 Group Pol
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableURL Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, hyperlinks embedded in an instant message will be "clickable;" that is, users can click that link and their web browser will open to the specified location.
 When set to False, hyperlinks appear in instant messages as plain text.
@@ -3609,7 +3609,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPhotoSizeKB
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the maximum size (in kilobytes) for photos displayed in Lync 2010.
 Setting the MaxPhotoSize to 0 prevents any photos from being displayed in Lync 2010.
@@ -3618,7 +3618,7 @@ The default value is 10 kilobytes.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the maximum size (in kilobytes) for photos displayed in Lync.
 Setting the MaxPhotoSize to 0 prevents any photos from being displayed in Lync.
@@ -3627,13 +3627,13 @@ The default value is 30 kilobytes.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill MaxPhotoSizeKB Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the maximum size (in kilobytes) for photos displayed in Skype for Business.
 
@@ -3655,14 +3655,14 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMediaRedirection
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 When set to True ($True) allows audio and video streams to be separated from other network traffic; in turn, this allows client devices to do encoding and decoding of audio and video locally.
 Media redirection typically results in lower bandwidth usage, higher server scalability, and a more-optimal user experience compared to similar techniques such as device remoting or codec compression.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableMediaRedirection Description}}
 
@@ -3682,7 +3682,7 @@ Accept wildcard characters: False
 ```
 
 ### -HelpEnvironment
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to "Office 365", the Office 365 client help documentation for Lync Server 2013 Preview will be shown to users rather than the on-premises help shown by default.
 You can either set HelpEnvironment to "Office 365" or to a null value ($Null).
@@ -3690,13 +3690,13 @@ If set to a null value (the default value) then the on-premises help will be sho
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill HelpEnvironment Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to "Office 365", the Office 365 client help documentation for Skype for Business will be shown to users rather than the on-premises help shown by default.
 You can either set HelpEnvironment to "Office 365" or to a null value ($Null).
@@ -3718,7 +3718,7 @@ Accept wildcard characters: False
 ```
 
 ### -TracingLevel
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables Administrators to manage event tracing and logging in Lync 2013 Preview.
 Allowed values are:
@@ -3731,13 +3731,13 @@ By default TracingLevel is set to Light.
 
 
 
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill TracingLevel Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables Administrators to manage event tracing and logging in Skype for Business.
 Allowed values are:
@@ -3814,13 +3814,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceConferencingAppSharing
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableHighPerformanceConferencingAppSharing Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, enables better performance in applications (such as CAD/CAM applications) that have a high screen refresh rate.
 However, this improved performance will reduce the system resources and network bandwidth available to other applications.
@@ -3841,13 +3841,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableHighPerformanceP2PAppSharing
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableHighPerformanceP2PAppSharing Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, allows a peer-to-peer application sharing session to exceed the maximum frame rate of 2.5 frames per second.
 The default value is False.
@@ -3916,13 +3916,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableServerConversationHistory
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableServerConversationHistory Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True), allows conversation histories, missed call notifications, and missed IM notifications to be stored on the server instead of in client mailboxes.
 This makes it easier for users to retrieve that information from a mobile device.
@@ -3945,13 +3945,13 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSkypeUI
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill EnableSkypeUI Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True), this parameter allows administrators to enable the Skype for Business user interface instead of the Lync interface for the Skype for Business client.
 
@@ -3987,13 +3987,13 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencyErrorThreshold
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill IMLatencyErrorThreshold Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If IM latency is greater than the threshold value (in milliseconds), the client will submit a CER.
 
@@ -4013,13 +4013,13 @@ Accept wildcard characters: False
 ```
 
 ### -IMLatencySpinnerDelay
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill IMLatencySpinnerDelay Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Amount of time, in milliseconds, to wait before showing the spinner in the client when IM message delivery is delayed.
 
@@ -4055,13 +4055,13 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallAllowCustomUserFeedback
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RateMyCallAllowCustomUserFeedback Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True ($True), enables a text box for users to type feedback when prompted.
 
@@ -4081,13 +4081,13 @@ Accept wildcard characters: False
 ```
 
 ### -RateMyCallDisplayPercentage
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill RateMyCallDisplayPercentage Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The RateMyCallDisplayPercentage setting adjusts how often users are prompted for feedback, ranging from 0 to 100.
 The default value is 10, meaning that users will get prompted for feedback 10% of the time after they finish a call.
@@ -4158,13 +4158,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-Below Content Applies To: Skype for Business Online
+**Below Content Applies To:** Skype for Business Online
 
 {{Fill Tenant Description}}
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the client policy is being modified.
 For example:

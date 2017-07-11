@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsDatabase
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the configuration of the Lync Server 2013 Preview databases.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the configuration of the Skype for Business Server 2015 databases.
 This cmdlet was introduced in Lync Server 2013.
@@ -44,7 +44,7 @@ Test-CsDatabase [-LocalService] [-Confirm] [-Report <String>] [-WhatIf] [<Common
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsDatabase cmdlet verifies connectivity to one or more Lync Server 2013 Preview databases.
 When run, Test-CsDatabase reads the Lync Server topology, attempts to connect each of the relevant databases, and then reports back the success or failure of each attempt.
@@ -56,7 +56,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDatabase"}
 
 Lync Server Control Panel: The functions carried out by the Test-CsDatabase cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsDatabase cmdlet verifies connectivity to one or more Skype for Business Server 2015 databases.
 When run, the Test-CsDatabase cmdlet reads the Skype for Business Server 2015 topology, attempts to connect each of the relevant databases, and then reports back the success or failure of each attempt.
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfiguredDatabases
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Tests the configuration of all the Lync Server databases installed on the specified computer.
 You must include the SqlServerFqdn parameter when using the ConfiguredDatabases parameter.
@@ -170,7 +170,7 @@ In addition, this parameter cannot be used in the same command as the CentralMan
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Tests the configuration of all the Skype for Business Server 2015 databases installed on the specified computer.
 You must include the SqlServerFqdn parameter when using the ConfiguredDatabases parameter.
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of database to be validated.
 Allowed values are:
@@ -223,7 +223,7 @@ User
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of database to be validated.
 Allowed values are:
@@ -272,14 +272,14 @@ Accept wildcard characters: False
 ```
 
 ### -LocalService
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Validates all the databases used by any of the Lync Server services that are installed on the local computer.
 This includes not only locally-installed databases but also databases installed on remote computers, provided those databases are used by one or more local services.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Validates all the databases used by any of the Skype for Business Server 2015 services that are installed on the local computer.
 This includes not only locally-installed databases but also databases installed on remote computers, provided those databases are used by one or more local services.

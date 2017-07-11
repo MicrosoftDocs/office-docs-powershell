@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsPinPolicy
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies one or more existing client personal identification number (PIN) policies.
 PIN authentication enables users to access Microsoft Lync Server 2010 by providing a PIN instead of a user name and password.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Modifies one or more existing client personal identification number (PIN) policies.
 PIN authentication enables users to access Lync Server by providing a PIN instead of a user name and password.
 This cmdlet was introduced in Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Modifies one or more existing client personal identification number (PIN) policies.
 PIN authentication enables users to access Skype for Business Server 2015 by providing a PIN instead of a user name and password.
@@ -42,7 +42,7 @@ Set-CsPinPolicy [-Instance <PSObject>] [-AllowCommonPatterns <Boolean>] [-Descri
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system, or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPinPolicy"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system, or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -70,7 +70,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPinPolicy"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system, or to join public switched telephone network (PSTN) conferences via telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password; unfortunately, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
@@ -180,7 +180,7 @@ The filtered set of policies is then passed to Set-CsPinPolicy, which takes each
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier assigned to the policy when it was created.
 PIN policies can be assigned at the global, site, or per-user scope.
@@ -192,7 +192,7 @@ If you do not specify an Identity, then Set-CsPinPolicy will modify the global p
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier assigned to the policy when it was created.
 PIN policies can be assigned at the global, site, or per-user scope.
@@ -278,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumLogonAttempts
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -302,7 +302,7 @@ MaximumLogonAttempts can be set to any whole number between 1 and 999, inclusive
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -329,7 +329,7 @@ This typically provides the most security.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.

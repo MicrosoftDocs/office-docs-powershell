@@ -6,11 +6,11 @@ schema: 2.0.0
 # New-CsWebServiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of Web Services configuration settings.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of Web Services configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -37,7 +37,7 @@ New-CsWebServiceConfiguration [-Identity] <XdsIdentity> [-AllowAnonymousAccessTo
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Many Microsoft Lync Server 2010 components are web-based: these components either use Web Services or web pages to carry out their tasks.
 For example, users employ a Web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -56,7 +56,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsWebServiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Many Lync Server components are web-based: these components either use Web Services or webpages to carry out their tasks.
 For example, users employ a Web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -75,7 +75,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsWebServiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Many Skype for Business Server 2015 components are web-based: these components either use Web Services or webpages to carry out their tasks.
 For example, users employ a Web service when searching for new contacts in the Address Book or when using group expansion to view the individual members of a distribution group.
@@ -236,7 +236,7 @@ New-CsWebServiceConfiguration -Identity "site:Redmond" - CrossDomainAuthorizatio
 ## PARAMETERS
 
 ### -Identity
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Unique identifier for the Web Services configuration settings to be created.
 To create settings configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
@@ -245,7 +245,7 @@ Note that any settings created at the service scope must be assigned to the Web 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the Web Services configuration settings to be created.
 To create settings configured at the site scope, use syntax similar to this:
@@ -274,19 +274,19 @@ Accept wildcard characters: False
 ```
 
 ### -AllowAnonymousAccessToLWAConference
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 When set to True (the default value), anonymous users will be allowed to attend Live Meeting Web Access (LWA) conferences.
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 When set to True (the default value), anonymous users will be allowed to attend Lync Web App (LWA) conferences.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value), anonymous users will be allowed to attend Skype for Business web App conferences.
 
@@ -361,7 +361,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableGroupExpansion
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 If set to True, group expansion will be enabled in Microsoft Lync 2010.
 With group expansion, users can configure a distribution group as a contact, and then "expand" that group.
@@ -369,7 +369,7 @@ When a group has been expanded, users can see all the individual members of a gr
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 If set to True, group expansion will be enabled in Lync Server.
 With group expansion, users can configure a distribution group as a contact, and then "expand" that group.
@@ -377,7 +377,7 @@ When a group has been expanded, users can see all the individual members of a gr
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 If set to True, group expansion will be enabled in Skype for Business.
 With group expansion, users can configure a distribution group as a contact, and then "expand" that group.
@@ -416,14 +416,14 @@ Accept wildcard characters: False
 ```
 
 ### -MACResolverUrl
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 URL for a Web service capable of performing Media Access Control (MAC) resolution.
 MAC resolution involves taking an IP address and determining the MAC address of the network card associated with that IP address.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 URL for a Web service capable of performing Media Access Control (MAC) resolution.
 MAC resolution involves taking the MAC address of a connected client and returning the chassis and port IDs of the network switch that client is connected to.
@@ -650,14 +650,14 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -710,13 +710,13 @@ Accept wildcard characters: False
 ```
 
 ### -ShowDownloadCommunicatorAttendeeLink
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill ShowDownloadCommunicatorAttendeeLink Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter has been deprecated for use with the on-premises version of Lync Server 2013 Preview.
 
@@ -724,7 +724,7 @@ If set to True (the default value), users joining a meeting by using a client ap
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter has been deprecated for use with the on-premises version of Skype for Business Server 2015.
 
@@ -746,13 +746,13 @@ Accept wildcard characters: False
 ```
 
 ### -ShowJoinUsingLegacyClientLink
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 {{Fill ShowJoinUsingLegacyClientLink Description}}
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter has been deprecated for use with the on-premises version of Lync Server 2013 Preview.
 
@@ -761,7 +761,7 @@ The default value is False.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter has been deprecated for use with the on-premises version of Skype for Business Server 2015.
 
@@ -800,7 +800,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoLaunchLyncWebAccess
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter has been deprecated for use with the on-premises version of Lync Server 2013 Preview.
 
@@ -810,7 +810,7 @@ The default value is True.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter has been deprecated for use with the on-premises version of Skype for Business Server 2015.
 
@@ -834,7 +834,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowAlternateJoinOptionsExpanded
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 This parameter has been deprecated for use with the on-premises version of Lync Server 2013 Preview.
 
@@ -843,7 +843,7 @@ When set to False (the default value) these options will be available, but the u
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter has been deprecated for use with the on-premises version of Skype for Business Server 2015.
 

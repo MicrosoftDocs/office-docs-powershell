@@ -6,18 +6,18 @@ schema: 2.0.0
 # Set-CsClientPin
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Assigns a new personal identification number (PIN) to the specified user.
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Assigns a new personal identification number (PIN) to the specified user.
 This cmdlet was introduced in Lync Server 2010.
 Note that the Microsoft Lync Server 2013 Preview version of this cmdlet can only assign PIN numbers to users homed on Lync Server 2013 Preview.
 You should use the Microsoft Lync Server 2010 version of Set-CsClientPin to assign PIN numbers to users homed on Lync Server 2010.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Assigns a new personal identification number (PIN) to the specified user.
 This cmdlet was introduced in Lync Server 2010.
@@ -32,7 +32,7 @@ Set-CsClientPin [-Identity] <UserIdParameter> [[-Pin] <String>] [-Force] [-WhatI
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.
@@ -63,7 +63,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientPin"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.
@@ -94,7 +94,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientPin"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences by using a telephone.
 Typically, logging on to the system or joining a conference requires the user to enter a user name or password.
@@ -272,7 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pin
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Optional PIN to be assigned to the user.
 If you do not include the PIN parameter, then Lync Server 2010 will randomly generate a PIN and assign it to the user in question.
@@ -280,7 +280,7 @@ Note that the PIN must adhere to the minimum length and common pattern settings 
 
 
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Optional PIN to be assigned to the user.
 If you do not include the PIN parameter, then Lync Server will randomly generate a PIN and assign it to the user in question.
@@ -288,7 +288,7 @@ Note that the PIN must adhere to the minimum length and common pattern settings 
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Optional PIN to be assigned to the user.
 If you do not include the PIN parameter, then Skype for Business Server 2015 will randomly generate a PIN and assign it to the user in question.

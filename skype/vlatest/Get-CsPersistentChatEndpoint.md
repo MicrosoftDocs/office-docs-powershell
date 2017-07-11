@@ -6,13 +6,13 @@ schema: 2.0.0
 # Get-CsPersistentChatEndpoint
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Returns information about the Persistent Chat endpoints configured for use in the organization.
 A Persistent Chat endpoint is an Active Directory contact object provides a friendly URL for a Lync Server 2013 Preview Persistent Chat pool.
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Returns information about the Persistent Chat endpoints configured for use in the organization.
 A Persistent Chat endpoint is an Active Directory contact object provides a friendly URL for a Skype for Business Server 2015 Persistent Chat pool.
@@ -30,7 +30,7 @@ Get-CsPersistentChatEndpoint [[-Identity] <UserIdParameter>] [-Credential <PSCre
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -49,7 +49,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatEndpoint"
 
 Lync Server Control Panel: The functions carried out by the Get-CsPersistentChatEndpoint cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -168,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on Lync Server-specific attributes.
 For example, you can limit returned data to Persistent Chat endpoints that have been assigned a specific voice policy, or endpoints have not been assigned a specific voice policy.
@@ -180,7 +180,7 @@ For example, a filter that returns only endpoints that have been assigned a per-
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on Skype for Business Server 2015-specific attributes.
 For example, you can limit returned data to Persistent Chat endpoints that have been assigned a specific voice policy, or endpoints have not been assigned a specific voice policy.
@@ -229,14 +229,14 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
 Because Persistent Chat endpoints have very few non-Lync Server attributes this parameter is of minimal value.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
 Because Persistent Chat endpoints have very few non-Skype for Business Server 2015 attributes this parameter is of minimal value.

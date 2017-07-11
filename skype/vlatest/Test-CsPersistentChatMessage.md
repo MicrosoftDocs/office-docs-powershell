@@ -6,12 +6,12 @@ schema: 2.0.0
 # Test-CsPersistentChatMessage
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Verifies whether or not a pair of users can exchange messages using the Persistent Chat service (formerly known as the Persistent Chat service).
 This cmdlet was introduced in Lync Server 2013 Preview.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Verifies whether or not a pair of users can exchange messages using the Persistent Chat service (formerly known as the Group Chat service).
 This cmdlet was introduced in Lync Server 2013.
@@ -38,7 +38,7 @@ Test-CsPersistentChatMessage [-TargetFqdn] <String> [-Authentication <Authentica
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 The Test-CsPersistentChatMessage cmdlet verifies that a pair of test users is able to exchange messages using the Persistent Chat service.
 To do this, the cmdlet logs the two users on to Lync Server 2013 Preview, connects the users to a persistent Chat room, exchanges a pair of messages, then exits the chat room and logs off the two users.
@@ -50,7 +50,7 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPersistentChatMessage"
 
 Lync Server Control Panel: The functions carried out by the Test-CsPersistentChatMessage cmdlet are not available in the Lync Server Control Panel.
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The Test-CsPersistentChatMessage cmdlet verifies that a pair of test users is able to exchange messages using the Persistent Chat service.
 To do this, the cmdlet logs the two users on to Skype for Business Server 2015, connects the users to a persistent Chat room, exchanges a pair of messages, then exits the chat room and logs off the two users.
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Type of authentication used when running the test.
 Allowed values are:
@@ -192,7 +192,7 @@ Allowed values are:
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Type of authentication used when running the test.
 Allowed values are:
@@ -399,7 +399,7 @@ Accept wildcard characters: False
 ```
 
 ### -Setup
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Enables the cmdlet to be run on a watcher node computer that does not have access to the Lync Server topology.
 To allow for this, first run Test-CsPersistentChatMessage along with the Setup parameter from a computer which does have access to the topology.
@@ -409,7 +409,7 @@ If you use the Setup parameter you must also use the TestUser1SipAddress and Tes
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Enables the cmdlet to be run on a watcher node computer that does not have access to the Skype for Business Server 2015 topology.
 To allow for this, first run the Test-CsPersistentChatMessage along with the Setup parameter from a computer which does have access to the topology.

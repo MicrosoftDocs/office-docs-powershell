@@ -6,11 +6,11 @@ schema: 2.0.0
 # Set-CsUnassignedNumber
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Modifies an existing range of unassigned numbers and the routing rules that apply to those numbers.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing range of unassigned numbers and the routing rules that apply to those numbers.
 This cmdlet was introduced in Lync Server 2010.
@@ -53,7 +53,7 @@ Set-CsUnassignedNumber [-Instance <PSObject>] [-Priority <Int32>] [-Force] [-Wha
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Microsoft Lync Server 2010 can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -69,7 +69,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUnassignedNumber"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Lync Server can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -85,7 +85,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUnassignedNumber"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
 Skype for Business Server 2015 can be set up to route calls to appropriate destinations when an unassigned number is called.
@@ -236,14 +236,14 @@ Accept wildcard characters: False
 ```
 
 ### -ExUmAutoAttendantPhoneNumber
-Below Content Applies To: Lync Server 2010, Lync Server 2013
+**Below Content Applies To:** Lync Server 2010, Lync Server 2013
 
 The phone number of the Exchange UM Auto Attendant to route calls in this range to.
 The Exchange UM Auto Attendant contact must already be set up in order to assign a value to this parameter.
 
 
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 The phone number of the Exchange Auto Attendant to route calls in this range to.
 The Skype for Business Auto Attendant contact must already be set up in order to assign a value to this parameter.
@@ -307,14 +307,14 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 It is possible for unassigned number ranges to overlap. 
 If a number falls within more than one range, the range with the highest priority will take effect.
 
 
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 It is possible for unassigned number ranges to overlap.
 If a number falls within more than one range, the range with the highest priority will take effect.

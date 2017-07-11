@@ -6,11 +6,11 @@ schema: 2.0.0
 # Remove-CsVoiceConfiguration
 
 ## SYNOPSIS
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Resets the voice configuration to its default values.
 
-Below Content Applies To: Lync Server 2013, Skype for Business Server 2015
+**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Resets the voice configuration to its default values.
 This cmdlet was introduced in Lync Server 2010.
@@ -24,7 +24,7 @@ Remove-CsVoiceConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confi
 ```
 
 ## DESCRIPTION
-Below Content Applies To: Lync Server 2010
+**Below Content Applies To:** Lync Server 2010
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet removes the global (and only) voice configuration, which is a container for all voice test configurations defined for a Microsoft Lync Server 2010 deployment.
@@ -39,7 +39,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoiceConfiguration"}
 
-Below Content Applies To: Lync Server 2013
+**Below Content Applies To:** Lync Server 2013
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet removes the global (and only) voice configuration, which is a container for all voice test configurations defined for a Lync Server deployment.
@@ -54,7 +54,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoiceConfiguration"}
 
-Below Content Applies To: Skype for Business Server 2015
+**Below Content Applies To:** Skype for Business Server 2015
 
 Voice test configurations are used to test a phone number against a specific voice policy, route, and dial plan.
 This cmdlet removes the global (and only) voice configuration, which is a container for all voice test configurations defined for a Skype for Business Server 2015 deployment.
