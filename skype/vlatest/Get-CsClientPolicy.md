@@ -242,7 +242,7 @@ The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.
 ## NOTES
 
 ## RELATED LINKS
-[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
-[New-CsClientPolicy](New-CsClientPolicy.md)
-[Remove-CsClientPolicy](Remove-CsClientPolicy.md)
-[Set-CsClientPolicy](Set-CsClientPolicy.md)
+* [Grant-CsClientPolicy](Grant-CsClientPolicy.md)
+* [New-CsClientPolicy](New-CsClientPolicy.md)
+* [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
+* [Set-CsClientPolicy](Set-CsClientPolicy.md)
