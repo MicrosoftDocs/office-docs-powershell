@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see http://go.microsoft.com/fwlink/?LinkID=113216.
 
 ## INPUTS
 None. The `Get-CsClientPolicy` cmdlet does not accept pipelined input.
@@ -226,7 +226,7 @@ The `Get-CsClientPolicy` cmdlet returns instances of the `Microsoft.Rtc.Manageme
 ## NOTES
 
 ## RELATED LINKS
-* (Grant-CsClientPolicy.md)
+* [Grant-CsClientPolicy](Grant-CsClientPolicy.md)
 * [New-CsClientPolicy](New-CsClientPolicy.md)
 * [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
 * [Set-CsClientPolicy](Set-CsClientPolicy.md)
