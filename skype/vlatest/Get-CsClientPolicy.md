@@ -218,26 +218,10 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-
-###  
-None.
-Get-CsClientPolicy does not accept pipelined input.
-
-### None
-
-###  
-None.
-The Get-CsClientPolicy cmdlet does not accept pipelined input.
+None. The `Get-CsClientPolicy` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
-
-###  
-Get-CsClientPolicy returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy object.
-
-### System.Object
-
-###  
-The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy object.
+The `Get-CsClientPolicy` cmdlet returns instances of the `Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy` object.
 
 ## NOTES
 
