@@ -6,11 +6,11 @@ Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# Skype Cmdlet Reference
+# Skype for Business Cmdlet Reference
 ## Description
 {{Manually Enter Description Here}}
 
-## skype Cmdlets
+## Skype for Business Cmdlets
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
 {{Manually Enter Add-CsSlaDelegates Description Here}}
 
