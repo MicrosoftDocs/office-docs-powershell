@@ -1,0 +1,274 @@
+---
+applicable: Skype for Business Online
+schema: 2.0.0
+---
+
+# Disable-CsOnlineDialInConferencingUser
+
+## SYNOPSIS
+Use the Disable-CsOnlineDialInConferencingUser cmdlet to prevent a Skype for Business Online user from using dial-in or audio conferencing through Skype for Business Online.
+
+## SYNTAX
+
+```
+Disable-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confirm]
+ [-DomainController <Object>] [-Force] [-SendEmail] [-SendEmailFromAddress <Object>]
+ [-SendEmailFromDisplayName <Object>] [-SendEmailToAddress <Object>] [-Tenant <Object>]
+ [-TenantDomain <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The Disable-CsOnlineDialInConferencingUser cmdlet validates that the user is provisioned for audio conferencing using Microsoft as the audio conferencing provider and then disables audio conferencing which prevents the user from setting up audio conferences or meetings.
+To disable the user, you must specify the TenantDomain or Tenant parameter.
+
+When a user is disabled, the conference ID or passcode that was assigned to the user is released so it can be used by another user that is enabled for dial-in or audio conferencing even if they have a license assigned to them.
+
+When you disable the user for audio conferencing using this cmdlet, it will check that the user belongs to the specified tenant or domain and any audio conferencing information is removed.
+
+If the user is enabled for a third-party audio conferencing provider (ACP) and the Active Directory information is set, the cmdlet will fail and you must use the Remove-CsUserACP cmdlet.
+
+## EXAMPLES
+
+### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+```
+
+```
+
+This example disables user "Pilar Ackerman" from using audio conferencing and will prompt you to confirm the operation.
+
+Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
+
+## PARAMETERS
+
+### -Identity
+Specifies the identity of the user account that will be disabled for Skype for Business Online.
+A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+You can also reference a user account by using the user's Active Directory distinguished name.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+PARAMVALUE: Fqdn
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: DC
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+The Force switch specifies whether to suppress warning and confirmation messages.
+It can be useful in scripting to suppress interactive prompts.
+If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendEmail
+PARAMVALUE: SwitchParameter
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendEmailFromAddress
+PARAMVALUE: String
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendEmailFromDisplayName
+PARAMVALUE: String
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SendEmailToAddress
+PARAMVALUE: String
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
+For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantDomain
+Specifies the domain name for the tenant or organization.
+
+This parameter is reserved for internal Microsoft use.
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+The WhatIf switch causes the command to simulate its results.
+By using this switch, you can view what changes would occur without having to commit those changes.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AsJob
+{{Fill AsJob Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[Online Version](http://technet.microsoft.com/EN-US/library/8bac1e2d-d136-4a47-aa10-704a85993ca7(OCS.15).aspx)
+
