@@ -10,13 +10,6 @@ schema: 2.0.0
 Returns information about the client policies configured for use in your organization.
 Among other things, client policies help determine the features of Skype for Business that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
-**Below Content Applies To:** Skype for Business Online
-
-Get-CsClientPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-Get-CsClientPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-
 ## SYNTAX
 
 ### Identity
@@ -36,43 +29,17 @@ Get-CsClientPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010 & 2013
-
-In Lync Server 2010, client policies replace the Group Policy settings used in previous versions of the product.
-In Microsoft Office Communicator 2007 and Microsoft Office Communicator 2007 R2, Group Policy helped determine what users could do with Communicator and other clients; for example, there were Group Policy settings that determined whether or not users could save a transcript of their instant messaging sessions; whether information from Microsoft Outlook was incorporated into their presence information; and whether or not users could include emoticons or formatted text in instant messages.
-
-As useful as Group Policy is, however, the technology does have some limitations when applied to Lync Server 2010.
-For one thing, Group Policy is designed to be applied on a per-domain or per-organizational unit (OU) basis; that makes it difficult to target policies toward a more select group of users (for example, all the users who work in a particular department, or all the users who have a particular job title).
-For another, Group Policy is only applied to users who log on to the domain and who log on using a computer; Group Policy is not applied to users who access the system over the Internet or by using a mobile phone.
-This means that the same user can have a different experience depending on the device he or she uses to log on, and where he or she logs on from.
-
-To help address these inconsistencies Lync Server 2010 uses client management policies instead of Group Policy.
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
-In addition, client policies, like other Lync Server 2010 policies, can readily be targeted towards selected groups of users.
+In addition, client policies, like other Skype for Business policies, can readily be targeted to selected groups of users.
 You can even create a custom policy that gets assigned to a single user.
 
 Client policies can be configured at the global, site, and per-user scopes.
 The Get-CsClientPolicy cmdlet enables you to return information about all the client policies that have been configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsClientPolicy cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsClientPolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015 & Online
-
-Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
-In addition, client policies, like other Skype for Business Server 2015 policies, can readily be targeted to selected groups of users.
-You can even create a custom policy that gets assigned to a single user.
-
-Client policies can be configured at the global, site, and per-user scopes.
-The Get-CsClientPolicy cmdlet enables you to return information about all the client policies that have been configured for use in your organization.
-
 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsClientPolicy
 ```
@@ -129,22 +96,12 @@ The -or operator tells Where-Object that any object that meets at least one of t
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 Unique identifier of the client policy to be returned.
 To refer to the global policy, use this syntax: -Identity global.
 To refer to a site policy, use syntax similar to this: -Identity site:Redmond.
 To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy.
 
 If this parameter is omitted, then all the client policies configured for use in your organization will be returned.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Identity Description}}
-
-
 
 ```yaml
 Type: XdsIdentity
@@ -173,19 +130,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 Enables you to use wildcard characters when indicating the policy (or policies) to be returned.
 For example, to return all the policies configured at the site scope use this syntax: -Filter "site:*".
 To return a collection of all the per-user policies, use this syntax: -Filter "tag:*".
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Filter Description}}
-
-
 
 ```yaml
 Type: String
@@ -201,17 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 Retrieves the client policy data from the local replica of the Central Management store rather than from the Central Management store itself.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill LocalStore Description}}
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -243,14 +180,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Tenant Description}}
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose client policies are being returned.
 For example:
 
@@ -259,8 +188,6 @@ For example:
 You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
 
 Get-CsTenant | Select-Object DisplayName, TenantID
-
-
 
 ```yaml
 Type: Object
@@ -319,18 +246,7 @@ The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c8e1cb96-2bf7-447c-b41c-d896fe85e349(OCS.14).aspx)
-
 [Grant-CsClientPolicy]()
-
 [New-CsClientPolicy]()
-
 [Remove-CsClientPolicy]()
-
 [Set-CsClientPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c8e1cb96-2bf7-447c-b41c-d896fe85e349(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c8e1cb96-2bf7-447c-b41c-d896fe85e349(OCS.16).aspx)
-
