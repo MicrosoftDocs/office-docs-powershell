@@ -1,0 +1,11 @@
+{
+    "officeps": {
+        "conceptualToc": "skype/docs-conceptual/toc.md",
+        "packageRoot": "skype",
+        "modules": {
+            "skype": {
+                "_displayName": "Skype",
+                "_version": "vlatest"
+            }        }
+    }
+}
