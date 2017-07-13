@@ -215,18 +215,35 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see http://go.microsoft.com/fwlink/?LinkID=113216.
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+###  
+None.
+Get-CsClientPolicy does not accept pipelined input.
 None. The `Get-CsClientPolicy` cmdlet does not accept pipelined input.
 
+### None
+
+###  
+None.
+The Get-CsClientPolicy cmdlet does not accept pipelined input.
+
 ## OUTPUTS
+
+###  
 The `Get-CsClientPolicy` cmdlet returns instances of the `Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy` object.
+
+### System.Object
+
+###  
+The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy object.
 
 ## NOTES
 
 ## RELATED LINKS
-* [Grant-CsClientPolicy](Grant-CsClientPolicy.md)
-* [New-CsClientPolicy](New-CsClientPolicy.md)
-* [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
-* [Set-CsClientPolicy](Set-CsClientPolicy.md)
+[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
+[New-CsClientPolicy](New-CsClientPolicy.md)
+[Remove-CsClientPolicy](Remove-CsClientPolicy.md)
+[Set-CsClientPolicy](Set-CsClientPolicy.md)
