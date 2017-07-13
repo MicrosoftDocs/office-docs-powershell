@@ -5,32 +5,32 @@
         "files": [
           "toc.yml"
         ],
-        "src": "skypeps/docs-conceptual",
-        "version": "skypeps",
-        "dest": "skype/skypeps"
+        "src": "skype-ps/docs-conceptual",
+        "version": "skype-ps",
+        "dest": "skype/skype-ps"
       },
       {
         "files": [
           "**/*.md"
         ],
-        "src": "skypeps/docs-conceptual",
-        "version": "skypeps",
+        "src": "skype-ps/docs-conceptual",
+        "version": "skype-ps",
         "dest": "skype"
       },
       {
         "files": [
           "toc.yml"
         ],
-        "src": "skypeps",
-        "version": "skypeps",
-        "dest": "module/skypeps"
+        "src": "skype-ps",
+        "version": "skype-ps",
+        "dest": "module/skype-ps"
       },
       {
         "files": [
           "**/*.md"
         ],
-        "src": "skypeps",
-        "version": "skypeps",
+        "src": "skype-ps",
+        "version": "skype-ps",
         "exclude": [
           "docs-conceptual/**"
         ],
@@ -50,8 +50,8 @@
       }
     ],
     "versions": {
-      "skypeps": {
-        "dest": "skypeps"
+      "skype-ps": {
+        "dest": "skype-ps"
       }
     },
     "overwrite": [],

@@ -56,8 +56,8 @@
   ],
 "JoinTOCPlugin": [
     {
-      "TopLevelTOC": "skypeps/toc.yml",
-      "ConceptualTOC": "skypeps/docs-conceptual/toc.yml",
+      "TopLevelTOC": "skype-ps/toc.yml",
+      "ConceptualTOC": "skype-ps/docs-conceptual/toc.yml",
       "ReferenceTOCUrl": "/powershell/module/skype/toc.json?view=skypeps",
       "ConceptualTOCUrl": "/powershell/skype/toc.json?view=skypeps"
     }
