@@ -1,5 +1,5 @@
 {
-    "officeps": {
+    "skypeps": {
         "conceptualToc": "docs-conceptual/toc.md",
         "packageRoot": "skype",
         "modules": {
