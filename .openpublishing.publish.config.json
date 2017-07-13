@@ -56,10 +56,10 @@
   ],
 "JoinTOCPlugin": [
     {
-      "TopLevelTOC": "skype-ps/toc.yml",
-      "ConceptualTOC": "skype-ps/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell/module/skype/toc.json?view=skypeps",
-      "ConceptualTOCUrl": "/powershell/skype/toc.json?view=skypeps"
+      "TopLevelTOC": "skype/skype-ps/toc.yml",
+      "ConceptualTOC": "skype/skype-ps/docs-conceptual/toc.yml",
+      "ReferenceTOCUrl": "/powershell/module/skype-ps/toc.json?view=skypeps",
+      "ConceptualTOCUrl": "/powershell/skype/skype-ps/toc.json?view=skypeps"
     }
 ],
   "notification_subscribers": [],
