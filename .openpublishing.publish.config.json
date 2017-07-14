@@ -58,7 +58,7 @@
     {
       "TopLevelTOC": "skype-ps/toc.yml",
       "ConceptualTOC": "skype-ps/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell/module/toc.json?view=skype-ps",
+      "ReferenceTOCUrl": "/powershell/module/skype-ps/toc.json?view=skype-ps",
       "ConceptualTOCUrl": "/powershell/skype/skype-ps/toc.json?view=skype-ps"
     }
 ],
