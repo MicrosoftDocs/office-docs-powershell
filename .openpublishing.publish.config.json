@@ -40,7 +40,7 @@
     {
       "id": "Microsoft.OpenPublishing.AzurePSPlugin",
       "path_to_root": "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin",
-      "version": "latest",
+      "version": "latest-prerelease",
       "nuget_feed": "https://www.myget.org/F/op-dev/api/v2"
     },
     {
