@@ -20,17 +20,16 @@
       "template_folder": "_themes",
       "version": 0,
       "customized_template_paths": [
-      "_dependentPackages/azurecli.plugins/azurecli"
+        "_dependentPackages/azurecli.plugins/azurecli"
       ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1",
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1"
         ]
       }
-      }
+    }
   ],
-    "dependent_packages": [
+  "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
       "id": "opbuild.templates.azurecli",
@@ -42,26 +41,11 @@
       "path_to_root": "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin",
       "version": "latest-prerelease",
       "nuget_feed": "https://www.myget.org/F/op-dev/api/v2"
-    },
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest"
     }
   ],
-"monikerPath": [
+  "monikerPath": [
     "skype/mapping/monikerMapping.json"
   ],
-"JoinTOCPlugin": [
-    {
-      "TopLevelTOC": "skype-ps/toc.yml",
-      "ConceptualTOC": "skype-ps/docs-conceptual/toc.yml",
-      "ReferenceTOCUrl": "/powershell/module/skype-ps/toc.json?view=skype-ps",
-      "ConceptualTOCUrl": "/powershell/skype/skype-ps/toc.json?view=skype-ps"
-    }
-],
   "notification_subscribers": [],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
