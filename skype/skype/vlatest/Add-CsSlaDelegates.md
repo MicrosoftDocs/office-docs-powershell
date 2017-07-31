@@ -140,3 +140,6 @@ The Add-CsSlaDelegates cmdlet returns a Microsoft.Rtc.Management.SlaConfiguratio
 ## NOTES
 
 ## RELATED LINKS
+
+[something](http://www.microsoft.com)
+
