@@ -6,18 +6,9 @@ schema: 2.0.0
 # Approve-CsDeviceUpdateRule
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Approves a device update rule that has been imported to the system.
-After a device update rule has been approved, the corresponding update will automatically be downloaded and installed by client devices affected by the update.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Approves a device update rule that has been imported to the system.
 After a device update rule has been approved, the corresponding update will automatically be downloaded and installed by client devices affected by the update.
 This cmdlet was introduced in Lync Server 2010.
-
-
 
 ## SYNTAX
 
@@ -32,55 +23,9 @@ Approve-CsDeviceUpdateRule [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Microsoft Lync Server 2010 uses device update rules as a way to provide firmware updates to devices that run Lync 2010 Phone Edition.
-Periodically, administrators upload a set of device update rules to Lync Server 2010; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices as those devices connect to the system.
-By default, devices check for new update rules each time they turn on and connect to Lync Server 2010.
-Devices also check for updates every 24 hours after that initial sign on.
-
-Each new device update rule added to the system is marked as "Pending." That means that the update will be downloaded and installed by the appropriate test devices; however, it will not be downloaded and installed by client devices in general.
-This gives you an opportunity to test the updates and ensure that there are no adverse effects before you make this update widely available.
-As soon as you are convinced that the update has passed your tests and will work for your organization, you can then use the Approve-CsDeviceUpdateRule to approve the update.
-
-When you approve an update, the PendingVersion of the associated update rule is assigned to the ApprovedVersion, and the PendingVersion property is cleared.
-For example, suppose the PendingVersion of a new update rule is version 1.0.0.1.
-After you run Approve-CsDeviceUpdateRule, the PendingVersion will be set to a null value, and the ApprovedVersion will be set to 1.0.0.1.
-The next time a client device logs on, the device will automatically check to see if there are any newly-approved updates applicable for that device.
-If so, the update will automatically be downloaded and installed.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Approve-CsDeviceUpdateRule cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server uses device update rules as a way to provide firmware updates to devices that run Lync Phone Edition.
-Periodically, administrators upload a set of device update rules to Lync Server; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices as those devices connect to the system.
-By default, devices check for new update rules each time they turn on and connect to Lync Server.
-Devices also check for updates every 24 hours after that initial sign on.
-
-Each new device update rule added to the system is marked as "Pending." That means that the update will be downloaded and installed by the appropriate test devices; however, it will not be downloaded and installed by client devices in general.
-This gives you an opportunity to test the updates and ensure that there are no adverse effects before you make this update widely available.
-As soon as you are convinced that the update has passed your tests and will work for your organization, you can then use the Approve-CsDeviceUpdateRule to approve the update.
-
-When you approve an update, the PendingVersion of the associated update rule is assigned to the ApprovedVersion, and the PendingVersion property is cleared.
-For example, suppose the PendingVersion of a new update rule is version 1.0.0.1.
-After you run Approve-CsDeviceUpdateRule, the PendingVersion will be set to a null value, and the ApprovedVersion will be set to 1.0.0.1.
-The next time a client device logs on, the device will automatically check to see if there are any newly-approved updates applicable for that device.
-If so, the update will automatically be downloaded and installed.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Approve-CsDeviceUpdateRule cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 uses device update rules as a way to provide firmware updates to devices that run Skype for Business Phone Edition.
-Periodically, administrators upload a set of device update rules to Skype for Business Server 2015; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices as those devices connect to the system.
-By default, devices check for new update rules each time they turn on and connect to Skype for Business Server 2015.
+Skype for Business Server uses device update rules as a way to provide firmware updates to devices that run Skype for Business Phone Edition.
+Periodically, administrators upload a set of device update rules to Skype for Business Server; after those rules have been tested and approved, they are automatically downloaded and applied to the appropriate devices as those devices connect to the system.
+By default, devices check for new update rules each time they turn on and connect to Skype for Business Server.
 Devices also check for updates every 24 hours after that initial sign on.
 
 Each new device update rule added to the system is marked as "Pending." That means that the update will be downloaded and installed by the appropriate test devices; however, it will not be downloaded and installed by client devices in general.
@@ -93,91 +38,34 @@ After you run the Approve-CsDeviceUpdateRule cmdlet, the PendingVersion will be 
 The next time a client device logs on, the device will automatically check to see if there are any newly-approved updates applicable for that device.
 If so, the update will automatically be downloaded and installed.
 
+Who can run this cmdlet: By default, members of the following groups are authorized to run the Approve-CsDeviceUpdateRule cmdlet locally: RTCUniversalServerAdmins.
+To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Approve-CsDeviceUpdateRule"}`
 
 
 ## EXAMPLES
-
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 --------------------------
 ```
 Approve-CsDeviceUpdateRule -Identity service:WebServer:atl-cs-001.litwareinc.com/d5ce3c10-2588-420a-82ac-dc2d9b1222ff9
 ```
 
 The command shown in Example 1 approves the device update rule d5ce3c10-2588-420a-82ac-dc2d9b1222ff9 found on the service WebServer:atl-cs-001.litwareinc.com.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 approves the device update rule d5ce3c10-2588-420a-82ac-dc2d9b1222ff9 found on the service WebServer:atl-cs-001.litwareinc.com.
-
-Approve-CsDeviceUpdateRule -Identity service:WebServer:atl-cs-001.litwareinc.com/d5ce3c10-2588-420a-82ac-dc2d9b1222ff9
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 approves the device update rule d5ce3c10-2588-420a-82ac-dc2d9b1222ff9 found on the service WebServer:atl-cs-001.litwareinc.com.
-
-Approve-CsDeviceUpdateRule -Identity service:WebServer:atl-cs-001.litwareinc.com/d5ce3c10-2588-420a-82ac-dc2d9b1222ff9
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 2 --------------------------
 ```
 Get-CsDeviceUpdateRule -Filter service:WebServer:atl-cs-001.litwareinc.com* | Approve-CsDeviceUpdateRule
-```
-
-The preceding command approves all the device update rules that have been configured for the service WebServer:atl-cs-001.litwareinc.com.
-To do this, the command first calls Get-CsDeviceUpdateRule along with the Filter parameter; the filter value "service:WebServer:atl-cs-001.litwareinc.com*" ensures that only those rules that have an Identity that begins with the string value "service:WebServer:atl-cs-001.litwareinc.com" will be returned.
-(By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 approves all the device update rules that have been configured for the service WebServer:atl-cs-001.litwareinc.com.
-To do this, the command first calls Get-CsDeviceUpdateRule along with the Filter parameter; the filter value "service:WebServer:atl-cs-001.litwareinc.com*" ensures that only those rules that have an Identity that begins with the string value "service:WebServer:atl-cs-001.litwareinc.com" will be returned.
-(By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
-
-Get-CsDeviceUpdateRule -Filter service:WebServer:atl-cs-001.litwareinc.com* | Approve-CsDeviceUpdateRule
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 approves all the device update rules that have been configured for the service WebServer:atl-cs-001.litwareinc.com.
 To do this, the command first calls the Get-CsDeviceUpdateRule cmdlet along with the Filter parameter; the filter value "service:WebServer:atl-cs-001.litwareinc.com*" ensures that only those rules that have an Identity that begins with the string value "service:WebServer:atl-cs-001.litwareinc.com" will be returned.
 (By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
 
-Get-CsDeviceUpdateRule -Filter service:WebServer:atl-cs-001.litwareinc.com* | Approve-CsDeviceUpdateRule
 
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 3 --------------------------
 ```
 Get-CsDeviceUpdateRule | Where-Object {$_.Brand -eq "LG-Nortel"} | Approve-CsDeviceUpdateRule
-```
-
-The command shown in Example 3 approves all the device update rules for the specified brand (LG-Nortel).
-To do this, the command first calls Get-CsDeviceUpdateRule to return a collection of all the device update rules currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Brand property is equal to LG-Nortel.
-The filtered collection is then piped to Approve-CsDeviceUpdateRule, which approves each rule in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 3 approves all the device update rules for the specified brand (LG-Nortel).
-To do this, the command first calls Get-CsDeviceUpdateRule to return a collection of all the device update rules currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Brand property is equal to LG-Nortel.
-The filtered collection is then piped to Approve-CsDeviceUpdateRule, which approves each rule in the collection.
-
-Get-CsDeviceUpdateRule | Where-Object {$_.Brand -eq "LG-Nortel"} | Approve-CsDeviceUpdateRule
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 3 approves all the device update rules for the specified brand (LG-Nortel).
@@ -185,7 +73,7 @@ To do this, the command first calls the Get-CsDeviceUpdateRule cmdlet to return 
 This collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Brand property is equal to LG-Nortel.
 The filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
 
-Get-CsDeviceUpdateRule | Where-Object {$_.Brand -eq "LG-Nortel"} | Approve-CsDeviceUpdateRule
+
 
 ## PARAMETERS
 
@@ -278,17 +166,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
-Approve-CsDeviceUpdateRule accepts pipelined instances of the device update rule object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
 The Approve-CsDeviceUpdateRule cmdlet accepts pipelined instances of the device update rule object.
 
 ## OUTPUTS
-
-###  
-None.
-Instead, Approve-CsDeviceUpdateRule approves instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DeviceUpdate.DeviceUpdate.Rule object.
 
 ###  
 None.
@@ -298,8 +178,6 @@ Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microso
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d82e0494-4868-4d13-ac03-e5a5d0f2380e(OCS.14).aspx)
-
 [Get-CsDeviceUpdateRule]()
 
 [Remove-CsDeviceUpdateRule]()
@@ -307,8 +185,3 @@ Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microso
 [Reset-CsDeviceUpdateRule]()
 
 [Restore-CsDeviceUpdateRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d82e0494-4868-4d13-ac03-e5a5d0f2380e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d82e0494-4868-4d13-ac03-e5a5d0f2380e(OCS.16).aspx)
-
