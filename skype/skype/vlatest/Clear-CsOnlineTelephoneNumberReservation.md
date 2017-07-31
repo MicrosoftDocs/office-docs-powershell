@@ -23,14 +23,13 @@ An error message will identify the source of the failure.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Clear-CsOnlineTelephoneNumberReservation -ReservationId b1ae43f5-07ab-4b81-be32-4b8cc2d11f75 -InventoryType Service
 ```
 
 This example clears a reservation with an inventory type of "Service".
 
-Clear-CsOnlineTelephoneNumberReservation -ReservationId b1ae43f5-07ab-4b81-be32-4b8cc2d11f75 -InventoryType Service
 
 ## PARAMETERS
 
@@ -38,9 +37,9 @@ Clear-CsOnlineTelephoneNumberReservation -ReservationId b1ae43f5-07ab-4b81-be32-
 Specifies the target telephone number type for the cmdlet.
 Acceptable values are:
 
-"Service" for numbers assigned to conferencing support.
+- "Service" for numbers assigned to conferencing support.
 
-"Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
+- "Subscriber" for numbers supporting public switched telephone network (PSTN) functions.
 
 ```yaml
 Type: Object
@@ -169,6 +168,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/59f60687-0061-41e5-b480-c640b0eeefee(OCS.15).aspx)
-
