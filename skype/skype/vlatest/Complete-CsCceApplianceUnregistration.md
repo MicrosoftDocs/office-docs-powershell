@@ -153,6 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/902b6e61-042d-4799-8d2d-10c3cc4f3e1b(OCS.15).aspx)
-

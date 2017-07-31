@@ -20,7 +20,7 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 
 ```
@@ -169,6 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cd4e0108-a053-4693-b64b-86ce63e1484f(OCS.15).aspx)
-
