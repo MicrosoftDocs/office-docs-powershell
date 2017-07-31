@@ -6,15 +6,8 @@ schema: 2.0.0
 # Backup-CsPool
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Creates a backup copy of the specified Microsoft Lync Server 2013 Preview pool.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates a backup copy of the specified Skype for Business Server 2015 pool.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -26,21 +19,13 @@ Backup-CsPool -PoolFqdn <Fqdn> [-Category <BackupCategory>] [-Confirm] [-FailedO
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
 If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
-Those users can then log on to Lync Server via the backup pool, and continue to use that pool until their home pool has been restored.
+Those users can then log on to Skype for Business Server via the backup pool, and continue to use that pool until their home pool has been restored.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Backup-CsPool"}
+To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-Lync Server Control Panel: The functions carried out by the Backup-CsPool cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Backup-CsPool cmdlet enables administrators to copy user data and conference data for a Registrar pool to a specified backup pool.
-If the primary pool should fail or otherwise become unavailable, users homed on that primary pool can then be "failed over" to the backup pool.
-Those users can then log on to Skype for Business Server 2015 via the backup pool, and continue to use that pool until their home pool has been restored.
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Backup-CsPool"}`
 
 Skype for Business Server Control Panel: The functions carried out by the Backup-CsPool cmdlet are not available in the Skype for Business Server Control Panel.
 
@@ -48,41 +33,21 @@ Skype for Business Server Control Panel: The functions carried out by the Backup
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com"
 ```
 
 The command shown in Example 1 backs up the pool atl-cs-001.litwareinc.com.
 
-Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com"
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 backs up the pool atl-cs-001.litwareinc.com.
-
-Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com" -SteadyState
 ```
 
 In Example 2, a "steady state" backup is done for the pool atl-cs-001.litwareinc.com.
 
-Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com" -SteadyState
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, a "steady state" backup is done for the pool atl-cs-001.litwareinc.com.
-
-Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com" -SteadyState
 
 ## PARAMETERS
 
@@ -90,7 +55,7 @@ Backup-CsPool -PoolFqdn "atl-cs-001.litwareinc.com" -SteadyState
 Fully qualified domain name of the pool being backed up.
 For example:
 
--SourcePoolFqdn "atl-cs-001.litwareinc.com"
+`-SourcePoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
@@ -106,26 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### -Category
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to select the Lync Server modules that will be backed up; if this parameter is not present then all the modules will be backed up.
+Enables you to select the Skype for Business Server modules that will be backed up; if this parameter is not present then all the modules will be backed up.
 Allowed values are:
 
 * CMS
 * UserData
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to select the Skype for Business Server 2015 modules that will be backed up; if this parameter is not present then all the modules will be backed up.
-Allowed values are:
-
-CMS
-
-UserData
-
-
 
 ```yaml
 Type: BackupCategory
@@ -226,7 +176,7 @@ Accept wildcard characters: False
 File path for the log file created when the cmdlet runs.
 For example:
 
--Report "C:\Logs\BackupPool.html"
+`-Report "C:\Logs\BackupPool.html"`
 
 If this file already exists, it will be overwritten when you run the cmdlet.
 
@@ -317,10 +267,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Backup-CsPool does not accept pipelined data.
-
-###  
-None.
 The Backup-CsPool cmdlet does not accept pipelined data.
 
 ## OUTPUTS
@@ -337,8 +283,3 @@ None.
 [Get-CsBackupServiceStatus]()
 
 [Get-CsPoolBackupRelationship]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/66ec46de-e1e7-4e33-961d-7ef785059c48(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/66ec46de-e1e7-4e33-961d-7ef785059c48(OCS.16).aspx)
-
