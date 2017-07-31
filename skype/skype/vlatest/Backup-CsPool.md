@@ -6,7 +6,7 @@ schema: 2.0.0
 # Backup-CsPool
 
 ## SYNOPSIS
-Creates a backup copy of the specified Skype for Business Server 2015 pool.
+Creates a backup copy of the specified Skype for Business Server pool.
 This cmdlet was introduced in Lync Server 2013.
 
 
