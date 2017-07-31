@@ -45,7 +45,7 @@ To return a list of all the role-based access control (RBAC) roles this cmdlet h
 
 
 ## EXAMPLES
-### -------------------------- EXAMPLE 1 --------------------------
+### -------------------------- Example 1 --------------------------
 ```
 Approve-CsDeviceUpdateRule -Identity service:WebServer:atl-cs-001.litwareinc.com/d5ce3c10-2588-420a-82ac-dc2d9b1222ff9
 ```
@@ -53,7 +53,7 @@ Approve-CsDeviceUpdateRule -Identity service:WebServer:atl-cs-001.litwareinc.com
 The command shown in Example 1 approves the device update rule d5ce3c10-2588-420a-82ac-dc2d9b1222ff9 found on the service WebServer:atl-cs-001.litwareinc.com.
 
 
-### -------------------------- EXAMPLE 2 --------------------------
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsDeviceUpdateRule -Filter service:WebServer:atl-cs-001.litwareinc.com* | Approve-CsDeviceUpdateRule
 ```
@@ -63,7 +63,7 @@ To do this, the command first calls the Get-CsDeviceUpdateRule cmdlet along with
 (By definition, these are all the device update rules that have been assigned to the service WebServer:atl-cs-001.litwareinc.com.) This filtered collection is then piped to the Approve-CsDeviceUpdateRule cmdlet, which approves each rule in the collection.
 
 
-### -------------------------- EXAMPLE 3 --------------------------
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsDeviceUpdateRule | Where-Object {$_.Brand -eq "LG-Nortel"} | Approve-CsDeviceUpdateRule
 ```
