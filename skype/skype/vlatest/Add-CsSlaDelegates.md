@@ -22,9 +22,9 @@ The Add-CsSlaDelegates cmdlet provides a way to retrieve a shared number configu
 
 NOTE: Logging in with the account created for the SLA number is not supported. Using the SLA number account with any device or Desktop Client can result in unpredictable behavior. It is not necessary to use that account for the Shared Line Appearance feature to function.
 
-By default, members of the RTCUniversalServerAdmins group are authorized to run the Add-CsSlaDelegates. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+By default, members of the RTCUniversalServerAdmins group are authorized to run the Add-CsSlaDelegates. To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt: 
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Add-CsSlaDelegates"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Add-CsSlaDelegates"}`
 
 ## EXAMPLES
 
@@ -134,7 +134,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ## OUTPUTS
-### RETURNS
+### SlaConfiguration Object
 The Add-CsSlaDelegates cmdlet returns a Microsoft.Rtc.Management.SlaConfiguration object.
 
 ## NOTES
