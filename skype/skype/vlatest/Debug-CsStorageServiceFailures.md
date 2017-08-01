@@ -24,7 +24,7 @@ AdapterId : bc24207f-08a7-4569-b984-a90f78a49d46
 
 EndpointId : archcdruser2@vdomain.com
 
-EndpointStatusTime : 5/8/2015 6:33:52 PM
+EndpointStatusTime : 5/8/2018 6:33:52 PM
 
 EndpointStatusDetail : StoreWebException: code=ErrorEwsAutodiscover, reason=GetUserSettings
 
@@ -68,23 +68,22 @@ Other :
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Debug-CsStorageServiceFailures -SipURI kmyer@contoso.com
 ```
 
 This example returns debugging information about storage service failures relating to user kmyer@contoso.com.
 
-Debug-CsStorageServiceFailures -SipURI kmyer@contoso.com
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+
+### -------------------------- Example 2 --------------------------
 ```
-
+Debug-CsStorageServiceFailures -Component ConversationHistory
 ```
 
 This example returns debugging information about storage service failures relating to the conversation history component.
 
-Debug-CsStorageServiceFailures -Component ConversationHistory
 
 ## PARAMETERS
 
@@ -109,9 +108,8 @@ Specifies the Windows Communication Foundation (WCF) binding.
 A WCF binding determines the transport, encoding, and protocol details required for clients and services to communicate with each other.
 Valid values are:
 
-NetNamedPipe
-
-NetTCP
+- NetNamedPipe
+- NetTCP
 
 ```yaml
 Type: String
@@ -130,21 +128,14 @@ Accept wildcard characters: False
 Specifies the storage service component for which debug information will be returned.
 Acceptable values for the Component parameter are:
 
-ConversationHistory
-
-ExchangeArchiving
-
-SqlArchiving
-
-QoE
-
-CDR
-
-LegalIntercept
-
-DataPurge
-
-Other
+- ConversationHistory
+- ExchangeArchiving
+- SqlArchiving
+- QoE
+- CDR
+- LegalIntercept
+- DataPurge
+- Other
 
 ```yaml
 Type: Component
@@ -163,9 +154,9 @@ Accept wildcard characters: False
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format defined in the Regional Options settings for the computer on which the command is run.
-For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
+For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2018 to specify March 1, 2018.
 You can enter the date only, or you can enter the date and time of day.
-If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
+If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -251,9 +242,9 @@ Accept wildcard characters: False
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format defined in the Regional Options settings for the computer on which the command is run.
-For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010.
+For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2018 to specify March 1, 2018.
 You can enter the date only, or you can enter the date and time of day.
-If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
+If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2018 5:00 PM".
 
 ```yaml
 Type: DateTime
@@ -273,17 +264,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 
 ## OUTPUTS
 
-###  
-The cmdlet returns debugging information as a System.String.
+### System.String
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/86984e2a-3631-48c5-82f9-d3289d69ec3f(OCS.16).aspx)
-
