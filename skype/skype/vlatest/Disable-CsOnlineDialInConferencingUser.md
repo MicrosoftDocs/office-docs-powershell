@@ -29,14 +29,14 @@ If the user is enabled for a third-party audio conferencing provider (ACP) and t
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
 ```
 
 This example disables user "Pilar Ackerman" from using audio conferencing and will prompt you to confirm the operation.
 
-Disable-CsOnlineDialInConferencingUser -Identity "Pilar Ackerman" -Confirm
+
 
 ## PARAMETERS
 
@@ -189,11 +189,13 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
+NOTE: This parameter is reserved for internal Microsoft use.
+
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
 For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+You can find your tenant ID by running this command: 
 
-This parameter is reserved for internal Microsoft use.
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -209,9 +211,9 @@ Accept wildcard characters: False
 ```
 
 ### -TenantDomain
-Specifies the domain name for the tenant or organization.
+NOTE: This parameter is reserved for internal Microsoft use.
 
-This parameter is reserved for internal Microsoft use.
+Specifies the domain name for the tenant or organization.
 
 ```yaml
 Type: Object
@@ -269,6 +271,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/8bac1e2d-d136-4a47-aa10-704a85993ca7(OCS.15).aspx)
-
