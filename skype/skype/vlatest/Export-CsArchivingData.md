@@ -6,20 +6,8 @@ schema: 2.0.0
 # Export-CsArchivingData
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to export records that have been stored in the Microsoft Lync Server 2010 Archiving database.
-
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to export records that have been stored in the Lync Server Archiving database.
+Enables you to export records that have been stored in the Skype for Business Server Archiving database.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to export records that have been stored in the Skype for Business Server 2015 Archiving database.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -53,178 +41,59 @@ Export-CsArchivingData -Identity <XdsIdentity> -OutputFolder <String> -StartDate
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
 Other organizations find it mandatory to keep such transcripts.
 For example, organizations in the financial world are often required by law to keep copies of all their electronic communications.
 
-Regardless of the reason, Lync Server 2010 gives you flexibility when it comes to archiving IM and conferencing sessions.
+Regardless of the reason, Skype for Business Server gives you flexibility when it comes to archiving IM and conferencing sessions.
 If you have deployed Archiving Server, you can use the various CsArchivingConfiguration cmdlets to enable and disable instant message archiving and to manage your Archiving database.
 You can also suspend IM should archiving fail, which helps ensure that you keep a record of all your electronic communications.
 
 If you have enabled archiving, records of your users' electronic communications are stored in the Archiving database.
 If you would like to view all of these records (or a selected subset of these records), you can use the Export-CsArchivingData cmdlet to extract these records from the database and save them as an Outlook Express Electronic Mail (EML) file (.EML file extension).
 
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Export-CsArchivingData cmdlet locally: RTCUniversalServerAdmins.
+By default, members of the following groups are authorized to run the Export-CsArchivingData cmdlet locally: RTCUniversalServerAdmins.
 To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
 
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Export-CsArchivingData"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
-Other organizations find it mandatory to keep such transcripts.
-For example, organizations in the financial world are often required by law to keep copies of all their electronic communications.
-
-Regardless of the reason, Lync Server gives you flexibility when it comes to archiving IM and conferencing sessions.
-If you have deployed Archiving Server, you can use the various CsArchivingConfiguration cmdlets to enable and disable instant message archiving and to manage your Archiving database.
-You can also suspend IM should archiving fail, which helps ensure that you keep a record of all your electronic communications.
-
-If you have enabled archiving, records of your users' electronic communications are stored in the Archiving database.
-If you would like to view all of these records (or a selected subset of these records), you can use the Export-CsArchivingData cmdlet to extract these records from the database and save them as an Outlook Express Electronic Mail (EML) file (.EML file extension).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Export-CsArchivingData cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsArchivingData"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Many organizations find it useful to keep a transcript of all the instant messaging (IM) sessions carried out by their users.
-Other organizations find it mandatory to keep such transcripts.
-For example, organizations in the financial world are often required by law to keep copies of all their electronic communications.
-
-Regardless of the reason, Skype for Business Server 2015 gives you flexibility when it comes to archiving IM and conferencing sessions.
-If you have deployed Archiving Server, you can use the various CsArchivingConfiguration cmdlets to enable and disable instant message archiving and to manage your Archiving database.
-You can also suspend IM should archiving fail, which helps ensure that you keep a record of all your electronic communications.
-
-If you have enabled archiving, records of your users' electronic communications are stored in the Archiving database.
-If you would like to view all of these records (or a selected subset of these records), you can use the Export-CsArchivingData cmdlet to extract these records from the database and save them as an Outlook Express Electronic Mail (EML) file (.EML file extension).
-
-
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Export-CsArchivingData"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
-Export-CsArchivingData -DBInstance atl-sql-001\Archinst -StartDate 1/1/2010 -OutputFolder "C:\ArchivingExports"
-```
-
-The command shown in Example 1 extracts records from the Archiving database atl-sql-001\Archinst, and then saves the resulting EML file to the folder C:\ArchivingExports.
-The specified start date of January 1, 2010 (-StartDate 1/1/2010) ensures that only items recorded in the database after 12/31/2009 will be exported.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
+Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2018 -OutputFolder "C:\ArchivingExports"
 ```
 
 The command shown in Example 1 extracts records from the Archiving database located on the server atl-sql-001.litwareinc.com, and then saves the resulting EML file to the folder C:\ArchivingExports.
-The specified start date of June 1, 2012 (-StartDate 6/1/2012) ensures that only items recorded in the database after 5/31/2012 will be exported.
+The specified start date of June 1, 2018 (-StartDate 6/1/2018) ensures that only items recorded in the database after 5/31/2018 will be exported.
 
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -OutputFolder "C:\ArchivingExports"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 extracts records from the Archiving database located on the server atl-sql-001.litwareinc.com, and then saves the resulting EML file to the folder C:\ArchivingExports.
-The specified start date of June 1, 2012 (-StartDate 6/1/2012) ensures that only items recorded in the database after 5/31/2012 will be exported.
-
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -OutputFolder "C:\ArchivingExports"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-Export-CsArchivingData -DBInstance atl-sql-001\Archinst -StartDate 1/1/2010 -OutputFolder "C:\ArchivingExports" -UserUri "sip:kenmyer@litwareinc.com"
-```
-
-The preceding command is a variation of the command shown in Example 1; in this case, however, only the records pertaining to the user Ken Myer are exported.
-To limit your export to records pertaining to a single user, include the UserUri parameter followed by appropriate SIP address.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
+Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2018 -OutputFolder "C:\ArchivingExports" -UserUri "kenmyer@litwareinc.com"
 ```
 
 Example 2 is a variation of the command shown in Example 1; in this case, however, only the records pertaining to the user Ken Myer are exported.
 To limit your export to records pertaining to a single user, include the UserUri parameter followed by appropriate SIP address.
 
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -OutputFolder "C:\ArchivingExports" -UserUri "sip:kenmyer@litwareinc.com"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-Example 2 is a variation of the command shown in Example 1; in this case, however, only the records pertaining to the user Ken Myer are exported.
-To limit your export to records pertaining to a single user, include the UserUri parameter followed by appropriate SIP address.
-
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -OutputFolder "C:\ArchivingExports" -UserUri "kenmyer@litwareinc.com"
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
-```
-Export-CsArchivingData -DBInstance atl-sql-001\Archinst -StartDate 1/1/2010 -EndDate 1/31/2010 -OutputFolder "C:\ArchivingExports"
+Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2018 -EndDate 6/30/2018 -OutputFolder "C:\ArchivingExports"
 ```
 
 Example 3 represents another variation of the command shown in Example 1.
-In Example 3, however, only items recorded in the database during the month of January 2010 are exported.
+In Example 3, however, only items recorded in the database during the month of June, 2018 are exported.
 To limit exporting to this time interval, the EndDate parameter is included along with the StartDate parameter.
-With a start date of January 1, 2010 and an end date of January 31, 2010, exporting is limited to items recorded during January 2010.
+With a start date of June 1, 2018 and an end date of June 30, 2018, exporting is limited to items recorded during June 2018.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 represents another variation of the command shown in Example 1.
-In Example 3, however, only items recorded in the database during the month of June, 2012 are exported.
-To limit exporting to this time interval, the EndDate parameter is included along with the StartDate parameter.
-With a start date of June 1, 2012 and an end date of June 30, 2012, exporting is limited to items recorded during June 2012.
-
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -EndDate 6/30/2012 -OutputFolder "C:\ArchivingExports"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 represents another variation of the command shown in Example 1.
-In Example 3, however, only items recorded in the database during the month of June, 2012 are exported.
-To limit exporting to this time interval, the EndDate parameter is included along with the StartDate parameter.
-With a start date of June 1, 2012 and an end date of June 30, 2012, exporting is limited to items recorded during June 2012.
-
-Export-CsArchivingData -Identity "ArchivingDatabase:atl-sql-001.litwareinc.com" -StartDate 6/1/2012 -EndDate 6/30/2012 -OutputFolder "C:\ArchivingExports"
 
 ## PARAMETERS
 
 ### -DBInstance
-**Below Content Applies To:** Lync Server 2010
+This parameter is intended for use only with Microsoft Lync Server 2010.If you are using the Export-CsArchivingData cmdlet on Skype for Business Server you should use the Identity parameter instead.
 
 Path to the SQL Server database instance where archiving data is recorded.
-For example: "atl-sql-001\Archinst".
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Path to the SQL Server database instance where archiving data is recorded.
-For example: "atl-sql-001\Archinst".
-
-This parameter is intended for use only with Microsoft Lync Server 2010.
-If you are using export-CsArchivingData on Microsoft Lync Server 2013 Preview you should use the Identity parameter instead.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Path to the SQL Server database instance where archiving data is recorded.
-For example: "atl-sql-001\Archinst".
-
-This parameter is intended for use only with Microsoft Lync Server 2010.
-If you are using the Export-CsArchivingData cmdlet on Skype for Business Server 2015 you should use the Identity parameter instead.
-
-
+For example: 
+`"atl-sql-001\Archinst"`
 
 ```yaml
 Type: String
@@ -240,19 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutputFolder
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Full path to the folder where the exported data should be stored (for example, C:\ArchivingExports).
-If this folder does not exist, then Export-CsArchivingData will create it.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Full path to the folder where the exported data should be stored (for example, C:\ArchivingExports).
 If this folder does not exist, then the Export-CsArchivingData cmdlet will create it.
-
-
 
 ```yaml
 Type: String
@@ -269,8 +127,8 @@ Accept wildcard characters: False
 
 ### -StartDate
 Indicates the earliest activity date for the records to be exported.
-For example, if you set the start date to 6/1/2010 (June 1, 2010, in U.S.
-English) any items recorded in the database prior to that date (for example, items recorded on May 31, 2010) will be excluded from the export.
+For example, if you set the start date to 6/1/2018 (June 1, 2018, in U.S.
+English) any items recorded in the database prior to that date (for example, items recorded on May 31, 2018) will be excluded from the export.
 
 Use the date-time formats specified by your Regional and Language Options settings when assigning values to the StartDate and EndDate properties.
 
@@ -289,9 +147,9 @@ Accept wildcard characters: False
 
 ### -EndDate
 Indicates the latest activity date for records to be exported.
-For example, if you set the end date to 6/1/2010 (June 1, 2010, in U.S.
-English) any items recorded in the database after that date (for example, items recorded on June 2, 2010) will be excluded from the export.
-Although you will not receive an error message, your export will fail if the end date occurs before the start date (for example, an end date of 1/1/2010 and a start date of 6/1/2010).
+For example, if you set the end date to 6/1/2018 (June 1, 2018, in U.S.
+English) any items recorded in the database after that date (for example, items recorded on June 2, 2018) will be excluded from the export.
+Although you will not receive an error message, your export will fail if the end date occurs before the start date (for example, an end date of 1/1/2018 and a start date of 6/1/2018).
 
 Use the date-time formats specified by your Regional and Language Options settings when assigning values to the StartDate and EndDate properties.
 
@@ -328,19 +186,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeWebConfArchive
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Instructs Export-CsArchivingData to only export instant messaging records.
-By default, the cmdlet exports both IM and conferencing records.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Instructs the Export-CsArchivingData cmdlet to only export instant messaging records.
 By default, the cmdlet exports both IM and conferencing records.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -405,23 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeTrustedApplication
-**Below Content Applies To:** Lync Server 2010
-
-Include data for trusted applications (CAA/CAS)
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-When included, instructs Export-CsArchivingData to include data logged by trusted applications when exporting records.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When included, instructs the Export-CsArchivingData cmdlet to include data logged by trusted applications when exporting records.
-
-
+Include data logged by trusted applications (CAA/CAS) when exporting records.
 
 ```yaml
 Type: SwitchParameter
@@ -440,15 +271,15 @@ Accept wildcard characters: False
 Service identity of the archiving database to be exported.
 For example:
 
--Identity "ArchivingDatabase:atl-sql-001.litwareinc.com"
+`-Identity "ArchivingDatabase:atl-sql-001.litwareinc.com"`
 
 You can also specify the database by using just the pool name:
 
--Identity "atl-sql-001.litwareinc.com"
+`-Identity "atl-sql-001.litwareinc.com"`
 
 You can retrieve the service identities for your archiving databases by using this command:
 
-Get-CsService -ArchivingDatabase | Select-Object Identity
+`Get-CsService -ArchivingDatabase | Select-Object Identity`
 
 ```yaml
 Type: XdsIdentity
@@ -484,31 +315,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
-Export-CsArchivingData does not accept pipelined input.
+### None
 
-###  
-None.
-The Export-CsArchivingData cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-Export-CsArchivingData returns Archiving database records in EML format.
-
-###  
+### 
 The Export-CsArchivingData cmdlet returns Archiving database records in EML format.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/644bf86e-0e7e-4607-bedf-d491b1c16745(OCS.14).aspx)
-
 [Get-CsArchivingConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/644bf86e-0e7e-4607-bedf-d491b1c16745(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/644bf86e-0e7e-4607-bedf-d491b1c16745(OCS.16).aspx)
-

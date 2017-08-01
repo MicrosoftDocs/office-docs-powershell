@@ -6,7 +6,7 @@ schema: 2.0.0
 # Find-CsGroup
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Find-CsGroup cmdlet to search groups.
 
 ## SYNTAX
 
@@ -16,23 +16,28 @@ Find-CsGroup [-SearchQuery <Object>] [-BypassDualWrite <Object>] [-ExactMatchOnl
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Find-CsGroup cmdlet lets you search groups in the Azure Address Book Service (AABS).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Find-CsGroup -SearchQuery "Contoso Group" -MaxResults 5
 ```
 
+This example finds and displays up to five groups that match the "Contoso Group" search query.
+
+### -------------------------- Example 2 --------------------------
+```
+Find-CsGroup -SearchQuery "ed0d1180-169e-47c7-b718-bf9e60543914" -ExactMatchOnly $true
 ```
 
-Insert descriptive text for example 1.
-
-Insert example commands for example 1.
+This example finds and displays only those groups that are an exact match to the search query.
 
 ## PARAMETERS
 
 ### -SearchQuery
-PARAMVALUE: String
+The SearchQuery parameter defines a search query to search the display name or the sip address or the GUID of groups. This parameter accepts partial search query. The search is not case sensitive.
 
 ```yaml
 Type: Object
@@ -64,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExactMatchOnly
-PARAMVALUE: $true | $false
+The ExactMatchOnly parameter instructs the cmdlet to return exact matches only. The default value is false.
 
 ```yaml
 Type: Object
@@ -96,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxResults
-PARAMVALUE: UInt32
+The MaxResults parameter identifies the maximum number of results to return. If this parameter is not provided, the default is value is 10.
 
 ```yaml
 Type: Object
@@ -148,11 +153,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel
+The Find-CsGroup cmdlet returns a list of Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel. Microsoft.Rtc.Management.Hosted.Group.Models.GroupModel contains Id and DisplayName. 
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/111da8e2-7a1b-4cb0-b327-94b698c23c39(OCS.15).aspx)
-
