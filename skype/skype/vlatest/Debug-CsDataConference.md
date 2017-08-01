@@ -6,7 +6,7 @@ schema: 2.0.0
 # Debug-CsDataConference
 
 ## SYNOPSIS
-Returns diagnostic information for the data conferencing capabilities included in Skype for Business Server 2015.
+Returns diagnostic information for the data conferencing capabilities included in Skype for Business Server.
 
 ## SYNTAX
 
@@ -15,31 +15,27 @@ Debug-CsDataConference [-Force] [-Report <String>] [-TargetFqdn <Fqdn>] [<Common
 ```
 
 ## DESCRIPTION
-Skype for Business Server Control Panel: The functions carried out by the Debug-CsDataConference cmdlet are not available in the Skype for Business Server Control Panel.
+The functions carried out by the Debug-CsDataConference cmdlet are not available in the Skype for Business Server Control Panel.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Debug-CsDataConference
 ```
 
 The command shown in Example 1 returns diagnostic information for the Conferencing Server installed on the local computer.
 
-Debug-CsDataConference
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Debug-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com"
 ```
 
 In Example 2, diagnostic information is returned for the Conferencing Server installed on the remote computer atl-cs-001.litwareinc.com.
 
-Debug-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Debug-CsDataConference | Select-Object -ExpandProperty Details | Format-List
 ```
 
 Example 3 returns detailed Conferencing Server diagnostic information for the local computer, but displays this information in an easy-to-read format.
@@ -48,7 +44,6 @@ That information is then piped to the Select-Object cmdlet.
 The Select-Object cmdlet uses the ExpandProperty parameter to return complete information for the Details property.
 (By default, only a small portion of the data in the Details property is displayed onscreen.) Finally, the data found in the Details property is piped to the Format-List cmdlet, which displays the data in an easy-to-read format.
 
-Debug-CsDataConference | Select-Object -ExpandProperty Details | Format-List
 
 ## PARAMETERS
 
@@ -70,7 +65,9 @@ Accept wildcard characters: False
 
 ### -Report
 Enables you to specify a file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\DataConference.html"
+For example: 
+
+`-Report "C:\Logs\DataConference.html"`
 
 ```yaml
 Type: String
@@ -108,20 +105,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
 The Debug-CsDataConference cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-The Debug-CsDataConference cmdlet returns instances of the Microsoft.Rtc.Management.DataCollabDiag.ServerResult object.
+### Microsoft.Rtc.Management.DataCollabDiag.ServerResult
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Test-CsDataConference]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1bf128a6-d4d8-41ec-a8e9-dc1cdcd73200(OCS.16).aspx)
-
