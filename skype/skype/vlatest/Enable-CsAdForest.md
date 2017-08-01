@@ -6,23 +6,9 @@ schema: 2.0.0
 # Enable-CsAdForest
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Makes the Active Directory modifications required before you can install Microsoft Lync Server 2010.
-This includes making global changes to the Configuration or System containers; creating universal groups; and creating property sets and display specifiers that are specific to Lync Server 2010.
-
-**Below Content Applies To:** Lync Server 2013
-
-Makes the Active Directory modifications required before you can install Lync Server.
-This includes making global changes to the Configuration or System containers; creating universal groups; and creating property sets and display specifiers that are specific to Lync Server.
+Makes the Active Directory modifications required before you can install Skype for Business Server.
+This includes making global changes to the Configuration or System containers; creating universal groups; and creating property sets and display specifiers that are specific to Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Makes the Active Directory modifications required before you can install Skype for Business Server 2015.
-This includes making global changes to the Configuration or System containers; creating universal groups; and creating property sets and display specifiers that are specific to Skype for Business Server 2015.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -34,104 +20,38 @@ Enable-CsAdForest [-GroupDomain <Fqdn>] [-GroupDomainController <Fqdn>] [-Global
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+Before you can install Skype for Business Server, you must make a number of forest-level changes to Active Directory Domain Services.
+This includes creating display specifiers and objects specific to Skype for Business Server, creating the universal security groups that are needed to manage Skype for Business Server, and granting global settings object access rights to these groups.
 
-Before you can install Lync Server 2010, you must make a number of forest-level changes to Active Directory Domain Services (AD DS).
-This includes creating display specifiers and objects specific to Lync Server 2010, creating the universal security groups that are needed to manage Lync Server 2010, and granting global settings object access permissions to these groups.
-Forest preparation is typically carried out through the Lync Server 2010 Setup Wizard.
-However, enterprise administrators can also perform forest preparation at any time by running the Enable-CsAdForest cmdlet.
-
-After Enable-CsAdForest finishes running, you can use the Get-CsAdForest cmdlet to verify that the forest is ready for the next step in the installation process.
-
-Note that this cmdlet carries out tasks similar to those carried out by the following Microsoft Office Communications Server 2007 R2 command:
-
-Lcscmd.exe /forest /action:ForestPrep
-
-Who can run this cmdlet: You must be an enterprise administrator in order to run the Enable-CsAdForest cmdlet locally.
-
-**Below Content Applies To:** Lync Server 2013
-
-Before you can install Lync Server, you must make a number of forest-level changes to Active Directory Domain Services (AD DS).
-This includes creating display specifiers and objects specific to Lync Server, creating the universal security groups that are needed to manage Lync Server, and granting global settings object access rights to these groups.
-Forest preparation is typically carried out through the Lync Server Setup Wizard.
-However, enterprise administrators can also perform forest preparation at any time by running the Enable-CsAdForest cmdlet.
-
-After Enable-CsAdForest finishes running, you can use the Get-CsAdForest cmdlet to verify that the forest is ready for the next step in the installation process.
-
-Note that this cmdlet carries out tasks similar to those carried out by the following Microsoft Office Communications Server 2007 R2 command:
-
-Lcscmd.exe /forest /action:ForestPrep
-
-Who can run this cmdlet: You must be an enterprise administrator in order to run the Enable-CsAdForest cmdlet locally.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Before you can install Skype for Business Server 2015, you must make a number of forest-level changes to Active Directory Domain Services.
-This includes creating display specifiers and objects specific to Skype for Business Server 2015, creating the universal security groups that are needed to manage Skype for Business Server 2015, and granting global settings object access rights to these groups.
-Forest preparation is typically carried out through the Skype for Business Server 2015 Setup Wizard.
+Forest preparation is typically carried out through the Skype for Business Server Setup Wizard.
 However, enterprise administrators can also perform forest preparation at any time by running the Enable-CsAdForest cmdlet.
 
 After the Enable-CsAdForest cmdlet finishes running, you can use the Get-CsAdForest cmdlet to verify that the forest is ready for the next step in the installation process.
 
+You must be an enterprise administrator in order to run the Enable-CsAdForest cmdlet locally.
 
+Historical Note: This cmdlet carries out tasks similar to those carried out by the following Microsoft Office Communications Server 2007 R2 command:
+
+`Lcscmd.exe /forest /action:ForestPrep`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Enable-CsAdForest
 ```
 
-This command prepares the Active Directory forest for the installation of Lync Server 2010.
-Because the GroupDomain parameter is not used, the universal security groups generated when you run Enable-CsAdForest will be created in the local domain.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command prepares the Active Directory forest for the installation of Lync Server.
-Because the GroupDomain parameter is not used, the universal security groups generated when you run Enable-CsAdForest will be created in the local domain.
-
-Enable-CsAdForest
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command prepares the Active Directory forest for the installation of Skype for Business Server 2015.
+This command prepares the Active Directory forest for the installation of Skype for Business Server.
 Because the GroupDomain parameter is not used, the universal security groups generated when you run the Enable-CsAdForest cmdlet will be created in the local domain.
 
-Enable-CsAdForest
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Enable-CsAdForest -GroupDomain northamerica.litwareinc.com
 ```
 
-This command prepares the Active Directory forest for the installation of Lync Server 2010.
-The GroupDomain parameter is used to ensure that the universal security groups created by running Enable-CsAdForest will be created in the northamerica.litwareinc.com domain.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command prepares the Active Directory forest for the installation of Lync Server.
-The GroupDomain parameter is used to ensure that the universal security groups created by running Enable-CsAdForest will be created in the northamerica.litwareinc.com domain.
-
-Enable-CsAdForest -GroupDomain northamerica.litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command prepares the Active Directory forest for the installation of Skype for Business Server 2015.
+This command prepares the Active Directory forest for the installation of Skype for Business Server.
 The GroupDomain parameter is used to ensure that the universal security groups created by running the Enable-CsAdForest cmdlet will be created in the northamerica.litwareinc.com domain.
 
-Enable-CsAdForest -GroupDomain northamerica.litwareinc.com
 
 ## PARAMETERS
 
@@ -169,19 +89,8 @@ Accept wildcard characters: False
 ```
 
 ### -GlobalCatalog
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-FQDN of a global catalog server in your domain.
-This parameter is not required if you are running Enable-CsAdForest on a computer with an account in your domain.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 FQDN of a global catalog server in your domain.
 This parameter is not required if you are running the Enable-CsAdForest cmdlet on a computer with an account in your domain.
-
-
 
 ```yaml
 Type: Fqdn
@@ -248,7 +157,9 @@ Accept wildcard characters: False
 
 ### -Report
 Enables you to specify a file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\ForestPrep.html"
+For example: 
+
+`-Report "C:\Logs\ForestPrep.html"`
 
 ```yaml
 Type: String
@@ -296,17 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipPrepareCheck
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill SkipPrepareCheck Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When set to True ($True), causes Enable-CsAdForest to run without first doing its initial preparation checks.
-
-
 
 ```yaml
 Type: Boolean
@@ -326,21 +227,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-None.
+### None
+
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2381fca7-294b-486d-919d-e8626cef6fea(OCS.14).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2381fca7-294b-486d-919d-e8626cef6fea(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2381fca7-294b-486d-919d-e8626cef6fea(OCS.16).aspx)
-

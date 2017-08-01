@@ -31,15 +31,14 @@ The audio conferencing provider name and domain information is automatically set
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Enable-CsOnlineDialInConferencingUser -Identity "Ken Meyer" -AllowPstnOnlyMeetings $false -ConferenceId 3659305 -ReplaceProvider -ServiceNumber 14255551234
 ```
 
 This example enables a user named Ken Meyer to use audio conferencing and set up Skype for Business Online dial-in meetings.
 When the cmdlet runs, it will replace Ken's existing audio conferencing provider information, set the default phone number to 14255551234 and the ConferenceId for meetings to 3659305.
 
-Enable-CsOnlineDialInConferencingUser -Identity "Ken Meyer" -AllowPstnOnlyMeetings $false -ConferenceId 3659305 -ReplaceProvider -ServiceNumber 14255551234
 
 ## PARAMETERS
 
@@ -343,6 +342,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/aada81a7-4345-4e6b-93f8-75459ec93098(OCS.15).aspx)
-

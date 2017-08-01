@@ -6,23 +6,9 @@ schema: 2.0.0
 # Disable-CsUser
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the Active Directory account of the specified user or users; this modification prevents users from using Microsoft Lync Server 2010 clients such as Microsoft Lync 2010.
-Disable-CsUser only restricts activity related to Lync Server 2010; it does not disable or remove a user's Active Directory account.
-
-**Below Content Applies To:** Lync Server 2013
-
-Modifies the Active Directory account of the specified user or users; this modification prevents users from using Lync Server clients such as Microsoft Lync 2013 Preview.
-Disable-CsUser only restricts activity related to Lync Server; it does not disable or remove a user's Active Directory account.
+Modifies the Active Directory account of the specified user or users; this modification prevents users from using Skype for Business Server clients such as Skype for Business.
+The Disable-CsUser cmdlet only restricts activity related to Skype for Business Server; it does not disable or remove a user's Active Directory account.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies the Active Directory account of the specified user or users; this modification prevents users from using Skype for Business Server 2015 clients such as Skype for Business.
-The Disable-CsUser cmdlet only restricts activity related to Skype for Business Server 2015; it does not disable or remove a user's Active Directory account.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,146 +19,48 @@ Disable-CsUser [-Identity] <UserIdParameter> [-DomainController <Fqdn>] [-PassTh
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+The Disable-CsUser cmdlet deletes all the attribute information related to Skype for Business Server from an Active Directory user account; this prevents the user from logging on to Skype for Business Server.
 
-The Disable-CsUser cmdlet deletes all the attribute information related to Lync Server from an Active Directory user account; this prevents the user from logging on to Lync Server.
-When you run Disable-CsUser all the Lync Server-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
+When you run the Disable-CsUser cmdlet all the Skype for Business Server-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
 You can later re-enable the account by using the Enable-CsUser cmdlet.
-However, all the Lync Server-related information (such as policy assignments) previously associated with that account will have to be re-created.
-If you want to prevent a user from logging on to Lync Server, but do not want to lose all of their account information, use Set-CsUser instead.
-For details, see the Set-CsUser help topic.
+However, all the Skype for Business Server-related information (such as policy assignments) previously associated with that account will have to be re-created.
 
-After an account has been disabled with Disable-CsUser, the affected user will no longer be returned by the Get-CsUser cmdlet; that's because that user no longer has a valid Lync Server account.
-To retrieve information for the disabled user account, use Get-CsAdUser.
-
-In addition, user data belonging to the deleted user account will be removed from the backend databases; for example, the user will be removed from Contacts lists in the organization, and any conferences scheduled by that user will be deleted.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Disable-CsUser cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Disable-CsUser"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The Disable-CsUser cmdlet deletes all the attribute information related to Lync Server from an Active Directory user account; this prevents the user from logging on to Lync Server.
-When you run Disable-CsUser all the Lync Server-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
-You can later re-enable the account by using the Enable-CsUser cmdlet.
-However, all the Lync Server-related information (such as policy assignments) previously associated with that account will have to be re-created.
-If you want to prevent a user from logging on to Lync Server, but do not want to lose all of their account information, use Set-CsUser instead.
-For details, see the Set-CsUser help topic.
-
-After an account has been disabled with Disable-CsUser, the affected user will no longer be returned by the Get-CsUser cmdlet; that's because that user no longer has a valid Lync Server account.
-To retrieve information for the disabled user account, use Get-CsAdUser.
-
-In addition, user data belonging to the deleted user account will be removed from the backend databases; for example, the user will be removed from Contacts lists in the organization, and any conferences scheduled by that user will be deleted.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Disable-CsUser cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Disable-CsUser"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Disable-CsUser cmdlet deletes all the attribute information related to Skype for Business Server 2015 from an Active Directory user account; this prevents the user from logging on to Skype for Business Server 2015.
-When you run the Disable-CsUser cmdlet all the Skype for Business Server 2015-related attributes are removed from an account, including the Identities of any per-user policies that have been assigned to that account.
-You can later re-enable the account by using the Enable-CsUser cmdlet.
-However, all the Skype for Business Server 2015-related information (such as policy assignments) previously associated with that account will have to be re-created.
-If you want to prevent a user from logging on to Skype for Business Server 2015, but do not want to lose all of their account information, use the Set-CsUser cmdlet instead.
+If you want to prevent a user from logging on to Skype for Business Server, but do not want to lose all of their account information, use the Set-CsUser cmdlet instead.
 For details, see the Set-CsUser cmdlet help topic.
 
-After an account has been disabled with the Disable-CsUser cmdlet, the affected user will no longer be returned by the Get-CsUser cmdlet; that's because that user no longer has a valid Skype for Business Server 2015 account.
+After an account has been disabled with the Disable-CsUser cmdlet, the affected user will no longer be returned by the Get-CsUser cmdlet; that's because that user no longer has a valid Skype for Business Server account.
 To retrieve information for the disabled user account, use the Get-CsAdUser cmdlet.
 
 In addition, user data belonging to the deleted user account will be removed from the backend databases; for example, the user will be removed from Contacts lists in the organization, and any conferences scheduled by that user will be deleted.
 
+By default, members of the following groups are authorized to run the Disable-CsUser cmdlet locally: RTCUniversalUserAdmins.
+To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
+
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Disable-CsUser"}`
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Disable-CsUser -Identity "Ken Myer"
 ```
 
-The preceding Example disables the Lync Server account for the user Ken Myer.
+Example 1 disables the Skype for Business Server account for the user Ken Myer.
 In this example, the user's display name is used to indicate his Identity.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-Example 1 disables the Lync Server account for the user Ken Myer.
-In this example, the user's display name is used to indicate his Identity.
-
-Disable-CsUser -Identity "Ken Myer"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 disables the Skype for Business Server 2015 account for the user Ken Myer.
-In this example, the user's display name is used to indicate his Identity.
-
-Disable-CsUser -Identity "Ken Myer"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-Get-CsUser -LDAPFilter "Department=Finance" | Disable-CsUser
-```
-
-In Example 2, all the users in the Finance department have their Lync Server accounts disabled.
-To carry out this task, the command first uses the Get-CsUser cmdlet and the LDAPFilter parameter to return a collection of all the users who belong to the Finance department.
-That collection is then piped to Disable-CsUser, which disables each account in the collection.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, all the users in the Finance department have their Lync Server accounts disabled.
-To carry out this task, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who belong to the Finance department.
-That collection is then piped to Disable-CsUser, which disables each account in the collection.
-
 Get-CsUser -LdapFilter "Department=Finance" | Disable-CsUser
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2, all the users in the Finance department have their Skype for Business Server 2015 accounts disabled.
 To carry out this task, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who belong to the Finance department.
 That collection is then piped to the Disable-CsUser cmdlet, which disables each account in the collection.
 
-Get-CsUser -LdapFilter "Department=Finance" | Disable-CsUser
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsUser -UnassignedUser | Disable-CsUser
-```
-
-In the preceding example, all the user accounts not currently assigned to a Registrar pool are disabled.
-To do this, Get-CsUser is called, along with the UnassignedUser parameter.
-This parameter restricts the returned data to users who have valid user accounts but are not assigned to a Registrar pool.
-That collection is then piped to Disable-CsUser, which disables each account in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In this example, all the user accounts not currently assigned to a Registrar pool are disabled.
-To do this, Get-CsUser is called, along with the UnassignedUser parameter.
-This parameter restricts the returned data to users who have valid user accounts but are not assigned to a Registrar pool.
-That collection is then piped to Disable-CsUser, which disables each account in the collection.
-
-Get-CsUser -UnassignedUser | Disable-CsUser
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In this example, all the user accounts not currently assigned to a Registrar pool are disabled.
@@ -180,7 +68,6 @@ To do this, the Get-CsUser cmdlet is called, along with the UnassignedUser param
 This parameter restricts the returned data to users who have valid user accounts but are not assigned to a Registrar pool.
 That collection is then piped to the Disable-CsUser cmdlet, which disables each account in the collection.
 
-Get-CsUser -UnassignedUser | Disable-CsUser
 
 ## PARAMETERS
 
@@ -276,42 +163,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Disable-CsUser accepts a pipelined string value representing the Identity of a user account that has been enabled for Lync Server.
-The cmdlet also accepts pipelined instances if the Active Directory user object.
-
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Disable-CsUser accepts a pipelined string value representing the Identity of a user account that has been enabled for Lync Server.
-The cmdlet also accepts pipelined instances of the Active Directory user object.
-
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-The Disable-CsUser cmdlet accepts a pipelined string value representing the Identity of a user account that has been enabled for Skype for Business Server 2015.
+### String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser
+The Disable-CsUser cmdlet accepts a pipelined string value representing the Identity of a user account that has been enabled for Skype for Business Server.
 The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## OUTPUTS
 
-###  
-Disable-CsUser does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-
-###  
+### None
 The Disable-CsUser cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
 
+
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/92e7e29e-2620-4852-9e4a-2fd3569bb095(OCS.14).aspx)
+## RELATED LINKS
 
 [Enable-CsUser]()
 
 [Get-CsUser]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/92e7e29e-2620-4852-9e4a-2fd3569bb095(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/92e7e29e-2620-4852-9e4a-2fd3569bb095(OCS.16).aspx)
-
