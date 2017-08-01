@@ -7,7 +7,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Returns information about the Address Book normalization rules in use in the organization.
-Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -22,7 +22,7 @@ Get-CsAddressBookNormalizationRule [[-Identity] <XdsIdentity>] [-LocalStore] [<C
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to a standard (E.164) format.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to a standard (E.164) format.
 (Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) Address Book normalization rules carry out these conversions and translations for Address Book servers.
 
 Although Address Book normalization rules are very similar to voice normalization rules, the two are not interchangeable: you cannot add voice normalization rules to an Address Book collection, nor can you add Address Book normalization rules to a dial plan.
@@ -30,45 +30,38 @@ That means, in some cases, you might need to create identical rules: one for ass
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule
 ```
 
 The command shown in Example 1 returns information about all the Address Book normalization rules configured for use in the organization.
 
-Get-CsAddressBookNormalizationRule
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule -Identity "Global/Generic_All"
 ```
 
 In Example 2, information is returned for a single Address Book normalization rule: the rule Generic_All found in the global collection of Address Book normalization rules.
 
-Get-CsAddressBookNormalizationRule -Identity "Global/Generic_All"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule -Identity "Global"
 ```
 
 Example 3 returns all the normalization rules found in the global collection of Address Book normalization rules.
 To return all the rules in a collection simply specify the collection scope.
 For example, to find all the rules in the collection assigned to the Redmond site use this syntax: -Identity "site:Redmond".
 
-Get-CsAddressBookNormalizationRule -Identity "Global"
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule | Where-Object {$_.Priority -eq 1}
 ```
 
 The command shown in Example 4 returns all the Address Book normalization rules that have a Priority of 1.
 To do this, Get-CsAddressBookNormalizationRule is first called in order to return a collection of all the normalization rules configured for use in the organization.
 That collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Priority is equal to 1.
 
-Get-CsAddressBookNormalizationRule | Where-Object {$_.Priority -eq 1}
 
 ## PARAMETERS
 
@@ -80,7 +73,7 @@ However, that filter will not a return rule with the identity site:Redmond/lobby
 
 To return all the rules in a given collection (such as the Redmond site) you can use the Identity parameter instead of the Filter parameter:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 ```yaml
 Type: String
@@ -132,18 +125,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsAddressBookNormalizationRule cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsAddressBookNormalizationRule cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
@@ -152,6 +146,3 @@ The Get-CsAddressBookNormalizationRule cmdlet returns instances of the Microsoft
 [Remove-CsAddressBookNormalizationRule]()
 
 [Set-CsAddressBookNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b4387c3e-db14-43d0-9125-ae45c0064e57(OCS.16).aspx)
-

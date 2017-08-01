@@ -7,7 +7,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Returns the Address Book normalization configuration settings currently in use in the organization.
-Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -22,44 +22,42 @@ Get-CsAddressBookNormalizationConfiguration [[-Identity] <XdsIdentity>] [-LocalS
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to the standard (E.164) format.
-(Note that an understanding of regular expressions is helpful in order to understood what normalization rules do and how they work.) In Skype for Business Server 2015, the Address Book normalization configuration settings represent collections of normalization created for use by the Address Book server.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to the standard (E.164) format.
+(Note that an understanding of regular expressions is helpful in order to understood what normalization rules do and how they work.) In Skype for Business Server, the Address Book normalization configuration settings represent collections of normalization created for use by the Address Book server.
 (These collections can be defined at the global scope or at the site scope.) The Get-CsAddressBookNormalizationConfiguration cmdlet provides a way to return information about the Address Book normalization rules currently in use in your organization.
 
 Although Address Book normalization rules are very similar to voice normalization rules, the two are not interchangeable: you cannot add voice normalization rules to an Address Book collection, nor can you add Address Book normalization rules to a dial plan.
 That means that, in some cases, you might need to create identical rules: one for assignment to Address Book servers, the other for assignment to dial plans.
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsAddressBookNormalizationConfiguration
 ```
 
 The command shown in Example 1 returns a collection of all the Address Book normalization configuration settings currently in use in the organization.
 This is done by calling the Get-CsAddressBookNormalizationConfiguration cmdlet without any additional parameters.
 
-Get-CsAddressBookNormalizationConfiguration
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsAddressBookNormalizationConfiguration -Identity "site:Redmond"
 ```
 
 In Example 2, information is returned for a single collection of normalization rules: the collection with the Identity site:Redmond:
 
-Get-CsAddressBookNormalizationConfiguration -Identity "site:Redmond"
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsAddressBookNormalizationConfiguration -Filter "site:*"
 ```
 
 Example 3 returns information about all the normalization configuration settings applied to the site scope.
 To do this, the command uses the Filter parameter and the parameter value "site:*".
 That syntax limits the returned data to all the collections that have an Identity that begins with the string value "site:".
 
-Get-CsAddressBookNormalizationConfiguration -Filter "site:*"
 
 ## PARAMETERS
 
@@ -123,18 +121,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsAddressBookNormalizationConfiguration cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsAddressBookNormalizationConfiguration cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationSettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationSettings
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
@@ -145,6 +144,3 @@ The Get-CsAddressBookNormalizationConfiguration cmdlet returns instances of the 
 [Set-CsAddressBookNormalizationConfiguration]()
 
 [Import-CsCompanyPhoneNormalizationRules]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/617d5113-b396-4e4b-96e4-e73fcfde8d57(OCS.16).aspx)
-
