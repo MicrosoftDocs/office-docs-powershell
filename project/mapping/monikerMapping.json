@@ -1,0 +1,12 @@
+{
+    "project-ps": {
+        "conceptualToc": "project/docs-conceptual/toc.md",
+        "packageRoot": "project",
+        "modules": {
+            "project": {
+                "_displayname": "Project Module",
+                "_version": "vlatest"
+            }      
+        }
+    }
+}
