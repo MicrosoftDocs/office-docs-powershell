@@ -1,0 +1,12 @@
+{
+    "exchange-ps": {
+        "conceptualToc": "exchange/docs-conceptual/toc.md",
+        "packageRoot": "exchange",
+        "modules": {
+            "exchange": {
+                "_displayname": "Exchange Module",
+                "_version": "vlatest"
+            }      
+        }
+    }
+}
