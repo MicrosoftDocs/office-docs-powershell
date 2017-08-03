@@ -10,6 +10,7 @@ schema: 2.0.0
 Returns information about the client policies configured for use in your organization.
 Among other things, client policies help determine the features of Skype for Business that are available to users; for example, you might give some users the right to transfer files while denying this right to other users.
 
+
 ## SYNTAX
 
 ### Identity
@@ -27,6 +28,7 @@ Get-CsClientPolicy [-Filter <String>] [-LocalStore] [-Tenant <Guid>] [<CommonPar
 Get-CsClientPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter <Object>] [-LocalStore]
  [-Tenant <Object>] [-AsJob] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 Client policies are applied each time a user accesses the system, regardless of where the user logs on from and regardless of the type of device the user logs on with.
@@ -93,6 +95,7 @@ To accomplish this task, the command first calls Get-CsClientPolicy to return a 
 That collection is then piped to Where-Object, which picks out only those policies that meet at least one of the following criteria: DisableSavingIM is equal to True and/or EnableIMAutoArchiving is equal to False.
 The -or operator tells Where-Object that any object that meets at least one of the specified conditions should be selected.
 
+
 ## PARAMETERS
 
 ### -Identity
@@ -102,19 +105,6 @@ To refer to a site policy, use syntax similar to this: -Identity site:Redmond.
 To refer to a per-user policy, use syntax similar to this: -Identity SalesDepartmentPolicy.
 
 If this parameter is omitted, then all the client policies configured for use in your organization will be returned.
-
-```yaml
-Type: XdsIdentity
-Parameter Sets: Identity
-Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
-
-Required: False
-Position: 2
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ```yaml
 Type: XdsIdentity
@@ -181,9 +171,13 @@ Accept wildcard characters: False
 
 ### -Tenant
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose client policies are being returned.
-For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+For example: 
 
-You can return the tenant ID for each of your Skype for Business Online tenants by running this command:  `Get-CsTenant | Select-Object DisplayName, TenantID`
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+You can return the tenant ID for each of your Skype for Business Online tenants by running this command: 
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -217,33 +211,25 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-###  
-None.
-Get-CsClientPolicy does not accept pipelined input.
-None. The `Get-CsClientPolicy` cmdlet does not accept pipelined input.
+## INPUTS
 
 ### None
 
-###  
-None.
-The Get-CsClientPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-The `Get-CsClientPolicy` cmdlet returns instances of the `Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy` object.
+### Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy
 
-### System.Object
-
-###  
-The Get-CsClientPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Client.ClientPolicy object.
 
 ## NOTES
 
+
 ## RELATED LINKS
 [Grant-CsClientPolicy](Grant-CsClientPolicy.md)
+
 [New-CsClientPolicy](New-CsClientPolicy.md)
+
 [Remove-CsClientPolicy](Remove-CsClientPolicy.md)
+
 [Set-CsClientPolicy](Set-CsClientPolicy.md)

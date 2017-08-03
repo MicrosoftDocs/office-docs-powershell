@@ -19,22 +19,22 @@ Get-CsCloudMeetingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Fi
 The Get-CsCloudMeetingPolicy cmdlet gets the current policy for automatic scheduling of Skype Meeting features and coordination of data.
 There are two polices to consider:
 
+- AutoScheduleDisabled: 
 If true, automatic schedule is disabled for the user.
-
+- AutoScheduleEnabled:
 If true, automatic schedule is enabled for the user.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
-
+Get-CsOnlineUser -identity "JaneCl" | fl CloudMeetingPolicy
 ```
 
 This example shows which policies has been granted to the user by the Set-CsCloudMeetingPolicy and Grant-CsCloudMeetingPolicy cmdlets.
 If the policy AutoScheduleEnabled is shown, the user is enabled for the feature.
 If the policy is blank or AutoScheduleDisabled, the user is not enabled for the feature.
 
-Get-CsOnlineUser -identity "JaneCl" | fl CloudMeetingPolicy
 
 ## PARAMETERS
 
@@ -72,7 +72,9 @@ Accept wildcard characters: False
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: 
+
+`-Identity "SeattlePSTN"`
 
 ```yaml
 Type: Object
@@ -105,8 +107,13 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: 
+
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+You can find your tenant ID by running this command: 
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
 The tenant ID will be determined by your connection and credentials.
