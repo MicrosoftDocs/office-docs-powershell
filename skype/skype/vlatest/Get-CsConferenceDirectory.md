@@ -6,17 +6,9 @@ schema: 2.0.0
 # Get-CsConferenceDirectory
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about the conference directories configured for use in your organization.
-Conference directories are used to help dial-in conferencing users locate conference information.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Returns information about the conference directories configured for use in your organization.
 Conference directories are used to help dial-in conferencing users locate conference information.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -32,76 +24,25 @@ Get-CsConferenceDirectory [-Filter <String>] [-LocalStore] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
-However, SIP addresses are difficult for  devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
-Because of that, Microsoft Lync Server 2010 uses conference directories as a way to help these devices locate, and connect to, dial-in conferences.
-This is done by creating a SIP conference directory that is associated with each dial-in conferencing URI, and is identified by an integer value rather than a SIP URI.
-PSTN telephones and other devices can use these numbers (rather than a SIP URI) when connecting to conferences; the directory number is included in the PSTN conference identification users enter when connecting to a dial-in conference.
-
-The Get-CsConferenceDirectory cmdlet enables you to return information about all the conference directories configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsConferenceDirectory cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsConferenceDirectory"}
-
-**Below Content Applies To:** Lync Server 2013
-
 When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
 However, SIP addresses are difficult for devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
-Because of that, Lync Server uses conference directories as a way to help these devices locate, and connect to, dial-in conferences.
+Because of that, Skype for Business Server uses conference directories as a way to help these devices locate, and connect to, dial-in conferences.
 This is done by creating a SIP conference directory that is associated with each dial-in conferencing URI, and is identified by an integer value rather than a SIP URI.
 PSTN telephones and other devices can use these numbers (rather than a SIP URI) when connecting to conferences; the directory number is included in the PSTN conference identification users enter when connecting to a dial-in conference.
 
 The Get-CsConferenceDirectory cmdlet enables you to return information about all the conference directories configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsConferenceDirectory cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsConferenceDirectory"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When you create a dial-in conferencing Uniform Resource Identifier (URI), those URIs are assigned unique SIP addresses.
-However, SIP addresses are difficult for devices that are not SIP-aware to translate; for example, a public switched telephone network (PSTN) telephone can't translate a SIP address.
-Because of that, Skype for Business Server 2015 uses conference directories as a way to help these devices locate, and connect to, dial-in conferences.
-This is done by creating a SIP conference directory that is associated with each dial-in conferencing URI, and is identified by an integer value rather than a SIP URI.
-PSTN telephones and other devices can use these numbers (rather than a SIP URI) when connecting to conferences; the directory number is included in the PSTN conference identification users enter when connecting to a dial-in conference.
-
-The Get-CsConferenceDirectory cmdlet enables you to return information about all the conference directories configured for use in your organization.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsConferenceDirectory
 ```
 
 The command shown in Example 1 returns information about all the conference directories configured for use in your organization.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 returns information about all the conference directories configured for use in your organization.
-
-Get-CsConferenceDirectory
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 returns information about all the conference directories configured for use in your organization.
-
-Get-CsConferenceDirectory
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsConferenceDirectory -Identity 2
 ```
@@ -109,73 +50,21 @@ Get-CsConferenceDirectory -Identity 2
 Example 2 returns information about the conference directory with the Identity 2.
 Because identities must be unique this command will never return more than a single conference directory.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 returns information about the conference directory with the Identity 2.
-Because identities must be unique this command will never return more than a single conference directory.
-
-Get-CsConferenceDirectory -Identity 2
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 returns information about the conference directory with the Identity 2.
-Because identities must be unique this command will never return more than a single conference directory.
-
-Get-CsConferenceDirectory -Identity 2
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsConferenceDirectory | Where-Object {$_.ServiceID -match "UserServer:atl-cs-001.litwareinc.com"}
-```
-
-The preceding command returns all the conference directories housed on the service UserServer:atl-cs-001.litwareinc.com.
-To do this, the command first calls Get-CsConferenceDirectory without any parameters in order to return a collection of all the conference directories found in your organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those directories where the ServiceID matches the string value "UserServer:atl-cs-001.litwareinc.com".
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 returns all the conference directories housed on the service UserServer:atl-cs-001.litwareinc.com.
-To do this, the command first calls Get-CsConferenceDirectory without any parameters in order to return a collection of all the conference directories found in your organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those directories where the ServiceID matches the string value "UserServer:atl-cs-001.litwareinc.com".
-
-Get-CsConferenceDirectory | Where-Object {$_.ServiceID -match "UserServer:atl-cs-001.litwareinc.com"}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 3 returns all the conference directories housed on the service UserServer:atl-cs-001.litwareinc.com.
 To do this, the command first calls the Get-CsConferenceDirectory cmdlet without any parameters in order to return a collection of all the conference directories found in your organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those directories where the ServiceID matches the string value "UserServer:atl-cs-001.litwareinc.com".
 
-Get-CsConferenceDirectory | Where-Object {$_.ServiceID -match "UserServer:atl-cs-001.litwareinc.com"}
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Numeric identifier (for example, 7) of the conference directory to be returned.
-If this parameter is omitted, then Get-CsConferenceDirectory returns information about all the conference directories in use in your organization.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Numeric identifier (for example, 7) of the conference directory to be returned.
 If this parameter is omitted, then the Get-CsConferenceDirectory cmdlet returns information about all the conference directories in use in your organization.
-
-
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -227,37 +116,24 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsConferenceDirectory does not accept pipelined input.
+### None
 
-###  
-None.
-The Get-CsConferenceDirectory cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-Get-CsConferenceDirectory returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.PstnConf.ConferenceDirectories object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.PstnConf.ConferenceDirectories
 
-###  
-The Get-CsConferenceDirectory cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.PstnConf.ConferenceDirectories object.
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2b7927ab-c6b3-42ce-9c27-9825cd47fd77(OCS.14).aspx)
+## RELATED LINKS
 
 [Move-CsConferenceDirectory]()
 
 [New-CsConferenceDirectory]()
 
 [Remove-CsConferenceDirectory]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2b7927ab-c6b3-42ce-9c27-9825cd47fd77(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2b7927ab-c6b3-42ce-9c27-9825cd47fd77(OCS.16).aspx)
-

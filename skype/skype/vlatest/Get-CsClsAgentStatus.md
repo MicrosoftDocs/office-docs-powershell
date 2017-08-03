@@ -19,23 +19,23 @@ The Get-CsClsAgentStatus cmdlet returns information about the ClsAgent, includin
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsClsAgentStatus
 ```
 
 Returns information about the ClsAgent service on the local machine.
 
-Get-CsClsAgentStatus
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsClsAgentStatus -DefaultXml
 ```
 
 Returns the default.xml file as an XmlDocument object.
 
-Get-CsClsAgentStatus -DefaultXml
+
 
 ## PARAMETERS
 
@@ -75,19 +75,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-Returns a Microsoft.Rtc.Management.Cls.AgentInfo object, or an XmlDocument object if the DefaultXml parameter is used.
+### Microsoft.Rtc.Management.Cls.AgentInfo
+Or an XmlDocument object if the DefaultXml parameter is used.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9bd15b0e-8f92-4ded-bbe6-0aa381d6e90d(OCS.16).aspx)
-
