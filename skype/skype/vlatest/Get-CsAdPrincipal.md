@@ -6,18 +6,9 @@ schema: 2.0.0
 # Get-CsAdPrincipal
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about Active Directory principals.
-These principals include Active Directory objects such as users, groups, contacts, containers, and organizational units.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns information about Active Directory principals.
 These principals include Active Directory objects such as users, groups, contacts, containers, and organizational units.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -29,144 +20,64 @@ Get-CsAdPrincipal [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] [
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The Get-CsAdPrincipal cmdlet returns a collection of Active Directory principals that can be used when constructing Persistent Chat membership lists (see the help information for the AllowedMembers and DeniedMembers parameters for the Set-CsPersistentChatCategory cmdlet for more details).
-Get-CsPrincipal returns information for Active Directory objects such as:
-
-Users (object class = {top, person, organizationalPerson, user})
-
-Groups (object class = {top, group})
-
-Contacts (object class = {top, person, organizationalPerson, contact})
-
-Containers (object class = {top, container})
-
-Organizational Units (object class = {top, organizationalUnit})
-
-Domains (object class = {top, domain, domainDNS})
-
-Among other things, this means that you can use the Get-CsAdPrincipal cmdlet (and the objectClass property) to quickly return information about Active Directory objects such as groups or organizational units.
-For example, this command returns the names of all your Active Directory OUs:
-
-Get-CsAdPrincipal | Where-Object {$_.ObjectClass -match "organizationalUnit"} | Select-Object Name
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAdPrincipal"}
-
-Lync Server Control Panel: The functions carried out by the Get-CsAdPrincipal cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 The Get-CsAdPrincipal cmdlet returns a collection of Active Directory principals that can be used when constructing Persistent Chat membership lists (see the help information for the AllowedMembers and DeniedMembers parameters for the Set-CsPersistentChatCategory cmdlet for more details).
 Get-CsAdPrincipal returns information for Active Directory objects such as:
 
-Users (object class = {top, person, organizationalPerson, user})
+`Users (object class = {top, person, organizationalPerson, user})`
 
-Groups (object class = {top, group})
+`Groups (object class = {top, group})`
 
-Contacts (object class = {top, person, organizationalPerson, contact})
+`Contacts (object class = {top, person, organizationalPerson, contact})`
 
-Containers (object class = {top, container})
+`Containers (object class = {top, container})`
 
-Organizational Units (object class = {top, organizationalUnit})
+`Organizational Units (object class = {top, organizationalUnit})`
 
-Domains (object class = {top, domain, domainDNS})
+`Domains (object class = {top, domain, domainDNS})`
 
 Among other things, this means that you can use the Get-CsAdPrincipal cmdlet (and the objectClass property) to quickly return information about Active Directory objects such as groups or organizational units.
 For example, this command returns the names of all your Active Directory OUs:
 
-Get-CsAdPrincipal | Where-Object {$_.ObjectClass -match "organizationalUnit"} | Select-Object Name
+`Get-CsAdPrincipal | Where-Object {$_.ObjectClass -match "organizationalUnit"} | Select-Object Name`
 
-Skype for Business Server Control Panel: The functions carried out by the Get-CsAdPrincipal cmdlet are not available in the Skype for Business Server Control Panel.
-
+The functions carried out by the Get-CsAdPrincipal cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsAdPrincipal
 ```
 
 The command shown in Example 1 returns all the Active Directory principals in the organization.
 
-Get-CsAdPrincipal
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 returns all the Active Directory principals in the organization.
-
-Get-CsAdPrincipal
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Get-CsAdPrincipal -Filter {SipAddress -eq "sip:RedmondMeetingRoom@litwareinc.com"}
 ```
 
 In Example 2, information is returned for a single Active Directory principal: the principal with the SIP address "sip:RedmondMeetingRoom@litwareinc.com".
 This is done by including the Filter parameter and a filter value that looks for principals where the SipAddress property is equal to (-eq) "sip:RedmondMeetingRoom@litwareinc.com".
 
-Get-CsAdPrincipal -Filter {SipAddress -eq "sip:RedmondMeetingRoom@litwareinc.com"}
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-In Example 2, information is returned for a single Active Directory principal: the principal with the SIP address "sip:RedmondMeetingRoom@litwareinc.com".
-This is done by including the Filter parameter and a filter value that looks for principals where the SipAddress property is equal to (-eq) "sip:RedmondMeetingRoom@litwareinc.com".
-
-Get-CsAdPrincipal -Filter {SipAddress -eq "sip:RedmondMeetingRoom@litwareinc.com"}
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In the preceding example, information is returned for all the Active Directory objects.
-To carry out this task, the command first calls Get-CsAdPrincipal without any parameters; this returns a collection of all the Active Directory principals.
-That collection is then piped to the Where-Object cmdlet, which selects only those principals where the ObjectClass property contains the string value "contact".
-
 Get-CsAdPrincipal | Where-Object {$_.ObjectClass -contains "contact"}
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In the preceding example, information is returned for all the Active Directory objects.
 To carry out this task, the command first calls the Get-CsAdPrincipal cmdlet without any parameters; this returns a collection of all the Active Directory principals.
 That collection is then piped to the Where-Object cmdlet, which selects only those principals where the ObjectClass property contains the string value "contact".
 
-Get-CsAdPrincipal | Where-Object {$_.ObjectClass -contains "contact"}
 
 ## PARAMETERS
 
 ### -Credential
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to run the Get-CsAdPrincipal cmdlet under alternate credentials.
-This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
-
-To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
-For details, see the Get-Credential Help topic.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Enables you to run the Get-CsAdPrincipal cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
 
 To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
 For details, see the Get-Credential cmdlet help topic.
-
-
 
 ```yaml
 Type: PSCredential
@@ -199,33 +110,15 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to limit the returned data by filtering on attributes specific to Lync Server.
+Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server.
 
 The Filter parameter uses the much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
-For example, a filter that returns only principals who are not enabled for Lync Server would look like this:
+For example, a filter that returns only principals who are not enabled for Skype for Business Server would look like this:
 
--Filter {Enabled -ne $True}
+`-Filter {Enabled -ne $True}`
 
 In that example.
 Enabled represents the Active Directory attribute, -ne represents the comparison operator (not equal to), and $True (a built-in Windows PowerShell variable) represents the value True.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
-
-The Filter parameter uses the much of the same Windows PowerShell filtering syntax used by the Where-Object cmdlet.
-For example, a filter that returns only principals who are not enabled for Skype for Business Server 2015 would look like this:
-
--Filter {Enabled -ne $True}
-
-In that example.
-Enabled represents the Active Directory attribute, -ne represents the comparison operator (not equal to), and $True (a built-in Windows PowerShell variable) represents the value True.
-
-
 
 ```yaml
 Type: String
@@ -263,33 +156,15 @@ Accept wildcard characters: False
 ```
 
 ### -LDAPFilter
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
+Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server).
 For example, you can limit returned data to principals who belong to a specific department or who have a specific manager or job title.
 
 The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only principals located in the city of Redmond would look like this:
 
--LdapFilter "l=Redmond"
+`-LdapFilter "l=Redmond"`
 
 In that example, the "l" (a lowercase L) represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
-For example, you can limit returned data to principals who belong to a specific department or who have a specific manager or job title.
-
-The LdapFilter parameter uses the LDAP query language when creating filters.
-For example, a filter that returns only principals located in the city of Redmond would look like this:
-
--LdapFilter "l=Redmond"
-
-In that example, the "l" (a lowercase L) represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
-
-
 
 ```yaml
 Type: String
@@ -311,11 +186,11 @@ For example, if the Finance OU has two child OUs -- AccountsPayable and Accounts
 
 When specifying an OU, use the distinguished name (DN) of that container; for example:
 
--OU "OU=Finance,dc=litwareinc,dc=com"
+`-OU "OU=Finance,dc=litwareinc,dc=com"`
 
 To return principals from the Users container, use this syntax:
 
--OU "cn=Users,dc=litwareinc,dc=com"
+`-OU "cn=Users,dc=litwareinc,dc=com"`
 
 ```yaml
 Type: OUIdParameter
@@ -355,31 +230,25 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
+### String
 String value or object representing an Active Directory user, group, contact, container, and organizational unit.
 For example, this syntax returns Active Directory principal information for the Redmond and Dublin OUs:
 
-"OU=Redmond,DC=litwareinc,DC=com", "OU=Dublin,DC=litwareinc,DC=com" | Get-CsAdPrincipal
+`"OU=Redmond,DC=litwareinc,DC=com", "OU=Dublin,DC=litwareinc,DC=com" | Get-CsAdPrincipal`
 
 ## OUTPUTS
 
-###  
-Get-CsAdPrincipal returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADPrincipal object.
+### Microsoft.Rtc.Management.ADConnect.Schema.OCSADPrincipal
 
-###  
-The Get-CsAdPrincipal cmdlet returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADPrincipal object.
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [New-CsPersistentChatCategory]()
 
 [Set-CsPersistentChatCategory]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/df2c3714-4064-4113-861f-95ce0ae8da81(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/df2c3714-4064-4113-861f-95ce0ae8da81(OCS.16).aspx)
-
