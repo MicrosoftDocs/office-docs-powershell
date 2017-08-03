@@ -26,33 +26,28 @@ Administrators can retrieve information about the audio conferencing providers a
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsAudioConferencingProvider
 ```
 
 The command shown in Example 1 returns information about all the audio conferencing providers available for use in your organization.
 
-Get-CsAudioConferencingProvider
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsAudioConferencingProvider -Identity "Fabrikam Telecom"
 ```
 
 In Example 2, information is returned for a single audio conferencing provider: the provider with the Identity Fabrikam Telecom.
 
-Get-CsAudioConferencingProvider -Identity "Fabrikam Telecom"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsAudioConferencingProvider -Filter "*Fabrikam*"
 ```
 
 Example 3 demonstrates how wildcard values (and the Filter parameter) can be used to return information about audio conferencing providers.
 In this example, the filter value "*Fabrikam*" returns all audio conferencing providers that have the string value "Fabrikam" anywhere in their Identity.
 
-Get-CsAudioConferencingProvider -Filter "*Fabrikam*"
 
 ## PARAMETERS
 
@@ -76,7 +71,7 @@ Accept wildcard characters: False
 Enables you to use wildcard characters when indicating the audio conferencing provider (or providers) to be returned.
 For example, this syntax returns information about all the audio conferencing providers that have the string value "fabrikam" somewhere in their Identity:
 
--Filter "*fabrikam*"
+`-Filter "*fabrikam*"`
 
 Note that you cannot use the Filter parameter and the Identity parameters in the same command.
 
@@ -97,7 +92,7 @@ Accept wildcard characters: False
 Unique identifier for the audio conferencing provider to be returned.
 For example:
 
--Identity "Fabrikam Telecom"
+`-Identity "Fabrikam Telecom"`
 
 If neither the Identity parameter nor the Filter parameter are included in a command then the Get-CsAudioConferencingProvider cmdlet returns information for all the available providers.
 
@@ -149,20 +144,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsAudioConferencingProvider cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsAudioConferencingProvider cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AudioConferencingProvider.AudioConferencingProvider#Decorated object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.AudioConferencingProvider.AudioConferencingProvider#Decorated
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e0762ab6-cadd-4b68-8614-ace1b387c7de(OCS.15).aspx)
-

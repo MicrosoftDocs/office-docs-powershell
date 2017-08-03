@@ -6,23 +6,9 @@ schema: 2.0.0
 # Get-CsAnalogDevice
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about the analog devices you can manage by using Microsoft Lync Server 2010.
-An analog device is a telephone or other device that is connected to the public switched telephone network.
-
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about the analog devices you can manage by using Lync Server.
+Returns information about the analog devices you can manage by using Skype for Business Server.
 An analog device is a telephone or other device that is connected to the public switched telephone network.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the analog devices you can manage by using Skype for Business Server 2015.
-An analog device is a telephone or other device that is connected to the public switched telephone network.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -34,63 +20,15 @@ Get-CsAnalogDevice [[-Identity] <UserIdParameter>] [-Credential <PSCredential>] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
 Instead, information is transmitted by using a continuous signal.
 This signal is commonly referred to as an analog signal; hence the term "analog devices."
 
 In addition to analog phones and phones that take advantage of Enterprise Voice, there is another class of phones: digital non-IP phones.
-These phones are proprietary to the private branch exchange (PBX) system they were purchased with, and cannot be managed by using Lync Server 2010 cmdlets.
+These phones are proprietary to the private branch exchange (PBX) system they were purchased with, and cannot be managed by using Skype for Business Server cmdlets.
 
-In order to enable administrators to manage analog devices for organizations, Lync Server 2010 lets you associate analog devices with Active Directory contact objects.
-After a device has been associated with a contact object, you can then manage the analog device by doing such things as assigning policies and dial plans to the contact.
-
-The Get-CsAnalogDevice cmdlet provides a way for you to retrieve information about the analog devices configured for use in your organization.
-If you call Get-CsAnalogDevice without any parameters the cmdlet will return information about all of your analog devices.
-Optional parameters provide different ways for you to filter information; for example, you can return all of the devices that have contact objects in a specified OU, or all of the analog devices located in a specified building.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsAnalogDevice cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory OUs can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsAnalogDevice"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
-Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
-Instead, information is transmitted by using a continuous signal.
-This signal is commonly referred to as an analog signal; hence the term "analog devices."
-
-In addition to analog phones and phones that take advantage of Enterprise Voice, there is another class of phones: digital non-IP phones.
-These phones are proprietary to the private branch exchange (PBX) system they were purchased with, and cannot be managed by using Lync Server cmdlets.
-
-In order to enable administrators to manage analog devices for organizations, Lync Server lets you associate analog devices with Active Directory contact objects.
-After a device has been associated with a contact object, you can then manage the analog device by doing such things as assigning policies and dial plans to the contact.
-
-The Get-CsAnalogDevice cmdlet provides a way for you to retrieve information about the analog devices configured for use in your organization.
-If you call Get-CsAnalogDevice without any parameters the cmdlet will return information about all of your analog devices.
-Optional parameters provide different ways for you to filter information; for example, you can return all of the devices that have contact objects in a specified OU, or all of the analog devices located in a specified building.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsAnalogDevice cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory OUs can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsAnalogDevice"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
-Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
-Instead, information is transmitted by using a continuous signal.
-This signal is commonly referred to as an analog signal; hence the term "analog devices."
-
-In addition to analog phones and phones that take advantage of Enterprise Voice, there is another class of phones: digital non-IP phones.
-These phones are proprietary to the private branch exchange (PBX) system they were purchased with, and cannot be managed by using Skype for Business Server 2015 cmdlets.
-
-In order to enable administrators to manage analog devices for organizations, Skype for Business Server 2015 lets you associate analog devices with Active Directory contact objects.
+In order to enable administrators to manage analog devices for organizations, Skype for Business Server lets you associate analog devices with Active Directory contact objects.
 After a device has been associated with a contact object, you can then manage the analog device by doing such things as assigning policies and dial plans to the contact.
 
 The Get-CsAnalogDevice cmdlet provides a way for you to retrieve information about the analog devices configured for use in your organization.
@@ -98,69 +36,26 @@ If you call the Get-CsAnalogDevice cmdlet without any parameters the cmdlet will
 Optional parameters provide different ways for you to filter information; for example, you can return all of the devices that have contact objects in a specified OU, or all of the analog devices located in a specified building.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsAnalogDevice
-```
-
-The command shown in Example 1 returns a collection of all the analog devices currently configured for use in the organization.
-This is done by calling Get-CsAnalogDevice without any parameters.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 returns a collection of all the analog devices currently configured for use in the organization.
-This is done by calling Get-CsAnalogDevice without any parameters.
-
-Get-CsAnalogDevice
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 1 returns a collection of all the analog devices currently configured for use in the organization.
 This is done by calling the Get-CsAnalogDevice cmdlet without any parameters.
 
-Get-CsAnalogDevice
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsAnalogDevice | Select-Object DisplayName, LineUri
-```
-
-In Example 2, only two property values -- DisplayName and LineUri -- are returned for all the analog devices in the organization.
-To carry out this task, the command first calls Get-CsAnalogDevice without any parameters; this returns all the property values for all the analog devices in the organization.
-This collection is then piped to the Select-Object cmdlet, which selects and displays only the values for the DisplayName and the LineUri properties.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, only two property values -- DisplayName and LineUri -- are returned for all the analog devices in the organization.
-To carry out this task, the command first calls Get-CsAnalogDevice without any parameters; this returns all the property values for all the analog devices in the organization.
-This collection is then piped to the Select-Object cmdlet, which selects and displays only the values for the DisplayName and the LineUri properties.
-
-Get-CsAnalogDevice | Select-Object DisplayName, LineUri
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2, only two property values -- DisplayName and LineUri -- are returned for all the analog devices in the organization.
 To carry out this task, the command first calls the Get-CsAnalogDevice cmdlet without any parameters; this returns all the property values for all the analog devices in the organization.
 This collection is then piped to the Select-Object cmdlet, which selects and displays only the values for the DisplayName and the LineUri properties.
 
-Get-CsAnalogDevice | Select-Object DisplayName, LineUri
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsAnalogDevice -Filter {DisplayName -eq "Building 14 Receptionist"}
 ```
@@ -168,199 +63,56 @@ Get-CsAnalogDevice -Filter {DisplayName -eq "Building 14 Receptionist"}
 Example 3 returns information about the analog device that has the Active Directory display name "Building 14 Receptionist".
 To do this, the command calls Get-CsAnalogDevice and the Filter parameter; the filter value {DisplayName -eq "Building 14 Receptionist"} limits the returned items to analog devices where the DisplayName property is equal to "Building 14 Receptionist".
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 returns information about the analog device that has the Active Directory display name "Building 14 Receptionist".
-To do this, the command calls Get-CsAnalogDevice and the Filter parameter; the filter value {DisplayName -eq "Building 14 Receptionist"} limits the returned items to analog devices where the DisplayName property is equal to "Building 14 Receptionist".
-
-Get-CsAnalogDevice -Filter {DisplayName -eq "Building 14 Receptionist"}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 returns information about the analog device that has the Active Directory display name "Building 14 Receptionist".
-To do this, the command calls Get-CsAnalogDevice and the Filter parameter; the filter value {DisplayName -eq "Building 14 Receptionist"} limits the returned items to analog devices where the DisplayName property is equal to "Building 14 Receptionist".
-
-Get-CsAnalogDevice -Filter {DisplayName -eq "Building 14 Receptionist"}
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsAnalogDevice -Filter {Gateway -eq "192.168.0.240"}
-```
-
-The preceding command returns all of the analog devices configured for the gateway 192.168.0.240.
-This is done by calling Get-CsAnalogDevice and including the Filter parameter; the filter value "192.168.0.240" ensures that the only objects returned are analog devices where the Gateway property is equal to 192.168.0.240.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 4 returns all of the analog devices configured for the gateway 192.168.0.240.
-This is done by calling Get-CsAnalogDevice and including the Filter parameter; the filter value "192.168.0.240" ensures that the only objects returned are analog devices where the Gateway property is equal to 192.168.0.240.
-
-Get-CsAnalogDevice -Filter {Gateway -eq "192.168.0.240"}
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 4 returns all of the analog devices configured for the gateway 192.168.0.240.
 This is done by calling the Get-CsAnalogDevice cmdlet and including the Filter parameter; the filter value "192.168.0.240" ensures that the only objects returned are analog devices where the Gateway property is equal to 192.168.0.240.
 
-Get-CsAnalogDevice -Filter {Gateway -eq "192.168.0.240"}
-
-### -------------------------- Example 5 ------------------------ (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsAnalogDevice -Filter {AnalogFax -eq $True}
-```
-
-The command shown in Example 5 returns information about all the analog fax machines in the organization.
-To perform this task, the command calls Get-CsAnalogDevice along with the Filter parameter.
-The filter value {AnalogFax -eq $True} limits the returned objects to fax machines: analog devices where the AnalogFax property is equal to True.
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 5 returns information about all the analog fax machines in the organization.
-To perform this task, the command calls Get-CsAnalogDevice along with the Filter parameter.
-The filter value {AnalogFax -eq $True} limits the returned objects to fax machines: analog devices where the AnalogFax property is equal to True.
-
-Get-CsAnalogDevice -Filter {AnalogFax -eq $True}
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 5 returns information about all the analog fax machines in the organization.
 To perform this task, the command calls the Get-CsAnalogDevice cmdlet along with the Filter parameter.
 The filter value {AnalogFax -eq $True} limits the returned objects to fax machines: analog devices where the AnalogFax property is equal to True.
 
-Get-CsAnalogDevice -Filter {AnalogFax -eq $True}
-
-### -------------------------- Example 6 ------------------------ (Lync Server 2010)
+### -------------------------- Example 6 --------------------------
 ```
 Get-CsAnalogDevice -Filter {LineUri -eq "tel:+14255556001"}
 ```
 
 In Example 6, a single analog device is returned: the device that has a LineUri (phone number) equal to tel:+14255556001.
 
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 6, a single analog device is returned: the device that has a LineUri (phone number) equal to tel:+14255556001.
-
-Get-CsAnalogDevice -Filter {LineUri -eq "tel:+14255556001"}
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 6, a single analog device is returned: the device that has a LineUri (phone number) equal to tel:+14255556001.
-
-Get-CsAnalogDevice -Filter {LineUri -eq "tel:+14255556001"}
-
-### -------------------------- Example 7 ------------------------ (Lync Server 2010)
+### -------------------------- Example 7 --------------------------
 ```
 Get-CsAnalogDevice -Filter {LineUri -like "tel:+1425555*"}
-```
-
-Example 7 returns all of the analog devices that have an area code of 425 and the phone prefix 555.
-To carry out this task, Get-CsAnalogDevice is used along with the Filter parameter; the filter value {LineUri -like "tel:+1425555*"} limits the returned data to devices where the LineUri property begins with the characters "tel:+1425555".
-That's equivalent to a phone number that begins with these characters: 1425555 (for example, the 1-425-555-1298).
-
-### -------------------------- EXAMPLE 7 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 7 returns all of the analog devices that have an area code of 425 and the phone prefix 555.
-To carry out this task, Get-CsAnalogDevice is used along with the Filter parameter; the filter value {LineUri -like "tel:+1425555*"} limits the returned data to devices where the LineUri property begins with the characters "tel:+1425555".
-That's equivalent to a phone number that begins with these characters: 1425555 (for example, the 1-425-555-1298).
-
-Get-CsAnalogDevice -Filter {LineUri -like "tel:+1425555*"}
-
-### -------------------------- EXAMPLE 7 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 7 returns all of the analog devices that have an area code of 425 and the phone prefix 555.
 To carry out this task, the Get-CsAnalogDevice cmdlet is used along with the Filter parameter; the filter value {LineUri -like "tel:+1425555*"} limits the returned data to devices where the LineUri property begins with the characters "tel:+1425555".
 That's equivalent to a phone number that begins with these characters: 1425555 (for example, the 1-425-555-1298).
 
-Get-CsAnalogDevice -Filter {LineUri -like "tel:+1425555*"}
-
-### -------------------------- Example 8 ------------------------ (Lync Server 2010)
+### -------------------------- Example 8 --------------------------
 ```
 Get-CsAnalogDevice -OU "ou=Telecommunications,dc=litwareinc,dc=com"
-```
-
-The preceding command returns a collection of all the analog devices that have a contact object in the Telecommunications OU in Active Directory Domain Services (AD DS).
-To do this, Get-CsAnalogDevice is called along with the OU parameter; the parameter value limits the returned objects to analog devices that have contacts objects in the OU with the distinguished name ou=Telecommunications,dc=litwareinc,dc=com.
-
-### -------------------------- EXAMPLE 8 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 8 returns a collection of all the analog devices that have a contact object in the Telecommunications OU in Active Directory Domain Services (AD DS).
-To do this, Get-CsAnalogDevice is called along with the OU parameter; the parameter value limits the returned objects to analog devices that have contacts objects in the OU with the distinguished name ou=Telecommunications,dc=litwareinc,dc=com.
-
-Get-CsAnalogDevice -OU "ou=Telecommunications,dc=litwareinc,dc=com"
-
-### -------------------------- EXAMPLE 8 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 8 returns a collection of all the analog devices that have a contact object in the Telecommunications OU in Active Directory Domain Services.
 To do this, the Get-CsAnalogDevice cmdlet is called along with the OU parameter; the parameter value limits the returned objects to analog devices that have contacts objects in the OU with the distinguished name ou=Telecommunications,dc=litwareinc,dc=com.
 
-Get-CsAnalogDevice -OU "ou=Telecommunications,dc=litwareinc,dc=com"
-
-### -------------------------- Example 9 ------------------------ (Lync Server 2010)
+### -------------------------- Example 9 --------------------------
 ```
 Get-CsAnalogDevice | Grant-CsVoicePolicy -PolicyName "AnalogVoicePolicy"
-```
-
-The command shown in Example 9 shows how you can return a collection of analog devices and then assign a voice policy to each device in the collection.
-To do this, Get-CsAnalogDevice is first called without any parameters; this returns a collection of all the analog devices configured for use in the organization.
-This collection is then piped to the Grant-CsVoicePolicy cmdlet, which assigns the voice policy AnalogVoicePolicy to each device in the collection.
-
-### -------------------------- EXAMPLE 9 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 9 shows how you can return a collection of analog devices and then assign a voice policy to each device in the collection.
-To do this, Get-CsAnalogDevice is first called without any parameters; this returns a collection of all the analog devices configured for use in the organization.
-This collection is then piped to the Grant-CsVoicePolicy cmdlet, which assigns the voice policy AnalogVoicePolicy to each device in the collection.
-
-Get-CsAnalogDevice | Grant-CsVoicePolicy -PolicyName "AnalogVoicePolicy"
-
-### -------------------------- EXAMPLE 9 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 9 shows how you can return a collection of analog devices and then assign a voice policy to each device in the collection.
 To do this, the Get-CsAnalogDevice cmdlet is first called without any parameters; this returns a collection of all the analog devices configured for use in the organization.
 This collection is then piped to the Grant-CsVoicePolicy cmdlet, which assigns the voice policy AnalogVoicePolicy to each device in the collection.
 
-Get-CsAnalogDevice | Grant-CsVoicePolicy -PolicyName "AnalogVoicePolicy"
 
 ## PARAMETERS
 
@@ -420,41 +172,13 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to limit the returned data by filtering on attributes specific to Lync Server 2010.
+Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server.
 For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
 
 The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
 For example, a filter that returns only fax machines would look like this, with AnalogFax representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
 
--Filter {AnalogFax -eq $True}
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to limit the returned data by filtering on attributes specific to Lync Server.
-For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
-
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only fax machines would look like this, with AnalogFax representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
-
--Filter {AnalogFax -eq $True}
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to limit the returned data by filtering on attributes specific to Skype for Business Server 2015.
-For example, you can limit returned data to analog device contact objects that have been assigned a specific voice policy, or contacts that have not been assigned a specific voice policy.
-
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only fax machines would look like this, with AnalogFax representing the Active Directory attribute, -eq representing the comparison operator (equal to), and $True (a built-in Windows PowerShell variable) representing the filter value:
-
--Filter {AnalogFax -eq $True}
-
-
+`-Filter {AnalogFax -eq $True}`
 
 ```yaml
 Type: String
@@ -470,47 +194,15 @@ Accept wildcard characters: False
 ```
 
 ### -LdapFilter
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server 2010).
+Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server).
 For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
 
 The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only contact objects representing analog devices in the city of Redmond would look like this:
 
--LdapFilter "l=Redmond"
+`-LdapFilter "l=Redmond"`
 
 In the preceding filter, "l" represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Lync Server).
-For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
-
-The LdapFilter parameter uses the LDAP query language when creating filters.
-For example, a filter that returns only contact objects representing analog devices in the city of Redmond would look like this:
-
--LdapFilter "l=Redmond"
-
-In the preceding filter, "l" represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to limit the returned data by filtering on generic Active Directory attributes (that is, attributes that are not specific to Skype for Business Server 2015).
-For example, you can limit returned data to contact objects that have been assigned to a specific department or are located in a specific building.
-
-The LdapFilter parameter uses the LDAP query language when creating filters.
-For example, a filter that returns only contact objects representing analog devices in the city of Redmond would look like this:
-
--LdapFilter "l=Redmond"
-
-In the preceding filter, "l" represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
-
-
 
 ```yaml
 Type: String
@@ -526,25 +218,13 @@ Accept wildcard characters: False
 ```
 
 ### -OU
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Enables you to return contact objects from a specific Active Directory organizational unit (OU).
-This returns data from both the specified OU and any of its child OUs.
-For example, if the Finance OU has two child OUs -- AccountsPayable and AccountsReceivable - analog device information will be returned from each of these OUs.
-
-When specifying an OU, use the distinguished name of that container; for example: -OU "OU=Finance,dc=litwareinc,dc=com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Enables you to return contact objects from a specific Active Directory organizational unit (OU).
 This returns data from both the specified OU and any of its child OUs.
 For example, if the Finance OU has two child OUs -- AccountsPayable and AccountsReceivable -- analog device information will be returned from each of these OUs.
 
-When specifying an OU, use the distinguished name of that container; for example: -OU "OU=Finance,dc=litwareinc,dc=com".
+When specifying an OU, use the distinguished name of that container; for example: 
 
-
+`-OU "OU=Finance,dc=litwareinc,dc=com"`
 
 ```yaml
 Type: OUIdParameter
@@ -584,29 +264,22 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-String.
-Get-CsAnalogDevice accepts a pipelined string value that represents the Identity of the analog device.
-
-###  
-String.
+### String
 The Get-CsAnalogDevice cmdlet accepts a pipelined string value that represents the Identity of the analog device.
+
 
 ## OUTPUTS
 
-###  
-Get-CsAnalogDevice returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADAnalogDeviceContact object.
+### Microsoft.Rtc.Management.ADConnect.Schema.OCSADAnalogDeviceContact
 
-###  
-The Get-CsAnalogDevice cmdlet returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADAnalogDeviceContact object.
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/92f56039-f112-45bb-8340-109b0837f828(OCS.14).aspx)
+## RELATED LINKS
 
 [Move-CsAnalogDevice]()
 
@@ -615,8 +288,3 @@ The Get-CsAnalogDevice cmdlet returns instances of the Microsoft.Rtc.Management.
 [Remove-CsAnalogDevice]()
 
 [Set-CsAnalogDevice]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/92f56039-f112-45bb-8340-109b0837f828(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/92f56039-f112-45bb-8340-109b0837f828(OCS.16).aspx)
-
