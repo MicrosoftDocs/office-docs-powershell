@@ -6,15 +6,8 @@ schema: 2.0.0
 # Get-CsCallParkOrbit
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Gets the call park orbit range settings for the organization.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Gets the call park orbit range settings for the organization.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -31,81 +24,29 @@ Get-CsCallParkOrbit [-Filter <String>] [-LocalStore] [-Type <OrbitType>] [<Commo
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-This cmdlet retrieves the settings for the call park orbits defined for an organization.
-You can retrieve a single call park orbit range (specified by the Identity parameter) or you can call Get-CsCallParkOrbit with no parameters to retrieve all the call park orbit ranges defined for an organization.
-Call park orbits are composed of settings that specify a range of numbers at which a user can park a call and the servers associated with those number ranges.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsCallParkOrbit cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmin.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsCallParkOrbit"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 This cmdlet retrieves the settings for the call park orbits defined for an organization.
 You can retrieve a single call park orbit range (specified by the Identity parameter) or you can call the Get-CsCallParkOrbit cmdlet with no parameters to retrieve all the call park orbit ranges defined for an organization.
 Call park orbits are composed of settings that specify a range of numbers at which a user can park a call and the servers associated with those number ranges.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsCallParkOrbit
-```
-
-In this example, Get-CsCallParkOrbit is called without specifying any additional parameters.
-When called like this, Get-CsCallParkOrbit returns a collection of all the call park orbit ranges configured for use in your organization.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In this example, Get-CsCallParkOrbit is called without specifying any additional parameters.
-When called like this, Get-CsCallParkOrbit returns a collection of all the call park orbit ranges configured for use in your organization.
-
-Get-CsCallParkOrbit
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In this example, the Get-CsCallParkOrbit cmdlet is called without specifying any additional parameters.
 When called like this, the Get-CsCallParkOrbit cmdlet returns a collection of all the call park orbit ranges configured for use in your organization.
 
-Get-CsCallParkOrbit
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsCallParkOrbit -Identity "Redmond CPO 1"
-```
-
-In the preceding example, Get-CsCallParkOrbit is used to return information about the call park orbit range with the name "Redmond CPO 1".
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, Get-CsCallParkOrbit is used to return information about the call park orbit range with the name "Redmond CPO 1".
-
-Get-CsCallParkOrbit -Identity "Redmond CPO 1"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2, the Get-CsCallParkOrbit cmdlet is used to return information about the call park orbit range with the name "Redmond CPO 1".
 
-Get-CsCallParkOrbit -Identity "Redmond CPO 1"
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsCallParkOrbit -Filter *Redmond*
 ```
@@ -115,59 +56,9 @@ For example, this command will return call park orbits with identities such as "
 The command uses the Filter parameter with the wildcard character (*) to designate what to search for.
 (This search is not case sensitive.)
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command in this example returns all call park orbit ranges with the string "Redmond" in their Identity.
-For example, this command will return call park orbits with identities such as "Redmond 501", "CP Redmond 1", and "ARedmond".
-The command uses the Filter parameter with the wildcard character (*) to designate what to search for.
-(This search is not case sensitive.)
-
-Get-CsCallParkOrbit -Filter *Redmond*
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in this example returns all call park orbit ranges with the string "Redmond" in their Identity.
-For example, this command will return call park orbits with identities such as "Redmond 501", "CP Redmond 1", and "ARedmond".
-The command uses the Filter parameter with the wildcard character (*) to designate what to search for.
-(This search is not case sensitive.)
-
-Get-CsCallParkOrbit -Filter *Redmond*
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsCallParkOrbit | Where-Object {$_.CallParkServiceId.toString() -eq "ApplicationServer:pool0.litwareinc.com"}
-```
-
-This command returns all call park orbit ranges assigned to the call park service with the ID ApplicationServer:pool0.litwareinc.com.
-The Get-CsCallParkOrbit cmdlet retrieves a collection of all call park orbit ranges, and then pipes that collection to the Where-Object cmdlet.
-This call to Where-Object finds all call park orbits in that collection with a value of ApplicationServer:pool0.litwareinc.com in their CallParkServiceId properties.
-Notice that we add the toString method to the end of the CallParkServiceId parameter name.
-The CallParkServiceId is of type WritableServiceId.
-In order to compare that value to the supplied string, we must first turn it into a string by calling the toString method.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command returns all call park orbit ranges assigned to the call park service with the ID ApplicationServer:pool0.litwareinc.com.
-The Get-CsCallParkOrbit cmdlet retrieves a collection of all call park orbit ranges, and then pipes that collection to the Where-Object cmdlet.
-This call to Where-Object finds all call park orbits in that collection with a value of ApplicationServer:pool0.litwareinc.com in their CallParkServiceId properties.
-Notice that we add the toString method to the end of the CallParkServiceId parameter name.
-The CallParkServiceId is of type WritableServiceId.
-In order to compare that value to the supplied string, we must first turn it into a string by calling the toString method.
-
-Get-CsCallParkOrbit | Where-Object {$_.CallParkServiceId.toString() -eq "ApplicationServer:pool0.litwareinc.com"}
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This command returns all call park orbit ranges assigned to the call park service with the ID ApplicationServer:pool0.litwareinc.com.
@@ -177,33 +68,9 @@ Notice that we add the toString method to the end of the CallParkServiceId param
 The CallParkServiceId is of type WritableServiceId.
 In order to compare that value to the supplied string, we must first turn it into a string by calling the toString method.
 
-Get-CsCallParkOrbit | Where-Object {$_.CallParkServiceId.toString() -eq "ApplicationServer:pool0.litwareinc.com"}
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsCallParkOrbit | Where-Object {$_.NumberRangeStart.StartsWith("*")}
-```
-
-The command in this example returns all call park orbit ranges where the range of numbers starts with an * prefix.
-After Get-CsCallParkOrbit retrieves a collection of all the call park orbit ranges, the collection is then piped to Where-Object.
-Where-Object narrows the collection to only those call park orbit ranges that have a call park location starting with a *.
-It does this by checking the StartsWith property of the NumberRangeStart object for the string "*".
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command in this example returns all call park orbit ranges where the range of numbers starts with an * prefix.
-After Get-CsCallParkOrbit retrieves a collection of all the call park orbit ranges, the collection is then piped to Where-Object.
-Where-Object narrows the collection to only those call park orbit ranges that have a call park location starting with a *.
-It does this by checking the StartsWith property of the NumberRangeStart object for the string "*".
-
-Get-CsCallParkOrbit | Where-Object {$_.NumberRangeStart.StartsWith("*")}
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command in this example returns all call park orbit ranges where the range of numbers starts with an * prefix.
@@ -211,39 +78,9 @@ After the Get-CsCallParkOrbit cmdlet retrieves a collection of all the call park
 The Where-Object cmdlet narrows the collection to only those call park orbit ranges that have a call park location starting with a *.
 It does this by checking the StartsWith property of the NumberRangeStart object for the string "*".
 
-Get-CsCallParkOrbit | Where-Object {$_.NumberRangeStart.StartsWith("*")}
-
-### -------------------------- Example 6 -------------------------- (Lync Server 2010)
+### -------------------------- Example 6 --------------------------
 ```
-Get-CsCallParkOrbit | Where-Object {[Char]::IsDigit($_.NumberRangeStart[0])}
-```
-
-The command in this example returns all call park orbit ranges where no prefix has been assigned to the numbers in the range.
-(A prefix is the value * or # placed at the beginning of the number.) All call park orbits returned by this command will have ranges that consist only of numbers with no other characters included.
-Get-CsCallParkOrbit retrieves a collection of all the call park orbit ranges, and then that collection is piped to Where-Object.
-Looking at the criteria in the call to Where-Object, we see this: $_.NumberRangeStart\[0\]).
-This returns the first character in the number at the start of the range.
-(Note that we need to check only the start of the range--if the starting number in the range doesn't have a prefix, neither will the ending number.) This character is passed to the IsDigit function to determine whether it is a numeric character.
-If it is, the call park orbit information for the corresponding collection item will be returned.
-
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command in this example returns all call park orbit ranges where no prefix has been assigned to the numbers in the range.
-(A prefix is the value * or # placed at the beginning of the number.) All call park orbits returned by this command will have ranges that consist only of numbers with no other characters included.
-Get-CsCallParkOrbit retrieves a collection of all the call park orbit ranges, and then that collection is piped to Where-Object.
-Looking at the criteria in the call to Where-Object, we see this: $_.NumberRangeStart\[0\]).
-This returns the first character in the number at the start of the range.
-(Note that we need to check only the start of the range--if the starting number in the range doesn't have a prefix, neither will the ending number.) This character is passed to the IsDigit function to determine whether it is a numeric character.
-If it is, the call park orbit information for the corresponding collection item will be returned.
-
 Get-CsCallParkOrbit | Where-Object {\[Char\]::IsDigit($_.NumberRangeStart\[0\])}
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command in this example returns all call park orbit ranges where no prefix has been assigned to the numbers in the range.
@@ -254,7 +91,6 @@ This returns the first character in the number at the start of the range.
 (Note that we need to check only the start of the range--if the starting number in the range doesn't have a prefix, neither will the ending number.) This character is passed to the IsDigit function to determine whether it is a numeric character.
 If it is, the call park orbit information for the corresponding collection item will be returned.
 
-Get-CsCallParkOrbit | Where-Object {\[Char\]::IsDigit($_.NumberRangeStart\[0\])}
 
 ## PARAMETERS
 
@@ -312,20 +148,20 @@ Accept wildcard characters: False
 Specifies the type of call park orbit to be retrieved.
 Skype for Business Server 2015 allows for two different types of call park orbits:
 
-CallPark.
+- CallPark: 
 This is the standard call park orbit, in which a user places a call on hold and then can retrieve that call from any phone by dialing the specified call park number.
 
-GroupPickup.
+- GroupPickup: 
 With group pickup, users can answer any incoming call that is made to any member of their call pickup group.
 Call pickup groups are configured by administrators.
 
 To return a specified type of a call park orbit, use syntax similar to this:
 
--Type GroupPickup
+`-Type GroupPickup`
 
 To return all call park orbit, regardless of type, simply omit the Type parameter.
 
-This parameter was introduced in the February 2013 release of Lync Server 2013.
+This parameter was introduced in Lync Server 2013.
 
 ```yaml
 Type: OrbitType
@@ -340,32 +176,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayCallParkOrbits.
+### Microsoft.Rtc.Management.Voice.Helpers.DisplayCallParkOrbits
+
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/73bbb09a-7966-4af1-aff3-001f5cc56df1(OCS.14).aspx)
+## RELATED LINKS
 
 [New-CsCallParkOrbit]()
 
 [Remove-CsCallParkOrbit]()
 
 [Set-CsCallParkOrbit]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/73bbb09a-7966-4af1-aff3-001f5cc56df1(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/73bbb09a-7966-4af1-aff3-001f5cc56df1(OCS.16).aspx)
-

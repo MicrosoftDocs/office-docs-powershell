@@ -150,17 +150,17 @@ AllowAnonymousBroadcastMeeting : False
 
 BroadcastMeetingRecordingEnforced : False
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsBroadcastMeetingPolicy
 ```
 
 This example lists all the pre-defined policy configurations for your organization.
 See detailed description for more information.
 
-Get-CsBroadcastMeetingPolicy
 
 ## PARAMETERS
 
@@ -263,19 +263,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-None
+### None
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5afebeab-b6f5-45ca-b27b-c16262655890(OCS.15).aspx)
-

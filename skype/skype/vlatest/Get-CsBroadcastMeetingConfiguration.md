@@ -21,18 +21,17 @@ Use the Get-CsBroadcastMeetingConfiguration cmdlet to retrieve the global (and o
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsBroadcastMeetingConfiguration
 ```
 
 This example returns the tenant's global broadcast meeting configuration.
 
-Get-CsBroadcastMeetingConfiguration
 
 ## PARAMETERS
 
@@ -151,19 +150,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.BroadcastMeetingConfiguration object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.BroadcastMeetingConfiguration
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/28a5bdab-f5ff-4128-b548-4707e150bc78(OCS.15).aspx)
-

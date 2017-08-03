@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-CsCallingLineIdentity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Get-CsCallingLineIdentity cmdlet to display the Caller ID policies for your organization.
 
 ## SYNTAX
 
@@ -16,18 +16,16 @@ Get-CsCallingLineIdentity [[-Identity] <Object>] [-BypassDualWrite <Object>] [-F
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+By default, the Skype for Business Online user's phone number can be seen when that user makes a call to a PSTN phone, or when a call comes in. You can create Caller ID policies to change this behavior, and you can use the Get-CsCallingLineIdentity cmdlet to display the existing Caller ID policies for your organization.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Get-CsCallingLineIdentity
 ```
 
-```
-
-Insert descriptive text for example 1.
-
-Insert example commands for example 1.
+The example gets and displays the Caller ID policies for your organization.
 
 ## PARAMETERS
 
@@ -48,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-PARAMVALUE: String
+The Filter parameter lets you insert a string through which your search results are filtered.
 
 ```yaml
 Type: Object
@@ -64,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-PARAMVALUE: XdsIdentity
+The Identity parameter identifies the Caller ID policy.
 
 ```yaml
 Type: Object
@@ -130,13 +128,37 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
+
+### None
+
 
 ## OUTPUTS
 
+### 
+Identity                  : Global
+
+Description               :
+
+EnableUserOverride        : False
+
+ServiceNumber             :
+
+CallingIDSubstitute       : LineUri
+
+BlockIncomingPstnCallerID : False
+
+
 ## NOTES
+
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e43700ef-9779-45d2-adbd-9447b2c90a82(OCS.15).aspx)
+[Grant-CsCallingLineIdentity]()
 
+[New-CsCallingLineIdentity]()
+
+[Remove-CsCallingLineIdentity]()
+
+[Set-CsCallingLineIdentity]()
