@@ -6,9 +6,7 @@ schema: 2.0.0
 # Get-CsIPPhonePolicy
 
 ## SYNOPSIS
-Get-CsIPPhonePolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-Get-CsIPPhonePolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -22,9 +20,9 @@ Get-CsIPPhonePolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Filter 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### Example 1
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -134,11 +132,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
+
 ## OUTPUTS
 
 ### System.Object
 
+
 ## NOTES
 
-## RELATED LINKS
 
+## RELATED LINKS

@@ -25,14 +25,13 @@ This cmdlet is reserved for internal Microsoft use.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+This cmdlet is reserved for internal Microsoft use.
 ```
 
 This cmdlet is reserved for internal Microsoft use.
 
-This cmdlet is reserved for internal Microsoft use.
 
 ## PARAMETERS
 
@@ -94,6 +93,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/8e972591-ceec-4f68-b21d-b8d0d583be72(OCS.16).aspx)
-
