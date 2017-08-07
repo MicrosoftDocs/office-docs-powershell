@@ -6,9 +6,6 @@ schema: 2.0.0
 # Get-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-Get-CsExternalUserCommunicationPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-Get-CsExternalUserCommunicationPolicy \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
@@ -24,7 +21,7 @@ Get-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-BypassDualWrite <
 
 ### Example 1 (Skype for Business Online)
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -141,4 +138,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

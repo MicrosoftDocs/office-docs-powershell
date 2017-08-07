@@ -6,18 +6,9 @@ schema: 2.0.0
 # Get-CsFIPSConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about the Federal Information Processing Standards (FIPS) configuration settings currently in use in the organization.
-The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns information about the Federal Information Processing Standards (FIPS) configuration settings currently in use in the organization.
 The FIPS standards are a set of United States government security standards required for use in computers maintained by non-military government agencies and by government contractors.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -33,61 +24,29 @@ Get-CsFIPSConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the US government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
-(See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Lync Server 2013 provides an option that enables the software to use only algorithms that meet the FIPS standards.
-If you need to work with the United States government (or with other entities that follow FIPS) then you can enable FIPS compliance in Lync Server 2013.
+(See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Skype for Business Server provides an option that enables the software to use only algorithms that meet the FIPS standards.
+If you need to work with the United States government (or with other entities that follow FIPS) then you can enable FIPS compliance in Skype for Business Server.
 
-Keep in mind, however, that, for the on-premises version of Lync Server, you have only a single, global collection of FIPS configuration settings: FIPS compliance can only be enabled or disabled for your entire Lync Server implementation.
+Keep in mind, however, that, for the on-premises version of Skype for Business Server, you have only a single, global collection of FIPS configuration settings: FIPS compliance can only be enabled or disabled for your entire Skype for Business Server implementation.
 You cannot selectively enable or disable FIPS compliance on, say, an individual site or an individual Registrar pool.
 If you do enable FIPS compliance, you could potentially encounter problems when trying to communicate with organizations that do not fully adhere to the FIPS standards.
 
-By default, FIPS compliance is disabled in Lync Server 2013 Preview.
+By default, FIPS compliance is disabled in Skype for Business Server.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsFIPSConfiguration"}
-
-Lync Server Control Panel: The functions carried out by the Get-CsFIPSConfiguration cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Federal Information Processing Standards (FIPS) are a series of standards and guidelines used by computers engaged in work for the US government; for example, there are FIPS standards that govern the use of such things as cryptography, encryption, and digital signatures.
-(See http://www.itl.nist.gov/fipspubs/by-num.htm (http://www.itl.nist.gov/fipspubs/by-num.htm) for more information.) Skype for Business Server 2015 provides an option that enables the software to use only algorithms that meet the FIPS standards.
-If you need to work with the United States government (or with other entities that follow FIPS) then you can enable FIPS compliance in Skype for Business Server 2015.
-
-Keep in mind, however, that, for the on-premises version of Skype for Business Server 2015, you have only a single, global collection of FIPS configuration settings: FIPS compliance can only be enabled or disabled for your entire Skype for Business Server 2015 implementation.
-You cannot selectively enable or disable FIPS compliance on, say, an individual site or an individual Registrar pool.
-If you do enable FIPS compliance, you could potentially encounter problems when trying to communicate with organizations that do not fully adhere to the FIPS standards.
-
-By default, FIPS compliance is disabled in Skype for Business Server 2015.
-
-Skype for Business Server Control Panel: The functions carried out by the Get-CsFIPSConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
-
+The functions carried out by the Get-CsFIPSConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsFIPSConfiguration
 ```
 
 The command shown in Example 1 returns information for all the FIPS configuration settings currently in use in the organization.
 Note that there is only a single, global instance of FIPS configuration settings.
 
-Get-CsFIPSConfiguration
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 returns information for all the FIPS configuration settings currently in use in the organization.
-Note that there is only a single, global instance of FIPS configuration settings.
-
-Get-CsFIPSConfiguration
 
 ## PARAMETERS
 
@@ -96,7 +55,7 @@ Enables you to use wildcard values when referencing a collection of FIPS configu
 Because you can only have a single, global instance of these settings there is no reason to use the Filter parameter.
 However, if you prefer you can use the following syntax to reference the global settings:
 
--Filter "g*"
+`-Filter "g*"`
 
 That syntax brings back all the FIPS configuration settings that have an Identity that begins with the letter "g".
 
@@ -114,25 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2013
-
-Unique Identity of the FIPS configuration settings.
-Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling Get-CsFIPSConfiguration.
-If you prefer, however, you can use the following syntax to reference the global settings:
-
--Identity global
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique Identity of the FIPS configuration settings.
 Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsFIPSConfiguration cmdlet.
 If you prefer, however, you can use the following syntax to reference the global settings:
 
--Identity global
-
-
+`-Identity global`
 
 ```yaml
 Type: XdsIdentity
@@ -164,33 +109,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account whose FIPS configuration settings are to be retrieved.
-
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose FIPS configuration settings are to be retrieved.
 
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -208,25 +135,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsFIPSConfiguration does not accept pipelined input.
+### None
 
-###  
-None.
-The Get-CsFIPSConfiguration cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-Get-CsFIPSConfiguration returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.FIPSConfiguration.FIPSConfiguration object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.FIPSConfiguration.FIPSConfiguration
 
-###  
-The Get-CsFIPSConfiguration cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.FIPSConfiguration.FIPSConfiguration object.
 
 ## NOTES
+
 
 ## RELATED LINKS
 
@@ -235,8 +156,3 @@ The Get-CsFIPSConfiguration cmdlet returns instances of the Microsoft.Rtc.Manage
 [Remove-CsFIPSConfiguration]()
 
 [Set-CsFIPSConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/56d29011-187f-4034-a5ed-71625087bf36(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/56d29011-187f-4034-a5ed-71625087bf36(OCS.16).aspx)
-

@@ -18,34 +18,29 @@ Get-CsGroupPickupUserOrbit [-User] <String> [-Force] [<CommonParameters>]
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsGroupPickupUserOrbit -User sip:ken.myer@contoso.com
 ```
 
 The following example gets the group pickup orbit number of a user specified by SIP address.
 
-Get-CsGroupPickupUserOrbit -User sip:ken.myer@contoso.com
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsGroupPickupUserOrbit "Ken Myer"
 ```
 
 The following example gets the group pickup orbit number by using the display name.
 User is a positional parameter.
 The first parameter after the cmdlet is assumed to be the User parameter value.
 
-Get-CsGroupPickupUserOrbit "Ken Myer"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsUser "Ken Myer" | Get-CsGroupPickupUserOrbit
 ```
 
 The following example gets the group pickup orbit numbers by piping the output of Get-CsUser to the Get-CsGroupPickupUserOrbit.
 
-Get-CsUser "Ken Myer" | Get-CsGroupPickupUserOrbit
 
 ## PARAMETERS
 
@@ -89,19 +84,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-This cmdlet supports pipelined input from the Get-CsUser cmdlet.
+### Get-CsUser
+
 
 ## OUTPUTS
 
-###  
-This cmdlet return an instance of the Microsoft.Rtc.Management.Voice.Helpers.GroupPickup.DisplayGroupPickupUserOrbit object.
+### Microsoft.Rtc.Management.Voice.Helpers.GroupPickup.DisplayGroupPickupUserOrbit
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4590555b-d578-4990-8a2f-f030e1c31929(OCS.16).aspx)
-
