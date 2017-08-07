@@ -6,17 +6,9 @@ schema: 2.0.0
 # Get-CsDialInConferencingAccessNumber
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about all the dial-in conferencing access numbers configured for use in your organization.
-Dial-in conferencing provides a way for users to use a "regular" telephone mobile phone, or device on the public switched telephone network (PSTN) to join the audio portion of an online conference.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Returns information about all the dial-in conferencing access numbers configured for use in your organization.
 Dial-in conferencing provides a way for users to use a "regular" telephone mobile phone, or device on the public switched telephone network (PSTN) to join the audio portion of an online conference.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -43,50 +35,6 @@ Get-CsDialInConferencingAccessNumber [-Credential <PSCredential>] [-DomainContro
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
-This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
-Users have full audio capabilities: they can speak to other participants and hear everything that takes place.
-However, they won't be able to see shared slides, video feeds, or other visual elements.
-
-In order to provide users with dial-in conferencing capabilities, you must create dial-in conferencing access numbers: phone numbers that users can call in order to be connected to a meeting.
-Dial-in conferencing access numbers are created by using the New-CsDialInConferencingAccessNumber cmdlet.
-When you create a new dial-in conferencing access number, you are actually creating a new contact object in Active Directory Domain Services (AD DS); this contact object is used to represent the access number and all its properties.
-Contact numbers can be retrieved by using the Get-CsDialInConferencingAccessNumber cmdlet.
-
-If you have imported dial-in conferencing access numbers from Microsoft Office Communications Server 2007 these numbers will also be retrieved by running Get-CsDialInConferencingAccessNumber and including the Region parameter.
-(Imported numbers will not be displayed unless you use the Region parameter.) Note, however, that a warning message will be displayed alongside the imported number's Uniform Resource Identifiers (URIs).
-This is simply the way the cmdlet handles imported dial-in conferencing access numbers.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsDialInConferencingAccessNumber cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsDialInConferencingAccessNumber"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
-This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
-Users have full audio capabilities: they can speak to other participants and hear everything that takes place.
-However, they won't be able to see shared slides, video feeds, or other visual elements.
-
-In order to provide users with dial-in conferencing capabilities, you must create dial-in conferencing access numbers: phone numbers that users can call in order to be connected to a meeting.
-Dial-in conferencing access numbers are created by using the New-CsDialInConferencingAccessNumber cmdlet.
-When you create a new dial-in conferencing access number, you are actually creating a new contact object in Active Directory Domain Services (AD DS); this contact object is used to represent the access number and all its properties.
-Contact numbers can be retrieved by using the Get-CsDialInConferencingAccessNumber cmdlet.
-
-If you have imported dial-in conferencing access numbers from Microsoft Office Communications Server 2007 these numbers will also be retrieved by running Get-CsDialInConferencingAccessNumber and including the Region parameter.
-(Imported numbers will not be displayed unless you use the Region parameter.) Note, however, that a warning message will be displayed alongside the imported number's Uniform Resource Identifiers (URIs).
-This is simply the way the cmdlet handles imported dial-in conferencing access numbers.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsDialInConferencingAccessNumber cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDialInConferencingAccessNumber"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Dial-in conferencing enables users to use any kind of telephone (such as a standard "land line", a mobile phone, or a Voice over Internet Protocol (VoIP) phone) to join the audio portion of an online conference.
 This enables users to participate in the meeting even if they do not have a computer or an Internet connection.
 Users have full audio capabilities: they can speak to other participants and hear everything that takes place.
@@ -102,38 +50,17 @@ If you have imported dial-in conferencing access numbers from Microsoft Office C
 This is simply the way the cmdlet handles imported dial-in conferencing access numbers.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber
-```
-
-The command shown in Example 1 returns a collection of all the dial-in conferencing access numbers configured for use in the organization.
-Calling Get-CsDialInConferencingAccessNumber without any additional parameters always returns a collection of all the available dial-in access numbers.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 returns a collection of all the dial-in conferencing access numbers configured for use in the organization.
-Calling Get-CsDialInConferencingAccessNumber without any additional parameters always returns a collection of all the available dial-in access numbers.
-
-Get-CsDialInConferencingAccessNumber
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 1 returns a collection of all the dial-in conferencing access numbers configured for use in the organization.
 Calling the Get-CsDialInConferencingAccessNumber cmdlet without any additional parameters always returns a collection of all the available dial-in access numbers.
 
-Get-CsDialInConferencingAccessNumber
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Identity sip:RedmondDialIn@litwareinc.com
 ```
@@ -141,51 +68,9 @@ Get-CsDialInConferencingAccessNumber -Identity sip:RedmondDialIn@litwareinc.com
 In Example 2, the dial-in conferencing access number with the Identity sip:RedmondDialIn@litwareinc.com is returned.
 Because identities must be unique, this command will never return more than one access number.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, the dial-in conferencing access number with the Identity sip:RedmondDialIn@litwareinc.com is returned.
-Because identities must be unique, this command will never return more than one access number.
-
-Get-CsDialInConferencingAccessNumber -Identity sip:RedmondDialIn@litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, the dial-in conferencing access number with the Identity sip:RedmondDialIn@litwareinc.com is returned.
-Because identities must be unique, this command will never return more than one access number.
-
-Get-CsDialInConferencingAccessNumber -Identity sip:RedmondDialIn@litwareinc.com
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Region "Redmond"
-```
-
-Example 3 uses the Region parameter to return all the dial-in conferencing access numbers associated with the Redmond region.
-To do this, Get-CsDialInConferencingAccessNumber is called along with the Region parameter.
-Specifying "Redmond" as the parameter value causes Get-CsDialInConferencingAccessNumber to return all the numbers where "Redmond" appears in the list of associated regions.
-For example, an access number that only listed Redmond as a region would be returned, as would an access number that listed both Redmond and Portland.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 uses the Region parameter to return all the dial-in conferencing access numbers associated with the Redmond region.
-To do this, Get-CsDialInConferencingAccessNumber is called along with the Region parameter.
-Specifying "Redmond" as the parameter value causes Get-CsDialInConferencingAccessNumber to return all the numbers where "Redmond" appears in the list of associated regions.
-For example, an access number that only listed Redmond as a region would be returned, as would an access number that listed both Redmond and Portland.
-
-Get-CsDialInConferencingAccessNumber -Region "Redmond"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 3 uses the Region parameter to return all the dial-in conferencing access numbers associated with the Redmond region.
@@ -193,59 +78,21 @@ To do this, the Get-CsDialInConferencingAccessNumber cmdlet is called along with
 Specifying "Redmond" as the parameter value causes the Get-CsDialInConferencingAccessNumber cmdlet to return all the numbers where "Redmond" appears in the list of associated regions.
 For example, an access number that only listed Redmond as a region would be returned, as would an access number that listed both Redmond and Portland.
 
-Get-CsDialInConferencingAccessNumber -Region "Redmond"
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Region $Null
-```
-
-The preceding command returns all the dial-in conferencing access numbers that are not associated with a region (that is, where the Regions property is empty).
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 4 returns all the dial-in conferencing access numbers that are not associated with a region (that is, where the Regions property is empty).
 
-Get-CsDialInConferencingAccessNumber -Region $Null
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 4 returns all the dial-in conferencing access numbers that are not associated with a region (that is, where the Regions property is empty).
-
-Get-CsDialInConferencingAccessNumber -Region $Null
-
-### -------------------------- Example 5 ------------------------ (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Region site:USA/Redmond
 ```
 
 The command shown in Example 5 returns all the dial-in conferencing access numbers for the Redmond region that have been scoped to the USA site (that is, the site with the SiteId site:USA).
 
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 5 returns all the dial-in conferencing access numbers for the Redmond region that have been scoped to the USA site (that is, the site with the SiteId site:USA).
-
-Get-CsDialInConferencingAccessNumber -Region site:USA/Redmond
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 5 returns all the dial-in conferencing access numbers for the Redmond region that have been scoped to the USA site (that is, the site with the SiteId site:USA).
-
-Get-CsDialInConferencingAccessNumber -Region site:USA/Redmond
-
-### -------------------------- Example 6 ------------------------ (Lync Server 2010)
+### -------------------------- Example 6 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Filter {DisplayName -like "*Seattle*"}
 ```
@@ -253,55 +100,9 @@ Get-CsDialInConferencingAccessNumber -Filter {DisplayName -like "*Seattle*"}
 In Example 6, the Filter parameter is used in order to return a collection of all the dial-in conferencing access numbers that include the string value "Seattle" somewhere in their DisplayName.
 The filter value {DisplayName -like "*Seattle*"} limits the returned data to access numbers where the DisplayName includes the word "Seattle" (for example, Seattle Access Number; Dial-In Number for Seattle; Tacoma/Seattle Access Number; etc.).
 
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 6, the Filter parameter is used in order to return a collection of all the dial-in conferencing access numbers that include the string value "Seattle" somewhere in their DisplayName.
-The filter value {DisplayName -like "*Seattle*"} limits the returned data to access numbers where the DisplayName includes the word "Seattle" (for example, Seattle Access Number; Dial-In Number for Seattle; Tacoma/Seattle Access Number; etc.).
-
-Get-CsDialInConferencingAccessNumber -Filter {DisplayName -like "*Seattle*"}
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 6, the Filter parameter is used in order to return a collection of all the dial-in conferencing access numbers that include the string value "Seattle" somewhere in their DisplayName.
-The filter value {DisplayName -like "*Seattle*"} limits the returned data to access numbers where the DisplayName includes the word "Seattle" (for example, Seattle Access Number; Dial-In Number for Seattle; Tacoma/Seattle Access Number; etc.).
-
-Get-CsDialInConferencingAccessNumber -Filter {DisplayName -like "*Seattle*"}
-
-### -------------------------- Example 7 ------------------------ (Lync Server 2010)
+### -------------------------- Example 7 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber -Filter {LineUri -like "tel:+1425*"}
-```
-
-Example 7 returns all the dial-in conferencing access numbers where the line Uri begins with tel:+1425; that effectively returns all the access numbers in the U.S.
-area code 425.
-To do this, Get-CsDialInConferencingAccessNumber is called along with the Filter parameter; the filter value {LineUri -like "tel:+1425*"} limits the returned data to line Uris that begin with the string value "tel:+1425".
-To return all the phone numbers for area code 425 or for the area code 206, use this filter value:
-
-{LineUri -like "tel:+1425*" -or LineUri -like "tel:+1206*"}
-
-### -------------------------- EXAMPLE 7 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 7 returns all the dial-in conferencing access numbers where the line Uri begins with tel:+1425; that effectively returns all the access numbers in the U.S.
-area code 425.
-To do this, Get-CsDialInConferencingAccessNumber is called along with the Filter parameter; the filter value {LineUri -like "tel:+1425*"} limits the returned data to line Uris that begin with the string value "tel:+1425".
-To return all the phone numbers for area code 425 or for the area code 206, use this filter value:
-
-{LineUri -like "tel:+1425*" -or LineUri -like "tel:+1206*"}
-
-Get-CsDialInConferencingAccessNumber -Filter {LineUri -like "tel:+1425*"}
-
-### -------------------------- EXAMPLE 7 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 7 returns all the dial-in conferencing access numbers where the line Uri begins with tel:+1425; that effectively returns all the access numbers in the U.S.
@@ -309,92 +110,34 @@ area code 425.
 To do this, the Get-CsDialInConferencingAccessNumber cmdlet is called along with the Filter parameter; the filter value {LineUri -like "tel:+1425*"} limits the returned data to line Uris that begin with the string value "tel:+1425".
 To return all the phone numbers for area code 425 or for the area code 206, use this filter value:
 
-{LineUri -like "tel:+1425*" -or LineUri -like "tel:+1206*"}
+`{LineUri -like "tel:+1425*" -or LineUri -like "tel:+1206*"}`
 
-Get-CsDialInConferencingAccessNumber -Filter {LineUri -like "tel:+1425*"}
-
-### -------------------------- Example 8 ------------------------ (Lync Server 2010)
+### -------------------------- Example 8 --------------------------
 ```
 Get-CsDialInConferencingAccessNumber | Where-Object {$_.PrimaryLanguage -eq "it-IT"}
-```
-
-The preceding example returns a collection of all the dial-in conferencing access numbers where the primary language is set to Italian.
-To carry out this task, Get-CsDialInConferencingAccessNumber is first called in order to return a collection of all the access numbers configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the PrimaryLanguage property is equal to Italian ("it-It").
-
-### -------------------------- EXAMPLE 8 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 8 returns a collection of all the dial-in conferencing access numbers where the primary language is set to Italian.
-To carry out this task, Get-CsDialInConferencingAccessNumber is first called in order to return a collection of all the access numbers configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the PrimaryLanguage property is equal to Italian ("it-It").
-
-Get-CsDialInConferencingAccessNumber | Where-Object {$_.PrimaryLanguage -eq "it-IT"}
-
-### -------------------------- EXAMPLE 8 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 8 returns a collection of all the dial-in conferencing access numbers where the primary language is set to Italian.
 To carry out this task, the Get-CsDialInConferencingAccessNumber cmdlet is first called in order to return a collection of all the access numbers configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the PrimaryLanguage property is equal to Italian ("it-It").
 
-Get-CsDialInConferencingAccessNumber | Where-Object {$_.PrimaryLanguage -eq "it-IT"}
-
-### -------------------------- Example 9 ------------------------ (Lync Server 2010)
+### -------------------------- Example 9 --------------------------
 ```
-Get-CsDialInConferencingAccessNumber  | Where-Object {$_.SecondaryLanguages -contains "fr-FR"}
-```
-
-The command shown in Example 9 returns all the dial-in conferencing access numbers where French is listed as one of the secondary languages.
-To accomplish this task, Get-CsDialInConferencingAccessNumber is first called without any parameters; that returns a complete collection of the access numbers configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the SecondaryLanguages property includes a listing for French (fr-FR).
-
-### -------------------------- EXAMPLE 9 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 9 returns all the dial-in conferencing access numbers where French is listed as one of the secondary languages.
-To accomplish this task, Get-CsDialInConferencingAccessNumber is first called without any parameters; that returns a complete collection of the access numbers configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the SecondaryLanguages property includes a listing for French (fr-FR).
-
 Get-CsDialInConferencingAccessNumber | Where-Object {$_.SecondaryLanguages -contains "fr-FR"}
-
-### -------------------------- EXAMPLE 9 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 9 returns all the dial-in conferencing access numbers where French is listed as one of the secondary languages.
 To accomplish this task, the Get-CsDialInConferencingAccessNumber cmdlet is first called without any parameters; that returns a complete collection of the access numbers configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which selects only those numbers where the SecondaryLanguages property includes a listing for French (fr-FR).
 
-Get-CsDialInConferencingAccessNumber | Where-Object {$_.SecondaryLanguages -contains "fr-FR"}
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-SIP address of the dial-in conferencing access number (that is, the contact object that represents the number) to be retrieved.
-You must include the "sip:" prefix when specifying the Identity; for example: -Identity sip:RedmondDialIn@litwareinc.com.
-
-If this parameter is not specified, then Get-CsDialInConferencingAccessNumber will return all the dial-in conferencing access numbers configured for use in your organization.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 SIP address of the dial-in conferencing access number (that is, the contact object that represents the number) to be retrieved.
 You must include the "sip:" prefix when specifying the Identity; for example: -Identity sip:RedmondDialIn@litwareinc.com.
 
 If this parameter is not specified, then the Get-CsDialInConferencingAccessNumber cmdlet will return all the dial-in conferencing access numbers configured for use in your organization.
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -410,23 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Enables you to run the Get-CsDialInConferencingAccessNumber cmdlet under alternate credentials; this might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
-
-To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
-For details, see the Get-Credential Help topic.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Enables you to run the Get-CsDialInConferencingAccessNumber cmdlet under alternate credentials; this might be required if the account you used to log on to Windows does not have the necessary privileges required to work with contact objects.
 
 To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
 For details, see the Get-Credential cmdlet help topic.
-
-
 
 ```yaml
 Type: PSCredential
@@ -479,35 +209,11 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to limit the returned data by filtering on specific attributes for Microsoft Lync Server 2010.
+Enables you to limit the returned data by filtering on specific attributes for Skype for Business Server.
 For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
 
 The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
 For example, a filter that returns only access numbers that have the 1-800 prefix would look like this: {LineUri -like "tel:+1800*"}, withLineUri representing the Active Directory attribute, -like representing the comparison operator, and "tel:+1800*" representing the filter value.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to limit the returned data by filtering on specific attributes for Lync Server.
-For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
-
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only access numbers that have the 1-800 prefix would look like this: {LineUri -like "tel:+1800*"}, withLineUri representing the Active Directory attribute, -like representing the comparison operator, and "tel:+1800*" representing the filter value.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to limit the returned data by filtering on specific attributes for Skype for Business Server 2015.
-For example, you can limit returned data to dial-in conferencing numbers that have the string value "Redmond" in their display name, or toll-free dial-in conferencing numbers that use the 1-800 prefix.
-
-The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
-For example, a filter that returns only access numbers that have the 1-800 prefix would look like this: {LineUri -like "tel:+1800*"}, withLineUri representing the Active Directory attribute, -like representing the comparison operator, and "tel:+1800*" representing the filter value.
-
-
 
 ```yaml
 Type: String
@@ -543,26 +249,6 @@ Accept wildcard characters: False
 ```
 
 ### -Region
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Returns all the dial-in conferencing access numbers associated with the specified dial plan region.
-For example, to return all the dial-in numbers for the Northwest region, use this syntax: -Region Northwest.
-
-You can also return access numbers that have been scoped to a particular site (or to the global scope) by including the scope in the parameter value.
-For example, to return access numbers that use the Northwest region, and that have been scoped to the Redmond site, use this syntax: -Region site:Redmond/Northwest.
-Note that, when referencing the site scope, you must use the SiteId property.
-You can retrieve SiteId values by using the Get-CsSite cmdlet.
-
-To return a list of access numbers that are not associated with a dial plan, set the Region parameter value to $Null: -Region $Null.
-
-Note that dial-in conferencing access numbers are only returned in order of their assigned priority if this parameter is specified.
-Priority order is the same order in which the numbers appear in meeting invitations and on the dial-in conferencing webpage.
-For details, see the Set-CsDialInConferencingAccessNumber Help topic.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns all the dial-in conferencing access numbers associated with the specified dial plan region.
 For example, to return all the dial-in numbers for the Northwest region, use this syntax: -Region Northwest.
 
@@ -576,8 +262,6 @@ To return a list of access numbers that are not associated with a dial plan, set
 Note that dial-in conferencing access numbers are only returned in order of their assigned priority if this parameter is specified.
 Priority order is the same order in which the numbers appear in meeting invitations and on the dial-in conferencing webpage.
 For details, see the Set-CsDialInConferencingAccessNumber cmdlet help topic.
-
-
 
 ```yaml
 Type: String
@@ -617,37 +301,24 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-String.
-Get-CsDialInConferencingAccessNumber accepts a string value representing the Identity of the access number.
-
-###  
-String.
+### String
 The Get-CsDialInConferencingAccessNumber cmdlet accepts a string value representing the Identity of the access number.
+
 
 ## OUTPUTS
 
-###  
-Get-CsDialInConferencingAccessNumber returns instances of the Microsoft.Rtc.Management.Xds.AccessNumber object.
+### Microsoft.Rtc.Management.Xds.AccessNumber
 
-###  
-The Get-CsDialInConferencingAccessNumber cmdlet returns instances of the Microsoft.Rtc.Management.Xds.AccessNumber object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f2c78377-ad21-4a9f-bef9-e9ef97316c85(OCS.14).aspx)
 
 [New-CsDialInConferencingAccessNumber]()
 
 [Remove-CsDialInConferencingAccessNumber]()
 
 [Set-CsDialInConferencingAccessNumber]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f2c78377-ad21-4a9f-bef9-e9ef97316c85(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f2c78377-ad21-4a9f-bef9-e9ef97316c85(OCS.16).aspx)
-

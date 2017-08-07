@@ -22,14 +22,13 @@ The Identity is in the form TenantGUID_GlobalVoiceDialPlan_TenantDialPlan.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
 ```
 
 This example gets the effective tenant dial plan for the Vt1_User1 organization.
 
-Get-CsEffectiveTenantDialPlan -Identity Vt1_User1
 
 ## PARAMETERS
 
@@ -170,13 +169,14 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
+
 
 ## OUTPUTS
 
+
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/484f8c00-a546-47a8-9a0b-541fd942de12(OCS.15).aspx)
-

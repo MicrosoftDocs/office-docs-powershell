@@ -6,22 +6,11 @@ schema: 2.0.0
 # Get-CsEffectivePolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns the "effective policies" for the specified user or users.
-This simply means that, if a user has been a per-user policy, the Identity of that policy will be displayed.
-If a user has not been assigned a per-user policy, then Get-CsEffectivePolicy will indicate whether the user is managed by a service policy, a site policy, or the global policy.
-This enables you to determine exactly which policy is being used to manage a given user.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns the "effective policies" for the specified user or users.
 This simply means that, if a user has been a per-user policy, the Identity of that policy will be displayed.
 If a user has not been assigned a per-user policy, then the Get-CsEffectivePolicy cmdlet will indicate whether the user is managed by a service policy, a site policy, or the global policy.
 This enables you to determine exactly which policy is being used to manage a given user.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -32,46 +21,6 @@ Get-CsEffectivePolicy [-Identity] <UserIdParameter> [-Credential <PSCredential>]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-Among other things, the Get-CsUser cmdlet returns information about the Microsoft Lync Server policies that are used to govern a user's behavior.
-For example:
-
-DialPlan : RedmondDialPlan
-
-LocationPolicy : RedmondLocationPolicy
-
-ClientPolicy :
-
-In the preceding output, it would appear that the user is being managed by a specific dial plan and location policy, but is not managed by a client.
-In truth, the user is managed by a client policy, either the global policy or a site policy.
-However, the Get-CsUser cmdlet only returns information about per-user policies that have been assigned to the user; of the user is managed by a global policy, a site policy, or a service policy, then Get-CsUser returns no information.
-
-In troubleshooting scenarios, it can been very useful to know whether a user is managed by a global policy, a site policy, or a service policy.
-In cases such as that, you can use the Get-CsEffectivePolicy cmdlet to return exact information about the policies that are used to govern a user's behavior.
-For the preceding user, Get-CsEffectivePolicy might return information similar to this:
-
-LocationProfile : RedmondDialPlan
-
-LocationPolicy : RedmondLocationPolicy
-
-ClientPolicy : Global
-
-This output lets you know that the user is managed by the global client policy.
-
-Note that, unlike the Get-CsUser cmdlet, Get-CsEffectivePolicy only returns information about policies; it does not return additional information such as the user's phone number or Registrar pool.
-Note, too that there are some differences in the terminology used in Get-CsUser to label policies names vs.
-the terminology used by Get-CsEffectivePolicy.
-For example, Get-CsUser uses the name DialPlan while Get-CsEffectivePolicy uses the name LocationProfile.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsEffectivePolicy"}
-
-Lync Server Control Panel: The functions carried out by the Get-CsEffectivePolicy cmdlet are not directly available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Among other things, the Get-CsUser cmdlet returns information about the Microsoft Lync Server policies that are used to govern a user's behavior.
 For example:
 
@@ -102,115 +51,53 @@ Note, too that there are some differences in the terminology used in the Get-CsU
 the terminology used by the Get-CsEffectivePolicy cmdlet.
 For example, the Get-CsUser cmdlet uses the name DialPlan while the Get-CsEffectivePolicy cmdlet uses the name LocationProfile.
 
-Skype for Business Server Control Panel: The functions carried out by the Get-CsEffectivePolicy cmdlet are not directly available in the Skype for Business Server Control Panel.
-
+The functions carried out by the Get-CsEffectivePolicy cmdlet are not directly available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsEffectivePolicy - Identity "Ken Myer"
 ```
 
 The command shown in Example 1 returns the effective policies for the user with the Active Directory display name Ken Myer.
 
-Get-CsEffectivePolicy - Identity "Ken Myer"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 returns the effective policies for the user with the Active Directory display name Ken Myer.
-
-Get-CsEffectivePolicy - Identity "Ken Myer"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In the preceding command, effective policy information is returned for users with the display names Ken Myer and Pilar Ackerman.
-Policy information for multiple users can be returned by piping multiple user Identities to Get-CsEffectivePolicy.
-
 "Ken Myer","Pilar Ackerman" | Get-CsEffectivePolicy
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In the preceding command, effective policy information is returned for users with the display names Ken Myer and Pilar Ackerman.
 Policy information for multiple users can be returned by piping multiple user Identities to the Get-CsEffectivePolicy cmdlet.
 
-"Ken Myer","Pilar Ackerman" | Get-CsEffectivePolicy
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-In Example 3, effective policy information is returned for all the users who have been assigned the conferencing policy RedmondConferencingPolicy.
-To do this, the command first uses the Get-CsUser cmdlet to return a collection of users who have been assigned RedmondConferencingPolicy; the Filter parameter and the filter value {ConferencingPolicy -eq "RedmondConferencingPolicy"} limits the returned data to users who have been assigned the RedmondConferencingPolicy per-user conferencing policy.
-That collection of user accounts is then piped to Get-CsEffectivePolicy, which displays effective policy information for each user in the collection.
-
 Get-CsUser -Filter {ConferencingPolicy -eq "RedmondConferencingPolicy"} | Get-CsEffectivePolicy
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 3, effective policy information is returned for all the users who have been assigned the conferencing policy RedmondConferencingPolicy.
 To do this, the command first uses the Get-CsUser cmdlet to return a collection of users who have been assigned RedmondConferencingPolicy; the Filter parameter and the filter value {ConferencingPolicy -eq "RedmondConferencingPolicy"} limits the returned data to users who have been assigned the RedmondConferencingPolicy per-user conferencing policy.
 That collection of user accounts is then piped to the Get-CsEffectivePolicy cmdlet, which displays effective policy information for each user in the collection.
 
-Get-CsUser -Filter {ConferencingPolicy -eq "RedmondConferencingPolicy"} | Get-CsEffectivePolicy
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2013)
+### -------------------------- Example 4 --------------------------
 ```
-
+Get-CsUser -Filter {ConferencingPolicy -eq "RedmondConferencingPolicy"} | Get-CsEffectivePolicy | Select-Object Identity, MobilityPolicy
 ```
 
 Example 4 is a variation of the command shown in Example 3.
 In this example, effective policy information is again returned for all the users who have been assigned the conferencing policy RedmondConferencingPolicy; in this case, however, the returned information is limited to the user Identity and mobility policy.
 This is done by returning all the effective policy information and then piping that data to the Select-Object cmdlet, which, in turn, is used to limit the displayed data to the Identity and MobilityPolicy properties.
 
-Get-CsUser -Filter {ConferencingPolicy -eq "RedmondConferencingPolicy"} | Get-CsEffectivePolicy | Select-Object Identity, MobilityPolicy
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 5 --------------------------
 ```
-
-```
-
-Example 4 is a variation of the command shown in Example 3.
-In this example, effective policy information is again returned for all the users who have been assigned the conferencing policy RedmondConferencingPolicy; in this case, however, the returned information is limited to the user Identity and mobility policy.
-This is done by returning all the effective policy information and then piping that data to the Select-Object cmdlet, which, in turn, is used to limit the displayed data to the Identity and MobilityPolicy properties.
-
-Get-CsUser -Filter {ConferencingPolicy -eq "RedmondConferencingPolicy"} | Get-CsEffectivePolicy | Select-Object Identity, MobilityPolicy
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 5, effective policy information is displayed for all the users in the Finance department.
-This task is carried out by first using Get-CsUser and the LdapFilter property to return a collection of user accounts; the filter value "Department=Finance" limits those accounts to users who work in the Finance department.
-That collection is then piped to the Get-CsEffectivePolicy cmdlet, which displays effective policy information for each user in the collection.
-
 Get-CsUser -LdapFilter "Department=Finance" | Get-CsEffectivePolicy
-
-### -------------------------- Example 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 5, effective policy information is displayed for all the users in the Finance department.
 This task is carried out by first using the Get-CsUser cmdlet and the LdapFilter property to return a collection of user accounts; the filter value "Department=Finance" limits those accounts to users who work in the Finance department.
 That collection is then piped to the Get-CsEffectivePolicy cmdlet, which displays effective policy information for each user in the collection.
 
-Get-CsUser -LdapFilter "Department=Finance" | Get-CsEffectivePolicy
 
 ## PARAMETERS
 
@@ -236,25 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to run the Get-CsEffectivePolicy cmdlet under alternate credentials.
-This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
-
-To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
-For details, see the Get-Credential cmdlet Help topic.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Enables you to run the Get-CsEffectivePolicy cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
 
 To use the Credential parameter you must first create a PSCredential object by using the Get-Credential cmdlet.
 For details, see the Get-Credential cmdlet help topic.
-
-
 
 ```yaml
 Type: PSCredential
@@ -274,7 +147,7 @@ Enables you to connect to the specified domain controller in order to retrieve u
 To connect to a particular domain controller, include the DomainController parameter followed by the fully qualified domain name (FQDN).
 For example:
 
--DomainController "atl-dc-001.litwareinc.com"
+`-DomainController "atl-dc-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
@@ -314,33 +187,22 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Get-CsEffectivePolicy accepts a pipelined string value representing the display name of a user account that has been enabled for Lync Server.
+### String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser
+The Get-CsEffectivePolicy cmdlet accepts a pipelined string value representing the display name of a user account that has been enabled for Skype for Business Server.
 The cmdlet also accepts pipelined instances of the Active Directory user object.
 
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-The Get-CsEffectivePolicy cmdlet accepts a pipelined string value representing the display name of a user account that has been enabled for Skype for Business Server 2015.
-The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## OUTPUTS
 
-###  
-Get-CsEffectivePolicy returns instances of the Microsoft.Rtc.Management.AD.Cmdlets.EffectivePolicies object.
+### Microsoft.Rtc.Management.AD.Cmdlets.EffectivePolicies
 
-###  
-The Get-CsEffectivePolicy cmdlet returns instances of the Microsoft.Rtc.Management.AD.Cmdlets.EffectivePolicies object.
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Get-CsUser]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/03b2984f-3a24-4b8d-bcaf-5049de9e2556(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/03b2984f-3a24-4b8d-bcaf-5049de9e2556(OCS.16).aspx)
-
