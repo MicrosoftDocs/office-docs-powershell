@@ -6,18 +6,9 @@ schema: 2.0.0
 # Get-CsDatabaseMirrorState
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about whether database mirroring has been implemented for a specified database on a specified pool.
-Database mirroring enables you to simultaneously maintain two copies of a database, with each copy residing on a different server.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns information about whether database mirroring has been implemented for a specified database on a specified pool.
 Database mirroring enables you to simultaneously maintain two copies of a database, with each copy residing on a different server.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -28,8 +19,6 @@ Get-CsDatabaseMirrorState -PoolFqdn <Fqdn> [-DatabaseType <DatabaseNameType>] [-
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Get-CsDatabaseMirrorState cmdlet returns information about the mirror databases configured for a pool; this includes information about the mirror databases that might (or might not) have been configured for the Front End server database, the Location Information Service database, the call detail recording and Quality of Experience databases, and so on.
 For each database the cmdlet will report back the synchronization status for both the primary database and the mirror database.
 In some cases you will see output similar to this, including the property value DatabaseInaccessibleOrMirroringNotEnabled:
@@ -46,53 +35,18 @@ MirroringStatusOnSecondary :
 
 That typically means that no mirror database has been assigned to the primary database (in this case, the database lcscdr, used for maintaining call detail data).
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsDatabaseMirrorState"}
-
-Lync Server Control Panel: The functions carried out by the Get-CsDatabaseMirrorState cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Get-CsDatabaseMirrorState cmdlet returns information about the mirror databases configured for a pool; this includes information about the mirror databases that might (or might not) have been configured for the Front End server database, the Location Information Service database, the call detail recording and Quality of Experience databases, and so on.
-For each database the cmdlet will report back the synchronization status for both the primary database and the mirror database.
-In some cases you will see output similar to this, including the property value DatabaseInaccessibleOrMirroringNotEnabled:
-
-DatabaseName : lcscdr
-
-StateOnPrimary : DatabaseInaccessibleOrMirroringNotEnabled
-
-StateOnMirror : DatabaseInaccessibleOrMirroringNotEnabled
-
-MirroringStatusOnPrimary :
-
-MirroringStatusOnSecondary :
-
-That typically means that no mirror database has been assigned to the primary database (in this case, the database lcscdr, used for maintaining call detail data).
-
-Skype for Business Server Control Panel: The functions carried out by the Get-CsDatabaseMirrorState cmdlet are not available in the Skype for Business Server Control Panel.
-
+The functions carried out by the Get-CsDatabaseMirrorState cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsDatabaseMirrorState -PoolFqdn "atl-cs-001.litwareinc.com" -DatabaseType Monitoring
 ```
 
 The command shown in Example 1 returns the state of the database mirror assigned to the monitoring database for the pool atl-cs-001.litwareinc.com.
 
-Get-CsDatabaseMirrorState -PoolFqdn "atl-cs-001.litwareinc.com" -DatabaseType Monitoring
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 returns the state of the database mirror assigned to the monitoring database for the pool atl-cs-001.litwareinc.com.
-
-Get-CsDatabaseMirrorState -PoolFqdn "atl-cs-001.litwareinc.com" -DatabaseType Monitoring
 
 ## PARAMETERS
 
@@ -100,7 +54,7 @@ Get-CsDatabaseMirrorState -PoolFqdn "atl-cs-001.litwareinc.com" -DatabaseType Mo
 Fully qualified domain name of the pool whose database mirroring state is being checked.
 For example:
 
--PoolFqdn "atl-cs-001.litwareinc.com"
+`-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
@@ -116,57 +70,31 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseType
-**Below Content Applies To:** Lync Server 2013
-
 Type of database whose mirror state is being checked.
-Allowed values are:
 
-App
-
-Archiving
-
-CMS
-
-Monitoring
-
-Provision
-
-User
+Allowed values for Lync Server 2013 are:
+- App
+- Archiving
+- CMS
+- Monitoring
+- Provision
+- User
 
 
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Type of database whose mirror state is being checked.
-Allowed values are:
-
-ActiveMonitoring
-
-Application
-
-Archiving
-
-CentralMgmt
-
-Edge
-
-Lyss
-
-Monitoring
-
-PersistentChat
-
-PersistentChatCompliance
-
-Provision
-
-Registrar
-
-SigninTelemetry
-
-User
-
-
+Allowed values for Skype for Business Server 2015 are:
+- ActiveMonitoring
+- Application
+- Archiving
+- CentralMgmt
+- Edge
+- Lyss
+- Monitoring
+- PersistentChat
+- PersistentChatCompliance
+- Provision
+- Registrar
+- SigninTelemetry
+- User
 
 ```yaml
 Type: DatabaseNameType
@@ -201,7 +129,7 @@ Accept wildcard characters: False
 Enables you to specify a file path for the log file created when the cmdlet runs.
 For example:
 
--Report "C:\Logs\DatabaseMirrorState.html"
+`-Report "C:\Logs\DatabaseMirrorState.html"`
 
 ```yaml
 Type: String
@@ -219,33 +147,22 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsDatabaseMirrorState does not accept pipelined input.
+### None
 
-###  
-None.
-The Get-CsDatabaseMirrorState cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-Get-CsDatabaseMirrorState returns instances of the Microsoft.Rtc.Management.Deployment.DatabaseMirrorState class.
+### Microsoft.Rtc.Management.Deployment.DatabaseMirrorState
 
-###  
-The Get-CsDatabaseMirrorState cmdlet returns instances of the Microsoft.Rtc.Management.Deployment.DatabaseMirrorState class.
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Install-CsMirrorDatabase]()
 
 [Uninstall-CsMirrorDatabase]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/458f5367-ee04-4281-971f-08f79a625509(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/458f5367-ee04-4281-971f-08f79a625509(OCS.16).aspx)
-
