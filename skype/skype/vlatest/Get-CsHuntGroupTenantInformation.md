@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-CsHuntGroupTenantInformation
 
 ## SYNOPSIS
-Get-CsHuntGroupTenantInformation \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -22,10 +22,11 @@ Get-CsHuntGroupTenantInformation [-BypassDualWrite <Object>] [-DomainController 
 
 ### Example 1 (Skype for Business Online)
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -116,9 +117,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
+
 ## OUTPUTS
 
 ### System.Object
+
 
 ## NOTES
 

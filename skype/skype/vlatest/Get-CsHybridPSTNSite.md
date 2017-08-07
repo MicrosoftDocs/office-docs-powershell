@@ -21,27 +21,24 @@ However, you can't create or modify hybrid PSTN sites through the CsTenantHybrid
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsHybridPSTNSite
 ```
 
 The command shown in Example 1 returns information for all the PSTN sites.
 
-Get-CsHybridPSTNSite
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsHybridPSTNSite -Identity "SeattlePSTN"
 ```
 
 The command shown in Example 2 returns information for the PSTN site with the given identity.
 
-Get-CsHybridPSTNSite -Identity "SeattlePSTN"
 
 ## PARAMETERS
 
@@ -155,17 +152,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsHybridPSTNSite cmdlet returns instances of the HybridPstnSite object.
+### HybridPstnSite
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/191a6540-1a2d-4594-a08f-8a0ce9c16c0d(OCS.15).aspx)
-

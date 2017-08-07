@@ -25,12 +25,13 @@ Get-CsImConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <Guid>]
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -105,11 +106,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### None
 
+
 ## OUTPUTS
 
 ### System.Object
 
+
 ## NOTES
 
 ## RELATED LINKS
-

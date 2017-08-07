@@ -6,7 +6,7 @@ schema: 2.0.0
 # Get-CsHuntGroup
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The Get-CsHuntGroup cmdlet returns the identified call queues.
 
 ## SYNTAX
 
@@ -16,18 +16,24 @@ Get-CsHuntGroup [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue. 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Get-CsHuntGroup
 ```
 
+This example gets all call queues in the organization.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsHuntGroup -PrimaryUri "sip:helpdesk@litwareinc.com"
 ```
 
-Insert descriptive text for example 1.
+This example gets all call queues for helpdesk@litwareinc.com.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -80,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryUri
-PARAMVALUE: Uri
+The PrimaryUri parameter represents the SIP address for the call queue.
 
 ```yaml
 Type: Object
@@ -132,11 +138,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Uri
+Represents the SIP uri of a call queue.
+
+
 ## OUTPUTS
+
+### Microsoft.Skype.Rgs.Configuration.Huntgroup
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/177a1193-2210-40c4-baaa-ead7e2938d24(OCS.15).aspx)
-

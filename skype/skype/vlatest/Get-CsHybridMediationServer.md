@@ -26,12 +26,11 @@ If the user has licenses assigned, the warning message will be shown as guidance
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
-
+Get-CsHybridMediationServer -Fqdn MediationServer.Contoso.com
 ```
 
 This example gets the FQDN of a mediation server access proxy.
 
-Get-CsHybridMediationServer -Fqdn MediationServer.Contoso.com
 
 ## PARAMETERS
 

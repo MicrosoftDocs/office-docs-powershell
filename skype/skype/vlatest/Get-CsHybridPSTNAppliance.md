@@ -27,41 +27,34 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsHybridPSTNAppliance
 ```
 
 The command shown in Example 1 returns information for all the Skype for Business Cloud Connector Edition appliances.
 
-Get-CsHybridPSTNAppliance
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsHybridPSTNAppliance -SiteName "SeattlePSTN"
 ```
 
 The command shown in Example 2 returns information for all the Skype for Business Cloud Connector Edition appliances in the given site.
 
-Get-CsHybridPSTNAppliance -SiteName "SeattlePSTN"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsHybridPSTNAppliance -Name "CCE1"
 ```
 
 The command shown in Example 3 returns information for the Skype for Business Cloud Connector Edition appliance with the given name.
 
-Get-CsHybridPSTNAppliance -Name "CCE1"
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Online)
+### -------------------------- Example 4 --------------------------
 ```
-
+Get-CsHybridPSTNAppliance -SiteName "SeattlePSTN" -Name "CCE1"
 ```
 
 The command shown in Example 4 returns information for the Skype for Business Cloud Connector Edition appliance in the given site with the given name.
 
-Get-CsHybridPSTNAppliance -SiteName "SeattlePSTN" -Name "CCE1"
 
 ## PARAMETERS
 
@@ -203,6 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/8cb052ae-dec8-4756-8954-eafd7210c0e4(OCS.15).aspx)
-
