@@ -6,21 +6,8 @@ schema: 2.0.0
 # Get-CsNetworkConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Retrieves global settings for call admission control (CAC), Enhanced 9-1-1 (E9-1-1), and media bypass.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Retrieves global settings for call admission control (CAC), Enhanced 9-1-1 (E9-1-1), and media bypass.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Online
-
-Get-CsNetworkConfiguration \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
-Get-CsNetworkConfiguration \[-Tenant \<guid\>\] \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
-
 
 
 ## SYNTAX
@@ -42,46 +29,15 @@ Get-CsNetworkConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object>] [-
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Microsoft Lync Server 2010 deployment, including whether or not that configuration has been enabled.
-You can use this cmdlet to retrieve these configurations and settings.
-However, other than EnableBandwidthPolicyCheck and MediaBypassSettings, it's recommended that you use cmdlets specific to the object type for retrieving the CAC configuration settings.
-For example, to retrieve the network regions, it will usually be easier to call Get-CsNetworkRegion than to call Get-CsNetworkConfiguration and then retrieve the NetworkRegions property of that configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsNetworkConfiguration cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Lync Server deployment, including whether or not that configuration has been enabled.
-You can use this cmdlet to retrieve these configurations and settings.
-However, other than EnableBandwidthPolicyCheck and MediaBypassSettings, it's recommended that you use cmdlets specific to the object type for retrieving the CAC configuration settings.
-For example, to retrieve the network regions, it will usually be easier to call Get-CsNetworkRegion than to call Get-CsNetworkConfiguration and then retrieve the NetworkRegions property of that configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsNetworkConfiguration cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsNetworkConfiguration"}
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill in the Description}}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Skype for Business Server 2015 deployment, including whether or not that configuration has been enabled.
+The network configuration object contains all the global settings for media bypass and for an entire CAC configuration within a Skype for Business Server deployment, including whether or not that configuration has been enabled.
 You can use this cmdlet to retrieve these configurations and settings.
 However, other than EnableBandwidthPolicyCheck and MediaBypassSettings, it's recommended that you use cmdlets specific to the object type for retrieving the CAC configuration settings.
 For example, to retrieve the network regions, it will usually be easier to call the Get-CsNetworkRegion cmdlet than to call the Get-CsNetworkConfiguration cmdlet and then retrieve the NetworkRegions property of that configuration.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsNetworkConfiguration
 ```
@@ -89,78 +45,20 @@ Get-CsNetworkConfiguration
 This example retrieves the network configuration settings.
 These settings are defined only at the global scope, so only one item will be returned.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example retrieves the network configuration settings.
-These settings are defined only at the global scope, so only one item will be returned.
-
-Get-CsNetworkConfiguration
-
-### Example 1 (Skype for Business Online)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example retrieves the network configuration settings.
-These settings are defined only at the global scope, so only one item will be returned.
-
-Get-CsNetworkConfiguration
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 (Get-CsNetworkConfiguration).MediaBypassSettings
-```
-
-Only one set of media bypass settings, which is applied globally, exists.
-These settings are stored as part of the overall network configuration.
-This command first retrieves that configuration by calling Get-CsNetworkConfiguration, and then retrieves the MediaBypassSettings property of the configuration.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Only one set of media bypass settings exists, which is applied globally.
-These settings are stored as part of the overall network configuration.
-This command first retrieves that configuration by calling Get-CsNetworkConfiguration, and then retrieves the MediaBypassSettings property of the configuration.
-
-(Get-CsNetworkConfiguration).MediaBypassSettings
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Only one set of media bypass settings exists, which is applied globally.
 These settings are stored as part of the overall network configuration.
 This command first retrieves that configuration by calling the Get-CsNetworkConfiguration cmdlet, and then retrieves the MediaBypassSettings property of the configuration.
 
-(Get-CsNetworkConfiguration).MediaBypassSettings
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 This will always be Global.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Identity Description}}
-
-
 
 ```yaml
 Type: XdsIdentity
@@ -189,17 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 Because there will only ever be one network configuration, you do not need this parameter for this cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Filter Description}}
-
-
 
 ```yaml
 Type: String
@@ -215,17 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalStore
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
-
 Retrieves the network configuration from the local replica of the Central Management store, rather than the Central Management store itself.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill LocalStore Description}}
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -291,28 +169,21 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
-## INPUTS
 
-###  
-None.
+## INPUTS
 
 ### None
 
+
 ## OUTPUTS
 
-###  
-Get-CsNetworkConfiguration returns an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkConfigurationSettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkConfigurationSettings
 
-### System.Object
-
-###  
-The Get-CsNetworkConfiguration cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.NetworkConfigurationSettings object.
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/08bc8eca-b244-4d5e-b089-1cc95605ba14(OCS.14).aspx)
+## RELATED LINKS
 
 [Remove-CsNetworkConfiguration]()
 
@@ -331,8 +202,3 @@ The Get-CsNetworkConfiguration cmdlet returns an instance of the Microsoft.Rtc.M
 [Get-CsNetworkSubnet]()
 
 [Get-CsNetworkBandwidthPolicyProfile]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/08bc8eca-b244-4d5e-b089-1cc95605ba14(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/08bc8eca-b244-4d5e-b089-1cc95605ba14(OCS.16).aspx)
-
