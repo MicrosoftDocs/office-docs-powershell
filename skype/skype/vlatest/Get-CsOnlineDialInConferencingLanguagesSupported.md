@@ -25,14 +25,14 @@ When no languages are specified for a dial-in service number it will get the set
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingLanguagesSupported |fl
 ```
 
 This example allows returns the list of supported languages when you are using Microsoft as your dial-in audio conferencing provider and displays them in a formatted list.
 
-Get-CsOnlineDialInConferencingLanguagesSupported |fl
+
 
 ## PARAMETERS
 
@@ -56,9 +56,9 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
+Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com`
 
-Computer name: -DomainController atl-cs-001
+Computer name: `-DomainController atl-cs-001`
 
 ```yaml
 Type: Object
@@ -117,6 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6667e986-a202-4297-aa7d-63edbfeb9cd5(OCS.15).aspx)
-

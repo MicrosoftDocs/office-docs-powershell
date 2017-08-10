@@ -20,14 +20,13 @@ Get-CsOnlineDialInConferencingTenantSettings [[-Identity] <Object>] [-BypassDual
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingTenantSettings
 ```
 
 This example returns the global setting for the tenant administrator's organization.
 
-Get-CsOnlineDialInConferencingTenantSettings
 
 ## PARAMETERS
 
@@ -130,19 +129,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.OnLineDialInConferencing.OnLineDialInConferencingTenantSettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.OnLineDialInConferencing.OnLineDialInConferencingTenantSettings
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7d788ab2-c6d8-4f3f-a738-08c84a127de7(OCS.15).aspx)
-

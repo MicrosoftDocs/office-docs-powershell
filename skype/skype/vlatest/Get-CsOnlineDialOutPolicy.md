@@ -7,9 +7,8 @@ schema: 2.0.0
 # Get-CsOnlineDialOutPolicy
 
 ## SYNOPSIS
-Get-CsOnlineDialOutPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
-Get-CsOnlineDialOutPolicy \[-Filter \<string\>\] \[-LocalStore\] \[-BypassDualWrite \<bool\>\] \[\<CommonParameters\>\]
 
 ## SYNTAX
 
@@ -23,12 +22,13 @@ Get-CsOnlineDialOutPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [-F
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -126,4 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -35,14 +35,13 @@ IsDefaultBridge = \[False\]}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDirectoryTenant -Tenant 7a205197-8e59-487d-b9fa-3fc1b108f1e5
 ```
 
 This example returns the tenant specified by GUID.
 
-Get-CsOnlineDirectoryTenant -Tenant 7a205197-8e59-487d-b9fa-3fc1b108f1e5
 
 ## PARAMETERS
 
@@ -115,8 +114,13 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: 
+
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
+
+You can find your tenant ID by running this command: 
+
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -167,19 +171,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-The cmdlet returns an instance, or an array of the Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacTenant objects.
+### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacTenant
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/43424745-8ce4-4a4c-b469-326f0d9d37ec(OCS.15).aspx)
-

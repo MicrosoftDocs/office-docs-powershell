@@ -24,32 +24,27 @@ A tenant administrator can only retrieve and view information that is associated
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingServiceNumber | fl
 ```
 
 This example returns all of the default service numbers for an organization in a formatted list.
 
-Get-CsOnlineDialInConferencingServiceNumber | fl
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingServiceNumber -BridgeId 72dfe128-d079-46f8-8tr0-gb12369p167c | fl
 ```
 
 This example returns all of the default service numbers for a specified audio conferencing bridge in a formatted list.
 
-Get-CsOnlineDialInConferencingServiceNumber -BridgeId 72dfe128-d079-46f8-8tr0-gb12369p167c | fl
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
 ```
 
 This example returns all of the default service numbers for the audio conferencing bridge named "Conference Bridge".
 
-Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
 
 ## PARAMETERS
 
@@ -172,9 +167,9 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
+Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com.`
 
-Computer name: -DomainController atl-cs-001
+Computer name: `-DomainController atl-cs-001`
 
 ```yaml
 Type: Object
@@ -255,6 +250,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3e36f620-dc3d-4f51-8f7a-f6fad6984b26(OCS.15).aspx)
-

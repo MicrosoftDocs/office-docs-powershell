@@ -29,14 +29,13 @@ There is one configuration per tenant.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialinConferencingTenantConfiguration
 ```
 
 This example returns the configuration for the tenant administrator's organization.
 
-Get-CsOnlineDialinConferencingTenantConfiguration
 
 ## PARAMETERS
 
@@ -141,17 +140,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.OnLineDialInConferencing.OnLineDialInConferencingTenantConfiguration object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.OnLineDialInConferencing.OnLineDialInConferencingTenantConfiguration
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/dc2c5684-d912-4378-8053-01c8b594e034(OCS.15).aspx)
-

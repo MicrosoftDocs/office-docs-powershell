@@ -27,18 +27,18 @@ The see a list of users with conferencing providers other than Microsoft use the
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
 ```
 
 This example uses the LdapFilter parameter to limit the returned data to users who work in the Finance department.
 
-Get-CsOnlineDialInConferencingUser -LdapFilter "Department=Finance"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
 ```
 
 This example returns users who have been enabled for audio conferencing provided by Microsoft, and are assigned to the specified service number.
@@ -47,7 +47,7 @@ By default, the Get-CsOnlineDialInConferencingUser cmdlet returns a large number
 Therefore, in this example the retrieved data is piped to the Format-Table cmdlet.
 The Format-Table cmdlet then uses the Property parameter to select the properties DisplayName and SipAddress.
 
-Get-CsOnlineDialInConferencingUser -ServiceNumber +14255034412 | Format-Table -Property DisplayName, SipAddress
+
 
 ## PARAMETERS
 
@@ -260,6 +260,7 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
 ## OUTPUTS
@@ -267,6 +268,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3605a039-0a04-4743-b141-703cf93bdc81(OCS.15).aspx)
-
