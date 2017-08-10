@@ -23,41 +23,34 @@ Get-CsOnlineLisLocation [-CivicAddressId <Object>] [-Location <Object>] [-Assign
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -ValidationStatus Validated
 ```
 
 This example returns a maximum of 25 validated locations in Seattle.
 
-Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -ValidationStatus Validated
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineLisLocation -CivicAddressId a363a9b8-1acd-41de-916a-296c7998a024
 ```
 
 This example returns the locations associated with a civic address specified by its unique identifier.
 
-Get-CsOnlineLisLocation -CivicAddressId a363a9b8-1acd-41de-916a-296c7998a024
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsOnlineLisLocation -Location "3rd Floor Cafe"
 ```
 
 This example returns the location described as the "3rd Floor Cafe".
 
-Get-CsOnlineLisLocation -Location "3rd Floor Cafe"
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Online)
+### -------------------------- Example 4 --------------------------
 ```
-
+Get-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e
 ```
 
 This example returns the information on one location specified by its unique identifier.
 
-Get-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e
 
 ## PARAMETERS
 
@@ -231,7 +224,7 @@ If there are a large number of locations, you can limit the number of returns by
 If you limited the first cmdlet execution to 25 results, and want to look at the next 25 locations, then you leave ResultSize at 25 and set NumberOfResultsToSkip to 25 to omit the first 25 you've reviewed.
 For example the command below will return locations 26-50 for Seattle.
 
-Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25
+`Get-CsOnlineLisLocation -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
 
 ```yaml
 Type: Object
@@ -346,19 +339,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-Returns an instance, or instances of emergency location objects.
+### Returns an instance, or instances of emergency location objects.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a3bea384-1050-48b3-b389-2ba2725c8cf6(OCS.15).aspx)
-

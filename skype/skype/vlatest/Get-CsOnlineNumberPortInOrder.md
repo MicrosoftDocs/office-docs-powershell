@@ -21,7 +21,7 @@ Get-CsOnlineNumberPortInOrder [-BypassDualWrite <Object>] [-Confirm] [-DomainCon
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 
 ```
@@ -166,6 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/8d95ff3e-b6e2-4a33-b567-e77352e4d7ed(OCS.15).aspx)
-

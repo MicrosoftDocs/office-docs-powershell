@@ -46,23 +46,20 @@ BridgeNumber :
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
 ```
 
 This example gets the attributes of a specific phone number.
 
-Get-CsOnlineTelephoneNumber -TelephoneNumber 19294450177
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 ```
 
 This example gets the phone numbers with the city code designating New York, New York.
 
-Get-CsOnlineTelephoneNumber -CapitalOrMajorCity NOAM-US-NY-NY
 
 ## PARAMETERS
 
@@ -248,7 +245,9 @@ Accept wildcard characters: False
 
 ### -TelephoneNumber
 Specifies the target telephone number.
-For example: -TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567
+For example: 
+
+`-TelephoneNumber tel:+18005551234, or -TelephoneNumber +14251234567`
 
 ```yaml
 Type: Object
@@ -353,19 +352,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-Returns an instance, or an array of Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Number objects.
+### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Number
+An instance or array of the objects.
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c8e38d14-5a24-4c2f-8a56-444ddd7a1c92(OCS.15).aspx)
-

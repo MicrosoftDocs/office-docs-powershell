@@ -36,14 +36,13 @@ NOAM-US-MA-BO
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDirectoryTenantNumberCities
 ```
 
 This example returns all the cities for which telephone numbers have been acquired by your organization.
 
-Get-CsOnlineDirectoryTenantNumberCities
 
 ## PARAMETERS
 
@@ -132,19 +131,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an IList\<string\> containing the geocodes of the relevant cities.
+### IList<string> containing the geocodes of the relevant cities.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/98bb8567-9172-4890-b2b6-9e46d4d9a759(OCS.15).aspx)
-

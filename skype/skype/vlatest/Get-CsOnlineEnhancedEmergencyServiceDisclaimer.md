@@ -21,14 +21,13 @@ Get-CsOnlineEnhancedEmergencyServiceDisclaimer [-CountryOrRegion <Object>] [-Byp
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion "US"
 ```
 
 This example returns your organization's enhanced emergency service terms and conditions acceptance status.
 
-Get-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion "US"
 
 ## PARAMETERS
 
@@ -150,19 +149,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-None
+### None
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3a3922b4-c5db-4ebf-942a-14d04166ac53(OCS.15).aspx)
-

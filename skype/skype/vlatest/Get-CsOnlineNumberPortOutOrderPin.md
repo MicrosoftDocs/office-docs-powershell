@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CsOnlineNumberPortOutOrderPin
 
 ## SYNOPSIS
-Get-CsOnlineNumberPortOutOrderPin \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+
 
 ## SYNTAX
 
@@ -21,9 +21,9 @@ Get-CsOnlineNumberPortOutOrderPin [-BypassDualWrite <Object>] [-Confirm] [-Domai
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -157,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

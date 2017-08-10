@@ -21,25 +21,25 @@ Get-CsOnlineLisCivicAddress [-AssignmentStatus <Object>] [-BypassDualWrite <Obje
 
 ## DESCRIPTION
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineLisCivicAddress -CivicAddressId 235678321ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example returns the civic address with the specified identification.
 
-Get-CsOnlineLisCivicAddress -CivicAddressId 235678321ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineLisCivicAddress -City Seattle
 ```
 
 This example returns all the civic addresses in the city of Seattle.
 
-Get-CsOnlineLisCivicAddress -City Seattle
 
 ## PARAMETERS
 
@@ -196,7 +196,7 @@ If there are a large number of civic addresses, you can limit the number of retu
 If you limited the first cmdlet execution to 25 results, and want to look at the next 25 locations, then you leave ResultSize at 25 and set NumberOfResultsToSkip to 25 to omit the first 25 you've reviewed.
 For example the command below will return civic addresses 26-50 for Seattle.
 
-Get-CsOnlineLisCivicAddress -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25
+`Get-CsOnlineLisCivicAddress -City Seattle -ResultSize 25 -NumberOfResultsToSkip 25`
 
 ```yaml
 Type: Object
@@ -311,19 +311,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-One or more instances of civic address objects.
+### One or more instances of civic address objects.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/af80ea5c-392b-4b9f-b04b-d5f30831e420(OCS.15).aspx)
-
