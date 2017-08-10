@@ -23,23 +23,20 @@ However, if the PSTN conferencing service status of the tenant is Disabled, no r
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingBridge | fl
 ```
 
 This example shows how to return all of the audio conferencing bridges that are being used and returns the results in a formatted list.
 
-Get-CsOnlineDialInConferencingBridge | fl
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineDialInConferencingBridge -Tenant 26efe125-c070-46f9-8ed0-fc02165a167c
 ```
 
 This example shows how to return all of the audio conferencing bridges for the given tenant.
 
-Get-CsOnlineDialInConferencingBridge -Tenant 26efe125-c070-46f9-8ed0-fc02165a167c
 
 ## PARAMETERS
 
@@ -95,9 +92,13 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
+Fully qualified domain name (FQDN): 
 
-Computer name: -DomainController atl-cs-001
+`-DomainController atl-cs-001.Contoso.com`
+
+Computer name: 
+
+`-DomainController atl-cs-001`
 
 This parameter is reserved for internal Microsoft use.
 
@@ -183,19 +184,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-None
+### None
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7dfc487f-2ac3-4b3f-987a-3935dcb86273(OCS.15).aspx)
-

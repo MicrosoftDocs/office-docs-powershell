@@ -20,16 +20,16 @@ Get-CsOnlineApplicationEndpoint [[-Uri] <Object>] [-Audience <Object>] [-BypassD
 ## DESCRIPTION
 Provide the detailed description here.
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -219,6 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/49e80b1a-b804-4d02-b53e-222ddab84035(OCS.15).aspx)
-
