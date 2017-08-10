@@ -35,14 +35,13 @@ MaximumActiveReservedNumbersCount : 200
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberReservationsInformation
 ```
 
 This example returns the number of active reservations, reserved telephone numbers, maximum reservations supported per session, and maximum telephone numbers that can be reserved per session.
 
-Get-CsOnlineTelephoneNumberReservationsInformation
 
 ## PARAMETERS
 
@@ -166,17 +165,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsOnlineTelephoneNumberReservationsInformation cmdlet returns a LacReservationInformation object.
+### LacReservationInformation object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/09893440-bbf9-4fe7-9483-d4bb59744505(OCS.15).aspx)
-

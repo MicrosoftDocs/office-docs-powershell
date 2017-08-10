@@ -30,23 +30,20 @@ Countries : {}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Service
 ```
 
 This example returns the region where the inventory type of "Service" is supported.
 
-Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Service
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Subscriber
 ```
 
 This example returns the region where the inventory type of "Subscriber" is supported.
 
-Get-CsOnlineTelephoneNumberInventoryRegions -InventoryType Subscriber
 
 ## PARAMETERS
 
@@ -175,17 +172,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-Returns an instance, or an array of Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Region objects.
+### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Region
+Instance or array of the object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fe898907-a83f-4f60-9ca5-7e4ef0dd326d(OCS.15).aspx)
-

@@ -41,14 +41,13 @@ Reservations : {}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryTypes
 ```
 
 This example retrieves all the telephone number types for your organization.
 
-Get-CsOnlineTelephoneNumberInventoryTypes
 
 ## PARAMETERS
 
@@ -139,17 +138,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an instance, or an array of Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Inventory objects.
+### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Inventory
+Instance or array of the object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/63fdbc5d-bdb6-463e-8659-5878f33eb21b(OCS.15).aspx)
-

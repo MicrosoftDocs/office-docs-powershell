@@ -56,14 +56,13 @@ Cities : {}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryAreas -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US
 ```
 
 This example returns the areas with Subscriber inventory in the specified region and country.
 
-Get-CsOnlineTelephoneNumberInventoryAreas -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US
 
 ## PARAMETERS
 
@@ -226,17 +225,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-The cmdlet returns an instance, or an array of Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryArea objects.
+### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryArea
+Instance or array of the objects.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5f266d0f-027b-4630-946e-38fe80ec1926(OCS.15).aspx)
-

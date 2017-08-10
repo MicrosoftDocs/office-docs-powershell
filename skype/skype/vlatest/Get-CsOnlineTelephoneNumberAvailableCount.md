@@ -29,14 +29,13 @@ RunspaceId Count
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberAvailableCount
 ```
 
 This example returns the total telephone numbers your organization is licensed to acquire.
 
-Get-CsOnlineTelephoneNumberAvailableCount
 
 ## PARAMETERS
 
@@ -176,17 +175,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet returns a LacAvailableNumberCount object.
+### LacAvailableNumberCount object
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/30e92f0b-016a-4d78-bafb-f3abfdb52514(OCS.15).aspx)
-

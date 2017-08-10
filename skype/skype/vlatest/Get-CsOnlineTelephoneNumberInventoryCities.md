@@ -32,23 +32,20 @@ GeoCode : NOAM-US-NY-NY
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryCities -InventoryType Service -RegionalGroup NOAM -CountryOrRegion US -Area NY
 ```
 
 The following example retrieves the cities defined as supporting "Service" inventory types in New York state.
 
-Get-CsOnlineTelephoneNumberInventoryCities -InventoryType Service -RegionalGroup NOAM -CountryOrRegion US -Area NY
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryCities -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US -Area NY
 ```
 
 The following example retrieves the cities defined as supporting "Subscriber" inventory types in New York state.
 
-Get-CsOnlineTelephoneNumberInventoryCities -InventoryType Subscriber -RegionalGroup NOAM -CountryOrRegion US -Area NY
 
 ## PARAMETERS
 
@@ -233,12 +230,9 @@ None
 
 ## OUTPUTS
 
-###  
-The cmdlet returns an instance, or an array of instances of the Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryCity object.
+### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.InventoryCity
+Instance or array of the object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e3ec9772-023a-4e55-9d54-99b97f012feb(OCS.15).aspx)
-

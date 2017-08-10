@@ -30,14 +30,13 @@ Areas : {}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineTelephoneNumberInventoryCountries -InventoryType Service -RegionalGroup NOAM
 ```
 
 This example returns the countries in the north American region that contain service type telephone numbers.
 
-Get-CsOnlineTelephoneNumberInventoryCountries -InventoryType Service -RegionalGroup NOAM
 
 ## PARAMETERS
 
@@ -183,17 +182,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None
+### None
 
 ## OUTPUTS
 
-###  
-This cmdlet returns an instance, or an array of Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Country objects.
+### Deserialized.Microsoft.Skype.EnterpriseVoice.BVDClient.Country
+Instance or array of the object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d30e5654-edac-449d-b5a7-c64210d5cedf(OCS.15).aspx)
-
