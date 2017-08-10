@@ -1,4 +1,5 @@
 ---
+external help file: 
 applicable: Lync Server 2010
 schema: 2.0.0
 ---
