@@ -23,14 +23,13 @@ Get-CsOnlineVoiceUser [-BypassDualWrite <Object>] [-CivicAddressId <Object>] [-D
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 ```
 
 This example uses the User Principal Name (UPN) to retrieve the location and phone number information.
 
-Get-CsOnlineVoiceUser -Identity Ken.Myer@contoso.com
 
 ## PARAMETERS
 
@@ -338,19 +337,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None
+### None
+
 
 ## OUTPUTS
 
-###  
-The cmdlet returns instances of the Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacUser object.
+### Deserialized.Microsoft.Rtc.Management.Hosted.Bvd.Types.LacUser
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/df1ee588-3cb0-4a83-8bcb-7231190e68db(OCS.15).aspx)
-
