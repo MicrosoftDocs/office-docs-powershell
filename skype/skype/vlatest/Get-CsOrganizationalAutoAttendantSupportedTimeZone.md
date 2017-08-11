@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantSupportedTimeZone
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Organizational Auto Attendant (OAA)service.
 
 ## SYNTAX
 
@@ -17,18 +17,24 @@ Get-CsOrganizationalAutoAttendantSupportedTimeZone [[-Identity] <Object>] [-Bypa
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets all the time zones that the OAA service supports, or a specific time zone if its Identity is provided.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Get-CsOrganizationalAutoAttendantSupportedTimeZone
 ```
 
+This example gets all supported time zones.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOrganizationalAutoAttendantSupportedTimeZone -Identity "Pacific Standard Time"
 ```
 
-Insert descriptive text for example 1.
+This example gets the Pacific Standard time zone.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -81,6 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
+
 PARAMVALUE: String
 
 ```yaml
@@ -133,11 +141,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.OAA.Models.TimeZone
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/54a0981a-84b7-491a-b82e-5631d3647fe5(OCS.15).aspx)
-

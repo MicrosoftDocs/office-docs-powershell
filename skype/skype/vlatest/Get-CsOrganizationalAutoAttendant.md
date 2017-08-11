@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Get-CsOrganizationalAutoAttendant cmdlet to get information about Organizational Auto Attendants (OAAs). 
 
 ## SYNTAX
 
@@ -18,18 +18,38 @@ Get-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <Obje
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Get-CsOrganizationalAutoAttendant cmdlet returns information about the OAAs in your organization.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Get-CsOrganizationalAutoAttendant
 ```
 
+This example gets all OAAs in the organization.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOrganizationalAutoAttendant -PrimaryUri sip:mainoaa@contoso.com
 ```
 
-Insert descriptive text for example 1.
+This example gets the OAAs that has the Primary URI of sip:mainoaa@contoso.com.
 
-Insert example commands for example 1.
+### -------------------------- Example 3 --------------------------
+```
+Get-CsOrganizationalAutoAttendant -First 10
+```
+
+This example gets the first ten organizational auto attendants configured for use in the organization.
+
+### -------------------------- Example 4 --------------------------
+```
+Get-CsOrganizationalAutoAttendant -Skip 5 -First 10
+```
+
+This example skips initial 5 organizational auto attendants and gets the next 10 OAAs configured for use in the organization.
+
 
 ## PARAMETERS
 
@@ -98,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryUri
-PARAMVALUE: Uri
+The PrimaryUri parameter represents the SIP address for the OAA to be retrieved. If this parameter is not specified, then all created OAAs in the organization are returned.
 
 ```yaml
 Type: Object
@@ -146,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-{{Fill First Description}}
+The First parameter indicates the maximum number of organizational auto attendants to retrieve as the result. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Object
@@ -178,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-{{Fill Skip Description}}
+The Skip parameter indicates the number of initial organizational auto attendants to skip in the result. It is intended to be used for pagination purposes.
 
 ```yaml
 Type: Object
@@ -196,13 +216,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
+
+### String
+The String is used as the PrimaryUri input.
+
 
 ## OUTPUTS
 
+### Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant 
+
+
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/393b7dfc-ec84-4038-a883-d6ad3b3b32cc(OCS.15).aspx)
-

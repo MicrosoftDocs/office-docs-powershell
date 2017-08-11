@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantStatus
 
 ## SYNOPSIS
-Get-CsOrganizationalAutoAttendantStatus \[-PrimaryUri\] \<uri\> \[-ApplicationId \<guid\>\] \[-IncludeResources \<List\[ResourceType\]\>\] \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[\<CommonParameters\>\]
+
 
 ## SYNTAX
 
@@ -17,8 +17,10 @@ Get-CsOrganizationalAutoAttendantStatus [[-PrimaryUri] <Object>] [-ApplicationId
  [-Tenant <Object>] [-AsJob] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
 {{Fill in the Description}}
+
 
 ## EXAMPLES
 
@@ -28,6 +30,7 @@ PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -174,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

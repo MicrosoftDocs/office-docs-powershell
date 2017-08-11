@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantSupportedLanguage
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets languages that are supported by the Organizational Auto Attendant (OAA) service.
 
 ## SYNTAX
 
@@ -17,18 +17,23 @@ Get-CsOrganizationalAutoAttendantSupportedLanguage [[-Identity] <Object>] [-Bypa
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets all languages (and their corresponding voices/speakers) that are supported by the OAA service.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Get-CsOrganizationalAutoAttendantSupportedLanguage
 ```
 
+This example gets all supported languages.
+
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOrganizationalAutoAttendantSupportedLanguage -Identity "en-US"
 ```
 
-Insert descriptive text for example 1.
-
-Insert example commands for example 1.
+The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets all languages (and their corresponding voices/speakers) that are supported by the OAA service.
 
 ## PARAMETERS
 
@@ -81,6 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
+The Identity parameter designates a specific language to be retrieved. If this parameter is not specified, then all supported languages are returned.
+
 PARAMVALUE: String
 
 ```yaml
@@ -133,11 +140,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.OAA.Models.Language
+
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f04e0cce-b868-4ebb-a590-0c4940740033(OCS.15).aspx)
-
