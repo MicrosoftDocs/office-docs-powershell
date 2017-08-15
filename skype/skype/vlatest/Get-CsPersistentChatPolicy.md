@@ -7,18 +7,9 @@ schema: 2.0.0
 # Get-CsPersistentChatPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about the Persistent Chat policies configured for use in your organization.
-Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Returns information about the Persistent Chat policies configured for use in your organization.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -34,117 +25,51 @@ Get-CsPersistentChatPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Tenant <G
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
+The Persistent Chat service provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
 
 By default, users are not granted access to the Persistent Chat service; that access can only be granted if the user is managed by a Persistent Chat policy that allows for the user of the service.
-When you install Lync 2013 Preview, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
+When you install Skype for Business Server, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
 If you want to give all your users access to the service you can simply set the EnablePersistentChat property in this global policy to True.
 Alternatively, you can create additional policies at the site or at the per-user scope, and thus provide Persistent Chat access to some users while denying this access to other users.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPersistentChatPolicy"}
-
-Lync Server Control Panel: To view Persistent Chat policy information in the Lync Server Control Panel, click Persistent Chat and then click Persistent Chat Policy.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-By default, users are not granted access to the Persistent Chat service; that access can only be granted if the user is managed by a Persistent Chat policy that allows for the user of the service.
-When you install Skype for Business Server 2015, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
-If you want to give all your users access to the service you can simply set the EnablePersistentChat property in this global policy to True.
-Alternatively, you can create additional policies at the site or at the per-user scope, and thus provide Persistent Chat access to some users while denying this access to other users.
-
-Skype for Business Server Control Panel: To view Persistent Chat policy information in the Skype for Business Server Control Panel, click Persistent Chat and then click Persistent Chat Policy.
-
+To view Persistent Chat policy information in the Skype for Business Server Control Panel, click Persistent Chat and then click Persistent Chat Policy.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsPersistentChatPolicy
 ```
 
 The command shown in Example 1 returns information about all the Persistent Chat policies configured for use in the organization.
 
-Get-CsPersistentChatPolicy
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 returns information about all the Persistent Chat policies configured for use in the organization.
-
-Get-CsPersistentChatPolicy
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPersistentChatPolicy -Identity "RedmondPersistentChatPolicy"
 ```
 
 In Example 2, information is returned only for the per-user Persistent Chat policy with the Identity RedmondPersistentChatPolicy.
 
-Get-CsPersistentChatPolicy -Identity "RedmondPersistentChatPolicy"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-In Example 2, information is returned only for the per-user Persistent Chat policy with the Identity RedmondPersistentChatPolicy.
-
-Get-CsPersistentChatPolicy -Identity "RedmondPersistentChatPolicy"
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPersistentChatPolicy -Filter "site:*"
 ```
 
 In Example 3, information is returned for all the Persistent Chat policies configured at the site scope.
 This is done by including the Filter parameter and the parameter value "site:*".
 
-Get-CsPersistentChatPolicy -Filter "site:*"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 --------------------------
 ```
-
-```
-
-In Example 3, information is returned for all the Persistent Chat policies configured at the site scope.
-This is done by including the Filter parameter and the parameter value "site:*".
-
-Get-CsPersistentChatPolicy -Filter "site:*"
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 4, information is returned only for those Persistent Chat policies in which Persistent Chat is enabled.
-To do this, Get-CsPersistentChatPolicy is first called without any parameters in order to return a collection of all the Persistent Chat policies configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those policies where the EnablePersistentChat property is equal to True ($True).
-
 Get-CsPersistentChatPolicy | Where-Object {$_.EnablePersistentChat -eq $True}
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 4, information is returned only for those Persistent Chat policies in which Persistent Chat is enabled.
 To do this, the Get-CsPersistentChatPolicy cmdlet is first called without any parameters in order to return a collection of all the Persistent Chat policies configured for use in the organization.
 This collection is then piped to the Where-Object cmdlet, which picks out only those policies where the EnablePersistentChat property is equal to True ($True).
 
-Get-CsPersistentChatPolicy | Where-Object {$_.EnablePersistentChat -eq $True}
 
 ## PARAMETERS
 
@@ -152,7 +77,7 @@ Get-CsPersistentChatPolicy | Where-Object {$_.EnablePersistentChat -eq $True}
 Enables you to do a wildcard search for Persistent Chat policies.
 For example, to find all the policies configured at the site scope, use this syntax:
 
--Filter "site:*"
+`-Filter "site:*"`
 
 You cannot use both the Filter parameter and the Identity parameter in the same command.
 
@@ -170,51 +95,24 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2013
-
 Unique identity assigned to the policy when it was created.
 Persistent Chat policies can be assigned at the global, site, or per-user scope.
 To refer to the global instance, use this syntax:
 
--Identity global
+`-Identity global`
 
 To refer to a policy at the site scope, use this syntax:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To refer to a policy at the per-user scope, use syntax similar to this:
 
--Identity RedmondPersistentChatPolicy
-
-Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
-To do a wildcard search for policies, use the Filter parameter instead.
-
-If neither the Identity nor the Filter parameter is specified Get-CsPersistentChatPolicy returns information about all the Persistent Chat policies configured for use in your organization.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unique identity assigned to the policy when it was created.
-Persistent Chat policies can be assigned at the global, site, or per-user scope.
-To refer to the global instance, use this syntax:
-
--Identity global
-
-To refer to a policy at the site scope, use this syntax:
-
--Identity site:Redmond
-
-To refer to a policy at the per-user scope, use syntax similar to this:
-
--Identity RedmondPersistentChatPolicy
+`-Identity RedmondPersistentChatPolicy`
 
 Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
 To do a wildcard search for policies, use the Filter parameter instead.
 
 If neither the Identity nor the Filter parameter is specified the Get-CsPersistentChatPolicy cmdlet returns information about all the Persistent Chat policies configured for use in your organization.
-
-
 
 ```yaml
 Type: XdsIdentity
@@ -249,11 +147,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Persistent Chat policies are being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -271,25 +169,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsPersistentChatPolicy does not accept pipelined input.
+### None
 
-###  
-None.
-The Get-CsPersistentChatPolicy cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-Get-CsPersistentChatPolicy returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
+### Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy
 
-###  
-The Get-CsPersistentChatPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
 
 ## NOTES
+
 
 ## RELATED LINKS
 
@@ -300,8 +192,3 @@ The Get-CsPersistentChatPolicy cmdlet returns instances of the Microsoft.Rtc.Man
 [Remove-CsPersistentChatPolicy]()
 
 [Set-CsPersistentChatPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0f33d177-dec6-44a3-a9ef-dd39029a4ddd(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0f33d177-dec6-44a3-a9ef-dd39029a4ddd(OCS.16).aspx)
-

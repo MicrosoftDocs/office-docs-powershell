@@ -7,18 +7,9 @@ schema: 2.0.0
 # Get-CsPoolFabricState
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Returns the Windows Fabric state for Microsoft Lync Server 2013 Preview pool.
-Windows Fabric is a Microsoft technology used for creating highly reliable, distributable, and scalable applications.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns the Windows Fabric state for a Skype for Business Server 2015 pool.
+Returns the Windows Fabric state for a Skype for Business Server pool.
 Windows Fabric is a Microsoft technology used for creating highly reliable, distributable, and scalable applications.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -51,67 +42,30 @@ Get-CsPoolFabricState [-UserUri] <UserIdParameter> [-Confirm] [-Force] [-WhatIf]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
+The Get-CsPoolFabricState cmdlet returns the Windows Fabric state for a Skype for Business Server pool.
+This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Skype for Business Server Storage Service.
 
-The Get-CsPoolFabricstate cmdlet returns the Windows Fabric state for a Lync Server 2013 Preview pool.
-This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Lync Server Storage Service.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsPoolFabricState"}
-
-Lync Server Control Panel: The functions carried out by the Get-CsPoolFabricState cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Get-CsPoolFabricState cmdlet returns the Windows Fabric state for a Skype for Business Server 2015 pool.
-This includes information about Windows Fabric replica instances for any (or all) of the following services: MCU factory; Conference Directory; Routing; Skype for Business Server 2015 Storage Service.
-
-Skype for Business Server Control Panel: The functions carried out by the Get-CsPoolFabricState cmdlet are not available in Skype for Business Server Control Panel.
-
+The functions carried out by the Get-CsPoolFabricState cmdlet are not available in Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com"
 ```
 
 The command shown in Example 1 returns the fabric state for the pool atl-cs-001.litwareinc.com.
 Because the Type parameter was not included, state information for all the services on the pool will be returned.
 
-Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 returns the fabric state for the pool atl-cs-001.litwareinc.com.
-Because the Type parameter was not included, state information for all the services on the pool will be returned.
-
-Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com" -Type MCU
 ```
 
 Example 2 returns the fabric state for a single service on the pool atl-cs-001.litwareinc.com: the MCU factory service.
 This is done by including the Type parameter and the parameter value "MCU".
 
-Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com" -Type MCU
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 returns the fabric state for a single service on the pool atl-cs-001.litwareinc.com: the MCU factory service.
-This is done by including the Type parameter and the parameter value "MCU".
-
-Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com" -Type MCU
 
 ## PARAMETERS
 
@@ -119,7 +73,7 @@ Get-CsPoolFabricState -PoolFqdn "atl-cs-001.litwareinc.com" -Type MCU
 Fully qualified domain name of the pool being checked.
 You must supply the FQDN of a pool when calling this cmdlet; for example:
 
--PoolFqdn "atl-cs-001.litwareinc.com"
+`-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: String
@@ -180,8 +134,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-**Below Content Applies To:** Lync Server 2013
-
 Specifies the service type to be returned.
 Allowed values are:
 
@@ -192,14 +144,6 @@ Allowed values are:
 LYSS (returns information for the Lync Server Storage service)
 
 You can only specify a single type per command.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-{{Fill Type Description}}
-
-
 
 ```yaml
 Type: FabricEnumerationType
@@ -251,11 +195,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the Skype for Business Online tenant account whose Windows Fabric pool state is being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -274,7 +218,7 @@ Accept wildcard characters: False
 Enables you to check the Windows fabric state for the pool used by a specific user.
 For example, to check the Windows fabric state for the user Ken Myer use this syntax:
 
--UserUri "sip:kenmyer@litwareinc.com"
+`-UserUri "sip:kenmyer@litwareinc.com"`
 
 Note that you can only specify one user URI per command.
 
@@ -358,33 +302,21 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsPoolFabricState does not support pipelined input.
+### None
 
-###  
-None.
-The Get-CsPoolFabricState cmdlet does not support pipelined input.
 
 ## OUTPUTS
 
-###  
-String value representing the fabric state..
-Get-CsPoolFabricState does not return objects.
-
-###  
+### String 
 String value representing the fabric state.
-The Get-CsPoolFabricState cmdlet does not return objects.
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Reset-CsPoolFabricState]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9fe6cce5-4142-47b3-94ac-4cb8b94ec215(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9fe6cce5-4142-47b3-94ac-4cb8b94ec215(OCS.16).aspx)
-
