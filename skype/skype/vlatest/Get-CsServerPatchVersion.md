@@ -20,12 +20,13 @@ Get-CsServerPatchVersion [-Report <String>] [<CommonParameters>]
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -59,4 +60,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,25 +7,10 @@ schema: 2.0.0
 # Get-CsService
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about the services and server roles being used in your Microsoft Lync Server 2010 infrastructure.
-A service is an instance of a role that has been deployed in a Lync Server 2010 pool. 
-For example, you might have a pool of computers all running the Monitoring Server service.
-
-**Below Content Applies To:** Lync Server 2013
-
-Returns information about the services and server roles being used in your Lync Server infrastructure.
-A service is an instance of a role that has been deployed in a Lync Server pool.
-For example, you might have a pool of computers all running the Monitoring Server service.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the services and server roles being used in your Skype for Business Server 2015 infrastructure.
-A service is an instance of a role that has been deployed in a Skype for Business Server 2015 pool.
+Returns information about the services and server roles being used in your Skype for Business Server infrastructure.
+A service is an instance of a role that has been deployed in a Skype for Business Server pool.
 For example, you might have a pool of computers all running the Monitoring service.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -191,72 +176,10 @@ Get-CsService [-PoolFqdn <String>] [-VideoInteropServer] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-The capabilities found in Lync Server 2010 are typically expressed as services or as server roles.
-For example, you can configure Lync Server to automatically save a transcript of every instant messaging session that takes place in your organization.
+The capabilities found in Skype for Business Server are typically expressed as services or as server roles.
+For example, you can configure Skype for Business Server to automatically save a transcript of every instant messaging session that takes place in your organization.
 In order to do this, you must install the Archiving Server server role.
-Services and server roles can be configured at the same time you install Lync Server itself, or they can be configured after the software is up and running.
-
-The Get-CsService cmdlet enables you to return information about the server roles and services running in your organization.
-Called without any additional parameters, Get-CsService returns detailed information about all your services and server roles.
-Alternatively, you can limit the returned data to a specified pool by using the PoolFqdn parameter.
-In addition, you can use any number of switch parameters to limit the returned data to a specific type of service.
-A switch parameter is a parameter that does not require a parameter value.
-For example, this command returns information about all your Archiving Servers:
-
-Get-CsService -ArchivingServer
-
-Note that you can only use one such switch parameter per command.
-The following command, which tries to return information about both Archiving Servers and Monitoring Servers, will fail:
-
-Get-CsService -ArchivingServer -MonitoringServer
-
-If you need to return information for multiple server roles, you can use Get-CsService to return a complete collection of service data, and then pipe that data to the Where-Object cmdlet:
-
-Get-CsService | Where-Object {$_.Role -eq "ArchivingServer" -or $_.Role -eq "MonitoringServer"}
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsService cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Get-CsService"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The capabilities found in Lync Server are typically expressed as services or as server roles.
-For example, you can configure Lync Server to automatically save a transcript of every instant messaging session that takes place in your organization.
-In order to do this, you must install the Archiving Server server role.
-Services and server roles can be configured at the same time you install Lync Server itself, or they can be configured after the software is up and running.
-
-The Get-CsService cmdlet enables you to return information about the server roles and services running in your organization.
-Called without any additional parameters, Get-CsService returns detailed information about all your services and server roles.
-Alternatively, you can limit the returned data to a specified pool by using the PoolFqdn parameter.
-In addition, you can use any number of switch parameters to limit the returned data to a specific type of service.
-A switch parameter is a parameter that does not require a parameter value.
-For example, this command returns information about all your Archiving Servers:
-
-Get-CsService -ArchivingServer
-
-Note that you can only use one such switch parameter per command.
-The following command, which tries to return information about both Archiving Servers and Monitoring Servers, will fail:
-
-Get-CsService -ArchivingServer -MonitoringServer
-
-If you need to return information for multiple server roles, you can use Get-CsService to return a complete collection of service data, and then pipe that data to the Where-Object cmdlet:
-
-Get-CsService | Where-Object {$_.Role -eq "ArchivingServer" -or $_.Role -eq "MonitoringServer"}
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsService cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsService"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The capabilities found in Skype for Business Server 2015 are typically expressed as services or as server roles.
-For example, you can configure Skype for Business Server 2015 to automatically save a transcript of every instant messaging session that takes place in your organization.
-In order to do this, you must install the Archiving Server server role.
-Services and server roles can be configured at the same time you install Skype for Business Server 2015 itself, or they can be configured after the software is up and running.
+Services and server roles can be configured at the same time you install Skype for Business Server itself, or they can be configured after the software is up and running.
 
 The Get-CsService cmdlet enables you to return information about the server roles and services running in your organization.
 Called without any additional parameters, the Get-CsService cmdlet returns detailed information about all your services and server roles.
@@ -265,47 +188,29 @@ In addition, you can use any number of switch parameters to limit the returned d
 A switch parameter is a parameter that does not require a parameter value.
 For example, this command returns information about all your Archiving Servers:
 
-Get-CsService -ArchivingServer
+`Get-CsService -ArchivingServer`
 
 Note that you can only use one such switch parameter per command.
 The following command, which tries to return information about both Archiving Servers and Monitoring Servers, will fail:
 
-Get-CsService -ArchivingServer -MonitoringServer
+`Get-CsService -ArchivingServer -MonitoringServer`
 
 If you need to return information for multiple server roles, you can use the Get-CsService cmdlet to return a complete collection of service data, and then pipe that data to the Where-Object cmdlet:
 
-Get-CsService | Where-Object {$_.Role -eq "ArchivingServer" -or $_.Role -eq "MonitoringServer"}
+`Get-CsService | Where-Object {$_.Role -eq "ArchivingServer" -or $_.Role -eq "MonitoringServer"}`
 
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsService
 ```
 
-The command shown in Example 1 returns information about all the Lync Server 2010 services and server roles currently running in your organization.
+The command shown in Example 1 returns information about all the Skype for Business Server services and server roles currently running in your organization.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 returns information about all the Lync Server services and server roles currently running in your organization.
-
-Get-CsService
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 returns information about all the Skype for Business Server 2015 services and server roles currently running in your organization.
-
-Get-CsService
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsService -ApplicationServer
 ```
@@ -314,117 +219,27 @@ Example 2 returns information only about the Application service.
 You can return information for other services/server roles simply by using the appropriate parameter.
 For example, this command returns information about the file store:
 
-Get-CsService -FileStore
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 returns information only about the Application service.
-You can return information for other services/server roles simply by using the appropriate parameter.
-For example, this command returns information about the file store:
-
-Get-CsService -ApplicationServer
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 returns information only about the Application service.
-You can return information for other services/server roles simply by using the appropriate parameter.
-For example, this command returns information about the file store:
-
-Get-CsService -ApplicationServer
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsService -PoolFqdn "atl-cs-001.litwareinc.com" | Select-Object Identity
-```
-
-The preceding command reports back the Identity for each service located on the pool atl-cs-001.litwareinc.com.
-To carry out this task, the command first calls Get-CsService and the PoolFqdn parameter to return only those services and server roles found on the pool atl-cs-001.litwareinc.com.
-This collection is then piped to the Select-Object cmdlet, which reports back the Identity of each item in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 reports back the Identity for each service located on the pool atl-cs-001.litwareinc.com.
-To carry out this task, the command first calls Get-CsService and the PoolFqdn parameter to return only those services and server roles found on the pool atl-cs-001.litwareinc.com.
-This collection is then piped to the Select-Object cmdlet, which reports back the Identity of each item in the collection.
-
-Get-CsService -PoolFqdn "atl-cs-001.litwareinc.com" | Select-Object Identity
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 3 reports back the Identity for each service located on the pool atl-cs-001.litwareinc.com.
 To carry out this task, the command first calls the Get-CsService cmdlet and the PoolFqdn parameter to return only those services and server roles found on the pool atl-cs-001.litwareinc.com.
 This collection is then piped to the Select-Object cmdlet, which reports back the Identity of each item in the collection.
 
-Get-CsService -PoolFqdn "atl-cs-001.litwareinc.com" | Select-Object Identity
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsService | Where-Object {$_.SiteID -eq "site:Redmond"}
-```
-
-In Example 4, information is returned for all the services/server roles found on the Redmond site.
-This is done by first calling Get-CsService without any parameters in order to return a collection of all the services and server roles currently in use in the organization.
-This data is then piped to the Where-Object cmdlet, which picks out only those items where the SiteID property is equal to site:Redmond.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 4, information is returned for all the services/server roles found on the Redmond site.
-This is done by first calling Get-CsService without any parameters in order to return a collection of all the services and server roles currently in use in the organization.
-This data is then piped to the Where-Object cmdlet, which picks out only those items where the SiteID property is equal to site:Redmond.
-
-Get-CsService | Where-Object {$_.SiteID -eq "site:Redmond"}
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 4, information is returned for all the services/server roles found on the Redmond site.
 This is done by first calling the Get-CsService cmdlet without any parameters in order to return a collection of all the services and server roles currently in use in the organization.
 This data is then piped to the Where-Object cmdlet, which picks out only those items where the SiteID property is equal to site:Redmond.
 
-Get-CsService | Where-Object {$_.SiteID -eq "site:Redmond"}
-
-### -------------------------- Example 5 ------------------------ (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsService | Where-Object {$_.DependentServiceList -like "*Registrar*"}
-```
-
-The command shown in Example 5 returns information about all the services that list the Registrar as a dependent service.
-To do this, Get-CsService is called in order to return a collection of all the services and server roles currently in use.
-This collection is then piped to Where-Object, which selects each item where the DependentServiceList property includes the string value "Registrar".
-The Where-Object criteria is specified by using the -like operator and the wildcard value "*Registrar*".
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 5 returns information about all the services that list the Registrar as a dependent service.
-To do this, Get-CsService is called in order to return a collection of all the services and server roles currently in use.
-This collection is then piped to Where-Object, which selects each item where the DependentServiceList property includes the string value "Registrar".
-The Where-Object criteria is specified by using the -like operator and the wildcard value "*Registrar*".
-
-Get-CsService | Where-Object {$_.DependentServiceList -like "*Registrar*"}
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 5 returns information about all the services that list the Registrar as a dependent service.
@@ -432,26 +247,15 @@ To do this, the Get-CsService cmdlet is called in order to return a collection o
 This collection is then piped to the Where-Object cmdlet, which selects each item where the DependentServiceList property includes the string value "Registrar".
 The Where-Object cmdlet criteria is specified by using the -like operator and the wildcard value "*Registrar*".
 
-Get-CsService | Where-Object {$_.DependentServiceList -like "*Registrar*"}
+
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Unique identifier of the specific service or server role to be returned.
-For example: -Identity "Registrar:atl-cs-001.litwareinc.com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique identifier of the specific service or server role to be returned.
 For example:
 
--Identity "Registrar:atl-cs-001.litwareinc.com"
-
-
+`-Identity "Registrar:atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -552,26 +356,8 @@ Accept wildcard characters: False
 ```
 
 ### -CentralManagement
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about the  Central Management service used in your organization.
-The Central Management service is used to send configuration data to computers running Lync Server 2010 services.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
 Returns information about the Central Management service used in your organization.
-The Central Management service is used to send configuration data to computers running Lync Server services.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the Central Management service used in your organization.
-The Central Management service is used to send configuration data to computers running Skype for Business Server 2015 services.
-
-
+The Central Management service is used to send configuration data to computers running Skype for Business Server services.
 
 ```yaml
 Type: SwitchParameter
@@ -587,19 +373,8 @@ Accept wildcard characters: False
 ```
 
 ### -CentralManagementDatabase
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Returns information about the Central Management store used in your organization.
-The Central Management store maintains configuration information for Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the Central Management store used in your organization.
-The Central Management store maintains configuration information for Skype for Business Server 2015.
-
-
+The Central Management store maintains configuration information for Skype for Business Server.
 
 ```yaml
 Type: SwitchParameter
@@ -667,19 +442,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileStore
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Returns information about the File Stores used in your organization.
-The File Store is used to maintain Lync Server files, such as audio files used by the Announcement service.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Returns information about the File Stores used in your organization.
-The File Store is used to maintain Skype for Business Server 2015 files, such as audio files used by the Announcement service.
-
-
+The File Store is used to maintain Skype for Business Server files, such as audio files used by the Announcement service.
 
 ```yaml
 Type: SwitchParameter
@@ -695,19 +459,8 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementServer
-**Below Content Applies To:** Lync Server 2010
-
-Returns information about the  Central Management Server used in your organization.
-The  Central Management Server is commonly collocated with the Front End Servers and is responsible for accessing information in the Central Management store.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Returns information about the Central Management Server used in your organization.
 The Central Management Server is commonly collocated with the Front End Servers and is responsible for accessing information in the Central Management store.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1061,35 +814,27 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-Get-CsService does not accept pipelined input.
+### None
 
-###  
-None.
-The Get-CsService cmdlet does not accept pipelined input.
 
 ## OUTPUTS
-
-###  
-Get-CsService returns different objects based on the parameters used when calling the cmdlet.
-For example, if you include the MonitoringDatabase parameter, Get-CsService returns instances of the Microsoft.Rtc.Management.Xds.DisplayMonitoringDatabase object.
-To determine the objects returned using other parameters, call Get-CsService using one of those parameters, and then pipe the returned object to the Get-Member cmdlet.
-For example: Get-CsService -Registrar | Get-Member.
 
 ###  
 The Get-CsService cmdlet returns different objects based on the parameters used when calling the cmdlet.
 For example, if you include the MonitoringDatabase parameter, the Get-CsService cmdlet returns instances of the Microsoft.Rtc.Management.Xds.DisplayMonitoringDatabase object.
 To determine the objects returned using other parameters, call the Get-CsService cmdlet using one of those parameters, and then pipe the returned object to the Get-Member cmdlet.
-For example: Get-CsService -Registrar | Get-Member
+For example: 
+
+`Get-CsService -Registrar | Get-Member`
+
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f687d41b-2cb3-4c32-ae28-90e25cdd0d6a(OCS.14).aspx)
+## RELATED LINKS
 
 [Set-CsApplicationServer]()
 
@@ -1112,8 +857,3 @@ For example: Get-CsService -Registrar | Get-Member
 [Set-CsUserServer]()
 
 [Set-CsWebServer]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f687d41b-2cb3-4c32-ae28-90e25cdd0d6a(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f687d41b-2cb3-4c32-ae28-90e25cdd0d6a(OCS.16).aspx)
-
