@@ -23,10 +23,11 @@ git fetch upstream
 git checkout -b [name of your branch]
 ```
 5. Work on content in your favorite Markdown editor.
-6. Test to make sure you didn't break markdown.
-
-7. Merge your work into Master branch.
-
+6. Test to make sure your work matches the correct schema (use PlatyPS tool for this).
+7. Merge the Master branch with your working branch (in your forked repo) and resolve any issues.
+```
+git merge master [name of your branch]
+```
 8. Submit a Pull Request to move your work upstream.
 
 ## Steps in more detail
@@ -104,6 +105,10 @@ git remote add upstream https://github.com/MicrosoftDocs/office-powershell-docs.
 git fetch upstream
 ```
 
+For more details, see:
+https://help.github.com/articles/configuring-a-remote-for-a-fork/
+https://help.github.com/articles/syncing-a-fork/
+
 ### Create and checkout a branch for your work
 The next step is to create your own working branch. 
 The reason for this is so that you can pull updates from the Master branch from the upstream repository and merge your own working branch in your own Fork. 
@@ -149,21 +154,42 @@ Any deviations will break Get-Help.
 How to run the command to generate XML and validate you have matched the schema and won't cause errors in build. 
 To validate run the New-ExternalHelp command (from PlatyPS) on your Markdown.
 
+### Merge the upstream Master branch into your branch
+Merge the Master branch with your working branch (in your forked repo) and resolve any issues.
+https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+
+It is best practice to merge the Master branch from upstream with your working branch and not vice versa.
+Then you can submit a Pull Request for your working branch and the upstream repo maintainer can merge your branch into Master without issues.
+
+Make sure that you have your working branch checked out and that your forked repo is updated with the upstream Master branch.
+See the section on forking above for details.
+
+Merge the Master branch with your working branch and then resolve issues.
+```
+git merge master [name of your branch]
+```
 
 ### Create a Pull Request
-**SECTION IN PROGRESS**
+To get your work back into the upstream repo you create a Pull Request.
+A Pull Request asks the maintainers of the upstream repo to pull your work into the main project.
 
-Get your work back into the upstream project with a Pull Request
-https://help.github.com/articles/configuring-a-remote-for-a-fork/
-https://help.github.com/articles/syncing-a-fork/
+1. To create a Pull Request, Open your web browser and navigate to the main upstream repo site at:
+https://github.com/MicrosoftDocs/office-powershell-docs
+2. Click the New Pull Request button towards the top of the page.
+3. Click the link to "compare across forks".
+4. Select the upstream branch and your local branch.
+5. Click Create Pull Request.
 
-When you are ready create a Pull Request to the main repository. 
-How to create a Pull Request.
+The repo maintainers will be notified of your Pull Request.
+Your Pull Request will have its own page where you can discuss and modify your request if required.
+
 
 ## Confirm your work shows up on docs.microsoft.com
-**SECTION IN PROGRESS**
+Once your Pull Request is approved and your branch merged into Master your changes will show on 
+docs.microsoft.com, here: 
+**need link**
 
-Once your Pull Request is approved and your branch merged into Master your changes will show on docs.microsoft.com, here: **need link**
+Your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
 
 ### Congratulations are in order!
 You just joined an elite club of contributors to Microsoft Office documentation!
