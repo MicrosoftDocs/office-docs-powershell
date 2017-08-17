@@ -106,8 +106,8 @@ git fetch upstream
 ```
 
 For more details, see:
-https://help.github.com/articles/configuring-a-remote-for-a-fork/
-https://help.github.com/articles/syncing-a-fork/
+- https://help.github.com/articles/configuring-a-remote-for-a-fork/
+- https://help.github.com/articles/syncing-a-fork/
 
 ### Create and checkout a branch for your work
 The next step is to create your own working branch. 
