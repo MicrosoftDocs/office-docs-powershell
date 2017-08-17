@@ -119,6 +119,8 @@ In the Git Bash terminal in Visual Studio Code:
 git checkout -b [name of your branch]
 ```
 
+Note the -b flag creates the branch if it doesn't exist and switches to it. To checkout an existing branch leave out the -b flag.
+
 ### Make edits to the relevant PowerShell cmdlet markdown.
 
 Open your favorite Markdown editor and edit the Markdown in your working branch. 
