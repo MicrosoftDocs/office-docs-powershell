@@ -27,14 +27,13 @@ If not, then licensing information is not available in the admin center.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantLicensingConfiguration
 ```
 
 The command shown in Example 1 returns licensing configuration information for the current tenant:
 
-Get-CsTenantLicensingConfiguration
 
 ## PARAMETERS
 
@@ -108,11 +107,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the tenant account whose licensing settings are being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return your tenant ID by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -148,19 +147,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-The Get-CsTenantLicensingConfiguration cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsTenantLicensingConfiguration cmdlet returns instances of the Deserialized.Microsoft.Rtc.Management.WritableConfig.Settings.TenantConfiguration.TenantLicensingConfiguration object.
+### Deserialized.Microsoft.Rtc.Management.WritableConfig.Settings.TenantConfiguration.TenantLicensingConfiguration
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Get-CsTenant]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1c8a4d07-dada-440e-8940-d6ab7e1c518c(OCS.15).aspx)
-
