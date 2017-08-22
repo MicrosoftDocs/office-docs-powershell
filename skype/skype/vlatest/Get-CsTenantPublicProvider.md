@@ -51,9 +51,9 @@ For more information, see the help topic for the Set-CsTenantFederationConfigura
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantPublicProvider -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" | Select-Object -ExpandProperty DomainPICStatus
 ```
 
 Example 1 returns detailed information about the status of all the public providers assigned to the tenant bf19b7db-6960-41e5-a139-2aa373474354.
@@ -61,11 +61,9 @@ To do this, the command first uses the Get-CsTenantPublicProvider cmdlet to retu
 That information is then piped to the Select-Object cmdlet, which uses the ExpandProperty parameter to "expand" the value of the DomainPICStatus property.
 Expanding a property simply means displaying all the values stored in that property onscreen, and in an easy-to-read format.
 
-Get-CsTenantPublicProvider -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" | Select-Object -ExpandProperty DomainPICStatus
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsTenantPublicProvider -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" | Select-Object -ExpandProperty DomainPICStatus | Where-Object {$_.Status -eq "Enabled"}
 ```
 
 The command shown in Example 23 is a variation of the command shown in Example 1.
@@ -73,7 +71,6 @@ In Example 2, however, the public provider information returned by "expanding" t
 The Where-Object cmdlet then picks out only those providers where the Status property is set to Enabled.
 The net effect is to display only those public providers that are enabled for use.
 
-Get-CsTenantPublicProvider -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" | Select-Object -ExpandProperty DomainPICStatus | Where-Object {$_.Status -eq "Enabled"}
 
 ## PARAMETERS
 
@@ -81,11 +78,11 @@ Get-CsTenantPublicProvider -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" | Sele
 Globally unique identifier (GUID) of the tenant account whose public provider settings are being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return your tenant ID by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -121,22 +118,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
-The Get-CsTenantPublicProvider cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsTenantPublicProvider cmdlet returns instances of the Microsoft.Rtc.Management.Hosted.TenantPICStatus object.
+### Microsoft.Rtc.Management.Hosted.TenantPICStatus
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Get-CsTenantFederationConfiguration]()
 
 [Set-CsTenantPublicProvider]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9314e96a-a622-4d2b-b4b8-ee2dc432d774(OCS.15).aspx)
-
