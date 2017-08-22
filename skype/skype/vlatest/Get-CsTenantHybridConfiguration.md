@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Returns values for the hybrid configuration settings that enable users homed on Skype for Business Online to have access to Enterprise Voice features such as media bypass, Enhanced 9-1-1, and call parking.
-A hybrid scenario (also known as a split-domain scenario) is a Skype for Business Server 2015 deployment in which some users have accounts homed on-premises while other users have accounts homed on Skype for Business Online.
+A hybrid scenario (also known as a split-domain scenario) is a Skype for Business Server deployment in which some users have accounts homed on-premises while other users have accounts homed on Skype for Business Online.
 
 ## SYNTAX
 
@@ -18,8 +18,8 @@ Get-CsTenantHybridConfiguration [[-Identity] <Object>] [-BypassDualWrite <Object
 ```
 
 ## DESCRIPTION
-In a hybrid or "split domain" deployment, an organization has some users who have accounts homed on Skype for Business Online while simultaneously having other users who have accounts homed on the on-premises version of Skype for Business Server 2015.
-By default, users homed on Skype for Business Online do not have access to the complete range of capabilities offered by Enterprise Voice; that's because the Skype for Business Server 2015 servers do not have direct access to Skype for Business Online deployment and network configuration information.
+In a hybrid or "split domain" deployment, an organization has some users who have accounts homed on Skype for Business Online while simultaneously having other users who have accounts homed on the on-premises version of Skype for Business Server.
+By default, users homed on Skype for Business Online do not have access to the complete range of capabilities offered by Enterprise Voice; that's because the Skype for Business Server servers do not have direct access to Skype for Business Online deployment and network configuration information.
 Among other things, Skype for Business Online users do not have default access to such things as:
 
 Enhanced 9-1-1, the service used for making emergency phone calls.
@@ -43,23 +43,20 @@ However, you can't create or modify hybrid PSTN sites through the CsTenantHybrid
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantHybridConfiguration -Identity "Global"
 ```
 
 The command shown in Example 1 returns the property values for the global collection of tenant hybrid configuration settings.
 
-Get-CsTenantHybridConfiguration -Identity "Global"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsTenantHybridConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354"
 ```
 
 In Example 2, property values are returned for the custom tenant hybrid configuration settings applied to the tenant with the TenantId "bf19b7db-6960-41e5-a139-2aa373474354".
 
-Get-CsTenantHybridConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354"
 
 ## PARAMETERS
 
@@ -84,7 +81,7 @@ Enables you to use wildcard characters in order to return a collection of tenant
 Because you are limited to a single, global collection of hybrid configuration settings there is no need to use the Filter parameter.
 However, this is valid syntax for the Get-CsTenantHybridConfiguration cmdlet:
 
-Get-CsTenantHybridConfiguration -Filter "g*"
+`Get-CsTenantHybridConfiguration -Filter "g*"`
 
 ```yaml
 Type: Object
@@ -103,7 +100,7 @@ Accept wildcard characters: False
 Unique Identity of the tenant hybrid configuration settings to be returned.
 Because you are limited to a single, global collection of hybrid configuration settings, the only collection that can be returned by using the Identity parameter is the global collection:
 
--Identity global
+`-Identity global`
 
 To modify the settings for an individual tenant, use the Tenant parameter instead of the Identity parameter.
 
@@ -178,22 +175,20 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsTenantHybridConfiguration cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsTenantHybridConfiguration cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.HybridConfiguration.TenantHybridConfiguration object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.HybridConfiguration.TenantHybridConfiguration
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Set-CsTenantHybridConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/910020b2-8462-4880-8519-ce742f9d7748(OCS.15).aspx)
-

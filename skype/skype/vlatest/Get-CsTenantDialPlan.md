@@ -26,23 +26,22 @@ You can use the Get-CsTenantDialPlan cmdlet to retrieve specific information abo
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantDialPlan
 ```
 
 This example retrieves a tenant dial plan.
 
-Get-CsTenantDialPlan
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 ```
 
 This example retrieves the tenant dial plan that is within the scope of Vt1TenantDialplan2.
 
-Get-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 
 ## PARAMETERS
 
@@ -154,6 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/83262fab-1b8a-436e-81ec-636ec948a734(OCS.15).aspx)
-

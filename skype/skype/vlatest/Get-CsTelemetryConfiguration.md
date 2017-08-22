@@ -7,7 +7,8 @@ schema: 2.0.0
 # Get-CsTelemetryConfiguration
 
 ## SYNOPSIS
-Use the Get-CsTelemetryConfiguration cmdlet to return the settings on existing telemetry configurations.
+Use the Get-CsTelemetryConfiguration cmdlet to return the settings on existing telemetry configurations. 
+Telemetry returns a small set of Skype for Business operational data to Microsoft for quality tracking and product improvement. The data includes sign-in information, meeting joins, and other activity data.
 
 ## SYNTAX
 
@@ -26,14 +27,13 @@ For privacy information, see the Skype for Business Privacy Statement (http://go
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTelemetryConfiguration -Identity Site:Redmond
 ```
 
 This example returns the settings for the configuration scoped to the Redmond site.
 
-Get-CsTelemetryConfiguration -Identity Site:Redmond
 
 ## PARAMETERS
 
@@ -62,9 +62,9 @@ For example, "site:Redmond" (for site).
 The format of the service scope is "Service:\<Identity\>", where identity is derived from the topology.
 You can use the following cmds to identify the relevant services.
 
-Get-CsService -WebServer | fl Identity
+`Get-CsService -WebServer | fl Identity`
 
-Get-CsService -PoolFqdn \<pool\> | fl Identity
+`Get-CsService -PoolFqdn \<pool\> | fl Identity`
 
 The first command will give you all of the WebServices in the topology, regardless of the pool.
 The second will give you all of the services on the pool, regardless of their role.
@@ -104,17 +104,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.SignInTelemetry.SignInTelemetryConfiguration
+### Microsoft.Rtc.Management.WritableConfig.Settings.SignInTelemetry.SignInTelemetryConfiguration
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3342e0f2-8892-4dfc-9ff3-587444159289(OCS.16).aspx)
-

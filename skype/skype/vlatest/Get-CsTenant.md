@@ -23,15 +23,14 @@ Organizations will typically have a single tenant in which to house all their us
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenant
 ```
 
 The command shown in Example 1 returns information about your tenant.
 Organizations will have only one tenant.
 
-Get-CsTenant
 
 ## PARAMETERS
 
@@ -55,11 +54,11 @@ Accept wildcard characters: False
 Enables you to return data by using Active Directory attributes and without having to specify the full Active Directory distinguished name.
 For example, to retrieve a tenant by using the tenant display name, use syntax similar to this:
 
-Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}
+`Get-CsTenant -Filter {DisplayName -eq "FabrikamTenant"}`
 
 To return all tenants that use a Fabrikam domain use this syntax:
 
-Get-CsTenant -Filter {Domains -like "*fabrikam*"}
+`Get-CsTenant -Filter {Domains -like "*fabrikam*"}`
 
 The Filter parameter uses the same Windows PowerShell filtering syntax is used by the Where-Object cmdlet.
 
@@ -82,7 +81,7 @@ Accept wildcard characters: False
 Unique identifier for the tenant.
 For example:
 
--Identity "bf19b7db-6960-41e5-a139-2aa373474354"
+`-Identity "bf19b7db-6960-41e5-a139-2aa373474354"`
 
 If you do not include either the Identity or the Filter parameter then the Get-CsTenant cmdlet will return information about all your tenants.
 
@@ -140,19 +139,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
+### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject or String
 The Get-CsTenant cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object as well as string values representing the Identity of the tenant (for example "bf19b7db-6960-41e5-a139-2aa373474354").
+
 
 ## OUTPUTS
 
-###  
-The Get-CsTenant cmdlet returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.TenantObject object.
+### Microsoft.Rtc.Management.ADConnect.Schema.TenantObject
+
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6882c0c3-9500-4ade-abdc-1f0c58f7e6d2(OCS.15).aspx)
-

@@ -29,20 +29,19 @@ The Get-CsTenantFederationConfiguration cmdlet provides a way for administrators
 This cmdlet can also be used to review the allowed and blocked lists, lists which are used to specify domains that users can and cannot communicate with.
 However, administrators must use the Get-CsTenantPublicProvider cmdlet in order to see which public IM and presence providers users are allowed to communicate with.
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantFederationConfiguration
 ```
 
 The command shown in Exercise 1 returns federation configuration information for the current tenant:
 
-Get-CsTenantFederationConfiguration
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsTenantFederationConfiguration | Select-Object -ExpandProperty AllowedList
 ```
 
 In Example 2, information is returned for all the domains found on the federation allowed list for the current tenant.
@@ -50,7 +49,6 @@ In Example 2, information is returned for all the domains found on the federatio
 That information is then piped to the Select-Object cmdlet, which uses the ExpandProperty to "expand" the property AllowedList.
 Expanding a property simply means displaying all the information stored in that property onscreen, and in an easy-to-read format.
 
-Get-CsTenantFederationConfiguration | Select-Object -ExpandProperty AllowedList
 
 ## PARAMETERS
 
@@ -75,7 +73,7 @@ Enables you to use wildcard characters in order to return a collection of tenant
 Because each tenant is limited to a single, global collection of federation configuration settings there is no need to use the Filter parameter.
 However, this is valid syntax for the Get-CsTenantFederationConfiguration cmdlet:
 
-Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Filter "g*"
+`Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Filter "g*"`
 
 ```yaml
 Type: Object
@@ -96,7 +94,7 @@ Because each tenant is limited to a single, global collection of federation sett
 If you do choose to use the Identity parameter you must also include the Tenant parameter.
 For example:
 
-Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"
+`Get-CsTenantFederationConfiguration -Tenant "bf19b7db-6960-41e5-a139-2aa373474354" -Identity "global"`
 
 ```yaml
 Type: Object
@@ -131,11 +129,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the tenant account whose federation settings are being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will automatically be filled in for you based on your connection information.
@@ -175,22 +173,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
-None.
-The Get-CsTenantFederationConfiguration cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsTenantFederationConfiguration cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.TenantFederationSettings object.
+### Microsoft.Rtc.Management.WritableConfig.Settings.Edge.TenantFederationSettings
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
 [Get-CsTenantPublicProvider]()
 
 [Set-CsTenantFederationConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/71344777-b94e-4fb3-a2ad-29e12aab9e91(OCS.15).aspx)
-
