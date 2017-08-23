@@ -24,27 +24,24 @@ You must use the CsTenantUpdateTimeWindow cmdlets to manage tenant update time w
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsTenantUpdateTimeWindow
 ```
 
 The command shown in Example 1 returns information for all the tenant update time windows.
 
-Get-CsTenantUpdateTimeWindow
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsTenantUpdateTimeWindow -Identity "AlwaysOn"
 ```
 
 The command shown in Example 2 returns information for the tenant update time window with the given identity.
 
-Get-CsTenantUpdateTimeWindow -Identity "AlwaysOn"
 
 ## PARAMETERS
 
@@ -154,6 +151,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f43bdc32-af03-4b18-b742-7b1d8e0fd3bf(OCS.15).aspx)
-

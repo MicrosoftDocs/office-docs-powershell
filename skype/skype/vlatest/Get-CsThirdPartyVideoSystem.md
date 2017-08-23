@@ -21,40 +21,35 @@ Get-CsThirdPartyVideoSystem [[-Identity] <UserIdParameter>] [-Confirm] [-Credent
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
 Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
 VTC contact objects can be created by using the New-CsThirdPartyVideoSystem cmdlet.
 Information about these contact objects can be returned by using the Get-CsThirdPartyVideoSystem cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Get-CsThirdPartyVideoSystem
 ```
 
 The command shown in Example 1 returns a collection of all the third-party video systems configured for use in the organization.
 
-Get-CsThirdPartyVideoSystem
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video System"}
 ```
 
 In Example 2, information is returned for a single third-party video system: the system with the Active Directory display name Redmond Video System.
 
-Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video System"}
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsThirdPartyVideoSystem -OU "ou=Telecommunications,dc=litwareinc,dc=com"
 ```
 
 Example 3 uses the OU parameter to return all the third-party video systems with accounts in the Telecommunications OU.
 Note that this command also returns information for any third-party video systems that have accounts in a child OU of the Telecommunications OU (for example, ou=Telecommunications,ou=AudioVideo,dc=litwareinc,dc=com).
 
-Get-CsThirdPartyVideoSystem -OU "ou=Telecommunications,dc=litwareinc,dc=com"
 
 ## PARAMETERS
 
@@ -118,7 +113,7 @@ For example, you can limit returned data to third-party video system contact obj
 The Filter parameter uses the same Windows PowerShell filtering syntax that is used by the Where-Object cmdlet.
 For example, a filter that returns only video systems in the IT department would look like this, with Department representing the Active Directory attribute, -eq representing the comparison operator (equal to), and "IT" representing the filter value:
 
--Filter {Department -eq "IT"}
+`-Filter {Department -eq "IT"}`
 
 ```yaml
 Type: String
@@ -158,7 +153,7 @@ For example, you can limit returned data to contact objects that have been assig
 The LdapFilter parameter uses the LDAP query language when creating filters.
 For example, a filter that returns only contact objects representing video systems in the city of Redmond would look like this:
 
--LdapFilter "l=Redmond"
+`-LdapFilter "l=Redmond"`
 
 In the preceding filter, "l" represents the Active Directory attribute (locality); "=" represents the comparison operator (equal to); and "Redmond" represents the filter value.
 
@@ -236,20 +231,18 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsThirdPartyVideoSystem cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsThirdPartyVideoSystem cmdlet returns instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADThirdPartyVideoSystemContact object.
+### Microsoft.Rtc.Management.ADConnect.Schema.OCSADThirdPartyVideoSystemContact
+
 
 ## NOTES
 
+
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6d70dbc0-75a1-45ec-9d21-994eb581d5cd(OCS.16).aspx)
-

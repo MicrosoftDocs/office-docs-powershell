@@ -25,7 +25,7 @@ Get-CsThirdPartyVideoSystemPolicy [[-Identity] <XdsIdentity>] [-LocalStore] [-Te
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
 Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
 
 One key management task related to VTC devices is to enable (or disable) the ability of these devices to send low-resolution video.
@@ -36,44 +36,38 @@ The Get-CsThirdPartyVideoSystem cmdlet provides a way for administrators to retu
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
+Get-CsThirdPartyVideoSystemPolicy
 
 ```
 
 The command shown in Example 1 returns information about all the third-party video system policies currently configured for use in the organization.
 
-Get-CsThirdPartyVideoSystemPolicy
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsThirdPartyVideoSystemPolicy -Identity "RedmondVideoSystemPolicy"
 ```
 
 In Example 2, information for a single third-party video system policy is returned: the per-user policy with the Identity RedmondVideoSystemPolicy.
 
-Get-CsThirdPartyVideoSystemPolicy -Identity "RedmondVideoSystemPolicy"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsThirdPartyVideoSystemPolicy -Filter "site:*"
 ```
 
 Example 3 returns information about all the third-party video system policies that have been configured at the site scope.
 To do this, the Filter parameter is included, along with the filter value "site:*".
 
-Get-CsThirdPartyVideoSystemPolicy -Filter "site:*"
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 --------------------------
 ```
-
+Get-CsThirdPartVideoSystemPolicy | Where-Object {$_.SupportsSendingLowResolution -eq $True}
 ```
 
 The command shown in Example 4 returns information for all the third-party video system policies that allow users to send low-resolution video.
 To carry out this task, Get-CsThirdPartyVideoSystemPolicy is first used to return a collection of all the policies configured for use in the organization.
 That collection is then pipe to the Where-Object cmdlet, which picks out only those policies where the SupportsSendingLowResolution property is set to True ($True).
 
-Get-CsThirdPartVideoSystemPolicy | Where-Object {$_.SupportsSendingLowResolution -eq $True}
 
 ## PARAMETERS
 
@@ -81,11 +75,11 @@ Get-CsThirdPartVideoSystemPolicy | Where-Object {$_.SupportsSendingLowResolution
 Enables you to do a wildcard search for third-party video system policies.
 For example, to find all the policies configured at the site scope, use this syntax:
 
--Filter "site:*"
+`-Filter "site:*"`
 
 To find all the per-user policies, use this syntax:
 
--Filter "tag:*"
+`-Filter "tag:*"`
 
 Note that you can only filter on the Identity property.
 
@@ -107,15 +101,15 @@ Unique identity assigned to the policy when it was created.
 Third-party video system policies can be assigned at the global, site, or per-user scope.
 To refer to the global instance, use this syntax:
 
--Identity "global"
+`-Identity "global"`
 
 To refer to a policy at the site scope, use syntax similar to this:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 To refer to a policy at the per-user scope, use syntax similar to the following:
 
--Identity "RedmondVideoSystemPolicy"
+`-Identity "RedmondVideoSystemPolicy"`
 
 Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
 To do a wildcard search for policies, use the Filter parameter instead.
@@ -154,11 +148,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the third-party video system policies are being returned.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -176,18 +170,19 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
-The Get-CsThirdPartyVideoSystemPolicy cmdlet does not accept pipelined input.
+### None
+
 
 ## OUTPUTS
 
-###  
-The Get-CsThirdPartyVideoSystemPolicy cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
+### Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy
+
 
 ## NOTES
+
 
 ## RELATED LINKS
 
@@ -198,6 +193,3 @@ The Get-CsThirdPartyVideoSystemPolicy cmdlet returns instances of the Microsoft.
 [Remove-CsThirdPartyVideoSystem]()
 
 [Set-CsThirdPartyVideoSystemPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f6f539bc-de45-4285-bd51-8fa22cf22518(OCS.16).aspx)
-
