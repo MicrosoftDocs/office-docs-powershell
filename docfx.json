@@ -5,7 +5,7 @@
         "files": [
           "**/*.md"
         ],
-        "src": "skype-ps/docs-conceptual",
+        "src": "docs-conceptual/skype-ps",
         "version": "skype-ps",
         "dest": "skype"
       },
@@ -13,9 +13,17 @@
         "files": [
           "toc.yml"
         ],
+        "src": "docs-conceptual/skype-ps",
+        "version": "skype-ps",
+        "dest": "skype/office"
+      },
+      {
+        "files": [
+          "toc.yml"
+        ],
         "src": "skype-ps",
         "version": "skype-ps",
-        "dest": "module/skype-ps"
+        "dest": "module/office"
       },
       {
         "files": [
@@ -23,9 +31,6 @@
         ],
         "src": "skype-ps",
         "version": "skype-ps",
-        "exclude": [
-          "docs-conceptual/**"
-        ],
         "dest": "module"
       }
     ],

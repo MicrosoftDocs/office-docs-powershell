@@ -24,7 +24,7 @@
       ],
       "customized_tasks": {
         "docset_prebuild": [
-          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1"
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
         ]
       }
     }
@@ -37,14 +37,15 @@
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     },
     {
-      "id": "Microsoft.OpenPublishing.AzurePSPlugin",
-      "path_to_root": "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin",
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
       "version": "latest-prerelease",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op-dev/api/v2"
     }
   ],
   "monikerPath": [
-    "skype/mapping/monikerMapping.json"
+    "mapping/monikerMapping.json"
   ],
   "notification_subscribers": [],
   "branches_to_filter": [],
