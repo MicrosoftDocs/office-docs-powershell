@@ -1,0 +1,26 @@
+{
+    "skype-ps": {
+        "conceptualToc": "docs-conceptual/skype-ps/toc.md",
+        "conceptualTocUrl": "/powershell/skype/office/toc.json",
+        "referenceTocUrl": "/powershell/module/office/toc.json",
+        "packageRoot": "skype-ps"
+    },
+    "project-ps": {
+        "conceptualToc": "docs-conceptual/project-ps/toc.md",
+        "conceptualTocUrl": "/powershell/project/office/toc.json",
+        "referenceTocUrl": "/powershell/module/office/toc.json",
+        "packageRoot": "project-ps"
+    },
+    "exchange-ps": {
+        "conceptualToc": "docs-conceptual/exchange-ps/toc.md",
+        "conceptualTocUrl": "/powershell/exchange/office/toc.json",
+        "referenceTocUrl": "/powershell/module/office/toc.json",
+        "packageRoot": "exchange-ps"
+    },
+    "sharepoint-ps": {
+        "conceptualToc": "docs-conceptual/sharepoint-ps/toc.md",
+        "conceptualTocUrl": "/powershell/sharepoint/office/toc.json",
+        "referenceTocUrl": "/powershell/module/office/toc.json",
+        "packageRoot": "sharepoint-ps"
+    }
+}
