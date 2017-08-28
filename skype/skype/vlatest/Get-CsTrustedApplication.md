@@ -7,15 +7,8 @@ schema: 2.0.0
 # Get-CsTrustedApplication
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Retrieves the settings for a trusted application.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Retrieves the settings for a trusted application.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -36,9 +29,7 @@ Get-CsTrustedApplication [-ApplicationId <String>] [-TrustedApplicationPoolFqdn 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Microsoft Lync Server 2010 but that is not a built-in part of the product.
+A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server but that is not a built-in part of the product.
 This cmdlet enables you to retrieve port and Globally Routable User Agent URI (GRUU) settings for one or more trusted applications.
 
 When you use this cmdlet to retrieve a single trusted application, you must supply a value for the Identity parameter.
@@ -47,100 +38,27 @@ For example, TrustPool.litwareinc.com/tapp2, where TrustPool.litwareinc.com is t
 Note that when you retrieve an application by calling this cmdlet, you'll see an ID that looks more like this: TrustPool.litwareinc.com/urn:application:tapp2.
 Notice the prefix urn:application: before the application name (tapp2).
 While this prefix is part of the Identity, it's not required when you specify the value for the Identity parameter.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsTrustedApplication cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrustedApplication\b"}
-
-**Below Content Applies To:** Lync Server 2013
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Lync Server but that is not a built-in part of the product.
-This cmdlet enables you to retrieve port and Globally Routable User Agent URI (GRUU) settings for one or more trusted applications.
-
-When you use this cmdlet to retrieve a single trusted application, you must supply a value for the Identity parameter.
-The Identity is the fully qualified domain name (FQDN) of the pool on which the application is homed followed by a slash (/) followed by the application ID.
-For example, TrustPool.litwareinc.com/tapp2, where TrustPool.litwareinc.com is the pool FQDN and tapp2 is the application ID.
-Note that when you retrieve an application by calling this cmdlet, you'll see an ID that looks more like this: TrustPool.litwareinc.com/urn:application:tapp2.
-Notice the prefix urn:application: before the application name (tapp2).
-While this prefix is part of the Identity, it's not required when you specify the value for the Identity parameter.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Get-CsTrustedApplication cmdlet locally: RTCUniversalUserAdmins, RTCUniversalServerAdmins, RTCUniversalReadOnlyAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Get-CsTrustedApplication\b"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server 2015 but that is not a built-in part of the product.
-This cmdlet enables you to retrieve port and Globally Routable User Agent URI (GRUU) settings for one or more trusted applications.
-
-When you use this cmdlet to retrieve a single trusted application, you must supply a value for the Identity parameter.
-The Identity is the fully qualified domain name (FQDN) of the pool on which the application is homed followed by a slash (/) followed by the application ID.
-For example, TrustPool.litwareinc.com/tapp2, where TrustPool.litwareinc.com is the pool FQDN and tapp2 is the application ID.
-Note that when you retrieve an application by calling this cmdlet, you'll see an ID that looks more like this: TrustPool.litwareinc.com/urn:application:tapp2.
-Notice the prefix urn:application: before the application name (tapp2).
-While this prefix is part of the Identity, it's not required when you specify the value for the Identity parameter.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Get-CsTrustedApplication
 ```
 
-This example retrieves information about all trusted applications defined within the Lync Server 2010 deployment.
+This example retrieves information about all trusted applications defined within the Skype for Business Server deployment.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example retrieves information about all trusted applications defined within the Lync Server deployment.
-
-Get-CsTrustedApplication
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example retrieves information about all trusted applications defined within the Skype for Business Server 2015 deployment.
-
-Get-CsTrustedApplication
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2
-```
-
-Example 2 retrieves the trusted application with the Identity TrustPool.litwareinc.com/urn:application:tapp2.
-Notice that we were able to omit the urn:application: prefix, Get-CsTrustedApplication adds the prefix automatically and retrieves the correct application.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 retrieves the trusted application with the Identity TrustPool.litwareinc.com/urn:application:tapp2.
-Notice that we were able to omit the urn:application: prefix, Get-CsTrustedApplication adds the prefix automatically and retrieves the correct application.
-
-Get-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 retrieves the trusted application with the Identity TrustPool.litwareinc.com/urn:application:tapp2.
 Notice that we were able to omit the urn:application: prefix.
 The Get-CsTrustedApplication cmdlet adds the prefix automatically and retrieves the correct application.
 
-Get-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsTrustedApplication -Filter *trust*
 ```
@@ -150,31 +68,7 @@ In this case, with a Filter value of *trust*, the command will retrieve all trus
 This string can be contained within any part of the Identity, the pool FQDN, or the application ID.
 So this command will retrieve trusted applications with identities such as TrustedPool.litwareinc.com/urn:application:application1, Pool1.litwareinc.com/urn:application:trustedapp, and Pool1.litwareinc.com/urn:application:trust.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 retrieves all trusted applications that have identities matching the wildcard string specified as the Filter value.
-In this case, with a Filter value of *trust*, the command will retrieve all trusted applications with the string "trust" anywhere within the Identity.
-This string can be contained within any part of the Identity, the pool FQDN, or the application ID.
-So this command will retrieve trusted applications with identities such as TrustedPool.litwareinc.com/urn:application:application1, Pool1.litwareinc.com/urn:application:trustedapp, and Pool1.litwareinc.com/urn:application:trust.
-
-Get-CsTrustedApplication -Filter *trust*
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 retrieves all trusted applications that have identities matching the wildcard string specified as the Filter value.
-In this case, with a Filter value of *trust*, the command will retrieve all trusted applications with the string "trust" anywhere within the Identity.
-This string can be contained within any part of the Identity, the pool FQDN, or the application ID.
-So this command will retrieve trusted applications with identities such as TrustedPool.litwareinc.com/urn:application:application1, Pool1.litwareinc.com/urn:application:trustedapp, and Pool1.litwareinc.com/urn:application:trust.
-
-Get-CsTrustedApplication -Filter *trust*
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsTrustedApplication -ApplicationId tapp2 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
 ```
@@ -183,61 +77,16 @@ Example 4 will return the same results as Example 2 (where the Identity was spec
 The only difference between the two examples is that Example 2 retrieves the trusted application based on the Identity, which consists of the trusted pool FQDN followed by the application ID.
 In this example, the application ID and trusted pool FQDN are entered as values to two separate parameters: ApplicationId and TrustedApplicationPoolFqdn.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 4 will return the same results as Example 2 (where the Identity was specified as the only parameter).
-The only difference between the two examples is that Example 2 retrieves the trusted application based on the Identity, which consists of the trusted pool FQDN followed by the application ID.
-In this example, the application ID and trusted pool FQDN are entered as values to two separate parameters: ApplicationId and TrustedApplicationPoolFqdn.
-
-Get-CsTrustedApplication -ApplicationId tapp2 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 4 will return the same results as Example 2 (where the Identity was specified as the only parameter).
-The only difference between the two examples is that Example 2 retrieves the trusted application based on the Identity, which consists of the trusted pool FQDN followed by the application ID.
-In this example, the application ID and trusted pool FQDN are entered as values to two separate parameters: ApplicationId and TrustedApplicationPoolFqdn.
-
-Get-CsTrustedApplication -ApplicationId tapp2 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
-
-### -------------------------- Example 5 ------------------------ (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Get-CsTrustedApplication | Where-Object {$_.TrustedApplicationPoolFqdn -eq "TrustPool.litwareinc.com"}
 ```
 
 Example 5 retrieves all the trusted applications on the pool TrustPool.litwareinc.com.
 The example begins by calling the Get-CsTrustedApplication cmdlet.
-This returns a collection of all trusted applications defined within the Lync Server deployment.
+This returns a collection of all trusted applications defined within the Skype for Business Server deployment.
 This collection is then piped to the Where-Object cmdlet, which looks through the collection item-by-item to find those with a TrustedApplicationPoolFqdn property value equal to (-eq) TrustPool.litwareinc.com.
 
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 5 retrieves all the trusted applications on the pool TrustPool.litwareinc.com.
-The example begins by calling the Get-CsTrustedApplication cmdlet.
-This returns a collection of all trusted applications defined within the Lync Server deployment.
-This collection is then piped to the Where-Object cmdlet, which looks through the collection item-by-item to find those with a TrustedApplicationPoolFqdn property value equal to (-eq) TrustPool.litwareinc.com.
-
-Get-CsTrustedApplication | Where-Object {$_.TrustedApplicationPoolFqdn -eq "TrustPool.litwareinc.com"}
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 5 retrieves all the trusted applications on the pool TrustPool.litwareinc.com.
-The example begins by calling the Get-CsTrustedApplication cmdlet.
-This returns a collection of all trusted applications defined within the Skype for Business Server 2015 deployment.
-This collection is then piped to the Where-Object cmdlet, which looks through the collection item-by-item to find those with a TrustedApplicationPoolFqdn property value equal to (-eq) TrustPool.litwareinc.com.
-
-Get-CsTrustedApplication | Where-Object {$_.TrustedApplicationPoolFqdn -eq "TrustPool.litwareinc.com"}
 
 ## PARAMETERS
 
@@ -316,29 +165,24 @@ Accept wildcard characters: False
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
+
 ## INPUTS
 
-###  
-None.
+### None
+
 
 ## OUTPUTS
 
-###  
-Returns an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplication.
+### Microsoft.Rtc.Management.Xds.DisplayTrustedApplication
+
 
 ## NOTES
 
-## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e6623931-3bac-4146-92a9-4465396e9fe6(OCS.14).aspx)
+## RELATED LINKS
 
 [New-CsTrustedApplication]()
 
 [Remove-CsTrustedApplication]()
 
 [Set-CsTrustedApplication]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e6623931-3bac-4146-92a9-4465396e9fe6(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e6623931-3bac-4146-92a9-4465396e9fe6(OCS.16).aspx)
-
