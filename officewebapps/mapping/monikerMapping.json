@@ -1,0 +1,12 @@
+{
+    "officewebapps-ps": {
+        "conceptualToc": "officewebapps/docs-conceptual/toc.md",
+        "packageRoot": "officewebapps",
+        "modules": {
+            "officewebapps": {
+                "_displayname": "Office Online Server Module",
+                "_version": "vlatest"
+            }      
+        }
+    }
+}
