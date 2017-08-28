@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Office.Web.Apps.Administration.dll-Help.xml
+external help file:
 Module Name: officewebapps
-online version: http://technet.microsoft.com/EN-US/library/02fadf5e-0382-4e73-8d07-e67d088b1a02(Office.15).aspx
+online version:
 schema: 2.0.0
 ---
 
@@ -45,6 +45,3 @@ This example returns details about all servers that are in a Office Online Serve
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/02fadf5e-0382-4e73-8d07-e67d088b1a02(Office.15).aspx)
-

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Office.Web.Apps.Administration.dll-Help.xml
+external help file:
 Module Name: officewebapps
-online version: http://technet.microsoft.com/EN-US/library/a9b766a7-a15c-4bbf-9750-31719406d65f(Office.15).aspx
+online version:
 schema: 2.0.0
 ---
 
@@ -46,6 +46,3 @@ This example returns the host domains that are on the Allow List.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a9b766a7-a15c-4bbf-9750-31719406d65f(Office.15).aspx)
-

@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Office.Web.Apps.Administration.dll-Help.xml
+external help file:
 Module Name: officewebapps
-online version: http://technet.microsoft.com/EN-US/library/73ba7a36-981a-4991-9121-57545505def7(Office.15).aspx
+online version:
 schema: 2.0.0
 ---
 
@@ -82,6 +82,3 @@ Accept wildcard characters: False
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/73ba7a36-981a-4991-9121-57545505def7(Office.15).aspx)
-

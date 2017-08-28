@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Office.Web.Apps.Administration.dll-help.xml
+external help file:
 Module Name: officewebapps
-online version: http://technet.microsoft.com/EN-US/library/225d97ba-7d34-4302-a7ea-648c3e68b1c0(Office.15).aspx
+online version:
 schema: 2.0.0
 ---
 
@@ -23,7 +23,7 @@ Get-OfficeWebAppsExcelBIServer
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+{{ Add example code here }}
 ```
 
 {{ Add example description here }}
@@ -37,6 +37,3 @@ PS C:\> {{ Add example code here }}
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/225d97ba-7d34-4302-a7ea-648c3e68b1c0(Office.15).aspx)
-

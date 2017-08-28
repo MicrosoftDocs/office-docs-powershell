@@ -1,7 +1,7 @@
 ---
-external help file: Microsoft.Office.Web.Apps.Administration.dll-Help.xml
+external help file:
 Module Name: officewebapps
-online version: http://technet.microsoft.com/EN-US/library/1f0704e1-a41d-40e6-a31b-08b1926ce811(Office.15).aspx
+online version:
 schema: 2.0.0
 ---
 
@@ -47,6 +47,3 @@ These details include the health status and roles held by each server.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1f0704e1-a41d-40e6-a31b-08b1926ce811(Office.15).aspx)
-
