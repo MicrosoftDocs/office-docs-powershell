@@ -1,4 +1,4 @@
----
+﻿---
 external help file: 
 applicable: Skype for Business Online
 schema: 2.0.0
@@ -7,7 +7,7 @@ schema: 2.0.0
 # Unregister-CsHybridPSTNAppliance
 
 ## SYNOPSIS
-Use the Unregister-CsHybridPSTNAppliance cmdlet to unregister a previously specified Skype for Business Cloud Connector Edition appliance.
+Use the `Unregister-CsHybridPSTNAppliance` cmdlet to unregister a previously specified Skype for Business Cloud Connector Edition appliance.
 
 ## SYNTAX
 
@@ -18,24 +18,24 @@ Unregister-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Objec
 
 ## DESCRIPTION
 Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified, and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set, and Unregister).
-The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify Skype for Business Cloud Connector Edition appliances through the CsTenantHybridConfiguration cmdlets.
 You must use the CsHybridPSTNAppliance cmdlets to manage Skype for Business Cloud Connector Edition appliances.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
+
 
 ## PARAMETERS
 
@@ -179,6 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0455f769-e673-4e29-abd9-7f521586ade3(OCS.15).aspx)
-

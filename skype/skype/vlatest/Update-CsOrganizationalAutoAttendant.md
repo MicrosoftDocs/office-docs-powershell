@@ -22,7 +22,7 @@ Update-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <O
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### Example 1
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -157,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
