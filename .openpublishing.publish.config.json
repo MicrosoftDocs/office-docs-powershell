@@ -1,34 +1,20 @@
 {
   "need_generate_pdf": false,
   "need_generate_intellisense": false,
-  "docsets_to_publish": [
+  "docsets_to_publish": [],
+  "notification_subscribers": [],
+  "branches_to_filter": [],
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "dependent_repositories": [
     {
-      "docset_name": "officeps",
-      "build_source_folder": ".",
-      "build_output_subfolder": "officeps",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_groups": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content",
-        "AzurePSModulePage": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "version": 0,
-      "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/Microsoft.OpenPublishing.AzurePSPlugin/tools/Restructure.ps1"
-        ]
-      }
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
+  "need_generate_pdf_url_template": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
@@ -45,18 +31,5 @@
   ],
   "monikerPath": [
     "skype/mapping/monikerMapping.json"
-  ],
-  "notification_subscribers": [],
-  "branches_to_filter": [],
-  "skip_source_output_uploading": false,
-  "need_preview_pull_request": false,
-  "dependent_repositories": [
-    {
-      "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
-      "branch_mapping": {}
-    }
-  ],
-  "need_generate_pdf_url_template": false
+  ]
 }
