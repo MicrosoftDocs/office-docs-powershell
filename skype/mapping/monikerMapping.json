@@ -1,12 +1,11 @@
 {
     "skype-ps": {
-        "conceptualToc": "skype/docs-conceptual/toc.md",
-        "packageRoot": "skype",
+        "conceptualToc": "docs-conceptual/TOC.md",
+        "conceptualTocUrl": "/powershell/skype/toc.json",
+        "referenceTocUrl": "/powershell/module/skype-ps/toc.json",
+        "packageRoot": "skype-ps",
         "modules": {
-            "skype": {
-                "_displayname": "Skype Module",
-                "_version": "vlatest"
-            }      
+            "skype": {}     
         }
     }
 }
