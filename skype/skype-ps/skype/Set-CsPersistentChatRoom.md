@@ -7,18 +7,9 @@ schema: 2.0.0
 # Set-CsPersistentChatRoom
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Modifies and existing Persistent Chat chat room.
-A chat room is a discussion forum that typically revolves around a specific topic.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Modifies and existing Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -44,8 +35,6 @@ Set-CsPersistentChatRoom [-Instance] <ChatRoom> [-Addin <String>] [-AsObject] [-
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
@@ -53,94 +42,41 @@ Likewise, individual chat rooms can be configured so that anyone can post a mess
 Persistent Chat discussions take the form of messages posted in individual chat rooms; chat rooms are discussion forums based on specific topics.
 By design, messages posted in a chat room remain there forever; at any time, users can return to the room and review all the messages that have been previously posted.
 
-The Set-CsPersistentChatRoom cmdlet enables you to modify any (or all) of the chat rooms that have been configured for use in your organization.
-This includes assigning Managers and Presenters to a room.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatRoom"}
-
-Lync Server Control Panel: To modify an existing Persistent Chat chat room using the Lync Server Control Panel, click Persistent Chat, click Room, then double-click the chat room to be modified.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-Persistent Chat discussions take the form of messages posted in individual chat rooms; chat rooms are discussion forums based on specific topics.
-By design, messages posted in a chat room remain there forever; at any time, users can return to the room and review all the messages that have been previously posted.
-
-The Set-CsPersistentChatRoom cmdlet enables you to modify any (or all) of the chat rooms that have been configured for use in your organization.
+The `Set-CsPersistentChatRoom` cmdlet enables you to modify any (or all) of the chat rooms that have been configured for use in your organization.
 This includes assigning Managers and Presenters to a room.
 
 Skype for Business Server Control Panel: To modify an existing Persistent Chat chat room using the Skype for Business Server Control Panel, click Persistent Chat, click Room, then double-click the chat room to be modified.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsPersistentChatRoom -Identity "atl-cs-001.litwareinc.com\ITChatRoom" -Disabled $True
 ```
 
 The command shown in Example 1 disables the Persistent Chat chat room with the Identity atl-cs-001.litwareinc.com\ITChatRoom.
 
-Set-CsPersistentChatRoom -Identity "atl-cs-001.litwareinc.com\ITChatRoom" -Disabled $True
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 disables the Persistent Chat chat room with the Identity atl-cs-001.litwareinc.com\ITChatRoom.
-
-Set-CsPersistentChatRoom -Identity "atl-cs-001.litwareinc.com\ITChatRoom" -Disabled $True
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, all the Persistent Chat chat rooms on the pool atl-cs-001.litwareinc.com are disabled.
-This task is performed by first using Get-CsPersistentChatRoom and the Identity parameter to return all the chat rooms configured for the pool atl-cs-001.litwareinc.com.
-These chat rooms are then piped to the Set-CsPersistentChatRoom cmdlet which sets the Disabled property of each room to True ($True).
-
 Get-CsPersistentChatRoom -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com" | Set-CsPersistentChatRoom -Disabled $True
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
 ```
 
+In Example 2, all the Persistent Chat chat rooms on the pool `atl-cs-001.litwareinc.com are disabled`.
+This task is performed by first using the `Get-CsPersistentChatRoom` cmdlet and the Identity parameter to return all the chat rooms configured for the pool `atl-cs-001.litwareinc.com`.
+These chat rooms are then piped to the `Set-CsPersistentChatRoom` cmdlet, which sets the Disabled property of each room to True ($True).
+
+
+### -------------------------- Example 3 --------------------------
 ```
-
-In Example 2, all the Persistent Chat chat rooms on the pool atl-cs-001.litwareinc.com are disabled.
-This task is performed by first using the Get-CsPersistentChatRoom cmdlet and the Identity parameter to return all the chat rooms configured for the pool atl-cs-001.litwareinc.com.
-These chat rooms are then piped to the Set-CsPersistentChatRoom cmdlet, which sets the Disabled property of each room to True ($True).
-
-Get-CsPersistentChatRoom -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com" | Set-CsPersistentChatRoom -Disabled $True
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPersistentChatRoom | Set-CsPersistentChatRoom -Disabled $True
 ```
 
 Example 3 disables all the Persistent Chat chat rooms in the organization.
-To do this, the command first calls Get-CsPersistentChatRoom without any parameters in order to return a collection of all the Persistent Chat chat rooms.
-This collection is then piped to the Set-CsPersistentChatRoom cmdlet, which disables each room in the collection.
+To do this, the command first calls the `Get-CsPersistentChatRoom` cmdlet without any parameters in order to return a collection of all the Persistent Chat chat rooms.
+This collection is then piped to the `Set-CsPersistentChatRoom` cmdlet, which disables each room in the collection.
 
-Get-CsPersistentChatRoom | Set-CsPersistentChatRoom -Disabled $True
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 disables all the Persistent Chat chat rooms in the organization.
-To do this, the command first calls the Get-CsPersistentChatRoom cmdlet without any parameters in order to return a collection of all the Persistent Chat chat rooms.
-This collection is then piped to the Set-CsPersistentChatRoom cmdlet, which disables each room in the collection.
-
-Get-CsPersistentChatRoom | Set-CsPersistentChatRoom -Disabled $True
 
 ## PARAMETERS
 
@@ -148,7 +84,7 @@ Get-CsPersistentChatRoom | Set-CsPersistentChatRoom -Disabled $True
 Unique Identifier for the Persistent Chat chat room being modified.
 The Identity for a chat room consists of the Persistent Chat pool where the room has been configured plus the name of the room; for example:
 
--Identity "atl-gc-001.litwareinc.com\RedmondChatRoom"
+`-Identity "atl-gc-001.litwareinc.com\RedmondChatRoom"`
 
 ```yaml
 Type: String
@@ -182,7 +118,7 @@ Accept wildcard characters: False
 ### -Addin
 Name of the Persistent Chat add-in, if any, associated with the chat room.
 A Persistent Chat add-in is a customized web page that can be embedded within a Persistent Chat client.
-Add-ins can be created by using the New-CsPersistentChatAddin cmdlet.
+Add-ins can be created by using the `New-CsPersistentChatAddin` cmdlet.
 
 ```yaml
 Type: String
@@ -217,10 +153,10 @@ Accept wildcard characters: False
 ### -Category
 Category under which the room is located; for example:
 
--Category "IT"
+`-Category "IT"`
 
 Note that the specified category must already exist or the command will fail.
-Categories, which are a collection of chat rooms, can be created by using the New-CsPersistentChatCategory cmdlet.
+Categories, which are a collection of chat rooms, can be created by using the `New-CsPersistentChatCategory` cmdlet.
 
 ```yaml
 Type: String
@@ -324,28 +260,28 @@ List of users allowed to define the membership of the chat room as well as confi
 
 To add a new user to the Managers list, use syntax similar to this:
 
--Managers @{Add="sip:kenmyer@litwareinc.com"}
+`-Managers @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--Managers @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-Managers @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the Managers list use the Remove method:
 
--Managers @{Remove="sip:kenmyer@litwareinc.com"}
+`-Managers @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the Managers list, set the value of the Managers property to null:
 
--Managers $Null
+`-Managers $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command adds all the users in the IT OU to the managers list:
 
--Managers @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-Managers @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To make all the users in a distribution list chat room managers, use the Active Directory distinguished name of that distribution list:
 
--Managers @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}
+`-Managers @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -366,28 +302,28 @@ If the Members property is null then the chat room inherits the membership list 
 
 To add a new user to the Members list, use syntax similar to this:
 
--Members @{Add="sip:kenmyer@litwareinc.com"}
+`-Members @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--Members @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-Members @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the Members list use the Remove method:
 
--Members @{Remove="sip:kenmyer@litwareinc.com"}
+`-Members @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the Members list, set the value of the Members property to null:
 
--Members $Null
+`-Members $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command adds all the users in the IT OU to the Members list:
 
--Members @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-Members @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To make all the users in a distribution list chat room members, use the Active Directory distinguished name of that distribution list:
 
--Members @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}
+`-Members @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -424,28 +360,28 @@ List of users who are allowed to post messages in an auditorium chat room.
 
 To add a new user to the Presenters list, use syntax similar to this:
 
--Presenters @{Add="sip:kenmyer@litwareinc.com"}
+`-Presenters @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--Presenters @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-Presenters @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the Presenters list use the Remove method:
 
--Presenters @{Remove="sip:kenmyer@litwareinc.com"}
+`-Presenters @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the Presenters list, set the value of the Presenters property to null:
 
--Presenters $Null
+`-Presenters $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command adds all the users in the IT OU to the Presenters list:
 
--Presenters @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-Presenters @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To make all the users in a distribution list chat room presenters, use the Active Directory distinguished name of that distribution list:
 
--Presenters @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}
+`-Presenters @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -485,7 +421,7 @@ Accept wildcard characters: False
 Specifies whether the chat room is configured as a Normal chat room (where all members can post messages) or an Auditorium (where only presenters can post messages).
 For example:
 
--Type "Auditorium"
+`-Type "Auditorium"`
 
 The default value is Normal.
 
@@ -524,20 +460,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsPersistentChatRoom accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
-
-###  
-The Set-CsPersistentChatRoom cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
+The `Set-CsPersistentChatRoom` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsPersistentChatRoom modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
-
-###  
-None.
-Instead, the Set-CsPersistentChatRoom cmdlet modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
+Instead, the `Set-CsPersistentChatRoom` cmdlet modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
 
 ## NOTES
 
@@ -550,8 +479,3 @@ Instead, the Set-CsPersistentChatRoom cmdlet modifies existing instances of the 
 [New-CsPersistentChatRoom]()
 
 [Remove-CsPersistentChatRoom]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3774931e-74a9-4189-9dde-3baae2293138(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3774931e-74a9-4189-9dde-3baae2293138(OCS.16).aspx)
-
