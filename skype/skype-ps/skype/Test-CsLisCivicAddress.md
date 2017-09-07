@@ -7,15 +7,8 @@ schema: 2.0.0
 # Test-CsLisCivicAddress
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Tests one or more civic addresses against the Master Street Address Guide.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Tests one or more civic addresses against the Master Street Address Guide.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -28,93 +21,35 @@ Test-CsLisCivicAddress [-City <String>] [-Country <String>] [-HouseNumber <Strin
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 In an Enterprise Voice implementation with Enhanced 9-1-1 (E9-1-1), user locations are determined based on location maps that map a subnet, port, switch, or wireless access point to a location.
 (In the absence of a connection to a mapped location, the user may be asked to input their location manually.) The addresses of these locations must be validated against the Master Street Address Guide (MSAG) by the E9-1-1 Network Routing Provider.
 This cmdlet uses the web service of that provider to validate mapped addresses.
-You can set up a service provider by calling the Set-CsLisServiceProvider cmdlet.
+You can set up a service provider by calling the `Set-CsLisServiceProvider` cmdlet.
 
-If you want to update the MSAGValid property of the civic address, be sure to include the UpdateValidationStatus parameter in your call to Test-CsLisCivicAddress.
-Use the Get-CsLisCivicAddress cmdlet to retrieve civic addresses.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsLisCivicAddress cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsLisCivicAddress"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In an Enterprise Voice implementation with Enhanced 9-1-1 (E9-1-1), user locations are determined based on location maps that map a subnet, port, switch, or wireless access point to a location.
-(In the absence of a connection to a mapped location, the user may be asked to input their location manually.) The addresses of these locations must be validated against the Master Street Address Guide (MSAG) by the E9-1-1 Network Routing Provider.
-This cmdlet uses the web service of that provider to validate mapped addresses.
-You can set up a service provider by calling the Set-CsLisServiceProvider cmdlet.
-
-If you want to update the MSAGValid property of the civic address, be sure to include the UpdateValidationStatus parameter in your call to the Test-CsLisCivicAddress cmdlet.
-Use the Get-CsLisCivicAddress cmdlet to retrieve civic addresses.
-
+If you want to update the MSAGValid property of the civic address, be sure to include the UpdateValidationStatus parameter in your call to the `Test-CsLisCivicAddress` cmdlet.
+Use the `Get-CsLisCivicAddress` cmdlet to retrieve civic addresses.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsLisCivicAddress -HouseNumber 1234 -HouseNumberSuffix "" -PreDirectional "" -StreetName Main -StreetSuffix St -PostDirectional "" -City Redmond -State WA -PostalCode 99999 -Country US -UpdateValidationStatus
-```
-
-This command validates the address with the properties matching the values specified in these parameters against the Master Street Address Guide.
-Notice the inclusion of the UdateValidationStatus parameter at the end: this will update the MSAGValid property of the address.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 This command validates the address with the properties matching the values specified in these parameters against the Master Street Address Guide.
 Notice the inclusion of the UpdateValidationStatus parameter at the end: this will update the MSAGValid property of the address.
 
-Test-CsLisCivicAddress -HouseNumber 1234 -HouseNumberSuffix "" -PreDirectional "" -StreetName Main -StreetSuffix St -PostDirectional "" -City Redmond -State WA -PostalCode 99999 -Country US -UpdateValidationStatus
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command validates the address with the properties matching the values specified in these parameters against the Master Street Address Guide.
-Notice the inclusion of the UpdateValidationStatus parameter at the end: this will update the MSAGValid property of the address.
-
-Test-CsLisCivicAddress -HouseNumber 1234 -HouseNumberSuffix "" -PreDirectional "" -StreetName Main -StreetSuffix St -PostDirectional "" -City Redmond -State WA -PostalCode 99999 -Country US -UpdateValidationStatus
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsLisCivicAddress | Test-CsLisCivicAddress -UpdateValidationStatus
 ```
 
 This example shows how to test all LIS civic addresses.
-The example begins with a call to Get-CsLisCivicAddress to retrieve all civic addresses defined in the location database.
-These addresses are piped to Test-CsLisCivicAddress, which uses the E9-1-1 Network Routing Provider web service to validate each address.
+The example begins with a call to the `Get-CsLisCivicAddress` cmdlet to retrieve all civic addresses defined in the location database.
+These addresses are piped to the `Test-CsLisCivicAddress` cmdlet, which uses the E9-1-1 Network Routing Provider web service to validate each address.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example shows how to test all LIS civic addresses.
-The example begins with a call to Get-CsLisCivicAddress to retrieve all civic addresses defined in the location database.
-These addresses are piped to Test-CsLisCivicAddress, which uses the E9-1-1 Network Routing Provider web service to validate each address.
-
-Get-CsLisCivicAddress | Test-CsLisCivicAddress -UpdateValidationStatus
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example shows how to test all LIS civic addresses.
-The example begins with a call to the Get-CsLisCivicAddress cmdlet to retrieve all civic addresses defined in the location database.
-These addresses are piped to the Test-CsLisCivicAddress cmdlet, which uses the E9-1-1 Network Routing Provider web service to validate each address.
-
-Get-CsLisCivicAddress | Test-CsLisCivicAddress -UpdateValidationStatus
 
 ## PARAMETERS
 
@@ -369,11 +304,4 @@ This cmdlet does not return a value.
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/4079e767-3339-40c9-b7cd-08ec6c9d2c25(OCS.14).aspx)
-
 [Get-CsLisCivicAddress]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4079e767-3339-40c9-b7cd-08ec6c9d2c25(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4079e767-3339-40c9-b7cd-08ec6c9d2c25(OCS.16).aspx)
-

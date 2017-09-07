@@ -7,15 +7,8 @@ schema: 2.0.0
 # Test-CsLisConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Tests the Location Information Server (LIS) configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Tests the Location Information Server (LIS) configuration.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -46,30 +39,15 @@ Test-CsLisConfiguration -TargetUri <String> -UserSipAddress <String> [-BssId <St
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 This cmdlet determines whether the Location Information Server (LIS) web service can be contacted based on the information in the supplied parameters.
 If the web service can be contacted and a location is found that corresponds to any of the supplied parameters, the test is considered to have passed and the location will be displayed.
 Even if the location is not found, if the web service can be contacted the test will return a pass, but with no location information.
 In addition, if you call this cmdlet without supplying any of the optional parameters, the test will still pass as long as the web service can be contacted; however, again, no location information will be returned.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsLisConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet determines whether the Location Information Server (LIS) web service can be contacted based on the information in the supplied parameters.
-If the web service can be contacted and a location is found that corresponds to any of the supplied parameters, the test is considered to have passed and the location will be displayed.
-Even if the location is not found, if the web service can be contacted the test will return a pass, but with no location information.
-In addition, if you call this cmdlet without supplying any of the optional parameters, the test will still pass as long as the web service can be contacted; however, again, no location information will be returned.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0
 ```
@@ -79,40 +57,11 @@ The test will be successful if a connection can be made with the current user cr
 If a location can be found that maps to the subnet IP address 192.168.0.0, then that location address will be returned.
 
 For this command to succeed, a health monitoring configuration containing synthetic transaction users must exist.
-To see if a health monitoring configuration exists, run the Get-CsHealthMonitoringConfiguration cmdlet.
-To create a new health monitoring configuration, run the New-CsHealthMonitoringConfiguration cmdlet.
+To see if a health monitoring configuration exists, run the `Get-CsHealthMonitoringConfiguration` cmdlet.
+To create a new health monitoring configuration, run the `New-CsHealthMonitoringConfiguration` cmdlet.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example tests the LIS configuration at the FQDN atl-cs-001.litwareinc.com.
-The test will be successful if a connection can be made with the current user credentials to the LIS web service at that FQDN.
-If a location can be found that maps to the subnet IP address 192.168.0.0, then that location address will be returned.
-
-For this command to succeed, a health monitoring configuration containing synthetic transaction users must exist.
-To see if a health monitoring configuration exists, run the Get-CsHealthMonitoringConfiguration cmdlet.
-To create a new health monitoring configuration, run the New-CsHealthMonitoringConfiguration cmdlet.
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example tests the LIS configuration at the FQDN atl-cs-001.litwareinc.com.
-The test will be successful if a connection can be made with the current user credentials to the LIS web service at that FQDN.
-If a location can be found that maps to the subnet IP address 192.168.0.0, then that location address will be returned.
-
-For this command to succeed, a health monitoring configuration containing synthetic transaction users must exist.
-To see if a health monitoring configuration exists, run the Get-CsHealthMonitoringConfiguration cmdlet.
-To create a new health monitoring configuration, run the New-CsHealthMonitoringConfiguration cmdlet.
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com
 ```
@@ -120,75 +69,29 @@ Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.
 This example is identical to Example 1 but with the addition of the UserSipAddress parameter.
 Use this command when no synthetic transaction users have been set up, but where the computer on which the command is running has a server certificate.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example is identical to Example 1 but with the addition of the UserSipAddress parameter.
-Use this command when no synthetic transaction users have been set up, but where the computer on which the command is running has a server certificate.
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example is identical to Example 1 but with the addition of the UserSipAddress parameter.
-Use this command when no synthetic transaction users have been set up, but where the computer on which the command is running has a server certificate.
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 $cred = Get-Credential
+
 Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com -UserCredential $cred
 ```
 
-The first line of this example calls a Windows PowerShell cmdlet, Get-Credential, which prompts the user for a user ID and password.
+The first line of this example calls a Windows PowerShell cmdlet, the `Get-Credential` cmdlet, which prompts the user for a user ID and password.
 This information is stored in an encrypted fashion in the variable $cred.
 
 The second line is identical to the command in Example 2 but with the addition of the UserSipAddress parameter.
 Use this command when no synthetic transaction users have been set up, and where the computer on which the command is running does not have a server certificate.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The first line of this example calls a Windows PowerShell cmdlet, Get-Credential, which prompts the user for a user ID and password.
-This information is stored in an encrypted fashion in the variable $cred.
-
-The second line is identical to the command in Example 2 but with the addition of the UserSipAddress parameter.
-Use this command when no synthetic transaction users have been set up, and where the computer on which the command is running does not have a server certificate.
-
-$cred = Get-Credential
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com -UserCredential $cred
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The first line of this example calls a Windows PowerShell cmdlet, the Get-Credential cmdlet, which prompts the user for a user ID and password.
-This information is stored in an encrypted fashion in the variable $cred.
-
-The second line is identical to the command in Example 2 but with the addition of the UserSipAddress parameter.
-Use this command when no synthetic transaction users have been set up, and where the computer on which the command is running does not have a server certificate.
-
-$cred = Get-Credential
-
-Test-CsLisConfiguration -TargetFqdn atl-cs-001.litwareinc.com -Subnet 192.168.0.0 -UserSipAddress sip:kmyer@litwareinc.com -UserCredential $cred
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 $cred = Get-Credential
+
 Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -WebCredential $cred -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
 ```
 
-The first line of this example calls the Get-Credential cmdlet, which prompts the user for a user ID and password.
+The first line of this example calls the `Get-Credential` cmdlet, which prompts the user for a user ID and password.
 This information is stored in an encrypted fashion in the variable $cred.
 
 Line 2 tests the LIS configuration by making a call to the web service URI (https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc) based on the SIP address of the remote user (sip:kmyer@litwareinc.com), and using the credentials we obtained in line 1 by passing them to the WebCredential parameter.
@@ -197,69 +100,15 @@ If a location can be found that maps to the subnet IP address 192.168.0.0, the M
 
 Use this command when the computer on which the command is running does not have a server certificate.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The first line of this example calls the Get-Credential cmdlet, which prompts the user for a user ID and password.
-This information is stored in an encrypted fashion in the variable $cred.
-
-Line 2 tests the LIS configuration by making a call to the web service URI (https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc) based on the SIP address of the remote user (sip:kmyer@litwareinc.com), and using the credentials we obtained in line 1 by passing them to the WebCredential parameter.
-The test will be successful if a connection can be made with the given user credentials to the LIS web service at that URI.
-If a location can be found that maps to the subnet IP address 192.168.0.0, the MAC address 0A-23-00-00-00-AA or the Port ID 4500 and ChassisId 0A-23-00-00-00-AA, that location address will be returned.
-
-Use this command when the computer on which the command is running does not have a server certificate.
-
-$cred = Get-Credential
-
-Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -WebCredential $cred -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The first line of this example calls the Get-Credential cmdlet, which prompts the user for a user ID and password.
-This information is stored in an encrypted fashion in the variable $cred.
-
-Line 2 tests the LIS configuration by making a call to the web service URI (https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc) based on the SIP address of the remote user (sip:kmyer@litwareinc.com), and using the credentials we obtained in line 1 by passing them to the WebCredential parameter.
-The test will be successful if a connection can be made with the given user credentials to the LIS web service at that URI.
-If a location can be found that maps to the subnet IP address 192.168.0.0, the MAC address 0A-23-00-00-00-AA or the Port ID 4500 and ChassisId 0A-23-00-00-00-AA, that location address will be returned.
-
-Use this command when the computer on which the command is running does not have a server certificate.
-
-$cred = Get-Credential
-
-Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -WebCredential $cred -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
 ```
 
-This example is identical to Example 4, except that the command does not use the WebCredential parameter (and therefore also does not call Get-Credential).
+This example is identical to Example 4, except that the command does not use the WebCredential parameter (and therefore also does not call the `Get-Credential` cmdlet).
 Use this command when the computer on which the command is running has a server certificate.
 
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example is identical to Example 4, except that the command does not use the WebCredential parameter (and therefore also does not call Get-Credential).
-Use this command when the computer on which the command is running has a server certificate.
-
-Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example is identical to Example 4, except that the command does not use the WebCredential parameter (and therefore also does not call the Get-Credential cmdlet).
-Use this command when the computer on which the command is running has a server certificate.
-
-Test-CsLisConfiguration -TargetUri https://atl-cs-001.litwareinc.com/locationinformation/lisservice.svc -UserSipAddress sip:kmyer@litwareinc.com -Subnet 192.168.0.0 -Mac 0A-23-00-00-00-AA -PortId 4500 -ChassisId 0A-23-00-00-00-AA
 
 ## PARAMETERS
 
@@ -295,28 +144,13 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUri
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 The Uniform Resource Identifier (URI) of the Location Information service.
-You can retrieve the URI of the Location Information service by running the following command: Get-CsService -WebServer | Select-Object LIServiceInternalUri
+You can retrieve the URI of the Location Information service by running the following command: `Get-CsService -WebServer | Select-Object LisServiceInternalUri`
 
 If you specify a value for this parameter, the UserSipAddress parameter is also required.
 If the computer you are running the command on does not have a server certificate, you must also specify a value for the WebCredential parameter.
 
 This parameter is required unless you specify the TargetFqdn parameter.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Uniform Resource Identifier (URI) of the Location Information service.
-You can retrieve the URI of the Location Information service by running the following command: Get-CsService -WebServer | Select-Object LisServiceInternalUri
-
-If you specify a value for this parameter, the UserSipAddress parameter is also required.
-If the computer you are running the command on does not have a server certificate, you must also specify a value for the WebCredential parameter.
-
-This parameter is required unless you specify the TargetFqdn parameter.
-
 
 
 ```yaml
@@ -334,7 +168,7 @@ Accept wildcard characters: False
 
 ### -UserCredential
 An object containing user credentials for accessing the Location Information service.
-This object can be retrieved by calling the Get-Credential cmdlet and supplying the appropriate credentials.
+This object can be retrieved by calling the `Get-Credential` cmdlet and supplying the appropriate credentials.
 
 This parameter is required if the TargetFqdn and UserSipAddress parameters are specified, and if the computer from which you're running the cmdlet does not have a server certificate.
 
@@ -357,7 +191,7 @@ The SIP address of a remote user.
 If you specify a value for this parameter, the TargetFqdn or TargetUri parameter is also required.
 
 This parameter is required when you specify the TargetFqdn parameter only if you have not set up synthetic transactions users.
-To see if synthetic transaction users have been set up, run the Get-CsHealthMonitoringConfiguration cmdlet.
+To see if synthetic transaction users have been set up, run the `Get-CsHealthMonitoringConfiguration` cmdlet.
 
 ```yaml
 Type: String
@@ -528,7 +362,7 @@ Accept wildcard characters: False
 
 ### -WebCredential
 An object containing user credentials for accessing the Location Information service.
-This object can be retrieved by calling the Get-Credential cmdlet and supplying the appropriate credentials.
+This object can be retrieved by calling the `Get-Credential` cmdlet and supplying the appropriate credentials.
 
 This parameter is required if the TargetUri and UserSipAddress parameters are specified, and the computer on which the command is run does not have a server certificate.
 
@@ -562,21 +396,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill OutVerboseVariable Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
-
 
 
 ```yaml
@@ -593,20 +418,6 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-**Below Content Applies To:** Lync Server 2013
-
-Type of authentication used in the test.
-Allowed values are:
-
-* TrustedServer
-* Negotiate
-* ClientCertificate
-* LiveID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Type of authentication used in the test.
 Allowed values are:
 
@@ -617,7 +428,6 @@ Negotiate
 ClientCertificate
 
 LiveID
-
 
 
 ```yaml
@@ -639,15 +449,15 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
-Note: Do not use prepend a $ character when specifying the variable name.To save the information stored in the logger variable to an HTML file, use a command similar to this:
+Note: Do not use prepend a $ character when specifying the variable name. To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -673,16 +483,11 @@ None.
 ## OUTPUTS
 
 ###  
-Test-CsLisConfiguration returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsLisConfiguration cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsLisConfiguration` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6983d42e-6b93-4365-b0f1-81031d6e251b(OCS.14).aspx)
 
 [Debug-CsLisConfiguration]()
 
@@ -693,8 +498,3 @@ The Test-CsLisConfiguration cmdlet returns an instance of the Microsoft.Rtc.Synt
 [Import-CsLisConfiguration]()
 
 [Export-CsLisConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6983d42e-6b93-4365-b0f1-81031d6e251b(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6983d42e-6b93-4365-b0f1-81031d6e251b(OCS.16).aspx)
-

@@ -7,9 +7,7 @@ schema: 2.0.0
 # Set-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-Set-CsTeamsMeetingPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-AllowTeamsMeeting \<bool\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowCloudRecording \<bool\>\] \[-EnableLowBandwidthConsumption \<bool\>\] \[-EnableOutlookAddIn \<bool\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsTeamsMeetingPolicy \[-Tenant \<guid\>\] \[-AllowTeamsMeeting \<bool\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowCloudRecording \<bool\>\] \[-EnableLowBandwidthConsumption \<bool\>\] \[-EnableOutlookAddIn \<bool\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -26,7 +24,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <Object>] [-AllowChannelMeetingScheduling 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 ------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -274,4 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

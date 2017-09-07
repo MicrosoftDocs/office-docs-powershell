@@ -7,7 +7,7 @@ schema: 2.0.0
 # Start-CsPool
 
 ## SYNOPSIS
-Use the Start-CsPool cmdlet to start a Skype for Business Server pool.
+Use the `Start-CsPool` cmdlet to start a Skype for Business Server pool.
 A pool is a set of servers, configured identically, that work together to provide services for a common group of users.
 
 ## SYNTAX
@@ -20,24 +20,23 @@ Start-CsPool [-PoolFqdn] <Fqdn> [-Confirm] [-Force] [-QuorumLossRecovery] [-Skip
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-This example starts the "atl-cs-001.litwareinc.com" pool and skips one routing group specified by its GUID.
-
 Start-CsPool -PoolFqdn "atl-cs-001.litwareinc.com" -SkipRoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c"
+```
+
+This example starts the `"atl-cs-001.litwareinc.com"` pool and skips one routing group specified by its GUID.
+
 
 ## PARAMETERS
 
 ### -PoolFqdn
 Fully qualified domain name of the pool being started.
-For example: -PoolFqdn "atl-cs-001.litwareinc.com"
+For example: `-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: Fqdn
@@ -107,8 +106,8 @@ Use this parameter if one or more of the routing groups are having problems gett
 
 Note that some of the users included in the skipped routing groups might not be able to sign in, or will have limited functionality.
 
-For example, to specify a single routing group use the following syntax: -SkipRoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c".
-The specify more than one routing group use the syntax: -SkipRoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c","cid4de2-3d86-3be9-bcf8-700fesi3923q".
+For example, to specify a single routing group use the following syntax: `-SkipRoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c"`.
+To specify more than one routing group use the syntax: `-SkipRoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c","cid4de2-3d86-3be9-bcf8-700fesi3923q"`.
 
 ```yaml
 Type: String[]
@@ -129,8 +128,8 @@ Use this parameter if one or more of the front end servers cannot be started.
 Note that there is a minimum number of servers required for the pool to be functional.
 The cmdlet will check for those conditions while trying to implement this parameter.
 
-For example, to specify a single server use the following syntax: -SkipServer "AtlServerOne".
-To specify more than one server use the syntax: -SkipServer "AtlServerOne","AtlServerTwo"
+For example, to specify a single server use the following syntax: `-SkipServer "AtlServerOne"`.
+To specify more than one server use the syntax: `-SkipServer "AtlServerOne","AtlServerTwo"`
 
 ```yaml
 Type: String[]
@@ -181,6 +180,3 @@ None
 [Backup-CsPool]()
 
 [Get-CsPool]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6bf66ee1-33de-487a-94eb-026646c56ccd(OCS.16).aspx)
-

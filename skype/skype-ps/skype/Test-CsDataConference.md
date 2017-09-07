@@ -7,17 +7,8 @@ schema: 2.0.0
 # Test-CsDataConference
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Verifies whether or not a pair of users can participate in a Microsoft Lync Server 2013 Preview data collaboration conference.
-A data collaboration conference is an online meeting that includes activities such as whiteboards or pools.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Verifies whether or not a pair of users can participate in a Skype for Business Server 2015 web conference that includes activities such as sharing or viewing PowerPoint slides, whiteboards, or polls.
-The cmdlet also verifies that the Skype for Business Server 2015 web conferencing service can discover Office Web Apps Server and that a client can upload a PowerPoint file for broadcast by Office Web Apps Server.
-
+Verifies whether or not a pair of users can participate in a Skype for Business Server web conference that includes activities such as sharing or viewing PowerPoint slides, whiteboards, or polls.
+The cmdlet also verifies that the Skype for Business Server web conferencing service can discover Office Web Apps Server and that a client can upload a PowerPoint file for broadcast by Office Web Apps Server.
 
 
 ## SYNTAX
@@ -40,102 +31,53 @@ Test-CsDataConference [-TargetFqdn] <String> [-Authentication <AuthenticationMec
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
+In Skype for Business Server, a data conference is any conference where collaborative activities such as whiteboarding or annotations are used.
+The `Test-CsDataConference` cmdlet enables you to verify that a pair of users are able to take part in a data conference.
 
-In Microsoft Lync Server 2013 Preview, a data conference is any conference where collaborative activities such as whiteboarding or annotations are used.
-The Test-CsDataConference cmdlet enables you to verify that a pair of users are able to take part in a data conference.
+The ability to conduct a data conference depends on the conferencing policy that has been assigned to the user who organized the conference (in the case of the `Test-CsDataConference` cmdlet, that is the "sender").
+If the organizer is not allowed to include collaborative activities in his or her meeting (for example, if his or her conferencing policy has the EnableDataCollaboration property set to False) then the `Test-CsDataConference` cmdlet will fail.
 
-The ability to conduct a data conference depends on the conferencing policy that has been assigned to the user who organized the conference (in the case of the Test-CsDataConference cmdlet, that is the "sender").
-If the organizer is not allowed to include collaborative activities in his or her meeting (for example, if his or her conferencing policy has the EnableDataCollaboration property set to False) then the Test-CsDataConference cmdlet will fail.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDataConference"}
-
-Lync Server Control Panel: The functions carried out by the Test-CsDataConference cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Skype for Business Server 2015, a data conference is any conference where collaborative activities such as whiteboarding or annotations are used.
-The Test-CsDataConference cmdlet enables you to verify that a pair of users are able to take part in a data conference.
-
-The ability to conduct a data conference depends on the conferencing policy that has been assigned to the user who organized the conference (in the case of the Test-CsDataConference cmdlet, that is the "sender").
-If the organizer is not allowed to include collaborative activities in his or her meeting (for example, if his or her conferencing policy has the EnableDataCollaboration property set to False) then the Test-CsDataConference cmdlet will fail.
-
-Skype for Business Server Control Panel: The functions carried out by the Test-CsDataConference cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Test-CsDataConference` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Test-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com"
 ```
 
 The command shown in Example 1 verifies that a data conference can be conducted on the pool atl-cs-001.litwareinc.com.
 This command assumes that you have configured a pair of test users for the specified pool.
 If no such test users exist, the command will fail.
 
-Test-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com"
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 verifies that a data conference can be conducted on the pool atl-cs-001.litwareinc.com.
-This command assumes that you have configured a pair of test users for the specified pool.
-If no such test users exist, the command will fail.
-
-Test-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Lync Server 2013 Preview and then conduct an data conference.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box only requires the administrator to enter the password for the Pilar Ackerman account.) The resulting credential object is then stored in a variable named $cred1.
-The second command does the same thing, this time returning a credential object for the Ken Myer account.
-
-With the credential objects in hand, the third command determines whether or not these two users can log on to Lync Server 2013 Preview and conduct a data conference.
-To carry out this task, Test-CsDataConference is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
-
 $credential1 = Get-Credential "litwareinc\pilar"
 
 $credential2 = Get-Credential "litwareinc\kenmyer"
 
 Test-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com" -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $credential1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $credential2
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
 ```
 
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server 2015 and then conduct an data conference.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell command-line interface credential object containing the name and password of the user Pilar Ackerman.
+The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server and then conduct an data conference.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell command-line interface credential object containing the name and password of the user Pilar Ackerman.
 (Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box only requires the administrator to enter the password for the Pilar Ackerman account.) The resulting credential object is then stored in a variable named $cred1.
 The second command does the same thing, this time returning a credential object for the Ken Myer account.
 
-With the credential objects in hand, the third command determines whether or not these two users can log on to Skype for Business Server 2015 and conduct a data conference.
-To carry out this task, the Test-CsDataConference cmdlet is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
+With the credential objects in hand, the third command determines whether or not these two users can log on to Skype for Business Server and conduct a data conference.
+To carry out this task, the `Test-CsDataConference` cmdlet is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
 
-$credential1 = Get-Credential "litwareinc\pilar"
-
-$credential2 = Get-Credential "litwareinc\kenmyer"
-
-Test-CsDataConference -TargetFqdn "atl-cs-001.litwareinc.com" -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $credential1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $credential2
 
 ## PARAMETERS
 
 ### -ReceiverCredential
 User credential object for the first of the two user accounts to be tested.
-The value passed to ReceiverCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to ReceiverCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\pilar and stores that object in a variable named $y:
 
-$y = Get-Credential "litwareinc\pilar"
+`$y = Get-Credential "litwareinc\pilar"`
 
 You need to supply the user password when running this command.
 
@@ -156,10 +98,10 @@ Accept wildcard characters: False
 
 ### -SenderCredential
 User credential object for the second of the two user accounts to be tested.
-The value passed to SenderCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to SenderCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You need to supply the user password when running this command.
 
@@ -251,17 +193,17 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
 Note: Do not prepend a $ character when specifying the variable name.
 
 To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -280,7 +222,7 @@ Accept wildcard characters: False
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
 
@@ -301,7 +243,7 @@ Accept wildcard characters: False
 SIP address for the first of the two user accounts to be tested.
 For example:
 
--ReceiverSipAddress "sip:pilar@litwareinc.com"
+`-ReceiverSipAddress "sip:pilar@litwareinc.com"`
 
 The ReceiverSIPAddress parameter must reference the same user account as ReceiverCredential.
 
@@ -354,7 +296,7 @@ Accept wildcard characters: False
 SIP address for the second of the two user accounts to be tested.
 For example:
 
--SenderSipAddress "sip:kenmyer@litwareinc.com"
+`-SenderSipAddress "sip:kenmyer@litwareinc.com"`
 
 The SenderSipAddress parameter must reference the same user account as SenderCredential.
 
@@ -435,27 +377,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsDataConference does not accept pipelined input.
-
-###  
-None.
-The Test-CsDataConference cmdlet does not accept pipelined input.
+The `Test-CsDataConference` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsDataConference returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsDataConference cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsDataConference` cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
 [Test-CsASConference]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bd7f3c98-7b10-494e-adce-a9b20428b6cc(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bd7f3c98-7b10-494e-adce-a9b20428b6cc(OCS.16).aspx)
-

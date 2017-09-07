@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is reserved for Microsoft internal use only.
 
+
 ## SYNTAX
 
 ```
@@ -16,14 +17,17 @@ Test-CsOnlineCarrierPortabilityIn [-TelephoneNumbers <Object>] [-BypassDualWrite
  [-DomainController <Object>] [-Force] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 
 ```
+
 
 ## PARAMETERS
 
@@ -149,6 +153,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d5ab02f1-57f7-42c2-95da-8288a1a53945(OCS.15).aspx)
-

@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsUnassignedNumber
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing range of unassigned numbers and the routing rules that apply to those numbers.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing range of unassigned numbers and the routing rules that apply to those numbers.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -54,54 +47,19 @@ Set-CsUnassignedNumber [-Instance <PSObject>] [-Priority <Int32>] [-Force] [-Wha
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Microsoft Lync Server 2010 can be set up to route calls to appropriate destinations when an unassigned number is called.
-This cmdlet modifies the settings that define that routing.
-
-In order to modify some of the settings for this cmdlet, your system must already either have Announcements defined or an Exchange Unified Messaging (UM) Auto Attendant set up.
-To determine whether you have Announcements, call the Get-CsAnnouncement cmdlet.
-To create a new Announcement, call New-CsAnnouncement.
-To check on Exchange UM Auto Attendant settings, run the Get-CsExUmContact cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUnassignedNumber cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUnassignedNumber"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Lync Server can be set up to route calls to appropriate destinations when an unassigned number is called.
-This cmdlet modifies the settings that define that routing.
-
-In order to modify some of the settings for this cmdlet, your system must already either have Announcements defined or an Exchange UM Auto Attendant set up.
-To determine whether you have Announcements, call the Get-CsAnnouncement cmdlet.
-To create a new Announcement, call New-CsAnnouncement.
-To check on Exchange UM Auto Attendant settings, run the Get-CsExUmContact cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUnassignedNumber cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUnassignedNumber"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Skype for Business Server 2015 can be set up to route calls to appropriate destinations when an unassigned number is called.
+Skype for Business Server can be set up to route calls to appropriate destinations when an unassigned number is called.
 This cmdlet modifies the settings that define that routing.
 
 In order to modify some of the settings for this cmdlet, your system must already either have Announcements defined or an Exchange Auto Attendant set up.
-To determine whether you have Announcements, call the Get-CsAnnouncement cmdlet.
-To create a new Announcement, call the New-CsAnnouncement cmdlet.
-To check Exchange Auto Attendant settings, run the Get-CsExUmContact cmdlet.
-
+To determine whether you have Announcements, call the `Get-CsAnnouncement` cmdlet.
+To create a new Announcement, call the `New-CsAnnouncement` cmdlet.
+To check Exchange Auto Attendant settings, run the `Get-CsExUmContact` cmdlet.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsUnassignedNumber -Identity UNSet1 -NumberRangeStart "+14255551000" -NumberRangeEnd "+14255551900"
 ```
@@ -110,64 +68,18 @@ This example modifies the unassigned number range with the name UNSet1.
 We first pass the Identity parameter the value UNSet1, the name of the unassigned number range we want to modify.
 We then use the NumberRangeStart (+14255551000) and NumberRangeEnd (+14255551900) parameters to modify the range of unassigned numbers to which the specified announcement or Auto Attendant will apply.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example modifies the unassigned number range with the name UNSet1.
-We first pass the Identity parameter the value UNSet1, the name of the unassigned number range we want to modify.
-We then use the NumberRangeStart (+14255551000) and NumberRangeEnd (+14255551900) parameters to modify the range of unassigned numbers to which the specified announcement or Auto Attendant will apply.
-
-Set-CsUnassignedNumber -Identity UNSet1 -NumberRangeStart "+14255551000" -NumberRangeEnd "+14255551900"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the unassigned number range with the name UNSet1.
-We first pass the Identity parameter the value UNSet1, the name of the unassigned number range we want to modify.
-We then use the NumberRangeStart (+14255551000) and NumberRangeEnd (+14255551900) parameters to modify the range of unassigned numbers to which the specified announcement or Auto Attendant will apply.
-
-Set-CsUnassignedNumber -Identity UNSet1 -NumberRangeStart "+14255551000" -NumberRangeEnd "+14255551900"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Set-CsUnassignedNumber -AnnouncementService ApplicationServer:redmond.litwareinc.com -AnnouncementName "Help Desk Announcement"
 ```
 
 This example modifies the Announcement of all unassigned number range settings that currently have an Announcement with the string "Welcome" in the name.
-First we call Get-CsUnassignedNumber to retrieve all unassigned number settings.
-We pipe that collection of settings to Where-Object, which narrows down the collection to only those settings where the AnnouncementName property contains (-match) the string Welcome.
-Once we have those settings, we pipe them to Set-CsUnassignedNumber, where we modify the Application Server ID of the Announcement Service (ApplicationServer:redmond.litwareinc.com) with the AnnouncementService parameter and the name of the new announcement (Help Desk Announcement) with the AnnouncementName parameter.
+First we call the `Get-CsUnassignedNumber` cmdlet to retrieve all unassigned number settings.
+We pipe that collection of settings to the `Where-Object` cmdlet, which narrows down the collection to only those settings where the AnnouncementName property contains (-match) the string Welcome.
+Once we have those settings, we pipe them to the `Set-CsUnassignedNumber` cmdlet, where we modify the Application Server ID of the Announcement Service (ApplicationServer:redmond.litwareinc.com) with the AnnouncementService parameter and the name of the new announcement (Help Desk Announcement) with the AnnouncementName parameter.
 Note that even if the new Announcement has a different name but the same service ID, you must still specify the service ID along with the name.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the Announcement of all unassigned number range settings that currently have an Announcement with the string "Welcome" in the name.
-First we call Get-CsUnassignedNumber to retrieve all unassigned number settings.
-We pipe that collection of settings to Where-Object, which narrows down the collection to only those settings where the AnnouncementName property contains (-match) the string Welcome.
-Once we have those settings, we pipe them to Set-CsUnassignedNumber, where we modify the Application Server ID of the Announcement Service (ApplicationServer:redmond.litwareinc.com) with the AnnouncementService parameter and the name of the new announcement (Help Desk Announcement) with the AnnouncementName parameter.
-Note that even if the new Announcement has a different name but the same service ID, you must still specify the service ID along with the name.
-
-Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Set-CsUnassignedNumber -AnnouncementService ApplicationServer:redmond.litwareinc.com -AnnouncementName "Help Desk Announcement"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the Announcement of all unassigned number range settings that currently have an Announcement with the string "Welcome" in the name.
-First we call the Get-CsUnassignedNumber cmdlet to retrieve all unassigned number settings.
-We pipe that collection of settings to the Where-Object cmdlet, which narrows down the collection to only those settings where the AnnouncementName property contains (-match) the string Welcome.
-Once we have those settings, we pipe them to the Set-CsUnassignedNumber cmdlet, where we modify the Application Server ID of the Announcement Service (ApplicationServer:redmond.litwareinc.com) with the AnnouncementService parameter and the name of the new announcement (Help Desk Announcement) with the AnnouncementName parameter.
-Note that even if the new Announcement has a different name but the same service ID, you must still specify the service ID along with the name.
-
-Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Set-CsUnassignedNumber -AnnouncementService ApplicationServer:redmond.litwareinc.com -AnnouncementName "Help Desk Announcement"
 
 ## PARAMETERS
 
@@ -189,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Instance
 A reference to an object containing unassigned number settings.
-This object must be of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnouncementVacantNumberRange and can be retrieved by calling the Get-CsUnassignedNumber cmdlet.
+This object must be of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnouncementVacantNumberRange and can be retrieved by calling the `Get-CsUnassignedNumber` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -237,18 +149,8 @@ Accept wildcard characters: False
 ```
 
 ### -ExUmAutoAttendantPhoneNumber
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-The phone number of the Exchange UM Auto Attendant to route calls in this range to.
-The Exchange UM Auto Attendant contact must already be set up in order to assign a value to this parameter.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 The phone number of the Exchange Auto Attendant to route calls in this range to.
 The Skype for Business Auto Attendant contact must already be set up in order to assign a value to this parameter.
-
 
 
 ```yaml
@@ -269,7 +171,7 @@ The first number in the range of unassigned numbers.
 Must be less than or equal to the value supplied for NumberRangeEnd.
 
 The number must match the regular expression (tel:)?(\+)?\[1-9\]\d{0,17}(;ext=\[1-9\]\d{0,9})?.
-This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+), and a digit 1 through 9.
+This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+) and a digit 1 through 9.
 The phone number can be up to 17 digits and may be followed by an extension in the format ;ext= followed by the extension number.
 
 ```yaml
@@ -291,7 +193,7 @@ Must be greater than or equal to the number supplied for NumberRangeStart.
 To specify a range of one number, use the same number for the NumberRangeStart and NumberRangeEnd.
 
 The number must match the regular expression (tel:)?(\+)?\[1-9\]\d{0,17}(;ext=\[1-9\]\d{0,9})?.
-This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+), and a digit 1 through 9.
+This means the number may begin with the string tel: (if you don't specify that string it will be automatically added for you), a plus sign (+) and a digit 1 through 9.
 The phone number can be up to 17 digits and may be followed by and extension in the format ;ext= followed by the extension number.
 
 ```yaml
@@ -308,18 +210,8 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-**Below Content Applies To:** Lync Server 2010
-
-It is possible for unassigned number ranges to overlap. 
-If a number falls within more than one range, the range with the highest priority will take effect.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 It is possible for unassigned number ranges to overlap.
 If a number falls within more than one range, the range with the highest priority will take effect.
-
 
 
 ```yaml
@@ -402,8 +294,6 @@ It modifies an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnno
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e7f52423-58d1-410a-9071-731bde45d3d4(OCS.14).aspx)
-
 [New-CsUnassignedNumber]()
 
 [Remove-CsUnassignedNumber]()
@@ -415,8 +305,3 @@ It modifies an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnno
 [Get-CsAnnouncement]()
 
 [Get-CsExUmContact]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e7f52423-58d1-410a-9071-731bde45d3d4(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e7f52423-58d1-410a-9071-731bde45d3d4(OCS.16).aspx)
-

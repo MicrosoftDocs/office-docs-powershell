@@ -7,16 +7,8 @@ schema: 2.0.0
 # Test-CsPersistentChatMessage
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Verifies whether or not a pair of users can exchange messages using the Persistent Chat service (formerly known as the Persistent Chat service).
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Verifies whether or not a pair of users can exchange messages using the Persistent Chat service (formerly known as the Group Chat service).
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -39,76 +31,41 @@ Test-CsPersistentChatMessage [-TargetFqdn] <String> [-Authentication <Authentica
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The Test-CsPersistentChatMessage cmdlet verifies that a pair of test users is able to exchange messages using the Persistent Chat service.
-To do this, the cmdlet logs the two users on to Lync Server 2013 Preview, connects the users to a persistent Chat room, exchanges a pair of messages, then exits the chat room and logs off the two users.
+The `Test-CsPersistentChatMessage` cmdlet verifies that a pair of test users is able to exchange messages using the Persistent Chat service.
+To do this, the cmdlet logs the two users on to Skype for Business Server, connects the users to a persistent Chat room, exchanges a pair of messages, then exits the chat room and logs off the two users.
 Note that calls to this cmdlet will fail if you have not created any chat rooms or if the two test user accounts have not been assigned a Persistent Chat policy that gives them access to the Persistent Chat service.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsPersistentChatMessage"}
-
-Lync Server Control Panel: The functions carried out by the Test-CsPersistentChatMessage cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Test-CsPersistentChatMessage cmdlet verifies that a pair of test users is able to exchange messages using the Persistent Chat service.
-To do this, the cmdlet logs the two users on to Skype for Business Server 2015, connects the users to a persistent Chat room, exchanges a pair of messages, then exits the chat room and logs off the two users.
-Note that calls to this cmdlet will fail if you have not created any chat rooms or if the two test user accounts have not been assigned a Persistent Chat policy that gives them access to the Persistent Chat service.
-
-Skype for Business Server Control Panel : The functions carried out by the Test-CsPersistentChatMessage cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel : The functions carried out by the `Test-CsPersistentChatMessage` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Lync Server 2013 Preview and then exchange messages using the Persistent Chat service.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box only requires the administrator to enter the password for the Pilar Ackerman account.) The resulting credentials object is then stored in a variable named $cred1.
-The second command does the same thing, this time returning a credential object for the Ken Myer account.
-
-With the credential objects in hand, the third command determines whether or not these two users can log on to Lync Server 2013 Preview and exchange messages using Persistent Chat.
-To carry out this task, Test-CsPersistentChatMessage is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
-
 $cred1 = Get-Credential "litwareinc\pilar"
 
 $cred2 = Get-Credential "litwareinc\kenmyer"
 
 Test-CsPersistentChatMessage -TargetFqdn atl-persistentchat-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
 
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server 2015 and then exchange messages using the Persistent Chat service.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell command-line interface credential object containing the name and password of the user Pilar Ackerman.
+The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server and then exchange messages using the Persistent Chat service.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell command-line interface credential object containing the name and password of the user Pilar Ackerman.
 (Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box only requires the administrator to enter the password for the Pilar Ackerman account.) The resulting credentials object is then stored in a variable named $cred1.
 The second command does the same thing, this time returning a credential object for the Ken Myer account.
 
-With the credential objects in hand, the third command determines whether or not these two users can log on to Skype for Business Server 2015 and exchange messages using Persistent Chat.
-To carry out this task, the Test-CsPersistentChatMessage cmdlet is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
+With the credential objects in hand, the third command determines whether or not these two users can log on to Skype for Business Server and exchange messages using Persistent Chat.
+To carry out this task, the `Test-CsPersistentChatMessage` cmdlet is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
 
-$cred1 = Get-Credential "litwareinc\pilar"
-
-$cred2 = Get-Credential "litwareinc\kenmyer"
-
-Test-CsPersistentChatMessage -TargetFqdn atl-persistentchat-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
 
 ## PARAMETERS
 
 ### -ReceiverCredential
 User credential object for the first of the two user accounts to be tested.
-The value passed to ReceiverCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to ReceiverCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\pilar and stores that object in a variable named $y:
 
-$y = Get-Credential "litwareinc\pilar"
+`$y = Get-Credential "litwareinc\pilar"`
 
 You need to supply the user password when running this command.
 
@@ -129,10 +86,10 @@ Accept wildcard characters: False
 
 ### -SenderCredential
 User credential object for the second of the two user accounts to be tested.
-The value passed to SenderCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to SenderCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You need to supply the user password when running this command.
 
@@ -181,20 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-**Below Content Applies To:** Lync Server 2013
-
-Type of authentication used when running the test.
-Allowed values are:
-
-* TrustedServer
-* Negotiate
-* ClientCertificate
-* LiveID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Type of authentication used when running the test.
 Allowed values are:
 
@@ -205,7 +148,6 @@ Negotiate
 ClientCertificate
 
 LiveID
-
 
 
 ```yaml
@@ -225,7 +167,7 @@ Accept wildcard characters: False
 Chat room location, consisting of the fully qualified domain name of the Persistent Chat Server and the name of the chat room.
 For example:
 
--ChatRoomIdentity "atl-persistentchat-001.litwareinc.com\ITChatRoom"
+`-ChatRoomIdentity "atl-persistentchat-001.litwareinc.com\ITChatRoom"`
 
 ```yaml
 Type: String
@@ -262,19 +204,19 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
 Note: Do not prepend a $ character when specifying the variable name.
 
 To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.
-ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.`
+`ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.
-ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.`
+`ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -293,7 +235,7 @@ Accept wildcard characters: False
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
 
@@ -314,7 +256,7 @@ Accept wildcard characters: False
 SIP address for the first of the two user accounts to be tested.
 For example:
 
--ReceiverSipAddress "sip:pilar@litwareinc.com"
+`-ReceiverSipAddress "sip:pilar@litwareinc.com"`
 
 The ReceiverSIPAddress parameter must reference the same user account as ReceiverCredential.
 
@@ -367,7 +309,7 @@ Accept wildcard characters: False
 SIP address for the second of the two user accounts to be tested.
 For example:
 
--SenderSipAddress "sip:kenmyer@litwareinc.com"
+`-SenderSipAddress "sip:kenmyer@litwareinc.com"`
 
 The SenderSipAddress parameter must reference the same user account as SenderCredential.
 
@@ -400,24 +342,11 @@ Accept wildcard characters: False
 ```
 
 ### -Setup
-**Below Content Applies To:** Lync Server 2013
-
-Enables the cmdlet to be run on a watcher node computer that does not have access to the Lync Server topology.
-To allow for this, first run Test-CsPersistentChatMessage along with the Setup parameter from a computer which does have access to the topology.
+Enables the cmdlet to be run on a watcher node computer that does not have access to the Skype for Business Server topology.
+To allow for this, first run the `Test-CsPersistentChatMessage` along with the Setup parameter from a computer which does have access to the topology.
 After that, you will be able to run the cmdlet on your watcher node computers.
 
 If you use the Setup parameter you must also use the TestUser1SipAddress and TestUser2SipAddress parameters.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables the cmdlet to be run on a watcher node computer that does not have access to the Skype for Business Server 2015 topology.
-To allow for this, first run the Test-CsPersistentChatMessage along with the Setup parameter from a computer which does have access to the topology.
-After that, you will be able to run the cmdlet on your watcher node computers.
-
-If you use the Setup parameter you must also use the TestUser1SipAddress and TestUser2SipAddress parameters.
-
 
 
 ```yaml
@@ -472,19 +401,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsPersistentChatMessage does not accept pipelined input.
-
-###  
-None.
-The Test-CsPersistentChatMessage cmdlet does not accept pipelined input.
+The `Test-CsPersistentChatMessage` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsPersistentChatMessage returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsPersistentChatMessage cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsPersistentChatMessage` cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
@@ -495,8 +417,3 @@ The Test-CsPersistentChatMessage cmdlet returns instances of the Microsoft.Rtc.S
 [New-CsPersistentChatPolicy]()
 
 [Set-CsPersistentChatPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/08c6db0b-23e2-4fbe-8276-181275a40daf(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/08c6db0b-23e2-4fbe-8276-181275a40daf(OCS.16).aspx)
-

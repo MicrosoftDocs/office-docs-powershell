@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsUserPstnSettings
 
 ## SYNOPSIS
-Use the Set-CsUserPstnSettings cmdlet to modify an existing voice-enabled user's public switched telephone network (PSTN) settings.
+Use the `Set-CsUserPstnSettings` cmdlet to modify an existing voice-enabled user's public switched telephone network (PSTN) settings.
 
 ## SYNTAX
 
@@ -17,23 +17,22 @@ Set-CsUserPstnSettings [[-Identity] <Object>] [-AllowInternationalCalls <Object>
 ```
 
 ## DESCRIPTION
-Hybrid PSTN sites are created, retrieved, modified, and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set, and Remove .) The hybrid PSTN sites can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Hybrid PSTN sites are created, retrieved, modified and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set and Remove). The hybrid PSTN sites can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify hybrid PSTN sites through the CsTenantHybridConfiguration cmdlets, you must use the CsHybridPSTNSite cmdlets to manage hybrid PSTN sites.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsUserPstnSettings -Identity jphillips@contoso.com -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" -AllowInternationalCalls $true
 ```
 
 This example modifies the specified user's PSTN settings to allow international calls.
 
-Set-CsUserPstnSettings -Identity jphillips@contoso.com -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308" -AllowInternationalCalls $true
 
 ## PARAMETERS
 
@@ -79,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -113,9 +112,9 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the global unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 
-You can find the tenant ID for your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+You can find the tenant ID for your Skype for Business Online tenants by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will be determined by your connection and credentials.
@@ -178,11 +177,8 @@ None.
 ## OUTPUTS
 
 ###  
-The Set-CsUserPstnSettings cmdlet returns instances of the UserPstnSettings object.
+The `Set-CsUserPstnSettings` cmdlet returns instances of the UserPstnSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1c25c989-c52a-4cee-9179-64a8feeedbc6(OCS.15).aspx)
-

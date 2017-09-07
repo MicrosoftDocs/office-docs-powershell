@@ -7,26 +7,10 @@ schema: 2.0.0
 # Test-CsGroupExpansion
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Tests the ability of a user to employ group expansion.
-Microsoft Lync Server 2010 enables users to configure an Active Directory distribution group as a contact.
-When you "expand" a group you will see the name and presence information for each member of the group.
-
-**Below Content Applies To:** Lync Server 2013
-
-Tests the ability of a user to employ group expansion.
-Lync Server enables users to configure an Active Directory distribution group as a contact.
+Skype for Business Server enables users to configure an Active Directory distribution group as a contact.
 When you "expand" a group you will see the name and presence information for each member of the group.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Tests the ability of a user to employ group expansion.
-Skype for Business Server 2015 enables users to configure an Active Directory distribution group as a contact.
-When you "expand" a group you will see the name and presence information for each member of the group.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -56,73 +40,26 @@ Test-CsGroupExpansion -GroupEmailAddress <String> -TargetUri <String> -UserSipAd
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
-In recognition of this, Lync Server 2010 allows you to configure a distribution group as a contact.
+In recognition of this, Skype for Business Server allows you to configure a distribution group as a contact.
 If you do this, you can then send the same instant message to all the group members simply by addressing the message to the group rather than each individual member of that group.
 
 There might also be times when you need to communicate with (or check the presence of) certain individuals in the group.
 Group expansion enables you to quickly and easily view all the group members and their current status.
 In addition to that, you can also select one or more group members, and then send an instant message just to those users rather than to all the members of the group.
 
-Group expansion is enabled and disabled by using the Set-CsWebServiceConfiguration cmdlet.
-If group expansion is enabled, you can determine whether the feature is working by running the Test-CsGroupExpansion cmdlet.
+Group expansion is enabled and disabled by using the `Set-CsWebServiceConfiguration` cmdlet.
+If group expansion is enabled, you can determine whether the feature is working by running the `Test-CsGroupExpansion` cmdlet.
 With this cmdlet, you specify an Active Directory distribution group by using the group's email address.
-Test-CsGroupExpansion then uses group expansion to retrieve the group membership and compare the retrieved list with the membership of the group email address that you supplied.
+The `Test-CsGroupExpansion` cmdlet then uses group expansion to retrieve the group membership and compare the retrieved list with the membership of the group email address that you supplied.
 If the two lists match, then group expansion is working correctly.
 
 Note that you can test group expansion in two different ways: by testing the service itself or by testing the associated web service.
-
-Who can run this cmdlet: To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupExpansion"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
-In recognition of this, Lync Server allows you to configure a distribution group as a contact.
-If you do this, you can then send the same instant message to all the group members simply by addressing the message to the group rather than each individual member of that group.
-
-There might also be times when you need to communicate with (or check the presence of) certain individuals in the group.
-Group expansion enables you to quickly and easily view all the group members and their current status.
-In addition to that, you can also select one or more group members, and then send an instant message just to those users rather than to all the members of the group.
-
-Group expansion is enabled and disabled by using the Set-CsWebServiceConfiguration cmdlet.
-If group expansion is enabled, you can determine whether the feature is working by running the Test-CsGroupExpansion cmdlet.
-With this cmdlet, you specify an Active Directory distribution group by using the group's email address.
-Test-CsGroupExpansion then uses group expansion to retrieve the group membership and compare the retrieved list with the membership of the group email address that you supplied.
-If the two lists match, then group expansion is working correctly.
-
-Note that you can test group expansion in two different ways: by testing the service itself or by testing the associated web service.
-
-Who can run this cmdlet: To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsGroupExpansion"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Users sometimes need to communicate on a regular basis with all the members of an Active Directory distribution group; for example, that group might comprise all the members of a team or all the people assigned to a particular project.
-In recognition of this, Skype for Business Server 2015 allows you to configure a distribution group as a contact.
-If you do this, you can then send the same instant message to all the group members simply by addressing the message to the group rather than each individual member of that group.
-
-There might also be times when you need to communicate with (or check the presence of) certain individuals in the group.
-Group expansion enables you to quickly and easily view all the group members and their current status.
-In addition to that, you can also select one or more group members, and then send an instant message just to those users rather than to all the members of the group.
-
-Group expansion is enabled and disabled by using the Set-CsWebServiceConfiguration cmdlet.
-If group expansion is enabled, you can determine whether the feature is working by running the Test-CsGroupExpansion cmdlet.
-With this cmdlet, you specify an Active Directory distribution group by using the group's email address.
-The Test-CsGroupExpansion cmdlet then uses group expansion to retrieve the group membership and compare the retrieved list with the membership of the group email address that you supplied.
-If the two lists match, then group expansion is working correctly.
-
-Note that you can test group expansion in two different ways: by testing the service itself or by testing the associated web service.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsGroupExpansion -TargetFqdn atl-cs-001.litwareinc.com -GroupEmailAddress FinanceGroup@litwareinc.com
 ```
@@ -130,31 +67,12 @@ Test-CsGroupExpansion -TargetFqdn atl-cs-001.litwareinc.com -GroupEmailAddress F
 The command shown in Example 1 connects to the Registrar pool atl-cs-001.litwareinc.com in order to verify group expansion.
 To run the test, the command uses the group FinanceGroup@litwareinc.com.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 connects to the Registrar pool atl-cs-001.litwareinc.com in order to verify group expansion.
-To run the test, the command uses the group FinanceGroup@litwareinc.com.
-
-Test-CsGroupExpansion -TargetFqdn atl-cs-001.litwareinc.com -GroupEmailAddress FinanceGroup@litwareinc.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 connects to the Registrar pool atl-cs-001.litwareinc.com in order to verify group expansion.
-To run the test, the command uses the group FinanceGroup@litwareinc.com.
-
-Test-CsGroupExpansion -TargetFqdn atl-cs-001.litwareinc.com -GroupEmailAddress FinanceGroup@litwareinc.com
 
 ## PARAMETERS
 
 ### -GroupEmailAddress
 Email address of the targeted distribution group.
-For example: -GroupEmailAddress "FinanceGroup@litwareinc.com".
+For example: `-GroupEmailAddress "FinanceGroup@litwareinc.com"`.
 
 ```yaml
 Type: String
@@ -204,7 +122,7 @@ Accept wildcard characters: False
 
 ### -TargetFqdn
 Fully qualified domain name (FQDN) of the Registrar pool where group expansion is to be tested.
-For example: -TargetFqdn "atl-cs-001.litwareinc.com".
+For example: `-TargetFqdn "atl-cs-001.litwareinc.com"`.
 
 Note that you cannot use both the TargetUri parameter and the TargetFqdn parameter in the same command.
 
@@ -236,7 +154,7 @@ Accept wildcard characters: False
 
 ### -TargetUri
 Uniform Resource Identifier (URI) of the Group Expansion Web service.
-For example: -TargetUri "https://atl-cs-001.litwareinc.com/groupexpansion".
+For example: `-TargetUri "https://atl-cs-001.litwareinc.com/groupexpansion"`.
 
 Note that you cannot use both the TargetUri parameter and the TargetFqdn parameter in the same command.
 
@@ -255,10 +173,10 @@ Accept wildcard characters: False
 
 ### -UserCredential
 User credential object for the user account to be used in the test.
-The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to UserCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You will need to supply the user password when running this command.
 
@@ -279,18 +197,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserSipAddress
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 SIP address of the user to be used in the test.
-If this parameter is not specified, then Test-CsGroupExpansion will conduct its checks using the account of the logged-on user.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-SIP address of the user to be used in the test.
-If this parameter is not specified, then the Test-CsGroupExpansion cmdlet will conduct its checks using the account of the logged-on user.
-
+If this parameter is not specified, then the `Test-CsGroupExpansion` cmdlet will conduct its checks using the account of the logged-on user.
 
 
 ```yaml
@@ -352,21 +260,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill OutVerboseVariable Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
-
 
 
 ```yaml
@@ -383,19 +282,10 @@ Accept wildcard characters: False
 ```
 
 ### -WebCredential
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill WebCredential Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 An object containing user credentials for accessing the Location Information service.
-This object can be retrieved by calling the Get-Credential cmdlet and supplying the appropriate credentials.
+This object can be retrieved by calling the `Get-Credential` cmdlet and supplying the appropriate credentials.
 
 This parameter is required if the TargetUri and UserSipAddress parameters are specified, and the computer on which the command is run does not have a server certificate.
-
 
 
 ```yaml
@@ -439,15 +329,15 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
-Note: Do not use prepend a $ character when specifying the variable name.To save the information stored in the logger variable to an HTML file, use a command similar to this:
+Note: Do not use prepend a $ character when specifying the variable name. To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -486,31 +376,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsGroupExpansion does not accept pipelined input.
-
-###  
-None.
-The Test-CsGroupExpansion cmdlet does not accept pipelined input.
+The `Test-CsGroupExpansion` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsGroupExpansion returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsGroupExpansion cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsGroupExpansion` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e41db33d-d028-4171-9418-ec04885be2fc(OCS.14).aspx)
-
 [Test-CsAddressBookService]()
 
 [Test-CsAddressBookWebQuery]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e41db33d-d028-4171-9418-ec04885be2fc(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e41db33d-d028-4171-9418-ec04885be2fc(OCS.16).aspx)
-

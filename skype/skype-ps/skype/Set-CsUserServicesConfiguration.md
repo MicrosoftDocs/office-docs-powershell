@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsUserServicesConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing collection of User Services configuration settings.
-The User Services service is used to help maintain presence information and manage conferencing.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -43,73 +35,25 @@ Set-CsUserServicesConfiguration [-Instance <PSObject>] [-AnonymousUserGracePerio
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+Skype for Business Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
+In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site and service scope.
+(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time and the length of time that a given meeting can remain active.
 
-Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The Set-CsUserServicesConfiguration cmdlet provides a way for administrators to modify information about any (or all) of the User Services configuration settings currently in use.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUserServicesConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself) run the following command from the  Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServicesConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The Set-CsUserServicesConfiguration cmdlet provides a way for administrators to modify information about any (or all) of the User Services configuration settings currently in use.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsUserServicesConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself) run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsUserServicesConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The Set-CsUserServicesConfiguration cmdlet provides a way for administrators to modify information about any (or all) of the User Services configuration settings currently in use.
-
+The `Set-CsUserServicesConfiguration` cmdlet provides a way for administrators to modify information about any (or all) of the User Services configuration settings currently in use.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsUserServicesConfiguration -Identity site:Redmond -AnonymousUserGracePeriod "00:30:00"
 ```
 
-The command shown in Example 1 modifies the User Services configuration settings for the Redmond site (-Identity site:Redmond).
+The command shown in Example 1 modifies the User Services configuration settings for the Redmond site (`-Identity site:Redmond`).
 In this example, the AnonymousUserGracePeriod is set to 30 minutes (00 hours: 30 minutes: 00 seconds).
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 modifies the User Services configuration settings for the Redmond site (-Identity site:Redmond).
-In this example, the AnonymousUserGracePeriod is set to 30 minutes (00 hours: 30 minutes: 00 seconds).
-
-Set-CsUserServicesConfiguration -Identity site:Redmond -AnonymousUserGracePeriod "00:30:00"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 modifies the User Services configuration settings for the Redmond site (-Identity site:Redmond).
-In this example, the AnonymousUserGracePeriod is set to 30 minutes (00 hours: 30 minutes: 00 seconds).
-
-Set-CsUserServicesConfiguration -Identity site:Redmond -AnonymousUserGracePeriod "00:30:00"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsUserServicesConfiguration -Identity site:Redmond -MaintenanceTimeOfDay "13:30"
 ```
@@ -118,123 +62,44 @@ In Example 2, the MaintenanceTimeOfDay property is modified for the User Service
 This is done by using the MaintenanceTimeOfDay parameter and the parameter value 13:30.
 That sets the maintenance time of day to 1:30 PM (13 hours and 30 minutes on a 24-hour clock).
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 2, the MaintenanceTimeOfDay property is modified for the User Services configuration settings applied to the Redmond site.
-This is done by using the MaintenanceTimeOfDay parameter and the parameter value 13:30.
-That sets the maintenance time of day to 1:30 PM (13 hours and 30 minutes on a 24-hour clock).
-
-Set-CsUserServicesConfiguration -Identity site:Redmond -MaintenanceTimeOfDay "13:30"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, the MaintenanceTimeOfDay property is modified for the User Services configuration settings applied to the Redmond site.
-This is done by using the MaintenanceTimeOfDay parameter and the parameter value 13:30.
-That sets the maintenance time of day to 1:30 PM (13 hours and 30 minutes on a 24-hour clock).
-
-Set-CsUserServicesConfiguration -Identity site:Redmond -MaintenanceTimeOfDay "13:30"
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsUserServicesConfiguration -Filter "service:*" | Set-CsUserServicesConfiguration -MaxContacts 300
-```
-
-The preceding command retrieves all the User Services configuration settings applied at the service scope and then modifies the allowed number of contacts for each of these items.
-To carry out this task, the command first uses Get-CsUserServicesConfiguration and the Filter parameter to retrieve all the settings configured at the service scope; the filter value "service:*" limits the returned data to settings that have an Identity that begins with the characters "service:".
-This filtered collection is then passed to Set-CsUserServicesConfiguration, which takes each item in the collection and sets the MaxContacts property to 300.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 3 retrieves all the User Services configuration settings applied at the service scope and then modifies the allowed number of contacts for each of these items.
-To carry out this task, the command first uses Get-CsUserServicesConfiguration and the Filter parameter to retrieve all the settings configured at the service scope; the filter value "service:*" limits the returned data to settings that have an Identity that begins with the characters "service:".
-This filtered collection is then passed to Set-CsUserServicesConfiguration, which takes each item in the collection and sets the MaxContacts property to 300.
+To carry out this task, the command first uses the `Get-CsUserServicesConfiguration` cmdlet and the Filter parameter to retrieve all the settings configured at the service scope; the filter value "service:*" limits the returned data to settings that have an Identity that begins with the characters "service:".
+This filtered collection is then passed to the `Set-CsUserServicesConfiguration` cmdlet, which takes each item in the collection and sets the MaxContacts property to 300.
 
-Get-CsUserServicesConfiguration -Filter "service:*" | Set-CsUserServicesConfiguration -MaxContacts 300
 
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 retrieves all the User Services configuration settings applied at the service scope and then modifies the allowed number of contacts for each of these items.
-To carry out this task, the command first uses the Get-CsUserServicesConfiguration cmdlet and the Filter parameter to retrieve all the settings configured at the service scope; the filter value "service:*" limits the returned data to settings that have an Identity that begins with the characters "service:".
-This filtered collection is then passed to the Set-CsUserServicesConfiguration cmdlet, which takes each item in the collection and sets the MaxContacts property to 300.
-
-Get-CsUserServicesConfiguration -Filter "service:*" | Set-CsUserServicesConfiguration -MaxContacts 300
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsUserServicesConfiguration | Where-Object {$_.MaxContacts -gt 300} | Set-CsUserServicesConfiguration -MaxContacts 300
 ```
 
 In Example 4, all User Services configuration settings that allow users more than 300 contacts are modified; after the modifications are made, no settings will allow for more than 300 contacts.
-To do this, the command first calls Get-CsUserServicesConfiguration without any additional parameters.
+To do this, the command first calls the `Get-CsUserServicesConfiguration` cmdlet without any additional parameters.
 This returns a collection of all the User Services configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the MaxContacts property is greater than 300.
-In turn, the filtered collection is piped to Set-CsUserServicesConfiguration, which takes each item in the filtered collection and changes the maximum number of allowed contacts to 300.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the MaxContacts property is greater than 300.
+In turn, the filtered collection is piped to the `Set-CsUserServicesConfiguration` cmdlet, which takes each item in the filtered collection and changes the maximum number of allowed contacts to 300.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 4, all User Services configuration settings that allow users more than 300 contacts are modified; after the modifications are made, no settings will allow for more than 300 contacts.
-To do this, the command first calls Get-CsUserServicesConfiguration without any additional parameters.
-This returns a collection of all the User Services configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the MaxContacts property is greater than 300.
-In turn, the filtered collection is piped to Set-CsUserServicesConfiguration, which takes each item in the filtered collection and changes the maximum number of allowed contacts to 300.
-
-Get-CsUserServicesConfiguration | Where-Object {$_.MaxContacts -gt 300} | Set-CsUserServicesConfiguration -MaxContacts 300
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 4, all User Services configuration settings that allow users more than 300 contacts are modified; after the modifications are made, no settings will allow for more than 300 contacts.
-To do this, the command first calls the Get-CsUserServicesConfiguration cmdlet without any additional parameters.
-This returns a collection of all the User Services configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the MaxContacts property is greater than 300.
-In turn, the filtered collection is piped to the Set-CsUserServicesConfiguration cmdlet, which takes each item in the filtered collection and changes the maximum number of allowed contacts to 300.
-
-Get-CsUserServicesConfiguration | Where-Object {$_.MaxContacts -gt 300} | Set-CsUserServicesConfiguration -MaxContacts 300
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Unique identifier for the User Services configuration settings to be modified.
-To modify the global settings, use this syntax: -Identity global.
-To modify settings configured at the site scope, use syntax similar to this: -Identity site:Redmond.
-To modify settings at the service level, use syntax like this: -Identity service:UserServer:atl-cs-001.litwareinc.com.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique identifier for the User Services configuration settings to be modified.
 To modify the global settings, use this syntax:
 
--Identity global
+`-Identity global`
 
 To modify settings configured at the site scope, use syntax similar to this:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To modify settings at the service level, use syntax like this:
 
--Identity service:UserServer:atl-cs-001.litwareinc.com
-
+`-Identity service:UserServer:atl-cs-001.litwareinc.com`
 
 
 ```yaml
@@ -267,31 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousUserGracePeriod
-**Below Content Applies To:** Lync Server 2010
-
-Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
-For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
-If an authenticated user does not join before the grace period expires then the anonymous user will be removed from the meeting.
-
-The AnonymousUserGracePeriod must be specified using the following format: days.minutes:seconds (for example, 0.00:30:00 for 30 minutes).
-The grace period can be set to any value between 0 second and 1 day; the default value is 90 minutes (01:30:00).
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
-For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
-If an authenticated user does not join before the grace period expires then the anonymous user will be removed from the meeting.
-This setting applies to both scheduled meetings and to ad-hoc meetings created by clicking Meet Now in Microsoft Lync.
-
-The AnonymousUserGracePeriod must be specified using the following format: days.hours:minutes:seconds (for example, 0.00:30:00 for 30 minutes).
-The grace period can be set to any value between 0 second and 1 day; the default value is 90 minutes (01:30:00).
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
 If an authenticated user does not join before the grace period expires then the anonymous user will be removed from the meeting.
@@ -299,7 +139,6 @@ This setting applies to both scheduled meetings and to ad-hoc meetings created b
 
 The AnonymousUserGracePeriod must be specified using the following format: days.hours:minutes:seconds (for example, 0.00:30:00 for 30 minutes).
 The grace period can be set to any value between 0 second and 1 day; the default value is 90 minutes (01:30:00).
-
 
 
 ```yaml
@@ -535,14 +374,6 @@ Accept wildcard characters: False
 ```
 
 ### -MinSubscriptionExpiration
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill MinSubscriptionExpiration Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Subscriptions are created any time a user makes a request for data such as presence information.
 When the request is made, the user (or, more correctly, the user's client application) can request the length of time that the subscription remains valid before it must be renewed.
 The MinSubscriptionExpiration property represents the minimum amount of time that clients can be granted.
@@ -550,7 +381,6 @@ For example, if the minimum time is set to 1200 seconds and a client requests a 
 
 The minimum subscription time must be expressed as an integer value between 300 seconds (5 minutes) and 86400 seconds (24 hours), inclusive.
 The default value is 1200 seconds (20 minutes).
-
 
 
 ```yaml
@@ -568,7 +398,7 @@ Accept wildcard characters: False
 
 ### -PresenceProviders
 Collection of presence providers for the User Service configuration settings.
-Presence providers are best added to a collection of User Service configuration settings by using the New-CsPresenceProvider cmdlet.
+Presence providers are best added to a collection of User Service configuration settings by using the `New-CsPresenceProvider` cmdlet.
 
 ```yaml
 Type: PSListModifier
@@ -606,35 +436,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
-Set-CsUserServicesConfiguration accepts pipelined instances of the user services settings object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
-The Set-CsUserServicesConfiguration cmdlet accepts pipelined instances of the user services settings object.
+The `Set-CsUserServicesConfiguration` cmdlet accepts pipelined instances of the user services settings object.
 
 ## OUTPUTS
 
 ###  
-Set-CsUserServicesConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
-
-###  
-The Set-CsUserServicesConfiguration cmdlet does not return a value or object.
+The `Set-CsUserServicesConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/51d76f29-4b2b-4208-962c-c5420414ad1b(OCS.14).aspx)
-
 [Get-CsUserServicesConfiguration]()
 
 [New-CsUserServicesConfiguration]()
 
 [Remove-CsUserServicesConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/51d76f29-4b2b-4208-962c-c5420414ad1b(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/51d76f29-4b2b-4208-962c-c5420414ad1b(OCS.16).aspx)
-

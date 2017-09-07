@@ -7,15 +7,8 @@ schema: 2.0.0
 # Test-CsIM
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Tests the ability of two users to exchange instant messages.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Tests the ability of two users to exchange instant messages.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -39,13 +32,11 @@ Test-CsIM [-TargetFqdn] <String> [-ReceiverSipAddress <String>] [-SenderSipAddre
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Test-CsIM is an example of a Microsoft Lync Server 2010 "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
+The `Test-CsIM` cmdlet is an example of a Skype for Business Server "synthetic transaction." Synthetic transactions are used in Skype for Business Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
 
 Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
+Many administrators will use the `CsHealthMonitoringConfiguration` cmdlets to set up test users for each of their Registrar pools.
 These test users are a pair of users who have been preconfigured for use with synthetic transactions.
 (Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
 
@@ -53,75 +44,16 @@ Alternatively, administrators can run a synthetic transaction using actual user 
 For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) to try to diagnose and resolve the problem.
 If you decide to conduct a synthetic transaction using actual user accounts you will need to supply credentials for each user.
 
-The Test-CsIM cmdlet starts off by trying to log a pair of test users on to Lync Server.
+The `Test-CsIM` cmdlet starts off by trying to log a pair of test users on to Skype for Business Server.
 Assuming the two logons are successful, the cmdlet then initiates an instant messaging (IM) session between the two test users.
-(User 1 invites User 2 to an IM session, and User 2 accepts the invitation.) After verifying that messages can be exchanged between the two users, Test-CsIM then ends the IM session and logs both users off of the system.
-
-Who can run this cmdlet: To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsIM"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Test-CsIM is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
-These test users are a pair of users who have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) to try to diagnose and resolve the problem.
-If you decide to conduct a synthetic transaction using actual user accounts you will need to supply credentials for each user.
-
-The Test-CsIM cmdlet starts off by trying to log a pair of test users on to Lync Server.
-Assuming the two logons are successful, the cmdlet then initiates an instant messaging (IM) session between the two test users.
-(User 1 invites User 2 to an IM session, and User 2 accepts the invitation.) After verifying that messages can be exchanged between the two users, Test-CsIM then ends the IM session and logs both users off of the system.
-
-Who can run this cmdlet: To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsIM"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Test-CsIM cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
-These test users are a pair of users who have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) to try to diagnose and resolve the problem.
-If you decide to conduct a synthetic transaction using actual user accounts you will need to supply credentials for each user.
-
-The Test-CsIM cmdlet starts off by trying to log a pair of test users on to Skype for Business Server 2015.
-Assuming the two logons are successful, the cmdlet then initiates an instant messaging (IM) session between the two test users.
-(User 1 invites User 2 to an IM session, and User 2 accepts the invitation.) After verifying that messages can be exchanged between the two users, the Test-CsIM cmdlet then ends the IM session and logs both users off of the system.
-
+(User 1 invites User 2 to an IM session, and User 2 accepts the invitation.) After verifying that messages can be exchanged between the two users, the `Test-CsIM` cmdlet then ends the IM session and logs both users off of the system.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com
-```
-
-The preceding example checks to see if a pair of preconfigured test users can log on to the pool atl-cs-001.litwareinc.com and then exchange instant messages.
-This command will work only if test users have been defined for the pool atl-cs-001.litwareinc.com.
-If they have, then the command will determine whether the two users can log on to the system and, if so, can then exchange instant messages.
-I
-
-If test users have not been defined, then the command will fail because it will not know which users to employ when doing the test.
-If you have not defined a Registrar for a pool, then you must include the SenderSipAddress and ReceiverSipAddress parameters as well as the corresponding credentials for the users involved in the IM session.
-Test-CsIM will then conduct its checks by using the two specified users.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 checks to see if a pair of preconfigured test users can log on to the pool atl-cs-001.litwareinc.com and then exchange instant messages.
@@ -131,88 +63,35 @@ I
 
 If test users have not been defined, then the command will fail because it will not know which users to employ when doing the test.
 If you have not defined a Registrar for a pool, then you must include the SenderSipAddress and ReceiverSipAddress parameters, in addition to the corresponding credentials for the users involved in the IM session.
-Test-CsIM will then conduct its checks by using the two specified users.
+The`Test-CsIM` cmdlet will then conduct its checks by using the two specified users.
 
-Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 checks to see if a pair of preconfigured test users can log on to the pool atl-cs-001.litwareinc.com and then exchange instant messages.
-This command will work only if test users have been defined for the pool atl-cs-001.litwareinc.com.
-If they have, then the command will determine whether the two users can log on to the system and, if so, can then exchange instant messages.
-I
-
-If test users have not been defined, then the command will fail because it will not know which users to employ when doing the test.
-If you have not defined a Registrar for a pool, then you must include the SenderSipAddress and ReceiverSipAddress parameters, in addition to the corresponding credentials for the users involved in the IM session.
-The Test-CsIM cmdlet will then conduct its checks by using the two specified users.
-
-Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 $cred1 = Get-Credential "litwareinc\pilar"
+
 $cred2 = Get-Credential "litwareinc\kenmyer"
 
 Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
 ```
 
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer)) to log on to Lync Server and then exchange instant messages.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box will only require the administrator to enter the password for the Pilar Ackerman account.) The resulting credential object is then stored in a variable named $cred1.
-The second command does the same thing, this time returning a credential object for the Ken Myer account.
-
-With the two credential objects in hand, the third command in the example determines whether or not the two users can log on to Lync Server and then exchange instant messages.
-To do this, Test-CsIM is called along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this user); -ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other user).
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Lync Server and then exchange instant messages.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
+The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server and then exchange instant messages.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
 (Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box will only require the administrator to enter the password for the Pilar Ackerman account.) The resulting credentials object is then stored in a variable named $cred1.
 The second command does the same thing, this time returning a credential object for the Ken Myer account.
 
-With the two credential objects in hand, the third command in the example determines whether or not the two users can log on to Lync Server and then exchange instant messages.
-To do this, Test-CsIM is called along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this user); -ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other user).
+With the two credential objects in hand, the third command in the example determines whether or not the two users can log on to Skype for Business Server and then exchange instant messages.
+To do this, the `Test-CsIM` cmdlet is called along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this user); -ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other user).
 
-$cred1 = Get-Credential "litwareinc\pilar"
-
-$cred2 = Get-Credential "litwareinc\kenmyer"
-
-Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server 2015 and then exchange instant messages.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box will only require the administrator to enter the password for the Pilar Ackerman account.) The resulting credentials object is then stored in a variable named $cred1.
-The second command does the same thing, this time returning a credential object for the Ken Myer account.
-
-With the two credential objects in hand, the third command in the example determines whether or not the two users can log on to Skype for Business Server 2015 and then exchange instant messages.
-To do this, the Test-CsIM cmdlet is called along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this user); -ReceiverSipAddress (the SIP address for the other test user); and ReceiverCredential (the Windows PowerShell object containing the credentials for the other user).
-
-$cred1 = Get-Credential "litwareinc\pilar"
-
-$cred2 = Get-Credential "litwareinc\kenmyer"
-
-Test-CsIm -TargetFqdn atl-cs-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
 
 ## PARAMETERS
 
 ### -ReceiverCredential
 User credential object for the first of the two user accounts to be tested.
-The value passed to ReceiverCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to ReceiverCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\pilar and stores that object in a variable named $y:
 
-$y = Get-Credential "litwareinc\pilar"
+`$y = Get-Credential "litwareinc\pilar"`
 
 You need to supply the user password when running this command.
 
@@ -233,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ReceiverSipAddress
 SIP address for the first of the two user accounts to be tested.
-For example: -ReceiverSipAddress "sip:jhaas@litwareinc.com".
+For example: `-ReceiverSipAddress "sip:jhaas@litwareinc.com"`.
 The ReceiverSipAddress parameter must reference the same user account as ReceiverCredential.
 
 The SIP address is not required if you are running the test under the health monitoring configuration settings for the pool.
@@ -266,10 +145,10 @@ Accept wildcard characters: False
 
 ### -SenderCredential
 User credential object for the second of the two user accounts to be tested.
-The value passed to SenderCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to SenderCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You need to supply the user password when running this command.
 
@@ -290,7 +169,7 @@ Accept wildcard characters: False
 
 ### -SenderSipAddress
 SIP address for the second of the two user accounts to be tested.
-For example: -SenderSipAddress "sip:kenmyer@litwareinc.com".
+For example: `-SenderSipAddress "sip:kenmyer@litwareinc.com"`.
 The SenderSipAddress parameter must reference the same user account as SenderCredential.
 
 The SIP address is not required if you are running the test under the health monitoring configuration settings for the pool.
@@ -400,21 +279,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill OutVerboseVariable Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
-
 
 
 ```yaml
@@ -431,20 +301,6 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-**Below Content Applies To:** Lync Server 2013
-
-Type of authentication used in the test.
-Allowed values are:
-
-* TrustedServer
-* Negotiate
-* ClientCertificate
-* LiveID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Type of authentication used in the test.
 Allowed values are:
 
@@ -455,7 +311,6 @@ Negotiate
 ClientCertificate
 
 LiveID
-
 
 
 ```yaml
@@ -475,7 +330,7 @@ Accept wildcard characters: False
 Email host for user employed in the Legal Intercept test.
 For example:
 
--EmailHost "litwareinc.com"
+`-EmailHost "litwareinc.com"`
 
 ```yaml
 Type: String
@@ -512,15 +367,15 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
 Note: Do not use prepend a $ character when specifying the variable name.To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -568,7 +423,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestLegalIntercept
-When used, instructs Test-CsIM to test the Legal Intercept service for the specified user.
+When used, instructs `Test-CsIM` to test the Legal Intercept service for the specified user.
 
 ```yaml
 Type: SwitchParameter
@@ -622,29 +477,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsIM does not accept pipelined input.
-
-###  
-None.
-The Test-CsIM cmdlet does not accept pipelined input.
+The `Test-CsIM` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsIM returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsIM cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsIM` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2fdab54c-5ec4-4db5-b29c-a3efaae68f66(OCS.14).aspx)
-
 [Test-CsGroupIM]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2fdab54c-5ec4-4db5-b29c-a3efaae68f66(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2fdab54c-5ec4-4db5-b29c-a3efaae68f66(OCS.16).aspx)
-

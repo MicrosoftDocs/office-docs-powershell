@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsTrustedApplicationPool
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies a pool that contains the computers that host trusted applications.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies a pool that contains the computers that host trusted applications.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -29,42 +22,15 @@ Set-CsTrustedApplicationPool [[-Identity] <XdsGlobalRelativeIdentity>] [-AppShar
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-It is recommended that the computers that are running trusted applications within a Microsoft Lync Server 2010 deployment be added to a separate pool that is only for trusted applications.
+We recommend that the computers that are running trusted applications within a Skype for Business Server deployment be added to a separate pool that is only for trusted applications.
 However, you can add trusted application computers to an existing pool that is also used for other purposes.
-The Set-CsTrustedApplicationPool cmdlet modifies the settings for an existing trusted application pool.
+The `Set-CsTrustedApplicationPool` cmdlet modifies the settings for an existing trusted application pool.
 Note that you can't modify the computers that are associated with a pool by using this cmdlet; you must use the CsTrustedApplicationComputer cmdlets to do that.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsTrustedApplicationPool cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsTrustedApplicationPool"}
-
-**Below Content Applies To:** Lync Server 2013
-
-We recommend that the computers that are running trusted applications within a Lync Server deployment be added to a separate pool that is only for trusted applications.
-However, you can add trusted application computers to an existing pool that is also used for other purposes.
-The Set-CsTrustedApplicationPool cmdlet modifies the settings for an existing trusted application pool.
-Note that you can't modify the computers that are associated with a pool by using this cmdlet; you must use the CsTrustedApplicationComputer cmdlets to do that.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsTrustedApplicationPool cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsTrustedApplicationPool"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-We recommend that the computers that are running trusted applications within a Skype for Business Server 2015 deployment be added to a separate pool that is only for trusted applications.
-However, you can add trusted application computers to an existing pool that is also used for other purposes.
-The Set-CsTrustedApplicationPool cmdlet modifies the settings for an existing trusted application pool.
-Note that you can't modify the computers that are associated with a pool by using this cmdlet; you must use the CsTrustedApplicationComputer cmdlets to do that.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsTrustedApplicationPool -Identity TrustPool.litwareinc.com -OutboundOnly $True
 ```
@@ -74,29 +40,6 @@ We use the Identity parameter to specify the FQDN of the pool we want to modify.
 This example modifies the OutboundOnly property of the pool by specifying a value of True ($True) for the parameter OutboundOnly.
 (The default value is False.)
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the pool with the FQDN TrustPool.litwareinc.com.
-We use the Identity parameter to specify the FQDN of the pool we want to modify.
-This example modifies the OutboundOnly property of the pool by specifying a value of True ($True) for the parameter OutboundOnly.
-(The default value is False.)
-
-Set-CsTrustedApplicationPool -Identity TrustPool.litwareinc.com -OutboundOnly $True
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the pool with the FQDN TrustPool.litwareinc.com.
-We use the Identity parameter to specify the FQDN of the pool we want to modify.
-This example modifies the OutboundOnly property of the pool by specifying a value of True ($True) for the parameter OutboundOnly.
-(The default value is False.)
-
-Set-CsTrustedApplicationPool -Identity TrustPool.litwareinc.com -OutboundOnly $True
 
 ## PARAMETERS
 
@@ -200,7 +143,7 @@ Accept wildcard characters: False
 ### -Registrar
 The service ID or FQDN of the Registrar service for the pool.
 Note that changing the Registrar will orphan any contacts attached to the application.
-Those contacts must be moved by calling the Move-CsApplicationEndpoint cmdlet.
+Those contacts must be moved by calling the `Move-CsApplicationEndpoint` cmdlet.
 
 ```yaml
 Type: String
@@ -216,20 +159,9 @@ Accept wildcard characters: False
 ```
 
 ### -RequiresReplication
-**Below Content Applies To:** Lync Server 2010
-
-Determines whether replication is required for this pool.
-Set this value to False if replication is not required.
-You would normally set this parameter to False for Microsoft Outlook Web Access and manually-provisioned applications.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Determines whether replication is required for this pool.
 Set this value to False if replication is not required.
 You would ordinarily set this parameter to False for Microsoft Outlook Web Access and manually-provisioned applications.
-
 
 
 ```yaml
@@ -380,8 +312,6 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/0f42d12b-d09a-41fd-892f-2b7515a35344(OCS.14).aspx)
-
 [New-CsTrustedApplicationPool]()
 
 [Remove-CsTrustedApplicationPool]()
@@ -389,8 +319,3 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer
 [Get-CsTrustedApplicationPool]()
 
 [New-CsTrustedApplicationComputer]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0f42d12b-d09a-41fd-892f-2b7515a35344(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0f42d12b-d09a-41fd-892f-2b7515a35344(OCS.16).aspx)
-

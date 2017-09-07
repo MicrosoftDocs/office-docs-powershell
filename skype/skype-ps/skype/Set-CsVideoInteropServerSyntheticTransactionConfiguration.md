@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsVideoInteropServerSyntheticTransactionConfiguration
 
 ## SYNOPSIS
-Use the Set-CsVideoInteropServerSyntheticTransactionConfiguration cmdlet to modify an existing Video Interop Server (VIS) synthetic transaction configuration.
+Use the `Set-CsVideoInteropServerSyntheticTransactionConfiguration` cmdlet to modify an existing Video Interop Server (VIS) synthetic transaction configuration.
 
 ## SYNTAX
 
@@ -26,18 +26,17 @@ Set-CsVideoInteropServerSyntheticTransactionConfiguration [-Confirm] [-Force] [-
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsVideoInteropServerSyntheticTransactionConfiguration -Identity Global -WatcherNodeFqdns "watchernode.contoso.com"
 ```
 
 This example sets the Global configuration to trust connections from the WatcherNode "watchernode.contoso.com".
 
-Set-CsVideoInteropServerSyntheticTransactionConfiguration -Identity Global -WatcherNodeFqdns "watchernode.contoso.com"
 
 ## PARAMETERS
 
@@ -78,11 +77,11 @@ Unique identity assigned to the VIS configuration when it was created.
 VIS settings can be configured at the global, site, or service scope (for the VideoInteropServer service only).
 To refer to the global instance, use this syntax:
 
--Identity "Global"
+`-Identity "Global"`
 
 Use this syntax to refer to a collection at the site scope:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 ```yaml
 Type: XdsIdentity
@@ -115,9 +114,9 @@ Accept wildcard characters: False
 
 ### -WatcherNodeFqdns
 Specifies the URL of the watcher node relevant to the synthetic transaction.
-For example: -WatcherNodeFqdns "atl-cs-001.Contoso.com".
+For example: `-WatcherNodeFqdns "atl-cs-001.Contoso.com"`.
 Watcher nodes are computers that periodically use Microsoft System Center Operations Manager and Skype for Business Server synthetic transactions to verify that Skype for Business Server components are working as expected.
-For more information, see New-CsWatcherNodeConfiguration.
+For more information, see `New-CsWatcherNodeConfiguration`.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>....
 If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
@@ -177,6 +176,3 @@ None.
 [Remove-CsVideoInteropServerSyntheticTransactionConfiguration]()
 
 [Test-CsP2PVideoInteropServerSipTrunkAV]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c257fe1f-7d35-4d73-b960-897baf999ae1(OCS.16).aspx)
-

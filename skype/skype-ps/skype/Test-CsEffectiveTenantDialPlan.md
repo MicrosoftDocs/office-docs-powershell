@@ -7,7 +7,7 @@ schema: 2.0.0
 # Test-CsEffectiveTenantDialPlan
 
 ## SYNOPSIS
-Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
+Use the `Test-CsEffectiveTenantDialPlan` cmdlet to test a tenant dial plan.
 
 ## SYNTAX
 
@@ -18,20 +18,19 @@ Test-CsEffectiveTenantDialPlan [-DialedNumber <Object>] [-Identity <Object>] [-B
 ```
 
 ## DESCRIPTION
-The Test-CsEffectiveTenantDialPlan cmdlet normalizes the dialed number by applying the normalization rules from the effective tenant dial plan that is returned for the specified user.
+The `Test-CsEffectiveTenantDialPlan` cmdlet normalizes the dialed number by applying the normalization rules from the effective tenant dial plan that is returned for the specified user.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
+Get-CsEffectiveTenantDialPlan -Identity vt1_user1 | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
 
+Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity 5d3ff00a-8d23-42d0-ac9e-32a2c518bc1c_Global_Vt1TenantDialPlan2
 ```
 
 This example gets the Identity of a dial plan that is associated with a dialed number, and applies the retrieved tenant dial plan to normalize the dialed number.
 
-Get-CsEffectiveTenantDialPlan -Identity vt1_user1 | Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080
-
-Test-CsEffectiveTenantDialPlan -DialedNumber 14258828080 -Identity 5d3ff00a-8d23-42d0-ac9e-32a2c518bc1c_Global_Vt1TenantDialPlan2
 
 ## PARAMETERS
 
@@ -192,6 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/464465d8-3965-48fc-9d01-6aa22808753d(OCS.15).aspx)
-
