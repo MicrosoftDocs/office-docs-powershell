@@ -23,24 +23,24 @@ However, you can't create or modify hybrid PSTN sites through the CsTenantHybrid
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+New-CsHybridPSTNSite -Identity "SeattlePSTN" -EdgeFQDN "Contoso.Denver.Edge.com" -BitsUpdateTimeWindow @{add="FirstWeekend","Night"} -OsUpdateTimeWindow @{add="Weekday"}
 ```
 
 This example creates a new hybrid public switched telephone network (PSTN) site named "SeattlePSTN" in the tenant.
 
-New-CsHybridPSTNSite -Identity "SeattlePSTN" -EdgeFQDN "Contoso.Denver.Edge.com" -BitsUpdateTimeWindow @{add="FirstWeekend","Night"} -OsUpdateTimeWindow @{add="Weekday"}
+
 
 ## PARAMETERS
 
 ### -EdgeFQDN
 Specifies the fully qualified domain name of the edge server.
-For example: -EdgeFQDN Contoso.Denver.Edge.com
+For example: `-EdgeFQDN Contoso.Denver.Edge.com`
 
 ```yaml
 Type: Object
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: `-Identity "SeattlePSTN".`
 If the identity provided is not unique within the tenant, the cmdlet will fail.
 
 ```yaml
@@ -191,9 +191,9 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the global unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
 
-You can find the tenant ID for your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+You can find the tenant ID for your Skype for Business Online tenants by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will be determined by your connection and credentials.
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters:` -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -261,6 +261,3 @@ The New-CsHybridPSTNSite cmdlet returns instances of the HybridPstnSite object.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0ed212d4-9d51-4cb2-bf59-f67f1aab3b0e(OCS.15).aspx)
-

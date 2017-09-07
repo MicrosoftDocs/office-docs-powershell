@@ -7,23 +7,9 @@ schema: 2.0.0
 # New-CsDialInConferencingConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
 Creates a new collection of dial-in conferencing configuration settings.
-These settings determine how Microsoft Lync Server 2010 responds when users join or leave a dial-in conference.
-In particular, information is returned regarding whether or not participants are required to record their name when joining a conference, and how (or if) the system announces that someone has joined or left the call.
-
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new collection of dial-in conferencing configuration settings.
-These settings determine how Lync Server responds when users join or leave a dial-in conference.
-In particular, information is returned regarding whether or not participants are required to record their name when joining a conference, and how (or if) the system announces that someone has joined or left the call.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new collection of dial-in conferencing configuration settings.
-These settings determine how Skype for Business Server 2015 responds when users join or leave a dial-in conference.
+These settings determine how Skype for Business Server responds when users join or leave a dial-in conference.
 In particular, information is returned regarding whether or not participants are required to record their name when joining a conference, and how (or if) the system announces that someone has joined or left the call.
 This cmdlet was introduced in Lync Server 2010.
 
@@ -39,48 +25,19 @@ New-CsDialInConferencingConfiguration [-Identity] <XdsIdentity> [-EnableNameReco
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-When users join (or leave) a dial-in conference, Lync Server 2010 can respond in different ways.
+When users join (or leave) a dial-in conference, Skype for Business Server can respond in different ways.
 For example, participants might be asked to record their name before they can enter the conference.
-Likewise, administrators can decide whether they want to have Lync Server announce that dial-in participants have either left or joined a conference.
+Likewise, administrators can decide whether they want to have Skype for Business Server announce that dial-in participants have either left or joined a conference.
 
 These conference "join behaviors" are managed using dial-in conferencing configuration settings; these settings can be configured at the global scope or at the site scope.
-(Settings configured at the site scope take precedence over settings configured at the global scope.) When you first install Lync Server, the only dial-in conferencing configuration settings you will have are the ones at the global scope; however, you can create new settings at the site scope by using the New-CSDialInConferencingConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsDialInConferencingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsDialInConferencingConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-When users join (or leave) a dial-in conference, Lync Server can respond in different ways.
-For example, participants might be asked to record their name before they can enter the conference.
-Likewise, administrators can decide whether they want to have Lync Server announce that dial-in participants have either left or joined a conference.
-
-These conference "join behaviors" are managed using dial-in conferencing configuration settings; these settings can be configured at the global scope or at the site scope.
-(Settings configured at the site scope take precedence over settings configured at the global scope.) When you first install Lync Server, the only dial-in conferencing configuration settings you will have are the ones at the global scope; however, you can create new settings at the site scope by using the New-CSDialInConferencingConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsDialInConferencingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDialInConferencingConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When users join (or leave) a dial-in conference, Skype for Business Server 2015 can respond in different ways.
-For example, participants might be asked to record their name before they can enter the conference.
-Likewise, administrators can decide whether they want to have Skype for Business Server 2015 announce that dial-in participants have either left or joined a conference.
-
-These conference "join behaviors" are managed using dial-in conferencing configuration settings; these settings can be configured at the global scope or at the site scope.
-(Settings configured at the site scope take precedence over settings configured at the global scope.) When you first install Skype for Business Server 2015, the only dial-in conferencing configuration settings you will have are the ones at the global scope; however, you can create new settings at the site scope by using the New-CSDialInConferencingConfiguration cmdlet.
+(Settings configured at the site scope take precedence over settings configured at the global scope.) When you first install Skype for Business Server, the only dial-in conferencing configuration settings you will have are the ones at the global scope; however, you can create new settings at the site scope by using the New-CSDialInConferencingConfiguration cmdlet.
 
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CSDialInConferencingConfiguration -Identity site:Redmond -EnableNameRecording $False
 ```
@@ -88,57 +45,14 @@ New-CSDialInConferencingConfiguration -Identity site:Redmond -EnableNameRecordin
 The command shown in Example 1 creates a new collection of dial-in conferencing configuration settings that are applied to the Redmond site.
 In addition, the optional parameter EnableNameRecording is included in order to set the EnableNameRecording property to False.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 creates a new collection of dial-in conferencing configuration settings that are applied to the Redmond site.
-In addition, the optional parameter EnableNameRecording is included in order to set the EnableNameRecording property to False.
-
-New-CSDialInConferencingConfiguration -Identity site:Redmond -EnableNameRecording $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new collection of dial-in conferencing configuration settings that are applied to the Redmond site.
-In addition, the optional parameter EnableNameRecording is included in order to set the EnableNameRecording property to False.
-
-New-CSDialInConferencingConfiguration -Identity site:Redmond -EnableNameRecording $False
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-$x = New-CSDialInConferencingConfiguration -Identity site:Redmond -InMemory
-$x.EnableNameRecording = $False
-Set-CSDialInConferencingConfiguration -Instance $x
-```
-
-In Example 2 the InMemory parameter is used to create a new collection of dial-in conferencing configuration settings that initially exist only in memory.
-To do this, the example first calls New-CSDialInConferencingConfiguration, and the InMemory parameter to create a virtual settings collection that is stored in the variable $x.
-(Note that this collection is given the Identity site:Redmond.) After creating the virtual collection, line 2 is used to modify the value of the  EnableNameRecording property.
-Finally, line 3 in the example calls Set-CSDialInConferencingConfiguration to transform the virtual configuration settings stored in $x into an actual collection of settings applied to the Redmond site.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2 the InMemory parameter is used to create a new collection of dial-in conferencing configuration settings that initially exist only in memory.
-To do this, the example first calls New-CSDialInConferencingConfiguration, and the InMemory parameter to create a virtual settings collection that is stored in the variable $x.
-(Note that this collection is given the Identity site:Redmond.) After creating the virtual collection, line 2 is used to modify the value of the EnableNameRecording property.
-Finally, line 3 in the example calls Set-CSDialInConferencingConfiguration to transform the virtual configuration settings stored in $x into an actual collection of settings applied to the Redmond site.
-
 $x = New-CSDialInConferencingConfiguration -Identity site:Redmond -InMemory
 
 $x.EnableNameRecording = $False
 
 Set-CSDialInConferencingConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2 the InMemory parameter is used to create a new collection of dial-in conferencing configuration settings that initially exist only in memory.
@@ -146,17 +60,11 @@ To do this, the example first calls the New-CSDialInConferencingConfiguration cm
 (Note that this collection is given the Identity site:Redmond.) After creating the virtual collection, line 2 is used to modify the value of the EnableNameRecording property.
 Finally, line 3 in the example calls the Set-CSDialInConferencingConfiguration cmdlet to transform the virtual configuration settings stored in $x into an actual collection of settings applied to the Redmond site.
 
-$x = New-CSDialInConferencingConfiguration -Identity site:Redmond -InMemory
-
-$x.EnableNameRecording = $False
-
-Set-CSDialInConferencingConfiguration -Instance $x
-
 ## PARAMETERS
 
 ### -Identity
 Indicates the Identity of the dial-in conferencing configuration settings to be created.
-Because these settings can only be created at the site scope, use syntax similar to this, with the prefix "site:" followed by the name of the site: -Identity site:Redmond.
+Because these settings can only be created at the site scope, use syntax similar to this, with the prefix "site:" followed by the name of the site: `-Identity site:Redmond.`
 
 Note that there can only be one set of dial-in conferencing configuration settings per site.
 The sample command will fail if a collection of settings with the Identity site:Redmond already exists.
@@ -252,14 +160,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -352,13 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsDialInConferencingConfiguration does not accept pipelined input.
 
 ###  
 None.
@@ -373,15 +269,9 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Di
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/ac0b6e22-3883-4884-aa94-18f4029c7f1e(OCS.14).aspx)
-
 [Get-CsDialInConferencingConfiguration]()
 
 [Remove-CsDialInConferencingConfiguration]()
 
 [Set-CsDialInConferencingConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ac0b6e22-3883-4884-aa94-18f4029c7f1e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ac0b6e22-3883-4884-aa94-18f4029c7f1e(OCS.16).aspx)
 

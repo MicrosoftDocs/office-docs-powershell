@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-CsNetworkSubnet
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new network subnet.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network subnet.
 This cmdlet was introduced in Lync Server 2010.
@@ -33,42 +28,11 @@ New-CsNetworkSubnet -MaskBits <Int32> -SubnetID <String> [-Description <String>]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
 Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
 Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
 
-In most deployments of Microsoft Lync Server 2010 where call admission control (CAC) is implemented, there will typically be a large number of subnets.
-Because of this, it's often best to call New-CsNetworkSubnet in conjunction with the Windows PowerShell cmdlet Import-CSV.
-By using these cmdlets together, you can read in subnet settings from a comma-separated values (CSV) file and create multiple subnets at once.
-For more details, see the Examples section for this cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkSubnet cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSubnet"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
-Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
-
-In most deployments of Lync Server where call admission control (CAC) is implemented, there will typically be a large number of subnets.
-Because of this, it's often best to call New-CsNetworkSubnet in conjunction with the Windows PowerShell cmdlet Import-CSV.
-By using these cmdlets together, you can read in subnet settings from a comma-separated values (CSV) file and create multiple subnets at once.
-For more details, see the Examples section for this cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkSubnet cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSubnet"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Each subnet must be associated with a network site for the purposes of determining the geographic location of the host belonging to this subnet.
-Use this cmdlet to create a new subnet, and at the same time (optionally) assign it to a network site.
-
-In most deployments of Skype for Business Server 2015 where call admission control (CAC) is implemented, there will typically be a large number of subnets.
+In most deployments of Skype for Business Server where call admission control (CAC) is implemented, there will typically be a large number of subnets.
 Because of this, it's often best to call the New-CsNetworkSubnet cmdlet in conjunction with the Import-CSV cmdlet.
 By using these cmdlets together, you can read in subnet settings from a comma-separated values (CSV) file and create multiple subnets at once.
 For more details, see the Examples section for this cmdlet.
@@ -77,7 +41,7 @@ For more details, see the Examples section for this cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CsNetworkSubnet -Identity 172.11.15.0 -MaskBits 24 -NetworkSiteID Vancouver
 ```
@@ -89,105 +53,11 @@ A subnet must have mask bits defined.
 That is done by supplying a value--in this case 24--to the MaskBits parameter.
 Finally, the site ID Vancouver is passed to the NetworkSiteID parameter to associate this subnet with that site.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-This example demonstrates how to create a new subnet object that represents the subnet 172.11.15.0/24.
-The Identity of the subnet is set to 172.11.15.0.
-This value will automatically be assigned as the SubnetID.
-A subnet must have mask bits defined.
-That is done by supplying a value--in this case 24--to the MaskBits parameter.
-Finally, the site ID Vancouver is passed to the NetworkSiteID parameter to associate this subnet with that site.
-
-New-CsNetworkSubnet -Identity 172.11.15.0 -MaskBits 24 -NetworkSiteID Vancouver
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example demonstrates how to create a new subnet object that represents the subnet 172.11.15.0/24.
-The Identity of the subnet is set to 172.11.15.0.
-This value will automatically be assigned as the SubnetID.
-A subnet must have mask bits defined.
-That is done by supplying a value--in this case 24--to the MaskBits parameter.
-Finally, the site ID Vancouver is passed to the NetworkSiteID parameter to associate this subnet with that site.
-
-New-CsNetworkSubnet -Identity 172.11.15.0 -MaskBits 24 -NetworkSiteID Vancouver
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-Import-CSV C:\subnet.csv | foreach {New-CsNetworkSubnet -Identity $_.Identity -MaskBits $_.Mask -NetworkSiteID $_.SiteID}
-```
-
-Example 2 reads from a CSV file to create a series of subnets.
-The CSV file in this example looks something like this:
-
-Identity, Mask, SiteID
-
-172.11.12.0, 24, Redmond
-
-172.11.13.0, 24, Chicago
-
-172.11.14.0, 25, Vancouver
-
-172.11.15.0, 31, Paris
-
-...
-
-The example starts by calling the Import-CSV cmdlet, passing it the path to a CSV file.
-This cmdlet will read the contents of that file into memory.
-Those file contents are then piped to the foreach function.
-The foreach function iterates through the contents one line at a time.
-As you can see from the example file, the first line is a list of headings that define the rest of the contents; the foreach function will use these headings to access the comma-separated values by name.
-
-Inside the foreach statement, the New-CsNetworkSubnet cmdlet is called.
-As foreach iterates through each line of the file contents, that line is passed as the values for the New-CsNetworkSubnet parameters.
-For example, the first time through the foreach statement, New-CsNetworkSubnet will create a subnet with the Identity 172.11.12.0: this is the value in the Identity position in the first comma-separated line of values.
-(The $_ indicates the current value in the foreach loop.) The Mask value (24) is then passed to the MaskBits parameter, and the SiteID value (Redmond) from the file is passed to the NetworkSiteID parameter.
-
-This process continues until all lines in the file have been read, and their values used to create new subnets.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 reads from a CSV file to create a series of subnets.
-The CSV file in this example looks something like this:
-
-Identity, Mask, SiteID
-
-172.11.12.0, 24, Redmond
-
-172.11.13.0, 24, Chicago
-
-172.11.14.0, 25, Vancouver
-
-172.11.15.0, 31, Paris
-
-...
-
-The example starts by calling the Import-CSV cmdlet, passing it the path to a CSV file.
-This cmdlet will read the contents of that file into memory.
-Those file contents are then piped to the foreach function.
-The foreach function iterates through the contents one line at a time.
-As you can see from the example file, the first line is a list of headings that define the rest of the contents; the foreach function will use these headings to access the comma-separated values by name.
-
-Inside the foreach statement, the New-CsNetworkSubnet cmdlet is called.
-As foreach iterates through each line of the file contents, that line is passed as the values for the New-CsNetworkSubnet parameters.
-For example, the first time through the foreach statement, New-CsNetworkSubnet will create a subnet with the Identity 172.11.12.0: this is the value in the Identity position in the first comma-separated line of values.
-(The $_ indicates the current value in the foreach loop.) The Mask value (24) is then passed to the MaskBits parameter, and the SiteID value (Redmond) from the file is passed to the NetworkSiteID parameter.
-
-This process continues until all lines in the file have been read, and their values used to create new subnets.
 
 Import-CSV C:\subnet.csv | foreach {New-CsNetworkSubnet -Identity $_.Identity -MaskBits $_.Mask -NetworkSiteID $_.SiteID}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 reads from a CSV file to create a series of subnets.
@@ -218,7 +88,6 @@ For example, the first time through the foreach statement, the New-CsNetworkSubn
 
 This process continues until all lines in the file have been read, and their values used to create new subnets.
 
-Import-CSV C:\subnet.csv | foreach {New-CsNetworkSubnet -Identity $_.Identity -MaskBits $_.Mask -NetworkSiteID $_.SiteID}
 
 ## PARAMETERS
 
@@ -325,14 +194,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -385,7 +246,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -401,8 +262,6 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/15af44bd-d798-435c-9c27-df47ab475023(OCS.14).aspx)
-
 [Remove-CsNetworkSubnet]()
 
 [Set-CsNetworkSubnet]()
@@ -410,8 +269,3 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 [Get-CsNetworkSubnet]()
 
 [Get-CsNetworkSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/15af44bd-d798-435c-9c27-df47ab475023(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/15af44bd-d798-435c-9c27-df47ab475023(OCS.16).aspx)
-

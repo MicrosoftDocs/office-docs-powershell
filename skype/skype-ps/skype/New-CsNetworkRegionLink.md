@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-CsNetworkRegionLink
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a link between two regions configured for call admission control (CAC).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a link between two regions configured for call admission control (CAC).
 This cmdlet was introduced in Lync Server 2010.
@@ -34,17 +29,6 @@ New-CsNetworkRegionLink -NetworkRegionID1 <String> -NetworkRegionID2 <String> -N
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Regions within a network are linked through physical WAN connectivity.
-This cmdlet defines a link between two regions and sets the bandwidth limitations on audio and video connections between these regions.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkRegionLink cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkRegionLink"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet defines a link between two regions and sets the bandwidth limitations on audio and video connections between these regions.
@@ -53,39 +37,11 @@ This cmdlet defines a link between two regions and sets the bandwidth limitation
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
-```
-New-CsNetworkRegionLink -Identity NA_EMEA -NetworkRegionID1 NorthAmerica -NetworkRegionID2 EMEA -BWPolicyProfileID LowBWLimits
-```
 
-This example creates a new network region link named NA_EMEA to link the regions NorthAmerica and EMEA.
-The region link name is specified as the value for the Identity parameter.
-(This will automatically be assigned as the value of the NetworkRegionLinkID.) The two network regions being linked are required parameters for creating the link, in this case the regions named NorthAmerica and EMEA.
-In this example we've also assigned a value to the BWPolicyProfile parameter.
-This will assign the bandwidth limitations defined in that bandwidth policy profile (LowBWLimits) to connections between these regions.
-If no BWPolicyProfileID is supplied, there are no bandwidth limitations on connections between these two regions.
-(There could still be limitations between sites.
-For details, see the New-CsNetworkSite Help topic.)
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-
-```
-
-This example creates a new network region link named NA_EMEA to link the regions NorthAmerica and EMEA.
-The region link name is specified as the value for the Identity parameter.
-(This will automatically be assigned as the value of the NetworkRegionLinkID.) The two network regions being linked are required parameters for creating the link, in this case the regions named NorthAmerica and EMEA.
-In this example we've also assigned a value to the BWPolicyProfile parameter.
-This will assign the bandwidth limitations defined in that bandwidth policy profile (LowBWLimits) to connections between these regions.
-If no BWPolicyProfileID is supplied, there are no bandwidth limitations on connections between these two regions.
-(There could still be limitations between sites.
-For details, see the New-CsNetworkSite Help topic.)
 
 New-CsNetworkRegionLink -Identity NA_EMEA -NetworkRegionID1 NorthAmerica -NetworkRegionID2 EMEA -BWPolicyProfileID LowBWLimits
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This example creates a new network region link named NA_EMEA to link the regions NorthAmerica and EMEA.
@@ -97,7 +53,6 @@ If no BWPolicyProfileID is supplied, there are no bandwidth limitations on conne
 (There could still be limitations between sites.
 For details, see the New-CsNetworkSite cmdlet help topic.)
 
-New-CsNetworkRegionLink -Identity NA_EMEA -NetworkRegionID1 NorthAmerica -NetworkRegionID2 EMEA -BWPolicyProfileID LowBWLimits
 
 ## PARAMETERS
 
@@ -202,14 +157,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -262,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -278,8 +225,6 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/61a6a7be-8078-4d59-a78a-2f241f6bf800(OCS.14).aspx)
-
 [Remove-CsNetworkRegionLink]()
 
 [Set-CsNetworkRegionLink]()
@@ -289,8 +234,4 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 [Get-CsNetworkBandwidthPolicyProfile]()
 
 [New-CsNetworkSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/61a6a7be-8078-4d59-a78a-2f241f6bf800(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/61a6a7be-8078-4d59-a78a-2f241f6bf800(OCS.16).aspx)
 

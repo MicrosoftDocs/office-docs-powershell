@@ -30,7 +30,7 @@ However, administrators can modify this default setting and limit communication 
 
 Skype for Business Online does not allow you to directly modify the allowed list or the blocked list; for example, you cannot use a command similar to this one, which passes a string value representing a domain name to the allowed domains list:
 
-Set-CsTenantFederationConfiguration -AllowedDomains "fabrikam.com"
+`Set-CsTenantFederationConfiguration -AllowedDomains "fabrikam.com"`
 
 Instead, you must use either the New-CsEdgeAllowAllKnownDomains cmdlet or the New-CsEdgeAllowList cmdlet to create a domain object and then pass that domain object to the Set-CsTenantFederationConfiguration cmdlet.
 The New-CsEdgeAllowAllKnownDomains cmdlet is used if you want to allow users to communicate with all domains except for those expressly specified on the blocked domains list.
@@ -39,24 +39,24 @@ In that case, users will only be allowed to communicate with domains that appear
 
 To configure federation with all known domains, use a set of commands similar to this:
 
-$x = New-CsEdgeAllowAllKnownDomains
+`$x = New-CsEdgeAllowAllKnownDomains`
 
-Set-CsTenantFederationConfiguration -AllowedDomains $x
+`Set-CsTenantFederationConfiguration -AllowedDomains $x`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 -------------------------- 
 ```
+$x = New-CsEdgeAllowAllKnownDomains
 
+Set-CsTenantFederationConfiguration -AllowedDomains $x
 ```
 
 The two commands shown in Example 1 configure the federation settings for the current tenant to allow all known domains.
 To do this, the first command in the example uses the New-CsEdgeAllowAllKnownDomains cmdlet to create an instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowAllKnownDomains object; this instance is stored in a variable named $x.
 In the second command, the Set-CsTenantFederationConfiguration cmdlet is called along with the AllowedDomains parameter; using $x as the parameter value configures the federation settings to allow all known domains.
 
-$x = New-CsEdgeAllowAllKnownDomains
 
-Set-CsTenantFederationConfiguration -AllowedDomains $x
 
 ## PARAMETERS
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -95,6 +95,4 @@ The New-CsEdgeAllowAllKnownDomains cmdlet creates new instances of the Microsoft
 ## RELATED LINKS
 
 [Set-CsTenantFederationConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cfdfb2cc-1af1-4878-82ab-c3fae198d6b4(OCS.15).aspx)
 

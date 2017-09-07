@@ -26,14 +26,13 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example -------------------------- 
 ```
-
+Get-CsUserPstnSettings -Identity jphillips@contoso.com -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 ```
 
 This example returns the PSTN settings for the specified user and tenant.
 
-Get-CsUserPstnSettings -Identity jphillips@contoso.com -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 
 ## PARAMETERS
 
@@ -148,6 +147,4 @@ The Get-CsUserPstnSettings cmdlet returns instances of the UserPstnSettings obje
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4404a83e-afaf-4789-897e-e1502b58884d(OCS.15).aspx)
 

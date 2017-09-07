@@ -25,18 +25,16 @@ Get-CsVideoInteropServerSyntheticTransactionConfiguration [[-Identity] <XdsIdent
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+Get-CsVideoInteropServerSyntheticTransactionConfiguration -Identity "site:Redmond"
 ```
 
 This example returns the Video Interop Server synthetic transaction configuration for the Redmond site.
-
-Get-CsVideoInteropServerSyntheticTransactionConfiguration -Identity "site:Redmond"
 
 ## PARAMETERS
 
@@ -122,6 +120,3 @@ Returns an object array, or single instance (if used with the Identity parameter
 [Remove-CsVideoInteropServerSyntheticTransactionConfiguration]()
 
 [Test-CsP2PVideoInteropServerSipTrunkAV]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/306a33ee-9d18-4f34-b804-815d7ab357f4(OCS.16).aspx)
-
