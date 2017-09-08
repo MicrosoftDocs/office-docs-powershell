@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsMediaConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing collection of media settings.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing collection of media settings.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -39,57 +32,23 @@ Set-CsMediaConfiguration [-Instance <PSObject>] [-EnableQoS <Boolean>] [-EnableS
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 This cmdlet modifies a collection of settings that define media configuration.
 These actions relate to audio and video calls between client endpoints.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsMediaConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsMediaConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet modifies a collection of settings that define media configuration.
-These actions relate to audio and video calls between client endpoints.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsMediaConfiguration -Identity site:Redmond1 -MaxVideoRateAllowed hd720p15m
-```
-
-The example shown above modifies the media configuration collection with the Identity site:co1; in particular, the command sets the value of the MaxVideoRateAllowed property to Hd720p15M.
-Note that the value passed to the MaxVideoRateAllowed parameter must be one of the values specified in the parameter description.
-Also note that the values are not case sensitive; the value entered here as hd720p15m will be automatically converted to the appropriate casing (in this instance, to Hd720p15M).
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 modifies the media configuration collection with the Identity site:Redmond1; in particular, the command sets the value of the MaxVideoRateAllowed property to Hd720p15M.
 Note that the value passed to the MaxVideoRateAllowed parameter must be one of the values specified in the parameter description.
 Also note that the values are not case sensitive; the value entered here as hd720p15m will be automatically converted to the appropriate casing (in this instance, to Hd720p15M).
 
-Set-CsMediaConfiguration -Identity site:Redmond1 -MaxVideoRateAllowed hd720p15m
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 modifies the media configuration collection with the Identity site:Redmond1; in particular, the command sets the value of the MaxVideoRateAllowed property to Hd720p15M.
-Note that the value passed to the MaxVideoRateAllowed parameter must be one of the values specified in the parameter description.
-Also note that the values are not case sensitive; the value entered here as hd720p15m will be automatically converted to the appropriate casing (in this instance, to Hd720p15M).
-
-Set-CsMediaConfiguration -Identity site:Redmond1 -MaxVideoRateAllowed hd720p15m
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
 ```
@@ -97,25 +56,6 @@ Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
 This example modifies the media configuration collection with the Identity site:Redmond1 to have an EncryptionLevel value of DoNotSupportEncryption.
 Note that this value is not case sensitive; the value was entered as donotsupportencryption, but that value will be accepted as a valid value and will be automatically changed to mixed case (DoNotSupportEncryption).
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the media configuration collection with the Identity site:Redmond1 to have an EncryptionLevel value of DoNotSupportEncryption.
-Note that this value is not case sensitive; the value was entered as donotsupportencryption, but that value will be accepted as a valid value and will be automatically changed to mixed case (DoNotSupportEncryption).
-
-Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the media configuration collection with the Identity site:Redmond1 to have an EncryptionLevel value of DoNotSupportEncryption.
-Note that this value is not case sensitive; the value was entered as donotsupportencryption, but that value will be accepted as a valid value and will be automatically changed to mixed case (DoNotSupportEncryption).
-
-Set-CsMediaConfiguration site:Redmond1 -EncryptionLevel donotsupportencryption
 
 ## PARAMETERS
 
@@ -137,20 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 An instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
-You can retrieve this object by calling Get-CsMediaConfiguration with a specific Identity.
-You can then assign new values to the properties of that object, and then save those changes by passing the object to Set-CsMediaConfiguration.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-An instance of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
-You can retrieve this object by calling the Get-CsMediaConfiguration cmdlet with a specific Identity.
-You can then assign new values to the properties of that object, and then save those changes by passing the object to the Set-CsMediaConfiguration cmdlet.
-
+You can retrieve this object by calling the `Get-CsMediaConfiguration` cmdlet with a specific Identity.
+You can then assign new values to the properties of that object and then save those changes by passing the object to the `Set-CsMediaConfiguration` cmdlet.
 
 
 ```yaml
@@ -167,21 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableQoS
-**Below Content Applies To:** Lync Server 2010
-
-This parameter enables or disables Quality of Service (QoS) marking on the Mediation Server.
 QoS monitors the quality of voice signals over a network.
-Setting this parameter to True causes the Mediation Server to perform Differentiated Services Code Point (DSCP) marking on voice packets.
-This helps to provide a QoS guarantee on IP networks.
-However, in a network that has been properly provisioned for voice transmission, this is not necessary.
-But if you are unsure of bandwidth capacity, setting this parameter to True assures good voice quality even in suboptimal environments.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-QoS monitors the quality of voice signals over a network.
-
 
 
 ```yaml
@@ -198,25 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableSiren
-**Below Content Applies To:** Lync Server 2010
-
-By default, the Mediation Server does not negotiate Siren between itself and other Unified Communications endpoints. 
-If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Unified Communications endpoints.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and other Lync clients.
-If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other Lync clients.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 By default, the Mediation Server does not negotiate Siren as a possible codec for calls between itself and other clients.
 If this setting is True, Siren will be included as a possible codec for use between the Mediation Server and other clients.
-
 
 
 ```yaml
@@ -233,27 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionLevel
-**Below Content Applies To:** Lync Server 2010
-
-The level of encryption between Unified Communications entities.
-
-Valid values:
-
-SupportEncryption - secure real-time transport protocol (SRTP) will be used if it can be negotiated.
-
-RequireEncryption - SRTP must be negotiated.
-
-DoNotSupportEncryption - SRTP must not be used.
-
-This value is not case sensitive.
-(For details, see the Examples in this topic.)
-
-Default: RequireEncryption
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 The level of encryption between unified communications devices.
 
 Valid values:
@@ -268,7 +145,6 @@ This value is not case sensitive.
 (For details, see the Examples in this topic.)
 
 Default: RequireEncryption
-
 
 
 ```yaml
@@ -397,7 +273,7 @@ Accept wildcard characters: False
 
 ### -EnableH264Codec
 When set to True (the default value) allows the use of the H.264/MPEG-4 AVC video codec.
-H.264 is a standard codec commonly used for recording, compressing, and distributing high-definition video.
+H.264 is a standard codec commonly used for recording, compressing and distributing high-definition video.
 
 ```yaml
 Type: Boolean
@@ -488,26 +364,15 @@ Accepts pipelined input of media configuration objects.
 ## OUTPUTS
 
 ###  
-Set-CsMediaConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
-
-###  
-The Set-CsMediaConfiguration cmdlet does not return a value or object.
+The `Set-CsMediaConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Media.MediaSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/768bc273-5253-4569-895d-5b1127386b92(OCS.14).aspx)
-
 [New-CsMediaConfiguration]()
 
 [Remove-CsMediaConfiguration]()
 
 [Get-CsMediaConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/768bc273-5253-4569-895d-5b1127386b92(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/768bc273-5253-4569-895d-5b1127386b92(OCS.16).aspx)
-

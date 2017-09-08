@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsHybridPSTNAppliance
 
 ## SYNOPSIS
-Use the Set-CsHybridPSTNAppliance cmdlet to modify an existing Skype for Business Cloud Connector Edition appliance's attributes.
+Use the `Set-CsHybridPSTNAppliance` cmdlet to modify an existing Skype for Business Cloud Connector Edition appliance's attributes.
 
 ## SYNTAX
 
@@ -18,25 +18,24 @@ Set-CsHybridPSTNAppliance [[-Identity] <Object>] [-BypassDualWrite <Object>] [-C
 ```
 
 ## DESCRIPTION
-Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified, and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set, and Unregister).
-The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set and Unregister).
+The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify Skype for Business Cloud Connector Edition appliances through the CsTenantHybridConfiguration cmdlets.
 You must use the CsHybridPSTNAppliance cmdlets to manage Skype for Business Cloud Connector Edition appliances.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -213,6 +212,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/09ab6c29-e0a4-4ef3-9c34-1239e789ac43(OCS.15).aspx)
-
