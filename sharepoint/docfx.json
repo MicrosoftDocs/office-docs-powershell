@@ -1,0 +1,60 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "skype-ps",
+        "dest": "skype",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "skype-ps",
+        "dest": "skype/skype-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "skype-ps",
+      "version": "skype-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "skype-ps",
+      "version": "skype-ps",
+      "dest": "module/skype-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "skype-ps": {
+        "dest": "skype-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {},
+    "fileMetadata": {},
+    "template": [],
+    "dest": "skype-ps"
+  }
+}
