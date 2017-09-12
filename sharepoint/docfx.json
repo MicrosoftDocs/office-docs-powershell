@@ -4,8 +4,8 @@
       {
         "files": ["**/*.md"],
         "src": "docs-conceptual",
-        "version": "skype-ps",
-        "dest": "skype",
+        "version": "sharepoint-ps",
+        "dest": "sharepoint",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
@@ -17,20 +17,20 @@
       {
          "files": ["toc.yml"],
         "src": "docs-conceptual",
-        "version": "skype-ps",
-        "dest": "skype/skype-ps"
+        "version": "sharepoint-ps",
+        "dest": "sharepoint/sharepoint-ps"
       },
       {
       "files": ["**/*.md"],
-      "src": "skype-ps",
-      "version": "skype-ps",
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
       "dest": "module"
     },
     {
       "files": ["toc.yml"],
-      "src": "skype-ps",
-      "version": "skype-ps",
-      "dest": "module/skype-ps"
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
+      "dest": "module/sharepoint-ps"
     }
     ],
     "resource": [
@@ -47,7 +47,7 @@
     ],
     "versions": {
       "skype-ps": {
-        "dest": "skype-ps"
+        "dest": "sharepoint-ps"
       }
     },
     "overwrite": [],
@@ -55,6 +55,6 @@
     "globalMetadata": {},
     "fileMetadata": {},
     "template": [],
-    "dest": "skype-ps"
+    "dest": "sharepoint-ps"
   }
 }
