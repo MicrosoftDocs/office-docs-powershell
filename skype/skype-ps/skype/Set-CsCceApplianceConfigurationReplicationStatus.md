@@ -7,9 +7,7 @@ schema: 2.0.0
 # Set-CsCceApplianceConfigurationReplicationStatus
 
 ## SYNOPSIS
-Set-CsCceApplianceConfigurationReplicationStatus \[-Identity\] \<XdsGlobalRelativeIdentity\> \[-Tenant \<guid\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsCceApplianceConfigurationReplicationStatus \[-Identity\] \<XdsGlobalRelativeIdentity\> \[-Tenant \<guid\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -23,7 +21,7 @@ Set-CsCceApplianceConfigurationReplicationStatus [[-Identity] <Object>] [-Bypass
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -175,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

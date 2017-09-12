@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsAccessEdgeConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the property values of an existing collection of Access Edge configuration settings for computers running the Access Edge service.
-The Access Edge service running on these computers (also known as Edge servers) provides a way for users outside your internal network to communicate with users inside that internal network.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies the property values of an existing collection of Access Edge configuration settings for computers running the Access Edge service.
 The Access Edge service running on these computers (also known as Edge servers) provides a way for users outside your internal network to communicate with users inside that internal network.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -70,85 +62,29 @@ Set-CsAccessEdgeConfiguration [-AllowAnonymousUsers <Boolean>] [-AllowFederatedU
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Microsoft Lync Server 2010 to people who are not logged on to your internal network.
-For example, if you have remote users, authenticated users who log on to Lync Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
+Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Skype for Business Server to people who are not logged on to your internal network.
+For example, if you have remote users, authenticated users who log on to Skype for Business Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
 Likewise, Edge Servers are required if you want to establish federation with another organization, or if you want to give your users the right to communicate with people who have accounts with a public instant messaging service such as Yahoo!, AOL, or MSN.
-Access Edge servers are located on the perimeter network, and are used to make and validate SIP connections between users inside and users outside your internal network.
+Access Edge servers are located on the perimeter network and are used to make and validate SIP connections between users inside and users outside your internal network.
 
-In Lync Server 2010, the Access Edge servers are managed using a single, global collection of configuration settings; the Set-CsAccessEdgeConfiguration cmdlet enables you to modify these global settings.
+In Skype for Business Server, the Access Edge servers are managed using a single, global collection of configuration settings; the `Set-CsAccessEdgeConfiguration` cmdlet enables you to modify these global settings.
 Note that the properties that can be modified depend on the routing type you choose for your Edge Servers.
 For example, if you choose to use Domain Name System (DNS) service routing, you will see and be able to change the property values BeClearinghouse and EnablePartnerDiscovery.
 If you use default routing, those two property values will not be available.
 Instead, you will see and be able to change the property values VerificationLevel and IsPublicProvider.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAccessEdgeConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control RBAC roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAccessEdgeConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Lync Server to people who are not logged on to your internal network.
-For example, if you have remote users, authenticated users who log on to Lync Server over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
-Likewise, Edge Servers are required if you want to establish federation with another organization, or if you want to give your users the right to communicate with people who have accounts with a public instant messaging service such as Yahoo!, AOL, or MSN.
-Access Edge servers are located on the perimeter network, and are used to make and validate SIP connections between users inside and users outside your internal network.
-
-In Lync Server, the Access Edge servers are managed using a single, global collection of configuration settings; the Set-CsAccessEdgeConfiguration cmdlet enables you to modify these global settings.
-Note that the properties that can be modified depend on the routing type you choose for your Edge Servers.
-For example, if you choose to use Domain Name System (DNS) service routing, you will see and be able to change the property values BeClearinghouse and EnablePartnerDiscovery.
-If you use default routing, those two property values will not be available.
-Instead, you will see and be able to change the property values VerificationLevel and IsPublicProvider.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAccessEdgeConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control RBAC roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAccessEdgeConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Edge servers (also known as access proxy servers) provide a way for you to extend the capabilities of Skype for Business Server 2015 to people who are not logged on to your internal network.
-For example, if you have remote users, authenticated users who log on to Skype for Business Server 2015 over the Internet rather than through the internal network, you will need to set up an Edge server in order to provide access to these users.
-Likewise, Edge Servers are required if you want to establish federation with another organization, or if you want to give your users the right to communicate with people who have accounts with a public instant messaging service such as Yahoo!, AOL, or MSN.
-Access Edge servers are located on the perimeter network, and are used to make and validate SIP connections between users inside and users outside your internal network.
-
-In Skype for Business Server 2015, the Access Edge servers are managed using a single, global collection of configuration settings; the Set-CsAccessEdgeConfiguration cmdlet enables you to modify these global settings.
-Note that the properties that can be modified depend on the routing type you choose for your Edge Servers.
-For example, if you choose to use Domain Name System (DNS) service routing, you will see and be able to change the property values BeClearinghouse and EnablePartnerDiscovery.
-If you use default routing, those two property values will not be available.
-Instead, you will see and be able to change the property values VerificationLevel and IsPublicProvider.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsAccessEdgeConfiguration -AllowAnonymousUsers $True -VerificationLevel "UseSourceVerification"
 ```
 
 In Example 1, two properties of the Access Edge configuration settings are modified: the AllowAnonymousUsers property is set to True and the VerificationLevel property is set to UseSourceVerification.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 1, two properties of the Access Edge configuration settings are modified: the AllowAnonymousUsers property is set to True and the VerificationLevel property is set to UseSourceVerification.
-
-Set-CsAccessEdgeConfiguration -AllowAnonymousUsers $True -VerificationLevel "UseSourceVerification"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, two properties of the Access Edge configuration settings are modified: the AllowAnonymousUsers property is set to True and the VerificationLevel property is set to UseSourceVerification.
-
-Set-CsAccessEdgeConfiguration -AllowAnonymousUsers $True -VerificationLevel "UseSourceVerification"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Set-CsAccessEdgeConfiguration -UseDefaultRouting -DefaultRouteFqdn "atl-edge-001.litwareinc.com"
 ```
@@ -156,71 +92,22 @@ Set-CsAccessEdgeConfiguration -UseDefaultRouting -DefaultRouteFqdn "atl-edge-001
 The command shown in Example 2 changes the routing method for the Edge server to default routing.
 In order to do this the command must include both the UseDefaultRouting parameter and the DefaultRouteFqdn parameter, along with a parameter value that specifies the fully qualified domain name of the Edge server.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 2 changes the routing method for the Edge server to default routing.
-In order to do this the command must include both the UseDefaultRouting parameter and the DefaultRouteFqdn parameter, along with a parameter value that specifies the fully qualified domain name of the Edge server.
-
-Set-CsAccessEdgeConfiguration -UseDefaultRouting -DefaultRouteFqdn "atl-edge-001.litwareinc.com"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 2 changes the routing method for the Edge server to default routing.
-In order to do this the command must include both the UseDefaultRouting parameter and the DefaultRouteFqdn parameter, along with a parameter value that specifies the fully qualified domain name of the Edge server.
-
-Set-CsAccessEdgeConfiguration -UseDefaultRouting -DefaultRouteFqdn "atl-edge-001.litwareinc.com"
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Set-CsAccessEdgeConfiguration -UseDnsSrvRouting -EnablePartnerDiscovery $True
-```
-
-The preceding command changes the routing method for the Edge server to DNS server routing.
-This requires the use of two parameters: UseDnsSrvRouting (with no parameter value) and EnablePartnerDiscovery (with the parameter value $True).
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 3 changes the routing method for the Edge server to DNS server routing.
 This requires the use of two parameters: UseDnsSrvRouting (with no parameter value) and EnablePartnerDiscovery (with the parameter value $True).
 
-Set-CsAccessEdgeConfiguration -UseDnsSrvRouting -EnablePartnerDiscovery $True
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 changes the routing method for the Edge server to DNS server routing.
-This requires the use of two parameters: UseDnsSrvRouting (with no parameter value) and EnablePartnerDiscovery (with the parameter value $True).
-
-Set-CsAccessEdgeConfiguration -UseDnsSrvRouting -EnablePartnerDiscovery $True
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Unique identifier of the Access Edge configuration settings to be returned.
-Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling Set-CsAccessEdgeConfiguration.
-However, if you prefer, you can use the following syntax to modify the global settings: -Identity global.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unique identifier of the Access Edge configuration settings to be returned.
-Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the Set-CsAccessEdgeConfiguration cmdlet.
-However, if you prefer, you can use the following syntax to modify the global settings: -Identity global.
-
+Because you can only have a single, global instance of these settings, you do not have to include the Identity when calling the `Set-CsAccessEdgeConfiguration` cmdlet.
+However, if you prefer, you can use the following syntax to modify the global settings: `-Identity global`.
 
 
 ```yaml
@@ -288,20 +175,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOutsideUsers
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Indicates whether users can access Lync Server across the Internet.
+Indicates whether users can access Skype for Business Server across the Internet.
 This includes both anonymous users and remote users who are trying to log on to the system.
 The default value is True.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates whether users can access Skype for Business Server 2015 across the Internet.
-This includes both anonymous users and remote users who are trying to log on to the system.
-The default value is True.
-
 
 
 ```yaml
@@ -318,20 +194,10 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultRouteFqdn
-**Below Content Applies To:** Lync Server 2010
-
-Fully qualified domain name (FQDN) of the server used for federation requests.
-This parameter is required if you use default routing.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Fully qualified domain name (FQDN) of the server used for federation requests.
 This parameter is required if you use default routing.
 
 Note that you must delete all your hosting providers and all your public providers before you can assign a new default route.
-
 
 
 ```yaml
@@ -366,22 +232,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePartnerDiscovery
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-If True, Lync Server will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
-If False, Lync Server will only federate with domains found on the AllowedDomains list.
+If True, Skype for Business Server will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
+If False, Skype for Business Server will only federate with domains found on the AllowedDomains list.
 This parameter is required if you use DNS service routing.
 The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-If True, Skype for Business Server 2015 will use DNS records to try and discover partner domains not listed in the AllowedDomains list.
-If False, Skype for Business Server 2015 will only federate with domains found on the AllowedDomains list.
-This parameter is required if you use DNS service routing.
-The default value is False.
-
 
 
 ```yaml
@@ -576,17 +430,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultRouting
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill UseDefaultRouting Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Indicates that administrators must specify the fully qualified domain name of the server used to send and receive federation requests.
 If you include the UseDefaultRouting parameter then you must also include the DefaultRouteFqdn parameter.
-
 
 
 ```yaml
@@ -672,16 +517,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDiscoveredPartnerContactsLimit
-**Below Content Applies To:** Lync Server 2013
-
-The default value is true ($True).
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 When set to True (the default value), enables user enumeration protection for Discovered Partner federated peers.
-
 
 
 ```yaml
@@ -805,29 +641,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Set-CsAccessEdgeConfiguration does not accept pipelined input.
-
-###  
-None.
-The Set-CsAccessEdgeConfiguration cmdlet does not accept pipelined input.
+The `Set-CsAccessEdgeConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Set-CsAccessEdgeConfiguration does not return any objects or values.
-
-###  
-The Set-CsAccessEdgeConfiguration cmdlet does not return any objects or values.
+The `Set-CsAccessEdgeConfiguration` cmdlet does not return any objects or values.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f3108b59-1ab2-4288-a470-57d741e7e569(OCS.14).aspx)
-
 [Get-CsAccessEdgeConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f3108b59-1ab2-4288-a470-57d741e7e569(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f3108b59-1ab2-4288-a470-57d741e7e569(OCS.16).aspx)
-

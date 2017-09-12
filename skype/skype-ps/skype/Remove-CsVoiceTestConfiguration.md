@@ -7,15 +7,8 @@ schema: 2.0.0
 # Remove-CsVoiceTestConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes a voice test configuration that was used to test phone numbers against specified routes and rules.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes a voice test configuration that was used to test phone numbers against specified routes and rules.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,80 +19,29 @@ Remove-CsVoiceTestConfiguration [-Identity] <XdsGlobalRelativeIdentity> [-Force]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
 When you're done with those tests and won't need them again, use this cmdlet to remove them.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsVoiceTestConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoiceTestConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Before implementing voice routes and voice policies, it's a good idea to test them out on various phone numbers to ensure the results are what you're expecting.
-When you're done with those tests and won't need them again, use this cmdlet to remove them.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsVoiceTestConfiguration -Identity TestConfig1
 ```
 
 This example removes the voice test configuration settings with the Identity TestConfig1.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example removes the voice test configuration settings with the Identity TestConfig1.
-
-Remove-CsVoiceTestConfiguration -Identity TestConfig1
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example removes the voice test configuration settings with the Identity TestConfig1.
-
-Remove-CsVoiceTestConfiguration -Identity TestConfig1
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsVoiceTestConfiguration -Filter *test* | Remove-CsVoiceTestConfiguration
 ```
 
 This example removes all voice test configuration settings for any configuration with an Identity containing the string test.
-The command first calls the Get-CsVoiceTestConfiguration cmdlet with the Filter parameter to retrieve all voice test configurations that have an Identity with the string "test" anywhere in its value.
-The resulting set of configurations is then piped to the Remove-CsVoiceTestConfiguration cmdlet and removed.
+The command first calls the `Get-CsVoiceTestConfiguration` cmdlet with the Filter parameter to retrieve all voice test configurations that have an Identity with the string "test" anywhere in its value.
+The resulting set of configurations is then piped to the `Remove-CsVoiceTestConfiguration` cmdlet and removed.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example removes all voice test configuration settings for any configuration with an Identity containing the string test.
-The command first calls the Get-CsVoiceTestConfiguration cmdlet with the Filter parameter to retrieve all voice test configurations that have an Identity with the string "test" anywhere in its value.
-The resulting set of configurations is then piped to the Remove-CsVoiceTestConfiguration cmdlet and removed.
-
-Get-CsVoiceTestConfiguration -Filter *test* | Remove-CsVoiceTestConfiguration
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example removes all voice test configuration settings for any configuration with an Identity containing the string test.
-The command first calls the Get-CsVoiceTestConfiguration cmdlet with the Filter parameter to retrieve all voice test configurations that have an Identity with the string "test" anywhere in its value.
-The resulting set of configurations is then piped to the Remove-CsVoiceTestConfiguration cmdlet and removed.
-
-Get-CsVoiceTestConfiguration -Filter *test* | Remove-CsVoiceTestConfiguration
 
 ## PARAMETERS
 
@@ -185,8 +127,6 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.T
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/abe27005-8325-47d7-8c7c-12bb831b87c7(OCS.14).aspx)
-
 [New-CsVoiceTestConfiguration]()
 
 [Set-CsVoiceTestConfiguration]()
@@ -194,8 +134,3 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.T
 [Get-CsVoiceTestConfiguration]()
 
 [Test-CsVoiceTestConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/abe27005-8325-47d7-8c7c-12bb831b87c7(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/abe27005-8325-47d7-8c7c-12bb831b87c7(OCS.16).aspx)
-

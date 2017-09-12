@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsBroadcastMeetingConfiguration
 
 ## SYNOPSIS
-Use the Set-CsBroadcastMeetingConfiguration cmdlet to modify the settings of your global (and only) broadcast meeting configuration.
+Use the `Set-CsBroadcastMeetingConfiguration` cmdlet to modify the settings of your global (and only) broadcast meeting configuration.
 
 ## SYNTAX
 
@@ -23,40 +23,37 @@ Set-CsBroadcastMeetingConfiguration [[-Identity] <Object>] [-SdnApiTemplateUrl <
 ```
 
 ## DESCRIPTION
-Use the Set-CsBroadcastMeetingConfiguration cmdlet to modify the settings of your global (and only) broadcast meeting configuration.
+Use the `Set-CsBroadcastMeetingConfiguration` cmdlet to modify the settings of your global (and only) broadcast meeting configuration.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsBroadcastMeetingConfiguration -Identity Global -EnableAnonymousBroadcastMeeting $true -EnableBroadcastMeetingRecording $true
 ```
 
 This example sets the global configuration to enable unauthenticated attendees and recorded meetings.
 
-Set-CsBroadcastMeetingConfiguration -Identity Global -EnableAnonymousBroadcastMeeting $true -EnableBroadcastMeetingRecording $true
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Set-CsBroadcastMeetingConfiguration -EnableSdnProviderForBroadcastMeeting $true -SdnProviderName "SDNCo" -SdnLicenseId 24030-38291-39042-2048-253904 -SdnApiTemplateUrl "https://api.SDNCo.com/template?auth={0}" -SdnFallbackAttendeeThresholdCountForBroadcastMeeting 1000
 ```
 
 This example enables Software Defined Network (SDN) management of broadcast meetings and provides all the required and optional settings to enable SDN support.
 
-Set-CsBroadcastMeetingConfiguration -EnableSdnProviderForBroadcastMeeting $true -SdnProviderName "SDNCo" -SdnLicenseId 24030-38291-39042-2048-253904 -SdnApiTemplateUrl "https://api.SDNCo.com/template?auth={0}" -SdnFallbackAttendeeThresholdCountForBroadcastMeeting 1000
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 3 --------------------------
 ```
-
+Set-CsBroadcastMeetingConfiguration -SdnFallbackAttendeeThresholdCountForBroadcastMeeting 500
 ```
 
 This example adjusts the broadcast meeting configuration to set the number of meeting attendees who can fall back from a Software Defined Network (SDN) to the content delivery network to 500.
 
-Set-CsBroadcastMeetingConfiguration -SdnFallbackAttendeeThresholdCountForBroadcastMeeting 500
 
 ## PARAMETERS
 
@@ -129,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -455,6 +452,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/87743900-fe6b-467f-bfc4-57ff14cc50df(OCS.15).aspx)
-

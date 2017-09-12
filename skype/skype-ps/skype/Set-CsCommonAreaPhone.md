@@ -7,23 +7,9 @@ schema: 2.0.0
 # Set-CsCommonAreaPhone
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the property values of a common area phone managed by Microsoft Lync Server 2010.
-Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
-
-**Below Content Applies To:** Lync Server 2013
-
-Modifies the property values of a common area phone managed by Lync Server.
+Modifies the property values of a common area phone managed by Skype for Business Server.
 Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies the property values of a common area phone managed by Skype for Business Server 2015.
-Common area phones are phones that are located in building lobbies, employee lounges, or other areas where they are likely to be used by a number of different people and for a number of different uses.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -36,201 +22,68 @@ Set-CsCommonAreaPhone [-Identity] <UserIdParameter> [-Enabled <Boolean>] [-Descr
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Common area phones are IP telephones that are not associated with an individual user.
 Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
-This presents administrators with a management challenge; that's because phone use in Lync Server 2010 is typically maintained by using voice policies and dial plans that are assigned to individual users.
+This presents administrators with a management challenge; that's because phone use in Skype for Business Server is typically maintained by using voice policies and dial plans that are assigned to individual users.
 Common area phones do not have individual users assigned to them.
 
 One solution to this challenge is to create Active Directory contact objects for all your common area phones.
-(These contact objects can be created by using the New-CsCommonAreaPhone cmdlet.) Like user accounts, these contact objects can be assigned policies and voice plans.
-As a result, you will be able to maintain control over common area phones even though those phones are not associated with an individual user. 
-For example, if you do not want people to have the ability to transfer or park calls from a common area phone, you can create a voice policy that prohibits call transfers and call parking, and then assign that policy to the common area phone.
-(Or, more correctly, to the contact object that represents the common area phone.) This command assigns the voice policy CommonAreaPhoneVoicePolicy to all your common area phones:
-
-Get-CsCommonAreaPhone | Grant-CsVoicePolicy -PolicyName "CommonAreaPhoneVoicePolicy"
-
-The Set-CsCommonAreaPhone cmdlet provides a way for you to modify the properties of the contact objects associated with common area phones.
-Among other things, you can change the contact's Active Directory display name or the line Uniform Resource Identifier (URI) associated with the phone.
-You can also use the Enabled parameter to enable and disable the account for use with Lync Server 2010.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCommonAreaPhone cmdlet locally: RTCUniversalUserAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory organizational units (OUs) can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCommonAreaPhone"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Common area phones are IP telephones that are not associated with an individual user.
-Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
-This presents administrators with a management challenge; that's because phone use in Lync Server is typically maintained by using voice policies and dial plans that are assigned to individual users.
-Common area phones do not have individual users assigned to them.
-
-One solution to this challenge is to create Active Directory contact objects for all your common area phones.
-(These contact objects can be created by using the New-CsCommonAreaPhone cmdlet.) Like user accounts, these contact objects can be assigned policies and voice plans.
+(These contact objects can be created by using the `New-CsCommonAreaPhone` cmdlet.) Like user accounts, these contact objects can be assigned policies and voice plans.
 As a result, you will be able to maintain control over common area phones even though those phones are not associated with an individual user.
 For example, if you do not want people to have the ability to transfer or park calls from a common area phone, you can create a voice policy that prohibits call transfers and call parking, and then assign that policy to the common area phone.
 (Or, more correctly, to the contact object that represents the common area phone.) This command assigns the voice policy CommonAreaPhoneVoicePolicy to all your common area phones:
 
-Get-CsCommonAreaPhone | Grant-CsVoicePolicy -PolicyName "CommonAreaPhoneVoicePolicy"
+`Get-CsCommonAreaPhone | Grant-CsVoicePolicy -PolicyName "CommonAreaPhoneVoicePolicy"`
 
-The Set-CsCommonAreaPhone cmdlet provides a way for you to modify the properties of the contact objects associated with common area phones.
+The `Set-CsCommonAreaPhone` cmdlet provides a way for you to modify the properties of the contact objects associated with common area phones.
 Among other things, you can change the contact's Active Directory display name or the line Uniform Resource Identifier (URI) associated with the phone.
-You can also use the Enabled parameter to enable and disable the account for use with Lync Server.
+You can also use the Enabled parameter to enable and disable the account for use with Skype for Business Server.
 
 In addition, you can configure "hotdesking" for common area phones by using the CsClientPolicy cmdlets.
-When a phone is hotdesked, users can log on to the phone using their Lync Server credentials.
+When a phone is hotdesked, users can log on to the phone using their Skype for Business Server credentials.
 Among other things, this gives users easy access to their contacts.
-See the help topic for the cmdlet Set-CsClientPolicy for more information.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCommonAreaPhone cmdlet locally: RTCUniversalUserAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory organizational units (OUs) can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCommonAreaPhone"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Common area phones are IP telephones that are not associated with an individual user.
-Instead of being located in someone's office, common area phones are typically located in building lobbies, cafeterias, employee lounges, meeting rooms and other locations where a large number of people are likely to gather.
-This presents administrators with a management challenge; that's because phone use in Skype for Business Server 2015 is typically maintained by using voice policies and dial plans that are assigned to individual users.
-Common area phones do not have individual users assigned to them.
-
-One solution to this challenge is to create Active Directory contact objects for all your common area phones.
-(These contact objects can be created by using the New-CsCommonAreaPhone cmdlet.) Like user accounts, these contact objects can be assigned policies and voice plans.
-As a result, you will be able to maintain control over common area phones even though those phones are not associated with an individual user.
-For example, if you do not want people to have the ability to transfer or park calls from a common area phone, you can create a voice policy that prohibits call transfers and call parking, and then assign that policy to the common area phone.
-(Or, more correctly, to the contact object that represents the common area phone.) This command assigns the voice policy CommonAreaPhoneVoicePolicy to all your common area phones:
-
-Get-CsCommonAreaPhone | Grant-CsVoicePolicy -PolicyName "CommonAreaPhoneVoicePolicy"
-
-The Set-CsCommonAreaPhone cmdlet provides a way for you to modify the properties of the contact objects associated with common area phones.
-Among other things, you can change the contact's Active Directory display name or the line Uniform Resource Identifier (URI) associated with the phone.
-You can also use the Enabled parameter to enable and disable the account for use with Skype for Business Server 2015.
-
-In addition, you can configure "hotdesking" for common area phones by using the CsClientPolicy cmdlets.
-When a phone is hotdesked, users can log on to the phone using their Skype for Business Server 2015 credentials.
-Among other things, this gives users easy access to their contacts.
-See the help topic for the Set-CsClientPolicy cmdlet for more information.
-
+See the help topic for the `Set-CsClientPolicy` cmdlet for more information.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Get-CsCommonAreaPhone -Filter {LineUri -eq "tel:+14255556710"} | Set-CsCommonAreaPhone -DisplayName "Employee Lounge"
 ```
 
 Example 1 modifies the Active Directory display name for the common area phone with the phone number 1-425-555-6710.
-To do this, Get-CsCommonAreaPhone is first called along with the Filter parameter; the filter value {LineUri -eq "tel:+14255556710"} limits the returned data to the common area phone where the LineUri property is equal to  tel:+14255556710.
-The returned object is then piped to Set-CsCommonAreaPhone, which sets the value of the DisplayName property to "Employee Lounge".
+To do this, the `Get-CsCommonAreaPhone` cmdlet is first called along with the Filter parameter; the filter value {LineUri -eq "tel:+14255556710"} limits the returned data to the common area phone where the LineUri property is equal to tel:+14255556710.
+The returned object is then piped to the `Set-CsCommonAreaPhone` cmdlet, which sets the value of the DisplayName property to "Employee Lounge".
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 1 modifies the Active Directory display name for the common area phone with the phone number 1-425-555-6710.
-To do this, Get-CsCommonAreaPhone is first called along with the Filter parameter; the filter value {LineUri -eq "tel:+14255556710"} limits the returned data to the common area phone where the LineUri property is equal to tel:+14255556710.
-The returned object is then piped to Set-CsCommonAreaPhone, which sets the value of the DisplayName property to "Employee Lounge".
-
-Get-CsCommonAreaPhone -Filter {LineUri -eq "tel:+14255556710"} | Set-CsCommonAreaPhone -DisplayName "Employee Lounge"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 modifies the Active Directory display name for the common area phone with the phone number 1-425-555-6710.
-To do this, the Get-CsCommonAreaPhone cmdlet is first called along with the Filter parameter; the filter value {LineUri -eq "tel:+14255556710"} limits the returned data to the common area phone where the LineUri property is equal to tel:+14255556710.
-The returned object is then piped to the Set-CsCommonAreaPhone cmdlet, which sets the value of the DisplayName property to "Employee Lounge".
-
-Get-CsCommonAreaPhone -Filter {LineUri -eq "tel:+14255556710"} | Set-CsCommonAreaPhone -DisplayName "Employee Lounge"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsCommonAreaPhone | Set-CsCommonAreaPhone -Enabled $True
 ```
 
 The command shown in Example 2 enables all the common area phones currently configured for use in the organization.
-To carry out this task, the command calls Get-CsCommonAreaPhone without any parameters in order to return a collection of all the common area phones.
-This collection is then piped to the Set-CsCommonAreaPhone cmdlet, which takes each item in the collection and sets the Enabled property to True.
+To carry out this task, the command calls the `Get-CsCommonAreaPhone` cmdlet without any parameters in order to return a collection of all the common area phones.
+This collection is then piped to the `Set-CsCommonAreaPhone` cmdlet, which takes each item in the collection and sets the Enabled property to True.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 2 enables all the common area phones currently configured for use in the organization.
-To carry out this task, the command calls Get-CsCommonAreaPhone without any parameters in order to return a collection of all the common area phones.
-This collection is then piped to the Set-CsCommonAreaPhone cmdlet, which takes each item in the collection and sets the Enabled property to True.
-
-Get-CsCommonAreaPhone | Set-CsCommonAreaPhone -Enabled $True
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 2 enables all the common area phones currently configured for use in the organization.
-To carry out this task, the command calls the Get-CsCommonAreaPhone cmdlet without any parameters in order to return a collection of all the common area phones.
-This collection is then piped to the Set-CsCommonAreaPhone cmdlet, which takes each item in the collection and sets the Enabled property to True.
-
-Get-CsCommonAreaPhone | Set-CsCommonAreaPhone -Enabled $True
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Get-CsCommonAreaPhone -Filter {Description -eq $Null} | Set-CsCommonAreaPhone -Description "Common area phone"
-```
-
-The preceding command adds a generic description to all the common area phones that do not have a value assigned to the Description property.
-To do this, Get-CsCommonAreaPhone is called along with the Filter parameter; the filter value {Description -eq $Null} ensures that the only items returned are common area phones where the Description property is equal to a null value.
-This filtered collection is then piped to Set-CsCommonAreaPhone, which assigns the generic description "Common area phone" to each item in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 3 adds a generic description to all the common area phones that do not have a value assigned to the Description property.
-To do this, Get-CsCommonAreaPhone is called along with the Filter parameter; the filter value {Description -eq $Null} ensures that the only items returned are common area phones where the Description property is equal to a null value.
-This filtered collection is then piped to Set-CsCommonAreaPhone, which assigns the generic description "Common area phone" to each item in the collection.
+To do this, the `Get-CsCommonAreaPhone` cmdlet is called along with the Filter parameter; the filter value {Description -eq $Null} ensures that the only items returned are common area phones where the Description property is equal to a null value.
+This filtered collection is then piped to the `Set-CsCommonAreaPhone` cmdlet, which assigns the generic description "Common area phone" to each item in the collection.
 
-Get-CsCommonAreaPhone -Filter {Description -eq $Null} | Set-CsCommonAreaPhone -Description "Common area phone"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 adds a generic description to all the common area phones that do not have a value assigned to the Description property.
-To do this, the Get-CsCommonAreaPhone cmdlet is called along with the Filter parameter; the filter value {Description -eq $Null} ensures that the only items returned are common area phones where the Description property is equal to a null value.
-This filtered collection is then piped to the Set-CsCommonAreaPhone cmdlet, which assigns the generic description "Common area phone" to each item in the collection.
-
-Get-CsCommonAreaPhone -Filter {Description -eq $Null} | Set-CsCommonAreaPhone -Description "Common area phone"
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Unique identifier for the common area phone.
 Common area phones are identified using the Active Directory distinguished name of the associated contact object.
 By default, common area phones use a globally unique identifier (GUID) as their common name; that means phones will typically have an Identity similar to this: CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
-Because of that you might find it easier to retrieve common area phones by using the Get-CsCommonAreaPhone cmdlet, and then piping the returned objects to Set-CsCommonAreaPhone.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unique identifier for the common area phone.
-Common area phones are identified using the Active Directory distinguished name of the associated contact object.
-By default, common area phones use a globally unique identifier (GUID) as their common name; that means phones will typically have an Identity similar to this: CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
-Because of that you might find it easier to retrieve common area phones by using the Get-CsCommonAreaPhone cmdlet, and then piping the returned objects to the Set-CsCommonAreaPhone cmdlet.
-
+Because of that you might find it easier to retrieve common area phones by using the `Get-CsCommonAreaPhone` cmdlet, and then piping the returned objects to the `Set-CsCommonAreaPhone` cmdlet.
 
 
 ```yaml
@@ -247,31 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-**Below Content Applies To:** Lync Server 2010
+Indicates whether or not the contact object for the common area phone has been enabled for Skype for Business Server.
 
-Indicates whether or not the contact object for the common area phone has been enabled for Lync Server 2010.
-
-If you disable a contact by using the Enabled parameter, the information associated with that account (including assigned policies and whether or not the contact is enabled for Enterprise Voice, remote call control, and/or voice mail integration) is retained.
+If you disable a contact by using the Enabled parameter, the information associated with that account (including assigned policies and whether or not the contact is enabled for Enterprise Voice, remote call control and/or voice mail integration) is retained.
 If you later re-enable the account by using the Enabled parameter, the associated account information will be restored.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Indicates whether or not the contact object for the common area phone has been enabled for Lync Server.
-
-If you disable a contact by using the Enabled parameter, the information associated with that account (including assigned policies and whether or not the contact is enabled for Enterprise Voice, remote call control, and/or voice mail integration) is retained.
-If you later re-enable the account by using the Enabled parameter, the associated account information will be restored.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates whether or not the contact object for the common area phone has been enabled for Skype for Business Server 2015.
-
-If you disable a contact by using the Enabled parameter, the information associated with that account (including assigned policies and whether or not the contact is enabled for Enterprise Voice, remote call control, and/or voice mail integration) is retained.
-If you later re-enable the account by using the Enabled parameter, the associated account information will be restored.
-
 
 
 ```yaml
@@ -321,31 +153,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayNumber
-**Below Content Applies To:** Lync Server 2010
-
-Phone number as displayed in Microsoft Lync 2010.
-The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
-When choosing a display number, keep in mind that this number will be shown on the display screen of the common area phone only if the number can be normalized.
-(Normalization is the process of translating number strings into a standard phone number format.) If a normalization rule does not exist for the phone number format used when configuring the display number, the display screen of the common area phone will show the value of the LineUri property rather than the value of the DisplayNumber property.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Phone number as displayed in Lync.
-The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
-When choosing a display number, keep in mind that this number will be shown on the display screen of the common area phone only if the number can be normalized.
-(Normalization is the process of translating number strings into a standard phone number format.) If a normalization rule does not exist for the phone number format used when configuring the display number, the display screen of the common area phone will show the value of the LineUri property rather than the value of the DisplayNumber property.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Phone number as displayed in Skype for Business.
-The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234; and so on.
+The DisplayNumber property can be formatted any way you prefer; for example 1-800-555-1234; 1-(800)-555-1234; 1.800.555.1234 and so on.
 When choosing a display number, keep in mind that this number will be shown on the display screen of the common area phone only if the number can be normalized.
 (Normalization is the process of translating number strings into a standard phone number format.) If a normalization rule does not exist for the phone number format used when configuring the display number, the display screen of the common area phone will show the value of the LineUri property rather than the value of the DisplayNumber property.
-
 
 
 ```yaml
@@ -396,28 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-**Below Content Applies To:** Lync Server 2010
-
-Unique identifier that allows the common area phone to communicate with SIP devices such as Lync 2010.
-The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
-For example: sip:bldg14lobby@litwareinc.com.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Unique identifier that allows the common area phone to communicate with SIP devices such as Lync.
-The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
-For example: sip:bldg14lobby@litwareinc.com.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique identifier that allows the common area phone to communicate with SIP devices such as Skype for Business.
 The SIP address must be prefaced by the prefix sip: and include a valid SIP domain.
 For example: sip:bldg14lobby@litwareinc.com.
-
 
 
 ```yaml
@@ -483,7 +275,7 @@ Accept wildcard characters: False
 
 ### -LineURI
 Phone number for the common area phone.
-The line Uniform Resource Identifier (URI) should be specified using the E.164 format, and be prefixed by the "TEL:" prefix.
+The line Uniform Resource Identifier (URI) should be specified using the E.164 format and be prefixed by the "TEL:" prefix.
 For example: TEL:+14255551297.
 Any extension number should be added to the end of the line URI; for example: TEL:+14255551297;ext=51297.
 
@@ -501,20 +293,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-**Below Content Applies To:** Lync Server 2013
-
-Indicates where the contact's instant messaging sessions are archived.
-Allowed values are:
-
-* Uninitialized
-* UseLyncArchivingPolicy
-* ArchivingToExchange
-* NoArchiving
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
 
@@ -525,7 +303,6 @@ UseLyncArchivingPolicy
 ArchivingToExchange
 
 NoArchiving
-
 
 
 ```yaml
@@ -552,18 +329,12 @@ Microsoft.Rtc.Management.ADConnect.Schema.OCSADCommonAreaPhoneContact object.
 ## OUTPUTS
 
 ###  
-By default, Set-CsCommonAreaPhone does not return any objects or values.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADCommonAreaPhoneContact object.
-
-###  
-By default, the Set-CsCommonAreaPhone cmdlet does not return any objects or values.
+By default, the `Set-CsCommonAreaPhone` cmdlet does not return any objects or values.
 However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADCommonAreaPhoneContact object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/765ab74c-33ca-4b17-ba15-edb2fe559ebb(OCS.14).aspx)
 
 [Get-CsCommonAreaPhone]()
 
@@ -572,8 +343,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [New-CsCommonAreaPhone]()
 
 [Remove-CsCommonAreaPhone]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/765ab74c-33ca-4b17-ba15-edb2fe559ebb(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/765ab74c-33ca-4b17-ba15-edb2fe559ebb(OCS.16).aspx)
-

@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsAllowedDomain
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies property values for a domain (or domains) included on the list of domains approved for federation.
-After a domain has been approved for federation (by being added to the allowed list), your users can exchange instant messages and presence information with people who have accounts in the federated domain.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies property values for a domain (or domains) included on the list of domains approved for federation.
 After a domain has been approved for federation (by being added to the allowed list), your users can exchange instant messages and presence information with people who have accounts in the federated domain.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -37,72 +29,25 @@ Set-CsAllowedDomain [-Instance <PSObject>] [-Comment <String>] [-MarkForMonitori
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
-When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Microsoft Lync 2010.
-Microsoft Lync Server 2010 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Lync Server Access Edge service to allow federation.
-In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
-
-To set up a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
-The allowed list represents the organizations you have chosen to federate with.
-If a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Lync Server 2010.
-
-The Set-CsAllowedDomain cmdlet provides a way for you to modify property values for any domain on the list of allowed domains.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAllowedDomain cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAllowedDomain"}
-
-**Below Content Applies To:** Lync Server 2013
-
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
-When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Lync.
-Lync Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
+When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications and otherwise communicate with one another by using SIP applications such as Skype for Business.
+Skype for Business Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider and 3) federation between your organization and a third-party hosting provider.
 
 Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Lync Server Access Edge service to allow federation.
+To begin with, you must enable your servers running the Skype for Business Server Access Edge service to allow federation.
 In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
 
 To set up a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
 The allowed list represents the organizations you have chosen to federate with.
 If a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Lync Server.
+Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Skype for Business Server.
 
-The Set-CsAllowedDomain cmdlet provides a way for you to modify property values for any domain on the list of allowed domains.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAllowedDomain cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAllowedDomain"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
-When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Skype for Business.
-Skype for Business Server 2015 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Skype for Business Server 2015 Access Edge service to allow federation.
-In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
-
-To set up a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
-The allowed list represents the organizations you have chosen to federate with.
-If a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Skype for Business Server 2015.
-
-The Set-CsAllowedDomain cmdlet provides a way for you to modify property values for any domain on the list of allowed domains.
-
+The `Set-CsAllowedDomain` cmdlet provides a way for you to modify property values for any domain on the list of allowed domains.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsAllowedDomain -Identity fabrikam.com -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
 ```
@@ -110,118 +55,40 @@ Set-CsAllowedDomain -Identity fabrikam.com -Comment "Contact: Ken Myer (kenmyer@
 The command shown in Example 1 modifies the Comment property for the allowed domain with the Identity "fabrikam.com".
 This is done by including the Comment parameter and the appropriate parameter value: "Contact: Ken Myer (kenmyer@fabrikam.com)".
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- Example 2 ------------------------
 ```
-
-```
-
-The command shown in Example 1 modifies the Comment property for the allowed domain with the Identity "fabrikam.com".
-This is done by including the Comment parameter and the appropriate parameter value: "Contact: Ken Myer (kenmyer@fabrikam.com)".
-
-Set-CsAllowedDomain -Identity fabrikam.com -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 modifies the Comment property for the allowed domain with the Identity "fabrikam.com".
-This is done by including the Comment parameter and the appropriate parameter value: "Contact: Ken Myer (kenmyer@fabrikam.com)".
-
-Set-CsAllowedDomain -Identity fabrikam.com -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-Get-CsAllowedDomain -Filter *fabrikam* | Set-CsAllowedDomain -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)" -MarkForMonitoring $True
-```
-
-The preceding command modifies the Comment and MarkForMonitoring properties for all of the allowed domains that have the string value "fabrikam" somewhere in their Identity.
-To carry out this task, the command first calls Get-CsAllowedDomain and the Filter parameter.
-The filter value "*fabrikam*" instructs Get-CsAllowedDomain to return any domain where the Identity includes the string value "fabrikam".
-(For example, this command returns domains such as fabrikam.com, us.fabrikam.net, and fabrikam-users.org).
-The filtered collection is then piped to Set-CsAllowedDomain, which modifies for Comment property and sets the MarkForMonitoring property to True ($True) for each item in the collection.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 modifies the Comment and MarkForMonitoring properties for all of the allowed domains that have the string value "fabrikam" somewhere in their Identity.
-To carry out this task, the command first calls Get-CsAllowedDomain and the Filter parameter.
-The filter value "*fabrikam*" instructs Get-CsAllowedDomain to return any domain where the Identity includes the string value "fabrikam".
-(For example, this command returns domains such as fabrikam.com, us.fabrikam.net, and fabrikam-users.org).
-The filtered collection is then piped to Set-CsAllowedDomain, which modifies for Comment property and sets the MarkForMonitoring property to True ($True) for each item in the collection.
-
-Get-CsAllowedDomain -Filter *fabrikam* | Set-CsAllowedDomain -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)" -MarkForMonitoring $True
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
+Get-CsAllowedDomain -Filter *fabrikam* | Set-CsAllowedDomain -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
 ```
 
 Example 2 modifies the Comment property for all of the allowed domains that have the string value "fabrikam" somewhere in their Identity.
-To carry out this task, the command first calls the Get-CsAllowedDomain cmdlet and the Filter parameter.
-The filter value "*fabrikam*" instructs the Get-CsAllowedDomain cmdlet to return any domain where the Identity includes the string value "fabrikam".
-(For example, this command returns domains such as fabrikam.com, us.fabrikam.net, and fabrikam-users.org).
-The filtered collection is then piped to the Set-CsAllowedDomain cmdlet, which modifies for Comment property.
+To carry out this task, the command first calls the `Get-CsAllowedDomain` cmdlet and the Filter parameter.
+The filter value "*fabrikam*" instructs the `Get-CsAllowedDomain` cmdlet to return any domain where the Identity includes the string value "fabrikam".
+(For example, this command returns domains such as fabrikam.com, us.fabrikam.net and fabrikam-users.org).
+The filtered collection is then piped to the `Set-CsAllowedDomain` cmdlet, which modifies for Comment property.
 
-Get-CsAllowedDomain -Filter *fabrikam* | Set-CsAllowedDomain -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
 
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
-Get-CsAllowedDomain | Where-Object {$_.MarkForMonitoring -eq $False} | Set-CsAllowedDomain -MarkForMonitoring $True
-```
-
-The command shown in Example 3 modifies all of the domains on the allowed list that are not currently monitored by Monitoring Server.
-(That is, all of the domains where the MarkForMonitoring property is set to False.) To do this, Get-CsAllowedDomain is called without any additional parameters in order to retrieve a collection of all the domains on the allowed list.
-That collection is piped to the Where-Object cmdlet, which selects only those domains where MarkForMonitoring is equal to False.
-The filtered collection is then piped to Set-CsAllowedDomain, which sets the MarkForMonitoring property for each domain in the collection to True.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 3 modifies all of the domains on the allowed list that are not currently monitored by Monitoring Server.
-(That is, all of the domains where the MarkForMonitoring property is set to False.) To do this, Get-CsAllowedDomain is called without any additional parameters in order to retrieve a collection of all the domains on the allowed list.
-That collection is piped to the Where-Object cmdlet, which selects only those domains where MarkForMonitoring is equal to False.
-The filtered collection is then piped to Set-CsAllowedDomain, which sets the MarkForMonitoring property for each domain in the collection to True.
-
-Get-CsAllowedDomain | Where-Object {$_.MarkForMonitoring -eq $False} | Set-CsAllowedDomain -MarkForMonitoring $True
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
+Get-CsAllowedDomain | Where-Object {$_.Comment -eq $Null} | Set-CsAllowedDomain -Comment "Need contact information."
 ```
 
 Example 3 adds a generic comment ("Need contact information.") to each domain on the allowed list where the Comment property currently has no value.
-To carry out this task, the command first calls the Get-CsAllowedDomain cmdlet to retrieve a collection of all the domains on the allowed list.
-This collection is then piped to the Where-Object cmdlet, which picks out those domains where the Comment property is equal to a null value.
-That filtered collection is then piped to the Set-CsAllowedDomain cmdlet, which modifies the Comment property for each item in the collection.
+To carry out this task, the command first calls the `Get-CsAllowedDomain` cmdlet to retrieve a collection of all the domains on the allowed list.
+This collection is then piped to the `Where-Object` cmdlet, which picks out those domains where the Comment property is equal to a null value.
+That filtered collection is then piped to the `Set-CsAllowedDomain` cmdlet, which modifies the Comment property for each item in the collection.
 
-Get-CsAllowedDomain | Where-Object {$_.Comment -eq $Null} | Set-CsAllowedDomain -Comment "Need contact information."
 
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 ------------------------
 ```
 Get-CsAllowedDomain | Where-Object {$_.Comment -eq $Null} | Set-CsAllowedDomain -Comment "Need contact information."
 ```
 
 Example 4 adds a generic comment ("Need contact information.") to each domain on the allowed list where the Comment property currently has no value.
-To carry out this task, the command first calls Get-CsAllowedDomain to retrieve a collection of all the domains on the allowed list.
-This collection is then piped to Where-Object, which picks out those domains where the Comment property is equal to a null value.
-That filtered collection is then piped to Set-CsAllowedDomain, which modifies the Comment property for each item in the collection.
+To carry out this task, the command first calls `Get-CsAllowedDomain` to retrieve a collection of all the domains on the allowed list.
+This collection is then piped to `Where-Object`, which picks out those domains where the Comment property is equal to a null value.
+That filtered collection is then piped to `Set-CsAllowedDomain`, which modifies the Comment property for each item in the collection.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 4 adds a generic comment ("Need contact information.") to each domain on the allowed list where the Comment property currently has no value.
-To carry out this task, the command first calls Get-CsAllowedDomain to retrieve a collection of all the domains on the allowed list.
-This collection is then piped to Where-Object, which picks out those domains where the Comment property is equal to a null value.
-That filtered collection is then piped to Set-CsAllowedDomain, which modifies the Comment property for each item in the collection.
-
-Get-CsAllowedDomain | Where-Object {$_.Comment -eq $Null} | Set-CsAllowedDomain -Comment "Need contact information."
 
 ## PARAMETERS
 
@@ -229,7 +96,7 @@ Get-CsAllowedDomain | Where-Object {$_.Comment -eq $Null} | Set-CsAllowedDomain 
 Fully qualified domain name (FQDN) of the allowed domain for which the property values are being modified.
 For example:
 
--Identity fabrikam.com
+`-Identity fabrikam.com`
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -278,22 +145,10 @@ Accept wildcard characters: False
 ```
 
 ### -MarkForMonitoring
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Indicates whether the federation connection between your domain and the remote domain will be monitored by Monitoring Server.
-By default, MarkForMonitoring is set to False, meaning that the connection will not be monitored.
-
-This property will be ignored if you have not deployed Monitoring Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates whether the federation connection between your domain and the remote domain will be monitored by Monitoring Server.
 By default, MarkForMonitoring is set to False, meaning that the connection will not be monitored.
 
 This property has been deprecated and should be ignored.
-
 
 
 ```yaml
@@ -414,27 +269,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowedDomain object.
-Set-CsAllowedDomain accepts pipelined instances of the allowed domain object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowedDomain object.
-The Set-CsAllowedDomain cmdlet accepts pipelined instances of the allowed domain object.
+The `Set-CsAllowedDomain` cmdlet accepts pipelined instances of the allowed domain object.
 
 ## OUTPUTS
 
 ###  
-Set-CsAllowedDomain does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowedDomain object.
-
-###  
-The Set-CsAllowedDomain cmdlet does not return a value or object.
+The `Set-CsAllowedDomain` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.AllowedDomain object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d5b25b66-2b11-40ef-9ea4-efcae0b610e6(OCS.14).aspx)
 
 [Get-CsAllowedDomain]()
 
@@ -443,8 +288,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [Remove-CsAllowedDomain]()
 
 [Set-CsAccessEdgeConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d5b25b66-2b11-40ef-9ea4-efcae0b610e6(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d5b25b66-2b11-40ef-9ea4-efcae0b610e6(OCS.16).aspx)
-

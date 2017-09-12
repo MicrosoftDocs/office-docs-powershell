@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsApplicationServer
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to modify configuration properties of one or more servers running the Application service.
-These servers (also known as Application Servers) host software programs, such as the Call Park application, that were developed using the Microsoft Unified Communications Managed API (UCMA) set.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Enables you to modify configuration properties of one or more servers running the Application service.
 These servers (also known as Application Servers) host software programs, such as the Call Park application, that were developed using the Microsoft Unified Communications Managed API (UCMA) set.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -32,139 +24,51 @@ Set-CsApplicationServer [[-Identity] <XdsGlobalRelativeIdentity>] [-ApplicationD
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+The Application service hosts a number of Skype for Business Server programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application and the Conferencing Announcement application.
+The Application service takes these programs and fully integrates them into the Skype for Business Server environment.
 
-The Application service hosts a number of Microsoft Lync Server 2010 programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
-The Application service takes these programs and fully integrates them into the Lync Server 2010 environment.
-
-The Set-CsApplicationServer cmdlet enables administrators to modify the configuration settings for any (or all) of the Application Servers deployed in their organization.
+The `Set-CsApplicationServer` cmdlet enables administrators to modify the configuration settings for any (or all) of the Application Servers deployed in their organization.
 For example, you can modify the ports used for audio, video, or application sharing traffic, or assign new values to ports used by individual applications such as the Conferencing Attendant application or the Conferencing Announcement application.
 Note that any time you change ports you will then need to restart the corresponding service.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsApplicationServer cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsApplicationServer"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The Application service hosts a number of Lync Server programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
-The Application service takes these programs and fully integrates them into the Lync Server environment.
-
-The Set-CsApplicationServer cmdlet enables administrators to modify the configuration settings for any (or all) of the Application Servers deployed in their organization.
-For example, you can modify the ports used for audio, video, or application sharing traffic, or assign new values to ports used by individual applications such as the Conferencing Attendant application or the Conferencing Announcement application.
-Note that any time you change ports you will then need to restart the corresponding service.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsApplicationServer cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsApplicationServer"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Application service hosts a number of Skype for Business Server 2015 programs that are not part of the core server components; these programs include the Response Group application, the Conferencing Attendant application, and the Conferencing Announcement application.
-The Application service takes these programs and fully integrates them into the Skype for Business Server 2015 environment.
-
-The Set-CsApplicationServer cmdlet enables administrators to modify the configuration settings for any (or all) of the Application Servers deployed in their organization.
-For example, you can modify the ports used for audio, video, or application sharing traffic, or assign new values to ports used by individual applications such as the Conferencing Attendant application or the Conferencing Announcement application.
-Note that any time you change ports you will then need to restart the corresponding service.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -CasSipPort 5074
 ```
 
 The command shown in Example 1 configures the SIP port for the Conferencing Announcement application on the Application Server ApplicationServer:atl-cs-001.litwareinc.com to 5074.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 configures the SIP port for the Conferencing Announcement application on the Application Server ApplicationServer:atl-cs-001.litwareinc.com to 5074.
-
-Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -CasSipPort 5074
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 configures the SIP port for the Conferencing Announcement application on the Application Server ApplicationServer:atl-cs-001.litwareinc.com to 5074.
-
-Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -CasSipPort 5074
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -AudioPortStart 49500 -AudioPortCount 5500
-```
-
-The preceding command configures audio ports for the Application Server ApplicationServer:atl-cs-001.litwareinc.com.
-In this example, the starting audio port is set to 49500 and a total of 5500 ports are set aside for audio traffic.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 2 configures audio ports for the Application Server ApplicationServer:atl-cs-001.litwareinc.com.
 In this example, the starting audio port is set to 49500 and a total of 5500 ports are set aside for audio traffic.
 
-Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -AudioPortStart 49500 -AudioPortCount 5500
 
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 configures audio ports for the Application Server ApplicationServer:atl-cs-001.litwareinc.com.
-In this example, the starting audio port is set to 49500 and a total of 5500 ports are set aside for audio traffic.
-
-Set-CsApplicationServer -Identity "ApplicationServer:atl-cs-001.litwareinc.com" -AudioPortStart 49500 -AudioPortCount 5500
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Get-CsService -ApplicationServer | ForEach-Object {Set-CsApplicationServer -Identity $_.Identity -CasSipPort 5074}
 ```
 
 In Example 3, the SIP port for the Conferencing Announcement application is set to 5074 for all of the Application Servers in the organization.
-To do this, the command first uses Get-CsService to return a collection of all the Application Servers currently in use.
-This collection is then piped to the ForEach-Object cmdlet, which takes each server in the collection, and uses Set-CsApplicationServer to set the Conferencing Announcement application SIP port to 5074.
+To do this, the command first uses the `Get-CsService` cmdlet to return a collection of all the Application Servers currently in use.
+This collection is then piped to the `ForEach-Object` cmdlet, which takes each server in the collection and uses the `Set-CsApplicationServer` cmdlet to set the Conferencing Announcement application SIP port to 5074.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3, the SIP port for the Conferencing Announcement application is set to 5074 for all of the Application Servers in the organization.
-To do this, the command first uses Get-CsService to return a collection of all the Application Servers currently in use.
-This collection is then piped to the ForEach-Object cmdlet, which takes each server in the collection, and uses Set-CsApplicationServer to set the Conferencing Announcement application SIP port to 5074.
-
-Get-CsService -ApplicationServer | ForEach-Object {Set-CsApplicationServer -Identity $_.Identity -CasSipPort 5074}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 3, the SIP port for the Conferencing Announcement application is set to 5074 for all of the Application Servers in the organization.
-To do this, the command first uses the Get-CsService cmdlet to return a collection of all the Application Servers currently in use.
-This collection is then piped to the ForEach-Object cmdlet, which takes each server in the collection, and uses the Set-CsApplicationServer cmdlet to set the Conferencing Announcement application SIP port to 5074.
-
-Get-CsService -ApplicationServer | ForEach-Object {Set-CsApplicationServer -Identity $_.Identity -CasSipPort 5074}
 
 ## PARAMETERS
 
 ### -Identity
 Service location of the Application Server to be modified.
-For example: -Identity "ApplicationServer:atl-cs-001.litwareinc.com".
+For example: `-Identity "ApplicationServer:atl-cs-001.litwareinc.com"`.
 
 Note that you can leave off the prefix "ApplicationServer:" when specifying an Application server.
-For example: -Identity "atl-cs-001.litwareinc.com".
+For example: `-Identity "atl-cs-001.litwareinc.com"`.
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -181,7 +85,7 @@ Accept wildcard characters: False
 
 ### -ApplicationDatabase
 Service location of the Application database.
-For example: -ApplicationDatabase "ApplicationDatabase:atl-cs-001.litwareinc.com".
+For example: `-ApplicationDatabase "ApplicationDatabase:atl-cs-001.litwareinc.com"`.
 
 ```yaml
 Type: String
@@ -216,7 +120,7 @@ Accept wildcard characters: False
 
 ### -AppSharingPortStart
 First port in the range of ports allocated for application sharing.
-For example: -AppSharingPortStart 60000.
+For example: `-AppSharingPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -267,7 +171,7 @@ Accept wildcard characters: False
 
 ### -AudioPortStart
 First port in the range of ports allocated for sending and receiving audio traffic.
-For example: -AudioPortStart 60000.
+For example: `-AudioPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -417,7 +321,7 @@ Accept wildcard characters: False
 
 ### -VideoPortStart
 First port in the range of ports allocated for sending and receiving video traffic.
-For example -VideoPortStart 60000.
+For example `-VideoPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -481,16 +385,7 @@ Accept wildcard characters: False
 ```
 
 ### -Registrar
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill Registrar Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Fully qualified domain name of the Registrar associated with the Policy Decision Point Server.
-
 
 
 ```yaml
@@ -513,31 +408,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Set-CsApplicationServer does not accept pipelined input.
-
-###  
-None.
-The Set-CsApplicationServer cmdlet does not accept pipelined input.
+The `Set-CsApplicationServer` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Set-CsApplicationServer does not return any values or objects.
-Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayApplicationServer object.
-
-###  
-The Set-CsApplicationServer cmdlet does not return any values or objects.
+The `Set-CsApplicationServer` cmdlet does not return any values or objects.
 Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayApplicationServer object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/74b3f941-df06-4fde-9487-eba081233723(OCS.14).aspx)
-
 [Get-CsServerApplication]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/74b3f941-df06-4fde-9487-eba081233723(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/74b3f941-df06-4fde-9487-eba081233723(OCS.16).aspx)
-

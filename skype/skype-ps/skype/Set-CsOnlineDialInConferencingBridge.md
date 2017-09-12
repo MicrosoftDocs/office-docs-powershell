@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsOnlineDialInConferencingBridge
 
 ## SYNOPSIS
-Use the Set-CsOnlineDialInConferencingBridge cmdlet to modify the settings of a Microsoft audio conferencing bridge.
+Use the `Set-CsOnlineDialInConferencingBridge` cmdlet to modify the settings of a Microsoft audio conferencing bridge.
 
 ## SYNTAX
 
@@ -18,31 +18,29 @@ Set-CsOnlineDialInConferencingBridge [[-Identity] <Object>] [[-Instance] <Object
 ```
 
 ## DESCRIPTION
-The Set-CsOnlineDialInConferencingBridge cmdlet can be used to set the default dial-in service phone number for a given audio conferencing bridge.
+The `Set-CsOnlineDialInConferencingBridge` cmdlet can be used to set the default dial-in service phone number for a given audio conferencing bridge.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineDialInConferencingBridge -Name "Conference Bridge" -DefaultServiceNumber 14255551234
 ```
 
 This example sets the default dial-in phone number to 14255551234 for the audio conferencing bridge named "Conference Bridge".
 
-Set-CsOnlineDialInConferencingBridge -Name "Conference Bridge" -DefaultServiceNumber 14255551234
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-This example changes the name of a conference bridge by creating an conference bridge instance, changing the instance's name, and then setting the conference bridge to the instance.
-
 $bridge = Get-CsOnlineDialInConferencingBridge -Name "Conference Bridge"
 
 $Bridge.Name = "O365 Bridge"
 
 Set-CsOnlineDialInConferencingBridge -Instance $bridge
+```
+
+This example changes the name of a conference bridge by creating an conference bridge instance, changing the instance's name and then setting the conference bridge to the instance.
+
 
 ## PARAMETERS
 
@@ -276,6 +274,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9e173adc-10bf-49e9-bc5a-329bbb8f2b49(OCS.15).aspx)
-

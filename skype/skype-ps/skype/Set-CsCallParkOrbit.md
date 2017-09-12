@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsCallParkOrbit
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Sets the properties for an existing call park orbit range within an organization.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Sets the properties for an existing call park orbit range within an organization.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -34,30 +27,15 @@ Set-CsCallParkOrbit [[-NumberRangeStart] <String>] [[-NumberRangeEnd] <String>] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Parking a call assigns a received phone call to a number within a specific range for later retrieval.
 A call park orbit is the set of numbers defined for this purpose.
-The Set-CsCallParkOrbit cmdlet enables you to change the number ranges and the ID of the Call Park service.
+The `Set-CsCallParkOrbit` cmdlet enables you to change the number ranges and the ID of the Call Park service.
 The new range of numbers must be unique among all call park orbits defined within the organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCallParkOrbit cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCallParkOrbit"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Parking a call assigns a received phone call to a number within a specific range for later retrieval.
-A call park orbit is the set of numbers defined for this purpose.
-The Set-CsCallParkOrbit cmdlet enables you to change the number ranges and the ID of the Call Park service.
-The new range of numbers must be unique among all call park orbits defined within the organization.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 500 -NumberRangeEnd 699
 ```
@@ -65,27 +43,8 @@ Set-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 500 -NumberRange
 This example changes the range of numbers for the call park orbit named "Redmond CPO 1" to 500 through 699.
 All values within this range must be unique among all call park orbit ranges within the organization.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example changes the range of numbers for the call park orbit named "Redmond CPO 1" to 500 through 699.
-All values within this range must be unique among all call park orbit ranges within the organization.
-
-Set-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 500 -NumberRangeEnd 699
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example changes the range of numbers for the call park orbit named "Redmond CPO 1" to 500 through 699.
-All values within this range must be unique among all call park orbit ranges within the organization.
-
-Set-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 500 -NumberRangeEnd 699
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*7000" -NumberRangeEnd "*7100"
 ```
@@ -95,29 +54,6 @@ All values within this range must be unique among all call park orbit ranges wit
 Note that, unlike the preceding example, double quote marks were included around the values assigned to NumberRangeStart and NumberRangeEnd.
 If these values begin with a * or # (the only non-numeric values allowed) you must enclose the value in double quotes.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example changes the range of numbers for the call park orbit named "Redmond CPO 2" to *7000 through *7100.
-All values within this range must be unique among all call park orbit ranges within the organization.
-Note that, unlike the preceding example, double quote marks were included around the values assigned to NumberRangeStart and NumberRangeEnd.
-If these values begin with a * or # (the only non-numeric values allowed) you must enclose the value in double quotes.
-
-Set-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*7000" -NumberRangeEnd "*7100"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example changes the range of numbers for the call park orbit named "Redmond CPO 2" to *7000 through *7100.
-All values within this range must be unique among all call park orbit ranges within the organization.
-Note that, unlike the preceding example, double quote marks were included around the values assigned to NumberRangeStart and NumberRangeEnd.
-If these values begin with a * or # (the only non-numeric values allowed) you must enclose the value in double quotes.
-
-Set-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*7000" -NumberRangeEnd "*7100"
 
 ## PARAMETERS
 
@@ -140,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-This object must be of type DisplayCallParkOrbit, which can be retrieved by calling the Get-CsCallParkOrbit cmdlet.
+This object must be of type DisplayCallParkOrbit, which can be retrieved by calling the `Get-CsCallParkOrbit` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -275,7 +211,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of call park orbit.
-Skype for Business Server 2015 allows for two different types of call park orbits:
+Skype for Business Server allows for two different types of call park orbits:
 
 CallPark.
 This is the standard call park orbit, in which a user places a call on hold and then can retrieve that call from any phone by dialing the specified call park number.
@@ -287,7 +223,7 @@ Call pickup groups are configured by administrators.
 
 To specify a call park orbit type, use syntax similar to this:
 
--Type GroupPickup
+`-Type GroupPickup`
 
 This parameter was introduced in the February 2013 release of Lync Server 2013.
 
@@ -322,15 +258,8 @@ This cmdlet modifies an object of type Microsoft.Rtc.Management.Voice.Helpers.Di
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/9a159a9a-69a6-4e4d-8224-49aa42092ea8(OCS.14).aspx)
-
 [New-CsCallParkOrbit]()
 
 [Remove-CsCallParkOrbit]()
 
 [Get-CsCallParkOrbit]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9a159a9a-69a6-4e4d-8224-49aa42092ea8(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9a159a9a-69a6-4e4d-8224-49aa42092ea8(OCS.16).aspx)
-

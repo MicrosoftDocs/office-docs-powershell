@@ -26,13 +26,18 @@ Set-CsOnlineNumberPortInOrder [-PortInOrderId <Object>] [-BillingTelephoneNumber
 ```
 
 ## DESCRIPTION
+{{Fill in the Description}}
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -526,6 +531,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/eecc8b8a-16c3-4334-91bf-3be5db4d14d5(OCS.15).aspx)
-
