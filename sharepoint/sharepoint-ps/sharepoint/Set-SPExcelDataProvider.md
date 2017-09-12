@@ -1,4 +1,5 @@
 ---
+external help file: 
 applicable: SharePoint Server 2013
 schema: 2.0.0
 ---
