@@ -24,15 +24,15 @@ Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsCallViaWorkPolicy -Identity Site:Redmond -Enabled $true -AdminCallbackNumber +14258881234 -UseAdminCallbackNumber $true
 ```
 
 This example creates a call via work policy for the Redmond site.
 The policy is enabled, the administrative callback number is specified and enforced.
 
-New-CsCallViaWorkPolicy -Identity Site:Redmond -Enabled $true -AdminCallbackNumber +14258881234 -UseAdminCallbackNumber $true
 
 ## PARAMETERS
 
@@ -40,8 +40,8 @@ New-CsCallViaWorkPolicy -Identity Site:Redmond -Enabled $true -AdminCallbackNumb
 Unique identity to be assigned to the policy.
 New policies can be created at the site or per-user scope.
 To create a new site policy, use the prefix "site:" and the name of the site as the Identity.
-For example, to create a new policy for the Redmond site you would use this syntax: -Identity site:Redmond.
-To create a new per-user policy, this syntax: -Identity SalesDepartmentPolicy.
+For example, to create a new policy for the Redmond site you would use this syntax: `-Identity site:Redmond.`
+To create a new per-user policy, this syntax: `-Identity SalesDepartmentPolicy.`
 
 You cannot create a new global policy.
 If you want to make changes to the global policy, use the Set-CsCallViawork cmdlet instead.
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -221,6 +221,4 @@ The New-CsCallViaWorkPolicy returns Microsoft.Rtc.Management.WritableConfig.Poli
 [Grant-CsCallViaWorkPolicy]()
 
 [Get-CsCallViaWorkPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/952ab367-5c68-4869-9827-873605e7c41e(OCS.16).aspx)
 

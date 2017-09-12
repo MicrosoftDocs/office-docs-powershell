@@ -7,12 +7,6 @@ schema: 2.0.0
 # New-CsAllowedDomain
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Adds a domain to the list of domains approved for federation.
-After a domain has been approved for federation (by being added to the allowed list), your users can exchange instant messages and presence information with people who have accounts in the federated domain.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Adds a domain to the list of domains approved for federation.
 After a domain has been approved for federation (by being added to the allowed list), your users can exchange instant messages and presence information with people who have accounts in the federated domain.
@@ -36,61 +30,18 @@ New-CsAllowedDomain [-Comment <String>] -Domain <String> [-MarkForMonitoring <Bo
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
-When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Microsoft Lync 2010.
-Microsoft Lync Server 2010 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Lync Server Access Edge service to allow federation.
-In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
-
-To establish a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
-The allowed list represents the organizations you have chosen to federate with; if a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Lync Server 2010.
-
-If you want to create a new federation relationship, you can use New-CsAllowedDomain to add a domain to the list of allowed domains.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsAllowedDomain cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsAllowedDomain"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
-When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Lync.
-Lync Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Lync Server Access Edge service to allow federation.
-In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
-
-To establish a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
-The allowed list represents the organizations you have chosen to federate with; if a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Lync Server.
-
-If you want to create a new federation relationship, you can use New-CsAllowedDomain to add a domain to the list of allowed domains.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsAllowedDomain cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAllowedDomain"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
 When federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another by using SIP applications such as Skype for Business.
-Skype for Business Server 2015 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and 3) federation between your organization and a third-party hosting provider.
+Skype for Business Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and 3) federation between your organization and a third-party hosting provider.
 
 Setting up direct federation with another organization involves several tasks.
-To begin with, you must enable your servers running the Skype for Business Server 2015 Access Edge service to allow federation.
+To begin with, you must enable your servers running the Skype for Business Server Access Edge service to allow federation.
 In addition, the other organization must enable federation with you; federation cannot be established unless both parties agree to the relationship.
 
 To establish a federated relationship you might also need to manage two federation-related lists: the allowed list and the blocked list.
 The allowed list represents the organizations you have chosen to federate with; if a domain appears on the allowed list then (depending on your configuration settings) your users will be able to exchange instant messages and presence information with users who have accounts in that federated domain.
-Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Skype for Business Server 2015.
+Conversely, the blocked list represents domains that users are expressly forbidden from federating with; for example, messages sent from a blocked domain will automatically be rejected by Skype for Business Server.
 
 If you want to create a new federation relationship, you can use the New-CsAllowedDomain cmdlet to add a domain to the list of allowed domains.
 
@@ -98,28 +49,10 @@ If you want to create a new federation relationship, you can use the New-CsAllow
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-New-CsAllowedDomain -Identity "fabrikam.com"
-```
-
-In the preceding example, the domain fabrikam.com is added to the list of allowed domains.
-To do this, New-CsAllowedDomain is called, along with the Identity parameter; this parameter is assigned the name of the domain to be added to the allowed list.
-Note that this command will fail if fabrikam.com is already on the allowed list or on the blocked list.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 1, the domain fabrikam.com is added to the list of allowed domains.
-To do this, New-CsAllowedDomain is called, along with the Identity parameter; this parameter is assigned the name of the domain to be added to the allowed list.
-Note that this command will fail if fabrikam.com is already on the allowed list or on the blocked list.
 
 New-CsAllowedDomain -Identity "fabrikam.com"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
 
 ```
 
@@ -127,71 +60,18 @@ In Example 1, the domain fabrikam.com is added to the list of allowed domains.
 To do this, the New-CsAllowedDomain cmdlet is called, along with the Identity parameter; this parameter is assigned the name of the domain to be added to the allowed list.
 Note that this command will fail if fabrikam.com is already on the allowed list or on the blocked list.
 
-New-CsAllowedDomain -Identity "fabrikam.com"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
+
 New-CsAllowedDomain -Identity "fabrikam.com" -ProxyFqdn "proxyserver.fabrikam.com" -MarkForMonitoring $True -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
-```
-
-Example 2 is a variation of the command shown in Example 1.
-In this case, however, two additional parameters are included along with Identity: ProxyFqdn is used to specify the FQDN of the proxy server for fabrikam.com, and MarkForMonitoring is used to add this federation connection to the list of items monitored by Monitoring Server.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
 ```
 
 Example 2 is a variation of the command shown in Example 1.
 In this case, however, two additional parameters are included along with Identity: ProxyFqdn is used to specify the FQDN of the proxy server for fabrikam.com, and MarkForMonitoring is used to add this federation connection to the list of items monitored by Monitoring Server.
 
-New-CsAllowedDomain -Identity "fabrikam.com" -ProxyFqdn "proxyserver.fabrikam.com" -MarkForMonitoring $True -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
-```
-
-Example 2 is a variation of the command shown in Example 1.
-In this case, however, two additional parameters are included along with Identity: ProxyFqdn is used to specify the FQDN of the proxy server for fabrikam.com, and MarkForMonitoring is used to add this federation connection to the list of items monitored by Monitoring Server.
-
-New-CsAllowedDomain -Identity "fabrikam.com" -ProxyFqdn "proxyserver.fabrikam.com" -MarkForMonitoring $True -Comment "Contact: Ken Myer (kenmyer@fabrikam.com)"
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
-```
-$x = New-CsAllowedDomain -Identity "fabrikam.com" -InMemory
-$x.ProxyFqdn = "proxyserver.fabrikam.com" 
-$x.MarkForMonitoring = $True 
-$x.Comment = "Contact: Ken Myer (kenmyer@fabrikam.com)"
-Set-CsAllowedDomain -Instance $x
-```
-
-Example 3 demonstrates how you can use the InMemory parameter to create a new allowed domain that initially exists only in memory.
-After you modify the property values of this in-memory-only domain, you can then call Set-CsAllowedDomain to add the domain to the allowed list.
-
-In order to do this, the first command in the example uses New-CsAllowedDomain and the InMemory parameter to create an allowed domain that has the Identity fabrikam.com.
-After that, the virtual domain is stored in the variable $x.
-
-Lines 2, 3, and 4 are used to modify the values of the ProxyFqdn, MarkForMonitoring, and Comment properties, respectively.
-After all of the property values have been modified, the final command uses Set-CsAllowedDomain to add the virtual domain to the allowed domain list.
-Keep in mind that, until Set-CsAllowedDomain is called, fabrikam.com exists only in memory: if you run Get-CsAllowedDomain any time prior to the last line in the example, fabrikam.com will not appear on the list of allowed domains.
-Fabrikam.com will not show up on the allowed list until after you have called Set-CsAllowedDomain.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 3 demonstrates how you can use the InMemory parameter to create a new allowed domain that initially exists only in memory.
-After you modify the property values of this in-memory-only domain, you can then call Set-CsAllowedDomain to add the domain to the allowed list.
-
-In order to do this, the first command in the example uses New-CsAllowedDomain and the InMemory parameter to create an allowed domain that has the Identity fabrikam.com.
-After that, the virtual domain is stored in the variable $x.
-
-Lines 2, 3, and 4 are used to modify the values of the ProxyFqdn, MarkForMonitoring, and Comment properties, respectively.
-After all of the property values have been modified, the final command uses Set-CsAllowedDomain to add the virtual domain to the allowed domain list.
-Keep in mind that, until Set-CsAllowedDomain is called, fabrikam.com exists only in memory: if you run Get-CsAllowedDomain any time prior to the last line in the example, fabrikam.com will not appear on the list of allowed domains.
-Fabrikam.com will not show up on the allowed list until after you have called Set-CsAllowedDomain.
 
 $x = New-CsAllowedDomain -Identity "fabrikam.com" -InMemory
 
@@ -202,10 +82,6 @@ $x.MarkForMonitoring = $True
 $x.Comment = "Contact: Ken Myer (kenmyer@fabrikam.com)"
 
 Set-CsAllowedDomain -Instance $x
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 3 demonstrates how you can use the InMemory parameter to create a new allowed domain that initially exists only in memory.
@@ -219,15 +95,6 @@ After all of the property values have been modified, the final command uses the 
 Keep in mind that, until the Set-CsAllowedDomain cmdlet is called, fabrikam.com exists only in memory: if you run the Get-CsAllowedDomain cmdlet any time prior to the last line in the example, fabrikam.com will not appear on the list of allowed domains.
 Fabrikam.com will not show up on the allowed list until after you have called the Set-CsAllowedDomain cmdlet.
 
-$x = New-CsAllowedDomain -Identity "fabrikam.com" -InMemory
-
-$x.ProxyFqdn = "proxyserver.fabrikam.com"
-
-$x.MarkForMonitoring = $True
-
-$x.Comment = "Contact: Ken Myer (kenmyer@fabrikam.com)"
-
-Set-CsAllowedDomain -Instance $x
 
 ## PARAMETERS
 
@@ -343,14 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -408,7 +267,7 @@ The VerificationLevel must be set to one of the following values:
 
 AlwaysVerifiable.
 All messages purportedly sent from this domain will be accepted.
-If a verification header is not found in the message it will be added by Skype for Business Server 2015.
+If a verification header is not found in the message it will be added by Skype for Business Server.
 
 AlwaysUnverifiable.
 All messages purportedly sent from a domain are considered unverified.
@@ -436,13 +295,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsAllowedDomain does not accept pipelined input.
 
 ###  
 None.
@@ -457,8 +312,6 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.A
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/7e040cf8-8e6f-4293-b7c4-1be76053d43d(OCS.14).aspx)
-
 [Get-CsAllowedDomain]()
 
 [Remove-CsAllowedDomain]()
@@ -466,8 +319,4 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.A
 [Set-CsAccessEdgeConfiguration]()
 
 [Set-CsAllowedDomain]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7e040cf8-8e6f-4293-b7c4-1be76053d43d(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7e040cf8-8e6f-4293-b7c4-1be76053d43d(OCS.16).aspx)
 

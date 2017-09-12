@@ -7,16 +7,9 @@ schema: 2.0.0
 # New-CsClsConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
 
 Creates a new collection of centralized logging configuration settings.
-Centralized logging provides a way for administrators to simultaneously enable or disable Microsoft Lync Server 2013 Preview tracing on multiple computers.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new collection of centralized logging configuration settings.
-Centralized logging provides a way for administrators to simultaneously enable or disable Skype for Business Server 2015 tracing on multiple computers.
+Centralized logging provides a way for administrators to simultaneously enable or disable Skype for Business Server tracing on multiple computers.
 This cmdlet was introduced in Lync Server 2013.
 
 
@@ -35,42 +28,19 @@ New-CsClsConfiguration [-Identity] <XdsIdentity> [-CacheFileLocalFolders <String
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
-Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
-This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
-In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using Windows PowerShell and the Search-CsClsLogging cmdlet.
-
-Centralized logging is built around a series of predefined scenarios that offer a more finely-targeted approach to logging than offered in previous versions of Lync Server.
-These scenarios predetermine the server components and logging for you; as a result, an administrator enabling the RGS scenario can be confident that he or she will only log information relevant to the Response Group service and not to, say, the audio conferencing provider service.
-
-It is also possible to define custom scenarios by using the New-CsClsScenario cmdlet.
-
-Centralized logging is managed by using collections of centralized logging service configuration settings.
-When you install Microsoft Lync Server 2013 Preview, you install a global set of these configuration settings; in addition, administrators can add custom settings collections at the site scope.
-This is done by using the New-CsClsConfiguration cmdlet.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClsConfiguration"}
-
-Lync Server Control Panel: The functions carried out by the New-CsCClsConfiguration cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
+The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
 This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
 In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using the Windows PowerShell command-line interface and the Search-CsClsLogging cmdlet.
 
-Centralized logging is built around a series of predefined scenarios that offer a more finely-targeted approach to logging than offered in previous versions of Skype for Business Server 2015.
+Centralized logging is built around a series of predefined scenarios that offer a more finely-targeted approach to logging than offered in previous versions of Skype for Business Server.
 These scenarios predetermine the server components and logging for you; as a result, an administrator enabling the RGS scenario can be confident that he or she will only log information relevant to the Response Group service and not to, say, the audio conferencing provider service.
 
 It is also possible to define custom scenarios by using the New-CsClsScenario cmdlet.
 
 Centralized logging is managed by using collections of centralized logging service configuration settings.
-When you install Skype for Business Server 2015, you install a global set of these configuration settings; in addition, administrators can add custom settings collections at the site scope.
+When you install Skype for Business Server, you install a global set of these configuration settings; in addition, administrators can add custom settings collections at the site scope.
 This is done by using the New-CsClsConfiguration cmdlet.
 
 Skype for Business Server Control Panel: The functions carried out by the New-CsCClsConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
@@ -79,25 +49,15 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsClsConfiguration -Identity "site:Redmond" -EtlFileRolloverSizeMB 40 -EtlFileRolloverMinutes 120
 ```
 
 The command shown in Example 1 creates a new collection of centralized logging configuration settings for the Redmond site.
 In this new collection, the ETL file rollover size is set to 40 megabytes, and the ETL file rollover time is set to 2 hours (120 minutes).
 
-New-CsClsConfiguration -Identity "site:Redmond" -EtlFileRolloverSizeMB 40 -EtlFileRolloverMinutes 120
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new collection of centralized logging configuration settings for the Redmond site.
-In this new collection, the ETL file rollover size is set to 40 megabytes, and the ETL file rollover time is set to 2 hours (120 minutes).
-
-New-CsClsConfiguration -Identity "site:Redmond" -EtlFileRolloverSizeMB 40 -EtlFileRolloverMinutes 120
 
 ## PARAMETERS
 
@@ -105,7 +65,7 @@ New-CsClsConfiguration -Identity "site:Redmond" -EtlFileRolloverSizeMB 40 -EtlFi
 Unique identifier for the centralized logging configuration settings to be created.
 Because these settings can only be created at the site scope, use syntax similar to this, with the prefix "site:" followed by the name of the site:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 ```yaml
 Type: XdsIdentity
@@ -325,18 +285,9 @@ Accept wildcard characters: False
 ```
 
 ### -MinimumClsAgentServiceVersion
-**Below Content Applies To:** Lync Server 2013
 
 Specifies the minimum version of the centralized logging service agent to be used when logging data; any computers with an agent version lower than the minimum value will be excluded from the logging operations.
-The default value is 6, representing Lync Server 2013 Preview.
-This parameter is intended for use with the Office 365 version of Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Specifies the minimum version of the centralized logging service agent to be used when logging data; any computers with an agent version lower than the minimum value will be excluded from the logging operations.
-The default value is 6, representing Skype for Business Server 2015.
+The default value is 6, representing Skype for Business Server.
 This parameter is intended for use with Skype for Business Online.
 
 
@@ -355,16 +306,6 @@ Accept wildcard characters: False
 ```
 
 ### -Regions
-**Below Content Applies To:** Lync Server 2013
-
-Collection of regions defined for the centralized logging configuration settings.
-Regions are defined using the New-CsClsRegion cmdlet.
-
-This parameter is intended for use with the Office 365 version of Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Collection of regions defined for the centralized logging configuration settings.
 Regions are defined using the New-CsClsRegion cmdlet.
@@ -421,15 +362,6 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroups
-**Below Content Applies To:** Lync Server 2013
-
-Security groups who are allowed to access the log files.
-
-This parameter is intended for use with the Office 365 version of Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Security groups who are allowed to access the log files.
 
@@ -534,22 +466,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsClsConfiguration does not accept pipelined input.
 
 ###  
 None.
 The New-CsClsConfiguration cmdlet does not accept pipelined input.
 
 ## OUTPUTS
-
-###  
-New-CsClsConfiguration creates new instances of the icrosoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.CentralizedLoggingConfiguration object.
 
 ###  
 The New-CsClsConfiguration cmdlet creates new instances of the icrosoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.CentralizedLoggingConfiguration object.
@@ -563,8 +488,3 @@ The New-CsClsConfiguration cmdlet creates new instances of the icrosoft.Rtc.Mana
 [Remove-CsClsConfiguration]()
 
 [Set-CsClsConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/44cf1720-feae-47a5-b56a-5891a095b243(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/44cf1720-feae-47a5-b56a-5891a095b243(OCS.16).aspx)
-

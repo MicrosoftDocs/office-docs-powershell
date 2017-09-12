@@ -29,17 +29,17 @@ Note that the policies to use this cmdlet are not available unless the Set-CsClo
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
 
+Grant-CsCloudMeetingPolicy -PolicyName AutoScheduleEnabled -Identity "JaneC"
 ```
 
 This example enables Skype Meetings automatic scheduling for a user.
 
-Grant-CsCloudMeetingPolicy -PolicyName AutoScheduleEnabled -Identity "JaneC"
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: `-Identity "SeattlePSTN".`
 
 ```yaml
 Type: Object
@@ -122,8 +122,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
 The tenant ID will be determined by your connection and credentials.
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -185,6 +185,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/470f6f10-e173-495b-8ae2-958b480f0d6f(OCS.15).aspx)
 

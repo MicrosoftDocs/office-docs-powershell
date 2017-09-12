@@ -22,18 +22,17 @@ Tenant dial plans provide information that is required for Enterprise Voice user
 Users who do not have a valid tenant dial plan cannot make calls by using Enterprise Voice.
 A tenant dial plan determines such things as how normalization rules are applied, and whether a prefix must be dialed for external calls.
 
-You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: Get-CsOnlineUser "\<user name\>" | Select-Object TenantDialPlan.
-
+You can check whether a user has been granted a per-user tenant dial plan by calling a command in this format: `Get-CsOnlineUser "\<user name\>" | Select-Object TenantDialPlan.`
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Online)
 ```
 
+Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
 ```
 
 This example grants the Vt1tenantDialPlan 9 dial plan to Vt1_User1.
 
-Grant-CsTenantDialPlan -PolicyName Vt1tenantDialPlan9 -Identity (Get-CsOnlineUser Vt1_User1).SipAddress
 
 ## PARAMETERS
 
@@ -120,8 +119,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".`
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -170,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -179,6 +178,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/157e20a6-73cf-4dfa-8104-eb9082c11403(OCS.15).aspx)
-

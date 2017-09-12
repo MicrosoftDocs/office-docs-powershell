@@ -7,12 +7,6 @@ schema: 2.0.0
 # New-CsAVEdgeConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new collection of configuration settings for computers running the A/V Edge service (these computers are also known as A/V Edge servers).
-An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of configuration settings for computers running the A/V Edge service (these computers are also known as A/V Edge servers).
 An A/V Edge server enables internal users to share audio and video data with external users (that is, users who are not logged on to your internal network).
@@ -28,54 +22,9 @@ New-CsAVEdgeConfiguration [-Identity] <XdsIdentity> [-MaxTokenLifetime <TimeSpan
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
 An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
-Among other things, this enables users to use Microsoft Lync Server 2010 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
-Edge Server configuration settings can be assigned at the global scope, the site scope, and the service scope.
-The A/V Edge configuration settings enable administrators to manage the amount of time that user authentication is valid before it must be renewed, and to limit the amount of bandwidth that can be used by a single user or a single port.
-
-The New-CsAVEdgeConfiguration cmdlet enables you to create new collections of A/V Edge configuration settings at either the site or the service scope.
-As noted, A/V Edge settings can also be configured at the global scope.
-However, you cannot create a new collection at the global scope.
-
-Note that any given site or service can host, at most, a single collection of A/V Edge configuration settings.
-If the Redmond site already hosts a collection of A/V Edge settings, you cannot create a new collection with the Identity site:Redmond.
-
-Unless instructed by Microsoft support personnel, it is recommended that you do not change the default A/V Edge configuration settings.
-Because of that, you will probably not need to create a new collection of settings for a site or service.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsAVEdgeConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsAVEdgeConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
-Among other things, this enables users to use Lync Server across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
-Edge Server configuration settings can be assigned at the global scope, the site scope, and the service scope.
-The A/V Edge configuration settings enable administrators to manage the amount of time that user authentication is valid before it must be renewed, and to limit the amount of bandwidth that can be used by a single user or a single port.
-
-The New-CsAVEdgeConfiguration cmdlet enables you to create new collections of A/V Edge configuration settings at either the site or the service scope.
-As noted, A/V Edge settings can also be configured at the global scope.
-However, you cannot create a new collection at the global scope.
-
-Note that any given site or service can host, at most, a single collection of A/V Edge configuration settings.
-If the Redmond site already hosts a collection of A/V Edge settings, you cannot create a new collection with the Identity site:Redmond.
-
-Unless instructed by Microsoft support personnel, it is recommended that you do not change the default A/V Edge configuration settings.
-Because of that, you will probably not need to create a new collection of settings for a site or service.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsAVEdgeConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsAVEdgeConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-An A/V Edge server provides a way for audio and video traffic to be exchanged across an organization's firewall.
-Among other things, this enables users to use Skype for Business Server 2015 across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
+Among other things, this enables users to use Skype for Business Server across the Internet, and then exchange audio and video data with users who have logged onto the system from inside the firewall.
 Edge Server configuration settings can be assigned at the global scope, the site scope, and the service scope.
 The A/V Edge configuration settings enable administrators to manage the amount of time that user authentication is valid before it must be renewed, and to limit the amount of bandwidth that can be used by a single user or a single port.
 
@@ -93,69 +42,24 @@ Because of that, you will probably not need to create a new collection of settin
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsAVEdgeConfiguration -Identity site:Redmond -MaxTokenLifetime "04:00:00"
 ```
 
 The command shown in Example 1 creates a new collection of A/V Edge configuration settings for the Redmond site.
 In this example, the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 creates a new collection of A/V Edge configuration settings for the Redmond site.
-In this example, the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
-
-New-CsAVEdgeConfiguration -Identity site:Redmond -MaxTokenLifetime "04:00:00"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new collection of A/V Edge configuration settings for the Redmond site.
-In this example, the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
-
-New-CsAVEdgeConfiguration -Identity site:Redmond -MaxTokenLifetime "04:00:00"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-$x = New-CsAVEdgeConfiguration -Identity site:Redmond -InMemory
-$x.MaxTokenLifetime = "04:00:00"
-Set-CsAVEdgeConfiguration -Instance $x
-```
-
-Example 2 demonstrates how you can create a new collection of A/V Edge configuration settings in memory, and then later transform those virtual settings into an actual collection of A/V Edge settings.
-To do this, the first command in the example creates a new collection of settings for the Redmond site; the InMemory parameter is added to ensure that these settings are created in memory only and are not immediately applied to the Redmond site.
-(Because these settings exist in memory only, they must be stored in a variable, in this case, a variable named $x.)
-
-In the second command, the value of the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
-The third command then uses Set-CsAVEdgeConfiguration to apply the settings stored in $x to the Redmond site.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 demonstrates how you can create a new collection of A/V Edge configuration settings in memory, and then later transform those virtual settings into an actual collection of A/V Edge settings.
-To do this, the first command in the example creates a new collection of settings for the Redmond site; the InMemory parameter is added to ensure that these settings are created in memory only and are not immediately applied to the Redmond site.
-(Because these settings exist in memory only, they must be stored in a variable, in this case, a variable named $x.)
-
-In the second command, the value of the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
-The third command then uses Set-CsAVEdgeConfiguration to apply the settings stored in $x to the Redmond site.
 
 $x = New-CsAVEdgeConfiguration -Identity site:Redmond -InMemory
 
 $x.MaxTokenLifetime = "04:00:00"
 
 Set-CsAVEdgeConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 demonstrates how you can create a new collection of A/V Edge configuration settings in memory, and then later transform those virtual settings into an actual collection of A/V Edge settings.
@@ -165,18 +69,13 @@ To do this, the first command in the example creates a new collection of setting
 In the second command, the value of the MaxTokenLifetime property is set to 4 hours (04 hours : 00 minutes : 00 seconds).
 The third command then uses the Set-CsAVEdgeConfiguration cmdlet to apply the settings stored in $x to the Redmond site.
 
-$x = New-CsAVEdgeConfiguration -Identity site:Redmond -InMemory
-
-$x.MaxTokenLifetime = "04:00:00"
-
-Set-CsAVEdgeConfiguration -Instance $x
 
 ## PARAMETERS
 
 ### -Identity
 Unique identifier for the collection of A/V Edge configuration settings to be created.
-To create a collection of settings to be applied at the site scope, use syntax similar to this: -Identity site:Redmond.
-(Note that this command will fail if a collection of A/V Edge configuration settings have already been applied to the Redmond site.) Settings configured at the service scope should use syntax similar to this: -Identity service:EdgeServer:atl-cs-001.litwareinc.com.
+To create a collection of settings to be applied at the site scope, use syntax similar to this: `-Identity site:Redmond.`
+(Note that this command will fail if a collection of A/V Edge configuration settings have already been applied to the Redmond site.) Settings configured at the service scope should use syntax similar to this: `-Identity service:EdgeServer:atl-cs-001.litwareinc.com.`
 
 ```yaml
 Type: XdsIdentity
@@ -234,14 +133,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -328,13 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsAVEdgeConfiguration does not accept pipelined input.
 
 ###  
 None.
@@ -349,15 +236,8 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.M
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/b6bcf426-9037-4679-99dc-e94bfb8f72a6(OCS.14).aspx)
-
 [Get-CsAVEdgeConfiguration]()
 
 [Remove-CsAVEdgeConfiguration]()
 
 [Set-CsAVEdgeConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b6bcf426-9037-4679-99dc-e94bfb8f72a6(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b6bcf426-9037-4679-99dc-e94bfb8f72a6(OCS.16).aspx)
-
