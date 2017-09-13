@@ -38,21 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>#Get UPA Proxy
-$pr = Get-SPServiceApplicationProxy | ? {$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
-
-C:\PS>#Add tenant to UPA 
-Add-SPSiteSubscriptionProfileConfig -Identity $sub -ProfileServiceApplicationProxy $pr -MySiteHostLocation http://contoso/my
-
-C:\PS>#Create new site subscription
-$sub = New-SPSiteSubscription
-```
-
-This example creates a new User Profile Service application tenant.
-
-### --------------EXAMPLE------------------ (SharePoint Server 2016)
+### --------------EXAMPLE------------------
 ```
 C:\PS>#Get UPA Proxy
           $pr = Get-SPServiceApplicationProxy | ? {$_.DisplayName.Contains(PartitionedUserProfileApplication_Proxy)}
