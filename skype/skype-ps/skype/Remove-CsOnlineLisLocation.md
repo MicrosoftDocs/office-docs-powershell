@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisLocation cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
+Use the `Remove-CsOnlineLisLocation` cmdlet to remove an existing emergency location from the Location Information Service (LIS.) You can only remove locations that have no assigned users.
 
 ## SYNTAX
 
@@ -21,20 +21,19 @@ If the location specified for removal is assigned to users, the cmdlet will fail
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsOnlineLisLocation -LocationId 788dd820-c136-4255-9f61-24b880ad0763
 ```
 
 This example removes the location specified by its identity.
 
-Remove-CsOnlineLisLocation -LocationId 788dd820-c136-4255-9f61-24b880ad0763
 
 ## PARAMETERS
 
 ### -LocationId
 Specifies the unique identifier of the location to be deleted.
-Location identities can be discovered by using the Get-CsOnlineLisLocation cmdlet.
+Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
 
 ```yaml
 Type: Object
@@ -66,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +169,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-This cmdlet supports pipelined input from the Get-CsOnlineLisLocation cmdlet.
+This cmdlet supports pipelined input from the `Get-CsOnlineLisLocation` cmdlet.
 
 ## OUTPUTS
 
@@ -180,6 +179,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fe0821e9-23fc-4758-a036-1cfe382d2f00(OCS.15).aspx)
-

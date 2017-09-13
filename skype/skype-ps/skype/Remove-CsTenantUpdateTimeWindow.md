@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsTenantUpdateTimeWindow
 
 ## SYNOPSIS
-Use the Remove-CsTenantUpdateTimeWindow cmdlet to remove a previously specified tenant update time window.
+Use the `Remove-CsTenantUpdateTimeWindow` cmdlet to remove a previously specified tenant update time window.
 
 ## SYNTAX
 
@@ -17,25 +17,24 @@ Remove-CsTenantUpdateTimeWindow [[-Identity] <Object>] [-BypassDualWrite <Object
 ```
 
 ## DESCRIPTION
-Tenant update time windows are created, retrieved, modified, and deleted by the CsTenantUpdateTimeWindow cmdlet group (New, Get, Set, and Remove).
-The tenant update time windows can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Tenant update time windows are created, retrieved, modified and deleted by the CsTenantUpdateTimeWindow cmdlet group (New, Get, Set and Remove).
+The tenant update time windows can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify tenant update time windows through the CsTenantHybridConfiguration cmdlets.
 You must use the CsTenantUpdateTimeWindow cmdlets to manage tenant update time windows.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsTenantUpdateTimeWindow -Identity "AlwaysOn"
 ```
 
 This example removes the tenant update time window.
 
-Remove-CsTenantUpdateTimeWindow -Identity "AlwaysOn"
 
 ## PARAMETERS
 
@@ -163,6 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1e3aa4ee-5bc7-40fc-8838-25f7a602ee58(OCS.15).aspx)
-

@@ -7,15 +7,8 @@ schema: 2.0.0
 # Remove-CsUnassignedNumber
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes an existing range of unassigned numbers and the routing rules that apply to those numbers.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes an existing range of unassigned numbers and the routing rules that apply to those numbers.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,96 +19,31 @@ Remove-CsUnassignedNumber [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-Wha
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Microsoft Lync Server 2010 can be set up to route calls to appropriate destinations when an unassigned number is called.
+Skype for Business Server can be set up to route calls to appropriate destinations when an unassigned number is called.
 This cmdlet removes the settings that define that routing.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsUnassignedNumber cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUnassignedNumber"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Lync Server can be set up to route calls to appropriate destinations when an unassigned number is called.
-This cmdlet removes the settings that define that routing.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsUnassignedNumber cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsUnassignedNumber"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unassigned numbers are phone numbers that have been assigned to an organization but that have not been assigned to specific users or phones.
-Skype for Business Server 2015 can be set up to route calls to appropriate destinations when an unassigned number is called.
-This cmdlet removes the settings that define that routing.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsUnassignedNumber -Identity UNSet1
 ```
 
 In this example, the unassigned number settings with the Identity UNSet1 are removed.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In this example, the unassigned number settings with the Identity UNSet1 are removed.
-
-Remove-CsUnassignedNumber -Identity UNSet1
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In this example, the unassigned number settings with the Identity UNSet1 are removed.
-
-Remove-CsUnassignedNumber -Identity UNSet1
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Remove-CsUnassignedNumber
 ```
 
 Example 2 removes all unassigned number settings where the name of the assigned announcement contains the string Welcome.
-The command begins with a call to Get-CsUnassignedNumber, which returns a collection of all unassigned number settings.
-This collection is then passed to the Where-Object cmdlet, which narrows down the collection to only those unassigned number settings with an AnnouncementName that includes (-match) the string Welcome.
-Finally, the narrowed-down collection is passed to Remove-CsUnassignedNumber, which removes everything left in the collection.
+The command begins with a call to the `Get-CsUnassignedNumber` cmdlet, which returns a collection of all unassigned number settings.
+This collection is then passed to the `Where-Object` cmdlet, which narrows down the collection to only those unassigned number settings with an AnnouncementName that includes (-match) the string Welcome.
+Finally, the narrowed-down collection is passed to the `Remove-CsUnassignedNumber` cmdlet, which removes everything left in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 removes all unassigned number settings where the name of the assigned announcement contains the string Welcome.
-The command begins with a call to Get-CsUnassignedNumber, which returns a collection of all unassigned number settings.
-This collection is then passed to the Where-Object cmdlet, which narrows down the collection to only those unassigned number settings with an AnnouncementName that includes (-match) the string Welcome.
-Finally, the narrowed-down collection is passed to Remove-CsUnassignedNumber, which removes everything left in the collection.
-
-Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Remove-CsUnassignedNumber
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 removes all unassigned number settings where the name of the assigned announcement contains the string Welcome.
-The command begins with a call to the Get-CsUnassignedNumber cmdlet, which returns a collection of all unassigned number settings.
-This collection is then passed to the Where-Object cmdlet, which narrows down the collection to only those unassigned number settings with an AnnouncementName that includes (-match) the string Welcome.
-Finally, the narrowed-down collection is passed to the Remove-CsUnassignedNumber cmdlet, which removes everything left in the collection.
-
-Get-CsUnassignedNumber | Where-Object {$_.AnnouncementName -match "Welcome"} | Remove-CsUnassignedNumber
 
 ## PARAMETERS
 
@@ -202,8 +130,6 @@ It removes an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnou
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/13095593-92d3-4790-99a5-5df4610652cb(OCS.14).aspx)
-
 [New-CsUnassignedNumber]()
 
 [Set-CsUnassignedNumber]()
@@ -213,8 +139,3 @@ It removes an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnnou
 [Get-CsAnnouncement]()
 
 [Get-CsExUmContact]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/13095593-92d3-4790-99a5-5df4610652cb(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/13095593-92d3-4790-99a5-5df4610652cb(OCS.16).aspx)
-
