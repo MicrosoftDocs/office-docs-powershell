@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsHybridPSTNSite
 
 ## SYNOPSIS
-Use the Remove-CsHybridPSTNSite cmdlet to remove a previously specified hybrid public switched telephone network (PSTN) site.
+Use the `Remove-CsHybridPSTNSite` cmdlet to remove a previously specified hybrid public switched telephone network (PSTN) site.
 
 ## SYNTAX
 
@@ -17,34 +17,33 @@ Remove-CsHybridPSTNSite [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Con
 ```
 
 ## DESCRIPTION
-Use the Remove-CsHybridPSTNSite cmdlet to remove a previously specified hybrid public switched telephone network (PSTN) site.
+Use the `Remove-CsHybridPSTNSite` cmdlet to remove a previously specified hybrid public switched telephone network (PSTN) site.
 
 Specifying a site for removal that is currently handling PSTN traffic will produce a dialogue asking for confirmation.
 If the removal is confirmed, the hybrid PSTN site will be deleted and marked invalid in the associated voice routing policy.
 
-Hybrid PSTN sites are created, retrieved, modified, and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set, and Remove .) The hybrid PSTN sites can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Hybrid PSTN sites are created, retrieved, modified, and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set and Remove .) The hybrid PSTN sites can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify hybrid PSTN sites through the CsTenantHybridConfiguration cmdlets, you must use the CsHybridPSTNSite cmdlets to manage hybrid PSTN sites.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsHybridPSTNSite -Identity "SeattlePSTN"
 ```
 
 This example removes the "SeattlePSTN" hybrid public switched telephone network (PSTN) site.
 
-Remove-CsHybridPSTNSite -Identity "SeattlePSTN"
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
 Type: Object
@@ -76,7 +75,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -111,9 +110,9 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the global unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 
-You can find the tenant ID for your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+You can find the tenant ID for your Skype for Business Online tenants by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will be determined by your connection and credentials.
@@ -181,6 +180,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a3b31c77-5b8f-4a8d-a947-b863362d5b4c(OCS.15).aspx)
-

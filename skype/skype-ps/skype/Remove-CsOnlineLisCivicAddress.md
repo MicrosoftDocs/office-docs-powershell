@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the Remove-CsOnlineLisCivicAddress cmdlet to delete an existing civic address from the Location Information Server (LIS.) You can't remove a civic address if any of its associated locations are assigned to users.
+Use the `Remove-CsOnlineLisCivicAddress` cmdlet to delete an existing civic address from the Location Information Server (LIS.) You can't remove a civic address if any of its associated locations are assigned to users.
 
 ## SYNTAX
 
@@ -17,32 +17,32 @@ Remove-CsOnlineLisCivicAddress [-CivicAddressId <Object>] [-BypassDualWrite <Obj
 ```
 
 ## DESCRIPTION
+Provide the detailed description here.
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsOnlineLisCivicAddress -CivicAddressId ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 ```
 
 This example removes the emergency civic address with the specified identification.
 
-Remove-CsOnlineLisCivicAddress -CivicAddressId ee38d9a5-33dc-4a32-9fb8-f234cedb91ac
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsOnlineLisCivicAddress -City Redmond | Remove-CsOnlineLisCivicAddress
 ```
 
 This example removes all the emergency civic addresses in the city of Redmond.
 
-Get-CsOnlineLisCivicAddress -City Redmond | Remove-CsOnlineLisCivicAddress
 
 ## PARAMETERS
 
 ### -CivicAddressId
 Specifies the unique identifier of the civic address to be deleted.
-You can find civic address identifiers by using the Get-CsOnlineLisCivicAddress cmdlet.
+You can find civic address identifiers by using the `Get-CsOnlineLisCivicAddress` cmdlet.
 
 ```yaml
 Type: Object
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -178,7 +178,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-This cmdlet accepts pipelined input from the Get-CsOnlineLisCivicAddress cmdlet.
+This cmdlet accepts pipelined input from the `Get-CsOnlineLisCivicAddress` cmdlet.
 
 ## OUTPUTS
 
@@ -188,6 +188,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0894c64b-0983-4723-b186-cab97d345db8(OCS.15).aspx)
-

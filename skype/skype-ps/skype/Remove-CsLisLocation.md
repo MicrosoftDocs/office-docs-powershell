@@ -7,15 +7,8 @@ schema: 2.0.0
 # Remove-CsLisLocation
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes a location from the location configuration database for Enhanced 9-1-1 (E9-1-1).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes a location from the location configuration database for Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -37,10 +30,8 @@ Remove-CsLisLocation [-City <String>] [-CompanyName <String>] [-Country <String>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
-In Microsoft Lync Server 2010 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
+In Skype for Business Server the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
 This cmdlet removes a location from the location configuration database.
 All properties of a location combined make the location unique, so you must enter all non-null properties of the location to remove it.
 If you do not enter all non-null properties of the location you want to remove (and no other location contains only the properties you specified), no locations will be removed.
@@ -49,120 +40,33 @@ You won't receive an error in this case, but no action will occur.
 This cmdlet will not remove locations that are associated with a Location Information Server (LIS) port, subnet, switch, or wireless access point.
 If you attempt to remove a location referenced by any of these devices, you'll receive an error.
 You must remove all references before removing the location.
-You can use the Remove-CsLisPort, Remove-CsLisSubnet, Remove-CsLisSwitch, and Remove-CsLisWirelessAccessPoint cmdlets to remove these references.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsLisLocation cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsLisLocation"}
-
-**Below Content Applies To:** Lync Server 2013
-
-E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
-In Lync Server the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
-This cmdlet removes a location from the location configuration database.
-All properties of a location combined make the location unique, so you must enter all non-null properties of the location to remove it.
-If you do not enter all non-null properties of the location you want to remove (and no other location contains only the properties you specified), no locations will be removed.
-You won't receive an error in this case, but no action will occur.
-
-This cmdlet will not remove locations that are associated with a Location Information Server (LIS) port, subnet, switch, or wireless access point.
-If you attempt to remove a location referenced by any of these devices, you'll receive an error.
-You must remove all references before removing the location.
-You can use the Remove-CsLisPort, Remove-CsLisSubnet, Remove-CsLisSwitch, and Remove-CsLisWirelessAccessPoint cmdlets to remove these references.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsLisLocation cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsLisLocation"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-E9-1-1 enables those who answer emergency calls to determine the caller's geographic location without having to ask the caller for that information.
-In Skype for Business Server 2015 the location is determined based on mapping the caller's port, subnet, switch, or wireless access point to a specific location.
-This cmdlet removes a location from the location configuration database.
-All properties of a location combined make the location unique, so you must enter all non-null properties of the location to remove it.
-If you do not enter all non-null properties of the location you want to remove (and no other location contains only the properties you specified), no locations will be removed.
-You won't receive an error in this case, but no action will occur.
-
-This cmdlet will not remove locations that are associated with a Location Information Server (LIS) port, subnet, switch, or wireless access point.
-If you attempt to remove a location referenced by any of these devices, you'll receive an error.
-You must remove all references before removing the location.
-You can use the Remove-CsLisPort cmdlet, the Remove-CsLisSubnet cmdlet, the Remove-CsLisSwitch cmdlet, and the Remove-CsLisWirelessAccessPoint cmdlet to remove these references.
-
+You can use the `Remove-CsLisPort` cmdlet, the `Remove-CsLisSubnet` cmdlet, the `Remove-CsLisSwitch` cmdlet and the `Remove-CsLisWirelessAccessPoint` cmdlet to remove these references.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsLisLocation -Location Bldg30NEWing -HouseNumber 1000 -StreetName Main -City Redmond -State WA -Country US
 ```
 
 Example 1 removes a location named Bldg30NEWing.
-This command specifies values for the parameters Location, HouseNumber, StreetName, City, State, and Country.
+This command specifies values for the parameters Location, HouseNumber, StreetName, City, State and Country.
 This means that those are the only properties of the location to be deleted that contain non-null values.
 If you don't supply parameter values for all non-null properties, the location will not be deleted.
 You will be prompted for any parameter that you haven't specified in the command, but if they contain null values you can simply press Enter at each prompt.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 1 removes a location named Bldg30NEWing.
-This command specifies values for the parameters Location, HouseNumber, StreetName, City, State, and Country.
-This means that those are the only properties of the location to be deleted that contain non-null values.
-If you don't supply parameter values for all non-null properties, the location will not be deleted.
-You will be prompted for any parameter that you haven't specified in the command, but if they contain null values you can simply press Enter at each prompt.
-
-Remove-CsLisLocation -Location Bldg30NEWing -HouseNumber 1000 -StreetName Main -City Redmond -State WA -Country US
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 removes a location named Bldg30NEWing.
-This command specifies values for the parameters Location, HouseNumber, StreetName, City, State, and Country.
-This means that those are the only properties of the location to be deleted that contain non-null values.
-If you don't supply parameter values for all non-null properties, the location will not be deleted.
-You will be prompted for any parameter that you haven't specified in the command, but if they contain null values you can simply press Enter at each prompt.
-
-Remove-CsLisLocation -Location Bldg30NEWing -HouseNumber 1000 -StreetName Main -City Redmond -State WA -Country US
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsLisLocation -Unreferenced | Remove-CsLisLocation
 ```
 
 This example will remove all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-The command begins with a call to Get-CsLisLocation, specifying the Unreferenced parameter.
+The command begins with a call to the `Get-CsLisLocation` cmdlet, specifying the Unreferenced parameter.
 This will return a collection of all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-This collection is then piped to Remove-CsLisLocation, which removes each location in the collection.
+This collection is then piped to the `Remove-CsLisLocation` cmdlet, which removes each location in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example will remove all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-The command begins with a call to Get-CsLisLocation, specifying the Unreferenced parameter.
-This will return a collection of all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-This collection is then piped to Remove-CsLisLocation, which removes each location in the collection.
-
-Get-CsLisLocation -Unreferenced | Remove-CsLisLocation
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example will remove all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-The command begins with a call to the Get-CsLisLocation cmdlet, specifying the Unreferenced parameter.
-This will return a collection of all locations that are not referenced by a LIS port, subnet, switch, or wireless access point.
-This collection is then piped to the Remove-CsLisLocation cmdlet, which removes each location in the collection.
-
-Get-CsLisLocation -Unreferenced | Remove-CsLisLocation
 
 ## PARAMETERS
 
@@ -570,8 +474,6 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/24e49a83-01a9-48ce-b940-fb0503f52077(OCS.14).aspx)
-
 [Set-CsLisLocation]()
 
 [Get-CsLisLocation]()
@@ -585,8 +487,3 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 [Remove-CsLisWirelessAccessPoint]()
 
 [Get-CsLisCivicAddress]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/24e49a83-01a9-48ce-b940-fb0503f52077(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/24e49a83-01a9-48ce-b940-fb0503f52077(OCS.16).aspx)
-
