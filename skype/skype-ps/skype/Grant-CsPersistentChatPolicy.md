@@ -201,19 +201,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ###  
 String value or Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
-Grant-CsPersistentChatPolicy accepts pipelined input of string values representing the Identity of a user account.
-The cmdlet also accepts pipelined input of user objects.
-
-###  
-String value or Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
 The Grant-CsPersistentChatPolicy cmdlet accepts pipelined input of string values representing the Identity of a user account.
 The cmdlet also accepts pipelined input of user objects.
 
 ## OUTPUTS
-
-###  
-By default, Grant-CsPersistentChatPolicy does not return an objects or values.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact.
 
 ###  
 By default, the Grant-CsPersistentChatPolicy cmdlet does not return an objects or values.

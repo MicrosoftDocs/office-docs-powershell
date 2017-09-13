@@ -180,7 +180,7 @@ Accept wildcard characters: False
 SQL Server instance name for the QoE database.
 For example:
 
--SqlInstanceName "archinst"
+`-SqlInstanceName "archinst"`
 
 ```yaml
 Type: String

@@ -48,7 +48,7 @@ For details, see the OU and the DN parameter descriptions in this topic.
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 
 New-CsAnalogDevice -LineUri tel:+14255556001 -DisplayName "Building 14 Receptionist" -RegistrarPool redmond-Cs-001.litwareinc.com -AnalogFax $False -Gateway 192.168.0.240 -OU "ou=Telecommunications,dc=litwareinc,dc=com"

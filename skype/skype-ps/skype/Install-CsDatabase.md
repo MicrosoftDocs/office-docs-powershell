@@ -440,7 +440,7 @@ Accept wildcard characters: False
 
 ### -SqlServerFqdn
 Fully qualified domain name (FQDN) of the computer where the database is to be installed.
-For example: -SqlServerFqdn atl-sql-001.litwareinc.com.
+For example: `-SqlServerFqdn atl-sql-001.litwareinc.com.`
 
 ```yaml
 Type: Fqdn
@@ -513,7 +513,7 @@ Accept wildcard characters: False
 
 ### -Report
 Enables you to specify a file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\InstallDatabases.html"
+For example: `-Report "C:\Logs\InstallDatabases.html"`
 
 ```yaml
 Type: String

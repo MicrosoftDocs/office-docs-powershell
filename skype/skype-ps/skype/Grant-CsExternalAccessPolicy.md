@@ -120,7 +120,7 @@ Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 
 Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Skype for Business Server.
 To do this, the command calls the Get-CsUser cmdlet (without any additional parameters) in order to return a collection of all the users enabled for Skype for Business Server.
-That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "-PolicyName $Null" to remove any per-user external access policy previously assigned to these users.
+That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "`-PolicyName $Null`" to remove any per-user external access policy previously assigned to these users.
 
 
 ## PARAMETERS

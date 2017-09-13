@@ -190,19 +190,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ###  
 String value or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Grant-CsUserServicesPolicy accepts pipelined input of string values representing the Identity of a user account.
-The cmdlet also accepts pipelined input of user objects.
-
-###  
-String value or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
 The Grant-CsUserServicesPolicy cmdlet accepts pipelined input of string values representing the Identity of a user account.
 The cmdlet also accepts pipelined input of user objects.
 
 ## OUTPUTS
-
-###  
-By default, Grant-CsUserServicesPolicy does not return a value or object.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact.
 
 ###  
 By default, the Grant-CsUserServicesPolicy cmdlet does not return a value or object.

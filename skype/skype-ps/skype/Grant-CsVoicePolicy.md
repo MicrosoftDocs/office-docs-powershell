@@ -91,8 +91,6 @@ The name (Identity) of the voice policy to be assigned to the user.
 Per-user policy identities include a prefix of tag: that should not be included with the PolicyName.)
 
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)

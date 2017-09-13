@@ -144,7 +144,7 @@ Accept wildcard characters: False
 
 ### -Report
 Enables you to specify a file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\MergeTopology.html"
+For example: `-Report "C:\Logs\MergeTopology.html"`
 
 ```yaml
 Type: String

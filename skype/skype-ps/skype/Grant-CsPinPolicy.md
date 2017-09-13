@@ -197,19 +197,10 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ###  
 String value or Microsoft.Rtc.Management.UserPinService.PinInfoDetails object.
-Grant-CsPinPolicy accepts pipelined input of string values representing the Identity of a user account.
-The cmdlet also accepts pipelined input of user objects.
-
-###  
-String value or Microsoft.Rtc.Management.UserPinService.PinInfoDetails object.
 The Grant-CsPinPolicy cmdlet accepts pipelined input of string values representing the Identity of a user account.
 The cmdlet also accepts pipelined input of user objects.
 
 ## OUTPUTS
-
-###  
-By default, Grant-CsPinPolicy does not return a value or object.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact.
 
 ###  
 By default, the Grant-CsPinPolicy cmdlet does not return a value or object.

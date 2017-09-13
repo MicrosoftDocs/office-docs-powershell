@@ -128,7 +128,7 @@ Accept wildcard characters: False
 Bypasses any prompts that would otherwise appear should a non-fatal error occur when running the command.
 To set the Force parameter to True, use this syntax:
 
--Force:$True
+`-Force:$True`
 
 ```yaml
 Type: SwitchParameter

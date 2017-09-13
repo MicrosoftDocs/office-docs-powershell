@@ -86,7 +86,7 @@ This command assumes that all the users in the Finance OU are legacy users.
 Get-CsUser -UnassignedUser | Move-CsLegacyUser -Target "atl-cs-001.litwareinc.com"
 ```
 
-In Example 4, Move-CsLegacyUser is used to assign a Registrar pool to all of the users that have enabled for Skype for Business Server 2015 but are not currently assigned to a Registrar pool.
+In Example 4, Move-CsLegacyUser is used to assign a Registrar pool to all of the users that have enabled for Skype for Business Server but are not currently assigned to a Registrar pool.
 In this command, the Get-CsUser cmdlet is first called, along with the UnassignedUser parameter, to return a collection of all the users not currently assigned to a Registrar pool.
 This collection is then piped to the Move-CsLegacyUser cmdlet, which assigns each user to the pool atl-cs-001.litwareinc.com.
 This example assumes that all of the unassigned users are legacy users.

@@ -69,7 +69,7 @@ Invoke-CsCdrDatabasePurge -Identity "service:MonitoringDatabase:atl-sql-001.litw
 
 The command shown in Example 2 is a variation of the command shown in Example 1; in this case, however, the Confirm parameter is added using this syntax:
 
--Confirm:$False
+`-Confirm:$False`
 
 That syntax suppresses the confirmation prompts that would otherwise appear when purging CDR records.
 

@@ -242,7 +242,7 @@ Call pickup groups are configured by administrators.
 
 To specify a call park orbit type, use syntax similar to this:
 
--Type GroupPickup
+`-Type GroupPickup`
 
 This parameter was introduced in the February 2013 release of Lync Server 2013.
 

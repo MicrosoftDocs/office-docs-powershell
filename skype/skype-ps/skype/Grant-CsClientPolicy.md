@@ -83,14 +83,13 @@ This filtered collection is then piped to the Grant-CsClientPolicy cmdlet, which
 
 ### -------------------------- EXAMPLE 5 -------------------------- 
 ```
-y.
 
 Get-CsUser -Filter {RegistrarPool -eq "atl-cs-001.litwareinc.com"} | Grant-CsClientPolicy -PolicyName AtlantaBranchPolicy
 ```
 
 In Example 5 all the users with accounts on the Registrar pool atl-cs-001.litwareinc.com are assigned the client policy AtlantaBranchPolicy.
 To do this, the Get-CsUser cmdlet is first called to return the appropriate user accounts; the Filter parameter and the filter value {RegistrarPool -eq "atl-cs-001.litwareinc.com"} ensure that only user accounts homed on the Registrar pool atl-cs-001.litwareinc.com will be returned.
-This collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns each user the client policy AtlantaBranchPolic
+This collection is then piped to the Grant-CsClientPolicy cmdlet, which assigns each user the client policy AtlantaBranchPolicy.
 
 ## PARAMETERS
 
