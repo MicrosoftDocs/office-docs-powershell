@@ -1,0 +1,60 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "officewebapps-ps",
+        "dest": "officewebapps",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "officewebapps-ps",
+        "dest": "officewebapps/officewebapps-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "officewebapps-ps",
+      "version": "officewebapps-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "officewebapps-ps",
+      "version": "officewebapps-ps",
+      "dest": "module/officewebapps-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "officewebapps-ps": {
+        "dest": "officewebapps-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {},
+    "fileMetadata": {},
+    "template": [],
+    "dest": "officewebapps-ps"
+  }
+}
