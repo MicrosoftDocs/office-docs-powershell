@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPDiagnosticsPerformanceCounter
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a new instance of a performance counter to a Web front end computer or a database server.
 
@@ -53,21 +48,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
 ```
 
 This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category ASP.NET -Counter "Requests Queued"
-```
-
-This example adds the counter that has the name ASP.NET\Requests Queued on front end Web servers.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
 ```
@@ -75,22 +63,7 @@ C:\PS>Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. 
 This example adds all instances of the counter PhysicalDisk in the category Avg.
 Disk Queue Length on front end Web servers.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category PhysicalDisk -counter "Avg. Disk Queue Length" -allinstances
-```
-
-This example adds all instances of the counter PhysicalDisk in the category Avg.
-Disk Queue Length on front end Web servers.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-C:\PS>Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
-```
-
-This example adds the _Total instance of the counter % Processor Time in the category Processor on database servers.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>Add-SPDiagnosticsPerformanceCounter -category Processor -counter "% Processor Time" -instance "_Total" -databaseserver
 ```
@@ -220,7 +193,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -269,7 +242,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

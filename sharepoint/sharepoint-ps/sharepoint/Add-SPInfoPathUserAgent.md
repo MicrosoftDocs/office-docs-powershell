@@ -18,20 +18,13 @@ Add-SPInfoPathUserAgent [-Name] <String> [-AssignmentCollection <SPAssignmentCol
 
 ## DESCRIPTION
 The Add-SPInfoPathUserAgent cmdlet creates a user agent to receive the .xml file that contains the data of the form for indexing.
-The user agent receives the InfoPath 2013 files from InfoPath Forms Services in SharePoint Server 2013 instead of Web pages in response to an HTTP request.
+The user agent receives the InfoPath 2013 files from InfoPath Forms Services in SharePoint Server instead of Web pages in response to an HTTP request.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Add-SPInfoPathUserAgent -Name "NewAgent"
-```
-
-This example creates a new agent named NewAgent.
-
-### ------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------EXAMPLE----------------- 
 ```
 C:\PS>Add-SPInfoPathUserAgent -Name "NewAgent"
 ```
@@ -84,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -101,7 +94,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
