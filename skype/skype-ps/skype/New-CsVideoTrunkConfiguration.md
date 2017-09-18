@@ -7,7 +7,8 @@ schema: 2.0.0
 # New-CsVideoTrunkConfiguration
 
 ## SYNOPSIS
-Use the New-CsVideoTrunkConfiguration to create a new video trunk configuration containing settings to manage a video Session Initiation Protocol (SIP) trunk between the Video Interop Server (VIS) and a Video Gateway.
+Use the `New-CsVideoTrunkConfiguration` to create a new video trunk configuration containing settings to manage a video Session Initiation Protocol (SIP) trunk between the Video Interop Server (VIS) and a Video Gateway.
+
 
 ## SYNTAX
 
@@ -18,8 +19,9 @@ New-CsVideoTrunkConfiguration [-Identity] <XdsIdentity> [-Confirm]
  [-GatewaySendsRtcpForCallsOnHold <Boolean>] [-InMemory] [-WhatIf] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
-The Video Interop Server in Skype for Business Server 2015 enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
+The Video Interop Server in Skype for Business Server enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server infrastructure.
 The Video Interop Server is a Skype service that runs on a standalone pool and cannot be co-located on an FE pool.
 
 To enable the Video Interop Server, you must use Topology Builder to define at least one VIS instance.
@@ -38,20 +40,20 @@ Secure Real-time Transport Protocol (SRTP) use when Transport Layer Security (TL
 
 Session timers usage on the Video Interop Server (VIS) for dialogs associated with a Video Trunk
 
-By default, Skype for Business Server 2015 ships with a single, global collection of Video Trunk configuration settings.
-However, administrators can use the New-CsVideoTrunkConfiguration cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
+By default, Skype for Business Server ships with a single, global collection of Video Trunk configuration settings.
+However, administrators can use the `New-CsVideoTrunkConfiguration` cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsVideoTrunkConfiguration -Identity "site:Redmond" -EnableSessionTimer $True
 ```
 
 This example creates a new collection of video trunk configuration settings that are assigned to the Redmond site.
 Session timers are enabled on the new configuration by setting the EnableSessionTimer parameter to True ($True).
 
-New-CsVideoTrunkConfiguration -Identity "site:Redmond" -EnableSessionTimer $True
 
 ## PARAMETERS
 
@@ -59,8 +61,8 @@ New-CsVideoTrunkConfiguration -Identity "site:Redmond" -EnableSessionTimer $True
 The Identity parameter specifies the unique identifier for the new collection of video trunk configuration settings.
 New collections can be created at either the site scope or the service scope (for the Video Gateway service only).
 
-For example, this syntax creates a new collection of settings assigned to the Redmond site: -Identity "site:Redmond".
-And this syntax creates a new collection assigned to the Video Gateway "video-pbx-001.litwareinc.com": -Identity "service:VideoGateway:video-pbx-001.litwareinc.com"
+For example, this syntax creates a new collection of settings assigned to the Redmond site: `-Identity "site:Redmond"`.
+And this syntax creates a new collection assigned to the Video Gateway "video-pbx-001.litwareinc.com": `-Identity "service:VideoGateway:video-pbx-001.litwareinc.com"`
 
 ```yaml
 Type: XdsIdentity
@@ -202,7 +204,7 @@ Accept wildcard characters: False
 
 ### -InMemory
 Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by passing that object reference to the Set-CsVideoTrunkConfiguration cmdlet.
+If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by passing that object reference to the `Set-CsVideoTrunkConfiguration` cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -240,12 +242,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The New-CsVideoTrunkConfiguration cmdlet does not accept pipelined input.
+The `New-CsVideoTrunkConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The New-CsVideoTrunkConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
+The `New-CsVideoTrunkConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
 
 ## NOTES
 
@@ -256,6 +258,3 @@ The New-CsVideoTrunkConfiguration cmdlet creates new instances of the Microsoft.
 [Set-CsVideoTrunkConfiguration]()
 
 [Remove-CsVideoTrunkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/76503acf-f757-45e1-8881-b0fa2392844d(OCS.16).aspx)
-

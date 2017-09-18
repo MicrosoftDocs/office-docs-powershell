@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the New-CsTenantDialPlan cmdlet to create a new tenant dial plan.
+Use the `New-CsTenantDialPlan` cmdlet to create a new tenant dial plan.
 
 ## SYNTAX
 
@@ -22,31 +22,29 @@ New-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confir
 You can use this cmdlet to create a new tenant dial plan.
 Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-You can add new normalization rules to a tenant dial plan by calling the New-CsVoiceNormalizationRule (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can add new normalization rules to a tenant dial plan by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsTenantDialPlan -Identity vt1tenantDialPlan9
 ```
 
 This example creates a tenant dial plan that has an Identity of vt1tenantDialPlan9.
 
-New-CsTenantDialPlan -Identity vt1tenantDialPlan9
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
+$nr2 = New-CsVoiceNormalizationRule -Identity Global/NR2 -Description "TestNR1" -Pattern '^(d{11})$' -Translation '+1' -InMemory
 
+New-CsTenantDialPlan -Identity vt1tenantDialPlan91 -NormalizationRules @{Add=$nr2}
 ```
 
 This example creates a new normalization rule and then applies that rule to a new tenant dial plan.
 
-$nr2 = New-CsVoiceNormalizationRule -Identity Global/NR2 -Description "TestNR1" -Pattern '^(d{11})$' -Translation '+1' -InMemory
-
-New-CsTenantDialPlan -Identity vt1tenantDialPlan91 -NormalizationRules @{Add=$nr2}
 
 ## PARAMETERS
 
@@ -86,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to, and any other information that helps to identify the purpose of the tenant dial plan.
+The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to and any other information that helps to identify the purpose of the tenant dial plan.
 Maximum characters: 512.
 
 ```yaml
@@ -175,13 +173,13 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the New-CsVoiceNormalizationRule (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 Each time a new tenant dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user tenant dial plan.
 By default, the Identity of the new voice normalization rule is the tenant dial plan Identity followed by a slash and then followed by the name Prefix All.
 (For example, TAG:Redmond/Prefix All.) The number of normalization rules cannot exceed 25 per TenantDialPlan.
 
-You can create a new normalization rule by calling the New-CsVoiceNormalizationRule (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
+You can create a new normalization rule by calling the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet.
 
 ```yaml
 Type: Object
@@ -214,7 +212,7 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server 2015 deployment.
+This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
 
 This string can be up to 256 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
@@ -242,8 +240,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -301,6 +299,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0bf4fcc2-b5a5-4e2a-b198-e9b7a0240979(OCS.15).aspx)
-

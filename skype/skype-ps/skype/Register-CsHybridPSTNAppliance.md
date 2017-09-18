@@ -7,7 +7,7 @@ schema: 2.0.0
 # Register-CsHybridPSTNAppliance
 
 ## SYNOPSIS
-Use the Register-CsHybridPSTNAppliance cmdlet to create a new Skype for Business Cloud Connector Edition appliance.
+Use the `Register-CsHybridPSTNAppliance` cmdlet to create a new Skype for Business Cloud Connector Edition appliance.
 
 ## SYNTAX
 
@@ -18,25 +18,24 @@ Register-CsHybridPSTNAppliance [-MediationServerFqdn <Object>] [-MediationServer
 ```
 
 ## DESCRIPTION
-Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified, and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set, and Unregister).
-The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Skype for Business Cloud Connector Edition appliances are registered, retrieved, modified and unregistered by the CsHybridPSTNAppliance cmdlet group (Register, Get, Set and Unregister).
+The Skype for Business Cloud Connector Edition appliances can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify Skype for Business Cloud Connector Edition appliances through the CsTenantHybridConfiguration cmdlets.
 You must use the CsHybridPSTNAppliance cmdlets to manage Skype for Business Cloud Connector Edition appliances.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -228,6 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/627e8698-264c-481d-a9a2-c42c770bb5f6(OCS.15).aspx)
-

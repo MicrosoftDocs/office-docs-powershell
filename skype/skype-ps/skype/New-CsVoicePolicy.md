@@ -7,15 +7,8 @@ schema: 2.0.0
 # New-CsVoicePolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new voice policy.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Creates a new voice policy.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,64 +26,22 @@ New-CsVoicePolicy [-Identity] <XdsIdentity> [-AllowCallForwarding <Boolean>] [-A
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 This cmdlet creates a new voice policy.
 Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
 The policy created by this cmdlet determines whether many of these features are enabled or disabled.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsVoicePolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsVoicePolicy"}
-
-**Below Content Applies To:** Lync Server 2013
-
-This cmdlet creates a new voice policy.
-Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
-The policy created by this cmdlet determines whether many of these features are enabled or disabled.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsVoicePolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsVoicePolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet creates a new voice policy.
-Voice policies are used to manage such Enterprise Voice-related features as simultaneous ringing (the ability to have a second phone ring each time someone calls your office phone) and call forwarding.
-The policy created by this cmdlet determines whether many of these features are enabled or disabled.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 New-CsVoicePolicy -Identity UserVoicePolicy1
-```
-
-This example creates a new per-user voice policy with default settings that has an Identity of UserVoicePolicy1.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 This example creates a new per-user voice policy (with default settings) that has an Identity of UserVoicePolicy1.
 
-New-CsVoicePolicy -Identity UserVoicePolicy1
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new per-user voice policy (with default settings) that has an Identity of UserVoicePolicy1.
-
-New-CsVoicePolicy -Identity UserVoicePolicy1
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 New-CsVoicePolicy UserVoicePolicy2 -AllowSimulRing $false -PstnUsages @{add = "Local"}
 ```
@@ -100,100 +51,28 @@ This command also adds "Local" to the list of PSTN usages, which associates this
 (Note that the Identity parameter is not explicitly specified.
 The Identity parameter is a positional parameter and therefore if you put the identity value first in the list of parameters you don't need to explicitly state that it's the Identity.)
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example creates a new per-user voice policy with an Identity of UserVoicePolicy2 and sets the AllowSimulRing property to False, meaning that any users to which this policy is assigned are not enabled for simultaneous ring, a feature that determines whether a second phone (such as a mobile phone) can be set to ring every time the user's office phone rings.
-This command also adds "Local" to the list of PSTN usages, which associates this voice policy with a voice route that also uses the Local PSTN usage.
-(Note that the Identity parameter is not explicitly specified.
-The Identity parameter is a positional parameter and therefore if you put the identity value first in the list of parameters you don't need to explicitly state that it's the Identity.)
-
-New-CsVoicePolicy UserVoicePolicy2 -AllowSimulRing $false -PstnUsages @{add = "Local"}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new per-user voice policy with an Identity of UserVoicePolicy2 and sets the AllowSimulRing property to False, meaning that any users to which this policy is assigned are not enabled for simultaneous ring, a feature that determines whether a second phone (such as a mobile phone) can be set to ring every time the user's office phone rings.
-This command also adds "Local" to the list of PSTN usages, which associates this voice policy with a voice route that also uses the Local PSTN usage.
-(Note that the Identity parameter is not explicitly specified.
-The Identity parameter is a positional parameter and therefore if you put the identity value first in the list of parameters you don't need to explicitly state that it's the Identity.)
-
-New-CsVoicePolicy UserVoicePolicy2 -AllowSimulRing $false -PstnUsages @{add = "Local"}
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 $a = Get-CsPstnUsage
+
 New-CsVoicePolicy site:Redmond -PstnUsages @{add = $a.Usage}
 ```
 
 This example creates a new voice policy for site Redmond and applies all the PSTN usages defined for the organization to this policy.
-The first line in this example calls the Get-CsPstnUsage cmdlet to retrieve the global set of PSTN usages for the organization and save it in the variable $a.
-The second line calls New-CsVoicePolicy to create the new voice policy for site Redmond.
+The first line in this example calls the `Get-CsPstnUsage` cmdlet to retrieve the global set of PSTN usages for the organization and save it in the variable $a.
+The second line calls the `New-CsVoicePolicy` cmdlet to create the new voice policy for site Redmond.
 A value is passed to the PstnUsages parameter to add the list contained in the global set of PSTN usages to this policy.
 Note the syntax of the add value: $a.Usage.
 This refers to the Usage property of the PSTN usage settings, which contains the list of PSTN usages.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example creates a new voice policy for site Redmond and applies all the PSTN usages defined for the organization to this policy.
-The first line in this example calls the Get-CsPstnUsage cmdlet to retrieve the global set of PSTN usages for the organization and save it in the variable $a.
-The second line calls New-CsVoicePolicy to create the new voice policy for site Redmond.
-A value is passed to the PstnUsages parameter to add the list contained in the global set of PSTN usages to this policy.
-Note the syntax of the add value: $a.Usage.
-This refers to the Usage property of the PSTN usage settings, which contains the list of PSTN usages.
-
-$a = Get-CsPstnUsage
-
-New-CsVoicePolicy site:Redmond -PstnUsages @{add = $a.Usage}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new voice policy for site Redmond and applies all the PSTN usages defined for the organization to this policy.
-The first line in this example calls the Get-CsPstnUsage cmdlet to retrieve the global set of PSTN usages for the organization and save it in the variable $a.
-The second line calls the New-CsVoicePolicy cmdlet to create the new voice policy for site Redmond.
-A value is passed to the PstnUsages parameter to add the list contained in the global set of PSTN usages to this policy.
-Note the syntax of the add value: $a.Usage.
-This refers to the Usage property of the PSTN usage settings, which contains the list of PSTN usages.
-
-$a = Get-CsPstnUsage
-
-New-CsVoicePolicy site:Redmond -PstnUsages @{add = $a.Usage}
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
-
 A unique identifier specifying the scope or the name of the policy.
-Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Microsoft Lync Server 2010 site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
+Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Skype for Business Server site to which this policy applies, such as site:Redmond) and a string designating a per-user policy, such as RedmondVoicePolicy.
 A global policy exists by default.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A unique identifier specifying the scope or the name of the policy.
-Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Lync Server site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
-A global policy exists by default.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A unique identifier specifying the scope or the name of the policy.
-Valid values for this cmdlet are site:\<site name\> (where \<site name\> is the name of the Skype for Business Server 2015 site to which this policy applies, such as site:Redmond), and a string designating a per-user policy, such as RedmondVoicePolicy.
-A global policy exists by default.
-
 
 
 ```yaml
@@ -406,16 +285,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-**Below Content Applies To:** Lync Server 2010
-
-A friendly name describing this policy.
-
-Default: DefaultPolicy
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 A displayable name describing this policy.
 
 Default: DefaultPolicy
@@ -436,24 +305,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreventPSTNTollBypass
-**Below Content Applies To:** Lync Server 2010
-
-PSTN tolls are more commonly known as long-distance charges.
-Organizations can sometimes bypass these tolls by implementing a Voice over Internet Protocol (VoIP) solution that enables branch offices to connect via network calls.
-Setting this parameter to True will send calls through the PSTN and incur charges rather than going through the network and bypassing the tolls.
-
-Default: False
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 PSTN tolls are more commonly known as long-distance charges.
 Organizations can sometimes bypass these tolls by implementing a Voice over Internet Protocol (VoIP) solution that enables branch offices to connect by using network calls.
 Setting this parameter to True will send calls through the PSTN and incur charges rather than going through the network and bypassing the tolls.
 
 Default: False
-
 
 
 ```yaml
@@ -474,7 +330,7 @@ A list of PSTN usages available to this policy.
 The PSTN usage ties a voice policy to a phone route.
 
 Any string value can be placed into this list, as long as the value exists in the current global list of PSTN usages.
-(Duplicate strings are not allowed; all strings must be unique.) The list of PSTN usages can be retrieved by calling the Get-CsPstnUsage cmdlet.
+(Duplicate strings are not allowed; all strings must be unique.) The list of PSTN usages can be retrieved by calling the `Get-CsPstnUsage` cmdlet.
 
 By default this list is empty.
 If you don't supply a value for this parameter, you'll receive a warning message stating that users granted this policy will not be able to make outbound PSTN calls.
@@ -509,18 +365,8 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
-
 
 
 ```yaml
@@ -569,19 +415,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallForwardingSimulRingUsageType
-**Below Content Applies To:** Lync Server 2013
-
-Provides a way for administrators to manage call forwarding and simultaneous ringing.
-Allowed values are:
-
-* VoicePolicyUsage - The default voice policy usage is used to manage call forwarding and simultaneous ringing on all calls. This is the default value.
-* InternalOnly - Call forwarding and simultaneous ringing are limited to calls made from one Lync user to another.
-* CustomUsage. A custom PSTN usage will be used to manage call forwarding and simultaneous ringing. This usage must be specified using the CustomCallForwardingSimulRingUsages parameter.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Provides a way for administrators to manage call forwarding and simultaneous ringing.
 Allowed values are:
 
@@ -593,7 +426,6 @@ InternalOnly - Call forwarding and simultaneous ringing are limited to calls mad
 CustomUsage.
 A custom PSTN usage will be used to manage call forwarding and simultaneous ringing.
 This usage must be specified using the CustomCallForwardingSimulRingUsages parameter.
-
 
 
 ```yaml
@@ -613,11 +445,11 @@ Accept wildcard characters: False
 Custom PSTN usage used to manage call forwarding and simultaneous ringing.
 To add a custom usage to voice policy use syntax similar to this:
 
--CustomCallForwardingSimulRingUsages @{Add="RedmondPstnUsage"}
+`-CustomCallForwardingSimulRingUsages @{Add="RedmondPstnUsage"}`
 
 To remove a custom usage, use this syntax:
 
--CustomCallForwardingSimulRingUsages @{Remove="RedmondPstnUsage"}
+`-CustomCallForwardingSimulRingUsages @{Remove="RedmondPstnUsage"}`
 
 Note that the usage must exist before it can be used with the CustomCallForwardingSimulRingUsages parameter.
 
@@ -654,20 +486,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSTNVoicemailEscapeTimer
-**Below Content Applies To:** Lync Server 2013
-
-Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Lync Server will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
+Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon". If a response is received within this time interval Skype for Business Server will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
 If no response is received before the time interval is reached then the call will be allowed to proceed.
 The default value is 1500 milliseconds.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Amount of time (in milliseconds) used to determine whether or not a call has been answered "too soon." If a response is received within this time interval Skype for Business Server 2015 will assume that the mobile device is not available and automatically switch the call to the organization's voicemail.
-If no response is received before the time interval is reached then the call will be allowed to proceed.
-The default value is 1500 milliseconds.
-
 
 
 ```yaml
@@ -684,30 +505,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for which the new voice policy is being created.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new voice policy is being created.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 ```yaml
@@ -779,8 +584,6 @@ This cmdlet creates an instance of the Microsoft.Rtc.Management.WritableConfig.V
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/3852de89-a604-437a-9fdf-3597b88ce13d(OCS.14).aspx)
-
 [Remove-CsVoicePolicy]()
 
 [Set-CsVoicePolicy]()
@@ -792,8 +595,3 @@ This cmdlet creates an instance of the Microsoft.Rtc.Management.WritableConfig.V
 [Test-CsVoicePolicy]()
 
 [Get-CsPstnUsage]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3852de89-a604-437a-9fdf-3597b88ce13d(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3852de89-a604-437a-9fdf-3597b88ce13d(OCS.16).aspx)
-
