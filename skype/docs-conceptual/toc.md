@@ -1,2 +1,2 @@
-# [Microsoft Office Cmdlet Reference](index.md)
+# [Microsoft Office Cmdlet Reference](intro.md)
 ## [Introduction](intro.md)
