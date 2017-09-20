@@ -52,7 +52,14 @@
     },
     "overwrite": [],
     "externalReference": [],
-    "globalMetadata": {},
+    "globalMetadata": {
+      "author" : "Ken Withee",
+      "ms.author" : "kenwith",
+      "ms.date" : "09/25/2017",
+      "ms.topic" : "reference",
+      "ms.service" : "exchange-powershell",
+      "ms.devlang" : "powershell"
+    },
     "fileMetadata": {},
     "template": [],
     "dest": "exchange-ps"
