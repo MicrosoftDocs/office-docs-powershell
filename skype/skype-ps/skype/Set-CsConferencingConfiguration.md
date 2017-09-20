@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsConferencingConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Modifies an existing collection of conferencing configuration settings.
-Conference settings determine such things as the maximum allowed size for meeting content and handouts; the content grace period (that is, the amount of time content will be stored before being deleted); and the URLs for the internal and external downloads of the supported client.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-Modifies an existing collection of conferencing configuration settings.
-Conference settings determine such things as the maximum allowed size for meeting content and handouts; the content grace period (that is, the amount of time content will be stored before being deleted); and the URLs for the internal and external downloads of the supported client.
+Conference settings determine such things as the maximum allowed size for meeting content and handouts; the content grace period (that is, the amount of time content will be stored before being deleted) and the URLs for the internal and external downloads of the supported client.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -51,8 +43,6 @@ Set-CsConferencingConfiguration [-Instance <PSObject>] [-ClientAppSharingPort <U
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 For conferences, management and administration is split between two sets of cmdlets.
 If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
 
@@ -65,268 +55,82 @@ These cmdlets enable you to manage the actual servers themselves.
 The CsConferencingConfiguration cmdlets (which can be applied to the global, the site, and the service scopes) aren't used to specify whether or not a user can share applications during a conference; if application sharing is allowed, however, these cmdlets enable you to indicate which ports should be used for that activity.
 Likewise, the cmdlets enable you to specify such things as storage limits and expiration periods, as well as pointers to internal and external URLs where users can obtain conferencing help and resources.
 
-When you install Microsoft Lync Server 2010, the system provides you with a single collection of conferencing configuration settings (the global collection).
-If you need to create custom settings for a site or service, you can do so using the New-CsConferencingConfiguration cmdlet.
-After these custom settings have been created, you can modify any of them (or modify the global collection) by using the Set-CsConferencingConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsConferencingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferencingConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-For conferences, management and administration is split between two sets of cmdlets.
-If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
-
-In addition to managing user activities, administrators need to manage the Web Conferencing service.
-For example, administrators need to be able to do such things as specify the maximum amount of content storage allotted to a single conference and to specify the grace period before that conference content is automatically deleted.
-They also need to be able to specify the ports used for activities such as application sharing and file transfer.
-
-These latter activities can be managed by using the CsConferencingConfiguration cmdlets.
-These cmdlets enable you to manage the actual servers themselves.
-The CsConferencingConfiguration cmdlets (which can be applied to the global, the site, and the service scopes) aren't used to specify whether or not a user can share applications during a conference; if application sharing is allowed, however, these cmdlets enable you to indicate which ports should be used for that activity.
-Likewise, the cmdlets enable you to specify such things as storage limits and expiration periods, as well as pointers to internal and external URLs where users can obtain conferencing help and resources.
-
-When you install Lync Server, the system provides you with a single collection of conferencing configuration settings (the global collection).
-If you need to create custom settings for a site or service, you can do so using the New-CsConferencingConfiguration cmdlet.
-After these custom settings have been created, you can modify any of them (or modify the global collection) by using the Set-CsConferencingConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsConferencingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferencingConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-For conferences, management and administration is split between two sets of cmdlets.
-If you want to manage the things users can and cannot do (for example, can users invite anonymous participants to join a conference, are users allowed to offer application sharing in a conference, or are users allowed to transfer files within a conference), then you need to use the CsConferencingPolicy cmdlets.
-
-In addition to managing user activities, administrators need to manage the Web Conferencing service.
-For example, administrators need to be able to do such things as specify the maximum amount of content storage allotted to a single conference and to specify the grace period before that conference content is automatically deleted.
-They also need to be able to specify the ports used for activities such as application sharing and file transfer.
-
-These latter activities can be managed by using the CsConferencingConfiguration cmdlets.
-These cmdlets enable you to manage the actual servers themselves.
-The CsConferencingConfiguration cmdlets (which can be applied to the global, the site, and the service scopes) aren't used to specify whether or not a user can share applications during a conference; if application sharing is allowed, however, these cmdlets enable you to indicate which ports should be used for that activity.
-Likewise, the cmdlets enable you to specify such things as storage limits and expiration periods, as well as pointers to internal and external URLs where users can obtain conferencing help and resources.
-
-When you install Skype for Business Server 2015, the system provides you with a single collection of conferencing configuration settings (the global collection).
-If you need to create custom settings for a site or service, you can do so using the New-CsConferencingConfiguration cmdlet.
-After these custom settings have been created, you can modify any of them (or modify the global collection) by using the Set-CsConferencingConfiguration cmdlet.
-
+When you install Skype for Business Server, the system provides you with a single collection of conferencing configuration settings (the global collection).
+If you need to create custom settings for a site or service, you can do so using the `New-CsConferencingConfiguration` cmdlet.
+After these custom settings have been created, you can modify any of them (or modify the global collection) by using the `Set-CsConferencingConfiguration` cmdlet.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsConferencingConfiguration -Identity global -Organization Litwareinc
 ```
 
-In Example 1, Set-CsConferencingConfiguration modifies the global instance of conferencing configuration settings; in this case, the command sets the value of the Organization property to Litwareinc.
+In Example 1, the `Set-CsConferencingConfiguration` cmdlet modifies the global instance of conferencing configuration settings; in this case, the command sets the value of the Organization property to Litwareinc.
 This is done by including the Organization parameter followed by the organization name: Litwareinc.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 1, Set-CsConferencingConfiguration modifies the global instance of conferencing configuration settings; in this case, the command sets the value of the Organization property to Litwareinc.
-This is done by including the Organization parameter followed by the organization name: Litwareinc.
-
-Set-CsConferencingConfiguration -Identity global -Organization Litwareinc
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, the Set-CsConferencingConfiguration cmdlet modifies the global instance of conferencing configuration settings; in this case, the command sets the value of the Organization property to Litwareinc.
-This is done by including the Organization parameter followed by the organization name: Litwareinc.
-
-Set-CsConferencingConfiguration -Identity global -Organization Litwareinc
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsConferencingConfiguration | Set-CsConferencingConfiguration -Organization Litwareinc
 ```
 
 Example 2 is an extension of the first example; in this case, the command modifies the value of the Organization property for each collection of conferencing configuration settings currently in use.
-To do this the command first uses Get-CsConferencingConfiguration to retrieve a collection of all the conferencing configuration settings.
-This collection is then piped to Set-CsConferencingConfiguration, which takes each item in the collection and changes the value of the Organization property to Litwareinc.
+To do this the command first uses the `Get-CsConferencingConfiguration` cmdlet to retrieve a collection of all the conferencing configuration settings.
+This collection is then piped to the `Set-CsConferencingConfiguration` cmdlet, which takes each item in the collection and changes the value of the Organization property to Litwareinc.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 2 is an extension of the first example; in this case, the command modifies the value of the Organization property for each collection of conferencing configuration settings currently in use.
-To do this the command first uses Get-CsConferencingConfiguration to retrieve a collection of all the conferencing configuration settings.
-This collection is then piped to Set-CsConferencingConfiguration, which takes each item in the collection and changes the value of the Organization property to Litwareinc.
-
-Get-CsConferencingConfiguration | Set-CsConferencingConfiguration -Organization Litwareinc
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 is an extension of the first example; in this case, the command modifies the value of the Organization property for each collection of conferencing configuration settings currently in use.
-To do this the command first uses the Get-CsConferencingConfiguration cmdlet to retrieve a collection of all the conferencing configuration settings.
-This collection is then piped to the Set-CsConferencingConfiguration cmdlet, which takes each item in the collection and changes the value of the Organization property to Litwareinc.
-
-Get-CsConferencingConfiguration | Set-CsConferencingConfiguration -Organization Litwareinc
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsConferencingConfiguration -Filter site:* | Set-CsConferencingConfiguration -MaxContentStorageMb 50
 ```
 
 The command shown in Example 3 changes the value of the MaxContentStorageMb property for all the conferencing configuration settings applied at the site scope.
-To do this, the command first calls Get-CsConferencingConfiguration along with the Filter parameter; the filter value "site:*" ensures that only settings where the Identity begins with the characters "site:" are returned.
-The filtered collection is then piped to the Set-CsConferencingConfiguration, which changes the MaxContentStorageMb property value for each item in the collection to 50.
+To do this, the command first calls the `Get-CsConferencingConfiguration` cmdlet along with the Filter parameter; the filter value "site:*" ensures that only settings where the Identity begins with the characters "site:" are returned.
+The filtered collection is then piped to the `Set-CsConferencingConfiguration` cmdlet, which changes the MaxContentStorageMb property value for each item in the collection to 50.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 3 changes the value of the MaxContentStorageMb property for all the conferencing configuration settings applied at the site scope.
-To do this, the command first calls Get-CsConferencingConfiguration along with the Filter parameter; the filter value "site:*" ensures that only settings where the Identity begins with the characters "site:" are returned.
-The filtered collection is then piped to the Set-CsConferencingConfiguration, which changes the MaxContentStorageMb property value for each item in the collection to 50.
-
-Get-CsConferencingConfiguration -Filter site:* | Set-CsConferencingConfiguration -MaxContentStorageMb 50
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 3 changes the value of the MaxContentStorageMb property for all the conferencing configuration settings applied at the site scope.
-To do this, the command first calls the Get-CsConferencingConfiguration cmdlet along with the Filter parameter; the filter value "site:*" ensures that only settings where the Identity begins with the characters "site:" are returned.
-The filtered collection is then piped to the Set-CsConferencingConfiguration cmdlet, which changes the MaxContentStorageMb property value for each item in the collection to 50.
-
-Get-CsConferencingConfiguration -Filter site:* | Set-CsConferencingConfiguration -MaxContentStorageMb 50
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Get-CsConferencingConfiguration | Where-Object {$_.MaxContentStorageMb -gt 100} | Set-CsConferencingConfiguration -MaxContentStorageMB 100
 ```
 
 In Example 4, all the conferencing configuration settings that allow for content storage of more than 100 megabytes are modified to set the maximum allowed content storage to 100 megabytes.
-To carry out this task, the command first calls Get-CsConferencingConfiguration without any parameters in order to return a collection of all the conferencing configuration settings currently in use.
-This collection is then piped to the Where-Object cmdlet, which picks out those settings where the MaxContentStorageMb property is greater than 100.
-This filtered collection is then piped to Set-CsConferencingConfiguration, which takes each item in the collection and sets the value of the MaxContentStorageMb property to 100.
+To carry out this task, the command first calls the `Get-CsConferencingConfiguration` cmdlet without any parameters in order to return a collection of all the conferencing configuration settings currently in use.
+This collection is then piped to the `Where-Object` cmdlet, which picks out those settings where the MaxContentStorageMb property is greater than 100.
+This filtered collection is then piped to the `Set-CsConferencingConfiguration` cmdlet, which takes each item in the collection and sets the value of the MaxContentStorageMb property to 100.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 4, all the conferencing configuration settings that allow for content storage of more than 100 megabytes are modified to set the maximum allowed content storage to 100 megabytes.
-To carry out this task, the command first calls Get-CsConferencingConfiguration without any parameters in order to return a collection of all the conferencing configuration settings currently in use.
-This collection is then piped to the Where-Object cmdlet, which picks out those settings where the MaxContentStorageMb property is greater than 100.
-This filtered collection is then piped to Set-CsConferencingConfiguration, which takes each item in the collection and sets the value of the MaxContentStorageMb property to 100.
-
-Get-CsConferencingConfiguration | Where-Object {$_.MaxContentStorageMb -gt 100} | Set-CsConferencingConfiguration -MaxContentStorageMB 100
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 4, all the conferencing configuration settings that allow for content storage of more than 100 megabytes are modified to set the maximum allowed content storage to 100 megabytes.
-To carry out this task, the command first calls the Get-CsConferencingConfiguration cmdlet without any parameters in order to return a collection of all the conferencing configuration settings currently in use.
-This collection is then piped to the Where-Object cmdlet, which picks out those settings where the MaxContentStorageMb property is greater than 100.
-This filtered collection is then piped to the Set-CsConferencingConfiguration cmdlet, which takes each item in the collection and sets the value of the MaxContentStorageMb property to 100.
-
-Get-CsConferencingConfiguration | Where-Object {$_.MaxContentStorageMb -gt 100} | Set-CsConferencingConfiguration -MaxContentStorageMB 100
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2010)
+### -------------------------- Example 5 --------------------------
 ```
 Set-CsConferencingConfiguration -Identity site:Redmond -ContentGracePeriod "22:00:00"
-```
-
-The preceding command retrieves the conferencing configuration settings for the Redmond site (-Identity site:Redmond) and modifies the value of the ContentGracePeriod property, setting the grace period to 22 hours (22 hours: 00 minutes: 00 seconds).
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 5 retrieves the conferencing configuration settings for the Redmond site (-Identity site:Redmond) and modifies the value of the ContentGracePeriod property, setting the grace period to 22 hours (22 hours: 00 minutes: 00 seconds).
 
-Set-CsConferencingConfiguration -Identity site:Redmond -ContentGracePeriod "22:00:00"
 
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 5 retrieves the conferencing configuration settings for the Redmond site (-Identity site:Redmond) and modifies the value of the ContentGracePeriod property, setting the grace period to 22 hours (22 hours: 00 minutes: 00 seconds).
-
-Set-CsConferencingConfiguration -Identity site:Redmond -ContentGracePeriod "22:00:00"
-
-### -------------------------- Example 6 -------------------------- (Lync Server 2010)
+### -------------------------- Example 6 --------------------------
 ```
 Get-CsConferencingConfiguration | Where-Object {$_.Organization -ne "Fabrikam"} | Set-CsConferencingConfiguration -Organization Litwareinc
 ```
 
 In Example 6, all the conferencing configuration settings that do not list Fabrikam as the Organization are modified; in particular, all these settings are assigned Litwareinc as the new organization.
-To accomplish this task, the command first calls Get-CsConferencingConfiguration without any parameters; this returns a collection of all the conferencing configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects all the settings where the Organization property is not equal to (-ne) Fabrikam.
-The filtered collection is then piped to Set-CsConferencingConfiguration; Set-CsConferencingConfiguration takes each item in the collection and changes the value of the Organization property to Litwareinc.
+To accomplish this task, the command first calls the `Get-CsConferencingConfiguration` cmdlet without any parameters; this returns a collection of all the conferencing configuration settings currently in use in the organization.
+This collection is then piped to the `Where-Object` cmdlet, which selects all the settings where the Organization property is not equal to (-ne) Fabrikam.
+The filtered collection is then piped to the `Set-CsConferencingConfiguration` cmdlet; the `Set-CsConferencingConfiguration` cmdlet takes each item in the collection and changes the value of the Organization property to Litwareinc.
 
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 6, all the conferencing configuration settings that do not list Fabrikam as the Organization are modified; in particular, all these settings are assigned Litwareinc as the new organization.
-To accomplish this task, the command first calls Get-CsConferencingConfiguration without any parameters; this returns a collection of all the conferencing configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects all the settings where the Organization property is not equal to (-ne) Fabrikam.
-The filtered collection is then piped to Set-CsConferencingConfiguration; Set-CsConferencingConfiguration takes each item in the collection and changes the value of the Organization property to Litwareinc.
-
-Get-CsConferencingConfiguration | Where-Object {$_.Organization -ne "Fabrikam"} | Set-CsConferencingConfiguration -Organization Litwareinc
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 6, all the conferencing configuration settings that do not list Fabrikam as the Organization are modified; in particular, all these settings are assigned Litwareinc as the new organization.
-To accomplish this task, the command first calls the Get-CsConferencingConfiguration cmdlet without any parameters; this returns a collection of all the conferencing configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects all the settings where the Organization property is not equal to (-ne) Fabrikam.
-The filtered collection is then piped to the Set-CsConferencingConfiguration cmdlet; the Set-CsConferencingConfiguration cmdlet takes each item in the collection and changes the value of the Organization property to Litwareinc.
-
-Get-CsConferencingConfiguration | Where-Object {$_.Organization -ne "Fabrikam"} | Set-CsConferencingConfiguration -Organization Litwareinc
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Unique identifier for the collection of conferencing configuration settings to be modified.
-To refer to the global collection, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
-To refer to a collection at the service scope, use syntax like the following: -Identity "service:ConferencingServer:atl-cs-001.litwareinc.com".
+To refer to the global collection, use this syntax: `-Identity global`.
+To refer to a collection configured at the site scope, use syntax similar to this: `-Identity "site:Redmond"`.
+To refer to a collection at the service scope, use syntax like the following: `-Identity "service:ConferencingServer:atl-cs-001.litwareinc.com"`.
 The Web Conferencing service is the only service that can host these configuration settings.
 
-If this parameter is not specified, then Set-CsConferencingConfiguration will automatically modify the global settings.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unique identifier for the collection of conferencing configuration settings to be modified.
-To refer to the global collection, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity "site:Redmond".
-To refer to a collection at the service scope, use syntax like the following: -Identity "service:ConferencingServer:atl-cs-001.litwareinc.com".
-The Web Conferencing service is the only service that can host these configuration settings.
-
-If this parameter is not specified, then the Set-CsConferencingConfiguration cmdlet will automatically modify the global settings.
-
+If this parameter is not specified, then the `Set-CsConferencingConfiguration` cmdlet will automatically modify the global settings.
 
 
 ```yaml
@@ -467,21 +271,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClientMediaPort
-**Below Content Applies To:** Lync Server 2010
-
-Represents the starting port number used for client media.
-The ClientMediaPort must be a value port number between 1024 and 65535, inclusive.
-The default value is 5350.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Represents the starting port number used for client media.
 Use this parameter for Microsoft Office Communicator 2007 R2 clients.
 The ClientMediaPort must be a value port number between 1024 and 65535, inclusive.
 The default value is 5350.
-
 
 
 ```yaml
@@ -498,21 +291,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClientMediaPortRange
-**Below Content Applies To:** Lync Server 2010
-
-Indicates the total number of ports available for client media.
-(The default value is 40.) To determine the actual ports used for client media, use this value and the ClientMediaPort value.
-For example, if ClientMediaPort is set to 5350 and ClientMediaPortRange is set to 3, then the following three ports are available for client media: 5350; 5351; 5352.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Indicates the total number of ports available for client media.
 (The default value is 40.) Use this parameter for Office Communicator 2007 R2 clients.
 To determine the actual ports used for client media, use this value and the ClientMediaPort value.
 For example, if ClientMediaPort is set to 5350 and ClientMediaPortRange is set to 3, then the following three ports are available for client media: 5350; 5351; 5352.
-
 
 
 ```yaml
@@ -618,24 +400,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConsoleDownloadExternalUrl
-**Below Content Applies To:** Lync Server 2010
-
-URL where external users can download a supported client.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-URL where external users can download a supported client such as Microsoft Lync 2013 Preview.
-Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Lync Server pool.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 URL where external users can download a supported client such as Skype for Business.
-Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server 2015 pool.
-
+Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server pool.
 
 
 ```yaml
@@ -652,24 +418,8 @@ Accept wildcard characters: False
 ```
 
 ### -ConsoleDownloadInternalUrl
-**Below Content Applies To:** Lync Server 2010
-
-URL where internal users can download a supported client.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-URL where internal users can download a supported client such as Microsoft Lync 2013 Preview.
-Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Lync Server pool.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 URL where internal users can download a supported client such as Skype for Business.
-Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server 2015 pool.
-
+Note that this setting applies only to legacy clients (such as Microsoft Office Communicator 2007 R2) that are logging on to a Skype for Business Server pool.
 
 
 ```yaml
@@ -686,26 +436,12 @@ Accept wildcard characters: False
 ```
 
 ### -ContentGracePeriod
-**Below Content Applies To:** Lync Server 2010
-
 Indicates how long conference content will remain on the server following the end of the conference.
 The ContentGracePeriod must be specified using the format Days.Hours:Minutes:Seconds.
-For example, to set the content grace period to 30 days, use this syntax: -ContentGracePeriod 30.00:00:00.
-
-The content grace period can be set to any value between 0 and 180 days.
-The default value is 15 days (15.00:00:00).
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-Indicates how long conference content will remain on the server following the end of the conference.
-The ContentGracePeriod must be specified using the format Days.Hours:Minutes:Seconds.
-For example, to set the content grace period to 30 days, use this syntax: -ContentGracePeriod 30.00:00:00.
+For example, to set the content grace period to 30 days, use this syntax: `-ContentGracePeriod 30.00:00:00`.
 
 The content grace period can be set to any value between 30 minutes (00:30:00) and 180 days (180.00:00:00).
 The default value is 15 days (15.00:00:00).
-
 
 
 ```yaml
@@ -872,7 +608,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudPollServicePrimaryUrl
-This parameter is not currently used with Skype for Business Server 2015.
+This parameter is not currently used with Skype for Business Server.
 
 ```yaml
 Type: String
@@ -888,7 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -CloudPollServiceSecondaryUrl
-This parameter is not currently used with Skype for Business Server 2015.
+This parameter is not currently used with Skype for Business Server.
 
 ```yaml
 Type: String
@@ -910,35 +646,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.WebConf.ConfSettings object.
-Set-CsConferencingConfiguration accepts pipelined instances of the conferencing configuration object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.WebConf.ConfSettings object.
-The Set-CsConferencingConfiguration cmdlet accepts pipelined instances of the conferencing configuration object.
+The `Set-CsConferencingConfiguration` cmdlet accepts pipelined instances of the conferencing configuration object.
 
 ## OUTPUTS
 
 ###  
-Set-CsConferencingConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.WebConf.ConfSettings object.
-
-###  
-The Set-CsConferencingConfiguration cmdlet does not return a value or object.
+The `Set-CsConferencingConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.WebConf.ConfSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/c468d7fd-fb2c-469c-85fb-58e0834aac36(OCS.14).aspx)
-
 [Get-CsConferencingConfiguration]()
 
 [New-CsConferencingConfiguration]()
 
 [Remove-CsConferencingConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c468d7fd-fb2c-469c-85fb-58e0834aac36(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c468d7fd-fb2c-469c-85fb-58e0834aac36(OCS.16).aspx)
-

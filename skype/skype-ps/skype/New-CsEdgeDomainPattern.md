@@ -32,28 +32,28 @@ However, administrators can modify this default setting and limit communication 
 
 Skype for Business Online does not allow you to directly modify the allowed list or the blocked list; for example, you cannot use a command similar to this one, which passes a string value representing a domain name to the blocked domains list:
 
-Set-CsTenantFederationConfiguration -BlockedDomains "fabrikam.com"
+`Set-CsTenantFederationConfiguration -BlockedDomains "fabrikam.com"`
 
 Instead, you must create a domain object by using the New-CsEdgeDomainPattern cmdlet, store that domain object in a variable (in this example, $x), then pass the variable name to the blocked domains list:
+
+`$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"`
+
+`Set-CsTenantFederationConfiguration -BlockedDomains $x`
+
+## EXAMPLES
+
+### -------------------------- Example 1 -------------------------- 
+```
 
 $x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
 
 Set-CsTenantFederationConfiguration -BlockedDomains $x
-
-## EXAMPLES
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
-```
-
 ```
 
 Example 1 demonstrates how you can assign a single domain to the blocked domains list for a specified tenant.
 To do this, the first command in the example creates a domain object for the domain fabrikam.com; this is done by calling the New-CsEdgeDomainPattern cmdlet and by saving the resulting domain object in a variable named $x.
 The second command then uses the Set-CsTenantFederationConfiguration cmdlet and the BlockedDomains parameter to configure fabrikam.com as the only domain blocked by the current tenant.
 
-$x = New-CsEdgeDomainPattern -Domain "fabrikam.com"
-
-Set-CsTenantFederationConfiguration -BlockedDomains $x
 
 ## PARAMETERS
 
@@ -61,7 +61,7 @@ Set-CsTenantFederationConfiguration -BlockedDomains $x
 Fully qualified domain name of the domain to be added to the allow list.
 For example:
 
--Domain "fabrikam.com"
+`-Domain "fabrikam.com"`
 
 Note that you cannot use wildcards when specifying a domain name.
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -113,6 +113,3 @@ The New-CsEdgeDomainPattern cmdlet creates new instances of the Microsoft.Rtc.Ma
 ## RELATED LINKS
 
 [Set-CsTenantFederationConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/573dfef5-39a3-4641-8325-564457423f29(OCS.15).aspx)
-

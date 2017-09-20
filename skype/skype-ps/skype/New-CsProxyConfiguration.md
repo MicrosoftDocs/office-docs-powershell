@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-CsProxyConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new collection of proxy configuration settings.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of proxy configuration settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -36,37 +31,10 @@ New-CsProxyConfiguration [-Identity] <XdsIdentity> [-AcceptClientCompression <Bo
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-Microsoft Lync Server 2010 enables you to manage your proxy servers through proxy server configuration settings.
+Skype for Business Server enables you to manage your proxy servers through proxy server configuration settings.
 These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
-When you install Lync Server 2010, a global collection of proxy server configuration settings is automatically created for you.
-As noted, you can also create additional collections at the service scope.
-These new collections are created by using the New-CsProxyConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsProxyConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsProxyConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server enables you to manage your proxy servers through proxy server configuration settings.
-These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
-When you install Lync Server, a global collection of proxy server configuration settings is automatically created for you.
-As noted, you can also create additional collections at the service scope.
-These new collections are created by using the New-CsProxyConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsProxyConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsProxyConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 enables you to manage your proxy servers through proxy server configuration settings.
-These settings, which can be applied at both the global scope and the service scope (albeit for only the Edge Server and Registrar services) enable you to control such things as the authentication protocols that can be used by client endpoints and whether or not compression will be used on incoming and outgoing proxy server connections.
-When you install Skype for Business Server 2015, a global collection of proxy server configuration settings is automatically created for you.
+When you install Skype for Business Server, a global collection of proxy server configuration settings is automatically created for you.
 As noted, you can also create additional collections at the service scope.
 These new collections are created by using the New-CsProxyConfiguration cmdlet.
 
@@ -74,67 +42,19 @@ These new collections are created by using the New-CsProxyConfiguration cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -RequestServerCompression $True -MaxClientMessageBodySizeKb 256
-```
-
-The preceding command creates a new collection of proxy configuration settings for the service EdgeServer:atl-edge-001.litwareinc.com.
-These new settings use all the default proxy server property values except for two: RequestServerCompression, which is set to True; and MaxClientMessageBodySizeKb, which is set to 256.
-Note that this command will fail if proxy server settings have already been configured for the service EdgeServer:atl-edge-001.litwareinc.com.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 creates a new collection of proxy configuration settings for the service EdgeServer:atl-edge-001.litwareinc.com.
 These new settings use all the default proxy server property values except for two: RequestServerCompression, which is set to True; and MaxClientMessageBodySizeKb, which is set to 256.
 Note that this command will fail if proxy server settings have already been configured for the service EdgeServer:atl-edge-001.litwareinc.com.
 
-New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -RequestServerCompression $True -MaxClientMessageBodySizeKb 256
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- EXAMPLE 2 --------------------------
 ```
-
-```
-
-Example 1 creates a new collection of proxy configuration settings for the service EdgeServer:atl-edge-001.litwareinc.com.
-These new settings use all the default proxy server property values except for two: RequestServerCompression, which is set to True; and MaxClientMessageBodySizeKb, which is set to 256.
-Note that this command will fail if proxy server settings have already been configured for the service EdgeServer:atl-edge-001.litwareinc.com.
-
-New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -RequestServerCompression $True -MaxClientMessageBodySizeKb 256
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-$x = New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -InMemory
-$x.RequestServerCompression = $True 
-$x.MaxClientMessageBodySizeKb = 256
-Set-CsProxyConfiguration -Instance $x
-```
-
-The commands shown in Example 2 demonstrate how you can create a collection of proxy server settings that initially exist only in memory.
-To do this, the first command calls New-CsProxyConfiguration along with two parameters: Identity (which specifies the Identity for the settings) and InMemory, which indicates that the new settings should be created in memory only.
-The resulting object is stored in the variable $x.
-
-After these virtual settings have been created, commands 2 and 3 are used to modify the values of the RequestServerCompression and MaxClientMessageBodySizeKb properties, respectively.
-Finally, command 4 is used to transform the virtual proxy server configuration settings into an actual collection of settings applied to the service EdgeServer:atl-edge-001.litwareinc.com.
-This final command is mandatory.
-If you do not call Set-CsProxyConfiguration, no settings will be applied to EdgeServer:atl-edge-001.litwareinc.com and the virtual settings will disappear as soon as you terminate your Windows PowerShell session or delete the variable $x.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 2 demonstrate how you can create a collection of proxy server settings that initially exist only in memory.
-To do this, the first command calls New-CsProxyConfiguration along with two parameters: Identity (which specifies the Identity for the settings) and InMemory, which indicates that the new settings should be created in memory only.
-The resulting object is stored in the variable $x.
-
-After these virtual settings have been created, commands 2 and 3 are used to modify the values of the RequestServerCompression and MaxClientMessageBodySizeKb properties, respectively.
-Finally, command 4 is used to transform the virtual proxy server configuration settings into an actual collection of settings applied to the service EdgeServer:atl-edge-001.litwareinc.com.
-This final command is mandatory.
-If you do not call Set-CsProxyConfiguration, no settings will be applied to EdgeServer:atl-edge-001.litwareinc.com and the virtual settings will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 
 $x = New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -InMemory
 
@@ -143,10 +63,6 @@ $x.RequestServerCompression = $True
 $x.MaxClientMessageBodySizeKb = 256
 
 Set-CsProxyConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands shown in Example 2 demonstrate how you can create a collection of proxy server settings that initially exist only in memory.
@@ -158,29 +74,10 @@ Finally, command 4 is used to transform the virtual proxy server configuration s
 This final command is mandatory.
 If you do not call the Set-CsProxyConfiguration cmdlet, no settings will be applied to EdgeServer:atl-edge-001.litwareinc.com and the virtual settings will disappear as soon as you end your Windows PowerShell session or delete the variable $x.
 
-$x = New-CsProxyConfiguration -Identity "service:EdgeServer:atl-edge-001.litwareinc.com" -InMemory
-
-$x.RequestServerCompression = $True
-
-$x.MaxClientMessageBodySizeKb = 256
-
-Set-CsProxyConfiguration -Instance $x
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Unique identifier for the proxy server configuration settings to be created.
-Proxy server configuration settings can only be created at the service scope, and only for the Edge Server and Registrar services.
-You cannot create settings at the global scope; likewise, you cannot create settings at the service scope if the service in question already hosts a collection of proxy server settings.
-For example, if the service Registrar:atl-cs-001.litwareinc.com already hosts proxy server settings, then any command that attempts to create new settings for that service will fail.
-
-To specify the Identity for your new proxy server settings, use syntax similar to this: -Identity "service:Registrar:atl-cs-001.litwareinc.com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Unique identifier for the proxy server configuration settings to be created.
 Proxy server configuration settings can only be created at the service scope, and only for the Edge Server and Registrar services.
@@ -189,9 +86,7 @@ For example, if the service Registrar:atl-cs-001.litwareinc.com already hosts pr
 
 To specify the Identity for your new proxy server settings, use syntax similar to this:
 
--Identity "service:Registrar:atl-cs-001.litwareinc.com"
-
-
+`-Identity "service:Registrar:atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: XdsIdentity
@@ -357,14 +252,6 @@ Accept wildcard characters: False
 ```
 
 ### -UseKerberosForClientToProxyAuth
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-When set to True (the default value), client endpoints will be allowed to use the Kerberos protocol for authentication.
-Although Kerberos is a more secure protocol than NTLM, it cannot be used if the client belongs to a different domain than the server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True (the default value), client endpoints will be allowed to use the Kerberos protocol for authentication.
 Although Kerberos is a more secure protocol than NTLM, it cannot be used if the client belongs to a different realm than the server.
@@ -419,14 +306,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -479,21 +358,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisableNtlmFor2010AndLaterClients
-**Below Content Applies To:** Lync Server 2010
-
-When set to True, users logging on from Microsoft Lync 2010 must use the Kerberos protocol for authentication.
-The default value is False.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-When set to True, users logging on from Lync must use the Kerberos protocol for authentication.
-The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, users logging on from Skype for Business must use the Kerberos protocol for authentication.
 The default value is False.
@@ -514,20 +378,6 @@ Accept wildcard characters: False
 ```
 
 ### -DnsCacheRecordCount
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill DnsCacheRecordCount Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Maximum number of records that can be maintained in the DNS record cache.
-The default value is 30000.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Maximum number of records that can be maintained in the DNS record cache.
 The default value is 3000.
@@ -705,7 +555,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestFeatureList
-This parameter is not currently used by Skype for Business Server 2015.
+This parameter is not currently used by Skype for Business Server.
 
 ```yaml
 Type: String
@@ -721,7 +571,7 @@ Accept wildcard characters: False
 ```
 
 ### -TestParameterList
-This parameter is not currently used by Skype for Business Server 2015.
+This parameter is not currently used by Skype for Business Server.
 
 ```yaml
 Type: String
@@ -737,13 +587,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsProxyConfiguration does not accept pipelined input.
 
 ###  
 None.
@@ -752,24 +598,15 @@ The New-CsProxyConfiguration cmdlet does not accept pipelined input.
 ## OUTPUTS
 
 ###  
-New-CsProxyConfiguration creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
-
-###  
 The New-CsProxyConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SipProxy.ProxySettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5133470e-1d77-4958-8844-a091336b2a3c(OCS.14).aspx)
-
 [Get-CsProxyConfiguration]()
 
 [Remove-CsProxyConfiguration]()
 
 [Set-CsProxyConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5133470e-1d77-4958-8844-a091336b2a3c(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5133470e-1d77-4958-8844-a091336b2a3c(OCS.16).aspx)
 

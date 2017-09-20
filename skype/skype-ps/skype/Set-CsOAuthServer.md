@@ -7,18 +7,9 @@ schema: 2.0.0
 # Set-CsOAuthServer
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Modifies an existing Open Authorization (OAuth) server.
-OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Modifies an existing Open Authorization (OAuth) server.
 OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -30,55 +21,26 @@ Set-CsOAuthServer [-Identity] <XdsGlobalRelativeIdentity> [-Confirm] [-Force] [-
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
+In Skype for Business Server, server-to-server authentication (for example, the authentication that enables Skype for Business Server and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
 If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
 
-If you are using an on-premises version of Lync Server 2013 Preview and you need to communicate with another server product that fully supports the OAuth protocol (for example, Exchange 2013 Preview or Microsoft SharePoint 2013) then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
+If you are using an on-premises version of Skype for Business Server and you need to communicate with another server product that fully supports the OAuth then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
 However, if you need to communicate with another server product (including server products found on Office 365) then you will need to use a token servers.
 These token servers can be managed by using the CsOAuthServer cmdlets.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsOAuthServer"}
-
-Lync Server Control Panel: The functions carried out by the Set-CsOAuthServer cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
-This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
-If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
-
-If you are using an on-premises version of Skype for Business Server 2015 and you need to communicate with another server product that fully supports the OAuth then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
-However, if you need to communicate with another server product (including server products found on Office 365) then you will need to use a token servers.
-These token servers can be managed by using the CsOAuthServer cmdlets.
-
-Skype for Business Server Control Panel: The functions carried out by the Set-CsOAuthServer cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Set-CsOAuthServer` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
 ```
 
 The command shown in Example 1 updates the metadata URL for the OAuth Server Office 365.
 
-Set-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 updates the metadata URL for the OAuth Server Office 365.
-
-Set-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
 
 ## PARAMETERS
 
@@ -164,30 +126,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for the OAuth server being modified.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the OAuth server being modified.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 ```yaml
@@ -257,7 +203,7 @@ Accept wildcard characters: False
 Type of authentication used by the server.
 For example, this syntax configures the server to use Active Directory Federation Services authentication:
 
--Type "ADFS"
+`-Type "ADFS"`
 
 ```yaml
 Type: String
@@ -278,20 +224,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsOAuthServer accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
-
-###  
-The Set-CsOAuthServer cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
+The `Set-CsOAuthServer` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsOAuthServer modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
-
-###  
-None.
-Instead, the Set-CsOAuthServer cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
+Instead, the `Set-CsOAuthServer` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
 
 ## NOTES
 
@@ -302,8 +241,3 @@ Instead, the Set-CsOAuthServer cmdlet modifies existing instances of the Microso
 [New-CsOAuthServer]()
 
 [Remove-CsOAuthServer]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/52825ca3-d287-4e09-9aec-b8b2d7bafc06(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/52825ca3-d287-4e09-9aec-b8b2d7bafc06(OCS.16).aspx)
-

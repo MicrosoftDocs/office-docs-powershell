@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-CsTelemetryConfiguration
 
 ## SYNOPSIS
-Use the New-CsTelemetryConfiguration cmdlet to create new configurations for telemetry.
+Use the `New-CsTelemetryConfiguration` cmdlet to create new configurations for telemetry.
 UNRESOLVED_TOKEN_VAL(PS_TelemetryDataStatement)
 
 ## SYNTAX
@@ -22,14 +22,13 @@ For privacy information, see the Skype for Business Privacy Statement (http://go
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsTelemetryConfiguration -Identity Site:Redmond -EnableClientTelemetry $True
 ```
 
 This example creates a new telemetry configuration with telemetry enabled and scoped for the Redmond site.
 
-New-CsTelemetryConfiguration -Identity Site:Redmond -EnableClientTelemetry $True
 
 ## PARAMETERS
 
@@ -40,9 +39,9 @@ For example, "site:Redmond" (for site).
 The format of the service scope is "Service:\<Identity\>", where identity is derived from the topology.
 You can use the following commands to identify the relevant services.
 
-Get-CsService -WebServer | fl Identity
+`Get-CsService -WebServer | fl Identity`
 
-Get-CsService -PoolFqdn \<pool\> | fl Identity
+`Get-CsService -PoolFqdn \<pool\> | fl Identity`
 
 The first command will give you all of the WebServices in the topology, regardless of the pool.
 The second will give you all of the services on the pool, regardless of their role.
@@ -159,6 +158,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c877b74f-f493-46ee-a117-7139dc639b62(OCS.16).aspx)
-

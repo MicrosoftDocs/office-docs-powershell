@@ -28,33 +28,33 @@ Move-CsThirdPartyVideoSystem [-Target] <Fqdn> -UserList <String> [-ConcurrentMov
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
 Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
 VTC contact objects can be created by using the New-CsThirdPartyVideoSystem cmdlet.
-Note that new contact objects must be assigned to a Skype for Business Server 2015 Registrar at the time they are created.
+Note that new contact objects must be assigned to a Skype for Business Server Registrar at the time they are created.
 If you later decide to move a contact object to a different pool, you can do so by using the Move-CsThirdPartyVideoSystem cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Move-CsThirdPartyVideoSystem -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com" -Target "atl-cs-001.litwareinc.com"
 ```
 
 The command shown in Example 1 moves the third-party video system with the Identity CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com to the Registrar pool atl-cs-001.litwareinc.com.
 
-Move-CsThirdPartyVideoSystem -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com" -Target "atl-cs-001.litwareinc.com"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
+
+Get-CsThirdPartyVideoSystem | Move-CsThirdPartyVideoSystem -Target "atl-cs-001.litwareinc.com"
 
 ```
 
 Example 2 shows how you can move all the third-party video systems in the organization to the Registrar pool atl-cs-001.litwareinc.com.
 To do this, the command first uses the Get-CsThirdPartyVideoSystem cmdlet to return a collection of all the available video systems.
 That collection is then piped to the Move-CsThirdPartyVideoSystem cmdlet, which moves all the video systems to the Registrar pool atl-cs-001.litwareinc.com.
-
-Get-CsThirdPartyVideoSystem | Move-CsThirdPartyVideoSystem -Target "atl-cs-001.litwareinc.com"
 
 ## PARAMETERS
 
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 
 ### -ProxyPool
 This parameter is used only for Skype for Business Online.
-It should not be used with an on-premises implementation of Skype for Business Server 2015.
+It should not be used with an on-premises implementation of Skype for Business Server.
 
 ```yaml
 Type: Fqdn
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -284,6 +284,3 @@ However, if you include the PassThru parameter you can instances of the Microsof
 [Remove-CsThirdPartyVideoSystem]()
 
 [Set-CsThirdPartyVideoSystem]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c1c06149-47f2-4d65-9648-51ba449d64b9(OCS.16).aspx)
-

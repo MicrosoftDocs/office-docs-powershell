@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the Set-CsTenantDialPlan cmdlet to modify an existing tenant dial plan.
+Use the `Set-CsTenantDialPlan` cmdlet to modify an existing tenant dial plan.
 
 ## SYNTAX
 
@@ -19,34 +19,32 @@ Set-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confir
 ```
 
 ## DESCRIPTION
-The Set-CsTenantDialPlan cmdlet modifies an existing tenant dial plan.
+The `Set-CsTenantDialPlan` cmdlet modifies an existing tenant dial plan.
 Tenant dial plans provide required information to let Enterprise Voice users make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the New-CsVoiceNormalizationRule (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet instead.
+Although normalization rules of a tenant dial plan can be added by using this cmdlet, it is recommended that you use the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet instead.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9
 ```
 
 This example updates the vt1tenantDialPlan9 tenant dial plan to use an external access prefix of 123.
 
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
+$nr2 = Get-CsVoiceNormalizationRule -Identity Global/NR2
 
+Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 ```
 
 This example updates the vt1tenantDialPlan9 tenant dial plan to have an external access prefix of 123 and use the Global/NR2 normalization rules.
 
-$nr2 = Get-CsVoiceNormalizationRule -Identity Global/NR2
-
-Set-CsTenantDialPlan -ExternalAccessPrefix "123" -Identity vt1tenantDialPlan9 -NormalizationRules @{Add=$nr2}
 
 ## PARAMETERS
 
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -83,7 +81,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to, or any other information that helps to identify the purpose of the tenant dial plan.
+The Description parameter describes the tenant dial plan - what it's for, what type of user it applies to or any other information that helps to identify the purpose of the tenant dial plan.
 Maximum characters is 512.
 
 ```yaml
@@ -101,7 +99,7 @@ Accept wildcard characters: False
 
 ### -ExternalAccessPrefix
 The ExternalAccessPrefix parameter is a number (or set of numbers) that designates the call as external to the organization.
-(For example, to tenant-dial an outside line, first dial 9.) This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
+(For example, to tenant-dial an outside line, first dial 9). This prefix is ignored by the normalization rules, although these rules will be applied to the rest of the number.
 The OptimizeDeviceDialing parameter must be set to True for this value to take effect.
 
 The value of this parameter must match the regular expression \[0-9\]{1,4}.
@@ -159,7 +157,7 @@ Accept wildcard characters: False
 
 ### -Instance
 The Instance parameter allows you to pass a reference to an object to the cmdlet, rather than set individual parameter values.
-You can retrieve this object reference by calling the Get-CsTenantDialPlan cmdlet.
+You can retrieve this object reference by calling the `Get-CsTenantDialPlan` cmdlet.
 
 ```yaml
 Type: Object
@@ -176,7 +174,7 @@ Accept wildcard characters: False
 
 ### -NormalizationRules
 The NormalizationRules parameter is a list of normalization rules that are applied to this dial plan.
-Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the New-CsVoiceNormalizationRule (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
+Although this list and these rules can be created directly by using this cmdlet, we recommend that you create the normalization rules by the `New-CsVoiceNormalizationRule` (https://technet.microsoft.com/en-us/library/gg398240.aspx) cmdlet, which creates the rule and assigns it to the specified tenant dial plan.
 
 The number of normalization rules cannot exceed 25 per TenantDialPlan.
 
@@ -211,7 +209,7 @@ Accept wildcard characters: False
 
 ### -SimpleName
 The SimpleName parameter is a display name for the tenant dial plan.
-This name must be unique among all tenant dial plans within the Skype for Business Server 2015 deployment.
+This name must be unique among all tenant dial plans within the Skype for Business Server deployment.
 
 This string can be up to 256 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.) and parentheses (()).
@@ -231,8 +229,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -289,6 +287,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bacfb0c2-a86d-4192-b6e9-3e2a7019fb4d(OCS.15).aspx)
-

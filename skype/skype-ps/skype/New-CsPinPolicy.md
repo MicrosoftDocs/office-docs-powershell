@@ -7,21 +7,9 @@ schema: 2.0.0
 # New-CsPinPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
 Creates a new client personal identification number (PIN) policy.
-PIN authentication enables users to access Microsoft Lync Server 2010 by providing a PIN instead of a user name and password.
-
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new client personal identification number (PIN) policy.
-PIN authentication enables users to access Lync Server by providing a PIN instead of a user name and password.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new client personal identification number (PIN) policy.
-PIN authentication enables users to access Skype for Business Server 2015 by providing a PIN instead of a user name and password.
+PIN authentication enables users to access Skype for Business Server by providing a PIN instead of a user name and password.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -35,45 +23,12 @@ New-CsPinPolicy [-Identity] <XdsIdentity> [-Description <String>] [-MaximumLogon
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-Lync Server 2010 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
+Skype for Business Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
 Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
-Because of that, Lync Server enables you to supply users with numeric-only PINs; when prompted, users can then log on or join a conference by entering the PIN instead of a user name and password.
+Because of that, Skype for Business Server enables you to supply users with numeric-only PINs; when prompted, users can then log on or join a conference by entering the PIN instead of a user name and password.
 
-Lync Server uses PIN policies to manage PIN authentication properties; for example, you can specify the minimum length for a PIN as well as determine whether you will allow PINs that use "common patterns" such as consecutive digits (for example, a PIN like 123456).
-You can use the New-CsPinPolicy cmdlet to create new PIN authentication policies; these new policies can be configured at either the site or the per-user scope.
-(There is also a global PIN policy.
-However, you cannot create a second global PIN policy; all you can do is modify the existing global policy.)
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsPinPolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsPinPolicy"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
-Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
-Because of that, Lync Server enables you to supply users with numeric-only PINs; when prompted, users can then log on or join a conference by entering the PIN instead of a user name and password.
-
-Lync Server uses PIN policies to manage PIN authentication properties; for example, you can specify the minimum length for a PIN as well as determine whether you will allow PINs that use "common patterns" such as consecutive digits (for example, a PIN like 123456).
-You can use the New-CsPinPolicy cmdlet to create new PIN authentication policies; these new policies can be configured at either the site or the per-user scope.
-(There is also a global PIN policy.
-However, you cannot create a second global PIN policy; all you can do is modify the existing global policy.)
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsPinPolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPinPolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 enables users to connect to the system or to join public switched telephone network (PSTN) conferences via telephone.
-Users typically log on to the system or join a conference by entering a user name or password; however, entering a user name and password can be a problem if you are using a phone that does not have an alphanumeric keypad.
-Because of that, Skype for Business Server 2015 enables you to supply users with numeric-only PINs; when prompted, users can then log on or join a conference by entering the PIN instead of a user name and password.
-
-Skype for Business Server 2015 uses PIN policies to manage PIN authentication properties; for example, you can specify the minimum length for a PIN as well as determine whether you will allow PINs that use "common patterns" such as consecutive digits (for example, a PIN like 123456).
+Skype for Business Server uses PIN policies to manage PIN authentication properties; for example, you can specify the minimum length for a PIN as well as determine whether you will allow PINs that use "common patterns" such as consecutive digits (for example, a PIN like 123456).
 You can use the New-CsPinPolicy cmdlet to create new PIN authentication policies; these new policies can be configured at either the site or the per-user scope.
 (There is also a global PIN policy.
 However, you cannot create a second global PIN policy; all you can do is modify the existing global policy.)
@@ -82,94 +37,29 @@ However, you cannot create a second global PIN policy; all you can do is modify 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10
-```
-
-In Example 1, New-CsPinPolicy is used to create a new PIN policy with the Identity site:Redmond.
-This command includes just one optional parameter, MinPasswordLength, which is used to set the MinPasswordLength property to 10.
-All the remaining policy properties will be configured using the default values.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 1, New-CsPinPolicy is used to create a new PIN policy with the Identity site:Redmond.
-This command includes just one optional parameter, MinPasswordLength, which is used to set the MinPasswordLength property to 10.
-All the remaining policy properties will be configured using the default values.
 
 New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 1, the New-CsPinPolicy cmdlet is used to create a new PIN policy with the Identity site:Redmond.
 This command includes just one optional parameter, MinPasswordLength, which is used to set the MinPasswordLength property to 10.
 All the remaining policy properties will be configured using the default values.
 
-New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10
 
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
+
 New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10 -PINHistoryCount 10 -PINLifetime 30
 ```
 
 The command shown in Example 2 creates a new policy with the Identity site:Redmond.
 This command uses the parameters MinPasswordLength, PINHistoryCount, and PINLifetime to explicitly configure three different property values for the new policy.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
-```
-
-The command shown in Example 2 creates a new policy with the Identity site:Redmond.
-This command uses the parameters MinPasswordLength, PINHistoryCount, and PINLifetime to explicitly configure three different property values for the new policy.
-
-New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10 -PINHistoryCount 10 -PINLifetime 30
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 2 creates a new policy with the Identity site:Redmond.
-This command uses the parameters MinPasswordLength, PINHistoryCount, and PINLifetime to explicitly configure three different property values for the new policy.
-
-New-CsPinPolicy -Identity "site:Redmond" -MinPasswordLength 10 -PINHistoryCount 10 -PINLifetime 30
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
-```
-$x = New-CsPinPolicy -Identity "site:Redmond" -InMemory
-$x.MinPasswordLength = 10
-$x.PINHistoryCount = 10
-$x.PINLifetime = 30
-Set-CsPinPolicy -Instance $x
-```
-
-The commands shown in Example 3 demonstrate how you can create a new PIN policy in memory only, modify the property values for that policy, and then use Set-CsPinPolicy to turn that in-memory-only policy into an actual PIN policy.
-In the first line above, New-CsPinPolicy and the InMemory parameter are used to create an in-memory policy with the Identity site:Redmond; this policy is stored in the variable $x.
-If the policy was not assigned to a variable it would be created in memory only and then immediately disappear as soon as the command completed.
-
-After the virtual policy has been assigned to the variable $x, the next three commands are used to modify property values for that policy; for example, line 2 sets the value of the MinPasswordLength property to 10.
-After all the properties have been configured, Set-CsPinPolicy is used to create an actual policy with the Identity site:Redmond; this is done by using the Instance parameter and passing the variable $x as the parameter value.
-After Set-CsPinPolicy has been called, you will be able to view the policy and its property values by using the Get-CsPinPolicy cmdlet.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 3 demonstrate how you can create a new PIN policy in memory only, modify the property values for that policy, and then use Set-CsPinPolicy to turn that in-memory-only policy into an actual PIN policy.
-In the first line above, New-CsPinPolicy and the InMemory parameter are used to create an in-memory policy with the Identity site:Redmond; this policy is stored in the variable $x.
-If the policy was not assigned to a variable it would be created in memory only and then immediately disappear as soon as the command completed.
-
-After the virtual policy has been assigned to the variable $x, the next three commands are used to modify property values for that policy; for example, line 2 sets the value of the MinPasswordLength property to 10.
-After all the properties have been configured, Set-CsPinPolicy is used to create an actual policy with the Identity site:Redmond; this is done by using the Instance parameter and passing the variable $x as the parameter value.
-After Set-CsPinPolicy has been called, you will be able to view the policy and its property values by using the Get-CsPinPolicy cmdlet.
 
 $x = New-CsPinPolicy -Identity "site:Redmond" -InMemory
 
@@ -180,10 +70,6 @@ $x.PINHistoryCount = 10
 $x.PINLifetime = 30
 
 Set-CsPinPolicy -Instance $x
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands shown in Example 3 demonstrate how you can create a new PIN policy in memory only, modify the property values for that policy, and then use the Set-CsPinPolicy cmdlet to turn that in-memory-only policy into an actual PIN policy.
@@ -194,50 +80,13 @@ After the virtual policy has been assigned to the variable $x, the next three co
 After all the properties have been configured, the Set-CsPinPolicy cmdlet is used to create an actual policy with the Identity site:Redmond; this is done by using the Instance parameter and passing the variable $x as the parameter value.
 After the Set-CsPinPolicy cmdlet has been called, you will be able to view the policy and its property values by using the Get-CsPinPolicy cmdlet.
 
-$x = New-CsPinPolicy -Identity "site:Redmond" -InMemory
 
-$x.MinPasswordLength = 10
-
-$x.PINHistoryCount = 10
-
-$x.PINLifetime = 30
-
-Set-CsPinPolicy -Instance $x
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-$x = Get-CsPinPolicy -Identity "site:Redmond"
-New-CsPinPolicy -Identity "site:Paris" -MinPasswordLength $x.MinPasswordLength
-```
-
-The commands used in Example 4 create a new PIN policy (site:Paris) that uses one of the property values found in the existing policy site:Redmond.
-To achieve this, the first command uses Get-CsPinPolicy to retrieve the PIN policy site:Redmond; the information retrieved for this policy is then stored in the variable $x.
-
-In the second command, New-CsPinPolicy is used to create the policy site:Paris.
-In addition, the MinPasswordLength parameter is used to specify the value of the MinPasswordLength property.
-However, instead of using a hard-coded numeric value, the command uses $x.MinPasswordLength as the parameter value; this tells New-CsPinPolicy to set the minimum password length to the value of the MinPasswordLength property found in the policy site:Redmond.
-The net result is that the value of the MinPasswordLength property will be copied from the existing policy site:Redmond to the new policy site:Paris.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands used in Example 4 create a new PIN policy (site:Paris) that uses one of the property values found in the existing policy site:Redmond.
-To achieve this, the first command uses Get-CsPinPolicy to retrieve the PIN policy site:Redmond; the information retrieved for this policy is then stored in the variable $x.
-
-In the second command, New-CsPinPolicy is used to create the policy site:Paris.
-In addition, the MinPasswordLength parameter is used to specify the value of the MinPasswordLength property.
-However, instead of using a hard-coded numeric value, the command uses $x.MinPasswordLength as the parameter value; this tells New-CsPinPolicy to set the minimum password length to the value of the MinPasswordLength property found in the policy site:Redmond.
-The net result is that the value of the MinPasswordLength property will be copied from the existing policy site:Redmond to the new policy site:Paris.
 
 $x = Get-CsPinPolicy -Identity "site:Redmond"
 
 New-CsPinPolicy -Identity "site:Paris" -MinPasswordLength $x.MinPasswordLength
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands used in Example 4 create a new PIN policy (site:Paris) that uses one of the property values found in the existing policy site:Redmond.
@@ -248,33 +97,20 @@ In addition, the MinPasswordLength parameter is used to specify the value of the
 However, instead of using a hard-coded numeric value, the command uses $x.MinPasswordLength as the parameter value; this tells the New-CsPinPolicy cmdlet to set the minimum password length to the value of the MinPasswordLength property found in the policy site:Redmond.
 The net result is that the value of the MinPasswordLength property will be copied from the existing policy site:Redmond to the new policy site:Paris.
 
-$x = Get-CsPinPolicy -Identity "site:Redmond"
-
-New-CsPinPolicy -Identity "site:Paris" -MinPasswordLength $x.MinPasswordLength
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Indicates the unique Identity to be assigned to the policy.
-PIN policies can be created at the site or per-user scope.
-To create a policy at the site scope, use syntax similar to this: -Identity site:Redmond.
-To create a policy at the per-user scope, use syntax similar to this: -Identity RedmondPinPolicy.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the unique Identity to be assigned to the policy.
 PIN policies can be created at the site or per-user scope.
 To create a policy at the site scope, use syntax similar to this:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To create a policy at the per-user scope, use syntax similar to this:
 
--Identity RedmondPinPolicy
+`-Identity RedmondPinPolicy`
 
 
 
@@ -309,31 +145,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumLogonAttempts
-**Below Content Applies To:** Lync Server 2010
-
-Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
-Logon failures are counted in two different ways: local logon failures and global logon failures.
-When a user first tries to logon, a new 30 minute observation window starts; each failed logon during that 30 minute window is recorded as both a local logon failure and a global logon failure.
-If the user reaches the MaximumLogonAttempts during that 30 minute observation window then he or she will temporarily be locked out of the system for one hour; during this time they will not be able to logon using PIN authentication even if they supply the correct PIN.
-
-After the lockout period has expired, the user's local logon attempts will be reset to 0.
-However, the user's global logon attempts will not be reset.
-If the user continually fails to logon, he or she will eventually reach the maximum number of allowed global logon attempts.
-Any user who reaches that point will have their PIN locked by the system, and will not be able to use PIN authentication until an administrator has unlocked the PIN.
-
-The maximum number of allowed logon attempts also varies with PIN size; this is why the MaximumLogonAttempts property does not show a default value when you run Get-CsPinPolicy.
-By default, a PIN length of 4 allows users 10 local logon attempts and 100 global logon attempts.
-A PIN length of 5 allows 25 local and 1000 global logon attempts, and PIN lengths greater than 6 allow 25 local tries and 5000 global tries.
-If you specify a value for the MaximumLogonAttempts property that value will be used for the maximum allowed number of local logon tries; however, global logon values do not change regardless of the value assigned to MaximumLogonAttempts.
-
-Each time a user successfully logs on using PIN authentication the local failed logon attempts is reset to 0.
-The global logon attempts are only reset when an administrator unlocks a user's PIN.
-
-MaximumLogonAttempts can be set to any whole number between 1 and 999, inclusive.
-
-
-
-**Below Content Applies To:** Lync Server 2013
 
 Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
 Logon failures are counted in two different ways: local logon failures and global logon failures.
@@ -355,34 +166,7 @@ The global logon attempts are only reset when an administrator unlocks a user's 
 
 MaximumLogonAttempts can be set to any whole number between 1 and 999, inclusive.
 However, it is recommended that you do not modify this property.
-When set to a null value (the default value) Lync Server 2013 Preview will automatically calculate lockout policies.
-This typically provides the most security.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates the number of sequential logon failures that are allowed before a user's PIN is automatically locked.
-Logon failures are counted in two different ways: local logon failures and global logon failures.
-When a user first tries to logon, a new 30 minute observation window starts; each failed logon during that 30 minute window is recorded as both a local logon failure and a global logon failure.
-If the user reaches the MaximumLogonAttempts during that 30 minute observation window then he or she will temporarily be locked out of the system for one hour; during this time they will not be able to logon using PIN authentication even if they supply the correct PIN.
-
-After the lockout period has expired, the user's local logon attempts will be reset to 0.
-However, the user's global logon attempts will not be reset.
-If the user continually fails to logon, he or she will eventually reach the maximum number of allowed global logon attempts.
-Any user who reaches that point will have their PIN locked by the system, and will not be able to use PIN authentication until an administrator has unlocked the PIN.
-
-The maximum number of allowed logon attempts also varies with PIN size; this is why the MaximumLogonAttempts property does not show a default value when you run Get-CsPinPolicy.
-By default, a PIN length of 4 allows users 10 local logon attempts and 100 global logon attempts.
-A PIN length of 5 allows 25 local and 1000 global logon attempts, and PIN lengths greater than 6 allow 25 local tries and 5000 global tries.
-If you specify a value for the MaximumLogonAttempts property that value will be used for the maximum allowed number of local logon tries; however, global logon values do not change regardless of the value assigned to MaximumLogonAttempts.
-
-Each time a user successfully logs on using PIN authentication the local failed logon attempts is reset to 0.
-The global logon attempts are only reset when an administrator unlocks a user's PIN.
-
-MaximumLogonAttempts can be set to any whole number between 1 and 999, inclusive.
-However, it is recommended that you do not modify this property.
-When set to a null value (the default value) Skype for Business Server 2015 will automatically calculate lockout policies.
+When set to a null value (the default value) Skype for Business Server will automatically calculate lockout policies.
 This typically provides the most security.
 
 
@@ -477,14 +261,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -537,13 +313,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCommonPatterns
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill AllowCommonPatterns Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether or not "common patterns" are allowed in PINs.
 Common patterns include repeating digits (222222); four or more consecutive digits (123456); and PINs that match a user's phone number or extension number.
@@ -569,7 +338,7 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for whom the new PIN policy is being created.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your Skype for Business Online tenants by running this command:
 
@@ -589,13 +358,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsPinPolicy does not accept pipelined input.
 
 ###  
 None.
@@ -610,8 +375,6 @@ Creates a new instance of the Microsoft.Rtc.Management.WritableConfig.Policy.Use
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d64fb0f9-1cdc-4497-992a-d002abafe92e(OCS.14).aspx)
-
 [Get-CsPinPolicy]()
 
 [Grant-CsPinPolicy]()
@@ -619,8 +382,4 @@ Creates a new instance of the Microsoft.Rtc.Management.WritableConfig.Policy.Use
 [Remove-CsPinPolicy]()
 
 [Set-CsPinPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d64fb0f9-1cdc-4497-992a-d002abafe92e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d64fb0f9-1cdc-4497-992a-d002abafe92e(OCS.16).aspx)
 

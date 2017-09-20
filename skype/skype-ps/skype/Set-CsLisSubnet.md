@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsLisSubnet
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a Location Information Server (LIS) subnet, creates an association between a subnet and a location (creating a new location if that location doesn't exist), or modifies an existing subnet and its associated location.
-The association between a subnet and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Creates a Location Information Server (LIS) subnet, creates an association between a subnet and a location (creating a new location if that location doesn't exist), or modifies an existing subnet and its associated location.
 The association between a subnet and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -44,8 +36,6 @@ Set-CsLisSubnet -City <String> -CompanyName <String> -Country <String> -HouseNum
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information.
 In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors.
 The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location.
@@ -56,40 +46,16 @@ If you enter a Subnet value that already exists, this cmdlet will update the loc
 If the Subnet does not exist, a new subnet location will be created.
 
 If a location with an address exactly matching the address parameters entered here (including null values) does not exist in the location database, a new address will be created based on the parameters entered with this cmdlet.
-(You can retrieve a list of locations by calling the Get-CsLisLocation cmdlet.) The Set-CsLisSubnet cmdlet does not require or prompt for location parameters; you can create a subnet entry without associating it with a location.
+(You can retrieve a list of locations by calling the `Get-CsLisLocation` cmdlet.) The `Set-CsLisSubnet` cmdlet does not require or prompt for location parameters; you can create a subnet entry without associating it with a location.
 It's also possible to create an invalid location with this cmdlet.
-A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State, and Country.
+A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State and Country.
 If you do not supply all these parameters, calls that originate from the specified subnet may not contain the information required by the emergency operator (depending on whether valid settings are available for a switch, port, or wireless access point that can be used in place of subnet settings).
 It is recommended that you be as specific as possible with the location parameters and fill in as many as possible.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsLisSubnet cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsLisSubnet"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information.
-In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors.
-The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location.
-This cmdlet allows the administrator to map physical locations to the subnet through which the client is connected.
-
-The Subnet parameter is the only required parameter for this cmdlet.
-If you enter a Subnet value that already exists, this cmdlet will update the location for that subnet based on the location parameters that are supplied.
-If the Subnet does not exist, a new subnet location will be created.
-
-If a location with an address exactly matching the address parameters entered here (including null values) does not exist in the location database, a new address will be created based on the parameters entered with this cmdlet.
-(You can retrieve a list of locations by calling the Get-CsLisLocation cmdlet.) The Set-CsLisSubnet cmdlet does not require or prompt for location parameters; you can create a subnet entry without associating it with a location.
-It's also possible to create an invalid location with this cmdlet.
-A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State, and Country.
-If you do not supply all these parameters, calls that originate from the specified subnet may not contain the information required by the emergency operator (depending on whether valid settings are available for a switch, port, or wireless access point that can be used in place of subnet settings).
-It is recommended that you be as specific as possible with the location parameters and fill in as many as possible.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsLisSubnet -Subnet 192.10.10.0
 ```
@@ -106,43 +72,6 @@ IMPORTANT: If a LIS subnet location with this Subnet value already exists, it wi
 That means that if this subnet were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
 The location will still exist in the location database, but it will not be associated with this subnet.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 1 creates or updates a LIS subnet location entry.
-The command in this example includes only one (required) parameter: Subnet.
-The value of the Subnet in this example is an IPv4 address, 192.10.10.0.
-
-Note that this example does not include any address information.
-It's possible to create a subnet entry on the Location Information Server without associating it with an address.
-However, emergency calls routed through this subnet may not (depending on port or switch locations that have been defined) contain enough information for the emergency operator to identify a location.
-
-IMPORTANT: If a LIS subnet location with this Subnet value already exists, it will be replaced by the values in this command.
-That means that if this subnet were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
-The location will still exist in the location database, but it will not be associated with this subnet.
-
-Set-CsLisSubnet -Subnet 192.10.10.0
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 creates or updates a LIS subnet location entry.
-The command in this example includes only one (required) parameter: Subnet.
-The value of the Subnet in this example is an IPv4 address, 192.10.10.0.
-
-Note that this example does not include any address information.
-It's possible to create a subnet entry on the Location Information Server without associating it with an address.
-However, emergency calls routed through this subnet may not (depending on port or switch locations that have been defined) contain enough information for the emergency operator to identify a location.
-
-IMPORTANT: If a LIS subnet location with this Subnet value already exists, it will be replaced by the values in this command.
-That means that if this subnet were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
-The location will still exist in the location database, but it will not be associated with this subnet.
-
-Set-CsLisSubnet -Subnet 192.10.10.0
 
 ## PARAMETERS
 
@@ -309,7 +238,7 @@ Additional information for the house number, such as 1/2 or A.
 For example, 1234 1/2 Oak Street or 1234 A Elm Street.
 
 Note: To designate an apartment number or office suite, you must use the Location parameter.
-For example, -Location "Suite 100/Office 150".
+For example, `-Location "Suite 100/Office 150"`.
 
 Maximum length: 5 characters
 
@@ -608,15 +537,8 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e51ef9ec-c307-4046-b64b-f23b354713fc(OCS.14).aspx)
-
 [Remove-CsLisSubnet]()
 
 [Get-CsLisSubnet]()
 
 [Get-CsLisLocation]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e51ef9ec-c307-4046-b64b-f23b354713fc(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e51ef9ec-c307-4046-b64b-f23b354713fc(OCS.16).aspx)
-

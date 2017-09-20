@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsVideoTrunkConfiguration
 
 ## SYNOPSIS
-Use the Set-CsVideoTrunkConfiguration to modify one or more Video Trunk configurations containing settings applicable to a video SIP trunk between the Video Interoperability Server (VIS) and a Video Gateway.
+Use the `Set-CsVideoTrunkConfiguration` to modify one or more Video Trunk configurations containing settings applicable to a video SIP trunk between the Video Interoperability Server (VIS) and a Video Gateway.
 
 ## SYNTAX
 
@@ -28,7 +28,7 @@ Set-CsVideoTrunkConfiguration [-Confirm] [-EnableMediaEncryptionForSipOverTls <B
 ```
 
 ## DESCRIPTION
-The Video Interop Server in Skype for Business Server 2015 enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
+The Video Interop Server in Skype for Business Server enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
 The Video Interop Server is a Skype service that runs on a standalone pool and cannot be co-located on an FE pool.
 
 To enable the Video Interop Server, you must use Topology Builder to define at least one VIS instance.
@@ -47,31 +47,29 @@ Secure Real-time Transport Protocol (SRTP) use when Transport Layer Security (TL
 
 Session timers usage on the Video Interop Server (VIS) for dialogs associated with a Video Trunk
 
-By default, Skype for Business Server 2015 ships with a single, global collection of Video Trunk configuration settings.
-However, administrators can use the New-CsVideoTrunkConfiguration cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
-Both the single global collection of settings and any custom settings that you create can be modified by using the Set-CsVideoTrunkConfiguration cmdlet.
+By default, Skype for Business Server ships with a single, global collection of Video Trunk configuration settings.
+However, administrators can use the `New-CsVideoTrunkConfiguration` cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
+Both the single global collection of settings and any custom settings that you create can be modified by using the `Set-CsVideoTrunkConfiguration` cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsVideoTrunkConfiguration -Identity "site:Seattle" -EnableSessionTimer $False
 ```
 
 This example disables session timers for the collection of Video Trunk configuration settings assigned to the Seattle site.
 
-Set-CsVideoTrunkConfiguration -Identity "site:Seattle" -EnableSessionTimer $False
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsVideoTrunkConfiguration | Set-CsVideoTrunkConfiguration -EnableSessionTimer $False
 ```
 
 In this example the session timers are disabled for all the Video Trunk configuration settings in use in the organization.
-The command first uses the Get-CsVideoTrunkConfiguration cmdlet to return a collection of all the available Video Trunk configuration settings.
-That collection is then piped to the Set-CsVideoTrunkConfiguration cmdlet, which disables the session timer for each item in the collection.
+The command first uses the `Get-CsVideoTrunkConfiguration` cmdlet to return a collection of all the available Video Trunk configuration settings.
+That collection is then piped to the `Set-CsVideoTrunkConfiguration` cmdlet, which disables the session timer for each item in the collection.
 
-Get-CsVideoTrunkConfiguration | Set-CsVideoTrunkConfiguration -EnableSessionTimer $False
 
 ## PARAMETERS
 
@@ -203,10 +201,10 @@ Accept wildcard characters: False
 ### -Identity
 The Identity parameter specifies the unique identifier for the video trunk configuration to be modified.
 
-For example, this syntax creates a new collection of settings assigned to the Redmond site: -Identity "site:Redmond".
-And this syntax creates a new collection assigned to the Video Gateway "video-pbx-001.litwareinc.com": -Identity "service:VideoGateway:video-pbx-001.litwareinc.com"
+For example, this syntax creates a new collection of settings assigned to the Redmond site: `-Identity "site:Redmond"`.
+And this syntax creates a new collection assigned to the Video Gateway "video-pbx-001.litwareinc.com": `-Identity "service:VideoGateway:video-pbx-001.litwareinc.com"`
 
-If this parameter is not specified, the Set-CsVideoTrunkConfiguration cmdlet will automatically modify the global settings.
+If this parameter is not specified, the `Set-CsVideoTrunkConfiguration` cmdlet will automatically modify the global settings.
 
 ```yaml
 Type: XdsIdentity
@@ -259,13 +257,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Set-CsVideoTrunkConfiguration cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
+The `Set-CsVideoTrunkConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Set-CsVideoTrunkConfiguration cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
+The `Set-CsVideoTrunkConfiguration` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
 
 ## NOTES
 
@@ -276,6 +274,3 @@ The Set-CsVideoTrunkConfiguration cmdlet modifies existing instances of the Micr
 [New-CsVideoTrunkConfiguration]()
 
 [Remove-CsVideoTrunkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f90d8b4d-6d3b-49c1-9390-c0e57eff219a(OCS.16).aspx)
-

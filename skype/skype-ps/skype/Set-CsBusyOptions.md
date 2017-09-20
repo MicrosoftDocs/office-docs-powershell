@@ -21,7 +21,7 @@ Set-CsBusyOptions [-Identity] <UserIdParameter> -ActionType <ActionType> [-Confi
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -127,4 +127,3 @@ Microsoft.Rtc.Management.AD.UserIdParameter
 ## NOTES
 
 ## RELATED LINKS
-

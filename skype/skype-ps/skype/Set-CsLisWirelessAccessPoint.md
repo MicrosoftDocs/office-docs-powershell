@@ -7,13 +7,6 @@ schema: 2.0.0
 # Set-CsLisWirelessAccessPoint
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a Location Information Server (LIS) wireless access point (WAP), creates an association between a WAP and a location (creating a new location if that location doesn't exist), or modifies an existing WAP and its associated location.
-The association between a WAP and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Creates a Location Information Server (LIS) wireless access point (WAP), creates an association between a WAP and a location (creating a new location if that location doesn't exist), or modifies an existing WAP and its associated location.
 The association between a WAP and location is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 This cmdlet was introduced in Lync Server 2010.
@@ -44,8 +37,6 @@ Set-CsLisWirelessAccessPoint -City <String> -CompanyName <String> -Country <Stri
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information.
 In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors.
 The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location.
@@ -56,40 +47,16 @@ If you enter a BSSID value that already exists, this cmdlet will update the loca
 If the BSSID does not exist, a new WAP location will be created.
 
 If a location with an address exactly matching the address parameters entered here (including null values) does not exist in the location database, a new address will be created based on the parameters entered with this cmdlet.
-(You can retrieve a list of locations by calling the Get-CsLisLocation cmdlet.) The Set-CsLisWirelessAccessPoint cmdlet does not require or prompt for location parameters; you can create a WAP entry without associating it with a location.
+(You can retrieve a list of locations by calling the `Get-CsLisLocation` cmdlet.) The `Set-CsLisWirelessAccessPoint` cmdlet does not require or prompt for location parameters; you can create a WAP entry without associating it with a location.
 It's also possible to create an invalid location with this cmdlet.
-A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State, and Country.
+A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State and Country.
 If you do not supply all of these parameters, calls that are received by the referenced WAP may not contain the information required by the emergency operator.
 It is recommended that you be as specific as possible with the location parameters and fill in as many as possible.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsLisWirelessAccessPoint cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsLisWirelessAccessPoint"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information.
-In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors.
-The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location.
-This cmdlet allows the administrator to map physical locations to the WAP through which calls will be routed.
-
-The BSSID parameter is the only required parameter for this cmdlet.
-If you enter a BSSID value that already exists, this cmdlet will update the location for that WAP based on the location parameters that are supplied.
-If the BSSID does not exist, a new WAP location will be created.
-
-If a location with an address exactly matching the address parameters entered here (including null values) does not exist in the location database, a new address will be created based on the parameters entered with this cmdlet.
-(You can retrieve a list of locations by calling the Get-CsLisLocation cmdlet.) The Set-CsLisWirelessAccessPoint cmdlet does not require or prompt for location parameters; you can create a WAP entry without associating it with a location.
-It's also possible to create an invalid location with this cmdlet.
-A valid location consists of, at minimum, the Location, HouseNumber, StreetName, City, State, and Country.
-If you do not supply all of these parameters, calls that are received by the referenced WAP may not contain the information required by the emergency operator.
-It is recommended that you be as specific as possible with the location parameters and fill in as many as possible.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99
 ```
@@ -106,45 +73,8 @@ IMPORTANT: If a LIS WAP location with this BSSID already exists, it will be repl
 That means that if this WAP were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
 The location will still exist in the location database, but it will not be associated with this WAP.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 1 creates or updates a LIS WAP location entry.
-The command in this example includes only one (required) parameter: BSSID.
-The value of the BSSID is the identifier (in the form of a MAC address) of the WAP, in this case 99-99-99-99-99-99.
-
-Notice that this example does not include any address information.
-It's possible to create a WAP entry on the Location Information Server without associating it with an address.
-However, emergency calls routed through this WAP may not contain enough information for the emergency operator to identify a location.
-
-IMPORTANT: If a LIS WAP location with this BSSID already exists, it will be replaced by the values in this command.
-That means that if this WAP were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
-The location will still exist in the location database, but it will not be associated with this WAP.
-
-Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 creates or updates a LIS WAP location entry.
-The command in this example includes only one (required) parameter: BSSID.
-The value of the BSSID is the identifier (in the form of a MAC address) of the WAP, in this case 99-99-99-99-99-99.
-
-Notice that this example does not include any address information.
-It's possible to create a WAP entry on the Location Information Server without associating it with an address.
-However, emergency calls routed through this WAP may not contain enough information for the emergency operator to identify a location.
-
-IMPORTANT: If a LIS WAP location with this BSSID already exists, it will be replaced by the values in this command.
-That means that if this WAP were associated with an address (a physical location), that association would no longer exist because we didn't include any location information in this command.
-The location will still exist in the location database, but it will not be associated with this WAP.
-
-Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99 -Location "30/1000" -HouseNumber 1234 -PreDirectional NE -StreetName First -StreetSuffix Avenue -City Redmond -State WA -Country US -PostalCode 99999
 ```
@@ -152,25 +82,6 @@ Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99 -Location "30/1000" -House
 Example 2 updates the WAP created in Example 1 by adding address information.
 (This is actually deleting the existing entry and replacing it with this new entry.) If the address does not exist in the location database, this cmdlet will create that location.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 updates the WAP created in Example 1 by adding address information.
-(This is actually deleting the existing entry and replacing it with this new entry.) If the address does not exist in the location database, this cmdlet will create that location.
-
-Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99 -Location "30/1000" -HouseNumber 1234 -PreDirectional NE -StreetName First -StreetSuffix Avenue -City Redmond -State WA -Country US -PostalCode 99999
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 updates the WAP created in Example 1 by adding address information.
-(This is actually deleting the existing entry and replacing it with this new entry.) If the address does not exist in the location database, this cmdlet will create that location.
-
-Set-CsLisWirelessAccessPoint -BSSID 99-99-99-99-99-99 -Location "30/1000" -HouseNumber 1234 -PreDirectional NE -StreetName First -StreetSuffix Avenue -City Redmond -State WA -Country US -PostalCode 99999
 
 ## PARAMETERS
 
@@ -339,7 +250,7 @@ Additional information for the house number, such as 1/2 or A.
 For example, 1234 1/2 Oak Street or 1234 A Elm Street.
 
 Note: To designate an apartment number or office suite, you must use the Location parameter.
-For example, -Location "Suite 100/Office 150".
+For example, `-Location "Suite 100/Office 150"`.
 
 Maximum length: 5 characters
 
@@ -638,15 +549,8 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/9c491f8d-c4c0-48e5-afc2-0153864dab41(OCS.14).aspx)
-
 [Remove-CsLisWirelessAccessPoint]()
 
 [Get-CsLisWirelessAccessPoint]()
 
 [Get-CsLisLocation]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9c491f8d-c4c0-48e5-afc2-0153864dab41(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9c491f8d-c4c0-48e5-afc2-0153864dab41(OCS.16).aspx)
-

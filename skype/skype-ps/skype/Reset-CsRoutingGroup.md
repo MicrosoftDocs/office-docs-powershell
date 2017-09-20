@@ -18,19 +18,18 @@ Reset-CsRoutingGroup [-RoutingGroup] <String> [-Binding <String>] [-Confirm] [-F
 ```
 
 ## DESCRIPTION
-The Reset-CsRoutingGroup cmdlet provides a way for administrators to reset Windows Fabric routing groups that are "missing" or are otherwise not working correctly.
-Missing routing groups can be identified by using the Get-CsPoolFabricState cmdlet and the FilterOnMissingReplicas parameter.
+The `Reset-CsRoutingGroup` cmdlet provides a way for administrators to reset Windows Fabric routing groups that are "missing" or are otherwise not working correctly.
+Missing routing groups can be identified by using the `Get-CsPoolFabricState` cmdlet and the FilterOnMissingReplicas parameter.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -Type "Transient"
 ```
 
 The command shown in Example 1 performs a transient on the routing group with the identity bef5fa3b-3c97-4af0-abe7-611deee7616c.
 
-Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -Type "Transient"
 
 ## PARAMETERS
 
@@ -38,7 +37,7 @@ Reset-CsRoutingGroup -RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c" -Type 
 Globally unique identifier (GUID) of the routing group that needs to be reset.
 For example:
 
--RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c"
+`-RoutingGroup "bef5fa3b-3c97-4af0-abe7-611deee7616c"`
 
 ```yaml
 Type: String
@@ -195,17 +194,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The Reset-CsRoutingGroup cmdlet does not accept pipelined input.
+The `Reset-CsRoutingGroup` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
 None.
-The Reset-CsRoutingGroup cmdlet does return objects or data.
+The `Reset-CsRoutingGroup` cmdlet does return objects or data.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9a02d648-18fe-49a0-8c06-8cafedeb9700(OCS.16).aspx)
-

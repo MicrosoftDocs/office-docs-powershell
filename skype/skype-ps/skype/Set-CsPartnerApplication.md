@@ -7,18 +7,9 @@ schema: 2.0.0
 # Set-CsPartnerApplication
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
 Modifies an existing partner application.
-A partner application is any application that Microsoft Lync Server 2013 Preview can directly exchange security tokens with, without having to go through a third-party security token server.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies an existing partner application.
-A partner application is any application that Skype for Business Server 2015 can directly exchange security tokens with, without having to go through a third-party security token server.
+A partner application is any application that Skype for Business Server can directly exchange security tokens with, without having to go through a third-party security token server.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -64,107 +55,50 @@ Set-CsPartnerApplication [-Confirm] [-Force] [-Instance <PSObject>] [-WhatIf] [<
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
+In Skype for Business Server, server-to-server authentication (for example, the authentication that enables Skype for Business Server and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
 If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
 
-If you are using an on-premises version of Lync Server 2013 Preview and you need to communicate with another server product that fully supports the OAuth protocol (for example, Exchange 2013 Preview or Microsoft SharePoint 2013) then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
-However, you will need to configure the other server product (e.g., Exchange 2013 Preview) as a partner application.
-(You will also need to configure Lync Server 2013 Preview as a partner application for the other server product.) In Lync Server 2013 Preview, partner applications are managed by using the CsPartnerApplication cmdlets.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPartnerApplication"}
-
-Lync Server Control Panel: The functions carried out by the Set-CsPartnerApplication cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
-This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
-If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
-
-If you are using an on-premises version of Skype for Business Server 2015 and you need to communicate with another server product that fully supports the OAuth protocol (for example, Exchange or SharePoint) then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
+If you are using an on-premises version of Skype for Business Server and you need to communicate with another server product that fully supports the OAuth protocol (for example, Exchange or SharePoint) then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
 However, you will need to configure the other server product (e.g., Exchange) as a partner application.
-(You will also need to configure Skype for Business Server 2015 as a partner application for the other server product.) In Skype for Business Server 2015, partner applications are managed by using the CsPartnerApplication cmdlets.
+(You will also need to configure Skype for Business Server as a partner application for the other server product.) In Skype for Business Server, partner applications are managed by using the CsPartnerApplication cmdlets.
 
-Skype for Business Server Control Panel: The functions carried out by the Set-CsPartnerApplication cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Set-CsPartnerApplication` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsPartnerApplication -Identity "MicrosoftExchange" -Enabled $False
 ```
 
 The command shown in Example 1 disables the partner application MicrosoftExchange.
 This is done by setting the Enabled property to False ($False).
 
-Set-CsPartnerApplication -Identity "MicrosoftExchange" -Enabled $False
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 disables the partner application MicrosoftExchange.
-This is done by setting the Enabled property to False ($False).
-
-Set-CsPartnerApplication -Identity "MicrosoftExchange" -Enabled $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPartnerApplication | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
 ```
 
 In Example 2, all the partner applications currently in use in the organization are disabled.
-To do this, the command first uses Get-CsPartnerApplication to return a collection of all the partner applications.
-This collection is then piped to the ForEach-Object cmdlet.
-In turn, ForEach-Object runs the Set-CsPartnerApplication cmdlet against each application in the collection.
+To do this, the command first uses the `Get-CsPartnerApplication` cmdlet to return a collection of all the partner applications.
+This collection is then piped to the `ForEach-Object` cmdlet.
+In turn, the `ForEach-Object` cmdlet runs the `Set-CsPartnerApplication` cmdlet against each application in the collection.
 Doing so disables each of those partner applications.
 
-Get-CsPartnerApplication | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-In Example 2, all the partner applications currently in use in the organization are disabled.
-To do this, the command first uses the Get-CsPartnerApplication cmdlet to return a collection of all the partner applications.
-This collection is then piped to the ForEach-Object cmdlet.
-In turn, the ForEach-Object cmdlet runs the Set-CsPartnerApplication cmdlet against each application in the collection.
-Doing so disables each of those partner applications.
-
-Get-CsPartnerApplication | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
-```
-
+Get-CsPartnerApplication | Where-Object {$_.ApplicationTrustLevel -eq "User"} | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
 ```
 
 Example 3 disables all partner applications where the ApplicationTrustLevel property is set to User.
-To carry out this task, the command first calls Get-CsPartnerApplication without any parameters; that returns a collection of all the partner applications configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those applications where the ApplicationTrustLevel property is equal to "User".
-That filtered collection is then piped to the ForEach-Object cmdlet, which uses Set-CsPartnerApplication, to take each item in the collection and set the Enabled property to $False.
+To carry out this task, the command first calls the `Get-CsPartnerApplication` cmdlet without any parameters; that returns a collection of all the partner applications configured for use in the organization.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those applications where the ApplicationTrustLevel property is equal to "User".
+That filtered collection is then piped to the `ForEach-Object` cmdlet, which uses the `Set-CsPartnerApplication` cmdlet to take each item in the collection and set the Enabled property to $False.
 
-Get-CsPartnerApplication | Where-Object {$_.ApplicationTrustLevel -eq "User"} | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 disables all partner applications where the ApplicationTrustLevel property is set to User.
-To carry out this task, the command first calls the Get-CsPartnerApplication cmdlet without any parameters; that returns a collection of all the partner applications configured for use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those applications where the ApplicationTrustLevel property is equal to "User".
-That filtered collection is then piped to the ForEach-Object cmdlet, which uses the Set-CsPartnerApplication cmdlet to take each item in the collection and set the Enabled property to $False.
-
-Get-CsPartnerApplication | Where-Object {$_.ApplicationTrustLevel -eq "User"} | ForEach-Object {Set-CsPartnerApplication -Identity $_.Identity -Enabled $False}
 
 ## PARAMETERS
 
@@ -172,7 +106,7 @@ Get-CsPartnerApplication | Where-Object {$_.ApplicationTrustLevel -eq "User"} | 
 Path to a certificate file that can be assigned to the partner application.
 For example:
 
--CertificateFileData "C:\Certificates\PartnerApplication.cer"
+`-CertificateFileData "C:\Certificates\PartnerApplication.cer"`
 
 ```yaml
 Type: String
@@ -191,13 +125,13 @@ Accept wildcard characters: False
 Certificate (in Base64 encoded format) that can be assigned to the partner application.
 To read raw data from a certificate and then convert that data to the required format, use commands similar to these:
 
-$x = Get-Content "C:\Certificates\PartnerApplication.cer" -Encoding Byte
+`$x = Get-Content "C:\Certificates\PartnerApplication.cer" -Encoding Byte`
 
-$y = \[Convert\]::ToBase64String($x)
+`$y = \[Convert\]::ToBase64String($x)`
 
 You can then use this syntax to assign the certificate data stored in the variable $y:
 
--CertificateRawData $y
+`-CertificateRawData $y`
 
 ```yaml
 Type: String
@@ -216,7 +150,7 @@ Accept wildcard characters: False
 Unique identifier of the partner application.
 For example:
 
--Identity "MicrosoftExchange"
+`-Identity "MicrosoftExchange"`
 
 ```yaml
 Type: XdsGlobalRelativeIdentity
@@ -232,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataUrl
-URL of the security token servicer federation metadata that carries the signing keys, the issuer identifier, and the issuer endpoint URL.
+URL of the security token servicer federation metadata that carries the signing keys, the issuer identifier and the issuer endpoint URL.
 
 ```yaml
 Type: String
@@ -282,9 +216,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationTrustLevel
-**Below Content Applies To:** Lync Server 2013
-
-Specifies the level of trust between Lync Server 2013 Preview and the partner application.
+Specifies the level of trust between Skype for Business Server and the partner application.
 Allowed values are:
 
 * Full -- The partner application is trusted to represent itself and to impersonate any user in the realm. This is the default value.
@@ -292,20 +224,6 @@ Allowed values are:
 * User -- The partner application must obtain consent from a security token server in order to represent a user, and cannot represent itself.
 
 The default value is Full.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Specifies the level of trust between Skype for Business Server 2015 and the partner application.
-Allowed values are:
-
-* Full -- The partner application is trusted to represent itself and to impersonate any user in the realm. This is the default value.
-* Application -- The partner application is trusted to represent itself within the realm. In order to impersonate a user, it must obtain consent through from a security token server.
-* User -- The partner application must obtain consent from a security token server in order to represent a user, and cannot represent itself.
-
-The default value is Full.
-
 
 
 ```yaml
@@ -338,18 +256,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-**Below Content Applies To:** Lync Server 2013
-
-When set to True, the partner application is available for use with Lync Server 2013 Preview.
-When set to False the partner application will continue to run, but will not be able to communicate with Lync Server until the Enabled property has been set to True.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When set to True, the partner application is available for use with Skype for Business Server 2015.
-When set to False the partner application will continue to run, but will not be able to communicate with Skype for Business Server 2015 until the Enabled property has been set to True.
-
+When set to True, the partner application is available for use with Skype for Business Server.
+When set to False the partner application will continue to run, but will not be able to communicate with Skype for Business Server until the Enabled property has been set to True.
 
 
 ```yaml
@@ -398,30 +306,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for the partner application being modified.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the partner application being modified.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 ```yaml
@@ -460,21 +352,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Set-CsPartnerApplication does not accept pipelined input.
-
-###  
-None.
-The Set-CsPartnerApplication cmdlet does not accept pipelined input.
+The `Set-CsPartnerApplication` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsPartnerApplication modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.PartnerApplication#Decorated object.
-
-###  
-None.
-Instead, the Set-CsPartnerApplication cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.PartnerApplication#Decorated object.
+Instead, the `Set-CsPartnerApplication` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.PartnerApplication#Decorated object.
 
 ## NOTES
 
@@ -485,8 +369,3 @@ Instead, the Set-CsPartnerApplication cmdlet modifies existing instances of the 
 [New-CsPartnerApplication]()
 
 [Remove-CsPartnerApplication]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/29c8c511-157b-478e-814f-b911955a8251(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/29c8c511-157b-478e-814f-b911955a8251(OCS.16).aspx)
-

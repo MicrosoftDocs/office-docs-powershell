@@ -18,29 +18,28 @@ Remove-CsConversationHistoryConfiguration [-Identity] <XdsIdentity> [-Confirm] [
 ```
 
 ## DESCRIPTION
-Prior to the release of Skype for Business Server 2015, conversation histories were stored in the Conversation History folder in users's mailbox, written by the Skype for Business rich client.
+Prior to the release of Skype for Business Server, conversation histories were stored in the Conversation History folder in users's mailbox, written by the Skype for Business rich client.
 Unfortunately, that proved to be a problem for mobile device users, because the Conversation History folder is typically not replicated to mobile devices.
-With Skype for Business Server 2015, however, conversation histories, missed call notifications, and missed IM notifications can be stored on the server in user mailboxes; this change makes these items readily available to mobile devices.
+With Skype for Business Server, however, conversation histories, missed call notifications and missed IM notifications can be stored on the server in user mailboxes; this change makes these items readily available to mobile devices.
 Administrators can manage the server-side storage of these conversation histories by using the conversation history configuration settings.
 Just keep in mind that a single, global collection of these settings is used to manage conversation histories throughout your deployment.
 There is no option for creating additional conversation history settings at the site, service, or per-user scope.
 
-Despite the name, the Remove-CsConversationHistoryConfiguration cmdlet does not actually delete the global collection of settings; that's because the global collection cannot be deleted.
-Instead, the Remove-CsConversationHistoryConfiguration cmdlet resets all the properties in the global collection to their default values.
-For example, when you install Skype for Business Server 2015 the CachedUserThreshold property is set to 1000000.
+Despite the name, the `Remove-CsConversationHistoryConfiguration` cmdlet does not actually delete the global collection of settings; that's because the global collection cannot be deleted.
+Instead, the `Remove-CsConversationHistoryConfiguration` cmdlet resets all the properties in the global collection to their default values.
+For example, when you install Skype for Business Server the CachedUserThreshold property is set to 1000000.
 Suppose you change this value to 500000.
-If you run the Remove-CsConversationHistoryConfiguration cmdlet then CachedUserThreshold will revert back to its default value of 1000000.
+If you run the `Remove-CsConversationHistoryConfiguration` cmdlet then CachedUserThreshold will revert back to its default value of 1000000.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsConversationHistoryConfiguration -Identity "global"
 ```
 
 The command shown in Example 1 resets all the properties in the global collection of conversation history configuration settings to their default values.
 
-Remove-CsConversationHistoryConfiguration -Identity "global"
 
 ## PARAMETERS
 
@@ -48,7 +47,7 @@ Remove-CsConversationHistoryConfiguration -Identity "global"
 Unique identifier for the conversation history configuration settings to be deleted.
 Because there is only a single, global collection of settings per deployment, the only allowed syntax is the following:
 
--Identity "global"
+`-Identity "global"`
 
 ```yaml
 Type: XdsIdentity
@@ -117,13 +116,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Remove-CsConversationHistoryConfiguration accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+`Remove-CsConversationHistoryConfiguration` accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Remove-CsConversationHistoryConfiguration resets instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+Instead, `Remove-CsConversationHistoryConfiguration` resets instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
 
 ## NOTES
 
@@ -132,6 +131,3 @@ Instead, Remove-CsConversationHistoryConfiguration resets instances of the Micro
 [Get-CsConversationHistoryConfiguration]()
 
 [Set-CsConversationHistoryConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/105d9ca9-3864-4615-9d4b-506977b83714(OCS.16).aspx)
-

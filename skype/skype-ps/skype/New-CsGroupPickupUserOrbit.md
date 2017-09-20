@@ -21,25 +21,25 @@ This cmdlet will throw an exception if the user is already assigned a group pick
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+New-CsGroupPickupUserOrbit -User sip:KenMyers@Contoso.com -Orbit "*100"
 ```
 
 This example adds a user specified by the SIP address to the *100 orbit.
 
-New-CsGroupPickupUserOrbit -User sip:KenMyers@Contoso.com -Orbit "*100"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+
+### -------------------------- Example 2 -------------------------- 
 ```
-
+New-CsGroupPickupUserOrbit "Ken Myers" -Orbit 2103
 ```
 
 This example adds a user specified by display name to the 2103 orbit.
 Because User is a positional parameter, the -User syntax is not required.
 The first parameter after the cmdlet is assumed to be the User parameter value.
 
-New-CsGroupPickupUserOrbit "Ken Myers" -Orbit 2103
+
 
 ## PARAMETERS
 
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -148,6 +148,4 @@ This cmdlet returns an instance of the Microsoft.Rtc.Management.Voice.Helpers.Gr
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7c0d90cd-0a67-4711-9005-b424d8235c57(OCS.16).aspx)
 

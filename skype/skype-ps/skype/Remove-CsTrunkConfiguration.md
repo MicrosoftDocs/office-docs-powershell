@@ -7,15 +7,8 @@ schema: 2.0.0
 # Remove-CsTrunkConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes an existing trunk configuration that describes the settings for a trunking peer entity such as a public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes an existing trunk configuration that describes the settings for a trunking peer entity such as a public switched telephone network (PSTN) gateway, IP-public branch exchange (PBX), or Session Border Controller (SBC) at the service provider.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -25,102 +18,33 @@ Remove-CsTrunkConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Confi
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Use this cmdlet to remove a trunking configuration applicable to PSTN gateway entities.
 Each configuration contains specific settings for a trunking peer entity such as a PSTN gateway, IP-PBX, or SBC at the service provider.
 These settings configure such things as whether media bypass is enabled on this trunk, whether real-time transport control protocol (RTCP) packets are sent under certain conditions, and whether to require secure real-time protocol (SRTP) encryption.
 
-Note that if you call Remove-CsTrunkConfiguration on the Global configuration, that trunk configuration will not be removed.
+Note that if you call the `Remove-CsTrunkConfiguration` cmdlet on the Global configuration, that trunk configuration will not be removed.
 Instead the configuration will be "reset" and all custom settings will be replaced with default values.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsTrunkConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the  Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsTrunkConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Use this cmdlet to remove a trunking configuration applicable to PSTN gateway entities.
-Each configuration contains specific settings for a trunking peer entity such as a PSTN gateway, IP-PBX, or SBC at the service provider.
-These settings configure such things as whether media bypass is enabled on this trunk, whether real-time transport control protocol (RTCP) packets are sent under certain conditions, and whether to require secure real-time protocol (SRTP) encryption.
-
-Note that if you call Remove-CsTrunkConfiguration on the Global configuration, that trunk configuration will not be removed.
-Instead the configuration will be "reset" and all custom settings will be replaced with default values.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsTrunkConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsTrunkConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Use this cmdlet to remove a trunking configuration applicable to PSTN gateway entities.
-Each configuration contains specific settings for a trunking peer entity such as a PSTN gateway, IP-PBX, or SBC at the service provider.
-These settings configure such things as whether media bypass is enabled on this trunk, whether real-time transport control protocol (RTCP) packets are sent under certain conditions, and whether to require secure real-time protocol (SRTP) encryption.
-
-Note that if you call the Remove-CsTrunkConfiguration cmdlet on the Global configuration, that trunk configuration will not be removed.
-Instead the configuration will be "reset" and all custom settings will be replaced with default values.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Remove-CsTrunkConfiguration -Identity site:Redmond
 ```
 
 This example removes the trunk configuration with the Identity site:Redmond.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example removes the trunk configuration with the Identity site:Redmond.
-
-Remove-CsTrunkConfiguration -Identity site:Redmond
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example removes the trunk configuration with the Identity site:Redmond.
-
-Remove-CsTrunkConfiguration -Identity site:Redmond
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsTrunkConfiguration -Filter site:* | Remove-CsTrunkConfiguration
 ```
 
 Example 2 removes all trunk configurations defined at the site level.
-The first part of the command is a call to the Get-CsTrunkConfiguration cmdlet that uses the Filter parameter to retrieve all trunk configurations with an Identity beginning with site: (that is, all trunk configurations defined at the site level).
-This collection of configurations is then piped to the Remove-CsTrunkConfiguration cmdlet, which removes each object in the collection.
+The first part of the command is a call to the `Get-CsTrunkConfiguration` cmdlet that uses the Filter parameter to retrieve all trunk configurations with an Identity beginning with site: (that is, all trunk configurations defined at the site level).
+This collection of configurations is then piped to the `Remove-CsTrunkConfiguration` cmdlet, which removes each object in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 removes all trunk configurations defined at the site level.
-The first part of the command is a call to the Get-CsTrunkConfiguration cmdlet that uses the Filter parameter to retrieve all trunk configurations with an Identity beginning with site: (that is, all trunk configurations defined at the site level).
-This collection of configurations is then piped to the Remove-CsTrunkConfiguration cmdlet, which removes each object in the collection.
-
-Get-CsTrunkConfiguration -Filter site:* | Remove-CsTrunkConfiguration
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 removes all trunk configurations defined at the site level.
-The first part of the command is a call to the Get-CsTrunkConfiguration cmdlet that uses the Filter parameter to retrieve all trunk configurations with an Identity beginning with site: (that is, all trunk configurations defined at the site level).
-This collection of configurations is then piped to the Remove-CsTrunkConfiguration cmdlet, which removes each object in the collection.
-
-Get-CsTrunkConfiguration -Filter site:* | Remove-CsTrunkConfiguration
 
 ## PARAMETERS
 
@@ -207,8 +131,6 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Tr
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/45546534-1a18-4db2-be61-850bacf55a52(OCS.14).aspx)
-
 [New-CsTrunkConfiguration]()
 
 [Set-CsTrunkConfiguration]()
@@ -216,8 +138,3 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Tr
 [Get-CsTrunkConfiguration]()
 
 [Test-CsTrunkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/45546534-1a18-4db2-be61-850bacf55a52(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/45546534-1a18-4db2-be61-850bacf55a52(OCS.16).aspx)
-

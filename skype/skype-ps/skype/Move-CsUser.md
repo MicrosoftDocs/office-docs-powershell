@@ -7,18 +7,8 @@ schema: 2.0.0
 # Move-CsUser
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
-Moves one or more user accounts enabled for Microsoft Lync Server 2010 to a new Registrar pool.
-
-**Below Content Applies To:** Lync Server 2013
-
-Moves one or more user accounts enabled for Lync Server to a new Registrar pool.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Moves one or more user accounts enabled for Skype for Business Server 2015 to a new Registrar pool.
+Moves one or more user accounts enabled for Skype for Business Server to a new Registrar pool.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -48,148 +38,53 @@ Move-CsUser [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <Int32>] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-The Move-CsUser cmdlet enables you to move a user account enabled for Lync Server 2010 from one Registrar pool to another.
-Move-CsUser affects only the user's Lync Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
+The Move-CsUser cmdlet enables you to move a user account enabled for Skype for Business Server from one Registrar pool to another.
+The Move-CsUser cmdlet affects only the user's Skype for Business Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
 
-If Lync Server is coexisting with Office Communications Server 2007 R2 or Office Communications Server 2007, then the Move-CsUser cmdlet can used to move a user back from Lync Server to the legacy installation of Office Communications Server.
+If Skype for Business Server is coexisting with Office Communications Server 2007 R2 or Office Communications Server 2007, then the Move-CsUser cmdlet can used to move a user back from Skype for Business Server to the legacy installation of Office Communications Server.
 To move a user back to Office Communications Server, assign the fully qualified domain name (FQDN) of the legacy pool to the Target parameter.
-If you do this, keep in mind that users moved back to Office Communications Server will likely experience functionality and data loss; that's because Lync Server has many more capabilities than either Office Communications Server 2007 or Office Communications Server 2007 R2.
-Users moved back might also need to install previous versions of their client software, and may be required to reschedule meetings that were created when their user accounts were homed on Lync Server.
+If you do this, keep in mind that users moved back to Office Communications Server will likely experience functionality and data loss; that's because Skype for Business Server has many more capabilities than either Office Communications Server 2007 or Office Communications Server 2007 R2.
+Users moved back might also need to install previous versions of their client software, and may be required to reschedule meetings that were created when their user accounts were homed on Skype for Business Server.
 
-To move users from Communications Server 2007 or Communications Server 2007 R2 to Lync Server, use the Move-CsLegacyUser cmdlet.
-Move-CsUser is designed to move users from one Lync Server to another Lync Server pool, or to move a user from a Lync Server pool to an Office Communications Server pool.
-Move-CsLegacyUser moves users from Office Communications Server to Lync Server.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsUser cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsUser"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The Move-CsUser cmdlet enables you to move a user account enabled for Lync Server from one Registrar pool to another.
-Move-CsUser affects only the user's Lync Server account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
-
-If Lync Server is coexisting with Office Communications Server 2007 R2 or Office Communications Server 2007, then the Move-CsUser cmdlet can used to move a user back from Lync Server to the legacy installation of Office Communications Server.
-To move a user back to Office Communications Server, assign the fully qualified domain name (FQDN) of the legacy pool to the Target parameter.
-If you do this, keep in mind that users moved back to Office Communications Server will likely experience functionality and data loss; that's because Lync Server has many more capabilities than either Office Communications Server 2007 or Office Communications Server 2007 R2.
-Users moved back might also need to install previous versions of their client software, and may be required to reschedule meetings that were created when their user accounts were homed on Lync Server.
-
-To move users from Communications Server 2007 or Communications Server 2007 R2 to Lync Server, use the Move-CsLegacyUser cmdlet.
-Move-CsUser is designed to move users from one Lync Server to another Lync Server pool, or to move a user from a Lync Server pool to an Office Communications Server pool.
-Move-CsLegacyUser moves users from Office Communications Server to Lync Server.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsUser cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsUser"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Move-CsUser cmdlet enables you to move a user account enabled for Skype for Business Server 2015 from one Registrar pool to another.
-The Move-CsUser cmdlet affects only the user's Skype for Business Server 2015 account location; it does not move the user's Active Directory account to a new organizational unit (OU) or other new location.
-
-If Skype for Business Server 2015 is coexisting with Office Communications Server 2007 R2 or Office Communications Server 2007, then the Move-CsUser cmdlet can used to move a user back from Skype for Business Server 2015 to the legacy installation of Office Communications Server.
-To move a user back to Office Communications Server, assign the fully qualified domain name (FQDN) of the legacy pool to the Target parameter.
-If you do this, keep in mind that users moved back to Office Communications Server will likely experience functionality and data loss; that's because Skype for Business Server 2015 has many more capabilities than either Office Communications Server 2007 or Office Communications Server 2007 R2.
-Users moved back might also need to install previous versions of their client software, and may be required to reschedule meetings that were created when their user accounts were homed on Skype for Business Server 2015.
-
-To move users from Communications Server 2007 or Communications Server 2007 R2 to Skype for Business Server 2015, use the Move-CsLegacyUser cmdlet.
-The Move-CsUser cmdlet is designed to move users from one Skype for Business Server 2015 to another Skype for Business Server 2015 pool, or to move a user from a Skype for Business Server 2015 pool to an Office Communications Server pool.
-Move-CsLegacyUser moves users from Office Communications Server to Skype for Business Server 2015.
+To move users from Communications Server 2007 or Communications Server 2007 R2 to Skype for Business Server, use the Move-CsLegacyUser cmdlet.
+The Move-CsUser cmdlet is designed to move users from one Skype for Business Server to another Skype for Business Server pool, or to move a user from a Skype for Business Server pool to an Office Communications Server pool.
+Move-CsLegacyUser moves users from Office Communications Server to Skype for Business Server.
 
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
-```
-
-In the preceding example, Move-CsUser is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 1, Move-CsUser is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
 Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 1, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 
-Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com"
 
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
-```
-
-In Example 2 all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
-To carry out this task, the command first uses Get-CsUser and the OU parameter to retrieve a collection of all the user accounts in the Finance OU.
-After the data has been retrieved, the information is piped to Move-CsUser, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2 all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
-To carry out this task, the command first uses Get-CsUser and the OU parameter to retrieve a collection of all the user accounts in the Finance OU.
-After the data has been retrieved, the information is piped to Move-CsUser, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
 Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2 all the user accounts in the Finance organizational unit (OU) are moved to the Registrar pool atl-cs-001.litwareinc.com.
 To carry out this task, the command first uses the Get-CsUser cmdlet and the OU parameter to retrieve a collection of all the user accounts in the Finance OU.
 After the data has been retrieved, the information is piped to the Move-CsUser cmdlet, which moves each account in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
-Get-CsUser -OU "ou=Finance,dc=litwareinc,dc=com" | Move-CsUser -Target "atl-cs-001.litwareinc.com"
 
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com" -Force
-```
-
-In the preceding example, Move-CsUser is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
-In addition, the Force parameter is used to ensure that only the account itself is moved; user data associated with that account (such conferences that Pilar has scheduled) will not be moved but will, instead, be discarded.
-The Force parameter should only be used if you have tried calling Move-CsUser without the parameter and that move failed.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3, Move-CsUser is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
-In addition, the Force parameter is used to ensure that only the account itself is moved; user data associated with that account (such conferences that Pilar has scheduled) will not be moved but will, instead, be discarded.
-The Force parameter should only be used if you have tried calling Move-CsUser without the parameter and that move failed.
 
 Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com" -Force
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 3, the Move-CsUser cmdlet is used to move the user account with the Identity Pilar Ackerman to the Registrar pool atl-cs-001.litwareinc.com.
 In addition, the Force parameter is used to ensure that only the account itself is moved; user data associated with that account (such conferences that Pilar has scheduled) will not be moved but will, instead, be discarded.
 The Force parameter should only be used if you have tried calling the Move-CsUser cmdlet without the parameter and that move failed.
 
-Move-CsUser -Identity "Pilar Ackerman" -Target "atl-cs-001.litwareinc.com" -Force
 
 ## PARAMETERS
 
@@ -215,16 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -Target
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-The FQDN (for example, atl-cs-001.litwareinc.com) of the Registrar pool where the user account should be moved.
-In addition to a Registrar pool, the Target can also be the FQDN of a legacy Office Communications Server Front End Server or a hosting provider.
-Any accounts moved to a hosting provider (for example, Microsoft Lync Online 2010) will lose all their associated user data.
-For example, any conferences the user has scheduled will be deleted and will not be available in Lync Online 2010.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 The FQDN (for example, atl-cs-001.litwareinc.com) of the Registrar pool where the user account should be moved.
 In addition to a Registrar pool, the Target can also be the FQDN of a legacy Office Communications Server Front End Server or a hosting provider.
@@ -264,24 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-**Below Content Applies To:** Lync Server 2010
 
-This parameter is used only for Microsoft Lync Online 2010.
-It should not be used with an on-premises implementation of Lync Server.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-This parameter is used only for Lync Online.
-It should not be used with an on-premises implementation of Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This parameter is used only for Skype for Business Server 2015.
-It should not be used with an on-premises implementation of Skype for Business Server 2015.
+This parameter is used only for Skype for Business Server.
+It should not be used with an on-premises implementation of Skype for Business Server.
 
 
 
@@ -352,11 +222,11 @@ Accept wildcard characters: False
 Enables you to bypass the confirmation prompt that would otherwise appear when you attempt to move a user.
 To bypass the confirmation prompt, include the Confirm parameter using this syntax:
 
--Confirm:$False
+`-Confirm:$False`
 
 If you would prefer to have the confirmation prompt then use this syntax:
 
--Confirm
+`-Confirm`
 
 ```yaml
 Type: SwitchParameter
@@ -372,17 +242,6 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to run the Move-CsUser cmdlet under alternate credentials.
-This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
-
-To use the Credential parameter you must first create a PSCredential object using the Get-Credential cmdlet.
-For details, see the Get-Credential cmdlet Help topic.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to run the Move-CsUser cmdlet under alternate credentials.
 This might be required if the account you used to log on to Windows does not have the necessary privileges required to work with user objects.
@@ -406,13 +265,6 @@ Accept wildcard characters: False
 ```
 
 ### -HostedMigrationOverrideUrl
-**Below Content Applies To:** Lync Server 2013
-
-URL for the hosted migration service used when moving a user to the Office 365 version of Lync Server 2013 Preview.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 URL for the hosted migration service used when moving a user to Skype for Business Online.
 
@@ -514,25 +366,17 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
-###  
-String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-Move-CsUser accepts a pipelined string value representing the Identity of a user account that has been enabled for Lync Server.
-The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ###  
 String or Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
-The Move-CsUser cmdlet accepts a pipelined string value representing the Identity of a user account that has been enabled for Skype for Business Server 2015.
+The Move-CsUser cmdlet accepts a pipelined string value representing the Identity of a user account that has been enabled for Skype for Business Server.
 The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## OUTPUTS
-
-###  
-Move-CsUser does not return a value or object.
-Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect.Schema.ADUser object.
 
 ###  
 The Move-CsUser cmdlet does not return a value or object.
@@ -542,13 +386,6 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/6fbdbab6-8a8c-421c-b16c-2319be4b8915(OCS.14).aspx)
-
 [Get-CsUser]()
 
 [Move-CsLegacyUser]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6fbdbab6-8a8c-421c-b16c-2319be4b8915(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6fbdbab6-8a8c-421c-b16c-2319be4b8915(OCS.16).aspx)
-

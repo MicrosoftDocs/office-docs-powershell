@@ -7,17 +7,9 @@ schema: 2.0.0
 # Test-CsUnifiedContactStore
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Verifies whether or not a user's contacts can be accessed through the Unified Contact Store.
-The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Microsoft Lync, Microsoft Outlook, and/or Microsoft Outlook Web Access.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Verifies whether or not a user's contacts can be accessed through the Unified Contact Store.
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Outlook, and/or Outlook Web App.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -38,89 +30,41 @@ Test-CsUnifiedContactStore [[-TargetFqdn] <String>] -UserCredential <PSCredentia
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The unified contact store introduced in Microsoft Lync Server 2013 Preview gives administrators the option of storing a user's contacts in Microsoft Exchange Server 2013 Preview instead of in Lync Server; in turn that allows the user to access the same set of contacts in Microsoft Outlook and Outlook Web Access as well as in Lync 2013 Preview.
-(Alternatively, you can continue to store contacts in Lync Server.
-In that case, users will have to maintain two separate sets of contacts: one for use with Outlook and Outlook Web Access, and one for use with Lync 2013 Preview.)
-
-You can verify whether or not a user's contacts have been moved to the unified contact store by running the Test-CsUnifiedContactStore cmdlet.
-The Test-CsUnifiedContactStore cmdlet will take the specified user account, connect to the unified contact store, and attempt to retrieve a contact for the user.
-If no contacts can be retrieved then the command will fail along with the message "No contacts were received for the user.
-Verify that contacts exist for the user."
-
-Note that Test-CsUnifiedContactStore will fail if the user has successfully migrated to the unified contact store but does not have any contacts on his or her Contacts list.
-The specified user must have at least one contact in order for Test-CsUnifiedContactStore to complete successfully.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsUnifiedContactStore"}
-
-Lync Server Control Panel: The functions carried out by the Test-csUnifiedContactStore cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The unified contact store introduced in Lync Server 2013 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server 2015; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web Access as well as in Skype for Business.
-(Alternatively, you can continue to store contacts in Skype for Business Server 2015.
+The unified contact store introduced in Lync Server 2013 gives administrators the option of storing a user's contacts in Exchange instead of in Skype for Business Server; in turn that allows the user to access the same set of contacts in Outlook and Outlook Web Access as well as in Skype for Business.
+(Alternatively, you can continue to store contacts in Skype for Business Server.
 In that case, users will have to maintain two separate sets of contacts: one for use with Outlook and Outlook Web App, and one for use with Skype for Business.)
 
-You can verify whether or not a user's contacts have been moved to the unified contact store by running the Test-CsUnifiedContactStore cmdlet.
-The Test-CsUnifiedContactStore cmdlet will take the specified user account, connect to the unified contact store, and attempt to retrieve a contact for the user.
+You can verify whether or not a user's contacts have been moved to the unified contact store by running the `Test-CsUnifiedContactStore` cmdlet.
+The `Test-CsUnifiedContactStore` cmdlet will take the specified user account, connect to the unified contact store, and attempt to retrieve a contact for the user.
 If no contacts can be retrieved then the command will fail along with the message "No contacts were received for the user.
 Verify that contacts exist for the user."
 
-Note that the Test-CsUnifiedContactStore cmdlet will fail if the user has successfully migrated to the unified contact store but does not have any contacts on his or her Contacts list.
-The specified user must have at least one contact in order for the Test-CsUnifiedContactStore cmdlet to complete successfully.
+Note that the `Test-CsUnifiedContactStore` cmdlet will fail if the user has successfully migrated to the unified contact store but does not have any contacts on his or her Contacts list.
+The specified user must have at least one contact in order for the `Test-CsUnifiedContactStore` cmdlet to complete successfully.
 
-Lync Server Control Panel: The functions carried out by the Test-csUnifiedContactStore cmdlet are not available in the Lync Server Control Panel.
-
+Lync Server Control Panel: The functions carried out by the `Test-csUnifiedContactStore` cmdlet are not available in the Lync Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-The commands shown in Example 2 verify whether or not contacts for the user litwareinc\kenmyer can be found in the unified contact store.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credentials object for the user litwareinc\kenmyer.
-Note that you must supply the password for this account in order to create a valid credentials object and to ensure that Test-CsUnifiedContactStore can carry out its check.
-
-The second command in the example uses the supplied credentials object ($x) and the SIP address of the user litwareinc\kenmyer in order to determine whether or not his contacts can be found in the unified contact store.
-
 $credential = Get-Credential "litwareinc\kenmyer"
 
 Test-CsUnifiedContactStore -TargetFqdn "atl-cs-001.litwareinc.com" -UserSipAddress "sip:kenmyer@litwareinc.com" -UserCredential $credential
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands shown in Example 2 verify whether or not contacts for the user litwareinc\kenmyer can be found in the unified contact store.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell command-line interface credentials object for the user litwareinc\kenmyer.
-Note that you must supply the password for this account in order to create a valid credentials object and to ensure that the Test-CsUnifiedContactStore cmdlet can carry out its check.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell command-line interface credentials object for the user litwareinc\kenmyer.
+Note that you must supply the password for this account in order to create a valid credentials object and to ensure that the `Test-CsUnifiedContactStore` cmdlet can carry out its check.
 
 The second command in the example uses the supplied credentials object ($x) and the SIP address of the user litwareinc\kenmyer in order to determine whether or not his contacts can be found in the unified contact store.
 
-$credential = Get-Credential "litwareinc\kenmyer"
-
-Test-CsUnifiedContactStore -TargetFqdn "atl-cs-001.litwareinc.com" -UserSipAddress "sip:kenmyer@litwareinc.com" -UserCredential $credential
 
 ## PARAMETERS
 
 ### -TargetFqdn
-**Below Content Applies To:** Lync Server 2013
-
-Fully qualified domain name (FQDN) of the Persistant Chat pool to be tested.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Fully qualified domain name (FQDN) of the pool to be tested.
-
 
 
 ```yaml
@@ -151,14 +95,14 @@ Accept wildcard characters: False
 
 ### -UserCredential
 User credentials object for the user account to be used in the test.
-The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to UserCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You need to supply the user password when running this command.
 
-.This parameter is not required if you are running the test by using test users configured via the CsHealthMonitoringConfiguration cmdlets
+This parameter is not required if you are running the test by using test users configured via the `CsHealthMonitoringConfiguration` cmdlets
 
 ```yaml
 Type: PSCredential
@@ -217,17 +161,17 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
 Note: Do not prepend a $ character when specifying the variable name.
 
 To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -246,7 +190,7 @@ Accept wildcard characters: False
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
 
@@ -284,9 +228,9 @@ Accept wildcard characters: False
 SIP address of the user to be used in the test.
 For example:
 
--UserSipAddress "sip:kenmyer@litwareinc.com"
+`-UserSipAddress "sip:kenmyer@litwareinc.com"`
 
-This parameter is not required if you are running the test by using test users configured via the CsHealthMonitoringConfiguration cmdlets.
+This parameter is not required if you are running the test by using test users configured via the `CsHealthMonitoringConfiguration` cmdlets.
 
 ```yaml
 Type: String
@@ -353,29 +297,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsUnifiedContactStore does not accept pipelined input.
-
-###  
-None.
-The Test-CsUnifiedContactStore cmdlet does not accept pipelined input.
+The `Test-CsUnifiedContactStore` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-New-CsUserServicesPolicySet-CsUserServicesPolicy
-
-###  
-The Test-CsUnifiedContactStore cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.WebTaskOutput object.
+The `Test-CsUnifiedContactStore` cmdlet returns instances of the Microsoft.Rtc.SyntheticTransactions.WebTaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/0aeca874-87da-4bc8-b2f2-c9c7e0d86883(OCS.15).aspx)
-
 [New-CsUserServicesPolicy]()
 
 [Set-CsUserServicesPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0aeca874-87da-4bc8-b2f2-c9c7e0d86883(OCS.16).aspx)
-

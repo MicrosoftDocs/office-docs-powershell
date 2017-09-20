@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsVideoInteropServerConfiguration
 
 ## SYNOPSIS
-Use the Set-CsVideoInteropServerConfiguration cmdlet to modify an existing collection of Video Interop Server (VIS) configuration settings.
+Use the `Set-CsVideoInteropServerConfiguration` cmdlet to modify an existing collection of Video Interop Server (VIS) configuration settings.
 VIS settings are scoped to appropriate VIS instances, and will govern the behavior of those instances.
 The Video Interop Server (VIS) enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business infrastructure.
 VIS is a Skype for Business service that runs on a standalone pool and cannot be co-located on an FE pool.
@@ -38,34 +38,32 @@ The Video Gateway and a VIS use a Session Initiation Protocol (SIP) trunk to con
 You can manage the Video Interop Server (VIS) by using VIS configuration settings and the CsVideoInteropServerConfiguration cmdlets.
 These settings are used to enable or disable the enhanced video experience (in which a single video stream is converted to multiple streams in order to accommodate the needs of devices that use different frame rates or video resolutions).
 
-By default, Skype for Business Server 2015 ships with a single, global collection of video interop configuration settings.
-However, administrators can use the New-CsVideoInteropServerConfiguration cmdlet to create additional settings at the site or the service scope (for the Video Interop server service only.) Both the global collection of settings and any custom settings that you create can be modified by using the Set-CsVideoInteropServerConfiguration cmdlet.
+By default, Skype for Business Server ships with a single, global collection of video interop configuration settings.
+However, administrators can use the `New-CsVideoInteropServerConfiguration` cmdlet to create additional settings at the site or the service scope (for the Video Interop server service only.) Both the global collection of settings and any custom settings that you create can be modified by using the `Set-CsVideoInteropServerConfiguration` cmdlet.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsVideoInteropServerConfiguration -Identity "site:Redmond" -EnableEnhancedVideoExperience $False
 ```
 
 This example disables enhanced video experience for the collection of VIS settings assigned to the Redmond site.
 
-Set-CsVideoInteropServerConfiguration -Identity "site:Redmond" -EnableEnhancedVideoExperience $False
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsVideoInteropServerConfiguration | Set-CsVideoInteropServerConfiguration -EnableEnhancedVideoExperience $False
 ```
 
 This example disables all enhanced video experience settings in the organization.
-The command uses the Get-CsVideoInteropServerConfiguration cmdlet to return a collection of all the available VIS settings.
-That collection is piped to the Set-CsVideoInteropServerConfiguration cmdlet, which disables the enhanced video experience for each item in the collection.
+The command uses the `Get-CsVideoInteropServerConfiguration` cmdlet to return a collection of all the available VIS settings.
+That collection is piped to the `Set-CsVideoInteropServerConfiguration` cmdlet, which disables the enhanced video experience for each item in the collection.
 
-Get-CsVideoInteropServerConfiguration | Set-CsVideoInteropServerConfiguration -EnableEnhancedVideoExperience $False
 
 ## PARAMETERS
 
@@ -86,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEnhancedVideoExperience
-When set to True ($True) the single video stream coming from a third party video system will be converted to multiple streams in order to meet the needs of devices using different video resolutions or frame rates .The default value is True ($True).
+When set to True ($True) the single video stream coming from a third party video system will be converted to multiple streams in order to meet the needs of devices using different video resolutions or frame rates. The default value is True ($True).
 
 ```yaml
 Type: Boolean
@@ -121,17 +119,17 @@ Accept wildcard characters: False
 Unique identifier for the video server configuration settings to be modified.
 To modify the global settings, use this syntax:
 
--Identity "global"
+`-Identity "global"`
 
 To manage settings at the site scope use syntax like the following:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 To modify settings configured at the service scope, use syntax similar to this:
 
--Identity "service:VideoInteropServer:atl-edge-001.litwareinc.com"
+`-Identity "service:VideoInteropServer:atl-edge-001.litwareinc.com"`
 
-If this parameter is not included, the Set-CsVideoInteropServerConfiguration cmdlet will automatically modify the global settings.
+If this parameter is not included, the `Set-CsVideoInteropServerConfiguration` cmdlet will automatically modify the global settings.
 
 ```yaml
 Type: XdsIdentity
@@ -184,13 +182,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Set-CsVideoInteropServerConfiguration cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
+The `Set-CsVideoInteropServerConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Set-CsVideoInteropServerConfiguration cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
+The `Set-CsVideoInteropServerConfiguration` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
 
 ## NOTES
 
@@ -201,6 +199,3 @@ The Set-CsVideoInteropServerConfiguration cmdlet modifies existing instances of 
 [New-CsVideoInteropServerConfiguration]()
 
 [Remove-CsVideoInteropServerConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/dd43e323-a37c-4006-8aac-61e5b119b432(OCS.16).aspx)
-

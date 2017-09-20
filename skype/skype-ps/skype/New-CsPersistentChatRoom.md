@@ -7,13 +7,6 @@ schema: 2.0.0
 # New-CsPersistentChatRoom
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new Persistent Chat chat room.
-A chat room is a discussion forum that typically revolves around a specific topic.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new Persistent Chat chat room.
 A chat room is a discussion forum that typically revolves around a specific topic.
@@ -30,26 +23,6 @@ New-CsPersistentChatRoom -Category <String> -Name <String> [-Addin <String>] [-D
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-Persistent Chat discussions take the form of messages posted in individual chat rooms; chat rooms are discussion forums based on specific topics.
-By design, messages posted in a chat room remain there forever; at any time, users can return to the room and review all the messages that have been previously posted.
-
-The New-CsPersistentChatRoom cmdlet enables administrators to create new Persistent Chat chat rooms.
-Note that not all the properties of a chat room are available using New-CsPersistentChatRoom; for example, you cannot assign chat room Managers or Presenters by using this cmdlet.
-To assign Managers or Presenters, you must create the chat room, then make those assignments using the Set-CsPersistentChatRoom cmdlet.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatRoom"}
-
-Lync Server Control Panel: To create a new Persistent Chat chat room using the Lync Server Control Panel, click Persistent Chat, click Room, and then click New.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
@@ -68,32 +41,22 @@ Skype for Business Server Control Panel: To create a new Persistent Chat chat ro
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsPersistentChatRoom -Name "ITChatRoom" -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"-Category "IT"
 ```
 
 The command shown in Example 1 creates a new Persistent Chat chat room named ITChatRoom on the pool atl-cs-001.litwareinc.com.
 In this example, the chat room is added to the IT category.
 
-New-CsPersistentChatRoom -Name "ITChatRoom" -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"-Category "IT"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new Persistent Chat chat room named ITChatRoom on the pool atl-cs-001.litwareinc.com.
-In this example, the chat room is added to the IT category.
-
-New-CsPersistentChatRoom -Name "ITChatRoom" -PersistentChatPoolFqdn "atl-cs-001.litwareinc.com"-Category "IT"
 
 ## PARAMETERS
 
 ### -Category
 Category under which the room is to be created; for example:
 
--Category "IT"
+`-Category "IT"`
 
 Note that the specified category must already exist or the command will fail.
 Categories, which are collections of Persistent Chat chat rooms, can be created by using the New-CsPersistentChatCategory cmdlet.
@@ -200,7 +163,7 @@ Accept wildcard characters: False
 Fully qualified domain name of the Persistent Chat pool where the new chat room will be located.
 For example:
 
--PersistentChatPoolFqdn "atl-gc-001.litwareinc.com"
+`-PersistentChatPoolFqdn "atl-gc-001.litwareinc.com"`
 
 ```yaml
 Type: String
@@ -240,7 +203,7 @@ Accept wildcard characters: False
 Specifies whether the new chat room should be configured as a Normal chat room (where all members can post messages) or an Auditorium (where only presenters can post messages).
 For example:
 
--Type "Auditorium"
+`-Type "Auditorium"`
 
 The default value is Normal.
 
@@ -258,22 +221,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsPersistentChatRoom does not accept pipelined input.
 
 ###  
 None.
 The New-CsPersistentChatRoom cmdlet does not accept pipelined input.
 
 ## OUTPUTS
-
-###  
-New-CsPersistentChatRoom creates new instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
 
 ###  
 The New-CsPersistentChatRoom cmdlet creates new instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.ChatRoomObject object.
@@ -289,8 +245,4 @@ The New-CsPersistentChatRoom cmdlet creates new instances of the Microsoft.Rtc.M
 [Remove-CsPersistentChatRoom]()
 
 [Set-CsPersistentChatRoom]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b00d353b-5b5b-40d6-b952-3c35170fbf8a(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b00d353b-5b5b-40d6-b952-3c35170fbf8a(OCS.16).aspx)
 

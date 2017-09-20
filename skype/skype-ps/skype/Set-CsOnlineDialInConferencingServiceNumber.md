@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsOnlineDialInConferencingServiceNumber
 
 ## SYNOPSIS
-Use the Set-CsOnlineDialInConferencingServiceNumber cmdlet to modify the properties of a dial-in or audio conferencing service number that is used by callers when they dial in to a meeting.
+Use the `Set-CsOnlineDialInConferencingServiceNumber` cmdlet to modify the properties of a dial-in or audio conferencing service number that is used by callers when they dial in to a meeting.
 
 ## SYNTAX
 
@@ -19,7 +19,7 @@ Set-CsOnlineDialInConferencingServiceNumber [[-Identity] <Object>] [[-Instance] 
 ```
 
 ## DESCRIPTION
-The Set-CsOnlineDialInConferencingServiceNumber cmdlet enables you to set the primary and secondary languages or restore the default languages for a given service number.
+The `Set-CsOnlineDialInConferencingServiceNumber` cmdlet enables you to set the primary and secondary languages or restore the default languages for a given service number.
 The primary language will be used for the prompts that callers will listen to when they are entering a meeting.
 The secondary languages (up to 4) will be available as options in the case the caller wants the prompts read in a different language.
 The following languages are supported for PSTN conferencing:
@@ -74,14 +74,13 @@ Ukrainian
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineDialInConferencingServiceNumber -Identity +14255551234 -PrimaryLanguage de-de -SecondaryLanguages en-us, ja-jp, en-gb
 ```
 
 This example sets the primary language to German (Germany) and the secondary languages to US English, Japanese, and UK English for the dial-in service number +14255551234.
 
-Set-CsOnlineDialInConferencingServiceNumber -Identity +14255551234 -PrimaryLanguage de-de -SecondaryLanguages en-us, ja-jp, en-gb
 
 ## PARAMETERS
 
@@ -194,7 +193,7 @@ Specifies the primary language that is used when users call into a meeting.
 The culture ID is used.
 For example, en-US for US English, ja-JP for Japanese, or es-ES for Spanish.
 
-Use the Get-CsOnlineDialInConferencingLanguagesSupported cmdlet to get a list of the available languages.
+Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list of the available languages.
 
 ```yaml
 Type: Object
@@ -232,7 +231,7 @@ For example, en-US for US English, ja-JP for Japanese, or es-ES for Spanish.
 The order you provide will be the order that will be presented to users that are calling into the meeting.
 There is a maximum of 4 languages that can be used as secondary languages.
 
-Use the Get-CsOnlineDialInConferencingLanguagesSupported cmdlet to get a list of the available languages.
+Use the `Get-CsOnlineDialInConferencingLanguagesSupported` cmdlet to get a list of the available languages.
 
 ```yaml
 Type: Object
@@ -306,6 +305,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/92bece4d-8a0b-4068-bb52-3d15501a8344(OCS.15).aspx)
-

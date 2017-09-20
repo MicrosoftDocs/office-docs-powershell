@@ -7,8 +7,8 @@ schema: 2.0.0
 # Remove-CsVideoTrunkConfiguration
 
 ## SYNOPSIS
-Use the Remove-CsVideoTrunkConfiguration to remove one or more Video Trunk configurations.
-Video Trunk configuration settings are scoped to Video Gateway instances, and govern the behavior of the Session Initiation Protocol (SIP) trunk between each Video Gateway instance and the paired Video Interop Server instance that together define the Video Trunk.
+Use the `Remove-CsVideoTrunkConfiguration` to remove one or more Video Trunk configurations.
+Video Trunk configuration settings are scoped to Video Gateway instances and govern the behavior of the Session Initiation Protocol (SIP) trunk between each Video Gateway instance and the paired Video Interop Server instance that together define the Video Trunk.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Remove-CsVideoTrunkConfiguration [-Identity] <XdsIdentity> [-Confirm] [-Force] [
 ```
 
 ## DESCRIPTION
-The Video Interop Server (VIS) in Skype for Business Server 2015 incorporates 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
+The Video Interop Server (VIS) in Skype for Business Server incorporates 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
 The VIS is a service that runs on a standalone pool and cannot be co-located on an FE pool.
 
 To enable the Video Interop Server, you must use Topology Builder to define at least one VIS instance.
@@ -36,41 +36,39 @@ Secure Real-time Transport Protocol (SRTP) use when Transport Layer Security (TL
 
 Session timers usage on the Video Interop Server (VIS) for dialogs associated with a Video Trunk
 
-By default, Skype for Business Server 2015 ships with a single, global collection of Video Trunk configuration settings.
-However, administrators can use the New-CsVideoTrunkConfiguration cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
+By default, Skype for Business Server ships with a single, global collection of Video Trunk configuration settings.
+However, administrators can use the `New-CsVideoTrunkConfiguration` cmdlet to create additional settings at the site or the service scope (for the Video Gateway service only).
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsVideoTrunkConfiguration -Identity "site:Seattle"
 ```
 
 This example removes the Video Trunk configuration settings scoped to the Seattle site.
 
-Remove-CsVideoTrunkConfiguration -Identity "site:Seattle"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsVideoTrunkConfiguration -Filter "site:*" | Remove-CsVideoTrunkConfiguration
 ```
 
 This example removes all the configuration settings that have been scoped at the site level.
-The command first calls the Get-CsVideoTrunkConfiguration cmdlet along with the Filter parameter that limits the returns to configurations scoped at the site level.
-Those configuration objects are then piped to, and removed by, the Remove-CsVideoTrunkConfiguration cmdlet.
+The command first calls the `Get-CsVideoTrunkConfiguration` cmdlet along with the Filter parameter that limits the returns to configurations scoped at the site level.
+Those configuration objects are then piped to, and removed by, the `Remove-CsVideoTrunkConfiguration` cmdlet.
 
-Get-CsVideoTrunkConfiguration -Filter "site:*" | Remove-CsVideoTrunkConfiguration
 
 ## PARAMETERS
 
 ### -Identity
 The Identity parameter specifies the Video Trunk configuration to remove.
 Video Trunk configuration settings can be configured at the global, site, or service scope (for the VideoGateway service only).
-To refer to the global instance, use this syntax: -Identity "global" To refer to a collection at the site scope: -Identity "site:Redmond"
+To refer to the global instance, use this syntax: `-Identity "global"` To refer to a collection at the site scope: `-Identity "site:Redmond"`
 
 Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
 
-The Remove-CsVideoTrunkConfiguration cmdlet can be run against the single global collection of settings.
+The `Remove-CsVideoTrunkConfiguration` cmdlet can be run against the single global collection of settings.
 However, that single global collection will not be deleted.
 Instead, all the properties within the collection will be reset to their default values.
 
@@ -141,13 +139,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Remove-CsVideoTrunkConfiguration cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
+The` Remove-CsVideoTrunkConfiguration` cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Remove-CsVideoTrunkConfiguration cmdlet removes specified Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration objects.
+The `Remove-CsVideoTrunkConfiguration` cmdlet removes specified Microsoft.Rtc.Management.WritableConfig.Settings.VideoTrunkConfiguration objects.
 
 ## NOTES
 
@@ -158,6 +156,3 @@ The Remove-CsVideoTrunkConfiguration cmdlet removes specified Microsoft.Rtc.Mana
 [New-CsVideoTrunkConfiguration]()
 
 [Set-CsVideoTrunkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6ab45bb0-b843-4b4a-88d4-436b82f5aacc(OCS.16).aspx)
-

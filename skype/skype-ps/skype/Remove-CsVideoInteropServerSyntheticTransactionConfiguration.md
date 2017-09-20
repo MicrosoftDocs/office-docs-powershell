@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsVideoInteropServerSyntheticTransactionConfiguration
 
 ## SYNOPSIS
-Use the Remove-CsVideoInteropServerSyntheticTransactionConfiguration cmdlet to remove an existing Video Interop (VIS) server synthetic transaction configuration.
+Use the `Remove-CsVideoInteropServerSyntheticTransactionConfiguration` cmdlet to remove an existing Video Interop (VIS) server synthetic transaction configuration.
 
 ## SYNTAX
 
@@ -19,18 +19,17 @@ Remove-CsVideoInteropServerSyntheticTransactionConfiguration [-Identity] <XdsIde
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsVideoInteropServerSyntheticTransactionConfiguration -Identity "site:Redmond"
 ```
 
 This example removes the Video Interop Server synthetic transaction configuration for the Redmond site.
 
-Remove-CsVideoInteropServerSyntheticTransactionConfiguration -Identity "site:Redmond"
 
 ## PARAMETERS
 
@@ -39,11 +38,11 @@ Identity of the VIS configuration to be removed.
 VIS settings can be configured at the global, site, or service scope (for the VideoInteropServer service only).
 To refer to the global instance, use this syntax:
 
--Identity "Global"
+`-Identity "Global"`
 
 Use this syntax to refer to a collection at the site scope:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 ```yaml
 Type: XdsIdentity
@@ -130,6 +129,3 @@ None
 [New-CsVideoInteropServerSyntheticTransactionConfiguration]()
 
 [Test-CsP2PVideoInteropServerSipTrunkAV]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/de83b57a-84ce-47f8-aa18-b2f3adbab261(OCS.16).aspx)
-

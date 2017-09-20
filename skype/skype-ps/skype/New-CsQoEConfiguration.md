@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-CsQoEConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new collection of QoE (Quality of Experience) settings.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new collection of QoE (Quality of Experience) settings.
 This cmdlet was introduced in Lync Server 2010.
@@ -28,49 +23,21 @@ New-CsQoEConfiguration [-Identity] <XdsIdentity> [-EnableExternalConsumer <Boole
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
 QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
 These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
 Use this cmdlet to create settings that configure QoE at the site level.
 (Settings at the global level exist by default and cannot be removed.)
 
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Microsoft Lync Server 2010 installation before QoE recording takes effect or any QoE data can be collected.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsQoEConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsQoEConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
-These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
-Use this cmdlet to create settings that configure QoE at the site level.
-(Settings at the global level exist by default and cannot be removed.)
-
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Lync Server installation before QoE recording takes effect or any QoE data can be collected.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsQoEConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsQoEConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
-These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
-Use this cmdlet to create settings that configure QoE at the site level.
-(Settings at the global level exist by default and cannot be removed.)
-
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Skype for Business Server 2015 installation before QoE recording takes effect or any QoE data can be collected.
+QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Skype for Business Server installation before QoE recording takes effect or any QoE data can be collected.
 
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
 ```
 
@@ -78,30 +45,10 @@ The command in Example 1 uses the New-CsQoEConfiguration cmdlet to create a new 
 In addition to the Identity site:Redmond, the new settings also have the EnableQoE property set to False.
 Because site settings take precedence over global settings, this means that QoE will be disabled for the Redmond site, regardless of whether or not QoE has been enabled at the global scope.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-```
-
-The command in Example 1 uses the New-CsQoEConfiguration cmdlet to create a new set of Quality of Experience settings with the Identity site:Redmond.
-In addition to the Identity site:Redmond, the new settings also have the EnableQoE property set to False.
-Because site settings take precedence over global settings, this means that QoE will be disabled for the Redmond site, regardless of whether or not QoE has been enabled at the global scope.
-
-New-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in Example 1 uses the New-CsQoEConfiguration cmdlet to create a new set of Quality of Experience settings with the Identity site:Redmond.
-In addition to the Identity site:Redmond, the new settings also have the EnableQoE property set to False.
-Because site settings take precedence over global settings, this means that QoE will be disabled for the Redmond site, regardless of whether or not QoE has been enabled at the global scope.
-
-New-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
 New-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 30 -PurgeHourOfDay 4
 ```
 
@@ -111,53 +58,13 @@ In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older
 
 Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command creates new QoE settings that apply to the Dublin site.
-In this example we've set the KeepQoEDataForDays parameter to 30, so QoE data will be purged from the database after 30 days rather than the default 60 days.
-In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older than the 30 days we just specified will be purged at 4:00 AM.
-
-Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
-
-New-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 30 -PurgeHourOfDay 4
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command creates new QoE settings that apply to the Dublin site.
-In this example we've set the KeepQoEDataForDays parameter to 30, so QoE data will be purged from the database after 30 days rather than the default 60 days.
-In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older than the 30 days we just specified will be purged at 4:00 AM.
-
-Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
-
-New-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 30 -PurgeHourOfDay 4
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
 
 The site to which the new settings apply.
-This must be entered in the format site:\<site name\>, where \<site name\> is the name of the site in your Lync Server 2010 deployment.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-The site to which the new settings apply.
-This must be entered in the format site:\<site name\>, where \<site name\> is the name of the site in your Lync Server deployment.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The site to which the new settings apply.
-This must be entered in the format site:\<site name\>, where \<site name\> is the name of the site in your Skype for Business Server 2015 deployment.
+This must be entered in the format site:\<site name\>, where \<site name\> is the name of the site in your Skype for Business Server deployment.
 
 
 
@@ -336,14 +243,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -396,7 +295,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -412,15 +311,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.QoE.Q
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/4fc607d5-1a85-4de5-9d18-39d0425c82dc(OCS.14).aspx)
-
 [Remove-CsQoEConfiguration]()
 
 [Set-CsQoEConfiguration]()
 
 [Get-CsQoEConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4fc607d5-1a85-4de5-9d18-39d0425c82dc(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4fc607d5-1a85-4de5-9d18-39d0425c82dc(OCS.16).aspx)
 

@@ -7,15 +7,8 @@ schema: 2.0.0
 # New-CsTrustedApplicationEndpoint
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new endpoint contact for a trusted application.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Creates a new endpoint contact for a trusted application.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -29,26 +22,13 @@ New-CsTrustedApplicationEndpoint -ApplicationId <String> -TrustedApplicationPool
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
-This cmdlet creates a new endpoint contact object in Active Directory Domain Services (AD DS) for a specified application.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsTrustedApplicationEndpoint cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplicationEndpoint"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet creates a new endpoint contact object in Active Directory Domain Services for a specified application.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
 ```
@@ -59,33 +39,8 @@ However, keep in mind that assigning values to only these two parameters will au
 In order to ensure the SIP address is unique, the auto-generated address will include a globally unique identifier (GUID) and will look something like this: sip:RtcApplication-fbf9e2d1-c6aa-45a3-a045-b92d4ef961b2@litwareinc.com.
 If you'd like a more readable SIP address, see Example 2.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example creates a trusted application endpoint for the application with the Application ID tapp1 homed on the pool TrustPool.litwareinc.com.
-ApplicationID and TrustedApplicationPoolFqdn are the only parameters that are required to create a trusted application endpoint.
-However, keep in mind that assigning values to only these two parameters will auto-generate a SIP address for the contact.
-In order to ensure the SIP address is unique, the auto-generated address will include a globally unique identifier (GUID) and will look something like this: sip:RtcApplication-fbf9e2d1-c6aa-45a3-a045-b92d4ef961b2@litwareinc.com.
-If you'd like a more readable SIP address, see Example 2.
-
-New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a trusted application endpoint for the application with the Application ID tapp1 homed on the pool TrustPool.litwareinc.com.
-ApplicationID and TrustedApplicationPoolFqdn are the only parameters that are required to create a trusted application endpoint.
-However, keep in mind that assigning values to only these two parameters will auto-generate a SIP address for the contact.
-In order to ensure the SIP address is unique, the auto-generated address will include a globally unique identifier (GUID) and will look something like this: sip:RtcApplication-fbf9e2d1-c6aa-45a3-a045-b92d4ef961b2@litwareinc.com.
-If you'd like a more readable SIP address, see Example 2.
-
-New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -SipAddress sip:endpoint1@litwareinc.com
 ```
@@ -94,27 +49,6 @@ Example 2 is identical to Example 1 in that it creates a trusted application end
 Unlike Example 1, we include one more parameter in our endpoint creation: SipAddress.
 Rather than allowing the system to generate a SIP address, we've specified an address of endpoint1@litwareinc.com.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 is identical to Example 1 in that it creates a trusted application endpoint for the application with the Application ID tapp1 on the TrustPool.litwareinc.com pool.
-Unlike Example 1, we include one more parameter in our endpoint creation: SipAddress.
-Rather than allowing the system to generate a SIP address, we've specified an address of endpoint1@litwareinc.com.
-
-New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -SipAddress sip:endpoint1@litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 is identical to Example 1 in that it creates a trusted application endpoint for the application with the Application ID tapp1 on the TrustPool.litwareinc.com pool.
-Unlike Example 1, we include one more parameter in our endpoint creation: SipAddress.
-Rather than allowing the system to generate a SIP address, we've specified an address of endpoint1@litwareinc.com.
-
-New-CsTrustedApplicationEndpoint -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -SipAddress sip:endpoint1@litwareinc.com
 
 ## PARAMETERS
 
@@ -242,7 +176,7 @@ Accept wildcard characters: False
 ### -SecondaryLanguages
 A collection of languages that can also be used for trusted applications.
 Values must be configured as a comma-separated values list of language codes.
-For example, the following syntax sets French Canadian and French as secondary languages: -SecondaryLanguages "fr-CA","fr-FR".
+For example, the following syntax sets French Canadian and French as secondary languages: `-SecondaryLanguages "fr-CA","fr-FR"`.
 
 ```yaml
 Type: Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]
@@ -258,37 +192,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2010
-
-The globally unique identifier (GUID) of the object.
-This parameter is not used for on-premises deployments.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for which the new trusted application pool endpoint is being created.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new trusted application pool endpoint is being created.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 ```yaml
@@ -370,15 +281,8 @@ Creates an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADApplica
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/78b34ba4-4c31-4f68-9069-3c7e7c162fbf(OCS.14).aspx)
-
 [Remove-CsTrustedApplicationEndpoint]()
 
 [Set-CsTrustedApplicationEndpoint]()
 
 [Get-CsTrustedApplicationEndpoint]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/78b34ba4-4c31-4f68-9069-3c7e7c162fbf(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/78b34ba4-4c31-4f68-9069-3c7e7c162fbf(OCS.16).aspx)
-

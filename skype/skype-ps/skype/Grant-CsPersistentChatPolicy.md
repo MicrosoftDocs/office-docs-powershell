@@ -7,13 +7,6 @@ schema: 2.0.0
 # Grant-CsPersistentChatPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Assigns a per-user Persistent Chat policy to a user.
-Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Assigns a per-user Persistent Chat policy to a user.
 Persistent Chat policies determine whether or not users are allowed access to Persistent Chat chat rooms.
@@ -29,32 +22,13 @@ Grant-CsPersistentChatPolicy [-Identity] <UserIdParameter> [[-PolicyName] <Strin
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
 
 By default, users are not granted access to the Persistent Chat service; that access can only be granted if the user is managed by a Persistent Chat policy that allows for the user of the service.
-When you install Lync 2013 Preview, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
-If you want to give all your users access to the service you can simply set the EnablePersistentChat property in this global policy to True.
-Alternatively, you can create additional policies at the site or at the per-user scope, and thus provide Persistent Chat access to some users while denying this access to other users.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsPersistentChatPolicy"}
-
-Lync Server Control Panel: To assign a Persistent Chat policy to a user in the Lync Server Control Panel, double-click the appropriate user account.
-In the Edit Lync Server User dialog box, select a policy from the Persistent Chat policy dropdown list and then click Commit.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-By default, users are not granted access to the Persistent Chat service; that access can only be granted if the user is managed by a Persistent Chat policy that allows for the user of the service.
-When you install Skype for Business Server 2015, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
+When you install Skype for Business Server, all your users are managed by a global Persistent Chat policy in which the use of Persistent Chat is disabled.
 If you want to give all your users access to the service you can simply set the EnablePersistentChat property in this global policy to True.
 Alternatively, you can create additional policies at the site or at the per-user scope, and thus provide Persistent Chat access to some users while denying this access to other users.
 
@@ -65,71 +39,41 @@ In the Edit Lync Server User dialog box, select a policy from the Persistent Cha
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Grant-CsPersistentChatPolicy -Identity "Ken Myer" -PolicyName "RedmondUsersPersistentChatPolicy"
 ```
 
 The command shown in Example 1 assigns the per-user policy RedmondUsersPersistentChatPolicy to the user with the Active Directory display name "Ken Myer".
 
-Grant-CsPersistentChatPolicy -Identity "Ken Myer" -PolicyName "RedmondUsersPersistentChatPolicy"
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 assigns the per-user policy RedmondUsersPersistentChatPolicy to the user with the Active Directory display name "Ken Myer".
-
-Grant-CsPersistentChatPolicy -Identity "Ken Myer" -PolicyName "RedmondUsersPersistentChatPolicy"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, the per-user policy RedmondUsersPersistentChatPolicy is assigned to all the users who work in the IT department.
-To do this, the command first calls Get-CsUser along with the LdapFilter property; the filter value "Department=IT" limits the returned data to users who work in the IT department.
-That collection of users is then piped to the Grant-CsPersistentChatPolicy cmdlet, which assigns the policy RedmondUsersPersistentChatPolicy to each user in the collection.
 
 Get-CsUser -LdapFilter "Department=IT" | Grant-CsPersistentChatPolicy -PolicyName "RedmondUsersPersistentChatPolicy"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2, the per-user policy RedmondUsersPersistentChatPolicy is assigned to all the users who work in the IT department.
 To do this, the command first calls the Get-CsUser cmdlet along with the LdapFilter property; the filter value "Department=IT" limits the returned data to users who work in the IT department.
 That collection of users is then piped to the Grant-CsPersistentChatPolicy cmdlet, which assigns the policy RedmondUsersPersistentChatPolicy to each user in the collection.
 
-Get-CsUser -LdapFilter "Department=IT" | Grant-CsPersistentChatPolicy -PolicyName "RedmondUsersPersistentChatPolicy"
 
-### -------------------------- Example 3 -------------------------- (Lync Server 2013)
+### -------------------------- Example 3 -------------------------- 
 ```
 
+Get-CsUser -Filter {PersistentChatPolicy -eq $Null} | Grant-CsPersistentChatPolicy -PolicyName "RedmondUsersPersistentChatPolicy"
 ```
 
 In Example 3, the per-user Persistent Chat policy RedmondUsersPersistentChatPolicy is assigned to all the users who do not currently have a per-user Persistent Chat policy assigned to them.
 To carry out this task, the command first employs the Get-CsUser cmdlet and the Filter parameter; the filter value {PersistentChatPolicy -eq $Null} limits the returned data to user accounts in which the PersistentChatPolicy property is currently null ($Null).
 That collection of users is then piped to the Grant-CsPersistentChatPolicy cmdlet, which assigns each user in the collection the policy RedmondUsersPersistentChatPolicy.
 
-Get-CsUser -Filter {PersistentChatPolicy -eq $Null} | Grant-CsPersistentChatPolicy -PolicyName "RedmondUsersPersistentChatPolicy"
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 -------------------------- 
 ```
 
-```
-
-In Example 3, the per-user Persistent Chat policy RedmondUsersPersistentChatPolicy is assigned to all the users who do not currently have a per-user Persistent Chat policy assigned to them.
-To carry out this task, the command first employs the Get-CsUser cmdlet and the Filter parameter; the filter value {PersistentChatPolicy -eq $Null} limits the returned data to user accounts in which the PersistentChatPolicy property is currently null ($Null).
-That collection of users is then piped to the Grant-CsPersistentChatPolicy cmdlet, which assigns each user in the collection the policy RedmondUsersPersistentChatPolicy.
-
-Get-CsUser -Filter {PersistentChatPolicy -eq $Null} | Grant-CsPersistentChatPolicy -PolicyName "RedmondUsersPersistentChatPolicy"
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2013)
-```
-
+Get-CsUser -Filter {PersistentChatPolicy -eq "RedmondUsersPersistentChatPolicy"} | Grant-CsPersistentChatPolicy -PolicyName $Null
 ```
 
 The command shown in Example 4 unassigns the per-user Persistent Chat policy RedmondUsersPersistentChatPolicy from any user currently assigned that policy.
@@ -138,20 +82,6 @@ That collection is then piped the Grant-CsPersistentChatPolicy cmdlet, which una
 
 After the per-user policy has been unassigned, users will have their Persistent Chat capabilities managed by their Persistent Chat site policy (if it exists) or, if not, by the global Persistent Chat policy.
 
-Get-CsUser -Filter {PersistentChatPolicy -eq "RedmondUsersPersistentChatPolicy"} | Grant-CsPersistentChatPolicy -PolicyName $Null
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 4 unassigns the per-user Persistent Chat policy RedmondUsersPersistentChatPolicy from any user currently assigned that policy.
-To carry out this task, the command first uses the Get-CsUser cmdlet and the Filter parameter to return a collection of users currently assigned the policy RedmondUsersPersistentChatPolicy; the filter value {PersistentChatPolicy -eq "RedmondUsersPersistentChatPolicy"} restricts the returned items to user accounts where the PersistentChatPolicy property is equal to RedmondUsersPersistentChatPolicy.
-That collection is then piped the Grant-CsPersistentChatPolicy cmdlet, which unassigns the per-user policy by setting the PersistentChatPolicy property to a null value ($Null).
-
-After the per-user policy has been unassigned, users will have their Persistent Chat capabilities managed by their Persistent Chat site policy (if it exists) or, if not, by the global Persistent Chat policy.
-
-Get-CsUser -Filter {PersistentChatPolicy -eq "RedmondUsersPersistentChatPolicy"} | Grant-CsPersistentChatPolicy -PolicyName $Null
 
 ## PARAMETERS
 
@@ -193,14 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to specify the fully qualified domain name of a domain controller to be contacted when assigning the new policy.
-If this parameter is not specified then Grant-CsPersistentChatPolicy will contact the first available domain controller.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified then the Grant-CsPersistentChatPolicy cmdlet will contact the first available domain controller.
@@ -273,14 +195,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-String value or Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
-Grant-CsPersistentChatPolicy accepts pipelined input of string values representing the Identity of a user account.
-The cmdlet also accepts pipelined input of user objects.
 
 ###  
 String value or Microsoft.Rtc.Management.WritableConfig.Policy.PersistentChat.PersistentChatPolicy object.
@@ -288,10 +205,6 @@ The Grant-CsPersistentChatPolicy cmdlet accepts pipelined input of string values
 The cmdlet also accepts pipelined input of user objects.
 
 ## OUTPUTS
-
-###  
-By default, Grant-CsPersistentChatPolicy does not return an objects or values.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact.
 
 ###  
 By default, the Grant-CsPersistentChatPolicy cmdlet does not return an objects or values.
@@ -308,8 +221,3 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 [Remove-CsPersistentChatPolicy]()
 
 [Set-CsPersistentChatPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/58889550-167a-4267-9f3d-0f244e898599(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/58889550-167a-4267-9f3d-0f244e898599(OCS.16).aspx)
-

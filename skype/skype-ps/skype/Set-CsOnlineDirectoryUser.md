@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsOnlineDirectoryUser
 
 ## SYNOPSIS
-Use the Set-CsOnlineDirectoryUser cmdlet to create or modify a PSTN enabled user in Business Voice Directory.
+Use the `Set-CsOnlineDirectoryUser` cmdlet to create or modify a PSTN enabled user in Business Voice Directory.
 This should be done via provisioning or operations in special cases.
 
 ## SYNTAX
@@ -23,14 +23,13 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -67,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -135,8 +134,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -194,6 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/800de821-bf8f-4600-9cd3-89db1b360b9d(OCS.15).aspx)
-

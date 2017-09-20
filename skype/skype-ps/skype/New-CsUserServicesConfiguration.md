@@ -7,17 +7,9 @@ schema: 2.0.0
 # New-CsUserServicesConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new collection of  User Services configuration settings.
-The User Services service is used to help maintain presence information and manage conferencing.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Creates a new collection of User Services configuration settings.
 The User Services service is used to help maintain presence information and manage conferencing.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,117 +25,30 @@ New-CsUserServicesConfiguration [-Identity] <XdsIdentity> [-AnonymousUserGracePe
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
+Skype for Business Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
+In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site and service scope.
+(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time and the length of time that a given meeting can remain active.
 
-Microsoft Lync Server 2010 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The New-CsUserServicesConfiguration cmdlet provides a way for administrators to create a new collection of User Services configuration settings at the site or service scope.
+The `New-CsUserServicesConfiguration` cmdlet provides a way for administrators to create a new collection of User Services configuration settings at the site or service scope.
 (New collections cannot be created at the global scope.) Note that any given site or service can only have, at most, a single collection of User Services configuration settings.
-Your command will fail if you try to create settings for, say, the Redmond site, and that site already hosts a collection of User Services configuration settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsUserServicesConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself) run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsUserServicesConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The New-CsUserServicesConfiguration cmdlet provides a way for administrators to create a new collection of User Services configuration settings at the site or service scope.
-(New collections cannot be created at the global scope.) Note that any given site or service can only have, at most, a single collection of User Services configuration settings.
-Your command will fail if you try to create settings for, say, the Redmond site, and that site already hosts a collection of User Services configuration settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsUserServicesConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself) run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUserServicesConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 relies on the User Services service to help maintain presence information for users and to manage meetings and conferences.
-In turn, the CsUserServicesConfiguration cmdlets are used to administer User Services configuration settings at the global, site, and service scope.
-(Note that the only service that can host User Services configuration settings is the User Services service itself.) These settings help determine such things as the number of contacts a user can have, the number of meetings a user can have scheduled at any one time, and the length of time that a given meeting can remain active.
-
-The New-CsUserServicesConfiguration cmdlet provides a way for administrators to create a new collection of User Services configuration settings at the site or service scope.
-(New collections cannot be created at the global scope.) Note that any given site or service can only have, at most, a single collection of User Services configuration settings.
-Your command will fail if you try to create settings for, say, the Redmond site, and that site already hosts a collection of User Services configuration settings.
-
+Your command will fail if you try to create settings for, say, the Redmond site and that site already hosts a collection of User Services configuration settings.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 New-CsUserServicesConfiguration -Identity site:Redmond -MaxContacts 500 -MaintenanceTimeOfDay "11:00 PM"
 ```
 
-The command shown in Example 1 creates a new collection of User Services configuration settings for the Redmond site (-Identity site:Redmond).
-In addition to specifying the Identity, the command also sets the maximum number of contacts (-MaxContacts 500) and the time of day when maintenance occurs (-MaintenanceTimeOfDay "11:00 PM").
+The command shown in Example 1 creates a new collection of User Services configuration settings for the Redmond site (`-Identity site:Redmond`).
+In addition to specifying the Identity, the command also sets the maximum number of contacts (-MaxContacts 500) and the time of day when maintenance occurs (`-MaintenanceTimeOfDay "11:00 PM"`).
 Note that this command will fail if User Services settings have already been configured for the Redmond site.
 That is because you are limited to one collection of settings per site.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- Example 2 ------------------------
 ```
-
-```
-
-The command shown in Example 1 creates a new collection of User Services configuration settings for the Redmond site (-Identity site:Redmond).
-In addition to specifying the Identity, the command also sets the maximum number of contacts (-MaxContacts 500) and the time of day when maintenance occurs (-MaintenanceTimeOfDay "11:00 PM").
-Note that this command will fail if User Services settings have already been configured for the Redmond site.
-That is because you are limited to one collection of settings per site.
-
-New-CsUserServicesConfiguration -Identity site:Redmond -MaxContacts 500 -MaintenanceTimeOfDay "11:00 PM"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new collection of User Services configuration settings for the Redmond site (-Identity site:Redmond).
-In addition to specifying the Identity, the command also sets the maximum number of contacts (-MaxContacts 500) and the time of day when maintenance occurs (-MaintenanceTimeOfDay "11:00 PM").
-Note that this command will fail if User Services settings have already been configured for the Redmond site.
-That is because you are limited to one collection of settings per site.
-
-New-CsUserServicesConfiguration -Identity site:Redmond -MaxContacts 500 -MaintenanceTimeOfDay "11:00 PM"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-$x = New-CsUserServicesConfiguration -Identity site:Redmond -InMemory
-$x.MaxContacts = 500 
-$x.MaintenanceTimeOfDay = "11:00 PM"
-Set-CsUserServicesConfiguration -Instance $x
-```
-
-Example 2 also creates a new collection of User Services configuration settings for the Redmond site.
-However, in this example the collection is initially created in memory and is only later applied to the Redmond site.
-To do this, the first command in the example uses New-CsUserServicesConfiguration and the InMemory parameter to create a new collection (with the Identity site:Redmond) that exists only in memory.
-Because this collection exists only in memory, the User Services object must be stored in a variable.
-In this case, that's a variable named $x.
-
-After the virtual collection has been created, commands 2 and 3 are used to modify the values of the MaxContacts and the MaintenanceTimeOfDay properties.
-The final command in the example then uses Set-CsUserServicesConfiguration to transform these virtual settings into an actual collection of User Services configuration settings applied to the Redmond site.
-This final step is crucial: if you do not call Set-CsUserServicesConfiguration no settings will be applied to the Redmond site, and your virtual settings will disappear as soon as you terminate your  Windows PowerShell session or delete the variable $x.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 also creates a new collection of User Services configuration settings for the Redmond site.
-However, in this example the collection is initially created in memory and is only later applied to the Redmond site.
-To do this, the first command in the example uses New-CsUserServicesConfiguration and the InMemory parameter to create a new collection (with the Identity site:Redmond) that exists only in memory.
-Because this collection exists only in memory, the User Services object must be stored in a variable.
-In this case, that's a variable named $x.
-
-After the virtual collection has been created, commands 2 and 3 are used to modify the values of the MaxContacts and the MaintenanceTimeOfDay properties.
-The final command in the example then uses Set-CsUserServicesConfiguration to transform these virtual settings into an actual collection of User Services configuration settings applied to the Redmond site.
-This final step is crucial: if you do not call Set-CsUserServicesConfiguration no settings will be applied to the Redmond site, and your virtual settings will disappear as soon as you terminate your Windows PowerShell session or delete the variable $x.
-
 $x = New-CsUserServicesConfiguration -Identity site:Redmond -InMemory
 
 $x.MaxContacts = 500
@@ -151,60 +56,30 @@ $x.MaxContacts = 500
 $x.MaintenanceTimeOfDay = "11:00 PM"
 
 Set-CsUserServicesConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 also creates a new collection of User Services configuration settings for the Redmond site.
 However, in this example the collection is initially created in memory and is only later applied to the Redmond site.
-To do this, the first command in the example uses the New-CsUserServicesConfiguration cmdlet and the InMemory parameter to create a new collection (with the Identity site:Redmond) that exists only in memory.
+To do this, the first command in the example uses the `New-CsUserServicesConfiguration` cmdlet and the InMemory parameter to create a new collection (with the Identity site:Redmond) that exists only in memory.
 Because this collection exists only in memory, the User Services object must be stored in a variable.
 In this case, that's a variable named $x.
 
 After the virtual collection has been created, commands 2 and 3 are used to modify the values of the MaxContacts and the MaintenanceTimeOfDay properties.
-The final command in the example then uses the Set-CsUserServicesConfiguration cmdlet to transform these virtual settings into an actual collection of User Services configuration settings applied to the Redmond site.
-This final step is crucial: if you do not call the Set-CsUserServicesConfiguration cmdlet no settings will be applied to the Redmond site, and your virtual settings will disappear as soon as you terminate your Windows PowerShell session or delete the variable $x.
+The final command in the example then uses the `Set-CsUserServicesConfiguration` cmdlet to transform these virtual settings into an actual collection of User Services configuration settings applied to the Redmond site.
+This final step is crucial: if you do not call the `Set-CsUserServicesConfiguration` cmdlet no settings will be applied to the Redmond site and your virtual settings will disappear as soon as you terminate your Windows PowerShell session or delete the variable $x.
 
-$x = New-CsUserServicesConfiguration -Identity site:Redmond -InMemory
-
-$x.MaxContacts = 500
-
-$x.MaintenanceTimeOfDay = "11:00 PM"
-
-Set-CsUserServicesConfiguration -Instance $x
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
-
-Unique identifier for the User Services configuration settings to be created.
-To create settings at the site scope, use syntax similar to this:  -Identity site:Redmond.
-To create settings at the service level, use syntax like this:  -Identity service:UserServer:atl-cs-001.litwareinc.com.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Unique identifier for the User Services configuration settings to be created.
-To create settings at the site scope, use syntax similar to this: -Identity site:Redmond.
-To create settings at the service level, use syntax like this: -Identity service:UserServer:atl-cs-001.litwareinc.com.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique identifier for the User Services configuration settings to be created.
 To create settings at the site scope, use syntax similar to this:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To create settings at the service level, use syntax like this:
 
--Identity service:UserServer:atl-cs-001.litwareinc.com
-
+`-Identity service:UserServer:atl-cs-001.litwareinc.com`
 
 
 ```yaml
@@ -221,19 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -AnonymousUserGracePeriod
-**Below Content Applies To:** Lync Server 2010
-
-Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
-For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
-If an authenticated user does not join before the grace period expires then the anonymous user will be removed from the meeting.
-
-The AnonymousUserGracePeriod must be specified using the following format: days.hours:minutes:seconds (for example, 0.00:30:00 for 30 minutes).
-The grace period can be set to any value between 0 second and 1 day; the default value is 90 minutes (01:30:00).
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Represents the amount of time an anonymous (unauthenticated) user can remain in a meeting without an authenticated user being present in that same meeting.
 For example, if this value is set to 15 minutes an anonymous user can stay in the meeting for, at most, 15 minutes before an authenticated user must join.
 If an authenticated user does not join before the grace period expires then the anonymous user will be removed from the meeting.
@@ -241,7 +103,6 @@ This setting applies to both scheduled meetings and to ad-hoc meetings created b
 
 The AnonymousUserGracePeriod must be specified using the following format: days.hours:minutes:seconds (for example, 0.00:30:00 for 30 minutes).
 The grace period can be set to any value between 0 second and 1 day; the default value is 90 minutes (01:30:00).
-
 
 
 ```yaml
@@ -397,20 +258,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSubscriptions
-**Below Content Applies To:** Lync Server 2010
-
-The maximum number of SIP subscribe dialogs a user can have open at any one time.
-A subscribe dialog represents a request for SIP resources.
-The default value is 200.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 The maximum number of SIP subscribe dialogs that a user can have open at any one time.
 A subscribe dialog represents a request for SIP resources.
 The default value is 200.
-
 
 
 ```yaml
@@ -461,18 +311,8 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
-
 
 
 ```yaml
@@ -521,14 +361,6 @@ Accept wildcard characters: False
 ```
 
 ### -MinSubscriptionExpiration
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill MinSubscriptionExpiration Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Subscriptions are created any time a user makes a request for data such as presence information.
 When the request is made, the user (or, more correctly, the user's client application) can request the length of time that the subscription remains valid before it must be renewed.
 The MinSubscriptionExpiration property represents the minimum amount of time that clients can be granted.
@@ -536,7 +368,6 @@ For example, if the minimum time is set to 1200 seconds and a client requests a 
 
 The minimum subscription time must be expressed as an integer value between 300 seconds (5 minutes) and 86400 seconds (24 hours), inclusive.
 The default value is 1200 seconds (20 minutes).
-
 
 
 ```yaml
@@ -554,7 +385,7 @@ Accept wildcard characters: False
 
 ### -PresenceProviders
 Collection of presence providers for the new User Service configuration settings.
-Presence providers are best added to a collection of User Service configuration settings by using the New-CsPresenceProvider cmdlet.
+Presence providers are best added to a collection of User Service configuration settings by using the `New-CsPresenceProvider` cmdlet.
 
 ```yaml
 Type: PSListModifier
@@ -592,33 +423,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-New-CsUserServicesConfiguration does not accept pipelined input.
-
-###  
-None.
-The New-CsUserServicesConfiguration cmdlet does not accept pipelined input.
+The `New-CsUserServicesConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-New-CsUserServicesConfiguration creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
-
-###  
-The New-CsUserServicesConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
+The `New-CsUserServicesConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.UserServices.UserServicesSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bdcb11b5-b8bf-4d63-a8a5-11f2b43686dd(OCS.14).aspx)
 
 [Get-CsUserServicesConfiguration]()
 
 [Remove-CsUserServicesConfiguration]()
 
 [Set-CsUserServicesConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bdcb11b5-b8bf-4d63-a8a5-11f2b43686dd(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bdcb11b5-b8bf-4d63-a8a5-11f2b43686dd(OCS.16).aspx)
-

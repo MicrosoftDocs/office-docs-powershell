@@ -21,7 +21,7 @@ Get-CsUserLocationStatus [[-Tenant] <Object>] [[-Identity] <Object>] [-Confirm] 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### Example (Skype for Business Online)
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -125,4 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

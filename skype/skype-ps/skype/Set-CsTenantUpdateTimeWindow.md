@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-CsTenantUpdateTimeWindow
 
 ## SYNOPSIS
-Use the Set-CsTenantUpdateTimeWindow cmdlet to modify an existing tenant update time window's attributes.
+Use the `Set-CsTenantUpdateTimeWindow` cmdlet to modify an existing tenant update time window's attributes.
 
 ## SYNTAX
 
@@ -18,52 +18,48 @@ Set-CsTenantUpdateTimeWindow [[-Identity] <Object>] [-Daily] [-DayOfMonth <Objec
 ```
 
 ## DESCRIPTION
-Tenant update time windows are created, retrieved, modified, and deleted by the CsTenantUpdateTimeWindow cmdlet group (New, Get, Set, and Remove).
-The tenant update time windows can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Tenant update time windows are created, retrieved, modified, and deleted by the CsTenantUpdateTimeWindow cmdlet group (New, Get, Set and Remove).
+The tenant update time windows can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify tenant update time windows through the CsTenantHybridConfiguration cmdlets.
 You must use the CsTenantUpdateTimeWindow cmdlets to manage tenant update time windows.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-This example updates an existing tenant update time window in the tenant in Monthly type.
-
 Set-CsTenantUpdateTimeWindow -Identity FirstAndLastWeekend -Monthly -WeeksOfMonth First,Last -DaysOfWeek Sunday,Saturday -StartTime 1:00 -Duration 5:00
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
-```
-
 ```
 
 This example updates an existing tenant update time window in the tenant in Monthly type.
 
-Set-CsTenantUpdateTimeWindow -Identity MidDay -Monthly -DayOfMonth 15 -StartTime 5:00 -Duration 6:00
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
+```
+Set-CsTenantUpdateTimeWindow -Identity MidDay -Monthly -DayOfMonth 15 -StartTime 5:00 -Duration 6:00
 ```
 
+This example updates an existing tenant update time window in the tenant in Monthly type.
+
+
+### -------------------------- Example 3 --------------------------
+```
+Set-CsTenantUpdateTimeWindow -Identity Weekday -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -StartTime 3:00 -Duration 10:00
 ```
 
 This example updates an existing tenant update time window in the tenant in Weekly type.
 
-Set-CsTenantUpdateTimeWindow -Identity Weekday -Weekly -DaysOfWeek Monday,Tuesday,Wednesday,Thursday,Friday -StartTime 3:00 -Duration 10:00
 
-### -------------------------- Example 4 -------------------------- (Skype for Business Online)
+### -------------------------- Example 4 --------------------------
 ```
-
+Set-CsTenantUpdateTimeWindow -Identity Night -Daily
 ```
 
 This example updates an existing tenant update time window in the tenant in Daily type.
 
-Set-CsTenantUpdateTimeWindow -Identity Night -Daily
 
 ## PARAMETERS
 
@@ -340,6 +336,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a26a413e-bd59-4709-b8df-62119b289add(OCS.15).aspx)
-

@@ -7,15 +7,8 @@ schema: 2.0.0
 # Move-CsMeetingRoom
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
 
-Moves a Microsoft Lync Server 2013 Preview meeting room object from one Registrar pool to another.
-A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Moves a Skype for Business Server 2015 meeting room object from one Registrar pool to another.
+Moves a Skype for Business Server meeting room object from one Registrar pool to another.
 A meeting room is a conferencing device designed to address video conferencing and collaboration scenarios in small conference rooms.
 This cmdlet was introduced in Lync Server 2013.
 
@@ -44,34 +37,8 @@ Move-CsMeetingRoom [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <I
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
-In Lync Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
-
-One touch meeting join experience
-
-Multi-view video gallery
-
-Touch-enabled white-boarding on the front of room screen
-
-Calendar integration to provide access to scheduled meetings
-
-Content sharing and switching
-
-In order to manage these new endpoint devices you must, among other things, create and enable a Microsoft Exchange Server 2013 Preview resource mailbox account for the device, then enable that resource account for Lync Server 2013 Preview.
-Note that, for Lync Server, there are no cmdlets for creating or removing meeting rooms.
-Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
-The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsMeetingRoom"}
-
-Lync Server Control Panel: The functions carried out by the Move-CsMeetingRoom cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Skype for Business Server 2015, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
+In Skype for Business Server, meeting rooms are self-contained computer appliances that are installed in conference rooms and supply advanced meeting capabilities such as:
 
 One touch meeting join experience
 
@@ -83,8 +50,8 @@ Calendar integration to provide access to scheduled meetings
 
 Content sharing and switching
 
-In order to manage these new endpoint devices you must, among other things, create and enable a Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server 2015.
-Note that, for Skype for Business Server 2015, there are no cmdlets for creating or removing meeting rooms.
+In order to manage these new endpoint devices you must, among other things, create and enable a Exchange resource mailbox account for the device, then enable that resource account for Skype for Business Server.
+Note that, for Skype for Business Server, there are no cmdlets for creating or removing meeting rooms.
 Instead, you use the Enable-CsMeetingRoom cmdlet to enable meeting rooms and the Disable-CsMeetingRoom cmdlet to disable meeting rooms.
 The resource account must already exist in order for you to enable the meeting room, and disabling a meeting room only removes that room from your collection of meeting rooms; it does not delete the resource mailbox account.
 
@@ -94,45 +61,25 @@ Skype for Business Server Control Panel: The functions carried out by the Move-C
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com" -Identity "Room 14"
 ```
 
 The command shown in Example 1 moves the meeting room with the display name "Room 14" to the pool atl-cs-001.litwareinc.com.
 
-Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com" -Identity "Room 14"
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 moves the meeting room with the display name "Room 14" to the pool atl-cs-001.litwareinc.com.
-
-Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com" -Identity "Room 14"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 moves all the meeting rooms in the organization to the pool atl-cs-001.litwareinc.com.
-To do this, the command first calls Get-CsMeetingRoom without any parameters; that returns a collection of all the meeting rooms configured for use in the organization.
-That collection is then piped to the Move-CsMeetingRoom cmdlet, which moves each meeting room in the collection to the new pool.
 
 Get-CsMeetingRoom | Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 moves all the meeting rooms in the organization to the pool atl-cs-001.litwareinc.com.
 To do this, the command first calls the Get-CsMeetingRoom cmdlet without any parameters; that returns a collection of all the meeting rooms configured for use in the organization.
 That collection is then piped to the Move-CsMeetingRoom cmdlet, which moves each meeting room in the collection to the new pool.
 
-Get-CsMeetingRoom | Move-CsMeetingRoom -Target "atl-cs-001.litwareinc.com"
 
 ## PARAMETERS
 
@@ -204,14 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-**Below Content Applies To:** Lync Server 2013
-
-When present, instructs Move-CsMeetingRoom to ignore all errors that might occur when carrying out the move operation.
-As a general rule, you should avoid using the Force parameter unless absolutely necessary.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When present, instructs the Move-CsMeetingRoom cmdlet to ignore all errors that might occur when carrying out the move operation.
 As a general rule, you should avoid using the Force parameter unless absolutely necessary.
@@ -265,13 +204,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-**Below Content Applies To:** Lync Server 2013
-
-This parameter is not used with the on-premises version of Lync Server 2013 Preview.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is not used with the on-premises version of Skype for Business Online.
 
@@ -355,12 +287,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-Moves-CsMeetingRoom accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom object.
 
 ###  
 The Moves-CsMeetingRoom cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADMeetingRoom object.
@@ -381,8 +310,4 @@ None.
 [Get-CsMeetingRoom]()
 
 [Set-CsMeetingRoom]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4ea6b8bd-b134-4453-9ae4-6118330a62ea(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4ea6b8bd-b134-4453-9ae4-6118330a62ea(OCS.16).aspx)
 

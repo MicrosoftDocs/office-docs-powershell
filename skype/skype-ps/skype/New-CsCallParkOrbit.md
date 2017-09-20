@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-CsCallParkOrbit
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new, named range of numbers assigned for parking calls within an organization.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new, named range of numbers assigned for parking calls within an organization.
 This cmdlet was introduced in Lync Server 2010.
@@ -27,20 +22,6 @@ New-CsCallParkOrbit [-Identity] <XdsGlobalRelativeIdentity> [-NumberRangeStart] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Parking a call assigns a received phone call to a specific number for later retrieval.
-A call park orbit range is the set of call park locations assigned to a specific Call Park service for this purpose.
-The New-CsCallParkOrbit cmdlet defines the numbers for a call park orbit range and applies them to a specific service.
-Calls parked within the given range will be parked on the specified Call Park service.
-You can create multiple call park orbits; each must have a globally unique name and a unique range of numbers.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsCallParkOrbit cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsCallParkOrbit"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Parking a call assigns a received phone call to a specific number for later retrieval.
 A call park orbit range is the set of call park locations assigned to a specific Call Park service for this purpose.
@@ -52,115 +33,42 @@ You can create multiple call park orbits; each must have a globally unique name 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 100 -NumberRangeEnd 199 -CallParkService ApplicationServer:pool0.litwareinc.com
 ```
 
 This example creates a new call park orbit named "Redmond CPO 1" on the Application Server with the service ID ApplicationServer:pool0.litwareinc.com.
 The available number range for this call park orbit is 100 through 199.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-```
-
-This example creates a new call park orbit named "Redmond CPO 1" on the Application Server with the service ID ApplicationServer:pool0.litwareinc.com.
-The available number range for this call park orbit is 100 through 199.
-
-New-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 100 -NumberRangeEnd 199 -CallParkService ApplicationServer:pool0.litwareinc.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new call park orbit named "Redmond CPO 1" on the Application Server with the service ID ApplicationServer:pool0.litwareinc.com.
-The available number range for this call park orbit is 100 through 199.
-
-New-CsCallParkOrbit -Identity "Redmond CPO 1" -NumberRangeStart 100 -NumberRangeEnd 199 -CallParkService ApplicationServer:pool0.litwareinc.com
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
 New-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*1000" -NumberRangeEnd "*1999" -CallParkService pool0.litwareinc.com
 ```
 
 This example creates a new call park orbit named "Redmond CPO 2" on the Call Park application server with the FQDN pool0.litwareinc.com.
 The available range for this call park orbit is *1000 through *1999.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-
-```
-
-This example creates a new call park orbit named "Redmond CPO 2" on the Call Park application server with the FQDN pool0.litwareinc.com.
-The available range for this call park orbit is *1000 through *1999.
-
-New-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*1000" -NumberRangeEnd "*1999" -CallParkService pool0.litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new call park orbit named "Redmond CPO 2" on the Call Park application server with the FQDN pool0.litwareinc.com.
-The available range for this call park orbit is *1000 through *1999.
-
-New-CsCallParkOrbit -Identity "Redmond CPO 2" -NumberRangeStart "*1000" -NumberRangeEnd "*1999" -CallParkService pool0.litwareinc.com
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
-```
-New-CsCallParkOrbit -Identity "Redmond CPO 3" -NumberRangeStart "#1000" -NumberRangeEnd "#1999"  -CallParkService ApplicationServer:redmond.litwareinc.com
-```
-
-This example creates a new call park orbit range named "Redmond CPO 3" on the Call Park application server with the service ID ApplicationServer:redmond.litwareinc.com.
-The available range for this call park orbit is #1000 through #1999.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example creates a new call park orbit range named "Redmond CPO 3" on the Call Park application server with the service ID ApplicationServer:redmond.litwareinc.com.
-The available range for this call park orbit is #1000 through #1999.
 
 New-CsCallParkOrbit -Identity "Redmond CPO 3" -NumberRangeStart "#1000" -NumberRangeEnd "#1999" -CallParkService ApplicationServer:redmond.litwareinc.com
 
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This example creates a new call park orbit range named "Redmond CPO 3" on the Call Park application server with the service ID ApplicationServer:redmond.litwareinc.com.
 The available range for this call park orbit is #1000 through #1999.
-
-New-CsCallParkOrbit -Identity "Redmond CPO 3" -NumberRangeStart "#1000" -NumberRangeEnd "#1999" -CallParkService ApplicationServer:redmond.litwareinc.com
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
 
 The name of the call park orbit range.
-This name must be unique within the Microsoft Lync Server 2010 deployment.
-This string can be any value, but should be something that allows for easy identification of the particular call park orbit range.
-All call park orbit ranges are created with a global scope.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-The name of the call park orbit range.
-This name must be unique within the Lync Server deployment.
-This string can be any value, but should be something that allows for easy identification of the particular call park orbit range.
-All call park orbit ranges are created with a global scope.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The name of the call park orbit range.
-This name must be unique within the Skype for Business Server 2015 deployment.
+This name must be unique within the Skype for Business Server deployment.
 This string can be any value, but should be something that allows for easy identification of the particular call park orbit range.
 All call park orbit ranges are created with a global scope.
 
@@ -223,24 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -NumberRangeEnd
-**Below Content Applies To:** Lync Server 2010
-
-The last number in the range for this call park orbit.
-The value must be greater than or equal to the NumberRangeStart.
-The value must also be the same length as the value of the NumberRangeStart.
-For example, if NumberRangeStart is set to 100,   NumberRangeEnd cannot be set to 1001.
-In addition, if the NumberRangeStart begins with a * or #, then NumberRangeEnd must begin with the same character.
-
-Valid values: Must match the regular expression string (\[\*|#\]?\[1-9\]\d{0,7})|(\[1-9\]\d{0,8}).
-This means that the value must be a string beginning with either the character * or # or a number 1 through 9 (the first character cannot be a zero).
-If the first character is * or # the following character must be a number 1 through 9 (it cannot be a zero).
-Subsequent characters can be any number 0 through 9 up to seven additional characters.
-(For example, #6000, *92000, and *95551212.) If the first character is not * or #, the first character must be a number 1 through 9 (it cannot be zero), followed by up to eight characters, each a number 0 through 9.
-(For example: 915551212;41212;300)
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 The last number in the range for this call park orbit.
 The value must be greater than or equal to the NumberRangeStart.
@@ -287,14 +177,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -348,7 +230,7 @@ Accept wildcard characters: False
 
 ### -Type
 Specifies the type of call park orbit being created.
-Skype for Business Server 2015 allows for two different types of call park orbits:
+Skype for Business Server allows for two different types of call park orbits:
 
 CallPark.
 This is the standard call park orbit, in which a user places a call on hold and then can retrieve that call from any phone by dialing the specified call park number.
@@ -360,7 +242,7 @@ Call pickup groups are configured by administrators.
 
 To specify a call park orbit type, use syntax similar to this:
 
--Type GroupPickup
+`-Type GroupPickup`
 
 This parameter was introduced in the February 2013 release of Lync Server 2013.
 
@@ -378,7 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -394,15 +276,9 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.Voice.Helpers.Dis
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d65a000f-905d-4512-b082-066748719f4c(OCS.14).aspx)
-
 [Remove-CsCallParkOrbit]()
 
 [Set-CsCallParkOrbit]()
 
 [Get-CsCallParkOrbit]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d65a000f-905d-4512-b082-066748719f4c(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d65a000f-905d-4512-b082-066748719f4c(OCS.16).aspx)
 

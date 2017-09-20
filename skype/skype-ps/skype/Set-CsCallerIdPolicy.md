@@ -22,14 +22,13 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -251,6 +250,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1ecf615a-bca4-4f9c-9b6d-244e0a9230d7(OCS.15).aspx)
-

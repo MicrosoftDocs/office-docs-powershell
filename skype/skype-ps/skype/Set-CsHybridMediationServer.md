@@ -17,7 +17,7 @@ Set-CsHybridMediationServer [[-Identity] <Object>] [-AccessProxyExternalFqdn <Ob
 ```
 
 ## DESCRIPTION
-The Set-CsHybridMediationServer cmdlet provides FQDN settings for users.
+The `Set-CsHybridMediationServer` cmdlet provides FQDN settings for users.
 Use this command to register mediation serviers from on-prem on O365 and point them to access proxy (Edge server) from on-prem.
 Then the existing Skype for Business online call routing mechanism can establish the conference.
 
@@ -26,14 +26,13 @@ Users must be retrieved by their identity and they cannot already have assigned 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsHybridMediationServer -Fqdn users.fabrikam.com -AccessProxyExternalFqdn mediationserver.Contoso.com
 ```
 
 This command sets the FQDN of a mediation server.
 
-Set-CsHybridMediationServer -Fqdn users.fabrikam.com -AccessProxyExternalFqdn mediationserver.Contoso.com
 
 ## PARAMETERS
 
@@ -71,7 +70,7 @@ Accept wildcard characters: False
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
 Type: Object
@@ -87,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -104,8 +103,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online, you do not have to include the Tenant parameter.
 The tenant ID will be determined by your connection and credentials.
@@ -169,6 +168,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-CsHybridMediationServer]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4e515da4-5f28-43ee-b8f0-d8c20d7594b6(OCS.15).aspx)
-

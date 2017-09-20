@@ -7,20 +7,8 @@ schema: 2.0.0
 # Test-CsDialInConferencing
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Test-CsDialInConferencing checks to see if a user can take part in a dial-in conferencing session.
-
-**Below Content Applies To:** Lync Server 2013
-
-Test-CsDialInConferencing checks to see if a user can take part in a dial-in conferencing session.
+The `Test-CsDialInConferencing` cmdlet checks to see if a user can take part in a dial-in conferencing session.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Test-CsDialInConferencing cmdlet checks to see if a user can take part in a dial-in conferencing session.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -42,13 +30,11 @@ Test-CsDialInConferencing [[-TargetFqdn] <String>] -UserCredential <PSCredential
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Test-CsDialInConferencing is an example of a Microsoft Lync Server 2010 "synthetic transaction." Synthetic transactions are used in Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
+The `Test-CsDialInConferencing` cmdlet is an example of a Skype for Business Server "synthetic transaction." Synthetic transactions are used in Skype for Business Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
 
 Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
+Many administrators will use the `CsHealthMonitoringConfiguration` cmdlets to set up test users for each of their Registrar pools.
 These test users are a pair of users who have been preconfigured for use with synthetic transactions.
 (Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
 
@@ -56,110 +42,30 @@ Alternatively, administrators can run a synthetic transaction using actual user 
 For example, if two users are unable to exchange instant messages, an administrator could run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) and try to diagnose and resolve the problem.
 If you decide to conduct a synthetic transaction using actual user accounts, you will need to supply the logon names and passwords for each user.
 
-The Test-CsDialInConferencing works by attempting to log a test user onto the system.
-(If you are using test users, Test-CsDialInConferencing will use the first test account configured for that pool.) If logon succeeds, the cmdlet will then use the user's credentials and permissions to try the available dial-in conferencing access numbers.
-The success or failure of each dial-in attempt will be noted, then the test user will be logged off from Lync Server.
+The `Test-CsDialInConferencing` cmdlet works by attempting to log a test user onto the system.
+(If you are using test users, the `Test-CsDialInConferencing` cmdlet will use the first test account configured for that pool.) If logon succeeds, the cmdlet will then use the user's credentials and permissions to try the available dial-in conferencing access numbers.
+The success or failure of each dial-in attempt will be noted, then the test user will be logged off from Skype for Business Server.
 
-Test-CsDialInConferencing only verifies that the appropriate connections can be made.
+The `Test-CsDialInConferencing` cmdlet only verifies that the appropriate connections can be made.
 The cmdlet does not actually make any phone calls or create any dial-in conferences that other users can join.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsDialInConferencing cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDialInConferencing"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Test-CsDialInConferencing is an example of a Lync Server "synthetic transaction." Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
-These test users are a pair of users who have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator could run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) and try to diagnose and resolve the problem.
-If you decide to conduct a synthetic transaction using actual user accounts, you will need to supply the logon names and passwords for each user.
-
-The Test-CsDialInConferencing works by attempting to log a test user onto the system.
-(If you are using test users, Test-CsDialInConferencing will use the first test account configured for that pool.) If logon succeeds, the cmdlet will then use the user's credentials and permissions to try the available dial-in conferencing access numbers.
-The success or failure of each dial-in attempt will be noted, then the test user will be logged off from Lync Server.
-
-Test-CsDialInConferencing only verifies that the appropriate connections can be made.
-The cmdlet does not actually make any phone calls or create any dial-in conferences that other users can join.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsDialInConferencing cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsDialInConferencing"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Test-CsDialInConferencing cmdlet is an example of a Skype for Business Server 2015 "synthetic transaction." Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions are typically conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test users for each of their Registrar pools.
-These test users are a pair of users who have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) With test users configured for a pool, administrators can simply run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator could run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts) and try to diagnose and resolve the problem.
-If you decide to conduct a synthetic transaction using actual user accounts, you will need to supply the logon names and passwords for each user.
-
-The Test-CsDialInConferencing cmdlet works by attempting to log a test user onto the system.
-(If you are using test users, the Test-CsDialInConferencing cmdlet will use the first test account configured for that pool.) If logon succeeds, the cmdlet will then use the user's credentials and permissions to try the available dial-in conferencing access numbers.
-The success or failure of each dial-in attempt will be noted, then the test user will be logged off from Skype for Business Server 2015.
-
-The Test-CsDialInConferencing cmdlet only verifies that the appropriate connections can be made.
-The cmdlet does not actually make any phone calls or create any dial-in conferences that other users can join.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com
-```
-
-The preceding example verifies that a preconfigured test user can take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
-This command will work only if test users have been defined for the pool atl-cs-001.litwareinc.com.
-If they have, then the command will determine whether or not the first test user is able to log on to Lync Server.
-
-If test users have not been defined, then the command will fail because it will not know which user to log on as.
-If you have not defined a test users for a pool, then you must include the UserCredential parameter and the credentials of the user that the command should employ when trying to log on.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 verifies that a preconfigured test user can take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
 This command will work only if test users have been defined for the pool atl-cs-001.litwareinc.com.
-If they have, then the command will determine whether or not the first test user is able to log on to Lync Server.
+If they have, then the command will determine whether or not the first test user is able to log on to Skype for Business Server.
 
 If test users have not been defined, then the command will fail because it will not know which user to log on as.
 If you have not defined test users for a pool, then you must include the UserCredential parameter and the credentials of the user that the command should employ when trying to log on.
 
-Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 verifies that a preconfigured test user can take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
-This command will work only if test users have been defined for the pool atl-cs-001.litwareinc.com.
-If they have, then the command will determine whether or not the first test user is able to log on to Skype for Business Server 2015.
-
-If test users have not been defined, then the command will fail because it will not know which user to log on as.
-If you have not defined test users for a pool, then you must include the UserCredential parameter and the credentials of the user that the command should employ when trying to log on.
-
-Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 $cred1 = Get-Credential "litwareinc\pilar"
 
@@ -167,43 +73,12 @@ Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com -UserSipAddress 
 ```
 
 The commands shown in Example 2 test the ability of a specific user (litwareinc\pilar) to take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name -litwareinc\pilar -- has been included as a parameter, the administrator only has to enter the password for the Pilar Ackerman account in the Windows PowerShell Credential Request dialog box.) The resulting credential object is then stored in a variable named $cred1.
-
-The second command then checks to see if the user Pilar Ackerman can log on to the pool atl-cs-001.litwareinc.com and take part in a dial-in conference.
-To carry out this task, Test-CsCsDialInConferencing is called, along with three parameters: TargetFqdn (the FQDN of the Registrar pool); UserCredential (the Windows PowerShell object containing Pilar Ackerman's user credentials); and UserSipAddress (the SIP address corresponding to the supplied user credentials).
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 2 test the ability of a specific user (litwareinc\pilar) to take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
 (Because the logon name -litwareinc\pilar -- has been included as a parameter, the administrator only has to enter the password for the Pilar Ackerman account in the Windows PowerShell Credential Request dialog box.) The resulting credentials object is then stored in a variable named $cred1.
 
 The second command then checks to see if the user Pilar Ackerman can log on to the pool atl-cs-001.litwareinc.com and take part in a dial-in conference.
-To carry out this task, Test-CsDialInConferencing is called, along with three parameters: TargetFqdn (the FQDN of the Registrar pool); UserCredential (the Windows PowerShell object containing Pilar Ackerman's user credentials); and UserSipAddress (the SIP address corresponding to the supplied user credentials).
+To carry out this task, the `Test-CsDialInConferencing` cmdlet is called, along with three parameters: TargetFqdn (the FQDN of the Registrar pool); UserCredential (the Windows PowerShell object containing Pilar Ackerman's user credentials); and UserSipAddress (the SIP address corresponding to the supplied user credentials).
 
-$cred1 = Get-Credential "litwareinc\pilar"
-
-Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com -UserSipAddress "sip:pilar@litwareinc.com" -UserCredential $cred1
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The commands shown in Example 2 test the ability of a specific user (litwareinc\pilar) to take part in dial-in conferencing on the pool atl-cs-001.litwareinc.com.
-To do this, the first command in the example uses the Get-Credential cmdlet to create a Windows PowerShell credential object containing the name and password of the user Pilar Ackerman.
-(Because the logon name -litwareinc\pilar -- has been included as a parameter, the administrator only has to enter the password for the Pilar Ackerman account in the Windows PowerShell Credential Request dialog box.) The resulting credentials object is then stored in a variable named $cred1.
-
-The second command then checks to see if the user Pilar Ackerman can log on to the pool atl-cs-001.litwareinc.com and take part in a dial-in conference.
-To carry out this task, the Test-CsDialInConferencing cmdlet is called, along with three parameters: TargetFqdn (the FQDN of the Registrar pool); UserCredential (the Windows PowerShell object containing Pilar Ackerman's user credentials); and UserSipAddress (the SIP address corresponding to the supplied user credentials).
-
-$cred1 = Get-Credential "litwareinc\pilar"
-
-Test-CsDialInConferencing -TargetFqdn atl-cs-001.litwareinc.com -UserSipAddress "sip:pilar@litwareinc.com" -UserCredential $cred1
 
 ## PARAMETERS
 
@@ -238,10 +113,10 @@ Accept wildcard characters: False
 
 ### -UserCredential
 User credential object for the user account to be tested.
-The value passed to UserCredential should be an object reference obtained by using the Get-Credential cmdlet.
+The value passed to UserCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
 For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
 
-$x = Get-Credential "litwareinc\kenmyer"
+`$x = Get-Credential "litwareinc\kenmyer"`
 
 You need to supply the user password when running this command.
 This parameter is not required if you are conducting the test using the health monitoring configuration settings.
@@ -341,21 +216,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill OutVerboseVariable Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
-
 
 
 ```yaml
@@ -372,20 +238,6 @@ Accept wildcard characters: False
 ```
 
 ### -Authentication
-**Below Content Applies To:** Lync Server 2013
-
-Type of authentication used in the test.
-Allowed values are:
-
-* TrustedServer
-* Negotiate
-* ClientCertificate
-* LiveID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Type of authentication used in the test.
 Allowed values are:
 
@@ -396,7 +248,6 @@ Negotiate
 ClientCertificate
 
 LiveID
-
 
 
 ```yaml
@@ -418,15 +269,15 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
-Note: Do not use prepend a $ character when specifying the variable name.To save the information stored in the logger variable to an HTML file, use a command similar to this:
+Note: Do not use prepend a $ character when specifying the variable name. To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -445,7 +296,7 @@ Accept wildcard characters: False
 Phone number for a PSTN telephone that will be used to verify that PSTN users can join the dial-in conference.
 For example:
 
--TargetPstnPhoneNumber "+12065551219"
+`-TargetPstnPhoneNumber "+12065551219"`
 
 Note that TargetPstnPhoneNumber should only be included when you are using the VerifyConferenceJoinType parameter.
 
@@ -466,7 +317,7 @@ Accept wildcard characters: False
 When set to True, verifies that the dial-in conference can joined by using a PSTN telephone.
 When performing this test you can optionally include the TargetPstnPhoneNumber.
 If you do that, TargetPstnPhoneNumber must specify the PSTN phone to be used for joining the conference.
-If TargetPstnPhoneNumber is not included then the Test-CsDialInConferencing cmdlet will use dial-in phone numbers preassigned to the appropriate dial-in conferencing region.
+If TargetPstnPhoneNumber is not included then the `Test-CsDialInConferencing` cmdlet will use dial-in phone numbers preassigned to the appropriate dial-in conferencing region.
 
 ```yaml
 Type: Boolean
@@ -488,29 +339,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsDialInConferencing does not accept pipelined input.
-
-###  
-None.
-The Test-CsDialInConferencing cmdlet does not accept pipelined input.
+The `Test-CsDialInConferencing` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsDialInConferencing returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsDialInConferencing cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsDialInConferencing` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e4aedf4f-77ac-4c8b-9613-07f8ea12c041(OCS.14).aspx)
-
 [Test-CsAVConference]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e4aedf4f-77ac-4c8b-9613-07f8ea12c041(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e4aedf4f-77ac-4c8b-9613-07f8ea12c041(OCS.16).aspx)
-

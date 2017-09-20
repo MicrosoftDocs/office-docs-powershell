@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsOnlineDialInConferencingTenantSettings
 
 ## SYNOPSIS
-Use the Remove-CsOnlineDialInConferencingTenantSettings cmdlet to revert the tenant level dial-in conferencing settings to their original defaults.
+Use the `Remove-CsOnlineDialInConferencingTenantSettings` cmdlet to revert the tenant level dial-in conferencing settings to their original defaults.
 
 ## SYNTAX
 
@@ -18,18 +18,17 @@ Remove-CsOnlineDialInConferencingTenantSettings [[-Identity] <Object>] [-BypassD
 
 ## DESCRIPTION
 There is always a single instance of the dial-in conferencing settings per tenant.
-You can modify the settings using Set-CsOnlineDialInConferencingTenantSettings, and revert those settings to their defaults by using Remove-CsOnlineDialInConferencingTenantSettings.
+You can modify the settings using `Set-CsOnlineDialInConferencingTenantSettings` and revert those settings to their defaults by using `Remove-CsOnlineDialInConferencingTenantSettings`.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsOnlineDialInConferencingTenantSettings
 ```
 
 This example reverts the tenant level dial-in conferencing settings to their original defaults.
 
-Remove-CsOnlineDialInConferencingTenantSettings
 
 ## PARAMETERS
 
@@ -66,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -164,6 +163,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fd07ccd7-603a-4cef-b3eb-b60feb62054b(OCS.15).aspx)
-

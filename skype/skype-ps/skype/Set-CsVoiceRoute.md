@@ -7,23 +7,9 @@ schema: 2.0.0
 # Set-CsVoiceRoute
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Modifies a voice route.
-Voice routes contain instructions that tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-
-**Below Content Applies To:** Lync Server 2013
-
-Modifies a voice route.
-Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Voice routes contain instructions that tell Skype for Business Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies a voice route.
-Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -45,230 +31,80 @@ Set-CsVoiceRoute [-Instance <PSObject>] [-AlternateCallerId <String>] [-Descript
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Use this cmdlet to modify an existing voice route.
 Voice routes are associated with voice policies through public switched telephone network (PSTN) usages.
 A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsVoiceRoute cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsVoiceRoute"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Use this cmdlet to modify an existing voice route.
-Voice routes are associated with voice policies through public switched telephone network (PSTN) usages.
-A voice route includes a regular expression that identifies which phone numbers will be routed through a given voice route: phone numbers matching the regular expression will be routed through this route.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsVoiceRoute -Identity Route1 -Description "Test Route"
 ```
 
 This command sets the Description of the Route1 voice route to "Test Route."
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This command sets the Description of the Route1 voice route to "Test Route."
-
-Set-CsVoiceRoute -Identity Route1 -Description "Test Route"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command sets the Description of the Route1 voice route to "Test Route."
-
-Set-CsVoiceRoute -Identity Route1 -Description "Test Route"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsVoiceRoute -Identity Route1 -PstnUsages @{add="Long Distance"}
 ```
 
 The command in this example modifies the voice route with the identity Route1 to add the PSTN usage Long Distance to the list of usages for this voice route.
-Long Distance must be in the list of global PSTN usages (which can be retrieved with a call to Get-CsPstnUsage).
+Long Distance must be in the list of global PSTN usages (which can be retrieved with a call to the `Get-CsPstnUsage` cmdlet).
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command in this example modifies the voice route with the identity Route1 to add the PSTN usage Long Distance to the list of usages for this voice route.
-Long Distance must be in the list of global PSTN usages (which can be retrieved with a call to Get-CsPstnUsage).
-
-Set-CsVoiceRoute -Identity Route1 -PstnUsages @{add="Long Distance"}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in this example modifies the voice route with the identity Route1 to add the PSTN usage Long Distance to the list of usages for this voice route.
-Long Distance must be in the list of global PSTN usages (which can be retrieved with a call to the Get-CsPstnUsage cmdlet).
-
-Set-CsVoiceRoute -Identity Route1 -PstnUsages @{add="Long Distance"}
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 $x = (Get-CsPstnUsage).Usage
+
 Set-CsVoiceRoute -Identity Route1 -PstnUsages @{replace=$x}
 ```
 
 This example modifies the voice route named Route1 to populate that route's list of PSTN usages with all the existing usages for the organization.
 The first command in this example retrieves the list of global PSTN usages.
-Notice that the call to Get-CsPstnUsage is in parentheses; this means that we first retrieve an object containing PSTN usage information.
+Notice that the call to the `Get-CsPstnUsage` cmdlet is in parentheses; this means that we first retrieve an object containing PSTN usage information.
 (Because there is only one--global--PSTN usage, only one object will be retrieved.) The command then retrieves the Usage property of this object.
 That property, which contains a list of PSTN usages, is assigned to the variable $x.
-In the second line of this example, Set-CsVoiceRoute is called to modify the voice route with the identity Route1.
+In the second line of this example, the `Set-CsVoiceRoute` cmdlet is called to modify the voice route with the identity Route1.
 Notice the value passed to the PstnUsages parameter: @{replace=$x}.
 This value says to replace everything in the PstnUsages list for this route with the contents of $x, which contain the PSTN usages list retrieved in line 1.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example modifies the voice route named Route1 to populate that route's list of PSTN usages with all the existing usages for the organization.
-The first command in this example retrieves the list of global PSTN usages.
-Notice that the call to Get-CsPstnUsage is in parentheses; this means that we first retrieve an object containing PSTN usage information.
-(Because there is only one--global--PSTN usage, only one object will be retrieved.) The command then retrieves the Usage property of this object.
-That property, which contains a list of PSTN usages, is assigned to the variable $x.
-In the second line of this example, Set-CsVoiceRoute is called to modify the voice route with the identity Route1.
-Notice the value passed to the PstnUsages parameter: @{replace=$x}.
-This value says to replace everything in the PstnUsages list for this route with the contents of $x, which contain the PSTN usages list retrieved in line 1.
-
-$x = (Get-CsPstnUsage).Usage
-
-Set-CsVoiceRoute -Identity Route1 -PstnUsages @{replace=$x}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the voice route named Route1 to populate that route's list of PSTN usages with all the existing usages for the organization.
-The first command in this example retrieves the list of global PSTN usages.
-Notice that the call to the Get-CsPstnUsage cmdlet is in parentheses; this means that we first retrieve an object containing PSTN usage information.
-(Because there is only one--global--PSTN usage, only one object will be retrieved.) The command then retrieves the Usage property of this object.
-That property, which contains a list of PSTN usages, is assigned to the variable $x.
-In the second line of this example, the Set-CsVoiceRoute cmdlet is called to modify the voice route with the identity Route1.
-Notice the value passed to the PstnUsages parameter: @{replace=$x}.
-This value says to replace everything in the PstnUsages list for this route with the contents of $x, which contain the PSTN usages list retrieved in line 1.
-
-$x = (Get-CsPstnUsage).Usage
-
-Set-CsVoiceRoute -Identity Route1 -PstnUsages @{replace=$x}
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 $x = Get-CsVoiceRoute -Identity Route1
+
 $x.Name = "RouteA"
+
 Set-CsVoiceRoute -Instance $x
 ```
 
 This set of commands changes the Name property of the voice route with the identity Route1 to RouteA.
 Changing the Name property automatically changes the Identity property, in this case to RouteA.
 
-In the first line, Get-CsVoiceRoute is called to retrieve the voice route with the identity Route1.
+In the first line, the `Get-CsVoiceRoute` cmdlet is called to retrieve the voice route with the identity Route1.
 The returned object is stored in the variable $x.
 Next, the Name property of that object is assigned the string value "RouteA".
-Finally, the object (contained in the variable $x) is passed to the Instance parameter of Set-CsVoiceRoute to make the change.
+Finally, the object (contained in the variable $x) is passed to the Instance parameter of the `Set-CsVoiceRoute` cmdlet to make the change.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
+
+### -------------------------- Example 5 --------------------------
 ```
-
-```
-
-This set of commands changes the Name property of the voice route with the identity Route1 to RouteA.
-Changing the Name property automatically changes the Identity property, in this case to RouteA.
-
-In the first line, Get-CsVoiceRoute is called to retrieve the voice route with the identity Route1.
-The returned object is stored in the variable $x.
-Next, the Name property of that object is assigned the string value "RouteA".
-Finally, the object (contained in the variable $x) is passed to the Instance parameter of Set-CsVoiceRoute to make the change.
-
-$x = Get-CsVoiceRoute -Identity Route1
-
-$x.Name = "RouteA"
-
-Set-CsVoiceRoute -Instance $x
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This set of commands changes the Name property of the voice route with the identity Route1 to RouteA.
-Changing the Name property automatically changes the Identity property, in this case to RouteA.
-
-In the first line, the Get-CsVoiceRoute cmdlet is called to retrieve the voice route with the identity Route1.
-The returned object is stored in the variable $x.
-Next, the Name property of that object is assigned the string value "RouteA".
-Finally, the object (contained in the variable $x) is passed to the Instance parameter of the Set-CsVoiceRoute cmdlet to make the change.
-
-$x = Get-CsVoiceRoute -Identity Route1
-
-$x.Name = "RouteA"
-
-Set-CsVoiceRoute -Instance $x
-
-### -------------------------- Example 5 -------------------------- (Lync Server 2010)
-```
-$y = Get-CsVoiceRoute -Identity Route1
-$y.PstnGatewayList.Add("PstnGateway:192.168.0.100")
-Set-CsVoiceRoute -Instance $y
-```
-
-This example modifies the voice route named Route1 and populates that route's list of PSTN gateways (PstnGatewayList) with the server role of the gateway with the identity PstnGateway:192.168.0.100.
-In the first line of this example, Get-CsVoiceRoute is called to retrieve the voice route we want to modify, in this case Route1.
-Next we call the Add method on the PstnGatewayList property of Route1.
-We pass the Add method the Identity of the service we want to add.
-Finally, we call Set-CsVoiceRoute, passing the Instance parameter the variable $y, which will update Route1 (stored in $y) with the newly-added PSTN gateway.
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the voice route named Route1 and populates that route's list of PSTN gateways (PstnGatewayList) with the server role of the gateway with the identity PstnGateway:192.168.0.100.
-In the first line of this example, Get-CsVoiceRoute is called to retrieve the voice route we want to modify, in this case Route1.
-Next we call the Add method on the PstnGatewayList property of Route1.
-We pass the Add method the Identity of the service we want to add.
-Finally, we call Set-CsVoiceRoute, passing the Instance parameter the variable $y, which will update Route1 (stored in $y) with the newly-added PSTN gateway.
-
 $y = Get-CsVoiceRoute -Identity Route1
 
 $y.PstnGatewayList.Add("PstnGateway:192.168.0.100")
 
 Set-CsVoiceRoute -Instance $y
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This example modifies the voice route named Route1 and populates that route's list of PSTN gateways (PstnGatewayList) with the server role of the gateway with the identity PstnGateway:192.168.0.100.
-In the first line of this example, the Get-CsVoiceRoute cmdlet is called to retrieve the voice route we want to modify, in this case Route1.
+In the first line of this example, the `Get-CsVoiceRoute` cmdlet is called to retrieve the voice route we want to modify, in this case Route1.
 Next we call the Add method on the PstnGatewayList property of Route1.
 We pass the Add method the Identity of the service we want to add.
-Finally, we call the Set-CsVoiceRoute cmdlet, passing the Instance parameter the variable $y, which will update Route1 (stored in $y) with the newly-added PSTN gateway.
+Finally, we call the `Set-CsVoiceRoute` cmdlet, passing the Instance parameter the variable $y, which will update Route1 (stored in $y) with the newly-added PSTN gateway.
 
-$y = Get-CsVoiceRoute -Identity Route1
-
-$y.PstnGatewayList.Add("PstnGateway:192.168.0.100")
-
-Set-CsVoiceRoute -Instance $y
 
 ## PARAMETERS
 
@@ -290,18 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-This object must be of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route and can be retrieved by calling Get-CsVoiceRoute.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-This object must be of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route and can be retrieved by calling the Get-CsVoiceRoute cmdlet.
-
+This object must be of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route and can be retrieved by calling the `Get-CsVoiceRoute` cmdlet.
 
 
 ```yaml
@@ -392,49 +218,16 @@ Accept wildcard characters: False
 ```
 
 ### -PstnGatewayList
-**Below Content Applies To:** Lync Server 2010
-
 A Mediation Server can be associated with multiple gateways.
 This parameter contains a list of gateways associated with this voice route.
 Each member of this list must be the service Identity of the PSTN gateway or Mediation Server.
 The value can refer to a Mediation Server only if the Mediation Server is configured for Microsoft Office Communications Server 2007 or Microsoft Office Communications Server 2007 R2.
-For Lync Server 2010 a PSTN gateway must be used.
-The service Identity is a string in the format ServiceRole:FQDN, where ServiceRole is the name of the service role (PSTNGateway), and FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server.
+For Skype for Business Server a PSTN gateway must be used.
+The service Identity is a string in the format ServiceRole:FQDN, where ServiceRole is the name of the service role (PSTNGateway) and FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server.
 For example, PSTNGateway:redmondpool.litwareinc.com.
-Service identities can be retrieved by calling the command Get-CsService | Select-Object Identity.
+Service identities can be retrieved by calling the command `Get-CsService | Select-Object Identity`.
 
 If you make changes to a voice route and leave the PstnGatewayList list empty, or if the change you make removes all the items in the list, you'll receive a warning message that users will be unable to make PSTN calls.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A Mediation Server can be associated with multiple gateways.
-This parameter contains a list of gateways associated with this voice route.
-Each member of this list must be the service Identity of the PSTN gateway or Mediation Server.
-The value can refer to a Mediation Server only if the Mediation Server is configured for Microsoft Office Communications Server 2007 or Microsoft Office Communications Server 2007 R2.
-For Lync Server a PSTN gateway must be used.
-The service Identity is a string in the format ServiceRole:FQDN, where ServiceRole is the name of the service role (PSTNGateway), and FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server.
-For example, PSTNGateway:redmondpool.litwareinc.com.
-Service identities can be retrieved by calling the command Get-CsService | Select-Object Identity.
-
-If you make changes to a voice route and leave the PstnGatewayList list empty, or if the change you make removes all the items in the list, you'll receive a warning message that users will be unable to make PSTN calls.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A Mediation Server can be associated with multiple gateways.
-This parameter contains a list of gateways associated with this voice route.
-Each member of this list must be the service Identity of the PSTN gateway or Mediation Server.
-The value can refer to a Mediation Server only if the Mediation Server is configured for Microsoft Office Communications Server 2007 or Microsoft Office Communications Server 2007 R2.
-For Skype for Business Server 2015 a PSTN gateway must be used.
-The service Identity is a string in the format ServiceRole:FQDN, where ServiceRole is the name of the service role (PSTNGateway), and FQDN is the fully qualified domain name (FQDN) of the pool or the IP address of the server.
-For example, PSTNGateway:redmondpool.litwareinc.com.
-Service identities can be retrieved by calling the command Get-CsService | Select-Object Identity.
-
-If you make changes to a voice route and leave the PstnGatewayList list empty, or if the change you make removes all the items in the list, you'll receive a warning message that users will be unable to make PSTN calls.
-
 
 
 ```yaml
@@ -453,7 +246,7 @@ Accept wildcard characters: False
 ### -PstnUsages
 A list of PSTN usages (such as Local or Long Distance) that can be applied to this voice route.
 The PSTN usage must be an existing usage.
-(PSTN usages can be retrieved by calling the Get-CsPstnUsage cmdlet.)
+(PSTN usages can be retrieved by calling the `Get-CsPstnUsage` cmdlet.)
 
 If you make changes to a voice route and leave the PstnUsages list empty, or if the change you make removes all the PSTN usages in the list, you'll receive a warning message that users will be unable to make PSTN calls.
 
@@ -544,27 +337,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route object.
-Accepts pipelined input of voice route objects.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route object.
-The Set-CsVoiceRoute cmdlet accepts pipelined input of voice route objects.
+The `Set-CsVoiceRoute` cmdlet accepts pipelined input of voice route objects.
 
 ## OUTPUTS
 
 ###  
-Set-CsVoiceRoute does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route object.
-
-###  
-The Set-CsVoiceRoute cmdlet does not return a value or object.
+The `Set-CsVoiceRoute` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Route object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b786aec0-946e-4ce5-812e-25e5d8cfa4d5(OCS.14).aspx)
 
 [New-CsVoiceRoute]()
 
@@ -577,8 +360,3 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 [Get-CsPstnUsage]()
 
 [Get-CsService]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b786aec0-946e-4ce5-812e-25e5d8cfa4d5(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b786aec0-946e-4ce5-812e-25e5d8cfa4d5(OCS.16).aspx)
-

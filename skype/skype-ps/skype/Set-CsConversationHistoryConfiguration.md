@@ -27,34 +27,32 @@ Set-CsConversationHistoryConfiguration [-Confirm] [-EnableServerConversationHist
 ```
 
 ## DESCRIPTION
-Prior to the release of Skype for Business Server 2015, conversation histories were stored exclusively in the Conversation History folder, written by the Skype for Business rich client.
+Prior to the release of Skype for Business Server, conversation histories were stored exclusively in the Conversation History folder, written by the Skype for Business rich client.
 Unfortunately, that proved to be a problem for mobile device users, because the Conversation History folder is typically not replicated to mobile devices.
-With Skype for Business Server 2015, however, conversation histories, missed call notifications, and missed IM notifications can now be stored on the server instead of in client mailboxes; this change makes these items readily available to mobile devices.
+With Skype for Business Server, however, conversation histories, missed call notifications, and missed IM notifications can now be stored on the server instead of in client mailboxes; this change makes these items readily available to mobile devices.
 That also means that administrators can manage the server-side storage of these conversation histories by using the conversation history configuration settings.
 Keep in mind that a single, global collection of these settings is used to manage conversation history throughout your deployment; there is no option for creating additional conversation history.
-However, the global settings can be modified by using the Set-CsConversationHistoryConfiguration cmdlet.
+However, the global settings can be modified by using the `Set-CsConversationHistoryConfiguration` cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsConversationHistoryConfiguration -Identity "global" -EnableServerConversationHistory $True
 ```
 
 In Example 1, the EnableServerConversationHistory property is set to True ($True).
 In turn, conversation histories, missed call notifications, and missed IM notifications will be stored on the server rather than in client mailboxes.
 
-Set-CsConversationHistoryConfiguration -Identity "global" -EnableServerConversationHistory $True
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Set-CsConversationHistoryConfiguration -Identity "global" -CachedUserThreshold 2000000
 ```
 
 The command shown in Example 2 modifies the global collection of conversation history configuration settings.
 (Each deployment is limited to a single, global collection of conversation history configuration settings.) In this example, the CachedUserThreshold property is set to 2000000.
 
-Set-CsConversationHistoryConfiguration -Identity "global" -CachedUserThreshold 2000000
 
 ## PARAMETERS
 
@@ -109,10 +107,10 @@ Accept wildcard characters: False
 
 ### -Identity
 Unique Identity of the conversation history configuration settings being modified.
-Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Set-CsConversationHistoryConfiguration cmdlet.
+Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the `Set-CsConversationHistoryConfiguration` cmdlet.
 However, you can still use the following syntax to reference the global settings:
 
--Identity "global"
+`-Identity "global"`
 
 ```yaml
 Type: XdsIdentity
@@ -201,13 +199,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsConversationHistoryConfiguration accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+`Set-CsConversationHistoryConfiguration` accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsConversationHistoryConfiguration modifies instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
+Instead, `Set-CsConversationHistoryConfiguration` modifies instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ConversationHistory.ConversationHistorySettings object.
 
 ## NOTES
 
@@ -216,6 +214,3 @@ Instead, Set-CsConversationHistoryConfiguration modifies instances of the Micros
 [Get-CsConversationHistoryConfiguration]()
 
 [Remove-CsConversationHistoryConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d580b9ea-ee07-4511-923e-03adad6a4db7(OCS.16).aspx)
-

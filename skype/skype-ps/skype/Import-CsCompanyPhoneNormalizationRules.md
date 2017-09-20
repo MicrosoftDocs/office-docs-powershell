@@ -7,7 +7,7 @@ schema: 2.0.0
 # Import-CsCompanyPhoneNormalizationRules
 
 ## SYNOPSIS
-Use the Import-CsCompanyPhoneNormalizationRules cmdlet to import custom phone normalization rules defined in Company_Phone_Number_Normalization_Rules.txt used in previous server versions into Skype for Business Server 2015 environments.
+Use the Import-CsCompanyPhoneNormalizationRules cmdlet to import custom phone normalization rules defined in Company_Phone_Number_Normalization_Rules.txt used in previous server versions into Skype for Business Server environments.
 
 ## SYNTAX
 
@@ -27,7 +27,7 @@ Import-CsCompanyPhoneNormalizationRules -FileName <String> [-Confirm] [-Force] [
 Address Book phone normalization rule configurations have been migrated from the plain text file Company_Phone_Number_Normalization_Rules.txt to central management configuration in Skype for Business Server for easier and more convenient manageability.
 In order for the Skype for Business Server Address Book service to pick up custom normalization rules, normalization rule definitions must be in the central management configuration store.
 The Import-CsCompanyPhoneNormalizationRules cmdlet reads all custom normalization rules defined in the file specified by the FileName parameter and ensures the same normalization rules exist in the central management configuration store.
-Company_Phone_Number_Normalization_Rules.txt and phone normalization rules defined in central management store must be kept in sync until the environment is fully migrated to Skype for Business Server 2015.
+Company_Phone_Number_Normalization_Rules.txt and phone normalization rules defined in central management store must be kept in sync until the environment is fully migrated to Skype for Business Server.
 
 The Import-CsCompanyPhoneNormalizationRules cmdlet uses GUID names for the new normalization rules as name is required in the Skype for Business Server configuration schema, and does not exist in the legacy normalization file format.
 These GUID names can be replaced with more appropriate values by using Set-CsAddressBookNormalizationConfiguration cmdlet after the migration is completed.
@@ -36,14 +36,14 @@ Alternatively, the New-CsAddressBookNormalizationConfiguration and Set-CsAddress
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Import-CsCompanyPhoneNormalizationRules -Filename "C:\Data\Company_Phone_Number_Normalization_Rules.txt" -Identity Global
 ```
 
 This example reads the phone normalization rules at the specified path and applies them globally.
 
-Import-CsCompanyPhoneNormalizationRules -Filename "C:\Data\Company_Phone_Number_Normalization_Rules.txt" -Identity Global
 
 ## PARAMETERS
 
@@ -51,7 +51,7 @@ Import-CsCompanyPhoneNormalizationRules -Filename "C:\Data\Company_Phone_Number_
 Specifies the full path to the input Company_Phone_Number_Normalization_Rules.txt file.
 For example:
 
--FileName "C:\Data\Company_Phone_Number_Normalization_Rules.txt"
+`-FileName "C:\Data\Company_Phone_Number_Normalization_Rules.txt"`
 
 ```yaml
 Type: String
@@ -102,15 +102,15 @@ Accept wildcard characters: False
 Unique identifier for the address book normalization configuration settings to be updated.
 To modify the global settings, use this syntax:
 
--Identity global
+`-Identity global`
 
 To modify settings configured at the site scope:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To modify settings at the service level:
 
--Identity service:Registrar:atl-cs-001.litwareinc.com
+`-Identity service:Registrar:atl-cs-001.litwareinc.com`
 
 Note that address book normalization configuration settings can only be applied to the Registrar service.
 An error will occur if you try to apply these settings to any other service.
@@ -161,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -184,6 +184,4 @@ None
 [New-CsAddressBookNormalizationConfiguration]()
 
 [Get-CsAddressBookNormalizationConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fe4c28d7-b6bf-4678-bfe9-11b9aed2c03d(OCS.16).aspx)
 

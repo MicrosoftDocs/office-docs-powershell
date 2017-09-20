@@ -19,16 +19,16 @@ Test-CsOnlinePortabilityIn [-BypassDualWrite <Object>] [-Confirm] [-DomainContro
 ## DESCRIPTION
 Provide the detailed description here.
 
+
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -170,6 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9969bce9-7b95-45e2-81c0-7af3d744b164(OCS.15).aspx)
-

@@ -7,16 +7,9 @@ schema: 2.0.0
 # New-CsOutboundCallingNumberTranslationRule
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
 
 Creates a new outbound calling number translation rule.
-An outbound calling number translation rule converts the E.164 phone numbers used by Microsoft Lync Server 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new outbound calling number translation rule.
-An outbound calling number translation rule converts the E.164 phone numbers used by Skype for Business Server 2015 to a format that can be used by trunking peers that do not support E.164 numbers.
+An outbound calling number translation rule converts the E.164 phone numbers used by Skype for Business Server to a format that can be used by trunking peers that do not support E.164 numbers.
 This cmdlet was introduced in Lync Server 2013.
 
 
@@ -38,24 +31,6 @@ New-CsOutboundCallingNumberTranslationRule -Name <String> -Parent <String> [-Con
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-Outbound calling number translation rules convert the E.164 phone numbers used by Microsoft Lync 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
-
-Outbound calling number translation rules must be bound to a collection of trunk configuration settings; when you create a new translation rule you must specify both the Identity of the trunking configuration settings and a name for the new rule (for example, site:Redmond/RedmondTranslationRule).
-Note that the trunking configuration settings do not necessarily have to exist at the time you create a new rule.
-For example, suppose you create the rule site:Redmond/RedmondTranslationRule but no trunk configuration settings have been created for the Redmond site.
-If the Redmond site is a valid site, trunk configuration settings will automatically be created for the site and the new translation rule will be assigned to that collection of settings.
-However, your command will fail if the Redmond site does not exist.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsOutboundCallingNumberTranslationRule"}
-
-Lync Server Control Panel: To create a new outbound calling number translation rule using the Lync Server Control Panel, click Voice Routing then click Trunk Configuration, and then double-click the appropriate item in the Name column.
-In the Edit Trunk Configuration dialog box scroll down to the section labeled Calling number translation rules and then click New.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Outbound calling number translation rules convert the E.164 phone numbers used by Skype for Business to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
 
@@ -72,23 +47,14 @@ In the Edit Trunk Configuration dialog box scroll down to the section labeled Ca
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsOutboundCallingNumberTranslationRule -Parent "site:Redmond" -Name SevenDigit -Description "Converts a dialed number to seven digits" -Pattern '^\+1206(\d{7})$' -Translation '$1'
 ```
 
 The command shown in Example 1 creates a new outbound calling number translation rule that converts an E.164 number that begins with the string value +1206 (for example, +12065551219) to a seven-digit value (for example, 5551219, stripping off the +1206).
 
-New-CsOutboundCallingNumberTranslationRule -Parent "site:Redmond" -Name SevenDigit -Description "Converts a dialed number to seven digits" -Pattern '^\+1206(\d{7})$' -Translation '$1'
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new outbound calling number translation rule that converts an E.164 number that begins with the string value +1206 (for example, +12065551219) to a seven-digit value (for example, 5551219, stripping off the +1206).
-
-New-CsOutboundCallingNumberTranslationRule -Parent "site:Redmond" -Name SevenDigit -Description "Converts a dialed number to seven digits" -Pattern '^\+1206(\d{7})$' -Translation '$1'
 
 ## PARAMETERS
 
@@ -97,7 +63,7 @@ Unique identifier for the new translation rule.
 Names are composed of the scope (parent), a "/" character, and a unique name within that scope.
 For example, a rule named RedmondDialing created for the Redmond site would have an Identity that looked like this:
 
--Identity "site:Redmond/RedmondDialing"
+`-Identity "site:Redmond/RedmondDialing"`
 
 If you use the Identity parameter then your command cannot contain either the Parent or the Name parameter.
 
@@ -118,7 +84,7 @@ Accept wildcard characters: False
 Name for the new translation rule; names must be unique for the given scope.
 For example:
 
--Name "RedmondDialing"
+`-Name "RedmondDialing"`
 
 Any time you use the Name parameter you must also use the Parent parameter.
 The Name parameter cannot be used in the same command as the Identity parameter.
@@ -140,15 +106,15 @@ Accept wildcard characters: False
 Scope at which the new translation rule will be configured.
 To configure a rule at the global scope, use this syntax:
 
--Parent "global"
+`-Parent "global"`
 
 To configure a rule at the site scope, use syntax similar to this:
 
--Parent "site:Redmond"
+`-Parent "site:Redmond"`
 
 To configure a rule at the service scope (for the PstnGateway service only) use syntax like this:
 
--Parent "service:PstnGateway:192.168.0.100"
+`-Parent "service:PstnGateway:192.168.0.100"`
 
 Any time you use the Parent parameter you must also use the Name parameter.
 The Parent parameter cannot be used in the same command as the Identity parameter.
@@ -299,13 +265,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsOutboundCallingNumberTranslationRule does not accept pipelined data.
 
 ###  
 None.
@@ -313,8 +275,6 @@ The New-CsOutboundCallingNumberTranslationRule cmdlet does not accept pipelined 
 
 ## OUTPUTS
 
-###  
-New-CsOutboundCallingNumberTranslationRule creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
 
 ###  
 The New-CsOutboundCallingNumberTranslationRule cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
@@ -328,8 +288,4 @@ The New-CsOutboundCallingNumberTranslationRule cmdlet creates new instances of t
 [Remove-CsOutboundCallingNumberTranslationRule]()
 
 [Set-CsOutboundCallingNumberTranslationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/959591bb-4a6b-4b7f-9666-da1fa0f9cd43(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/959591bb-4a6b-4b7f-9666-da1fa0f9cd43(OCS.16).aspx)
 

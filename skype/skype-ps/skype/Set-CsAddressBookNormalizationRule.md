@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Modifies an existing Address Book normalization rule.
-Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -25,7 +25,7 @@ Set-CsAddressBookNormalizationRule [-Confirm] [-Description <String>] [-Force] [
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to a standard (E.164) format.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to a standard (E.164) format.
 (Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) Address Book normalization rules carry out these conversions and translations for Address Book servers.
 
 Although Address Book normalization rules are very similar to voice normalization rules, the two are not interchangeable: you cannot add voice normalization rules to an Address Book collection, nor can you add Address Book normalization rules to a dial plan.
@@ -33,26 +33,24 @@ That means, in some cases, you might need to create identical rules: one for ass
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsAddressBookNormalizationRule -Identity "Global/RedmondAddresses" -Priority 1
 ```
 
 The command shown in Example 1 changes the priority of the RedmondAddresses normalization rule found in the global collection of Address Book normalization rules.
 
-Set-CsAddressBookNormalizationRule -Identity "Global/RedmondAddresses" -Priority 1
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
 ```
 
 In Example 2, all the normalization rules that use the Translation +12065556$1 are updated to use the Translation +14255556$1; this might be required if an area code changes from 206 to 425.
-To carry out this task, the Get-CsAddressBookNormalizationRule cmdlet is called in order to return a collection of all the available normalization rules.
-This collection is then piped to the Where-Object cmdlet, which picks out only those rules that have a Translation equal to +12065556$1.
-Those rules are then piped to the Set-CsAddressBookTranslationRule, which changes the Translation for each of these rules to +14255556$1.
+To carry out this task, the `Get-CsAddressBookNormalizationRule` cmdlet is called in order to return a collection of all the available normalization rules.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those rules that have a Translation equal to +12065556$1.
+Those rules are then piped to the `Set-CsAddressBookTranslationRule`, which changes the Translation for each of these rules to +14255556$1.
 
-Get-CsAddressBookNormalizationRule | Where-Object {$_.Translation -eq '+1206556$1'} Set-CsAddressBookNormalizationRule -Translation '+1425556$1'
 
 ## PARAMETERS
 
@@ -218,13 +216,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Set-CsAddressBookNormalizationRule cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
+The `Set-CsAddressBookNormalizationRule` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, the Set-CsAddressBookNormalizationRule cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
+Instead, the `Set-CsAddressBookNormalizationRule` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
 
 ## NOTES
 
@@ -235,6 +233,3 @@ Instead, the Set-CsAddressBookNormalizationRule cmdlet modifies existing instanc
 [New-CsAddressBookNormalizationRule]()
 
 [Remove-CsAddressBookNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f06f3a1c-b1ce-4bc7-809a-a1b25c46e308(OCS.16).aspx)
-

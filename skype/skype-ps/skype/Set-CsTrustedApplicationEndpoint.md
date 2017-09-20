@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsTrustedApplicationEndpoint
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing endpoint contact for a trusted application.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing endpoint contact for a trusted application.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -30,26 +23,13 @@ Set-CsTrustedApplicationEndpoint [-Identity] <UserIdParameter> [-DisplayName <St
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
-This cmdlet modifies an existing endpoint contact object in Active Directory Domain Services (AD DS).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsTrustedApplicationEndpoint cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsTrustedApplicationEndpoint"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 A trusted application endpoint is an Active Directory contact object that enables routing of calls to a trusted application.
 This cmdlet modifies an existing endpoint contact object in Active Directory Domain Services.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsTrustedApplicationEndpoint -Identity "sip:endpoint1@litwareinc.com" -DisplayName "Endpoint 1"
 ```
@@ -58,61 +38,17 @@ This example modifies the application endpoint contact object with the SIP addre
 Notice that the Identity value begins with the string sip: followed by the SIP address.
 The next parameter, DisplayName, is given a value of "Endpoint 1", which changes the display name of the contact to that value.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example modifies the application endpoint contact object with the SIP address endpoint1@litwareinc.com.
-Notice that the Identity value begins with the string sip: followed by the SIP address.
-The next parameter, DisplayName, is given a value of "Endpoint 1", which changes the display name of the contact to that value.
-
-Set-CsTrustedApplicationEndpoint -Identity "sip:endpoint1@litwareinc.com" -DisplayName "Endpoint 1"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the application endpoint contact object with the SIP address endpoint1@litwareinc.com.
-Notice that the Identity value begins with the string sip: followed by the SIP address.
-The next parameter, DisplayName, is given a value of "Endpoint 1", which changes the display name of the contact to that value.
-
-Set-CsTrustedApplicationEndpoint -Identity "sip:endpoint1@litwareinc.com" -DisplayName "Endpoint 1"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsTrustedApplicationEndpoint -Identity "Endpoint 1" | Set-CsTrustedApplicationEndpoint -DisplayNumber "(425)555-1212"
 ```
 
 This example modifies the display number of the endpoint application with the display name Endpoint 1.
-The command begins with a call to Get-CsTrustedApplicationEndpoint with an Identity of Endpoint 1.
+The command begins with a call to the `Get-CsTrustedApplicationEndpoint` cmdlet with an Identity of Endpoint 1.
 This retrieves the endpoint contact object with that display name.
-This object is then piped to the Set-CsTrustedApplicationEndpoint cmdlet, which modifies the DisplayNumber to the value, in this case, (425)555-1212.
+This object is then piped to the `Set-CsTrustedApplicationEndpoint` cmdlet, which modifies the DisplayNumber to the value, in this case, (425)555-1212.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the display number of the endpoint application with the display name Endpoint 1.
-The command begins with a call to Get-CsTrustedApplicationEndpoint with an Identity of Endpoint 1.
-This retrieves the endpoint contact object with that display name.
-This object is then piped to the Set-CsTrustedApplicationEndpoint cmdlet, which modifies the DisplayNumber to the value, in this case, (425)555-1212.
-
-Get-CsTrustedApplicationEndpoint -Identity "Endpoint 1" | Set-CsTrustedApplicationEndpoint -DisplayNumber "(425)555-1212"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the display number of the endpoint application with the display name Endpoint 1.
-The command begins with a call to the Get-CsTrustedApplicationEndpoint cmdlet with an Identity of Endpoint 1.
-This retrieves the endpoint contact object with that display name.
-This object is then piped to the Set-CsTrustedApplicationEndpoint cmdlet, which modifies the DisplayNumber to the value, in this case, (425)555-1212.
-
-Get-CsTrustedApplicationEndpoint -Identity "Endpoint 1" | Set-CsTrustedApplicationEndpoint -DisplayNumber "(425)555-1212"
 
 ## PARAMETERS
 
@@ -165,28 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-**Below Content Applies To:** Lync Server 2010
-
-Determines whether the contact is enabled for Lync Server 2010.
+Determines whether the contact is enabled for Skype for Business Server.
 
 Default: True
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Determines whether the contact is enabled for Lync Server.
-
-Default: True
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Determines whether the contact is enabled for Skype for Business Server 2015.
-
-Default: True
-
 
 
 ```yaml
@@ -276,7 +193,7 @@ Accept wildcard characters: False
 ### -SecondaryLanguages
 A collection of languages that can also be used for trusted applications.
 Values must be configured as a comma-separated values list of language codes.
-For example, the following syntax sets French Canadian and French as secondary languages: -SecondaryLanguages "fr-CA","fr-FR".
+For example, the following syntax sets French Canadian and French as secondary languages: `-SecondaryLanguages "fr-CA","fr-FR"`.
 
 ```yaml
 Type: Microsoft.Rtc.Management.ADConnect.Core.MultiValuedProperty`1[System.String]
@@ -413,15 +330,8 @@ It modifies an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADApp
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/6c2713f4-8e2c-48fc-9f27-07c1d6b87a18(OCS.14).aspx)
-
 [New-CsTrustedApplicationEndpoint]()
 
 [Remove-CsTrustedApplicationEndpoint]()
 
 [Get-CsTrustedApplicationEndpoint]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6c2713f4-8e2c-48fc-9f27-07c1d6b87a18(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6c2713f4-8e2c-48fc-9f27-07c1d6b87a18(OCS.16).aspx)
-

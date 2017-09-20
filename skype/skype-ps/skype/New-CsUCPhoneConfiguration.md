@@ -7,23 +7,9 @@ schema: 2.0.0
 # New-CsUCPhoneConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new collection of settings used to manage Microsoft Lync 2010 Phone Edition.
-These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
-
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new collection of settings used to manage Lync Phone Edition.
-These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates a new collection of settings used to manage UC phone configuration settings.
-These settings enable you to configure such things as the required security mode, and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
+These settings enable you to configure such things as the required security mode and to specify whether or not the phone should automatically be locked after a specified period of inactivity.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -36,99 +22,32 @@ New-CsUCPhoneConfiguration [-Identity] <XdsIdentity> [-CalendarPollInterval <Tim
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Lync 2010 Phone Edition represents the merging of the telephone and Microsoft Lync 2010.
-Lync 2010 Phone Edition uses special hardware (that is, a Lync 2010-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
-In addition, this hardware can also act as a Lync 2010-like endpoint: you can set your current status; check the status of your Lync 2010 contacts; search for new contacts; and carry out many of the other activities you are used to doing with Lync 2010.
-
-Lync Server 2010 ships with a number of cmdlets that enable you to manage your phones running Lync 2010; for example, you can control such things as the minimum length of the personal identification number (PIN) used to log on to the phone and whether or not the phone will automatically lock itself after a specified period of inactivity.
-
-Unified communications (UC) phone configuration settings can be applied at either the global scope or at the site scope.
-(Settings applied at the site scope take precedence over settings applied at the global scope.) When you first install Lync Server, a single set of UC phone configuration settings is created and applied at the global scope.
-However, at any time after that you can use the New-CsUCPhoneConfiguration cmdlet to create a collection of settings that are applied at the site scope.
-This lets you tailor UC phone management to the unique needs of each individual site.
-
-New-CsUCPhoneConfiguration enables you to create new UC phone settings at the site scope.
-Note that there can only be one collection of settings per site.
-For example, suppose you try to create a collection of settings that has the Identity site:Redmond, but the Redmond site already has a set of UC phone settings assigned to it.
-In that case, your command will fail.
-Instead, you must do one of two things: either remove the existing settings, and then use New-CsUCPhoneConfiguration to create a new collection of settings; or simply use Set-CsUCPhoneConfiguration to modify the existing settings.
-
-You cannot create a new collection of settings at the global scope.
-The only thing you can do at the global scope is use Set-CsUCPhoneConfiguration to modify the existing settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsUCPhoneConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC roles this cmdlet )has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsUCPhoneConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Phone Edition represents the merging of the telephone and Lync Server.
-Lync Phone Edition uses special hardware (that is, a Lync Phone Edition-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
-In addition, this hardware can also act as a Lync-like endpoint: you can set your current status; check the status of your Lync contacts; search for new contacts; and carry out many of the other activities you are used to doing with Lync.
-
-Lync Server ships with a number of cmdlets that enable you to manage your phones running Lync Phone Edition; for example, you can control such things as the minimum length of the personal identification number (PIN) used to log on to the phone and whether or not the phone will automatically lock itself after a specified period of inactivity.
-
-Unified communications (UC) phone configuration settings can be applied at either the global scope or at the site scope.
-(Settings applied at the site scope take precedence over settings applied at the global scope.) When you first install Lync Server, a single set of UC phone configuration settings is created and applied at the global scope.
-However, at any time after that you can use the New-CsUCPhoneConfiguration cmdlet to create a collection of settings that are applied at the site scope.
-This lets you tailor UC phone management to the unique needs of each individual site.
-
-New-CsUCPhoneConfiguration enables you to create new UC phone settings at the site scope.
-Note that there can only be one collection of settings per site.
-For example, suppose you try to create a collection of settings that has the Identity site:Redmond, but the Redmond site already has a set of UC phone settings assigned to it.
-In that case, your command will fail.
-Instead, you must do one of two things: either remove the existing settings, and then use New-CsUCPhoneConfiguration to create a new collection of settings; or simply use Set-CsUCPhoneConfiguration to modify the existing settings.
-
-You cannot create a new collection of settings at the global scope.
-The only thing you can do at the global scope is use Set-CsUCPhoneConfiguration to modify the existing settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsUCPhoneConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC roles this cmdlet )has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsUCPhoneConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-UC phones represent the merging of the telephone and Skype for Business Server 2015.
+UC phones represent the merging of the telephone and Skype for Business Server.
 UC phones use special hardware (that is, a Skype for Business-compatible telephone) that can function as a Voice over Internet Protocol (VoIP) telephone.
-In addition, this hardware can also act as a Skype for Business-like endpoint: you can set your current status; check the status of your Skype for Business contacts; search for new contacts; and carry out many of the other activities you are used to doing with Skype for Business.
+In addition, this hardware can also act as a Skype for Business-like endpoint: you can set your current status; check the status of your Skype for Business contacts; search for new contacts and carry out many of the other activities you are used to doing with Skype for Business.
 
-Skype for Business Server 2015 ships with a number of cmdlets that enable you to manage your UC phones; for example, you can control such things as the minimum length of the personal identification number (PIN) used to log on to the phone and whether or not the phone will automatically lock itself after a specified period of inactivity.
+Skype for Business Server ships with a number of cmdlets that enable you to manage your UC phones; for example, you can control such things as the minimum length of the personal identification number (PIN) used to log on to the phone and whether or not the phone will automatically lock itself after a specified period of inactivity.
 
 Unified communications (UC) phone configuration settings can be applied at either the global scope or at the site scope.
-(Settings applied at the site scope take precedence over settings applied at the global scope.) When you first install Skype for Business Server 2015, a single set of UC phone configuration settings is created and applied at the global scope.
-However, at any time after that you can use the New-CsUCPhoneConfiguration cmdlet to create a collection of settings that are applied at the site scope.
+(Settings applied at the site scope take precedence over settings applied at the global scope.) When you first install Skype for Business Server, a single set of UC phone configuration settings is created and applied at the global scope.
+However, at any time after that you can use the `New-CsUCPhoneConfiguration` cmdlet to create a collection of settings that are applied at the site scope.
 This lets you tailor UC phone management to the unique needs of each individual site.
 
-The New-CsUCPhoneConfiguration cmdlet enables you to create new UC phone settings at the site scope.
+The `New-CsUCPhoneConfiguration` cmdlet enables you to create new UC phone settings at the site scope.
 Note that there can only be one collection of settings per site.
 For example, suppose you try to create a collection of settings that has the Identity site:Redmond, but the Redmond site already has a set of UC phone settings assigned to it.
 In that case, your command will fail.
-Instead, you must do one of two things: either remove the existing settings, and then use the New-CsUCPhoneConfiguration cmdlet to create a new collection of settings; or simply use the Set-CsUCPhoneConfiguration cmdlet to modify the existing settings.
+Instead, you must do one of two things: either remove the existing settings and then use the `New-CsUCPhoneConfiguration` cmdlet to create a new collection of settings; or simply use the `Set-CsUCPhoneConfiguration` cmdlet to modify the existing settings.
 
 You cannot create a new collection of settings at the global scope.
-The only thing you can do at the global scope is use the Set-CsUCPhoneConfiguration cmdlet to modify the existing settings.
-
+The only thing you can do at the global scope is use the `Set-CsUCPhoneConfiguration` cmdlet to modify the existing settings.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 New-CsUCPhoneConfiguration -Identity site:Redmond -CalendarPollInterval "00:10:00" -LoggingLevel "Medium"
-```
-
-The preceding command creates a new collection of UC phone settings for the Redmond site.
-In this example, two optional parameters are included along with the required parameter Identity: CalendarPollInterval, which sets the calendar polling time to every 10 minutes (00 hours: 10 minutes: 00 seconds); and LoggingLevel, which sets the UC phone logging level to Medium.
-As soon as this command completes, the new settings will be applied to the Redmond site and users in that site will have their UC phones governed by the new settings.
-Note that this command will fail if the Redmond site already has a collection of UC phone settings.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 creates a new collection of UC phone settings for the Redmond site.
@@ -136,47 +55,9 @@ In this example, two optional parameters are included along with the required pa
 As soon as this command completes, the new settings will be applied to the Redmond site and users in that site will have their UC phones governed by the new settings.
 Note that this command will fail if the Redmond site already has a collection of UC phone settings.
 
-New-CsUCPhoneConfiguration -Identity site:Redmond -CalendarPollInterval "00:10:00" -LoggingLevel "Medium"
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 ------------------------
 ```
-
-```
-
-Example 1 creates a new collection of UC phone settings for the Redmond site.
-In this example, two optional parameters are included along with the required parameter Identity: CalendarPollInterval, which sets the calendar polling time to every 10 minutes (00 hours: 10 minutes: 00 seconds); and LoggingLevel, which sets the UC phone logging level to Medium.
-As soon as this command completes, the new settings will be applied to the Redmond site and users in that site will have their UC phones governed by the new settings.
-Note that this command will fail if the Redmond site already has a collection of UC phone settings.
-
-New-CsUCPhoneConfiguration -Identity site:Redmond -CalendarPollInterval "00:10:00" -LoggingLevel "Medium"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-$x = New-CsUCPhoneConfiguration -Identity site:Redmond -InMemory
-$x.CalendarPollInterval = "00:10:00" 
-$x.LoggingLevel = "Medium"
-Set-CsUCPhoneConfiguration -Instance $x
-```
-
-Example 2 demonstrates the use of the InMemory parameter; this parameter enables you to create a new set of UC phone settings that exists in memory only.
-(These settings are stored in the variable $x.) After this virtual collection has been created, you can modify the in-memory-only settings using commands similar to those shown in lines 2 and 3 of the example: in line 2, the CalendarPollInterval property is set the 10 minutes (00 hours: 10  minutes: 00 seconds), and in line 3 the LoggingLevel property is set to Medium.
-
-After you have finished modifying the property values, you can then use Set-CsUCPhoneConfiguration to turn the virtual settings stored in $x into an actual collection of settings applied to the Redmond site.
-Note that, with the use of the InMemory parameter, the settings are not actually applied until you call Set-CsUCPhoneConfiguration.
-If you do not call this cmdlet, your virtual settings will disappear when you end your Windows PowerShell session or when you delete the variable $x.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 demonstrates the use of the InMemory parameter; this parameter enables you to create a new set of UC phone settings that exists in memory only.
-(These settings are stored in the variable $x.) After this virtual collection has been created, you can modify the in-memory-only settings using commands similar to those shown in lines 2 and 3 of the example: in line 2, the CalendarPollInterval property is set the 10 minutes (00 hours: 10 minutes: 00 seconds), and in line 3 the LoggingLevel property is set to Medium.
-
-After you have finished modifying the property values, you can then use Set-CsUCPhoneConfiguration to turn the virtual settings stored in $x into an actual collection of settings applied to the Redmond site.
-Note that, with the use of the InMemory parameter, the settings are not actually applied until you call Set-CsUCPhoneConfiguration.
-If you do not call this cmdlet, your virtual settings will disappear when you end your Windows PowerShell session or when you delete the variable $x.
-
 $x = New-CsUCPhoneConfiguration -Identity site:Redmond -InMemory
 
 $x.CalendarPollInterval = "00:10:00"
@@ -184,26 +65,15 @@ $x.CalendarPollInterval = "00:10:00"
 $x.LoggingLevel = "Medium"
 
 Set-CsUCPhoneConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 demonstrates the use of the InMemory parameter; this parameter enables you to create a new set of UC phone settings that exists in memory only.
-(These settings are stored in the variable $x.) After this virtual collection has been created, you can modify the in-memory-only settings using commands similar to those shown in lines 2 and 3 of the example: in line 2, the CalendarPollInterval property is set the 10 minutes (00 hours: 10 minutes: 00 seconds), and in line 3 the LoggingLevel property is set to Medium.
+(These settings are stored in the variable $x.) After this virtual collection has been created, you can modify the in-memory-only settings using commands similar to those shown in lines 2 and 3 of the example: in line 2, the CalendarPollInterval property is set the 10 minutes (00 hours: 10 minutes: 00 seconds) and in line 3 the LoggingLevel property is set to Medium.
 
-After you have finished modifying the property values, you can then use the Set-CsUCPhoneConfiguration cmdlet to turn the virtual settings stored in $x into an actual collection of settings applied to the Redmond site.
-Note that, with the use of the InMemory parameter, the settings are not actually applied until you call the Set-CsUCPhoneConfiguration cmdlet.
+After you have finished modifying the property values, you can then use the `Set-CsUCPhoneConfiguration` cmdlet to turn the virtual settings stored in $x into an actual collection of settings applied to the Redmond site.
+Note that, with the use of the InMemory parameter, the settings are not actually applied until you call the `Set-CsUCPhoneConfiguration` cmdlet.
 If you do not call this cmdlet, your virtual settings will disappear when you end your Windows PowerShell session or when you delete the variable $x.
 
-$x = New-CsUCPhoneConfiguration -Identity site:Redmond -InMemory
-
-$x.CalendarPollInterval = "00:10:00"
-
-$x.LoggingLevel = "Medium"
-
-Set-CsUCPhoneConfiguration -Instance $x
 
 ## PARAMETERS
 
@@ -225,23 +95,12 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarPollInterval
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Indicates how often the UC device retrieves information from your Microsoft Outlook calendar.
-The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax: -CalendarPollInterval "01:00:00".
-The default value is 3 minutes (00:03:00).
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates how often the UC device retrieves information from your Outlook calendar.
 The value must be specified using the format hours:minutes:seconds; for example, to set the time interval to 1 hour (the maximum allowed interval) use this syntax:
 
--CalendarPollInterval "01:00:00"
+`-CalendarPollInterval "01:00:00"`
 
 The default value is 3 minutes (00:03:00).
-
 
 
 ```yaml
@@ -360,34 +219,11 @@ Accept wildcard characters: False
 ```
 
 ### -Voice8021p
-**Below Content Applies To:** Lync Server 2010
-
-Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Server 2010 deployment.
+Specifies the user priority value (the 802.1p value) for voice traffic within the Skype for Business Server deployment.
 
 This setting is effective only for networks in which switches and bridges are 802.1p-capable.
 The minimum value for this property is 0 and the maximum value is 7.
 The default value is 0.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Specifies the user priority value (the 802.1p value) for voice traffic within the Lync Serverdeployment.
-
-This setting is effective only for networks in which switches and bridges are 802.1p-capable.
-The minimum value for this property is 0 and the maximum value is 7.
-The default value is 0.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Specifies the user priority value (the 802.1p value) for voice traffic within the Skype for Business Server 2015 deployment.
-
-This setting is effective only for networks in which switches and bridges are 802.1p-capable.
-The minimum value for this property is 0 and the maximum value is 7.
-The default value is 0.
-
 
 
 ```yaml
@@ -440,18 +276,8 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
-
 
 
 ```yaml
@@ -506,11 +332,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-New-CsUCPhoneConfiguration does not accept pipelined input.
-
-###  
-None.
-The New-CsUCPhoneConfiguration cmdlet does not accept pipelined input.
+The `New-CsUCPhoneConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
@@ -521,15 +343,8 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Uc
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/633a593e-565d-4c04-affb-589502050212(OCS.14).aspx)
-
 [Get-CsUCPhoneConfiguration]()
 
 [Remove-CsUCPhoneConfiguration]()
 
 [Set-CsUCPhoneConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/633a593e-565d-4c04-affb-589502050212(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/633a593e-565d-4c04-affb-589502050212(OCS.16).aspx)
-

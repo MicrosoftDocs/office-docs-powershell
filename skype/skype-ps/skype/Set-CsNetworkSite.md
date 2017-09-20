@@ -7,15 +7,8 @@ schema: 2.0.0
 # Set-CsNetworkSite
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -35,28 +28,14 @@ Set-CsNetworkSite [-Instance <PSObject>] [-BWPolicyProfileID <String>] [-BypassI
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet modifies the settings on an existing site.
 This can include such things as the region with which the site is associated, the description of the site, and the associated bandwidth policy profile.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsNetworkSite cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkSite"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
-This cmdlet modifies the settings on an existing site.
-This can include such things as the region with which the site is associated, the description of the site, and the associated bandwidth policy profile.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsNetworkSite -Identity Vancouver -NetworkRegionID Canada
 ```
@@ -67,33 +46,8 @@ The Vancouver site is being moved to a new region, which requires that the Netwo
 Because a NetworkRegionID has been supplied but no value has been specified for BypassID, a BypassID value will be automatically generated.
 Any previously-existing bypass ID will be overwritten.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In this example the network site named Vancouver is modified.
-The name of the site being modified is specified as the value for the Identity parameter.
-The Vancouver site is being moved to a new region, which requires that the NetworkRegionID parameter be changed, in this case to the region named Canada.
-Because a NetworkRegionID has been supplied but no value has been specified for BypassID, a BypassID value will be automatically generated.
-Any previously-existing bypass ID will be overwritten.
-
-Set-CsNetworkSite -Identity Vancouver -NetworkRegionID Canada
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In this example the network site named Vancouver is modified.
-The name of the site being modified is specified as the value for the Identity parameter.
-The Vancouver site is being moved to a new region, which requires that the NetworkRegionID parameter be changed, in this case to the region named Canada.
-Because a NetworkRegionID has been supplied but no value has been specified for BypassID, a BypassID value will be automatically generated.
-Any previously-existing bypass ID will be overwritten.
-
-Set-CsNetworkSite -Identity Vancouver -NetworkRegionID Canada
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsNetworkSite -Identity Vancouver - BWPolicyProfileID LowBWLimits
 ```
@@ -103,29 +57,6 @@ The site name is specified as the value for the Identity parameter.
 Then we specify a value for the BWPolicyProfileID parameter: LowBWLimits.
 The policies associated with that profile will be used for this site.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 simply modifies the bandwidth policy profile associated with the Vancouver site.
-The site name is specified as the value for the Identity parameter.
-Then we specify a value for the BWPolicyProfileID parameter: LowBWLimits.
-The policies associated with that profile will be used for this site.
-
-Set-CsNetworkSite -Identity Vancouver - BWPolicyProfileID LowBWLimits
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 simply modifies the bandwidth policy profile associated with the Vancouver site.
-The site name is specified as the value for the Identity parameter.
-Then we specify a value for the BWPolicyProfileID parameter: LowBWLimits.
-The policies associated with that profile will be used for this site.
-
-Set-CsNetworkSite -Identity Vancouver - BWPolicyProfileID LowBWLimits
 
 ## PARAMETERS
 
@@ -148,18 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-**Below Content Applies To:** Lync Server 2010
-
-A reference to a network site object (an object of type  Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.DisplayNetworkSiteType).
-This object can be retrieved by calling the Get-CsNetworkSite cmdlet.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 A reference to a network site object (an object of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.DisplayNetworkSiteType).
-This object can be retrieved by calling the Get-CsNetworkSite cmdlet.
-
+This object can be retrieved by calling the `Get-CsNetworkSite` cmdlet.
 
 
 ```yaml
@@ -177,7 +98,7 @@ Accept wildcard characters: False
 
 ### -BWPolicyProfileID
 The Identity of the bandwidth policy profile that will define the limitations for this site.
-You can retrieve a list of available profiles by calling the Get-CsNetworkBandwidthPolicyProfile cmdlet.
+You can retrieve a list of available profiles by calling the `Get-CsNetworkBandwidthPolicyProfile` cmdlet.
 
 If you specify a value for this parameter, you must also specify a value for the NetworkRegionID parameter.
 
@@ -195,26 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-**Below Content Applies To:** Lync Server 2010
-
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
-(Use this BypassID value in the call to New-CsNetworkMediaBypassConfiguration.)
-
-If you specify a value for this parameter you must also specify a value for the NetworkRegionID parameter.
-If you do not specify a value for this parameter but you do specify a NetworkRegionID, a BypassID will be automatically generated.
-
-If you explicitly specify a value, it must be in the format of a GUID (for example, 3b24a047-dce6-48b2-9f20-9fbff17ed62a).
-It is recommended that you supply a value for NetworkRegionID and allow the BypassID value to be auto-generated.
-If you manually enter a value, you will receive a confirmation prompt to verify that you don't want the value to be auto-generated.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A globally unique identifier (GUID).
-This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
-(Use this BypassID value in the call to New-CsNetworkMediaBypassConfiguration.)
+(Use this BypassID value in the call to the `New-CsNetworkMediaBypassConfiguration` cmdlet.)
 
 If you specify a value for this parameter you must also specify a value for the NetworkRegionID parameter.
 If you do not specify a value for this parameter but you do specify a NetworkRegionID, a BypassID will be automatically generated.
@@ -222,22 +126,6 @@ If you do not specify a value for this parameter but you do specify a NetworkReg
 If you explicitly specify a value, it must be in the format of a GUID (for example, 3b24a047-dce6-48b2-9f20-9fbff17ed62a).
 We recommend that you supply a value for NetworkRegionID and allow the BypassID value to be auto-generated.
 If you manually enter a value, you will receive a confirmation prompt to verify that you don't want the value to be auto-generated.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A globally unique identifier (GUID).
-This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
-(Use this BypassID value in the call to the New-CsNetworkMediaBypassConfiguration cmdlet.)
-
-If you specify a value for this parameter you must also specify a value for the NetworkRegionID parameter.
-If you do not specify a value for this parameter but you do specify a NetworkRegionID, a BypassID will be automatically generated.
-
-If you explicitly specify a value, it must be in the format of a GUID (for example, 3b24a047-dce6-48b2-9f20-9fbff17ed62a).
-We recommend that you supply a value for NetworkRegionID and allow the BypassID value to be auto-generated.
-If you manually enter a value, you will receive a confirmation prompt to verify that you don't want the value to be auto-generated.
-
 
 
 ```yaml
@@ -273,7 +161,7 @@ Accept wildcard characters: False
 ### -LocationPolicy
 The name of the location policy associated with this site.
 The location policy assigns specific E9-1-1 settings to the site.
-To retrieve a list of location policies, call the Get-CsLocationPolicy cmdlet.
+To retrieve a list of location policies, call the `Get-CsLocationPolicy` cmdlet.
 
 ```yaml
 Type: String
@@ -291,7 +179,7 @@ Accept wildcard characters: False
 ### -NetworkRegionID
 The Identity of the network region that this site is associated with.
 This parameter must contain a value if you want to provide a BypassID (either through auto-generation or manually), or if the EnableBandwidthPolicyCheck property of the network configuration is True.
-You can retrieve the network configuration settings by calling the Get-CsNetworkConfiguration cmdlet.
+You can retrieve the network configuration settings by calling the `Get-CsNetworkConfiguration` cmdlet.
 
 If a BypassID exists on this site already and you don't specify a value for the BypassID parameter, the existing BypassID will be overwritten by an auto-generated BypassID.
 
@@ -377,7 +265,7 @@ Accept wildcard characters: False
 Per-user voice routing policy to be assigned to the site.
 For example:
 
--VoiceRoutingPolicy "RedmondVoiceRouting"
+`-VoiceRoutingPolicy "RedmondVoiceRouting"`
 
 Note that you must specify a per-user policy; global and/or site policies cannot be assigned to a site using the VoiceRoutingPolicy parameter.
 
@@ -415,8 +303,6 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/221a099c-72c4-4eb0-8812-6b2b7639a9ee(OCS.14).aspx)
-
 [New-CsNetworkSite]()
 
 [Remove-CsNetworkSite]()
@@ -430,8 +316,3 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 [Get-CsLocationPolicy]()
 
 [Get-CsNetworkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/221a099c-72c4-4eb0-8812-6b2b7639a9ee(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/221a099c-72c4-4eb0-8812-6b2b7639a9ee(OCS.16).aspx)
-

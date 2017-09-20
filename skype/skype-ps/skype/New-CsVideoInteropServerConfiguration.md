@@ -7,10 +7,11 @@ schema: 2.0.0
 # New-CsVideoInteropServerConfiguration
 
 ## SYNOPSIS
-Use the New-CsVideoInteropServerConfiguration cmdlet to create a new collection of Video Interop Server (VIS) configuration settings.
-The configuration can then be scoped to the appropriate VIS instances, and will govern the behavior of those instances.
+Use the `New-CsVideoInteropServerConfiguration` cmdlet to create a new collection of Video Interop Server (VIS) configuration settings.
+The configuration can then be scoped to the appropriate VIS instances and will govern the behavior of those instances.
 The Video Interop Server (VIS) enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business infrastructure.
 VIS is a Skype for Business service that runs on a standalone pool and cannot be co-located on an FE pool.
+
 
 ## SYNTAX
 
@@ -18,6 +19,7 @@ VIS is a Skype for Business service that runs on a standalone pool and cannot be
 New-CsVideoInteropServerConfiguration [-Identity] <XdsIdentity> [-Confirm]
  [-EnableEnhancedVideoExperience <Boolean>] [-Force] [-InMemory] [-WhatIf] [<CommonParameters>]
 ```
+
 
 ## DESCRIPTION
 The Video Interop Server (VIS) enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business infrastructure.
@@ -31,20 +33,20 @@ The Video Gateway and a VIS use a Session Initiation Protocol (SIP) trunk to con
 The Video Interop Server can be managed by using VIS configuration settings and the CsVideoInteropServerConfiguration cmdlets.
 These settings are used to enable or disable the enhanced video experience (in which a single video stream is converted to multiple streams in order to accommodate the needs of devices that use different frame rates or video resolutions).
 
-By default, Skype for Business Server 2015 ships with a single, global collection of video interop configuration settings.
-However, administrators can use the New-CsVideoInteropServerConfiguration cmdlet to create additional settings at the site or the service scope (for the VIS service only.)
+By default, Skype for Business Server ships with a single, global collection of video interop configuration settings.
+However, administrators can use the `New-CsVideoInteropServerConfiguration` cmdlet to create additional settings at the site or the service scope (for the VIS service only.)
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsVideoInteropServerConfiguration -Identity "site:Redmond" -EnableEnhancedVideoExperience $False
 ```
 
 This example creates a new collection of VIS configuration settings that are assigned to the Redmond site.
 The enhanced video experience is disabled by setting the EnableEnhancedVideoExperience parameter to False ($False).
 
-New-CsVideoInteropServerConfiguration -Identity "site:Redmond" -EnableEnhancedVideoExperience $False
 
 ## PARAMETERS
 
@@ -53,11 +55,11 @@ Unique identifier for the new collection of VIS configuration settings.
 New collections can be created at either the site scope or the service scope (for the video interop service only).
 For example, this syntax creates a new collection of settings assigned to the Redmond site:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 And this syntax creates a new collection assigned to the VIS for the pool atl-cs-001.litwareinc.com:
 
--Identity "service:VideoInteropServer:atl-edge-001.litwareinc.com"
+`-Identity "service:VideoInteropServer:atl-edge-001.litwareinc.com"`
 
 ```yaml
 Type: XdsIdentity
@@ -161,12 +163,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The New-CsVideoInteropServerConfiguration cmdlet does not accept pipelined input.
+The `New-CsVideoInteropServerConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The New-CsVideoInteropServerConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
+The `New-CsVideoInteropServerConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
 
 ## NOTES
 
@@ -177,6 +179,3 @@ The New-CsVideoInteropServerConfiguration cmdlet creates new instances of the Mi
 [Remove-CsVideoInteropServerConfiguration]()
 
 [Set-CsVideoInteropServerConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1f1124e2-9bba-4659-a48f-0c2c1e060482(OCS.16).aspx)
-

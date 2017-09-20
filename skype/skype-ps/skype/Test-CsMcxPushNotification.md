@@ -7,14 +7,6 @@ schema: 2.0.0
 # Test-CsMcxPushNotification
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Verifies that the push notification service is working.
-The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices like iPhones and Windows Phones, even if the Lync application on those devices is currently suspended or running in the background.
-This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Verifies that the push notification service is working.
 The push notification service (Apple Push Notification Service and Microsoft Push Notification Service) provides a way to send notifications about events such as new instant messages or new voice mail to mobile devices like iPhones and Windows Phones, even if the Skype for Business application on those devices is currently suspended or running in the background.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
@@ -29,24 +21,7 @@ Test-CsMcxPushNotification [-AccessEdgeFqdn] <String> [-Certificate <X509Certifi
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The Apple Push Notification Service and the Lync Server Push Notification Service enable users running Lync on their Apple iPhone or Windows Phone to receive notifications about Lync events even when Lync Server is suspended or running in the background.
-For example, users can receive notice for events such as these:
-
-- Invitations to a new instant messaging session or conference
-- New instant messages
-- New voice mail
-
-Without the push notification service, users would receive these notices only when Lync Server was in the foreground and serving as the active application.
-
-The Test-CsMcxPushNotification cmdlet provides a way for administrators to verify that the push notification service is working.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Test-CsMcxPushNotification cmdlet locally: RTCUniversalServerAdmins.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Apple Push Notification Service and the Skype for Business Server 2015 Push Notification Service enable users running Skype for Business on their Apple iPhone or Windows Phone to receive notifications about Skype for Business events even when the application is suspended or running in the background.
+The Apple Push Notification Service and the Skype for Business Server Push Notification Service enable users running Skype for Business on their Apple iPhone or Windows Phone to receive notifications about Skype for Business events even when the application is suspended or running in the background.
 For example, users can receive notice for events such as these:
 
 - Invitations to a new instant messaging session or conference
@@ -55,31 +30,20 @@ For example, users can receive notice for events such as these:
 
 Without the push notification service, users would receive these notices only when Skype for Business was in the foreground and serving as the active application.
 
-The Test-CsMcxPushNotification cmdlet provides a way for administrators to verify that the push notification service is working.
+The `Test-CsMcxPushNotification` cmdlet provides a way for administrators to verify that the push notification service is working.
 When using this cmdlet, make sure that the AccessEdgeFqdn parameter points to the internal edge of the proxy server to which push notification traffic is directed.
-
 
 
 ## EXAMPLES
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-The command shown in Example 1 tests the push notification service accessed through the Edge server atl-edge-001.litwareinc.com.
-
 Test-CsMcxPushNotification -AccessEdgeFqdn "atl-edge-001.litwareinc.com"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 1 tests the push notification service accessed through the Edge server atl-edge-001.litwareinc.com.
 The AccessEdgeFqdn must point to the internal edge of the proxy server to which push notification traffic is directed.
 
-Test-CsMcxPushNotification -AccessEdgeFqdn "atl-edge-001.litwareinc.com"
 
 ## PARAMETERS
 
@@ -137,17 +101,17 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
 Note: Do not use prepend a $ character when specifying the variable name.
 
 To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -166,7 +130,7 @@ Accept wildcard characters: False
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
 
@@ -190,25 +154,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsMcxPushNotification does not accept pipelined input.
-
-###  
-None.
-The Test-CsMcxPushNotification cmdlet does not accept pipelined input.
+The `Test-CsMcxPushNotification` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsMcxPushNotification returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
-
-###  
-The Test-CsMcxPushNotification cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+The `Test-CsMcxPushNotification` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/db81339b-f79a-418a-b29d-8596dff7a210(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/db81339b-f79a-418a-b29d-8596dff7a210(OCS.16).aspx)
-

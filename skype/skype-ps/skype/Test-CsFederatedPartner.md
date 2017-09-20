@@ -7,15 +7,8 @@ schema: 2.0.0
 # Test-CsFederatedPartner
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Verifies the ability to connect to a federated domain.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Verifies the ability to connect to a federated domain.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -27,81 +20,49 @@ Test-CsFederatedPartner [-TargetFqdn] <String> [-Domain] <String> [-Certificate 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Test-CsFederatedPartner verifies your ability to connect to the domain of a federated partner.
+`Test-CsFederatedPartner` verifies your ability to connect to the domain of a federated partner.
 In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
-Domains can be added to the allowed list by using the New-CsAllowedDomain cmdlet.
-
-Who can run this cmdlet: To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Test-CsFederatedPartner"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Test-CsFederatedPartner verifies your ability to connect to the domain of a federated partner.
-In order to verify the connectivity to a domain, that domain must be listed in the collection of allowed (federated) domains.
-Domains can be added to the allowed list by using the New-CsAllowedDomain cmdlet.
+Domains can be added to the allowed list by using the `New-CsAllowedDomain` cmdlet.
 When using this cmdlet, make sure that the TargetFqdn parameter points to the internal edge of the proxy server to which federated SIP traffic is directed.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain fabrikam.com
-```
-
-The command shown in Example 1 verifies the connection between the local access proxy server (accessproxy.litwareinc.com) and the federated domain Fabrikam.com.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 1 verifies the connection between the local access proxy server (accessproxy.litwareinc.com) and the federated domain Fabrikam.com.
-
-Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain fabrikam.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 1 verifies the connection between the local access proxy server (accessproxy.litwareinc.com) and the federated domain Fabrikam.com.
 Note that TargetFqdn must point to the internal edge of the proxy server to which federated SIP traffic is directed.
 
-Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain fabrikam.com
 
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinco.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
 ```
 
 Example 2 shows how you can test the connection between your domain and the Lync Server Push Notification Service.
 You must have configured this service as a hosting provider and must have added push.lync.com to your list of allowed domains for this test to succeed.
 For more information, see Configuring for push notifications in Lync Server 2013.
 
-Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinco.com -Domain push.lync.com -ProxyFqdn sipfed.online.lync.com
 
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsAllowedDomain | ForEach-Object {Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain $_.Identity}
 ```
 
 In Example 3, connectivity is verified for all the domains on your allowed domains list.
-To do this, the command first uses the Get-CsAllowedDomain cmdlet to retrieve a collection of all your allowed domains.
-That collection is then piped to the ForEach-Object cmdlet.
-In turn, ForEach-Object runs the Test-CsFederatedPartner cmdlet against each domain in the collection.
+To do this, the command first uses the `Get-CsAllowedDomain` cmdlet to retrieve a collection of all your allowed domains.
+That collection is then piped to the `ForEach-Object` cmdlet.
+In turn, `ForEach-Object` runs the `Test-CsFederatedPartner` cmdlet against each domain in the collection.
 
-Get-CsAllowedDomain | ForEach-Object {Test-CsFederatedPartner -TargetFqdn accessproxy.litwareinc.com -Domain $_.Identity}
 
 ## PARAMETERS
 
 ### -Domain
 Fully qualified domain name (FQDN) of the federated domain.
-For example: -Domain "fabrikam.com".
+For example: `-Domain "fabrikam.com"`.
 
 ```yaml
 Type: String
@@ -198,21 +159,12 @@ Accept wildcard characters: False
 ```
 
 ### -OutVerboseVariable
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill OutVerboseVariable Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 When present, detailed output from running the cmdlet will be stored in the specified variable.
 For example, to store output in a variable named $TestOutput use the following syntax:
 
--OutVerboseVariable TestOutput
+`-OutVerboseVariable TestOutput`
 
 Do not prepend a $ character when specifying the variable name.
-
 
 
 ```yaml
@@ -234,15 +186,15 @@ This variable includes a pair of methods - ToHTML and ToXML - that can then be u
 
 To store output in a logger variable named $TestOutput use the following syntax:
 
--OutLoggerVariable TestOutput
+`-OutLoggerVariable TestOutput`
 
-Note: Do not use prepend a $ character when specifying the variable name.To save the information stored in the logger variable to an HTML file, use a command similar to this:
+Note: Do not use prepend a $ character when specifying the variable name. To save the information stored in the logger variable to an HTML file, use a command similar to this:
 
-$TestOutput.ToHTML() \> C:\Logs\TestOutput.html
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
 
 To save the information stored in the logger variable to an XML file, use a command similar to this:
 
-$TestOutput.ToXML() \> C:\Logs\TestOutput.xml
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
 
 ```yaml
 Type: String
@@ -264,22 +216,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Test-CsFederatedPartner does not accept pipelined input.
+`Test-CsFederatedPartner` does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Test-CsFederatedPartner returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+`Test-CsFederatedPartner` returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/1f56bf80-37b4-4520-b8a5-da0740a894a2(OCS.14).aspx)
-
 [Get-CsAllowedDomain]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1f56bf80-37b4-4520-b8a5-da0740a894a2(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1f56bf80-37b4-4520-b8a5-da0740a894a2(OCS.16).aspx)
-

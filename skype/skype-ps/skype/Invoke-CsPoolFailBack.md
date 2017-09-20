@@ -7,16 +7,8 @@ schema: 2.0.0
 # Invoke-CsPoolFailBack
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
 
-Invokes the failback process for a Microsoft Lync Server 2013 Preview pool.
-Failback is used after a pool has failed over and the users of that pool have been "failed over" to a backup pool.
-(That simply means users who were signed on to the failed pool are automatically signed on to the backup pool.) When the failed pool has been restored, the fail back process signs the failed-over users back to their original pool.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Invokes the failback process for a Skype for Business Server 2015 pool.
+Invokes the failback process for a Skype for Business Server pool.
 Failback is used after a pool has failed over and the users of that pool have been "failed over" to a backup pool.
 (That simply means users who were signed on to the failed pool are automatically signed on to the backup pool.) When the failed pool has been restored, the fail back process signs the failed-over users back to their original pool.
 This cmdlet was introduced in Lync Server 2013.
@@ -31,32 +23,12 @@ Invoke-CsPoolFailBack -PoolFqdn <Fqdn> [-Confirm] [-DisasterMode] [-Force] [-Wai
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
 The pool failover process provides a way for administrators to quickly restore service to users if the Registrar pool they have logged on to should suddenly become unavailable.
-If a pool fails, users will automatically be signed off from Microsoft Lync Server 2013 Preview; if they immediately try to log back on, that logon will be rejected if their home pool is still unavailable.
+If a pool fails, users will automatically be signed off from Skype for Business Server; if they immediately try to log back on, they will be redirected to their specified backup pool.
 
 To restore service to these users, administrators can run the Invoke-CsPoolFailOver cmdlet against the pool that is not currently available.
-Doing this will allow users to sign on to Lync Server using the designated backup pool.
-Note that users will not be rehomed on the backup pool; they will simply be allowed to log on and make use of that pool until their home pool has been restored.
-For example, if Pool A fails, users will be able to log on to Pool B until Pool A has been restored.
-
-When the failed pool is once more up and running, administrators can then run the Invoke-CsPoolFailBack cmdlet in order to "fail back" users of that pool.
-If a user is currently logged on to the backup pool then he or she will be redirected back to their home pool after service has been restored.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Invoke-CsPoolFailback"}
-
-Lync Server Control Panel: The functions carried out by the Invoke-CsPoolFailback cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The pool failover process provides a way for administrators to quickly restore service to users if the Registrar pool they have logged on to should suddenly become unavailable.
-If a pool fails, users will automatically be signed off from Skype for Business Server 2015; if they immediately try to log back on, they will be redirected to their specified backup pool.
-
-To restore service to these users, administrators can run the Invoke-CsPoolFailOver cmdlet against the pool that is not currently available.
-Doing this will allow users to sign on to Skype for Business Server 2015 using the designated backup pool, and give these users access to all Skype for Business Server 2015 services and functionality.
+Doing this will allow users to sign on to Skype for Business Server using the designated backup pool, and give these users access to all Skype for Business Server services and functionality.
 Note that users will not be rehomed on the backup pool; they will simply be allowed to log on and make use of that pool until their home pool has been restored.
 For example, if Pool A fails, users will be able to log on to Pool B (with complete functionality) until Pool A has been restored.
 
@@ -69,42 +41,23 @@ Skype for Business Server Control Panel: The functions carried out by the Invoke
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
+
+Invoke-CsPoolFailback -PoolFqdn "atl-cs-001.litwareinc.com"
 
 ```
 
 In Example 1, failback is invoked for the pool atl-cs-001.litwareinc.com.
-
-Invoke-CsPoolFailback -PoolFqdn "atl-cs-001.litwareinc.com"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, failback is invoked for the pool atl-cs-001.litwareinc.com.
-
-Invoke-CsPoolFailback -PoolFqdn "atl-cs-001.litwareinc.com"
 
 ## PARAMETERS
 
 ### -PoolFqdn
-**Below Content Applies To:** Lync Server 2013
-
-Fully qualified domain name of the pool being failed back.
-For example:-PoolFqdn "atl-cs-001.litwareinc.com"
-
-The pool FQDN used during failback should be the same FQDN used during failover.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Fully qualified domain name of the pool being failed back.
 For example:
 
--PoolFqdn "atl-cs-001.litwareinc.com"
+`-PoolFqdn "atl-cs-001.litwareinc.com"`
 
 The pool FQDN used during failback must be the same FQDN used during failover.
 
@@ -140,13 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -DisasterMode
-**Below Content Applies To:** Lync Server 2013
-
-Enables administrators to invoke pool failback even if the backup pool is currently unavailable.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Enables administrators to invoke pool failback even if the backup pool is currently unavailable.
 When you use this parameter, data generated by the failed-over users on the backup pool will be lost.
@@ -252,13 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-Invoke-CsPoolFailBack does not accept pipelined input.
 
 ###  
 None.
@@ -274,8 +216,3 @@ None.
 ## RELATED LINKS
 
 [Invoke-CsPoolFailOver]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4e58d0b5-4353-4de8-b242-2a4553c3371e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4e58d0b5-4353-4de8-b242-2a4553c3371e(OCS.16).aspx)
-

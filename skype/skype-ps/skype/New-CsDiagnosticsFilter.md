@@ -7,21 +7,9 @@ schema: 2.0.0
 # New-CsDiagnosticsFilter
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
 Creates a new diagnostic filter to be used with diagnostic configuration settings.
-Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Microsoft Lync Server 2010 log files.
-
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new diagnostic filter to be used with diagnostic configuration settings.
-Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Lync Server log files.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new diagnostic filter to be used with diagnostic configuration settings.
-Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Skype for Business Server 2015 log files.
+Diagnostic configuration settings are used to determine whether traffic to or from a given domain or Uniform Resource Identifier (URI) is recorded in your Skype for Business Server log files.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -36,64 +24,15 @@ New-CsDiagnosticsFilter [-Enabled <Boolean>] [-ExcludeConferenceMessages <Boolea
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-If you enable logging for Lync Server 2010, then, by default, traffic traveling to or from any domain or URI is included in those log files.
+If you enable logging for Skype for Business Server, then, by default, traffic traveling to or from any domain or URI is included in those log files.
 This ensures that as much information as possible is recorded in the log files.
 
 On the other hand, this can also result in cases of too much information.
 For example, if you are experiencing connectivity problems with a particular domain, you might want to limit logging to traffic between your network and that domain; that makes it easier for you to identify the relevant records and, in turn, might make it easier for you to diagnose and correct the problem.
 
 Diagnostic configuration settings make it possible for you to specify the domains or URIs that will be recorded in the log files; for example, you might want to log only the traffic to or from specified domains.
-In addition to the global settings, Lync Server enables you to create diagnostic settings at the site scope or the service scope (for either the Edge Server or the Registrar service).
-In turn, this enables you to apply different settings to the Redmond site than are applied to your other sites.
-
-The New-CsDiagnosticsFilter enables you to add a filter to a collection of diagnostic settings.
-This collection contains the domains and URIs that will have their traffic recorded in the log files.
-When a filter is added, only information pertaining to the domains and URIs in the filter will be logged; for logging purposes, traffic from other domains and URIs will be ignored.
-
-Note that the New-CsDiagnosticsFilter cmdlet creates in-memory-only instances of a diagnostic filter.
-After creating one of these virtual filters, you will then need to use either New-CsDiagnosticConfiguration or Set-CsDiagnosticConfiguration to add the filter to a collection.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsDiagnosticsFilter cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsDiagnosticsFilter"}
-
-**Below Content Applies To:** Lync Server 2013
-
-If you enable logging for Lync Server, then, by default, traffic traveling to or from any domain or URI is included in those log files.
-This ensures that as much information as possible is recorded in the log files.
-
-On the other hand, this can also result in cases of too much information.
-For example, if you are experiencing connectivity problems with a particular domain, you might want to limit logging to traffic between your network and that domain; that makes it easier for you to identify the relevant records and, in turn, might make it easier for you to diagnose and correct the problem.
-
-Diagnostic configuration settings make it possible for you to specify the domains or URIs that will be recorded in the log files; for example, you might want to log only the traffic to or from specified domains.
-In addition to the global settings, Lync Server enables you to create diagnostic settings at the site scope or the service scope (for either the Edge Server or the Registrar service).
-In turn, this enables you to apply different settings to the Redmond site than are applied to your other sites.
-
-The New-CsDiagnosticsFilter enables you to add a filter to a collection of diagnostic settings.
-This collection contains the domains and URIs that will have their traffic recorded in the log files.
-When a filter is added, only information pertaining to the domains and URIs in the filter will be logged; for logging purposes, traffic from other domains and URIs will be ignored.
-
-Note that the New-CsDiagnosticsFilter cmdlet creates in-memory-only instances of a diagnostic filter.
-After creating one of these virtual filters, you will then need to use either New-CsDiagnosticConfiguration or Set-CsDiagnosticConfiguration to add the filter to a collection.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsDiagnosticsFilter cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDiagnosticsFilter"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-If you enable logging for Skype for Business Server 2015, then, by default, traffic traveling to or from any domain or URI is included in those log files.
-This ensures that as much information as possible is recorded in the log files.
-
-On the other hand, this can also result in cases of too much information.
-For example, if you are experiencing connectivity problems with a particular domain, you might want to limit logging to traffic between your network and that domain; that makes it easier for you to identify the relevant records and, in turn, might make it easier for you to diagnose and correct the problem.
-
-Diagnostic configuration settings make it possible for you to specify the domains or URIs that will be recorded in the log files; for example, you might want to log only the traffic to or from specified domains.
-In addition to the global settings, Skype for Business Server 2015 enables you to create diagnostic settings at the site scope or the service scope (for either the Edge Server or the Registrar service).
+In addition to the global settings, Skype for Business Server enables you to create diagnostic settings at the site scope or the service scope (for either the Edge Server or the Registrar service).
 In turn, this enables you to apply different settings to the Redmond site than are applied to your other sites.
 
 The New-CsDiagnosticsFilter cmdlet enables you to add a filter to a collection of diagnostic settings.
@@ -107,42 +46,12 @@ After creating one of these virtual filters, you will then need to use either th
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-$x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com" -Enabled $False
-Set-CsDiagnosticConfiguration -Identity global -Filter $x
-```
-
-The commands shown in Example 1 use New-CsDiagnosticsFilter to create a new diagnostic filter and then assign that filter to the global diagnostic configuration settings.
-To carry out this task, the first command calls New-CsDiagnosticsFilter to create an in-memory-only diagnostic filter.
-This filter adds the FQDN fabrikam.com and the URI user@fabrikam.com to the filter.
-The command also sets the Enabled property to True ($True) in order to activate the filter.
-The resulting virtual filter is then stored in the variable $x.
-
-In the second command, Set-CsDiagnosticConfiguration is used to assign the new filter to the global diagnostic configuration settings.
-In this case, any existing values in the Filter property will be replaced by the newly-created filter stored in $x.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 1 use New-CsDiagnosticsFilter to create a new diagnostic filter and then assign that filter to the global diagnostic configuration settings.
-To carry out this task, the first command calls New-CsDiagnosticsFilter to create an in-memory-only diagnostic filter.
-This filter adds the FQDN fabrikam.com and the URI user@fabrikam.com to the filter.
-The command also sets the Enabled property to True ($True) in order to activate the filter.
-The resulting virtual filter is then stored in the variable $x.
-
-In the second command, Set-CsDiagnosticConfiguration is used to assign the new filter to the global diagnostic configuration settings.
-In this case, any existing values in the Filter property will be replaced by the newly-created filter stored in $x.
-
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com" -Enabled $False
 
 Set-CsDiagnosticConfiguration -Identity global -Filter $x
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands shown in Example 1 use the New-CsDiagnosticsFilter cmdlet to create a new diagnostic filter and then assign that filter to the global diagnostic configuration settings.
@@ -154,42 +63,19 @@ The resulting virtual filter is then stored in the variable $x.
 In the second command, the Set-CsDiagnosticConfiguration cmdlet is used to assign the new filter to the global diagnostic configuration settings.
 In this case, any existing values in the Filter property will be replaced by the newly-created filter stored in $x.
 
-$x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com" -Enabled $False
 
-Set-CsDiagnosticConfiguration -Identity global -Filter $x
 
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 $x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com","contoso.com" -Enabled $False
+
 Set-CsDiagnosticConfiguration -Identity global -Filter $x
-```
-
-The commands shown in Example 2 are a variation of the commands shown in Example 1; in Example 2, however, two FQDNs (fabrikam.com and contoso.com) are added to the filter's Fqdn property.
-To do this, both names (separated by a comma) are used as parameter values for the Fqdn parameter.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
 ```
 
 The commands shown in Example 2 are a variation of the commands shown in Example 1; in Example 2, however, two FQDNs (fabrikam.com and contoso.com) are added to the filter's Fqdn property.
 To do this, both names (separated by a comma) are used as parameter values for the Fqdn parameter.
 
-$x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com","contoso.com" -Enabled $False
-
-Set-CsDiagnosticConfiguration -Identity global -Filter $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The commands shown in Example 2 are a variation of the commands shown in Example 1; in Example 2, however, two FQDNs (fabrikam.com and contoso.com) are added to the filter's Fqdn property.
-To do this, both names (separated by a comma) are used as parameter values for the Fqdn parameter.
-
-$x = New-CsDiagnosticsFilter -Fqdn "fabrikam.com","contoso.com" -Enabled $False
-
-Set-CsDiagnosticConfiguration -Identity global -Filter $x
 
 ## PARAMETERS
 
@@ -306,13 +192,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeSubscribeMessages
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill ExcludeSubscribeMessages Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 If set to True, information about client subscriptions (that is, any message that uses the SUBSCRIBE method) will not be recorded in the log files.
 The default value is False.
@@ -351,13 +230,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsDiagnosticsFilter does not accept pipelined input.
 
 ###  
 None.
@@ -365,8 +240,6 @@ The New-CsDiagnosticsFilter cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
-###  
-New-CsDiagnosticsFilter creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Diagnostics.Filter object.
 
 ###  
 The New-CsDiagnosticsFilter cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Diagnostics.Filter object.
@@ -375,13 +248,7 @@ The New-CsDiagnosticsFilter cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f1af92b1-4d1f-4eb3-9874-7fa6f6ae39c5(OCS.14).aspx)
-
 [New-CsDiagnosticConfiguration]()
 
 [Set-CsDiagnosticConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f1af92b1-4d1f-4eb3-9874-7fa6f6ae39c5(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f1af92b1-4d1f-4eb3-9874-7fa6f6ae39c5(OCS.16).aspx)
 

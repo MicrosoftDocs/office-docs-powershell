@@ -7,8 +7,8 @@ schema: 2.0.0
 # Set-CsStorageServiceConfiguration
 
 ## SYNOPSIS
-Modifies existing instances of the Skype for Business Server 2015 Storage Service.
-The storage service provides a common infrastructure that enables Skype for Business Server 2015 components to use Exchange as a back-end data store.
+Modifies existing instances of the Skype for Business Server Storage Service.
+The storage service provides a common infrastructure that enables Skype for Business Server components to use Exchange as a back-end data store.
 Note that, at this point in time, there are no property values that can be modified by using this cmdlet.
 
 ## SYNTAX
@@ -29,20 +29,20 @@ Set-CsStorageServiceConfiguration [-Confirm] [-EnableAsyncAdaptorTaskAbort <Bool
 ```
 
 ## DESCRIPTION
-The Skype for Business Server 2015 Storage Service enables Skype for Business Server 2015 components, such as archiving, to use Exchange as a back-end data store.
-This helps to reduce operating costs: for example, you do not need to have separate storage solutions for Exchange archiving and for Skype for Business Server 2015 archiving.
-The Storage Service also enables Skype for Business Server 2015 to leverage the heavy investment that has been made in Exchange archiving and storage, and prevents administrators from having to use multiple tools to retrieve archived data.
+The Skype for Business Server Storage Service enables Skype for Business Server components, such as archiving, to use Exchange as a back-end data store.
+This helps to reduce operating costs: for example, you do not need to have separate storage solutions for Exchange archiving and for Skype for Business Server archiving.
+The Storage Service also enables Skype for Business Server to leverage the heavy investment that has been made in Exchange archiving and storage and prevents administrators from having to use multiple tools to retrieve archived data.
 
-Separate instances of the Skype for Business Server 2015 Storage Service can be configured at the global, site, and service scope (for the Registrar service only).
-By default, Skype for Business Server 2015 provides you with a single, global collection of Storage Service configuration settings.
-Administrators have the option of creating custom settings by using the New-CsStorageServiceConfiguration cmdlet.
-At this point in time, however, these Storage service instances do not include any settings that can managed by using the Set-CsStorageServiceConfiguration cmdlet.
+Separate instances of the Skype for Business Server Storage Service can be configured at the global, site and service scope (for the Registrar service only).
+By default, Skype for Business Server provides you with a single, global collection of Storage Service configuration settings.
+Administrators have the option of creating custom settings by using the `New-CsStorageServiceConfiguration` cmdlet.
+At this point in time, however, these Storage service instances do not include any settings that can managed by using the `Set-CsStorageServiceConfiguration` cmdlet.
 
-Skype for Business Server Control Panel: The functions carried out by the Set-CsStorageServiceConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
+Skype for Business Server Control Panel: The functions carried out by the `Set-CsStorageServiceConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Server 2015)
+### -------------------------- Example 1 ------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -153,15 +153,15 @@ Storage service configuration settings can be applied to the global, site, or se
 
 To modify the global settings, use this syntax:
 
--Identity "global"
+`-Identity "global"`
 
 To modify settings configured at the site scope, use syntax similar to this:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 To modify settings at the service level, use syntax similar to this:
 
--Identity "service:Registar:atl-cs-001.litwareinc.com"
+`-Identity "service:Registar:atl-cs-001.litwareinc.com"`
 
 ```yaml
 Type: XdsIdentity
@@ -214,13 +214,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Set-CsStorageServiceConfiguration cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.StorageService.StorageServiceSettings object.
+The `Set-CsStorageServiceConfiguration` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.StorageService.StorageServiceSettings object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Set-CsStorageServiceConfiguration cmdlet does not return any data or objects.
+The `Set-CsStorageServiceConfiguration` cmdlet does not return any data or objects.
 
 ## NOTES
 
@@ -231,6 +231,3 @@ The Set-CsStorageServiceConfiguration cmdlet does not return any data or objects
 [New-CsStorageServiceConfiguration]()
 
 [Remove-CsStorageServiceConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a69b9b0b-6f53-4d33-a28c-5d4cb1246647(OCS.16).aspx)
-

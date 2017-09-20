@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Removes an Address Book normalization rule.
-Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -18,7 +18,7 @@ Remove-CsAddressBookNormalizationRule [-Identity] <XdsIdentity> [-Confirm] [-For
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to a standard (E.164) format.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to a standard (E.164) format.
 (Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) The Address Book normalization rules handle these conversions and translations for the Address Book server.
 
 Although Address Book normalization rules are very similar to voice normalization rules, the two are not interchangeable: you cannot add voice normalization rules to an Address Book collection, nor can you add Address Book normalization rules to a dial plan.
@@ -26,38 +26,35 @@ That means, in some cases, you might need to create identical rules: one for ass
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsAddressBookNormalizationRule -Identity "Global/Generic_All"
 ```
 
 The command shown in Example 1 removes the Generic_All normalization rule from the global collection of Address Book normalization rules.
 
-Remove-CsAddressBookNormalizationRule -Identity "Global/Generic_All"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule -Identity "site:Redmond" | Remove-CsAddressBookNormalizationRule
 ```
 
 In Example 2, all the normalization rules are removed from the collection of Address Book normalization rules assigned to the Redmond site.
-To do this, the Get-CsAddressBookNormalizationRule cmdlet is first used to retrieve all the rules assigned to the Redmond site.
-Those rules are then piped to, and deleted by, the Remove-CsAddressBookNormalizationRule cmdlet.
+To do this, the `Get-CsAddressBookNormalizationRule` cmdlet is first used to retrieve all the rules assigned to the Redmond site.
+Those rules are then piped to and deleted by, the `Remove-CsAddressBookNormalizationRule` cmdlet.
 When the command finishes running the normalization rules collection for the Redmond site will still exist, but the collection will no longer contain any rules.
 
-Get-CsAddressBookNormalizationRule -Identity "site:Redmond" | Remove-CsAddressBookNormalizationRule
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsAddressBookNormalizationRule | Where-Object {$_.Pattern -eq "E164"} | Remove-CsAddressBookNormalizationRule
 ```
 
 Example 3 removes all Address Book normalization rules where the Pattern property is equal to E164.
-To carry out this task, the command first uses Get-CsAddressBookNormalizationRule to return a collection of all the available normalization rules.
-That collection is then piped to the Where-Object cmdlet, which picks out only those rules where the Pattern property is equal to E164.
-Any rules that meet that criterion are then piped to the Remove-CsAddressBookNormalizationRule cmdlet and are deleted.
+To carry out this task, the command first uses `Get-CsAddressBookNormalizationRule` to return a collection of all the available normalization rules.
+That collection is then piped to the `Where-Object` cmdlet, which picks out only those rules where the Pattern property is equal to E164.
+Any rules that meet that criterion are then piped to the `Remove-CsAddressBookNormalizationRule` cmdlet and are deleted.
 
-Get-CsAddressBookNormalizationRule | Where-Object {$_.Pattern -eq "E164"} | Remove-CsAddressBookNormalizationRule
 
 ## PARAMETERS
 
@@ -132,13 +129,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Remove-CsAddressBookNormalizationRule cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
+The `Remove-CsAddressBookNormalizationRule` cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, the Remove-CsAddressBookNormalizationRule cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
+Instead, the `Remove-CsAddressBookNormalizationRule` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.AddressBook.AddressBookNormalizationRule#Decorated object.
 
 ## NOTES
 
@@ -149,6 +146,3 @@ Instead, the Remove-CsAddressBookNormalizationRule cmdlet deletes existing insta
 [New-CsAddressBookNormalizationRule]()
 
 [Set-CsAddressBookNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/708ebae7-59b2-4f33-a706-18a7237eccb0(OCS.16).aspx)
-

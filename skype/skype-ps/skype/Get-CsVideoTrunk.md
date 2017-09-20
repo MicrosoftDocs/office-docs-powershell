@@ -27,41 +27,36 @@ Video trunks are SIP trunks between the Video Interop Server and a Video Gateway
 
 Trunk information is read-only.
 You cannot create, delete or modify trunks by using Windows PowerShell.
-Those operations can only be carried out by using Skype for Business Server 2015 Topology Builder.
+Those operations can only be carried out by using Skype for Business Server Topology Builder.
 
 To return a list of all the role-based access control (RBAC) roles that can run this cmdlet (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "Get-CsVideoTrunk"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "Get-CsVideoTrunk"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+Get-CsVideoTrunk
 ```
 
 This example returns information about all the video trunks configured for use in the organization.
 
-Get-CsVideoTrunk
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
+Get-CsVideoTrunk -Identity "VideoTrunk:192.168.0.240"
 ```
 
 This example returns information for a single video trunk with the identity "VideoTrunk:192.168.0.240".
 
-Get-CsVideoTrunk -Identity "VideoTrunk:192.168.0.240"
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 -------------------------- 
 ```
-
+Get-CsVideoTrunk -Filter "VideoTrunk:192.168*"
 ```
 
 This example uses the Filter parameter to return all the video trunks located on the IP subnet 192.168.
 The filter value "VideoTrunk:192.168*" limits the returned data to video trunks that having an Identity that begins with the string value "192.168".
 
-Get-CsVideoTrunk -Filter "VideoTrunk:192.168*"
 
 ## PARAMETERS
 
@@ -143,6 +138,3 @@ The Get-CsVideoTrunk cmdlet returns instances of the Microsoft.Rtc.Management.Xd
 ## RELATED LINKS
 
 [Set-CsVideoGateway]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/dbc9cdd6-28bb-430d-af9c-2bfa44ced167(OCS.16).aspx)
-

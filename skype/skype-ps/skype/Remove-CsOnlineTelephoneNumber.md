@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-CsOnlineTelephoneNumber
 
 ## SYNOPSIS
-Use the Remove-CsOnlineTelephoneNumber cmdlet to remove a telephone number from the Business Voice Directory.
+Use the `Remove-CsOnlineTelephoneNumber` cmdlet to remove a telephone number from the Business Voice Directory.
 
 ## SYNTAX
 
@@ -17,17 +17,17 @@ Remove-CsOnlineTelephoneNumber [-TelephoneNumber <Object>] [-BypassDualWrite <Ob
 ```
 
 ## DESCRIPTION
+Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsOnlineTelephoneNumber -TelephoneNumber +14258884567
 ```
 
 This example removes the specified telephone number from the Business Voice Directory.
 
-Remove-CsOnlineTelephoneNumber -TelephoneNumber +14258884567
 
 ## PARAMETERS
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -179,6 +179,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fc442732-969a-43ea-a1a6-4b534faa1ece(OCS.15).aspx)
-

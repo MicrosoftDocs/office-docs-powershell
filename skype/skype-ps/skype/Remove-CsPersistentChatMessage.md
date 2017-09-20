@@ -7,16 +7,8 @@ schema: 2.0.0
 # Remove-CsPersistentChatMessage
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Replaces one or more Persistent Chat messages in the Persistent Chat database with a default message or with an administrator-provided message.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Replaces one or more Persistent Chat messages in the Persistent Chat database with a default message or with an administrator-provided message.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -36,77 +28,36 @@ Remove-CsPersistentChatMessage -Identity <String> -ReplaceMessage <String> [-Cas
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
+Conversations can be based around specific topics and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
 
 Persistent Chat discussions take the form of messages posted in individual chat rooms; chat rooms are discussion forums based on specific topics.
 By design, messages posted in a chat room remain there forever; at any time, users can return to the room and review all the messages that have been previously posted.
 
 However, there might be times when administrators need to remove messages from a chat room; for example, perhaps a user posted a series of messages with erroneous information regarding the forthcoming company meeting.
-The Remove-CsPersisentChatMessage cmdlet enables administrators to remove a single chat message, or to remove an entire set of chat messages based on criteria such as the user who posted the message or keywords found in that message.
+The `Remove-CsPersisentChatMessage` cmdlet enables administrators to remove a single chat message, or to remove an entire set of chat messages based on criteria such as the user who posted the message or keywords found in that message.
 
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsPersistentChatMessage"}
-
-Lync Server Control Panel: The functions carried out by the Remove-CsPartnerApplication cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-Persistent Chat discussions take the form of messages posted in individual chat rooms; chat rooms are discussion forums based on specific topics.
-By design, messages posted in a chat room remain there forever; at any time, users can return to the room and review all the messages that have been previously posted.
-
-However, there might be times when administrators need to remove messages from a chat room; for example, perhaps a user posted a series of messages with erroneous information regarding the forthcoming company meeting.
-The Remove-CsPersisentChatMessage cmdlet enables administrators to remove a single chat message, or to remove an entire set of chat messages based on criteria such as the user who posted the message or keywords found in that message.
-
-Skype for Business Server Control Panel: The functions carried out by the Remove-CsPersistentChatMessage cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Remove-CsPersistentChatMessage` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -EndDate "4/1/2012"
 ```
 
 The command shown in Example 1 removes all the Persistent Chat messages posted on or before April 1, 2012 from the ITChatRoom chat room on the server atl-persistentchat-001.litwareinc.com.
 
-Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -EndDate "4/1/2012"
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-The command shown in Example 1 removes all the Persistent Chat messages posted on or before April 1, 2012 from the ITChatRoom chat room on the server atl-persistentchat-001.litwareinc.com.
-
-Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -EndDate "4/1/2012"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
+Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -UserUri "sip:kenmyer@litwareinc.com"
 ```
 
 In Example 2, all Persistent Chat messages posted by the user kenmyer@litwareinc.com are removed from the ITChatRoom chat room on the server atl-persistentchat-001.litwareinc.com.
 
-Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -UserUri "sip:kenmyer@litwareinc.com"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, all Persistent Chat messages posted by the user kenmyer@litwareinc.com are removed from the ITChatRoom chat room on the server atl-persistentchat-001.litwareinc.com.
-
-Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom" -UserUri "sip:kenmyer@litwareinc.com"
 
 ## PARAMETERS
 
@@ -114,7 +65,7 @@ Remove-CsPersistentChatMessage -Identity "atl-persistentchat-001.litwareinc.com\
 Unique identifier for the chat room containing the message to be deleted.
 For example:
 
--Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom"
+`-Identity "atl-persistentchat-001.litwareinc.com\ITChatRoom"`
 
 ```yaml
 Type: String
@@ -214,36 +165,17 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-**Below Content Applies To:** Lync Server 2013
-
 Keywords that can be used to help identify the messages to be deleted.
 For example, to search for all messages that include the keyword "Fabrikam" use this syntax:
 
--Filter "Fabrikam"
+`-Filter "Fabrikam"`
 
 To search for multiple keywords, put all the keywords in a single string, separated by using blank spaces:
 
--Filter "Fabrikam Contoso TailspinToys"
+`-Filter "Fabrikam Contoso TailspinToys"`
 
-By default, Remove-CsPersistentChatMessage will look for messages using all the specified keywords.
+By default, the `Remove-CsPersistentChatMessage` cmdlet will look for messages using all the specified keywords.
 To look for messages using any one of the provided keywords, use the MatchClause parameter and set the parameter value to "Or".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Keywords that can be used to help identify the messages to be deleted.
-For example, to search for all messages that include the keyword "Fabrikam" use this syntax:
-
--Filter "Fabrikam"
-
-To search for multiple keywords, put all the keywords in a single string, separated by using blank spaces:
-
--Filter "Fabrikam Contoso TailspinToys"
-
-By default, the Remove-CsPersistentChatMessage cmdlet will look for messages using all the specified keywords.
-To look for messages using any one of the provided keywords, use the MatchClause parameter and set the parameter value to "Or".
-
 
 
 ```yaml
@@ -260,9 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -MatchClause
-**Below Content Applies To:** Lync Server 2013
-
-Specifies how Remove-CsPersistentChatMessage handles multiple keywords.
+Specifies how the `Remove-CsPersistentChatMessage` cmdlet handles multiple keywords.
 Allowed values are:
 
 * All (A message must include all the specified keywords in order to be a match)
@@ -271,23 +201,7 @@ Allowed values are:
 
 For example, this syntax searches for messages that have the exact phrase "For internal use only) in the message text:
 
--Filter "For internal use only" -MatchClause "Exact"
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Specifies how the Remove-CsPersistentChatMessage cmdlet handles multiple keywords.
-Allowed values are:
-
-* All (A message must include all the specified keywords in order to be a match)
-* Or (A message containing one or more of the specified keywords will be considered a match)
-* Exact (Messages must exactly match the specified phrase, including the word order, in order to be a match)
-
-For example, this syntax searches for messages that have the exact phrase "For internal use only) in the message text:
-
--Filter "For internal use only" -MatchClause "Exact"
-
+`-Filter "For internal use only" -MatchClause "Exact"`
 
 
 ```yaml
@@ -358,11 +272,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Remove-CsPersistentChatMessage does not accept pipelined input.
-
-###  
-None.
-The Remove-CsPersistentChatMessage cmdlet does not accept pipelined input.
+The `Remove-CsPersistentChatMessage` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
@@ -374,8 +284,3 @@ None.
 ## RELATED LINKS
 
 [Clear-CsPersistentChatRoom]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0cb53905-4608-44a9-ba3d-ba51fc90d65e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0cb53905-4608-44a9-ba3d-ba51fc90d65e(OCS.16).aspx)
-

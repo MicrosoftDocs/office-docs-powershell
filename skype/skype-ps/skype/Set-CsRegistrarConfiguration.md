@@ -7,17 +7,9 @@ schema: 2.0.0
 # Set-CsRegistrarConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the property values in an existing collection of Registrar configuration settings.
-Registrars are used to authenticate logon requests and to maintain information about user status and availability.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies the property values in an existing collection of Registrar configuration settings.
 Registrars are used to authenticate logon requests and to maintain information about user status and availability.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -41,178 +33,66 @@ Set-CsRegistrarConfiguration [-Instance <PSObject>] [-DefaultEndpointExpiration 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-The Registrar is perhaps the most important component in Microsoft Lync Server 2010; after all, without a Registrar, users would not be able to log on to the system, and Lync Server 2010 would not be able to keep track of users and their current status.
-When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
+The Registrar is perhaps the most important component in Skype for Business Server; after all, without a Registrar, users would not be able to log on to the system and Skype for Business Server would not be able to keep track of users and their current status.
+When a user logs on to Skype for Business Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
 If the client passes the challenge (that is, if the client presents a valid set of credentials), then the user is authenticated and endpoint information such as IP address, port, and user name is logged in the registration database.
 When a user logs off, this information is then removed from the database.
 In between log on and log off, the Registrar keeps status information up-to-date and helps to route messages to and from the user.
 
 Registrar configuration settings are used to help manage endpoints and endpoint subscriptions; these settings can be applied at the global, site, or service scope.
-(Service scoped-settings are only used with the Registrar service.) The Set-CsRegistrarConfiguration cmdlet can be used to modify any (or all) of the Registrar configuration collections currently in use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsRegistrarConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrarConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The Registrar is perhaps the most important component in Lync Server; after all, without a Registrar, users would not be able to log on to the system, and Lync Server would not be able to keep track of users and their current status.
-When a user logs on to Lync Server, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
-If the client passes the challenge (that is, if the client presents a valid set of credentials), then the user is authenticated and endpoint information such as IP address, port, and user name is logged in the registration database.
-When a user logs off, this information is then removed from the database.
-In between log on and log off, the Registrar keeps status information up-to-date and helps to route messages to and from the user.
-
-Registrar configuration settings are used to help manage endpoints and endpoint subscriptions; these settings can be applied at the global, site, or service scope.
-(Service scoped-settings are only used with the Registrar service.) The Set-CsRegistrarConfiguration cmdlet can be used to modify any (or all) of the Registrar configuration collections currently in use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsRegistrarConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsRegistrarConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Registrar is perhaps the most important component in Skype for Business Server 2015; after all, without a Registrar, users would not be able to log on to the system, and Skype for Business Server 2015 would not be able to keep track of users and their current status.
-When a user logs on to Skype for Business Server 2015, the endpoint the user is logging on from sends a REGISTER request to the Registrar; in turn, the server responds by challenging the client device for authentication credentials.
-If the client passes the challenge (that is, if the client presents a valid set of credentials), then the user is authenticated and endpoint information such as IP address, port, and user name is logged in the registration database.
-When a user logs off, this information is then removed from the database.
-In between log on and log off, the Registrar keeps status information up-to-date and helps to route messages to and from the user.
-
-Registrar configuration settings are used to help manage endpoints and endpoint subscriptions; these settings can be applied at the global, site, or service scope.
-(Service scoped-settings are only used with the Registrar service.) The Set-CsRegistrarConfiguration cmdlet can be used to modify any (or all) of the Registrar configuration collections currently in use in your organization.
-
+(Service scoped-settings are only used with the Registrar service.) The `Set-CsRegistrarConfiguration` cmdlet can be used to modify any (or all) of the Registrar configuration collections currently in use in your organization.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsRegistrarConfiguration -Identity site:Redmond -EnableDHCPServer $True
-```
-
-The preceding command modifies the Registrar configuration settings applied to the Redmond site (-Identity site:Redmond).
-In this example, the value of the EnableDHCPServer property is set to True.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 modifies the Registrar configuration settings applied to the Redmond site (-Identity site:Redmond).
 In this example, the value of the EnableDHCPServer property is set to True.
 
-Set-CsRegistrarConfiguration -Identity site:Redmond -EnableDHCPServer $True
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 modifies the Registrar configuration settings applied to the Redmond site (-Identity site:Redmond).
-In this example, the value of the EnableDHCPServer property is set to True.
-
-Set-CsRegistrarConfiguration -Identity site:Redmond -EnableDHCPServer $True
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsRegistrarConfiguration | Where-Object {$_.MaxEndpointsPerUser -gt 8} | Set-CsRegistrarConfiguration -MaxEndpointsPerUser 8
 ```
 
 In Example 2, any Registrar configuration settings that allow users more than 8 endpoints are modified.
-To accomplish this, the command first calls Get-CsRegistrarConfiguration without any parameters; this returns a collection of all the Registrar configuration settings used in the organization.
-This collection is then piped to Where-Object, which picks out only those settings where the MaxEndpointsPerUser property is greater than (-gt) 8.
-Finally, the filtered collection is piped to Set-CsRegistrarCollection, which sets the maximum number of endpoints for each item in that collection to 8.
+To accomplish this, the command first calls the `Get-CsRegistrarConfiguration` cmdlet without any parameters; this returns a collection of all the Registrar configuration settings used in the organization.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the MaxEndpointsPerUser property is greater than (-gt) 8.
+Finally, the filtered collection is piped to the `Set-CsRegistrarConfiguration` cmdlet, which sets the maximum number of endpoints for each item in that collection to 8.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 2, any Registrar configuration settings that allow users more than 8 endpoints are modified.
-To accomplish this, the command first calls Get-CsRegistrarConfiguration without any parameters; this returns a collection of all the Registrar configuration settings used in the organization.
-This collection is then piped to Where-Object, which picks out only those settings where the MaxEndpointsPerUser property is greater than (-gt) 8.
-Finally, the filtered collection is piped to Set-CsRegistrarCollection, which sets the maximum number of endpoints for each item in that collection to 8.
-
-Get-CsRegistrarConfiguration | Where-Object {$_.MaxEndpointsPerUser -gt 8} | Set-CsRegistrarConfiguration -MaxEndpointsPerUser 8
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, any Registrar configuration settings that allow users more than 8 endpoints are modified.
-To accomplish this, the command first calls the Get-CsRegistrarConfiguration cmdlet without any parameters; this returns a collection of all the Registrar configuration settings used in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the MaxEndpointsPerUser property is greater than (-gt) 8.
-Finally, the filtered collection is piped to the Set-CsRegistrarConfiguration cmdlet, which sets the maximum number of endpoints for each item in that collection to 8.
-
-Get-CsRegistrarConfiguration | Where-Object {$_.MaxEndpointsPerUser -gt 8} | Set-CsRegistrarConfiguration -MaxEndpointsPerUser 8
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsRegistrarConfiguration -Filter "site:*"| Set-CsRegistrarConfiguration -EnableDHCPServer $False
-```
-
-The command shown in Example 3 disables client registration by using DHCP for each site in the organization that hosts a collection of Registrar configuration settings.
-To do this, the command calls Get-CsRegistrarConfiguration along with the Filter parameter; the parameter value "site:*" limits the returned data to settings that have been configured at the site scope.
-This collection is then piped to Set-CsRegistrarConfiguration, which uses the EnableDHCPServer parameter and the parameter value $False to prevent clients from using a DHCP server to locate a Registrar.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 The command shown in Example 3 disables client registration via DHCP for each site in the organization that hosts a collection of Registrar configuration settings.
-To do this, the command calls Get-CsRegistrarConfiguration along with the Filter parameter; the parameter value "site:*" limits the returned data to settings that have been configured at the site scope.
-This collection is then piped to Set-CsRegistrarConfiguration, which uses the EnableDHCPServer parameter and the parameter value $False to prevent clients from using a DHCP server to locate a Registrar.
+To do this, the command calls the `Get-CsRegistrarConfiguration` cmdlet along with the Filter parameter; the parameter value "site:*" limits the returned data to settings that have been configured at the site scope.
+This collection is then piped to the `Set-CsRegistrarConfiguration` cmdlet, which uses the EnableDHCPServer parameter and the parameter value $False to prevent clients from using a DHCP server to locate a Registrar.
 
-Get-CsRegistrarConfiguration -Filter "site:*"| Set-CsRegistrarConfiguration -EnableDHCPServer $False
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 3 disables client registration via DHCP for each site in the organization that hosts a collection of Registrar configuration settings.
-To do this, the command calls the Get-CsRegistrarConfiguration cmdlet along with the Filter parameter; the parameter value "site:*" limits the returned data to settings that have been configured at the site scope.
-This collection is then piped to the Set-CsRegistrarConfiguration cmdlet, which uses the EnableDHCPServer parameter and the parameter value $False to prevent clients from using a DHCP server to locate a Registrar.
-
-Get-CsRegistrarConfiguration -Filter "site:*"| Set-CsRegistrarConfiguration -EnableDHCPServer $False
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Unique identifier for the Registrar configuration settings to be modified.
-To modify the global settings, use this syntax: -Identity global.
-To modify settings configured at the site scope, use syntax similar to this: -Identity site:Redmond.
-To modify settings at the service level, use syntax like this: -Identity service:Registrar:atl-cs-001.litwareinc.com.
-Note that Registrar settings can only be applied to the Registrar service.
-An error message will occur if you try to apply these settings to any other service.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Unique identifier for the Registrar configuration settings to be modified.
 To modify the global settings, use this syntax:
 
--Identity global
+`-Identity global`
 
 To modify settings configured at the site scope, use syntax similar to this:
 
--Identity site:Redmond
+`-Identity site:Redmond`
 
 To modify settings at the service level, use syntax like this:
 
--Identity service:Registrar:atl-cs-001.litwareinc.com
+`-Identity service:Registrar:atl-cs-001.litwareinc.com`
 
 Note that Registrar settings can only be applied to the Registrar service.
 An error message will occur if you try to apply these settings to any other service.
-
 
 
 ```yaml
@@ -303,28 +183,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxEndpointsPerUser
-**Below Content Applies To:** Lync Server 2010
-
 Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
-For example, a user who is logged on to Lync Server 2010 with both a computer and a mobile phone would be using two endpoints.
-MaxEndPointsPerUser must be set to a value between 1 and 64, inclusive.
-The default value is 8.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
-For example, a user who is logged on to Lync Server with both a computer and a mobile phone would be using two endpoints.
-MaxEndPointsPerUser must be set to a value between 1 and 64, inclusive.
-The default value is 8.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates the maximum number of endpoints a user can simultaneously have connected to the system.
-For example, a user who is logged on to Skype for Business Server 2015 with both a computer and a mobile phone would be using two endpoints.
+For example, a user who is logged on to Skype for Business Server with both a computer and a mobile phone would be using two endpoints.
 MaxEndPointsPerUser must be set to a value between 1 and 64, inclusive.
 The default value is 8.
 
@@ -334,7 +194,6 @@ For new deployments, the maximum number of endpoints should be no more than 8.
 
 Note, too, that the maximum number of endpoints is intended to give individual users multiple points of presence.
 As such, this setting is designed for individual users and not for groups of users (such as an entire department.)
-
 
 
 ```yaml
@@ -437,20 +296,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxUserCount
-**Below Content Applies To:** Lync Server 2013
-
-Indicates the maximum number of users that can simultaneously be logged on to a Registrar pool.
-MaxUserCount can be set to any integer value between 2000 and 100000, inclusive.
-The default value is 12000.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates the maximum number of users that can simultaneously be logged on to a Registrar.
 MaxUserCount can be set to any integer value between 2000 and 100000, inclusive.
 The default value is 12000.
-
 
 
 ```yaml
@@ -545,35 +393,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.Registrar.RegistrarSettings object.
-Set-CsRegistrarConfiguration accepts pipelined instances of the Registrar settings object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.Registrar.RegistrarSettings object.
-The Set-CsRegistrarConfiguration cmdlet accepts pipelined instances of the Registrar settings object.
+The `Set-CsRegistrarConfiguration` cmdlet accepts pipelined instances of the Registrar settings object.
 
 ## OUTPUTS
 
 ###  
-Set-CsRegistrarConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Registrar.RegistrarSettings object.
-
-###  
-The Set-CsRegistrarConfiguration cmdlet does not return a value or object.
+The `Set-CsRegistrarConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Registrar.RegistrarSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/9616b967-09dd-470d-8d0a-acce1ff4fbf9(OCS.14).aspx)
-
 [Get-CsRegistrarConfiguration]()
 
 [New-CsRegistrarConfiguration]()
 
 [Remove-CsRegistrarConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9616b967-09dd-470d-8d0a-acce1ff4fbf9(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9616b967-09dd-470d-8d0a-acce1ff4fbf9(OCS.16).aspx)
-

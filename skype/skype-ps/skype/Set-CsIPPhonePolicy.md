@@ -7,9 +7,7 @@ schema: 2.0.0
 # Set-CsIPPhonePolicy
 
 ## SYNOPSIS
-Set-CsIPPhonePolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-UserDialTimeoutMS \<uint64\>\] \[-KeyboardLockMaxPinRetry \<uint64\>\] \[-PrioritizedCodecsList \<string\>\] \[-EnablePowerSaveMode \<bool\>\] \[-PowerSaveDuringOfficeHoursTimeoutMS \<uint64\>\] \[-PowerSavePostOfficeHoursTimeoutMS \<uint64\>\] \[-EnableOneTouchVoicemail \<bool\>\] \[-DateTimeFormat \<int\>\] \[-EnableDeviceUpdate \<bool\>\] \[-EnableExchangeCalendaring \<bool\>\] \[-EnableBetterTogetherOverEthernet \<bool\>\] \[-BetterTogetherOverEthernetPairingMode \<string\>\] \[-LocalProvisioningServerUser \<string\>\] \[-LocalProvisioningServerPassword \<string\>\] \[-LocalProvisioningServerAddress \<string\>\] \[-LocalProvisioningServerType \<string\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsIPPhonePolicy \[-Tenant \<guid\>\] \[-UserDialTimeoutMS \<uint64\>\] \[-KeyboardLockMaxPinRetry \<uint64\>\] \[-PrioritizedCodecsList \<string\>\] \[-EnablePowerSaveMode \<bool\>\] \[-PowerSaveDuringOfficeHoursTimeoutMS \<uint64\>\] \[-PowerSavePostOfficeHoursTimeoutMS \<uint64\>\] \[-EnableOneTouchVoicemail \<bool\>\] \[-DateTimeFormat \<int\>\] \[-EnableDeviceUpdate \<bool\>\] \[-EnableExchangeCalendaring \<bool\>\] \[-EnableBetterTogetherOverEthernet \<bool\>\] \[-BetterTogetherOverEthernetPairingMode \<string\>\] \[-LocalProvisioningServerUser \<string\>\] \[-LocalProvisioningServerPassword \<string\>\] \[-LocalProvisioningServerAddress \<string\>\] \[-LocalProvisioningServerType \<string\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -30,7 +28,7 @@ Set-CsIPPhonePolicy [[-Identity] <Object>] [-BetterTogetherOverEthernetPairingMo
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -438,4 +436,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
