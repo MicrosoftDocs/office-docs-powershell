@@ -7,11 +7,6 @@ schema: 2.0.0
 # Merge-SPLogFile
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Combines trace log entries from all farm computers into a single log file on the local computer.
 
@@ -37,112 +32,56 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite
 ```
 
 This example merges the last hour of log data from all farm computers with no filtering.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite
-```
-
-This example merges the last hour of log data from all farm computers with no filtering.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area Search
 ```
 
 This example merges the last hour of log data from the Search area.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area Search
-```
-
-This example merges the last hour of log data from the Search area.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area "SharePoint Foundation","Web Analytics Services"
 ```
 
 This example merges the last hour of log data from the SharePoint Foundation and Web Analytics Services areas.
 
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Area "SharePoint Foundation","Web Analytics Services"
-```
-
-This example merges the last hour of log data from the SharePoint Foundation and Web Analytics Services areas.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 4----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Level High
 ```
 
 This example merges the log data of level High or higher.
 
-### --------------EXAMPLE 4----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Level High
-```
-
-This example merges the log data of level High or higher.
-
-### --------------EXAMPLE 5----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 5----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" - EndTime "06/09/2008 16:15"
 ```
 
 This example merges the log data for events in a particular time range, which is culture-specific to the United States.
 
-### --------------EXAMPLE 5----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" - EndTime "06/09/2008 16:15"
-```
-
-This example merges the log data for events in a particular time range, which is culture-specific to the United States.
-
-### --------------EXAMPLE 6----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 6----------------- 
 ```
 C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Message "*permission changed*"
 ```
 
 This example merges the log data for events with permission changed in the message text.
 
-### --------------EXAMPLE 6----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -Message "*permission changed*"
-```
-
-This example merges the log data for events with permission changed in the message text.
-
-### --------------EXAMPLE 7----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 7----------------- 
 ```
 C:\PS>Merge-SPLogFile -Overwrite -Path d:\1.log -ContextFilter "name=timer job*" -Area "*search*"
 ```
 
 This example merges the log data for all search timer jobs.
 
-### --------------EXAMPLE 7----------------- (SharePoint Server 2016)
-```
-C:\PS>Merge-SPLogFile -Overwrite -Path d:\1.log -ContextFilter "name=timer job*" -Area "*search*"
-```
-
-This example merges the log data for all search timer jobs.
-
-### --------------EXAMPLE 8----------------- (SharePoint Server 2013)
-```
-C:\PS>Merge-SPLogFile -Overwrite -Path d:\2.log -ContextFilter "user=contoso?joeuser"
-```
-
-This example shows how to merge the log data for all user names that have a contoso\joeuser or Contoso/joeuser format.
-
-### --------------EXAMPLE 8----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 8----------------- 
 ```
 C:\PS>Merge-SPLogFile -Overwrite -Path d:\2.log -ContextFilter "user=contoso?joeuser"
 ```

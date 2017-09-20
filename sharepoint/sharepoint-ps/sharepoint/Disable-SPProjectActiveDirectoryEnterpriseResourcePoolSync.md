@@ -31,7 +31,7 @@ However, this Active Directory group can contain nested groups whose members are
 
 The following actions can occur during the Enterprise Resource Pool synchronization process:
 
-- A new Project Server 2013 enterprise resource and corresponding user account can be created based on an Active Directory account.
+- A new Project Server enterprise resource and corresponding user account can be created based on an Active Directory account.
 - An active Project Server resource/user account can be deactivated.
 - An existing Project Server user account's metadata (for example, name, e-mail address, and so on) can be updated if it has changed in Active Directory.
 - A previously inactive Project Server resource/user account can be reactivated.
@@ -40,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE--------------------- 
 ```
 C:\PS>Disable-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```

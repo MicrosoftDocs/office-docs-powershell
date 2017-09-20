@@ -35,33 +35,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Enable-SPSessionStateService -DefaultProvision
 ```
 
-This example enables a ASP.NET session state on a SharePoint Server 2013 farm that uses the defaults (database hosted on the configuration database SQL Server, using Windows authentication, 60-minute session time-out).
+This example enables a ASP.NET session state on a SharePoint Server farm that uses the defaults (database hosted on the configuration database SQL Server, using Windows authentication, 60-minute session time-out).
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Enable-SPSessionStateService -DefaultProvision
-```
-
-This example enables a ASP.NET session state on a SharePoint Server 2013 farm that uses the defaults (database hosted on the configuration database SQL Server, using Windows authentication, 60-minute session time-out).
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Enable-SPSessionStateService -DatabaseName "Session State Database" -DatabaseServer "localhost" -SessionTimeout 120
 ```
 
-This example enables a ASP.NET session state on a SharePoint Server 2013 farm that uses a custom database name, database server, session time-out of 120 minutes, and Windows credentials (due to the lack of a DatabaseCredentials parameter).
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Enable-SPSessionStateService -DatabaseName "Session State Database" -DatabaseServer "localhost" -SessionTimeout 120
-```
-
-This example enables a ASP.NET session state on a SharePoint Server 2013 farm that uses a custom database name, database server, session time-out of 120 minutes, and Windows credentials (due to the lack of a DatabaseCredentials parameter).
+This example enables a ASP.NET session state on a SharePoint Server farm that uses a custom database name, database server, session time-out of 120 minutes, and Windows credentials (due to the lack of a DatabaseCredentials parameter).
 
 ## PARAMETERS
 
@@ -124,7 +110,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +181,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

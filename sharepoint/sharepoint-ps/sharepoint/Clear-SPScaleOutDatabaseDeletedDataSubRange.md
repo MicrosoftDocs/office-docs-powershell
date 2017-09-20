@@ -7,11 +7,6 @@ schema: 2.0.0
 # Clear-SPScaleOutDatabaseDeletedDataSubRange
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Clears all partitions inside the specified deleted subrange.
 
@@ -32,25 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
-C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
-
-C:\PS>Set-SPScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode Deleted -IsUpperSubRange $false
-
-C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
-
-C:\PS>Clear-SPScaleOutDatabaseDeletedDataSubRange -Database $database -Range $state.Range -IsUpperSubRange $false
-```
-
-This example creates a deleted subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
-The example then clears that subrange and all data in the partitions in the subrange.
-
-### --------------EXAMPLE-------------- (SharePoint Server 2016)
+### --------------EXAMPLE-------------- 
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -142,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -159,7 +136,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

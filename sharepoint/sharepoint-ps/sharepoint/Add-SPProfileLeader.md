@@ -18,11 +18,11 @@ Add-SPProfileLeader [-ProfileServiceApplicationProxy] <SPServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Use the Add-SPProfileLeader cmdlet to add a user as the company leader.
 
-For additional information about SPProfileLeader cmdlets, see The *-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server 2010 SP1 (http://go.microsoft.com/fwlink/p/?LinkId=226295) (http://go.microsoft.com/fwlink/p/?LinkId=226295).
+For additional information about SPProfileLeader cmdlets, see The *-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server SP1 (http://go.microsoft.com/fwlink/p/?LinkId=226295) (http://go.microsoft.com/fwlink/p/?LinkId=226295).
 
 After you use the Add-SPProfileLeader cmdlet to add a company leader, you have to complete a full crawl of your content sources for the changes to take effect.
 
@@ -30,16 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------EXAMPLE------------ (SharePoint Server 2013)
-```
-C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
-
-C:\PS>Add-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedow"
-```
-
-This example adds a company leader named, Jane Dow.
-
-### ---------EXAMPLE------------ (SharePoint Server 2016)
+### ---------EXAMPLE------------ 
 ```
 C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
 
@@ -107,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -141,7 +132,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

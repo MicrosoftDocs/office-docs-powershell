@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppPrincipal
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Displays a specific app principal object.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE-------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPAppPrincipal -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd"
-```
-
-This example returns the app principal for a specified ID.
-
-### -----------EXAMPLE-------- (SharePoint Server 2016)
+### -----------EXAMPLE-------- 
 ```
 C:\PS>Get-SPAppPrincipal -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd"
 ```

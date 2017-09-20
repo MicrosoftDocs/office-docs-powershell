@@ -25,16 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE------------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchQuerySuggestionCandidates -SearchApplication $searchapp
-```
-
-This example returns popular search queries by using the search application contained in the variable $searchapp.
-
-### ---------------------EXAMPLE------------------------ (SharePoint Server 2016)
+### ---------------------EXAMPLE------------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
 
@@ -135,5 +126,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/456b9bad-3b38-4688-958c-90a59a43cf3a(Office.15).aspx)
 

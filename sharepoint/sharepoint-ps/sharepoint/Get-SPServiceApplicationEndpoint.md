@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPServiceApplicationEndpoint
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the endpoint of a service application.
 
@@ -43,14 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE-------------------- (SharePoint Server 2013)
-```
-C:\PS>Get- SPServiceApplicationEndpoint -ServiceApplication "ServiceSubApp1"
-```
-
-This example returns the SPServiceEndpoint object based on the specified service application.
-
-### -------------------EXAMPLE-------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE-------------------- 
 ```
 C:\PS>Get- SPServiceApplicationEndpoint -ServiceApplication "ServiceSubApp1"
 ```

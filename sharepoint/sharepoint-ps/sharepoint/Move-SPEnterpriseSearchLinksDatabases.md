@@ -29,19 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$ssa=Get-SPEnterpriseSearchServiceapplication
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links2"
-$ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links3"
-$dbs = $ssa | Get-SPEnterpriseSearchLinksDatabase
-$ssa | Repartition-SPEnterpriseSearchLinksDatabases -TargetStores $dbs
-```
-
-This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDatabases to move data from the current links databases into new databases.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$ssa=Get-SPEnterpriseSearchServiceapplication
 $ssa | New-SPEnterpriseSearchLinksDatabase -DatabaseName "links1"
@@ -56,14 +44,6 @@ This example adds 3 new links databases and uses Move-SPEnterpriseSearchLinksDat
 ## PARAMETERS
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the search application that contains the links database.
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search application that contains the links database.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
@@ -87,13 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill AssignmentCollection Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -119,16 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:**SharePoint Server 2013
-
-Prompts you for confirmation before running the cmdlet.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 
 
@@ -146,13 +112,6 @@ Accept wildcard characters: False
 ```
 
 ### -RepartitioningId
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill RepartitioningId Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Resumes the move with this identifier.
 
@@ -172,13 +131,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceStores
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SourceStores Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies a source list of databases.
 If this parameter is not specified then all currently existing links databases will be used as a source list.
@@ -199,13 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetStores
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill TargetStores Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies a target list of databases.
 If this parameter is not specified then all currently existing links databases will be used as a target list.
@@ -226,17 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:**SharePoint Server 2013
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 
 
@@ -263,8 +200,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5bff925f-3845-434e-be9f-3ba50673be28(Office.15).aspx)
 
 [New-SPEnterpriseSearchLinksDatabase]()
 

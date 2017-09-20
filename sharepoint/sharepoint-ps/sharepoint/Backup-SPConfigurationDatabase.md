@@ -7,11 +7,6 @@ schema: 2.0.0
 # Backup-SPConfigurationDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Performs a farm-level configuration-only backup.
 
@@ -48,28 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1-------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1-------------------- 
 ```
 C:\PS>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
 ```
 
 This example displays components that are available for inclusion in a configuration-only backup.
 
-### -------------------EXAMPLE 1-------------------- (SharePoint Server 2016)
-```
-C:\PS>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -ShowTree
-```
-
-This example displays components that are available for inclusion in a configuration-only backup.
-
-### -------------------EXAMPLE 2-------------------- (SharePoint Server 2013)
-```
-C:\PS>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
-```
-
-This example performs a configuration-only backup with verbose output.
-
-### -------------------EXAMPLE 2-------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE 2-------------------- 
 ```
 C:\PS>Backup-SPConfigurationDatabase -DatabaseName SharePoint_Config -DatabaseServer SqlServer1 -Directory \\server\share\Backup -Verbose
 ```
@@ -79,10 +60,10 @@ This example performs a configuration-only backup with verbose output.
 ## PARAMETERS
 
 ### -Directory
-Specifies the path where SharePoint 2010 Products stores the backup package it generates.
-If you have a computer on which SQL Server 2008 and an instance of SharePoint 2010 Products are installed, you can use local drive paths.
+Specifies the path where SharePoint Products stores the backup package it generates.
+If you have a computer on which SQL Server and an instance of SharePoint Products are installed, you can use local drive paths.
 This includes a basic installation.
-However, if SQL Server 2008 and SharePoint 2010 Products are installed on multiple computers or if you have multiple servers running SharePoint 2010 Products, you must use Universal Naming Convention (UNC) share paths so that the SQL Server database and search components are written to the same location; for example, \\\\computer_name\volume\Backup).
+However, if SQL Server and SharePoint Products are installed on multiple computers or if you have multiple servers running SharePoint Products, you must use Universal Naming Convention (UNC) share paths so that the SQL Server database and search components are written to the same location; for example, \\\\computer_name\volume\Backup).
 
 Multiple backup packages can be stored in the same location.
 This is the same path that you pass to the Directory parameter of the Restore-SPFarm cmdlet.

@@ -7,13 +7,9 @@ schema: 2.0.0
 # Get-SPServerScaleOutDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
 
 Applies to:
 
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Synopsis}}
 
 
 
@@ -25,22 +21,18 @@ Get-SPServerScaleOutDatabase -ServiceApplication <SPServiceApplicationPipeBind>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
 
 Use the Get-SPServerScaleOutDatabase cmdlet to return all scale-out database objects for the specified service application.
 
 A scale-out database is a database which implements the Shared Service Database Scale Out Generic Protocol.
 For more information, see SharePoint Shared Service Database Scale Out Generic Protocol Specification (http://go.microsoft.com/fwlink/p/?LinkId=273867)
 
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Description}}
 
 
 
 ## EXAMPLES
 
-### ----------EXAMPLE-------------- (SharePoint Server 2013)
+### ----------EXAMPLE-------------- 
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
@@ -49,25 +41,13 @@ C:\PS>Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 
 This example gets all scale-out databases for the given service application by using the $serviceApplication variable.
 
-### Example 1 (SharePoint Server 2016)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -ServiceApplication
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies the service application of the scale-out databases.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill ServiceApplication Description}}
 
 
 
@@ -85,7 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -96,10 +75,6 @@ When the Global parameter is used, all objects are contained in the global store
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill AssignmentCollection Description}}
 
 
 
@@ -117,16 +92,10 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:**SharePoint Server 2013
 
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Prompts you for confirmation before running the cmdlet.
 
 
 
@@ -144,17 +113,11 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:**SharePoint Server 2013
 
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
 
 
 

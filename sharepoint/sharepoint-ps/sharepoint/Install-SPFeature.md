@@ -7,11 +7,6 @@ schema: 2.0.0
 # Install-SPFeature
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Installs a SharePoint Feature by using the Feature.xml file.
 
@@ -53,21 +48,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Install-SPFeature -path "MyCustomFeature"
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Install-SPFeature -path "MyCustomFeature"
-```
-
-This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature/feature.xml.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Install-SPFeature -AllExistingFeatures -Whatif
 ```
@@ -75,36 +63,14 @@ C:\PS>Install-SPFeature -AllExistingFeatures -Whatif
 This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
 This is commonly done after an upgrade process.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Install-SPFeature -AllExistingFeatures -Whatif
-```
-
-This example shows the unregistered features that are available on the file system and that are installed if this command is run without the WhatIf parameter.
-This is commonly done after an upgrade process.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3----------------- 
 ```
 C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
 This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
-```
-
-This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2013)
-```
-C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
-```
-
-This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 4----------------- 
 ```
 C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 15
 ```
@@ -193,7 +159,7 @@ Accept wildcard characters: False
 Specifies the version of feature to install.
 When the version is not specified it will default to the web applications MaxVersion value.
 
-The values for this can be either SharePoint Server 2010 or SharePoint Server 2013
+The values for this can be either SharePoint Server or SharePoint Server 
 
 ```yaml
 Type: Int32
@@ -210,7 +176,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -260,7 +226,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

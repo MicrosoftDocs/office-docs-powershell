@@ -27,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplication -Identity MySSA | Get-SPEnterpriseSearchSecurityTrimmer
-```
-
-This example obtains the pluggable security trimmers registered in the search service application MySSA.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplication -Identity MySSA | Get-SPEnterpriseSearchSecurityTrimmer
 ```
@@ -112,5 +105,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/60fd124a-e678-4440-9e37-852372a6d977(Office.15).aspx)
 

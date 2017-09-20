@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPRoutingMachineInfo
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a new routing target to the farm.
 
@@ -31,20 +26,7 @@ Use the Add-SPRoutingMachineInfo cmdlet to add a new routing target to the farm 
 
 ## EXAMPLES
 
-### -------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>Add-SPRoutingMachineInfo -RequestManagementSettings $rm -Name <MachineName> -Availability Available
-
-C:\PS>
-```
-
-This example adds a routing target for a specified identity to the farm.
-
-### -------------EXAMPLE-------------- (SharePoint Server 2016)
+### -------------EXAMPLE-------------- 
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 

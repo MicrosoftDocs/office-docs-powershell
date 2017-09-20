@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE-------------------- (SharePoint Server 2013)
-```
-C:\PS>$session = Get-SPTaxonomySession -Site "http://sitename"
-```
-
-This example retrieves a TaxonomySession object, which can be used to access term stores associated with the Web application for a site.
-
-### -----------------EXAMPLE-------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE-------------------- 
 ```
 C:\PS>$session = Get-SPTaxonomySession -Site "http://sitename"
 ```

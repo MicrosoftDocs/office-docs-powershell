@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWOPIZone
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the zone that is configured on the current SharePoint farm for the WOPI application to use.
 
@@ -30,15 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPWOPIZone
-```
-
-This example returns the zone that is configured for the WOPI application (such as a server that runs Office Web Apps Server) to use. 
-Return values may be "internal-http," "internal-https," "external-http" or "external-https."
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPWOPIZone
 ```

@@ -7,13 +7,8 @@ schema: 2.0.0
 # Move-SPUser
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
 
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Migrates a user account in SharePoint 2010 Products.
+Migrates a user account in SharePoint Products.
 
 
 
@@ -32,21 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Move-SPUser -Identity "DOMAIN\JaneDoe" -NewAlias "Domain\JaneSmith"
 ```
 
 This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>Move-SPUser -Identity "DOMAIN\JaneDoe" -NewAlias "Domain\JaneSmith"
-```
-
-This example migrates DOMAIN\JaneDoe to the new account of DOMAIN\JaneSmith.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Move-SPUser -Identity "DomainA\JaneDoe" -NewAlias "DomainB\JaneDoe"
 ```
@@ -115,7 +103,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -148,7 +136,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

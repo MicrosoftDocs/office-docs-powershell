@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWeb
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all subsites that match the given criteria.
 
@@ -46,50 +41,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 1---------------------- 
 ```
 C:\PS>Get-SPWeb -site http://sitename/sites/site1
 ```
 
 This example returns all the subwebs in a given site collection.
 
-### --------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWeb -site http://sitename/sites/site1
-```
-
-This example returns all the subwebs in a given site collection.
-
-### --------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 2---------------------- 
 ```
 C:\PS>Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
 ```
 
 This example displays all subsites that use the "STS#0" template.
 
-### --------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWeb -Site http://sitename/sites/site1  -filter {$_.Template -eq "STS#0"}
-```
-
-This example displays all subsites that use the "STS#0" template.
-
-### --------------------EXAMPLE 3---------------------- (SharePoint Server 2013)
-```
-C:\PS>Start-SPAssignment -Global
-
-C:\PS>$w = Get-SPWeb http://sitename
-
-C:\PS>$w.set_SiteLogoUrl("http://PathToImage/test.jpg")
-
-C:\PS>$w.Update()
-
-C:\PS>Stop-SPAssignment -Global
-```
-
-This example demonstrates how to save a subsite as a variable and to call object model methods on the SPAssignment object.
-
-### --------------------EXAMPLE 3---------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE 3---------------------- 
 ```
 C:\PS>Start-SPAssignment -Global
 
@@ -149,7 +115,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -238,7 +204,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

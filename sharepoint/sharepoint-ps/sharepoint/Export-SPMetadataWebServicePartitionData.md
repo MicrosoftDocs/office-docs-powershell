@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Export-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -Path "\\server_name\folder_name\file_name.cab"
-```
-
-This example creates a backup of data for a specific site subscription on a Metadata Service application.
-
-### -----------------EXAMPLE-------------- (SharePoint Server 2016)
+### -----------------EXAMPLE-------------- 
 ```
 C:\PS>Export-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -Path "\\server_name\folder_name\file_name.cab"
 ```

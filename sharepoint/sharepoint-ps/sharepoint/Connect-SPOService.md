@@ -40,15 +40,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+###   ------------ Example 1 --------------------
 ```
-
+{example code}
 ```
-
-###   (SharePoint Online)
-```
-
-```
+{example description}
 
 ## PARAMETERS
 
@@ -148,6 +144,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Disconnect-SPOService]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d9c6793a-56aa-4170-b6b5-90adb564fc2c(Office.15).aspx)
 

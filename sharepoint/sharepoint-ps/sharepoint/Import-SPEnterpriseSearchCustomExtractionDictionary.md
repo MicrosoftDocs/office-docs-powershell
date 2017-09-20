@@ -7,11 +7,6 @@ schema: 2.0.0
 # Import-SPEnterpriseSearchCustomExtractionDictionary
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Imports a custom entity extraction dictionary.
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Imports a custom extraction dictionary.
 
@@ -26,14 +21,6 @@ Import-SPEnterpriseSearchCustomExtractionDictionary -DictionaryName <String> -Fi
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet imports a custom entity extraction dictionary from a .csv file.
-In order to activate custom entity extraction you must also configure entity extraction in the search schema.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet imports a custom extraction dictionary from a .cvs file and deploys it to the extraction sub flow.
 
@@ -43,18 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication
-
-
-Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename \\host\share\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
-```
-
-This example imports the custom entity extraction dictionary that is located at \\\\host\share to the default search service application.
-The entries of this dictionary will be matched in a case-insensitive way against the terms in the documents being indexed.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------- 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
 Import-SPEnterpriseSearchCustomExtractionDictionary -SearchApplication $searchApp -Filename c:\transfer\entity_extraction.csv -DictionaryName Microsoft.UserDictionaries.EntityExtraction.Custom.Word.1
@@ -84,13 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the full UNC (Universal Naming Convention) path of the .csv file to be imported.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the file path of the .cvs file to be imported
 
@@ -110,13 +79,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the search service application to which the custom entity extraction dictionary should be imported.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search service application to which the custom extraction dictionary should be imported.
 
@@ -159,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -176,7 +138,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -202,5 +164,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5d6287c5-d439-4233-9ddb-9ee19f2d2112(Office.15).aspx)
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPLogEvent
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns results from a Unified Logging Service (ULS) trace log.
 
@@ -46,84 +41,42 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPLogEvent -MinimumLevel "Warning"
 ```
 
 This example returns all log entries equal to or more severe than Warning from the default log directory.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogEvent -MinimumLevel "Warning"
-```
-
-This example returns all log entries equal to or more severe than Warning from the default log directory.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
 ```
 
 This example returns all warning entries from log files in the C:\Logs directory.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogEvent -Directory "C:\Logs" | Where-Object {$_.Level -eq "Warning"}
-```
-
-This example returns all warning entries from log files in the C:\Logs directory.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3-----------------
 ```
 C:\PS>Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
 ```
 
 This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
 
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogEvent -StartTime "12/04/2007 17:00" -EndTime "12/04/2007 18:00"
-```
-
-This example returns error entries that occurred during a particular time range, which is culture-specific to the United States.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 4----------------- 
 ```
 C:\PS>Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
 ```
 
 This example returns the contents of the most recent log file and adds the specified context key data.
 
-### --------------EXAMPLE 4----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogEvent -ContextKey @("UserName" ,"SiteName")
-```
-
-This example returns the contents of the most recent log file and adds the specified context key data.
-
-### --------------EXAMPLE 5----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 5----------------- 
 ```
 C:\PS>Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
 ```
 
 This example returns all error entries related to SharePoint Foundation.
 
-### --------------EXAMPLE 5----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogEvent | Where-Object {$_.Level -eq "Error" -and {$_.Area -eq "SharePoint Foundation "}
-```
-
-This example returns all error entries related to SharePoint Foundation.
-
-### --------------EXAMPLE 6----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
-```
-
-This example returns the contents of the log file and adds context data.
-
-### --------------EXAMPLE 6----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 6----------------- 
 ```
 C:\PS>Get-SPLogEvent -ContextKey @("Name") | %{$_.ToString() + "'t" + $_.Context["Name"]}
 ```
@@ -171,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContextKey
-Specifies that context data should be added to the results for the specified Context Keys, for example: -ContextKey @("UserName", "SiteName").
+Specifies that context data should be added to the results for the specified Context Keys, for example: `-ContextKey @("UserName", "SiteName")`.
 
 ```yaml
 Type: String[]

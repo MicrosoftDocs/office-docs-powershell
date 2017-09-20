@@ -7,7 +7,7 @@ schema: 2.0.0
 # Import-SPInfoPathAdministrationFiles
 
 ## SYNOPSIS
-Imports InfoPath 2013 form templates and .udcx files that are located on the SharePoint Central Administration Web site.
+Imports InfoPath form templates and .udcx files that are located on the SharePoint Central Administration Web site.
 
 ## SYNTAX
 
@@ -17,21 +17,14 @@ Import-SPInfoPathAdministrationFiles [-Path] <String> [-AssignmentCollection <SP
 ```
 
 ## DESCRIPTION
-The Import-SPInfoPathAdministrationFiles cmdlet imports InfoPath 2013 form templates (.xsn files) and universal data connections (.udcx files) that are located on the SharePoint Central Administration Web site into the specified InfoPath Forms Services service.
-This cmdlet imports from a backup package that includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Foundation 2013, and browser forms that were deployed by an administrator.
+The Import-SPInfoPathAdministrationFiles cmdlet imports InfoPath form templates (.xsn files) and universal data connections (.udcx files) that are located on the SharePoint Central Administration Web site into the specified InfoPath Forms Services service.
+This cmdlet imports from a backup package that includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Foundation, and browser forms that were deployed by an administrator.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Import-SPInfoPathAdministrationFiles -path "backupfiles.cab"
-```
-
-This example imports form templates (XSN files) and universal data connections (UDCX files) located on the SharePoint Central Administration Web site into the specified Forms service.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Import-SPInfoPathAdministrationFiles -path "backupfiles.cab"
 ```
@@ -82,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -117,7 +110,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

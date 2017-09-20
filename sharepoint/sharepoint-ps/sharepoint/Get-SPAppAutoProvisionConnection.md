@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppAutoProvisionConnection
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns provision connection settings for an app.
 
@@ -31,30 +26,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1---------- (SharePoint Server 2013)
+### ---------------EXAMPLE 1---------- 
 ```
 C:\PS>Get-SpAppAutoProvisionConnection
 ```
 
 This example returns the entire app auto provisioning connection information for the default site subscription.
 
-### ---------------EXAMPLE 1---------- (SharePoint Server 2016)
-```
-C:\PS>Get-SpAppAutoProvisionConnection
-```
-
-This example returns the entire app auto provisioning connection information for the default site subscription.
-
-### ---------------EXAMPLE 2---------- (SharePoint Server 2013)
-```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-
-C:\PS>Get-SPAppAutoProvisionConnection -SiteSubscription $subscription -ConnectionType RemoteWebHost
-```
-
-This example returns the remote web host app auto provisioning connection information for the site subscription for Contoso.com site
-
-### ---------------EXAMPLE 2---------- (SharePoint Server 2016)
+### ---------------EXAMPLE 2---------- 
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
 

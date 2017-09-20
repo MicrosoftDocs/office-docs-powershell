@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication MySSA$demotedRule | Remove-SPEnterpriseSearchQueryDemoted
-```
-
-This example obtains a reference to a site demotion rule for the URL http://somesite.com, and removes it.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$demotedRule = Get-SPEnterpriseSearchQueryDemoted -Identity http://somesite.com -SearchApplication MySSA
 $demotedRule | Remove-SPEnterpriseSearchQueryDemoted
@@ -128,5 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/3307ecb3-be25-4fc8-b863-ea561af780d1(Office.15).aspx)
 

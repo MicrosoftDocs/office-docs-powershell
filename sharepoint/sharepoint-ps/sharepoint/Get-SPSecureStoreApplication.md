@@ -34,28 +34,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
 ```
 
 This example gets the Secure Store application for the target application with the name ContosoTargetApplication.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoTargetApplication"
-```
-
-This example gets the Secure Store application for the target application with the name ContosoTargetApplication.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPSecureStoreApplication -ServiceContext http://contoso -All
-```
-
-This example returns all of the Secure Store applicationshttp://contoso.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Get-SPSecureStoreApplication -ServiceContext http://contoso -All
 ```

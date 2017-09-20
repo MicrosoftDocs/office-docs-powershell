@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPBackupHistory
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a history of backup and restore operations.
 
@@ -32,43 +27,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPBackupHistory -Directory \\file_server\share\Backup
 ```
 
 This example returns all farm backup and restore operations that have been run for the \\\\file_server\share\Backup directory.
 
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPBackupHistory -Directory \\file_server\share\Backup
-```
-
-This example returns all farm backup and restore operations that have been run for the \\\\file_server\share\Backup directory.
-
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPBackupHistory -Directory C:\Backup -ShowBackup
 ```
 
 This example returns all of the farm backup operations that have been run for the C:\Backup directory.
 
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPBackupHistory -Directory C:\Backup -ShowBackup
-```
-
-This example returns all of the farm backup operations that have been run for the C:\Backup directory.
-
-### ------------------EXAMPLE 3----------------- (SharePoint Server 2013)
-```
-C:\PS>(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
-```
-
-This example gets all of the farm backup operations that have been run for the C:\Backup directory, finds the most recent backup, and then passes its backup GUID to the Restore-SPFarm cmdlet.
-The Restore-SPFarm cmdlet will then perform an overwrite restore from that backup package.
-
-### ------------------EXAMPLE 3----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 3----------------- 
 ```
 C:\PS>(Get-SPBackupHistory -Directory C:\Backup -ShowBackup)[0].SelfId | Restore-SPFarm -Directory C:\Backup -RestoreMethod overwrite
 ```
@@ -79,7 +52,7 @@ The Restore-SPFarm cmdlet will then perform an overwrite restore from that backu
 ## PARAMETERS
 
 ### -Directory
-Specifies the path where the SharePoint 2010 Products backup packages generated from a farm backup have been stored.
+Specifies the path where the SharePoint Products backup packages generated from a farm backup have been stored.
 
 The type must be a valid path in either of the following forms:
 

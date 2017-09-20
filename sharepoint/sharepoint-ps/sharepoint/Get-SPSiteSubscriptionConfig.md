@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSiteSubscriptionConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the configuration properties of a site subscription.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPSiteSubscriptionConfig http://contoso.com | Select FeatureSet
-```
-
-This example gets the feature set ID for the site subscription that contains the Web site http://contoso.com.
-
-### ---------------EXAMPLE--------------- (SharePoint Server 2016)
+### ---------------EXAMPLE--------------- 
 ```
 C:\PS>Get-SPSiteSubscriptionConfig http://contoso.com | Select FeatureSet
 ```

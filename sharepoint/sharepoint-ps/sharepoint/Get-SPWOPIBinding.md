@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWOPIBinding
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a list of bindings that were created by using New-SPWOPIBinding on the current SharePoint farm where this cmdlet is run.
 
@@ -32,28 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
 ```
 
 This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWOPIBinding -Server "Server.corp.Contoso.com"
-```
-
-This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the WOPI application "Server.corp.Contoso.com."  The WOPI application may be the server that runs Office Web Apps Server.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPWOPIZone | Get-SPWOPIBinding
-```
-
-This example returns a list of bindings that were created on the current SharePoint farm where this cmdlet is run for the zone configured for the WOPI application.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPWOPIZone | Get-SPWOPIBinding
 ```

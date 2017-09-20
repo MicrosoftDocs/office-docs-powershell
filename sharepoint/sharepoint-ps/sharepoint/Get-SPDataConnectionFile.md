@@ -24,42 +24,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 1-------------- 
 ```
 C:\PS>Get-SPDataConnectionFile
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties ofeach .udcx file.
 
-### ---------------EXAMPLE 1-------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPDataConnectionFile
-```
-
-This example lists the Identity, DisplayName, and WebAccessible properties ofeach .udcx file.
-
-### ---------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 2-------------- 
 ```
 C:\PS>"Sample.udcx" | Get-SPDataConnectionFile
 ```
 
 This example lists the Identity, DisplayName, and WebAccessible properties of the specified file, named Sample.udcx.
 
-### ---------------EXAMPLE 2-------------- (SharePoint Server 2016)
-```
-C:\PS>"Sample.udcx" | Get-SPDataConnectionFile
-```
-
-This example lists the Identity, DisplayName, and WebAccessible properties of the specified file, named Sample.udcx.
-
-### ---------------EXAMPLE 3-------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
-```
-
-This example lists the Identity, DisplayName, and WebAccessible properties of all .udcx files with the specified Category.
-
-### ---------------EXAMPLE 3-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE 3-------------- 
 ```
 C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}
 ```

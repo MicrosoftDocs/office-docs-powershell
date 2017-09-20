@@ -25,14 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1" Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList
-```
-
-This example returns all language resource entries for the en-us language in the QuerySuggestionBlockList type.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1" 
 Get-SPEnterpriseSearchLanguageResourcePhrase -SearchApplication $searchapp -Language en-us -Type QuerySuggestionBlockList
@@ -43,13 +36,6 @@ This example returns all language resource entries for the en-us language in the
 ## PARAMETERS
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill AssignmentCollection Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -75,13 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Identity Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the language resource phrase to get.
 
@@ -103,13 +82,6 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Language Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Filters to return phrases of a specified source language.
 
@@ -131,13 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mapping
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Mapping Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Allows a term or phrase to be mapped to another term or phrase.
 For example, the nickname "John" could be mapped to "Jonathan".
@@ -160,13 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Owner Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search object owner that defines the scope at which the corresponding LanguageResourcePhrase is created.
 
@@ -193,13 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SearchApplication Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search application that contains the language resources.
 
@@ -221,13 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceId
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SourceId Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Identifies the search result source for which the LanguageResourcePhrase applies to.
 
@@ -247,13 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Type Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Filters to return phrases of a specified type.
 
@@ -290,5 +227,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/eefb089d-aed8-475c-825d-80eeea17a9f7(Office.15).aspx)
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Dismount-SPContentDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Detaches a content database from its currently associated Web application.
 
@@ -33,29 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------ (SharePoint Server 2013)
+### --------------EXAMPLE 1------------ 
 ```
 C:\PS>Dismount-SPContentDatabase 12345678-90ab-cdef-1234-567890abcdef
 ```
 
 This example detaches the content database with the GUID 12345678-90ab-cdef-1234-567890abcdef from its current parent Web application.
 
-### --------------EXAMPLE 1------------ (SharePoint Server 2016)
-```
-C:\PS>Dismount-SPContentDatabase 12345678-90ab-cdef-1234-567890abcdef
-```
-
-This example detaches the content database with the GUID 12345678-90ab-cdef-1234-567890abcdef from its current parent Web application.
-
-### --------------EXAMPLE 2------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPContentDatabase -WebApplication http://sitename | Dismount-SPContentDatabase -WhatIf
-```
-
-This example detaches all content databases from the Web application on port 80 of the local machine.
-Remove the WhatIf parameter to perform the operation.
-
-### --------------EXAMPLE 2------------ (SharePoint Server 2016)
+### --------------EXAMPLE 2------------ 
 ```
 C:\PS>Get-SPContentDatabase -WebApplication http://sitename | Dismount-SPContentDatabase -WhatIf
 ```
@@ -107,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +104,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

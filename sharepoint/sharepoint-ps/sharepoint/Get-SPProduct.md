@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPProduct
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a list of the SharePoint-related products installed in the farm and the versions of all updates installed for each product.
 
@@ -43,14 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPProduct -Local
-```
-
-This example displays the SharePoint-related products installed on the local server.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPProduct -Local
 ```

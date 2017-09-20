@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSiteSubscription
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the site subscription for the given URL or all site subscriptions in the local farm.
 
@@ -32,16 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>$SiteSub = Get-SPSiteSubscription http://Contoso.com
-
-C:\PS>$SiteSub = Get-SPSite http://contoso.com | Get-SPSiteSubscription
-```
-
-This example retrieves the site subscription for http://Contoso.com.
-
-### ------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE---------------------- 
 ```
 C:\PS>$SiteSub = Get-SPSiteSubscription http://Contoso.com
 

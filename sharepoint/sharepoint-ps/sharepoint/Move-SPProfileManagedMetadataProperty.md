@@ -23,34 +23,20 @@ Use the Move-SPProfileManagedMetadataProperty cmdlet to move multiple-string or 
 If you do not specify a term set, the values are moved into the Keywords term set.
 Any new values you add to the property after running the cmdlet will be moved into the term set that you specified.
 
-After a user profile application has been upgraded from Office SharePoint Server 2007, single-string and multiple-string value properties are not available for use unless the Move-SPProfileManagedMetadataProperty cmdlet is run to map them to term sets within Managed Metadata Service.
+After a user profile application has been upgraded from Office SharePoint Server, single-string and multiple-string value properties are not available for use unless the Move-SPProfileManagedMetadataProperty cmdlet is run to map them to term sets within Managed Metadata Service.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ---------------EXAMPLE 1------------------ 
 ```
 C:\PS>Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging -ProfileServiceApplicationProxy dbc4ccf5-b245-4e0f-8696-235402f83260
 ```
 
 This example moves values from the SPS-Interests property into a new term set called Interests, and marks that term set as available for tagging.
 
-### ---------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging -ProfileServiceApplicationProxy dbc4ccf5-b245-4e0f-8696-235402f83260
-```
-
-This example moves values from the SPS-Interests property into a new term set called Interests, and marks that term set as available for tagging.
-
-### ---------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains("User Profile Service")} | Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
-```
-
-This example performs the same task as Example 1, but pipes the result for the ProfileServiceApplicationProxy parameter by using the Get-SPServiceApplicationProxy cmdlet.
-
-### ---------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ---------------EXAMPLE 2------------------ 
 ```
 C:\PS>Get-SPServiceApplicationProxy | ?{$_.DisplayName.Contains("User Profile Service")} | Move-SPProfileManagedMetadataProperty -Identity SPS-Interests -TermSetName Interests -AvailableForTagging
 ```
@@ -133,7 +119,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +153,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

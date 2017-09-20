@@ -17,13 +17,6 @@ New-SPEnterpriseSearchCrawlMapping [-Url] <String> -SearchApplication <SearchSer
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The New-SPEnterpriseSearchCrawlMapping cmdlet is run when the search functionality is initially configured, and when access is changed through a different mechanism to create the crawl mapping rule; for example, when a rule is changed to use file:\\\\ rather than http://.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 The New-SPEnterpriseSearchCrawlMapping cmdlet is run when the search functionality is initially configured, and when access is changed through a different mechanism to create the crawl mapping rule; for example, when a rule is changed to use file:\\\\ rather than  http://.
 
@@ -33,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"New-SPEnterpriseSearchCrawlMapping -SearchApplication $searchapp -Url "file://location1" -Target "http://location2"
-```
-
-This example will change the query results link from the file share where the item was crawled to the Web site location from which the item can be browsed.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
 New-SPEnterpriseSearchCrawlMapping -SearchApplication $searchapp -Url "file://location1" -Target "http://location2"
@@ -128,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +131,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -171,5 +157,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f1932a85-aaee-4c2b-982f-5ba21b36cf3a(Office.15).aspx)
 

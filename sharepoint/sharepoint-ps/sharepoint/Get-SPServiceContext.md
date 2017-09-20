@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPServiceContext
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a service context.
 
@@ -43,16 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE--------------- (SharePoint Server 2013)
-```
-C:\PS>$sitesub = Get-SPSiteSubscription http://my.contoso.com/
-
-C:\PS>Get-SPServiceContext $sitesub
-```
-
-This example returns the service context for a site in a hosted environment.
-
-### ----------------EXAMPLE--------------- (SharePoint Server 2016)
+### ----------------EXAMPLE--------------- 
 ```
 C:\PS>$sitesub = Get-SPSiteSubscription http://my.contoso.com/
 

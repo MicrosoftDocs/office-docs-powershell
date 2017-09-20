@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPBrowserCustomerExperienceImprovementProgram
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the current opt-in state for the browser Customer Experience Improvement Program.
 
@@ -48,28 +43,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication http://WebAppexample1
 ```
 
 This example returns the current Customer Experience Improvement Program opt-in state for the Web application, WebAppexample1.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPBrowserCustomerExperienceImprovementProgram -WebApplication http://WebAppexample1
-```
-
-This example returns the current Customer Experience Improvement Program opt-in state for the Web application, WebAppexample1.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPSiteSubscription http://SiteSubscription1 | Get- SPBrowserCustomerExperienceImprovementProgram
-```
-
-The following example returns the Customer Experience Improvement Program opt-in state for the site subscription, SiteSubscription1.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>Get-SPSiteSubscription http://SiteSubscription1 | Get- SPBrowserCustomerExperienceImprovementProgram
 ```

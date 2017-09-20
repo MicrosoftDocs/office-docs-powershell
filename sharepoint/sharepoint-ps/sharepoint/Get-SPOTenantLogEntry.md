@@ -34,7 +34,7 @@ Get-SPOTenantLogEntry [[-StartTimeInUtc] <DateTime>] [[-EndTimeInUtc] <DateTime>
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

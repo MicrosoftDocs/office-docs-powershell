@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-SPBECWebServiceApplicationProxy
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Do not use this cmdlet.
 
@@ -31,12 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
-```
-C:\PS>
-```
-
-###   (SharePoint Server 2016)
+###   ------------ Example 1 --------------------
 ```
 C:\PS>
 ```

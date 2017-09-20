@@ -35,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE----------------------- 
 ```
 C:\PS>Get-SPProjectWebInstance -Url http://server/pwa
 ```
@@ -45,7 +45,7 @@ This example returns the properties for a Project Web App instance at http://ser
 ## PARAMETERS
 
 ### -ServiceApplication
-Specifies the name of the Project Server 2013 service application.
+Specifies the name of the Project Server service application.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a Project Web App instance (for example, ProjectWebApp1); or an instance of a valid PsiServiceApplication object.
 

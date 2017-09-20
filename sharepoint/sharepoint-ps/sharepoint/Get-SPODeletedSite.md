@@ -42,20 +42,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+###   ------------ Example 1 --------------------
 ```
+{example code}
+```
+{example description}
 
-```
-
-###   (SharePoint Online)
-```
-
-```
-
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -147,5 +139,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-SPODeletedSite]()
 
-[Online Version](http://technet.microsoft.com/EN-US/library/29079bf5-73e8-48f5-b992-4d04dac4738f(Office.15).aspx)
 

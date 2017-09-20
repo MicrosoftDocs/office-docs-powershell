@@ -27,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE------------------- (SharePoint Server 2013)
-```
-$crawlDatabase = Get-SPEnterpriseSearchCrawlDatabase -SearchApplicationMySearchServiceApp -Identity CrawlDB_1
-```
-
-This example gets a reference to the crawl database CrawlDB_1 from the search service application named MySearchServiceApp.
-
-### -------------------EXAMPLE------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE------------------- 
 ```
 C:\PS>
 $crawlDatabase = Get-SPEnterpriseSearchCrawlDatabase -SearchApplication
@@ -114,5 +107,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d4944100-fea2-4a6c-9ea3-553cd99c856b(Office.15).aspx)
 

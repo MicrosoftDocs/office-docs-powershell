@@ -25,10 +25,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+###   ------------ Example 1 --------------------
 ```
-
+{example code}
 ```
+{example description}
 
 ## PARAMETERS
 
@@ -51,5 +52,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-SPOTenantLogEntry]()
 
-[Online Version](http://technet.microsoft.com/EN-US/library/dba7f754-c9b7-4b4e-8b75-6cf4ddf398e7(Office.15).aspx)
 

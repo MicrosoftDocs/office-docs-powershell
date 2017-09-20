@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPRoutingMachinePool
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a new machine pool.
 
@@ -32,18 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------EXAMPLE-------- (SharePoint Server 2013)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>Add-SPRoutingMachinePool -RequestManagementSettings $rm -Name <MachineName>
-```
-
-This example adds a machine pool.
-
-### ----------EXAMPLE-------- (SharePoint Server 2016)
+### ----------EXAMPLE-------- 
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 

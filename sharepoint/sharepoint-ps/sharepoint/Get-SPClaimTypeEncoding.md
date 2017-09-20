@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPClaimTypeEncoding
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a list of all the types of claims.
 
@@ -25,15 +20,6 @@ Get-SPClaimTypeEncoding [-AssignmentCollection <SPAssignmentCollection>] [-Claim
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-Use the Get-SPClaimTypeEncoding cmdlet to return the following:
-
-For additional information about the SPClaim methods and properties, see M:Microsoft.SharePoint.Administration.Claims.SPClaim.ToEncodedString and P:Microsoft.SharePoint.Administration.Claims.SPClaim.ClaimType respectively.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Use the Get-SPClaimTypeEncoding cmdlet to return the following:
 
@@ -49,28 +35,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-------- 
 ```
 C:\PS>Get-SPClaimTypeEncoding
 ```
 
 This example returns a list of all types of claima in the farm.
 
-### --------------EXAMPLE 1-------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPClaimTypeEncoding
-```
-
-This example returns a list of all types of claima in the farm.
-
-### --------------EXAMPLE 2-------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
-```
-
-This example returns a specific claim type by using the ClaimType parameter.
-
-### --------------EXAMPLE 2-------- (SharePoint Server 2016)
+### --------------EXAMPLE 2-------- 
 ```
 C:\PS>Get-SPClaimTypeEncoding -ClaimType "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/country"
 ```

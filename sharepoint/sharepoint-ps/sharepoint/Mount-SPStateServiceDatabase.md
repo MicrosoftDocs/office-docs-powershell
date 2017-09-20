@@ -25,42 +25,23 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
 ```
 
-This example associates a SharePoint Server 2013 farm with a SQL Server database.
+This example associates a SharePoint Server farm with a SQL Server database.
 
 This example is used in least privilege scenarios when an administrator cannot create databases in SQL.
 The database must already exist and be empty.
 The database cannot be used until the Initialize-SPStateServiceDatabase cmdlet is run, so errors could occur with this example.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
-```
-
-This example associates a SharePoint Server 2013 farm with a SQL Server database.
-
-This example is used in least privilege scenarios when an administrator cannot create databases in SQL.
-The database must already exist and be empty.
-The database cannot be used until the Initialize-SPStateServiceDatabase cmdlet is run, so errors could occur with this example.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -ServiceApplication "ServiceApp1" -Weight 10 | Initialize-SPStateServiceDatabase
 ```
 
-This example associates a SharePoint Server 2013 farm with a SQL Server database, at the same time that it also associates the database with a service application and gives a weight of 10.
-The result is immediately piped to the Initialize-SPStateServiceDatabase cmdlet so that the database can be used.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Mount-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -ServiceApplication "ServiceApp1" -Weight 10 | Initialize-SPStateServiceDatabase
-```
-
-This example associates a SharePoint Server 2013 farm with a SQL Server database, at the same time that it also associates the database with a service application and gives a weight of 10.
+This example associates a SharePoint Server farm with a SQL Server database, at the same time that it also associates the database with a service application and gives a weight of 10.
 The result is immediately piped to the Initialize-SPStateServiceDatabase cmdlet so that the database can be used.
 
 ## PARAMETERS

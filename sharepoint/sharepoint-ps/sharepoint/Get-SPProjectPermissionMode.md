@@ -22,7 +22,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------------- (SharePoint Server 2016)
+### --------------EXAMPLE 1------------------- 
 ```
 C:\PS>Get-SPProjectPermissionMode -Url http://AppServer/pwa
 ```

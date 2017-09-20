@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
-```
-
-This example obtains a reference to a search service application named MySSA.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity MySSA
 ```
@@ -90,5 +83,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/b8030354-e62d-4723-a809-eb6cf8c301c5(Office.15).aspx)
 

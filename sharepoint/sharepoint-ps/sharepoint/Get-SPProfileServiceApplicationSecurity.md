@@ -29,16 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE-------------------- (SharePoint Server 2013)
-```
-C:\PS>$UPAProxy = Get-SPServiceApplicationProxy -Identity "UPA proxy 1"
-
-C:\PS>Get- SPProfileServiceApplicationSecurity - ProfileServiceApplicationProxy $UPAProxy -Type MySiteReaderACL
-```
-
-This example displays MySite information on UPA Proxy 1.
-
-### -------------------EXAMPLE-------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE-------------------- 
 ```
 C:\PS>$UPAProxy = Get-SPServiceApplicationProxy -Identity "UPA proxy 1"
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPShellAdmin
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the names of all users who have the SharePoint_Shell_Access role.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPShellAdmin -database 4251d855-3c15-4501-8dd1-98f960359fa6
-```
-
-This example returns the name of each user who has the SharePoint_Shell_Access role in the database specified.
-
-### --------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------- 
 ```
 C:\PS>Get-SPShellAdmin -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```

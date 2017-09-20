@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPThrottlingRule
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a new throttling rule.
 
@@ -32,20 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE--------- (SharePoint Server 2013)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-
-C:\PS>Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
-```
-
-This example adds a throttling rule for a specified identity by using the $rm and $c variables.
-
-### -----------EXAMPLE--------- (SharePoint Server 2016)
+### -----------EXAMPLE--------- 
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 

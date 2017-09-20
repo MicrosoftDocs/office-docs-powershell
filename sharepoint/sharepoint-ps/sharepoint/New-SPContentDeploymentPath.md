@@ -28,19 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>$source = Get-SPSite "http://source/"
-
-C:\PS>$credentials=Get-Credential
-
-C:\PS>New-SPContentDeploymentPath -Name "Deployment Path" -SourceSPWebApplication $source.WebApplication -SourceSPSite $source DestinationCentralAdministrationURL "http://destination:8080" -DestinationSPWebApplication "http://destination" -DestinationSPSite "http://destination" -KeepTemporaryFilesOptions "Failure" -PathAccount $credentials -PathEnabled:$true
-```
-
-This example creates a new deployment path called Deployment Path that connects a source at http://source to a destination at http://destination.
-The path is enabled and configured to keep temporary files on job failure.
-
-### -----------------EXAMPLE---------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE---------------------- 
 ```
 C:\PS>$source = Get-SPSite "http://source/"
 
@@ -239,7 +227,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -258,7 +246,7 @@ Accept wildcard characters: False
 Specifies the user and group information to include during the export operation for this content deployment path.
 The default value is All.
 
-The type must be one of the following values: None, All, or WssOnly- Applies only SharePoint Foundation 2013 security settings.
+The type must be one of the following values: None, All, or WssOnly- Applies only SharePoint Foundation security settings.
 Includes user memberships and role assignments such as default roles, for example, Web Designer or any custom roles that extend from the default roles.
 The access control list (ACL) for each object is migrated.
 No user information defined in the DAP or LDAP servers is included.
@@ -368,7 +356,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

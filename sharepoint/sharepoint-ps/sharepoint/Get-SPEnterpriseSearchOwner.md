@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
-```
-
-This example shows how to retrieve the tenant owner of a search object at the SPSite level.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
 ```
@@ -122,5 +115,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/45f4323d-6bc8-4be9-a8da-584f8d1b9f7b(Office.15).aspx)
 

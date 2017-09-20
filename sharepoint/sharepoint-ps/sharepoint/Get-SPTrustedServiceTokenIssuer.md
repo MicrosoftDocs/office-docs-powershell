@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPTrustedServiceTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the object that represents the farm trust.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPTrustedServiceTokenIssuer "WFEFarm1"
-```
-
-This example gets the trusted services token issuer WFEFarm1.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPTrustedServiceTokenIssuer "WFEFarm1"
 ```

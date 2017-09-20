@@ -22,14 +22,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Clear-SPSecureStoreDefaultProvider
-```
-
-This example clears the secure store provider.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Clear-SPSecureStoreDefaultProvider
 ```

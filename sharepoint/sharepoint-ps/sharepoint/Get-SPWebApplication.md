@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWebApplication
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all Web applications that match the given criteria.
 
@@ -35,28 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1---------------------- 
 ```
 C:\PS>$w = Get-SPWebApplication http://sitename
 ```
 
 This example gets the Web application for http://sitename and stores it in a variable.
 
-### ------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>$w = Get-SPWebApplication http://sitename
-```
-
-This example gets the Web application for http://sitename and stores it in a variable.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
-```
-
-This example displays all public properties on the SharePoint Central Administration Web application in list format.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>Get-SPWebApplication -IncludeCentralAdministration | Where { $_.DefaultServerComment -eq "SharePoint Central Administration v4"} | Format-List *
 ```

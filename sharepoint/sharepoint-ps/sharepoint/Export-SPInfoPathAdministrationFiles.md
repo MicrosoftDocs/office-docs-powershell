@@ -7,7 +7,7 @@ schema: 2.0.0
 # Export-SPInfoPathAdministrationFiles
 
 ## SYNOPSIS
-Saves InfoPath 2013 form templates on the SharePoint Central Administration Web site and .udcx files to a .cab file.
+Saves InfoPath form templates on the SharePoint Central Administration Web site and .udcx files to a .cab file.
 
 ## SYNTAX
 
@@ -17,27 +17,20 @@ Export-SPInfoPathAdministrationFiles [-Path] <String> [-AssignmentCollection <SP
 ```
 
 ## DESCRIPTION
-The Export-SPInfoPathAdministrationFiles cmdlet saves all InfoPath 2013 form templates (.xsn files) and universal data connections (.udcx files) that are located on the Central Administration page.
-The backup package includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Server 2013, and includes browser forms that were deployed by an administrator.
+The Export-SPInfoPathAdministrationFiles cmdlet saves all InfoPath form templates (.xsn files) and universal data connections (.udcx files) that are located on the Central Administration page.
+The backup package includes all workflow forms in InfoPath that were deployed by an administrator and not included with SharePoint Server, and includes browser forms that were deployed by an administrator.
 The backup package is output to the specified .cab file.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>Export-SPInfoPathAdministrationFiles -path d:\file.cab
 ```
 
-This example saves all InfoPath 2013 form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
-```
-C:\PS>Export-SPInfoPathAdministrationFiles -path d:\file.cab
-```
-
-This example saves all InfoPath 2013 form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.
+This example saves all InfoPath form templates (.xsn files) and universal data connections (.udcx files) located on the SharePoint Central Administration Web site in a compressed cabinet file named file.cab.
 
 ## PARAMETERS
 
@@ -83,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-Specifies the site collection that contains the InfoPath 2013 form template and Central Administration .udcx files to export.
+Specifies the site collection that contains the InfoPath form template and Central Administration .udcx files to export.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
 
@@ -118,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

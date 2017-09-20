@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-```
-
-This example creates a new ContentEnrichmentConfiguration object.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 ```
@@ -71,8 +64,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/13f5da5a-2ae5-436d-a42c-a7e0628aa305(Office.15).aspx)
 
 [Get-SPEnterpriseSearchContentEnrichmentConfiguration]()
 

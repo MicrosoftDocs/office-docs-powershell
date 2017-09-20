@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-SPProjectQueueSettings
 
 ## SYNOPSIS
-Returns a list of all Project Server 2013 Queue settings and their current values for the specified Project Server Service Application.
+Returns a list of all Project Server Queue settings and their current values for the specified Project Server Service Application.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE--------------------- 
 ```
 C:\PS>Get-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```

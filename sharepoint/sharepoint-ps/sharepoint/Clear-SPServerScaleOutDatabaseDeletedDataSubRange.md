@@ -7,13 +7,9 @@ schema: 2.0.0
 # Clear-SPServerScaleOutDatabaseDeletedDataSubRange
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
 
 Applies to:
 
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Synopsis}}
 
 
 
@@ -26,19 +22,14 @@ Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database <SPDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
 
 Use the Clear-SPServerScaleOutDatabaseDeletedDataSubRange cmdlet to clear all partitions inside the specified deleted subrange that are contained within a specified scale-out database.
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Description}}
 
 
 
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
+### --------------EXAMPLE-------------- 
 ```
 C:\PS>$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -56,25 +47,12 @@ C:\PS>Clear-SPServerScaleOutDatabaseDeletedDataSubRange -Database $database -Ran
 This example creates a deleted subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
 The example then clears that subrange and all data in the partitions in the subrange.
 
-### Example 1 (SharePoint Server 2016)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -Database
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies the scale-out database to clear the deleted subrange from.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill Database Description}}
 
 
 
@@ -92,15 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsUpperSubRange
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies whether the subrange with deleted mode is on the upper or lower side of the data range.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill IsUpperSubRange Description}}
 
 
 
@@ -118,15 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -Range
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies the expected data range of the scale-out database.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill Range Description}}
 
 
 
@@ -144,7 +110,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -154,11 +119,6 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill AssignmentCollection Description}}
 
 
 
@@ -176,16 +136,10 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:**SharePoint Server 2013
 
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Prompts you for confirmation before running the cmdlet.
 
 
 
@@ -203,17 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:**SharePoint Server 2013
 
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+For more information, type the following command: `get-help about_commonparameters`
 
 
 

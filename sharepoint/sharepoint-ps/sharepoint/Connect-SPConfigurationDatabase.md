@@ -7,11 +7,6 @@ schema: 2.0.0
 # Connect-SPConfigurationDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Connects the local server computer to a farm.
 
@@ -39,16 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd") -AsPlainText -Force                      
-
-C:\PS>Start-Service SPTimerv4
-```
-
-This example joins the local server computer to a farm that is configured to use the database SharePointConfigurationDatabase on an instance of SQL Server by using the name ServerName\InstanceName with the passphrase MyP@ssw0rd.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Connect-SPConfigurationDatabase -DatabaseServer "ServerName\InstanceName" -DatabaseName "SharePointConfigurationDatabaseName" -Passphrase (ConvertTo-SecureString "MyP@ssw0rd" -AsPlainText -Force 
                      

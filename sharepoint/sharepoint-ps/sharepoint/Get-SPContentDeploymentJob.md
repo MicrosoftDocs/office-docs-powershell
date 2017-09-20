@@ -25,14 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPContentDeploymentJob "Job 1"
-```
-
-This example returns the content deployment job called Job 1.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>Get-SPContentDeploymentJob "Job 1"
 ```

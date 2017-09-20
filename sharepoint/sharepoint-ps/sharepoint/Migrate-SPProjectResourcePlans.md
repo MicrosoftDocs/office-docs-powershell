@@ -21,7 +21,7 @@ Migrate-SPProjectResourcePlans [-Url] <Uri> [-AssignmentCollection <SPAssignment
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

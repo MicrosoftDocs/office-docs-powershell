@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPShellAdmin
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a user to the SharePoint_Shell_Access role for the specified database.
 
@@ -38,7 +33,7 @@ Use the Add-SPShellAdmin cmdlet to add a user to the SharePoint_Shell_Access rol
 The user is added to the WSS_Admin_WPG group on all Web servers when the user is added to the SharePoint_Shell_Access role.
 If the target database does not have a SharePoint_Shell_Access role, the role is automatically created.
 
-In order to use Windows PowerShell for SharePoint 2010 Products, a user must be a member of the SharePoint_Shell_Access role on the configuration database and a member of the WSS_ADMIN_WPG local group on the computer where SharePoint 2010 Products is installed.
+In order to use Windows PowerShell for SharePoint Products, a user must be a member of the SharePoint_Shell_Access role on the configuration database and a member of the WSS_ADMIN_WPG local group on the computer where SharePoint Products is installed.
 However, the result of running this cmdlet is that the user specified with the UserName parameter will have the dbo_owner role access on the affected databases as described above.
 Therefore, you should carefully plan which users are given this access.
 
@@ -46,56 +41,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1------------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1------------------------- 
 ```
 C:\PS>Add-SPShellAdmin -UserName CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in the farm configuration database only, and also ensures the user is added to the WSS_Admin_WPG local group on each server in the farm.
 
-### -------------------EXAMPLE 1------------------------- (SharePoint Server 2016)
-```
-C:\PS>Add-SPShellAdmin -UserName CONTOSO\User1
-```
-
-This example adds a new user named User1 to the SharePoint_Shell_Access role in the farm configuration database only, and also ensures the user is added to the WSS_Admin_WPG local group on each server in the farm.
-
-### -------------------EXAMPLE 2------------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 2------------------------- 
 ```
 C:\PS>Add-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified content database and the configuration database by passing a database GUID to the cmdlet.
 
-### -------------------EXAMPLE 2------------------------- (SharePoint Server 2016)
-```
-C:\PS>Add-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
-```
-
-This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified content database and the configuration database by passing a database GUID to the cmdlet.
-
-### -------------------EXAMPLE 3------------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 3------------------------- 
 ```
 C:\PS>Get-SPDatabase | Where-Object {$_.WebApplication -like "SPAdministrationWebApplication"} | Add-SPShellAdmin CONTOSO\User1
 ```
 
 This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified Central Administration content database and the configuration database.
 
-### -------------------EXAMPLE 3------------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPDatabase | Where-Object {$_.WebApplication -like "SPAdministrationWebApplication"} | Add-SPShellAdmin CONTOSO\User1
-```
-
-This example adds a new user named User1 to the SharePoint_Shell_Access role in both the specified Central Administration content database and the configuration database.
-
-### -------------------EXAMPLE 4------------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPDatabase | ?{$_.Name -eq "WSS_Content"} | Add-SPShellAdmin -Username CONTOSO\User1
-```
-
-This example adds a new user named User1 to the SharePoint_Shell_Access role of both the specified content database and the configuration database by passing the name of the database to the cmdlet.
-
-### -------------------EXAMPLE 4------------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE 4------------------------- 
 ```
 C:\PS>Get-SPDatabase | ?{$_.Name -eq "WSS_Content"} | Add-SPShellAdmin -Username CONTOSO\User1
 ```
@@ -144,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -179,7 +146,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

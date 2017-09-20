@@ -7,11 +7,6 @@ schema: 2.0.0
 # Clear-SPScaleOutDatabaseLog
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Clears all scale-out logs.
 
@@ -31,18 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE------- (SharePoint Server 2013)
-```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
-C:\PS>Clear-SPScaleOutDatabaseLog -Database $database -LogEntryTimeout 30
-```
-
-This example removes all scale-out log entries in the first scale-out database of the specified service application unless there is a scale-out log entry which is more recent than 30 minutes.
-
-### -----------EXAMPLE------- (SharePoint Server 2016)
+### -----------EXAMPLE------- 
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -95,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +113,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

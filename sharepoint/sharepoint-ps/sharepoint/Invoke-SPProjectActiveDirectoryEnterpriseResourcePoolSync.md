@@ -17,10 +17,10 @@ Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync [-Url] <Uri>
 ```
 
 ## DESCRIPTION
-Active Directory Enterprise Resource Pool synchronization is used to create or update multiple Project Server 2013 enterprise resources at the same time.
-Project Server 2013 enterprise resources can also be automatically activated and deactivated based on group membership in the Active Directory directory service.
-For example, new employees in your department can automatically be added as Project Server 2013 enterprise resources as long as they are in the Active Directory group selected for synchronization.
-Conversely, employees who are removed from the Active Directory group have their Project Server 2013 accounts deactivated upon synchronization.
+Active Directory Enterprise Resource Pool synchronization is used to create or update multiple Project Server enterprise resources at the same time.
+Project Server enterprise resources can also be automatically activated and deactivated based on group membership in the Active Directory directory service.
+For example, new employees in your department can automatically be added as Project Server enterprise resources as long as they are in the Active Directory group selected for synchronization.
+Conversely, employees who are removed from the Active Directory group have their Project Server accounts deactivated upon synchronization.
 
 Enterprise Resource Pool synchronization also updates enterprise resource properties with the most current data from Active Directory.
 For example, an employee's name and e-mail address may change because of marriage.
@@ -31,16 +31,16 @@ However, this Active Directory group can contain nested groups whose members are
 
 The following actions can occur during the Enterprise Resource Pool synchronization process:
 
-- A new Project Server 2013 enterprise resource and corresponding user account can be created based on an Active Directory account.
-- An active Project Server 2013 resource/user account can be deactivated.
-- An existing Project Server 2013 user account's metadata (for example, name, e-mail address, and so on) can be updated if it has changed in Active Directory.
-- A previously inactive Project Server 2013 resource/user account can be reactivated.
+- A new Project Server enterprise resource and corresponding user account can be created based on an Active Directory account.
+- An active Project Server resource/user account can be deactivated.
+- An existing Project Server user account's metadata (for example, name, e-mail address, and so on) can be updated if it has changed in Active Directory.
+- A previously inactive Project Server resource/user account can be reactivated.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE--------------------- 
 ```
 C:\PS>Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync http://localhost/pwa
 ```

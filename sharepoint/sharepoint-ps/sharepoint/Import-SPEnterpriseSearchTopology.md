@@ -24,17 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-
-Import-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename .\topology.xml
-```
-
-This example imports a topology from a file named topology.xml to the default search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Import-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename .\topology.xml
@@ -104,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -121,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -146,8 +136,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ff9d8da2-60c8-4331-a1c9-222aa38b5565(Office.15).aspx)
 
 [New-SPEnterpriseSearchTopology]()
 

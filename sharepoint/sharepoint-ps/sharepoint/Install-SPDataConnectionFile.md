@@ -27,18 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Install-SPDataConnectionFile -Path .\folder\sample.udcx -Category "Install" -WebAccessible $true
-
-C:\PS>".\folder\sample.udcx" | Install-SPDataConnectionFile -Category "Install" -Category "Category1"  -Overwrite $true
-```
-
-This example uploads a data connection file to a specified category.
-
-This cmdlet is equivalent to the Upload Data Connection File user interface setting that is located on the Manage Data Connection Files page of the SharePoint Central Administration Web site.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>Install-SPDataConnectionFile -Path .\folder\sample.udcx -Category "Install" -WebAccessible $true
 
@@ -112,7 +101,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -146,7 +135,7 @@ Accept wildcard characters: False
 
 ### -WebAccessible
 Specifies that the universal data connection file can be accessed by using the Web service.
-If False, only the Forms Server 2013 can retrieve the universal data connection files internally.
+If False, only the Forms Server can retrieve the universal data connection files internally.
 The default value is False.
 
 ```yaml
@@ -164,7 +153,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

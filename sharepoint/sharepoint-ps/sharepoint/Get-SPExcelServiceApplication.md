@@ -24,21 +24,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication "MyExcelServices"
 ```
 
 This example displays the Excel Services Application Web service application named MyExcelServices.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication
 ```
 
 This example displays every Excel Services Application Web service application that runs in the farm.
 
-### --------------EXAMPLE 3-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3-------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | format-list *
 ```

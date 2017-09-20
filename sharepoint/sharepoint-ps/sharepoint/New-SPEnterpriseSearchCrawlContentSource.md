@@ -27,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"New-SPEnterpriseSearchCrawlContentSource -SearchApplication $searchapp -Type file -name somename -StartAddresses file://someserver/public
-```
-
-This example creates a new content source of type file to crawl a file system.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
 New-SPEnterpriseSearchCrawlContentSource -SearchApplication $searchapp -Type file -name somename -StartAddresses file://someserver/public
@@ -45,13 +38,6 @@ This example creates a new content source of type file to crawl a file system.
 ## PARAMETERS
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill AssignmentCollection Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -77,13 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -BDCApplicationProxyGroup
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill BDCApplicationProxyGroup Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the proxy to use for a business type content source.
 This proxy group must contain a default Business Data Connectivity Metadata Store proxy.
@@ -104,16 +83,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:**SharePoint Server 2013
-
-Prompts you for confirmation before running the cmdlet.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 
 
@@ -131,13 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -CrawlPriority
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill CrawlPriority Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the priority of this content source.
 
@@ -159,13 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -CustomProtocol
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill CustomProtocol Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the custom protocol, handled by the custom connector, to use for this content source.
 
@@ -185,13 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -LOBSystemSet
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill LOBSystemSet Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies a comma-separated list of Business Data Connectivity metadata store system names and system instance names for a business type content source.
 
@@ -211,13 +162,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPageEnumerationDepth
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill MaxPageEnumerationDepth Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies, for a web or custom type content source, the number of page hops that the crawler can make from the start address to a content item.
 
@@ -237,13 +181,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSiteEnumerationDepth
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill MaxSiteEnumerationDepth Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies, for a web or custom type content source, the number of site hops that the crawler can take from the start address to a content item.
 
@@ -263,13 +200,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Name Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the name of the content source to create.
 
@@ -291,13 +221,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SearchApplication Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search application that contains the content source.
 
@@ -319,13 +242,6 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointCrawlBehavior
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SharePointCrawlBehavior Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies crawl behavior for a sharepoint type content source.
 The behavior can be either:
@@ -350,13 +266,6 @@ Accept wildcard characters: False
 ```
 
 ### -StartAddresses
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill StartAddresses Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the comma-separated list of URLs at which to start a crawl for this content source.
 
@@ -378,13 +287,6 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Tag Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the URL for the page to modify the settings for a custom content source.
 The string that specifies the URL can contain a maximum of 1,024 characters.
@@ -407,13 +309,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Type Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the name of the content source type. 
 The value Business is for the Business Data Connectivity metadata store.
@@ -438,17 +333,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:**SharePoint Server 2013
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 
 
@@ -476,5 +363,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5eeb0b21-d8db-436a-b353-a6bf57b6f734(Office.15).aspx)
 

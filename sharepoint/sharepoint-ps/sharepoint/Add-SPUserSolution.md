@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPUserSolution
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Uploads a new sandboxed solution to the solution gallery.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE--------------------- (SharePoint Server 2013)
-```
-C:\PS>Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site http://sitename
-```
-
-This example adds the sandboxed solution c:\contoso_solution.wsp to the site http://sitename.
-
-### -------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE--------------------- 
 ```
 C:\PS>Add-SPUserSolution -LiteralPath c:\contoso_solution.wsp -Site http://sitename
 ```
@@ -111,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +116,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

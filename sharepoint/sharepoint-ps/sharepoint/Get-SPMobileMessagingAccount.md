@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPMobileMessagingAccount
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Retrieves mobile messaging accounts for the specified Web application.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPMobileMessagingAccount -WebApplication http://sitename
-```
-
-This example retrieves the current mobile account settings information of the Web application http://sitename.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPMobileMessagingAccount -WebApplication http://sitename
 ```

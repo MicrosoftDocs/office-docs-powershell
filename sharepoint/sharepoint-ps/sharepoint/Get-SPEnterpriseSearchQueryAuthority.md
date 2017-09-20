@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"$qAuth = $ssa | Get-SPEnterpriseSearchQueryAuthority -Identity "http://contoso.com"
-```
-
-This example obtains the authoritative page for the URL http://contoso.com from the search service application named MySSA.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity "MySSA"
 $qAuth = $ssa | Get-SPEnterpriseSearchQueryAuthority -Identity "http://contoso.com"
@@ -41,14 +34,7 @@ $qAuth = $ssa | Get-SPEnterpriseSearchQueryAuthority -Identity "http://contoso.c
 
 This example obtains the authoritative page for the URL http://contoso.com from the search service application named MySSA.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$qaCollection = Get-SPEnterpriseSearchQueryAuthority -SearchApplication "MySSA"
-```
-
-This example obtains the collection of query authority pages from a search service application named MySSA.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$qaCollection = Get-SPEnterpriseSearchQueryAuthority -SearchApplication "MySSA"
 ```
@@ -141,6 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2ba641eb-34f9-4026-a350-543fd7787aa5(Office.15).aspx)
 

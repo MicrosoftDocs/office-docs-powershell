@@ -7,7 +7,7 @@ schema: 2.0.0
 # Invoke-SPProjectActiveDirectoryGroupSync
 
 ## SYNOPSIS
-Manually starts the synchronization job to synchronize Project Server 2013 group membership with the specified Active Directory groups.
+Manually starts the synchronization job to synchronize Project Server group membership with the specified Active Directory groups.
 
 ## SYNTAX
 
@@ -24,7 +24,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------------- (SharePoint Server 2016)
+### --------------EXAMPLE 1------------------- 
 ```
 C:\PS>Invoke-SPProjectActiveDirectoryGroupSync -Url http://AppServer/pwa
 ```

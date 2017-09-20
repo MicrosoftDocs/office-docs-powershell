@@ -24,20 +24,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ------------ Example 1 --------------------
 ```
-
+{example code}
 ```
-
-###   (SharePoint Online)
-```
-
-```
-
-###   (SharePoint Online)
-```
-
-```
+{example description}
 
 ## PARAMETERS
 
@@ -157,5 +148,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-SPOExternalUser]()
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5bed4da8-25c1-4c16-9d12-64b9e8f319a4(Office.15).aspx)
 

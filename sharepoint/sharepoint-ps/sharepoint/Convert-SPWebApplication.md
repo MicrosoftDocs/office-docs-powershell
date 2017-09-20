@@ -7,11 +7,6 @@ schema: 2.0.0
 # Convert-SPWebApplication
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Converts the authentication mode of a web application.
 
@@ -34,14 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE------- (SharePoint Server 2013)
-```
-C:\PS>Convert-SPWebApplication -Identity "https://<webappurl>" -To Claims -RetainPermissions [-Force]
-```
-
-This example converts a web application specified by the Identity parameter to use the claim authentication mode.
-
-### ------------EXAMPLE------- (SharePoint Server 2016)
+### ------------EXAMPLE------- 
 ```
 C:\PS>Convert-SPWebApplication -Identity "https://<webappurl>" -To Claims -RetainPermissions [-Force]
 ```

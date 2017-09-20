@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-SPProjectPCSSettings
 
 ## SYNOPSIS
-Gets the settings for the Project Calculation Engine on the Project Server 2013.
+Gets the settings for the Project Calculation Engine on the Project Server.
 
 ## SYNTAX
 
@@ -17,14 +17,14 @@ Get-SPProjectPCSSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-The Get-SPProjectPCSSettings cmdlet lets users read the settings that control the operations of the Project Calculation Engine on Project Server 2013.
-The cmdlet requires you to identify the Project Server 2013 Service Application.
+The Get-SPProjectPCSSettings cmdlet lets users read the settings that control the operations of the Project Calculation Engine on Project Server.
+The cmdlet requires you to identify the Project Server Service Application.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE----------------------- 
 ```
 C:\PS>Get-SPProjectPCSSettings -sa "Project Service Application"
 ```
@@ -34,7 +34,7 @@ This example reads the settings for the Project Calculation Engine running on th
 ## PARAMETERS
 
 ### -ServiceApplication
-The Project Server 2013 Service Application for which the settings are to be read.
+The Project Server Service Application for which the settings are to be read.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind

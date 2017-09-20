@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------EXAMPLE--------- (SharePoint Server 2013)
-```
-$linksDatabase = Get-SPEnterpriseSearchLinksDatabase  -Identity LinksDB_1 -SearchApplication MySearchServiceApp
-```
-
-This example gets a reference to the links database LinksDB_1 from the search service application MySearchServiceApp.
-
-### ---------EXAMPLE--------- (SharePoint Server 2016)
+### ---------EXAMPLE--------- 
 ```
 C:\PS>$linksDatabase = Get-SPEnterpriseSearchLinksDatabase  -Identity LinksDB_1 -SearchApplication MySearchServiceApp
 ```
@@ -108,8 +101,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/67cf6817-d2d7-4657-b532-fd123ca0da61(Office.15).aspx)
 
 [New-SPEnterpriseSearchLinksDatabase]()
 

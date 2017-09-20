@@ -21,21 +21,14 @@ The Get-SPEnterpriseSearchQueryKeyword cmdlet reads a QueryKeyword object when t
 
 If the Identity parameter is not specified, this cmdlet returns the query keyword collection from the specified search application.
 
-You can use this cmdlet for keywords in site collections that are in SharePoint Server 2010 mode.
-You cannot use this cmdlet after a site collection is upgraded to SharePoint Server 2013 mode because keywords and Best Bets are automatically migrated to query rules.
+You can use this cmdlet for keywords in site collections that are in SharePoint Server mode.
+You cannot use this cmdlet after a site collection is upgraded to SharePoint Server mode because keywords and Best Bets are automatically migrated to query rules.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site http://myserver/sites/engineering | Set-SPEnterpriseSearchQueryKeyword -StartDate "12/25/2009" -EndDate "12/24/2010" -Site http://myserver/sites/engineering
-```
-
-This example gets a reference to the keyword with the term Engineering from the site http://myserver/sites/engineering and sets the start dates and end dates for the keyword.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site http://myserver/sites/engineering | Set-SPEnterpriseSearchQueryKeyword -StartDate "12/25/2009" -EndDate "12/24/2010" -Site http://myserver/sites/engineering
 ```
@@ -113,5 +106,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/0dcc571f-cc53-4838-9f32-cf0baab4306f(Office.15).aspx)
 

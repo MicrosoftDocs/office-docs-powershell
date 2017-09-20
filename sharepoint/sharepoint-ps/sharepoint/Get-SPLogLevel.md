@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPLogLevel
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a list of objects or diagnostic levels.
 
@@ -31,56 +26,28 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPLogLevel
 ```
 
 This example displays throttle levels for all categories.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogLevel
-```
-
-This example displays throttle levels for all categories.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPLogLevel -Identity "Category1"
 ```
 
 This example displays the throttle level for the Category1 category.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPLogLevel -Identity "Category1"
-```
-
-This example displays the throttle level for the Category1 category.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3----------------- 
 ```
 C:\PS>"Cat1", "Cat2", "Cat3" | Get-SpLogLevel
 ```
 
 This example displays the throttle level for multiple categories.
 
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>"Cat1", "Cat2", "Cat3" | Get-SpLogLevel
-```
-
-This example displays the throttle level for multiple categories.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPLogLevel -Identity "Area:*"
-```
-
-This example displays the throttle level for all categories in one area.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 4----------------- 
 ```
 C:\PS>Get-SPLogLevel -Identity "Area:*"
 ```

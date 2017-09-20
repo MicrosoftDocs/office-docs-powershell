@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPBingMapsBlock
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns Bing Maps blocked status.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE----------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPBingMapsBlock
-```
-
-This example returns an object, and BlockBingMapsInAllLocales property will return True or False on whether Bing Maps are blocked in all locales.
-
-### -----------EXAMPLE----------- (SharePoint Server 2016)
+### -----------EXAMPLE----------- 
 ```
 C:\PS>Get-SPBingMapsBlock
 ```

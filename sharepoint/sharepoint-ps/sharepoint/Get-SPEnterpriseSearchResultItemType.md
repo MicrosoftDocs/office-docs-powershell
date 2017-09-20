@@ -18,25 +18,6 @@ Get-SPEnterpriseSearchResultItemType [[-Identity] <ResultItemTypePipeBind>] -Own
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The Get-SPEnterpriseSearchResultItemType cmdlet retrieves the result item types that exist for the specified owner.
-
-Result item types enable you to change the look of search results based on the type of result.
-You start by defining a collection of rules, which will be evaluated against the properties of results.
-Then you define the display template to use for rendering that type of result.
-Once you have created the result item type, results matching the rules of the result item type will render using the specified display template.
-
-Example use cases:
-
-- Change the look of results for a particular file name extension, for example Word documents.
-- Change the look of a particular content type in search results.
-- Change the look of results from a particular author.
-- Add a result action to results from a particular result source as part of a custom search application.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 The Get-SPEnterpriseSearchResultItemType cmdlet retrieves the result item types that exist for the specified owner.
 
@@ -58,15 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSiteGet-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $ssa
-```
-
-This example retrieves the result item types that are defined for the owner referenced by $tenantowner for the search application referenced by $ssa.
-Although SearchApplication and SearchApplicationProxy are optional parameters, this cmdlet requires use of one of them.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite
@@ -177,8 +150,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f2322217-12e2-400c-8b6d-592dd6c9c67c(Office.15).aspx)
 
 [New-SPEnterpriseSearchResultItemType]()
 

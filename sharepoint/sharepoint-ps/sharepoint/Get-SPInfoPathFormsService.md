@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-SPInfoPathFormsService
 
 ## SYNOPSIS
-Returns the InfoPath Forms Services in SharePoint Server 2013 settings that are in the farm.
+Returns the InfoPath Forms Services in SharePoint Server settings that are in the farm.
 
 ## SYNTAX
 
@@ -17,20 +17,13 @@ Get-SPInfoPathFormsService [-AssignmentCollection <SPAssignmentCollection>]
 ```
 
 ## DESCRIPTION
-The Get-SPInfoPathFormsService cmdlet reads the settings for the InfoPath Forms Services in SharePoint Server 2013.
+The Get-SPInfoPathFormsService cmdlet reads the settings for the InfoPath Forms Services in SharePoint Server.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### -----------EXAMPLE---------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPInfoPathFormsService
-```
-
-This example displays the InfoPath Forms Services settings for the entire farm.
-
-### -----------EXAMPLE---------------- (SharePoint Server 2016)
+### -----------EXAMPLE---------------- 
 ```
 C:\PS>Get-SPInfoPathFormsService
 ```

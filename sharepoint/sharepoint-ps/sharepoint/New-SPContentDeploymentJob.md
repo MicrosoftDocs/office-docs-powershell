@@ -27,15 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Deployment Job" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false
-```
-
-This example creates a new content deployment job called Deployment Job by using the deployment path Path 1.
-The job is configured to be an incremental job with no schedule.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPContentDeploymentPath "Path 1" | New-SPContentDeploymentJob -Name "Deployment Job" -SPContentDeploymentPath $_ -IncrementalEnabled:$true -ScheduleEnabled:$false
 ```
@@ -105,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -259,7 +251,7 @@ SPSites passed in must exist in the current path of the source site collection.
 The default scope is the entire site collection.
 Valid values include an SPWeb object or an array of SPWeb objects.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation 2013 Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind[]
@@ -275,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlSnapshotSetting
-Creates a database snapshot of the source SharePoint Foundation 2013 content database to use for the export process.
+Creates a database snapshot of the source SharePoint Foundation content database to use for the export process.
 
 The type must be one of the following values:
 
@@ -299,7 +291,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

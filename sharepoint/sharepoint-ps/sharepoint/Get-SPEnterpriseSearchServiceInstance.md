@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssInstance = Get-SPEnterpriseSearchServiceInstance -Local
-```
-
-This example obtains a reference to the local search service instance.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssInstance = Get-SPEnterpriseSearchServiceInstance -Local
 ```
@@ -106,5 +99,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/309d98e8-a5fa-4cb5-b6e1-bf94380a8212(Office.15).aspx)
 

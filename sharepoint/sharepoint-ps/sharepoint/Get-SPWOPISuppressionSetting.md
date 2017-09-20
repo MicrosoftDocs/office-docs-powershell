@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWOPISuppressionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the suppression settings on the current SharePoint farm where this cmdlet is run.
 
@@ -30,15 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPWOPISuppressionSetting
-```
-
-This example returns all the suppression settings on the current SharePoint farm where this cmdlet is run.
-The suppression settings returned include the DocType and WOPIAction.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPWOPISuppressionSetting
 ```

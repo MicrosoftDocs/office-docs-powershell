@@ -25,28 +25,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1---------------------- 
 ```
 C:\PS>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
 ```
 
 This example returns a list of safe data providers for a specific Visio Services application.
 
-### -------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1"
-```
-
-This example returns a list of safe data providers for a specific Visio Services application.
-
-### -------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
-```
-
-This example returns information about a specified safe data provider for a specific Visio Services application.
-
-### -------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE 2---------------------- 
 ```
 C:\PS>Get-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1
 ```

@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-SPAuthenticationProvider
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Creates a new authentication provider in the farm.
 
@@ -54,7 +49,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------------EXAMPLE1------------------ (SharePoint Server 2013)
+### ---------------------------EXAMPLE1------------------ 
 ```
 C:\PS>$ap = New - SPAuthenticationProvider -UseWindowsIntegratedAuthentication
 
@@ -63,16 +58,7 @@ C:\PS>Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Clai
 
 This example creates a Windows claims authentication provider.
 
-### ---------------------------EXAMPLE1------------------ (SharePoint Server 2016)
-```
-C:\PS>$ap = New - SPAuthenticationProvider -UseWindowsIntegratedAuthentication
-
-C:\PS>Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
-```
-
-This example creates a Windows claims authentication provider.
-
-### ---------------------------EXAMPLE2------------------ (SharePoint Server 2013)
+### ---------------------------EXAMPLE2------------------ 
 ```
 C:\PS>$ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
 
@@ -81,25 +67,7 @@ C:\PS>Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Clai
 
 This example creates an authentication provider that is based on the ASP.NET membership role provider.
 
-### ---------------------------EXAMPLE2------------------ (SharePoint Server 2016)
-```
-C:\PS>$ap = New-SPAuthenticationProvider -ASPNETMembershipProvider "membership" -ASPNETRoleProviderName "rolemanager"
-
-C:\PS>Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
-```
-
-This example creates an authentication provider that is based on the ASP.NET membership role provider.
-
-### ---------------------------EXAMPLE3------------------ (SharePoint Server 2013)
-```
-C:\PS>$ap = New - SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
-
-C:\PS>Set-SPWebApplication -Name "Claims Windows Web App" -ApplicationPool "Claims App Pool" -ApplicationPoolAccount "redmond\appool" -Url http://<servername> -Port 80 -AuthenticationProvider $ap
-```
-
-This example creates a trusted token issuer authentication provider.
-
-### ---------------------------EXAMPLE3------------------ (SharePoint Server 2016)
+### ---------------------------EXAMPLE3------------------ 
 ```
 C:\PS>$ap = New - SPAuthenticationProvider -TrustedIdentityTokenIssuer | Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 

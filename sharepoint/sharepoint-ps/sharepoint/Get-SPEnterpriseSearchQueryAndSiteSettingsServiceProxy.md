@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$qssSvcProxy = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
-```
-
-This example obtains a reference to the query and site settings service proxy.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$qssSvcProxy = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceProxy
 ```
@@ -72,5 +65,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/08f5f0f9-4319-4faf-9468-7e0cd7aef9a4(Office.15).aspx)
 

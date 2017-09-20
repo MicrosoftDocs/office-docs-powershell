@@ -16,15 +16,6 @@ Get-SPEnterpriseSearchVssDataPath [-AssignmentCollection <SPAssignmentCollection
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet retrieves the index paths for all active index components on the current server.
-This list is required as input by the Search VSS Writer in order to perform VSS backup of the current server.
-This cmdlet will typically be called from a VSS script, and rarely used directly.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet retrieves the index paths for all active index components on the current server. 
 This list is required as input by the Search VSS Writer in order to perform VSS backup of the current server. 
@@ -36,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchVssDataPath
-```
-
-This example gets the index paths for all active index components on the current server.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPEnterpriseSearchVssDataPath
 ```
@@ -85,5 +69,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/26d6e44c-a606-47a1-a3e0-c4919670f684(Office.15).aspx)
 

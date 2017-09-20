@@ -26,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE--------------------- (SharePoint Server 2013)
+### ---------------------EXAMPLE--------------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataProvider | where {$_.ProviderID -eq "SQLOLEDB"}
 ```
@@ -34,7 +34,7 @@ C:\PS>Get-SPExcelServiceApplication -Identity "ExcelServices" | Get-SPExcelDataP
 This example displays the data provider with the provider identifier (ID) SQLOLEDB from the list of data providers that is on the MyExcelService application.
 To select a specific provider from the list of safe providers, you must pipe a where clause that can filter the list of providers.
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
+### --------------EXAMPLE-------------- 
 ```
 C:\PS>Get-SPExcelDataProvider -ExcelServiceApplication "Excel Services" | format-table
 ```

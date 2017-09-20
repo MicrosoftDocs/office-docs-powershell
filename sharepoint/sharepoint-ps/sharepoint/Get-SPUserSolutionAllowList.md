@@ -21,14 +21,7 @@ Get-SPUserSolutionAllowList [-AssignmentCollection <SPAssignmentCollection>] [-C
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2013)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### Example 1 (SharePoint Server 2016)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

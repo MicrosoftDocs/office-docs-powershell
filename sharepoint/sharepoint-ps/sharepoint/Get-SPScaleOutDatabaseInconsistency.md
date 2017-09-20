@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPScaleOutDatabaseInconsistency
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Displays all inconsistencies related to scale-out databases' ranges.
 
@@ -31,16 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
-
-C:\PS>Get-SPScaleOutDatabaseInconsistency -ServiceApplication $serviceApplication
-```
-
-This example gets all the scale-out inconsistencies for the given service application.
-
-### -------------EXAMPLE-------------- (SharePoint Server 2016)
+### -------------EXAMPLE-------------- 
 ```
 C:\PS>$serviceApplication = Get-SPServiceApplication -Name "AppManagement"
 
@@ -91,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -108,7 +94,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

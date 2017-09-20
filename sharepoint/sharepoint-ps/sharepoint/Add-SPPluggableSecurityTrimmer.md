@@ -24,16 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1-------------------- (SharePoint Server 2013)
-```
-C:\PS>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")}
-
-C:\PS>Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $pr.Id -PlugInId 0
-```
-
-This example adds a pluggable security trimmer that is related to the User Profile service application proxy.
-
-### ----------------EXAMPLE 1-------------------- (SharePoint Server 2016)
+### ----------------EXAMPLE 1-------------------- 
 ```
 C:\PS>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")}
 
@@ -42,16 +33,8 @@ C:\PS>$pr = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")}
 
 This example adds a pluggable security trimmer that is related to the User Profile service application proxy.
 
-### -----------------EXAMPLE 2---------------------- (SharePoint Server 2013)
-```
-C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")} $proxy.Id
 
-C:\PS>Add-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
-```
-
-This example turns on security trimming in a User Profile Service Application.
-
-### -----------------EXAMPLE 2---------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 2---------------------- 
 ```
 C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")} $proxy.Id
 
@@ -120,7 +103,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +138,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

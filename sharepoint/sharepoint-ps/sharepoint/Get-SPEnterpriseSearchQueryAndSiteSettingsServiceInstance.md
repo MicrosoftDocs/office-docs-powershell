@@ -24,28 +24,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-$qqssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
-```
-
-This example obtain a reference to the query and site setting service instance on the local farm.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>$qqssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Local
 ```
 
 This example obtain a reference to the query and site setting service instance on the local farm.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$qssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity myServer
-```
-
-This example obtain a reference to the query and site setting service instance from a specific server name.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$qssSvcInstance = Get-SPEnterpriseSearchQueryAndSiteSettingsServiceInstance -Identity myServer
 ```
@@ -121,5 +107,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f1438a74-92fb-498d-aac1-66743403f3bc(Office.15).aspx)
 

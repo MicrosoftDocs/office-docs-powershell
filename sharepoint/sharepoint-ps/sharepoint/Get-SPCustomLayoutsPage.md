@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPCustomLayoutsPage
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a mapping to a custom layout page.
 
@@ -33,14 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPCustomLayoutsPage -Identity "_layouts/accessdenied.aspx" -WebApplication "http://server_name/mywebapp"
-```
-
-This example returns the mapping of the AccessDenied layout page in the Web application.
-
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------------- 
 ```
 C:\PS>Get-SPCustomLayoutsPage -Identity "_layouts/accessdenied.aspx" -WebApplication "http://server_name/mywebapp"
 ```

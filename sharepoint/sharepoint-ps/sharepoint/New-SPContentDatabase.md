@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-SPContentDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Creates a new content database and attaches it to the specified Web application.
 
@@ -34,14 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE-------------------- (SharePoint Server 2013)
-```
-C:\PS>New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
-```
-
-This example creates a new content database for the sitename Web application.
-
-### --------------EXAMPLE-------------------- (SharePoint Server 2016)
+### --------------EXAMPLE-------------------- 
 ```
 C:\PS>New-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
 ```
@@ -126,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -231,7 +219,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

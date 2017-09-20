@@ -25,17 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-
-New-SPEnterpriseSearchContentProcessingComponent -SearchTopology 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchServiceInstance 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
-```
-
-This example adds a new content processing component to the search topology with identity 06e6651d-ecdd-4105-bb65-6a83b6155525 in the search service instance with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the default search service application referenced by $ssa.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 New-SPEnterpriseSearchContentProcessingComponent -SearchTopology 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchServiceInstance 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
@@ -46,14 +36,6 @@ This example adds a new content processing component to the search topology with
 ## PARAMETERS
 
 ### -SearchServiceInstance
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the search service instance that will host the new content processing component.
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh, a valid name of a search topology server, or an instance of a valid SearchServiceInstance object.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search service instance that will host the new content processing component.
 
@@ -112,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -145,7 +127,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -171,5 +153,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/918df489-28ba-4b24-bb73-6a3b167f85ef(Office.15).aspx)
 

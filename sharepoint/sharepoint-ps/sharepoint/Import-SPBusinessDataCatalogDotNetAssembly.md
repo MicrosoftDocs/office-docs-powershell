@@ -7,11 +7,6 @@ schema: 2.0.0
 # Import-SPBusinessDataCatalogDotNetAssembly
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Imports a .NET Connectivity assembly.
 
@@ -32,28 +27,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE 1---------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 1---------------- 
 ```
 C:\PS>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll"
 ```
 
 This example imports the assembly Assembly.
 
-### -----------------EXAMPLE 1---------------- (SharePoint Server 2016)
-```
-C:\PS>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll"
-```
-
-This example imports the assembly Assembly.
-
-### -----------------EXAMPLE 2---------------- (SharePoint Server 2013)
-```
-C:\PS>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll" -DependentAssemblyPaths "c:\Folder\Assembly2.dll","c:\Folder\Assembly3.dll"
-```
-
-This example imports the assembly Assembly, and also imports the dependent assemblies Assembly2 and Assembly3.
-
-### -----------------EXAMPLE 2---------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 2---------------- 
 ```
 C:\PS>Import-SPBusinessDataCatalogDotNetAssembly -LobSystem $ContosoDB -Path "c:\Folder\Assembly.dll" -DependentAssemblyPaths "c:\Folder\Assembly2.dll","c:\Folder\Assembly3.dll"
 ```
@@ -118,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +132,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

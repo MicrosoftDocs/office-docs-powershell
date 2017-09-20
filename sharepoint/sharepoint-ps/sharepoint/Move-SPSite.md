@@ -7,11 +7,6 @@ schema: 2.0.0
 # Move-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Moves site collections from one content database to another.
 
@@ -26,18 +21,6 @@ Move-SPSite [-Identity] <SPSitePipeBind> -DestinationDatabase <SPContentDatabase
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The Move-SPSite cmdlet moves the data in the specified site collection from its current content database to the content database specified by the DestinationDatabase parameter.
-A no-access lock is applied to the site collection to prevent users from altering data within the site collection while the move is taking place.
-Once the move is complete, the site collection is returned to its original lock state. 
-The destination content database specified must already exist, must be attached to the same SQL Server as the site collection's current content database, and must be attached to the site collection's current Web application.
-
-After you run the Move-SPSite cmdlet, run the IISReset command to update changes to IIS.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 The Move-SPSite cmdlet moves the data in the specified site collection from its current content database to the content database specified by the DestinationDatabase parameter.
 A no-access lock is applied to the site collection to prevent users from altering data within the site collection while the move is taking place.
@@ -50,35 +33,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ---------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
 ```
 
 This example moves the site collection http://servername/sites/sitename to the content database ContentDb2.
 
-### ---------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Move-SPSite http://servername/sites/sitename -DestinationDatabase ContentDb2
-```
-
-This example moves the site collection http://servername/sites/sitename to the content database ContentDb2.
-
-### ---------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ---------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
 ```
 
 This example moves all site collections in ContentDb1 to ContentDb2.
 
-### ---------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite -ContentDatabase ContentDb1 | Move-SPSite -DestinationDatabase ContentDb2
-```
-
-This example moves all site collections in ContentDb1 to ContentDb2.
-
-### ---------------------EXAMPLE 3----------------------- (SharePoint Server 2013)
+### ---------------------EXAMPLE 3----------------------- 
 ```
 C:\PS>Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
 ```
@@ -87,23 +56,7 @@ This example moves all site collections where DOMAIN\username is the site collec
 The Get-SPSiteAdministration cmdlet is used instead of the Get-SPSite cmdlet because you must have permission within the site collection to access the properties of the SPSite object.
 You can access the properties of the SPSiteAdministration object as a SharePoint farm administrator.
 
-### ---------------------EXAMPLE 3----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSiteAdministration | where { $_.OwnerLoginName -eq "DOMAIN\username" } | Move-SPSite -DestinationDatabase ContentDb2
-```
-
-This example moves all site collections where DOMAIN\username is the site collection owner to ContentDb2.
-The Get-SPSiteAdministration cmdlet is used instead of the Get-SPSite cmdlet because you must have permission within the site collection to access the properties of the SPSite object.
-You can access the properties of the SPSiteAdministration object as a SharePoint farm administrator.
-
-### ---------------------EXAMPLE 4----------------------- (SharePoint Server 2013)
-```
-C:\PS>Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping       @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
-```
-
-This example moves an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database, sourceProvider1 is the source RBS provider and targetProvider1 is the target RBS provider.
-
-### ---------------------EXAMPLE 4----------------------- (SharePoint Server 2016)
+### ---------------------EXAMPLE 4----------------------- 
 ```
 C:\PS>Move-SPSite -Identity siteUrl -DestinationDatabase databaseName -RbsProviderMapping
        @{"sourceProvider1"="targetProvider1", "sourceProvider2"="targetProvider2"}
@@ -171,7 +124,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -RbsProviderMapping
-This parameter was added in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This parameter was added in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Used to move an RBS-enabled site collection from one RBS-enabled content database to another RBS-enabled content database without moving the underlying BLOB content.
 If the content database has more than one RBS provider associated with it, you must specify all providers.
@@ -208,7 +161,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

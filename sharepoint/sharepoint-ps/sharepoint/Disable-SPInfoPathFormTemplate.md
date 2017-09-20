@@ -7,7 +7,7 @@ schema: 2.0.0
 # Disable-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Deactivates a InfoPath 2013 form template from the specified site collection.
+Deactivates a InfoPath form template from the specified site collection.
 
 ## SYNTAX
 
@@ -17,34 +17,25 @@ Disable-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind> -Site <SPSit
 ```
 
 ## DESCRIPTION
-The Disable-SPInfoPathFormTemplate cmdlet deactivates the InfoPath 2013 form template that is specified in the Identity parameter.
+The Disable-SPInfoPathFormTemplate cmdlet deactivates the InfoPath form template that is specified in the Identity parameter.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>Disable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site http://testSite
 
 C:\PS>"FormTemplatexsn" | Disable-SPInfoPathFormTemplate -Site "http://testSite"
 ```
 
-This example deactivates an InfoPath 2013 form  template from a site collection named TestSite.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
-```
-C:\PS>Disable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site http://testSite
-
-C:\PS>"FormTemplatexsn" | Disable-SPInfoPathFormTemplate -Site "http://testSite"
-```
-
-This example deactivates an InfoPath 2013 form  template from a site collection named TestSite.
+This example deactivates an InfoPath form  template from a site collection named TestSite.
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the InfoPath 2013 form template to disable.
+Specifies the InfoPath form template to disable.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a form template (for example, InfoPathFormTemplate1); a valid name of a form template files (for example, FormTemplateFile1.xsn); or an instance of a valid SPFormTemplate object.
 
@@ -62,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the site collection that contains the InfoPath 2013 form template to deactivate.
+Specifies the site collection that contains the InfoPath form template to deactivate.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
 
@@ -103,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -120,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

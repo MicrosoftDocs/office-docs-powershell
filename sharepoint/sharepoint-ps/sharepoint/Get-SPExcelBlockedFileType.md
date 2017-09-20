@@ -22,7 +22,7 @@ Get-SPExcelBlockedFileType [[-Identity] <SPExcelBlockedFileTypePipeBind>]
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2013)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

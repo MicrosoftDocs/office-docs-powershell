@@ -25,15 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"$rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )
-```
-
-This example returns a rule for the property "ContentTypeId", where the condition is that the property shall start with a specific value.
-The second step specifies the value that the property shall start with.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
 $rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )
@@ -108,8 +100,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/019159bd-d7cd-4321-94bb-285f51ab7bc5(Office.15).aspx)
 
 [Get-SPEnterpriseSearchPropertyRuleCollection]()
 

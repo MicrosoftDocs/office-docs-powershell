@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPEnterpriseSearchContentEnrichmentConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Returns the content enrichment configuration for the specified Search service application.
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the content enrichment configuration for the specified search service application.
 
@@ -31,17 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-
-Get-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
-```
-
-This example retrieves the ContentEnrichmentConfiguration object from the default SearchServiecApplication.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
@@ -99,8 +84,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e34c7111-0b06-47f1-a37e-b6cb36088b6b(Office.15).aspx)
 
 [Set-SPEnterpriseSearchContentEnrichmentConfiguration]()
 

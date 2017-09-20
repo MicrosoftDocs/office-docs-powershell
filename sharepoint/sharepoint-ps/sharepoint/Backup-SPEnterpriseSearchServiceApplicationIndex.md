@@ -27,16 +27,6 @@ Backup-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchSer
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet will take a backup of the search index to a specified backup location.
-The cmdlet has to be run in two phases.
-Phase one will take a backup of what is present in the index at the time that the backup cmdlet is run.
-Phase two will take a differential backup of what was added to the index after you started the first phase index backup.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet will take a backup of the search index to a specified backup location. 
 The cmdlet has to be run in two phases. 
@@ -49,15 +39,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationBackup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
-```
-
-This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder.
-The cmdlet stores a handle file backuphandle.txt that is used by the second phase cmdlet.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
@@ -66,14 +48,7 @@ Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 -SearchApplication $ss
 This example starts a Phase 1 backup of the search index for the default search application, and stores the backup at the location \\\\backuphost\backupfolder. 
 The cmdlet stores a handle file backuphandle.txt that is used by the second phase cmdlet.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationBackup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
-```
-
-This example checks the backup status and progress by re-running the cmdlet for Phase 1.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
@@ -81,15 +56,7 @@ Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 1 $ssa -BackupFolder "\\
 
 This example checks the backup status and progress by re-running the cmdlet for Phase 1.
 
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationBackup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
-```
-
-This example starts the Phase 2 of the search index backup by using the same backup location and backup handle file as used for Phase 1.
-The Search Service Application must be paused before the second phase can be started.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Backup-SPEnterpriseSearchServiceApplicationIndex -Phase 2 -SearchApplication $ssa -BackupFolder "\\backuphost\backupfolder" -BackupHandleFile "\\backuphost\backupfolder\backuphandle.txt" -Retries 3
@@ -204,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -221,7 +188,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -295,5 +262,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/625bd9f3-d7f5-4d8a-9edf-6cb270ce27b3(Office.15).aspx)
 

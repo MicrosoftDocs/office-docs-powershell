@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPProcessAccount
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a system account or a managed account.
 
@@ -46,28 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>Get-SPProcessAccount -NetworkService
 ```
 
 This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPProcessAccount -NetworkService
-```
-
-This example creates the SPProcessAccountPipeBind type by using the NetworkService account.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
-```
-
-This example creates an SPServiceApplicationPool account by using the NetworkService account returned by the Get-SPProcessAccount cmdlet.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>Get-SPProcessAccount -NetworkService | New-SPServiceApplicationPool -Account $_
 ```

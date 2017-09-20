@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication MySearchServiceApp$crawlConn = Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication$searchApp -Protocol "http://"
-```
-
-This example obtains a reference to all custom crawl connectors for the http:// protocol for a search service application named MySearchServiceApp.
-
-### --------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------- 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication MySearchServiceApp
 $crawlConn = Get-SPEnterpriseSearchCrawlCustomConnector -SearchApplication
@@ -108,5 +101,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/bd3948e9-e1b5-453e-bd2d-85be7c859339(Office.15).aspx)
 

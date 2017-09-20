@@ -31,7 +31,7 @@ Get-SPOMigrationJobProgress -Credentials <CredentialCmdletPipeBind> [-DontWaitFo
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

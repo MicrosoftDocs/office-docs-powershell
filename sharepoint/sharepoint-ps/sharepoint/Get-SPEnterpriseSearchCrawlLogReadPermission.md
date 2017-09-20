@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationGet-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
-```
-
-This example retrieves a list of users who have permission to view the crawl log information for a tenant with id "00000000-0000-0000-0000-000000000001" on the search application referenced by $ssa.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
@@ -109,8 +102,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6a9f8f69-8d56-43b2-80b1-fcd6999acc27(Office.15).aspx)
 
 [Set-SPEnterpriseSearchCrawlLogReadPermission]()
 

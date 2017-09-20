@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPSiteSubscriptionFeaturePackMember
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a feature to a SharePoint Feature set.
 
@@ -35,20 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE---------------- (SharePoint Server 2013)
-```
-C:\PS>$fs = New-SPFeatureSet
-
-C:\PS>Get-SPFeature -limit all | Where{ $_.Scope -eq "WEB" } | Add-SPSiteSubscriptionFeaturePackMember -id $fs
-
-C:\PS>$fs = Get-SPFeatureSet $fs
-```
-
-This example creates a Feature set and adds all Web site scoped Features to the set.
-
-The Feature set is refreshed in the last line so that the local object has the correct values.
-
-### -------------EXAMPLE---------------- (SharePoint Server 2016)
+### -------------EXAMPLE---------------- 
 ```
 C:\PS>$fs = New-SPFeatureSet
 
@@ -138,7 +120,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

@@ -21,7 +21,7 @@ Get-SPOWebTemplate [[-LocaleId] <UInt32>] [-CompatibilityLevel <Int32>] [-Name <
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

@@ -22,14 +22,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE---------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPSecureStoreSystemAccount
-```
-
-This example returns a list of user accounts for the secure store system.
-
-### -------------EXAMPLE---------- (SharePoint Server 2016)
+### -------------EXAMPLE---------- 
 ```
 C:\PS>Get-SPSecureStoreSystemAccount
 ```

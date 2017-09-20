@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAuthenticationProvider
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns an authentication provider.
 
@@ -27,27 +22,20 @@ Get-SPAuthenticationProvider [[-Identity] <SPAuthenticationProviderPipeBind>]
 
 ## DESCRIPTION
 The Get-SPAuthenticationProvider cmdlet returns an authentication provider on a specified Web application zone.
-The following are the standard authentication providers available for SharePoint 2010 Products: NTLM, Classic NTLM, Negotiate, and Classic Negotiate.
+The following are the standard authentication providers available for SharePoint Products: NTLM, Classic NTLM, Negotiate, and Classic Negotiate.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### -----------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 1----------------- 
 ```
 C:\PS>New-SPWebApplication http://sharepointonline.com -AuthenticationProvider (Get-SPAuthenticationProvider "LiveID STS")
 ```
 
 This example registers the LiveID STS authentication provider for the new Web application.
 
-### -----------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPWebApplication http://sharepointonline.com -AuthenticationProvider (Get-SPAuthenticationProvider "LiveID STS")
-```
-
-This example registers the LiveID STS authentication provider for the new Web application.
-
-### -----------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 2----------------- 
 ```
 C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (New-SPAuthenticationProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider")
 ```
@@ -55,15 +43,7 @@ C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (New-SPAut
 This example registers ASPNet for the new Web application.
 Note that ASPNET memberships are not persisted and must be re-created every use.
 
-### -----------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (New-SPAuthenticationProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider")
-```
-
-This example registers ASPNet for the new Web application.
-Note that ASPNET memberships are not persisted and must be re-created every use.
-
-### -----------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 3----------------- 
 ```
 C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (Get-SPAuthenticationProvider "NTLM")
 ```
@@ -71,22 +51,7 @@ C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (Get-SPAut
 This example registers the NTLM authentication provider for the new Web application.
 This command is equivalent to the command New-SPWebApplication http://contoso.com; NTLM is default authentication provider.
 
-### -----------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (Get-SPAuthenticationProvider "NTLM")
-```
-
-This example registers the NTLM authentication provider for the new Web application.
-This command is equivalent to the command New-SPWebApplication http://contoso.com; NTLM is default authentication provider.
-
-### -----------------EXAMPLE 4----------------- (SharePoint Server 2013)
-```
-C:\PS>$ip = @( (Get-SPAuthenticationProvider "LiveID STS"), (New-SPAuthenticationProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPAuthenticationProvider "NTLM")) )New-SPWebApplication http://contoso.com -AuthenticationProvider $ip
-```
-
-This example registers the NTLM, ASPNet, and LiveID STS authentication providers for the new Web application.
-
-### -----------------EXAMPLE 4----------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 4----------------- 
 ```
 C:\PS>$ip = @( (Get-SPAuthenticationProvider "LiveID STS"), (New-SPAuthenticationProvider -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPAuthenticationProvider "NTLM")) )
 New-SPWebApplication http://contoso.com -AuthenticationProvider $ip
@@ -94,14 +59,7 @@ New-SPWebApplication http://contoso.com -AuthenticationProvider $ip
 
 This example registers the NTLM, ASPNet, and LiveID STS authentication providers for the new Web application.
 
-### -----------------EXAMPLE 5----------------- (SharePoint Server 2013)
-```
-C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (Get-SPAuthenticationProvider "Legacy NTLM")
-```
-
-This example registers the Legacy NTLM authentication provider for the new Web application.
-
-### -----------------EXAMPLE 5----------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 5----------------- 
 ```
 C:\PS>New-SPWebApplication http://contoso.com -AuthenticationProvider (Get-SPAuthenticationProvider "Legacy NTLM")
 ```

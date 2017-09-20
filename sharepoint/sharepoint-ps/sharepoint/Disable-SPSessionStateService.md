@@ -20,21 +20,14 @@ Disable-SPSessionStateService [-AssignmentCollection <SPAssignmentCollection>] [
 The Disable-SPSessionStateService cmdlet turns off the session state service.
 If your farm does not depend on session state service, we recommend that you disable it.
 
-When session state is disabled, some SharePoint Server 2013 services, components, and third-party components no longer function.
+When session state is disabled, some SharePoint Server services, components, and third-party components no longer function.
 Changing this property modifies the Web.config file on every content Web application on every server in the farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Disable-SPSessionStateService
-```
-
-This example turns off ASP.NET session state on the farm.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Disable-SPSessionStateService
 ```
@@ -67,7 +60,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -84,7 +77,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

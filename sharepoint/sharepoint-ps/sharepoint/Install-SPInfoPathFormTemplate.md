@@ -7,7 +7,7 @@ schema: 2.0.0
 # Install-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Installs an InfoPath 2013 form template on a farm.
+Installs an InfoPath form template on a farm.
 
 ## SYNTAX
 
@@ -17,22 +17,13 @@ Install-SPInfoPathFormTemplate [-Path] <String> [-AssignmentCollection <SPAssign
 ```
 
 ## DESCRIPTION
-The Install-SPInfoPathFormTemplate cmdlet installs an InfoPath 2013 form template on a farm.
+The Install-SPInfoPathFormTemplate cmdlet installs an InfoPath form template on a farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Install-SPInfoPathFormTemplate -Path c:\Form.xsn
-
-C:\PS>"FormTemplateFirst.xsn", "FormTemplateSecond.xsn", "FormTemplateThird.xsn" | Install-SPInfoPathFormTemplate
-```
-
-This example installs multiple form templates on a farm.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>Install-SPInfoPathFormTemplate -Path c:\Form.xsn
 
@@ -88,7 +79,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +133,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPDiagnosticsPerformanceCounter
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a collection of performance counters.
 
@@ -37,42 +32,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Get- SPDiagnosticsPerformanceCounter
 ```
 
 This example gets the performance counter settings for front end Web servers and database servers.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Get- SPDiagnosticsPerformanceCounter
-```
-
-This example gets the performance counter settings for front end Web servers and database servers.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Get- SPDiagnosticsPerformanceCounter -WebFrontEnd
 ```
 
 This example gets the performance counter settings for front end Web servers.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
-```
-C:\PS>Get- SPDiagnosticsPerformanceCounter -WebFrontEnd
-```
-
-This example gets the performance counter settings for front end Web servers.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-C:\PS>Get- SPDiagnosticsPerformanceCounter -DatabaseServer
-```
-
-This example gets the performance counter settings for database servers.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>Get- SPDiagnosticsPerformanceCounter -DatabaseServer
 ```

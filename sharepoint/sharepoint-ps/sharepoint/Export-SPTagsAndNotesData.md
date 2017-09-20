@@ -22,7 +22,7 @@ The tags and notes are written into separate files, and then the two are compres
 
 ## EXAMPLES
 
-### ----------------EXAMPLE----------------- (SharePoint Server 2016)
+### ----------------EXAMPLE----------------- 
 ```
 Export-SPTagsAndNotesData -Site http://site.contoso.com -FilePath C:\TagsAndNotes.zip
 ```

@@ -18,23 +18,6 @@ Get-SPEnterpriseSearchStatus -SearchApplication <SearchServiceApplicationPipeBin
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet retrieves diagnostic information for all or specified search components in the active topology of a Search Service Application.
-
-If you don't specify any of the optional parameters, the cmdlet will retrieve the health status of all the search components within the Search Service Application.
-Each search component will have one of the following states:
-
-If you have defined more than one Index component for a partition in your search topology, this cmdlet will indicate which index component that has the Primary role for this partition.
-
-You can use the cmdlet to output the following additional information:
-
-If you don't want to iterate over the output in a script, use the Text parameter.
-If you do not use the Text parameter, the cmdlet will output a set of objects that have the following properties:
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet retrieves diagnostic information for all or specified search components in the active topology of a Search Service Application.
 
@@ -70,42 +53,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
-```
-
-This example retrieves diagnostics information about all search components of the default Search Service Application.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -Text
 ```
 
 This example retrieves a list that has diagnostics information about all search components of the default Search Service Application.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchStatus -SearchApplication "Search Service Application" -JobStatus -Text
-```
-
-This example retrieves the background activity job status for the search analytics timer jobs.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchStatus -SearchApplication "Search Service Application" -JobStatus -Text
 ```
 
 This example retrieves the background activity job status for the search analytics timer jobs.
 
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
-```
-
-This example retrieves the diagnostic information for the index component named IndexComponent1.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplication | Get-SPEnterpriseSearchStatus -HealthReport -Component IndexComponent1 -Text
 ```
@@ -153,14 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -Component
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the name of the search component.
-This parameter is only used in association with the HealthReport and Primary parameter.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the name of the search component. 
 This parameter is only used in association with the HealthReport and Primary parameter.
@@ -181,14 +135,6 @@ Accept wildcard characters: False
 ```
 
 ### -Constellation
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies if internal diagnostic information for the search topology should be provided.
-This parameter should only be used for debugging.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies if internal diagnostic information for the search topology should be provided. 
 This parameter should only be used for debugging.
@@ -226,14 +172,6 @@ Accept wildcard characters: False
 ```
 
 ### -DetailSearchRuntime
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies if internal diagnostic information for the search runtime should be provided.
-This parameter should only be used for debugging.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies if internal diagnostic information for the search runtime should be provided. 
 This parameter should only be used for debugging.
@@ -254,14 +192,6 @@ Accept wildcard characters: False
 ```
 
 ### -HealthReport
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies if diagnostic information for the search component should be provided.
-When using this parameter, you must specify the component name using the Component parameter.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies if diagnostic information for the search component should be provided. 
 When using this parameter, you must specify the component name using the Component parameter.
@@ -298,15 +228,6 @@ Accept wildcard characters: False
 ```
 
 ### -Primary
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies if the Admin component has the Primary role.
-When using this parameter, you must specify the component name using the Component parameter.
-Returns true if the Admin Component has the Primary role.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies if the Admin component has the Primary role.
 When using this parameter, you must specify the component name using the Component parameter. 
@@ -328,16 +249,6 @@ Accept wildcard characters: False
 ```
 
 ### -Text
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies if the print output from this cmdlet should be outputted in a format that is convenient for reading.
-If not used, this cmdlet outputs a SearchStatusInfo object.
-
-When using this parameter, the output is printed to the console and cannot be piped to a file or another program.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies if the print output from this cmdlet should be outputted in a format that is convenient for reading. 
 If not used, this cmdlet outputs a SearchStatusInfo object.
@@ -370,5 +281,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/8cb0f69b-2ed1-4bf4-b461-2895da6f9ef0(Office.15).aspx)
 

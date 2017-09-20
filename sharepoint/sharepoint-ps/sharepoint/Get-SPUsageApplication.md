@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPUsageApplication
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a specified usage application.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPUsageApplication -Identity "Usage and Health data collection"
-```
-
-This example returns the usage application named, Usage and Health data collection
-
-### ---------------EXAMPLE------------------ (SharePoint Server 2016)
+### ---------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPUsageApplication -Identity "Usage and Health data collection"
 ```

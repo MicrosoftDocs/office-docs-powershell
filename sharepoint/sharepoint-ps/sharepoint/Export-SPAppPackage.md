@@ -7,11 +7,6 @@ schema: 2.0.0
 # Export-SPAppPackage
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Exports an app package.
 
@@ -31,16 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------- (SharePoint Server 2013)
-```
-C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
-
-C:\PS>Export-SPAppPackage -App $instance.App -Path .\exported.spapp
-```
-
-This example exports an app package to the \exported.spapp location.
-
-### --------------EXAMPLE----------- (SharePoint Server 2016)
+### --------------EXAMPLE----------- 
 ```
 C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
 

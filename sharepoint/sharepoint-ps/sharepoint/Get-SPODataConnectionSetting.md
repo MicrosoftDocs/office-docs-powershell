@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPODataConnectionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns Business Connectivity Services OData connection properties.
 
@@ -36,28 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2013)
+### ----------------EXAMPLE 1------------ 
 ```
 C:\PS>Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example returns properties of the BCS connection named ContosoServiceApp
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
-```
-
-This example returns properties of the BCS connection named ContosoServiceApp
-
-### ----------------EXAMPLE 2------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPODataConnectionSetting -ServiceContext "http://contoso"
-```
-
-This example returns a list of BCS connections for the service context named http://contoso
-
-### ----------------EXAMPLE 2------------ (SharePoint Server 2016)
+### ----------------EXAMPLE 2------------ 
 ```
 C:\PS>Get-SPODataConnectionSetting -ServiceContext "http://contoso"
 ```

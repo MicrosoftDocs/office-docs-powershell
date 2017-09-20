@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPVisioPerformance -VisioServiceApplication "VGS1"
-```
-
-This example gets settings related to performance for a Visio Services application.
-
-### -----------------EXAMPLE---------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE---------------------- 
 ```
 C:\PS>Get-SPVisioPerformance -VisioServiceApplication "VGS1"
 ```

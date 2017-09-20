@@ -41,7 +41,7 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-###   (SharePoint Server 2016)
+###   ------------ Example 1 --------------------
 ```
 C:\PS>
 ```

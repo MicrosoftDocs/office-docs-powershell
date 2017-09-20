@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceAppNew-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $searchApp -ModelFilePath \\models\myFileTypeModel.mft -Protocol "mftml://"
-```
-
-This example creates a custom connector for a file type whose model is located at \\\\models\myFileTypeModel.mft and has the protocol name mftml://.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
 New-SPEnterpriseSearchCrawlCustomConnector -SearchApplication $searchApp 
@@ -118,7 +111,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -151,7 +144,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -177,5 +170,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/9cfc9653-9bee-4c3a-8739-9bc81aa3e699(Office.15).aspx)
 

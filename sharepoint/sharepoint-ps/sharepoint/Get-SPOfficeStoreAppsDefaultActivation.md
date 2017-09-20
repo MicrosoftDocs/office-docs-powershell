@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPOfficeStoreAppsDefaultActivation
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the properties of apps for Office.
 
@@ -42,28 +37,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE 1------ (SharePoint Server 2013)
+### --------EXAMPLE 1------ 
 ```
 C:\PS>Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
 ```
 
 This examples returns the setting for the web application http://sphvm-8044.
 
-### --------EXAMPLE 1------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
-```
-
-This examples returns the setting for the web application http://sphvm-8044.
-
-### --------EXAMPLE 2------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
-```
-
-This examples returns the Subscription ID setting for the tenant
-
-### --------EXAMPLE 2------ (SharePoint Server 2016)
+### --------EXAMPLE 2------ 
 ```
 C:\PS>Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```

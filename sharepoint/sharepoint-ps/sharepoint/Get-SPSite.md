@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all site collections that match the specified criteria.
 
@@ -74,35 +69,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1--------------------- 
 ```
 C:\PS>Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
 ```
 
 This example gets the collection of subweb titles in site collection at http://\<site name\>.
 
-### ------------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite 'http://<site name>' | Get-SPWeb -Limit All | Select Title
-```
-
-This example gets the collection of subweb titles in site collection at http://\<site name\>.
-
-### ------------------EXAMPLE 2--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2--------------------- 
 ```
 C:\PS>Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
 ```
 
 This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
 
-### ------------------EXAMPLE 2--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite -ContentDatabase "b399a366-d899-4cff-8a9b-8c0594ee755f" | Format-Table -Property Url, Owner, SecondaryOwner
-```
-
-This example gets a subset of data from all sites in the content database b399a366-d899-4cff-8a9b-8c0594ee755f.
-
-### ------------------EXAMPLE 3--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 3--------------------- 
 ```
 C:\PS>Start-SPAssignment -Global
 
@@ -119,24 +100,7 @@ The previous example uses the Global method of assignment collection.
 The Global method is easy to use but the contents of this object grows quickly.
 Be careful not to run a Get-SPSite command that returns many results while global assignment is enabled.
 
-### ------------------EXAMPLE 3--------------------- (SharePoint Server 2016)
-```
-C:\PS>Start-SPAssignment -Global
-
-C:\PS>$s = Get-SPSite -Identity http://<MyApp>/Sites/Site1
-
-C:\PS>$s.Url
-
-C:\PS>Stop-SPAssignment -Global
-```
-
-This example gets the sites specified by the Identity parameter and inserts the results in the variable s
-
-The previous example uses the Global method of assignment collection.
-The Global method is easy to use but the contents of this object grows quickly.
-Be careful not to run a Get-SPSite command that returns many results while global assignment is enabled.
-
-### ------------------EXAMPLE 4--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 4--------------------- 
 ```
 C:\PS>$GC = Start-SPAssignment
 
@@ -149,34 +113,14 @@ This example gets the first 50 sites owned by user DOMAIN\JDow by using a server
 
 This example uses advanced assignment collection methods.
 
-### ------------------EXAMPLE 4--------------------- (SharePoint Server 2016)
-```
-C:\PS>$GC = Start-SPAssignment
-
-C:\PS>$Sites = $GC | Get-SPSite -Filter {$_.Owner -eq "DOMAIN\JDow"} -Limit 50
-
-C:\PS>Stop-SPAssignment $GC
-```
-
-This example gets the first 50 sites owned by user DOMAIN\JDow by using a server-side query, and assigns them to a local variable.
-
-This example uses advanced assignment collection methods.
-
-### ------------------EXAMPLE 5--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 5--------------------- 
 ```
 C:\PS>Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
 ```
 
 This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
 
-### ------------------EXAMPLE 5--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWebApplication http://<site name> | Get-SPSite -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.Usage.Storage }{$sum}
-```
-
-This example shows a command that returns the sum of the disk space usage for all sites in a given web application.
-
-### ------------------EXAMPLE 6--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 6--------------------- 
 ```
 C:\PS>Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
 ```
@@ -185,56 +129,26 @@ This example returns all sites that match the given regular expression.
 
 The Quotes on the Identity parameter are required when the Regex parameter is used.
 
-### ------------------EXAMPLE 6--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite -Identity "http://localserver/(my|personal)/sites" -Regex
-```
-
-This example returns all sites that match the given regular expression.
-
-The Quotes on the Identity parameter are required when the Regex parameter is used.
-
-### ------------------EXAMPLE 7--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 7--------------------- 
 ```
 C:\PS>Get-SPSite http://<site name>/sites/teams/* -Limit 100
 ```
 
 This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
 
-### ------------------EXAMPLE 7--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite http://<site name>/sites/teams/* -Limit 100
-```
-
-This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
-
-### ------------------EXAMPLE 8--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 8--------------------- 
 ```
 C:\PS>Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
 ```
 
 This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
 
-### ------------------EXAMPLE 8--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite | select url, @{Expression={$_.Usage.Storage}}
-```
-
-This example gets the amount of storage used by a site collection, by using the storage field of the .UsageInfo property.
-
-### ------------------EXAMPLE 9--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 9--------------------- 
 ```
 C:\PS>Get-SPSite -Limit all -CompatibilityLevel 14
 ```
 
-This example returns all SharePoint Server 2010 mode site collections.
-
-### ------------------EXAMPLE 9--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSite -Limit all -CompatibilityLevel 14
-```
-
-This example returns all SharePoint Server 2010 mode site collections.
+This example returns all SharePoint Server mode site collections.
 
 ## PARAMETERS
 
@@ -317,7 +231,7 @@ Accept wildcard characters: False
 ### -CompatibilityLevel
 Specifies the version of templates to use when creating a new SPSite object.
 This value sets the initial CompatibilityLevel value for the site collection.
-The values for this parameter can be either SharePoint Server 2010 or SharePoint Server 2013.
+The values for this parameter can be either SharePoint Server or SharePoint Server.
 When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the web application depending on the SiteCreationMode setting.
 
 ```yaml
@@ -335,7 +249,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -426,7 +340,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

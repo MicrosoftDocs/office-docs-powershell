@@ -27,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Add code example. (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication "Sample Search Service Application"$searchapp | Get-SPEnterpriseSearchCrawlExtension "pdf"
-```
-
-This example checks whether the pdf file type is included in the file types to be included in the content index.
-
-### Add code example. (SharePoint Server 2016)
+### Add code example. 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "Sample Search Service Application"
 $searchapp | Get-SPEnterpriseSearchCrawlExtension "pdf"
@@ -113,5 +106,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/ab5860a7-1570-4451-863a-f231191eeb5b(Office.15).aspx)
 

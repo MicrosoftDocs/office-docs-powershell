@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWebTemplate
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Displays all globally installed site templates that match the given identity.
 
@@ -31,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>$template = Get-SPWebTemplate "STS#0"
 
@@ -40,23 +35,7 @@ C:\PS>New-SPSite http://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $templat
 
 This example creates a site collection by using the team site Web template (ID=STS#0).
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>$template = Get-SPWebTemplate "STS#0"
-
-C:\PS>New-SPSite http://contoso.com -OwnerAlias "DOMAIN\JDOE" -Template $template
-```
-
-This example creates a site collection by using the team site Web template (ID=STS#0).
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPWebTemplate "STS*"
-```
-
-This example displays basic information about all the STS templates.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPWebTemplate "STS*"
 ```
@@ -108,7 +87,7 @@ Accept wildcard characters: False
 ### -CompatibilityLevel
 Specifies the version of templates to use when creating a new SPSite object.
 This value sets the initial CompatibilityLevel value for the site collection.
-The values for this parameter can be either SharePoint Server 2010 or SharePoint Server 2013.
+The values for this parameter can be either SharePoint Server or SharePoint Server.
 When this parameter is not specified, the CompatibilityLevel will default to the highest possible version for the Web application depending on the SiteCreationMode setting
 
 ```yaml

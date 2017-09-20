@@ -21,7 +21,7 @@ Disable-SPProjectEnterpriseProjectTaskSync [-AssignmentCollection <SPAssignmentC
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### Example 1 
 ```
 PS C:\> {{ Add example code here }}
 ```

@@ -24,14 +24,14 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>Get-SPProjectOdataConfiguration
 ```
 
 This example returns the OData configuration for the instance of Project Web App.
 
-### ----------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>(Get-SPProjectOdataConfiguration).EntitySetsWithMaxPAgeSizeOverride
 ```

@@ -23,16 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPDataConnectionFileDependant -Identity "FileName.udcx
-
-C:\PS>"FileName.udcx" | Get-SPDataConnectionFileDependant
-```
-
-This example displays a list of deployed forms with a specified name.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPDataConnectionFileDependant -Identity "FileName.udcx
 

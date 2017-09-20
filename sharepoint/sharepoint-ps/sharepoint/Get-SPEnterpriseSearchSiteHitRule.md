@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$shRule = Get-SPEnterpriseSearchSiteHitRule -Identity MySiteHitRule
-```
-
-The following example obtains a reference to the site hit rule with the name MySiteHitRule.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$shRule = Get-SPEnterpriseSearchSiteHitRule -Identity MySiteHitRule
 ```
@@ -111,5 +104,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/ba0d415d-5b7e-4392-9a80-c73292b2294e(Office.15).aspx)
 

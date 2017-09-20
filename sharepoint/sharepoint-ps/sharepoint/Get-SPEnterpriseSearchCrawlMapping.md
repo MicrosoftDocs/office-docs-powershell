@@ -27,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"$searchapp | Get-SPEnterpriseSearchCrawlMapping
-```
-
-This example returns the crawl mappings for the search application SearchApp1.
-
-###   (SharePoint Server 2016)
+###  ------ EXAMPLE ------
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication "SearchApp1"
 $searchapp | Get-SPEnterpriseSearchCrawlMapping
@@ -113,5 +106,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/89a24664-f67a-4fe8-bb7c-95bf297c7776(Office.15).aspx)
 

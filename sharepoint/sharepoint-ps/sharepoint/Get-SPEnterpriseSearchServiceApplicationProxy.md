@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssaProxy = Get-SPEnterpriseSearchServiceApplicationProxy -Identity SsaProxy
-```
-
-This example obtains a reference to a search service application proxy with the name SsaProxy.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$ssaProxy = Get-SPEnterpriseSearchServiceApplicationProxy -Identity SsaProxy
 ```
@@ -91,5 +84,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/233890cc-6571-4bd3-bb59-2b549a6098c3(Office.15).aspx)
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Install-SPSolution
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Deploys an installed SharePoint solution in the farm.
 
@@ -34,20 +29,6 @@ Install-SPSolution [[-Identity] <SPSolutionPipeBind>] [-AssignmentCollection <SP
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
-
-The Install-SPSolution cmdlet deploys an installed SharePoint solution in the farm.
-Use the Add-SPSolution cmdlet to install a SharePoint solution package in the farm.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-The following table lists the valid values for the CompatabilityLevel parameter:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
@@ -62,35 +43,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm and specifies that GAC can be deployed for the new SharePoint solution.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment
-```
-
-This example deploys the installed SharePoint solution contoso_solution.wsp in the farm and specifies that GAC can be deployed for the new SharePoint solution.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment --CompatibilityLevel 15
-```
-
-This example deploys the installed SharePoint solution contoso_solution.wsp in the farm within the latest version directories and specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -AddtoLatestVersion $true
 ```
 
 This example deploys the installed SharePoint solution contoso_solution.wsp in the farm within the latest version directories and specifies that global assembly cache (GAC) can be deployed for the new SharePoint solution.
 
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>Install-SPSolution -Identity contoso_solution.wsp -GACDeployment -CompatibilityLevel {14,15}
 ```
@@ -185,15 +152,6 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies whether to install into the solution, into a specific version directory based on CompatibilityLevel.
-The default behavior if this parameter is not specified is to install the solution only to the version directory based on the version tracked in the manifest of the solution's cab file.
-For the list of values, see the table in the  section.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 {{Fill CompatibilityLevel Description}}
 
@@ -214,7 +172,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -352,15 +310,6 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-Deploys the SharePoint solution for the specified SharePoint web application.
-
-The value must be in one of the following forms:
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Deploys the SharePoint solution for the specified SharePoint web application.
 
@@ -387,7 +336,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

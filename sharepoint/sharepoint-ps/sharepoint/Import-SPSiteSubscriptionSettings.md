@@ -7,11 +7,6 @@ schema: 2.0.0
 # Import-SPSiteSubscriptionSettings
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Restores a backup of subscription site settings to the given subscription identifier.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPSiteSubscription http://contoso.com | Import-SPSiteSubscriptionSettings -path "c:/backups/contoso_settings_file.bak" -force
-```
-
-This example restores the subscription settings store of contoso.com.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPSiteSubscription http://contoso.com | Import-SPSiteSubscriptionSettings -path "c:/backups/contoso_settings_file.bak" -force
 ```
@@ -125,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -158,7 +146,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

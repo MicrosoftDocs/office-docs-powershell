@@ -7,14 +7,7 @@ schema: 2.0.0
 # Get-SPServer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Returns the server or servers in the farm that match the given identity.
-
 
 
 ## SYNTAX
@@ -32,28 +25,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPServer
 ```
 
 This example returns all servers in the local farm in a list.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPServer
-```
-
-This example returns all servers in the local farm in a list.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
-```
-
-This example returns a list of all servers in the farm that need an upgrade.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPServer | Where{ $_.NeedsUpgrade -eq $TRUE}
 ```

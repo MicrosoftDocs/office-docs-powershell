@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPInfoPathWebServiceProxy -Identity "http://server_name"
-```
-
-This example displays the Web service proxy settings for a specified Web application.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPInfoPathWebServiceProxy -Identity "http://server_name"
 ```

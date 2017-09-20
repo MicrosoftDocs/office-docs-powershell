@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSecurityTokenServiceConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the security token service (STS) for the farm.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Set-SPSecurityTokenServiceConfig -ServiceTokenLifetime 1000
-```
-
-This example gets the security token service (STS) for the farm and sets the expiration for the service token cache to 1000 minutes.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Set-SPSecurityTokenServiceConfig -ServiceTokenLifetime 1000
 ```

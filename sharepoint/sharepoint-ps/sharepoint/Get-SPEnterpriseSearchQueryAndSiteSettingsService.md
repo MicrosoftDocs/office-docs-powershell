@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$qssService = Get-SPEnterpriseSearchQUeryAndSiteSettingsService
-```
-
-This example obtains a reference to the query and site settings service.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$qssService = Get-SPEnterpriseSearchQUeryAndSiteSettingsService
 ```
@@ -73,5 +66,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/245a4b7a-98d7-4fa0-a99a-ebb3c4be821b(Office.15).aspx)
 

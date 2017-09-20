@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-SPAzureAccessControlServiceApplicationProxy
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Creates a new service application proxy group.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
-```
-
-This example creates a proxy group named ACS which will be added to the default proxy group.
-
-### --------------EXAMPLE-------------- (SharePoint Server 2016)
+### --------------EXAMPLE-------------- 
 ```
 C:\PS>New-SPAzureAccessControlServiceApplicationProxy -Name "ACS" -metadataEndpointUri "http://test" -DefaultProxyGroup
 ```
@@ -104,7 +92,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +127,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

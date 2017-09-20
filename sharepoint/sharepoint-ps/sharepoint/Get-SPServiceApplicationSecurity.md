@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPServiceApplicationSecurity
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the SPObjectSecurity object for a service application.
 
@@ -32,15 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>$security = Get-SPServiceApplicationSecurity $serviceApp -AdminGrant-SPObjectSecurity $security $principal "Full Control"Set-SPServiceApplicationSecurity $serviceApp -Admin $security
-```
-
-This example retrieves the SPObjectSecurity object corresponding to the administrator ACL on a service application, and adds a new user principal to that ACL.
-The new user is an administrator for the service application $serviceApp.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$security = Get-SPServiceApplicationSecurity $serviceApp -Admin
 Grant-SPObjectSecurity $security $principal "Full Control"

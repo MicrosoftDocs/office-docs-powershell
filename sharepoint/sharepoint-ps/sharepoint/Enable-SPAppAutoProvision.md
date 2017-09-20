@@ -7,11 +7,6 @@ schema: 2.0.0
 # Enable-SPAppAutoProvision
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Enables automatic provisioning of an app.
 
@@ -31,7 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-------- 
 ```
 C:\PS>Enable-SPAppAutoProvision
 ```
@@ -40,26 +35,7 @@ This example enables auto provisioning for the farm.
 The app auto provisioning is enabled by default.
 This setting overrides site subscription level setting.
 
-### --------------EXAMPLE 1-------- (SharePoint Server 2016)
-```
-C:\PS>Enable-SPAppAutoProvision
-```
-
-This example enables auto provisioning for the farm.
-The app auto provisioning is enabled by default.
-This setting overrides site subscription level setting.
-
-### --------------EXAMPLE 2-------- (SharePoint Server 2013)
-```
-C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
-
-C:\PS>Enable-SPAppAutoProvision -SiteSubscription $subscription
-```
-
-This example enables app auto provisioning for the site subscription for Contoso.Com site.
-The app auto provisioning is  enabled by default.
-
-### --------------EXAMPLE 2-------- (SharePoint Server 2016)
+### --------------EXAMPLE 2-------- 
 ```
 C:\PS>$subscription = Get-SPSiteSubscription http://Contoso.com
 

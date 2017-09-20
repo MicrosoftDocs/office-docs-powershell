@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPUserSettingsProviderManager
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the User Settings Provider Manager.
 
@@ -30,14 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------EXAMPLE-------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPUserSettingsProviderManager
-```
-
-This example returns the User Settings Provider Manager for the farm.
-
-### ----------EXAMPLE-------- (SharePoint Server 2016)
+### ----------EXAMPLE-------- 
 ```
 C:\PS>Get-SPUserSettingsProviderManager
 ```

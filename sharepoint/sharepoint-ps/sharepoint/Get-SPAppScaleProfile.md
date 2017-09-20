@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppScaleProfile
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns settings for an app profile.
 
@@ -30,18 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>$scaleProfile = Get-SPAppScaleProfile
-
-C:\PS>$scaleProfile.MaxDatabaseSize
-
-C:\PS>$scaleProfile.RemoteWebSiteInstanceCount
-```
-
-This example returns the farm level app scale profile.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE-------------- 
 ```
 C:\PS>$scaleProfile = Get-SPAppScaleProfile
 

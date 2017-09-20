@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSiteUpgradeSessionInfo
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Manage or report site upgrade.
 
@@ -45,7 +40,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE 1---------- (SharePoint Server 2013)
+### -----------EXAMPLE 1---------- 
 ```
 C:\PS>$db = Get-SPContentDatabase -Identity wss_content
 
@@ -54,25 +49,7 @@ C:\PS>Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
 
 This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
 
-### -----------EXAMPLE 1---------- (SharePoint Server 2016)
-```
-C:\PS>$db = Get-SPContentDatabase -Identity wss_content
-
-C:\PS>Get-SPSiteUpgradeSessionInfo -ContentDatabase $db
-```
-
-This example returns siteupgradeinfo for every SPContentDatabase returned from Get-SPContentDatabase cmdlet.
-
-### -----------EXAMPLE 2---------- (SharePoint Server 2013)
-```
-C:\PS>$site=Get-SPSite -Identity http://localhost
-
-C:\PS>Get-SPSiteUpgradeSessionInfo -Site $site
-```
-
-This example returns siteupgradeinfo for every SPSite object returned from Get-SPSite cmdlet.
-
-### -----------EXAMPLE 2---------- (SharePoint Server 2016)
+### -----------EXAMPLE 2---------- 
 ```
 C:\PS>$site=Get-SPSite -Identity http://localhost
 

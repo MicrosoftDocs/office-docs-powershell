@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPContentDeploymentPath "Path 1"
-```
-
-This example returns the content deployment path named Path1.
-
-### --------------EXAMPLE-------------- (SharePoint Server 2016)
+### --------------EXAMPLE-------------- 
 ```
 C:\PS>Get-SPContentDeploymentPath "Path 1"
 ```

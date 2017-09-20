@@ -24,10 +24,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+###   ------------ Example 1 --------------------
 ```
-
+{example code}
 ```
+{example description}
 
 ## PARAMETERS
 
@@ -97,6 +98,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPOSiteGroup]()
 
 [Remove-SPOSiteGroup]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bb440d88-4708-4a30-930a-b17aae9b2455(Office.15).aspx)
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Export-SPWeb
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Exports a site, list, or library.
 
@@ -28,20 +23,13 @@ Export-SPWeb [-Identity] <SPWebPipeBind> -Path <String> [-AppLogFilePath <String
 
 ## DESCRIPTION
 The Export-SPWeb cmdlet exports a site, list, or library.
-The capability to export from a library is a new feature in SharePoint 2013.
+The capability to export from a library is a new feature in SharePoint.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------------------EXAMPLE-----------------------. (SharePoint Server 2013)
-```
-C:\PS>Export-SPWeb http://site -Path "site export.cmp"
-```
-
-This example exports the site at http://site/ to a file called site export.cmp in the current directory.
-
-### --------------------EXAMPLE-----------------------. (SharePoint Server 2016)
+### --------------------EXAMPLE-----------------------. 
 ```
 C:\PS>Export-SPWeb http://site -Path "site export.cmp"
 ```
@@ -141,7 +129,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -213,13 +201,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUserSecurity
-**Below Content Applies To:**SharePoint Server 2013
-
-Preserves the user security settings except for SPLists that have broken inheritance and item level permissions set.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Preserves the user security settings.
 
@@ -342,7 +323,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

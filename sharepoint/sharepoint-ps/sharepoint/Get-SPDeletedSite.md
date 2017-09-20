@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPDeletedSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Gets a list of deleted site collections.
 
@@ -31,7 +26,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 Use the Get-SPDeletedSite cmdlet to display a list of deleted site collections by using the Identity parameter.
 If no parameter is specified, then all deleted site collections in the farm are displayed.
@@ -45,43 +40,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1--------------------- 
 ```
 C:\PS>Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example gets a specific deleted site collection by using a site ID.
 
-### ------------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
-```
-
-This example gets a specific deleted site collection by using a site ID.
-
-### ------------------EXAMPLE 2--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2--------------------- 
 ```
 C:\PS>Get-SPDeletedSite "/"
 ```
 
 This example gets a deleted site collection from the root site.
 
-### ------------------EXAMPLE 2--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPDeletedSite "/"
-```
-
-This example gets a deleted site collection from the root site.
-
-### ------------------EXAMPLE 3--------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPDeletedSite '/Site/cat*'
-```
-
-This example matches a deleted site collection that contains any combination with the string "cat".
-The asterisk (*) wildcard character requests a match for multiple characters.
-
-### ------------------EXAMPLE 3--------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 3--------------------- 
 ```
 C:\PS>Get-SPDeletedSite '/Site/cat*'
 ```
@@ -133,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -256,7 +229,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

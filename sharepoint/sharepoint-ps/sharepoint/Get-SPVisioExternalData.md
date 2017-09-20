@@ -23,28 +23,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------------ 
 ```
 C:\PS>Get-SPVisioExternalData -VisioServiceApplication "VGS1"
 ```
 
 This example gets settings related to external data for a Visio Services application.
 
-### ------------------EXAMPLE 1------------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPVisioExternalData -VisioServiceApplication "VGS1"
-```
-
-This example gets settings related to external data for a Visio Services application.
-
-### ------------------EXAMPLE 2------------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
-```
-
-This example uses a pipe bind to get settings related to external data for a Visio Services application.
-
-### ------------------EXAMPLE 2------------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------------ 
 ```
 C:\PS>Get-SPVisioServiceApplication -identity "VGS1" | Get-SPVisioExternalData
 ```

@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPMetadataServiceApplication -Identity "ManagedMetadataServiceApp1"
-```
-
-This example retrieves an existing managed metadata service application.
-
-### ----------------EXAMPLE----------------- (SharePoint Server 2016)
+### ----------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPMetadataServiceApplication -Identity "ManagedMetadataServiceApp1"
 ```

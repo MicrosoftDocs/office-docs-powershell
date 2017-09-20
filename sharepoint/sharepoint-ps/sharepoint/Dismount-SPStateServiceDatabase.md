@@ -24,29 +24,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Dismount-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
 This example removes the association between the SharePoint farm and the SQL Server database without dropping the SQL Server database.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Dismount-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
-```
-
-This example removes the association between the SharePoint farm and the SQL Server database without dropping the SQL Server database.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6B
-F-329BF39FA1E4 | Dismount-SPStateServiceDatabase
-```
-
-This example dismounts a single database because only the Identity parameter is used.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPStateServiceDatabase -ServiceApplication F9168C5E-CEB2-4faa-B6B
 F-329BF39FA1E4 | Dismount-SPStateServiceDatabase
@@ -98,7 +83,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +100,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

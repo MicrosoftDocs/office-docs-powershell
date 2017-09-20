@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPUserLicenseMapping
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the claim-to-user license mappings.
 
@@ -36,42 +31,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPUserLicenseMapping
 ```
 
 This example returns all claim-to-user license mappings for the entire SharePoint farm.
 
-### ---------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPUserLicenseMapping
-```
-
-This example returns all claim-to-user license mappings for the entire SharePoint farm.
-
-### ---------------EXAMPLE 2 ----------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 2 ----------------- 
 ```
 C:\PS>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
 ```
 
 This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
 
-### ---------------EXAMPLE 2 ----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPUserLicenseMapping -WebApplication "SharePoint - 80"
-```
-
-This example returns all claim-to-user license mappings for the web application with the name "SharePoint - 80".
-
-### ---------------EXAMPLE 3 ----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
-```
-
-This example returns all claim-to-user license mappings for the Web application with the URL http://\<server_name\>/sites/sitename.
-
-### ---------------EXAMPLE 3 ----------------- (SharePoint Server 2016)
+### ---------------EXAMPLE 3 ----------------- 
 ```
 C:\PS>Get-SPUserLicenseMapping -WebApplication http://<server_name>/sitename
 ```

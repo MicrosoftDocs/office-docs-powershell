@@ -25,14 +25,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPPerformancePointServiceApplication PPSApp_01 | Get-SPPerformancePointServiceApplicationTrustedLocation -Identity $_.ID | select *
-```
-
-This example retrieves TrustedLocation information for the PPSApp_01 PerformancePoint Service application.
-
-### ----------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE---------------------- 
 ```
 C:\PS>Get-SPPerformancePointServiceApplication PPSApp_01 | Get-SPPerformancePointServiceApplicationTrustedLocation -Identity $_.ID | select *
 ```
@@ -65,7 +58,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -118,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

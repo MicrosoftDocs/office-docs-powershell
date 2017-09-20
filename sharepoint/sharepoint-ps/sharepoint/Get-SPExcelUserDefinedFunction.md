@@ -28,14 +28,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf
 ```
 
 This example displays the user-defined function named SampleCompany.SampleApplication.SampleUdf from the list of user-defined functions that is in the Excel Services Application Web service application named MyExcelService.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-------------- 
 ```
 C:\PS>Get-SPExcelServiceApplication | Get-SPExcelUserDefinedFunction | format-list
 ```

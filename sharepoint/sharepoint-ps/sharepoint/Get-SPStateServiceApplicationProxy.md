@@ -24,28 +24,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPStateServiceApplicationProxy
 ```
 
 This example displays all the state service application proxies on the farm.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPStateServiceApplicationProxy
-```
-
-This example displays all the state service application proxies on the farm.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
-```
-
-This example displays a specific state service application proxy on the farm.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPStateServiceApplicationProxy -Identity 81dc50e0-c0f9-4d2c-8284-bb03bb1ea676
 ```
@@ -96,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +99,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

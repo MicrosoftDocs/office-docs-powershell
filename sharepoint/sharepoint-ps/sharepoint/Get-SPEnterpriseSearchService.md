@@ -22,14 +22,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchService = Get-SPEnterpriseSearchService
-```
-
-This example obtains a reference to the search service of the current farm.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchService = Get-SPEnterpriseSearchService
 ```
@@ -71,5 +64,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/fcf865a8-b46b-44fb-89ba-f52e20876f6c(Office.15).aspx)
 

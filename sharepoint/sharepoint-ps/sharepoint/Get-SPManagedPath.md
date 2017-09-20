@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPManagedPath
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all managed paths that match the given criteria.
 
@@ -46,28 +41,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPManagedPath -WebApplication http://sitename
 ```
 
 This example returns all managed paths for the specified Web application.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPManagedPath -WebApplication http://sitename
-```
-
-This example returns all managed paths for the specified Web application.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPManagedPath -identity "Sites" -HostHeader
-```
-
-This example gets the Sites managed path from the HostHeader managed paths.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPManagedPath -identity "Sites" -HostHeader
 ```

@@ -7,7 +7,7 @@ schema: 2.0.0
 # Enable-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Activates a InfoPath 2013 form template in the specified site collection.
+Activates a InfoPath form template in the specified site collection.
 
 ## SYNTAX
 
@@ -17,35 +17,26 @@ Enable-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind> -Site <SPSite
 ```
 
 ## DESCRIPTION
-The Enable-SPInfoPathFormTemplate cmdlet activates an InfoPath 2013 form template to the SharePoint site collection specified in the Site parameter.
-This cmdlet returns a new InfoPath 2013 form template.
+The Enable-SPInfoPathFormTemplate cmdlet activates an InfoPath form template to the SharePoint site collection specified in the Site parameter.
+This cmdlet returns a new InfoPath form template.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
 
 C:\PS>"FormTemplatexsn" | Enable-SPInfoPathFormTemplate -Site "http://TestSite"
 ```
 
-This example activates an InfoPath 2013 form template to a site collection named TestSite.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
-```
-C:\PS>Enable-SPInfoPathFormTemplate -Identity "FormTemplate.xsn" -Site "http://TestSite"
-
-C:\PS>"FormTemplatexsn" | Enable-SPInfoPathFormTemplate -Site "http://TestSite"
-```
-
-This example activates an InfoPath 2013 form template to a site collection named TestSite.
+This example activates an InfoPath form template to a site collection named TestSite.
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the InfoPath 2013 form template to activate.
+Specifies the InfoPath form template to activate.
 The form template must be an administrator-approved, browser-enabled form template that is available on the server farm.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a form template (for example, InfoPathFormTemplate1); a valid name of a form template files (for example, FormTemplateFile1.xsn); or an instance of a valid SPFormTemplate object.
@@ -64,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-Specifies the site collection that contains the InfoPath 2013 form template to activate.
+Specifies the site collection that contains the InfoPath form template to activate.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid URL, in the form http://server_name; or an instance of a valid SPSite object.
 
@@ -105,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -122,7 +113,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

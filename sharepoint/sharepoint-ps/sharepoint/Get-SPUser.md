@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPUser
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the user account or accounts that match a given search criteria.
 
@@ -34,14 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPUser -Web "http://zsharepoint2" -Group "Viewers"
-```
-
-This example returns all members of the group Viewers on the Web site http://zsharepoint2.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPUser -Web "http://zsharepoint2" -Group "Viewers"
 ```
@@ -71,7 +59,7 @@ Accept wildcard characters: False
 ### -Web
 Specifies the Web site to be used as a scope.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation 2013 Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind

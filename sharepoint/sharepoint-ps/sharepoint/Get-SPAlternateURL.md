@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAlternateURL
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all alternate URLs that match a given set of criteria.
 
@@ -47,28 +42,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPAlternateURL -WebApplication http://sitename
 ```
 
 This example displays all the alternate URLs on a given Web application.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPAlternateURL -WebApplication http://sitename
-```
-
-This example displays all the alternate URLs on a given Web application.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPAlternateURL -ResourceName "MyResource"
-```
-
-This example displays all the alternate URLs for a given resource.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPAlternateURL -ResourceName "MyResource"
 ```

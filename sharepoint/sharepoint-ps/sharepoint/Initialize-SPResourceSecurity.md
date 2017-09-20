@@ -7,11 +7,6 @@ schema: 2.0.0
 # Initialize-SPResourceSecurity
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Enforces resource security on the local server.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Initialize-SPResourceSecurity
-```
-
-This example enforces resource security on the local server.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Initialize-SPResourceSecurity
 ```

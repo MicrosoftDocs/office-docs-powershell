@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPEnterpriseSearchComponent
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Retrieves one or all search components in a given search topology.
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Retrieves one or all search components in a given search topology..
 
@@ -33,16 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchComponent -SearchTopology 56e6651d-ecdd-4105-bb65-6a83b6155525 -Identity 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
-```
-
-This example retrieves the search component with the identity 06e6651d-ecdd-4105-bb65-6a83b6155525 from the search topology with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
-
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 1----------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchComponent -SearchTopology 56e6651d-ecdd-4105-bb65-6a83b6155525 -Identity 06e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
@@ -50,16 +36,7 @@ Get-SPEnterpriseSearchComponent -SearchTopology 56e6651d-ecdd-4105-bb65-6a83b615
 
 This example retrieves the search component with the identity 06e6651d-ecdd-4105-bb65-6a83b6155525 from the search topology with identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
 
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchComponent -SearchTopology 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
-```
-
-This example retrieves all search components from the search topology with the identity 56e6651d-ecdd-4105-bb65-6a83b6155525 in the search service application referenced by $ssa.
-
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 2----------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchComponent -SearchTopology 56e6651d-ecdd-4105-bb65-6a83b6155525 -SearchApplication $ssa
@@ -150,5 +127,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e0342473-a608-4745-b5ea-7b7c812b2ba2(Office.15).aspx)
 

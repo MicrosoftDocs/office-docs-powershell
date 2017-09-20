@@ -7,11 +7,6 @@ schema: 2.0.0
 # Disable-SPHealthAnalysisRule
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Disables health analyzer rules.
 
@@ -29,21 +24,14 @@ Use the Disable-SPHealthAnalysisRule cmdlet to disable a health analyzer rule.
 
 The SPHealthAnalysisRule cmdlets were first introduced in the February 2011 Cumulative Update, which is available for download as follows:
 
---Description of the SharePoint Foundation 2010 Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (http://support.microsoft.com/kb/2475880)
---Description of the SharePoint Server 2010 Cumulative Update Server Hotfix Package (MOSS server-package (http://support.microsoft.com/kb/2475878)
+--Description of the SharePoint Foundation Cumulative Update Server Hotfix Package (SharePoint Foundation server-package) (http://support.microsoft.com/kb/2475880)
+--Description of the SharePoint Server Cumulative Update Server Hotfix Package (MOSS server-package (http://support.microsoft.com/kb/2475878)
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE 1--------------------------- (SharePoint Server 2013)
-```
-C:\PS>Disable-SPHealthAnalysisRule -Identity "CustomRule"
-```
-
-This example disables the health analyzer rule named CustomRule.
-
-### ---------------------EXAMPLE 1--------------------------- (SharePoint Server 2016)
+### ---------------------EXAMPLE 1--------------------------- 
 ```
 C:\PS>Disable-SPHealthAnalysisRule -Identity "CustomRule"
 ```
@@ -94,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -111,7 +99,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

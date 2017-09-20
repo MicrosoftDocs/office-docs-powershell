@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPThrottlingRule
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all throttling rules.
 
@@ -31,18 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------EXAMPLE-------- (SharePoint Server 2013)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>Get-SPThrottlingRule -RequestManagementSettings $rm
-```
-
-This example returns throttling rules for the farm by using the $rm and $web variables.
-
-### ----------EXAMPLE-------- (SharePoint Server 2016)
+### ----------EXAMPLE--------
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 

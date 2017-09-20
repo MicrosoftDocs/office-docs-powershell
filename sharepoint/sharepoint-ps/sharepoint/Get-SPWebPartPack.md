@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWebPartPack
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the Web Part packages that were installed for the specified scope.
 
@@ -34,14 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPWebPartPack -WebApplication http://zsharepoint2:80
-```
-
-This example returns all Web Part packages that have been installed on the Web application on port 80 in local farm.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Get-SPWebPartPack -WebApplication http://zsharepoint2:80
 ```

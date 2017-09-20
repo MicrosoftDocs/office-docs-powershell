@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1----------------- (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication ExampleSearchServiceApplication $crawlRule = Get-SPEnterpriseSearchCrawlRule -SearchApplication  $searchApp -Identity http://example$crawlRule | Set-SPEnterpriseSearchCrawlRule -Type InclusionRule
-```
-
-This example uses the Get-SPEnterpriseSearchCrawlRule cmdlet to retrieve a crawl rule in order to change its type from ExclusionRule to InclusionRule.
-
-### ---------------EXAMPLE 1----------------- (SharePoint Server 2016)
+### ---------------EXAMPLE 1----------------- 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication ExampleSearchServiceApplication 
 $crawlRule = Get-SPEnterpriseSearchCrawlRule -SearchApplication  $searchApp -Identity http://example
@@ -40,14 +33,7 @@ $crawlRule | Set-SPEnterpriseSearchCrawlRule -Type InclusionRule
 
 This example uses the Get-SPEnterpriseSearchCrawlRule cmdlet to retrieve a crawl rule in order to change its type from ExclusionRule to InclusionRule.
 
-### ---------------EXAMPLE 2--------------- (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication MySearchServiceApp Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | where {$_.Path -like "*example*"}
-```
-
-This example returns a list of crawl rules with paths that contain the word example from the search service application named, MySearchServiceApp.
-
-### ---------------EXAMPLE 2--------------- (SharePoint Server 2016)
+### ---------------EXAMPLE 2--------------- 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication MySearchServiceApp Get-SPEnterpriseSearchCrawlRule -SearchApplication $searchApp | where 
 {$_.Path -like "*example*"}
@@ -124,5 +110,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/a99f98a2-82b2-4336-a14f-1bc527129e8d(Office.15).aspx)
 

@@ -7,13 +7,9 @@ schema: 2.0.0
 # Get-SPAppAcquisitionConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
 
 Applies to:
 
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Synopsis}}
 
 
 
@@ -32,7 +28,6 @@ Get-SPAppAcquisitionConfiguration [-AssignmentCollection <SPAssignmentCollection
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
 
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
@@ -40,29 +35,19 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 
 Use the Get-SPAppAcquisitionConfiguration cmdlet to return app acquisition settings from the SharePoint Storeor App Catalog.
 
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill in the Description}}
-
 
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1------- (SharePoint Server 2013)
+### ------------EXAMPLE 1------- 
 ```
 C:\PS>Get-SPAppAcquisitionConfiguration -WebApplication http://localhost
 ```
 
 This example returns app acquisition settings for the specified web application.
 
-### Example 1 (SharePoint Server 2016)
-```
-PS C:\> {{ Add example code here }}
-```
 
-{{ Add example description here }}
-
-### ------------EXAMPLE 2------- (SharePoint Server 2013)
+### ------------EXAMPLE 2------- 
 ```
 C:\PS>Get-SPAppAcquisitionConfiguration -SiteSubscription http://localhost/sites/SharePointOnlineAdmin
 ```
@@ -72,15 +57,10 @@ This example returns app acquisition settings for the specified tenant.
 ## PARAMETERS
 
 ### -SiteSubscription
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies the site collection for which app acquisition settings are to be returned.
 
 
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill SiteSubscription Description}}
 
 
 
@@ -98,7 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
 
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
@@ -108,11 +87,6 @@ When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are au
 When the Global parameter is used, all objects are contained in the global store.
 If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill AssignmentCollection Description}}
 
 
 
@@ -130,15 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
-**Below Content Applies To:**SharePoint Server 2013
 
 Specifies the web application for which app acquisition settings are to be returned.
 
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
-{{Fill WebApplication Description}}
 
 
 

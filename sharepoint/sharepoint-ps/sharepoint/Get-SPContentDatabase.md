@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPContentDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns one or more content databases.
 
@@ -54,28 +49,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2013)
+### ----------------EXAMPLE 1------------ 
 ```
 C:\PS>Get-SPContentDatabase -webapplication http://sitename
 ```
 
 This example returns all content databases used by the sitename Web application.
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPContentDatabase -webapplication http://sitename
-```
-
-This example returns all content databases used by the sitename Web application.
-
-### ----------------EXAMPLE 2------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPContentDatabase -site http://contoso.com
-```
-
-This example returns the content database that contains the site collection at http://contoso.com.
-
-### ----------------EXAMPLE 2------------ (SharePoint Server 2016)
+### ----------------EXAMPLE 2------------ 
 ```
 C:\PS>Get-SPContentDatabase -site http://contoso.com
 ```

@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPSiteSubscriptionEdiscoveryHub -Identity http://contoso.com
-```
-
-This example displays the eDiscovery hub for the specified site collection.
-
-### ------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE---------------------- 
 ```
 C:\PS>Get-SPSiteSubscriptionEdiscoveryHub -Identity http://contoso.com
 ```
@@ -80,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -97,7 +90,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

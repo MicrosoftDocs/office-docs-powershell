@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPEnterpriseSearchFileFormat
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Retrieves all file formats that the parsing system has format handlers for.
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Retrieves all parseable file formats.
 
@@ -26,15 +21,6 @@ Get-SPEnterpriseSearchFileFormat [[-Identity] <DocumentParserFileFormatPipeBind>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The Get-SPEnterpriseSearchFileFormat cmdlet retrieves the following information about a specified file format:
-
-If you do not specify a format ID, the cmdlet returns the list of information for all the file formats that the content processing component has format handlers for.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 The Get-SPEnterpriseSearchFileFormat cmdlet returns the file format information for a given format ID.
 If no format ID is provided, the cmdlet returns all the parseable file formats.
@@ -45,15 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
-```
-
-This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all file formats that the Search service application referenced by $ssa has format handlers for.
-
-### -------------EXAMPLE 1------------- (SharePoint Server 2016)
+### -------------EXAMPLE 1------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
@@ -61,16 +39,7 @@ Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa
 
 This example uses the Get-SPEnterpriseSearchFileFormat to retrieve all parseable file formats in the search service application referenced by $ssa.
 
-### -------------EXAMPLE 2------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa zip
-```
-
-This example uses the Get-SPEnterpriseSearchFileFormat cmdlet to retrieve information about the file format "zip" in the Search service application referenced by $ssa.
-The result is as follows:
-
-### -------------EXAMPLE 2------------- (SharePoint Server 2016)
+### -------------EXAMPLE 2------------- 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchFileFormat -SearchApplication $ssa doc
@@ -97,14 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the Search application for which to retrieve file format information.
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search application for which to retrieve file format information.
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid search application name (for example, SearchApp1); or an instance of a valid SearchServiceApplication object.
@@ -156,8 +117,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5813415a-a741-4371-9500-fd8e0dfb6977(Office.15).aspx)
 
 [New-SPEnterpriseSearchFileFormat]()
 

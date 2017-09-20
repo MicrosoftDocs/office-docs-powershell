@@ -7,11 +7,6 @@ schema: 2.0.0
 # Mount-SPContentDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Attaches an existing content database to the farm.
 
@@ -40,7 +35,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 1--------------------- 
 ```
 C:\PS>Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
 ```
@@ -49,25 +44,7 @@ This example mounts an existing database to the sitename web application.
 If upgrades are required, it triggers database schema upgrade and then performs only build-to-build upgrade actions on existing site collections if required.
 This operation does not changed the CompatibilityLevel for existing site collections in this database.
 
-### -----------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename
-```
-
-This example mounts an existing database to the sitename web application.
-If upgrades are required, it triggers database schema upgrade and then performs only build-to-build upgrade actions on existing site collections if required.
-This operation does not changed the CompatibilityLevel for existing site collections in this database.
-
-### -----------------EXAMPLE 2--------------------- (SharePoint Server 2013)
-```
-C:\PS>Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename -NoB2BSiteUpgrade
-```
-
-This example mounts an existing database to the sitename web application but it prevents any site upgrades from occurring.
-If upgrades are required, it triggers database schema upgrades only and no build-to-build upgrade actions are performed on any site collections.
-This operation does not change the CompatibilityLevel for existing site collections in this database.
-
-### -----------------EXAMPLE 2--------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 2--------------------- 
 ```
 C:\PS>Mount-SPContentDatabase "MyDatabase" -DatabaseServer "MyServer" -WebApplication http://sitename -NoB2BSiteUpgrade
 ```
@@ -168,7 +145,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -304,7 +281,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

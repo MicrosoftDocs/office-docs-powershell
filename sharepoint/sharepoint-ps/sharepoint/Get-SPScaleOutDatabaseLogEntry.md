@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPScaleOutDatabaseLogEntry
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Queries a scale-out database for scale-out logs.
 
@@ -32,18 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE----------- (SharePoint Server 2013)
-```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
-C:\PS>Get-SPScaleOutDatabaseLogEntry -Database  $database -Count 10 -MajorAction DataMove
-```
-
-This example gets the 10 most recent scale-out log entries from the first scale-out database of the given service application.
-
-### -------------EXAMPLE----------- (SharePoint Server 2016)
+### -------------EXAMPLE----------- 
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -112,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -166,15 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -RangeLimitPoint
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the range limit point of the scale-out log entries to be returned.
-
-The range limit point has different meaning depending on the action that records the log entry.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the range limit point of the scale-out log entries to be returned.
 
@@ -204,7 +179,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

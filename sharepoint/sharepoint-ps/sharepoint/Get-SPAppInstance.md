@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppInstance
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the metadata for an instance of an app.
 
@@ -48,7 +43,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------EXAMPLE 1----------- (SharePoint Server 2013)
+### -----------EXAMPLE 1----------- 
 ```
 C:\PS>$instances = Get-SPAppInstance -Web http://localhost
 ```
@@ -56,22 +51,7 @@ C:\PS>$instances = Get-SPAppInstance -Web http://localhost
 This example returns a collection if more than one app is installed on http://localhost.
 If only one app is installed, a single object is returned.
 
-### -----------EXAMPLE 1----------- (SharePoint Server 2016)
-```
-C:\PS>$instances = Get-SPAppInstance -Web http://localhost
-```
-
-This example returns a collection if more than one app is installed on http://localhost.
-If only one app is installed, a single object is returned.
-
-### -----------EXAMPLE 2----------- (SharePoint Server 2013)
-```
-C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
-```
-
-This example returns the ID of an instance of an app.
-
-### -----------EXAMPLE 2----------- (SharePoint Server 2016)
+### -----------EXAMPLE 2----------- 
 ```
 C:\PS>$instance = Get-SPAppInstance -AppInstanceId $instance.Id
 ```

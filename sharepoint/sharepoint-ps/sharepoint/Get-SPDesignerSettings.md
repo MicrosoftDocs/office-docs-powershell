@@ -7,13 +7,8 @@ schema: 2.0.0
 # Get-SPDesignerSettings
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
 
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Displays SharePoint Designer 2013 features.
+Displays SharePoint Designer features.
 
 
 
@@ -25,25 +20,18 @@ Get-SPDesignerSettings [-WebApplication] <SPWebApplicationPipeBind>
 ```
 
 ## DESCRIPTION
-The Get-SPDesignerSettings cmdlet determines whether SharePoint Designer 2013 features are enabled on the specified Web application.
+The Get-SPDesignerSettings cmdlet determines whether SharePoint Designer features are enabled on the specified Web application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE------------------------ (SharePoint Server 2013)
+### ---------------------EXAMPLE------------------------ 
 ```
 C:\PS>Get-SPDesignerSettings -webapplication http://contoso
 ```
 
-This example retrieves the SharePoint Designer 2013 settings for the Web application, http://contoso.
-
-### ---------------------EXAMPLE------------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPDesignerSettings -webapplication http://contoso
-```
-
-This example retrieves the SharePoint Designer 2013 settings for the Web application, http://contoso.
+This example retrieves the SharePoint Designer settings for the Web application, http://contoso.
 
 ## PARAMETERS
 

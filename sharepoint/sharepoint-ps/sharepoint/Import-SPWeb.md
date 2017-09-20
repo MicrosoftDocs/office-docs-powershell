@@ -7,11 +7,6 @@ schema: 2.0.0
 # Import-SPWeb
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Imports a web, list, or library.
 
@@ -29,20 +24,13 @@ Import-SPWeb [-Identity] <SPWebPipeBind> -Path <String> [-ActivateSolutions]
 
 ## DESCRIPTION
 The Import-SPWeb cmdlet imports a web, list, or library.
-The capability to import from a library is a new feature in SharePoint 2010 Products.
+The capability to import from a library is a new feature in SharePoint Products.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Import-SPWeb http://site -Path export.cmp -UpdateVersions Overwrite
-```
-
-This example imports the contents of export.cmp into a site at http://site, overwriting the versioned content on the site with the contents of the export.cmp file.
-
-### ---------------------EXAMPLE---------------------- (SharePoint Server 2016)
+### ---------------------EXAMPLE---------------------- 
 ```
 C:\PS>Import-SPWeb http://site -Path export.cmp -UpdateVersions Overwrite
 ```
@@ -127,7 +115,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -215,13 +203,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUserSecurity
-**Below Content Applies To:**SharePoint Server 2013
-
-Preserves the user security settings except for SPLists that have broken inheritance and item level permissions set.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Preserves the user security settings.
 
@@ -309,7 +290,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

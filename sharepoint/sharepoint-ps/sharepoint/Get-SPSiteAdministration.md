@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPSiteAdministration
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a site administration object that allows farm administrators to view certain information about site collections to which they might not have access.
 
@@ -57,7 +52,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="Storage";Expression={$_.Quota.StorageMaximumLevel}}
 ```
@@ -65,25 +60,7 @@ C:\PS>Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="S
 This example gets a subset of data from all of the sites in the content database with the URL b399a366-d899-4cff-8a9b-8c0594ee755f (farm administrator does not require access).
 This command uses the calculated property Storage to display the maximum storage value for the content database.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPSiteAdministration | Select -Property Url, OwnerLoginName, @{Name="Storage";Expression={$_.Quota.StorageMaximumLevel}}
-```
-
-This example gets a subset of data from all of the sites in the content database with the URL b399a366-d899-4cff-8a9b-8c0594ee755f (farm administrator does not require access).
-This command uses the calculated property Storage to display the maximum storage value for the content database.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-C:\PS>Start-SPAssignment -Global$s = Get-SPSiteAdministration -Identity http://MyApp/Sites/Site1$s.UrlStop-SPAssignment -Global
-```
-
-This example gets the site collections specified by the Identity parameter and inserts the results into the variable s.
-This example uses the Global method of garbage collection.
-This method is easier to use but grows quickly.
-Do not run a Get-SPSite command that returns many results while global assignment is on.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>Start-SPAssignment -Global
 $s = Get-SPSiteAdministration -Identity http://MyApp/Sites/Site1
@@ -96,15 +73,7 @@ This example uses the Global method of garbage collection.
 This method is easier to use but grows quickly.
 Do not run a Get-SPSite command that returns many results while global assignment is on.
 
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-C:\PS>$GC = Start-SPAssignment$Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50Stop-SPAssignment $GC
-```
-
-This example gets the first 50 sites owned by user DOMAIN\JDoe by using a server-side query, and assigns the returned sites to a local variable.
-This command uses advanced assignment collection methods.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3-------------------
 ```
 C:\PS>$GC = Start-SPAssignment
 $Sites = $GC | Get-SPSiteAdministration -Filter {$_.Owner -eq "DOMAIN\JDoe"} -Limit 50
@@ -114,35 +83,21 @@ Stop-SPAssignment $GC
 This example gets the first 50 sites owned by user DOMAIN\JDoe by using a server-side query, and assigns the returned sites to a local variable.
 This command uses advanced assignment collection methods.
 
-### ------------------EXAMPLE 4------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 4------------------ 
 ```
 C:\PS>Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
 ```
 
 This command returns the sum of the disk space usage for all sites in the specified Web application.
 
-### ------------------EXAMPLE 4------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit All |ForEach-Object {$sum=0}{ $sum+=$_.DiskUsed }{$sum}
-```
-
-This command returns the sum of the disk space usage for all sites in the specified Web application.
-
-### ------------------EXAMPLE 5------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 5------------------ 
 ```
 C:\PS>Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
 ```
 
 This example gets the URLs for all site collections in a Web application.
 
-### ------------------EXAMPLE 5------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPWebApplication http://sitename | Get-SPSiteAdministration -Limit ALL | Select URL
-```
-
-This example gets the URLs for all site collections in a Web application.
-
-### ------------------EXAMPLE 6------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 6------------------ 
 ```
 C:\PS>Get-SPSiteAdministration -identity "http://localserver/(my|personal)/sites" -Regex
 ```
@@ -150,22 +105,7 @@ C:\PS>Get-SPSiteAdministration -identity "http://localserver/(my|personal)/sites
 This example returns all sites that match the given regular expression.
 The quotation marks around the value specified for the Identity parameter are required when using the Regex flag.
 
-### ------------------EXAMPLE 6------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPSiteAdministration -identity "http://localserver/(my|personal)/sites" -Regex
-```
-
-This example returns all sites that match the given regular expression.
-The quotation marks around the value specified for the Identity parameter are required when using the Regex flag.
-
-### ------------------EXAMPLE 7------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPSite "http://sitename/sites/teams/*" -Limit 100
-```
-
-This example gets up to 100 of the sites under the URL http://sitename/sites/teams.
-
-### ------------------EXAMPLE 7------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 7------------------ 
 ```
 C:\PS>Get-SPSite "http://sitename/sites/teams/*" -Limit 100
 ```
@@ -252,7 +192,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -341,7 +281,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

@@ -24,16 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchTopology -SearchApplication $ssa
-```
-
-This example retrieves all search topologies of the search service application referenced by $ssa.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa
@@ -41,16 +32,7 @@ Get-SPEnterpriseSearchTopology -SearchApplication $ssa
 
 This example retrieves all search topologies of the search service application referenced by $ssa.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
-```
-
-This example retrieves the active search topology of the search service application referenced by $ssa.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
@@ -58,17 +40,7 @@ Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Active
 
 This example retrieves the active search topology of the search service application referenced by $ssa.
 
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-
-Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
-```
-
-This example retrieves search topology with the identity 10fa59cb-4b32-4fe6-8f8d-065388df201e of the search service application referenced by $ssa.
-
-### ------------------EXAMPLE 3------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 3------------------ 
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchTopology -SearchApplication $ssa -Identity 10fa59cb-4b32-4fe6-8f8d-065388df201e
@@ -160,8 +132,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/43e2c839-54b8-4f78-b883-abc1dbea617c(Office.15).aspx)
 
 [New-SPEnterpriseSearchTopology]()
 

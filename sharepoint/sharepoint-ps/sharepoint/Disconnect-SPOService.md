@@ -30,10 +30,11 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+###   ------------ Example 1 --------------------
 ```
-
+{example code}
 ```
+{example description}
 
 ## PARAMETERS
 
@@ -56,5 +57,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Connect-SPOService]()
 
-[Online Version](http://technet.microsoft.com/EN-US/library/efd0e73c-1cb1-4dd4-83ea-cedec565ba24(Office.15).aspx)
 

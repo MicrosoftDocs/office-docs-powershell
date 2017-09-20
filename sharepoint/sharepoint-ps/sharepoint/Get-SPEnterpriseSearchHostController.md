@@ -25,31 +25,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchHostController
-```
-
-This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------ 
 ```
 C:\PS>Get-SPEnterpriseSearchHostController
 ```
 
 This example retrieves a list of all HostControllers in the farm with their status (primary/secondary) and repository version.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$ssi = Get-SPEnterpriseSearchServiceInstance -Local
-
-
-Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
-```
-
-This example retrieves the status information for the SearchHostController on the local server.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------ 
 ```
 C:\PS>$ssi = Get-SPEnterpriseSearchServiceInstance -Local
 Get-SPEnterpriseSearchHostController -SearchServiceInstance $ssi
@@ -108,5 +91,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d93675ff-d1fc-4a01-8506-9e29ce22db1d(Office.15).aspx)
 

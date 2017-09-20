@@ -23,14 +23,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE---------- (SharePoint Server 2013)
-```
-C:\PS>Add-SPSecureStoreSystemAccount -AccountName contoso\jdoe
-```
-
-This example adds the account name jdoe.
-
-### ------------EXAMPLE---------- (SharePoint Server 2016)
+### ------------EXAMPLE---------- 
 ```
 C:\PS>Add-SPSecureStoreSystemAccount -AccountName contoso\jdoe
 ```
@@ -79,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -96,7 +89,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

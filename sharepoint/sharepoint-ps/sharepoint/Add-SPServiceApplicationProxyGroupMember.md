@@ -7,11 +7,6 @@ schema: 2.0.0
 # Add-SPServiceApplicationProxyGroupMember
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Adds a member to the service application proxy group.
 
@@ -32,18 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
-```
-C:\PS>Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member babab30e-8e3a-428b-8ff4-4d5c8f455e6d
-```
-
-This example adds a select service application proxy to the service application proxy group named RemoteProxyGroup.
-
-The service application proxy group GUID is unique to every farm.
-You can run Get-SPServiceApplicationProxyGroup | Select Name,Id to see the GUID of the serviceapplication proxy groups.
-Use this result for any other SPServiceApplicationProxyGroup cmdlets.
-
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------------- 
 ```
 C:\PS>Add-SPServiceApplicationProxyGroupMember RemoteProxyGroup -Member babab30e-8e3a-428b-8ff4-4d5c8f455e6d
 ```
@@ -112,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +113,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

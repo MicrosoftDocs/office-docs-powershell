@@ -27,42 +27,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1---------------- (SharePoint Server 2013)
+### ------------EXAMPLE 1---------------- 
 ```
 C:\PS>Get-SPAccessServiceApplication -identity "MyAccessService"
 ```
 
 This example displays an Access Services application named MyAccessService.
 
-### ------------EXAMPLE 1---------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPAccessServiceApplication -identity "MyAccessService"
-```
-
-This example displays an Access Services application named MyAccessService.
-
-### ------------EXAMPLE 2---------------- (SharePoint Server 2013)
+### ------------EXAMPLE 2---------------- 
 ```
 C:\PS>Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
 ```
 
 This example displays every Access Services application that run in the farm, which allows more than 10,000 records in a table.
 
-### ------------EXAMPLE 2---------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPAccessServiceApplication | where {$_.recordsintablemax -gt 10000}
-```
-
-This example displays every Access Services application that run in the farm, which allows more than 10,000 records in a table.
-
-### ------------EXAMPLE 3---------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPAccessServiceApplication
-```
-
-This example displays every Access Services application in the farm.
-
-### ------------EXAMPLE 3---------------- (SharePoint Server 2016)
+### ------------EXAMPLE 3---------------- 
 ```
 C:\PS>Get-SPAccessServiceApplication
 ```

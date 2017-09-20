@@ -7,11 +7,6 @@ schema: 2.0.0
 # Clear-SPLogLevel
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Resets the Windows trace logging and event logging levels to their default values.
 
@@ -32,42 +27,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1----------------- 
 ```
 C:\PS>Clear-SPLogLevel -Identity Cat1
 ```
 
 This example resets the log levels for a single category.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Clear-SPLogLevel -Identity Cat1
-```
-
-This example resets the log levels for a single category.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2----------------- 
 ```
 C:\PS>"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
 ```
 
 This example resets the log levels for multiple categories.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>"Cat1", "Cat2", "Cat3" | Clear-SPLogLevel
-```
-
-This example resets the log levels for multiple categories.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPLogLevel | Clear-SPLogLevel
-```
-
-This example resets the log levels for all categories.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
+### --------------EXAMPLE 3----------------- 
 ```
 C:\PS>Get-SPLogLevel | Clear-SPLogLevel
 ```

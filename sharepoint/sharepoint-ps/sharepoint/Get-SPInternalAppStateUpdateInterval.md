@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPInternalAppStateUpdateInterval
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the interval in hours between updates of the internal app state update job.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE----------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPInternalAppStateUpdateInterval
-```
-
-This example returns the interval in hours between updates of the internal app state update job.
-
-### ------------EXAMPLE----------- (SharePoint Server 2016)
+### ------------EXAMPLE----------- 
 ```
 C:\PS>Get-SPInternalAppStateUpdateInterval
 ```

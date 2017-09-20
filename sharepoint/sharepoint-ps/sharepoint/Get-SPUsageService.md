@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPUsageService
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a usage service.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE------------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPUsageService -Identity 57055d99-9914-4af6-a3bf-7b76e3f231c2
-```
-
-This example returns a SPUsageService object of the specified ID.
-
-### -------------------EXAMPLE------------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE------------------------- 
 ```
 C:\PS>Get-SPUsageService -Identity 57055d99-9914-4af6-a3bf-7b76e3f231c2
 ```

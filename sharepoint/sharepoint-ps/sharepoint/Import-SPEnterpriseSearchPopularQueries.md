@@ -53,27 +53,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$ssap = Get-SPEnterpriseSearchServiceApplicationProxy
-
-$hostname = hostname
-
-$web = get-spsite | get-spweb | where {$_.Url-eq "http://$hostname"}
-
-$owner = new-object Microsoft.Office.Server.Search.Administration.SearchObjectOwner -ArgumentList @([Microsoft.Office.Server.Search.Administration.SearchObjectLevel]::SPWeb,$web)
-
-$mgr = new-object Microsoft.Office.Server.Search.Administration.Query.FederationManager -ArgumentList $ssap
-
-$source = $mgr.GetSourceByName("Local SharePoint Results", $owner)
-
-Import-SPEnterpriseSearchPopularQueries -SearchApplicationProxy $ssap -Filename C:\input.txt -ResultSource $source -Web $web
-```
-
-This example uses the Import-SPEnterpriseSearchPopularQueries cmdlet to import the queries file that is named C:\input.txt and associate with it the Result Source referenced by $source and the SPWeb referenced by $web.
-The example defines the variable $web as the SPWeb with URL http://hostname, and the variable $source as the Result Source named "Local SharePoint Results" at the SPWeb referenced by $web.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE-------- 
 ```
 C:\PS>$ssap = Get-SPEnterpriseSearchServiceApplicationProxy
 
@@ -167,7 +147,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +180,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -226,5 +206,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/810a552b-60a3-496a-b891-c5ddf911b90f(Office.15).aspx)
 

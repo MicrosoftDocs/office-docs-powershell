@@ -26,16 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity UserName
-```
-
-This example retrieves the managed property UserName from the default search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity UserName
@@ -167,5 +158,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/048a6d51-71f3-4d47-be19-6fd440f73557(Office.15).aspx)
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Copy-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Makes a copy of a site collection.
 
@@ -36,14 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE------------- (SharePoint Server 2013)
-```
-C:\PS>Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
-```
-
-This example makes a copy of the http://contoso/sites/OldTeam site collection from its database to the WSS_Content database with the new URL, http://contoso/sites/NewTeam and a new Site ID.
-
-### --------------EXAMPLE------------- (SharePoint Server 2016)
+### --------------EXAMPLE------------- 
 ```
 C:\PS>Copy-SPSite http://contoso/sites/OldTeam -DestinationDatabase WSS_Content -TargetUrl http://contoso/sites/NewTeam
 ```

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPTrustedIdentityTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns an identity provider.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------------EXAMPLE 1------------------------ (SharePoint Server 2013)
-```
-C:\PS>$trustedsts=Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
-```
-
-This example gets a trusted identity token issuer.
-
-### --------------------------EXAMPLE 1------------------------ (SharePoint Server 2016)
+### --------------------------EXAMPLE 1------------------------ 
 ```
 C:\PS>$trustedsts = Get-SPTrustedIdentityTokenIssuer "LiveIDSTS"
 ```

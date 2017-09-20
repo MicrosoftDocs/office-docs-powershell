@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppStateUpdateInterval
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the interval in hours between updates of the app state update job.
 
@@ -25,20 +20,13 @@ Get-SPAppStateUpdateInterval [-AssignmentCollection <SPAssignmentCollection>] [<
 
 ## DESCRIPTION
 Use the Get-SPAppStateUpdateInterval cmdlet to return the interval in hours between updates of the the app state update job.
-The app state update job updates the app states, including app updates, in SharePoint 2013 based on information in the SharePoint Store.
+The app state update job updates the app states, including app updates, in SharePoint based on information in the SharePoint Store.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
-```
-C:\PS>Get-SPAppStateUpdateInterval
-```
-
-This example returns the app state update timer job invocation interval in hours.
-
-###   (SharePoint Server 2016)
+### ------------EXAMPLE------- 
 ```
 C:\PS>Get-SPAppStateUpdateInterval
 ```

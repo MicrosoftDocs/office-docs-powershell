@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Returns a InfoPath 2013 form template.
+Returns a InfoPath form template.
 
 ## SYNTAX
 
@@ -17,45 +17,31 @@ Get-SPInfoPathFormTemplate [[-Identity] <SPFormTemplatePipeBind>]
 ```
 
 ## DESCRIPTION
-The Get-SPInfoPathFormTemplate cmdlet reads a specific InfoPath 2013 form template or the collection of templates.
-If the Identity parameter is not specified, the cmdlet returns the collection of InfoPath 2013 form templates for the farm.
+The Get-SPInfoPathFormTemplate cmdlet reads a specific InfoPath form template or the collection of templates.
+If the Identity parameter is not specified, the cmdlet returns the collection of InfoPath form templates for the farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 1-------------- 
 ```
 C:\PS>Get-SPInfoPathFormTemplate
 ```
 
-This example lists the Identity, DisplayName, and FormTemplateStatus property for each admininstrator-deployed InfoPath 2013 form template.
+This example lists the Identity, DisplayName, and FormTemplateStatus property for each admininstrator-deployed InfoPath form template.
 
-### ---------------EXAMPLE 1-------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPInfoPathFormTemplate
-```
-
-This example lists the Identity, DisplayName, and FormTemplateStatus property for each admininstrator-deployed InfoPath 2013 form template.
-
-### ---------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### ---------------EXAMPLE 2-------------- 
 ```
 C:\PS>"SomeFormTemplate.xsn" | Get-SPInfoPathFormTemplate | format-list
 ```
 
-This example lists all the properties of the specified InfoPath 2013 form template.
-
-### ---------------EXAMPLE 2-------------- (SharePoint Server 2016)
-```
-C:\PS>"SomeFormTemplate.xsn" | Get-SPInfoPathFormTemplate | format-list
-```
-
-This example lists all the properties of the specified InfoPath 2013 form template.
+This example lists all the properties of the specified InfoPath form template.
 
 ## PARAMETERS
 
 ### -Identity
-Specifies the InfoPath 2013 form template to get.
+Specifies the InfoPath form template to get.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a form template (for example, InfoPathFormTemplate1); a valid name of a form template files (for example, FormTemplateFile1.xsn); or an instance of a valid SPFormTemplate object.
 

@@ -7,11 +7,6 @@ schema: 2.0.0
 # New-SPAlternateURL
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Creates a new public or internal URL for the specified Web application zone or resource.
 
@@ -53,18 +48,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
-```
-C:\PS>#create the public URLNew-SPAlternateURL https://www.contoso.com -Zone "Internet"
-
-C:\PS>#create the internal URLNew-SPAlternateURL http://sharepoint.contoso.com -Zone "Internet" -internal
-```
-
-This example translates incoming requests for https://www.contoso.com into http://sharepoint.contoso.com (on the Internet zone).
-
-When a reverse proxy is being set up to handle public URL SSL termination, alternate access mappings must be configured to handle the URL translation.
-
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE----------------------- 
 ```
 C:\PS>#create the public URL
 New-SPAlternateURL https://www.contoso.com -Zone "Internet"
@@ -156,7 +140,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -190,7 +174,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

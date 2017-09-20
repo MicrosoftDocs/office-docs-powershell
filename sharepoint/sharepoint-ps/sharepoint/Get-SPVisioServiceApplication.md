@@ -24,28 +24,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE 1------------------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE 1------------------------- 
 ```
 C:\PS>Get-SPVisioServiceApplication
 ```
 
 This example returns a collection of all Visio Services applications in the farm.
 
-### -----------------------EXAMPLE 1------------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPVisioServiceApplication
-```
-
-This example returns a collection of all Visio Services applications in the farm.
-
-### -----------------------EXAMPLE 2------------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPVisioServiceApplication "VGS1"
-```
-
-This example returns properties of the VGS1  Visio Services application.
-
-### -----------------------EXAMPLE 2------------------------- (SharePoint Server 2016)
+### -----------------------EXAMPLE 2------------------------- 
 ```
 C:\PS>Get-SPVisioServiceApplication "VGS1"
 ```

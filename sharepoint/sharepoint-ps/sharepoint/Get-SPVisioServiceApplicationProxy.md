@@ -24,28 +24,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### ----------------EXAMPLE 1--------------------- 
 ```
 C:\PS>Get-SPVisioServiceApplicationProxy
 ```
 
 This example returns a list of Visio Services application proxies.
 
-### ----------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPVisioServiceApplicationProxy
-```
-
-This example returns a list of Visio Services application proxies.
-
-### ----------------EXAMPLE 2--------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPVisioServiceApplicationProxy "Connection to VGS2"
-```
-
-This example returns settings for a Visio Services application proxy.
-
-### ----------------EXAMPLE 2--------------------- (SharePoint Server 2016)
+### ----------------EXAMPLE 2--------------------- 
 ```
 C:\PS>Get-SPVisioServiceApplicationProxy "Connection to VGS2"
 ```

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPServiceApplicationProxy
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns an instance of the specified service application proxy.
 
@@ -35,14 +30,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPServiceApplicationProxy
-```
-
-This example retrieves all the service application proxies in the farm.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE----------------- 
 ```
 C:\PS>Get-SPServiceApplicationProxy
 ```

@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPTimerJob
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns timer jobs.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE--------------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
-```
-
-This example displays all timer jobs for a specified Web application.
-
-### ---------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### ---------------------EXAMPLE--------------------- 
 ```
 C:\PS>Get-SPTimerJob -WebApplication "http://servername" | select Name, DisplayName
 ```

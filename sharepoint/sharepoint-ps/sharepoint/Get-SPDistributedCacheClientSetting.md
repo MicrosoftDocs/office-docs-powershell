@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPDistributedCacheClientSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns distributed cache settings from usage.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE-------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
-```
-
-This example returns the Distributed Cache client settings for DistributedLogonTokenCache.
-
-### ------------EXAMPLE-------- (SharePoint Server 2016)
+### ------------EXAMPLE-------- 
 ```
 C:\PS>Get-SPDistributedCacheClientSetting -ContainerType DistributedLogonTokenCache
 ```
@@ -49,15 +37,6 @@ This example returns the Distributed Cache client settings for DistributedLogonT
 ## PARAMETERS
 
 ### -ContainerType
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the container type to clear.
-
-The valid values are the following:
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the container type to clear.
 

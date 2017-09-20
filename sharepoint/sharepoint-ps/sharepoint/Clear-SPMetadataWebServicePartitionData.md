@@ -32,14 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE--------------- (SharePoint Server 2013)
-```
-C:\PS>Clear-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
-```
-
-This example removes data for a site subscription on a Metadata Service application.
-
-### ----------------EXAMPLE--------------- (SharePoint Server 2016)
+### ----------------EXAMPLE--------------- 
 ```
 C:\PS>Clear-SPMetadataWebServicePartitionData -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2"
 ```

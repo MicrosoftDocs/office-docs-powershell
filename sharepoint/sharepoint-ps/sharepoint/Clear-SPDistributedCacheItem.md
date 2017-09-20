@@ -7,11 +7,6 @@ schema: 2.0.0
 # Clear-SPDistributedCacheItem
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Clears cached items from the distributed cache server.
 
@@ -31,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE------ (SharePoint Server 2013)
-```
-C:\PS>Clear-SPDistributedCacheItem -ContainerType DistributedLogonTokenCache
-```
-
-This example removes all the cache items for distributed token cache.
-
-### ------------EXAMPLE------ (SharePoint Server 2016)
+### ------------EXAMPLE------ 
 ```
 C:\PS>Clear-SPDistributedCacheItem -ContainerType DistributedLogonTokenCache
 ```
@@ -48,15 +36,6 @@ This example removes all the cache items for distributed token cache.
 ## PARAMETERS
 
 ### -ContainerType
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the container type to clear.
-
-The valid values are the following:
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the container type to clear.
 
@@ -112,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -129,7 +108,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

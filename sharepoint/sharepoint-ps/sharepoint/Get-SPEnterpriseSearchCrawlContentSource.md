@@ -26,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication " SearchApp1" $contentsource = Get-SPEnterpriseSearchCrawlContentSource -SearchApplication $searchapp -Identity "Local SharePoint Sites" $contentsource.StartFullCrawl()
-```
-
-This example retrieves the default content source for the search service application, SearchApp1, and starts a full crawl on the content source.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication " SearchApp1" 
 $contentsource = Get-SPEnterpriseSearchCrawlContentSource -SearchApplication $searchapp -Identity "Local SharePoint Sites" $contentsource.StartFullCrawl()
@@ -112,5 +105,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2bd3631d-a24d-443f-bab8-a261dc3fb701(Office.15).aspx)
 

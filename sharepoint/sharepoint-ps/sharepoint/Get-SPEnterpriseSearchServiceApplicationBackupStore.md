@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPEnterpriseSearchServiceApplicationBackupStore
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Retrieves information about the Search service application backup files.
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Retrieves information about the search service application backup files.
 
@@ -26,13 +21,6 @@ Get-SPEnterpriseSearchServiceApplicationBackupStore [-BackupFolder] <String> [-N
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet returns information about the search databases and index files in a specified Search service application backup location.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
 
 This cmdlet returns information about the search databases and index files in a specified search service application backup location.
 
@@ -42,28 +30,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
-```
-
-This example retrieves the backup of the search databases and index files that are located at \\\\sample\backup with the backup id 3222ad97-91ad-471f-a764-780ec1f05f74 from the Search service application Search Service Application.
-
-### ------------------EXAMPLE 1----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 1----------------- 
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -BackupId 3222ad97-91ad-471f-a764-780ec1f05f74
 ```
 
 This example retrieves the backup of the search databases and index files that are located at \\\\sample\backup with the backup id 3222ad97-91ad-471f-a764-780ec1f05f74 from the search service application Search Service Application.
 
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
-```
-
-This example retrieves the most recently taken backup of the search databases and index files that are located at \\\\sample\backup from the Search service application Search Service Application.
-
-### ------------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE 2----------------- 
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplicationBackupStore -BackupFolder \\sample\backup -Name "Search Service Application" -UseMostRecent
 ```
@@ -89,13 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the name of the Search service application from which to retrieve the related backup information.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the name of the search service application from which to retrieve the related backup information.
 
@@ -186,7 +153,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -203,7 +170,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -229,5 +196,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/b306c983-ce99-4a8d-b840-5db542ba4ed0(Office.15).aspx)
 

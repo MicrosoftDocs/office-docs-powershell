@@ -7,11 +7,6 @@ schema: 2.0.0
 # Install-SPApplicationContent
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Copies shared application data to existing Web application folders.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ---------------------EXAMPLE-------------------- (SharePoint Server 2013)
-```
-C:\PS>Install-SPApplicationContent
-```
-
-This example copies data to a Web application in the existing folders.
-
-### ---------------------EXAMPLE-------------------- (SharePoint Server 2016)
+### ---------------------EXAMPLE-------------------- 
 ```
 C:\PS>Install-SPApplicationContent
 ```

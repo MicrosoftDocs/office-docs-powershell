@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPFarmConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns a global property or a collection of global properties for the local farm.
 
@@ -36,21 +31,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE---------------- (SharePoint Server 2013)
-```
-C:\PS>$a = Get-SPFarmConfig
-
-C:\PS>$a.AjaxTimeout = 200
-
-C:\PS>$a | Set-SPFarmConfig
-```
-
-This example uses the Get-SPFarmConfig cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout, and then passes PSCustomObject to the Set-SPFarmConfig cmdlet to change the Ajax Timeout setting.
-Ajax Timeout, a farm-wide setting, is a member of the SPWebService object and cannot be accessed with a Windows PowerShell cmdlet.
-
-You can perform the same operations with either of the following commands.
-
-### -------------EXAMPLE---------------- (SharePoint Server 2016)
+### -------------EXAMPLE---------------- 
 ```
 C:\PS>$a = Get-SPFarmConfig
 

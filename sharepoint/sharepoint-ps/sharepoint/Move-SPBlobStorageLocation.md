@@ -7,11 +7,6 @@ schema: 2.0.0
 # Move-SPBlobStorageLocation
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Copies a content database to a new location by using Remote BLOB Storage (RBS).
 
@@ -36,31 +31,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1----------------------- 
 ```
 C:\PS>Move-SPBlobStorageLocation WSS_Content
 ```
 
 This example copies the content database named WSS_Content from the Windows Internal Database to the same database name in SQL Server 2008 Express by using RBS.
 
-### -------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Move-SPBlobStorageLocation WSS_Content
-```
-
-This example copies the content database named WSS_Content from the Windows Internal Database to the same database name in SQL Server 2008 Express by using RBS.
-
-### -------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
-```
-C:\PS>Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
-```
-
-This example copies the content database named WSS_Content from the Windows Internal Database to a database in SQL Server 2008 Express.
-The name of the new database will be WSS_V4_Content.
-During the move, the backup file name will be WSSBackupDB.
-The output of this command displays log information to the Command Prompt window.
-
-### -------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+### -------------------EXAMPLE 2----------------------- 
 ```
 C:\PS>Move-SPBlobStorageLocation WSS_Content -DestinationDatabase WSS_V4_Content -BackupDatabase WSSBackupDB -VerboseMod:$true
 ```
@@ -112,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +125,7 @@ Accept wildcard characters: False
 ### -DestinationDataSourceInstance
 Specifies the name of the instance of the destination database.
 The value in the SourceDatabase parameter is migrated to this instance.
-The name of the instance of the database should be SQL Server 2008 with Service Pack 1 (SP1) and Cumulative Update 2 version or higher.
+The name of the instance of the database should be SQL Server with Service Pack 1 (SP1) and Cumulative Update 2 version or higher.
 If the DestinationDataSourceInstance parameter is not specified, the local host name is used.
 
 ```yaml
@@ -200,7 +178,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter

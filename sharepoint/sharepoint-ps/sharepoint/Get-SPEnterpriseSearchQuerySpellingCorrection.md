@@ -24,16 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication
-
-Get-SPEnterpriseSearchQuerySpellingCorrection -SearchApplication $searchApp
-```
-
-Returns the current configuration for the Query Spelling Correction component for the default Search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchQuerySpellingCorrection -SearchApplication $searchApp
@@ -60,13 +51,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies the Search service application that contains the query spelling correction parameters.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Specifies the search service application that contains the query spelling correction parameters.
 
@@ -117,6 +101,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4a00b085-917b-48c2-a2cc-8252410b2a24(Office.15).aspx)
 

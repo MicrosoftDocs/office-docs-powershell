@@ -7,11 +7,6 @@ schema: 2.0.0
 # Install-SPHelpCollection
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Installs the provided Help site collection files in the current farm.
 
@@ -35,7 +30,7 @@ This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Install-SPHelpCollection cmdlet installs the Help site collection files for SharePoint 2010 Products in the current farm.
+The Install-SPHelpCollection cmdlet installs the Help site collection files for SharePoint Products in the current farm.
 Use the LiteralPath parameter to install specific custom Help collection files.
 If the LiteralPath parameter is not specified, all available Help in the Help site collection is installed and existing Help collection files are overwritten.
 
@@ -43,14 +38,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
-```
-
-This example installs the specified help collection in the current farm.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>Install-SPHelpCollection -LiteralPath 'C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\HCCab\1033\OSSAdmin.cab'
 ```

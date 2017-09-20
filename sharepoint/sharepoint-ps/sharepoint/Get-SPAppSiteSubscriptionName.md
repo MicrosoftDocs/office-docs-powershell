@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPAppSiteSubscriptionName
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns the name of the specified site subscription.
 
@@ -31,28 +26,14 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1------- (SharePoint Server 2013)
+### ------------EXAMPLE 1------- 
 ```
 C:\PS>Get-SPAppSiteSubscriptionName
 ```
 
 This example returns the name of the default site subscription.
 
-### ------------EXAMPLE 1------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPAppSiteSubscriptionName
-```
-
-This example returns the name of the default site subscription.
-
-### ------------EXAMPLE 2------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
-```
-
-This example returns the name of the site subscription for SPSite https://www.contoso.com
-
-### ------------EXAMPLE 2------- (SharePoint Server 2016)
+### ------------EXAMPLE 2------- 
 ```
 C:\PS>Get-SPAppSiteSubscriptionName -SiteSubscription https://www.contoso.com
 ```

@@ -24,14 +24,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplicationGet-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $searchApp
-```
-
-This example gets the current status of the linguistic query and document processing components from the default SearchServiceApplication.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
 Get-SpEnterpriseSearchLinguisticComponentsStatus -SearchApplication $searchApp
@@ -105,8 +98,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/4bd018e3-8aff-4602-9e69-cad9f764d48a(Office.15).aspx)
 
 [Set-SPEnterpriseSearchLinguisticComponentsStatus]()
 

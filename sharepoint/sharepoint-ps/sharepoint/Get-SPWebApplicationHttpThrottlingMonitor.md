@@ -7,11 +7,6 @@ schema: 2.0.0
 # Get-SPWebApplicationHttpThrottlingMonitor
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
 
 Returns all counters and their associated Health Score bucket values for network throttling on a Web application.
 
@@ -32,14 +27,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>$s = get-SPWebApplicationHTTPThrottlingMonitors http://sharepoint
-```
-
-This example gets all performance counters that are being read in the network throttling monitor for the http://sharepoint Web application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$s = get-SPWebApplicationHTTPThrottlingMonitors http://sharepoint
 ```

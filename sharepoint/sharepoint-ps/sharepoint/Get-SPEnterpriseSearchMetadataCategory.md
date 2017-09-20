@@ -28,17 +28,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-
-Get-SPEnterpriseSearchMetadataCategory -SearchApplication $searchapp
-```
-
-This example retrieves the metadata category collection of a search service application for the default search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------ 
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
 Get-SPEnterpriseSearchMetadataCategory -SearchApplication $searchapp
@@ -153,5 +143,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/37317ac8-89c3-493f-a685-b44bbbdf49c9(Office.15).aspx)
 
