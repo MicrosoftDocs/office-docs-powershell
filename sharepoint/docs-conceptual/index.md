@@ -1,3 +1,3 @@
 # SharePoint PowerShell cmdlets
 
-This is your index page. Welcome!
+This is your SharePoint index page. Welcome!
