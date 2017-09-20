@@ -1,6 +1,6 @@
 {
     "exchange-ps": {
-        "conceptualToc": "exchange/docs-conceptual/toc.md",
+        "conceptualToc": "exchange/docs-conceptual/toc.yml",
         "packageRoot": "exchange",
         "modules": {
             "exchange": {

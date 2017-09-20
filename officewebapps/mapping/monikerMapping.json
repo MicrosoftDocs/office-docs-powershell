@@ -1,6 +1,6 @@
 {
     "officewebapps-ps": {
-        "conceptualToc": "officewebapps/docs-conceptual/toc.md",
+        "conceptualToc": "officewebapps/docs-conceptual/toc.yml",
         "packageRoot": "officewebapps",
         "modules": {
             "officewebapps": {
