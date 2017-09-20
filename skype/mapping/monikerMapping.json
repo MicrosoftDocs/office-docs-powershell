@@ -1,6 +1,6 @@
 {
     "skype-ps": {
-        "conceptualToc": "docs-conceptual/TOC.yml",
+        "conceptualToc": "docs-conceptual/toc.yml",
         "conceptualTocUrl": "/powershell/skype/skype-ps/toc.json",
         "referenceTocUrl": "/powershell/module/skype-ps/toc.json",
         "packageRoot": "skype-ps",
