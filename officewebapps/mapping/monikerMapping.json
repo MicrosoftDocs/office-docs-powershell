@@ -1,12 +1,11 @@
 {
     "officewebapps-ps": {
-        "conceptualToc": "officewebapps/docs-conceptual/toc.yml",
-        "packageRoot": "officewebapps",
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/officewebapps/officewebapps-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/officewebapps-ps/toc.json",
+        "packageRoot": "officewebapps-ps",
         "modules": {
-            "officewebapps": {
-                "_displayname": "Office Online Server Module",
-                "_version": "vlatest"
-            }      
+            "officewebapps": {}     
         }
     }
 }
