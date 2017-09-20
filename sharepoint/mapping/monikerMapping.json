@@ -1,6 +1,6 @@
 {
     "sharepoint-ps": {
-        "conceptualToc": "docs-conceptual/TOC.md",
+        "conceptualToc": "docs-conceptual/TOC.hml",
         "conceptualTocUrl": "/powershell/sharepoint/sharepoint-ps/toc.json",
         "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
         "packageRoot": "sharepoint-ps",
