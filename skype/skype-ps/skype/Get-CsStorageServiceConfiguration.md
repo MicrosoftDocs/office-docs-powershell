@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
 

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPersistentChatEligiblePrincipal
 schema: 2.0.0
 ---
 

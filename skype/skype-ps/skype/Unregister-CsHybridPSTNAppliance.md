@@ -1,6 +1,7 @@
 ﻿---
 external help file: 
 applicable: Skype for Business Online
+title: Unregister-CsHybridPSTNAppliance
 schema: 2.0.0
 ---
 
