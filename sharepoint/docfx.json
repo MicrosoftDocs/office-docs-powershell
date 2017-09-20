@@ -46,7 +46,7 @@
       }
     ],
     "versions": {
-      "skype-ps": {
+      "sharepoint-ps": {
         "dest": "sharepoint-ps"
       }
     },
