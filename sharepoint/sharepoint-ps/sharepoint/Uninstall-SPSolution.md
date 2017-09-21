@@ -7,14 +7,7 @@ schema: 2.0.0
 # Uninstall-SPSolution
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Retracts a deployed SharePoint solution.
-
 
 
 ## SYNTAX
@@ -34,44 +27,20 @@ Uninstall-SPSolution [-Identity] <SPSolutionPipeBind> -WebApplication <SPWebAppl
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Uninstall-SPSolution cmdlet retracts a deployed SharePoint solution in preparation for removing it from the farm entirely.
+The `Uninstall-SPSolution` cmdlet retracts a deployed SharePoint solution in preparation for removing it from the farm entirely.
 This cmdlet removes files from the front-end Web server.
-Use the Remove-SPSolution cmdlet to delete the solution package from the solution store of the farm; be sure to use the Remove-SPSolution cmdlet only after you have run Uninstall-SPSolution.
+Use the `Remove-SPSolution` cmdlet to delete the solution package from the solution store of the farm; be sure to use the `Remove-SPSolution` cmdlet only after you have run `Uninstall-SPSolution`.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-The following table lists the valid values for the CompatabilityLevel parameter:
-
-**Below Content Applies To:**SharePoint Server 2016
-
-This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
-
-The Uninstall-SPSolution cmdlet retracts a deployed SharePoint solution in preparation for removing it from the farm entirely.
-This cmdlet removes files from the front-end Web server.
-Use the Remove-SPSolution cmdlet to delete the solution package from the solution store of the farm; be sure to use the Remove-SPSolution cmdlet only after you have run Uninstall-SPSolution.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Uninstall-SPUserSolution -Identity contoso_solution.wsp
-```
-
-This example retracts the deployed SharePoint solution contoso_solution.wsp.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Uninstall-SPUserSolution -Identity contoso_solution.wsp
 ```
@@ -139,7 +108,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -156,7 +125,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -172,18 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -CompatibilityLevel
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies whether to uninstall the solution, from a specific version directory based on CompatibilityLevel.
-The default behavior if this parameter is not specified is to uninstall the solution only from the version directory based on the version tracked in the manifest of the solution's cab file.
-For the list of values, see the table in the  section.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 {{Fill CompatibilityLevel Description}}
-
 
 
 ```yaml
@@ -254,7 +212,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -279,4 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

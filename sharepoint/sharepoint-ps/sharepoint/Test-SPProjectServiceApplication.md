@@ -22,7 +22,7 @@ Test-SPProjectServiceApplication [-Identity] <PsiServiceApplicationPipeBind>
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```

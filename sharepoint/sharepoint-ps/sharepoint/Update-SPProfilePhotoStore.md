@@ -7,7 +7,7 @@ schema: 2.0.0
 # Update-SPProfilePhotoStore
 
 ## SYNOPSIS
-Updates the profile photo store to be compatible with SharePoint Server 2013.
+Updates the profile photo store to be compatible with SharePoint Server.
 
 ## SYNTAX
 
@@ -18,9 +18,9 @@ Update-SPProfilePhotoStore -MySiteHostLocation <SPSitePipeBind>
 ```
 
 ## DESCRIPTION
-After upgrading from Office SharePoint Server 2007 to SharePoint Server 2013, run the Update-SPProfilePhotoStore cmdlet to ensure that the SharePoint profile photo store is compatible with SharePoint Server 2013.
-The Update-SPProfilePhotoStore cmdlet should be used only after an upgrade from Office SharePoint Server 2007 has completed.
-When the Update-SPProfilePhotoStore cmdlet is used, three thumbnail versions with predictable sizes and names are created from the original photo, the new photos are placed into the My Site Host's User Photos library, and the property value in the profile database is updated.
+After upgrading from Office SharePoint Server to SharePoint Server, run the `Update-SPProfilePhotoStore` cmdlet to ensure that the SharePoint profile photo store is compatible with SharePoint Server.
+The `Update-SPProfilePhotoStore` cmdlet should be used only after an upgrade from Office SharePoint Server has completed.
+When the `Update-SPProfilePhotoStore` cmdlet is used, three thumbnail versions with predictable sizes and names are created from the original photo, the new photos are placed into the My Site Host's User Photos library, and the property value in the profile database is updated.
 
 During the operation, the original image is left as-is.
 If the operation fails for certain users for any reason, it continues on to the next user.
@@ -34,14 +34,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------- (SharePoint Server 2013)
-```
-C:\PS>Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
-```
-
-This example uploads photos to a specified My Site host location.
-
-### ------------------EXAMPLE------------------- (SharePoint Server 2016)
+### ------------------EXAMPLE-------------------
 ```
 C:\PS>Update-SPProfilePhotoStore -MySiteHostLocation http://mysites
 ```
@@ -73,7 +66,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -164,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

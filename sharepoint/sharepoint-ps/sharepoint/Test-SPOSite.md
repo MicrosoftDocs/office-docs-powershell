@@ -16,20 +16,23 @@ Test-SPOSite -Identity <SpoSitePipeBind> [-RuleId <Guid>] [-RunAlways] [<CommonP
 ```
 
 ## DESCRIPTION
-The Test-SPOSite cmdlet runs one or all site collection health checks on the site collection and its contents.
-Tests are intended not to make any changes except in repair mode, which can be initiated by running the Repair-SPOSite cmdlet.
+The `Test-SPOSite` cmdlet runs one or all site collection health checks on the site collection and its contents.
+Tests are intended not to make any changes except in repair mode, which can be initiated by running the `Repair-SPOSite` cmdlet.
 This cmdlet reports the rules together with a summary of the results.
 
-You must be a SharePoint Online global administrator to run the Test-SPOSite cmdlet.
+You must be a SharePoint Online global administrator to run the `Test-SPOSite` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ---------------EXAMPLE--------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -103,6 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPOSite]()
 
 [Repair-SPOSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/356c9605-5ff4-4545-bb81-27b3b3b63da4(Office.15).aspx)
-

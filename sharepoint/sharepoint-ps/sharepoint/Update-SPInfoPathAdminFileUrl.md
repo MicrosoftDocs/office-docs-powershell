@@ -17,26 +17,16 @@ Update-SPInfoPathAdminFileUrl -Find <Uri> -Replace <Uri> [-AssignmentCollection 
 ```
 
 ## DESCRIPTION
-The Update-SPInfoPathAdminFileUrl cmdlet updates data connections in administrator-approved InfoPath form templates (.xsn files) and universal data connections (.udcx files).
+The `Update-SPInfoPathAdminFileUrl` cmdlet updates data connections in administrator-approved InfoPath form templates (.xsn files) and universal data connections (.udcx files).
 This allows for InfoPath data connections that reference the current farm to be updated when content is migrated to a different farm URL.
 This cmdlet cannot update any references to URLs that exist in form template business logic (code).
-Typically, this cmdlet is used with the Import-SPInfoPathAdministratorFiles cmdlet.
+Typically, this cmdlet is used with the `Import-SPInfoPathAdministratorFiles` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Get-SPWebApplication http://contoso2010 | Update-SPInfoPathAdminFileUrl
--find "http://contoso2007" 
--replace "http://contoso2010"
-```
-
-This example updates data connections in administrator-approved InfoPath form templates and universal data connection files.
-Data connections that reference http://contoso 2007 are updated to reference http://contoso2010.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Get-SPWebApplication http://contoso2010 | Update-SPInfoPathAdminFileUrl
 -find "http://contoso2007" 
@@ -91,7 +81,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -108,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +132,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -167,4 +157,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

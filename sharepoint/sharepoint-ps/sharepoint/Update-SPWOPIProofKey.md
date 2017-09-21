@@ -7,14 +7,7 @@ schema: 2.0.0
 # Update-SPWOPIProofKey
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Updates the public key that is used to connect to the WOPI application on the current SharePoint farm where this cmdlet is run.
-
 
 
 ## SYNTAX
@@ -25,7 +18,7 @@ Update-SPWOPIProofKey [-AssignmentCollection <SPAssignmentCollection>] [-ServerN
 ```
 
 ## DESCRIPTION
-The Update-SPWOPIProofKey cmdlet updates the public key that is used to connect to the WOPI application (which could be a server that runs Office Web Apps Server) on the current SharePoint farm where this cmdlet is run.
+The `Update-SPWOPIProofKey` cmdlet updates the public key that is used to connect to the WOPI application (which could be a server that runs Office Web Apps Server) on the current SharePoint farm where this cmdlet is run.
 You may want to use this cmdlet if the keys become unsynchronized between the SharePoint farm and the WOPI application.
 If the keys are unsynchronized, documents may not open in the browser and messages such as "Invalid Proof Signature for file…" or "Invalid Proof Signature for folder..." are found in the Unified Logging System (ULS) logs.
 
@@ -33,14 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-C:\PS>Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
-```
-
-This example obtains the current public key from the WOPI application (such as a server that runs Office Web Apps Server) and updates the key that is stored on the SharePoint farm.
-
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
+### --------------EXAMPLE-----------------
 ```
 C:\PS>Update-SPWOPIProofKey -ServerName "Server.corp.Contoso.com"
 ```
@@ -56,7 +42,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -103,4 +89,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Content roadmap for Office Web Apps]()
 
 [Use Office Web Apps with SharePoint 2013]()
-

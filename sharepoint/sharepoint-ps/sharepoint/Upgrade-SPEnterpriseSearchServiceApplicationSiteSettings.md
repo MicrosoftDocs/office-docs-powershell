@@ -17,23 +17,14 @@ Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity <SPSitePipeBi
 ```
 
 ## DESCRIPTION
-Use the Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings cmdlet to upgrade the search settings for specified site collection from 2010 to 2013 experience.
+Use the `Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings` cmdlet to upgrade the search settings for specified site collection from 2010 to 2013 experience.
 The upgrades include conversion of best bets to query rules.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$site= Get-SPSite http://test
-
-Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
-```
-
-This example upgrades the search settings for the site collection referenced by $site.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------EXAMPLE--------
 ```
 C:\PS>$site= Get-SPSite http://test
 
@@ -41,6 +32,7 @@ C:\PS>Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings -Identity $site
 ```
 
 This example upgrades the search settings for the site collection referenced by $site.
+
 
 ## PARAMETERS
 
@@ -68,7 +60,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -85,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +94,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +120,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2cbb3074-6327-4fd7-ab14-b6b22baab6f2(Office.15).aspx)
-
 [Remove-SPEnterpriseSearchServiceApplicationSiteSettings]()
-

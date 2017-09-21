@@ -25,12 +25,12 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Get-SPProjectWebInstance | Test-SPProjectWebInstance
 ```
 
-This example runs a suite of tests on all Project Web Instances in the SharePoint Server 2013 farm.
+This example runs a suite of tests on all Project Web Instances in the SharePoint Server farm.
 
 ## PARAMETERS
 
@@ -57,7 +57,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -100,4 +100,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Mount-SPProjectWebInstance]()
-

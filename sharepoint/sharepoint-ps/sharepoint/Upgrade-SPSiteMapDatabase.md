@@ -21,7 +21,7 @@ Upgrade-SPSiteMapDatabase [-DatabaseId] <Guid> [-AssignmentCollection <SPAssignm
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### -------------EXAMPLE 1----------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -109,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

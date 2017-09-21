@@ -7,14 +7,7 @@ schema: 2.0.0
 # Upgrade-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Starts the upgrade process on a site collection.
-
 
 
 ## SYNTAX
@@ -25,12 +18,12 @@ Upgrade-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-The Upgrade-SPSite cmdlet starts the upgrade process on a site collection.
+The `Upgrade-SPSite` cmdlet starts the upgrade process on a site collection.
 
-The Upgrade-SPSite cmdlet activates the upgrade process for the specified SPSite object.
+The `Upgrade-SPSite` cmdlet activates the upgrade process for the specified SPSite object.
 You can also use this cmdlet to resume failed upgrades.
 When you use this cmdlet to initiate upgrade on an SPSite object, the object can be either a build-to-build or version-to-version upgrade.
-By default, the Upgrade-SPSite cmdlet operates as a build-to-build upgrade.
+By default, the `Upgrade-SPSite` cmdlet operates as a build-to-build upgrade.
 This prevents unexpected version upgrades of site collections if you use this cmdlet after a patching operation.
 When in version-to-version upgrade mode, site collection health checks are run in repair mode to ensure that the site collection is healthy enough to upgrade successfully.
 If successful, the remainder of the upgrade occurs.
@@ -39,7 +32,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------EXAMPLE 1---------- (SharePoint Server 2013)
+### -------------EXAMPLE 1----------
 ```
 C:\PS>Upgrade-SPSite http://<site name>/sites/testsite
 ```
@@ -47,23 +40,7 @@ C:\PS>Upgrade-SPSite http://<site name>/sites/testsite
 This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
 The SPSite.CompatibilityLevel will not be changed by this operation.
 
-### -------------EXAMPLE 1---------- (SharePoint Server 2016)
-```
-C:\PS>Upgrade-SPSite http://<site name>/sites/testsite
-```
-
-This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
-The SPSite.CompatibilityLevel will not be changed by this operation.
-
-### -------------EXAMPLE 2---------- (SharePoint Server 2013)
-```
-C:\PS>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
-```
-
-This example upgrades the existing http://\<site name\>/sites/testsite site collection by using only build-to-build upgrade actions.
-The SPSite.CompatibilityLevel will not be changed by this operation.
-
-### -------------EXAMPLE 2---------- (SharePoint Server 2016)
+### -------------EXAMPLE 2----------
 ```
 C:\PS>Upgrade-SPSite http://<site name>/sites/testsite -VersionUpgrade
 ```
@@ -96,7 +73,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -113,7 +90,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +172,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -236,4 +213,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

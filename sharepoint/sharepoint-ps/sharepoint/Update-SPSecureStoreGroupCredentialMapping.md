@@ -17,7 +17,7 @@ Update-SPSecureStoreGroupCredentialMapping -Identity <SPSecureStoreApplication> 
 ```
 
 ## DESCRIPTION
-The Update-SPSecureStoreGroupCredentialMapping cmdlet sets a new group credential mapping for a Secure Store Service application.
+The `Update-SPSecureStoreGroupCredentialMapping` cmdlet sets a new group credential mapping for a Secure Store Service application.
 Group credentials are a set of credentials that are associated with multiple identities.
 Target applications will get credentials for a Secure Store application by using the current user.
 If the current user meets the authorization rule defined in the Secure Store application for the group credentials, then the data is provided.
@@ -26,23 +26,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
-
-$firstCredential = ConvertTo-SecureString "LOBDATABASE\fulltimeemployees" -AsPlainText -Force
-
-$secondCredential = ConvertTo-SecureString "abcDEF123$%^" -AsPlainText -Force
-
-$credentialValues = $firstCredential,$secondCredential
-
-Update-SPSecureStoreGroupCredentialMapping -Identity $ssApp -Values $credentialValues
-```
-
-This example adds a credential mapping for the target application ContosoGroupTargetApplication, for all users in this group target application.
-These users are mapped to a pair of credential values on the External System with a username of identity fulltimeemployees on domain LOBDATABASE and with password abcDEF123$%^.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$ssApp = Get-SPSecureStoreApplication -ServiceContext http://contoso -Name "ContosoGroupTargetApplication"
 
@@ -99,7 +83,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -116,7 +100,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -155,4 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

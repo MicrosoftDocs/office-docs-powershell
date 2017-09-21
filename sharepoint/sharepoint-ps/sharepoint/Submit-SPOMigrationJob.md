@@ -30,7 +30,7 @@ Submit-SPOMigrationJob [-TargetWebUrl] <String>
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### --------------EXAMPLE-----------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -181,4 +181,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

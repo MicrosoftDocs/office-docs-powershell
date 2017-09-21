@@ -7,14 +7,7 @@ schema: 2.0.0
 # Uninstall-SPUserSolution
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Deactivates a sandboxed solution in a site collection.
-
 
 
 ## SYNTAX
@@ -25,21 +18,14 @@ Uninstall-SPUserSolution [-Identity] <SPUserSolutionPipeBind> -Site <SPSitePipeB
 ```
 
 ## DESCRIPTION
-The Uninstall-SPUserSolution cmdlet deactivates a sandboxed solution in a site collection so that you can delete it by using the Remove-SPUserSolution cmdlet.
+The `Uninstall-SPUserSolution` cmdlet deactivates a sandboxed solution in a site collection so that you can delete it by using the `Remove-SPUserSolution` cmdlet.
 A user solution is a sandboxed solution.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE--------------- (SharePoint Server 2013)
-```
-C:\PS>Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
-```
-
-This example deactivates the sandboxed solution contoso_solution.wsp on the site http://sitename.
-
-### ------------------EXAMPLE--------------- (SharePoint Server 2016)
+### ------------------EXAMPLE---------------
 ```
 C:\PS>Uninstall-SPUserSolution -Identity contoso_solution.wsp -Site http://sitename
 ```
@@ -91,7 +77,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -108,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +111,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -150,4 +136,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -24,7 +24,7 @@ Sync-SPProjectPermissions [-Url] <Uri> [[-Type] <SharePointPermissionModeSyncTyp
 ```
 
 ## DESCRIPTION
-The Sync-SPProjectPermissions cmdlet causes permissions to be synchronized to the project sites associated with projects in a Project Web App instance and the permissions set on those projects in Project Server 2013.
+The `Sync-SPProjectPermissions` cmdlet causes permissions to be synchronized to the project sites associated with projects in a Project Web App instance and the permissions set on those projects in Project Server.
 
 This cmdlet works with both SharePoint permission mode and Project Server permission mode.
 
@@ -32,10 +32,13 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-###   (SharePoint Server 2016)
+### --------------EXAMPLE-----------------
 ```
-C:\PS>
+PS C:\> {{ Add example code here }}
 ```
+
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -137,7 +140,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -162,4 +165,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
