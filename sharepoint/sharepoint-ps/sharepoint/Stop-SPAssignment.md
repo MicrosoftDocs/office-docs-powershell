@@ -7,14 +7,7 @@ schema: 2.0.0
 # Stop-SPAssignment
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Disposes of objects in the provided assignment collection.
-
 
 
 ## SYNTAX
@@ -25,30 +18,16 @@ Stop-SPAssignment [[-SemiGlobal] <SPAssignmentCollection>] [-AssignmentCollectio
 ```
 
 ## DESCRIPTION
-The Stop-SPAssignment cmdlet disposes of objects in the provided assignment collection.
+The `Stop-SPAssignment` cmdlet disposes of objects in the provided assignment collection.
 Use the Global parameter to dispose of all objects in the global assignment collector and to stop the global store from collecting additional objects.
 Provide a SemiGlobal assignment collector to dispose of all contained objects.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Start-SPAssignment -global
-
-C:\PS>$w=Get-SPWeb http://MyWeb
-
-C:\PS>$w | Set-SPWeb -title "Accounting"
-
-C:\PS>Stop-SPAssignment -global
-```
-
-This example uses simple assignment.
-While easier to use simple assignment, running commands that iterate through multiple SPSite or SPWeb objects while simple assignment is enabled is not recommended.
-Ensure that Stop-SPAssignment is run before attempting any iterations of multiple objects.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Start-SPAssignment -global
 
@@ -61,7 +40,8 @@ C:\PS>Stop-SPAssignment -global
 
 This example uses simple assignment.
 While easier to use simple assignment, running commands that iterate through multiple SPSite or SPWeb objects while simple assignment is enabled is not recommended.
-Ensure that Stop-SPAssignment is run before attempting any iterations of multiple objects.
+Ensure that `Stop-SPAssignment` is run before attempting any iterations of multiple objects.
+
 
 ## PARAMETERS
 
@@ -88,7 +68,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -104,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Global
-Stops the global assignment collector from storing objects, and disposes of any objects contained by the global assignment collector.
+Stops the global assignment collector from storing objects and disposes of any objects contained by the global assignment collector.
 
 ```yaml
 Type: SwitchParameter
@@ -129,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

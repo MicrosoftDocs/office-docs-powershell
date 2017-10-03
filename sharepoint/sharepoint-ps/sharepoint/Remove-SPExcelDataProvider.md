@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a data provider from Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -17,24 +18,16 @@ Remove-SPExcelDataProvider [-Identity] <SPExcelDataProviderPipeBind>
 ```
 
 ## DESCRIPTION
-The Remove-SPExcelDataProvider cmdlet removes a data provider that is stored on the list of safe data providers.
+The `Remove-SPExcelDataProvider` cmdlet removes a data provider that is stored on the list of safe data providers.
 Excel Services Application refreshes external data connections only if the data provider for that connection is on the list of safe data providers.
 Excel Services Application includes a set of common data providers on this list, so using cmdlets to modify safe data providers is typically done only in custom data connection scenarios.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | where {$_.providerID -eq "SQLOLEDB" } | Remove-SPExcelDataProvider
-```
-
-This example removes the default SQL OLEDB data provider from the list of safe data providers that is on the Excel Services Application Web service application named MyExcelService.
-
-Excel Services Application will no longer refresh any data connections that use this data provider.
-
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>$provider = Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataProvider | { where {$_.providerID -eq "MyCustomProvider"}
 
@@ -44,6 +37,7 @@ C:\PS>Remove-SPExcelDataProvider $provider
 This example removes a custom data provider from the list of safe data providers that is on the Excel Services Application Web service application named MyExcelService.
 
 Excel Services Application will no longer refresh any data connections that use this data provider.
+
 
 ## PARAMETERS
 
@@ -72,7 +66,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -89,7 +83,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +100,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -131,4 +125,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -18,41 +18,29 @@ Set-SPVisioSafeDataProvider -DataProviderId <String> -DataProviderType <Int32> -
 ```
 
 ## DESCRIPTION
-The Set-SPVisioSafeDataProvider cmdlet sets the Description property of a safe data provider for a Visio Services application.
+The `Set-SPVisioSafeDataProvider` cmdlet sets the Description property of a safe data provider for a Visio Services application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1----------------------
 ```
 C:\PS>Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the description property of a safe data provider for a specific Visio Services application.
 
-### -------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
-```
 
-This example sets the description property of a safe data provider for a specific Visio Services application.
-
-### -------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 2----------------------
 ```
 C:\PS>Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
 ```
 
 This example sets the Description property of a safe data provider for a specific Visio Services application.
-The result is piped from the Set-SPVisioSafeDataProvider cmdlet.
+The result is piped from the `Set-SPVisioSafeDataProvider` cmdlet.
 
-### -------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPVisioServiceApplication -Identity "VGS1" | Set-SPVisioSafeDataProvider -DataProviderID "SQLOLEDB" -DataProviderType 1 -Description "SQL OLEDB Driver!"
-```
-
-This example sets the Description property of a safe data provider for a specific Visio Services application.
-The result is piped from the Set-SPVisioSafeDataProvider cmdlet.
 
 ## PARAMETERS
 
@@ -139,7 +127,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -164,4 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

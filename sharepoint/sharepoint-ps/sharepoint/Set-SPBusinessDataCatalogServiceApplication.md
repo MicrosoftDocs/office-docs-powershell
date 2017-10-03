@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPBusinessDataCatalogServiceApplication
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets global properties for a Business Data Connectivity service application in the farm.
-
 
 
 ## SYNTAX
@@ -28,25 +21,20 @@ Set-SPBusinessDataCatalogServiceApplication [-ApplicationPool <SPIisWebServiceAp
 ```
 
 ## DESCRIPTION
-The Set-SPBusinessDataCatalogServiceApplication cmdlet sets global properties for a Business Data Connectivity service application in the farm.
+The `Set-SPBusinessDataCatalogServiceApplication` cmdlet sets global properties for a Business Data Connectivity service application in the farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Set-SPBusinessDataCatalogServiceApplication -Identity $serviceApplication -FailoverDatabaseServer "CONTOSO\Backup"
 ```
 
 This example sets the failover database server to CONTOSO\Backup for the given service application.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>Set-SPBusinessDataCatalogServiceApplication -Identity $serviceApplication -FailoverDatabaseServer "CONTOSO\Backup"
-```
-
-This example sets the failover database server to CONTOSO\Backup for the given service application.
 
 ## PARAMETERS
 
@@ -226,7 +214,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -243,7 +231,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -284,4 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

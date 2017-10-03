@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPThrottlingRule
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Changes properties of an existing throttling rule.
-
 
 
 ## SYNTAX
@@ -26,13 +19,14 @@ Set-SPThrottlingRule [-Identity] <SPThrottlingRulePipeBind> [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-Use the Set-SPThrottlingRule cmdlet to change the properties of an existing throttling rule by using the Identity parameter.
+Use the `Set-SPThrottlingRule` cmdlet to change the properties of an existing throttling rule by using the Identity parameter.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
@@ -49,22 +43,6 @@ C:\PS>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Th
 
 This example sets throttling rule property
 
-###   (SharePoint Server 2016)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>$c=New-SPRequestManagementRuleCriteria -Value http -Property url -MatchType startswith -CaseSensitive $false
-
-C:\PS>$throttlingrule=Add-SPThrottlingRule -RequestManagementSettings $rm -Name <Rule Name> -Criteria $c -Threshold 4
-
-C:\PS>$criteriaNew = New-SPRequestManagementRuleCriteria -Property UserAgent -MatchType Equals -Value "Mozilla/4.0 (compatible; MSIE 4.01; Windows NT; MS Search 6.0 Robot)"
-
-C:\PS>Set-SPThrottlingRule -Identity $ throttlingrule -Criteria $criteriaNew -Threshold 8
-```
-
-This example sets throttling rule property
 
 ## PARAMETERS
 
@@ -91,7 +69,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -171,4 +149,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPThrottlingRule]()
 
 [Remove-SPThrottlingRule]()
-

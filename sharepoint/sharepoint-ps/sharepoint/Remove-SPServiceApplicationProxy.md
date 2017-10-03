@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPServiceApplicationProxy
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Deletes the specified service application proxy.
-
 
 
 ## SYNTAX
@@ -25,13 +18,14 @@ Remove-SPServiceApplicationProxy [-Identity] <SPServiceApplicationProxyPipeBind>
 ```
 
 ## DESCRIPTION
-The Remove-SPServiceApplicationProxy cmdlet deletes the service application proxy specified by the Identity parameter.
+The `Remove-SPServiceApplicationProxy` cmdlet deletes the service application proxy specified by the Identity parameter.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>Remove-SPServiceApplicationProxy babab30e-8e3a-428b-8ff4-4d5c8f455e6d
 ```
@@ -39,17 +33,8 @@ C:\PS>Remove-SPServiceApplicationProxy babab30e-8e3a-428b-8ff4-4d5c8f455e6d
 This example deletes the given service application proxy.
 
 The service application GUID is unique to every farm.
-You can run the Get-SPServiceApplication cmdlet to see the GUID of the service applications, and then use the result from the Get-SPServiceApplication cmdlet for other SPServiceApplication cmdlets; for example, Grant-SPServiceApplication or Publish-SPServiceApplication.
+You can run the `Get-SPServiceApplication` cmdlet to see the GUID of the service applications and then use the result from the `Get-SPServiceApplication` cmdlet for other SPServiceApplication cmdlets; for example, `Grant-SPServiceApplication` or `Publish-SPServiceApplication`.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPServiceApplicationProxy babab30e-8e3a-428b-8ff4-4d5c8f455e6d
-```
-
-This example deletes the given service application proxy.
-
-The service application GUID is unique to every farm.
-You can run the Get-SPServiceApplication cmdlet to see the GUID of the service applications, and then use the result from the Get-SPServiceApplication cmdlet for other SPServiceApplication cmdlets; for example, Grant-SPServiceApplication or Publish-SPServiceApplication.
 
 ## PARAMETERS
 
@@ -89,7 +74,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +91,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -147,4 +132,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

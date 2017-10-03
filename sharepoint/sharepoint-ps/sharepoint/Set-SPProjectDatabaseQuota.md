@@ -29,12 +29,16 @@ Microsoft internal use only.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-###   (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
-C:\PS>
+PS C:\> {{ Add example code here }}
 ```
+
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -160,4 +164,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

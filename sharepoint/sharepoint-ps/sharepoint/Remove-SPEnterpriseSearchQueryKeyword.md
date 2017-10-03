@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a query keyword.
 
+
 ## SYNTAX
 
 ```
@@ -17,28 +18,22 @@ Remove-SPEnterpriseSearchQueryKeyword [-Identity] <KeywordPipeBind> -Site <SPSit
 ```
 
 ## DESCRIPTION
-The Remove-SPEnterpriseSearchQueryKeyword cmdlet deletes unused or unwanted keywords from the query keyword collection.
+The `Remove-SPEnterpriseSearchQueryKeyword` cmdlet deletes unused or unwanted keywords from the query keyword collection.
 
-You can use this cmdlet for keywords in site collections that are in SharePoint Server 2010 mode.
-You cannot use this cmdlet after a site collection is upgraded to SharePoint Server 2013 mode because keywords and Best Bets are automatically migrated to query rules.
+You cannot use this cmdlet after a site collection is upgraded to SharePoint Server because keywords and Best Bets are automatically migrated to query rules.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site http://myserver/sites/engineering | Remove-SPEnterpriseSearchQueryKeyword -Site http://myserver/sites/engineering
-```
-
-This example removes the Engineering keyword from the site collection at http://myserver/sites/engineering.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Get-SPEnterpriseSearchQueryKeyword -Identity Engineering -Site http://myserver/sites/engineering | Remove-SPEnterpriseSearchQueryKeyword -Site http://myserver/sites/engineering
 ```
 
 This example removes the Engineering keyword from the site collection at http://myserver/sites/engineering.
+
 
 ## PARAMETERS
 
@@ -85,7 +80,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -102,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +114,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -144,6 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0967401b-8688-48cc-bbec-cd4dea8f5f3b(Office.15).aspx)
-

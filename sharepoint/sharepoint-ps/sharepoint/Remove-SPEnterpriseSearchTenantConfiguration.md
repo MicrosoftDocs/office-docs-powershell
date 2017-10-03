@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes all tenant specific search settings.
 
+
 ## SYNTAX
 
 ```
@@ -18,29 +19,24 @@ Remove-SPEnterpriseSearchTenantConfiguration [-SiteSubscriptionId] <Guid>
 ```
 
 ## DESCRIPTION
-The Remove-SPEnterpriseSearchTenantConfigurationcmdlet removes all tenant specific search settings.
-The removed settings are: query Rules, result types, result sources, managed metadata, ranking models, search dictionaries, authoritative pages, query suggestion settings, client types, and the default search center.
+The `Remove-SPEnterpriseSearchTenantConfigurationcmdlet` removes all tenant specific search settings.
+The removed settings are: query Rules, result types, result sources, managed metadata, ranking models, search dictionaries, authoritative pages, query suggestion settings, client types and the default search center.
 Use this cmdlet when removing tenants and in conjunction with moving tenants.
-When moving a tenant, copy the tenant configuration from the source to the destination, and then use this cmdlet to remove the tenant configuration from the source farm.
+When moving a tenant, copy the tenant configuration from the source to the destination and then use this cmdlet to remove the tenant configuration from the source farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationRemove-SPEnterpriseSearchTenantConfiguration -SiteSubscriptionId "00000000-0000-0000-0000-000000000001" -SearchApplication $ssa
-```
-
-This example uses Remove-SPEnterpriseSearchTenantConfiguration to remove all tenant specific settings from the search service application referenced by $ssa.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 Remove-SPEnterpriseSearchTenantConfiguration -SiteSubscriptionId "00000000-0000-0000-0000-000000000001" -SearchApplication $ssa
 ```
 
 This example uses Remove-SPEnterpriseSearchTenantConfiguration to remove all tenant specific settings from the search service application referenced by $ssa.
+
 
 ## PARAMETERS
 
@@ -85,7 +81,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -102,7 +98,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +115,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -144,6 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b2bd659f-3f34-4be2-92f6-1beba3ffefaa(Office.15).aspx)
-

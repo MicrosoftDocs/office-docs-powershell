@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPScaleOutDatabaseDataRange
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Extends the range of a specified scale-out database.
-
 
 
 ## SYNTAX
@@ -26,13 +19,14 @@ Set-SPScaleOutDatabaseDataRange -Database <SPDatabasePipeBind> -IsUpperSubRange 
 ```
 
 ## DESCRIPTION
-Use the Set-SPScaleOutDatabaseDataRange cmdlet to extend the range of a specified scale-out database towards a specified direction.
+Use the `Set-SPScaleOutDatabaseDataRange` cmdlet to extend the range of a specified scale-out database towards a specified direction.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE------------ (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -45,18 +39,6 @@ C:\PS>Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -N
 
 This example extends the data range end point of the first database in the specified service application up to the maximum range point.
 
-### --------------EXAMPLE------------ (SharePoint Server 2016)
-```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>$database = $databases[0]
-
-C:\PS>$state = Get-SPScaleOutDatabaseDataState -Database $database
-
-C:\PS>Set-SPScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
-```
-
-This example extends the data range end point of the first database in the specified service application up to the maximum range point.
 
 ## PARAMETERS
 
@@ -115,7 +97,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -132,7 +114,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -167,7 +149,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -198,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPScaleOutDatabase]()
 
 [Get-SPScaleOutDatabaseDataState]()
-

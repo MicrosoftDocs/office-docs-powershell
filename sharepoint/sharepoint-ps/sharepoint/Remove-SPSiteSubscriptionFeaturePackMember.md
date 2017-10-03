@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPSiteSubscriptionFeaturePackMember
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a feature definition from the provided SharePoint Feature set.
-
 
 
 ## SYNTAX
@@ -35,17 +28,18 @@ Remove-SPSiteSubscriptionFeaturePackMember [-Identity] <SPSiteSubscriptionFeatur
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Remove-SPSiteSubscriptionFeaturePackMember cmdlet removes the provided FeatureDefintion parameter from the feature set specified by the Identity parameter.
+The `Remove-SPSiteSubscriptionFeaturePackMember` cmdlet removes the provided FeatureDefintion parameter from the feature set specified by the Identity parameter.
 If the AllFeatureDefinitions flag is provided, all feature definitions are removed from the given Feature set.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1-----------------------
 ```
 C:\PS>$FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
@@ -54,28 +48,14 @@ C:\PS>Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinitio
 
 This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>$FS = Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a"
 
-C:\PS>Remove-SPSiteSubscriptionFeaturePackMember -Identity $fs -FeatureDefinition (Get-SPFeature "PublishingSite")
-```
-
-This example removes the PublishingSite feature from the Feature set that has ID 30daa535-b0fe-4d10-84b0-fb04029d161a.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
 ```
 
 This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.
 
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPSiteSubscriptionFeaturePack "30daa535-b0fe-4d10-84b0-fb04029d161a" | Remove-SPSiteSubscriptionFeaturePackMember -AllFeatureDefinitions
-```
-
-This example removes all features from the Feature set 30daa535-b0fe-4d10-84b0-fb04029d161a.
 
 ## PARAMETERS
 
@@ -136,7 +116,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -153,7 +133,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -170,7 +150,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -195,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

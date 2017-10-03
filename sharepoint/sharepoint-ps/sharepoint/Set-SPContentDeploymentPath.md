@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a content deployment path.
 
+
 ## SYNTAX
 
 ```
@@ -21,25 +22,20 @@ Set-SPContentDeploymentPath [-Identity] <SPContentDeploymentPathPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPContentDeploymentPath cmdlet sets the properties of a content deployment path for a content deployment job.
+The `Set-SPContentDeploymentPath` cmdlet sets the properties of a content deployment path for a content deployment job.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE------------- (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>Get-SPContentDeploymentPath "Path 1" | Set-SPContentDeploymentPath -PathEnabled:$false
 ```
 
 This example sets the deployment path Path 1 to be disabled.
 
-### ------------EXAMPLE------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPContentDeploymentPath "Path 1" | Set-SPContentDeploymentPath -PathEnabled:$false
-```
-
-This example sets the deployment path Path 1 to be disabled.
 
 ## PARAMETERS
 
@@ -68,7 +64,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -121,7 +117,7 @@ Accept wildcard characters: False
 Specifies the user and group information to include during the export operation for this content deployment path.
 The default value is All.
 
-The type must be one of the following values: None, All, or WssOnly- Applies only SharePoint Foundation 2013 security settings.
+The type must be one of the following values: None, All, or WssOnly- Applies only SharePoint Foundation security settings.
 Includes user memberships and role assignments such as default roles, for example, Web Designer or any custom roles that extend from the default roles.
 The access control list (ACL) for each object is migrated.
 No user information defined in the DAP or LDAP servers is included.
@@ -280,7 +276,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -321,4 +317,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

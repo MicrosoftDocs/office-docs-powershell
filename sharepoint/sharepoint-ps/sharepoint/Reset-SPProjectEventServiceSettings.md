@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ```
@@ -18,14 +19,16 @@ Reset-SPProjectEventServiceSettings [-AssignmentCollection <SPAssignmentCollecti
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -59,4 +62,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

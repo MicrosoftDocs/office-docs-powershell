@@ -18,41 +18,30 @@ Set-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPStateServiceDatabase cmdlet manages the credentials that are used to communicate with the database, sets the weight of the database, or changes the state service application with which it is associated.
+The `Set-SPStateServiceDatabase` cmdlet manages the credentials that are used to communicate with the database, sets the weight of the database, or changes the state service application with which it is associated.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 1---------------------
 ```
 C:\PS>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
 ```
 
 This example updates the database weight to the maximum (10).
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -Weight 10
-```
 
-This example updates the database weight to the maximum (10).
-
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 2---------------------
 ```
 C:\PS>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
 ```
 
 This example updates the associated service application for a state service database.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b -ServiceApplication "StateSvcApp1"
-```
 
-This example updates the associated service application for a state service database.
-
-### --------------EXAMPLE 3-------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 3---------------------
 ```
 C:\PS>$cred = Get-Credential
 
@@ -61,14 +50,6 @@ C:\PS>Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $c
 
 This example updates the SQL Authentication credentials that are used for a given database.
 
-### --------------EXAMPLE 3-------------- (SharePoint Server 2016)
-```
-C:\PS>$cred = Get-Credential
-
-C:\PS>Set-SPStateServiceDatabase -Identity "StateSvcDB1" -DatabaseCredentials $cred
-```
-
-This example updates the SQL Authentication credentials that are used for a given database.
 
 ## PARAMETERS
 
@@ -115,7 +96,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -132,7 +113,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +168,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -212,4 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

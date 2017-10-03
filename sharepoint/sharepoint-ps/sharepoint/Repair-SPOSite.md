@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Checks and repairs the site collection and its contents.
 
+
 ## SYNTAX
 
 ```
@@ -17,28 +18,27 @@ Repair-SPOSite [-Confirm] -Identity <SpoSitePipeBind> [-RuleId <Guid>] [-RunAlwa
 ```
 
 ## DESCRIPTION
-The Repair-SPOSite cmdlet runs one or all site collection health checks on the site collection and its contents.
+The `Repair-SPOSite` cmdlet runs one or all site collection health checks on the site collection and its contents.
 This cmdlet will make changes if issues are found and automatically repairable.
 
 The cmdlet reports the health check rules with a summary of the results.
 The rules might not support automatic repair.
-Tests without repair mode can be initiated by running the Test-SPOSite cmdlet.
+Tests without repair mode can be initiated by running the `Test-SPOSite` cmdlet.
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ----------------------EXAMPLE-----------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -139,6 +139,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Test-SPOSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6ef179d0-ed05-47c2-bb0c-0fd65b13c79e(Office.15).aspx)
-

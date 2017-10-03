@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPDeletedSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a deleted site collection.
-
 
 
 ## SYNTAX
@@ -26,32 +19,27 @@ Remove-SPDeletedSite [-Identity] <SPDeletedSitePipeBind> [-AssignmentCollection 
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
-Use the Remove-SPDeletedSite cmdlet to permanently remove a deleted site collection from the farm.
+Use the `Remove-SPDeletedSite` cmdlet to permanently remove a deleted site collection from the farm.
 
-Unlike the Remove-SPSite cmdlet that uses the host name and scheme for the Identity parameter (that is, http://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
+Unlike the `Remove-SPSite` cmdlet that uses the host name and scheme for the Identity parameter (that is, http://server_name), the value of the identity parameter for all SPDeletedSite cmdlets use a server-relative URL.
 Typically, the forward slash character (/) begins the relative URL and also denotes the root site.
 
 For additional information about a server-relative URL or understanding general concepts about absolute and relative URLs, see Server Relative URL Property (http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spsite.serverrelativeurl.aspx) or Understanding Absolute and Relative URL Addresses (http://msdn.microsoft.com/en-us/library/bb208688(office.12).aspx).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
 ```
 
 This example permanently removes a specific deleted site collection by using a site ID.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPDeletedSite -Identity 610857cb-8414-4a89-8bf3-ad3628f6c86c
-```
-
-This example permanently removes a specific deleted site collection by using a site ID.
 
 ## PARAMETERS
 
@@ -79,7 +67,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -96,7 +84,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -149,7 +137,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -174,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

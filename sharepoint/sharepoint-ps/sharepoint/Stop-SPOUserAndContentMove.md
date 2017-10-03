@@ -20,12 +20,13 @@ Stop-SPOUserAndContentMove [-UserPrincipalName] <String> [<CommonParameters>]
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -59,4 +60,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPEnterpriseSearchContentEnrichmentConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Removes the current content enrichment configuration from the Search service application.
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes the current content enrichment configuration from the search service application.
-
 
 
 ## SYNTAX
@@ -29,25 +22,17 @@ This cmdlet removes the current content enrichment configuration from the Search
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication
-
-
-Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
-```
-
-This example removes the content enrichment configuration from the default Search service application.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE-----------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 PS> Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 This example removes the content enrichment configuration from the default search service application.
+
 
 ## PARAMETERS
 
@@ -74,7 +59,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -100,11 +85,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/c45dee4c-1754-4b2b-b5e5-a92b15839f7f(Office.15).aspx)
-
 [Get-SPEnterpriseSearchContentEnrichmentConfiguration]()
 
 [Set-SPEnterpriseSearchContentEnrichmentConfiguration]()
 
 [New-SPEnterpriseSearchContentEnrichmentConfiguration]()
-

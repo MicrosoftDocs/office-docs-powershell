@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Secure Store application fields object.
 
+
 ## SYNTAX
 
 ```
@@ -17,27 +18,21 @@ New-SPSecureStoreApplicationField [-Masked] -Name <String> -Type <SecureStoreCre
 ```
 
 ## DESCRIPTION
-The New-SPSecureStoreApplicationField cmdlet creates a new Secure Store application field object for a target application.
+The `New-SPSecureStoreApplicationField` cmdlet creates a new Secure Store application field object for a target application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
 ```
 
-This example creates a new credential field of type WindowsUserName with the name UserName, and the masked property (which when true will hide characters as they are typed in by the user) set to false.
-This cmdlet is typically used in conjunction with the New-SPSecureStoreApplication cmdlet.
+This example creates a new credential field of type WindowsUserName with the name UserName and the masked property (which when true will hide characters as they are typed in by the user) set to false.
+This cmdlet is typically used in conjunction with the `New-SPSecureStoreApplication` cmdlet.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
-```
-
-This example creates a new credential field of type WindowsUserName with the name UserName, and the masked property (which when true will hide characters as they are typed in by the user) set to false.
-This cmdlet is typically used in conjunction with the New-SPSecureStoreApplication cmdlet.
 
 ## PARAMETERS
 
@@ -98,7 +93,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -123,4 +118,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

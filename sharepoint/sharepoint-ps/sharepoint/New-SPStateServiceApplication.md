@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new state service application.
 
+
 ## SYNTAX
 
 ```
@@ -17,14 +18,15 @@ New-SPStateServiceApplication [-Name] <String> [-AssignmentCollection <SPAssignm
 ```
 
 ## DESCRIPTION
-The New-SPStateServiceApplication cmdlet creates a new state service application on the farm.
+The `New-SPStateServiceApplication` cmdlet creates a new state service application on the farm.
 A state service application is the container for state service databases.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-----------------
 ```
 C:\PS>New-SPStateServiceApplication -Name "State Service Application 1"
 ```
@@ -34,17 +36,7 @@ This example creates a new state service application, named State Service Applic
 State service applications are the container for databases.
 State service applications must have a proxy and a database created to be usable.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPStateServiceApplication -Name "State Service Application 1"
-```
-
-This example creates a new state service application, named State Service Application 1, on the farm.
-
-State service applications are the container for databases.
-State service applications must have a proxy and a database created to be usable.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-----------------
 ```
 C:\PS>New-SPStateServiceDatabase -Name "State Service Database" | New-SPStateServiceApplication -Name "StateServiceApp1" | New-SPStateServiceApplicationProxy -DefaultProxyGroup
 ```
@@ -53,14 +45,6 @@ This example creates a new state service database, a new state service applicati
 
 This example configures all the objects required to have State Service operational on a farm.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPStateServiceDatabase -Name "State Service Database" | New-SPStateServiceApplication -Name "StateServiceApp1" | New-SPStateServiceApplicationProxy -DefaultProxyGroup
-```
-
-This example creates a new state service database, a new state service application associated with the database and a new state service application proxy associated with the state service application proxy.
-
-This example configures all the objects required to have State Service operational on a farm.
 
 ## PARAMETERS
 
@@ -89,7 +73,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -132,4 +116,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

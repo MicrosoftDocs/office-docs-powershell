@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPTrustedIdentityTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets the identity providers of a Web application.
-
 
 
 ## SYNTAX
@@ -45,29 +38,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -------------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
-```
-C:\PS>Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -ImportTrustCertificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
-```
-
-This example sets the identity provider to LiveIDSTS.
-
-### -------------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
+### -------------------------EXAMPLE 1----------------------
 ```
 C:\PS>Set-SPTrustedIdentityTokenIssuer "LiveIDSTS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert")
 ```
 
 This example sets the identity provider to LiveIDSTS.
 
-### -------------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
-```
-C:\PS>$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )New-SPWebApplication http://contoso.com -IdentityProvider $ip
-```
 
-This example sets the identity provider using the .ASPNetMembership and Role parameters.
-When these parameters are used, a variable must be set; otherwise, the values do not take effect.
-
-### -------------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
+### -------------------------EXAMPLE 2----------------------
 ```
 C:\PS>$ip = @( (Get-SPTrustedIdentityTokenIssuer "LiveID STS"), (New-SPTrustedIdentityTokenIssuer -ASPNetMembershipProvider "myMembershipProvider" -ASPNetRoleProvider "myRoleProvider"), (Get-SPTrustedIdentityTokenIssuer "NTLM")) )
 New-SPWebApplication http://contoso.com -IdentityProvider $ip
@@ -75,6 +54,7 @@ New-SPWebApplication http://contoso.com -IdentityProvider $ip
 
 This example sets the identity provider using the .ASPNetMembership and Role parameters.
 When these parameters are used, a variable must be set; otherwise, the values do not take effect.
+
 
 ## PARAMETERS
 
@@ -103,7 +83,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -316,4 +296,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes tags, notes, or ratings.
 
+
 ## SYNTAX
 
 ```
@@ -20,25 +21,20 @@ Remove-SPSocialItemByDate -EndDate <DateTime>
 ```
 
 ## DESCRIPTION
-Use the Remove-SPSocialItemByDate cmdlet to delete, tags, notes, ratings created before a particular date.
+Use the `Remove-SPSocialItemByDate` cmdlet to delete, tags, notes, ratings created before a particular date.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE------------ (SharePoint Server 2013)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Remove-SPSocialItemByDate -RemoveTags 1 -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c -EndDate 9/15/2009
 ```
 
 This example removes tags before 9/15/09 from the specified User Profile Service Application Proxy.
 
-### --------------EXAMPLE------------ (SharePoint Server 2016)
-```
-C:\PS>Remove-SPSocialItemByDate -RemoveTags 1 -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c -EndDate 9/15/2009
-```
-
-This example removes tags before 9/15/09 from the specified User Profile Service Application Proxy.
 
 ## PARAMETERS
 
@@ -81,7 +77,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -98,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +191,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -220,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

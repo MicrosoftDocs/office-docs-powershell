@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPRequestManagementRuleCriteria
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates criteria for the rule to match.
-
 
 
 ## SYNTAX
@@ -35,22 +28,21 @@ New-SPRequestManagementRuleCriteria [-Value] <String> [-Property] <SPRequestMana
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the New-SPRequestManagementRuleCriteria cmdlet to create criteria for the rule to match.
+Use the `New-SPRequestManagementRuleCriteria` cmdlet to create criteria for the rule to match.
+
 
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
-C:\PS>
+PS C:\> {{ Add example code here }}
 ```
 
-###   (SharePoint Server 2016)
-```
-C:\PS>
-```
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -71,6 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -CustomHeader
+{{ Fill CustomHeader Description}}
+
 ```yaml
 Type: String
 Parameter Sets: CustomPropertyParameterSet
@@ -157,7 +151,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -186,4 +180,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPRequestManagementSettings]()
 
 [Set-SPRequestManagementSettings]()
-

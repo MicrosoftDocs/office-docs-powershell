@@ -24,25 +24,20 @@ Set-SPWordConversionServiceApplication [-Identity] <WordServiceApplicationPipeBi
 ```
 
 ## DESCRIPTION
-The Set-SPWordConversionServiceApplication cmdlet sets global properties of a Word Automation Services application.
+The `Set-SPWordConversionServiceApplication` cmdlet sets global properties of a Word Automation Services application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------EXAMPLE----------------- (SharePoint Server 2013)
+### -----------EXAMPLE-----------------
 ```
 C:\PS>Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
 ```
 
 This example sets the timer job frequency of the WordServices1 application to 30 minutes.
 
-### -----------EXAMPLE----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPServiceApplication -Name WordServices1 | Set-SPWordConversionServiceApplication -TimerJobFrequency 30
-```
-
-This example sets the timer job frequency of the WordServices1 application to 30 minutes.
 
 ## PARAMETERS
 
@@ -127,7 +122,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -160,7 +155,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -195,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConversionTimeout
-Specifies the time, in minutes, after which a conversion that is marked InProgress is confirmed to be still running each time the timer job runs and, if necessary, the conversion is restarted.
+Specifies the time, in minutes, after which a conversion that is marked InProgress is confirmed to be still running each time the timer job runs and if necessary, the conversion is restarted.
 The default value is 5.
 
 The type must be a valid integer in the range from 1 to 60.
@@ -269,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisableBinaryFileScan
-Specifies whether additional checks are run when Word 97 to Word 2003 documents are processed.
+Specifies whether additional checks are run when Word documents are processed.
 Turn this setting off only if all documents processed by the service are trusted.
 
 ```yaml
@@ -435,7 +430,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -492,4 +487,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

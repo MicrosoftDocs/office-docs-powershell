@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a data connection file.
 
+
 ## SYNTAX
 
 ```
@@ -18,74 +19,51 @@ Set-SPDataConnectionFile [-Identity] <SPDataConnectionFilePipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPDataConnectionFile cmdlet sets the properties of the data connection file specified in the Identity parameter.
+The `Set-SPDataConnectionFile` cmdlet sets the properties of the data connection file specified in the Identity parameter.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-----------------
 ```
 C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
 
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -Category "Temp"
-```
 
-This example updates the Category of the specified .udcx file.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-----------------
 ```
 C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
 ```
 
 This example updates the DisplayName of the specified .udcx file.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPDataConnectionFile -Identity "sample.udcx" -DisplayName "NewDisplayName"
-```
 
-This example updates the DisplayName of the specified .udcx file.
-
-### --------------EXAMPLE 3----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 3-----------------
 ```
 C:\PS>Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
 ```
 
 This example updates the Category of the specified .udcx file.
 
-### --------------EXAMPLE 3----------------- (SharePoint Server 2016)
-```
-C:\PS>Sample.udcx" | Set-SPDataConnectionFile -Category "Temp"
-```
 
-This example updates the Category of the specified .udcx file.
-
-### --------------EXAMPLE 4----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 4-----------------
 ```
 C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
 ```
 
-This example updates the Category field for the collection of .udcx files that are returned from a query used by the Get-SPDataConnectionFile cmdlet.
+This example updates the Category field for the collection of .udcx files that are returned from a query used by the `Get-SPDataConnectionFile` cmdlet.
 
-### --------------EXAMPLE 4----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPDataConnectionFile | where {$_.Category -eq "Category1"}  | Set-SPDataConnectionFile -Category "Category2"
-```
-
-This example updates the Category field for the collection of .udcx files that are returned from a query used by the Get-SPDataConnectionFile cmdlet.
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the data connection file to update.
 
-The type must be a valid GUID, in form 12345678-90ab-cdef-1234-567890bcdefgh;  a valid name of a data connection file (for example, DataConnectionFileName1.udcx); or an instance of a valid SPDataConnectionFile object.
+The type must be a valid GUID, in form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a data connection file (for example, DataConnectionFileName1.udcx); or an instance of a valid SPDataConnectionFile object.
 
 ```yaml
 Type: SPDataConnectionFilePipeBind
@@ -107,7 +85,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -143,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -216,7 +194,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -241,4 +219,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPWebApplication
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Deletes the specified Web application.
-
 
 
 ## SYNTAX
@@ -33,17 +26,18 @@ Remove-SPWebApplication [-Identity] <SPWebApplicationPipeBind> [-AssignmentColle
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Remove-SPWebApplication cmdlet deletes the Web application specified by the Identity and Zone parameters.
+The `Remove-SPWebApplication` cmdlet deletes the Web application specified by the Identity and Zone parameters.
 If no zone is provided, the entire Web application and all zones are removed.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1-----------------------
 ```
 C:\PS>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
 ```
@@ -51,27 +45,14 @@ C:\PS>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Inte
 This example prompts and then removes the Internet zone Web application extension on the Web application at http://sitename.
 This command does not remove the content databases or the IIS Web site.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWebApplication http://sitename | Remove-SPWebApplication -Zone "Internet" -Confirm
-```
 
-This example prompts and then removes the Internet zone Web application extension on the Web application at http://sitename.
-This command does not remove the content databases or the IIS Web site.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
 ```
 
-This example permanently removes the Web application, all content databases, and the IIS Web site at http://sitename
+This example permanently removes the Web application, all content databases and the IIS Web site at http://sitename
 
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPWebApplication http://sitename -Confirm -DeleteIISSite -RemoveContentDatabases
-```
-
-This example permanently removes the Web application, all content databases, and the IIS Web site at http://sitename
 
 ## PARAMETERS
 
@@ -119,7 +100,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -136,7 +117,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +168,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -212,4 +193,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

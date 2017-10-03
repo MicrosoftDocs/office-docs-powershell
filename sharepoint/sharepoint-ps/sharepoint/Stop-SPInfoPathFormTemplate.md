@@ -7,7 +7,7 @@ schema: 2.0.0
 # Stop-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Disables a InfoPath 2013 form template on a farm before an upgrade.
+Disables a InfoPath form template on a farm before an upgrade.
 
 ## SYNTAX
 
@@ -17,22 +17,15 @@ Stop-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind>
 ```
 
 ## DESCRIPTION
-The Stop-SPInfoPathFormTemplate cmdlet quiesces, or disables, an InfoPath 2013 form template before it upgrades the form.
+The `Stop-SPInfoPathFormTemplate` cmdlet quiesces, or disables, an InfoPath form template before it upgrades the form.
 Before a form is updated it is quiesced, which disables access to the form.
-Use Start-SPIPFormTemplate to unquiesce, or activate, a form template after the form is upgraded.
+Use `Start-SPIPFormTemplate` to unquiesce, or activate, a form template after the form is upgraded.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>Stop-SPInfoPathFormTemplate -Identity formName.xsn
-```
-
-This example disables a form template for a specified name.
-
-### ---------------EXAMPLE-------------- (SharePoint Server 2016)
+### ---------------EXAMPLE--------------
 ```
 C:\PS>Stop-SPInfoPathFormTemplate -Identity formName.xsn
 ```
@@ -42,7 +35,7 @@ This example disables a form template for a specified name.
 ## PARAMETERS
 
 ### -Identity
-Specifies the InfoPath 2013 form template to start.
+Specifies the InfoPath form template to start.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a form template (for example, InfoPathFormTemplate1); a valid name of a form template files (for example, FormTemplateFile1.xsn); or an instance of a valid SPFormTemplate object.
 
@@ -66,7 +59,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -83,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +112,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -144,4 +137,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

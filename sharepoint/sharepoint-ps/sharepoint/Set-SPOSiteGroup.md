@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Updates the SharePoint Online owner and permission levels on a group inside a site collection.
 
+
 ## SYNTAX
 
 ```
@@ -17,21 +18,20 @@ Set-SPOSiteGroup -Identity <String> [-Name <String>] [-Owner <String>] [-Permiss
 ```
 
 ## DESCRIPTION
-You must be a SharePoint Online global administrator and a site collection administrator to run the Set-SPOSiteGroup cmdlet.
+You must be a SharePoint Online global administrator and a site collection administrator to run the `Set-SPOSiteGroup` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### --------------------EXAMPLE---------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -147,6 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Get-SPOSiteGroup]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c6450a79-d9d9-4584-9158-c47e12249cd4(Office.15).aspx)
-

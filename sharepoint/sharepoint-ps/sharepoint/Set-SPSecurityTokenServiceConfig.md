@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPSecurityTokenServiceConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Updates the settings of the SharePoint security token service (STS) identity provider.
-
 
 
 ## SYNTAX
@@ -75,10 +68,10 @@ Set-SPSecurityTokenServiceConfig [-AssignmentCollection <SPAssignmentCollection>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Set-SPSecurityTokenServiceConfig cmdlet updates the settings of the SharePoint security token service (STS) identity provider.
+The `Set-SPSecurityTokenServiceConfig` cmdlet updates the settings of the SharePoint security token service (STS) identity provider.
 If a certificate file is used, the certificate must be an X509 certificate with private keys, otherwise an exception is raised.
 
 This cmdlet operates only with certificates that can be exported.
@@ -86,23 +79,18 @@ To create a certificate which can be used in this cmdlet specify the X509KeyStor
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### --------------------EXAMPLE 1---------------------
 ```
 C:\PS>Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
 ```
 
 This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Set-SPSecurityTokenServiceConfig -SigningCertificateThumbprint "2796BAE63F1801E277261BA0D77770028F20EEE4"
-```
 
-This example updates the signing certificate of the SharePoint security token service (STS) identity provider with a certificate that has been deployed in the certificate store.
-
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
+### --------------------EXAMPLE 2---------------------
 ```
 C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
 
@@ -111,18 +99,12 @@ C:\PS>Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
 
 This example imports the signing certificate for the SharePoint STS identity provider.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2016)
-```
-C:\PS>$stsCert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2 "c:\sts.pfx","a",20
-
-C:\PS>Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCert
-```
-
-This example imports the signing certificate for the SharePoint STS identity provider.
 
 ## PARAMETERS
 
 ### -QueueSigningCertificateThumbprint
+{{ Fill QueueSigningCertificateThumbprint Description }}
+
 ```yaml
 Type: String
 Parameter Sets: QueueSigningCertificateReference
@@ -150,6 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateThumbprint
+{{ Fill RevokeSigningCertificateThumbprint Description }}
+
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
@@ -188,7 +172,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -205,7 +189,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -296,6 +280,8 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificate
+{{ Fill QueueSigningCertificate Description }}
+
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateQueue
@@ -310,6 +296,8 @@ Accept wildcard characters: False
 ```
 
 ### -QueueSigningCertificateStoreName
+{{ Fill QueueSigningCertificateStoreName Description }}
+
 ```yaml
 Type: String
 Parameter Sets: QueueSigningCertificateReference, SigningCertificateReference
@@ -324,6 +312,8 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificate
+{{ Fill RevokeSigningCertificate Description }}
+
 ```yaml
 Type: X509Certificate2
 Parameter Sets: SigningCertificateRevoke
@@ -338,6 +328,8 @@ Accept wildcard characters: False
 ```
 
 ### -RevokeSigningCertificateStoreName
+{{ Fill RevokeSigningCertificateStoreName Description }}
+
 ```yaml
 Type: String
 Parameter Sets: RevokeSigningCertificateReference
@@ -410,7 +402,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -454,4 +446,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

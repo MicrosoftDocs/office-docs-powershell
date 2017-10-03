@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Provisions a new instance of the Machine Translation service.
 
+
 ## SYNTAX
 
 ```
@@ -19,13 +20,14 @@ New-SPTranslationServiceApplication [-Name] <String> -ApplicationPool <SPIisWebS
 ```
 
 ## DESCRIPTION
-Use the New-SPTranslationServiceApplication cmdlet to provision a new instance of the Machine Translation service on the farm.
+Use the `New-SPTranslationServiceApplication` cmdlet to provision a new instance of the Machine Translation service on the farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------EXAMPLE--------------- (SharePoint Server 2013)
+### -------------EXAMPLE---------------
 ```
 C:\PS>New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool "SharePoint Web Services Default" -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
 ```
@@ -33,13 +35,6 @@ C:\PS>New-SPTranslationServiceApplication -Name TranslationService -ApplicationP
 This example creates a Machine Translation service application named TranslationService which will run in the SharePoint Web Services Default service application pool.
 The database will be called TranslationServiceDatabase and will be hosted on the Server1 SQL server instance.
 
-### -------------EXAMPLE--------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPTranslationServiceApplication -Name TranslationService -ApplicationPool "SharePoint Web Services Default" -DatabaseServer Server1 -DatabaseName TranslationServiceDatabase
-```
-
-This example creates a Machine Translation service application named TranslationService which will run in the SharePoint Web Services Default service application pool.
-The database will be called TranslationServiceDatabase and will be hosted on the Server1 SQL server instance.
 
 ## PARAMETERS
 
@@ -82,7 +77,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -99,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -197,7 +192,7 @@ Accept wildcard characters: False
 
 ### -PartitionMode
 Restricts this service to behave uniquely on a partitioned set of site collections.
-This cannot be changed after the application is provisioned
+This cannot be changed after the application is provisioned.
 
 ```yaml
 Type: SwitchParameter
@@ -214,7 +209,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -261,4 +256,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPTranslationServiceApplicationProxy]()
 
 [Set-SPTranslationServiceApplicationProxy]()
-

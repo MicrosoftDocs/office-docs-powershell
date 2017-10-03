@@ -7,14 +7,7 @@ schema: 2.0.0
 # Repair-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Activates the RunRepairs method against the referenced SPSite object.
-
 
 
 ## SYNTAX
@@ -25,42 +18,31 @@ Repair-SPSite [-Identity] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentC
 ```
 
 ## DESCRIPTION
-The Repair-SPSite cmdlet runs one or all site collection health checks on the site collection and its contents.
+The `Repair-SPSite` cmdlet runs one or all site collection health checks on the site collection and its contents.
 This cmdlet automatically repairs issues that it finds.
 
-Run the Test-SPSite cmdlet for reports of rules which were run and a summary of the results.
+Run the `Test-SPSite` cmdlet for reports of rules which were run and a summary of the results.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE 1--------------- (SharePoint Server 2013)
+### ------------EXAMPLE 1---------------
 ```
 C:\PS>Repair-SPSite http://<site name</sites/testsite
 ```
 
 This example runs all the site collection health checks in repair mode on the http://\<site name\>/sites/testsite site collection.
 
-### ------------EXAMPLE 1--------------- (SharePoint Server 2016)
-```
-C:\PS>Repair-SPSite http://<site name</sites/testsite
-```
 
-This example runs all the site collection health checks in repair mode on the http://\<site name\>/sites/testsite site collection.
-
-### ------------EXAMPLE 2--------------- (SharePoint Server 2013)
+### ------------EXAMPLE 2---------------
 ```
 C:\PS>Repair-SPSite http://<site name>/sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
 ```
 
 This example runs just the "Missing Galleries Check" in repair mode on the http://\<site name\>/sites/testsite site collection.
 
-### ------------EXAMPLE 2--------------- (SharePoint Server 2016)
-```
-C:\PS>Repair-SPSite http://<site name>/sites/testsite -Rule "ee967197-ccbe-4c00-88e4-e6fab81145e1"
-```
-
-This example runs just the "Missing Galleries Check" in repair mode on the http://\<site name\>/sites/testsite site collection.
 
 ## PARAMETERS
 
@@ -87,7 +69,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -104,7 +86,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +135,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -180,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Test-SPSite]()
-

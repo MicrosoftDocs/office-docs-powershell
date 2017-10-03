@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of a connection to a managed metadata service application.
 
+
 ## SYNTAX
 
 ```
@@ -19,53 +20,36 @@ Set-SPMetadataServiceApplicationProxy [-Identity] <SPMetadataServiceProxyCmdletP
 ```
 
 ## DESCRIPTION
-Use the Set-SPMetadataServiceApplicationProxy cmdlet to set the properties of a connection to a managed metadata service application.
+Use the `Set-SPMetadataServiceApplicationProxy` cmdlet to set the properties of a connection to a managed metadata service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 1---------------------
 ```
 C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
 ```
 
 This example enables content type syndication and enables content type pushdown on an existing connection to a managed metadata service application.
 
-### -----------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled -ContentTypePushdownEnabled
-```
 
-This example enables content type syndication and enables content type pushdown on an existing connection to a managed metadata service application.
-
-### -----------------EXAMPLE 2--------------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 2---------------------
 ```
 C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
 ```
 
 This example disables content type syndication and disables content type pushdown on an existing connection to a managed metadata service application.
 
-### -----------------EXAMPLE 2--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -ContentTypeSyndicationEnabled:$false -ContentTypePushdownEnabled:$false
-```
 
-This example disables content type syndication and disables content type pushdown on an existing connection to a managed metadata service application.
-
-### -----------------EXAMPLE 3--------------------- (SharePoint Server 2013)
+### -----------------EXAMPLE 3---------------------
 ```
 C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
 ```
 
 This example configures an existing connection to a managed metadata service application to be the default location for storing enterprise keywords and prevents it from being the default location for storing column-specific term sets.
 
-### -----------------EXAMPLE 3--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMetadataServiceApplicationProxy -Identity "MetadataServiceProxy1" -DefaultKeywordTaxonomy -DefaultSiteCollectionTaxonomy:$false
-```
-
-This example configures an existing connection to a managed metadata service application to be the default location for storing enterprise keywords and prevents it from being the default location for storing column-specific term sets.
 
 ## PARAMETERS
 
@@ -94,7 +78,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -111,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -229,7 +213,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -254,4 +238,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

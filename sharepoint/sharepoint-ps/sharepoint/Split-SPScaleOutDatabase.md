@@ -7,14 +7,7 @@ schema: 2.0.0
 # Split-SPScaleOutDatabase
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Moves a specified percentage of partitions from one scale-out database to another.
-
 
 
 ## SYNTAX
@@ -37,16 +30,16 @@ Split-SPScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Split-SPScaleOutDatabase cmdlet to move a specified percentage of partitions from a source database to an existing target database or to a new database that you create with the specified parameters.
+Use the `Split-SPScaleOutDatabase` cmdlet to move a specified percentage of partitions from a source database to an existing target database or to a new database that you create with the specified parameters.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------- (SharePoint Server 2013)
+### ---------------EXAMPLE---------------
 ```
 C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
 
@@ -58,17 +51,6 @@ C:\PS>Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyD
 This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
 The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
 
-### ---------------EXAMPLE--------------- (SharePoint Server 2016)
-```
-C:\PS>$databases = Get-SPScaleOutDatabase -ServiceApplication $serviceApplication
-
-C:\PS>database = $databases[0]
-
-C:\PS>Split-SPScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
-```
-
-This example creates a new scale-out database named Database2 on the MyDatabaseServer database server  in the given service application.
-The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
 
 ## PARAMETERS
 
@@ -143,7 +125,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -160,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -263,7 +245,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -294,4 +276,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPScaleOutDatabase]()
 
 [Remove-SPScaleOutDatabase]()
-

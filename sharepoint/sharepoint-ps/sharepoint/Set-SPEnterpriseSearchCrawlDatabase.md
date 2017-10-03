@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a crawl database for a Search service application.
 
+
 ## SYNTAX
 
 ```
@@ -20,21 +21,15 @@ Set-SPEnterpriseSearchCrawlDatabase [-Identity] <CrawlStorePipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPEnterpriseSearchCrawlDatabase cmdlet sets properties of a specified crawl database for a Search service application.
+The `Set-SPEnterpriseSearchCrawlDatabase` cmdlet sets properties of a specified crawl database for a Search service application.
 A crawl database stores crawl history for a Search service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceAppSet-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore-SearchApplication $searchApp -FailoverDatabaseServer \\failoverServer
-```
-
-This example sets the failover database server for the crawl database, SearchApp_CrawlStore, to the \\\\failoverServer server.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication mySearchServiceApp
 Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore
@@ -42,6 +37,7 @@ Set-SPEnterpriseSearchCrawlDatabase -Identity SearchApp_CrawlStore
 ```
 
 This example sets the failover database server for the crawl database, SearchApp_CrawlStore, to the \\\\failoverServer server.
+
 
 ## PARAMETERS
 
@@ -70,7 +66,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -87,7 +83,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
+
 
 ```yaml
 Type: SwitchParameter
@@ -138,7 +135,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -227,6 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/013afca3-9aba-47ee-ad44-b20d1dc17f16(Office.15).aspx)
-

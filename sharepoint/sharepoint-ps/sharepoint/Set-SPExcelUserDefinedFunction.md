@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a user-defined function in Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -19,7 +20,7 @@ Set-SPExcelUserDefinedFunction [-Identity] <SPExcelUDFPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPExcelUserDefinedFunction cmdlet sets properties of a user-defined function assembly. 
+The `Set-SPExcelUserDefinedFunction` cmdlet sets properties of a user-defined function assembly. 
 Excel Services Application uses only user-defined functions that have an entry in the user-defined function list.
 User-defined functions are managed code assemblies that can be called from an Excel Services Application workbook by using standard Excel Services Application formula syntax.
 The assemblies can perform custom logic or other actions, such as refresh data.
@@ -27,21 +28,24 @@ Windows PowerShell cmdlets operate on the entries in the user-defined function l
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1--------------
 ```
 C:\PS>Set-SPExcelUserDefinedFunction -ExcelServiceApplication "My Excel Service" -Identity SampleCompany.SampleApplication.SampleUdf -Description "This is the new description for the sample UDF"
 ```
 
 This example changes the description of the user-defined function (UDF) to the UDF SampleCompany.SampleApplication.SampleUdf file for the Excel Services Application Web service application named My Excel Service.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### --------------EXAMPLE 2--------------
 ```
 C:\PS>Get-SPExcelServiceApplication "My Excel Service" | Set-SPExcelUserDefinedFunction -Identity SampleCompany.SampleApplication.SampleUdf -Enable: $false
 ```
 
 This example disables the sample UDF SampleCompany.SampleApplication.SampleUdf file from the Excel Services Application named My Excel Service.
+
 
 ## PARAMETERS
 
@@ -83,9 +87,10 @@ Accept wildcard characters: False
 
 ### -Assembly
 Specifies the strongly-typed name of the assembly.
-The name must be unique in the list of user-defined functions, and cannot be more than 4096 alphanumeric characters long.
+The name must be unique in the list of user-defined functions and cannot be more than 4096 alphanumeric characters long.
 
 The type must be a string of alphanumeric characters; for example, SampleCompany.SampleApplication.SampleUdf, C:\UDFs\SampleUdf.dll, or \\\\MyNetworkServer\UDFs\SampleUdf.dll.
+
 
 ```yaml
 Type: String
@@ -125,7 +130,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -142,7 +147,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -194,7 +199,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -219,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

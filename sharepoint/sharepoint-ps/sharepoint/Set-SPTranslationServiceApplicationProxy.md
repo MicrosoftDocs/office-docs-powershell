@@ -18,18 +18,11 @@ Set-SPTranslationServiceApplicationProxy [-Identity] <TranslationServiceApplicat
 ```
 
 ## DESCRIPTION
-Use the Set-SPTranslationServiceApplicationProxy cmdlet to set properties on a Machine Translation service application proxy in the farm.
+Use the `Set-SPTranslationServiceApplicationProxy` cmdlet to set properties on a Machine Translation service application proxy in the farm.
 
 ## EXAMPLES
 
-### -------------EXAMPLE--------- (SharePoint Server 2013)
-```
-C:\PS>Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
-```
-
-This example adds the Machine Translation Service application proxy named TranslationServiceProxy to the default proxy group.
-
-### -------------EXAMPLE--------- (SharePoint Server 2016)
+### -------------EXAMPLE---------
 ```
 C:\PS>Set-SPTranslationServiceApplicationProxy TranslationServiceProxy -DefaultProxyGroup
 ```
@@ -63,7 +56,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -80,7 +73,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -153,7 +146,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -184,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPTranslationServiceApplicationProxy]()
 
 [Set-SPTranslationServiceApplication]()
-

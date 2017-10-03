@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Resets all Project Server Queue settings to their default values for a specific Project Server Service Application.
 
+
 ## SYNTAX
 
 ```
@@ -21,14 +22,16 @@ Resets all Project Server Queue settings to their default values for a specific 
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>Reset-SPProjectQueueSettings -ServiceApplication "Project Service Application"
 ```
 
 This example resets the queue settings for the "Project Service Application" service application.
+
 
 ## PARAMETERS
 
@@ -51,6 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+{{Fill AssignmentCollection Description}}
+
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
@@ -78,4 +83,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPProjectQueueSettings]()
 
 [Get-SPProjectQueueSettings]()
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a result item type for a search object owner.
 
+
 ## SYNTAX
 
 ```
@@ -19,28 +20,7 @@ Remove-SPEnterpriseSearchResultItemType [-Identity] <ResultItemTypePipeBind> -Ow
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The Remove-SPEnterpriseSearchResultItemType cmdlet removes a user-created result item type, given a result type identity and a search owner.
-You cannot use this cmdlet to remove the built-in result item types that are included with SharePoint products.
-
-Result item types enable you to change the look of search results based on the type of result.
-You start by defining a collection of rules, which will be evaluated against the properties of results.
-Then you define the display template to use for rendering that type of result.
-Once you have created the result item type, results matching the rules of the result item type will display using the specified display template.
-
-Example use cases:
-
-- Change the look of results for a particular file name extension, for example Word documents.
-- Change the look of a particular content type in search results.
-- Change the look of results from a particular author.
-- Add a result action to results from a particular result source as part of a custom search application.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
-
-The Remove-SPEnterpriseSearchResultItemType cmdlet removes a user-created result item type, given a result type identity and a search owner.
+The `Remove-SPEnterpriseSearchResultItemType` cmdlet removes a user-created result item type, given a result type identity and a search owner.
 You cannot use this cmdlet to remove the built-in result item types that are included with SharePoint products.
 
 Result item types enable you to change the look of search results based on the type of result. 
@@ -58,20 +38,9 @@ Example use cases:
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
-
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$web = Get-SPWeb "UrlOfTheSite"$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web$searchapp = Get-SPEnterpriseSearchServiceApplication$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $searchapp$resultType.BuiltInRemove-SPEnterpriseSearchResultItemType -Identity $resultType -Owner $tenantOwner -SearchApplication $searchapp
-```
-
-This example first defines variables for the URL of the site, the search owner, and search application.
-It then retrieves the result item type and checks whether the result item type is a built-in result item type or not.
-If $resultType.BuiltIn returns false, the result item type is not built-in and you can modify it.
-Next, the example removes the result item type referenced by $resultType for the owner referenced by $tenantOwner.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$web = Get-SPWeb "UrlOfTheSite"
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
@@ -83,7 +52,7 @@ $resultType.BuiltIn
 Remove-SPEnterpriseSearchResultItemType -Identity $resultType -Owner $tenantOwner -SearchApplication $searchapp
 ```
 
-This example first defines variables for the URL of the site, the search owner, and search application.
+This example first defines variables for the URL of the site, the search owner and search application.
 It then retrieves the result item type and checks whether the result item type is a built-in result item type or not.
 If $resultType.BuiltIn returns false, the result item type is not built-in and you can modify it.
 Next, the example removes the result item type referenced by $resultType for the owner referenced by $tenantOwner.
@@ -130,7 +99,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -147,7 +116,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -198,7 +167,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -224,8 +193,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/374da73e-a3aa-4560-b1ad-c771bafe155d(Office.15).aspx)
-
 [New-SPEnterpriseSearchResultItemType]()
 
 [Set-SPEnterpriseSearchResultItemType]()
@@ -233,4 +200,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPEnterpriseSearchResultItemType]()
 
 [Get-SPEnterpriseSearchOwner]()
-

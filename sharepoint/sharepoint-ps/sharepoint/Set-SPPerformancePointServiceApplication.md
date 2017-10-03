@@ -30,22 +30,14 @@ Set-SPPerformancePointServiceApplication [-Identity] <SPPerformancePointMonitori
 ```
 
 ## DESCRIPTION
-The Set-SPPerformancePointServiceApplication cmdlet updates global runtime properties for a PerformancePoint Service application.
+The `Set-SPPerformancePointServiceApplication` cmdlet updates global runtime properties for a PerformancePoint Service application.
 The changes made to properties by using this cmdlet affect all servers in the farm that run the instance of the specified PerformancePoint Service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ----------------EXAMPLE---------------------- (SharePoint Server 2013)
-```
-C:\PS>Set-SPPerformancePointServiceApplication -Identity PPSApp_01 -DataSourceQueryTimeoutSeconds 5000
-```
-
-This example sets the Data Source Query Timeout setting to a value of 5000.
-This cmdlet is equivalent to the PerformancePoint Service Settings page on the SharePoint Central Administration Web site.
-
-### ----------------EXAMPLE---------------------- (SharePoint Server 2016)
+### ----------------EXAMPLE----------------------
 ```
 C:\PS>Set-SPPerformancePointServiceApplication -Identity PPSApp_01 -DataSourceQueryTimeoutSeconds 5000
 ```
@@ -187,7 +179,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -242,7 +234,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -260,7 +252,7 @@ Accept wildcard characters: False
 ### -DatabaseFailoverServer
 Specifies the name of the database server that contains the PerformancePoint Services database that must be mirrored.
 
-This parameter was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This parameter was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
 
 ```yaml
 Type: String
@@ -278,7 +270,7 @@ Accept wildcard characters: False
 ### -DatabaseName
 Specifies the name of the PerformancePoint Services database that will be created when the service application is provisioned.
 
-This parameter was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This parameter was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
 
 ```yaml
 Type: String
@@ -299,7 +291,7 @@ This should be the same server name that is used for the SharePoint content and 
 
 The value may be written as SQL instance\server if it is not referring to the default instance.
 
-This parameter was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This parameter was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 ```yaml
 Type: String
@@ -317,7 +309,7 @@ Accept wildcard characters: False
 ### -DatabaseSQLAuthenticationCredential
 Determines whether to use Windows authentication or SQL Server authentication when connecting to a PerformancePoint Services database.
 
-This parameter was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This parameter was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
 ```yaml
 Type: PSCredential
@@ -465,7 +457,7 @@ Accept wildcard characters: False
 
 ### -MSMQName
 Specifies the name of the queue.
-The queue name can contain a maximum of  380 characters, and cannot contain the following characters: CR (ASCII 13), LF (ASCII 10), backslash (\\), plus sign (+), comma (,), or quotation marks ("").
+The queue name can contain a maximum of 380 characters and cannot contain the following characters: CR (ASCII 13), LF (ASCII 10), backslash (\\), plus sign (+), comma (,), or quotation marks ("").
 
 The type must be a valid MSMQ name; for example, MessageQueue1.
 
@@ -635,7 +627,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -740,4 +732,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

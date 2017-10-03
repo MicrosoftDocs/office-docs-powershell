@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores third-party backup of a search application.
 
+
 ## SYNTAX
 
 ### Config
@@ -29,13 +30,13 @@ Restore-SPEnterpriseSearchServiceApplication [-Name] <String>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet is used by third parties to create a search application that uses existing data.
 
 Some third parties back up the application data and have to restore the application later.
-So, the data is restored and uses the Restore-SPEnterpriseSearchServiceApplication cmdlet to create a new search application that uses the restored data.
+So, the data is restored and uses the `Restore-SPEnterpriseSearchServiceApplication` cmdlet to create a new search application that uses the restored data.
 
 This cmdlet supports parameter sets.
 The first set of parameters is for Application Configuration Attach mode and the second set of parameters is for Search Application Attach mode.
@@ -45,21 +46,10 @@ However, Search Application Attach restores configuration, topology and all craw
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------EXAMPLE 1-------------- (SharePoint Server 2013)
-```
-$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
-
-
-$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
-
-Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -AdminSearchServiceInstance $searchInstance -DatabaseName "SearchServiceApplication_Admindb" -DatabaseServer "SQLServer1"
-```
-
-This example uses Application Configuration Attach mode to restore configuration data.
-
-### -------------EXAMPLE 1-------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE 1-----------------------
 ```
 C:\PS>$searchInstance = Get-SPEnterpriseSearchServiceInstance -local
 $applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
@@ -69,16 +59,8 @@ C:\PS>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplicati
 
 This example uses Application Configuration Attach mode to restore configuration data.
 
-### -------------EXAMPLE 2-------------- (SharePoint Server 2013)
-```
-$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
 
-Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplication" -ApplicationPool $applicationPool -TopologyFile "C:\TopologyFile.xml"
-```
-
-This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.
-
-### -------------EXAMPLE 2-------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE 2-----------------------
 ```
 C:\PS>$applicationPool = New-SPServiceApplicationPool -Name "SearchServiceApplicationPool" -Account "domain\username"
 
@@ -86,6 +68,7 @@ C:\PS>Restore-SPEnterpriseSearchServiceApplication -Name "SearchServiceApplicati
 ```
 
 This example uses Search Application Attach mode to restore topology data in the file that is named topology.xml.
+
 
 ## PARAMETERS
 
@@ -146,15 +129,8 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
-Manages objects for the purpose of proper disposal.
-Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
-Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
-When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
-
-When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -171,10 +147,8 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
-Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
@@ -291,10 +265,8 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
-Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
 
 ```yaml
 Type: SwitchParameter
@@ -351,6 +323,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fb717b7b-53cd-44c4-b94d-348c6403d4b2(Office.15).aspx)
-

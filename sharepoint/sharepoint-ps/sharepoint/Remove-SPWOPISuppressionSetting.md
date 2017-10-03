@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPWOPISuppressionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes the suppression settings for a file name extension or programmatic ID and action on the current SharePoint farm where this cmdlet is run.
-
 
 
 ## SYNTAX
@@ -32,39 +25,28 @@ Remove-SPWOPISuppressionSetting [-AssignmentCollection <SPAssignmentCollection>]
 ```
 
 ## DESCRIPTION
-The Remove-SPWOPISuppressionSetting cmdlet removes the suppression settings for a file name extension or programmatic indentifier (ProgID) and action on the current SharePoint farm where this cmdlet is run.
+The `Remove-SPWOPISuppressionSetting` cmdlet removes the suppression settings for a file name extension or programmatic indentifier (ProgID) and action on the current SharePoint farm where this cmdlet is run.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-----------------
 ```
 C:\PS>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
 ```
 
 This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPWOPISuppressionSetting -Extension "XLSX" -Action "view"
-```
 
-This example removes suppression settings for viewing Excel workbooks that have the file name extension ".xlsx."
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-----------------
 ```
 C:\PS>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
 ```
 
 This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWOPISuppressionSetting | Remove-SPWOPISuppressionSetting
-```
-
-This example removes all suppression settings on the current SharePoint farm where this cmdlet is run.
 
 ## PARAMETERS
 
@@ -92,7 +74,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -109,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters.
+For more information, type the following command: `get-help about_commonparameters`.
 
 ```yaml
 Type: SwitchParameter
@@ -126,7 +108,7 @@ Accept wildcard characters: False
 
 ### -Extension
 Specifies the file name extension.
-Run Get-SPWOPIBinding to get the list of file name extensions the WOPI application supports.
+Run `Get-SPWOPIBinding` to get the list of file name extensions the WOPI application supports.
 
 ```yaml
 Type: String
@@ -143,7 +125,7 @@ Accept wildcard characters: False
 
 ### -Identity
 Specifies a string that represents a SPWOPISuppressionSetting.
-Run Get-SPWOPISuppressionSetting to see examples of such strings.
+Run `Get-SPWOPISuppressionSetting` to see examples of such strings.
 
 ```yaml
 Type: String
@@ -160,7 +142,7 @@ Accept wildcard characters: False
 
 ### -ProgId
 Specifies the programmatic identifier (ProgID) for an application to suppress.
-Run Get-SPWOPIBinding to get the list of ProgIDs that the WOPI application supports.
+Run `Get-SPWOPIBinding` to get the list of ProgIDs that the WOPI application supports.
 
 ```yaml
 Type: String
@@ -177,7 +159,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -210,4 +192,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPWOPISuppressionSetting]()
 
 [Get-SPWOPISuppressionSetting]()
-

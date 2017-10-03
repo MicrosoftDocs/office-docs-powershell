@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPUserLicenseMapping
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a claim-to-SharePoint user license mapping.
-
 
 
 ## SYNTAX
@@ -25,25 +18,20 @@ Remove-SPUserLicenseMapping -Identity <System.Collections.Generic.List`1[System.
 ```
 
 ## DESCRIPTION
-The Remove-SPUserLicenseMapping cmdlet uses the Identity parameter to remove a claim-to-SharePoint user license mapping.
+The `Remove-SPUserLicenseMapping` cmdlet uses the Identity parameter to remove a claim-to-SharePoint user license mapping.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------EXAMPLE--------------- (SharePoint Server 2013)
+### ----------------EXAMPLE---------------
 ```
 C:\PS>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
 ```
 
 This example removes the claim-to-license mapping that has the unique ID, e69ba7cc-4be0-4723-ad63-58d06173afff.
 
-### ----------------EXAMPLE--------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPUserLicenseMapping -Identity e69ba7cc-4be0-4723-ad63-58d06173afff
-```
-
-This example removes the claim-to-license mapping that has the unique ID, e69ba7cc-4be0-4723-ad63-58d06173afff.
 
 ## PARAMETERS
 
@@ -71,7 +59,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -88,7 +76,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +93,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -134,4 +122,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Add-SPUserLicenseMapping]()
 
 [Get-SPUserLicenseMapping]()
-

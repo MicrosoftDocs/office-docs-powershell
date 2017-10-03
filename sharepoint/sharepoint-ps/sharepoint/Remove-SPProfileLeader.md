@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Remove a company leader.
 
+
 ## SYNTAX
 
 ```
@@ -18,26 +19,18 @@ Remove-SPProfileLeader [-ProfileServiceApplicationProxy] <SPServiceApplicationPr
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
-Use the Remove-SPProfileLeader cmdlet to remove a user as the company leader.
+Use the `Remove-SPProfileLeader` cmdlet to remove a user as the company leader.
 
-For additional information about SPProfileLeader cmdlets, see The *-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server 2010 SP1 (http://go.microsoft.com/fwlink/p/?LinkId=226295) (http://go.microsoft.com/fwlink/p/?LinkId=226295).
+For additional information about SPProfileLeader cmdlets, see The *-SPProfileLeader Windows PowerShell cmdlets in SharePoint Server SP1 (http://go.microsoft.com/fwlink/p/?LinkId=226295) (http://go.microsoft.com/fwlink/p/?LinkId=226295).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ---------------EXAMPLE------------ (SharePoint Server 2013)
-```
-C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
-
-C:\PS>Remove-SPProfileLeader -ProfileServiceApplicationProxy $upaProxy -Name "contoso\janedow"
-```
-
-This example removes the user "Jane Dow" from the leaders list for a specific user profile service application.
-
-### ---------------EXAMPLE------------ (SharePoint Server 2016)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h981aq
 
@@ -45,6 +38,7 @@ C:\PS>$upaProxy = Get-SPServiceApplicationProxy 1232b6f7-b9ff-99ad-0cd0-fg1g67h9
 ```
 
 This example removes the user "Jane Dow" from the leaders list for a specific user profile service application.
+
 
 ## PARAMETERS
 
@@ -88,7 +82,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -105,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -139,7 +133,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -164,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

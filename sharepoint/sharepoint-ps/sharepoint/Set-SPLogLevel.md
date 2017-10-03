@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPLogLevel
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets the trace and event level for a set of categories.
-
 
 
 ## SYNTAX
@@ -25,69 +18,46 @@ Set-SPLogLevel [-AssignmentCollection <SPAssignmentCollection>] [-EventSeverity 
 ```
 
 ## DESCRIPTION
-The Set-SPLogLevel cmdlet sets the Windows event logging and trace logging levels for one or more diagnostic logging categories registered in the farm.
+The `Set-SPLogLevel` cmdlet sets the Windows event logging and trace logging levels for one or more diagnostic logging categories registered in the farm.
 If an event or trace associated with a category occurs, but is less severe than that category's logging level, the event or trace is not written to the event log or the trace log.
 If an event or trace associated with a category occurs and is equally severe or more severe than that category's logging level, the event or trace is written to the event log or the trace log.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1-----------------------
 ```
 C:\PS>set-sploglevel -TraceSeverity Monitorable
 ```
 
 This example sets the TraceSeverity values for all categories to Monitorable.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>set-sploglevel -TraceSeverity Monitorable
-```
 
-This example sets the TraceSeverity values for all categories to Monitorable.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
 ```
 
 This example sets the EventSeverity and TraceSeverity values for a single category.
 
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPLogLevel -TraceSeverity High -EventSeverity Warning -Identity "Cat1"
-```
 
-This example sets the EventSeverity and TraceSeverity values for a single category.
-
-### ------------------EXAMPLE 3----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 3-----------------------
 ```
 C:\PS>"Cat1", "Cat2", "Cat3" | Set-SPLogLevel -EventSeverity Error
 ```
 
 This example sets the EventSeverity values for multiple categories.
 
-### ------------------EXAMPLE 3----------------------- (SharePoint Server 2016)
-```
-C:\PS>"Cat1", "Cat2", "Cat3" | Set-SPLogLevel -EventSeverity Error
-```
 
-This example sets the EventSeverity values for multiple categories.
-
-### ------------------EXAMPLE 4----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 4-----------------------
 ```
 C:\PS>Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
 ```
 
 This example sets the EventSeverity values for all categories in the same area.
 
-### ------------------EXAMPLE 4----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPLogLevel -EventSeverity Warning -Identity "AreaName:*"
-```
-
-This example sets the EventSeverity values for all categories in the same area.
 
 ## PARAMETERS
 
@@ -98,7 +68,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -156,7 +126,7 @@ Accept wildcard characters: False
 
 ### -InputObject
 The InputObject is pipelined to the cmdlet and can be a string in a format identical to the Identity parameter, or can be an SPDiagnosticsCategory object.
-The user can retrieve one or more categories from the Get-SPLogLevel cmdlet, modify the category values, and then pipeline them into the Set-SPLogLevel cmdlet.
+The user can retrieve one or more categories from the `Get-SPLogLevel` cmdlet, modify the category values and then pipeline them into the `Set-SPLogLevel` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -207,4 +177,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

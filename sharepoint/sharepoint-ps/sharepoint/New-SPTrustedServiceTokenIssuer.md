@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPTrustedServiceTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a trust with a SharePoint farm.
-
 
 
 ## SYNTAX
@@ -33,14 +26,15 @@ New-SPTrustedServiceTokenIssuer [-Name] <String> [-AssignmentCollection <SPAssig
 ```
 
 ## DESCRIPTION
-The New-SPTrustedServiceTokenIssuer cmdlet creates a trust with a SharePoint farm.
+The `New-SPTrustedServiceTokenIssuer` cmdlet creates a trust with a SharePoint farm.
 If a certificate file is used, it must have only one X509 certificate without private keys, otherwise an exception is raised.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
 
@@ -49,14 +43,6 @@ C:\PS>New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1"
 
 This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-
-C:\PS>New-SPTrustedServiceTokenIssuer -Name "WFEFarm1" -Description "WFE Farm 1" -Certificate $cert
-```
-
-This example shows how to create a new SharePoint Farm trust using the trust certificate from a file.
 
 ## PARAMETERS
 
@@ -103,7 +89,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -195,4 +181,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

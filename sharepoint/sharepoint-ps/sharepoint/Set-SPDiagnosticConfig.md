@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPDiagnosticConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets diagnostic configuration settings on the farm.
-
 
 
 ## SYNTAX
@@ -32,27 +25,22 @@ Set-SPDiagnosticConfig [-AllowLegacyTraceProviders] [-AppAnalyticsAutomaticUploa
 ```
 
 ## DESCRIPTION
-Use the Set-SPDiagnosticConfig cmdlet to set diagnostic configuration settings on the entire farm.
+Use the `Set-SPDiagnosticConfig` cmdlet to set diagnostic configuration settings on the entire farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1-----------------------
 ```
 C:\PS>set-spdiagnosticconfig -errorReportingEnable -DownloadErrorReportingUpdatesEnabled:$false -DaysToKeepLog  60
 ```
 
-This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnable, and sets DaysToKeepLog to 60.
+This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnable and sets DaysToKeepLog to 60.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>set-spdiagnosticconfig -errorReportingEnable -DownloadErrorReportingUpdatesEnabled:$false -DaysToKeepLog  60
-```
 
-This example enables ErrorReporting, disables DownloadErrorReportingUpdatesEnable, and sets DaysToKeepLog to 60.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2-----------------------
 ```
 C:\PS>$L = get-spdiagnosticconfig
 
@@ -65,23 +53,11 @@ C:\PS>$L | Set-SPDiagnosticConfig
 
 This example disables CEIP and sets LogCutInterval to 60 minutes.
 
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>$L = get-spdiagnosticconfig
-
-C:\PS>$L.CustomerExperienceImprovementProgramEnabled = $false
-
-C:\PS>$L.LogCutInterval = 60
-
-C:\PS>$L | Set-SPDiagnosticConfig
-```
-
-This example disables CEIP and sets LogCutInterval to 60 minutes.
 
 ## PARAMETERS
 
 ### -AllowLegacyTraceProviders
-Specifies that trace providers built for previous versions of SharePoint Products and Technologies can write to the trace session for SharePoint 2010 Products.
+Specifies that trace providers built for previous versions of SharePoint Products and Technologies can write to the trace session for SharePoint Products.
 
 ```yaml
 Type: SwitchParameter
@@ -119,7 +95,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -138,7 +114,7 @@ Accept wildcard characters: False
 Specifies whether participation in the Customer Experience Improvement Program (CEIP) is enabled.
 
 The CEIP is designed to improve the quality, reliability, and performance of Microsoft products and technologies.
-With your permission, anonymous information about your server is sent to Microsoft to help improve SharePoint 2010 Products.
+With your permission, anonymous information about your server is sent to Microsoft to help improve SharePoint Products.
 
 The type must be either of the following values:
 
@@ -163,7 +139,7 @@ Accept wildcard characters: False
 ### -DaysToKeepLogs
 Specifies the number of days to keep trace log files. 
 The type must be a valid number between 1 and 366.
-The default value is 14 days..
+The default value is 14 days.
 
 ```yaml
 Type: Int32
@@ -358,7 +334,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputObject
-Use the result from the Get-SPDiagnosticConfig cmdlet, make modifications, and then pipeline the object into Set-SPDiagnosticConfig cmdlet to update the content database.
+Use the result from the `Get-SPDiagnosticConfig` cmdlet, make modifications and then pipeline the object into `Set-SPDiagnosticConfig` cmdlet to update the content database.
 
 ```yaml
 Type: PSObject
@@ -533,4 +509,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPTrustedSecurityTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets the trusted token issuer.
-
 
 
 ## SYNTAX
@@ -34,33 +27,18 @@ Set-SPTrustedSecurityTokenIssuer [-Identity] <SPTrustedSecurityTokenServicePipeB
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Set-SPTrustedSecurityTokenIssuer cmdlet to set the trusted token issuer.
-
-To set the certificate successfully, all of the required parameters must be specified.
+Use the `Set-SPTrustedSecurityTokenIssuer` cmdlet to set the trusted token issuer.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
-
-This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
-
-Use the Set-SPTrustedSecurityTokenIssuer cmdlet to set the trusted token issuer.
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
 
 
 ## EXAMPLES
 
-### --------EXAMPLE--------- (SharePoint Server 2013)
+### -----------------EXAMPLE--------------------
 ```
 C:\PS>$a=Get-SPTrustedSecurityTokenIssuer
 
@@ -69,14 +47,6 @@ C:\PS>Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<w
 
 This example sets the metadata endpoint of the url for the self-issue.
 
-###   (SharePoint Server 2016)
-```
-C:\PS>$a=Get-SPTrustedSecurityTokenIssuer
-
-C:\PS>Set-SPTrustedSecurityTokenIssuer -Identity $a -MetadataEndpoint https://<webappurl/>/_layouts/15/metadata/json/1/
-```
-
-This example sets the metadata endpoint of the url for the self-issue.
 
 ## PARAMETERS
 
@@ -103,7 +73,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -136,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -168,7 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsTrustBroker
-Specifies whether the trust is established with a self-issuer partner app (that is, Exchange Server 2010 or Exchange Server 2007 or Lync).
+Specifies whether the trust is established with a self-issuer partner app (that is, Exchange Server or Lync).
 
 ```yaml
 Type: SwitchParameter
@@ -215,7 +185,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -246,4 +216,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPTrustedSecurityTokenIssuer]()
 
 [Remove-SPTrustedSecurityTokenIssuer]()
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a Machine Translation Service application proxy on the local farm.
 
+
 ## SYNTAX
 
 ### ConnectLocal
@@ -27,29 +28,24 @@ New-SPTranslationServiceApplicationProxy -Name <String> -Uri <String>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The New-SPTranslationServiceApplicationProxy cmdlet creates a Machine Translation Service application proxy on the local farm.
+The `New-SPTranslationServiceApplicationProxy` cmdlet creates a Machine Translation Service application proxy on the local farm.
 The proxy is added to the default proxy group for the local farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------EXAMPLE--------- (SharePoint Server 2013)
+### -----------EXAMPLE---------
 ```
 C:\PS>New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication TranslationService -DefaultProxyGroup
 ```
 
 This example creates a Machine Translation Service application proxy in the default proxy group named TranslationServiceProxy which connects to the Machine Translation Service application named TranslationService.
 
-### -----------EXAMPLE--------- (SharePoint Server 2016)
-```
-C:\PS>New-SPTranslationServiceApplicationProxy -Name TranslationServiceProxy -ServiceApplication TranslationService -DefaultProxyGroup
-```
-
-This example creates a Machine Translation Service application proxy in the default proxy group named TranslationServiceProxy which connects to the Machine Translation Service application named TranslationService.
 
 ## PARAMETERS
 
@@ -113,7 +109,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -130,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -163,7 +159,7 @@ Accept wildcard characters: False
 
 ### -PartitionMode
 Specifies that the service application restrict data by site group.
-After the PartitionMode parameter is set and the service application is created, it cannot be changed
+After the PartitionMode parameter is set and the service application is created, it cannot be changed.
 
 ```yaml
 Type: SwitchParameter
@@ -180,7 +176,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -211,4 +207,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPTranslationServiceApplication]()
 
 [Set-SPTranslationServiceApplicationProxy]()
-

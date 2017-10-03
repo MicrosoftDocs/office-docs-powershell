@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a data connection library from Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -18,24 +19,15 @@ Remove-SPExcelDataConnectionLibrary [-Identity] <SPExcelDCLPipeBind>
 ```
 
 ## DESCRIPTION
-The Remove-SPExcelDataConnectionLibrary cmdlet removes a library from the Excel Services Application trusted data connection libraries list. 
+The `Remove-SPExcelDataConnectionLibrary` cmdlet removes a library from the Excel Services Application trusted data connection libraries list. 
 Excel Services Application loads data connection files only if they are stored in a data connection library that is on the trusted data connection libraries list.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
-```
-C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove- SPExcelDataConnectionLibrary -Identity "http://portal/site/salesDCL"
-```
-
-This example removes the http://portal/site/salesDCL library from the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.
-
-Connection files are no longer loaded from this library.
-Workbooks that depend on this connection file might not refresh data.
-
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>Get-SPExcelServiceApplication | Get-SPExcelDataConnectionLibrary | Remove-SPExcelDataConnectionLibrary
 ```
@@ -44,6 +36,7 @@ This example removes all data connection libraries from all Excel Services Appli
 
 Connection files are no longer loaded from any libraries.
 Workbooks that depend on any connection files might not refresh data.
+
 
 ## PARAMETERS
 
@@ -90,7 +83,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -107,7 +100,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -124,7 +117,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -149,4 +142,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

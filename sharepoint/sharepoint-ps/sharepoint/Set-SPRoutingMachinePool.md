@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPRoutingMachinePool
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets properties of a machine pool.
-
 
 
 ## SYNTAX
@@ -26,13 +19,13 @@ Set-SPRoutingMachinePool [-Identity] <SPRoutingMachinePoolPipeBind>
 ```
 
 ## DESCRIPTION
-Use the Set-SPRoutingMachinePool cmdlet to set properties of a machine pool by using the Identity parameter.
+Use the `Set-SPRoutingMachinePool` cmdlet to set properties of a machine pool by using the Identity parameter.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-###   (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
 
@@ -45,18 +38,6 @@ C:\PS>Set-SPRoutingMachinePool -Identity $pool -MachineTargets <Machine collecti
 
 This example sets the machine pool property of MachineTargets for a specified identity as defined by the $pool variable.
 
-###   (SharePoint Server 2016)
-```
-C:\PS>$web=Get-SPWebApplication -Identity <URL of web application>
-
-C:\PS>$rm=Get-SPRequestManagementSettings -Identity $web
-
-C:\PS>$pool=Get-SPRoutingMachinePool -RequestManagementSettings $rm
-
-C:\PS>Set-SPRoutingMachinePool -Identity $pool -MachineTargets <Machine collections>
-```
-
-This example sets the machine pool property of MachineTargets for a specified identity as defined by the $pool variable.
 
 ## PARAMETERS
 
@@ -83,7 +64,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -130,4 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPRoutingMachinePool]()
 
 [Remove-SPRoutingMachinePool]()
-

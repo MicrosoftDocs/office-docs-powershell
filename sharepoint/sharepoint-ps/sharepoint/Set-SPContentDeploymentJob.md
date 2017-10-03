@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a content deployment job.
 
+
 ## SYNTAX
 
 ```
@@ -21,25 +22,20 @@ Set-SPContentDeploymentJob [-Identity] <SPContentDeploymentJobPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPContentDeploymentJob cmdlet sets the properties of a content deployment job.
+The `Set-SPContentDeploymentJob` cmdlet sets the properties of a content deployment job.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------------EXAMPLE------------------ (SharePoint Server 2013)
+### -----------------EXAMPLE------------------
 ```
 C:\PS>Get-SPContentDeploymentJob "Job 1" | Set-SPContentDeploymentJob -Schedule "hourly between 0 and 59" -ScheduleEnabled:$true
 ```
 
 This example sets the deployment job called Job 1 to run hourly.
 
-### -----------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPContentDeploymentJob "Job 1" | Set-SPContentDeploymentJob -Schedule "hourly between 0 and 59" -ScheduleEnabled:$true
-```
-
-This example sets the deployment job called Job 1 to run hourly.
 
 ## PARAMETERS
 
@@ -68,7 +64,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -85,7 +81,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -257,7 +253,7 @@ SPSite objects that are passed in must exist in the current path of the source s
 The default scope is the entire site collection.
 Valid values include a SPWeb object or an array of SPWeb objects.
 
-The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation 2013 Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
+The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of a SharePoint Foundation Web site (for example, MySPSite1); or an instance of a valid SPWeb object.
 
 ```yaml
 Type: SPWebPipeBind[]
@@ -273,7 +269,7 @@ Accept wildcard characters: False
 ```
 
 ### -SqlSnapshotSetting
-Backs up the SharePoint Foundation 2013 content database by using SQL Server.
+Backs up the SharePoint Foundation content database by using SQL Server.
 
 The type must be one of the following values: None or CreateNew.
 
@@ -292,7 +288,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -317,4 +313,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

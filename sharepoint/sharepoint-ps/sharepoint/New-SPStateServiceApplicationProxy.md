@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a proxy for a state service application.
 
+
 ## SYNTAX
 
 ```
@@ -17,25 +18,20 @@ New-SPStateServiceApplicationProxy [-ServiceApplication] <SPStateServiceApplicat
 ```
 
 ## DESCRIPTION
-The New-SPStateServiceApplicationProxy cmdlet creates a proxy for a state service application.
+The `New-SPStateServiceApplicationProxy` cmdlet creates a proxy for a state service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE------------------- (SharePoint Server 2013)
+### --------------EXAMPLE-------------------
 ```
 C:\PS>Get-SPServiceApplication -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b | New-SPStateServiceApplicationProxy -DefaultProxyGroup
 ```
 
-This example creates a new service application proxy, associates it with a provided service application, and adds it to the farm's default proxy group.
+This example creates a new service application proxy, associates it with a provided service application and adds it to the farm's default proxy group.
 
-### --------------EXAMPLE------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPServiceApplication -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b | New-SPStateServiceApplicationProxy -DefaultProxyGroup
-```
-
-This example creates a new service application proxy, associates it with a provided service application, and adds it to the farm's default proxy group.
 
 ## PARAMETERS
 
@@ -64,7 +60,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -124,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
