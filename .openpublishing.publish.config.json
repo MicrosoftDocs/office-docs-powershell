@@ -1,7 +1,21 @@
 {
-  "need_generate_pdf": false,
-  "need_generate_intellisense": false,
   "docsets_to_publish": [
+    {
+      "docset_name": "sharepoint-ps",
+      "build_source_folder": "sharepoint",
+      "build_output_subfolder": "sharepoint-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes"
+    },
     {
       "docset_name": "skype-ps",
       "build_source_folder": "skype",
@@ -14,20 +28,22 @@
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
-         "AzurePsModulePage": "Content"
+        "AzurePsModulePage": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes",
       "version": 0,
       "customized_template_paths": [
-        "_dependentPackages/azurecli.plugins/azurecli" ],
-        "customized_tasks": {
-          "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"]
-          },
-         "monikerPath": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      },
+      "monikerPath": [
         "mapping/monikerMapping.json"
-      ] 
+      ]
     }
   ],
   "notification_subscribers": [],
@@ -42,6 +58,10 @@
       "branch_mapping": {}
     }
   ],
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "need_generate_pdf": false,
+  "need_generate_intellisense": false,
   "dependent_packages": [
     {
       "path_to_root": "_dependentPackages/azurecli.plugins",
@@ -56,7 +76,5 @@
       "id": "Microsoft.OpenPublishing.CommonPlugins",
       "nuget_feed": "https://www.myget.org/F/op/api/v2"
     }
-  ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  ]
 }
