@@ -1,5 +1,4 @@
 ---
-external help file: 
 Module Name: sharepoint
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 Download Help Link: {{Please enter FwLink manually}}
