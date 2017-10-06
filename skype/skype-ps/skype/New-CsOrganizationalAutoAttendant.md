@@ -68,12 +68,12 @@ $o=New-CsOrganizationalAutoAttendant -Name "Main organizational auto attendant" 
 
 This example creates a new OAA named Main organizational auto attendant that has the following properties:
 
-•It sets a default call flow.
-•It enables voice response.
-•It uses the after hours schedule and call flow.
-•The default language is en-US.
-•The time zone is set to UTC.
-•An inclusion scope is specified.
+- It sets a default call flow.
+- It enables voice response.
+- It uses the after hours schedule and call flow.
+- The default language is en-US.
+- The time zone is set to UTC.
+- An inclusion scope is specified.
 
 
 ## PARAMETERS
