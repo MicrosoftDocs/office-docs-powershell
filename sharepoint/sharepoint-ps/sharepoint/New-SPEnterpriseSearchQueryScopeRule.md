@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a shared scope rule to a query scope.
 
+
 ## SYNTAX
 
 ```
@@ -20,34 +21,22 @@ New-SPEnterpriseSearchQueryScopeRule -RuleType <String> -Scope <ScopePipeBind> -
 ```
 
 ## DESCRIPTION
-After you upgrade a Search service application from SharePoint Server 2010 to SharePoint Server 2013, you can view shared scopes, but you cannot create, update, or delete them.
+After you upgrade a Search service application to SharePoint Server, you can view shared scopes, but you cannot create, update, or delete them.
 Therefore, you cannot use this cmdlet for shared scopes after upgrade.
 However, you can convert shared scopes to result sources, which serve a similar purpose.
-Similarly, after you upgrade a SharePoint Server 2010 site collection to SharePoint Server 2013 mode, you can view local scopes, but you cannot create, update, or delete them.
+Similarly, after you upgrade a SharePoint Server site collection to SharePoint Server mode, you can view local scopes, but you cannot create, update, or delete them.
 Therefore, you cannot use this cmdlet for local scopes after you upgrade a site collection.
 However, you can convert local scopes to result sources, which serve a similar purpose.
 
-The New-SPEnterpriseSearchQueryScopeRule cmdlet creates a new shared scope rule.
+The `New-SPEnterpriseSearchQueryScopeRule` cmdlet creates a new shared scope rule.
 SPEnterpriseSearchQueryScopeRule represents a query results scope rule that can be applied to a scope.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication -Identity
-
-$scope = Get-SPEnterpriseSearchQueryScope -Identity MustCrawl -SearchApplication $ssa
-
-$sr = New-SPEnterpriseSearchQueryScopeRule -Scope $scope -RuleType AllContent -Url http://criticalSite
-
-Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSite
-```
-
-This example creates a new scope rule of type AllContent for the URL http://criticalSite.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication -Identity
 
@@ -59,6 +48,7 @@ C:\PS>Get-SPEnterpriseSearchQueryScopeRule -Scope $scope -Url http://criticalSit
 ```
 
 This example creates a new scope rule of type AllContent for the URL http://criticalSite.
+
 
 ## PARAMETERS
 
@@ -123,7 +113,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -140,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -260,7 +250,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -285,6 +275,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fbcd7080-339c-470d-8bed-2509c99df204(Office.15).aspx)
-

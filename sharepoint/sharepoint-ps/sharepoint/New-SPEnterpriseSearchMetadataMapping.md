@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a managed property mapping.
 
+
 ## SYNTAX
 
 ```
@@ -24,27 +25,10 @@ SPEnterpriseSearchMetadataMapping represents a snapshot of a mapping between a m
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity UserName
-
-$cat = Get-SPEnterpriseSearchMetadataCategory -SearchApplication $searchapp -Identity People
-
-$cp = Get-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $searchapp -Category $cat -Limit 1
-
-$ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $searchapp -Name "MyCrawlProp" -PropSet $cp.PropSet -Category $cp.CategoryName -IsNameEnum $false -VariantType $cp.VariantType -IsMappedToContents $true
-
-
-New-SPEnterpriseSearchMetadataMapping -SearchApplication $searchapp -ManagedProperty $mp -CrawledProperty $ncp
-```
-
-This example maps the created crawled property MyCrawlProp to the managed property UserName for the default search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
 $mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity UserName
@@ -54,7 +38,8 @@ $ncp = New-SPEnterpriseSearchMetadataCrawledProperty -SearchApplication $searcha
 New-SPEnterpriseSearchMetadataMapping -SearchApplication $searchapp -ManagedProperty $mp -CrawledProperty $ncp
 ```
 
-This example maps the created crawled property MyCrawlProp to the managed property UserName for the default  search service application.
+This example maps the created crawled property MyCrawlProp to the managed property UserName for the default search service application.
+
 
 ## PARAMETERS
 
@@ -119,7 +104,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -136,7 +121,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -189,7 +174,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -214,6 +199,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/9d6a7ce8-78df-4c04-91f2-5c2f4e0296c1(Office.15).aspx)
-

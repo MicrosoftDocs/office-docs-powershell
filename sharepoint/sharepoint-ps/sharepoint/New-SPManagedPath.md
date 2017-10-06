@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPManagedPath
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a new managed path for the given Web application for all host header site collections.
-
 
 
 ## SYNTAX
@@ -33,10 +26,10 @@ New-SPManagedPath [-RelativeURL] <String> -WebApplication <SPWebApplicationPipeB
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The New-SPManagedPath cmdlet adds a new managed path to a given Web application or for use with all host header site collections.
+The `New-SPManagedPath` cmdlet adds a new managed path to a given Web application or for use with all host header site collections.
 If the HostHeader switch is provided, the managed path is shared among all host header site collections; otherwise, a Web application must be specified to create this managed path within.
 The relative URL is a partial URL that represents the managed path.
 When the slash mark (/) is used, the root is defined.
@@ -44,21 +37,16 @@ If the Explicit parameter is not provided, the new managed path is a wildcard pa
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>New-SPManagedPath "Teams" -WebApplication "http://somesite"
 ```
 
 This example creates a Teams managed path for a given Web application (http://somesite).
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPManagedPath "Teams" -WebApplication "http://somesite"
-```
-
-This example creates a Teams managed path for a given Web application (http://somesite).
 
 ## PARAMETERS
 
@@ -121,7 +109,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -138,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -173,7 +161,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -198,4 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

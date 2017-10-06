@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a custom security trimmer to a shared search application.
 
+
 ## SYNTAX
 
 ```
@@ -24,21 +25,10 @@ SPEnterpriseSearchSecurityTrimmer represents a security trimmer that performs cu
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-
-New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $searchapp -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
-```
-
-This example adds a new custom security trimmer for trimming the returned result set.
-This new security trimmer is added to the search application by using the id 1.
-The strong named assembly contains the class CustomSecurityTrimmerPost, which implements the ISecurityTrimmerPost interface.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication
 New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $searchapp -TypeName "SearchCustomSecurityTrimmer.CustomSecurityTrimmerPost, SearchCustomSecurityTrimmer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=48e046c834625a88, processorArchitecture=MSIL" -Id 1
@@ -47,6 +37,7 @@ New-SPEnterpriseSearchSecurityTrimmer -SearchApplication $searchapp -TypeName "S
 This example adds a new custom security trimmer for trimming the returned result set.
 This new security trimmer is added to the search application by using the id 1.
 The strong named assembly contains the class CustomSecurityTrimmerPost, which implements the ISecurityTrimmerPost interface.
+
 
 ## PARAMETERS
 
@@ -106,7 +97,7 @@ Accept wildcard characters: False
 
 ### -TypeName
 Specifies the strong named assembly name of a security trimmer type.
-The strong name must refer to a type whose assembly is deployed to the global assembly cache on a query server, and that type must implement the ISecurityTrimmerPre , ISecurityTrimmerPost or ISecurityTrimmer2 interface.
+The strong name must refer to a type whose assembly is deployed to the global assembly cache on a query server and that type must implement the ISecurityTrimmerPre, ISecurityTrimmerPost or ISecurityTrimmer2 interface.
 Security trimming can be done in two places: before query execution (ISecurityTrimmerPre) or after the results set has returned (ISecurityTrimmerPost or ISecurityTrimmer2).
 For how to reference a strong name assembly, see http://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx (http://msdn.microsoft.com/en-us/library/s1sx4kfb.aspx)
 
@@ -130,7 +121,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -147,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -182,7 +173,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -207,6 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/493d9d19-ae43-43ce-b75f-916535881b35(Office.15).aspx)
-

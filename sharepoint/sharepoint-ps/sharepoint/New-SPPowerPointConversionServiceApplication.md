@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a PowerPoint Conversion Service application.
 
+
 ## SYNTAX
 
 ```
@@ -17,28 +18,24 @@ New-SPPowerPointConversionServiceApplication [-Name] <String>
  [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
-Use the New-SPPowerPointConversionServiceApplication cmdlet to create a new instance of a PowerPoint Conversion Service application by using the Name parameter.
+Use the `New-SPPowerPointConversionServiceApplication` cmdlet to create a new instance of a PowerPoint Conversion Service application by using the Name parameter.
 
 After the PowerPoint Conversion Service application is created, you can convert PowerPoint presentations to various formats.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------EXAMPLE----------- (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
 ```
 
 This example creates a new instance of the PowerPoint Conversion Service application named MyWorkgroupPPTApp and assigns it to the default application pool.
 
-### -------------EXAMPLE----------- (SharePoint Server 2016)
-```
-C:\PS>New-SPPowerPointConversionServiceApplication -Name "MyWorkgroupPPTApp" -ApplicationPool "SharePoint Web Services Default"
-```
-
-This example creates a new instance of the PowerPoint Conversion Service application named MyWorkgroupPPTApp and assigns it to the default application pool.
 
 ## PARAMETERS
 
@@ -81,7 +78,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -98,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +112,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -144,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPPowerPointConversionServiceApplicationProxy]()
 
 [Set-SPPowerPointConversionServiceApplication]()
-

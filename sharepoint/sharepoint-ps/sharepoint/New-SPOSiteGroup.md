@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new group in a SharePoint Online site collection.
 
+
 ## SYNTAX
 
 ```
@@ -16,24 +17,23 @@ New-SPOSiteGroup -Group <String> -PermissionLevels <String[]> -Site <SpoSitePipe
 ```
 
 ## DESCRIPTION
-A SharePoint 2013 group is a set of individual users.
-SharePoint 2013 groups enable you to manage sets of users instead of individual users.
+A SharePoint group is a set of individual users.
+SharePoint groups enable you to manage sets of users instead of individual users.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ------------------EXAMPLE------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -101,6 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [New-SPOSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b7902410-e541-42c1-80e8-d2f04719a629(Office.15).aspx)
-

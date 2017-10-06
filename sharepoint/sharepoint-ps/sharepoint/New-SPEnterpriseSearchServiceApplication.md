@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a search service application to a farm.
 
+
 ## SYNTAX
 
 ```
@@ -22,24 +23,15 @@ New-SPEnterpriseSearchServiceApplication [[-Name] <String>]
 
 ## DESCRIPTION
 This cmdlet is used when the search functionality is first configured or when a new shared search application is added to a farm.
-SPEnterpriseSearchServiceApplication represents a self-contained aggregation of indexed content and properties available for search, and provides an anchor class for setting global search properties.
+SPEnterpriseSearchServiceApplication represents a self-contained aggregation of indexed content and properties available for search and provides an anchor class for setting global search properties.
 A farm can include multiple search service applications.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$appPool = New-SPServiceApplicationPool -name "SsaAppPool" -account contoso\adminUser
-
-$ssa = New-SPEnterpriseSearchServiceApplication -Name "NewSSA" -ApplicationPool $appPool
-```
-
-This example creates a new search service application named NewSSA in a new application pool.
-A search service application that is created in this manner will have active search topology, but no search components.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$appPool = New-SPServiceApplicationPool -name "SsaAppPool" -account contoso\adminUser
 $ssa = New-SPEnterpriseSearchServiceApplication -Name "NewSSA" -ApplicationPool $appPool
@@ -50,6 +42,7 @@ $ssa | Get-SPEnterpriseSearchAdministrationComponent
 
 This example creates a new search service application named NewSSA in a new application pool and initializes its administration component.
 A search service application that is created in this manner will have active search topology, but no search components.
+
 
 ## PARAMETERS
 
@@ -96,7 +89,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -113,7 +106,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -219,7 +212,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -292,6 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3360bbb7-394d-4b13-bf86-e9cd7caa43ba(Office.15).aspx)
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds an authoritative page to a shared search application.
 
+
 ## SYNTAX
 
 ```
@@ -18,27 +19,22 @@ New-SPEnterpriseSearchQueryAuthority [-Url] <String> -Level <Single> -Owner <Sea
 ```
 
 ## DESCRIPTION
-The New-SPEnterpriseSearchQueryAuthority cmdlet adds an authoritative page to adjust query rank.
+The `New-SPEnterpriseSearchQueryAuthority` cmdlet adds an authoritative page to adjust query rank.
 SPEnterpriseSearchQueryAuthority represents authoritative sites that rank higher in relevance than demoted sites, which are de-emphasized in relevance.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationNew-SPEnterpriseSearchQueryAuthority -SearchApplication $ssa -Url http://contoso.com -Level 1.5
-```
-
-This example designates the URL http://contoso.com as an authoritative page with a relative importance of 1.5.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 New-SPEnterpriseSearchQueryAuthority -SearchApplication $ssa -Url http://contoso.com -Level 1.5
 ```
 
 This example designates the URL http://contoso.com as an authoritative page with a relative importance of 1.5.
+
 
 ## PARAMETERS
 
@@ -81,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-Specifies the search object owner that defines the scope at which the corresponding Query Authority is created.The owner must be one of the following valid levels:- Search Service Application- Site Subscription
+Specifies the search object owner that defines the scope at which the corresponding Query Authority is created. The owner must be one of the following valid levels:- Search Service Application- Site Subscription
 
 ```yaml
 Type: SearchObjectOwner
@@ -121,7 +117,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -138,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -155,7 +151,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -180,6 +176,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/81be139d-d4ed-4390-b782-292fc9b15637(Office.15).aspx)
-

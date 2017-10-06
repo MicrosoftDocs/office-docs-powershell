@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new search application proxy to a farm.
 
+
 ## SYNTAX
 
 ### SSA
@@ -27,33 +28,28 @@ New-SPEnterpriseSearchServiceApplicationProxy [[-Name] <String>] -Uri <String>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet creates a proxy for a search service application.
 The search service application proxy can be used by a web application or another service consumer to use the functionality that is provided by the search application.
 
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://msdn.microsoft.com/en-us/library/dd878348(VS.85).aspx).
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-New-SPEnterpriseSearchServiceApplicationProxy -Name MyNewProxy -SearchApplication MySSA
-```
-
-This example adds a search service application proxy to a search service application named MySSA.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>New-SPEnterpriseSearchServiceApplicationProxy -Name MyNewProxy -SearchApplication MySSA
 ```
 
 This example adds a search service application proxy to a search service application named MySSA.
+
 
 ## PARAMETERS
 
@@ -118,7 +114,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -135,7 +131,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -185,7 +181,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -210,6 +206,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2a074a5a-0af0-48fd-aa1f-edc875f93335(Office.15).aspx)
-
