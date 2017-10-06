@@ -24,7 +24,12 @@ New-CsHuntGroup [-Domain <Object>] [-LineUri <Object>] [-Name <Object>] [-AgentA
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+Creates new Call Queue in your Skype for Business Online organization. Call Queues are part of Phone System in Office 365.
+
+Note, you need to specify UseDefaultMusicOnHold $True (default is none), or provide MusicOnHoldFileName and MusicOnHoldFileContent. 
+
+MusicOnHoldFileName and MusicOnHoldFileContent cannot be empty so you must specify a valid MusicOnHoldFileName and MusicOnHoldFileContent or set UseDefaultMusicOnHold to true.
+
 
 ## EXAMPLES
 
