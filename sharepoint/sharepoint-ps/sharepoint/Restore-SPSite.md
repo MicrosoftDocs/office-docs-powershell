@@ -7,14 +7,7 @@ schema: 2.0.0
 # Restore-SPSite
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Restores a site collection.
-
 
 
 ## SYNTAX
@@ -35,56 +28,39 @@ Restore-SPSite [-Identity] <String> -Path <String> [-AssignmentCollection <SPAss
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Restore-SPSite cmdlet performs a restoration of the site collection to a location specified by the Identity parameter.
+The `Restore-SPSite` cmdlet performs a restoration of the site collection to a location specified by the Identity parameter.
 A content database may only contain one copy of a site collection.
 If a site collection is backed up and restored to a different URL location within the same Web application, an additional content database must be available to hold the restored copy of the site collection.
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### ----------------------EXAMPLE 1----------------------
 ```
 C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
 ```
 
 This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL http://server_name/sites/site_name.
 
-### ----------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak
-```
 
-This example restores a site collection from the backup file C:\Backup\site_name.bak to the site collection URL http://server_name/sites/site_name.
-
-### ----------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
+### ----------------------EXAMPLE 2----------------------
 ```
 C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
 ```
 
 This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at http://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
 
-### ----------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPSite http://server_name/sites/site_name -Path C:\Backup\site_name.bak -Force -DatabaseServer SQLBE1 -DatabaseName SQLDB1
-```
 
-This example restores a site collection backup from the backup file C:\Backup\site_name.bak, but overwrites the existing site collection at http://server_name/sites/site_name while specifying that the site collection must be stored in a specific content database.
-
-### ----------------------EXAMPLE 3---------------------- (SharePoint Server 2013)
+### ----------------------EXAMPLE 3----------------------
 ```
 C:\PS>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
 ```
 
 This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection http://www.example.com on the Web application http://server_name.
 
-### ----------------------EXAMPLE 3---------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPSite http://www.example.com -Path \\file_server\share\site_name.bak -HostHeaderWebApplication http://server_name
-```
-
-This example restores a site collection backup from the backup file \\\\file_server\share\site_name.bak to the host-named site collection http://www.example.com on the Web application http://server_name.
 
 ## PARAMETERS
 
@@ -134,7 +110,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -151,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -237,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -GradualDelete
-Specifies that the site collection being overwritten with the Force parameter should be gradually deleted over time by a timer job instead of all at once, which reduces its impact on SharePoint 2010 Products and SQL Server performance.
+Specifies that the site collection being overwritten with the Force parameter should be gradually deleted over time by a timer job instead of all at once, which reduces its impact on SharePoint Products and SQL Server performance.
 This option is recommended for large site collections.
 
 ```yaml
@@ -274,7 +250,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -315,4 +291,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

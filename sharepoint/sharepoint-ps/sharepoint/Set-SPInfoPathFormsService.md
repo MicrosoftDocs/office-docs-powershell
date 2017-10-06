@@ -7,7 +7,8 @@ schema: 2.0.0
 # Set-SPInfoPathFormsService
 
 ## SYNOPSIS
-Sets parameters for InfoPath Forms Services in SharePoint Server 2013.
+Sets parameters for InfoPath Forms Services in SharePoint Server.
+
 
 ## SYNTAX
 
@@ -24,39 +25,28 @@ Set-SPInfoPathFormsService [-ActiveSessionTimeout <Int32>] [-AllowEmbeddedSqlFor
 ```
 
 ## DESCRIPTION
-The Set-SPInfoPathFormsService cmdlet modifies the settings for InfoPath Forms Services in SharePoint Server 2013.
+The `Set-SPInfoPathFormsService` cmdlet modifies the settings for InfoPath Forms Services in SharePoint Server.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-----------------
 ```
 C:\PS>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
 ```
 
 This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPInfoPathFormsService -AllowUserFormBrowserEnabling $true -AllowUserFormBrowserRendering $false
-```
 
-This example modifies the AllowUserFormBrowserEnabling and AllowUserFormBrowserRendering parameter values.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-----------------
 ```
 C:\PS>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
 ```
 
 This example modifies the AllowViewState and ViewStateThreshold parameter values.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPInfoPathFormsService -AllowViewState $true -ViewStateThreshold 40961
-```
-
-This example modifies the AllowViewState and ViewStateThreshold parameter values.
 
 ## PARAMETERS
 
@@ -80,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowEmbeddedSqlForDataConnections
-Specifies a value that indicates whether embedded SQL authentication can be used by browser-enabled  InfoPath 2013 form templates.
+Specifies a value that indicates whether embedded SQL authentication can be used by browser-enabled InfoPath form templates.
 
 The type must be one of the following values: True, False (default)
 
@@ -194,7 +184,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -211,7 +201,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -338,7 +328,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPostbacksPerSession
-Specifies the value of the maximum postbacks that an instance of a browser-enabled InfoPath 2013 form template can make to the InfoPath Forms Services service.
+Specifies the value of the maximum postbacks that an instance of a browser-enabled InfoPath form template can make to the InfoPath Forms Services service.
 The default value is 20.
 
 The type must be a non-negative integer and less than or equal to 999999.
@@ -434,7 +424,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -475,4 +465,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

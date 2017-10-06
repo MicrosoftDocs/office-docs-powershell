@@ -18,7 +18,7 @@ Set-SPProjectPermissionMode [-Url] <Uri> [-Mode] <PermissionMode>
 ```
 
 ## DESCRIPTION
-The Set-SPProjectPermissionMode cmdlet changes the permission mode for the specified Project Web App instance.
+The `Set-SPProjectPermissionMode` cmdlet changes the permission mode for the specified Project Web App instance.
 
 Switching security modes deletes all permissions configuration information for the specified Project Web App instance and reverts to the default settings for the specified mode.
 
@@ -26,19 +26,21 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------EXAMPLE 1------------------- (SharePoint Server 2016)
+### --------------EXAMPLE 1-------------------
 ```
 C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode ProjectServer
 ```
 
 This example shows the syntax for transitioning a server into Project Server permission mode.
 
-### --------------EXAMPLE 2------------------- (SharePoint Server 2016)
+
+### --------------EXAMPLE 2-------------------
 ```
 C:\PS>Set-SPPRojectPermissionMode -Url http://AppServer/pwa -AdministratorAccount contoso\John.Woods -Mode SharePoint
 ```
 
 This example shows the syntax for transitioning a server into SharePoint permission mode.
+
 
 ## PARAMETERS
 
@@ -85,7 +87,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -114,4 +116,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPProjectPermissionMode]()
 
 [Invoke-SPProjectActiveDirectoryGroupSync]()
-

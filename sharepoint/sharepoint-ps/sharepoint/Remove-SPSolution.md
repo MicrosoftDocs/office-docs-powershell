@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPSolution
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a SharePoint solution from a farm.
-
 
 
 ## SYNTAX
@@ -25,26 +18,21 @@ Remove-SPSolution [-Identity] <SPSolutionPipeBind> [-AssignmentCollection <SPAss
 ```
 
 ## DESCRIPTION
-The Remove-SPSolution cmdlet deletes a SharePoint solution from a farm.
-Before you use this cmdlet, you must use the Uninstall-SPSolution cmdlet to retract the solution files from the front-end Web server.
+The `Remove-SPSolution` cmdlet deletes a SharePoint solution from a farm.
+Before you use this cmdlet, you must use the `Uninstall-SPSolution` cmdlet to retract the solution files from the front-end Web server.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Remove-SPSolution -Identity contoso_solution.wsp
 ```
 
 This example removes the SharePoint solution contoso_solution.wsp.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>Remove-SPSolution -Identity contoso_solution.wsp
-```
-
-This example removes the SharePoint solution contoso_solution.wsp.
 
 ## PARAMETERS
 
@@ -73,7 +61,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -90,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +95,7 @@ Accept wildcard characters: False
 
 ### -Force
 Forces the removal of the SharePoint solution.
-You can use this parameter to remove SharePoint solutions that have been added to the server, even if they have not been deployed by using the Install-SPSolution cmdlet.
+You can use this parameter to remove SharePoint solutions that have been added to the server, even if they have not been deployed by using the `Install-SPSolution` cmdlet.
 
 ```yaml
 Type: SwitchParameter
@@ -142,7 +130,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -167,4 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

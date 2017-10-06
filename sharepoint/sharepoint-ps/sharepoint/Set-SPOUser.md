@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures properties on an existing user.
 
+
 ## SYNTAX
 
 ```
@@ -16,19 +17,23 @@ Set-SPOUser -IsSiteCollectionAdmin <Boolean> -LoginName <String> -Site <SpoSiteP
 ```
 
 ## DESCRIPTION
-Use the Set-SPOUser cmdlet to configure properties of an existing user.
+Use the `Set-SPOUser` cmdlet to configure properties of an existing user.
 That is, to add or remove a user as a SharePoint Online site collection administrator.
 
 You must have the SharePoint Online global administrator permission to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### --------------------EXAMPLE---------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -96,6 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Get-SPOUser]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/698da79c-cda6-44ce-ab99-3ac72ddf1dd5(Office.15).aspx)
-

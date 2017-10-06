@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Grants users permission to view the crawl log information.
 
+
 ## SYNTAX
 
 ```
@@ -20,22 +21,15 @@ Set-SPEnterpriseSearchCrawlLogReadPermission [-AssignmentCollection <SPAssignmen
 ## DESCRIPTION
 Only the Search Service Application administrator can use this cmdlet.
 
-The administrator uses the Set-SPEnterpriseSearchCrawlLogReadPermission cmdlet to grant users permission to view crawl log information.
+The administrator uses the `Set-SPEnterpriseSearchCrawlLogReadPermission` cmdlet to grant users permission to view crawl log information.
 The administrator can choose to restrict the permission to crawl log information from a particular tenant.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------EXAMPLE -------- (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication$crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -SearchApplication $ssa -UserNames "user1;user2" -Tenant "00000000-0000-0000-0000-000000000001"
-```
-
-This example first defines $crawlLogPermission, which is the list of users who have permission to view the crawl log information from the tenant with id "00000000-0000-0000-0000-000000000001" on the search application referenced by $ssa.
-Then the example uses the Set-SPEnterpriseSearchCrawlLogReadPermission cmdlet to add user1 and user2 to the list of users referenced by $crawlLogPermission.
-
-### --------EXAMPLE -------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 $crawlLogPermission = Get-SPEnterpriseSearchCrawlLogReadPermission -SearchApplication $ssa -Tenant "00000000-0000-0000-0000-000000000001"
@@ -44,7 +38,8 @@ Set-SPEnterpriseSearchCrawlLogReadPermission -Identity $crawlLogPermission -Sear
 ```
 
 This example first defines $crawlLogPermission, which is the list of users who have permission to view the crawl log information from the tenant with id "00000000-0000-0000-0000-000000000001" on the search application referenced by $ssa.
-Then the example uses the Set-SPEnterpriseSearchCrawlLogReadPermission cmdlet to add user1 and user2 to the list of users referenced by $crawlLogPermission.
+Then the example uses the `Set-SPEnterpriseSearchCrawlLogReadPermission` cmdlet to add user1 and user2 to the list of users referenced by $crawlLogPermission.
+
 
 ## PARAMETERS
 
@@ -55,7 +50,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -72,7 +67,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -156,7 +151,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -182,9 +177,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/ff291003-4189-497e-9236-16c8333a4075(Office.15).aspx)
-
 [Get-SPEnterpriseSearchCrawlLogReadPermission]()
 
 [Remove-SPEnterpriseSearchCrawlLogReadPermission]()
-

@@ -21,23 +21,13 @@ Set-SPEnterpriseSearchQuerySpellingCorrection [-AssignmentCollection <SPAssignme
 
 ## DESCRIPTION
 This cmdlet provides access to the configuration options for the QSC component.
-The two most prominent configuration options are the switch to enable the content-alignment process, and the selection of dictionaries to be used for query spelling correction, that is the set of fixed dictionaries per language or the dynamic dictionary that is being produced by the content alignment process.
+The two most prominent configuration options are the switch to enable the content-alignment process and the selection of dictionaries to be used for query spelling correction, that is the set of fixed dictionaries per language or the dynamic dictionary that is being produced by the content alignment process.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------- (SharePoint Server 2013)
-```
-$searchApp = Get-SPEnterpriseSearchServiceApplication
-
-
-Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $searchApp -SpellingDictionary dynamic
-```
-
-This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.
-
-### ------------------EXAMPLE----------------- (SharePoint Server 2016)
+### ------------------EXAMPLE-----------------
 ```
 C:\PS>$searchApp = Get-SPEnterpriseSearchServiceApplication
 Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $searchApp -SpellingDictionary dynamic
@@ -45,25 +35,17 @@ Set-SpEnterpriseSEarchQuerySpellingCorrection -SearchApplication $searchApp -Spe
 
 This example sets the dictionary named dynamic to be used for query spelling correction for the default search service application.
 
+
 ## PARAMETERS
 
 ### -AssignmentCollection
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill AssignmentCollection Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Manages objects for the purpose of proper disposal.
 Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management.
 Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory.
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
-
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 
 ```yaml
@@ -80,16 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentAlignmentEnabled
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill ContentAlignmentEnabled Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 A Boolean value to enable or deactivate the content alignment process.
-
 
 
 ```yaml
@@ -106,17 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -DiacriticsInSuggestionsEnabled
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill DiacriticsInSuggestionsEnabled Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 A switch to enable or disable spelling suggestions that contain diacritics (for example, German umlaut umlaut). 
 The default setting is true.
-
 
 
 ```yaml
@@ -133,16 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill Identity Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies an object that represents the current status for the query spelling correction.
-
 
 
 ```yaml
@@ -159,17 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDictionarySize
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill MaxDictionarySize Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies the maximal number of terms in a content-aligned spelling dictionary.
 In a multi-tenant environment, this number is valid per tenant.
-
 
 
 ```yaml
@@ -186,17 +132,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxProcessingTime
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill MaxProcessingTime Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies the maximum runtime for compiling a content-aligned spelling dictionary.
 The default value is 6 hours.
-
 
 
 ```yaml
@@ -213,16 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchApplication
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SearchApplication Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies the search service application that contains the QSC components.
-
 
 
 ```yaml
@@ -239,17 +167,8 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityTrimmingEnabled
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SecurityTrimmingEnabled Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 A Boolean value to enable or deactivate the security check for spelling suggestions. 
 If enabled, only spelling suggestions that deliver at least one document for the current user are shown.
-
 
 
 ```yaml
@@ -266,19 +185,10 @@ Accept wildcard characters: False
 ```
 
 ### -SpellingDictionary
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill SpellingDictionary Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies the dictionary to be used for query spelling correction.
 The two available values are dynamic and static.
 When value is set to dynamic, the query spelling correction uses the content-aligned dictionary.
 When value is set to static, the query spelling correction uses the out of the box static spelling dictionaries.
-
 
 
 ```yaml
@@ -295,17 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -TermFrequencyThreshold
-**Below Content Applies To:**SharePoint Server 2013
-
-{{Fill TermFrequencyThreshold Description}}
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies the minimum number of documents that must contain the most frequently used term in the document collection for the content-alignment process to be executed.
 In a multi-tenant environment, this number is valid per tenant.
-
 
 
 ```yaml
@@ -331,6 +232,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0c0d069e-d7a8-4341-901a-922188a17705(Office.15).aspx)
-

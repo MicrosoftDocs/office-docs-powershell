@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPSiteURL
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Adds or changes an URL mapping for the site.
-
 
 
 ## SYNTAX
@@ -25,26 +18,17 @@ Set-SPSiteURL [-Identity] <SPSitePipeBind> -Url <String> [-AssignmentCollection 
 ```
 
 ## DESCRIPTION
-The Set-SPSiteUrl cmdlet adds or changes an URL mapping for the site.
+The `Set-SPSiteUrl` cmdlet adds or changes an URL mapping for the site.
 
-The Set-SPSiteUrl cmdlet only applies to the root site collection for a host name that is, http://www.contoso.com.
+The `Set-SPSiteUrl` cmdlet only applies to the root site collection for a host name that is, http://www.contoso.com.
 This cmdlet cannot be directly run against a managed path site collection underneath the root that is, http://www.contoso.com/sites/test.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ---------------EXAMPLE------------ (SharePoint Server 2013)
-```
-C:\PS>$site = Get-SPSite 'http://www.contoso.com'
-
-C:\PS>Set-SPSiteURL -Identity $site -Url http://contoso.sharepoint.com -Zone Default
-```
-
-This example adds an additional URL, http://contoso.sharepoint.com, to the site collection.
-The newly added URL is in the default zone.
-
-### ---------------EXAMPLE------------ (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$site = Get-SPSite 'http://www.contoso.com'
 
@@ -53,6 +37,7 @@ C:\PS>Set-SPSiteURL -Identity $site -Url http://contoso.sharepoint.com -Zone 0
 
 This example adds an additional URL, http://contoso.sharepoint.com, to the site collection.
 The newly added URL is in the default zone.
+
 
 ## PARAMETERS
 
@@ -100,7 +85,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -117,7 +102,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +119,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -150,23 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Zone
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies one of the five zones with which the alternate URL is associated.
-
-The type must be any one of the following values:
-
-If the Zone parameter is not specified and is a new entry, the default value is set.
-If an entry exists and is not specified, do not change.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies one of the five zones with which the alternate URL is associated.
 If the Zone parameter is not specified and is a new entry, the default value is set.
 If an entry exists and is not specified, do not change.
-
 
 
 ```yaml
@@ -196,4 +167,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPSiteUrl]()
 
 [Remove-SPSiteUrl]()
-

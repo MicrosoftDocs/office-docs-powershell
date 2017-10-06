@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a state service database from a state service application and drops it from the SQL Server.
 
+
 ## SYNTAX
 
 ```
@@ -17,26 +18,21 @@ Remove-SPStateServiceDatabase [-Identity] <SPStateDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-The Remove-SPStateServiceDatabase cmdlet removes a state service database from a state service application and deletes the database.
-To remove a state service database and not delete the database, use the Dismount-SPStateServiceDatabase cmdlet.
+The `Remove-SPStateServiceDatabase` cmdlet removes a state service database from a state service application and deletes the database.
+To remove a state service database and not delete the database, use the `Dismount-SPStateServiceDatabase` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
+### --------------EXAMPLE-----------------
 ```
 C:\PS>Remove-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
 ```
 
-This example removes the specified database from a SharePoint Server 2013 farm and drops the database from the SQL Server (data loss).
+This example removes the specified database from a SharePoint Server farm and drops the database from the SQL Server (data loss).
 
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPStateServiceDatabase -Identity 9703f7e2-9521-47c3-bd92-80e3eeba391b
-```
-
-This example removes the specified database from a SharePoint Server 2013 farm and drops the database from the SQL Server (data loss).
 
 ## PARAMETERS
 
@@ -65,7 +61,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -82,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +95,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -124,4 +120,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

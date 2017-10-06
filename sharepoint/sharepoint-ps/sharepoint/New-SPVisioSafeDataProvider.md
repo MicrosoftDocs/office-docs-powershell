@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new data provider to a Visio Services application.
 
+
 ## SYNTAX
 
 ```
@@ -18,25 +19,20 @@ New-SPVisioSafeDataProvider -DataProviderId <String> -DataProviderType <Int32>
 ```
 
 ## DESCRIPTION
-The New-SPVisioSafeDataProvider cmdlet adds a new data provider to the list of safe data providers for a Visio Services application.
+The `New-SPVisioSafeDataProvider` cmdlet adds a new data provider to the list of safe data providers for a Visio Services application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE------------------------ (SharePoint Server 2013)
+### -------------------EXAMPLE------------------------
 ```
 C:\PS>New-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "CustomProvider" -DataProviderType 5 -Description "Custom Data Provider"
 ```
 
 This example creates a new safe data provider for a specified Visio Services application.
 
-### -------------------EXAMPLE------------------------ (SharePoint Server 2016)
-```
-C:\PS>New-SPVisioSafeDataProvider -VisioServiceApplication "VGS1" -DataProviderID "CustomProvider" -DataProviderType 5 -Description "Custom Data Provider"
-```
-
-This example creates a new safe data provider for a specified Visio Services application.
 
 ## PARAMETERS
 
@@ -104,7 +100,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -147,4 +143,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPWebApplicationExtension
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a new zone instance for the Web application.
-
 
 
 ## SYNTAX
@@ -30,26 +23,21 @@ New-SPWebApplicationExtension [-Identity] <SPWebApplicationPipeBind> -Name <Stri
 ```
 
 ## DESCRIPTION
-The New-SPWebApplicationExtension cmdlet creates a new zone instance for the Web application.
+The `New-SPWebApplicationExtension` cmdlet creates a new zone instance for the Web application.
 This is also known as extending a Web application and allows alternate permissions to be configured for the same content that is available in the existing Web application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>Get-SPWebApplication http://sitename | New-SPWebApplicationExtension -Name "ExtranetSite" -SecureSocketsLayer -Zone "Extranet" -URL "https://extranet.sitename.com"
 ```
 
 This example extends the given Web application at http://sitename to the Extranet zone for SSL use.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWebApplication http://sitename | New-SPWebApplicationExtension -Name "ExtranetSite" -SecureSocketsLayer -Zone "Extranet" -URL "https://extranet.sitename.com"
-```
-
-This example extends the given Web application at http://sitename to the Extranet zone for SSL use.
 
 ## PARAMETERS
 
@@ -87,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Zone
 Specifies one of the five zones with which the internal URL of this new extension is to be associated.
-This zone cannot already be in use..
+This zone cannot already be in use.
 
 The type must be any one of the following values: Default, Intranet, Internet, Extranet, or Custom
 
@@ -143,7 +131,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -192,7 +180,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -332,7 +320,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -357,4 +345,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

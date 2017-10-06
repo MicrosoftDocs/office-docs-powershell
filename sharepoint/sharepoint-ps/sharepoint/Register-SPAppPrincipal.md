@@ -7,14 +7,7 @@ schema: 2.0.0
 # Register-SPAppPrincipal
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Lets an on-premise or SharePoint Online administrator register an app principal.
-
 
 
 ## SYNTAX
@@ -25,13 +18,14 @@ Register-SPAppPrincipal -DisplayName <String> -NameIdentifier <String> -Site <SP
 ```
 
 ## DESCRIPTION
-Use the Register-SPAppPrincipal cmdlet to let an on-premise farm or SharePoint Online administrator to register an app principal management service.
+Use the `Register-SPAppPrincipal` cmdlet to let an on-premise farm or SharePoint Online administrator to register an app principal management service.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE-------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>$site = Get-SPSite "https://<urlofsite>"
 
@@ -40,14 +34,6 @@ C:\PS>Register-SPAppPrincipal -site $site.root -NameIdentifier "00000003-0000-0f
 
 This example registers the app principal named Contoso SharePoint Online.
 
-### ------------EXAMPLE-------- (SharePoint Server 2016)
-```
-C:\PS>$site = Get-SPSite "https://<urlofsite>"
-
-C:\PS>Register-SPAppPrincipal -site $site.root -NameIdentifier "00000003-0000-0ff1-ce00-000000000000@f686d426-8d16-42db-81b7-cb578e110ccd" -DisplayName "Contoso SharePoint Online"
-```
-
-This example registers the app principal named Contoso SharePoint Online.
 
 ## PARAMETERS
 
@@ -84,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
+{{ Fill Site Description}}
+
 ```yaml
 Type: SPWebPipeBind
 Parameter Sets: (All)
@@ -104,7 +92,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -131,4 +119,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Get-SPAppPrincipal]()
-

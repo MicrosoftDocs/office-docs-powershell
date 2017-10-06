@@ -7,14 +7,7 @@ schema: 2.0.0
 # Stop-SPDistributedCacheServiceInstance
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Stops an instance of the distributed cache service on a local server.
-
 
 
 ## SYNTAX
@@ -25,7 +18,7 @@ Stop-SPDistributedCacheServiceInstance [-Graceful] [-AssignmentCollection <SPAss
 ```
 
 ## DESCRIPTION
-Use the Stop-SPDistributedCacheServiceInstance cmdlet to stop an instance of the distributed cache service on a local server.
+Use the `Stop-SPDistributedCacheServiceInstance` cmdlet to stop an instance of the distributed cache service on a local server.
 
 Execution of this cmdlet moves cached items to another server to preserve them.
 If you stop the distributed service before you stop each instance, cached items are lost.
@@ -35,19 +28,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------EXAMPLE---------- (SharePoint Server 2013)
+### ------------EXAMPLE----------
 ```
 C:\PS>Stop-SPDistributedCacheServiceInstance -Graceful
 ```
 
 This example gracefully stops an instance of a distributed cache service on a local server.
 
-### ------------EXAMPLE---------- (SharePoint Server 2016)
-```
-C:\PS>Stop-SPDistributedCacheServiceInstance -Graceful
-```
-
-This example gracefully stops an instance of a distributed cache service on a local server.
 
 ## PARAMETERS
 
@@ -74,7 +61,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -103,4 +90,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPDistributedCacheServiceInstanceOnLocalServer]()
 
 [Add-SPDistributedCacheServiceInstanceOnLocalServer]()
-

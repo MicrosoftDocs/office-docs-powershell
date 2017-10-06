@@ -7,14 +7,7 @@ schema: 2.0.0
 # Restore-SPFarm
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Restores one or more items from a backup.
-
 
 
 ## SYNTAX
@@ -34,65 +27,48 @@ Restore-SPFarm -Directory <String> [-ShowTree] [-AssignmentCollection <SPAssignm
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Restore-SPFarm cmdlet restores one or more items from a backup such as an individual database, Web application, or the entire farm.
+The `Restore-SPFarm` cmdlet restores one or more items from a backup such as an individual database, Web application, or the entire farm.
 This cmdlet can also be used to apply a farm template to the entire farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1-----------------------
 ```
 C:\PS>Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
 ```
 
 This example restores the configuration settings from the backup package in the \\\\file_server\share\Backup directory to the farm.
 
-### -------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPFarm -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -RestoreMethod new -ConfigurationOnly
-```
 
-This example restores the configuration settings from the backup package in the \\\\file_server\share\Backup directory to the farm.
-
-### -------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
 ```
 
 This example show which components of the farm would be restored under the Microsoft SharePoint Foundation Web Application node, but does not actually restore them.
 
-### -------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPFarm -ShowTree -Directory \\file_server\share\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef -Item "Microsoft SharePoint Foundation Web Application" -Verbose
-```
 
-This example show which components of the farm would be restored under the Microsoft SharePoint Foundation Web Application node, but does not actually restore them.
-
-### -------------------EXAMPLE 3----------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 3-----------------------
 ```
 C:\PS>Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
 ```
 
 This example restores a farm by using 10 threads and suppresses the overwrite warning.
 
-### -------------------EXAMPLE 3----------------------- (SharePoint Server 2016)
-```
-C:\PS>Restore-SPFarm -Directory C:\Backup -BackupId 12345678-90ab-cdef-1234-567890abcdef  -RestoreMethod overwrite -RestoreThreads 10 -Force
-```
-
-This example restores a farm by using 10 threads and suppresses the overwrite warning.
 
 ## PARAMETERS
 
 ### -Directory
-Specifies the path where SharePoint 2010 Products stored the backup package.
-If you have a computer on which SQL Server 2008 and an instance of SharePoint 2010 Products are installed, you can use local drive paths.
+Specifies the path where SharePoint Products stored the backup package.
+If you have a computer on which SQL Server and an instance of SharePoint Products are installed, you can use local drive paths.
 This includes a basic installation.
-However, if SQL Server 2008 and SharePoint 2010 Products are installed on multiple computers, you must use Universal Naming Convention (UNC) share paths so that the SQL Server 2008 and SharePoint 2010 Products can read from the same location (for example, \\\\computer_name \volume\Backup).
+However, if SQL Server and SharePoint Products are installed on multiple computers, you must use Universal Naming Convention (UNC) share paths so that the SQL Server and SharePoint Products can read from the same location (for example, \\\\computer_name \volume\Backup).
 
 The type must be either of the valid paths:
 
@@ -136,8 +112,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowTree
-Displays which objects in the farm will be restored based on the other parameters passed to the Restore-SPFarm cmdlet namely the Item and ConfigurationOnly parameters.
-Items that will be excluded from the restore based on the other parameters passed to the Restore-SPFarm cmdlet will be preceded with an asterisk (*).
+Displays which objects in the farm will be restored based on the other parameters passed to the `Restore-SPFarm` cmdlet namely the Item and ConfigurationOnly parameters.
+Items that will be excluded from the restore based on the other parameters passed to the `Restore-SPFarm` cmdlet will be preceded with an asterisk (*).
 Items that cannot be restored will be enclosed in square brackets (\[ \]).
 A restore operation will not be performed if the ShowTree parameter is present.
 
@@ -161,7 +137,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -179,7 +155,7 @@ Accept wildcard characters: False
 ### -BackupId
 Specifies the GUID of the backup package that is to be restored.
 Each backup package has a unique GUID associated with it.
-The GUID can be seen by using the Get-SPBackupHistory cmdlet to view the backup history.
+The GUID can be seen by using the `Get-SPBackupHistory` cmdlet to view the backup history.
 If this parameter is not specified, the most recent backup package in the path that is specified with the Directory parameter is used.
 
 The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890abcdef.
@@ -215,7 +191,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -360,7 +336,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -385,4 +361,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

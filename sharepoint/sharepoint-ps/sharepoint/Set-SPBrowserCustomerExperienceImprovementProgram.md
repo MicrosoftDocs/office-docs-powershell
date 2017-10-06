@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPBrowserCustomerExperienceImprovementProgram
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Turns on or off the browser Customer Experience Improvement Program.
-
 
 
 ## SYNTAX
@@ -39,60 +32,45 @@ Set-SPBrowserCustomerExperienceImprovementProgram -WebApplication <SPWebApplicat
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Set-SPBrowserCustomerExperienceImprovementProgram cmdlet turns on or off the browser Customer Experience Improvement Program for collecting software quality metrics.
+The `Set-SPBrowserCustomerExperienceImprovementProgram` cmdlet turns on or off the browser Customer Experience Improvement Program for collecting software quality metrics.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1-----------------------
 ```
 C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the farm.
 
-### ------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable
-```
 
-This example turns on the browser Customer Experience Improvement Program for the farm.
-
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
 ```
 
 This example turns off the browser Customer Experience Improvement Program for the farm.
 
-### ------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPBrowserCustomerExperienceImprovementProgram -Farm -Enable:$False
-```
 
-This example turns off the browser Customer Experience Improvement Program for the farm.
-
-### ------------------EXAMPLE 3----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 3-----------------------
 ```
 C:\PS>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
 ```
 
 This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.
 
-### ------------------EXAMPLE 3----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPWebApplication http://MyOfficeApp1 | Get- SPBrowserCustomerExperienceImprovementProgram -Enable
-```
-
-This example turns on the browser Customer Experience Improvement Program for the Web application, MyOfficeApp1.
 
 ## PARAMETERS
 
 ### -Farm
+{{Fill Farm Description}}
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Farm
@@ -149,7 +127,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -166,7 +144,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -200,7 +178,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -225,4 +203,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

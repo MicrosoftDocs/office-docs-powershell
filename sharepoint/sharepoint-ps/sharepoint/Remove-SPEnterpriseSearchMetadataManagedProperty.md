@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Deletes a metadata managed property.
 
+
 ## SYNTAX
 
 ```
@@ -23,21 +24,10 @@ This cmdlet deletes a specified managed property from the managed property colle
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-$searchapp = Get-SPEnterpriseSearchServiceApplication
-
-$mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity AboutMeUpdate
-
-
-Remove-SPEnterpriseSearchMetadataManagedProperty -Identity $mp
-```
-
-This example removes the managed property AboutMeUpdate from the default search service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$searchapp = Get-SPEnterpriseSearchServiceApplication 
 $mp = Get-SPEnterpriseSearchMetadataManagedProperty -SearchApplication $searchapp -Identity AboutMeUpdate 
@@ -45,6 +35,7 @@ Remove-SPEnterpriseSearchMetadataManagedProperty -Identity $mp
 ```
 
 This example removes the managed property AboutMeUpdate from the default search service application.
+
 
 ## PARAMETERS
 
@@ -75,7 +66,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -92,7 +83,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -163,7 +154,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -188,6 +179,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0d1e9ea8-2e36-4e9a-9fa8-1ab6dc4c29b1(Office.15).aspx)
-

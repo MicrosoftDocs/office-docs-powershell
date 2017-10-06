@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a proxy for a Project Server Service application.
 
+
 ## SYNTAX
 
 ```
@@ -17,25 +18,28 @@ New-SPProjectServiceApplicationProxy [-Name] <String> -ServiceApplication <PsiSe
 ```
 
 ## DESCRIPTION
-The New-SPProjectServiceApplicationProxy cmdlet creates a proxy for a Project Server Service application.
+The `New-SPProjectServiceApplicationProxy` cmdlet creates a proxy for a Project Server Service application.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### -------------------EXAMPLE 1------------------
 ```
 C:\PS>New-SPProjectServiceApplicationProxy -Name PsiApplicationProxy -ServiceApplication PsiApplication
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication.
 
-### -------------------EXAMPLE 2------------------ (SharePoint Server 2016)
+
+### -------------------EXAMPLE 2------------------
 ```
 C:\PS>Get-SPServiceApplication | ?{ $_.Name -eq "PsiApplication" } | New-SPProjectServiceApplicationProxy -Name "PsiApplicationProxy" -Default
 ```
 
 This example creates a Project Server Service application proxy with the name PsiApplicationProxy for the application PsiApplication and adds the proxy to the Default proxy group.
+
 
 ## PARAMETERS
 
@@ -82,7 +86,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -107,4 +111,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

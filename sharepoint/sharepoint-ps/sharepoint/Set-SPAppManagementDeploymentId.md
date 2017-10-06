@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPAppManagementDeploymentId
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets the identifier of the farm or tenant used by the Office Marketplace to issue App licenses.
-
 
 
 ## SYNTAX
@@ -26,14 +19,15 @@ Set-SPAppManagementDeploymentId -AppManagementServiceApplication <AppManagementS
 ```
 
 ## DESCRIPTION
-Use the Set-SPAppManagementDeploymentId cmdlet to set the identifier of the farm or tenant used by the Office Marketplace to issue App Licenses.
+Use the `Set-SPAppManagementDeploymentId` cmdlet to set the identifier of the farm or tenant used by the Office Marketplace to issue App Licenses.
 To ensure you do not lose rights to the use of all Apps you have purchased on the Marketplace, do not change the deployment id unless directed by Microsoft documentation or support.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------EXAMPLE 1---------- (SharePoint Server 2013)
+### -----------EXAMPLE 1----------
 ```
 C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 
@@ -42,16 +36,8 @@ C:\PS>Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E2
 
 This example sets the deployment identifier of the current farm to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
 
-### -----------EXAMPLE 1---------- (SharePoint Server 2016)
-```
-C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 
-C:\PS>Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $appManagementServiceApplication
-```
-
-This example sets the deployment identifier of the current farm to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
-
-### -----------EXAMPLE 2---------- (SharePoint Server 2013)
+### -----------EXAMPLE 2----------
 ```
 C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
 
@@ -60,14 +46,6 @@ C:\PS>Get-SPSiteSubscription | where{$_.Id.Id -eq "88f16a50-0530-4f3f-b749-24ef0
 
 This example sets the deployment identifier of the tenant with the site subscription identifier 88f16a50-0530-4f3f-b749-24ef0b30d685 to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
 
-### -----------EXAMPLE 2---------- (SharePoint Server 2016)
-```
-C:\PS>$appManagementServiceApplication = Get-SPServiceApplication | where {$_.TypeName -eq "App Management Service Application"}
-
-C:\PS>Get-SPSiteSubscription | where{$_.Id.Id -eq "88f16a50-0530-4f3f-b749-24ef0b30d685"} | Set-SPAppManagementDeploymentId -DeploymentId 3102B7C3-1866-48EE-91CB-84E20AD24BF2 -AppManagementServiceApplication $appManagementServiceApplication
-```
-
-This example sets the deployment identifier of the tenant with the site subscription identifier 88f16a50-0530-4f3f-b749-24ef0b30d685 to 3102B7C3-1866-48EE-91CB-84E20AD24BF2.
 
 ## PARAMETERS
 
@@ -112,7 +90,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -129,7 +107,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -163,7 +141,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -188,4 +166,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

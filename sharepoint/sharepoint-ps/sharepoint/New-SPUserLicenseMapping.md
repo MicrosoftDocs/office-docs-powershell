@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPUserLicenseMapping
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a license mapping object.
-
 
 
 ## SYNTAX
@@ -48,36 +41,29 @@ New-SPUserLicenseMapping -License <String> -SecurityGroup <String>
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the New-SPUserLicenseMapping cmdlet to create a new license mapping object.
-This cmdlet must be used first before the Add-SPUserLicenseMapping cmdlet can be used.
+Use the `New-SPUserLicenseMapping` cmdlet to create a new license mapping object.
+This cmdlet must be used first before the `Add-SPUserLicenseMapping` cmdlet can be used.
 
-The object created by using the New-SPUserLicenseMapping cmdlet is stored in memory and is not written to any database in SharePoint Server 2013.
-After the object is created you can pipe the result to the Add-SPUserLicenseMapping cmdlet.
+The object created by using the `New-SPUserLicenseMapping` cmdlet is stored in memory and is not written to any database in SharePoint Server.
+After the object is created you can pipe the result to the `Add-SPUserLicenseMapping` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------EXAMPLE------------- (SharePoint Server 2013)
-```
-C:\PS>$a=New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
-
-C:\PS>$a | Add-SPUserLicenseMapping
-```
-
-This example creates a license mapping object and then pipes the result to the Add-SPUserLicenseMapping cmdlet.
-
-### ----------EXAMPLE------------- (SharePoint Server 2016)
+### ----------------------- EXAMPLE---------------------------)
 ```
 C:\PS>$a = New-SPUserLicenseMapping -SecurityGroup yoursecuritygroup -License Enterprise
 
 C:\PS>$a | Add-SPUserLicenseMapping
 ```
 
-This example creates a license mapping object and then pipes the result to the Add-SPUserLicenseMapping cmdlet.
+This example creates a license mapping object and then pipes the result to the `Add-SPUserLicenseMapping` cmdlet.
+
 
 ## PARAMETERS
 
@@ -117,7 +103,7 @@ Accept wildcard characters: False
 
 ### -License
 Specifies the name of a supported SharePoint user license.
-For the full list of supported licenses on a SharePoint farm, see the Get-SPUserLicense cmdlet.
+For the full list of supported licenses on a SharePoint farm, see the `Get-SPUserLicense` cmdlet.
 
 ```yaml
 Type: String
@@ -224,7 +210,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -241,7 +227,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -294,7 +280,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -325,4 +311,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPUserLicenseMapping]()
 
 [Remove-SPUserLicenseMapping]()
-

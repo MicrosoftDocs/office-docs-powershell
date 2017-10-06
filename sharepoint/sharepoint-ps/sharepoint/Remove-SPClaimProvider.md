@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPClaimProvider
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Unregisters a claim provider.
-
 
 
 ## SYNTAX
@@ -25,26 +18,21 @@ Remove-SPClaimProvider [-Identity] <SPClaimProviderPipeBind> [-AssignmentCollect
 ```
 
 ## DESCRIPTION
-The Remove-SPClaimProvider cmdlet unregisters a claim provider.
+The `Remove-SPClaimProvider` cmdlet unregisters a claim provider.
 If the unregistered claim provider was assigned to a trusted identity token issuer, the trusted token issuer will use the default (system) claim provider.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Remove - SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
 ```
 
 This example removes a claim provider from the farm
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>Remove - SPClaimProvider -Identity "12345678-90ab-cdef-1234-567890bcdefgh"
-```
-
-This example removes a claim provider from the farm
 
 ## PARAMETERS
 
@@ -73,7 +61,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -98,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

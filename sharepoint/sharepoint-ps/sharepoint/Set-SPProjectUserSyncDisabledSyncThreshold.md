@@ -18,7 +18,7 @@ Set-SPProjectUserSyncDisabledSyncThreshold [-Url] <Uri> [-Threshold] <Int32>
 ```
 
 ## DESCRIPTION
-The Set-SPProjectUserSyncDisabledSyncThreshold cmdlet d the threshold over which a user sync job will not be executed but instead will be deleted.
+The `Set-SPProjectUserSyncDisabledSyncThreshold` cmdlet d the threshold over which a user sync job will not be executed but instead will be deleted.
 This threshold is the product of the number of projects multiplied by the number of users.
 The purpose of configuring this threshold is to prevent malicious user syncs of the whole server.
 Set it to a negative value to reset to default value (not set).
@@ -29,12 +29,13 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>Set-SPProjectUserSyncDisabledSyncThreshold -URL http//contoso-AppSrv/PWA -Threshold 400
 ```
 
 This example sets the sync disable threshold for the Project Web App instance at http//contoso-AppSrv/PWA to 400.
+
 
 ## PARAMETERS
 
@@ -77,7 +78,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -108,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPProjectUserSyncFullSyncThreshold]()
 
 [Set-SPProjectUserSyncOffPeakSyncThreshold]()
-

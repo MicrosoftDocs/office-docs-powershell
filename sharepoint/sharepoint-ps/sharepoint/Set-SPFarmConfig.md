@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPFarmConfig
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets a global property or a collection of global properties for the local farm.
-
 
 
 ## SYNTAX
@@ -31,18 +24,19 @@ Set-SPFarmConfig [-AssignmentCollection <SPAssignmentCollection>] [-Confirm]
 ```
 
 ## DESCRIPTION
-The Set-SPFarmConfig cmdlet updates a collection of global settings for the local farm that are not members of the SPFarm object.
-Use the Get-SPFarmConfig cmdlet to read global settings for the local farm and to create a new PSCustomObject object from the collection of properties returned from the local farm, and then add this object to the pipeline.
-Modify the PSCustomObject object and pass it to the Set-SPFarmConfig cmdlet to change the parameter values.
+The `Set-SPFarmConfig` cmdlet updates a collection of global settings for the local farm that are not members of the SPFarm object.
+Use the `Get-SPFarmConfig` cmdlet to read global settings for the local farm and to create a new PSCustomObject object from the collection of properties returned from the local farm and then add this object to the pipeline.
+Modify the PSCustomObject object and pass it to the `Set-SPFarmConfig` cmdlet to change the parameter values.
 
-The properties collected in the PSCustomObject object must be farm-wide settings, and must be configurable only once for the entire farm.
-The parameter name added to the PSCustomObject object must match exactly the input parameter name for the Set-SPFarmConfig cmdlet.
+The properties collected in the PSCustomObject object must be farm-wide settings and must be configurable only once for the entire farm.
+The parameter name added to the PSCustomObject object must match exactly the input parameter name for the `Set-SPFarmConfig` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ---------------------EXAMPLE-------------------------- (SharePoint Server 2013)
+### ---------------------EXAMPLE--------------------------
 ```
 C:\PS>$a = Get-SPFarmConfig
 
@@ -51,24 +45,11 @@ C:\PS>$a.AjaxTimeout = 200
 C:\PS>$a | Set-SPFarmConfig
 ```
 
-This example uses the Get-SPFarmConfig cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout, and then passes PSCustomObject to the Set-SPFarmConfig cmdlet to change the Ajax Timeout setting.
+This example uses the `Get-SPFarmConfig` cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout and then passes PSCustomObject to the `Set-SPFarmConfig` cmdlet to change the Ajax Timeout setting.
 Ajax Timeout, a farm-wide setting, is a member of the SPWebService object and cannot be accessed by using a Windows PowerShell cmdlet.
 
 You can perform the same operations with either of the following commands.
 
-### ---------------------EXAMPLE-------------------------- (SharePoint Server 2016)
-```
-C:\PS>$a = Get-SPFarmConfig
-
-C:\PS>$a.AjaxTimeout = 200
-
-C:\PS>$a | Set-SPFarmConfig
-```
-
-This example uses the Get-SPFarmConfig cmdlet to add the Ajax Timeout setting to the PSCustomObject object, sets the value for Ajax Timeout, and then passes PSCustomObject to the Set-SPFarmConfig cmdlet to change the Ajax Timeout setting.
-Ajax Timeout, a farm-wide setting, is a member of the SPWebService object and cannot be accessed by using a Windows PowerShell cmdlet.
-
-You can perform the same operations with either of the following commands.
 
 ## PARAMETERS
 
@@ -79,7 +60,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -96,7 +77,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -196,7 +177,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -389,4 +370,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

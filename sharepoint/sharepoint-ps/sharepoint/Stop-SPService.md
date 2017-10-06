@@ -21,12 +21,13 @@ Stop-SPService [-Identity] <SPServicePipeBind> [-AssignmentCollection <SPAssignm
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -126,4 +127,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

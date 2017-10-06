@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a pluggable security trimmer from a profile service application proxy.
 
+
 ## SYNTAX
 
 ```
@@ -17,22 +18,14 @@ Remove-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId <Guid> -PlugInI
 ```
 
 ## DESCRIPTION
-Use the Remove-SPPluggableSecurityTrimmer cmdlet to remove a specified pluggable security trimmer from a User Profile service application proxy.
+Use the `Remove-SPPluggableSecurityTrimmer` cmdlet to remove a specified pluggable security trimmer from a User Profile service application proxy.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------------EXAMPLE 1---------------------- (SharePoint Server 2013)
-```
-C:\PS>$pr = Get-SPServiceApplicationProxy | ? $_.TypeName.Contains("Profile")}
-
-C:\PS>Remove-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $pr.Id -PlugInId 0
-```
-
-This example removes a pluggable security trimmer.
-
-### -----------------EXAMPLE 1---------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 1----------------------
 ```
 C:\PS>$pr = Get-SPServiceApplicationProxy | ? $_.TypeName.Contains("Profile")}
 
@@ -41,16 +34,8 @@ C:\PS>$pr = Get-SPServiceApplicationProxy | ? $_.TypeName.Contains("Profile")}
 
 This example removes a pluggable security trimmer.
 
-### -----------------EXAMPLE 2---------------------- (SharePoint Server 2013)
-```
-C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")} $proxy.Id
 
-C:\PS>Remove-SPPluggableSecurityTrimmer -UserProfileApplicationProxyId $proxy.Id -PlugInId 0
-```
-
-This example turns off security trimming in a User Profile Service Application.
-
-### -----------------EXAMPLE 2---------------------- (SharePoint Server 2016)
+### -----------------EXAMPLE 2----------------------
 ```
 C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile")} $proxy.Id
 
@@ -58,6 +43,7 @@ C:\PS>$proxy = Get-SPServiceApplicationProxy | ? {$_.TypeName.Contains("Profile"
 ```
 
 This example turns off security trimming in a User Profile Service Application.
+
 
 ## PARAMETERS
 
@@ -102,7 +88,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -119,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -136,7 +122,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -161,4 +147,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

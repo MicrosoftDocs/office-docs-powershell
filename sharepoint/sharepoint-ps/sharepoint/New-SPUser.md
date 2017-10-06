@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPUser
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Adds an existing user to a SharePoint site with the designated permissions.
-
 
 
 ## SYNTAX
@@ -26,7 +19,7 @@ New-SPUser [-UserAlias] <String> -Web <SPWebPipeBind> [-AssignmentCollection <SP
 ```
 
 ## DESCRIPTION
-The New-SPUser cmdlet adds an existing user to a SharePoint web site with the designated permissions.
+The `New-SPUser` cmdlet adds an existing user to a SharePoint web site with the designated permissions.
 This user has the given permissions in all subsites that inherit permissions.
 The user account must already exist in the user directory.
 
@@ -35,23 +28,18 @@ If only an alias is given and the farm is in Active Directory Account Create mod
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1---------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1----------------------
 ```
 C:\PS>PS> New-SPUser - UserAlias 'Contoso\Jdow'-displayname 'Jane Dow' -web http://contoso.com
 ```
 
 This example adds a new user named Jane Dow to the Contoso domain.
 
-### ------------------EXAMPLE 1---------------------- (SharePoint Server 2016)
-```
-C:\PS>PS> New-SPUser - UserAlias 'Contoso\Jdow'-displayname 'Jane Dow' -web http://contoso.com
-```
 
-This example adds a new user named Jane Dow to the Contoso domain.
-
-### ------------------EXAMPLE 2---------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 2----------------------
 ```
 C:\PS>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
 ```
@@ -59,17 +47,12 @@ C:\PS>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
 This example adds Contoso\Jdow to all webs in the http://sitename site collection.
 Because this site collection uses inherited permissions, only the top-level web site needs to be touched.
 
-### ------------------EXAMPLE 2---------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPWeb http://sitename | New-SPUser -UserAlias Contoso\Jdow
-```
-
-This example adds Contoso\Jdow to all webs in the http://sitename site collection.
-Because this site collection uses inherited permissions, only the top-level web site needs to be touched.
 
 ## PARAMETERS
 
 ### -UserAlias
+{{ Fill UserAlias Description}}
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -108,7 +91,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -125,7 +108,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -228,7 +211,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -253,4 +236,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,14 +7,7 @@ schema: 2.0.0
 # Receive-SPServiceApplicationConnectionInfo
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Configures this farm to receive service information from another farm.
-
 
 
 ## SYNTAX
@@ -25,33 +18,28 @@ Receive-SPServiceApplicationConnectionInfo [-FarmUrl] <Uri> [-AssignmentCollecti
 ```
 
 ## DESCRIPTION
-The Receive-SPServiceApplicationConnectionInfo cmdlet retrieves the list of service applications published by another farm.
+The `Receive-SPServiceApplicationConnectionInfo` cmdlet retrieves the list of service applications published by another farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>Receive-SPServiceApplicationConnectionInfo -FarmUrl http://FarmB/topology/topology.svc
 ```
 
 This example retreives a list of service applications published by a given farm.
 
-The FarmURL parameter can be obtained by the Get-SPTopologyServiceApplication cmdlet.
+The FarmURL parameter can be obtained by the `Get-SPTopologyServiceApplication` cmdlet.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>Receive-SPServiceApplicationConnectionInfo -FarmUrl http://FarmB/topology/topology.svc
-```
-
-This example retreives a list of service applications published by a given farm.
-
-The FarmURL parameter can be obtained by the Get-SPTopologyServiceApplication cmdlet.
 
 ## PARAMETERS
 
 ### -FarmUrl
+{{ Fill FarmUrl Description}}
+
 ```yaml
 Type: Uri
 Parameter Sets: (All)
@@ -66,6 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
+{{ Fill AssignmentCollection Description}}
+
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
@@ -80,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
+{{ Fill Filter Description}}
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -103,4 +95,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

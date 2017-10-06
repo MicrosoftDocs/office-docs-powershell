@@ -21,14 +21,7 @@ Test-SPO365LinkSettings [-AssignmentCollection <SPAssignmentCollection>] -MySite
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2013)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### Example 1 (SharePoint Server 2016)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -75,7 +68,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.Uri
-Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## OUTPUTS
 
@@ -84,4 +76,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

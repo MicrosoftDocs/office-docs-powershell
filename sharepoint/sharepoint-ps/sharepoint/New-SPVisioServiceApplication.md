@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new Visio Services application to a farm.
 
+
 ## SYNTAX
 
 ```
@@ -17,41 +18,29 @@ New-SPVisioServiceApplication -ApplicationPool <SPIisWebServiceApplicationPoolPi
 ```
 
 ## DESCRIPTION
-The New-SPVisioServiceApplication cmdlet adds a new Visio Services application to a farm.
+The `New-SPVisioServiceApplication` cmdlet adds a new Visio Services application to a farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### ----------------EXAMPLE 1---------------------
 ```
 C:\PS>New-SPVisioServiceApplication -Identity "VGS2" -ServiceApplicationPool "SharePoint Web Services Default" -CreateDefaultProxy
 ```
 
-This example creates a new Visio Services application VGS2, and also creates a service application proxy associated with it.
+This example creates a new Visio Services application VGS2 and also creates a service application proxy associated with it.
 
-### ----------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPVisioServiceApplication -Identity "VGS2" -ServiceApplicationPool "SharePoint Web Services Default" -CreateDefaultProxy
-```
 
-This example creates a new Visio Services application VGS2, and also creates a service application proxy associated with it.
-
-### ----------------EXAMPLE 2--------------------- (SharePoint Server 2013)
+### ----------------EXAMPLE 2---------------------
 ```
 C:\PS>Get-SPIISWebServiceApplicationPool "SharePoint Web Services System Default" | New-SPVisioServiceApplication "VGS3"
 ```
 
 This example creates a new Visio Services application VGS3 without creating an associated service application proxy.
-You can pipe the results from the Get-SPIISWebServiceApplicationPool cmdlet.
+You can pipe the results from the `Get-SPIISWebServiceApplicationPool` cmdlet.
 
-### ----------------EXAMPLE 2--------------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPIISWebServiceApplicationPool "SharePoint Web Services System Default" | New-SPVisioServiceApplication "VGS3"
-```
-
-This example creates a new Visio Services application VGS3 without creating an associated service application proxy.
-You can pipe the results from the Get-SPIISWebServiceApplicationPool cmdlet.
 
 ## PARAMETERS
 
@@ -96,7 +85,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -113,7 +102,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -148,7 +137,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -173,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

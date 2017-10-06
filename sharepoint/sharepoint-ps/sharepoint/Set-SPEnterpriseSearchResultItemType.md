@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a result item type.
 
+
 ## SYNTAX
 
 ```
@@ -21,23 +22,7 @@ Set-SPEnterpriseSearchResultItemType [-Identity] <ResultItemTypePipeBind> -Owner
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-The Set-SPEnterpriseSearchResultItemType cmdlet sets properties of user-created result item types.
-You cannot use this cmdlet to set or change properties of the built-in result item types that are included with SharePoint products.
-
-Result item types enable you to change the look of search results based on the type of result.
-You start by defining a collection of rules, which will be evaluated against the properties of results.
-Then you define the display template to use for rendering that type of result.
-Once you have created the result item type, results matching the rules of the result item type will render using the specified display template.
-
-Example use cases:
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
-
-The Set-SPEnterpriseSearchResultItemType cmdlet sets properties of user-created result item types.
+The `Set-SPEnterpriseSearchResultItemType` cmdlet sets properties of user-created result item types.
 You cannot use this cmdlet to set or change properties of the built-in result item types that are included with SharePoint products.
 
 Result item types enable you to change the look of search results based on the type of result.
@@ -55,25 +40,9 @@ Example use cases:
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
-
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$web = Get-SPWeb "UrlOfTheSite"$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web$searchapp = Get-SPEnterpriseSearchServiceApplication$resultType = Get-SPEnterpriseSearchResultItemType -Owner $tenantOwner -SearchApplication $searchapp$resultType.BuiltIn$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"$rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection$ruleCollection.Add( $rule )$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"Set-SPEnterpriseSearchResultItemType -Identity $resultType `-SearchApplication $searchapp `-Name "CustomResultType" `-Rules $ruleCollection `-RulePriority 1 -DisplayProperties $displayProperties `-DisplayTemplateUrl $displaytemplateUrl `-Owner $tenantOwner
-```
-
-This example first defines variables for the URL of the site, the search owner, and search application.
-It retrieves the result item type and checks whether the result item type is a built-in result item type.
-If $resultType.BuiltIn returns false then the result item type is not built-in and you can set its properties by using the Set-SPEnterpriseSearchResultItemType.
-
-Next, the example creates the rule that result item types shall be matched against, and adds it to a property rule collection.
-
-Next, the example defines which properties of the result item type that shall be displayed and the display template to use.
-
-Finally, the example uses the Set-SPEnterpriseSearchResultItemType cmdlet to modify the result item type.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>$web = Get-SPWeb "UrlOfTheSite"
 $tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web
@@ -102,15 +71,16 @@ Set-SPEnterpriseSearchResultItemType
 -Owner $tenantOwner
 ```
 
-This example first defines variables for the URL of the site, the search owner, and search application.
+This example first defines variables for the URL of the site, the search owner and search application.
 It retrieves the result item type and checks whether the result item type is a built-in result item type.
-If $resultType.BuiltIn returns false then the result item type is not built-in and you can set its properties by using the Set-SPEnterpriseSearchResultItemType.
+If $resultType.BuiltIn returns false then the result item type is not built-in and you can set its properties by using the `Set-SPEnterpriseSearchResultItemType`.
 
-Next, the example creates the rule that result item types shall be matched against, and adds it to a property rule collection.
+Next, the example creates the rule that result item types shall be matched against and adds it to a property rule collection.
 
 Next, the example defines which properties of the result item type that shall be displayed and the display template to use.
 
-Finally, the example uses the Set-SPEnterpriseSearchResultItemType cmdlet to modify the result item type.
+Finally, the example uses the `Set-SPEnterpriseSearchResultItemType` cmdlet to modify the result item type.
+
 
 ## PARAMETERS
 
@@ -154,7 +124,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -171,7 +141,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -235,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -OptimizeForFrequentUse
-??
+{{ Fill OptimizeForFrequentUse Description }}
 
 ```yaml
 Type: Boolean
@@ -334,7 +304,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -360,8 +330,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2d67c8e9-2ebc-4a36-b6ea-460adf6fa15d(Office.15).aspx)
-
 [New-SPEnterpriseSearchResultItemType]()
 
 [Get-SPEnterpriseSearchResultItemType]()
@@ -373,4 +341,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPEnterpriseSearchPropertyRule]()
 
 [Get-SPEnterpriseSearchPropertyRuleCollection]()
-

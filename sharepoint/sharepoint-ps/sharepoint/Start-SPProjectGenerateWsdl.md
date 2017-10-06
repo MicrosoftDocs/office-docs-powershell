@@ -21,12 +21,13 @@ Start-SPProjectGenerateWsdl [-AssignmentCollection <SPAssignmentCollection>] [-P
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -76,4 +77,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

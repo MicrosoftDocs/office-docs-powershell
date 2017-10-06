@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Configures settings for a PowerPoint Conversion Service application.
 
+
 ## SYNTAX
 
 ```
@@ -19,37 +20,26 @@ Set-SPPowerPointConversionServiceApplication [-Identity] <SPPowerPointConversion
 ```
 
 ## DESCRIPTION
-Use the Set-SPPowerPointConversionServiceApplication cmdlet to set properties and settings for an instance of a PowerPoint Conversion Service application that is in a farm.
+Use the `Set-SPPowerPointConversionServiceApplication` cmdlet to set properties and settings for an instance of a PowerPoint Conversion Service application that is in a farm.
+
 
 ## EXAMPLES
 
-### -----------EXAMPLE 1------- (SharePoint Server 2013)
+### --------------------EXAMPLE 1---------------------
 ```
 C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
 ```
 
 This example establishes new operational defaults for the conversion cache expiration.
 
-### -----------EXAMPLE 1------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -CacheExpirationPeriodInSeconds 1200
-```
 
-This example establishes new operational defaults for the conversion cache expiration.
-
-### -----------EXAMPLE 2------- (SharePoint Server 2013)
+### --------------------EXAMPLE 2---------------------
 ```
 C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
 ```
 
 This example disables binary scanning of documents.
 
-### -----------EXAMPLE 2------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPPowerPointConversionServiceApplication -Identity "MyWorkgroupPPTApp" -DisableBinaryScan:$false
-```
-
-This example disables binary scanning of documents.
 
 ## PARAMETERS
 
@@ -76,7 +66,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -191,4 +181,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPPowerPointConversionServiceApplication]()
 
 [New-SPPowerPointConversionServiceApplicationProxy]()
-

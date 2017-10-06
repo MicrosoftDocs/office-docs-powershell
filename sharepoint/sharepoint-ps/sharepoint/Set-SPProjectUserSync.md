@@ -17,7 +17,7 @@ Set-SPProjectUserSync [-Url] <Uri> [-Value] <UserSyncParameterValues[]>
 ```
 
 ## DESCRIPTION
-WSS User sync synchronizes Project Server 2013 permissions with SharePoint Server 2013 permissions.
+WSS User sync synchronizes Project Server permissions with SharePoint Server permissions.
 When users are granted permissions to Project Server entities, permissions are granted to the Project Web App site and the connected SharePoint sites.
 By using this cmdlet, administrators can control the behavior of WSS User sync.
 They can choose to disable WSS User sync, enable it only for the Project Web App site, enable it only for connected SharePoint sites, or enable for both.
@@ -26,12 +26,13 @@ For permissions and the most current information about Windows PowerShell for Pr
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Set-SPProjectUserSync http://localhost/pwa EnablePWA
 ```
 
 In this example, WSS User sync is enabled for the Project Web App site at http://localhost/pwa.
+
 
 ## PARAMETERS
 
@@ -74,7 +75,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -105,4 +106,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPProjectUserSyncFullSyncThreshold]()
 
 [Set-SPProjectUserSyncOffPeakSyncThreshold]()
-

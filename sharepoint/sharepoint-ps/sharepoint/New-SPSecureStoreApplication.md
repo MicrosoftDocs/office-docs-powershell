@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Secure Store application.
 
+
 ## SYNTAX
 
 ```
@@ -19,13 +20,14 @@ New-SPSecureStoreApplication -ServiceContext <SPServiceContextPipeBind> -TargetA
 ```
 
 ## DESCRIPTION
-The New-SPSecureStoreApplication cmdlet creates a new Secure Store application.
+The `New-SPSecureStoreApplication` cmdlet creates a new Secure Store application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$usernameField = New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
 
@@ -41,29 +43,10 @@ $contosoTargetApp = New-SPSecureStoreTargetApplication -Name "ContosoTargetAppli
 New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $claimUser
 ```
 
-This example creates a new group target application ContosoTargetApplication, and then a new application for that target application.
-This new application has two fields; UserName of type WindowsUserName, and Password of type WindowsPassword.
+This example creates a new group target application ContosoTargetApplication and then a new application for that target application.
+This new application has two fields; UserName of type WindowsUserName and Password of type WindowsPassword.
 The user with identity janedoe on the CONTOSO domain is set as the target application administrator.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>$usernameField = New-SPSecureStoreApplicationField -Name "UserName" -Type WindowsUserName -Masked:$false
-
-$passwordField = New-SPSecureStoreApplicationField -Name "Password" -Type WindowsPassword -Masked:$true
-
-$fields = $usernameField,$passwordField
-
-
-$userClaim = New-SPClaimsPrincipal -Identity "CONTOSO\janedoe" -IdentityType WindowsSamAccountName
-
-$contosoTargetApp = New-SPSecureStoreTargetApplication -Name "ContosoTargetApplication" -FriendlyName "Contoso Target Application" -ApplicationType Group
-
-New-SPSecureStoreApplication -ServiceContext http://contoso -TargetApplication $contosoTargetApp -Fields $fields -Administrator $claimUser
-```
-
-This example creates a new group target application ContosoTargetApplication, and then a new application for that target application.
-This new application has two fields; UserName of type WindowsUserName, and Password of type WindowsPassword.
-The user with identity janedoe on the CONTOSO domain is set as the target application administrator.
 
 ## PARAMETERS
 
@@ -85,7 +68,7 @@ Accept wildcard characters: False
 
 ### -TargetApplication
 Specifies information about the target application.
-For example, the TargetApplication object includes data values for application name, display name, contact info, enable ticketing flag, and URL address to set the credential.
+For example, the TargetApplication object includes data values for application name, display name, contact info, enable ticketing flag and URL address to set the credential.
 The schema for the TargetApplication object is defined in the ISecureSToreProviderExtended interface that exposes the target application metadata.
 
 ```yaml
@@ -124,7 +107,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -198,4 +181,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

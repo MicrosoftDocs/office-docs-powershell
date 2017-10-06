@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets global properties for Excel Services Application.
 
+
 ## SYNTAX
 
 ### ExistingTargetApplicationParameterSet
@@ -40,26 +41,29 @@ Set-SPExcelServiceApplication [[-Identity] <SPExcelServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-The Set-ExcelServiceApplication cmdlet changes global runtime properties for Excel Services Application. 
+The `Set-ExcelServiceApplication` cmdlet changes global runtime properties for Excel Services Application. 
 Changes to properties that are made by using this cmdlet affect all machines in the farm that are running an instance of the specified Excel Services Application Web service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1--------------
 ```
 C:\PS>Set-SPExcelServiceApplication ExcelServiceTestApplication -sessionsperusermax 10
 ```
 
 This example sets the Excel Services Application Web service application named ExcelServiceTestApplication to enable each user to open no more than 10 sessions at one time on a back-end application server that runs Excel Services Application.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### --------------EXAMPLE 2--------------
 ```
 C:\PS>Get-SPExcelServiceApplication | where{ $_.privatebytesmax -ne -1 } | Set-SPExcelServiceApplication -PrivateBytesMax -1
 ```
 
-This example displays every Excel Services Application application that runs in the farm that is using a user-specified value for the maximum number of private bytes of memory on the computer, and then sets that value to -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
+This example displays every Excel Services Application application that runs in the farm that is using a user-specified value for the maximum number of private bytes of memory on the computer and then sets that value to -1, which indicates that Excel Services Application will consume 50 percent of the available memory resources.
+
 
 ## PARAMETERS
 
@@ -88,7 +92,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -404,7 +408,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -519,4 +523,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

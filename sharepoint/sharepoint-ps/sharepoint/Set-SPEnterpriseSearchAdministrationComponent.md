@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ```
@@ -22,21 +23,16 @@ Set-SPEnterpriseSearchAdministrationComponent [[-Identity] <AdminComponentPipeBi
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
 
-### Example 1 (SharePoint Server 2016)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -184,4 +180,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

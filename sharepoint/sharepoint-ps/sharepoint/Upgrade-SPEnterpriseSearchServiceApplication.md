@@ -28,42 +28,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------EXAMPLE 1----------------- (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
-```
-
-This example upgrades a search service application.
-
-### ----------------EXAMPLE 1----------------- (SharePoint Server 2016)
+### ----------------EXAMPLE 1-----------------
 ```
 C:\PS>Get-SPEnterpriseSearchServiceApplication | Upgrade-SPEnterpriseSearchServiceApplication
 ```
 
 This example upgrades a search service application.
 
-### ----------------EXAMPLE 2----------------- (SharePoint Server 2013)
-```
-Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
-```
-
-This example upgrades a search service application.
-
-### ----------------EXAMPLE 2----------------- (SharePoint Server 2016)
+### ----------------EXAMPLE 2-----------------
 ```
 C:\PS>Upgrade-SPEnterpriseSearchServiceApplication -Identity 846ceb0b-31d6-4c79-82c1-3a9deafe0b45
 ```
 
 This example upgrades a search service application.
 
-### ----------------EXAMPLE 3----------------- (SharePoint Server 2013)
-```
-Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
-```
-
-This example upgrades a search service application.
-
-### ----------------EXAMPLE 3----------------- (SharePoint Server 2016)
+### ----------------EXAMPLE 3-----------------
 ```
 C:\PS>Upgrade-SPEnterpriseSearchServiceApplication "DefaultSearchApplication"
 ```
@@ -97,7 +76,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -114,7 +93,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -131,7 +110,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -156,6 +135,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d864545d-2b27-4cc0-9c56-e421fb8d0641(Office.15).aspx)
-

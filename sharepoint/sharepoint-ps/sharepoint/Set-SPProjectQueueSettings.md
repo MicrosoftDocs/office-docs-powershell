@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-SPProjectQueueSettings
 
 ## SYNOPSIS
-Sets the value of one or multiple Project Server 2013 Queue settings for a specific Project Server service application.
+Sets the value of one or multiple Project Server Queue settings for a specific Project Server service application.
 
 ## SYNTAX
 
@@ -21,18 +21,20 @@ Set-SPProjectQueueSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-Sets the value of one or multiple Project Server 2013 Queue settings for a specific Project Server service application.
+Sets the value of one or multiple Project Server Queue settings for a specific Project Server service application.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Set-SPProjectQueueSettings -ServiceApplication "Project Service Application" -MaxDegreeOfConcurrency 6
 ```
 
 This example sets a maximum of 6 for the number of jobs that can be processed at one time by the specified service application.
+
 
 ## PARAMETERS
 
@@ -61,7 +63,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -197,7 +199,7 @@ Accept wildcard characters: False
 
 ### -PeriodicTasksInterval
 There are a number of bookkeeping tasks executed by the Queue System.
-Some examples are awakening jobs in 'Sleeping' state, updating the heartbeat timestamp, checking whether Queue Cleanup needs to be executed, and so on.
+Some examples are awakening jobs in 'Sleeping' state, updating the heartbeat timestamp, checking whether Queue Cleanup needs to be executed and so on.
 This setting controls the time interval at which these tasks run.
 
 Minimum: 500 (1/2 second);Maximum: 300000 (5 minutes);Default: 10000 (10 second)
@@ -217,7 +219,7 @@ Accept wildcard characters: False
 
 ### -QueueTimeout
 The Queue System has a failover recovery feature.
-If the farm contains multiple servers running the Project Server Application Service, and the Queue Service fails on one server, jobs are automatically redistributed to other servers on which the Queue Service is online.
+If the farm contains multiple servers running the Project Server Application Service and the Queue Service fails on one server, jobs are automatically redistributed to other servers on which the Queue Service is online.
 A Queue Service is considered to have timed out if it cannot be accessed from the Queue health timer job for more than the 'Queue Timeout' interval.
 
 Minimum: 5 minutes;Maximum: 60 minutes;Default: 15 minutes
@@ -318,4 +320,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

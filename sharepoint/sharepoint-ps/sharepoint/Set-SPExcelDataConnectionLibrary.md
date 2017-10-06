@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a data connection library for Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -19,31 +20,34 @@ Set-SPExcelDataConnectionLibrary [-Identity] <SPExcelDCLPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPExcelDataConnectionLibrary cmdlet sets the properties of a library from which Excel Services Application loads data connection files.
+The `Set-SPExcelDataConnectionLibrary` cmdlet sets the properties of a library from which Excel Services Application loads data connection files.
 Excel Services Application loads data connection files only if they are stored in a data connection library that is on the list of trusted data connection libraries.
 Data connection libraries constitute a kind of list that contains data connection files.
-These files contain everything that Excel Services Application  and the Excel client require to connect to an external data source.
+These files contain everything that Excel Services Application and the Excel client require to connect to an external data source.
 Data connection libraries enable you to reuse and share data connections.
 Data connections can be loaded by using information from the workbook file.
 However, using a data connection library to load data connections provides an additional layer for data connections so that they can be managed separately from workbooks.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1--------------
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Description "This is the DCL where all the connections to the sales data are stored
 ```
 
 This example sets a display description for the entry http://portal/site/salesDCL in the list of trusted data connection libraries (DCLs) that is on the Excel Services Application Web service application named MyExcelService.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### --------------EXAMPLE 2--------------
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Get-SPExcelDataConnectionLibrary | where {$_.address -eq "http://portal/site/salesDCL" } | Set-SPExcelDataConnectionLibrary -Address "http://portal/site/salesDCL
 ```
 
 This example updates the address of the data connection library for the entry http://portal/test/site/salesDCL to http://portal/site/salesDCL in the list of trusted data connection libraries, which is on the Excel Services Application Web service application named MyExcelService.
+
 
 ## PARAMETERS
 
@@ -109,7 +113,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -126,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -161,7 +165,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -186,4 +190,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores the search index from the specified backup files.
 
+
 ## SYNTAX
 
 ### Restore
@@ -27,7 +28,7 @@ Restore-SPEnterpriseSearchServiceApplicationIndex [-SearchApplication] <SearchSe
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
 This cmdlet will clear the complete search index for a specified search service application and replace it with the search index from the specified backup files.
@@ -37,16 +38,10 @@ The first set of parameters is for Application Configuration Attach mode and the
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplication$handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
-```
-
-This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1------------------
 ```
 C:\PS>$ssa = Get-SPEnterpriseSearchServiceApplication
 $handle = Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -BackupFolder "\\sample\backup\spbr0000"
@@ -55,19 +50,14 @@ Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handl
 
 This example starts a restore of the search index in the default search service application from a backup located at \\\\sample\backup\spbr0000.
 
-### ------------------EXAMPLE 2------------------ (SharePoint Server 2013)
-```
-$ssa = Get-SPEnterpriseSearchServiceApplicationRestore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication $ssa -Handle $handle
-```
 
-This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .
-
-### ------------------EXAMPLE 1------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2------------------
 ```
 C:\PS>Restore-SPEnterpriseSearchServiceApplicationIndex -SearchApplication "Search Service Application" -Handle $handle
 ```
 
 This example checks the status of the running job to restore of the search index in the search service application Search Service Application with the handle $handle .
+
 
 ## PARAMETERS
 
@@ -136,18 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMove
-**Below Content Applies To:**SharePoint Server 2013
-
-Specifies a switch to move instead of copying files when restoring.
-Moving may be faster than copying.
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Specifies a switch to move instead of copying files when restoring. 
 Moving may be faster than copying.
-
 
 
 ```yaml
@@ -202,7 +182,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -219,7 +199,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -236,7 +216,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -261,6 +241,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/752e67bc-0f9c-47d4-bd14-e4430e5ae503(Office.15).aspx)
-

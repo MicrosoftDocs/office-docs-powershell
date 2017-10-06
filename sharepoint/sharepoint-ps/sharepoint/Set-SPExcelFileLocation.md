@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets properties of a trusted file location for Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -25,7 +26,7 @@ Set-SPExcelFileLocation [-Identity] <SPExcelFileLocationPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPExcelFileLocation cmdlet sets properties of a location from which Excel Services Application loads workbooks.
+The `Set-SPExcelFileLocation` cmdlet sets properties of a location from which Excel Services Application loads workbooks.
 Excel Services Application  loads only workbooks that are stored in a trusted file location.
 Properties of trusted file locations control how workbooks can be used when they are loaded on Excel Services Application.
 Excel Services Application always enforces the properties that are defined by the trusted file location from which a workbook was loaded.
@@ -33,21 +34,24 @@ The properties that are used by the trusted file location are determined by comp
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1--------------
 ```
 C:\PS>Get-SPExcelFileLocation -ExcelServiceApplication "My Excel Service" | where { $_.externaldataallowed -eq "DclAndEmbedded"} | Set-SPExcelFileLocation -ExernalDataAllowed Dcl
 ```
 
 This example gets every trusted file location for the Excel Services Application Web service application named My Excel Service that allows data connections to load from workbook files and specifies that the locations must use a data connection library to load data connections.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### --------------EXAMPLE 2--------------
 ```
 C:\PS>Get-SPExcelServiceApplication | Get-SPExcelFileLocation | where {$_.Address -eq "http://"} | Set-SPExcelFileLocation -Description "This is the default trusted file location for Excel Services Application. It allows any file from anywhere in SharePoint to load."
 ```
 
 This example changes the description of the default file location for every Excel Services Application Web service application in the farm.
+
 
 ## PARAMETERS
 
@@ -135,7 +139,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -217,7 +221,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -544,7 +548,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -604,4 +608,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

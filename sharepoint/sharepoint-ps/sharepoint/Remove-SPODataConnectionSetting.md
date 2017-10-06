@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPODataConnectionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a Business Connectivity Services connection.
-
 
 
 ## SYNTAX
@@ -34,10 +27,10 @@ Remove-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Remove-SPODataConnectionSetting cmdlet to remove a Business Connectivity Services connection for a particular Business Connectivity Services service application in the farm.
+Use the `Remove-SPODataConnectionSetting` cmdlet to remove a Business Connectivity Services connection for a particular Business Connectivity Services service application in the farm.
 
 The metadata object associated with the Business Connectivity Services connection is also deleted.
 
@@ -46,9 +39,10 @@ You cannot use this command in the SharePoint Online Management Shell.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2013)
+### -----------------------EXAMPLE 1-----------------------------
 ```
 C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
 ```
@@ -56,15 +50,8 @@ C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "Co
 This example removes the Business Connectivity Services connection named ContosoServiceApp.
 Metadata properties are also removed.
 
-### ----------------EXAMPLE 1------------ (SharePoint Server 2016)
-```
-C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp"
-```
 
-This example removes the Business Connectivity Services connection named ContosoServiceApp.
-Metadata properties are also removed.
-
-### ----------------EXAMPLE 2------------ (SharePoint Server 2013)
+### -----------------------EXAMPLE 2-----------------------------
 ```
 C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
 ```
@@ -73,16 +60,8 @@ This example removes the Business Connectivity Services connection metadata name
 
 The associated Business Connectivity Services connection object is also removed.
 
-### ----------------EXAMPLE 2------------ (SharePoint Server 2016)
-```
-C:\PS>Remove-SPODataConnectionSetting -ServiceContext "http://contoso" -Name "ContosoServiceApp-metadata"
-```
 
-This example removes the Business Connectivity Services connection metadata named ContosoServiceApp.
-
-The associated Business Connectivity Services connection object is also removed.
-
-### ----------------EXAMPLE 3------------ (SharePoint Server 2013)
+### -----------------------EXAMPLE 3-----------------------------
 ```
 C:\PS>$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
 
@@ -91,14 +70,6 @@ C:\PS>Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceCont
 
 This example removes the Business Connectivity Services and its associated metadata connection named ContosoServiceApp.
 
-### ----------------EXAMPLE 3------------ (SharePoint Server 2016)
-```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSettingMetadata -ServiceContext http://contoso -Name "ContosoServiceApp"
-
-C:\PS>Remove-SPODataConnectionSetting -Identity $ConnectionVariable -ServiceContext "http://contoso"
-```
-
-This example removes the Business Connectivity Services and its associated metadata connection named ContosoServiceApp.
 
 ## PARAMETERS
 
@@ -158,7 +129,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -175,7 +146,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -192,7 +163,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -223,4 +194,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPODataConnectionSetting]()
 
 [Set-SPODataConnectionSetting]()
-

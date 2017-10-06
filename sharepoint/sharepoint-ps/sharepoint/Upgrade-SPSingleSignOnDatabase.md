@@ -17,23 +17,16 @@ Upgrade-SPSingleSignOnDatabase -SecureStoreConnectionString <String> -SecureStor
 ```
 
 ## DESCRIPTION
-The Upgrade-SPSingleSignOnDatabase cmdlet migrates the application definitions from SSO database to Secure Store database as target applications.
-Use the Upgrade-SPSingleSignOn cmdlet to convert an SSO database to a Secure Store database.
+The `Upgrade-SPSingleSignOnDatabase` cmdlet migrates the application definitions from SSO database to Secure Store database as target applications.
+Use the `Upgrade-SPSingleSignOn` cmdlet to convert an SSO database to a Secure Store database.
 SSO is a SharePoint Server feature.
-SSO functionality is performed by the Secure Store Service in SharePoint Server 2013.
+SSO functionality is performed by the Secure Store Service in SharePoint Server.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
-```
-
-This example migrates the SSO database at the SSO connection to a Secure Store database at the Secure Store connection.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Upgrade-SPSingleSignOnDatabase -SSOConnectionString "Data Source=oldServer;Database=SSO;Trusted_Connection=yes;" -SecureStoreConnectionString "Data Source=CONTOSO\SQLDatabase;Database=ContosoSSDatabase;Trusted_Connection=yes;" -SecureStorePassphrase "abcDEF123!@#"
 ```
@@ -97,7 +90,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -122,4 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -17,7 +17,7 @@ Update-SPSecureStoreMasterKey -Passphrase <String> -ServiceApplicationProxy <SPS
 ```
 
 ## DESCRIPTION
-The Update-SPSecureStoreApplicationServerKey cmdlet changes the master key of a Secure Store Service application.
+The `Update-SPSecureStoreApplicationServerKey` cmdlet changes the master key of a Secure Store Service application.
 
 Updating the master key is required when:
 
@@ -29,16 +29,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-C:\PS>$newPassPhrase = "abcDEF123!"
-
-C:\PS>Update-SPSecureStoreMasterKey -ServiceApplicationProxy $contosoProxy -Passphrase $newPassPhrase
-```
-
-This example creates a new master key for the given service application.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$newPassPhrase = "abcDEF123!"
 
@@ -91,7 +82,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -116,4 +107,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

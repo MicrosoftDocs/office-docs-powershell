@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new Work Management Service application.
 
+
 ## SYNTAX
 
 ```
@@ -17,13 +18,14 @@ New-SPWorkManagementServiceApplication -ApplicationPool <SPIisWebServiceApplicat
 ```
 
 ## DESCRIPTION
-Use the New-SPWorkManagementServiceApplication cmdlet to create a new Work Management Service application.
+Use the `New-SPWorkManagementServiceApplication` cmdlet to create a new Work Management Service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE---------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>$appPool = Get-SPServiceApplicationPool "SharePoint Web Services System Default"
 
@@ -32,14 +34,6 @@ C:\PS>New-SPWorkManagementServiceApplication -Name "WM Service App" -Application
 
 This example creates a new Work Management Service Application using the "SharePoint Web Services System Default" App Pool.
 
-### ------------EXAMPLE---------- (SharePoint Server 2016)
-```
-C:\PS>$appPool = Get-SPServiceApplicationPool "SharePoint Web Services System Default"
-
-C:\PS>New-SPWorkManagementServiceApplication -Name "WM Service App" -ApplicationPool $appPool
-```
-
-This example creates a new Work Management Service Application using the "SharePoint Web Services System Default" App Pool.
 
 ## PARAMETERS
 
@@ -83,7 +77,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -100,7 +94,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -133,7 +127,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -164,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPWorkManagementServiceApplication]()
 
 [Set-SPWorkManagementServiceApplicationProxy]()
-

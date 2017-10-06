@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPTrustedRootAuthority
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a trusted root authority.
-
 
 
 ## SYNTAX
@@ -32,14 +25,15 @@ New-SPTrustedRootAuthority [-Name] <String> [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-The New-SPTrustedRootAuthority cmdlet creates a trusted root authority.
+The `New-SPTrustedRootAuthority` cmdlet creates a trusted root authority.
 If a certificate file is used, it must have only one X509 certificate without private keys, otherwise an exception is raised.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
 
@@ -48,14 +42,6 @@ C:\PS>New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
 
 This example creates a new trusted root authority, WFEFarm1.
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
-```
-C:\PS>$cert = Get-PfxCertificate C:\LiveIDSigningCert.pfx
-
-C:\PS>New-SPTrustedRootAuthority -Name "WFEFarm1" -Certificate $cert
-```
-
-This example creates a new trusted root authority, WFEFarm1.
 
 ## PARAMETERS
 
@@ -102,7 +88,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -176,4 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

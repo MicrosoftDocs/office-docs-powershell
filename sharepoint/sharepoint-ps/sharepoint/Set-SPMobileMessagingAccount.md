@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPMobileMessagingAccount
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Configures the specified mobile messaging account.
-
 
 
 ## SYNTAX
@@ -26,25 +19,20 @@ Set-SPMobileMessagingAccount [-Identity] <SPMobileMessagingAccountPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPMobileMessagingAccount cmdlet configures the specified mobile messaging account.
+The `Set-SPMobileMessagingAccount` cmdlet configures the specified mobile messaging account.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>Set-SPMobileMessagingAccount -WebApplication http://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
 ```
 
 This example changes the SMS mobile account settings of the Web application, http://sitename, to the following values:service name: SMSLink; service URL: https://www.adatum.com/Service/MessagingService.asmx; user ID: someone@example.com; and password: password1.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMobileMessagingAccount -WebApplication http://sitename -Identity SMS -ServiceName SMSLink -ServiceUrl https://www.adatum.com/Service/MessagingService.asmx-UserId someone@example.com -Password password1
-```
-
-This example changes the SMS mobile account settings of the Web application, http://sitename, to the following values:service name: SMSLink; service URL: https://www.adatum.com/Service/MessagingService.asmx; user ID: someone@example.com; and password: password1.
 
 ## PARAMETERS
 
@@ -92,7 +80,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -181,4 +169,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

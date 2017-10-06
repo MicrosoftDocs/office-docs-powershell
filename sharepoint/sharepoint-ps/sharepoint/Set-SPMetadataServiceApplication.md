@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the properties of a managed metadata service application.
 
+
 ## SYNTAX
 
 ### NoQuota
@@ -35,13 +36,14 @@ Set-SPMetadataServiceApplication [-Identity] <SPMetadataServiceCmdletPipeBind> [
 ```
 
 ## DESCRIPTION
-Use the Set-SPMetadataServiceApplication cmdlet to set the properties of a managed metadata service application.
+Use the `Set-SPMetadataServiceApplication` cmdlet to set the properties of a managed metadata service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------------EXAMPLE 1--------------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 1---------------------
 ```
 C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -HubUri "http://sitename" -SyndicationErrorReportEnabled
 ```
@@ -49,15 +51,8 @@ C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -HubUri "
 This example adds a content type hub to an existing managed metadata service application.
 It also enables error reporting when content types are imported.
 
-### --------------------EXAMPLE 1--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -HubUri "http://sitename" -SyndicationErrorReportEnabled
-```
 
-This example adds a content type hub to an existing managed metadata service application.
-It also enables error reporting when content types are imported.
-
-### --------------------EXAMPLE 2--------------------- (SharePoint Server 2013)
+### --------------------EXAMPLE 2---------------------
 ```
 C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -AdministratorAccount "contoso\username1" -FullAccessAccount "contoso\AppPoolAccount1,contoso\AppPoolAccount2" -RestrictedAccount "contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5" -ReadAccessAccount "contoso\AppPoolAccount6"
 ```
@@ -65,17 +60,8 @@ C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -Administ
 This example sets permissions on an existing managed metadata service application.
 
 If you use Windows PowerShell to set any of the account values, you should set all of them.
-The Set-SPMetadataServiceApplication cmdlet first erases all accounts, then adds the accounts that you specified.
+The `Set-SPMetadataServiceApplication` cmdlet first erases all accounts, then adds the accounts that you specified.
 
-### --------------------EXAMPLE 2--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPMetadataServiceApplication -Identity "MetadataServiceApp1" -AdministratorAccount "contoso\username1" -FullAccessAccount "contoso\AppPoolAccount1,contoso\AppPoolAccount2" -RestrictedAccount "contoso\AppPoolAccount3,contoso\AppPoolAccount4,contoso\AppPoolAccount5" -ReadAccessAccount "contoso\AppPoolAccount6"
-```
-
-This example sets permissions on an existing managed metadata service application.
-
-If you use Windows PowerShell to set any of the account values, you should set all of them.
-The Set-SPMetadataServiceApplication cmdlet first erases all accounts, then adds the accounts that you specified.
 
 ## PARAMETERS
 
@@ -101,7 +87,7 @@ Accept wildcard characters: False
 A comma-separated list of user accounts or service accounts in the format \<domain\>\\\<account\> that may create and run the service application.
 The accounts must already exist.
 
-If a value is set by using this parameter, any existing values for the FullAccessAccount, ReadAccessAccount, and RestrictedAccount parameters are removed.
+If a value is set by using this parameter, any existing values for the FullAccessAccount, ReadAccessAccount and RestrictedAccount parameters are removed.
 Consider setting all four parameters at the same time.
 
 ```yaml
@@ -142,7 +128,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -179,7 +165,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -291,7 +277,7 @@ Accept wildcard characters: False
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given read/write permission to the managed metadata service's term store and content type gallery.
 The accounts must already exist.
 
-If a value is set by using this parameter, any existing values for the AdministratorAccount, ReadAccessAccount, and RestrictedAccount parameters are removed.
+If a value is set by using this parameter, any existing values for the AdministratorAccount, ReadAccessAccount and RestrictedAccount parameters are removed.
 Consider setting all four parameters at the same time.
 
 ```yaml
@@ -325,10 +311,10 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedAccount
-Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery, and permission to write to open term sets and local term sets and to create new enterprise keywords.
+Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery and permission to write to open term sets and local term sets and to create new enterprise keywords.
 The accounts must already exist.
 
-If a value is set by using this parameter, any previous values for the FullAccessAccount, ReadAccessAccount, and AdministratorAccount parameters are removed.
+If a value is set by using this parameter, any previous values for the FullAccessAccount, ReadAccessAccount and AdministratorAccount parameters are removed.
 Consider setting all four parameters at the same time.
 
 ```yaml
@@ -400,7 +386,7 @@ Accept wildcard characters: False
 Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given read-only permission to the managed metadata service's term store and content type gallery.
 The accounts must already exist.
 
-If a value is set by using this parameter, any previous values for the FullAccessAccount, RestrictedAccount, and AdministratorAccount parameters are removed.
+If a value is set by using this parameter, any previous values for the FullAccessAccount, RestrictedAccount and AdministratorAccount parameters are removed.
 Consider setting all four parameters at the same time.
 
 ```yaml
@@ -418,7 +404,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -539,4 +525,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -21,14 +21,7 @@ Stop-SPTaxonomyReplication [-AssignmentCollection <SPAssignmentCollection>] -Cre
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2013)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### Example 1 (SharePoint Server 2016)
+### ------------------EXAMPLE-----------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -84,4 +77,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

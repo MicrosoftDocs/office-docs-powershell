@@ -7,7 +7,7 @@ schema: 2.0.0
 # Uninstall-SPInfoPathFormTemplate
 
 ## SYNOPSIS
-Removes a InfoPath 2013 form template from a farm.
+Removes a InfoPath form template from a farm.
 
 ## SYNTAX
 
@@ -17,25 +17,19 @@ Uninstall-SPInfoPathFormTemplate [-Identity] <SPFormTemplatePipeBind>
 ```
 
 ## DESCRIPTION
-The Uninstall-SPInfoPathFormTemplate cmdlet removes a specified InfoPath 2013 form template from a farm.
+The `Uninstall-SPInfoPathFormTemplate` cmdlet removes a specified InfoPath form template from a farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### --------------EXAMPLE----------------- (SharePoint Server 2013)
+### --------------EXAMPLE-----------------
 ```
 C:\PS>Uninstall-SPInfoPathFormTemplate -Identity formName.xsn
 ```
 
-This example removes an InfoPath 2013 form template from a farm.
+This example removes an InfoPath form template from a farm.
 
-### --------------EXAMPLE----------------- (SharePoint Server 2016)
-```
-C:\PS>Uninstall-SPInfoPathFormTemplate -Identity formName.xsn
-```
-
-This example removes an InfoPath 2013 form template from a farm.
 
 ## PARAMETERS
 
@@ -64,7 +58,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -81,7 +75,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -98,7 +92,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -123,4 +117,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

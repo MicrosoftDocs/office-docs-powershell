@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a collection of external users from the tenancy's folder.
 
+
 ## SYNTAX
 
 ```
@@ -16,23 +17,22 @@ Remove-SPOExternalUser [-Confirm] -UniqueIDs <String[]> [-WhatIf] [<CommonParame
 ```
 
 ## DESCRIPTION
-The Remove-SPOExternalUser cmdlet permanently removes a collection of external users from the tenancy's folder.
+The `Remove-SPOExternalUser` cmdlet permanently removes a collection of external users from the tenancy's folder.
 
 Users who are removed lose access to all tenant resources.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### -----------------------EXAMPLE-----------------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -101,6 +101,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Get-SPOExternalUser]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3567d973-e7cf-4550-826b-5b2ef7190a58(Office.15).aspx)
-

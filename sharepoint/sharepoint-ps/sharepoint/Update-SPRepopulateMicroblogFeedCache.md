@@ -35,37 +35,23 @@ Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy <SPService
 ```
 
 ## DESCRIPTION
-Use the Update-SPRepopulateMicroblogFeedCache cmdlet to refresh the feeds of a given user.
+Use the `Update-SPRepopulateMicroblogFeedCache` cmdlet to refresh the feeds of a given user.
 It can be used in scenarios where the automatic refresh has failed or when reverting to an old version of a user's personal site.
 
-When you refresh the cache, the Update-SPRepopulateMicroblogLMTCache cmdlet should be run first, and then the Update-SPRepopulateMicroblogFeedCache cmdlet second.
+When you refresh the cache, the `Update-SPRepopulateMicroblogLMTCache` cmdlet should be run first and then the `Update-SPRepopulateMicroblogFeedCache` cmdlet second.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
-### ------------EXAMPLE 1------------ (SharePoint Server 2013)
+### ------------EXAMPLE 1------------
 ```
 C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user>
 ```
 
 This example refreshes the feeds for a specific user by using the AccountName parameter.
 
-### ------------EXAMPLE 1------------ (SharePoint Server 2016)
-```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user>
-```
-
-This example refreshes the feeds for a specific user by using the AccountName parameter.
-
-### ------------EXAMPLE 2------------ (SharePoint Server 2013)
-```
-C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user> -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
-```
-
-This example refreshes the feeds for a specific user by using the AccountName parameter.
-
-### ------------EXAMPLE 2------------ (SharePoint Server 2016)
+### ------------EXAMPLE 2------------
 ```
 C:\PS>Update-SPRepopulateMicroblogFeedCache -ProfileServiceApplicationProxy a4f93369-0795-4aee-8a21-46f5ade29606 -AccountName contoso\<user> -SiteSubscription 0C37852B-34D0-418e-91C6-2AC25AF4BE5B
 ```
@@ -119,7 +105,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -256,4 +242,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Update-SPRepopulateMicroblogLMTCache]()
-

@@ -7,7 +7,8 @@ schema: 2.0.0
 # Reset-SPProjectPCSSettings
 
 ## SYNOPSIS
-Resets the settings for the Project Calculation Engine on Project Server 2013.
+Resets the settings for the Project Calculation Engine on Project Server.
+
 
 ## SYNTAX
 
@@ -17,24 +18,26 @@ Reset-SPProjectPCSSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-The Reset-SPProjectPCSSettings cmdlet lets you reset the settings that control the operations of the Project Calculation Engine on Project Server 2013.
+The `Reset-SPProjectPCSSettings` cmdlet lets you reset the settings that control the operations of the Project Calculation Engine on Project Server.
 The cmdlet requires you to identify the Project Server service application.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Reset-SPProjectPCSSettings -sa "Project Service Application"
 ```
 
 This cmdlet resets the settings for the Project Calculation Engine that is running on the "Project Service Application" service application.
 
+
 ## PARAMETERS
 
 ### -ServiceApplication
-The Project Server 2013 service application for which the settings are to be read.
+The Project Server service application for which the settings are to be read.
 
 ```yaml
 Type: PsiServiceApplicationPipeBind
@@ -56,7 +59,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -81,4 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

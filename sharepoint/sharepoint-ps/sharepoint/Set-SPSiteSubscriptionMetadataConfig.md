@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets the site subscription configuration settings for a specified Metadata Service application.
 
+
 ## SYNTAX
 
 ```
@@ -19,25 +20,20 @@ Set-SPSiteSubscriptionMetadataConfig [-Identity] <SPSiteSubscriptionPipeBind>
 ```
 
 ## DESCRIPTION
-Use the Set-SPSiteSubscriptionMetadataConfig cmdlet to set the site subscription-specific settings for a specified shared service application for the Metadata Service.
+Use the `Set-SPSiteSubscriptionMetadataConfig` cmdlet to set the site subscription-specific settings for a specified shared service application for the Metadata Service.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2013)
+### --------------------EXAMPLE---------------------
 ```
 C:\PS>Set-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -HubUri "http://sitename" -SyndicationErrorReportEnabled:$false
 ```
 
 This example sets the content type syndication hub and disables syndication error reporting for a specific site subscription on an existing partitioned Metadata Service application.
 
-### --------------------EXAMPLE--------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPSiteSubscriptionMetadataConfig -Identity $siteSubscriptionPipeBind1 -ServiceProxy "MetadataServiceProxy2" -HubUri "http://sitename" -SyndicationErrorReportEnabled:$false
-```
-
-This example sets the content type syndication hub and disables syndication error reporting for a specific site subscription on an existing partitioned Metadata Service application.
 
 ## PARAMETERS
 
@@ -84,7 +80,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -101,7 +97,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -117,6 +113,8 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotUnpublishAllPackages
+{{ Fill DoNotUnpublishAllPackages description}}
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -166,7 +164,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -191,4 +189,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

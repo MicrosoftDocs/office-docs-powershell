@@ -21,7 +21,7 @@ Upgrade-SPProfileServiceApplication [-Identity] <SPServiceApplicationPipeBind>
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Server 2016)
+### -----------EXAMPLE---------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -110,4 +110,3 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 ## NOTES
 
 ## RELATED LINKS
-

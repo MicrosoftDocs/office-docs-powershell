@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPManagedAccount
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Configures the managed account.
-
 
 
 ## SYNTAX
@@ -50,10 +43,10 @@ Set-SPManagedAccount [-Identity] <SPManagedAccountPipeBind> [-AssignmentCollecti
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Set-SPManagedAccount cmdlet sets the properties on the given managed account.
+The `Set-SPManagedAccount` cmdlet sets the properties on the given managed account.
 
 You can use this cmdlet to change the password expiration and notification settings for the managed account: Use the default parameter set.
 Additionally, you can use this cmdlet to change the password for the managed account to automatically generated passwords on a set schedule: Use the parameter set that includes the AutoGeneratePassword parameter.
@@ -64,23 +57,15 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE-----------------------
 ```
 C:\PS>$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
 
 C:\PS>Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
 ```
 
-This example displays an explicit managed account if it exists, and then attempts to update it to use automatically generated passwords.
+This example displays an explicit managed account if it exists and then attempts to update it to use automatically generated passwords.
 
-### ------------------EXAMPLE----------------------- (SharePoint Server 2016)
-```
-C:\PS>$m = Get-SPManagedAccount -Identity "DOMAINx\UserY"
-
-C:\PS>Set-SPManagedAccount -Identity $m -AutoGeneratePassword true
-```
-
-This example displays an explicit managed account if it exists, and then attempts to update it to use automatically generated passwords.
 
 ## PARAMETERS
 
@@ -173,7 +158,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -213,7 +198,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -328,7 +313,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -353,4 +338,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

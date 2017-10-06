@@ -7,7 +7,8 @@ schema: 2.0.0
 # Pause-SPProjectWebInstance
 
 ## SYNOPSIS
-Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server 2013 PSI or CSOM.
+Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server PSI or CSOM.
+
 
 ## SYNTAX
 
@@ -17,18 +18,22 @@ Pause-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind>
 ```
 
 ## DESCRIPTION
-Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server 2013 Project Server Interface (PSI) or Client Server Object Model (CSOM).
-While in this state the database is not actually read-only, and the Queue service can still write to the database, but it will not pick up any new jobs to process.
+Switches the specified instance of Project Web App to read-only, preventing any changes from being made through the Project Server Interface (PSI) or Client Server Object Model (CSOM).
+While in this state the database is not actually read-only and the Queue service can still write to the database, but it will not pick up any new jobs to process.
 This cmdlet is used to allow the queue to empty out before an administrator switches the database to read-only.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-###   (SharePoint Server 2016)
+### ------------------EXAMPLE-----------------------
 ```
-C:\PS>
+PS C:\> {{ Add example code here }}
 ```
+
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -56,7 +61,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -83,4 +88,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Resume-SPProjectWebInstance]()
-

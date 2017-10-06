@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-SPProjectPCSSettings
 
 ## SYNOPSIS
-Sets the settings for the Project Calculation Engine on Project Server 2013.
+Sets the settings for the Project Calculation Engine on Project Server.
 
 ## SYNTAX
 
@@ -20,20 +20,22 @@ Set-SPProjectPCSSettings [-ServiceApplication <PsiServiceApplicationPipeBind>]
 ```
 
 ## DESCRIPTION
-The Set-SPProjectPCSSettings cmdlet lets you configure the different settings that govern the operations of the Project Calculation Engine on Project Server 2013.
+The `Set-SPProjectPCSSettings` cmdlet lets you configure the different settings that govern the operations of the Project Calculation Engine on Project Server.
 The settings are per service application, which is identified by the Service Application parameter provided to this cmdlet.
 The settings have maximum and minimum values that are enforced by Project Server.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Set-SPProjectPCSSettings -sa "Project Service Application" -MaximumSessionsPerUser 500
 ```
 
 This example sets 500 as the maximum allowed Project Calculation Engine sessions that a user can open on the "Project Service Application" service application.
+
 
 ## PARAMETERS
 
@@ -60,7 +62,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -229,4 +231,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

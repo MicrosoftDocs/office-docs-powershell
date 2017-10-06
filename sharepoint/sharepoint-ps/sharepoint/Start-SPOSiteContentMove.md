@@ -36,7 +36,7 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-Preferred
 
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### ---------------EXAMPLE--------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -187,4 +187,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

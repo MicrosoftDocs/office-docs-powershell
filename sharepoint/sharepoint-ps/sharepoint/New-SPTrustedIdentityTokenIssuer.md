@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPTrustedIdentityTokenIssuer
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates an identity provider in the farm.
-
 
 
 ## SYNTAX
@@ -45,7 +38,7 @@ New-SPTrustedIdentityTokenIssuer -Description <String> -Name <String> -Realm <St
 ```
 
 ## DESCRIPTION
-The New-SPTrustedIdentityTokenIssuer cmdlet creates an identity provider in the farm.
+The `New-SPTrustedIdentityTokenIssuer` cmdlet creates an identity provider in the farm.
 This object is created and used only for setting this type of identity provider in a Web application.
 The specified claim type cannot be NTLM, Classic NTLM, Negotiate, or Classic Negotiate.
 For ASP.NET Membership provider or Role providers, no objects are persisted.
@@ -53,9 +46,10 @@ For security token service (STS) identity providers, this cmdlet creates and per
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------------- EXAMPLE--------------------------- (SharePoint Server 2013)
+### ----------------------- EXAMPLE---------------------------
 ```
 C:\PS>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
 
@@ -64,14 +58,6 @@ C:\PS>Set -SPWebApplication http://contoso.com -IdentityProvider (Get-SPTrustedI
 
 This example creates a new identity provider in the farm named LiveIDSTS.
 
-### ----------------------- EXAMPLE--------------------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPTrustedIdentityTokenIssuer -Name "LiveIDSTS" - Description "LiveID STS" -Certificate (Get-ChildItem"cert:Certificates (LocalComputer)\Personal\Certificates -Name "LiveID Cert") -SignInUrl http://int.contoso.com/ -IdentifierClaim "http://schemas.contoso.com/2007/05/Claims/Puid"
-
-C:\PS>Set -SPWebApplication http://contoso.com -IdentityProvider (Get-SPTrustedIdentityTokenIssuer "LiveIDSTS")
-```
-
-This example creates a new identity provider in the farm named LiveIDSTS.
 
 ## PARAMETERS
 
@@ -190,7 +176,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -242,6 +228,8 @@ Accept wildcard characters: False
 ```
 
 ### -MetadataEndPoint
+{{ Fill MetadataEndPoint Description}}
+
 ```yaml
 Type: Uri
 Parameter Sets: MetadataEndPointParameterSet
@@ -379,4 +367,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

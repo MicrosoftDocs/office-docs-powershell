@@ -7,7 +7,8 @@ schema: 2.0.0
 # New-SPStateServiceDatabase
 
 ## SYNOPSIS
-Creates and provisions a new state service database, and installs the state database schema into it.
+Creates and provisions a new state service database and installs the state database schema into it.
+
 
 ## SYNTAX
 
@@ -18,28 +19,23 @@ New-SPStateServiceDatabase [-Name] <String> [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-The New-SPStateServiceDatabase cmdlet creates and a new state service database.
+The `New-SPStateServiceDatabase` cmdlet creates and a new state service database.
 This cmdlet installs the session state database schema in the state service database.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 1-----------------
 ```
 C:\PS>Get-SPStateServiceApplication -name "State Service Application 1" | New-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
 ```
 
-This example creates a new state service database by using Windows authentication, and associates it with the provided service application.
+This example creates a new state service database by using Windows authentication and associates it with the provided service application.
 
-### --------------EXAMPLE 1----------------- (SharePoint Server 2016)
-```
-C:\PS>Get-SPStateServiceApplication -name "State Service Application 1" | New-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost"
-```
 
-This example creates a new state service database by using Windows authentication, and associates it with the provided service application.
-
-### --------------EXAMPLE 2----------------- (SharePoint Server 2013)
+### --------------EXAMPLE 2-----------------
 ```
 C:\PS>$cred = Get-Credential
 
@@ -50,16 +46,6 @@ This example creates a new state service database, a new state service applicati
 
 This example configures all the objects required to have State Service operational on a farm.
 
-### --------------EXAMPLE 2----------------- (SharePoint Server 2016)
-```
-C:\PS>$cred = Get-Credential
-
-C:\PS>Get-SPStateServiceApplication -name "State Service Application 1" | New-SPStateServiceDatabase -Name "statedata1" -DatabaseServer "localhost" -DatabaseCredentials $cred
-```
-
-This example creates a new state service database, a new state service application associated with the database and a new state service application proxy associated with the state service application proxy.
-
-This example configures all the objects required to have State Service operational on a farm.
 
 ## PARAMETERS
 
@@ -86,7 +72,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -187,4 +173,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

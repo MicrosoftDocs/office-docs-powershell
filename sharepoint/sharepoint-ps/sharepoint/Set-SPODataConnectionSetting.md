@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPODataConnectionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Sets or updates global properties for a Microsoft Business Connectivity Services connection.
-
 
 
 ## SYNTAX
@@ -37,33 +30,28 @@ Set-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind> -Name <S
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Set-SPODataConnectionSetting cmdlet to update the properties of an existing connection for a specific Business Connectivity Services service application.
+Use the `Set-SPODataConnectionSetting` cmdlet to update the properties of an existing connection for a specific Business Connectivity Services service application.
 
 This cmdlet applies to an on-premises environment only.
 You cannot use this command in the SharePoint Online Management Shell.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------EXAMPLE 1----------- (SharePoint Server 2013)
-```
-C:\PS>Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough" -ExtensionProvider "Contoso.ExtensionProvider.Server, Contoso.ExtensionProvider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31ba4812ca364d35"
-```
-
-This example updates the properties of Business Connectivity Services connection named ContosoServiceApp.
-
-### -------------EXAMPLE 1----------- (SharePoint Server 2016)
+### -------------EXAMPLE 1-----------
 ```
 C:\PS>Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough"
 ```
 
 This example updates the properties of Business Connectivity Services connection named ContosoServiceApp.
 
-### -------------EXAMPLE 2----------- (SharePoint Server 2013)
+
+### -------------EXAMPLE 2-----------
 ```
 C:\PS>$ConnectionVariable = Get-SPODataConnectionSetting -ServiceContext http://contoso -Name "ContosoServiceApp"
 
@@ -72,21 +60,14 @@ C:\PS>Set-SPODataConnectionSetting -Identity $ConnectionVariable -Authentication
 
 This example updates the properties of the Business Connectivity Services service connection named ContosoServiceApp.
 
-### -------------EXAMPLE 2----------- (SharePoint Server 2016)
-```
-C:\PS>$ConnectionVariable = Get-SPODataConnectionSetting -ServiceContext http://contoso -Name "ContosoServiceApp"
 
-C:\PS>Set-SPODataConnectionSetting -Identity $ConnectionVariable -AuthenticationMode "PassThrough"
-```
-
-This example updates the properties of the Business Connectivity Services service connection named ContosoServiceApp.
-
-### -------------EXAMPLE 3----------- (SharePoint Server 2013)
+### -------------EXAMPLE 3-----------
 ```
 C:\PS>Set-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -AuthenticationMode "PassThrough" -ExtensionProvider ""
 ```
 
-This example updates the properties of Business Connectivity Services connection named ContosoServiceApp, the authentication mode has been changed, and extension provider value has been cleared.
+This example updates the properties of Business Connectivity Services connection named ContosoServiceApp, the authentication mode has been changed and extension provider value has been cleared.
+
 
 ## PARAMETERS
 
@@ -145,7 +126,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -188,7 +169,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -204,22 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionProvider
-**Below Content Applies To:**SharePoint Server 2013
-
-Extends the functionality provided by the OData connector in Business Connectivity Service as well as provides the fully qualified assembly name of an OData extension provider.
-Fully qualified assembly name should contain following parameters in this order:
-
-Namespace.Class, Assembly Name, Version, Culture and Public Key.
-E.g.
-"Contoso.ExtensionProvider.Server, Contoso.ExtensionPRovider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31ba4812ca364d35".
-To clear the value of ExtensionProvider, provide an empty string for example, "".
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 {{Fill ExtensionProvider Description}}
-
 
 
 ```yaml
@@ -279,7 +245,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -310,4 +276,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [New-SPODataConnectionSetting]()
 
 [Remove-SPODataConnectionSetting]()
-

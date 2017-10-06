@@ -17,7 +17,7 @@ Upgrade-SPOSite [-Confirm] -Identity <SpoSitePipeBind> [-NoEmail] [-QueueOnly] [
 ```
 
 ## DESCRIPTION
-The Upgrade-SPOSite cmdlet activates the upgrade process for the specified SharePoint Online site collection.
+The `Upgrade-SPOSite` cmdlet activates the upgrade process for the specified SharePoint Online site collection.
 This cmdlet can also be used to resume failed upgrades.
 
 When upgrade is initiated, it can either be a build-to-build or version-to-version upgrade.
@@ -30,15 +30,13 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   (SharePoint Online)
+### -----------EXAMPLE---------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -157,6 +155,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Request-SPOUpgradeEvaluationSite]()
 
 [New-SPOSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e45078d4-2933-4001-a27b-aff9e6b1eb9d(Office.15).aspx)
-

@@ -7,7 +7,8 @@ schema: 2.0.0
 # Repair-SPProjectWebInstance
 
 ## SYNOPSIS
-Re-queues specific Project Server 2013 queue items that may have fallen out of the queue.
+Re-queues specific Project Server queue items that may have fallen out of the queue.
+
 
 ## SYNTAX
 
@@ -17,19 +18,21 @@ Repair-SPProjectWebInstance [-Identity] <ProjectInstancePipeBind> -RepairRule <P
 ```
 
 ## DESCRIPTION
-The Repair-SPProjectWebInstance cmdlet re-queues specific Project Server queue items that may have fallen out of the queue.
+The `Repair-SPProjectWebInstance` cmdlet re-queues specific Project Server queue items that may have fallen out of the queue.
 This includes triggers that may have been missed and queue jobs that were enqueued on a server that was subsequently removed from the farm.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE-----------------------
 ```
 C:\PS>Repair-SPProjectWebInstance -Identity http://contoso-appsrv/PWA -RepairRule QueueMissingTriggers
 ```
 
 This example enqueues any missing triggers for the Project Web App instance at http://contoso-appsrv/PWA.
+
 
 ## PARAMETERS
 
@@ -72,7 +75,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -99,4 +102,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Test-SPProjectWebInstance]()
-

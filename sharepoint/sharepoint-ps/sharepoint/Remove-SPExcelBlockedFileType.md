@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes an entry from the list of file types that are prevented from loading on Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -18,14 +19,15 @@ Remove-SPExcelBlockedFileType [-Identity] <SPExcelBlockedFileTypePipeBind>
 ```
 
 ## DESCRIPTION
-The Remove-SPExcelBlockedExcelFileType cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application. 
+The `Remove-SPExcelBlockedExcelFileType` cmdlet removes an entry from the list of file types that are prevented from loading on an Excel Services Application Web service application. 
 Excel Services Application does not load any file types that correspond to a file type that is on this list.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE---------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove-SPExcelBlockedExcelFileType -FileType XLSX
 ```
@@ -33,6 +35,7 @@ C:\PS>Get-SPExcelServiceApplication -Identity "MyExcelService" | Remove-SPExcelB
 This example removes the .xlsx file name extensions from the list of file types that are prevented from loading by Excel Services Application.
 
 After the .xlsx file name extension is removed from the list, these extensions are allowed to load in Excel Services Application.
+
 
 ## PARAMETERS
 
@@ -79,7 +82,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -96,7 +99,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -113,7 +116,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -138,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

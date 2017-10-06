@@ -19,43 +19,48 @@ Set-SPProjectOdataConfiguration [-AcceptCountRequests <Boolean>] [-AcceptProject
 ```
 
 ## DESCRIPTION
-The Set-SPProjectOdataConfiguration cmdlet sets the settings for how the OData service is configured for an instance of Project Web App.
-It allows the user to configure the settings for a list of parameters that specify paging, the enabling of various querying functionality, whether MaxResultsPerCollection has been enabled, and whether verbose errors are enabled.
+The `Set-SPProjectOdataConfiguration` cmdlet sets the settings for how the OData service is configured for an instance of Project Web App.
+It allows the user to configure the settings for a list of parameters that specify paging, the enabling of various querying functionality, whether MaxResultsPerCollection has been enabled and whether verbose errors are enabled.
 Paging can be specified per entity.
 If no paging overrides exist for a given entity, the DefaultMaxPageSize parameter is used. 
 MaxResultsPerCollection cannot be used in conjunction with paging.
 
 For permissions and the most current information about Windows PowerShell for Project Server, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251833 (http://go.microsoft.com/fwlink/p/?LinkId=251833).
 
+
 ## EXAMPLES
 
-### ----------------------EXAMPLE----------------------- (SharePoint Server 2016)
+### ----------------------EXAMPLE 1-----------------------
 ```
 C:\PS>Set-SPProjectOdataConfiguration -ClearEntityPageSizeOverrides
 ```
 
 This example clears any page size overrides that have been set for any specific entities.
 
-### ----------------------EXAMPLE 1----------------------- (SharePoint Server 2016)
+
+### ----------------------EXAMPLE 2-----------------------
 ```
 C:\PS>Set-SPProjectOdataConfiguration -AcceptProjectionRequests $true
 ```
 
 This example sets AcceptProjectionRequests to true.
 
-### ----------------------EXAMPLE 2----------------------- (SharePoint Server 2016)
+
+### ----------------------EXAMPLE 3-----------------------
 ```
 C:\PS>Set-SPProjectOdataConfiguration -DefaultMaxPageSize 50
 ```
 
 This example sets the default maximum page size to 50 rows.
 
-### ----------------------EXAMPLE 3----------------------- (SharePoint Server 2016)
+
+### ----------------------EXAMPLE 4-----------------------
 ```
 C:\PS>Set-SPProjectOdataConfiguration -EntitySetName Assignments -PageSizeOverride 100
 ```
 
 This example sets the page size override for the Assignments entity.
+
 
 ## PARAMETERS
 
@@ -99,7 +104,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -222,4 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

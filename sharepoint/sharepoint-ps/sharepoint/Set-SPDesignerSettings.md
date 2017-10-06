@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPDesignerSettings
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Sets SharePoint Designer 2013 features.
-
+Sets SharePoint Designer features.
 
 
 ## SYNTAX
@@ -29,25 +22,20 @@ Set-SPDesignerSettings [-WebApplication] <SPWebApplicationPipeBind> [-AllowDesig
 ```
 
 ## DESCRIPTION
-The Set-SPDesignerSettings cmdlet sets SharePoint Designer 2013 features on a specified Web application when the WebApplicaton is used.
+The `Set-SPDesignerSettings` cmdlet sets SharePoint Designer features on a specified Web application when the WebApplicaton is used.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE-------------------- (SharePoint Server 2013)
+### -------------------EXAMPLE--------------------
 ```
 C:\PS>Set-SPDesignerSettings -WebApplication http://constoso -AllowRevertFromTemplate $False -AllowMasterPageEditing $False
 ```
 
 This example disables the ability to detach pages from existing site definitions and to edit master pages and page layouts.
 
-### -------------------EXAMPLE-------------------- (SharePoint Server 2016)
-```
-C:\PS>Set-SPDesignerSettings -WebApplication http://constoso -AllowRevertFromTemplate $False -AllowMasterPageEditing $False
-```
-
-This example disables the ability to detach pages from existing site definitions and to edit master pages and page layouts.
 
 ## PARAMETERS
 
@@ -68,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDesigner
-Specifies whether to allow users to edit sites in a web application by using SharePoint Designer 2013.
+Specifies whether to allow users to edit sites in a web application by using SharePoint Designer.
 The default value is True
 
 ```yaml
@@ -85,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMasterPageEditing
-Specifies whether to allow site administrators to customize master pages and layout pages using SharePoint Designer 2013.
+Specifies whether to allow site administrators to customize master pages and layout pages using SharePoint Designer.
 The default value is True.
 
 ```yaml
@@ -102,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowRevertFromTemplate
-Specifies whether to allow site administrators to detach pages from the original site definition using SharePoint Designer 2013.
+Specifies whether to allow site administrators to detach pages from the original site definition using SharePoint Designer.
 The default value is True.
 
 ```yaml
@@ -125,7 +113,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -142,7 +130,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -158,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -ShowURLStructure
-Specifies whether to allow site administrators to manage the URL structure of their Web sites by using SharePoint Designer 2013.
+Specifies whether to allow site administrators to manage the URL structure of their Web sites by using SharePoint Designer.
 The default value is True.
 
 ```yaml
@@ -176,7 +164,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -281,4 +269,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

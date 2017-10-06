@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Removes a synchronization connection.
 
+
 ## SYNTAX
 
 ```
@@ -20,31 +21,24 @@ Remove-SPProfileSyncConnection [-ProfileServiceApplication] <SPServiceApplicatio
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server 2010 with Service Pack 1 (SP1) and SharePoint Foundation 2010 with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
 
-Use the Remove-SPProfileSyncConnection cmdlet to remove a User Profile synchronization connection.
-
-For additional information about profile synchronization connections, see
+Use the `Remove-SPProfileSyncConnection` cmdlet to remove a User Profile synchronization connection.
 
 This cmdlet only works with Active Directory Synchronization Connections
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE-------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>Remove-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
 ```
 
 This example removes a user from the fabrikam domain using a specific user profile service application.
 
-### ------------EXAMPLE-------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPProfileSyncConnection -ProfileServiceApplication 888ds256-9ad9-53a9-f135-99eecd245670b -ConnectionDomain "Fabrikam" -ConnectionUserName "Testupa" -ConnectionPassword convertto-securestring "Password1" -asplaintext -force -ConnectionSynchronizationOU "OU=SharePoint Users,DC=fabrikam,DC=com"
-```
-
-This example removes a user from the fabrikam domain using a specific user profile service application.
 
 ## PARAMETERS
 
@@ -152,7 +146,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -169,7 +163,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -218,7 +212,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -243,4 +237,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -7,7 +7,8 @@ schema: 2.0.0
 # Set-SPAccessServiceApplication
 
 ## SYNOPSIS
-Sets global properties of an existing Access Services application in SharePoint Server 2013.
+Sets global properties of an existing Access Services application in SharePoint Server.
+
 
 ## SYNTAX
 
@@ -22,62 +23,41 @@ Set-SPAccessServiceApplication [-Identity] <SPAccessServiceApplicationPipeBind>
 ```
 
 ## DESCRIPTION
-The Set-SPAccessServiceApplication cmdlet sets the global runtime properties of an existing Access Services application in SharePoint Server 2013.
+The `Set-SPAccessServiceApplication` cmdlet sets the global runtime properties of an existing Access Services application in SharePoint Server.
 The changes made to the properties by using this cmdlet affect all machines in the farm on which this Access Services application runs.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------EXAMPLE 1------------------ (SharePoint Server 2013)
+### ------------EXAMPLE 1------------------
 ```
 C:\PS>Set-SPAccessServiceApplication -identity "MyAccessService" -requestDurationMax 100
 ```
 
 This example sets the Access Services application named MyAccessService to let requests take up to 100 seconds before they time out.
 
-### ------------EXAMPLE 1------------------ (SharePoint Server 2016)
-```
-C:\PS>Set-SPAccessServiceApplication -identity "MyAccessService" -requestDurationMax 100
-```
 
-This example sets the Access Services application named MyAccessService to let requests take up to 100 seconds before they time out.
-
-### ------------EXAMPLE 2------------------ (SharePoint Server 2013)
+### ------------EXAMPLE 2------------------
 ```
 C:\PS>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -sessionsPerUserMax 5
 ```
 
 This example sets every Access Services application in the farm to allow up to five sessions per user on each back-end application server computer on which Access Services runs.
 
-First, every Access Services application is retrieved, and then a new value is set by using the Set-SPAccessServiceApplication cmdlet.
+First, every Access Services application is retrieved and then a new value is set by using the `Set-SPAccessServiceApplication` cmdlet.
 
-### ------------EXAMPLE 2------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPAccessServiceApplication | Set-SPAccessServiceApplication -sessionsPerUserMax 5
-```
 
-This example sets every Access Services application in the farm to allow up to five sessions per user on each back-end application server computer on which Access Services runs.
-
-First, every Access Services application is retrieved, and then a new value is set by using the Set-SPAccessServiceApplication cmdlet.
-
-### ------------EXAMPLE 3------------------ (SharePoint Server 2013)
+### ------------EXAMPLE 3------------------
 ```
 C:\PS>Get-SPAccessServiceApplication | where {$_.rowsMax -gt 50000 } | Set-SPAccessServiceApplication -rowsMax 50000
 ```
 
-This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query, and then sets the service application to allow up to 50,000 rows only.
+This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query and then sets the service application to allow up to 50,000 rows only.
 
-First, every Access Services application that has more than 50,000 rows is retrieved, and then a new value is set by using the Set-SPAccessServiceApplication cmdlet.
+First, every Access Services application that has more than 50,000 rows is retrieved and then a new value is set by using the `Set-SPAccessServiceApplication` cmdlet.
 
-### ------------EXAMPLE 3------------------ (SharePoint Server 2016)
-```
-C:\PS>Get-SPAccessServiceApplication | where {$_.rowsMax -gt 50000 } | Set-SPAccessServiceApplication -rowsMax 50000
-```
-
-This example sets every Access Services application in the farm that allows more than 50,000 rows to be returned from, or used in, a query, and then sets the service application to allow up to 50,000 rows only.
-
-First, every Access Services application that has more than 50,000 rows is retrieved, and then a new value is set by using the Set-SPAccessServiceApplication cmdlet.
 
 ## PARAMETERS
 
@@ -106,7 +86,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -162,7 +142,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -426,7 +406,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -467,4 +447,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

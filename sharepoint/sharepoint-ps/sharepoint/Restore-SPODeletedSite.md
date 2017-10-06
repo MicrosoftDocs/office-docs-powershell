@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Restores a SharePoint Online deleted site collection from the Recycle Bin.
 
+
 ## SYNTAX
 
 ```
@@ -20,12 +21,16 @@ You must be a SharePoint Online global administrator and a site collection admin
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ----------------------EXAMPLE-----------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -79,6 +84,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPODeletedSite]()
 
 [Remove-SPODeletedSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/fad9d40f-c3b4-4efb-ba73-b428688a2682(Office.15).aspx)
-

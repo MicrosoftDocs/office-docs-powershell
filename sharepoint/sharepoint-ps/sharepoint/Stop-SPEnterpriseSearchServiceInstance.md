@@ -17,26 +17,6 @@ Stop-SPEnterpriseSearchServiceInstance [-Identity] <SearchServiceInstancePipeBin
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-This cmdlet stops an instance of a search service.
-
-Before you can stop a search service instance, you must remove all search topology components on the associated server from the active topology.
-This can be done in three ways:
-
-- Removing components from the search topology. If there are items in the search index, see 
-      Manage search components in SharePoint Server 2013and 
-      Manage the index component in SharePoint Server 2013. If there are no items in the search index, see 
-      Change the default search topology in SharePoint Server 2013.
-- Moving components to another server. If there are items in the search index, see 
-      Manage search components in SharePoint Server 2013and 
-      Manage the index component in SharePoint Server 2013. If there are no items in the search index, see 
-      Change the default search topology in SharePoint Server 2013.
-- Removing the search service application. For more information, see 
-      Remove-SPEnterpriseSearchServiceApplication
-
-**Below Content Applies To:**SharePoint Server 2016
-
 This cmdlet stops an instance of a search service.
 
 Before you can stop a search service instance, you must remove all search topology components on the associated server from the active topology. 
@@ -44,25 +24,18 @@ This can be done in three ways:
 
 - Removing components from the search topology
 - Moving components to another server.  For more information, see .
-- Removing the search service application.  For more information, see Remove-SPEnterpriseSearchServiceApplication
-
+- Removing the search service application.  For more information, see `Remove-SPEnterpriseSearchServiceApplication`
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
-```
-
-This example stops the local search service instance.
-
-### ------------------EXAMPLE------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Get-SPEnterpriseSearchServiceInstance -Local | Stop-SPEnterpriseSearchServiceInstance
 ```
 
 This example stops the local search service instance.
+
 
 ## PARAMETERS
 
@@ -91,7 +64,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -108,7 +81,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +98,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -150,6 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/985591b0-951f-4274-aead-a184398bba41(Office.15).aspx)
-

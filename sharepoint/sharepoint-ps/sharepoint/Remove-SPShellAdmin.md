@@ -7,14 +7,7 @@ schema: 2.0.0
 # Remove-SPShellAdmin
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Removes a user from the SharePoint_Shell_Access role.
-
 
 
 ## SYNTAX
@@ -25,7 +18,7 @@ Remove-SPShellAdmin [-UserName] <String> [-AssignmentCollection <SPAssignmentCol
 ```
 
 ## DESCRIPTION
-Use the Remove-SPShellAdmin cmdlet to remove a user from the SharePoint_Shell_Access role in a specified database.
+Use the `Remove-SPShellAdmin` cmdlet to remove a user from the SharePoint_Shell_Access role in a specified database.
 
 When you use this cmdlet to remove a user from the role, you do not remove the user from the WSS_ADMIN_WPG group in the target database.
 
@@ -36,21 +29,16 @@ When you run this cmdlet to add a user to the SharePoint_Shell_Access role, the 
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -----------------------EXAMPLE----------------------------- (SharePoint Server 2013)
+### -----------------------EXAMPLE-----------------------------
 ```
 C:\PS>Remove-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
 ```
 
 This example removes an existing user named User1 from the SharePoint_Shell_Access role in the database specified.
 
-### -----------------------EXAMPLE----------------------------- (SharePoint Server 2016)
-```
-C:\PS>Remove-SPShellAdmin -UserName CONTOSO\User1 -database 4251d855-3c15-4501-8dd1-98f960359fa6
-```
-
-This example removes an existing user named User1 from the SharePoint_Shell_Access role in the database specified.
 
 ## PARAMETERS
 
@@ -77,7 +65,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -94,7 +82,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -128,7 +116,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -153,4 +141,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

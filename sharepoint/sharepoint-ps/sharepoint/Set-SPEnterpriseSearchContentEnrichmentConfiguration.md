@@ -7,14 +7,7 @@ schema: 2.0.0
 # Set-SPEnterpriseSearchContentEnrichmentConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Stores the specified content enrichment configuration to the Search service application.
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Stores the specified content enrichment configuration to the search service application.
-
 
 
 ## SYNTAX
@@ -32,20 +25,10 @@ Both a ContentEnrichmentConfiguration and a SearchServiceApplication object have
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE 1 ------------------ (SharePoint Server 2013)
-```
-$config = New-SPEnterpriseSearchContentEnrichmentConfiguration$config.Endpoint = "http://server/service"$config.InputProperties = "Title", "Url"$config.OutputProperties = "Title", "Url"$ssa = Get-SPEnterpriseSearchServiceApplicationSet-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
-```
-
-This example creates a new ContentEnrichmentConfiguration object.
-The URL of the external web service is stored in the $config.Endpoint property.
-The new ContentEnrichmentConfiguration is configured to use Title and URL, which are the managed properties that you want to send to the external web service.
-It is also configured to expect the external web service to output the same managed properties.
-The SearchServiceApplication object is retrieved, and used for storing the newly created ContentEnrichmentConfiguration.
-
-### ------------------EXAMPLE 1 ------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 1 ------------------
 ```
 C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 $config.Endpoint = "http://server/service"
@@ -59,28 +42,10 @@ This example creates a new ContentEnrichmentConfiguration object.
 The URL of the external web service is stored in the $config.Endpoint property.
 The new ContentEnrichmentConfiguration is configured to use Title and URL, which are the managed properties that you want to send to the external web service. 
 It is also configured to expect the external web service to output the same managed properties. 
-The SearchServiceApplication object is retrieved, and used for storing the newly created ContentEnrichmentConfiguration.
-
-### ------------------EXAMPLE 2 ------------------ (SharePoint Server 2013)
-```
-$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
-
-$config.Endpoint = "http://server/service"$config.InputProperties = "Title"$config.OutputProperties = "Title"$config.Trigger = 'Contains(Title, "Example")'
-
-$ssa = Get-SPEnterpriseSearchServiceApplication
+The SearchServiceApplication object is retrieved and used for storing the newly created ContentEnrichmentConfiguration.
 
 
-Set-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa -ContentEnrichmentConfiguration $config
-```
-
-This example creates a new ContentEnrichmentConfiguration object.
-The URL of the external web service is stored in the $config.Endpoint property.
-The new ContentEnrichmentConfiguration is configured to use Title, which is the managed property that you want to send to the external web service.
-It is also configured to expect the external web service to output the same managed property.
-The $config.Trigger is set to only send the managed property when the Boolean trigger expression is true, in this case when the managed property Title contains the string "Example".
-The SearchServiceApplication object is retrieved, and used for storing the newly created ContentEnrichmentConfiguration.
-
-### ------------------EXAMPLE 2 ------------------ (SharePoint Server 2016)
+### ------------------EXAMPLE 2 ------------------
 ```
 C:\PS>$config = New-SPEnterpriseSearchContentEnrichmentConfiguration
 $config.Endpoint = "http://server/service"
@@ -97,6 +62,7 @@ The new ContentEnrichmentConfiguration is configured to use Title, which is the 
 It is also configured to expect the external web service to output the same managed property. 
 The $config.Trigger is set to only send the managed property when the Boolean trigger expression is true, in this case when the managed property Title contains the string "Example".
 The SearchServiceApplication object is retrieved, and used for storing the newly created ContentEnrichmentConfiguration.
+
 
 ## PARAMETERS
 
@@ -139,7 +105,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -156,7 +122,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -173,7 +139,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -199,11 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/7d803d1c-0b1d-4205-acdb-75d2878b6cfe(Office.15).aspx)
-
 [Get-SPEnterpriseSearchContentEnrichmentConfiguration]()
 
 [New-SPEnterpriseSearchContentEnrichmentConfiguration]()
 
 [Remove-SPEnterpriseSearchContentEnrichmentConfiguration]()
-

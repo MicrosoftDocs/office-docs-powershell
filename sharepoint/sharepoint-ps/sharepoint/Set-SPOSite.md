@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Sets or updates one or more properties' values for a site collection.
 
+
 ## SYNTAX
 
 ### ParamSet2
@@ -42,40 +43,30 @@ Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-DisableSharingForNonOwner
 Set-SPOSite [-Identity] <SpoSitePipeBind> [-Confirm] [-WhatIf] [-NewUrl <String>] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
-For any parameters that are passed in, the Set-SPOSite cmdlet sets or updates the setting for the site collection identified by parameter Identity.
+For any parameters that are passed in, the `Set-SPOSite` cmdlet sets or updates the setting for the site collection identified by parameter Identity.
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### --------------------EXAMPLE---------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
-
-###   (SharePoint Online)
-```
-
-```
-
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
 ### -EnablePWA
 Determines whether site can include Project Web App.
-For more information about Project Web App ,see Plan SharePoint groups in Project Server 2013.
+For more information about Project Web App, see Plan SharePoint groups in Project Server.
 
 ```yaml
 Type: Boolean
@@ -140,7 +131,7 @@ Accept wildcard characters: False
 
 ### -DenyAddAndCustomizePages
 Determines whether the Add And Customize Pages right is denied on the site collection.
-For more information about permission levels, see User permissions and permission levels in SharePoint 2013.
+For more information about permission levels, see User permissions and permission levels in SharePoint.
 
 ```yaml
 Type: Boolean
@@ -194,7 +185,7 @@ Accept wildcard characters: False
 Sets the lock state on a site.
 Valid values are: NoAccess and Unlock.
 When the lock state of a site is NoAccess, all traffic to the site will be blocked.
-If parameter NoAccessRedirectUrl in the Set-SPOTenant cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
+If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
 
 ```yaml
@@ -245,7 +236,7 @@ Accept wildcard characters: False
 ### -ResourceQuota
 Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
-For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint 2010 (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
+For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
 ```yaml
 Type: Double
@@ -296,8 +287,7 @@ Accept wildcard characters: False
 Determines what level of sharing is available for the site.
 The possible values are: Disabled - external user sharing (share by email) and guest link sharing are both disabled, ExternalUserSharingOnly - external user sharing (share by email) is enabled, but guest link sharing is disabled, or ExternalUserAndGuestSharing - external user sharing (share by email) and guest link sharing are both enabled.
 
-For more information about sharing, see .
-Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
 ```yaml
 Type: SharingCapabilities
@@ -600,6 +590,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Set-SPOTenant]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/de2a6a72-cff9-4afd-9144-97a28fcdbe40(Office.15).aspx)
-
