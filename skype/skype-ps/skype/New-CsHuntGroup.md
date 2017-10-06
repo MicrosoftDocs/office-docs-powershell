@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsHuntGroup
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Creates new Call Queue in your Skype for Business Online organization. Call Queues are part of Phone System in Office 365.
 
 ## SYNTAX
 
@@ -48,7 +48,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -64,7 +64,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -80,7 +80,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -433,4 +433,4 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## NOTES
 
 ## RELATED LINKS
-
+[Create a Phone System call queue](https://support.office.com/en-us/article/Create-a-Phone-System-call-queue-67ccda94-1210-43fb-a25b-7b9785f8a061)
