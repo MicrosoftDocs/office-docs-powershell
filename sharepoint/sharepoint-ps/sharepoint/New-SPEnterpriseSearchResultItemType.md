@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new result item type.
 
+
 ## SYNTAX
 
 ### New
@@ -32,22 +33,7 @@ New-SPEnterpriseSearchResultItemType [[-Name] <String>] [[-Rules] <PropertyRuleC
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-Use the New-SPEnterpriseSearchResultItemType cmdlet to create a new result item type.
-
-Result item types enable you to change the look of search results based on the type of result.
-You start by defining a collection of rules, which will be evaluated against the properties of results.
-Then you define the display template to use for rendering that type of result.
-Once you have created the result item type, results matching the rules of the result item type will render using the specified display template.
-
-Example use cases:
-
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
-
-**Below Content Applies To:**SharePoint Server 2016
-
-Use the New-SPEnterpriseSearchResultItemType cmdlet to create a new result item type.
+Use the `New-SPEnterpriseSearchResultItemType` cmdlet to create a new result item type.
 
 Result item types enable you to change the look of search results based on the type of result.
 You start by defining a collection of rules, which will be evaluated against the properties of results.
@@ -64,19 +50,9 @@ Example use cases:
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 
-
 ## EXAMPLES
 
-### --------EXAMPLE-------- (SharePoint Server 2013)
-```
-$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"$rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )$ruleCollection = Get-SPEnterpriseSearchPropertyRuleCollection$ruleCollection.Add( $rule )$displayProperties = "WorkId,Rank,Title,Size,Path,Description,SiteName,HitHighlightedSummary,HitHighlightedProperties,ViewsLifeTime"$displaytemplateUrl = "~sitecollection/_catalogs/masterpage/Display Templates/Search/Item_MyCustomDisplayTemplate.js"$web = Get-SPWeb "UrlOfTheSite"$tenantOwner = Get-SPEnterpriseSearchOwner -Level SPSite -SPWeb $web$svcAppProxy = Get-SPEnterpriseSearchServiceApplicationProxyNew-SPEnterpriseSearchResultItemType -SearchApplicationProxy $svcAppProxy `-Name "CustomResultType" `-Rules $ruleCollection `-RulePriority 1 -DisplayProperties $displayProperties `-DisplayTemplateUrl $displaytemplateUrl `-Owner $tenantOwner
-```
-
-This example first defines the rule to apply to the search results in order to target results with a specific property, and adds the rule to the rule collection.
-Thereafter the example defines the properties of the result that shall be displayed and the URL to the display template governing the appearance of the rendered results.
-Finally, the example defines the rule item type by its name, the rule collection, the display properties, the display template, and the tenant owner.
-
-### --------EXAMPLE-------- (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$rule = Get-SPEnterpriseSearchPropertyRule -PropertyName "ContentTypeId" -Operator "StartsWith"
 $rule.AddValue( "0x010063C2F478ACC511DFB869B5BFDFD720851252" )
@@ -101,9 +77,9 @@ New-SPEnterpriseSearchResultItemType -SearchApplicationProxy $svcAppProxy `
 -Owner $tenantOwner
 ```
 
-This example first defines the rule to apply to the search results in order to target results with a specific property, and adds the rule to the rule collection.
+This example first defines the rule to apply to the search results in order to target results with a specific property and adds the rule to the rule collection.
 Thereafter the example defines the properties of the result that shall be displayed and the URL to the display template governing the appearance of the rendered results.
-Finally, the example defines the rule item type by its name, the rule collection, the display properties, the display template, and the tenant owner.
+Finally, the example defines the rule item type by its name, the rule collection, the display properties, the display template and the tenant owner.
 
 ## PARAMETERS
 
@@ -299,7 +275,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -316,7 +292,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -384,7 +360,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -410,8 +386,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/45fae4e2-4ca1-4edc-b16a-1b9ea67d16cd(Office.15).aspx)
-
 [Set-SPEnterpriseSearchResultItemType]()
 
 [Get-SPEnterpriseSearchResultItemType]()
@@ -423,4 +397,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPEnterpriseSearchPropertyRule]()
 
 [Get-SPEnterpriseSearchPropertyRuleCollection]()
-

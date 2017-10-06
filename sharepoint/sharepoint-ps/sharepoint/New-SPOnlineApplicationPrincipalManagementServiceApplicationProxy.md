@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-This is the introduction.
-
-**Below Content Applies To:**SharePoint Server 2016
-
 {{Fill in the Synopsis}}
-
 
 
 ## SYNTAX
@@ -26,29 +19,18 @@ New-SPOnlineApplicationPrincipalManagementServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:**SharePoint Server 2013
-
-Enter detail description
-
-**Below Content Applies To:**SharePoint Server 2016
-
 {{Fill in the Description}}
-
 
 
 ## EXAMPLES
 
-### Add code example (SharePoint Server 2013)
-```
-C:\PS>
-```
-
-### Example 1 (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -163,4 +145,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

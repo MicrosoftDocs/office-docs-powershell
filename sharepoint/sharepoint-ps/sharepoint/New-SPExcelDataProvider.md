@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new safe data provider to Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -18,28 +19,31 @@ New-SPExcelDataProvider -ExcelServiceApplication <SPExcelServiceApplicationPipeB
 ```
 
 ## DESCRIPTION
-The New-SPExcelDataProvider cmdlet adds a data provider to the list of safe data providers in an Excel Services Application Web service application.
+The `New-SPExcelDataProvider` cmdlet adds a data provider to the list of safe data providers in an Excel Services Application Web service application.
 Excel Services Application refreshes external data connections only if the data provider for a connection is on the list of safe data providers. 
 Excel Services Application includes a set of common data providers on this list.
 Therefore, using cmdlets to modify safe data providers typically occurs only in custom data connection scenarios.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------
 ```
 C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for the Excel Services Application Web service application named MyExcelService.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### ------------------EXAMPLE 2------------------
 ```
 C:\PS>Get-SPExcelServiceApplication | New-SPExcelDataProvider -providerID "CustomOLEDB" -ProviderType OleDb -description "This is a custom OLEDB provider"
 ```
 
 This example adds a new custom OLEDB data provider to the list of safe data providers for all Excel Services Application Web service application in the farm.
+
 
 ## PARAMETERS
 
@@ -105,7 +109,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -122,7 +126,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -157,7 +161,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -182,4 +186,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -9,23 +9,27 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ```
 New-SPOSdnProvider [-Identity] <String> [-License] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 (SharePoint Online)
+### ------------------EXAMPLE------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
@@ -108,4 +112,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new site hit rule for a search application.
 
+
 ## SYNTAX
 
 ```
@@ -18,27 +19,22 @@ New-SPEnterpriseSearchSiteHitRule -Behavior <String> -HitRate <String>
 ```
 
 ## DESCRIPTION
-The New-SPEnterpriseSearchSiteHitRule cmdlet sets the maximum limits for crawling a site.
+The `New-SPEnterpriseSearchSiteHitRule` cmdlet sets the maximum limits for crawling a site.
 The new site hit rule is used by all search service applications on the current farm.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------EXAMPLE------------------ (SharePoint Server 2013)
-```
-New-SPEnterpriseSearchSiteHitRule -Identity myHost -Behavior 0 -HitRate 40
-```
-
-This example creates a new site hit rule on the myHost host that limits to 40 the number of simultaneous requests.
-
-### ----------------EXAMPLE------------------ (SharePoint Server 2016)
+### ----------------EXAMPLE------------------
 ```
 C:\PS>New-SPEnterpriseSearchSiteHitRule -Identity myHost -Behavior 0 
 -HitRate 40
 ```
 
 This example creates a new site hit rule on the myHost host that limits to 40 the number of simultaneous requests.
+
 
 ## PARAMETERS
 
@@ -83,7 +79,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -100,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -135,7 +131,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -176,6 +172,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b7a7b3f5-bc2c-4592-9168-7ff465768e79(Office.15).aspx)
-

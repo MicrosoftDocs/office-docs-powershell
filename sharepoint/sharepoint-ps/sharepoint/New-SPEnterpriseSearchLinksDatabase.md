@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new links database for a search service application.
 
+
 ## SYNTAX
 
 ```
@@ -19,26 +20,21 @@ New-SPEnterpriseSearchLinksDatabase -DatabaseName <String>
 ```
 
 ## DESCRIPTION
-Use the New-SPEnterpriseSearchLinksDatabase cmdlet during initial configuration and farm scale out to create a new links database, which can be added to a search service application.
+Use the `New-SPEnterpriseSearchLinksDatabase` cmdlet during initial configuration and farm scale out to create a new links database, which can be added to a search service application.
 A links database stores query logging and analytics information.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ---------EXAMPLE--------- (SharePoint Server 2013)
-```
-New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication MySearchServiceApp
-```
-
-This example adds a new links database LinksDB_1 to the search service application named MySearchServiceApp.
-
-### ---------EXAMPLE--------- (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>New-SPEnterpriseSearchLinksDatabase -DatabaseName LinksDB_1 -SearchApplication MySearchServiceApp
 ```
 
 This example adds a new links database LinksDB_1 to the search service application named MySearchServiceApp.
+
 
 ## PARAMETERS
 
@@ -83,7 +79,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -100,7 +96,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -181,7 +177,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -207,8 +203,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/b2bd7795-8067-4cee-af24-68273955505a(Office.15).aspx)
-
 [Set-SPEnterpriseSearchLinksDatabase]()
 
 [Get-SPEnterpriseSearchLinksDatabase]()
@@ -216,4 +210,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPEnterpriseSearchLinksDatabase]()
 
 [Repartition-SPEnterpriseSearchLinksDatabases]()
-

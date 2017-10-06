@@ -7,14 +7,7 @@ schema: 2.0.0
 # New-SPODataConnectionSetting
 
 ## SYNOPSIS
-**Below Content Applies To:**SharePoint Server 2013
-
-Applies to:
-
-**Below Content Applies To:**SharePoint Server 2016
-
 Creates a new Business Data Connectivity service connection.
-
 
 
 ## SYNTAX
@@ -25,27 +18,20 @@ New-SPODataConnectionSetting -AuthenticationMode <ODataAuthenticationMode> -Serv
  [-ExtensionProvider <String>] [-SecureStoreTargetApplicationId <String>] [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
-Use the New-SPODataConnectionSetting cmdlet to create a new Business Data Connectivity service connection and its associated metadata properties in the farm.
-To see the metadata settings, use the Get-SPODataConnectionSettingMetaData cmdlet.
+Use the `New-SPODataConnectionSetting` cmdlet to create a new Business Data Connectivity service connection and its associated metadata properties in the farm.
+To see the metadata settings, use the `Get-SPODataConnectionSettingMetaData` cmdlet.
 
 This cmdlet applies to an on-premises environment only.
 You cannot use this command in the SharePoint Online Management Shell.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE-------------- (SharePoint Server 2013)
-```
-C:\PS>New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName" -ExtensionProvider "Contoso.ExtensionProvider.Server, Contoso.ExtensionPRovider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31ba4812ca364d35"
-```
-
-This example creates a new Business Data Connectivity service connection named ContosoServiceApp.
-
-In this process, a Microsoft Business Connectivity Services connection metadata object is created.
-
-### --------------EXAMPLE-------------- (SharePoint Server 2016)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "http://contoso" -ServiceAddressURL "https://expensereporting.cloudapp.net/expensereporting.svc" -AuthenticationMode "Credentials" -SecureStoreTargetApplicationId "DallasUserName"
 ```
@@ -53,6 +39,7 @@ C:\PS>New-SPODataConnectionSetting -Name "ContosoServiceApp" -ServiceContext "ht
 This example creates a new Business Data Connectivity service connection named ContosoServiceApp.
 
 In this process, a Microsoft Business Connectivity Services connection metadata object is created.
+
 
 ## PARAMETERS
 
@@ -132,7 +119,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -148,22 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionProvider
-**Below Content Applies To:**SharePoint Server 2013
-
-Extends the functionality provided by the OData connector in Business Connectivity Service as well as provides the fully qualified assembly name of an OData extension provider.
-Fully qualified assembly name should contain following parameters in this order:
-
-Namespace.Class, Assembly Name, Version, Culture and Public Key.
-E.g.
-"Contoso.ExtensionProvider.Server, Contoso.ExtensionPRovider, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31ba4812ca364d35".
-To clear the value of ExtensionProvider, provide an empty string, for example, "".
-
-
-
-**Below Content Applies To:**SharePoint Server 2016
-
 {{Fill ExtensionProvider Description}}
-
 
 
 ```yaml
@@ -219,4 +191,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPODataConnectionSetting]()
 
 [Set-SPODataConnectionSetting]()
-

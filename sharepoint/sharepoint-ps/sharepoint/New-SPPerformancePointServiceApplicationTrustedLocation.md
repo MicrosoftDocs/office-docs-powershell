@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new trusted location for a PerformancePoint Service application.
 
+
 ## SYNTAX
 
 ```
@@ -20,14 +21,15 @@ New-SPPerformancePointServiceApplicationTrustedLocation
 ```
 
 ## DESCRIPTION
-The New-SPPerformancePointServiceApplicationTrustedLocation cmdlet creates a new trusted location for a PerformancePoint Service application.
+The `New-SPPerformancePointServiceApplicationTrustedLocation` cmdlet creates a new trusted location for a PerformancePoint Service application.
 The new trusted location can be a Content or Data Source trusted location type and is enforced only when it is enabled in the PerformancePoint Service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ------------------EXAMPLE--------------------- (SharePoint Server 2013)
+### ------------------EXAMPLE---------------------
 ```
 C:\PS>New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
 ```
@@ -35,13 +37,6 @@ C:\PS>New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplicatio
 This example creates a new TrustedLocation for the PPSApp_01 service application.
 This creates a Content trusted location of type Site with the specified URL.
 
-### ------------------EXAMPLE--------------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPPerformancePointServiceApplicationTrustedLocation -ServiceApplication PPSApp_01 -url "http://Some_Valid_Site_URL" -Type Site -TrustedLocationType Content
-```
-
-This example creates a new TrustedLocation for the PPSApp_01 service application.
-This creates a Content trusted location of type Site with the specified URL.
 
 ## PARAMETERS
 
@@ -124,7 +119,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -141,7 +136,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -176,7 +171,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -201,4 +196,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

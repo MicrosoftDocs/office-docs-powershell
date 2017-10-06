@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE-------------------------
+### ------------------EXAMPLE------------------
 ```
 C:\PS>$appPool = New-SPIisWebServiceApplicationPool -Name HostedAppPool -Account (Get-SPManagedAccount "contoso\AppPoolAccount")
           New-SPProfileServiceApplication -Name PartitionedUserProfileApplication -PartitionMode -ApplicationPool $appPool

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new user-defined function to Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -18,7 +19,7 @@ New-SPExcelUserDefinedFunction -Assembly <String> -ExcelServiceApplication <SPEx
 ```
 
 ## DESCRIPTION
-The New-SPExcelUserDefinedFunction cmdlet adds a user-defined function to an Excel Services Application Web service application. 
+The `New-SPExcelUserDefinedFunction` cmdlet adds a user-defined function to an Excel Services Application Web service application. 
 Excel Services Application uses only user-defined functions that have an entry in the list of user-defined functions.
 User-defined functions are managed code assemblies that can be called from an Excel Services Application workbook by using standard  Excel Services Application formula syntax.
 The assemblies can perform custom logic or other actions, such as refresh data.
@@ -26,18 +27,10 @@ Windows PowerShell cmdlets operate on the entries that are in the list of user-d
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
-```
-C:\PS>New-SPExcelUserDefinedFunction -ExcelServiceApplication "MyExcelService" -Assembly "SampleCompany.SampleApplication.SampleUdf" -AssemblyLocation GAC
-```
-
-This example adds the SampleComany.SampleApplication.SampleUdf file to the Excel Services Application Web service application named MyExcelService as a new user-defined function.
-
-The user-defined function assembly is deployed to the global assembly cache (GAC).
-
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+### ------------------EXAMPLE------------------
 ```
 C:\PS>Get-SPExcelServiceApplication | New-SPExcelUserDefinedFunction -Assembly "SampleCompany.SampleApplication.SampleUdf" -AssemblyLocation GAC
 ```
@@ -45,6 +38,7 @@ C:\PS>Get-SPExcelServiceApplication | New-SPExcelUserDefinedFunction -Assembly "
 This example adds the SampleComany.SampleApplication.SampleUdf file to every Excel Services Application Web service application in the farm.
 
 The user-defined function assembly is deployed to the global assembly cache (GAC).
+
 
 ## PARAMETERS
 
@@ -116,7 +110,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -133,7 +127,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -187,7 +181,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -212,4 +206,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new SharePoint Online site collection for the current company.
 
+
 ## SYNTAX
 
 ```
@@ -17,30 +18,25 @@ New-SPOSite [-CompatibilityLevel <Int32>] [-LocaleId <UInt32>] [-NoWait] -Owner 
  -Url <UrlCmdletPipeBind> [<CommonParameters>]
 ```
 
+
 ## DESCRIPTION
-The New-SPOSite cmdlet creates a new site collection for the current company.
+The `New-SPOSite` cmdlet creates a new site collection for the current company.
 However, creating a new SharePoint Online site collection fails if a deleted site with the same URL exists in the Recycle Bin.
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   (SharePoint Online)
+### ------------------EXAMPLE------------------
+```
+PS C:\> {{ Add example code here }}
 ```
 
-```
+{{ Add example description here }}
 
-###   (SharePoint Online)
-```
-
-```
-
-###   (SharePoint Online)
-```
-
-```
 
 ## PARAMETERS
 
@@ -222,6 +218,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOSite]()
 
 [Set-SPOSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3f869c81-ca2d-4b98-a05f-edf3b2397a37(Office.15).aspx)
-

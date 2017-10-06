@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Creates a new managed metadata service application.
 
+
 ## SYNTAX
 
 ### NoQuota
@@ -35,27 +36,22 @@ New-SPMetadataServiceApplication -Name <String> [-AdministratorAccount <String>]
 ```
 
 ## DESCRIPTION
-Use the New-SPMetadataServiceApplication cmdlet to create a new managed metadata service application.
+Use the `New-SPMetadataServiceApplication` cmdlet to create a new managed metadata service application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### -------------------EXAMPLE 1------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 1-------------
 ```
 C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
 ```
 
 This example creates a new managed metadata service application.
 
-### -------------------EXAMPLE 1------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp1" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB1"
-```
 
-This example creates a new managed metadata service application.
-
-### -------------------EXAMPLE 2------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 2-------------
 ```
 C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
 ```
@@ -63,27 +59,14 @@ C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationP
 This example creates a new managed metadata service application and specifies a content type hub to be used for syndication.
 It also enables error reporting during syndication.
 
-### -------------------EXAMPLE 2------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp2" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB2" -HubUri "http://sitename" -SyndicationErrorReportEnabled
-```
 
-This example creates a new managed metadata service application and specifies a content type hub to be used for syndication.
-It also enables error reporting during syndication.
-
-### -------------------EXAMPLE 3------------- (SharePoint Server 2013)
+### -------------------EXAMPLE 3-------------
 ```
 C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp3" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB3" -PartitionMode
 ```
 
 This example creates a new managed metadata service application that is partitioned, for use by sites in a subscription.
 
-### -------------------EXAMPLE 3------------- (SharePoint Server 2016)
-```
-C:\PS>New-SPMetadataServiceApplication -Name "MetadataServiceApp3" -ApplicationPool "AppPool1" -DatabaseName "MetadataDB3" -PartitionMode
-```
-
-This example creates a new managed metadata service application that is partitioned, for use by sites in a subscription.
 
 ## PARAMETERS
 
@@ -146,7 +129,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -183,7 +166,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -361,7 +344,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedAccount
-Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery, and permission to write to open term sets and local term sets and to create new enterprise keywords. 
+Specifies a comma-separated set of application pool accounts in the format \<domain\>\\\<account\> that will be given permission to read the managed metadata service's term store and content type gallery; and permission to write to open term sets and local term sets and to create new enterprise keywords. 
 The accounts must already exist.
 
 ```yaml
@@ -395,7 +378,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -532,4 +515,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

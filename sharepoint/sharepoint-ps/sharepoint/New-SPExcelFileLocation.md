@@ -9,6 +9,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Adds a new trusted location to Excel Services Application.
 
+
 ## SYNTAX
 
 ```
@@ -25,20 +26,21 @@ New-SPExcelFileLocation -Address <String> -ExcelServiceApplication <SPExcelServi
 ```
 
 ## DESCRIPTION
-The New-SPExcelFileLocation cmdlet adds a new location to the list of trusted file locations in an Excel Services Application Web service application. 
+The `New-SPExcelFileLocation` cmdlet adds a new location to the list of trusted file locations in an Excel Services Application Web service application. 
 Excel Services Application loads only workbooks that are stored in a trusted file location.
 Properties of trusted file locations control how workbooks can be used when loaded on Excel Services Application.
 Excel Services Application always enforces the properties defined by the trusted file location from which a workbook was loaded.
 The properties that the trusted file location uses are determined through comparison of the file path for the workbook with the Address parameter of the trusted file location.
 
 The longest match takes precedence.
-For example, if http://portal/site/ and http://portal/site/subsite are trusted locations, and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
+For example, if http://portal/site/ and http://portal/site/subsite are trusted locations and you load a workbook from the subsite, the application uses the properties from the subsite trusted location because it has the longest matching address.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------------EXAMPLE 1-------------- (SharePoint Server 2013)
+### ------------------EXAMPLE 1------------------
 ```
 C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address "http://myPortal/myTeam" -includechildren -locationType SharePoint -description "This is my team's site on myPortal." -workbooksizemax 50 -externaldataallowed DclAndEmbedded -WarnOnDataRefresh:$false
 ```
@@ -50,12 +52,14 @@ All workbooks loaded from this location must be smaller than 50 megabytes (MB) i
 The workbooks can refresh external data by using connections that are embedded in the workbook file or stored in a data connection library.
 A warning message that the workbook is attempting to refresh external data will not be displayed.
 
-### --------------EXAMPLE 2-------------- (SharePoint Server 2013)
+
+### ------------------EXAMPLE 2------------------
 ```
 C:\PS>Get-SPExcelServiceApplication -identity "MyExcelService" | New-SPExcelFileLocation -address http://myPortal/myTeam/managers -locationType SharePoint -description "This is the manager's subsite for myTeam."
 ```
 
 This example adds a new trusted file location to the list of trusted file locations that is in the Excel Services Application Web service application named MyExcelService with a given address and description.
+
 
 ## PARAMETERS
 
@@ -122,7 +126,7 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -205,7 +209,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 Prompts you for confirmation before executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -305,7 +309,7 @@ Accept wildcard characters: False
 
 ### -IncludeChildren
 Indicates that subordinate URLs, directories and libraries are trusted.
-For example, if the trusted file location is http://portal, and IncludeChildren is true, http://portal/subSite is also trusted, as is any URL subordinate to the URL specified in Address.
+For example, if the trusted file location is http://portal and IncludeChildren is true, http://portal/subSite is also trusted, as is any URL subordinate to the URL specified in Address.
 
 ```yaml
 Type: SwitchParameter
@@ -532,7 +536,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 Displays a message that describes the effect of the command instead of executing the command.
-For more information, type the following command: get-help about_commonparameters
+For more information, type the following command: `get-help about_commonparameters`
 
 ```yaml
 Type: SwitchParameter
@@ -592,4 +596,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
