@@ -29,10 +29,10 @@ Alternatively, it can route the calls to an operator, a user, another OAA, or a 
 You can create new OAAs by using the New-CsOrganizationalAutoAttendant cmdlet; each newly created OAA gets assigned a random Primary (SIP) URI that serves as the identity of the OAA. 
 
 **NOTE**
-•PrimaryUri of OAAs is a SIP URI; however, currently they are not routable, (you cannot call an OAA through the PrimaryUri).
-•The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
-•The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an “after hours” call flow was specified together with the corresponding schedule and call handling association.
-•If a user is present in both inclusion and exclusion scopes, then exclusion scope always takes priority, i.e., the user will not be able to be contacted through directory lookup feature. 
+• PrimaryUri of OAAs is a SIP URI; however, currently they are not routable, (you cannot call an OAA through the PrimaryUri).
+• The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
+• The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an “after hours” call flow was specified together with the corresponding schedule and call handling association.
+• If a user is present in both inclusion and exclusion scopes, then exclusion scope always takes priority, i.e., the user will not be able to be contacted through directory lookup feature. 
 
 ## EXAMPLES
 
