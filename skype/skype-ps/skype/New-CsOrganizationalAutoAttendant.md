@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Organizational Auto Attendant (OAA).
 
 ## SYNTAX
 
