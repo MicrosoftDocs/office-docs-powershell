@@ -168,8 +168,8 @@ The `Test-CsTopology` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Enable-CsTopology]()
+[Enable-CsTopology](Enable-CsTopology.md)
 
-[Get-CsTopology]()
+[Get-CsTopology](Get-CsTopology.md)
 
-[Publish-CsTopology]()
+[Publish-CsTopology](Publish-CsTopology.md)

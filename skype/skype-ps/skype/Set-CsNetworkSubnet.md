@@ -210,8 +210,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkSubnet]()
+[New-CsNetworkSubnet](New-CsNetworkSubnet.md)
 
-[Remove-CsNetworkSubnet]()
+[Remove-CsNetworkSubnet](Remove-CsNetworkSubnet.md)
 
-[Get-CsNetworkSubnet]()
+[Get-CsNetworkSubnet](Get-CsNetworkSubnet.md)

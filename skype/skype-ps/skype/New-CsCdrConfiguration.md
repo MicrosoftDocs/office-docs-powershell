@@ -281,9 +281,9 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CallDe
 
 ## RELATED LINKS
 
-[Get-CsCdrConfiguration]()
+[Get-CsCdrConfiguration](Get-CsCdrConfiguration.md)
 
-[Remove-CsCdrConfiguration]()
+[Remove-CsCdrConfiguration](Remove-CsCdrConfiguration.md)
 
-[Set-CsCdrConfiguration]()
+[Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)
 

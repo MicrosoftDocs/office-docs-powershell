@@ -220,5 +220,5 @@ The Install-CsAdServerSchema cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Get-CsAdServerSchema]()
+[Get-CsAdServerSchema](Get-CsAdServerSchema.md)
 

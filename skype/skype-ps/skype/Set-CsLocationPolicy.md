@@ -464,16 +464,16 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsLocationPolicy]()
+[New-CsLocationPolicy](New-CsLocationPolicy.md)
 
-[Remove-CsLocationPolicy]()
+[Remove-CsLocationPolicy](Remove-CsLocationPolicy.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Grant-CsLocationPolicy]()
+[Grant-CsLocationPolicy](Grant-CsLocationPolicy.md)
 
-[Test-CsLocationPolicy]()
+[Test-CsLocationPolicy](Test-CsLocationPolicy.md)
 
-[Get-CsPstnUsage]()
+[Get-CsPstnUsage](Get-CsPstnUsage.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

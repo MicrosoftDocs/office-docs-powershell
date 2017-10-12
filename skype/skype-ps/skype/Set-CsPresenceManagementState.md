@@ -255,4 +255,4 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsPresenceManagementState]()
+[Get-CsPresenceManagementState](Get-CsPresenceManagementState.md)

@@ -261,6 +261,6 @@ The Invoke-CsCdrDatabasePurge cmdlet returns instances of the Microsoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[New-CsCdrConfiguration]()
+[New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
-[Set-CsCdrConfiguration]()
+[Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)

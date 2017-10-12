@@ -103,8 +103,8 @@ The `Test-CsComputer` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Disable-CsComputer]()
+[Disable-CsComputer](Disable-CsComputer.md)
 
-[Enable-CsComputer]()
+[Enable-CsComputer](Enable-CsComputer.md)
 
-[Get-CsComputer]()
+[Get-CsComputer](Get-CsComputer.md)

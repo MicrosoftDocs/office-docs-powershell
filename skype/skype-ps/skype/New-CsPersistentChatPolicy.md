@@ -233,11 +233,11 @@ The New-CsPersistentChatPolicy cmdlet creates new instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatPolicy]()
+[Get-CsPersistentChatPolicy](Get-CsPersistentChatPolicy.md)
 
-[Grant-CsPersistentChatPolicy]()
+[Grant-CsPersistentChatPolicy](Grant-CsPersistentChatPolicy.md)
 
-[Remove-CsPersistentChatPolicy]()
+[Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
-[Set-CsPersistentChatPolicy]()
+[Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)
 

@@ -112,8 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-CsTopology]()
+[Enable-CsTopology](Enable-CsTopology.md)
 
-[Publish-CsTopology]()
+[Publish-CsTopology](Publish-CsTopology.md)
 
-[Test-CsTopology]()
+[Test-CsTopology](Test-CsTopology.md)

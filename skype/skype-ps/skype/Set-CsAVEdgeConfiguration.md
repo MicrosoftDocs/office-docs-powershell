@@ -212,8 +212,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)
 
-[New-CsAVEdgeConfiguration]()
+[New-CsAVEdgeConfiguration](New-CsAVEdgeConfiguration.md)
 
-[Remove-CsAVEdgeConfiguration]()
+[Remove-CsAVEdgeConfiguration](Remove-CsAVEdgeConfiguration.md)

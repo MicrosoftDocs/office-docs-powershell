@@ -207,10 +207,10 @@ The `New-CsVoiceRoutingPolicy` cmdlet creates new instances of Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[Get-CsVoiceRoutingPolicy]()
+[Get-CsVoiceRoutingPolicy](Get-CsVoiceRoutingPolicy.md)
 
-[Grant-CsVoiceRoutingPolicy]()
+[Grant-CsVoiceRoutingPolicy](Grant-CsVoiceRoutingPolicy.md)
 
-[Remove-CsVoiceRoutingPolicy]()
+[Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
-[Set-CsVoiceRoutingPolicy]()
+[Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)

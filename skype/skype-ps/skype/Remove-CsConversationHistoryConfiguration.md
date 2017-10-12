@@ -129,6 +129,6 @@ Instead, `Remove-CsConversationHistoryConfiguration` resets instances of the Mic
 
 ## RELATED LINKS
 
-[Get-CsConversationHistoryConfiguration]()
+[Get-CsConversationHistoryConfiguration](Get-CsConversationHistoryConfiguration.md)
 
-[Set-CsConversationHistoryConfiguration]()
+[Set-CsConversationHistoryConfiguration](Set-CsConversationHistoryConfiguration.md)

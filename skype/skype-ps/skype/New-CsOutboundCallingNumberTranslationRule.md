@@ -284,9 +284,9 @@ The New-CsOutboundCallingNumberTranslationRule cmdlet creates new instances of t
 
 ## RELATED LINKS
 
-[Get-CsOutboundCallingNumberTranslationRule]()
+[Get-CsOutboundCallingNumberTranslationRule](Get-CsOutboundCallingNumberTranslationRule.md)
 
-[Remove-CsOutboundCallingNumberTranslationRule]()
+[Remove-CsOutboundCallingNumberTranslationRule](Remove-CsOutboundCallingNumberTranslationRule.md)
 
-[Set-CsOutboundCallingNumberTranslationRule]()
+[Set-CsOutboundCallingNumberTranslationRule](Set-CsOutboundCallingNumberTranslationRule.md)
 

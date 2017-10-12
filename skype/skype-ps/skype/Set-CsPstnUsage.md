@@ -192,4 +192,4 @@ Instead, it configures instances of the Microsoft.Rtc.Management.WritableConfig.
 
 ## RELATED LINKS
 
-[Get-CsPstnUsage]()
+[Get-CsPstnUsage](Get-CsPstnUsage.md)

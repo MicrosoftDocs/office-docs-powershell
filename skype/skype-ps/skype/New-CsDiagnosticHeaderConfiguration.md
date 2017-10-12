@@ -249,9 +249,9 @@ The New-CsDiagnosticHeaderConfiguration cmdlet creates new instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsDiagnosticConfiguration]()
+[Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
-[Remove-CsDiagnosticHeaderConfiguration]()
+[Remove-CsDiagnosticHeaderConfiguration](Remove-CsDiagnosticHeaderConfiguration.md)
 
-[Set-CsDiagnosticHeaderConfiguration]()
+[Set-CsDiagnosticHeaderConfiguration](Set-CsDiagnosticHeaderConfiguration.md)
 

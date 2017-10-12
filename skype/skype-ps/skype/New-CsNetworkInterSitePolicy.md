@@ -223,9 +223,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Remove-CsNetworkInterSitePolicy]()
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Set-CsNetworkInterSitePolicy]()
+[Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)
 
-[Get-CsNetworkInterSitePolicy]()
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)
 

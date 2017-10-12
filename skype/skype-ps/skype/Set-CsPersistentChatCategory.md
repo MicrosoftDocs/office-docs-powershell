@@ -377,8 +377,8 @@ Instead, the `Set-CsPersistentChatCategory` cmdlet modifies existing instances o
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatCategory]()
+[Get-CsPersistentChatCategory](Get-CsPersistentChatCategory.md)
 
-[New-CsPersistentChatCategory]()
+[New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
-[Remove-CsPersistentChatCategory]()
+[Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)

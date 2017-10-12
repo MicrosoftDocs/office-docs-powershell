@@ -282,8 +282,8 @@ Creates an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADApplica
 
 ## RELATED LINKS
 
-[Remove-CsTrustedApplicationEndpoint]()
+[Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
-[Set-CsTrustedApplicationEndpoint]()
+[Set-CsTrustedApplicationEndpoint](Set-CsTrustedApplicationEndpoint.md)
 
-[Get-CsTrustedApplicationEndpoint]()
+[Get-CsTrustedApplicationEndpoint](Get-CsTrustedApplicationEndpoint.md)

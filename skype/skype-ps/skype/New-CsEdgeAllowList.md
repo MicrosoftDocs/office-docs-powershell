@@ -157,7 +157,7 @@ The New-CsEdgeAllowList cmdlet creates new instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[New-CsEdgeDomainPattern]()
+[New-CsEdgeDomainPattern](New-CsEdgeDomainPattern.md)
 
-[Set-CsTenantFederationConfiguration]()
+[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
 

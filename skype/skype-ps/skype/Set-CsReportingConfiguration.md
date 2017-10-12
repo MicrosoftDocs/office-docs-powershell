@@ -177,8 +177,8 @@ Instead, the `Set-CsReportingConfiguration` cmdlet modifies existing instances o
 
 ## RELATED LINKS
 
-[Get-CsReportingConfiguration]()
+[Get-CsReportingConfiguration](Get-CsReportingConfiguration.md)
 
-[New-CsReportingConfiguration]()
+[New-CsReportingConfiguration](New-CsReportingConfiguration.md)
 
-[Remove-CsReportingConfiguration]()
+[Remove-CsReportingConfiguration](Remove-CsReportingConfiguration.md)

@@ -173,8 +173,8 @@ Instead, the `Set-CsPersistentChatAddin` cmdlet modifies existing instances of t
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatAddin]()
+[Get-CsPersistentChatAddin](Get-CsPersistentChatAddin.md)
 
-[New-CsPersistentChatAddin]()
+[New-CsPersistentChatAddin](New-CsPersistentChatAddin.md)
 
-[Remove-CsPersistentChatAddin]()
+[Remove-CsPersistentChatAddin](Remove-CsPersistentChatAddin.md)

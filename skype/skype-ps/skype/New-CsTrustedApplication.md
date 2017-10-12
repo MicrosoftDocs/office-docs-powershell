@@ -253,8 +253,8 @@ Creates an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplication
 
 ## RELATED LINKS
 
-[Remove-CsTrustedApplication]()
+[Remove-CsTrustedApplication](Remove-CsTrustedApplication.md)
 
-[Set-CsTrustedApplication]()
+[Set-CsTrustedApplication](Set-CsTrustedApplication.md)
 
-[Get-CsTrustedApplication]()
+[Get-CsTrustedApplication](Get-CsTrustedApplication.md)

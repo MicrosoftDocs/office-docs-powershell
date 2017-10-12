@@ -129,6 +129,6 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[New-CsNetworkBandwidthPolicyProfile]()
+[New-CsNetworkBandwidthPolicyProfile](New-CsNetworkBandwidthPolicyProfile.md)
 
-[Set-CsNetworkBandwidthPolicyProfile]()
+[Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)

@@ -184,8 +184,8 @@ The Get-CsUserServicesConfiguration cmdlet returns instances of the Microsoft.Rt
 ## RELATED LINKS
 
 
-[New-CsUserServicesConfiguration]()
+[New-CsUserServicesConfiguration](New-CsUserServicesConfiguration.md)
 
-[Remove-CsUserServicesConfiguration]()
+[Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)
 
-[Set-CsUserServicesConfiguration]()
+[Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)

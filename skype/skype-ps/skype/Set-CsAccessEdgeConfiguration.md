@@ -653,4 +653,4 @@ The `Set-CsAccessEdgeConfiguration` cmdlet does not return any objects or values
 
 ## RELATED LINKS
 
-[Get-CsAccessEdgeConfiguration]()
+[Get-CsAccessEdgeConfiguration](Get-CsAccessEdgeConfiguration.md)

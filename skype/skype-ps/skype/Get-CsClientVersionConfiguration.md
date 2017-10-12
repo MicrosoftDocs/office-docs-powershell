@@ -163,8 +163,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClientVersionConfiguration]()
+[New-CsClientVersionConfiguration](New-CsClientVersionConfiguration.md)
 
-[Remove-CsClientVersionConfiguration]()
+[Remove-CsClientVersionConfiguration](Remove-CsClientVersionConfiguration.md)
 
-[Set-CsClientVersionConfiguration]()
+[Set-CsClientVersionConfiguration](Set-CsClientVersionConfiguration.md)

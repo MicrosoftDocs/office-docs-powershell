@@ -152,10 +152,10 @@ Instead, the `Remove-CsPresenceProvider` cmdlet deletes instances of the Microso
 
 ## RELATED LINKS
 
-[Get-CsPresenceProvider]()
+[Get-CsPresenceProvider](Get-CsPresenceProvider.md)
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsPresenceProvider]()
+[New-CsPresenceProvider](New-CsPresenceProvider.md)
 
-[Set-CsPresenceProvider]()
+[Set-CsPresenceProvider](Set-CsPresenceProvider.md)

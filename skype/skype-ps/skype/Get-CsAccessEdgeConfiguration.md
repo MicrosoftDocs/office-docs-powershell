@@ -146,4 +146,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsAccessEdgeConfiguration]()
+[Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)

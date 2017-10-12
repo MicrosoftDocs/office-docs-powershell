@@ -372,8 +372,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsMediaConfiguration]()
+[New-CsMediaConfiguration](New-CsMediaConfiguration.md)
 
-[Remove-CsMediaConfiguration]()
+[Remove-CsMediaConfiguration](Remove-CsMediaConfiguration.md)
 
-[Get-CsMediaConfiguration]()
+[Get-CsMediaConfiguration](Get-CsMediaConfiguration.md)

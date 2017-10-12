@@ -144,10 +144,10 @@ The `Remove-CsCommonAreaPhone` cmdlet deletes existing instances of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsCommonAreaPhone]()
+[Get-CsCommonAreaPhone](Get-CsCommonAreaPhone.md)
 
-[Move-CsCommonAreaPhone]()
+[Move-CsCommonAreaPhone](Move-CsCommonAreaPhone.md)
 
-[New-CsCommonAreaPhone]()
+[New-CsCommonAreaPhone](New-CsCommonAreaPhone.md)
 
-[Set-CsCommonAreaPhone]()
+[Set-CsCommonAreaPhone](Set-CsCommonAreaPhone.md)

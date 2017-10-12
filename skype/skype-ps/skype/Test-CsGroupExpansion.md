@@ -388,6 +388,6 @@ The `Test-CsGroupExpansion` cmdlet returns an instance of the Microsoft.Rtc.Synt
 
 ## RELATED LINKS
 
-[Test-CsAddressBookService]()
+[Test-CsAddressBookService](Test-CsAddressBookService.md)
 
-[Test-CsAddressBookWebQuery]()
+[Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)

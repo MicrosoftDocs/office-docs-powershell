@@ -146,6 +146,6 @@ Move-CsRgsConfiguration moves instances of the Microsoft.Rtc.Management.Writable
 
 ## RELATED LINKS
 
-[Get-CsRgsConfiguration]()
+[Get-CsRgsConfiguration](Get-CsRgsConfiguration.md)
 
-[Move-CsRgsConfiguration]()
+[Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)

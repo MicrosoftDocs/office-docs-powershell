@@ -188,12 +188,12 @@ Instead, the cmdlet disables instances of the Microsoft.Rtc.Management.WritableC
 
 ## RELATED LINKS
 
-[Enable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[Get-CsHostingProvider]()
+[Get-CsHostingProvider](Get-CsHostingProvider.md)
 
-[New-CsHostingProvider]()
+[New-CsHostingProvider](New-CsHostingProvider.md)
 
-[Remove-CsHostingProvider]()
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)
 
-[Set-CsHostingProvider]()
+[Set-CsHostingProvider](Set-CsHostingProvider.md)

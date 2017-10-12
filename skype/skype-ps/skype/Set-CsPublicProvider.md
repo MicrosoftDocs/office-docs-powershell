@@ -230,12 +230,12 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Disable-CsPublicProvider]()
+[Disable-CsPublicProvider](Disable-CsPublicProvider.md)
 
-[Enable-CsPublicProvider]()
+[Enable-CsPublicProvider](Enable-CsPublicProvider.md)
 
-[Get-CsPublicProvider]()
+[Get-CsPublicProvider](Get-CsPublicProvider.md)
 
-[New-CsPublicProvider]()
+[New-CsPublicProvider](New-CsPublicProvider.md)
 
-[Remove-CsPublicProvider]()
+[Remove-CsPublicProvider](Remove-CsPublicProvider.md)

@@ -266,8 +266,8 @@ Instead, the `Set-CsPersistentChatConfiguration` cmdlet modifies existing instan
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatConfiguration]()
+[Get-CsPersistentChatConfiguration](Get-CsPersistentChatConfiguration.md)
 
-[New-CsPersistentChatConfiguration]()
+[New-CsPersistentChatConfiguration](New-CsPersistentChatConfiguration.md)
 
-[Remove-CsPersistentChatConfiguration]()
+[Remove-CsPersistentChatConfiguration](Remove-CsPersistentChatConfiguration.md)

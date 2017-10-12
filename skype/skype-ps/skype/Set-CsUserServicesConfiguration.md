@@ -449,8 +449,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsUserServicesConfiguration]()
+[New-CsUserServicesConfiguration](New-CsUserServicesConfiguration.md)
 
-[Remove-CsUserServicesConfiguration]()
+[Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)

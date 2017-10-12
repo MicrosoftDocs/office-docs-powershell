@@ -88,4 +88,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Install-CsAdServerSchema]()
+[Install-CsAdServerSchema](Install-CsAdServerSchema.md)

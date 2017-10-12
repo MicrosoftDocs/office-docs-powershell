@@ -170,8 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPersistentChatComplianceConfiguration]()
+[New-CsPersistentChatComplianceConfiguration](New-CsPersistentChatComplianceConfiguration.md)
 
-[Remove-CsPersistentChatComplianceConfiguration]()
+[Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)
 
-[Set-CsPersistentChatComplianceConfiguration]()
+[Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)

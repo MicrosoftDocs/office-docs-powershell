@@ -329,12 +329,12 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Disable-CsHostingProvider]()
+[Disable-CsHostingProvider](Disable-CsHostingProvider.md)
 
-[Enable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[Get-CsHostingProvider]()
+[Get-CsHostingProvider](Get-CsHostingProvider.md)
 
-[New-CsHostingProvider]()
+[New-CsHostingProvider](New-CsHostingProvider.md)
 
-[Remove-CsHostingProvider]()
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)

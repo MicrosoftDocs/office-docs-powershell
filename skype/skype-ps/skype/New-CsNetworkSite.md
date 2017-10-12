@@ -338,17 +338,17 @@ Create an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Networ
 
 ## RELATED LINKS
 
-[Remove-CsNetworkSite]()
+[Remove-CsNetworkSite](Remove-CsNetworkSite.md)
 
-[Set-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[New-CsNetworkMediaBypassConfiguration]()
+[New-CsNetworkMediaBypassConfiguration](New-CsNetworkMediaBypassConfiguration.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Get-CsNetworkConfiguration]()
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 

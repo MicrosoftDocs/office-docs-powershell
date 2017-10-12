@@ -171,6 +171,6 @@ Instead, the `Set-CsPersistentChatState` cmdlet modifies existing instances of t
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatState]()
+[Get-CsPersistentChatState](Get-CsPersistentChatState.md)
 
-[Set-CsPersistentChatActiveServer]()
+[Set-CsPersistentChatActiveServer](Set-CsPersistentChatActiveServer.md)

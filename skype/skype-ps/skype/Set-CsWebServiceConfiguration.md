@@ -841,8 +841,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsWebServiceConfiguration]()
+[Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Remove-CsWebServiceConfiguration]()
+[Remove-CsWebServiceConfiguration](Remove-CsWebServiceConfiguration.md)

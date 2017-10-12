@@ -144,8 +144,8 @@ Instead, it removes instances of the Microsoft.Rtc.Management.WritableConfig.Set
 
 ## RELATED LINKS
 
-[New-CsQoEConfiguration]()
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[Set-CsQoEConfiguration]()
+[Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)
 
-[Get-CsQoEConfiguration]()
+[Get-CsQoEConfiguration](Get-CsQoEConfiguration.md)

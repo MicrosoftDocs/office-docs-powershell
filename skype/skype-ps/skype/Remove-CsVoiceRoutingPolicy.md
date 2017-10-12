@@ -161,10 +161,10 @@ Instead, the `Remove-CsVoiceRoutingPolicy` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsVoiceRoutingPolicy]()
+[Get-CsVoiceRoutingPolicy](Get-CsVoiceRoutingPolicy.md)
 
-[Grant-CsVoiceRoutingPolicy]()
+[Grant-CsVoiceRoutingPolicy](Grant-CsVoiceRoutingPolicy.md)
 
-[New-CsVoiceRoutingPolicy]()
+[New-CsVoiceRoutingPolicy](New-CsVoiceRoutingPolicy.md)
 
-[Set-CsVoiceRoutingPolicy]()
+[Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)

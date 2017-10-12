@@ -151,8 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPersistentChatCategory]()
+[New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
-[Remove-CsPersistentChatCategory]()
+[Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)
 
-[Set-CsPersistentChatCategory]()
+[Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)

@@ -103,6 +103,6 @@ The Get-CsConfigurationStoreLocation cmdlet reports back the location of the con
 
 ## RELATED LINKS
 
-[Remove-CsConfigurationStoreLocation]()
+[Remove-CsConfigurationStoreLocation](Remove-CsConfigurationStoreLocation.md)
 
-[Set-CsConfigurationStoreLocation]()
+[Set-CsConfigurationStoreLocation](Set-CsConfigurationStoreLocation.md)

@@ -240,8 +240,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsDiagnosticHeaderConfiguration]()
+[Get-CsDiagnosticHeaderConfiguration](Get-CsDiagnosticHeaderConfiguration.md)
 
-[New-CsDiagnosticHeaderConfiguration]()
+[New-CsDiagnosticHeaderConfiguration](New-CsDiagnosticHeaderConfiguration.md)
 
-[Remove-CsDiagnosticHeaderConfiguration]()
+[Remove-CsDiagnosticHeaderConfiguration](Remove-CsDiagnosticHeaderConfiguration.md)

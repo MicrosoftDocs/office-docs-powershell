@@ -204,6 +204,6 @@ The New-CsSimpleUrl cmdlet creates new instances of the Microsoft.Rtc.Management
 
 ## RELATED LINKS
 
-[New-CsSimpleUrlConfiguration]()
+[New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
-[New-CsSimpleUrlEntry]()
+[New-CsSimpleUrlEntry](New-CsSimpleUrlEntry.md)

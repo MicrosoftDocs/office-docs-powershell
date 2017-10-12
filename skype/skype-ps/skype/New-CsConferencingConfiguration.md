@@ -632,10 +632,10 @@ The New-CsConferencingConfiguration cmdlet creates new instances of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsConferencingConfiguration]()
+[Get-CsConferencingConfiguration](Get-CsConferencingConfiguration.md)
 
-[Remove-CsConferencingConfiguration]()
+[Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)
 
-[Set-CsConferencingConfiguration]()
+[Set-CsConferencingConfiguration](Set-CsConferencingConfiguration.md)
 
 

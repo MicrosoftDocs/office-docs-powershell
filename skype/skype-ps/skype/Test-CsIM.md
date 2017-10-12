@@ -489,4 +489,4 @@ The `Test-CsIM` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransac
 
 ## RELATED LINKS
 
-[Test-CsGroupIM]()
+[Test-CsGroupIM](Test-CsGroupIM.md)

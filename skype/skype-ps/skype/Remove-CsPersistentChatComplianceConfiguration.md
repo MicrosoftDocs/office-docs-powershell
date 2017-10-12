@@ -162,8 +162,8 @@ Instead, the `Remove-CsPersistentChatComplianceConfiguration` cmdlet deletes exi
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatComplianceConfiguration]()
+[Get-CsPersistentChatComplianceConfiguration](Get-CsPersistentChatComplianceConfiguration.md)
 
-[New-CsPersistentChatComplianceConfiguration]()
+[New-CsPersistentChatComplianceConfiguration](New-CsPersistentChatComplianceConfiguration.md)
 
-[Set-CsPersistentChatComplianceConfiguration]()
+[Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)

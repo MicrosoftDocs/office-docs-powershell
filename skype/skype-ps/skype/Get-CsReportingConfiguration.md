@@ -144,8 +144,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsReportingConfiguration]()
+[New-CsReportingConfiguration](New-CsReportingConfiguration.md)
 
-[Remove-CsReportingConfiguration]()
+[Remove-CsReportingConfiguration](Remove-CsReportingConfiguration.md)
 
-[Set-CsReportingConfiguration]()
+[Set-CsReportingConfiguration](Set-CsReportingConfiguration.md)

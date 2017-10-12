@@ -55,6 +55,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisServiceProvider]()
+[Remove-CsLisServiceProvider](Remove-CsLisServiceProvider.md)
 
-[Set-CsLisServiceProvider]()
+[Set-CsLisServiceProvider](Set-CsLisServiceProvider.md)

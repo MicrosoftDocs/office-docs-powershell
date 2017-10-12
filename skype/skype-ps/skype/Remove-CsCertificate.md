@@ -233,10 +233,10 @@ Instead, the `Remove-CsCertificate` cmdlet deletes instances of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[Get-CsCertificate]()
+[Get-CsCertificate](Get-CsCertificate.md)
 
-[Import-CsCertificate]()
+[Import-CsCertificate](Import-CsCertificate.md)
 
-[Request-CsCertificate]()
+[Request-CsCertificate](Request-CsCertificate.md)
 
-[Set-CsCertificate]()
+[Set-CsCertificate](Set-CsCertificate.md)

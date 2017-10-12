@@ -278,8 +278,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsDialInConferencingConfiguration]()
+[Get-CsDialInConferencingConfiguration](Get-CsDialInConferencingConfiguration.md)
 
-[New-CsDialInConferencingConfiguration]()
+[New-CsDialInConferencingConfiguration](New-CsDialInConferencingConfiguration.md)
 
-[Remove-CsDialInConferencingConfiguration]()
+[Remove-CsDialInConferencingConfiguration](Remove-CsDialInConferencingConfiguration.md)

@@ -389,6 +389,6 @@ The `Test-CsAVConference` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)
 
-[Test-CsDialInConferencing]()
+[Test-CsDialInConferencing](Test-CsDialInConferencing.md)

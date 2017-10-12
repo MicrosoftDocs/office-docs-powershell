@@ -197,4 +197,4 @@ None.
 
 ## RELATED LINKS
 
-[Set-CsPersistentChatState]()
+[Set-CsPersistentChatState](Set-CsPersistentChatState.md)

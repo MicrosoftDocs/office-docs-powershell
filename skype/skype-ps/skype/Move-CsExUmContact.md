@@ -292,10 +292,10 @@ When called with the PassThru parameter, returns an object of type Microsoft.Rtc
 
 ## RELATED LINKS
 
-[New-CsExUmContact]()
+[New-CsExUmContact](New-CsExUmContact.md)
 
-[Remove-CsExUmContact]()
+[Remove-CsExUmContact](Remove-CsExUmContact.md)
 
-[Set-CsExUmContact]()
+[Set-CsExUmContact](Set-CsExUmContact.md)
 
-[Get-CsExUmContact]()
+[Get-CsExUmContact](Get-CsExUmContact.md)

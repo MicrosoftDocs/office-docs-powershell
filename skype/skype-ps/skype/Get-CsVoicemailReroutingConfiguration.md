@@ -142,8 +142,8 @@ Retrieves one or more objects of type Microsoft.Rtc.Management.WritableConfig.Se
 
 ## RELATED LINKS
 
-[New-CsVoicemailReroutingConfiguration]()
+[New-CsVoicemailReroutingConfiguration](New-CsVoicemailReroutingConfiguration.md)
 
-[Remove-CsVoicemailReroutingConfiguration]()
+[Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
-[Set-CsVoicemailReroutingConfiguration]()
+[Set-CsVoicemailReroutingConfiguration](Set-CsVoicemailReroutingConfiguration.md)

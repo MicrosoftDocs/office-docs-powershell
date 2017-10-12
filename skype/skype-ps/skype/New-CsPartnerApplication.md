@@ -404,8 +404,8 @@ The New-CsPartnerApplication cmdlet creates new instances of the Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[Get-CsPartnerApplication]()
+[Get-CsPartnerApplication](Get-CsPartnerApplication.md)
 
-[Remove-CsPartnerApplication]()
+[Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)
 
-[Set-CsPartnerApplication]()
+[Set-CsPartnerApplication](Set-CsPartnerApplication.md)

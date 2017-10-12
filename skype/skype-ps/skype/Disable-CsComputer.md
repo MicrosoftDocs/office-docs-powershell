@@ -185,8 +185,8 @@ Instead, Disable-CsComputer disables instances of the Microsoft.Rtc.Management.D
 
 
 ## RELATED LINKS
-[Enable-CsComputer]()
+[Enable-CsComputer](Enable-CsComputer.md)
 
-[Get-CsComputer]()
+[Get-CsComputer](Get-CsComputer.md)
 
-[Test-CsComputer]()
+[Test-CsComputer](Test-CsComputer.md)

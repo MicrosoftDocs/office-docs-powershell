@@ -126,8 +126,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsSipDomain]()
+[New-CsSipDomain](New-CsSipDomain.md)
 
-[Remove-CsSipDomain]()
+[Remove-CsSipDomain](Remove-CsSipDomain.md)
 
-[Set-CsSipDomain]()
+[Set-CsSipDomain](Set-CsSipDomain.md)

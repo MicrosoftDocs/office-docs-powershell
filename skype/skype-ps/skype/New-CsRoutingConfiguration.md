@@ -212,13 +212,13 @@ Can create an in-memory object of type Microsoft.Rtc.Management.WritableConfig.P
 
 ## RELATED LINKS
 
-[Remove-CsRoutingConfiguration]()
+[Remove-CsRoutingConfiguration](Remove-CsRoutingConfiguration.md)
 
-[Set-CsRoutingConfiguration]()
+[Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 
-[Get-CsRoutingConfiguration]()
+[Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 

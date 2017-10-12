@@ -610,8 +610,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsProxyConfiguration]()
+[Get-CsProxyConfiguration](Get-CsProxyConfiguration.md)
 
-[New-CsProxyConfiguration]()
+[New-CsProxyConfiguration](New-CsProxyConfiguration.md)
 
-[Remove-CsProxyConfiguration]()
+[Remove-CsProxyConfiguration](Remove-CsProxyConfiguration.md)

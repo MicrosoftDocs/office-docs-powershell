@@ -147,10 +147,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsCpsConfiguration]()
+[New-CsCpsConfiguration](New-CsCpsConfiguration.md)
 
-[Remove-CsCpsConfiguration]()
+[Remove-CsCpsConfiguration](Remove-CsCpsConfiguration.md)
 
-[Set-CsCpsConfiguration]()
+[Set-CsCpsConfiguration](Set-CsCpsConfiguration.md)
 
-[Set-CsCallParkServiceMusicOnHoldFile]()
+[Set-CsCallParkServiceMusicOnHoldFile](Set-CsCallParkServiceMusicOnHoldFile.md)

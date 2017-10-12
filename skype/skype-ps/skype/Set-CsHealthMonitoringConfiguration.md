@@ -257,8 +257,8 @@ Instead, the `Set-CsHealthMonitoringConfiguration` cmdlet modifies existing inst
 
 ## RELATED LINKS
 
-[Get-CsHealthMonitoringConfiguration]()
+[Get-CsHealthMonitoringConfiguration](Get-CsHealthMonitoringConfiguration.md)
 
-[New-CsHealthMonitoringConfiguration]()
+[New-CsHealthMonitoringConfiguration](New-CsHealthMonitoringConfiguration.md)
 
-[Remove-CsHealthMonitoringConfiguration]()
+[Remove-CsHealthMonitoringConfiguration](Remove-CsHealthMonitoringConfiguration.md)

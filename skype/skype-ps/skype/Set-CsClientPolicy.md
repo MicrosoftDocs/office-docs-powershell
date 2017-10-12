@@ -2183,10 +2183,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsClientPolicy]()
+[Get-CsClientPolicy](Get-CsClientPolicy.md)
 
-[Grant-CsClientPolicy]()
+[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
 
-[New-CsClientPolicy]()
+[New-CsClientPolicy](New-CsClientPolicy.md)
 
-[Remove-CsClientPolicy]()
+[Remove-CsClientPolicy](Remove-CsClientPolicy.md)

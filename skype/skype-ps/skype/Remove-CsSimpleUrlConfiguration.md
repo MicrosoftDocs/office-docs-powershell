@@ -193,8 +193,8 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsSimpleUrlConfiguration]()
+[Get-CsSimpleUrlConfiguration](Get-CsSimpleUrlConfiguration.md)
 
-[New-CsSimpleUrlConfiguration]()
+[New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
-[Set-CsSimpleUrlConfiguration]()
+[Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)

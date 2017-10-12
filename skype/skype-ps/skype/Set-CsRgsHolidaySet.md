@@ -197,10 +197,10 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 
 ## RELATED LINKS
 
-[Get-CsRgsHolidaySet]()
+[Get-CsRgsHolidaySet](Get-CsRgsHolidaySet.md)
 
-[New-CsRgsHoliday]()
+[New-CsRgsHoliday](New-CsRgsHoliday.md)
 
-[New-CsRgsHolidaySet]()
+[New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
-[Remove-CsRgsHolidaySet]()
+[Remove-CsRgsHolidaySet](Remove-CsRgsHolidaySet.md)

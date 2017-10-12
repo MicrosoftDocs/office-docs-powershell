@@ -240,10 +240,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicy]()
+[Get-CsClientVersionPolicy](Get-CsClientVersionPolicy.md)
 
-[New-CsClientVersionPolicy]()
+[New-CsClientVersionPolicy](New-CsClientVersionPolicy.md)
 
-[Remove-CsClientVersionPolicy]()
+[Remove-CsClientVersionPolicy](Remove-CsClientVersionPolicy.md)
 
-[Set-CsClientVersionPolicy]()
+[Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)

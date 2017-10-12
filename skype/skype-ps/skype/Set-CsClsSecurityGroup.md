@@ -200,8 +200,8 @@ Instead, the `Set-CsClsSecurityGroup` cmdlet modifies existing instances of the 
 
 ## RELATED LINKS
 
-[Get-CsClsSecurityGroup]()
+[Get-CsClsSecurityGroup](Get-CsClsSecurityGroup.md)
 
-[New-CsClsSecurityGroup]()
+[New-CsClsSecurityGroup](New-CsClsSecurityGroup.md)
 
-[Remove-CsClsSecurityGroup]()
+[Remove-CsClsSecurityGroup](Remove-CsClsSecurityGroup.md)

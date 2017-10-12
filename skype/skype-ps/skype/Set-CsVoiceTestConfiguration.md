@@ -282,18 +282,18 @@ This cmdlet returns an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 ## RELATED LINKS
 
-[New-CsVoiceTestConfiguration]()
+[New-CsVoiceTestConfiguration](New-CsVoiceTestConfiguration.md)
 
-[Remove-CsVoiceTestConfiguration]()
+[Remove-CsVoiceTestConfiguration](Remove-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
 
-[Test-CsVoiceTestConfiguration]()
+[Test-CsVoiceTestConfiguration](Test-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
-[Get-CsPstnUsage]()
+[Get-CsPstnUsage](Get-CsPstnUsage.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)

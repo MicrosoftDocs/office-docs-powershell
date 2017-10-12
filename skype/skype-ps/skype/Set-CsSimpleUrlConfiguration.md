@@ -273,12 +273,12 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsSimpleUrlConfiguration]()
+[Get-CsSimpleUrlConfiguration](Get-CsSimpleUrlConfiguration.md)
 
-[New-CsSimpleUrl]()
+[New-CsSimpleUrl](New-CsSimpleUrl.md)
 
-[New-CsSimpleUrlConfiguration]()
+[New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
-[New-CsSimpleUrlEntry]()
+[New-CsSimpleUrlEntry](New-CsSimpleUrlEntry.md)
 
-[Remove-CsSimpleUrlConfiguration]()
+[Remove-CsSimpleUrlConfiguration](Remove-CsSimpleUrlConfiguration.md)

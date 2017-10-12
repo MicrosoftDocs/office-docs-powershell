@@ -192,10 +192,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Import-CsCertificate]()
+[Import-CsCertificate](Import-CsCertificate.md)
 
-[Remove-CsCertificate]()
+[Remove-CsCertificate](Remove-CsCertificate.md)
 
-[Request-CsCertificate]()
+[Request-CsCertificate](Request-CsCertificate.md)
 
-[Set-CsCertificate]()
+[Set-CsCertificate](Set-CsCertificate.md)

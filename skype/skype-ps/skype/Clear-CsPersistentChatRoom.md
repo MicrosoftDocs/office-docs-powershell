@@ -176,4 +176,4 @@ None. Instead, Clear-CsPersistentChatRoom modifies existing instances of the Mic
 
 ## RELATED LINKS
 
-[Remove-CsPersistentChatMessage]()
+[Remove-CsPersistentChatMessage](Remove-CsPersistentChatMessage.md)

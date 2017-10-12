@@ -360,6 +360,6 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsConferencingConfiguration]()
+[Get-CsConferencingConfiguration](Get-CsConferencingConfiguration.md)
 
-[Get-CsService]()
+[Get-CsService](Get-CsService.md)

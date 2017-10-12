@@ -108,6 +108,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsTestUserCredential]()
+[Remove-CsTestUserCredential](Remove-CsTestUserCredential.md)
 
-[Set-CsTestUserCredential]()
+[Set-CsTestUserCredential](Set-CsTestUserCredential.md)

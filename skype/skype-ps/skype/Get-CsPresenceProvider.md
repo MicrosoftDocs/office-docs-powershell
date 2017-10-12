@@ -154,10 +154,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsPresenceProvider]()
+[New-CsPresenceProvider](New-CsPresenceProvider.md)
 
-[Remove-CsPresenceProvider]()
+[Remove-CsPresenceProvider](Remove-CsPresenceProvider.md)
 
-[Set-CsPresenceProvider]()
+[Set-CsPresenceProvider](Set-CsPresenceProvider.md)

@@ -164,6 +164,6 @@ The `Test-CsSetupPermission` cmdlet returns an instance of the Microsoft.Rtc.Syn
 
 ## RELATED LINKS
 
-[Grant-CsSetupPermission]()
+[Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 
-[Revoke-CsSetupPermission]()
+[Revoke-CsSetupPermission](Revoke-CsSetupPermission.md)

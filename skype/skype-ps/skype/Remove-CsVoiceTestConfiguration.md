@@ -128,10 +128,10 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.T
 
 ## RELATED LINKS
 
-[New-CsVoiceTestConfiguration]()
+[New-CsVoiceTestConfiguration](New-CsVoiceTestConfiguration.md)
 
-[Set-CsVoiceTestConfiguration]()
+[Set-CsVoiceTestConfiguration](Set-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
 
-[Test-CsVoiceTestConfiguration]()
+[Test-CsVoiceTestConfiguration](Test-CsVoiceTestConfiguration.md)

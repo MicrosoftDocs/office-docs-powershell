@@ -141,12 +141,12 @@ The `Sync-CsClsLogging` cmdlet does not return objects.
 
 ## RELATED LINKS
 
-[Search-CsClsLogging]()
+[Search-CsClsLogging](Search-CsClsLogging.md)
 
-[Show-CsClsLogging]()
+[Show-CsClsLogging](Show-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Stop-CsClsLogging]()
+[Stop-CsClsLogging](Stop-CsClsLogging.md)
 
-[Update-CsClsLogging]()
+[Update-CsClsLogging](Update-CsClsLogging.md)

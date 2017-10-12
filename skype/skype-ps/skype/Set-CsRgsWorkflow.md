@@ -194,8 +194,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 
 ## RELATED LINKS
 
-[Get-CsRgsWorkflow]()
+[Get-CsRgsWorkflow](Get-CsRgsWorkflow.md)
 
-[New-CsRgsWorkflow]()
+[New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
-[Remove-CsRgsWorkflow]()
+[Remove-CsRgsWorkflow](Remove-CsRgsWorkflow.md)

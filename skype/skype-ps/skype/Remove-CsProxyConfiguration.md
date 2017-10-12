@@ -158,8 +158,8 @@ Instead, the `Remove-CsProxyConfiguration` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsProxyConfiguration]()
+[Get-CsProxyConfiguration](Get-CsProxyConfiguration.md)
 
-[New-CsProxyConfiguration]()
+[New-CsProxyConfiguration](New-CsProxyConfiguration.md)
 
-[Set-CsProxyConfiguration]()
+[Set-CsProxyConfiguration](Set-CsProxyConfiguration.md)

@@ -229,10 +229,10 @@ Instead, the `Set-CsVoiceRoutingPolicy` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsVoiceRoutingPolicy]()
+[Get-CsVoiceRoutingPolicy](Get-CsVoiceRoutingPolicy.md)
 
-[Grant-CsVoiceRoutingPolicy]()
+[Grant-CsVoiceRoutingPolicy](Grant-CsVoiceRoutingPolicy.md)
 
-[New-CsVoiceRoutingPolicy]()
+[New-CsVoiceRoutingPolicy](New-CsVoiceRoutingPolicy.md)
 
-[Remove-CsVoiceRoutingPolicy]()
+[Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)

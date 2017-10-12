@@ -192,12 +192,12 @@ It removes an instance of a Microsoft.Rtc.Management.WritableConfig.Policy.Voice
 
 ## RELATED LINKS
 
-[New-CsVoicePolicy]()
+[New-CsVoicePolicy](New-CsVoicePolicy.md)
 
-[Set-CsVoicePolicy]()
+[Set-CsVoicePolicy](Set-CsVoicePolicy.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Grant-CsVoicePolicy]()
+[Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)
 
-[Test-CsVoicePolicy]()
+[Test-CsVoicePolicy](Test-CsVoicePolicy.md)

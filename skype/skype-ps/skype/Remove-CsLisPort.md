@@ -171,10 +171,10 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 
 ## RELATED LINKS
 
-[Set-CsLisPort]()
+[Set-CsLisPort](Set-CsLisPort.md)
 
-[Get-CsLisPort]()
+[Get-CsLisPort](Get-CsLisPort.md)
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)
 
-[Remove-CsLisSwitch]()
+[Remove-CsLisSwitch](Remove-CsLisSwitch.md)

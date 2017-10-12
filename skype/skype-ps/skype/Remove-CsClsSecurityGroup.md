@@ -151,8 +151,8 @@ Instead, the `Remove-CsClsSecurityGroup` cmdlet deletes existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsClsSecurityGroup]()
+[Get-CsClsSecurityGroup](Get-CsClsSecurityGroup.md)
 
-[New-CsClsSecurityGroup]()
+[New-CsClsSecurityGroup](New-CsClsSecurityGroup.md)
 
-[Set-CsClsSecurityGroup]()
+[Set-CsClsSecurityGroup](Set-CsClsSecurityGroup.md)

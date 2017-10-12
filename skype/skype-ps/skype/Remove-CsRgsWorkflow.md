@@ -179,8 +179,8 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.Workflow object.
 
 ## RELATED LINKS
 
-[Get-CsRgsWorkflow]()
+[Get-CsRgsWorkflow](Get-CsRgsWorkflow.md)
 
-[New-CsRgsWorkflow]()
+[New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
-[Set-CsRgsWorkflow]()
+[Set-CsRgsWorkflow](Set-CsRgsWorkflow.md)

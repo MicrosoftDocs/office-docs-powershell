@@ -302,9 +302,9 @@ The New-CsPrivacyConfiguration cmdlet creates new instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Get-CsPrivacyConfiguration]()
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
 
-[Remove-CsPrivacyConfiguration]()
+[Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
 
-[Set-CsPrivacyConfiguration]()
+[Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)
 

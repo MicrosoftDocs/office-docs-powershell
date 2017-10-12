@@ -144,4 +144,4 @@ Instead, the `Revoke-CsClientCertificate` cmdlet revokes instances of the Micros
 
 ## RELATED LINKS
 
-[Get-CsClientCertificate]()
+[Get-CsClientCertificate](Get-CsClientCertificate.md)

@@ -178,8 +178,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Store.S
 
 ## RELATED LINKS
 
-[Get-CsManagementConnection]()
+[Get-CsManagementConnection](Get-CsManagementConnection.md)
 
-[Remove-CsManagementConnection]()
+[Remove-CsManagementConnection](Remove-CsManagementConnection.md)
 
-[Set-CsConfigurationStoreLocation]()
+[Set-CsConfigurationStoreLocation](Set-CsConfigurationStoreLocation.md)

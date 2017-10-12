@@ -150,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClsSecurityGroup]()
+[New-CsClsSecurityGroup](New-CsClsSecurityGroup.md)
 
-[Remove-CsClsSecurityGroup]()
+[Remove-CsClsSecurityGroup](Remove-CsClsSecurityGroup.md)
 
-[Set-CsClsSecurityGroup]()
+[Set-CsClsSecurityGroup](Set-CsClsSecurityGroup.md)

@@ -425,14 +425,14 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 ## RELATED LINKS
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
 
-[Test-CsVoiceNormalizationRule]()
+[Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)

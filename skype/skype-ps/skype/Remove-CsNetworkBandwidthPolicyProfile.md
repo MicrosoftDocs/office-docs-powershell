@@ -143,8 +143,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkBandwidthPolicyProfile]()
+[New-CsNetworkBandwidthPolicyProfile](New-CsNetworkBandwidthPolicyProfile.md)
 
-[Set-CsNetworkBandwidthPolicyProfile]()
+[Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)

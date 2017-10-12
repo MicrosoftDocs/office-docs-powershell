@@ -205,6 +205,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsPersistentChatCategory]()
+[Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)
 
-[New-CsPersistentChatRoom]()
+[New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)

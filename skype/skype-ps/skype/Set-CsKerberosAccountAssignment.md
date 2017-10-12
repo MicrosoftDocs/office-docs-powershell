@@ -179,10 +179,10 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsKerberosAccountAssignment]()
+[Get-CsKerberosAccountAssignment](Get-CsKerberosAccountAssignment.md)
 
-[New-CsKerberosAccount]()
+[New-CsKerberosAccount](New-CsKerberosAccount.md)
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)

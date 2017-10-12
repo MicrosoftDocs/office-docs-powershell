@@ -244,10 +244,10 @@ The `New-CsThirdPartyVideoSystem` cmdlet creates new instances of the Microsoft.
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystem]()
+[Get-CsThirdPartyVideoSystem](Get-CsThirdPartyVideoSystem.md)
 
-[Move-CsThirdPartyVideoSystem]()
+[Move-CsThirdPartyVideoSystem](Move-CsThirdPartyVideoSystem.md)
 
-[Remove-CsThirdPartyVideoSystem]()
+[Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystem]()
+[Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)

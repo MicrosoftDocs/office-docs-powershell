@@ -83,6 +83,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisSwitch]()
+[Remove-CsLisSwitch](Remove-CsLisSwitch.md)
 
-[Set-CsLisSwitch]()
+[Set-CsLisSwitch](Set-CsLisSwitch.md)

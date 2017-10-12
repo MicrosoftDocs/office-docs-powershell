@@ -124,10 +124,10 @@ This cmdlet removes (resets) an object of type Microsoft.Rtc.Management.Writable
 
 ## RELATED LINKS
 
-[Set-CsVoiceConfiguration]()
+[Set-CsVoiceConfiguration](Set-CsVoiceConfiguration.md)
 
-[Get-CsVoiceConfiguration]()
+[Get-CsVoiceConfiguration](Get-CsVoiceConfiguration.md)
 
-[Remove-CsVoiceTestConfiguration]()
+[Remove-CsVoiceTestConfiguration](Remove-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)

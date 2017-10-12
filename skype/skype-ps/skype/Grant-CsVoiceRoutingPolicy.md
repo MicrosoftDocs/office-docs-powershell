@@ -242,10 +242,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsVoiceRoutingPolicy]()
+[Get-CsVoiceRoutingPolicy](Get-CsVoiceRoutingPolicy.md)
 
-[New-CsVoiceRoutingPolicy]()
+[New-CsVoiceRoutingPolicy](New-CsVoiceRoutingPolicy.md)
 
-[Remove-CsVoiceRoutingPolicy]()
+[Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
-[Set-CsVoiceRoutingPolicy]()
+[Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)

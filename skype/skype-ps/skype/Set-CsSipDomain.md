@@ -152,8 +152,8 @@ Instead, the cmdlet is used to modify existing instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Get-CsSipDomain]()
+[Get-CsSipDomain](Get-CsSipDomain.md)
 
-[New-CsSipDomain]()
+[New-CsSipDomain](New-CsSipDomain.md)
 
-[Remove-CsSipDomain]()
+[Remove-CsSipDomain](Remove-CsSipDomain.md)

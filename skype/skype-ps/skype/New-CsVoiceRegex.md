@@ -236,8 +236,8 @@ Creates on object of type Microsoft.Rtc.Management.Voice.OcsVoiceRegex.
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)

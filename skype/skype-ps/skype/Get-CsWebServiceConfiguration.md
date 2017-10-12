@@ -180,8 +180,8 @@ The Get-CsWebServiceConfiguration cmdlet returns instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Remove-CsWebServiceConfiguration]()
+[Remove-CsWebServiceConfiguration](Remove-CsWebServiceConfiguration.md)
 
-[Set-CsWebServiceConfiguration]()
+[Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)

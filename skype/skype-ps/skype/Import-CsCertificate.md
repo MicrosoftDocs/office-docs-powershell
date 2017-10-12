@@ -312,10 +312,10 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsCertificate]()
+[Get-CsCertificate](Get-CsCertificate.md)
 
-[Remove-CsCertificate]()
+[Remove-CsCertificate](Remove-CsCertificate.md)
 
-[Request-CsCertificate]()
+[Request-CsCertificate](Request-CsCertificate.md)
 
-[Set-CsCertificate]()
+[Set-CsCertificate](Set-CsCertificate.md)

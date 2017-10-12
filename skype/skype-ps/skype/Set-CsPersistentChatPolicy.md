@@ -223,10 +223,10 @@ Instead, the `Set-CsPersistentChatPolicy` cmdlet modifies existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatPolicy]()
+[Get-CsPersistentChatPolicy](Get-CsPersistentChatPolicy.md)
 
-[Grant-CsPersistentChatPolicy]()
+[Grant-CsPersistentChatPolicy](Grant-CsPersistentChatPolicy.md)
 
-[New-CsPersistentChatPolicy]()
+[New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
-[Remove-CsPersistentChatPolicy]()
+[Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)

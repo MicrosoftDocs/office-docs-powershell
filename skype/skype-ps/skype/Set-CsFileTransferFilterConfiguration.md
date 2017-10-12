@@ -267,8 +267,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsFileTransferFilterConfiguration]()
+[New-CsFileTransferFilterConfiguration](New-CsFileTransferFilterConfiguration.md)
 
-[Remove-CsFileTransferFilterConfiguration]()
+[Remove-CsFileTransferFilterConfiguration](Remove-CsFileTransferFilterConfiguration.md)
 
-[Get-CsFileTransferFilterConfiguration]()
+[Get-CsFileTransferFilterConfiguration](Get-CsFileTransferFilterConfiguration.md)

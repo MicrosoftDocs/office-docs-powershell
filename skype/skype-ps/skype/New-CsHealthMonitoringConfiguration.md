@@ -301,9 +301,9 @@ The New-CsHealthMonitoringConfiguration cmdlet creates new instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsHealthMonitoringConfiguration]()
+[Get-CsHealthMonitoringConfiguration](Get-CsHealthMonitoringConfiguration.md)
 
-[Remove-CsHealthMonitoringConfiguration]()
+[Remove-CsHealthMonitoringConfiguration](Remove-CsHealthMonitoringConfiguration.md)
 
-[Set-CsHealthMonitoringConfiguration]()
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)
 

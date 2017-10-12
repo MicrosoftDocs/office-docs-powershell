@@ -211,12 +211,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsHostingProvider]()
+[Disable-CsHostingProvider](Disable-CsHostingProvider.md)
 
-[Enable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[New-CsHostingProvider]()
+[New-CsHostingProvider](New-CsHostingProvider.md)
 
-[Remove-CsHostingProvider]()
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)
 
-[Set-CsHostingProvider]()
+[Set-CsHostingProvider](Set-CsHostingProvider.md)

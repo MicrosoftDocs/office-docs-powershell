@@ -261,11 +261,11 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 
 ## RELATED LINKS
 
-[Remove-CsCpsConfiguration]()
+[Remove-CsCpsConfiguration](Remove-CsCpsConfiguration.md)
 
-[Set-CsCpsConfiguration]()
+[Set-CsCpsConfiguration](Set-CsCpsConfiguration.md)
 
-[Get-CsCpsConfiguration]()
+[Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)
 
-[Set-CsCallParkServiceMusicOnHoldFile]()
+[Set-CsCallParkServiceMusicOnHoldFile](Set-CsCallParkServiceMusicOnHoldFile.md)
 

@@ -165,8 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsSipResponseCodeTranslationRule]()
+[New-CsSipResponseCodeTranslationRule](New-CsSipResponseCodeTranslationRule.md)
 
-[Remove-CsSipResponseCodeTranslationRule]()
+[Remove-CsSipResponseCodeTranslationRule](Remove-CsSipResponseCodeTranslationRule.md)
 
-[Set-CsSipResponseCodeTranslationRule]()
+[Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)

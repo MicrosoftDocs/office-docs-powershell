@@ -165,8 +165,8 @@ Instead, the `Remove-CsWebServiceConfiguration` cmdlet deletes existing instance
 
 ## RELATED LINKS
 
-[Get-CsWebServiceConfiguration]()
+[Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Set-CsWebServiceConfiguration]()
+[Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)

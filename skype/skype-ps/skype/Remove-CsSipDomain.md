@@ -147,8 +147,8 @@ Instead, the `Remove-CsSipDomain` cmdlet deletes existing instance of the Micros
 
 ## RELATED LINKS
 
-[Get-CsSipDomain]()
+[Get-CsSipDomain](Get-CsSipDomain.md)
 
-[New-CsSipDomain]()
+[New-CsSipDomain](New-CsSipDomain.md)
 
-[Set-CsSipDomain]()
+[Set-CsSipDomain](Set-CsSipDomain.md)

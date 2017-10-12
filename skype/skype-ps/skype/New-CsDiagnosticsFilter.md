@@ -249,7 +249,7 @@ The New-CsDiagnosticsFilter cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[New-CsDiagnosticConfiguration]()
+[New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
-[Set-CsDiagnosticConfiguration]()
+[Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
 

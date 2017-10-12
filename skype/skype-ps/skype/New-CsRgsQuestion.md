@@ -187,5 +187,5 @@ New-CsRgsQuestion creates instances of the Microsoft.Rtc.Management.WriteableSet
 
 ## RELATED LINKS
 
-[New-CsRgsAnswer]()
+[New-CsRgsAnswer](New-CsRgsAnswer.md)
 

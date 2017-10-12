@@ -186,10 +186,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsPersistentChatPolicy]()
+[Grant-CsPersistentChatPolicy](Grant-CsPersistentChatPolicy.md)
 
-[New-CsPersistentChatPolicy]()
+[New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
-[Remove-CsPersistentChatPolicy]()
+[Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
-[Set-CsPersistentChatPolicy]()
+[Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)

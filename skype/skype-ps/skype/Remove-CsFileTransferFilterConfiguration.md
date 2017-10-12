@@ -150,8 +150,8 @@ Instead, it removes instances of the Microsoft.Rtc.Management.WritableConfig.Set
 
 ## RELATED LINKS
 
-[New-CsFileTransferFilterConfiguration]()
+[New-CsFileTransferFilterConfiguration](New-CsFileTransferFilterConfiguration.md)
 
-[Set-CsFileTransferFilterConfiguration]()
+[Set-CsFileTransferFilterConfiguration](Set-CsFileTransferFilterConfiguration.md)
 
-[Get-CsFileTransferFilterConfiguration]()
+[Get-CsFileTransferFilterConfiguration](Get-CsFileTransferFilterConfiguration.md)

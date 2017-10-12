@@ -371,8 +371,8 @@ Instead, the `Set-CsXmppAllowedPartner` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsXmppAllowedPartner]()
+[Get-CsXmppAllowedPartner](Get-CsXmppAllowedPartner.md)
 
-[New-CsXmppAllowedPartner]()
+[New-CsXmppAllowedPartner](New-CsXmppAllowedPartner.md)
 
-[Remove-CsXmppAllowedPartner]()
+[Remove-CsXmppAllowedPartner](Remove-CsXmppAllowedPartner.md)

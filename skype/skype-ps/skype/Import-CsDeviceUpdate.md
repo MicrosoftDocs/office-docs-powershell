@@ -183,5 +183,5 @@ The Import-CsDeviceUpdate cmdlet imports instances of the Microsoft.Rtc.Manageme
 
 ## RELATED LINKS
 
-[Get-CsDeviceUpdateRule]()
+[Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 

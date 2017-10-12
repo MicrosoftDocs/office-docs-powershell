@@ -277,4 +277,4 @@ The `Test-CsPhoneBootstrap` cmdlet returns an instance of the Microsoft.Rtc.Synt
 
 ## RELATED LINKS
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

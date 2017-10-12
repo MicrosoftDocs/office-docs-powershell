@@ -221,10 +221,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsStaticRoutingConfiguration]()
+[Get-CsStaticRoutingConfiguration](Get-CsStaticRoutingConfiguration.md)
 
-[New-CsStaticRoute]()
+[New-CsStaticRoute](New-CsStaticRoute.md)
 
-[New-CsStaticRoutingConfiguration]()
+[New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
-[Remove-CsStaticRoutingConfiguration]()
+[Remove-CsStaticRoutingConfiguration](Remove-CsStaticRoutingConfiguration.md)

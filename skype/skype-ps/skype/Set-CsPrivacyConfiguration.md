@@ -369,8 +369,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsPrivacyConfiguration]()
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
 
-[New-CsPrivacyConfiguration]()
+[New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
-[Remove-CsPrivacyConfiguration]()
+[Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)

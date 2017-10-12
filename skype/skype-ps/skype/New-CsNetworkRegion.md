@@ -346,11 +346,11 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Remove-CsNetworkRegion]()
+[Remove-CsNetworkRegion](Remove-CsNetworkRegion.md)
 
-[Set-CsNetworkRegion]()
+[Set-CsNetworkRegion](Set-CsNetworkRegion.md)
 
-[Get-CsNetworkRegion]()
+[Get-CsNetworkRegion](Get-CsNetworkRegion.md)
 
-[New-CsNetworkBWAlternatePath]()
+[New-CsNetworkBWAlternatePath](New-CsNetworkBWAlternatePath.md)
 

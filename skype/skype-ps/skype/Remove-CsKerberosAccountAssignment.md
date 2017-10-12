@@ -149,8 +149,8 @@ Instead, the cmdlet deletes existing instances of the Microsoft.Rtc.Management.W
 
 ## RELATED LINKS
 
-[Get-CsKerberosAccountAssignment]()
+[Get-CsKerberosAccountAssignment](Get-CsKerberosAccountAssignment.md)
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

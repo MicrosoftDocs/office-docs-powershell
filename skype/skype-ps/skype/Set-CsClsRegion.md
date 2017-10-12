@@ -203,8 +203,8 @@ Instead, the `Set-CsClsRegion` cmdlet modifies existing instances of the Microso
 
 ## RELATED LINKS
 
-[Get-CsClsRegion]()
+[Get-CsClsRegion](Get-CsClsRegion.md)
 
-[New-CsClsRegion]()
+[New-CsClsRegion](New-CsClsRegion.md)
 
-[Remove-CsClsRegion]()
+[Remove-CsClsRegion](Remove-CsClsRegion.md)

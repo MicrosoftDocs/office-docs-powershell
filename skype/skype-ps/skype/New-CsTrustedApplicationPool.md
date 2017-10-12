@@ -398,12 +398,12 @@ Creates an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer.
 
 ## RELATED LINKS
 
-[Remove-CsTrustedApplicationPool]()
+[Remove-CsTrustedApplicationPool](Remove-CsTrustedApplicationPool.md)
 
-[Set-CsTrustedApplicationPool]()
+[Set-CsTrustedApplicationPool](Set-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)
 
-[New-CsTrustedApplicationComputer]()
+[New-CsTrustedApplicationComputer](New-CsTrustedApplicationComputer.md)
 
-[Get-CsSite]()
+[Get-CsSite](Get-CsSite.md)

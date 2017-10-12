@@ -141,6 +141,6 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsService]()
+[Get-CsService](Get-CsService.md)
 
-[Move-CsManagementServer]()
+[Move-CsManagementServer](Move-CsManagementServer.md)

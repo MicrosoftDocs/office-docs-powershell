@@ -364,10 +364,10 @@ The `Set-CsCertificate` cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Get-CsCertificate]()
+[Get-CsCertificate](Get-CsCertificate.md)
 
-[Import-CsCertificate]()
+[Import-CsCertificate](Import-CsCertificate.md)
 
-[Remove-CsCertificate]()
+[Remove-CsCertificate](Remove-CsCertificate.md)
 
-[Request-CsCertificate]()
+[Request-CsCertificate](Request-CsCertificate.md)

@@ -139,10 +139,10 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.R
 
 ## RELATED LINKS
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Set-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
-[Test-CsVoiceRoute]()
+[Test-CsVoiceRoute](Test-CsVoiceRoute.md)

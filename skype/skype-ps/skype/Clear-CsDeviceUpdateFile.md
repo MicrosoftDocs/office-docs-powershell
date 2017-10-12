@@ -130,6 +130,6 @@ The Clear-CsDeviceUpdateFile cmdlet does not return any values.
 ## NOTES
 
 ## RELATED LINKS
-[Clear-CsDeviceUpdateLog]()
+[Clear-CsDeviceUpdateLog](Clear-CsDeviceUpdateLog.md)
 
-[Get-CsDeviceUpdateConfiguration]()
+[Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)

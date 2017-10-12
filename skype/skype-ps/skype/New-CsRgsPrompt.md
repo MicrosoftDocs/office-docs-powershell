@@ -146,7 +146,7 @@ New-CsRgsPrompt creates instances of the Microsoft.Rtc.Management.WritableSettin
 
 ## RELATED LINKS
 
-[Import-CsRgsAudioFile]()
+[Import-CsRgsAudioFile](Import-CsRgsAudioFile.md)
 
-[New-CsRgsCallAction]()
+[New-CsRgsCallAction](New-CsRgsCallAction.md)
 

@@ -148,4 +148,4 @@ If called along with the AsBytes parameter, the Export-CsConfiguration cmdlet re
 
 ## RELATED LINKS
 
-[Import-CsConfiguration]()
+[Import-CsConfiguration](Import-CsConfiguration.md)

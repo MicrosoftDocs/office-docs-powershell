@@ -302,8 +302,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsQoEConfiguration]()
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[Remove-CsQoEConfiguration]()
+[Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
-[Get-CsQoEConfiguration]()
+[Get-CsQoEConfiguration](Get-CsQoEConfiguration.md)

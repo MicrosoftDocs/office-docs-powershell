@@ -131,4 +131,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.OcsVoiceUserTestResult.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

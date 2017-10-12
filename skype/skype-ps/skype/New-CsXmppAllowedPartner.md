@@ -382,8 +382,8 @@ The `New-CsXmppAllowedPartner` cmdlet creates new instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Get-CsXmppAllowedPartner]()
+[Get-CsXmppAllowedPartner](Get-CsXmppAllowedPartner.md)
 
-[Remove-CsXmppAllowedPartner]()
+[Remove-CsXmppAllowedPartner](Remove-CsXmppAllowedPartner.md)
 
-[Set-CsXmppAllowedPartner]()
+[Set-CsXmppAllowedPartner](Set-CsXmppAllowedPartner.md)

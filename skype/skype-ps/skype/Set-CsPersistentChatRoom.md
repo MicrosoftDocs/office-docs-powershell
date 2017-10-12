@@ -473,10 +473,10 @@ Instead, the `Set-CsPersistentChatRoom` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Clear-CsPersistentChatRoom]()
+[Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)
 
-[Get-CsPersistentChatRoom]()
+[Get-CsPersistentChatRoom](Get-CsPersistentChatRoom.md)
 
-[New-CsPersistentChatRoom]()
+[New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
-[Remove-CsPersistentChatRoom]()
+[Remove-CsPersistentChatRoom](Remove-CsPersistentChatRoom.md)

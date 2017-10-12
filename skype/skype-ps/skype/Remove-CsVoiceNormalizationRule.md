@@ -186,14 +186,14 @@ This cmdlet deletes an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
 
-[Test-CsVoiceNormalizationRule]()
+[Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
 
-[Remove-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)

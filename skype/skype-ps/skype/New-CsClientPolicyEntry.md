@@ -166,6 +166,6 @@ The New-CsClientPolicyEntry cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[New-CsClientPolicy]()
+[New-CsClientPolicy](New-CsClientPolicy.md)
 
-[Set-CsClientPolicy]()
+[Set-CsClientPolicy](Set-CsClientPolicy.md)

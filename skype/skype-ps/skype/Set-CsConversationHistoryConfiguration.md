@@ -212,6 +212,6 @@ Instead, `Set-CsConversationHistoryConfiguration` modifies instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsConversationHistoryConfiguration]()
+[Get-CsConversationHistoryConfiguration](Get-CsConversationHistoryConfiguration.md)
 
-[Remove-CsConversationHistoryConfiguration]()
+[Remove-CsConversationHistoryConfiguration](Remove-CsConversationHistoryConfiguration.md)

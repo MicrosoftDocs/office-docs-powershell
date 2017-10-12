@@ -422,9 +422,9 @@ The New-CsRegistrarConfiguration cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsRegistrarConfiguration]()
+[Get-CsRegistrarConfiguration](Get-CsRegistrarConfiguration.md)
 
-[Remove-CsRegistrarConfiguration]()
+[Remove-CsRegistrarConfiguration](Remove-CsRegistrarConfiguration.md)
 
-[Set-CsRegistrarConfiguration]()
+[Set-CsRegistrarConfiguration](Set-CsRegistrarConfiguration.md)
 

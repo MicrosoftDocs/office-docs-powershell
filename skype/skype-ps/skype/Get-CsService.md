@@ -837,24 +837,24 @@ For example:
 
 ## RELATED LINKS
 
-[Set-CsApplicationServer]()
+[Set-CsApplicationServer](Set-CsApplicationServer.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)
 
-[Set-CsConferenceServer]()
+[Set-CsConferenceServer](Set-CsConferenceServer.md)
 
-[Set-CsDirector]()
+[Set-CsDirector](Set-CsDirector.md)
 
-[Set-CsEdgeServer]()
+[Set-CsEdgeServer](Set-CsEdgeServer.md)
 
-[Set-CsManagementServer]()
+[Set-CsManagementServer](Set-CsManagementServer.md)
 
-[Set-CsMediationServer]()
+[Set-CsMediationServer](Set-CsMediationServer.md)
 
-[Set-CsMonitoringServer]()
+[Set-CsMonitoringServer](Set-CsMonitoringServer.md)
 
-[Set-CsRegistrar]()
+[Set-CsRegistrar](Set-CsRegistrar.md)
 
-[Set-CsUserServer]()
+[Set-CsUserServer](Set-CsUserServer.md)
 
-[Set-CsWebServer]()
+[Set-CsWebServer](Set-CsWebServer.md)

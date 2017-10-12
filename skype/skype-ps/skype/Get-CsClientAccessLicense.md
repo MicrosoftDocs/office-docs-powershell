@@ -226,4 +226,4 @@ The Get-CsClientAccessLicense cmdlet returns licensing information.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

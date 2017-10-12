@@ -160,8 +160,8 @@ Instead, the cmdlet deletes modifies instances of the Microsoft.Rtc.Management.W
 
 ## RELATED LINKS
 
-[Get-CsSipResponseCodeTranslationRule]()
+[Get-CsSipResponseCodeTranslationRule](Get-CsSipResponseCodeTranslationRule.md)
 
-[New-CsSipResponseCodeTranslationRule]()
+[New-CsSipResponseCodeTranslationRule](New-CsSipResponseCodeTranslationRule.md)
 
-[Set-CsSipResponseCodeTranslationRule]()
+[Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)

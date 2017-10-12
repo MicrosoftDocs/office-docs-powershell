@@ -143,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkInterSitePolicy]()
+[New-CsNetworkInterSitePolicy](New-CsNetworkInterSitePolicy.md)
 
-[Remove-CsNetworkInterSitePolicy]()
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Set-CsNetworkInterSitePolicy]()
+[Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)

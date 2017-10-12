@@ -359,13 +359,13 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Ed
 
 ## RELATED LINKS
 
-[Disable-CsHostingProvider]()
+[Disable-CsHostingProvider](Disable-CsHostingProvider.md)
 
-[Enable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[Get-CsHostingProvider]()
+[Get-CsHostingProvider](Get-CsHostingProvider.md)
 
-[Remove-CsHostingProvider]()
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)
 
-[Set-CsHostingProvider]()
+[Set-CsHostingProvider](Set-CsHostingProvider.md)
 

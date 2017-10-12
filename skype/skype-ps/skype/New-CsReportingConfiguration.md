@@ -179,9 +179,9 @@ The New-CsReportingConfiguration cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsReportingConfiguration]()
+[Get-CsReportingConfiguration](Get-CsReportingConfiguration.md)
 
-[Remove-CsReportingConfiguration]()
+[Remove-CsReportingConfiguration](Remove-CsReportingConfiguration.md)
 
-[Set-CsReportingConfiguration]()
+[Set-CsReportingConfiguration](Set-CsReportingConfiguration.md)
 

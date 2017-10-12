@@ -151,8 +151,8 @@ Instead, the `Remove-CsXmppAllowedPartner` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsXmppAllowedPartner]()
+[Get-CsXmppAllowedPartner](Get-CsXmppAllowedPartner.md)
 
-[New-CsXmppAllowedPartner]()
+[New-CsXmppAllowedPartner](New-CsXmppAllowedPartner.md)
 
-[Set-CsXmppAllowedPartner]()
+[Set-CsXmppAllowedPartner](Set-CsXmppAllowedPartner.md)

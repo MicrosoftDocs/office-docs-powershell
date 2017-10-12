@@ -137,16 +137,16 @@ This cmdlet removes instances of the Microsoft.Rtc.Management.WritableConfig.Pol
 
 ## RELATED LINKS
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Set-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

@@ -143,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsBandwidthPolicyServiceConfiguration]()
+[New-CsBandwidthPolicyServiceConfiguration](New-CsBandwidthPolicyServiceConfiguration.md)
 
-[Remove-CsBandwidthPolicyServiceConfiguration]()
+[Remove-CsBandwidthPolicyServiceConfiguration](Remove-CsBandwidthPolicyServiceConfiguration.md)
 
-[Set-CsBandwidthPolicyServiceConfiguration]()
+[Set-CsBandwidthPolicyServiceConfiguration](Set-CsBandwidthPolicyServiceConfiguration.md)

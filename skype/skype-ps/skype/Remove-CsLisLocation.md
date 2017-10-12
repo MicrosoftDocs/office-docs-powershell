@@ -475,16 +475,16 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 
 ## RELATED LINKS
 
-[Set-CsLisLocation]()
+[Set-CsLisLocation](Set-CsLisLocation.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)
 
-[Remove-CsLisPort]()
+[Remove-CsLisPort](Remove-CsLisPort.md)
 
-[Remove-CsLisSubnet]()
+[Remove-CsLisSubnet](Remove-CsLisSubnet.md)
 
-[Remove-CsLisSwitch]()
+[Remove-CsLisSwitch](Remove-CsLisSwitch.md)
 
-[Remove-CsLisWirelessAccessPoint]()
+[Remove-CsLisWirelessAccessPoint](Remove-CsLisWirelessAccessPoint.md)
 
-[Get-CsLisCivicAddress]()
+[Get-CsLisCivicAddress](Get-CsLisCivicAddress.md)

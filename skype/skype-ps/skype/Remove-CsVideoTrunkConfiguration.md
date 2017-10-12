@@ -152,8 +152,8 @@ The `Remove-CsVideoTrunkConfiguration` cmdlet removes specified Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunkConfiguration]()
+[Get-CsVideoTrunkConfiguration](Get-CsVideoTrunkConfiguration.md)
 
-[New-CsVideoTrunkConfiguration]()
+[New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
-[Set-CsVideoTrunkConfiguration]()
+[Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)

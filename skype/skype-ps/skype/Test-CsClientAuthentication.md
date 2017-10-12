@@ -239,6 +239,6 @@ The `Test-CsClientAuthentication` cmdlet returns an instance of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[Get-CsWebServiceConfiguration]()
+[Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

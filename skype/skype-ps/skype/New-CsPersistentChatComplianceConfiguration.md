@@ -350,9 +350,9 @@ The New-CsPersistentChatComplianceConfiguration cmdlet creates new instances of 
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatComplianceConfiguration]()
+[Get-CsPersistentChatComplianceConfiguration](Get-CsPersistentChatComplianceConfiguration.md)
 
-[Remove-CsPersistentChatComplianceConfiguration]()
+[Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)
 
-[Set-CsPersistentChatComplianceConfiguration]()
+[Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)
 

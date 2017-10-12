@@ -190,10 +190,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsPinPolicy]()
+[Grant-CsPinPolicy](Grant-CsPinPolicy.md)
 
-[New-CsPinPolicy]()
+[New-CsPinPolicy](New-CsPinPolicy.md)
 
-[Remove-CsPinPolicy]()
+[Remove-CsPinPolicy](Remove-CsPinPolicy.md)
 
-[Set-CsPinPolicy]()
+[Set-CsPinPolicy](Set-CsPinPolicy.md)

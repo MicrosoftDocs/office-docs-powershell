@@ -270,9 +270,9 @@ The New-CsFileTransferFilterConfiguration cmdlet creates new instances of the Mi
 
 ## RELATED LINKS
 
-[Remove-CsFileTransferFilterConfiguration]()
+[Remove-CsFileTransferFilterConfiguration](Remove-CsFileTransferFilterConfiguration.md)
 
-[Set-CsFileTransferFilterConfiguration]()
+[Set-CsFileTransferFilterConfiguration](Set-CsFileTransferFilterConfiguration.md)
 
-[Get-CsFileTransferFilterConfiguration]()
+[Get-CsFileTransferFilterConfiguration](Get-CsFileTransferFilterConfiguration.md)
 

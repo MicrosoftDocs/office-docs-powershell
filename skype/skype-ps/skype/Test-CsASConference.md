@@ -365,6 +365,6 @@ The `Test-CsASConference` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Get-CsConferencingPolicy]()
+[Get-CsConferencingPolicy](Get-CsConferencingPolicy.md)
 
-[Test-CsDataConference]()
+[Test-CsDataConference](Test-CsDataConference.md)

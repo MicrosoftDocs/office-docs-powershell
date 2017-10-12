@@ -363,13 +363,13 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Ed
 
 ## RELATED LINKS
 
-[Disable-CsPublicProvider]()
+[Disable-CsPublicProvider](Disable-CsPublicProvider.md)
 
-[Enable-CsPublicProvider]()
+[Enable-CsPublicProvider](Enable-CsPublicProvider.md)
 
-[Get-CsPublicProvider]()
+[Get-CsPublicProvider](Get-CsPublicProvider.md)
 
-[Remove-CsPublicProvider]()
+[Remove-CsPublicProvider](Remove-CsPublicProvider.md)
 
-[Set-CsPublicProvider]()
+[Set-CsPublicProvider](Set-CsPublicProvider.md)
 

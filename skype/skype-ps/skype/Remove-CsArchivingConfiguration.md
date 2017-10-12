@@ -170,10 +170,10 @@ Instead, the cmdlet removes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsArchivingConfiguration]()
+[Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
 
-[New-CsArchivingConfiguration]()
+[New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
-[Set-CsArchivingConfiguration]()
+[Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)

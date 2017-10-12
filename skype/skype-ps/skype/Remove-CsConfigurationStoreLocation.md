@@ -157,6 +157,6 @@ The `Remove-CsConfigurationStoreLocation` cmdlet does not return any objects or 
 
 ## RELATED LINKS
 
-[Get-CsConfigurationStoreLocation]()
+[Get-CsConfigurationStoreLocation](Get-CsConfigurationStoreLocation.md)
 
-[Set-CsConfigurationStoreLocation]()
+[Set-CsConfigurationStoreLocation](Set-CsConfigurationStoreLocation.md)

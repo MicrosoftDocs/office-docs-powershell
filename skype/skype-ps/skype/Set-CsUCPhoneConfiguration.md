@@ -467,8 +467,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsUCPhoneConfiguration]()
+[Get-CsUCPhoneConfiguration](Get-CsUCPhoneConfiguration.md)
 
-[New-CsUCPhoneConfiguration]()
+[New-CsUCPhoneConfiguration](New-CsUCPhoneConfiguration.md)
 
-[Remove-CsUCPhoneConfiguration]()
+[Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)

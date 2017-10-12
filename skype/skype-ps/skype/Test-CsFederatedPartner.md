@@ -228,4 +228,4 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsAllowedDomain]()
+[Get-CsAllowedDomain](Get-CsAllowedDomain.md)

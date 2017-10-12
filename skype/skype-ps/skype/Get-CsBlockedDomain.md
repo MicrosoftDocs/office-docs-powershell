@@ -163,10 +163,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsBlockedDomain]()
+[New-CsBlockedDomain](New-CsBlockedDomain.md)
 
-[Remove-CsBlockedDomain]()
+[Remove-CsBlockedDomain](Remove-CsBlockedDomain.md)
 
-[Set-CsAccessEdgeConfiguration]()
+[Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)
 
-[Set-CsBlockedDomain]()
+[Set-CsBlockedDomain](Set-CsBlockedDomain.md)

@@ -247,6 +247,6 @@ The `Set-CsConfigurationStoreLocation` cmdlet does not return any objects or val
 
 ## RELATED LINKS
 
-[Get-CsConfigurationStoreLocation]()
+[Get-CsConfigurationStoreLocation](Get-CsConfigurationStoreLocation.md)
 
-[Remove-CsConfigurationStoreLocation]()
+[Remove-CsConfigurationStoreLocation](Remove-CsConfigurationStoreLocation.md)

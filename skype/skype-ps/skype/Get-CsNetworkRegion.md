@@ -138,8 +138,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkRegion]()
+[New-CsNetworkRegion](New-CsNetworkRegion.md)
 
-[Remove-CsNetworkRegion]()
+[Remove-CsNetworkRegion](Remove-CsNetworkRegion.md)
 
-[Set-CsNetworkRegion]()
+[Set-CsNetworkRegion](Set-CsNetworkRegion.md)

@@ -231,8 +231,8 @@ The New-CsClsSecurityGroup cmdlet creates new instances of the Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[Get-CsClsSecurityGroup]()
+[Get-CsClsSecurityGroup](Get-CsClsSecurityGroup.md)
 
-[Remove-CsClsSecurityGroup]()
+[Remove-CsClsSecurityGroup](Remove-CsClsSecurityGroup.md)
 
-[Set-CsClsSecurityGroup]()
+[Set-CsClsSecurityGroup](Set-CsClsSecurityGroup.md)

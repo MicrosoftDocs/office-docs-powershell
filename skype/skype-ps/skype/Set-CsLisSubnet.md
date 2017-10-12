@@ -538,8 +538,8 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Remove-CsLisSubnet]()
+[Remove-CsLisSubnet](Remove-CsLisSubnet.md)
 
-[Get-CsLisSubnet]()
+[Get-CsLisSubnet](Get-CsLisSubnet.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)

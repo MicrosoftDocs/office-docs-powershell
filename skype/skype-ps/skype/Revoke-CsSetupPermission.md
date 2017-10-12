@@ -215,6 +215,6 @@ None.
 
 ## RELATED LINKS
 
-[Grant-CsSetupPermission]()
+[Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 
-[Test-CsSetupPermission]()
+[Test-CsSetupPermission](Test-CsSetupPermission.md)

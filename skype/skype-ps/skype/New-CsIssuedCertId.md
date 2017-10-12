@@ -128,5 +128,5 @@ New-CsIssuedCertId creates instances of the Microsoft.Rtc.Management.WritableCon
 
 ## RELATED LINKS
 
-[New-CsSipProxyTLS]()
+[New-CsSipProxyTLS](New-CsSipProxyTLS.md)
 

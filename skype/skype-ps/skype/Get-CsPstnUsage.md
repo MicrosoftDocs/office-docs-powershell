@@ -153,8 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsPstnUsage]()
+[Set-CsPstnUsage](Set-CsPstnUsage.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

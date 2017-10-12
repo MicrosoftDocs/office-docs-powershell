@@ -139,8 +139,8 @@ Deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settin
 
 ## RELATED LINKS
 
-[New-CsAnnouncement]()
+[New-CsAnnouncement](New-CsAnnouncement.md)
 
-[Set-CsAnnouncement]()
+[Set-CsAnnouncement](Set-CsAnnouncement.md)
 
-[Get-CsAnnouncement]()
+[Get-CsAnnouncement](Get-CsAnnouncement.md)

@@ -243,10 +243,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsPresencePolicy]()
+[Grant-CsPresencePolicy](Grant-CsPresencePolicy.md)
 
-[New-CsPresencePolicy]()
+[New-CsPresencePolicy](New-CsPresencePolicy.md)
 
-[Remove-CsPresencePolicy]()
+[Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)
 
-[Set-CsPresencePolicy]()
+[Set-CsPresencePolicy](Set-CsPresencePolicy.md)

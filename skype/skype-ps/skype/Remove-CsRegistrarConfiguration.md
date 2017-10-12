@@ -165,8 +165,8 @@ Instead, the `Remove-CsRegistrarConfiguration` cmdlet deletes existing instances
 
 ## RELATED LINKS
 
-[Get-CsRegistrarConfiguration]()
+[Get-CsRegistrarConfiguration](Get-CsRegistrarConfiguration.md)
 
-[New-CsRegistrarConfiguration]()
+[New-CsRegistrarConfiguration](New-CsRegistrarConfiguration.md)
 
-[Set-CsRegistrarConfiguration]()
+[Set-CsRegistrarConfiguration](Set-CsRegistrarConfiguration.md)

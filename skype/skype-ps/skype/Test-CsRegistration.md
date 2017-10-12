@@ -323,4 +323,4 @@ The `Test-CsRegistration` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Test-CsClientAuth]()
+[Test-CsClientAuth](Test-CsClientAuth.md)

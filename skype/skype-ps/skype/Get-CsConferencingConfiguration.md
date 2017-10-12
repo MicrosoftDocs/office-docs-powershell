@@ -165,8 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsConferencingConfiguration]()
+[New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
-[Remove-CsConferencingConfiguration]()
+[Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)
 
-[Set-CsConferencingConfiguration]()
+[Set-CsConferencingConfiguration](Set-CsConferencingConfiguration.md)

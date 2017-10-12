@@ -184,8 +184,8 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.HolidaySet object.
 
 ## RELATED LINKS
 
-[Get-CsRgsHolidaySet]()
+[Get-CsRgsHolidaySet](Get-CsRgsHolidaySet.md)
 
-[New-CsRgsHolidaySet]()
+[New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
-[Set-CsRgsHolidaySet]()
+[Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)

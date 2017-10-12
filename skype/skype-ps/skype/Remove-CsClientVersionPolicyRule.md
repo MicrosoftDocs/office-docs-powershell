@@ -204,8 +204,8 @@ Instead, the `Remove-CsClientVersionPolicyRule` cmdlet deletes instances of the 
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicyRule]()
+[Get-CsClientVersionPolicyRule](Get-CsClientVersionPolicyRule.md)
 
-[New-CsClientVersionPolicyRule]()
+[New-CsClientVersionPolicyRule](New-CsClientVersionPolicyRule.md)
 
-[Set-CsClientVersionPolicyRule]()
+[Set-CsClientVersionPolicyRule](Set-CsClientVersionPolicyRule.md)

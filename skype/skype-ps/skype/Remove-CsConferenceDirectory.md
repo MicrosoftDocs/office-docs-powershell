@@ -141,8 +141,8 @@ Instead, the `Removes-CsConferenceDirectory` cmdlet deletes instances of the Mic
 
 ## RELATED LINKS
 
-[Get-CsConferenceDirectory]()
+[Get-CsConferenceDirectory](Get-CsConferenceDirectory.md)
 
-[Move-CsConferenceDirectory]()
+[Move-CsConferenceDirectory](Move-CsConferenceDirectory.md)
 
-[New-CsConferenceDirectory]()
+[New-CsConferenceDirectory](New-CsConferenceDirectory.md)

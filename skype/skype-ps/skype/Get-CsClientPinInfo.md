@@ -145,10 +145,10 @@ The cmdlet also accepts pipelined input of user objects.
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[Lock-CsClientPin]()
+[Lock-CsClientPin](Lock-CsClientPin.md)
 
-[Set-CsClientPin]()
+[Set-CsClientPin](Set-CsClientPin.md)
 
-[Unlock-CsClientPin]()
+[Unlock-CsClientPin](Unlock-CsClientPin.md)

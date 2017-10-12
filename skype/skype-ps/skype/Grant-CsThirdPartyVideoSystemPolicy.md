@@ -193,10 +193,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[New-CsThirdPartyVideoSystemPolicy]()
+[New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystemPolicy]()
+[Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

@@ -276,8 +276,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsServerApplication]()
+[Get-CsServerApplication](Get-CsServerApplication.md)
 
-[New-CsServerApplication]()
+[New-CsServerApplication](New-CsServerApplication.md)
 
-[Remove-CsServerApplication]()
+[Remove-CsServerApplication](Remove-CsServerApplication.md)

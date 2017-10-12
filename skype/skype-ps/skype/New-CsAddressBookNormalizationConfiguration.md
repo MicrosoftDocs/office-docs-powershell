@@ -163,11 +163,11 @@ The New-CsAddressBookNormalizationConfiguration cmdlet creates new instances of 
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationConfiguration]()
+[Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
 
-[Remove-CsAddressBookNormalizationConfiguration]()
+[Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
-[Set-CsAddressBookNormalizationConfiguration]()
+[Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
-[Import-CsCompanyPhoneNormalizationRules]()
+[Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)
 

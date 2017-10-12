@@ -157,4 +157,4 @@ The Export-CsRgsConfiguration cmdlet creates compressed files with the .ZIP file
 
 ## RELATED LINKS
 
-[Import-CsRgsConfiguration]()
+[Import-CsRgsConfiguration](Import-CsRgsConfiguration.md)

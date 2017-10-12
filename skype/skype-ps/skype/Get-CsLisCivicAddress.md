@@ -79,6 +79,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Test-CsLisCivicAddress]()
+[Test-CsLisCivicAddress](Test-CsLisCivicAddress.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)

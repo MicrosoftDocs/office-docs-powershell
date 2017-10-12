@@ -271,10 +271,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsDiagnosticConfiguration]()
+[Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
-[New-CsDiagnosticConfiguration]()
+[New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
-[New-CsDiagnosticsFilter]()
+[New-CsDiagnosticsFilter](New-CsDiagnosticsFilter.md)
 
-[Remove-CsDiagnosticConfiguration]()
+[Remove-CsDiagnosticConfiguration](Remove-CsDiagnosticConfiguration.md)

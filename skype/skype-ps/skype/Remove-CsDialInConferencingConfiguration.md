@@ -156,8 +156,8 @@ Instead, the `Remove-CSDialInConferencingConfiguration` cmdlet deletes instances
 
 ## RELATED LINKS
 
-[Get-CsDialInConferencingConfiguration]()
+[Get-CsDialInConferencingConfiguration](Get-CsDialInConferencingConfiguration.md)
 
-[New-CsDialInConferencingConfiguration]()
+[New-CsDialInConferencingConfiguration](New-CsDialInConferencingConfiguration.md)
 
-[Set-CsDialInConferencingConfiguration]()
+[Set-CsDialInConferencingConfiguration](Set-CsDialInConferencingConfiguration.md)

@@ -235,11 +235,11 @@ New-CsRgsHolidaySet creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 
 ## RELATED LINKS
 
-[Get-CsRgsHolidaySet]()
+[Get-CsRgsHolidaySet](Get-CsRgsHolidaySet.md)
 
-[New-CsRgsHoliday]()
+[New-CsRgsHoliday](New-CsRgsHoliday.md)
 
-[Remove-CsRgsHolidaySet]()
+[Remove-CsRgsHolidaySet](Remove-CsRgsHolidaySet.md)
 
-[Set-CsRgsHolidaySet]()
+[Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)
 

@@ -230,10 +230,10 @@ The New-CsPresenceProvider cmdlet creates new instances of the Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[Get-CsPresenceProvider]()
+[Get-CsPresenceProvider](Get-CsPresenceProvider.md)
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[Remove-CsPresenceProvider]()
+[Remove-CsPresenceProvider](Remove-CsPresenceProvider.md)
 
-[Set-CsPresenceProvider]()
+[Set-CsPresenceProvider](Set-CsPresenceProvider.md)

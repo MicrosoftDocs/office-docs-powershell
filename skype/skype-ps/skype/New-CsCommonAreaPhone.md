@@ -305,12 +305,12 @@ The New-CsCommonAreaPhone cmdlet creates new instances of the Microsoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[Get-CsCommonAreaPhone]()
+[Get-CsCommonAreaPhone](Get-CsCommonAreaPhone.md)
 
-[Move-CsCommonAreaPhone]()
+[Move-CsCommonAreaPhone](Move-CsCommonAreaPhone.md)
 
-[Remove-CsCommonAreaPhone]()
+[Remove-CsCommonAreaPhone](Remove-CsCommonAreaPhone.md)
 
-[Set-CsCommonAreaPhone]()
+[Set-CsCommonAreaPhone](Set-CsCommonAreaPhone.md)
 
 

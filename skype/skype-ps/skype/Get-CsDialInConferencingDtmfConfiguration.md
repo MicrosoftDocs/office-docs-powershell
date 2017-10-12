@@ -152,8 +152,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDialInConferencingDtmfConfiguration]()
+[New-CsDialInConferencingDtmfConfiguration](New-CsDialInConferencingDtmfConfiguration.md)
 
-[Remove-CsDialInConferencingDtmfConfiguration]()
+[Remove-CsDialInConferencingDtmfConfiguration](Remove-CsDialInConferencingDtmfConfiguration.md)
 
-[Set-CsDialInConferencingDtmfConfiguration]()
+[Set-CsDialInConferencingDtmfConfiguration](Set-CsDialInConferencingDtmfConfiguration.md)

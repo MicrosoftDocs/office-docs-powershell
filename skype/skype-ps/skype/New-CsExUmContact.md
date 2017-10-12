@@ -250,13 +250,13 @@ Creates an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADExUmCon
 
 ## RELATED LINKS
 
-[Remove-CsExUmContact]()
+[Remove-CsExUmContact](Remove-CsExUmContact.md)
 
-[Set-CsExUmContact]()
+[Set-CsExUmContact](Set-CsExUmContact.md)
 
-[Get-CsExUmContact]()
+[Get-CsExUmContact](Get-CsExUmContact.md)
 
-[Move-CsExUmContact]()
+[Move-CsExUmContact](Move-CsExUmContact.md)
 
-[Get-CsHostedVoicemailPolicy]()
+[Get-CsHostedVoicemailPolicy](Get-CsHostedVoicemailPolicy.md)
 

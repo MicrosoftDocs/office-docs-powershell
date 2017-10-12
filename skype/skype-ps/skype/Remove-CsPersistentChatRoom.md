@@ -172,10 +172,10 @@ Instead, the `Remove-CsPersistentChatRoom` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Clear-CsPersistentChatRoom]()
+[Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)
 
-[Get-CsPersistentChatRoom]()
+[Get-CsPersistentChatRoom](Get-CsPersistentChatRoom.md)
 
-[New-CsPersistentChatRoom]()
+[New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
-[Set-CsPersistentChatRoom]()
+[Set-CsPersistentChatRoom](Set-CsPersistentChatRoom.md)

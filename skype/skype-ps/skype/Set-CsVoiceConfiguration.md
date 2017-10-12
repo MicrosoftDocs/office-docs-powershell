@@ -200,12 +200,12 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Remove-CsVoiceConfiguration]()
+[Remove-CsVoiceConfiguration](Remove-CsVoiceConfiguration.md)
 
-[Get-CsVoiceConfiguration]()
+[Get-CsVoiceConfiguration](Get-CsVoiceConfiguration.md)
 
-[New-CsVoiceTestConfiguration]()
+[New-CsVoiceTestConfiguration](New-CsVoiceTestConfiguration.md)
 
-[Set-CsVoiceTestConfiguration]()
+[Set-CsVoiceTestConfiguration](Set-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)

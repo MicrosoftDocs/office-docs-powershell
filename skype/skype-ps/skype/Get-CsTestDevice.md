@@ -161,8 +161,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTestDevice]()
+[New-CsTestDevice](New-CsTestDevice.md)
 
-[Remove-CsTestDevice]()
+[Remove-CsTestDevice](Remove-CsTestDevice.md)
 
-[Set-CsTestDevice]()
+[Set-CsTestDevice](Set-CsTestDevice.md)

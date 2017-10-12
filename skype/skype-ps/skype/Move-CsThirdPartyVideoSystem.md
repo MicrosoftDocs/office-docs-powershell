@@ -278,10 +278,10 @@ However, if you include the PassThru parameter you can instances of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystem]()
+[Get-CsThirdPartyVideoSystem](Get-CsThirdPartyVideoSystem.md)
 
-[New-CsThirdPartyVideoSystem]()
+[New-CsThirdPartyVideoSystem](New-CsThirdPartyVideoSystem.md)
 
-[Remove-CsThirdPartyVideoSystem]()
+[Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystem]()
+[Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)

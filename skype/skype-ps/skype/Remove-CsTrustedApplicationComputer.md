@@ -137,10 +137,10 @@ It removes an object of type Microsoft.Rtc.Management.Xds.DisplayComputer.
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationComputer]()
+[New-CsTrustedApplicationComputer](New-CsTrustedApplicationComputer.md)
 
-[Get-CsTrustedApplicationComputer]()
+[Get-CsTrustedApplicationComputer](Get-CsTrustedApplicationComputer.md)
 
-[Remove-CsTrustedApplicationPool]()
+[Remove-CsTrustedApplicationPool](Remove-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)

@@ -303,10 +303,10 @@ When the PassThru parameter is used, it also returns an object of this type.
 
 ## RELATED LINKS
 
-[New-CsExUmContact]()
+[New-CsExUmContact](New-CsExUmContact.md)
 
-[Remove-CsExUmContact]()
+[Remove-CsExUmContact](Remove-CsExUmContact.md)
 
-[Get-CsExUmContact]()
+[Get-CsExUmContact](Get-CsExUmContact.md)
 
-[Move-CsExUmContact]()
+[Move-CsExUmContact](Move-CsExUmContact.md)

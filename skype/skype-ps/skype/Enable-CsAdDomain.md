@@ -240,6 +240,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsAdDomain]()
+[Disable-CsAdDomain](Disable-CsAdDomain.md)
 
-[Get-CsAdDomain]()
+[Get-CsAdDomain](Get-CsAdDomain.md)

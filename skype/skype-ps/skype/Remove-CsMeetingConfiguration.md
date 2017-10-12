@@ -180,8 +180,8 @@ Instead, the `Remove-CsMeetingConfiguration` cmdlet deletes existing instances o
 
 ## RELATED LINKS
 
-[Get-CsMeetingConfiguration]()
+[Get-CsMeetingConfiguration](Get-CsMeetingConfiguration.md)
 
-[New-CsMeetingConfiguration]()
+[New-CsMeetingConfiguration](New-CsMeetingConfiguration.md)
 
-[Set-CsMeetingConfiguration]()
+[Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)

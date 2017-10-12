@@ -319,11 +319,11 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy]()
+[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 
-[New-CsExternalAccessPolicy]()
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Remove-CsExternalAccessPolicy]()
+[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy]()
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
 

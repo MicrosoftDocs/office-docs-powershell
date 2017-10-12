@@ -214,9 +214,9 @@ The New-CsFIPSConfiguration cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Get-CsFIPSConfiguration]()
+[Get-CsFIPSConfiguration](Get-CsFIPSConfiguration.md)
 
-[Remove-CsFIPSConfiguration]()
+[Remove-CsFIPSConfiguration](Remove-CsFIPSConfiguration.md)
 
-[Set-CsFIPSConfiguration]()
+[Set-CsFIPSConfiguration](Set-CsFIPSConfiguration.md)
 

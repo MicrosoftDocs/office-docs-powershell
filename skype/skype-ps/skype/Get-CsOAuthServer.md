@@ -155,8 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOAuthServer]()
+[New-CsOAuthServer](New-CsOAuthServer.md)
 
-[Remove-CsOAuthServer]()
+[Remove-CsOAuthServer](Remove-CsOAuthServer.md)
 
-[Set-CsOAuthServer]()
+[Set-CsOAuthServer](Set-CsOAuthServer.md)

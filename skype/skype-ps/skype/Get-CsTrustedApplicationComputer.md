@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationComputer]()
+[New-CsTrustedApplicationComputer](New-CsTrustedApplicationComputer.md)
 
-[Remove-CsTrustedApplicationComputer]()
+[Remove-CsTrustedApplicationComputer](Remove-CsTrustedApplicationComputer.md)

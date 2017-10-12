@@ -243,6 +243,6 @@ Instead, the cmdlet configures existing instances of the Microsoft.Rtc.Rgs.Manag
 
 ## RELATED LINKS
 
-[Get-CsRgsConfiguration]()
+[Get-CsRgsConfiguration](Get-CsRgsConfiguration.md)
 
-[Move-CsRgsConfiguration]()
+[Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)

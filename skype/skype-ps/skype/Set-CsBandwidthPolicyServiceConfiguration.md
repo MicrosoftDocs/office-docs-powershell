@@ -227,8 +227,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.B
 
 ## RELATED LINKS
 
-[New-CsBandwidthPolicyServiceConfiguration]()
+[New-CsBandwidthPolicyServiceConfiguration](New-CsBandwidthPolicyServiceConfiguration.md)
 
-[Remove-CsBandwidthPolicyServiceConfiguration]()
+[Remove-CsBandwidthPolicyServiceConfiguration](Remove-CsBandwidthPolicyServiceConfiguration.md)
 
-[Get-CsBandwidthPolicyServiceConfiguration]()
+[Get-CsBandwidthPolicyServiceConfiguration](Get-CsBandwidthPolicyServiceConfiguration.md)

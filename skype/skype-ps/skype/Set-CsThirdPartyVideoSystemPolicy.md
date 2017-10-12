@@ -213,10 +213,10 @@ Instead, the `Set-CsThirdPartyVideoSystemPolicy` cmdlet modifies existing instan
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[Grant-CsThirdPartyVideoSystemPolicy]()
+[Grant-CsThirdPartyVideoSystemPolicy](Grant-CsThirdPartyVideoSystemPolicy.md)
 
-[New-CsThirdPartyVideoSystemPolicy]()
+[New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystemPolicy]()
+[Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)

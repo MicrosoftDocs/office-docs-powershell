@@ -127,6 +127,6 @@ Instead, the `Remove-CsBackupServiceConfiguration` cmdlet deletes instances of t
 
 ## RELATED LINKS
 
-[Get-CsBackupServiceConfiguration]()
+[Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)
 
-[Set-CsBackupServiceConfiguration]()
+[Set-CsBackupServiceConfiguration](Set-CsBackupServiceConfiguration.md)

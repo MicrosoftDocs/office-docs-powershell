@@ -175,8 +175,8 @@ The `New-CsVideoInteropServerConfiguration` cmdlet creates new instances of the 
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerConfiguration]()
+[Get-CsVideoInteropServerConfiguration](Get-CsVideoInteropServerConfiguration.md)
 
-[Remove-CsVideoInteropServerConfiguration]()
+[Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)
 
-[Set-CsVideoInteropServerConfiguration]()
+[Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)

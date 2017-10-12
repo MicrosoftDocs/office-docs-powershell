@@ -416,12 +416,12 @@ String values or XML.
 
 ## RELATED LINKS
 
-[Show-CsClsLogging]()
+[Show-CsClsLogging](Show-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Stop-CsClsLogging]()
+[Stop-CsClsLogging](Stop-CsClsLogging.md)
 
-[Sync-CsClsLogging]()
+[Sync-CsClsLogging](Sync-CsClsLogging.md)
 
-[Update-CsClsLogging]()
+[Update-CsClsLogging](Update-CsClsLogging.md)

@@ -145,8 +145,8 @@ The `Remove-CsServerApplication` cmdlet deletes existing instances of the Micros
 
 ## RELATED LINKS
 
-[Get-CsServerApplication]()
+[Get-CsServerApplication](Get-CsServerApplication.md)
 
-[New-CsServerApplication]()
+[New-CsServerApplication](New-CsServerApplication.md)
 
-[Set-CsServerApplication]()
+[Set-CsServerApplication](Set-CsServerApplication.md)

@@ -214,8 +214,8 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ExumR
 
 ## RELATED LINKS
 
-[Remove-CsVoicemailReroutingConfiguration]()
+[Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
-[Set-CsVoicemailReroutingConfiguration]()
+[Set-CsVoicemailReroutingConfiguration](Set-CsVoicemailReroutingConfiguration.md)
 
-[Get-CsVoicemailReroutingConfiguration]()
+[Get-CsVoicemailReroutingConfiguration](Get-CsVoicemailReroutingConfiguration.md)

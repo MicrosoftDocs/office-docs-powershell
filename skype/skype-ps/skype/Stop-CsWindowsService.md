@@ -294,6 +294,6 @@ Instead, the `Stop-CsWindowsService` cmdlet stops instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Get-CsWindowsService]()
+[Get-CsWindowsService](Get-CsWindowsService.md)
 
-[Start-CsWindowsService]()
+[Start-CsWindowsService](Start-CsWindowsService.md)

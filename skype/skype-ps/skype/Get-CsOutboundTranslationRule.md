@@ -133,8 +133,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[Remove-CsOutboundTranslationRule]()
+[Remove-CsOutboundTranslationRule](Remove-CsOutboundTranslationRule.md)
 
-[Set-CsOutboundTranslationRule]()
+[Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)

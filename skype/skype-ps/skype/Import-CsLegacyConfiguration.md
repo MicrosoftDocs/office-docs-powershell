@@ -177,9 +177,9 @@ The Import-CsLegacyConfiguration cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Import-CsLegacyConferenceDirectory]()
+[Import-CsLegacyConferenceDirectory](Import-CsLegacyConferenceDirectory.md)
 
-[Merge-CsLegacyTopology]()
+[Merge-CsLegacyTopology](Merge-CsLegacyTopology.md)
 
-[Move-CsLegacyUser]()
+[Move-CsLegacyUser](Move-CsLegacyUser.md)
 

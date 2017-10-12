@@ -167,8 +167,8 @@ Instead, the `Remove-CsClsConfiguration` cmdlet deletes existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsClsConfiguration]()
+[Get-CsClsConfiguration](Get-CsClsConfiguration.md)
 
-[New-CsClsConfiguration]()
+[New-CsClsConfiguration](New-CsClsConfiguration.md)
 
-[Set-CsClsConfiguration]()
+[Set-CsClsConfiguration](Set-CsClsConfiguration.md)

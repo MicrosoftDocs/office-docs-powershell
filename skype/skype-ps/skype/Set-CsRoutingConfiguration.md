@@ -228,14 +228,14 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsRoutingConfiguration]()
+[New-CsRoutingConfiguration](New-CsRoutingConfiguration.md)
 
-[Remove-CsRoutingConfiguration]()
+[Remove-CsRoutingConfiguration](Remove-CsRoutingConfiguration.md)
 
-[Get-CsRoutingConfiguration]()
+[Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)
 
-[Set-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
-[New-CsCallViaWorkPolicy]()
+[New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)

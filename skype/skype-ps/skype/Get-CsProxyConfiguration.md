@@ -163,8 +163,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsProxyConfiguration]()
+[New-CsProxyConfiguration](New-CsProxyConfiguration.md)
 
-[Remove-CsProxyConfiguration]()
+[Remove-CsProxyConfiguration](Remove-CsProxyConfiguration.md)
 
-[Set-CsProxyConfiguration]()
+[Set-CsProxyConfiguration](Set-CsProxyConfiguration.md)

@@ -206,7 +206,7 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsIPPhonePolicy]()
+[Get-CsIPPhonePolicy](Get-CsIPPhonePolicy.md)
 
-[Set-CsIPPhonePolicy]()
+[Set-CsIPPhonePolicy](Set-CsIPPhonePolicy.md)
 

@@ -216,10 +216,10 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsClientPolicy]()
+[Get-CsClientPolicy](Get-CsClientPolicy.md)
 
-[Grant-CsClientPolicy]()
+[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
 
-[New-CsClientPolicy]()
+[New-CsClientPolicy](New-CsClientPolicy.md)
 
-[Set-CsClientPolicy]()
+[Set-CsClientPolicy](Set-CsClientPolicy.md)

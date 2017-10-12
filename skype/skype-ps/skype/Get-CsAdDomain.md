@@ -176,6 +176,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsAdDomain]()
+[Disable-CsAdDomain](Disable-CsAdDomain.md)
 
-[Enable-CsAdDomain]()
+[Enable-CsAdDomain](Enable-CsAdDomain.md)

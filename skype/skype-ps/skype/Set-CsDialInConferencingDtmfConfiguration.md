@@ -360,8 +360,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsDialInConferencingDtmfConfiguration]()
+[Get-CsDialInConferencingDtmfConfiguration](Get-CsDialInConferencingDtmfConfiguration.md)
 
-[New-CsDialInConferencingDtmfConfiguration]()
+[New-CsDialInConferencingDtmfConfiguration](New-CsDialInConferencingDtmfConfiguration.md)
 
-[Remove-CsDialInConferencingDtmfConfiguration]()
+[Remove-CsDialInConferencingDtmfConfiguration](Remove-CsDialInConferencingDtmfConfiguration.md)

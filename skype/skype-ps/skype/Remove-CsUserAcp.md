@@ -251,6 +251,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsUserAcp]()
+[Get-CsUserAcp](Get-CsUserAcp.md)
 
-[Set-CsUserAcp]()
+[Set-CsUserAcp](Set-CsUserAcp.md)

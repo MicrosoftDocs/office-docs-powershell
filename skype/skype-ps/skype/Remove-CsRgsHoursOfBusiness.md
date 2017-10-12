@@ -181,8 +181,8 @@ Deletes existing instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.
 
 ## RELATED LINKS
 
-[Get-CsRgsHoursOfBusiness]()
+[Get-CsRgsHoursOfBusiness](Get-CsRgsHoursOfBusiness.md)
 
-[New-CsRgsHoursOfBusiness]()
+[New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
-[Set-CsRgsHoursOfBusiness]()
+[Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)

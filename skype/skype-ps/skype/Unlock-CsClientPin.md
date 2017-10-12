@@ -147,8 +147,8 @@ Instead, the cmdlet configures one or more instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[Get-CsClientPinInfo]()
+[Get-CsClientPinInfo](Get-CsClientPinInfo.md)
 
-[Lock-CsClientPin]()
+[Lock-CsClientPin](Lock-CsClientPin.md)
 
-[Set-CsClientPin]()
+[Set-CsClientPin](Set-CsClientPin.md)

@@ -213,10 +213,10 @@ The Get-CsVoiceRoutingPolicy cmdlet returns instances of the Microsoft.Rtc.Manag
 
 ## RELATED LINKS
 
-[Grant-CsVoiceRoutingPolicy]()
+[Grant-CsVoiceRoutingPolicy](Grant-CsVoiceRoutingPolicy.md)
 
-[New-CsVoiceRoutingPolicy]()
+[New-CsVoiceRoutingPolicy](New-CsVoiceRoutingPolicy.md)
 
-[Remove-CsVoiceRoutingPolicy]()
+[Remove-CsVoiceRoutingPolicy](Remove-CsVoiceRoutingPolicy.md)
 
-[Set-CsVoiceRoutingPolicy]()
+[Set-CsVoiceRoutingPolicy](Set-CsVoiceRoutingPolicy.md)

@@ -182,8 +182,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTrustedApplication]()
+[New-CsTrustedApplication](New-CsTrustedApplication.md)
 
-[Remove-CsTrustedApplication]()
+[Remove-CsTrustedApplication](Remove-CsTrustedApplication.md)
 
-[Set-CsTrustedApplication]()
+[Set-CsTrustedApplication](Set-CsTrustedApplication.md)

@@ -323,4 +323,4 @@ A String must represent a valid user account Identity (for example, "sip:kenmyer
 
 ## RELATED LINKS
 
-[Set-CsUser]()
+[Set-CsUser](Set-CsUser.md)

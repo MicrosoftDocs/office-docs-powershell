@@ -160,8 +160,8 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsCdrConfiguration]()
+[Get-CsCdrConfiguration](Get-CsCdrConfiguration.md)
 
-[New-CsCdrConfiguration]()
+[New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
-[Set-CsCdrConfiguration]()
+[Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)

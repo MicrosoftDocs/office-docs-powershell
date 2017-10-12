@@ -165,8 +165,8 @@ Instead, the `Remove-CsHealthMonitoringConfiguration` cmdlet deletes existing in
 
 ## RELATED LINKS
 
-[Get-CsHealthMonitoringConfiguration]()
+[Get-CsHealthMonitoringConfiguration](Get-CsHealthMonitoringConfiguration.md)
 
-[New-CsHealthMonitoringConfiguration]()
+[New-CsHealthMonitoringConfiguration](New-CsHealthMonitoringConfiguration.md)
 
-[Set-CsHealthMonitoringConfiguration]()
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)

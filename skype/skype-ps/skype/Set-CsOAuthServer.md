@@ -237,8 +237,8 @@ Instead, the `Set-CsOAuthServer` cmdlet modifies existing instances of the Micro
 
 ## RELATED LINKS
 
-[Get-CsOAuthServer]()
+[Get-CsOAuthServer](Get-CsOAuthServer.md)
 
-[New-CsOAuthServer]()
+[New-CsOAuthServer](New-CsOAuthServer.md)
 
-[Remove-CsOAuthServer]()
+[Remove-CsOAuthServer](Remove-CsOAuthServer.md)

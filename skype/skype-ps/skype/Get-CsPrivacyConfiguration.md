@@ -244,8 +244,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPrivacyConfiguration]()
+[New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
-[Remove-CsPrivacyConfiguration]()
+[Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
 
-[Set-CsPrivacyConfiguration]()
+[Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)

@@ -244,6 +244,6 @@ The Get-CsAdContact cmdlet accepts a pipelined string value representing the Ide
 
 ## RELATED LINKS
 
-[Get-CsAdUser]()
+[Get-CsAdUser](Get-CsAdUser.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

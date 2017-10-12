@@ -246,8 +246,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.T
 
 ## RELATED LINKS
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[Remove-CsOutboundTranslationRule]()
+[Remove-CsOutboundTranslationRule](Remove-CsOutboundTranslationRule.md)
 
-[Get-CsOutboundTranslationRule]()
+[Get-CsOutboundTranslationRule](Get-CsOutboundTranslationRule.md)

@@ -150,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

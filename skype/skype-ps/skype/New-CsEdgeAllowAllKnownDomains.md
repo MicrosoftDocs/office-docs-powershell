@@ -95,5 +95,5 @@ The New-CsEdgeAllowAllKnownDomains cmdlet creates new instances of the Microsoft
 
 ## RELATED LINKS
 
-[Set-CsTenantFederationConfiguration]()
+[Set-CsTenantFederationConfiguration](Set-CsTenantFederationConfiguration.md)
 

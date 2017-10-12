@@ -152,8 +152,8 @@ Instead, the `Remove-CsUserReplicatorConfiguration` cmdlet deletes instances of 
 
 ## RELATED LINKS
 
-[Get-CsUserReplicatorConfiguration]()
+[Get-CsUserReplicatorConfiguration](Get-CsUserReplicatorConfiguration.md)
 
-[New-CsUserReplicatorConfiguration]()
+[New-CsUserReplicatorConfiguration](New-CsUserReplicatorConfiguration.md)
 
-[Set-CsUserReplicatorConfiguration]()
+[Set-CsUserReplicatorConfiguration](Set-CsUserReplicatorConfiguration.md)

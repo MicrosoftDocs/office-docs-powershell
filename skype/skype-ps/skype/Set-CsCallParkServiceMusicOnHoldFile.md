@@ -161,10 +161,10 @@ This cmdlet does not return a value.
 
 ## RELATED LINKS
 
-[New-CsCpsConfiguration]()
+[New-CsCpsConfiguration](New-CsCpsConfiguration.md)
 
-[Remove-CsCpsConfiguration]()
+[Remove-CsCpsConfiguration](Remove-CsCpsConfiguration.md)
 
-[Set-CsCpsConfiguration]()
+[Set-CsCpsConfiguration](Set-CsCpsConfiguration.md)
 
-[Get-CsCpsConfiguration]()
+[Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)

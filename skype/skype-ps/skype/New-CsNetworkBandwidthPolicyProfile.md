@@ -284,10 +284,10 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Remove-CsNetworkBandwidthPolicyProfile]()
+[Remove-CsNetworkBandwidthPolicyProfile](Remove-CsNetworkBandwidthPolicyProfile.md)
 
-[Set-CsNetworkBandwidthPolicyProfile]()
+[Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[New-CsNetworkBWPolicy]()
+[New-CsNetworkBWPolicy](New-CsNetworkBWPolicy.md)

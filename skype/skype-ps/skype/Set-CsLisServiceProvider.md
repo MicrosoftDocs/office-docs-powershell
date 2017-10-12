@@ -173,6 +173,6 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Remove-CsLisServiceProvider]()
+[Remove-CsLisServiceProvider](Remove-CsLisServiceProvider.md)
 
-[Get-CsLisServiceProvider]()
+[Get-CsLisServiceProvider](Get-CsLisServiceProvider.md)

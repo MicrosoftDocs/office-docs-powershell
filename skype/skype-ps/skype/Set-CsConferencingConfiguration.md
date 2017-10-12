@@ -659,8 +659,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsConferencingConfiguration]()
+[Get-CsConferencingConfiguration](Get-CsConferencingConfiguration.md)
 
-[New-CsConferencingConfiguration]()
+[New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
-[Remove-CsConferencingConfiguration]()
+[Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)

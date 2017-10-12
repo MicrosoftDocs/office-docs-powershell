@@ -160,8 +160,8 @@ The `Remove-CsVideoInteropServerConfiguration` cmdlet deletes instances of the M
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerConfiguration]()
+[Get-CsVideoInteropServerConfiguration](Get-CsVideoInteropServerConfiguration.md)
 
-[New-CsVideoInteropServerConfiguration]()
+[New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
-[Set-CsVideoInteropServerConfiguration]()
+[Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)

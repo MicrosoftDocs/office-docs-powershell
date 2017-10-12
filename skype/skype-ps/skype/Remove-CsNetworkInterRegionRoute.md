@@ -136,8 +136,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkInterRegionRoute]()
+[New-CsNetworkInterRegionRoute](New-CsNetworkInterRegionRoute.md)
 
-[Set-CsNetworkInterRegionRoute]()
+[Set-CsNetworkInterRegionRoute](Set-CsNetworkInterRegionRoute.md)
 
-[Get-CsNetworkInterRegionRoute]()
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)

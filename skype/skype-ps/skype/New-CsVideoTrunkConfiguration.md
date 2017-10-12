@@ -254,8 +254,8 @@ The `New-CsVideoTrunkConfiguration` cmdlet creates new instances of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunkConfiguration]()
+[Get-CsVideoTrunkConfiguration](Get-CsVideoTrunkConfiguration.md)
 
-[Set-CsVideoTrunkConfiguration]()
+[Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
 
-[Remove-CsVideoTrunkConfiguration]()
+[Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)

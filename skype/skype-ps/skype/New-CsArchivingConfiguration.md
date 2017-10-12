@@ -372,10 +372,10 @@ The New-CsArchivingConfiguration cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsArchivingConfiguration]()
+[Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
 
-[Remove-CsArchivingConfiguration]()
+[Remove-CsArchivingConfiguration](Remove-CsArchivingConfiguration.md)
 
-[Set-CsArchivingConfiguration]()
+[Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)

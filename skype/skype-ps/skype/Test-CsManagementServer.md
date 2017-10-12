@@ -75,4 +75,4 @@ The `Test-CsManagementServer` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Set-CsManagementServer]()
+[Set-CsManagementServer](Set-CsManagementServer.md)

@@ -156,6 +156,6 @@ New-CsRgsHoliday creates new instances of the Microsoft.Rtc.Rgs.Management.Writa
 
 ## RELATED LINKS
 
-[New-CsRgsHolidaySet]()
+[New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
-[Set-CsRgsHolidaySet]()
+[Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)

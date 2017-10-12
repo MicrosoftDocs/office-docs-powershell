@@ -159,8 +159,8 @@ Instead, the `Remove-CsFIPSConfiguration` cmdlet deletes existing instances of t
 
 ## RELATED LINKS
 
-[Get-CsFIPSConfiguration]()
+[Get-CsFIPSConfiguration](Get-CsFIPSConfiguration.md)
 
-[New-CsFIPSConfiguration]()
+[New-CsFIPSConfiguration](New-CsFIPSConfiguration.md)
 
-[Set-CsFIPSConfiguration]()
+[Set-CsFIPSConfiguration](Set-CsFIPSConfiguration.md)

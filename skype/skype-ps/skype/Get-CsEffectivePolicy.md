@@ -207,4 +207,4 @@ The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

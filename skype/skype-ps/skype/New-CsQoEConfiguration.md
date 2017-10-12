@@ -312,9 +312,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.QoE.Q
 
 ## RELATED LINKS
 
-[Remove-CsQoEConfiguration]()
+[Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
-[Set-CsQoEConfiguration]()
+[Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)
 
-[Get-CsQoEConfiguration]()
+[Get-CsQoEConfiguration](Get-CsQoEConfiguration.md)
 

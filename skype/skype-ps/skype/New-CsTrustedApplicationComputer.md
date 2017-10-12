@@ -144,10 +144,10 @@ Creates an object of type Microsoft.Rtc.Management.Xds.DisplayComputer.
 
 ## RELATED LINKS
 
-[Remove-CsTrustedApplicationComputer]()
+[Remove-CsTrustedApplicationComputer](Remove-CsTrustedApplicationComputer.md)
 
-[Get-CsTrustedApplicationComputer]()
+[Get-CsTrustedApplicationComputer](Get-CsTrustedApplicationComputer.md)
 
-[New-CsTrustedApplicationPool]()
+[New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)

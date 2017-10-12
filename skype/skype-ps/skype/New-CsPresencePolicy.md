@@ -281,11 +281,11 @@ The New-CsPresencePolicy cmdlet creates new instances of the Microsoft.Rtc.Manag
 
 ## RELATED LINKS
 
-[Get-CsPresencePolicy]()
+[Get-CsPresencePolicy](Get-CsPresencePolicy.md)
 
-[Grant-CsPresencePolicy]()
+[Grant-CsPresencePolicy](Grant-CsPresencePolicy.md)
 
-[Remove-CsPresencePolicy]()
+[Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)
 
-[Set-CsPresencePolicy]()
+[Set-CsPresencePolicy](Set-CsPresencePolicy.md)
 

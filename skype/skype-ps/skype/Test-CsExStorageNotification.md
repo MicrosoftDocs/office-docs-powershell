@@ -145,4 +145,4 @@ The `Test-CsExStorageNotification` cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Test-CsExStorageConnectivity]()
+[Test-CsExStorageConnectivity](Test-CsExStorageConnectivity.md)

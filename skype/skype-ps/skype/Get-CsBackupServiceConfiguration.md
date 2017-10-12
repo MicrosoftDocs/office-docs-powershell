@@ -125,6 +125,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsBackupServiceConfiguration]()
+[Remove-CsBackupServiceConfiguration](Remove-CsBackupServiceConfiguration.md)
 
-[Set-CsBackupServiceConfiguration]()
+[Set-CsBackupServiceConfiguration](Set-CsBackupServiceConfiguration.md)

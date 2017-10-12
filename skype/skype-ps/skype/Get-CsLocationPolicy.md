@@ -164,12 +164,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsLocationPolicy]()
+[New-CsLocationPolicy](New-CsLocationPolicy.md)
 
-[Remove-CsLocationPolicy]()
+[Remove-CsLocationPolicy](Remove-CsLocationPolicy.md)
 
-[Set-CsLocationPolicy]()
+[Set-CsLocationPolicy](Set-CsLocationPolicy.md)
 
-[Grant-CsLocationPolicy]()
+[Grant-CsLocationPolicy](Grant-CsLocationPolicy.md)
 
-[Test-CsLocationPolicy]()
+[Test-CsLocationPolicy](Test-CsLocationPolicy.md)

@@ -546,9 +546,9 @@ The New-CsClientVersionPolicyRule cmdlet creates new instances of Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicyRule]()
+[Get-CsClientVersionPolicyRule](Get-CsClientVersionPolicyRule.md)
 
-[Remove-CsClientVersionPolicyRule]()
+[Remove-CsClientVersionPolicyRule](Remove-CsClientVersionPolicyRule.md)
 
-[Set-CsClientVersionPolicyRule]()
+[Set-CsClientVersionPolicyRule](Set-CsClientVersionPolicyRule.md)
 

@@ -207,6 +207,6 @@ Instead, the `Set-CsTenantPublicProvider` cmdlet modifies existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration]()
+[Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
-[Get-CsTenantPublicProvider]()
+[Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)

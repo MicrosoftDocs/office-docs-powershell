@@ -131,12 +131,12 @@ Returns an object of type Microsoft.Rtc.Management.Voice.LocationProfileTestResu
 
 ## RELATED LINKS
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Set-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)

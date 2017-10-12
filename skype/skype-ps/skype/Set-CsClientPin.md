@@ -197,8 +197,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.UserPin
 
 ## RELATED LINKS
 
-[Get-CsClientPinInfo]()
+[Get-CsClientPinInfo](Get-CsClientPinInfo.md)
 
-[Lock-CsClientPin]()
+[Lock-CsClientPin](Lock-CsClientPin.md)
 
-[Unlock-CsClientPin]()
+[Unlock-CsClientPin](Unlock-CsClientPin.md)

@@ -181,8 +181,8 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsConferenceDirectory]()
+[Get-CsConferenceDirectory](Get-CsConferenceDirectory.md)
 
-[New-CsConferenceDirectory]()
+[New-CsConferenceDirectory](New-CsConferenceDirectory.md)
 
-[Remove-CsConferenceDirectory]()
+[Remove-CsConferenceDirectory](Remove-CsConferenceDirectory.md)

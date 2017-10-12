@@ -190,10 +190,10 @@ Modifies existing instances of the Microsoft.Rtc.Rgs.Management.WriteableSetting
 
 ## RELATED LINKS
 
-[Get-CsRgsHoursOfBusiness]()
+[Get-CsRgsHoursOfBusiness](Get-CsRgsHoursOfBusiness.md)
 
-[New-CsRgsHoursOfBusiness]()
+[New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
-[New-CsRgsTimeRange]()
+[New-CsRgsTimeRange](New-CsRgsTimeRange.md)
 
-[Remove-CsRgsHoursOfBusiness]()
+[Remove-CsRgsHoursOfBusiness](Remove-CsRgsHoursOfBusiness.md)

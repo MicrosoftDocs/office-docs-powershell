@@ -157,8 +157,8 @@ Instead, the `Remove-CsDiagnosticConfiguration` cmdlet deletes existing instance
 
 ## RELATED LINKS
 
-[Get-CsDiagnosticConfiguration]()
+[Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
-[New-CsDiagnosticConfiguration]()
+[New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
-[Set-CsDiagnosticConfiguration]()
+[Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)

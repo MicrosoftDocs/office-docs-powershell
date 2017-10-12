@@ -404,9 +404,9 @@ The New-CsMeetingConfiguration cmdlet creates new instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Get-CsMeetingConfiguration]()
+[Get-CsMeetingConfiguration](Get-CsMeetingConfiguration.md)
 
-[Remove-CsMeetingConfiguration]()
+[Remove-CsMeetingConfiguration](Remove-CsMeetingConfiguration.md)
 
-[Set-CsMeetingConfiguration]()
+[Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)
 

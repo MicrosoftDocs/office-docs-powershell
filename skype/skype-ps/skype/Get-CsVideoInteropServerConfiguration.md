@@ -165,8 +165,8 @@ The Get-CsVideoInteropServerConfiguration cmdlet returns instances of the Micros
 
 ## RELATED LINKS
 
-[New-CsVideoInteropServerConfiguration]()
+[New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
-[Remove-CsVideoInteropServerConfiguration]()
+[Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)
 
-[Set-CsVideoInteropServerConfiguration]()
+[Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)

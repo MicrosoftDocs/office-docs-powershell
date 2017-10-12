@@ -263,8 +263,8 @@ The Get-CsUCPhoneConfiguration cmdlet returns instances of the Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[New-CsUCPhoneConfiguration]()
+[New-CsUCPhoneConfiguration](New-CsUCPhoneConfiguration.md)
 
-[Remove-CsUCPhoneConfiguration]()
+[Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)
 
-[Set-CsUCPhoneConfiguration]()
+[Set-CsUCPhoneConfiguration](Set-CsUCPhoneConfiguration.md)

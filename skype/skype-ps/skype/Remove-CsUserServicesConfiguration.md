@@ -160,8 +160,8 @@ Instead, the `Remove-CsUserServicesConfiguration` cmdlet deletes existing instan
 
 ## RELATED LINKS
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsUserServicesConfiguration]()
+[New-CsUserServicesConfiguration](New-CsUserServicesConfiguration.md)
 
-[Set-CsUserServicesConfiguration]()
+[Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)

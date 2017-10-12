@@ -181,10 +181,10 @@ Instead, the `Reset-CsDeviceUpdateRule` cmdlet resets instances of the Microsoft
 
 ## RELATED LINKS
 
-[Approve-CsDeviceUpdateRule]()
+[Approve-CsDeviceUpdateRule](Approve-CsDeviceUpdateRule.md)
 
-[Get-CsDeviceUpdateRule]()
+[Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 
-[Remove-CsDeviceUpdateRule]()
+[Remove-CsDeviceUpdateRule](Remove-CsDeviceUpdateRule.md)
 
-[Restore-CsDeviceUpdateRule]()
+[Restore-CsDeviceUpdateRule](Restore-CsDeviceUpdateRule.md)

@@ -214,6 +214,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsDatabaseMirrorState]()
+[Get-CsDatabaseMirrorState](Get-CsDatabaseMirrorState.md)
 
-[Install-CsMirrorDatabase]()
+[Install-CsMirrorDatabase](Install-CsMirrorDatabase.md)

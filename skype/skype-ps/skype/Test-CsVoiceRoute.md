@@ -157,10 +157,10 @@ Returns an object of type Microsoft.Rtc.Management.Voice.VoiceRouteTestResult.
 
 ## RELATED LINKS
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Remove-CsVoiceRoute]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Set-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

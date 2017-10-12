@@ -222,8 +222,8 @@ Instead, the `Set-CsOutboundCallingNumberTranslationRule` cmdlet modifies existi
 
 ## RELATED LINKS
 
-[Get-CsOutboundCallingNumberTranslationRule]()
+[Get-CsOutboundCallingNumberTranslationRule](Get-CsOutboundCallingNumberTranslationRule.md)
 
-[New-CsOutboundCallingNumberTranslationRule]()
+[New-CsOutboundCallingNumberTranslationRule](New-CsOutboundCallingNumberTranslationRule.md)
 
-[Remove-CsOutboundCallingNumberTranslationRule]()
+[Remove-CsOutboundCallingNumberTranslationRule](Remove-CsOutboundCallingNumberTranslationRule.md)

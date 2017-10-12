@@ -164,8 +164,8 @@ Instead, the `Remove-CsOAuthServer` cmdlet deletes existing instances of the Mic
 
 ## RELATED LINKS
 
-[Get-CsOAuthServer]()
+[Get-CsOAuthServer](Get-CsOAuthServer.md)
 
-[New-CsOAuthServer]()
+[New-CsOAuthServer](New-CsOAuthServer.md)
 
-[Set-CsOAuthServer]()
+[Set-CsOAuthServer](Set-CsOAuthServer.md)

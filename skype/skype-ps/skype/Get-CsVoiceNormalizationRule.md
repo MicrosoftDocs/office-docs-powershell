@@ -216,12 +216,12 @@ The Get-CsVoiceNormalizationRule cmdlet returns instances of the Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Test-CsVoiceNormalizationRule]()
+[Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)

@@ -181,4 +181,4 @@ Instead, the `Set-CsClsSearchTerm` cmdlet modifies existing instances of the Mic
 
 ## RELATED LINKS
 
-[Get-CsClsSearchTerm]()
+[Get-CsClsSearchTerm](Get-CsClsSearchTerm.md)

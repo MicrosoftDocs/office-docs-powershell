@@ -122,8 +122,8 @@ This cmdlet removes an object of type System.Management.Automation.PSCustomObjec
 
 ## RELATED LINKS
 
-[Set-CsLisWirelessAccessPoint]()
+[Set-CsLisWirelessAccessPoint](Set-CsLisWirelessAccessPoint.md)
 
-[Get-CsLisWirelessAccessPoint]()
+[Get-CsLisWirelessAccessPoint](Get-CsLisWirelessAccessPoint.md)
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)

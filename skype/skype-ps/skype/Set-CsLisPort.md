@@ -617,10 +617,10 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Remove-CsLisPort]()
+[Remove-CsLisPort](Remove-CsLisPort.md)
 
-[Get-CsLisPort]()
+[Get-CsLisPort](Get-CsLisPort.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)
 
-[Get-CsLisSwitch]()
+[Get-CsLisSwitch](Get-CsLisSwitch.md)

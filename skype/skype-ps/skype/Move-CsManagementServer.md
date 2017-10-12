@@ -256,5 +256,5 @@ The Move-CsManagementServer cmdlet does not return any objects.
 
 ## RELATED LINKS
 
-[Set-CsManagementServer]()
+[Set-CsManagementServer](Set-CsManagementServer.md)
 

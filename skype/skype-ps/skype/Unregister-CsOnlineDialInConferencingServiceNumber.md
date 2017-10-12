@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: 
 applicable: Skype for Business Online
 title: Unregister-CsOnlineDialInConferencingServiceNumber

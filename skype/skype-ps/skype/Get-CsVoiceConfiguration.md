@@ -110,8 +110,8 @@ This cmdlet returns an instance of the Microsoft.Rtc.Management.WritableConfig.P
 
 ## RELATED LINKS
 
-[Remove-CsVoiceConfiguration]()
+[Remove-CsVoiceConfiguration](Remove-CsVoiceConfiguration.md)
 
-[Set-CsVoiceConfiguration]()
+[Set-CsVoiceConfiguration](Set-CsVoiceConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)

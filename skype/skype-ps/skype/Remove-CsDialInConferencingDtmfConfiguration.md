@@ -161,8 +161,8 @@ Instead, the `Remove-CSDialInConferencingDtmfConfiguration` cmdlet deletes insta
 
 ## RELATED LINKS
 
-[Get-CsDialInConferencingDtmfConfiguration]()
+[Get-CsDialInConferencingDtmfConfiguration](Get-CsDialInConferencingDtmfConfiguration.md)
 
-[New-CsDialInConferencingDtmfConfiguration]()
+[New-CsDialInConferencingDtmfConfiguration](New-CsDialInConferencingDtmfConfiguration.md)
 
-[Set-CsDialInConferencingDtmfConfiguration]()
+[Set-CsDialInConferencingDtmfConfiguration](Set-CsDialInConferencingDtmfConfiguration.md)

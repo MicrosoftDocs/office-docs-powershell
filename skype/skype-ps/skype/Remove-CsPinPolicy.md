@@ -203,10 +203,10 @@ Instead, the cmdlet removes one or more instances of the Microsoft.Rtc.Managemen
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[Grant-CsPinPolicy]()
+[Grant-CsPinPolicy](Grant-CsPinPolicy.md)
 
-[New-CsPinPolicy]()
+[New-CsPinPolicy](New-CsPinPolicy.md)
 
-[Set-CsPinPolicy]()
+[Set-CsPinPolicy](Set-CsPinPolicy.md)

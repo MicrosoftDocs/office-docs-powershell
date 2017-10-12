@@ -244,4 +244,4 @@ None.
 
 ## RELATED LINKS
 
-[Invoke-CsDatabaseFailover]()
+[Invoke-CsDatabaseFailover](Invoke-CsDatabaseFailover.md)

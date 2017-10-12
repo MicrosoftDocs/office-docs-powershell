@@ -121,6 +121,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsConversationHistoryConfiguration]()
+[Remove-CsConversationHistoryConfiguration](Remove-CsConversationHistoryConfiguration.md)
 
-[Set-CsConversationHistoryConfiguration]()
+[Set-CsConversationHistoryConfiguration](Set-CsConversationHistoryConfiguration.md)

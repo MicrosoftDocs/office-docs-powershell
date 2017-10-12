@@ -100,4 +100,4 @@ The `Test-CsCertificateConfiguration` cmdlet returns instances of the Microsoft.
 
 ## RELATED LINKS
 
-[Get-CsCertificate]()
+[Get-CsCertificate](Get-CsCertificate.md)

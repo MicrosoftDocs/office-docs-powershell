@@ -294,10 +294,10 @@ The New-CsAnalogDevice cmdlet creates new instances of the Microsoft.Rtc.Managem
 
 ## RELATED LINKS
 
-[Get-CsAnalogDevice]()
+[Get-CsAnalogDevice](Get-CsAnalogDevice.md)
 
-[Move-CsAnalogDevice]()
+[Move-CsAnalogDevice](Move-CsAnalogDevice.md)
 
-[Remove-CsAnalogDevice]()
+[Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
-[Set-CsAnalogDevice]()
+[Set-CsAnalogDevice](Set-CsAnalogDevice.md)

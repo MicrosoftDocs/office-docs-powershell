@@ -143,10 +143,10 @@ This cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Pol
 ## RELATED LINKS
 
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Remove-CsVoiceRoute]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Set-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Test-CsVoiceRoute]()
+[Test-CsVoiceRoute](Test-CsVoiceRoute.md)

@@ -484,8 +484,8 @@ The New-CsClsConfiguration cmdlet creates new instances of the icrosoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[Get-CsClsConfiguration]()
+[Get-CsClsConfiguration](Get-CsClsConfiguration.md)
 
-[Remove-CsClsConfiguration]()
+[Remove-CsClsConfiguration](Remove-CsClsConfiguration.md)
 
-[Set-CsClsConfiguration]()
+[Set-CsClsConfiguration](Set-CsClsConfiguration.md)

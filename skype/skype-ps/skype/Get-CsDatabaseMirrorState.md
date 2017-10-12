@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Install-CsMirrorDatabase]()
+[Install-CsMirrorDatabase](Install-CsMirrorDatabase.md)
 
-[Uninstall-CsMirrorDatabase]()
+[Uninstall-CsMirrorDatabase](Uninstall-CsMirrorDatabase.md)

@@ -309,10 +309,10 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkRegion]()
+[New-CsNetworkRegion](New-CsNetworkRegion.md)
 
-[Remove-CsNetworkRegion]()
+[Remove-CsNetworkRegion](Remove-CsNetworkRegion.md)
 
-[Get-CsNetworkRegion]()
+[Get-CsNetworkRegion](Get-CsNetworkRegion.md)
 
-[New-CsNetworkBWAlternatePath]()
+[New-CsNetworkBWAlternatePath](New-CsNetworkBWAlternatePath.md)

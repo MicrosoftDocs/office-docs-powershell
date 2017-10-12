@@ -169,10 +169,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Approve-CsDeviceUpdateRule]()
+[Approve-CsDeviceUpdateRule](Approve-CsDeviceUpdateRule.md)
 
-[Remove-CsDeviceUpdateRule]()
+[Remove-CsDeviceUpdateRule](Remove-CsDeviceUpdateRule.md)
 
-[Reset-CsDeviceUpdateRule]()
+[Reset-CsDeviceUpdateRule](Reset-CsDeviceUpdateRule.md)
 
-[Restore-CsDeviceUpdateRule]()
+[Restore-CsDeviceUpdateRule](Restore-CsDeviceUpdateRule.md)

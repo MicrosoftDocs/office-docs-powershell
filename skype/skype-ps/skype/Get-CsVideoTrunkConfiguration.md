@@ -161,8 +161,8 @@ The Get-CsVideoTrunkConfiguration cmdlet returns instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[New-CsVideoTrunkConfiguration]()
+[New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
-[Set-CsVideoTrunkConfiguration]()
+[Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
 
-[Remove-CsVideoTrunkConfiguration]()
+[Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)

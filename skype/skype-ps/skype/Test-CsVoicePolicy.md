@@ -151,12 +151,12 @@ Returns an object of type Microsoft.Rtc.Management.Voice.VoicePolicyTestResult.
 
 ## RELATED LINKS
 
-[New-CsVoicePolicy]()
+[New-CsVoicePolicy](New-CsVoicePolicy.md)
 
-[Remove-CsVoicePolicy]()
+[Remove-CsVoicePolicy](Remove-CsVoicePolicy.md)
 
-[Set-CsVoicePolicy]()
+[Set-CsVoicePolicy](Set-CsVoicePolicy.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Grant-CsVoicePolicy]()
+[Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)

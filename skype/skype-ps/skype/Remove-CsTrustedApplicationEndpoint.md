@@ -115,8 +115,8 @@ It removes an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADAppl
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationEndpoint]()
+[New-CsTrustedApplicationEndpoint](New-CsTrustedApplicationEndpoint.md)
 
-[Set-CsTrustedApplicationEndpoint]()
+[Set-CsTrustedApplicationEndpoint](Set-CsTrustedApplicationEndpoint.md)
 
-[Get-CsTrustedApplicationEndpoint]()
+[Get-CsTrustedApplicationEndpoint](Get-CsTrustedApplicationEndpoint.md)

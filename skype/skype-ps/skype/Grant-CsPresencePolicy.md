@@ -228,10 +228,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsPresencePolicy]()
+[Get-CsPresencePolicy](Get-CsPresencePolicy.md)
 
-[New-CsPresencePolicy]()
+[New-CsPresencePolicy](New-CsPresencePolicy.md)
 
-[Remove-CsPresencePolicy]()
+[Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)
 
-[Set-CsPresencePolicy]()
+[Set-CsPresencePolicy](Set-CsPresencePolicy.md)

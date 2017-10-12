@@ -280,8 +280,8 @@ Instead, the cmdlet modifies the global instance (the only such instance) of the
 
 ## RELATED LINKS
 
-[Get-CsUserReplicatorConfiguration]()
+[Get-CsUserReplicatorConfiguration](Get-CsUserReplicatorConfiguration.md)
 
-[New-CsUserReplicatorConfiguration]()
+[New-CsUserReplicatorConfiguration](New-CsUserReplicatorConfiguration.md)
 
-[Remove-CsUserReplicatorConfiguration]()
+[Remove-CsUserReplicatorConfiguration](Remove-CsUserReplicatorConfiguration.md)

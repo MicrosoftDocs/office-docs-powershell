@@ -413,8 +413,8 @@ The `Test-CsPersistentChatMessage` cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Grant-CsPersistentChatPolicy]()
+[Grant-CsPersistentChatPolicy](Grant-CsPersistentChatPolicy.md)
 
-[New-CsPersistentChatPolicy]()
+[New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
-[Set-CsPersistentChatPolicy]()
+[Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)

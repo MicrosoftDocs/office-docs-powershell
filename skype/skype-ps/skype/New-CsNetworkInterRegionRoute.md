@@ -250,9 +250,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Remove-CsNetworkInterRegionRoute]()
+[Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
-[Set-CsNetworkInterRegionRoute]()
+[Set-CsNetworkInterRegionRoute](Set-CsNetworkInterRegionRoute.md)
 
-[Get-CsNetworkInterRegionRoute]()
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)
 

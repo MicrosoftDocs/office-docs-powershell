@@ -140,10 +140,10 @@ Instead, the `Remove-CsAddressBookNormalizationConfiguration` cmdlet deletes exi
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationConfiguration]()
+[Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
 
-[New-CsAddressBookNormalizationConfiguration]()
+[New-CsAddressBookNormalizationConfiguration](New-CsAddressBookNormalizationConfiguration.md)
 
-[Set-CsAddressBookNormalizationConfiguration]()
+[Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
-[Import-CsCompanyPhoneNormalizationRules]()
+[Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)

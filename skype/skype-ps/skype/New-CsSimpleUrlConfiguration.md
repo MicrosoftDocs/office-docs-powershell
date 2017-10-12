@@ -252,13 +252,13 @@ The New-CsSimpleUrlConfiguration cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsSimpleUrlConfiguration]()
+[Get-CsSimpleUrlConfiguration](Get-CsSimpleUrlConfiguration.md)
 
-[New-CsSimpleUrl]()
+[New-CsSimpleUrl](New-CsSimpleUrl.md)
 
-[New-CsSimpleUrlEntry]()
+[New-CsSimpleUrlEntry](New-CsSimpleUrlEntry.md)
 
-[Remove-CsSimpleUrlConfiguration]()
+[Remove-CsSimpleUrlConfiguration](Remove-CsSimpleUrlConfiguration.md)
 
-[Set-CsSimpleUrlConfiguration]()
+[Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)
 

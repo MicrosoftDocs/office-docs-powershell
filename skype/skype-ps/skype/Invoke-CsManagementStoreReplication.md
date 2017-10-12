@@ -119,5 +119,5 @@ The Invoke-CsManagementStoreReplication cmdlet does not return any objects.
 
 ## RELATED LINKS
 
-[Get-CsManagementStoreReplicationStatus]()
+[Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
 

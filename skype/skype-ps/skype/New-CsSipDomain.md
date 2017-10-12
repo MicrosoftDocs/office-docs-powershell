@@ -170,9 +170,9 @@ The New-CsSipDomain cmdlet creates new instances of the Microsoft.Rtc.Management
 
 ## RELATED LINKS
 
-[Get-CsSipDomain]()
+[Get-CsSipDomain](Get-CsSipDomain.md)
 
-[Remove-CsSipDomain]()
+[Remove-CsSipDomain](Remove-CsSipDomain.md)
 
-[Set-CsSipDomain]()
+[Set-CsSipDomain](Set-CsSipDomain.md)
 
