@@ -182,8 +182,8 @@ Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microso
 
 [Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 
-[Remove-CsDeviceUpdateRule]()
+[Remove-CsDeviceUpdateRule](/Remove-CsDeviceUpdateRule.md)
 
-[Reset-CsDeviceUpdateRule]()
+[Reset-CsDeviceUpdateRule](Reset-CsDeviceUpdateRule)
 
-[Restore-CsDeviceUpdateRule]()
+[Restore-CsDeviceUpdateRule](/Restore-CsDeviceUpdateRule)
