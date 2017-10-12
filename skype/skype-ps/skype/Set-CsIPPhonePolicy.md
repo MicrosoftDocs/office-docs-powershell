@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsIPPhonePolicy
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Use the Set-CsIPPhonePolicy cmdlet to modify the settings of the Skype for Business Online global IP phone policy. IP phone policies define the Skype for Business Online features that are available to users.
 
 ## SYNTAX
 
@@ -25,21 +25,31 @@ Set-CsIPPhonePolicy [[-Identity] <Object>] [-BetterTogetherOverEthernetPairingMo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+IP phone policies are applied each time a user accesses the system via an IP phone device. The Set-CsIPPhonePolicy cmdlet enables you to modify the global IP phone policy that has been configured in your organization.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-CsIPPhonePolicy -UserDialTimeoutMS 10000
 ```
 
-{{ Add example description here }}
+This example modifies the global IP phone policy UserDialTimeoutMS parameter to 10 seconds (10000 ms).
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsIPPhonePolicy -EnablePowerSaveMode $False -EnableOneTouchVoicemail $False -EnableDeviceUpdate $False
+```
+
+This example sets the EnablePowerSaveModeproperty, EnableOneTouchVoicemailvalues, and EnableDeviceUpdate parameters to $false.
 
 ## PARAMETERS
 
 ### -BetterTogetherOverEthernetPairingMode
-{{Fill BetterTogetherOverEthernetPairingMode Description}}
+System.String
+
+Auto – The phone will get paired with BTOE app Automatically and no need for the user to enter the pairing code. Manual – The user needs to enter the pairing code manually to pair with the BTOE app. 
 
 ```yaml
 Type: Object
@@ -71,7 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-Prompts you for confirmation before running the cmdlet.
+System.Management.Automation.SwitchParameter
+
+Prompts you for confirmation before executing the command.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -DateTimeFormat
-{{Fill DateTimeFormat Description}}
+System.Int32
+
+Specifies the time format to be used. The acceptable values are "24" for a 24 hour time format, or "12" for a 12 hour format. The default is "24".
 
 ```yaml
 Type: Object
@@ -103,7 +117,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableBetterTogetherOverEthernet
-{{Fill EnableBetterTogetherOverEthernet Description}}
+System.Boolean
+
+Specifies whether the Better Together Over Ethernet (BTOE) feature is enabled for users. If $true, and if the BTOE plugin is installed on the IP device, the user can tether the device to a PC and sign in to Skype for Business Online. The default is $true.
 
 ```yaml
 Type: Object
@@ -119,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDeviceUpdate
-{{Fill EnableDeviceUpdate Description}}
+System.Boolean
+
+Specifies whether the IP device will be updated by the Skype for Business Online service. If set to $true, IP devices will get firmware updates from the service, if $false the device will not be updated. The default is $true.
 
 ```yaml
 Type: Object
@@ -135,7 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeCalendaring
-{{Fill EnableExchangeCalendaring Description}}
+System.Boolean
+
+Specifies whether an IP device is enabled to connect to the Exchange Online calendaring service. If $true, users are able to connect to their Exchange calendars. If $false, users will not be enabled to connect to their calendars. The default is $true.
 
 ```yaml
 Type: Object
@@ -151,7 +171,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOneTouchVoicemail
-{{Fill EnableOneTouchVoicemail Description}}
+System.Boolean
+
+Specifies whether the Visual Voicemail feature in Skype for Business Online is enabled. If set to $true, the feature is enabled, otherwise $false.
 
 ```yaml
 Type: Object
@@ -167,7 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -EnablePowerSaveMode
-{{Fill EnablePowerSaveMode Description}}
+System.Boolean
+
+If enabled, phone goes to power savings mode (display turns off) based on values of the PowerSaveDuringOfficeHoursTimeoutMS and PowerSavePostOfficeHoursTimeoutMS parameters.
 
 ```yaml
 Type: Object
@@ -183,7 +207,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+System.Management.Automation.SwitchParameter
+
+The Force switch specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the Force switch isn't provided in the command, you're prompted for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -199,7 +225,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Microsoft.Rtc.Management.Xds.XdsIdentity
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -215,7 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-{{Fill Instance Description}}
+System.Management.Automation.PSObject
+
+Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
 
 ```yaml
 Type: Object
@@ -231,7 +261,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeyboardLockMaxPinRetry
-{{Fill KeyboardLockMaxPinRetry Description}}
+System.UInt64
+
+Specifies the maximum number of retries allowed for phone unlock. The default is 5.
 
 ```yaml
 Type: Object
@@ -247,7 +279,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerAddress
-{{Fill LocalProvisioningServerAddress Description}}
+System.String
+
+Specifies the address of the provisioning server for your organization. 
 
 ```yaml
 Type: Object
@@ -263,7 +297,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerPassword
-{{Fill LocalProvisioningServerPassword Description}}
+System.String
+
+Specifies the password for the provisioning server. 
 
 ```yaml
 Type: Object
@@ -279,7 +315,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerType
-{{Fill LocalProvisioningServerType Description}}
+System.String
+
+Specifies the server type for the phone. The default is FTP.
 
 ```yaml
 Type: Object
@@ -295,7 +333,9 @@ Accept wildcard characters: False
 ```
 
 ### -LocalProvisioningServerUser
-{{Fill LocalProvisioningServerUser Description}}
+System.String
+
+Specifies a username for the provisioning server.
 
 ```yaml
 Type: Object
@@ -311,7 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSaveDuringOfficeHoursTimeoutMS
-{{Fill PowerSaveDuringOfficeHoursTimeoutMS Description}}
+System.UInt64
+
+Specifies the time in milliseconds to wait during office hours before turning on Power Save mode. The default is 900,000.
 
 ```yaml
 Type: Object
@@ -327,7 +369,9 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSavePostOfficeHoursTimeoutMS
-{{Fill PowerSavePostOfficeHoursTimeoutMS Description}}
+System.UInt64
+
+Specifies the time in milliseconds to wait after office hours before turning on Power Save mode. The default is 300,000.
 
 ```yaml
 Type: Object
@@ -343,7 +387,9 @@ Accept wildcard characters: False
 ```
 
 ### -PrioritizedCodecsList
-{{Fill PrioritizedCodecsList Description}}
+System.String
+
+Specifies the order in which to prioritize codecs. The default is: "G722_8000;PCMU;PCMA;G729"
 
 ```yaml
 Type: Object
@@ -359,7 +405,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+System.Guid
+
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: Object
@@ -375,7 +423,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserDialTimeoutMS
-{{Fill UserDialTimeoutMS Description}}
+System.UInt64
+
+Specifies the time in milliseconds to wait in On-Hook mode before dialing out automatically. If a user enters a phone number and does not click dial, the system will dial the number after the number of milliseconds specified. The default is 5000. 
 
 ```yaml
 Type: Object
@@ -391,8 +441,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
+System.Management.Automation.SwitchParameter
+
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
 
 ```yaml
 Type: SwitchParameter
@@ -428,11 +479,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.Management.Automation.PSObject
+### 
+System.Management.Automation.PSObject 
+Microsoft.Rtc.Management.ADConnect.Schema.ADUser
 
 ## OUTPUTS
 
 ### System.Object
+By default, the Grant-CsIPPhonePolicy cmdlet returns no objects or values. However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSUserOrAppContact object.
 
 ## NOTES
 
