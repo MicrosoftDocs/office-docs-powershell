@@ -1,7 +1,6 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
-title: New-CsClsProvider
 schema: 2.0.0
 ---
 
@@ -11,7 +10,7 @@ schema: 2.0.0
 
 Creates a new centralized logging trace provider.
 Trace providers are application components that generate trace messages or trace events useful in troubleshooting problems with Skype for Business Server.
-This cmdlet was introduced in Lync Server 2013.
+This cmdlet was introduced in Lync Server.
 
 
 
@@ -196,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

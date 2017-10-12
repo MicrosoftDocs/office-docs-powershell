@@ -1,20 +1,12 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
-title: New-CsClsRegion
 schema: 2.0.0
 ---
 
 # New-CsClsRegion
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new centralized logging configuration region.
-Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
-Centralized logging regions are intended for use with Lync Online Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new centralized logging configuration region.
 Centralized logging provides a way for administrators to simultaneously enable or disable event tracing on multiple computers.
@@ -37,25 +29,8 @@ New-CsClsRegion -Name <String> -OtherRegionAccess <String> -Parent <String> -Sec
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
-Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
-This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
-In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using Windows PowerShell and the Search-CsClsLogging cmdlet.
-
-With the Office 365 version of Lync Server, regions are used to determine which users have access to the personally-identifiable information that is written to the log files.
-Regions are created by using the New-CsClsRegion cmdlet and then are added to a collection of centralized logging configuration settings.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsClsRegion"}
-
-Lync Server Control Panel: The functions carried out by the New-CsClsRegion cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
+The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server.
 Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
 This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
 In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using the Windows PowerShell command-line interface and the Search-CsClsLogging cmdlet.
@@ -69,25 +44,15 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsClsRegion -Identity "global/Europe" -SecurityGroupSuffix "EMEA" -OtherRegionAccess "global/US"
 ```
 
 The command shown in Example a creates a new global region named Europe.
 The new region uses the security group suffix EMEA and also allows access by the global/US region.
 
-New-CsClsRegion -Identity "global/Europe" -SecurityGroupSuffix "EMEA" -OtherRegionAccess "global/US"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example a creates a new global region named Europe.
-The new region uses the security group suffix EMEA and also allows access by the global/US region.
-
-New-CsClsRegion -Identity "global/Europe" -SecurityGroupSuffix "EMEA" -OtherRegionAccess "global/US"
 
 ## PARAMETERS
 
@@ -96,7 +61,7 @@ Unique identifier for the new region.
 Region Identities consist of the centralized logging configuration scope where the region will be created plus a unique region name.
 For example, to create a global region named Redmond use this syntax:
 
--Identity "global/Redmond"
+`-Identity "global/Redmond"`
 
 If you use the Identity parameter then you cannot use either the name parameter or the Parent parameter in that same command.
 
@@ -117,7 +82,7 @@ Accept wildcard characters: False
 Unique name for the new region.
 For example:
 
--Name "Redmond"
+`-Name "Redmond"`
 
 If you use the Name parameter you must also use the Parent parameter.
 However, you should not use the Identity parameter in the same command as the Name and Parent parameters.
@@ -155,7 +120,7 @@ Accept wildcard characters: False
 Scope of the centralized logging configuration settings where the new region will be located.
 For example, to add the new region to the global settings, use this syntax:
 
--Parent "global"
+`-Parent "global"`
 
 You can return identities for all your centralizing logging "parents" by using this command:
 
@@ -243,14 +208,6 @@ Accept wildcard characters: False
 ```
 
 ### -Sites
-**Below Content Applies To:** Lync Server 2013
-
-Sites contained within this region.
-These correspond to the SideId attribute values in the topology document.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Sites contained within this region.
 These correspond to the SiteId attribute values in the topology document.
@@ -293,16 +250,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-New-CsClsRegion does not accept pipelined input.
-
-###  
-None.
 The New-CsClsRegion cmdlet does not accept pipelined input.
 
 ## OUTPUTS
-
-###  
-New-CsClsRegion creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.Region#Decorated object.
 
 ###  
 The New-CsClsRegion cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.Region#Decorated object.
@@ -317,7 +267,4 @@ The New-CsClsRegion cmdlet creates new instances of the Microsoft.Rtc.Management
 
 [Set-CsClsRegion]()
 
-[Online Version](http://technet.microsoft.com/EN-US/library/09396d6e-e7ec-43b8-9f5b-d9cac30348f6(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/09396d6e-e7ec-43b8-9f5b-d9cac30348f6(OCS.16).aspx)
 
