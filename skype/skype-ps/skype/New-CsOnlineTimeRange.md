@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOnlineTimeRange
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The New-CsOnlineTimeRange cmdlet creates a new time range.
 
 ## SYNTAX
 
@@ -18,17 +18,31 @@ New-CsOnlineTimeRange [-End <Object>] [-Start <Object>] [-BypassDualWrite <Objec
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Organizational Auto Attendant (OAA) service. Time ranges are used to form schedules.
+
+Note: The start and end bounds of the time range must obey the relation start < end.
+A time range can only be formed of minute/hour increments.
+A time range can span from one minute to 24 hours.
+ 
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 
-Insert example commands for example 1.
+$workdayTimeRange = New-CsOnlineTimeRange -Start 09:00 -End 17:00
+
 ```
 
-Insert descriptive text for example 1.
+This example creates a time range for a 9am to 5pm work day.
+
+### -------------------------- Example 2 --------------------------
+```
+$allDayTimeRange = New-CsOnlineTimeRange -Start 00:00 -End 1.00:00
+```
+
+This example creates a 24-hour time range.
 
 
 ## PARAMETERS
@@ -36,13 +50,15 @@ Insert descriptive text for example 1.
 ### -End
 PARAMVALUE: TimeSpan
 
+The End parameter represents the end bound of the time range.
+
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -52,13 +68,15 @@ Accept wildcard characters: False
 ### -Start
 PARAMVALUE: TimeSpan
 
+The Start parameter represents the start bound of the time range.
+
 ```yaml
 Type: Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -150,7 +168,13 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
+### None
+
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.Online.Models.TimeRange
+
 
 ## NOTES
 
