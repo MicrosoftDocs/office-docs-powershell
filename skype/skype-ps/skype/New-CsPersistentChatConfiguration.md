@@ -228,9 +228,9 @@ The New-CsPersistentChatConfiguration cmdlet creates new instances of the Micros
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatConfiguration]()
+[Get-CsPersistentChatConfiguration](Get-CsPersistentChatConfiguration.md)
 
-[Remove-CsPersistentChatConfiguration]()
+[Remove-CsPersistentChatConfiguration](Remove-CsPersistentChatConfiguration.md)
 
-[Set-CsPersistentChatConfiguration]()
+[Set-CsPersistentChatConfiguration](Set-CsPersistentChatConfiguration.md)
 

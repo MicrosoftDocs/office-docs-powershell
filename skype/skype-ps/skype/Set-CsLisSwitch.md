@@ -555,12 +555,12 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Remove-CsLisSwitch]()
+[Remove-CsLisSwitch](Remove-CsLisSwitch.md)
 
-[Get-CsLisSwitch]()
+[Get-CsLisSwitch](Get-CsLisSwitch.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)
 
-[Set-CsLisPort]()
+[Set-CsLisPort](Set-CsLisPort.md)
 
-[Get-CsLisPort]()
+[Get-CsLisPort](Get-CsLisPort.md)

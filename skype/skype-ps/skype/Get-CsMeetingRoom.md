@@ -252,10 +252,10 @@ The Get-CsMeetingRoom cmdlet accepts a pipelined string value representing the I
 
 ## RELATED LINKS
 
-[Disable-CsMeetingRoom]()
+[Disable-CsMeetingRoom](Disable-CsMeetingRoom.md)
 
-[Enable-CsMeetingRoom]()
+[Enable-CsMeetingRoom](Enable-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
-[Set-CsMeetingRoom]()
+[Set-CsMeetingRoom](Set-CsMeetingRoom.md)

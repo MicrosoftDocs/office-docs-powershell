@@ -125,10 +125,10 @@ The `Remove-CsThirdPartyVideoSystem` cmdlet does not return any objects or data.
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystem]()
+[Get-CsThirdPartyVideoSystem](Get-CsThirdPartyVideoSystem.md)
 
-[Move-CsThirdPartyVideoSystem]()
+[Move-CsThirdPartyVideoSystem](Move-CsThirdPartyVideoSystem.md)
 
-[New-CsThirdPartyVideoSystem]()
+[New-CsThirdPartyVideoSystem](New-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystem]()
+[Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)

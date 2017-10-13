@@ -331,8 +331,8 @@ It modifies an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADApp
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationEndpoint]()
+[New-CsTrustedApplicationEndpoint](New-CsTrustedApplicationEndpoint.md)
 
-[Remove-CsTrustedApplicationEndpoint]()
+[Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
-[Get-CsTrustedApplicationEndpoint]()
+[Get-CsTrustedApplicationEndpoint](Get-CsTrustedApplicationEndpoint.md)

@@ -330,6 +330,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsUserAcp]()
+[Get-CsUserAcp](Get-CsUserAcp.md)
 
-[Remove-CsUserAcp]()
+[Remove-CsUserAcp](Remove-CsUserAcp.md)

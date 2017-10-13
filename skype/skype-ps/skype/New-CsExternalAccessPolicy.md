@@ -405,11 +405,11 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Exte
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy]()
+[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 
-[Grant-CsExternalAccessPolicy]()
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
 
-[Remove-CsExternalAccessPolicy]()
+[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy]()
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
 

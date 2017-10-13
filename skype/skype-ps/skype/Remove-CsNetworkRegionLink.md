@@ -133,8 +133,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkRegionLink]()
+[New-CsNetworkRegionLink](New-CsNetworkRegionLink.md)
 
-[Set-CsNetworkRegionLink]()
+[Set-CsNetworkRegionLink](Set-CsNetworkRegionLink.md)
 
-[Get-CsNetworkRegionLink]()
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)

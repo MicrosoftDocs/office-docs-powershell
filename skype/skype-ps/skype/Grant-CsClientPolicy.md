@@ -280,10 +280,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsClientPolicy]()
+[Get-CsClientPolicy](Get-CsClientPolicy.md)
 
-[New-CsClientPolicy]()
+[New-CsClientPolicy](New-CsClientPolicy.md)
 
-[Remove-CsClientPolicy]()
+[Remove-CsClientPolicy](Remove-CsClientPolicy.md)
 
-[Set-CsClientPolicy]()
+[Set-CsClientPolicy](Set-CsClientPolicy.md)

@@ -94,8 +94,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)
 
-[Set-CsLisLocation]()
+[Set-CsLisLocation](Set-CsLisLocation.md)
 
-[Get-CsLisCivicAddress]()
+[Get-CsLisCivicAddress](Get-CsLisCivicAddress.md)

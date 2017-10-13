@@ -358,10 +358,10 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkBandwidthPolicyProfile]()
+[New-CsNetworkBandwidthPolicyProfile](New-CsNetworkBandwidthPolicyProfile.md)
 
-[Remove-CsNetworkBandwidthPolicyProfile]()
+[Remove-CsNetworkBandwidthPolicyProfile](Remove-CsNetworkBandwidthPolicyProfile.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[New-CsNetworkBWPolicy]()
+[New-CsNetworkBWPolicy](New-CsNetworkBWPolicy.md)

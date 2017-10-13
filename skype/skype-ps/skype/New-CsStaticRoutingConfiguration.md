@@ -182,10 +182,10 @@ The `New-CsStaticRoutingConfiguration` cmdlet creates new instances of the Micro
 
 ## RELATED LINKS
 
-[Get-CsStaticRoutingConfiguration]()
+[Get-CsStaticRoutingConfiguration](Get-CsStaticRoutingConfiguration.md)
 
-[New-CsStaticRoute]()
+[New-CsStaticRoute](New-CsStaticRoute.md)
 
-[Remove-CsStaticRoutingConfiguration]()
+[Remove-CsStaticRoutingConfiguration](Remove-CsStaticRoutingConfiguration.md)
 
-[Set-CsStaticRoutingConfiguration]()
+[Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)

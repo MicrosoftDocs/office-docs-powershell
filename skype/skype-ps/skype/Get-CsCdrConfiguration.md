@@ -151,8 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsCdrConfiguration]()
+[New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
-[Remove-CsCdrConfiguration]()
+[Remove-CsCdrConfiguration](Remove-CsCdrConfiguration.md)
 
-[Set-CsCdrConfiguration]()
+[Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)

@@ -186,10 +186,10 @@ Instead, the `Remove-CsPersistentChatPolicy` cmdlet deletes existing instances o
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatPolicy]()
+[Get-CsPersistentChatPolicy](Get-CsPersistentChatPolicy.md)
 
-[Grant-CsPersistentChatPolicy]()
+[Grant-CsPersistentChatPolicy](Grant-CsPersistentChatPolicy.md)
 
-[New-CsPersistentChatPolicy]()
+[New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
-[Set-CsPersistentChatPolicy]()
+[Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)

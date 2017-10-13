@@ -167,8 +167,8 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.Queue object.
 
 ## RELATED LINKS
 
-[Get-CsRgsQueue]()
+[Get-CsRgsQueue](Get-CsRgsQueue.md)
 
-[New-CsRgsQueue]()
+[New-CsRgsQueue](New-CsRgsQueue.md)
 
-[Set-CsRgsQueue]()
+[Set-CsRgsQueue](Set-CsRgsQueue.md)

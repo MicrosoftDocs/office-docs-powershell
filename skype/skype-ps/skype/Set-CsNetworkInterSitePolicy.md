@@ -199,8 +199,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkInterSitePolicy]()
+[New-CsNetworkInterSitePolicy](New-CsNetworkInterSitePolicy.md)
 
-[Remove-CsNetworkInterSitePolicy]()
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Get-CsNetworkInterSitePolicy]()
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)

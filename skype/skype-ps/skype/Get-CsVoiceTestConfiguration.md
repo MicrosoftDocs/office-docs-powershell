@@ -131,10 +131,10 @@ Returns one of more objects of type Microsoft.Rtc.Management.WritableConfig.Poli
 ## RELATED LINKS
 
 
-[New-CsVoiceTestConfiguration]()
+[New-CsVoiceTestConfiguration](New-CsVoiceTestConfiguration.md)
 
-[Remove-CsVoiceTestConfiguration]()
+[Remove-CsVoiceTestConfiguration](Remove-CsVoiceTestConfiguration.md)
 
-[Set-CsVoiceTestConfiguration]()
+[Set-CsVoiceTestConfiguration](Set-CsVoiceTestConfiguration.md)
 
-[Test-CsVoiceTestConfiguration]()
+[Test-CsVoiceTestConfiguration](Test-CsVoiceTestConfiguration.md)

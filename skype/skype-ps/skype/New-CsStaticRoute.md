@@ -318,6 +318,6 @@ The `New-CsStaticRoute` cmdlet creates new instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[New-CsStaticRoutingConfiguration]()
+[New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
-[Set-CsStaticRoutingConfiguration]()
+[Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)

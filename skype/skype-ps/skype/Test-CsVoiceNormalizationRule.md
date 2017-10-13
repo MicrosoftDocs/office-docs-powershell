@@ -137,10 +137,10 @@ Returns an object of type Microsoft.Rtc.Management.Voice.NormalizationRuleTestRe
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

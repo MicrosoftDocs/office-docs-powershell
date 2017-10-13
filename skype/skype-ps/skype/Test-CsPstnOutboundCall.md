@@ -352,4 +352,4 @@ The `Test-CsPstnOutboundCall` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Test-CsPstnPeerToPeerCall]()
+[Test-CsPstnPeerToPeerCall](Test-CsPstnPeerToPeerCall.md)

@@ -313,10 +313,10 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationPool]()
+[New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
-[Remove-CsTrustedApplicationPool]()
+[Remove-CsTrustedApplicationPool](Remove-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)
 
-[New-CsTrustedApplicationComputer]()
+[New-CsTrustedApplicationComputer](New-CsTrustedApplicationComputer.md)

@@ -147,10 +147,10 @@ The `Remove-CsAnalogDevice` cmdlet deletes existing instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsAnalogDevice]()
+[Get-CsAnalogDevice](Get-CsAnalogDevice.md)
 
-[Move-CsAnalogDevice]()
+[Move-CsAnalogDevice](Move-CsAnalogDevice.md)
 
-[New-CsAnalogDevice]()
+[New-CsAnalogDevice](New-CsAnalogDevice.md)
 
-[Set-CsAnalogDevice]()
+[Set-CsAnalogDevice](Set-CsAnalogDevice.md)

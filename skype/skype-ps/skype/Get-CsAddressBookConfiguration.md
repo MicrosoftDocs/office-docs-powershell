@@ -157,8 +157,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAddressBookConfiguration]()
+[New-CsAddressBookConfiguration](New-CsAddressBookConfiguration.md)
 
-[Remove-CsAddressBookConfiguration]()
+[Remove-CsAddressBookConfiguration](Remove-CsAddressBookConfiguration.md)
 
-[Set-CsAddressBookConfiguration]()
+[Set-CsAddressBookConfiguration](Set-CsAddressBookConfiguration.md)

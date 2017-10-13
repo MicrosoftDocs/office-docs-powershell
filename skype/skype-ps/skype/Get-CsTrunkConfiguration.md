@@ -128,10 +128,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsTrunkConfiguration]()
+[New-CsTrunkConfiguration](New-CsTrunkConfiguration.md)
 
-[Remove-CsTrunkConfiguration]()
+[Remove-CsTrunkConfiguration](Remove-CsTrunkConfiguration.md)
 
-[Set-CsTrunkConfiguration]()
+[Set-CsTrunkConfiguration](Set-CsTrunkConfiguration.md)
 
-[Test-CsTrunkConfiguration]()
+[Test-CsTrunkConfiguration](Test-CsTrunkConfiguration.md)

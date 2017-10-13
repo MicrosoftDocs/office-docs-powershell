@@ -127,6 +127,6 @@ Instead, the `Remove-CsConferenceDisclaimer` cmdlet resets existing instances of
 
 ## RELATED LINKS
 
-[Get-CsConferenceDisclaimer]()
+[Get-CsConferenceDisclaimer](Get-CsConferenceDisclaimer.md)
 
-[Set-CsConferenceDisclaimer]()
+[Set-CsConferenceDisclaimer](Set-CsConferenceDisclaimer.md)

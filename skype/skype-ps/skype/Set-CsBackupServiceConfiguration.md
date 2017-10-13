@@ -308,6 +308,6 @@ Instead, the `Set-CsBackupServiceConfiguration` cmdlet modifies existing instanc
 
 ## RELATED LINKS
 
-[Get-CsBackupServiceConfiguration]()
+[Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)
 
-[Remove-CsBackupServiceConfiguration]()
+[Remove-CsBackupServiceConfiguration](Remove-CsBackupServiceConfiguration.md)

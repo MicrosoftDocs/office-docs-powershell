@@ -236,8 +236,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsMeetingConfiguration]()
+[New-CsMeetingConfiguration](New-CsMeetingConfiguration.md)
 
-[Remove-CsMeetingConfiguration]()
+[Remove-CsMeetingConfiguration](Remove-CsMeetingConfiguration.md)
 
-[Set-CsMeetingConfiguration]()
+[Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)

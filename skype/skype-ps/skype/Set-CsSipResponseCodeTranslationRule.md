@@ -255,8 +255,8 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.WritableC
 
 ## RELATED LINKS
 
-[Get-CsSipResponseCodeTranslationRule]()
+[Get-CsSipResponseCodeTranslationRule](Get-CsSipResponseCodeTranslationRule.md)
 
-[New-CsSipResponseCodeTranslationRule]()
+[New-CsSipResponseCodeTranslationRule](New-CsSipResponseCodeTranslationRule.md)
 
-[Remove-CsSipResponseCodeTranslationRule]()
+[Remove-CsSipResponseCodeTranslationRule](Remove-CsSipResponseCodeTranslationRule.md)

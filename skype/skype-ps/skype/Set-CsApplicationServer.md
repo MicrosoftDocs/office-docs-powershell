@@ -421,4 +421,4 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsServerApplication]()
+[Get-CsServerApplication](Get-CsServerApplication.md)

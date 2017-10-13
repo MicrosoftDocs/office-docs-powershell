@@ -148,8 +148,8 @@ The Get-CsXmppAllowedPartner cmdlet returns instances of the Microsoft.Rtc.Manag
 
 ## RELATED LINKS
 
-[New-CsXmppAllowedPartner]()
+[New-CsXmppAllowedPartner](New-CsXmppAllowedPartner.md)
 
-[Remove-CsXmppAllowedPartner]()
+[Remove-CsXmppAllowedPartner](Remove-CsXmppAllowedPartner.md)
 
-[Set-CsXmppAllowedPartner]()
+[Set-CsXmppAllowedPartner](Set-CsXmppAllowedPartner.md)

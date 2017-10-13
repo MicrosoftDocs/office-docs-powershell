@@ -166,5 +166,5 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Answe
 
 ## RELATED LINKS
 
-[New-CsRgsQuestion]()
+[New-CsRgsQuestion](New-CsRgsQuestion.md)
 

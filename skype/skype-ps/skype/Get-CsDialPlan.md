@@ -209,14 +209,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Set-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

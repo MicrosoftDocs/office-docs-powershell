@@ -257,8 +257,8 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.De
 
 ## RELATED LINKS
 
-[Get-CsTestDevice]()
+[Get-CsTestDevice](Get-CsTestDevice.md)
 
-[Remove-CsTestDevice]()
+[Remove-CsTestDevice](Remove-CsTestDevice.md)
 
-[Set-CsTestDevice]()
+[Set-CsTestDevice](Set-CsTestDevice.md)

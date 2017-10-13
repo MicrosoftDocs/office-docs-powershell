@@ -550,8 +550,8 @@ This cmdlet creates or modifies an object of type System.Management.Automation.P
 
 ## RELATED LINKS
 
-[Remove-CsLisWirelessAccessPoint]()
+[Remove-CsLisWirelessAccessPoint](Remove-CsLisWirelessAccessPoint.md)
 
-[Get-CsLisWirelessAccessPoint]()
+[Get-CsLisWirelessAccessPoint](Get-CsLisWirelessAccessPoint.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)

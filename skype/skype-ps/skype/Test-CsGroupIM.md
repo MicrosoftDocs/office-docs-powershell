@@ -404,4 +404,4 @@ The `Test-CsGroupIM` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTr
 
 ## RELATED LINKS
 
-[Test-CsIM]()
+[Test-CsIM](Test-CsIM.md)

@@ -373,6 +373,6 @@ The `Test-CsAddressBookService` cmdlet returns an instance of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Test-CsAddressBookWebQuery]()
+[Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)
 
-[Update-CsAddressBook]()
+[Update-CsAddressBook](Update-CsAddressBook.md)

@@ -412,10 +412,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy]()
+[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 
-[Grant-CsExternalAccessPolicy]()
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
 
-[New-CsExternalAccessPolicy]()
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Remove-CsExternalAccessPolicy]()
+[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)

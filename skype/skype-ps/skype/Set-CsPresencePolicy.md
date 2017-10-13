@@ -278,10 +278,10 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsPresencePolicy]()
+[Get-CsPresencePolicy](Get-CsPresencePolicy.md)
 
-[Grant-CsPresencePolicy]()
+[Grant-CsPresencePolicy](Grant-CsPresencePolicy.md)
 
-[New-CsPresencePolicy]()
+[New-CsPresencePolicy](New-CsPresencePolicy.md)
 
-[Remove-CsPresencePolicy]()
+[Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)

@@ -195,10 +195,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsBlockedDomain]()
+[Get-CsBlockedDomain](Get-CsBlockedDomain.md)
 
-[New-CsBlockedDomain]()
+[New-CsBlockedDomain](New-CsBlockedDomain.md)
 
-[Remove-CsBlockedDomain]()
+[Remove-CsBlockedDomain](Remove-CsBlockedDomain.md)
 
-[Set-CsAccessEdgeConfiguration]()
+[Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)

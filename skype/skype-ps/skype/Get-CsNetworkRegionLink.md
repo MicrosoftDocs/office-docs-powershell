@@ -139,8 +139,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkRegionLink]()
+[New-CsNetworkRegionLink](New-CsNetworkRegionLink.md)
 
-[Remove-CsNetworkRegionLink]()
+[Remove-CsNetworkRegionLink](Remove-CsNetworkRegionLink.md)
 
-[Set-CsNetworkRegionLink]()
+[Set-CsNetworkRegionLink](Set-CsNetworkRegionLink.md)

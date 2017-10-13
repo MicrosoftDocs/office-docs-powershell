@@ -242,8 +242,8 @@ None.
 
 ## RELATED LINKS
 
-[New-CsUserServicesPolicy]()
+[New-CsUserServicesPolicy](New-CsUserServicesPolicy.md)
 
-[Set-CsUserServicesPolicy]()
+[Set-CsUserServicesPolicy](Set-CsUserServicesPolicy.md)
 
-[Test-CsUnifiedContactStore]()
+[Test-CsUnifiedContactStore](Test-CsUnifiedContactStore.md)

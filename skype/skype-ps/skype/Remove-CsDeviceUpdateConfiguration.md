@@ -168,8 +168,8 @@ Instead, the `Remove-CsDeviceUpdateConfiguration` cmdlet deletes instances of th
 
 ## RELATED LINKS
 
-[Get-CsDeviceUpdateConfiguration]()
+[Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
 
-[New-CsDeviceUpdateConfiguration]()
+[New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
-[Set-CsDeviceUpdateConfiguration]()
+[Set-CsDeviceUpdateConfiguration](Set-CsDeviceUpdateConfiguration.md)

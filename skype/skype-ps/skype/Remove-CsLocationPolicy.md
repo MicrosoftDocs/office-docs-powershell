@@ -167,12 +167,12 @@ Instead, the cmdlet removes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[New-CsLocationPolicy]()
+[New-CsLocationPolicy](New-CsLocationPolicy.md)
 
-[Set-CsLocationPolicy]()
+[Set-CsLocationPolicy](Set-CsLocationPolicy.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Grant-CsLocationPolicy]()
+[Grant-CsLocationPolicy](Grant-CsLocationPolicy.md)
 
-[Test-CsLocationPolicy]()
+[Test-CsLocationPolicy](Test-CsLocationPolicy.md)

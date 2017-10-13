@@ -146,8 +146,8 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplica
 
 ## RELATED LINKS
 
-[New-CsTrustedApplication]()
+[New-CsTrustedApplication](New-CsTrustedApplication.md)
 
-[Remove-CsTrustedApplication]()
+[Remove-CsTrustedApplication](Remove-CsTrustedApplication.md)
 
-[Get-CsTrustedApplication]()
+[Get-CsTrustedApplication](Get-CsTrustedApplication.md)

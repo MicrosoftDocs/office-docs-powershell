@@ -313,6 +313,6 @@ Creates an object reference of type Microsoft.Rtc.Management.WritableConfig.Sett
 
 ## RELATED LINKS
 
-[Get-CsNetworkConfiguration]()
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 
-[Set-CsNetworkConfiguration]()
+[Set-CsNetworkConfiguration](Set-CsNetworkConfiguration.md)

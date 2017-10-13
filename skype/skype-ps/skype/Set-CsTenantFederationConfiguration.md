@@ -366,6 +366,6 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration]()
+[Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
-[Get-CsTenantPublicProvider]()
+[Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)

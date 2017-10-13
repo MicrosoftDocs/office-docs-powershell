@@ -324,8 +324,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsImFilterConfiguration]()
+[New-CsImFilterConfiguration](New-CsImFilterConfiguration.md)
 
-[Remove-CsImFilterConfiguration]()
+[Remove-CsImFilterConfiguration](Remove-CsImFilterConfiguration.md)
 
-[Get-CsImFilterConfiguration]()
+[Get-CsImFilterConfiguration](Get-CsImFilterConfiguration.md)

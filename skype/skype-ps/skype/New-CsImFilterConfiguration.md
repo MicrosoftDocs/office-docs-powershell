@@ -317,8 +317,8 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ImFil
 
 ## RELATED LINKS
 
-[Remove-CsImFilterConfiguration]()
+[Remove-CsImFilterConfiguration](Remove-CsImFilterConfiguration.md)
 
-[Set-CsImFilterConfiguration]()
+[Set-CsImFilterConfiguration](Set-CsImFilterConfiguration.md)
 
-[Get-CsImFilterConfiguration]()
+[Get-CsImFilterConfiguration](Get-CsImFilterConfiguration.md)

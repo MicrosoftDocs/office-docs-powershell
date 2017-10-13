@@ -154,8 +154,8 @@ Instead, the `Remove-CsPersistentChatCategory` cmdlet deletes existing instances
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatCategory]()
+[Get-CsPersistentChatCategory](Get-CsPersistentChatCategory.md)
 
-[New-CsPersistentChatCategory]()
+[New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
-[Set-CsPersistentChatCategory]()
+[Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)

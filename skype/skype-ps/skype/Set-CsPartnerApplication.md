@@ -365,8 +365,8 @@ Instead, the `Set-CsPartnerApplication` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsPartnerApplication]()
+[Get-CsPartnerApplication](Get-CsPartnerApplication.md)
 
-[New-CsPartnerApplication]()
+[New-CsPartnerApplication](New-CsPartnerApplication.md)
 
-[Remove-CsPartnerApplication]()
+[Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)

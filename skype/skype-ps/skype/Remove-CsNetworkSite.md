@@ -131,8 +131,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkSite]()
+[New-CsNetworkSite](New-CsNetworkSite.md)
 
-[Set-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)

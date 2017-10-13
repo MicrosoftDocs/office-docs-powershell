@@ -293,6 +293,6 @@ The `Set-CsVideoInteropServer` cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Set-CsVideoGateway]()
+[Set-CsVideoGateway](Set-CsVideoGateway.md)
 
-[Get-CsVideoTrunk]()
+[Get-CsVideoTrunk](Get-CsVideoTrunk.md)

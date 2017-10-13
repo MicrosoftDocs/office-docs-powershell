@@ -344,8 +344,8 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.Uc
 
 ## RELATED LINKS
 
-[Get-CsUCPhoneConfiguration]()
+[Get-CsUCPhoneConfiguration](Get-CsUCPhoneConfiguration.md)
 
-[Remove-CsUCPhoneConfiguration]()
+[Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)
 
-[Set-CsUCPhoneConfiguration]()
+[Set-CsUCPhoneConfiguration](Set-CsUCPhoneConfiguration.md)

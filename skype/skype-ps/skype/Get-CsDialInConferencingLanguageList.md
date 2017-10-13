@@ -136,6 +136,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDialInConferencingAccessNumber]()
+[New-CsDialInConferencingAccessNumber](New-CsDialInConferencingAccessNumber.md)
 
-[Set-CsDialInConferencingAccessNumber]()
+[Set-CsDialInConferencingAccessNumber](Set-CsDialInConferencingAccessNumber.md)

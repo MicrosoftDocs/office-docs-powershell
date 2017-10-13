@@ -365,8 +365,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsDeviceUpdateConfiguration]()
+[Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)
 
-[New-CsDeviceUpdateConfiguration]()
+[New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
-[Remove-CsDeviceUpdateConfiguration]()
+[Remove-CsDeviceUpdateConfiguration](Remove-CsDeviceUpdateConfiguration.md)

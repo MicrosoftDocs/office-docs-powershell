@@ -216,8 +216,8 @@ The `New-CsStorageServiceConfiguration` cmdlet creates new instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsStorageServiceConfiguration]()
+[Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 
-[Remove-CsStorageServiceConfiguration]()
+[Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)
 
-[Set-CsStorageServiceConfiguration]()
+[Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)

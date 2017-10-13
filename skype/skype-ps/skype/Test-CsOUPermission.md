@@ -205,6 +205,6 @@ The `Test-CsOUPermission` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Grant-CsOUPermission]()
+[Grant-CsOUPermission](Grant-CsOUPermission.md)
 
-[Revoke-CsOUPermission]()
+[Revoke-CsOUPermission](Revoke-CsOUPermission.md)

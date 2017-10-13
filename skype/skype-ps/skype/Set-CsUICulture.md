@@ -130,4 +130,4 @@ Instead, the cmdlet modifies existing instances of the System.Globalization.Cult
 
 ## RELATED LINKS
 
-[Get-CsUICulture]()
+[Get-CsUICulture](Get-CsUICulture.md)

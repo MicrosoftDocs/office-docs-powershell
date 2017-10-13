@@ -239,11 +239,11 @@ The New-CsPersistentChatRoom cmdlet creates new instances of the Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[Clear-CsPersistentChatRoom]()
+[Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)
 
-[Get-CsPersistentChatRoom]()
+[Get-CsPersistentChatRoom](Get-CsPersistentChatRoom.md)
 
-[Remove-CsPersistentChatRoom]()
+[Remove-CsPersistentChatRoom](Remove-CsPersistentChatRoom.md)
 
-[Set-CsPersistentChatRoom]()
+[Set-CsPersistentChatRoom](Set-CsPersistentChatRoom.md)
 

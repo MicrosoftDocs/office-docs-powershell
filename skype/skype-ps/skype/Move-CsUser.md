@@ -387,6 +387,6 @@ Instead, the cmdlet modifies instances of the Microsoft.Rtc.Management.ADConnect
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)
 
-[Move-CsLegacyUser]()
+[Move-CsLegacyUser](Move-CsLegacyUser.md)

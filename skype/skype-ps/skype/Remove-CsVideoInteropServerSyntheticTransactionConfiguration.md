@@ -123,10 +123,10 @@ None
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Get-CsVideoInteropServerSyntheticTransactionConfiguration](Get-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Set-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Set-CsVideoInteropServerSyntheticTransactionConfiguration](Set-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[New-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Test-CsP2PVideoInteropServerSipTrunkAV]()
+[Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)

@@ -119,10 +119,10 @@ It removes an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADExUm
 
 ## RELATED LINKS
 
-[New-CsExUmContact]()
+[New-CsExUmContact](New-CsExUmContact.md)
 
-[Set-CsExUmContact]()
+[Set-CsExUmContact](Set-CsExUmContact.md)
 
-[Get-CsExUmContact]()
+[Get-CsExUmContact](Get-CsExUmContact.md)
 
-[Move-CsExUmContact]()
+[Move-CsExUmContact](Move-CsExUmContact.md)

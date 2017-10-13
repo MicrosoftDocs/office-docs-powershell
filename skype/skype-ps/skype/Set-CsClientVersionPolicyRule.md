@@ -475,8 +475,8 @@ Instead, the `Set-CsClientVersionPolicyRule` cmdlet modifies instances of the Mi
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicyRule]()
+[Get-CsClientVersionPolicyRule](Get-CsClientVersionPolicyRule.md)
 
-[New-CsClientVersionPolicyRule]()
+[New-CsClientVersionPolicyRule](New-CsClientVersionPolicyRule.md)
 
-[Set-CsClientVersionPolicyRule]()
+[Set-CsClientVersionPolicyRule](Set-CsClientVersionPolicyRule.md)

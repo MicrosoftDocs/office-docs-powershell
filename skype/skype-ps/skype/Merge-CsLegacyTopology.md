@@ -229,8 +229,8 @@ The Merge-CsLegacyTopology cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Import-CsLegacyConfiguration]()
+[Import-CsLegacyConfiguration](Import-CsLegacyConfiguration.md)
 
-[Import-CsLegacyConferenceDirectory]()
+[Import-CsLegacyConferenceDirectory](Import-CsLegacyConferenceDirectory.md)
 
-[Move-CsLegacyUser]()
+[Move-CsLegacyUser](Move-CsLegacyUser.md)

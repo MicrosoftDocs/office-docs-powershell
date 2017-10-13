@@ -142,8 +142,8 @@ Instead, the `Remove-CsAddressBookNormalizationRule` cmdlet deletes existing ins
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationRule]()
+[Get-CsAddressBookNormalizationRule](Get-CsAddressBookNormalizationRule.md)
 
-[New-CsAddressBookNormalizationRule]()
+[New-CsAddressBookNormalizationRule](New-CsAddressBookNormalizationRule.md)
 
-[Set-CsAddressBookNormalizationRule]()
+[Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)

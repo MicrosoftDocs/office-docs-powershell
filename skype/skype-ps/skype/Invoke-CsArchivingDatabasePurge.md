@@ -270,6 +270,6 @@ The Invoke-CsArchivingDatabasePurge cmdlet returns instances of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[New-CsArchivingConfiguration]()
+[New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
-[Set-CsArchivingConfiguration]()
+[Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)

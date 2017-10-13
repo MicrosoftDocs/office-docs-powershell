@@ -229,6 +229,6 @@ The Invoke-CsQoEDatabasePurge cmdlet returns instances of the Microsoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[New-CsQoEConfiguration]()
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[Set-CsQoEConfiguration]()
+[Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)

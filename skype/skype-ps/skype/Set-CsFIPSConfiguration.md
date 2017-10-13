@@ -205,8 +205,8 @@ Instead, the `Set-CsFIPSConfiguration` cmdlet modifies existing instances of the
 
 ## RELATED LINKS
 
-[Get-CsFIPSConfiguration]()
+[Get-CsFIPSConfiguration](Get-CsFIPSConfiguration.md)
 
-[New-CsFIPSConfiguration]()
+[New-CsFIPSConfiguration](New-CsFIPSConfiguration.md)
 
-[Remove-CsFIPSConfiguration]()
+[Remove-CsFIPSConfiguration](Remove-CsFIPSConfiguration.md)

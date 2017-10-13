@@ -153,10 +153,10 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voic
 
 ## RELATED LINKS
 
-[New-CsHostedVoicemailPolicy]()
+[New-CsHostedVoicemailPolicy](New-CsHostedVoicemailPolicy.md)
 
-[Set-CsHostedVoicemailPolicy]()
+[Set-CsHostedVoicemailPolicy](Set-CsHostedVoicemailPolicy.md)
 
-[Get-CsHostedVoicemailPolicy]()
+[Get-CsHostedVoicemailPolicy](Get-CsHostedVoicemailPolicy.md)
 
-[Grant-CsHostedVoicemailPolicy]()
+[Grant-CsHostedVoicemailPolicy](Grant-CsHostedVoicemailPolicy.md)

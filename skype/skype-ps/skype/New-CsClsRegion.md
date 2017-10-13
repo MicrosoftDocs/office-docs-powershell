@@ -261,10 +261,10 @@ The New-CsClsRegion cmdlet creates new instances of the Microsoft.Rtc.Management
 
 ## RELATED LINKS
 
-[Get-CsClsRegion]()
+[Get-CsClsRegion](Get-CsClsRegion.md)
 
-[Remove-CsClsRegion]()
+[Remove-CsClsRegion](Remove-CsClsRegion.md)
 
-[Set-CsClsRegion]()
+[Set-CsClsRegion](Set-CsClsRegion.md)
 
 

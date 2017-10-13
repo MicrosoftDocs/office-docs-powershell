@@ -99,10 +99,10 @@ The `Test-CsWatcherNodeConfiguration` cmdlet returns an instance of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsWatcherNodeConfiguration]()
+[Get-CsWatcherNodeConfiguration](Get-CsWatcherNodeConfiguration.md)
 
-[New-CsWatcherNodeConfiguration]()
+[New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
-[Remove-CsWatcherNodeConfiguration]()
+[Remove-CsWatcherNodeConfiguration](Remove-CsWatcherNodeConfiguration.md)
 
-[Set-CsWatcherNodeConfiguration]()
+[Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)

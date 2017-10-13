@@ -236,10 +236,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicy]()
+[Get-CsClientVersionPolicy](Get-CsClientVersionPolicy.md)
 
-[New-CsClientVersionPolicy]()
+[New-CsClientVersionPolicy](New-CsClientVersionPolicy.md)
 
-[Remove-CsClientVersionPolicy]()
+[Remove-CsClientVersionPolicy](Remove-CsClientVersionPolicy.md)
 
-[Set-CsClientVersionPolicy]()
+[Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)

@@ -212,6 +212,6 @@ The New-CsClsProvider cmdlet creates new instances of the Microsoft.Rtc.Manageme
 
 ## RELATED LINKS
 
-[New-CsClsScenario]()
+[New-CsClsScenario](New-CsClsScenario.md)
 
-[Set-CsClsScenario]()
+[Set-CsClsScenario](Set-CsClsScenario.md)

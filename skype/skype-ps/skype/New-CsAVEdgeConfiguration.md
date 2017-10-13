@@ -237,8 +237,8 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.M
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)
 
-[Remove-CsAVEdgeConfiguration]()
+[Remove-CsAVEdgeConfiguration](Remove-CsAVEdgeConfiguration.md)
 
-[Set-CsAVEdgeConfiguration]()
+[Set-CsAVEdgeConfiguration](Set-CsAVEdgeConfiguration.md)

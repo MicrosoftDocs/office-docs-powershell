@@ -99,7 +99,7 @@ The New-CsSipProxyRealm cmdlet creates new instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[New-CsSipProxyCustom]()
+[New-CsSipProxyCustom](New-CsSipProxyCustom.md)
 
-[New-CsSipProxyUseDefault]()
+[New-CsSipProxyUseDefault](New-CsSipProxyUseDefault.md)
 

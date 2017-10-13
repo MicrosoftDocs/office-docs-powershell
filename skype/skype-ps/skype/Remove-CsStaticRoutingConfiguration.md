@@ -166,8 +166,8 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsStaticRoutingConfiguration]()
+[Get-CsStaticRoutingConfiguration](Get-CsStaticRoutingConfiguration.md)
 
-[New-CsStaticRoutingConfiguration]()
+[New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
-[Set-CsStaticRoutingConfiguration]()
+[Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)

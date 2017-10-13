@@ -87,6 +87,6 @@ It removes an object of type System.Management.Automation.PSCustomObject.
 
 ## RELATED LINKS
 
-[Set-CsLisServiceProvider]()
+[Set-CsLisServiceProvider](Set-CsLisServiceProvider.md)
 
-[Get-CsLisServiceProvider]()
+[Get-CsLisServiceProvider](Get-CsLisServiceProvider.md)

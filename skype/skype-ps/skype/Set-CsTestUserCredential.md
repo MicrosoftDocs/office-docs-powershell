@@ -222,6 +222,6 @@ Instead, the `Set-CsTestUserCredential` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsTestUserCredential]()
+[Get-CsTestUserCredential](Get-CsTestUserCredential.md)
 
-[Remove-CsTestUserCredential]()
+[Remove-CsTestUserCredential](Remove-CsTestUserCredential.md)

@@ -212,6 +212,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Enable-CsAdDomain]()
+[Enable-CsAdDomain](Enable-CsAdDomain.md)
 
-[Get-CsAdDomain]()
+[Get-CsAdDomain](Get-CsAdDomain.md)

@@ -296,4 +296,4 @@ The `Test-CsExUMConnectivity` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Test-CsExUMVoiceMail]()
+[Test-CsExUMVoiceMail](Test-CsExUMVoiceMail.md)

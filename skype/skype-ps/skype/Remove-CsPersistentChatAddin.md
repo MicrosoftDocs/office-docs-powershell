@@ -165,8 +165,8 @@ Instead, the `Remove-CsPersistentChatAddin` cmdlet deletes existing instances of
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatAddin]()
+[Get-CsPersistentChatAddin](Get-CsPersistentChatAddin.md)
 
-[New-CsPersistentChatAddin]()
+[New-CsPersistentChatAddin](New-CsPersistentChatAddin.md)
 
-[Set-CsPersistentChatAddin]()
+[Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)

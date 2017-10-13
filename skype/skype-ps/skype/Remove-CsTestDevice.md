@@ -177,8 +177,8 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsTestDevice]()
+[Get-CsTestDevice](Get-CsTestDevice.md)
 
-[New-CsTestDevice]()
+[New-CsTestDevice](New-CsTestDevice.md)
 
-[Set-CsTestDevice]()
+[Set-CsTestDevice](Set-CsTestDevice.md)

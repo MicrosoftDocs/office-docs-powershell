@@ -208,10 +208,10 @@ Instead, the `Set-CsAddressBookNormalizationConfiguration` cmdlet modifies exist
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationConfiguration]()
+[Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
 
-[New-CsAddressBookNormalizationConfiguration]()
+[New-CsAddressBookNormalizationConfiguration](New-CsAddressBookNormalizationConfiguration.md)
 
-[Remove-CsAddressBookNormalizationConfiguration]()
+[Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
-[Import-CsCompanyPhoneNormalizationRules]()
+[Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)

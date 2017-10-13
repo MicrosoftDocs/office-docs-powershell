@@ -453,10 +453,10 @@ Instead, the `Set-CsMeetingRoom` cmdlet modifies existing instances of the Micro
 
 ## RELATED LINKS
 
-[Disable-CsMeetingRoom]()
+[Disable-CsMeetingRoom](Disable-CsMeetingRoom.md)
 
-[Enable-CsMeetingRoom]()
+[Enable-CsMeetingRoom](Enable-CsMeetingRoom.md)
 
-[Get-CsMeetingRoom]()
+[Get-CsMeetingRoom](Get-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)

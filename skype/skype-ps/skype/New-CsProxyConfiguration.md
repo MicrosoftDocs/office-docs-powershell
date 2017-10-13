@@ -605,9 +605,9 @@ The New-CsProxyConfiguration cmdlet creates new instances of the Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[Get-CsProxyConfiguration]()
+[Get-CsProxyConfiguration](Get-CsProxyConfiguration.md)
 
-[Remove-CsProxyConfiguration]()
+[Remove-CsProxyConfiguration](Remove-CsProxyConfiguration.md)
 
-[Set-CsProxyConfiguration]()
+[Set-CsProxyConfiguration](Set-CsProxyConfiguration.md)
 

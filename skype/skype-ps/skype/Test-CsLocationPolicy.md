@@ -327,18 +327,18 @@ The `Test-CsLocationPolicy` cmdlet returns an instance of the Microsoft.Rtc.Synt
 
 ## RELATED LINKS
 
-[New-CsLocationPolicy]()
+[New-CsLocationPolicy](New-CsLocationPolicy.md)
 
-[Remove-CsLocationPolicy]()
+[Remove-CsLocationPolicy](Remove-CsLocationPolicy.md)
 
-[Set-CsLocationPolicy]()
+[Set-CsLocationPolicy](Set-CsLocationPolicy.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Grant-CsLocationPolicy]()
+[Grant-CsLocationPolicy](Grant-CsLocationPolicy.md)
 
-[Get-CsHealthMonitoringConfiguration]()
+[Get-CsHealthMonitoringConfiguration](Get-CsHealthMonitoringConfiguration.md)
 
-[Set-CsHealthMonitoringConfiguration]()
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)
 
-[Set-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)

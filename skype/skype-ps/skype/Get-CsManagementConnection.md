@@ -74,6 +74,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsManagementConnection]()
+[Remove-CsManagementConnection](Remove-CsManagementConnection.md)
 
-[Set-CsManagementConnection]()
+[Set-CsManagementConnection](Set-CsManagementConnection.md)

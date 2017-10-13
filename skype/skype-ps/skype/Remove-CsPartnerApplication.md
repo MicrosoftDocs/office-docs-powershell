@@ -176,8 +176,8 @@ Instead, the `Remove-CsPartnerApplication` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsPartnerApplication]()
+[Get-CsPartnerApplication](Get-CsPartnerApplication.md)
 
-[New-CsPartnerApplication]()
+[New-CsPartnerApplication](New-CsPartnerApplication.md)
 
-[Set-CsPartnerApplication]()
+[Set-CsPartnerApplication](Set-CsPartnerApplication.md)

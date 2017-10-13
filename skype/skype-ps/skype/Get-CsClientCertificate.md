@@ -148,4 +148,4 @@ The cmdlet also accepts pipelined input of user objects.
 
 ## RELATED LINKS
 
-[Revoke-CsClientCertificate]()
+[Revoke-CsClientCertificate](Revoke-CsClientCertificate.md)

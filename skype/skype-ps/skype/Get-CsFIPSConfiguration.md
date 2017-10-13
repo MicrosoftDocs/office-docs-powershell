@@ -153,8 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsFIPSConfiguration]()
+[New-CsFIPSConfiguration](New-CsFIPSConfiguration.md)
 
-[Remove-CsFIPSConfiguration]()
+[Remove-CsFIPSConfiguration](Remove-CsFIPSConfiguration.md)
 
-[Set-CsFIPSConfiguration]()
+[Set-CsFIPSConfiguration](Set-CsFIPSConfiguration.md)

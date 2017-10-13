@@ -178,8 +178,8 @@ Instead, the cmdlet removes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsUCPhoneConfiguration]()
+[Get-CsUCPhoneConfiguration](Get-CsUCPhoneConfiguration.md)
 
-[New-CsUCPhoneConfiguration]()
+[New-CsUCPhoneConfiguration](New-CsUCPhoneConfiguration.md)
 
-[Set-CsUCPhoneConfiguration]()
+[Set-CsUCPhoneConfiguration](Set-CsUCPhoneConfiguration.md)

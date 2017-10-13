@@ -183,8 +183,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsServerApplication]()
+[New-CsServerApplication](New-CsServerApplication.md)
 
-[Remove-CsServerApplication]()
+[Remove-CsServerApplication](Remove-CsServerApplication.md)
 
-[Set-CsServerApplication]()
+[Set-CsServerApplication](Set-CsServerApplication.md)

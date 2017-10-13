@@ -374,10 +374,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsArchivingConfiguration]()
+[Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)
 
-[New-CsArchivingConfiguration]()
+[New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
-[Remove-CsArchivingConfiguration]()
+[Remove-CsArchivingConfiguration](Remove-CsArchivingConfiguration.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)

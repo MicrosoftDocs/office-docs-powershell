@@ -509,8 +509,8 @@ Instead, the `Set-CsClsConfiguration` cmdlet modifies existing instances of the 
 
 ## RELATED LINKS
 
-[Get-CsClsConfiguration]()
+[Get-CsClsConfiguration](Get-CsClsConfiguration.md)
 
-[New-CsClsConfiguration]()
+[New-CsClsConfiguration](New-CsClsConfiguration.md)
 
-[Remove-CsClsConfiguration]()
+[Remove-CsClsConfiguration](Remove-CsClsConfiguration.md)

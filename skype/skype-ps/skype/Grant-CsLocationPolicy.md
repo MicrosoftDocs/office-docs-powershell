@@ -200,14 +200,14 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[New-CsLocationPolicy]()
+[New-CsLocationPolicy](New-CsLocationPolicy.md)
 
-[Remove-CsLocationPolicy]()
+[Remove-CsLocationPolicy](Remove-CsLocationPolicy.md)
 
-[Set-CsLocationPolicy]()
+[Set-CsLocationPolicy](Set-CsLocationPolicy.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Test-CsLocationPolicy]()
+[Test-CsLocationPolicy](Test-CsLocationPolicy.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

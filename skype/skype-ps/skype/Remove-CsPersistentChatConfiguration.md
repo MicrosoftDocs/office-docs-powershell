@@ -162,8 +162,8 @@ Instead, the `Remove-CsPersistentChatConfiguration` cmdlet deletes existing inst
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatConfiguration]()
+[Get-CsPersistentChatConfiguration](Get-CsPersistentChatConfiguration.md)
 
-[New-CsPersistentChatConfiguration]()
+[New-CsPersistentChatConfiguration](New-CsPersistentChatConfiguration.md)
 
-[Set-CsPersistentChatConfiguration]()
+[Set-CsPersistentChatConfiguration](Set-CsPersistentChatConfiguration.md)

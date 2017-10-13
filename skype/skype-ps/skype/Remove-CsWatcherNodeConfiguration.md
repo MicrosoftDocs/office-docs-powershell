@@ -151,10 +151,10 @@ Instead, the `Remove-CsWatcherNodeConfiguration` cmdlet deletes existing instanc
 
 ## RELATED LINKS
 
-[Get-CsWatcherNodeConfiguration]()
+[Get-CsWatcherNodeConfiguration](Get-CsWatcherNodeConfiguration.md)
 
-[New-CsWatcherNodeConfiguration]()
+[New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
-[Set-CsWatcherNodeConfiguration]()
+[Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
 
-[Test-CsWatcherNodeConfiguration]()
+[Test-CsWatcherNodeConfiguration](Test-CsWatcherNodeConfiguration.md)

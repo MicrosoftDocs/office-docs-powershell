@@ -570,16 +570,16 @@ It creates or modifies an object of type System.Management.Automation.PSCustomOb
 
 ## RELATED LINKS
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)
 
-[Get-CsLisLocation]()
+[Get-CsLisLocation](Get-CsLisLocation.md)
 
-[Set-CsLisPort]()
+[Set-CsLisPort](Set-CsLisPort.md)
 
-[Set-CsLisSubnet]()
+[Set-CsLisSubnet](Set-CsLisSubnet.md)
 
-[Set-CsLisSwitch]()
+[Set-CsLisSwitch](Set-CsLisSwitch.md)
 
-[Set-CsLisWirelessAccessPoint]()
+[Set-CsLisWirelessAccessPoint](Set-CsLisWirelessAccessPoint.md)
 
-[Get-CsLisCivicAddress]()
+[Get-CsLisCivicAddress](Get-CsLisCivicAddress.md)

@@ -142,4 +142,4 @@ The Get-CsXmppGatewayConfiguration cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Set-CsXmppGatewayConfiguration]()
+[Set-CsXmppGatewayConfiguration](Set-CsXmppGatewayConfiguration.md)

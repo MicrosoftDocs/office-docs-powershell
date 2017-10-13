@@ -228,7 +228,7 @@ The Grant-CsSetupPermission cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Revoke-CsSetupPermission]()
+[Revoke-CsSetupPermission](Revoke-CsSetupPermission.md)
 
-[Test-CsSetupPermission]()
+[Test-CsSetupPermission](Test-CsSetupPermission.md)
 

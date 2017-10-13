@@ -229,8 +229,8 @@ Instead, the `Set-CsAddressBookNormalizationRule` cmdlet modifies existing insta
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationRule]()
+[Get-CsAddressBookNormalizationRule](Get-CsAddressBookNormalizationRule.md)
 
-[New-CsAddressBookNormalizationRule]()
+[New-CsAddressBookNormalizationRule](New-CsAddressBookNormalizationRule.md)
 
-[Remove-CsAddressBookNormalizationRule]()
+[Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)

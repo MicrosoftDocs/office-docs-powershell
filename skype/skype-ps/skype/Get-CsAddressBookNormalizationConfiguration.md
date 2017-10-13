@@ -139,10 +139,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAddressBookNormalizationConfiguration]()
+[New-CsAddressBookNormalizationConfiguration](New-CsAddressBookNormalizationConfiguration.md)
 
-[Remove-CsAddressBookNormalizationConfiguration]()
+[Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
-[Set-CsAddressBookNormalizationConfiguration]()
+[Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
-[Import-CsCompanyPhoneNormalizationRules]()
+[Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)

@@ -156,12 +156,12 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Disable-CsPublicProvider]()
+[Disable-CsPublicProvider](Disable-CsPublicProvider.md)
 
-[Enable-CsPublicProvider]()
+[Enable-CsPublicProvider](Enable-CsPublicProvider.md)
 
-[Get-CsPublicProvider]()
+[Get-CsPublicProvider](Get-CsPublicProvider.md)
 
-[New-CsPublicProvider]()
+[New-CsPublicProvider](New-CsPublicProvider.md)
 
-[Set-CsPublicProvider]()
+[Set-CsPublicProvider](Set-CsPublicProvider.md)

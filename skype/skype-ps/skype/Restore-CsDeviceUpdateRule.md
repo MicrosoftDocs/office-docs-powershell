@@ -184,10 +184,10 @@ Instead, the `Restore-CsDeviceUpdateRule` cmdlet restores instances of the Micro
 
 ## RELATED LINKS
 
-[Approve-CsDeviceUpdateRule]()
+[Approve-CsDeviceUpdateRule](Approve-CsDeviceUpdateRule.md)
 
-[Get-CsDeviceUpdateRule]()
+[Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 
-[Remove-CsDeviceUpdateRule]()
+[Remove-CsDeviceUpdateRule](Remove-CsDeviceUpdateRule.md)
 
-[Reset-CsDeviceUpdateRule]()
+[Reset-CsDeviceUpdateRule](Reset-CsDeviceUpdateRule.md)

@@ -185,5 +185,5 @@ The New-CsKerberosAccount cmdlet creates new instances of the Microsoft.Rtc.Mana
 
 ## RELATED LINKS
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 

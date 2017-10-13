@@ -311,6 +311,6 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.ADConne
 
 ## RELATED LINKS
 
-[Disable-CsUser]()
+[Disable-CsUser](Disable-CsUser.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

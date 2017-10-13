@@ -198,11 +198,11 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkRegionLink]()
+[New-CsNetworkRegionLink](New-CsNetworkRegionLink.md)
 
-[Remove-CsNetworkRegionLink]()
+[Remove-CsNetworkRegionLink](Remove-CsNetworkRegionLink.md)
 
-[Get-CsNetworkRegionLink]()
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 

@@ -301,8 +301,8 @@ The `New-CsSipResponseCodeTranslationRule` cmdlet creates new instances of the M
 
 ## RELATED LINKS
 
-[Get-CsSipResponseCodeTranslationRule]()
+[Get-CsSipResponseCodeTranslationRule](Get-CsSipResponseCodeTranslationRule.md)
 
-[Remove-CsSipResponseCodeTranslationRule]()
+[Remove-CsSipResponseCodeTranslationRule](Remove-CsSipResponseCodeTranslationRule.md)
 
-[Set-CsSipResponseCodeTranslationRule]()
+[Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)

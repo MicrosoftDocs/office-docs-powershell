@@ -164,12 +164,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsPublicProvider]()
+[Disable-CsPublicProvider](Disable-CsPublicProvider.md)
 
-[Enable-CsPublicProvider]()
+[Enable-CsPublicProvider](Enable-CsPublicProvider.md)
 
-[New-CsPublicProvider]()
+[New-CsPublicProvider](New-CsPublicProvider.md)
 
-[Remove-CsPublicProvider]()
+[Remove-CsPublicProvider](Remove-CsPublicProvider.md)
 
-[Set-CsPublicProvider]()
+[Set-CsPublicProvider](Set-CsPublicProvider.md)

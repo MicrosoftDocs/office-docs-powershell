@@ -163,8 +163,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDiagnosticConfiguration]()
+[New-CsDiagnosticConfiguration](New-CsDiagnosticConfiguration.md)
 
-[Remove-CsDiagnosticConfiguration]()
+[Remove-CsDiagnosticConfiguration](Remove-CsDiagnosticConfiguration.md)
 
-[Set-CsDiagnosticConfiguration]()
+[Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)

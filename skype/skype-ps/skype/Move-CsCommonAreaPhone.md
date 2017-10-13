@@ -320,10 +320,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsCommonAreaPhone]()
+[Get-CsCommonAreaPhone](Get-CsCommonAreaPhone.md)
 
-[New-CsCommonAreaPhone]()
+[New-CsCommonAreaPhone](New-CsCommonAreaPhone.md)
 
-[Remove-CsCommonAreaPhone]()
+[Remove-CsCommonAreaPhone](Remove-CsCommonAreaPhone.md)
 
-[Set-CsCommonAreaPhone]()
+[Set-CsCommonAreaPhone](Set-CsCommonAreaPhone.md)

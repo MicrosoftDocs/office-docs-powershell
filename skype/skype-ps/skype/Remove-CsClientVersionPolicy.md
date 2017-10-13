@@ -184,10 +184,10 @@ The `Remove-CsClientVersionPolicy` cmdlet deletes existing instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicy]()
+[Get-CsClientVersionPolicy](Get-CsClientVersionPolicy.md)
 
-[Grant-CsClientVersionPolicy]()
+[Grant-CsClientVersionPolicy](Grant-CsClientVersionPolicy.md)
 
-[New-CsClientVersionPolicy]()
+[New-CsClientVersionPolicy](New-CsClientVersionPolicy.md)
 
-[Set-CsClientVersionPolicy]()
+[Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)

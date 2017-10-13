@@ -173,6 +173,6 @@ The New-CsPersistentChatEndpoint cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatEndpoint]()
+[Get-CsPersistentChatEndpoint](Get-CsPersistentChatEndpoint.md)
 
-[Remove-CsPersistentChatEndpoint]()
+[Remove-CsPersistentChatEndpoint](Remove-CsPersistentChatEndpoint.md)

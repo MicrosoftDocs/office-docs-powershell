@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 title: Update-CsAddressBook
@@ -105,8 +105,8 @@ Instead, the Update-CsAddressBook cmdlet updates existing instances of the Micro
 
 ## RELATED LINKS
 
-[Get-CsAddressBookConfiguration]()
+[Get-CsAddressBookConfiguration](Get-CsAddressBookConfiguration.md)
 
-[Test-CsAddressBookService]()
+[Test-CsAddressBookService](Test-CsAddressBookService.md)
 
-[Test-CsAddressBookWebQuery]()
+[Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)

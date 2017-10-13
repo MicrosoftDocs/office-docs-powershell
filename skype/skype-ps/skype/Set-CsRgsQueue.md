@@ -174,8 +174,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 
 ## RELATED LINKS
 
-[Get-CsRgsQueue]()
+[Get-CsRgsQueue](Get-CsRgsQueue.md)
 
-[New-CsRgsQueue]()
+[New-CsRgsQueue](New-CsRgsQueue.md)
 
-[Remove-CsRgsQueue]()
+[Remove-CsRgsQueue](Remove-CsRgsQueue.md)

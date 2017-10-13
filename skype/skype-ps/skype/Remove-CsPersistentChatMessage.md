@@ -284,4 +284,4 @@ None.
 
 ## RELATED LINKS
 
-[Clear-CsPersistentChatRoom]()
+[Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)

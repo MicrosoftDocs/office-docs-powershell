@@ -143,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAddressBookNormalizationRule]()
+[New-CsAddressBookNormalizationRule](New-CsAddressBookNormalizationRule.md)
 
-[Remove-CsAddressBookNormalizationRule]()
+[Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
-[Set-CsAddressBookNormalizationRule]()
+[Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)

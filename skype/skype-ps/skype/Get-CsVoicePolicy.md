@@ -208,12 +208,12 @@ This cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Pol
 
 ## RELATED LINKS
 
-[New-CsVoicePolicy]()
+[New-CsVoicePolicy](New-CsVoicePolicy.md)
 
-[Remove-CsVoicePolicy]()
+[Remove-CsVoicePolicy](Remove-CsVoicePolicy.md)
 
-[Set-CsVoicePolicy]()
+[Set-CsVoicePolicy](Set-CsVoicePolicy.md)
 
-[Grant-CsVoicePolicy]()
+[Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)
 
-[Test-CsVoicePolicy]()
+[Test-CsVoicePolicy](Test-CsVoicePolicy.md)

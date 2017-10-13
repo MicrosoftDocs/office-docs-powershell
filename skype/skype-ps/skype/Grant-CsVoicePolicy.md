@@ -237,16 +237,16 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[New-CsVoicePolicy]()
+[New-CsVoicePolicy](New-CsVoicePolicy.md)
 
-[Remove-CsVoicePolicy]()
+[Remove-CsVoicePolicy](Remove-CsVoicePolicy.md)
 
-[Set-CsVoicePolicy]()
+[Set-CsVoicePolicy](Set-CsVoicePolicy.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Test-CsVoicePolicy]()
+[Test-CsVoicePolicy](Test-CsVoicePolicy.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)
 
-[Get-CsOnlineUser]()
+[Get-CsOnlineUser](Get-CsOnlineUser.md)

@@ -273,4 +273,4 @@ The Get-CsAdUser cmdlet accepts a pipelined string value representing the Identi
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

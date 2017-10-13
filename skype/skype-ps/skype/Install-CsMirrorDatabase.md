@@ -353,6 +353,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsDatabaseMirrorState]()
+[Get-CsDatabaseMirrorState](Get-CsDatabaseMirrorState.md)
 
-[Uninstall-CsMirrorDatabase]()
+[Uninstall-CsMirrorDatabase](Uninstall-CsMirrorDatabase.md)

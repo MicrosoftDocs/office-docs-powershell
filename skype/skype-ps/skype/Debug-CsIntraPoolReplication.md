@@ -241,6 +241,6 @@ Debug-CsIntraPoolReplication returns instances of the Microsoft.Rtc.Management.U
 
 ## RELATED LINKS
 
-[Get-CsManagementStoreReplicationStatus]()
+[Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
 
-[Test-CsReplica]()
+[Test-CsReplica](Test-CsReplica.md)

@@ -154,8 +154,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsComputer]()
+[Disable-CsComputer](Disable-CsComputer.md)
 
-[Enable-CsComputer]()
+[Enable-CsComputer](Enable-CsComputer.md)
 
-[Test-CsComputer]()
+[Test-CsComputer](Test-CsComputer.md)

@@ -332,8 +332,8 @@ New-CsRgsAgentGroup creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 
 ## RELATED LINKS
 
-[Get-CsRgsAgentGroup]()
+[Get-CsRgsAgentGroup](Get-CsRgsAgentGroup.md)
 
-[Remove-CsRgsAgentGroup]()
+[Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
 
-[Set-CsRgsAgentGroup]()
+[Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)

@@ -151,8 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsHealthMonitoringConfiguration]()
+[New-CsHealthMonitoringConfiguration](New-CsHealthMonitoringConfiguration.md)
 
-[Remove-CsHealthMonitoringConfiguration]()
+[Remove-CsHealthMonitoringConfiguration](Remove-CsHealthMonitoringConfiguration.md)
 
-[Set-CsHealthMonitoringConfiguration]()
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)

@@ -72,6 +72,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisPort]()
+[Remove-CsLisPort](Remove-CsLisPort.md)
 
-[Set-CsLisPort]()
+[Set-CsLisPort](Set-CsLisPort.md)

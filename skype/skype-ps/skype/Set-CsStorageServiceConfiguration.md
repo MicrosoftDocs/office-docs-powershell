@@ -227,8 +227,8 @@ The `Set-CsStorageServiceConfiguration` cmdlet does not return any data or objec
 
 ## RELATED LINKS
 
-[Get-CsStorageServiceConfiguration]()
+[Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 
-[New-CsStorageServiceConfiguration]()
+[New-CsStorageServiceConfiguration](New-CsStorageServiceConfiguration.md)
 
-[Remove-CsStorageServiceConfiguration]()
+[Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)

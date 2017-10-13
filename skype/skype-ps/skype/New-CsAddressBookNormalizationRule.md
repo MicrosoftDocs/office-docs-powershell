@@ -272,8 +272,8 @@ The New-CsAddressBookNormalizationRule cmdlet creates instances of the Microsoft
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationRule]()
+[Get-CsAddressBookNormalizationRule](Get-CsAddressBookNormalizationRule.md)
 
-[Remove-CsAddressBookNormalizationRule]()
+[Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
-[Set-CsAddressBookNormalizationRule]()
+[Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)

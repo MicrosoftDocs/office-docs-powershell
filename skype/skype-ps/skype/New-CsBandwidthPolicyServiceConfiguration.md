@@ -238,8 +238,8 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Bandw
 
 ## RELATED LINKS
 
-[Remove-CsBandwidthPolicyServiceConfiguration]()
+[Remove-CsBandwidthPolicyServiceConfiguration](Remove-CsBandwidthPolicyServiceConfiguration.md)
 
-[Set-CsBandwidthPolicyServiceConfiguration]()
+[Set-CsBandwidthPolicyServiceConfiguration](Set-CsBandwidthPolicyServiceConfiguration.md)
 
-[Get-CsBandwidthPolicyServiceConfiguration]()
+[Get-CsBandwidthPolicyServiceConfiguration](Get-CsBandwidthPolicyServiceConfiguration.md)

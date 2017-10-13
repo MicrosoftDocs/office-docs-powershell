@@ -138,4 +138,4 @@ The Get-CsVideoTrunk cmdlet returns instances of the Microsoft.Rtc.Management.Xd
 
 ## RELATED LINKS
 
-[Set-CsVideoGateway]()
+[Set-CsVideoGateway](Set-CsVideoGateway.md)

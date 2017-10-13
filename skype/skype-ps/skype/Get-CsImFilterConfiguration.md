@@ -197,8 +197,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsImFilterConfiguration]()
+[New-CsImFilterConfiguration](New-CsImFilterConfiguration.md)
 
-[Remove-CsImFilterConfiguration]()
+[Remove-CsImFilterConfiguration](Remove-CsImFilterConfiguration.md)
 
-[Set-CsImFilterConfiguration]()
+[Set-CsImFilterConfiguration](Set-CsImFilterConfiguration.md)

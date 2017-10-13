@@ -400,4 +400,4 @@ The `Test-CsPresence` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

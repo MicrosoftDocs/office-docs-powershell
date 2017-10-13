@@ -126,6 +126,6 @@ The `New-CsSipProxyTransport` cmdlet creates new instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[New-CsSipProxyTCP]()
+[New-CsSipProxyTCP](New-CsSipProxyTCP.md)
 
-[New-CsSipProxyTLS]()
+[New-CsSipProxyTLS](New-CsSipProxyTLS.md)

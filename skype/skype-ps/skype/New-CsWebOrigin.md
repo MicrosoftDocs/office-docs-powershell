@@ -99,6 +99,6 @@ The `New-CsWebOrigin` cmdlet creates new instances of the Microsoft.Rtc.Manageme
 
 ## RELATED LINKS
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Set-CsWebServiceConfiguration]()
+[Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)

@@ -342,9 +342,9 @@ The New-CsServerApplication cmdlet creates new instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Get-CsServerApplication]()
+[Get-CsServerApplication](Get-CsServerApplication.md)
 
-[Remove-CsServerApplication]()
+[Remove-CsServerApplication](Remove-CsServerApplication.md)
 
-[Set-CsServerApplication]()
+[Set-CsServerApplication](Set-CsServerApplication.md)
 

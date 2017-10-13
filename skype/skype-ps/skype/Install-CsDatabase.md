@@ -631,5 +631,5 @@ The Install-CsDatabase cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Uninstall-CsDatabase]()
+[Uninstall-CsDatabase](Uninstall-CsDatabase.md)
 

@@ -162,10 +162,10 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Approve-CsDeviceUpdateRule]()
+[Approve-CsDeviceUpdateRule](Approve-CsDeviceUpdateRule.md)
 
-[Get-CsDeviceUpdateRule]()
+[Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 
-[Reset-CsDeviceUpdateRule]()
+[Reset-CsDeviceUpdateRule](Reset-CsDeviceUpdateRule.md)
 
-[Restore-CsDeviceUpdateRule]()
+[Restore-CsDeviceUpdateRule](Restore-CsDeviceUpdateRule.md)

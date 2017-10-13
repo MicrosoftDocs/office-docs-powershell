@@ -153,4 +153,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Test-CsUnifiedContactStore]()
+[Test-CsUnifiedContactStore](Test-CsUnifiedContactStore.md)

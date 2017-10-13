@@ -123,12 +123,12 @@ This cmdlet removes (resets) an object of type Microsoft.Rtc.Management.Policy.V
 
 ## RELATED LINKS
 
-[New-CsRoutingConfiguration]()
+[New-CsRoutingConfiguration](New-CsRoutingConfiguration.md)
 
-[Set-CsRoutingConfiguration]()
+[Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 
-[Get-CsRoutingConfiguration]()
+[Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)
 
-[Remove-CsVoiceRoute]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

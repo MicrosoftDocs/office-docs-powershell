@@ -713,10 +713,10 @@ Instead, the `Request-CsCertificate` cmdlet helps manage instances of the Micros
 
 ## RELATED LINKS
 
-[Get-CsCertificate]()
+[Get-CsCertificate](Get-CsCertificate.md)
 
-[Import-CsCertificate]()
+[Import-CsCertificate](Import-CsCertificate.md)
 
-[Remove-CsCertificate]()
+[Remove-CsCertificate](Remove-CsCertificate.md)
 
-[Set-CsCertificate]()
+[Set-CsCertificate](Set-CsCertificate.md)

@@ -249,10 +249,10 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsExternalAccessPolicy]()
+[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 
-[Grant-CsExternalAccessPolicy]()
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
 
-[New-CsExternalAccessPolicy]()
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy]()
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)

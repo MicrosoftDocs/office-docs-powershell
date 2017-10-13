@@ -331,20 +331,20 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

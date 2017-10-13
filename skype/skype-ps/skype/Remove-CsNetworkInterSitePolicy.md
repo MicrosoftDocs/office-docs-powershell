@@ -131,8 +131,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkInterSitePolicy]()
+[New-CsNetworkInterSitePolicy](New-CsNetworkInterSitePolicy.md)
 
-[Set-CsNetworkInterSitePolicy]()
+[Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)
 
-[Get-CsNetworkInterSitePolicy]()
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)

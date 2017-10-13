@@ -299,6 +299,6 @@ The Debug-CsAddressBookReplication cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Test-CsAddressBookService]()
+[Test-CsAddressBookService](Test-CsAddressBookService.md)
 
-[Test-CsAddressBookWebQuery]()
+[Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)

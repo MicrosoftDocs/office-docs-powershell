@@ -278,7 +278,7 @@ The Grant-CsOUPermission cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Revoke-CsOUPermission]()
+[Revoke-CsOUPermission](Revoke-CsOUPermission.md)
 
-[Test-CsOUPermission]()
+[Test-CsOUPermission](Test-CsOUPermission.md)
 

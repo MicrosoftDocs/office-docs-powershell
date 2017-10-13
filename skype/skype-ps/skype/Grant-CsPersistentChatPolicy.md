@@ -215,10 +215,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatPolicy]()
+[Get-CsPersistentChatPolicy](Get-CsPersistentChatPolicy.md)
 
-[New-CsPersistentChatPolicy]()
+[New-CsPersistentChatPolicy](New-CsPersistentChatPolicy.md)
 
-[Remove-CsPersistentChatPolicy]()
+[Remove-CsPersistentChatPolicy](Remove-CsPersistentChatPolicy.md)
 
-[Set-CsPersistentChatPolicy]()
+[Set-CsPersistentChatPolicy](Set-CsPersistentChatPolicy.md)

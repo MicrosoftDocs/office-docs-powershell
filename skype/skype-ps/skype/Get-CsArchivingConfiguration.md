@@ -164,10 +164,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsArchivingConfiguration]()
+[New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
-[Remove-CsArchivingConfiguration]()
+[Remove-CsArchivingConfiguration](Remove-CsArchivingConfiguration.md)
 
-[Set-CsArchivingConfiguration]()
+[Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)

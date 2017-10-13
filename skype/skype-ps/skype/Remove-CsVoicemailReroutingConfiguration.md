@@ -135,8 +135,8 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ExumR
 
 ## RELATED LINKS
 
-[New-CsVoicemailReroutingConfiguration]()
+[New-CsVoicemailReroutingConfiguration](New-CsVoicemailReroutingConfiguration.md)
 
-[Set-CsVoicemailReroutingConfiguration]()
+[Set-CsVoicemailReroutingConfiguration](Set-CsVoicemailReroutingConfiguration.md)
 
-[Get-CsVoicemailReroutingConfiguration]()
+[Get-CsVoicemailReroutingConfiguration](Get-CsVoicemailReroutingConfiguration.md)

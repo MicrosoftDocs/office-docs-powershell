@@ -181,10 +181,10 @@ The New-CsKerberosAccountAssignment cmdlet creates new instances of the Microsof
 
 ## RELATED LINKS
 
-[Get-CsKerberosAccountAssignment]()
+[Get-CsKerberosAccountAssignment](Get-CsKerberosAccountAssignment.md)
 
-[New-CsKerberosAccount]()
+[New-CsKerberosAccount](New-CsKerberosAccount.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

@@ -162,8 +162,8 @@ Instead, the `Remove-CsDiagnosticHeaderConfiguration` cmdlet deletes existing in
 
 ## RELATED LINKS
 
-[Get-CsDiagnosticHeaderConfiguration]()
+[Get-CsDiagnosticHeaderConfiguration](Get-CsDiagnosticHeaderConfiguration.md)
 
-[New-CsDiagnosticHeaderConfiguration]()
+[New-CsDiagnosticHeaderConfiguration](New-CsDiagnosticHeaderConfiguration.md)
 
-[Set-CsDiagnosticHeaderConfiguration]()
+[Set-CsDiagnosticHeaderConfiguration](Set-CsDiagnosticHeaderConfiguration.md)

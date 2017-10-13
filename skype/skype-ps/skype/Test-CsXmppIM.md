@@ -297,4 +297,4 @@ The `Test-CsXmppIM` cmdlet returns instances of the Microsoft.Rtc.SyntheticTrans
 
 ## RELATED LINKS
 
-[Set-CsXmppGatewayConfiguration]()
+[Set-CsXmppGatewayConfiguration](Set-CsXmppGatewayConfiguration.md)

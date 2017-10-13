@@ -257,10 +257,10 @@ Represents the Identity of the common area phone.
 
 ## RELATED LINKS
 
-[Move-CsCommonAreaPhone]()
+[Move-CsCommonAreaPhone](Move-CsCommonAreaPhone.md)
 
-[New-CsCommonAreaPhone]()
+[New-CsCommonAreaPhone](New-CsCommonAreaPhone.md)
 
-[Remove-CsCommonAreaPhone]()
+[Remove-CsCommonAreaPhone](Remove-CsCommonAreaPhone.md)
 
-[Set-CsCommonAreaPhone]()
+[Set-CsCommonAreaPhone](Set-CsCommonAreaPhone.md)

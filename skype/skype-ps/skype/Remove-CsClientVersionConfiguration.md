@@ -157,8 +157,8 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsClientVersionConfiguration]()
+[Get-CsClientVersionConfiguration](Get-CsClientVersionConfiguration.md)
 
-[New-CsClientVersionConfiguration]()
+[New-CsClientVersionConfiguration](New-CsClientVersionConfiguration.md)
 
-[Set-CsClientVersionConfiguration]()
+[Set-CsClientVersionConfiguration](Set-CsClientVersionConfiguration.md)

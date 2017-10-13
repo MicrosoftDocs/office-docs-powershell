@@ -350,10 +350,10 @@ Instead, the cmdlet configures one or more instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[Grant-CsPinPolicy]()
+[Grant-CsPinPolicy](Grant-CsPinPolicy.md)
 
-[New-CsPinPolicy]()
+[New-CsPinPolicy](New-CsPinPolicy.md)
 
-[Remove-CsPinPolicy]()
+[Remove-CsPinPolicy](Remove-CsPinPolicy.md)

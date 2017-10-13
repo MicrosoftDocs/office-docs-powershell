@@ -159,10 +159,10 @@ The Get-CsWatcherNodeConfiguration cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[New-CsWatcherNodeConfiguration]()
+[New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
-[Remove-CsWatcherNodeConfiguration]()
+[Remove-CsWatcherNodeConfiguration](Remove-CsWatcherNodeConfiguration.md)
 
-[Set-CsWatcherNodeConfiguration]()
+[Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
 
-[Test-CsWatcherNodeConfiguration]()
+[Test-CsWatcherNodeConfiguration](Test-CsWatcherNodeConfiguration.md)

@@ -154,6 +154,6 @@ The `Remove-CsPersistentChatEndpoint` cmdlet does not return objects or data.
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatEndpoint]()
+[Get-CsPersistentChatEndpoint](Get-CsPersistentChatEndpoint.md)
 
-[New-CsPersistentChatEndpoint]()
+[New-CsPersistentChatEndpoint](New-CsPersistentChatEndpoint.md)

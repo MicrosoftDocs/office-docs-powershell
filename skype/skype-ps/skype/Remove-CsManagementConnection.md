@@ -97,8 +97,8 @@ Instead, the `Remove-CsManagementConnection` cmdlet deletes instances of the Mic
 
 ## RELATED LINKS
 
-[Get-CsManagementConnection]()
+[Get-CsManagementConnection](Get-CsManagementConnection.md)
 
-[Remove-CsConfigurationStoreLocation]()
+[Remove-CsConfigurationStoreLocation](Remove-CsConfigurationStoreLocation.md)
 
-[Set-CsManagementConnection]()
+[Set-CsManagementConnection](Set-CsManagementConnection.md)

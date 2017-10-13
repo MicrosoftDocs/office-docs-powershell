@@ -209,8 +209,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClientVersionPolicyRule]()
+[New-CsClientVersionPolicyRule](New-CsClientVersionPolicyRule.md)
 
-[Remove-CsClientVersionPolicyRule]()
+[Remove-CsClientVersionPolicyRule](Remove-CsClientVersionPolicyRule.md)
 
-[Set-CsClientVersionPolicyRule]()
+[Set-CsClientVersionPolicyRule](Set-CsClientVersionPolicyRule.md)

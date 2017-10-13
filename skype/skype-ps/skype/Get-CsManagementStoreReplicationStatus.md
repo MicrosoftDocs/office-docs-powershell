@@ -140,4 +140,4 @@ If the CentralManagementStoreStatus parameter is used, then the cmdlet returns i
 
 ## RELATED LINKS
 
-[Invoke-CsManagementStoreReplication]()
+[Invoke-CsManagementStoreReplication](Invoke-CsManagementStoreReplication.md)

@@ -151,8 +151,8 @@ Instead, the `Remove-CsClsRegion` cmdlet deletes existing instances of the Micro
 
 ## RELATED LINKS
 
-[Get-CsClsRegion]()
+[Get-CsClsRegion](Get-CsClsRegion.md)
 
-[New-CsClsRegion]()
+[New-CsClsRegion](New-CsClsRegion.md)
 
-[Set-CsClsRegion]()
+[Set-CsClsRegion](Set-CsClsRegion.md)

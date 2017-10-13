@@ -143,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsQoEConfiguration]()
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[Remove-CsQoEConfiguration]()
+[Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
-[Set-CsQoEConfiguration]()
+[Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)

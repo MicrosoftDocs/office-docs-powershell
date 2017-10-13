@@ -243,8 +243,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkInterRegionRoute]()
+[New-CsNetworkInterRegionRoute](New-CsNetworkInterRegionRoute.md)
 
-[Remove-CsNetworkInterRegionRoute]()
+[Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
-[Get-CsNetworkInterRegionRoute]()
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)

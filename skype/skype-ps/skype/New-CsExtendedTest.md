@@ -132,7 +132,7 @@ The New-CsExtendedTest cmdlet creates new instances of the Microsoft.Rtc.Managem
 
 ## RELATED LINKS
 
-[New-CsWatcherNodeConfiguration]()
+[New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
-[Set-CsWatcherNodeConfiguration]()
+[Set-CsWatcherNodeConfiguration](Set-CsWatcherNodeConfiguration.md)
 

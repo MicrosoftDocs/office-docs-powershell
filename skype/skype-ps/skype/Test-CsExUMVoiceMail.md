@@ -349,4 +349,4 @@ The `Test-CsExUMVoiceMail` cmdlet returns an instance of the Microsoft.Rtc.Synth
 
 ## RELATED LINKS
 
-[Test-CsExUMConnectivity]()
+[Test-CsExUMConnectivity](Test-CsExUMConnectivity.md)

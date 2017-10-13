@@ -124,8 +124,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Loc
 
 ## RELATED LINKS
 
-[Set-CsEnhancedEmergencyServiceDisclaimer]()
+[Set-CsEnhancedEmergencyServiceDisclaimer](Set-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Get-CsEnhancedEmergencyServiceDisclaimer]()
+[Get-CsEnhancedEmergencyServiceDisclaimer](Get-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)

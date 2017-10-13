@@ -139,8 +139,8 @@ It removes an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer.
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationPool]()
+[New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
-[Set-CsTrustedApplicationPool]()
+[Set-CsTrustedApplicationPool](Set-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)

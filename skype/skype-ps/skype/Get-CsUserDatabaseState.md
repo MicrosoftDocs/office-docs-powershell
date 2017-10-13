@@ -136,8 +136,8 @@ The Get-CsUserDatabaseState cmdlet returns instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[Set-CsUserDatabaseState]()
+[Set-CsUserDatabaseState](Set-CsUserDatabaseState.md)
 
-[Update-CsUserDatabase]()
+[Update-CsUserDatabase](Update-CsUserDatabase.md)
 
 

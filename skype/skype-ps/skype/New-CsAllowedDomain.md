@@ -313,11 +313,11 @@ Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.A
 
 ## RELATED LINKS
 
-[Get-CsAllowedDomain]()
+[Get-CsAllowedDomain](Get-CsAllowedDomain.md)
 
-[Remove-CsAllowedDomain]()
+[Remove-CsAllowedDomain](Remove-CsAllowedDomain.md)
 
-[Set-CsAccessEdgeConfiguration]()
+[Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)
 
-[Set-CsAllowedDomain]()
+[Set-CsAllowedDomain](Set-CsAllowedDomain.md)
 

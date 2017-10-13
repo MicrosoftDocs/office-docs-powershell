@@ -152,8 +152,8 @@ Instead, the `Remove-CsOutboundCallingNumberTranslationRule` cmdlet deletes exis
 
 ## RELATED LINKS
 
-[Get-CsOutboundCallingNumberTranslationRule]()
+[Get-CsOutboundCallingNumberTranslationRule](Get-CsOutboundCallingNumberTranslationRule.md)
 
-[New-CsOutboundCallingNumberTranslationRule]()
+[New-CsOutboundCallingNumberTranslationRule](New-CsOutboundCallingNumberTranslationRule.md)
 
-[Set-CsOutboundCallingNumberTranslationRule]()
+[Set-CsOutboundCallingNumberTranslationRule](Set-CsOutboundCallingNumberTranslationRule.md)

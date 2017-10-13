@@ -320,4 +320,4 @@ The `Test-CsAVEdgeConnectivity` cmdlet returns instances of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)

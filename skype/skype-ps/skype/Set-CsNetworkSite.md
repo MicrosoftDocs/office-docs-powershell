@@ -304,16 +304,16 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[New-CsNetworkSite]()
+[New-CsNetworkSite](New-CsNetworkSite.md)
 
-[Remove-CsNetworkSite]()
+[Remove-CsNetworkSite](Remove-CsNetworkSite.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[New-CsNetworkMediaBypassConfiguration]()
+[New-CsNetworkMediaBypassConfiguration](New-CsNetworkMediaBypassConfiguration.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Get-CsNetworkConfiguration]()
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)

@@ -192,10 +192,10 @@ Instead, the `Remove-CsPresencePolicy` cmdlet deletes instances of the Microsoft
 
 ## RELATED LINKS
 
-[Get-CsPresencePolicy]()
+[Get-CsPresencePolicy](Get-CsPresencePolicy.md)
 
-[Grant-CsPresencePolicy]()
+[Grant-CsPresencePolicy](Grant-CsPresencePolicy.md)
 
-[New-CsPresencePolicy]()
+[New-CsPresencePolicy](New-CsPresencePolicy.md)
 
-[Set-CsPresencePolicy]()
+[Set-CsPresencePolicy](Set-CsPresencePolicy.md)

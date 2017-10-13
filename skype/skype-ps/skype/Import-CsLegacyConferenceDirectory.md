@@ -133,9 +133,9 @@ The Import-CsLegacyConferenceDirectory cmdlet does not return any objects or val
 
 ## RELATED LINKS
 
-[Import-CsLegacyConfiguration]()
+[Import-CsLegacyConfiguration](Import-CsLegacyConfiguration.md)
 
-[Merge-CsLegacyTopology]()
+[Merge-CsLegacyTopology](Merge-CsLegacyTopology.md)
 
-[Move-CsLegacyUser]()
+[Move-CsLegacyUser](Move-CsLegacyUser.md)
 

@@ -515,10 +515,10 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsMeetingConfiguration]()
+[Get-CsMeetingConfiguration](Get-CsMeetingConfiguration.md)
 
-[New-CsMeetingConfiguration]()
+[New-CsMeetingConfiguration](New-CsMeetingConfiguration.md)
 
-[Remove-CsMeetingConfiguration]()
+[Remove-CsMeetingConfiguration](Remove-CsMeetingConfiguration.md)
 
-[Update-CsTenantMeetingUrl]()
+[Update-CsTenantMeetingUrl](Update-CsTenantMeetingUrl.md)

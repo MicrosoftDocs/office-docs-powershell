@@ -135,8 +135,8 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ImFil
 
 ## RELATED LINKS
 
-[New-CsImFilterConfiguration]()
+[New-CsImFilterConfiguration](New-CsImFilterConfiguration.md)
 
-[Set-CsImFilterConfiguration]()
+[Set-CsImFilterConfiguration](Set-CsImFilterConfiguration.md)
 
-[Get-CsImFilterConfiguration]()
+[Get-CsImFilterConfiguration](Get-CsImFilterConfiguration.md)

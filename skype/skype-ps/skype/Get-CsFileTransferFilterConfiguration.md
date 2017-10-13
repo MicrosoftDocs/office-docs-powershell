@@ -164,8 +164,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsFileTransferFilterConfiguration]()
+[New-CsFileTransferFilterConfiguration](New-CsFileTransferFilterConfiguration.md)
 
-[Remove-CsFileTransferFilterConfiguration]()
+[Remove-CsFileTransferFilterConfiguration](Remove-CsFileTransferFilterConfiguration.md)
 
-[Set-CsFileTransferFilterConfiguration]()
+[Set-CsFileTransferFilterConfiguration](Set-CsFileTransferFilterConfiguration.md)

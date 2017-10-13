@@ -122,4 +122,4 @@ The Get-CsAdminRoleAssignment cmdlet returns string values representing the RBAC
 
 ## RELATED LINKS
 
-[Get-CsAdminRole]()
+[Get-CsAdminRole](Get-CsAdminRole.md)

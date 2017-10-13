@@ -158,10 +158,10 @@ Instead, the `Set-CsPresenceProvider` cmdlet modifies existing instances of the 
 
 ## RELATED LINKS
 
-[Get-CsPresenceProvider]()
+[Get-CsPresenceProvider](Get-CsPresenceProvider.md)
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsPresenceProvider]()
+[New-CsPresenceProvider](New-CsPresenceProvider.md)
 
-[Remove-CsPresenceProvider]()
+[Remove-CsPresenceProvider](Remove-CsPresenceProvider.md)

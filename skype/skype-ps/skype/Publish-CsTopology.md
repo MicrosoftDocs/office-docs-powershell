@@ -256,10 +256,10 @@ Instead, the `Publish-CsTopology` cmdlet publishes instances of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[Enable-CsTopology]()
+[Enable-CsTopology](Enable-CsTopology.md)
 
-[Get-CsTopology]()
+[Get-CsTopology](Get-CsTopology.md)
 
-[New-CsSimpleUrlConfiguration]()
+[New-CsSimpleUrlConfiguration](New-CsSimpleUrlConfiguration.md)
 
-[Test-CsTopology]()
+[Test-CsTopology](Test-CsTopology.md)

@@ -376,11 +376,11 @@ Creates a new instance of the Microsoft.Rtc.Management.WritableConfig.Policy.Use
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[Grant-CsPinPolicy]()
+[Grant-CsPinPolicy](Grant-CsPinPolicy.md)
 
-[Remove-CsPinPolicy]()
+[Remove-CsPinPolicy](Remove-CsPinPolicy.md)
 
-[Set-CsPinPolicy]()
+[Set-CsPinPolicy](Set-CsPinPolicy.md)
 

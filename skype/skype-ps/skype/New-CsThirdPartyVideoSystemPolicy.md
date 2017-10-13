@@ -184,10 +184,10 @@ The `New-CsThirdPartyVideoSystemPolicy` cmdlet creates new instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[Grant-CsThirdPartyVideoSystemPolicy]()
+[Grant-CsThirdPartyVideoSystemPolicy](Grant-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystemPolicy]()
+[Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

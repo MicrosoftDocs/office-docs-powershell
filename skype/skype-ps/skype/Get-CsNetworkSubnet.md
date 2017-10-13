@@ -135,8 +135,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkSubnet]()
+[New-CsNetworkSubnet](New-CsNetworkSubnet.md)
 
-[Remove-CsNetworkSubnet]()
+[Remove-CsNetworkSubnet](Remove-CsNetworkSubnet.md)
 
-[Set-CsNetworkSubnet]()
+[Set-CsNetworkSubnet](Set-CsNetworkSubnet.md)

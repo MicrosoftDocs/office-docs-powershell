@@ -258,9 +258,9 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Clie
 
 ## RELATED LINKS
 
-[Get-CsClientVersionConfiguration]()
+[Get-CsClientVersionConfiguration](Get-CsClientVersionConfiguration.md)
 
-[Remove-CsClientVersionConfiguration]()
+[Remove-CsClientVersionConfiguration](Remove-CsClientVersionConfiguration.md)
 
-[Set-CsClientVersionConfiguration]()
+[Set-CsClientVersionConfiguration](Set-CsClientVersionConfiguration.md)
 

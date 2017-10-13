@@ -136,8 +136,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ba
 
 ## RELATED LINKS
 
-[New-CsBandwidthPolicyServiceConfiguration]()
+[New-CsBandwidthPolicyServiceConfiguration](New-CsBandwidthPolicyServiceConfiguration.md)
 
-[Set-CsBandwidthPolicyServiceConfiguration]()
+[Set-CsBandwidthPolicyServiceConfiguration](Set-CsBandwidthPolicyServiceConfiguration.md)
 
-[Get-CsBandwidthPolicyServiceConfiguration]()
+[Get-CsBandwidthPolicyServiceConfiguration](Get-CsBandwidthPolicyServiceConfiguration.md)

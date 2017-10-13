@@ -242,6 +242,6 @@ The `Revoke-CsOUPermission` cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Grant-CsOUPermission]()
+[Grant-CsOUPermission](Grant-CsOUPermission.md)
 
-[Test-CsOUPermission]()
+[Test-CsOUPermission](Test-CsOUPermission.md)

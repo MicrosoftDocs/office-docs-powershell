@@ -193,10 +193,10 @@ Instead, the `Remove-CsThirdPartyVideoSystemPolicy` cmdlet deletes instances of 
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[Grant-CsThirdPartyVideoSystemPolicy]()
+[Grant-CsThirdPartyVideoSystemPolicy](Grant-CsThirdPartyVideoSystemPolicy.md)
 
-[New-CsThirdPartyVideoSystemPolicy]()
+[New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

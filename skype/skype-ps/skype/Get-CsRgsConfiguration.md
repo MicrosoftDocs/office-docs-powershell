@@ -106,6 +106,6 @@ A string value representing the Identity of the Response Group configuration set
 
 ## RELATED LINKS
 
-[Move-CsRgsConfiguration]()
+[Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)
 
-[Set-CsRgsConfiguration]()
+[Set-CsRgsConfiguration](Set-CsRgsConfiguration.md)

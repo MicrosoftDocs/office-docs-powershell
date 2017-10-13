@@ -214,8 +214,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsTestDevice]()
+[Get-CsTestDevice](Get-CsTestDevice.md)
 
-[New-CsTestDevice]()
+[New-CsTestDevice](New-CsTestDevice.md)
 
-[Remove-CsTestDevice]()
+[Remove-CsTestDevice](Remove-CsTestDevice.md)

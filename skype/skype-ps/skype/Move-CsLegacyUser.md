@@ -405,12 +405,12 @@ Instead, the cmdlet moves instances of the Microsoft.Rtc.Management.ADConnect.Sc
 
 ## RELATED LINKS
 
-[Import-CsLegacyConfiguration]()
+[Import-CsLegacyConfiguration](Import-CsLegacyConfiguration.md)
 
-[Import-CsLegacyConferenceDirectory]()
+[Import-CsLegacyConferenceDirectory](Import-CsLegacyConferenceDirectory.md)
 
-[Merge-CsLegacyTopology]()
+[Merge-CsLegacyTopology](Merge-CsLegacyTopology.md)
 
-[Move-CsUser]()
+[Move-CsUser](Move-CsUser.md)
 
-[Set-CsUser]()
+[Set-CsUser](Set-CsUser.md)

@@ -144,8 +144,8 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Media
 
 ## RELATED LINKS
 
-[New-CsMediaConfiguration]()
+[New-CsMediaConfiguration](New-CsMediaConfiguration.md)
 
-[Set-CsMediaConfiguration]()
+[Set-CsMediaConfiguration](Set-CsMediaConfiguration.md)
 
-[Get-CsMediaConfiguration]()
+[Get-CsMediaConfiguration](Get-CsMediaConfiguration.md)

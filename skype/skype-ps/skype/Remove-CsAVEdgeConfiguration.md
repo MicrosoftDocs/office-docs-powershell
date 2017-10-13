@@ -155,8 +155,8 @@ Instead, the cmdlet deletes instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)
 
-[New-CsAVEdgeConfiguration]()
+[New-CsAVEdgeConfiguration](New-CsAVEdgeConfiguration.md)
 
-[Set-CsAVEdgeConfiguration]()
+[Set-CsAVEdgeConfiguration](Set-CsAVEdgeConfiguration.md)

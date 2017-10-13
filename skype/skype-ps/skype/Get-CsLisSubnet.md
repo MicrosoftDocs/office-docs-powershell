@@ -72,6 +72,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisSubnet]()
+[Remove-CsLisSubnet](Remove-CsLisSubnet.md)
 
-[Set-CsLisSubnet]()
+[Set-CsLisSubnet](Set-CsLisSubnet.md)

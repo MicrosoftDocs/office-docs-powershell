@@ -178,11 +178,11 @@ None
 
 ## RELATED LINKS
 
-[Set-CsAddressBookNormalizationConfiguration]()
+[Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
-[Remove-CsAddressBookNormalizationConfiguration]()
+[Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
-[New-CsAddressBookNormalizationConfiguration]()
+[New-CsAddressBookNormalizationConfiguration](New-CsAddressBookNormalizationConfiguration.md)
 
-[Get-CsAddressBookNormalizationConfiguration]()
+[Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
 

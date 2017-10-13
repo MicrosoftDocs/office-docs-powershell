@@ -250,10 +250,10 @@ The New-CsClientVersionPolicy cmdlet creates new instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Get-CsClientVersionPolicy]()
+[Get-CsClientVersionPolicy](Get-CsClientVersionPolicy.md)
 
-[Grant-CsClientVersionPolicy]()
+[Grant-CsClientVersionPolicy](Grant-CsClientVersionPolicy.md)
 
-[Remove-CsClientVersionPolicy]()
+[Remove-CsClientVersionPolicy](Remove-CsClientVersionPolicy.md)
 
-[Set-CsClientVersionPolicy]()
+[Set-CsClientVersionPolicy](Set-CsClientVersionPolicy.md)

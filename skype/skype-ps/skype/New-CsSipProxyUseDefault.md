@@ -72,6 +72,6 @@ The `New-CsSipProxyUseDefault` cmdlet creates new instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[New-CsSipProxyCustom]()
+[New-CsSipProxyCustom](New-CsSipProxyCustom.md)
 
-[New-CsSipProxyRealm]()
+[New-CsSipProxyRealm](New-CsSipProxyRealm.md)

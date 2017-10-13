@@ -187,10 +187,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsThirdPartyVideoSystemPolicy]()
+[Grant-CsThirdPartyVideoSystemPolicy](Grant-CsThirdPartyVideoSystemPolicy.md)
 
-[New-CsThirdPartyVideoSystemPolicy]()
+[New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystem]()
+[Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

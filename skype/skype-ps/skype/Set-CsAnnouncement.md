@@ -277,10 +277,10 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[New-CsAnnouncement]()
+[New-CsAnnouncement](New-CsAnnouncement.md)
 
-[Remove-CsAnnouncement]()
+[Remove-CsAnnouncement](Remove-CsAnnouncement.md)
 
-[Get-CsAnnouncement]()
+[Get-CsAnnouncement](Get-CsAnnouncement.md)
 
-[Import-CsAnnouncementFile]()
+[Import-CsAnnouncementFile](Import-CsAnnouncementFile.md)

@@ -179,5 +179,5 @@ The Import-CsConfiguration cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Export-CsConfiguration]()
+[Export-CsConfiguration](Export-CsConfiguration.md)
 

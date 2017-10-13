@@ -110,6 +110,6 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[New-CsNetworkRegion]()
+[New-CsNetworkRegion](New-CsNetworkRegion.md)
 
-[Set-CsNetworkRegion]()
+[Set-CsNetworkRegion](Set-CsNetworkRegion.md)

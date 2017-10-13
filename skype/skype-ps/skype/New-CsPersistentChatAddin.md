@@ -128,9 +128,9 @@ The New-CsPersistentChatAddin cmdlet creates new instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatAddin]()
+[Get-CsPersistentChatAddin](Get-CsPersistentChatAddin.md)
 
-[Remove-CsPersistentChatAddin]()
+[Remove-CsPersistentChatAddin](Remove-CsPersistentChatAddin.md)
 
-[Set-CsPersistentChatAddin]()
+[Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)
 

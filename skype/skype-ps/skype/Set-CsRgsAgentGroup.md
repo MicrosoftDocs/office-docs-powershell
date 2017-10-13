@@ -197,8 +197,8 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Rgs.Managem
 
 ## RELATED LINKS
 
-[Get-CsRgsAgentGroup]()
+[Get-CsRgsAgentGroup](Get-CsRgsAgentGroup.md)
 
-[New-CsRgsAgentGroup]()
+[New-CsRgsAgentGroup](New-CsRgsAgentGroup.md)
 
-[Remove-CsRgsAgentGroup]()
+[Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)

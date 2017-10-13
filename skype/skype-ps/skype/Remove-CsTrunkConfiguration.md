@@ -132,10 +132,10 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Tr
 
 ## RELATED LINKS
 
-[New-CsTrunkConfiguration]()
+[New-CsTrunkConfiguration](New-CsTrunkConfiguration.md)
 
-[Set-CsTrunkConfiguration]()
+[Set-CsTrunkConfiguration](Set-CsTrunkConfiguration.md)
 
-[Get-CsTrunkConfiguration]()
+[Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)
 
-[Test-CsTrunkConfiguration]()
+[Test-CsTrunkConfiguration](Test-CsTrunkConfiguration.md)

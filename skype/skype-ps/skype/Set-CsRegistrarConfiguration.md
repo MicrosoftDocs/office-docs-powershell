@@ -406,8 +406,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsRegistrarConfiguration]()
+[Get-CsRegistrarConfiguration](Get-CsRegistrarConfiguration.md)
 
-[New-CsRegistrarConfiguration]()
+[New-CsRegistrarConfiguration](New-CsRegistrarConfiguration.md)
 
-[Remove-CsRegistrarConfiguration]()
+[Remove-CsRegistrarConfiguration](Remove-CsRegistrarConfiguration.md)

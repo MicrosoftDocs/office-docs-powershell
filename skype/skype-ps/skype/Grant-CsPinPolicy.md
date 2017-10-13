@@ -211,11 +211,11 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[New-CsPinPolicy]()
+[New-CsPinPolicy](New-CsPinPolicy.md)
 
-[Remove-CsPinPolicy]()
+[Remove-CsPinPolicy](Remove-CsPinPolicy.md)
 
-[Set-CsPinPolicy]()
+[Set-CsPinPolicy](Set-CsPinPolicy.md)
 

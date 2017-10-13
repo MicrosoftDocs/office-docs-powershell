@@ -193,8 +193,8 @@ Instead, the `Remove-CsPrivacyConfiguration` cmdlet deletes existing instances o
 
 ## RELATED LINKS
 
-[Get-CsPrivacyConfiguration]()
+[Get-CsPrivacyConfiguration](Get-CsPrivacyConfiguration.md)
 
-[New-CsPrivacyConfiguration]()
+[New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
-[Set-CsPrivacyConfiguration]()
+[Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)

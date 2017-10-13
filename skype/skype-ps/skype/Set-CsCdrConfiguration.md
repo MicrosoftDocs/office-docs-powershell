@@ -285,8 +285,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsCdrConfiguration]()
+[Get-CsCdrConfiguration](Get-CsCdrConfiguration.md)
 
-[New-CsCdrConfiguration]()
+[New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
-[Remove-CsCdrConfiguration]()
+[Remove-CsCdrConfiguration](Remove-CsCdrConfiguration.md)

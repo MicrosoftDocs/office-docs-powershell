@@ -147,8 +147,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDialInConferencingConfiguration]()
+[New-CsDialInConferencingConfiguration](New-CsDialInConferencingConfiguration.md)
 
-[Remove-CsDialInConferencingConfiguration]()
+[Remove-CsDialInConferencingConfiguration](Remove-CsDialInConferencingConfiguration.md)
 
-[Set-CsDialInConferencingConfiguration]()
+[Set-CsDialInConferencingConfiguration](Set-CsDialInConferencingConfiguration.md)

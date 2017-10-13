@@ -2276,13 +2276,13 @@ The New-CsClientPolicy cmdlet creates new instances of the Microsoft.Rtc.Managem
 
 ## RELATED LINKS
 
-[Get-CsClientPolicy]()
+[Get-CsClientPolicy](Get-CsClientPolicy.md)
 
-[Grant-CsClientPolicy]()
+[Grant-CsClientPolicy](Grant-CsClientPolicy.md)
 
-[New-CsClientPolicyEntry]()
+[New-CsClientPolicyEntry](New-CsClientPolicyEntry.md)
 
-[Remove-CsClientPolicy]()
+[Remove-CsClientPolicy](Remove-CsClientPolicy.md)
 
-[Set-CsClientPolicy]()
+[Set-CsClientPolicy](Set-CsClientPolicy.md)
 

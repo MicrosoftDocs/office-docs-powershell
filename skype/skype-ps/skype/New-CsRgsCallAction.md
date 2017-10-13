@@ -221,6 +221,6 @@ New-CsRgsCallAction creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 
 ## RELATED LINKS
 
-[New-CsRgsQueue]()
+[New-CsRgsQueue](New-CsRgsQueue.md)
 
-[Set-CsRgsQueue]()
+[Set-CsRgsQueue](Set-CsRgsQueue.md)

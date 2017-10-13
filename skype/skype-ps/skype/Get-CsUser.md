@@ -400,12 +400,12 @@ The Get-CsUser cmdlet returns instances of the Microsoft.Rtc.Management.ADConnec
 
 ## RELATED LINKS
 
-[Disable-CsUser]()
+[Disable-CsUser](Disable-CsUser.md)
 
-[Enable-CsUser]()
+[Enable-CsUser](Enable-CsUser.md)
 
-[Get-CsAdUser]()
+[Get-CsAdUser](Get-CsAdUser.md)
 
-[Move-CsUser]()
+[Move-CsUser](Move-CsUser.md)
 
-[Set-CsUser]()
+[Set-CsUser](Set-CsUser.md)

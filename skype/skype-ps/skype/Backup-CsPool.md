@@ -280,8 +280,8 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsBackupServiceConfiguration]()
+[Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)
 
-[Get-CsBackupServiceStatus]()
+[Get-CsBackupServiceStatus](Get-CsBackupServiceStatus.md)
 
-[Get-CsPoolBackupRelationship]()
+[Get-CsPoolBackupRelationship](Get-CsPoolBackupRelationship.md)

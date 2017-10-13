@@ -184,6 +184,6 @@ Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Get-CsConferenceDisclaimer]()
+[Get-CsConferenceDisclaimer](Get-CsConferenceDisclaimer.md)
 
-[Remove-CsConferenceDisclaimer]()
+[Remove-CsConferenceDisclaimer](Remove-CsConferenceDisclaimer.md)

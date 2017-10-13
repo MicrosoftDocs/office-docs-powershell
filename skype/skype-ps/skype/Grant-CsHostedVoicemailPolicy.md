@@ -242,12 +242,12 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[New-CsHostedVoicemailPolicy]()
+[New-CsHostedVoicemailPolicy](New-CsHostedVoicemailPolicy.md)
 
-[Remove-CsHostedVoicemailPolicy]()
+[Remove-CsHostedVoicemailPolicy](Remove-CsHostedVoicemailPolicy.md)
 
-[Set-CsHostedVoicemailPolicy]()
+[Set-CsHostedVoicemailPolicy](Set-CsHostedVoicemailPolicy.md)
 
-[Get-CsHostedVoicemailPolicy]()
+[Get-CsHostedVoicemailPolicy](Get-CsHostedVoicemailPolicy.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

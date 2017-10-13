@@ -320,4 +320,4 @@ String value representing the fabric state.
 
 ## RELATED LINKS
 
-[Reset-CsPoolFabricState]()
+[Reset-CsPoolFabricState](Reset-CsPoolFabricState.md)

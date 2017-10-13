@@ -122,9 +122,9 @@ The New-CsSipProxyTLS cmdlet creates new instances of the Microsoft.Rtc.Manageme
 
 ## RELATED LINKS
 
-[New-CsSipProxyTCP]()
+[New-CsSipProxyTCP](New-CsSipProxyTCP.md)
 
-[New-CsSipProxyTransport]()
+[New-CsSipProxyTransport](New-CsSipProxyTransport.md)
 
-[New-CsSipProxyUseDefaultCert]()
+[New-CsSipProxyUseDefaultCert](New-CsSipProxyUseDefaultCert.md)
 

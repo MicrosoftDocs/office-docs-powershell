@@ -137,8 +137,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Tr
 
 ## RELATED LINKS
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[Set-CsOutboundTranslationRule]()
+[Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)
 
-[Get-CsOutboundTranslationRule]()
+[Get-CsOutboundTranslationRule](Get-CsOutboundTranslationRule.md)

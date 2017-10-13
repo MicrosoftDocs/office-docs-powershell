@@ -187,8 +187,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsRgsHolidaySet]()
+[New-CsRgsHolidaySet](New-CsRgsHolidaySet.md)
 
-[Remove-CsRgsHolidaySet]()
+[Remove-CsRgsHolidaySet](Remove-CsRgsHolidaySet.md)
 
-[Set-CsRgsHolidaySet]()
+[Set-CsRgsHolidaySet](Set-CsRgsHolidaySet.md)

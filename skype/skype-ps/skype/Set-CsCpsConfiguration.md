@@ -252,10 +252,10 @@ Modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Call
 
 ## RELATED LINKS
 
-[New-CsCpsConfiguration]()
+[New-CsCpsConfiguration](New-CsCpsConfiguration.md)
 
-[Remove-CsCpsConfiguration]()
+[Remove-CsCpsConfiguration](Remove-CsCpsConfiguration.md)
 
-[Get-CsCpsConfiguration]()
+[Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)
 
-[Set-CsCallParkServiceMusicOnHoldFile]()
+[Set-CsCallParkServiceMusicOnHoldFile](Set-CsCallParkServiceMusicOnHoldFile.md)

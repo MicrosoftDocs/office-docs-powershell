@@ -283,4 +283,4 @@ The `Reset-CsPoolRegistrarState` cmdlet does not return objects.
 
 ## RELATED LINKS
 
-[Get-CsPoolFabricState]()
+[Get-CsPoolFabricState](Get-CsPoolFabricState.md)

@@ -199,6 +199,6 @@ Instead, the `Set-CsUserDatabaseState` cmdlet modifies existing instances of the
 
 ## RELATED LINKS
 
-[Get-CsUserDatabaseState]()
+[Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 
-[Update-CsUserDatabase]()
+[Update-CsUserDatabase](Update-CsUserDatabase.md)

@@ -178,6 +178,6 @@ None
 
 ## RELATED LINKS
 
-[Backup-CsPool]()
+[Backup-CsPool](Backup-CsPool.md)
 
-[Get-CsPool]()
+[Get-CsPool](Get-CsPool.md)

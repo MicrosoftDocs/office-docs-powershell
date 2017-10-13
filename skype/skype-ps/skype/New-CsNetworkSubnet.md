@@ -263,10 +263,10 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Remove-CsNetworkSubnet]()
+[Remove-CsNetworkSubnet](Remove-CsNetworkSubnet.md)
 
-[Set-CsNetworkSubnet]()
+[Set-CsNetworkSubnet](Set-CsNetworkSubnet.md)
 
-[Get-CsNetworkSubnet]()
+[Get-CsNetworkSubnet](Get-CsNetworkSubnet.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)

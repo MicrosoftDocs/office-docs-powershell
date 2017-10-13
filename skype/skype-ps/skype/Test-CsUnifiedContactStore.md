@@ -309,6 +309,6 @@ The `Test-CsUnifiedContactStore` cmdlet returns instances of the Microsoft.Rtc.S
 
 ## RELATED LINKS
 
-[New-CsUserServicesPolicy]()
+[New-CsUserServicesPolicy](New-CsUserServicesPolicy.md)
 
-[Set-CsUserServicesPolicy]()
+[Set-CsUserServicesPolicy](Set-CsUserServicesPolicy.md)

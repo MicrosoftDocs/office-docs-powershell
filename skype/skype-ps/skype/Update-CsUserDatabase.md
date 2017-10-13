@@ -102,6 +102,6 @@ Instead, the `Update-CsUserDatabase` cmdlet updates instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsUserDatabaseState]()
+[Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 
-[Set-CsUserDatabaseState]()
+[Set-CsUserDatabaseState](Set-CsUserDatabaseState.md)

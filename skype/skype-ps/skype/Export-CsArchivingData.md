@@ -331,4 +331,4 @@ The Export-CsArchivingData cmdlet returns Archiving database records in EML form
 
 ## RELATED LINKS
 
-[Get-CsArchivingConfiguration]()
+[Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)

@@ -183,7 +183,7 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Audio
 
 ## RELATED LINKS
 
-[New-CsRgsWorkflow]()
+[New-CsRgsWorkflow](New-CsRgsWorkflow.md)
 
-[Set-CsRgsWorkflow]()
+[Set-CsRgsWorkflow](Set-CsRgsWorkflow.md)
 

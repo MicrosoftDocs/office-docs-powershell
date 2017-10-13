@@ -350,4 +350,4 @@ The `Set-CsAudioTestServiceApplication` cmdlet does not return any objects or va
 
 ## RELATED LINKS
 
-[Get-CsAudioTestServiceApplication]()
+[Get-CsAudioTestServiceApplication](Get-CsAudioTestServiceApplication.md)

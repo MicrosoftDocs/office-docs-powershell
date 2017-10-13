@@ -158,12 +158,12 @@ This cmdlet does not return a value.
 
 ## RELATED LINKS
 
-[Export-CsLisConfiguration]()
+[Export-CsLisConfiguration](Export-CsLisConfiguration.md)
 
-[Publish-CsLisConfiguration]()
+[Publish-CsLisConfiguration](Publish-CsLisConfiguration.md)
 
-[Unpublish-CsLisConfiguration]()
+[Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
-[Debug-CsLisConfiguration]()
+[Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
-[Test-CsLisConfiguration]()
+[Test-CsLisConfiguration](Test-CsLisConfiguration.md)

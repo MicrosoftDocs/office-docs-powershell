@@ -216,8 +216,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.E
 
 ## RELATED LINKS
 
-[New-CsVoicemailReroutingConfiguration]()
+[New-CsVoicemailReroutingConfiguration](New-CsVoicemailReroutingConfiguration.md)
 
-[Remove-CsVoicemailReroutingConfiguration]()
+[Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
-[Get-CsVoicemailReroutingConfiguration]()
+[Get-CsVoicemailReroutingConfiguration](Get-CsVoicemailReroutingConfiguration.md)

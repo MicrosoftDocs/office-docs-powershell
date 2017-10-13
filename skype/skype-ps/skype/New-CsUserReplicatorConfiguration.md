@@ -239,8 +239,8 @@ The `New-CsUserReplicatorConfiguration` cmdlet creates new instances of the Micr
 
 ## RELATED LINKS
 
-[Get-CsUserReplicatorConfiguration]()
+[Get-CsUserReplicatorConfiguration](Get-CsUserReplicatorConfiguration.md)
 
-[Remove-CsUserReplicatorConfiguration]()
+[Remove-CsUserReplicatorConfiguration](Remove-CsUserReplicatorConfiguration.md)
 
-[Set-CsUserReplicatorConfiguration]()
+[Set-CsUserReplicatorConfiguration](Set-CsUserReplicatorConfiguration.md)

@@ -256,8 +256,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsClientVersionConfiguration]()
+[Get-CsClientVersionConfiguration](Get-CsClientVersionConfiguration.md)
 
-[New-CsClientVersionConfiguration]()
+[New-CsClientVersionConfiguration](New-CsClientVersionConfiguration.md)
 
-[Remove-CsClientVersionConfiguration]()
+[Remove-CsClientVersionConfiguration](Remove-CsClientVersionConfiguration.md)

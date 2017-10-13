@@ -148,10 +148,10 @@ Creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Ps
 
 ## RELATED LINKS
 
-[Get-CsConferenceDirectory]()
+[Get-CsConferenceDirectory](Get-CsConferenceDirectory.md)
 
-[Move-CsConferenceDirectory]()
+[Move-CsConferenceDirectory](Move-CsConferenceDirectory.md)
 
-[Remove-CsConferenceDirectory]()
+[Remove-CsConferenceDirectory](Remove-CsConferenceDirectory.md)
 
 

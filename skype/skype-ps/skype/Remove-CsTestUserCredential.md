@@ -152,6 +152,6 @@ Instead, the `Remove-CsTestUserCredential` cmdlet deletes existing instances of 
 
 ## RELATED LINKS
 
-[Get-CsTestUserCredential]()
+[Get-CsTestUserCredential](Get-CsTestUserCredential.md)
 
-[Set-CsTestUserCredential]()
+[Set-CsTestUserCredential](Set-CsTestUserCredential.md)

@@ -312,9 +312,9 @@ New-CsRgsQueue creates new instances of the Microsoft.Rtc.Rgs.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsRgsQueue]()
+[Get-CsRgsQueue](Get-CsRgsQueue.md)
 
-[Remove-CsRgsQueue]()
+[Remove-CsRgsQueue](Remove-CsRgsQueue.md)
 
-[Set-CsRgsQueue]()
+[Set-CsRgsQueue](Set-CsRgsQueue.md)
 

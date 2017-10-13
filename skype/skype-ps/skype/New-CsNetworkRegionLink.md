@@ -226,13 +226,13 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 
 ## RELATED LINKS
 
-[Remove-CsNetworkRegionLink]()
+[Remove-CsNetworkRegionLink](Remove-CsNetworkRegionLink.md)
 
-[Set-CsNetworkRegionLink]()
+[Set-CsNetworkRegionLink](Set-CsNetworkRegionLink.md)
 
-[Get-CsNetworkRegionLink]()
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[New-CsNetworkSite]()
+[New-CsNetworkSite](New-CsNetworkSite.md)
 

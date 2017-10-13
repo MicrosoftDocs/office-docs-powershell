@@ -187,10 +187,10 @@ Instead, Disable-CsMeetingRoom deletes instance of the Microsoft.Rtc.Management.
 
 ## RELATED LINKS
 
-[Enable-CsMeetingRoom]()
+[Enable-CsMeetingRoom](Enable-CsMeetingRoom.md)
 
-[Get-CsMeetingRoom]()
+[Get-CsMeetingRoom](Get-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
-[Set-CsMeetingRoom]()
+[Set-CsMeetingRoom](Set-CsMeetingRoom.md)

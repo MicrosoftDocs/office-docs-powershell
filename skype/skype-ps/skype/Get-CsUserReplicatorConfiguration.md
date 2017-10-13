@@ -150,8 +150,8 @@ The Get-CsUserReplicatorConfiguration cmdlet returns instances of the Microsoft.
 ## RELATED LINKS
 
 
-[New-CsUserReplicatorConfiguration]()
+[New-CsUserReplicatorConfiguration](New-CsUserReplicatorConfiguration.md)
 
-[Remove-CsUserReplicatorConfiguration]()
+[Remove-CsUserReplicatorConfiguration](Remove-CsUserReplicatorConfiguration.md)
 
-[Set-CsUserReplicatorConfiguration]()
+[Set-CsUserReplicatorConfiguration](Set-CsUserReplicatorConfiguration.md)

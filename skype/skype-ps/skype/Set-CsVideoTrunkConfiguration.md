@@ -270,8 +270,8 @@ The `Set-CsVideoTrunkConfiguration` cmdlet modifies existing instances of the Mi
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunkConfiguration]()
+[Get-CsVideoTrunkConfiguration](Get-CsVideoTrunkConfiguration.md)
 
-[New-CsVideoTrunkConfiguration]()
+[New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
-[Remove-CsVideoTrunkConfiguration]()
+[Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)

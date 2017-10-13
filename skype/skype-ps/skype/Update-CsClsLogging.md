@@ -172,12 +172,12 @@ String value.
 
 ## RELATED LINKS
 
-[Search-CsClsLogging]()
+[Search-CsClsLogging](Search-CsClsLogging.md)
 
-[Show-CsClsLogging]()
+[Show-CsClsLogging](Show-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Stop-CsClsLogging]()
+[Stop-CsClsLogging](Stop-CsClsLogging.md)
 
-[Sync-CsClsLogging]()
+[Sync-CsClsLogging](Sync-CsClsLogging.md)

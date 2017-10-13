@@ -239,14 +239,14 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[New-CsDialPlan]()
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Set-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

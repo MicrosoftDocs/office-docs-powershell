@@ -233,6 +233,6 @@ The Get-CsWindowsService cmdlet returns instances of the Microsoft.Rtc.Managemen
 
 ## RELATED LINKS
 
-[Start-CsWindowsService]()
+[Start-CsWindowsService](Start-CsWindowsService.md)
 
-[Stop-CsWindowsService]()
+[Stop-CsWindowsService](Stop-CsWindowsService.md)

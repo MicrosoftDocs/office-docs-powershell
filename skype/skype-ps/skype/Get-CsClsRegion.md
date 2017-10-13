@@ -150,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClsRegion]()
+[New-CsClsRegion](New-CsClsRegion.md)
 
-[Remove-CsClsRegion]()
+[Remove-CsClsRegion](Remove-CsClsRegion.md)
 
-[Set-CsClsRegion]()
+[Set-CsClsRegion](Set-CsClsRegion.md)

@@ -212,4 +212,4 @@ When used with the PassThru parameter, returns an object of type Microsoft.Rtc.M
 
 ## RELATED LINKS
 
-[Get-CsApplicationEndpoint]()
+[Get-CsApplicationEndpoint](Get-CsApplicationEndpoint.md)

@@ -167,8 +167,8 @@ Instead, the `Remove-CsConferencingConfiguration` cmdlet deletes existing instan
 
 ## RELATED LINKS
 
-[Get-CsConferencingConfiguration]()
+[Get-CsConferencingConfiguration](Get-CsConferencingConfiguration.md)
 
-[New-CsConferencingConfiguration]()
+[New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
-[Set-CsConferencingConfiguration]()
+[Set-CsConferencingConfiguration](Set-CsConferencingConfiguration.md)

@@ -380,9 +380,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Media
 
 ## RELATED LINKS
 
-[Remove-CsMediaConfiguration]()
+[Remove-CsMediaConfiguration](Remove-CsMediaConfiguration.md)
 
-[Set-CsMediaConfiguration]()
+[Set-CsMediaConfiguration](Set-CsMediaConfiguration.md)
 
-[Get-CsMediaConfiguration]()
+[Get-CsMediaConfiguration](Get-CsMediaConfiguration.md)
 

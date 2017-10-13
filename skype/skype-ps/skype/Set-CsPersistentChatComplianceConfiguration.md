@@ -347,8 +347,8 @@ Instead, the `Set-CsPersistentChatComplianceConfiguration` cmdlet modifies exist
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatComplianceConfiguration]()
+[Get-CsPersistentChatComplianceConfiguration](Get-CsPersistentChatComplianceConfiguration.md)
 
-[New-CsPersistentChatComplianceConfiguration]()
+[New-CsPersistentChatComplianceConfiguration](New-CsPersistentChatComplianceConfiguration.md)
 
-[Remove-CsPersistentChatComplianceConfiguration]()
+[Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)

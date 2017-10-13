@@ -254,10 +254,10 @@ The Update-CsUserData cmdlet updates Skype for Business Server 2015 user informa
 
 ## RELATED LINKS
 
-[Convert-CsUserData]()
+[Convert-CsUserData](Convert-CsUserData.md)
 
-[Export-CsUserData]()
+[Export-CsUserData](Export-CsUserData.md)
 
-[Import-CsUserData]()
+[Import-CsUserData](Import-CsUserData.md)
 
-[Sync-CsUserData]()
+[Sync-CsUserData](Sync-CsUserData.md)

@@ -551,10 +551,10 @@ Creates new instances of the Microsoft.Rtc.Rgs.Management.WritableSettings.Busin
 
 ## RELATED LINKS
 
-[Get-CsRgsHoursOfBusiness]()
+[Get-CsRgsHoursOfBusiness](Get-CsRgsHoursOfBusiness.md)
 
-[New-CsRgsTimeRange]()
+[New-CsRgsTimeRange](New-CsRgsTimeRange.md)
 
-[Remove-CsRgsHoursOfBusiness]()
+[Remove-CsRgsHoursOfBusiness](Remove-CsRgsHoursOfBusiness.md)
 
-[Set-CsRgsHoursOfBusiness]()
+[Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)

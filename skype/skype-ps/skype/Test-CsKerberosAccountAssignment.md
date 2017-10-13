@@ -108,10 +108,10 @@ The `Test-CsKerberosAccountAssignment` cmdlet does not return any objects or val
 
 ## RELATED LINKS
 
-[Get-CsKerberosAccountAssignment]()
+[Get-CsKerberosAccountAssignment](Get-CsKerberosAccountAssignment.md)
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

@@ -135,6 +135,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsTrunk]()
+[Get-CsTrunk](Get-CsTrunk.md)
 
-[Get-CsTrunkConfiguration]()
+[Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)

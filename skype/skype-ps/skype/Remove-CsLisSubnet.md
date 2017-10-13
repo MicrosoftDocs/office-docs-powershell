@@ -126,8 +126,8 @@ This cmdlet removes an object of type System.Management.Automation.PSCustomObjec
 
 ## RELATED LINKS
 
-[Set-CsLisSubnet]()
+[Set-CsLisSubnet](Set-CsLisSubnet.md)
 
-[Get-CsLisSubnet]()
+[Get-CsLisSubnet](Get-CsLisSubnet.md)
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)

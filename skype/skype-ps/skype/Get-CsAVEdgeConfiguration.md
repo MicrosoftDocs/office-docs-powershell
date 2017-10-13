@@ -166,8 +166,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAVEdgeConfiguration]()
+[New-CsAVEdgeConfiguration](New-CsAVEdgeConfiguration.md)
 
-[Remove-CsAVEdgeConfiguration]()
+[Remove-CsAVEdgeConfiguration](Remove-CsAVEdgeConfiguration.md)
 
-[Set-CsAVEdgeConfiguration]()
+[Set-CsAVEdgeConfiguration](Set-CsAVEdgeConfiguration.md)

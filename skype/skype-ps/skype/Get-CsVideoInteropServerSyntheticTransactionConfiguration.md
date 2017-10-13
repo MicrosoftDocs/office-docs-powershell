@@ -114,10 +114,10 @@ Returns an object array, or single instance (if used with the Identity parameter
 
 ## RELATED LINKS
 
-[Set-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Set-CsVideoInteropServerSyntheticTransactionConfiguration](Set-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[New-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Remove-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Remove-CsVideoInteropServerSyntheticTransactionConfiguration](Remove-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Test-CsP2PVideoInteropServerSipTrunkAV]()
+[Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)

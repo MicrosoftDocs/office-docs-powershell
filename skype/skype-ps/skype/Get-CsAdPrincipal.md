@@ -251,6 +251,6 @@ For example, this syntax returns Active Directory principal information for the 
 
 ## RELATED LINKS
 
-[New-CsPersistentChatCategory]()
+[New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
-[Set-CsPersistentChatCategory]()
+[Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)

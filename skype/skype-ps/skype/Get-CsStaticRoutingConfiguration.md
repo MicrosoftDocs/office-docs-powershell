@@ -170,8 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsStaticRoutingConfiguration]()
+[New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
-[Remove-CsStaticRoutingConfiguration]()
+[Remove-CsStaticRoutingConfiguration](Remove-CsStaticRoutingConfiguration.md)
 
-[Set-CsStaticRoutingConfiguration]()
+[Set-CsStaticRoutingConfiguration](Set-CsStaticRoutingConfiguration.md)

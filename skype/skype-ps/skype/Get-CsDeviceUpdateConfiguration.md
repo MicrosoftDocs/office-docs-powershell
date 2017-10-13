@@ -156,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDeviceUpdateConfiguration]()
+[New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
-[Remove-CsDeviceUpdateConfiguration]()
+[Remove-CsDeviceUpdateConfiguration](Remove-CsDeviceUpdateConfiguration.md)
 
-[Set-CsDeviceUpdateConfiguration]()
+[Set-CsDeviceUpdateConfiguration](Set-CsDeviceUpdateConfiguration.md)

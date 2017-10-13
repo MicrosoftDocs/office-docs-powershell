@@ -167,8 +167,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsRegistrarConfiguration]()
+[New-CsRegistrarConfiguration](New-CsRegistrarConfiguration.md)
 
-[Remove-CsRegistrarConfiguration]()
+[Remove-CsRegistrarConfiguration](Remove-CsRegistrarConfiguration.md)
 
-[Set-CsRegistrarConfiguration]()
+[Set-CsRegistrarConfiguration](Set-CsRegistrarConfiguration.md)

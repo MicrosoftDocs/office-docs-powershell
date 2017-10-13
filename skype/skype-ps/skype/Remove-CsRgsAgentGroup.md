@@ -163,8 +163,8 @@ Microsoft.Rtc.Rgs.Management.WritableSettings.AgentGroup object.
 
 ## RELATED LINKS
 
-[Get-CsRgsAgentGroup]()
+[Get-CsRgsAgentGroup](Get-CsRgsAgentGroup.md)
 
-[New-CsRgsAgentGroup]()
+[New-CsRgsAgentGroup](New-CsRgsAgentGroup.md)
 
-[Set-CsRgsAgentGroup]()
+[Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)

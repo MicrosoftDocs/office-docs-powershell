@@ -287,9 +287,9 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Se
 
 ## RELATED LINKS
 
-[Remove-CsOutboundTranslationRule]()
+[Remove-CsOutboundTranslationRule](Remove-CsOutboundTranslationRule.md)
 
-[Set-CsOutboundTranslationRule]()
+[Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)
 
-[Get-CsOutboundTranslationRule]()
+[Get-CsOutboundTranslationRule](Get-CsOutboundTranslationRule.md)
 

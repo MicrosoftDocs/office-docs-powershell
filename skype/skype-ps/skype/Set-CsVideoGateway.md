@@ -185,4 +185,4 @@ The `Set-CsVideoGateway` cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunk]()
+[Get-CsVideoTrunk](Get-CsVideoTrunk.md)

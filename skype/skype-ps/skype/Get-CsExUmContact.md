@@ -226,10 +226,10 @@ Accepts a pipelined string value representing the Identity of an Exchange UM con
 
 ## RELATED LINKS
 
-[New-CsExUmContact]()
+[New-CsExUmContact](New-CsExUmContact.md)
 
-[Remove-CsExUmContact]()
+[Remove-CsExUmContact](Remove-CsExUmContact.md)
 
-[Set-CsExUmContact]()
+[Set-CsExUmContact](Set-CsExUmContact.md)
 
-[Move-CsExUmContact]()
+[Move-CsExUmContact](Move-CsExUmContact.md)

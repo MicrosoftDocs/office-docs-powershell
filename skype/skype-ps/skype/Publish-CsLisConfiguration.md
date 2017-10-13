@@ -103,12 +103,12 @@ This cmdlet does not return a value.
 
 ## RELATED LINKS
 
-[Debug-CsLisConfiguration]()
+[Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
-[Unpublish-CsLisConfiguration]()
+[Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
-[Import-CsLisConfiguration]()
+[Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
-[Export-CsLisConfiguration]()
+[Export-CsLisConfiguration](Export-CsLisConfiguration.md)
 
-[Test-CsLisConfiguration]()
+[Test-CsLisConfiguration](Test-CsLisConfiguration.md)

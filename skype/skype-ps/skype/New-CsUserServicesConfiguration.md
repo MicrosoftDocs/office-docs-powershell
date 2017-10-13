@@ -435,8 +435,8 @@ The `New-CsUserServicesConfiguration` cmdlet creates new instances of the Micros
 
 ## RELATED LINKS
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[Remove-CsUserServicesConfiguration]()
+[Remove-CsUserServicesConfiguration](Remove-CsUserServicesConfiguration.md)
 
-[Set-CsUserServicesConfiguration]()
+[Set-CsUserServicesConfiguration](Set-CsUserServicesConfiguration.md)

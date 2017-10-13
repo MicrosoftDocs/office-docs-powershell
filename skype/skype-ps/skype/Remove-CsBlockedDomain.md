@@ -155,10 +155,10 @@ Deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.B
 
 ## RELATED LINKS
 
-[Get-CsBlockedDomain]()
+[Get-CsBlockedDomain](Get-CsBlockedDomain.md)
 
-[New-CsBlockedDomain]()
+[New-CsBlockedDomain](New-CsBlockedDomain.md)
 
-[Set-CsAccessEdgeConfiguration]()
+[Set-CsAccessEdgeConfiguration](Set-CsAccessEdgeConfiguration.md)
 
-[Set-CsBlockedDomain]()
+[Set-CsBlockedDomain](Set-CsBlockedDomain.md)

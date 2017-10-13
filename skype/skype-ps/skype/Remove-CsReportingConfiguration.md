@@ -143,8 +143,8 @@ Instead, the `Remove-CsReportingConfiguration` cmdlet deletes existing instances
 
 ## RELATED LINKS
 
-[Get-CsReportingConfiguration]()
+[Get-CsReportingConfiguration](Get-CsReportingConfiguration.md)
 
-[New-CsReportingConfiguration]()
+[New-CsReportingConfiguration](New-CsReportingConfiguration.md)
 
-[Set-CsReportingConfiguration]()
+[Set-CsReportingConfiguration](Set-CsReportingConfiguration.md)

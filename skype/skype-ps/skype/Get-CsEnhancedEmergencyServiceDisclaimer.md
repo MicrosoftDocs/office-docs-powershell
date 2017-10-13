@@ -112,8 +112,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsEnhancedEmergencyServiceDisclaimer]()
+[Remove-CsEnhancedEmergencyServiceDisclaimer](Remove-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Set-CsEnhancedEmergencyServiceDisclaimer]()
+[Set-CsEnhancedEmergencyServiceDisclaimer](Set-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Get-CsLocationPolicy]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)

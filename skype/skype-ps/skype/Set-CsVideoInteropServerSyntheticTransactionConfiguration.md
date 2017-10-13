@@ -170,10 +170,10 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Get-CsVideoInteropServerSyntheticTransactionConfiguration](Get-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[New-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Remove-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Remove-CsVideoInteropServerSyntheticTransactionConfiguration](Remove-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Test-CsP2PVideoInteropServerSipTrunkAV]()
+[Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)

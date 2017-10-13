@@ -382,4 +382,4 @@ The `Test-CsP2PAV` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTran
 
 ## RELATED LINKS
 
-[Test-CsAVConference]()
+[Test-CsAVConference](Test-CsAVConference.md)

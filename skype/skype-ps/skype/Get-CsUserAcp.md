@@ -253,6 +253,6 @@ The Get-CsUserAcp cmdlet returns instances of the Microsoft.Rtc.Management.ADCon
 
 ## RELATED LINKS
 
-[Remove-CsUserAcp]()
+[Remove-CsUserAcp](Remove-CsUserAcp.md)
 
-[Set-CsUserAcp]()
+[Set-CsUserAcp](Set-CsUserAcp.md)

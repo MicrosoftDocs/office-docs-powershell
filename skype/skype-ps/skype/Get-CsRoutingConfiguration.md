@@ -111,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsRoutingConfiguration]()
+[New-CsRoutingConfiguration](New-CsRoutingConfiguration.md)
 
-[Remove-CsRoutingConfiguration]()
+[Remove-CsRoutingConfiguration](Remove-CsRoutingConfiguration.md)
 
-[Set-CsRoutingConfiguration]()
+[Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

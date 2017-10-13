@@ -308,4 +308,4 @@ Instead, the `Set-CsXmppGatewayConfiguration` cmdlet modifies existing instances
 
 ## RELATED LINKS
 
-[Get-CsXmppGatewayConfiguration]()
+[Get-CsXmppGatewayConfiguration](Get-CsXmppGatewayConfiguration.md)

@@ -267,9 +267,9 @@ The New-CsOAuthServer cmdlet creates new instances of the Microsoft.Rtc.Manageme
 
 ## RELATED LINKS
 
-[Get-CsOAuthServer]()
+[Get-CsOAuthServer](Get-CsOAuthServer.md)
 
-[Remove-CsOAuthServer]()
+[Remove-CsOAuthServer](Remove-CsOAuthServer.md)
 
-[Set-CsOAuthServer]()
+[Set-CsOAuthServer](Set-CsOAuthServer.md)
 

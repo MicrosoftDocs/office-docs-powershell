@@ -167,6 +167,6 @@ New-CsRgsTimeRange creates new instances of the Microsoft.Rtc.Rgs.Management.Wri
 
 ## RELATED LINKS
 
-[New-CsRgsHoursOfBusiness]()
+[New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
-[Set-CsRgsHoursOfBusiness]()
+[Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)

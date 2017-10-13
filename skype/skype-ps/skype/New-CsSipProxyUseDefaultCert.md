@@ -91,4 +91,4 @@ The `New-CsSipProxyUseDefaultCert` cmdlet creates new instances of the Microsoft
 
 ## RELATED LINKS
 
-[New-CsSipProxyTLS]()
+[New-CsSipProxyTLS](New-CsSipProxyTLS.md)

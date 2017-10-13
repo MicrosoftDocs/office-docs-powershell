@@ -344,14 +344,14 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Annou
 
 ## RELATED LINKS
 
-[Remove-CsAnnouncement]()
+[Remove-CsAnnouncement](Remove-CsAnnouncement.md)
 
-[Set-CsAnnouncement]()
+[Set-CsAnnouncement](Set-CsAnnouncement.md)
 
-[Get-CsAnnouncement]()
+[Get-CsAnnouncement](Get-CsAnnouncement.md)
 
-[Import-CsAnnouncementFile]()
+[Import-CsAnnouncementFile](Import-CsAnnouncementFile.md)
 
-[New-CsUnassignedNumber]()
+[New-CsUnassignedNumber](New-CsUnassignedNumber.md)
 
-[Set-CsUnassignedNumber]()
+[Set-CsUnassignedNumber](Set-CsUnassignedNumber.md)

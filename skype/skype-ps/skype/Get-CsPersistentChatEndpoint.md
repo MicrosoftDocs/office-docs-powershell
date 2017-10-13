@@ -240,6 +240,6 @@ String value representing the Identity or the SIP address of a Persistent Chat e
 
 ## RELATED LINKS
 
-[New-CsPersistentChatEndpoint]()
+[New-CsPersistentChatEndpoint](New-CsPersistentChatEndpoint.md)
 
-[Remove-CsPersistentChatEndpoint]()
+[Remove-CsPersistentChatEndpoint](Remove-CsPersistentChatEndpoint.md)

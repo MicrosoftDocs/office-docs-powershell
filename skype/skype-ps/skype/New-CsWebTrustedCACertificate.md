@@ -111,6 +111,6 @@ The `New-CsWebTrustedCACertificate` cmdlet creates new instances of the Microsof
 
 ## RELATED LINKS
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Set-CsWebServiceConfiguration]()
+[Set-CsWebServiceConfiguration](Set-CsWebServiceConfiguration.md)

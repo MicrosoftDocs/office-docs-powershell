@@ -254,4 +254,4 @@ The `Uninstall-CsDatabase` cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Install-CsDatabase]()
+[Install-CsDatabase](Install-CsDatabase.md)

@@ -175,8 +175,8 @@ The New-CsPersistentChatCategory cmdlet creates new instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatCategory]()
+[Get-CsPersistentChatCategory](Get-CsPersistentChatCategory.md)
 
-[Remove-CsPersistentChatCategory]()
+[Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)
 
-[Set-CsPersistentChatCategory]()
+[Set-CsPersistentChatCategory](Set-CsPersistentChatCategory.md)

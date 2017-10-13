@@ -395,4 +395,4 @@ The `Test-CsPstnPeerToPeerCall` cmdlet returns an instance of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Test-CsPstnOutboundCall]()
+[Test-CsPstnOutboundCall](Test-CsPstnOutboundCall.md)

@@ -133,8 +133,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[New-CsNetworkSubnet]()
+[New-CsNetworkSubnet](New-CsNetworkSubnet.md)
 
-[Set-CsNetworkSubnet]()
+[Set-CsNetworkSubnet](Set-CsNetworkSubnet.md)
 
-[Get-CsNetworkSubnet]()
+[Get-CsNetworkSubnet](Get-CsNetworkSubnet.md)

@@ -389,4 +389,4 @@ Instead, the `Set-CsOAuthConfiguration` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsOAuthConfiguration]()
+[Get-CsOAuthConfiguration](Get-CsOAuthConfiguration.md)
