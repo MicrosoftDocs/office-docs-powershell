@@ -8,6 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantStatus
 
 ## SYNOPSIS
+Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Organizational Auto Attendant (OAA) provisioning.
 
 
 ## SYNTAX
@@ -20,18 +21,24 @@ Get-CsOrganizationalAutoAttendantStatus [[-PrimaryUri] <Object>] [-ApplicationId
 
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet provides a way to return the provisioning status of an organizational auto attendant configured for use in your organization. 
 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-CsOrganizationalAutoAttendantStatus -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-{{ Add example description here }}
+In Example 1, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records for all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOrganizationalAutoAttendantStatus -PrimaryUri sip:mainoaa@contoso.com -IncludeResources @("AudioFile")
+```
+
+In Example 2, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
@@ -100,7 +107,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeResources
-{{Fill IncludeResources Description}}
+PARAMVALUE: System.Collections.Generic.List
+
+The IncludeResources parameter identities the organizational auto attendant resources whose status is to be retrieved. Available resources are:
+- AudioFile: Indicates status for audio files used by OAA.
+- DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with OAA.
 
 ```yaml
 Type: Object
@@ -117,7 +128,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryUri
-{{Fill PrimaryUri Description}}
+PARAMVALUE: System.Uri
+The Primary URI represents the SIP address of the organizational auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
 Type: Object
@@ -125,7 +137,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
@@ -169,11 +181,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### The Get-CsOrganizationalAutoAttendantStatus cmdlet accepts a string as the PrimaryUri parameter.
 
 ## OUTPUTS
 
-### System.Object
+### The Get-CsOrganizationalAutoAttendantStatus cmdlet returns instances of the Microsoft.Rtc.Management.OAA.Models.StatusRecord object.
 
 ## NOTES
 
