@@ -3,7 +3,9 @@
   items:
   - name: Introduction
     href: intro.md
-  - name: SharePoint Online
+  - name: SharePoint Online Cmdlets
     href: sharepoint-online-cmdlets.md
-  - name: SharePoint Server
+  - name: SharePoint Server Cmdlets
     href: sharepoint-server-cmdlets.md
+  - name: SharePoint PnP Cmdlets
+    href: sharepoint-pnp-cmdlets.md
