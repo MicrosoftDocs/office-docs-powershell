@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-SPEduUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Not in use
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Add-SPEduUser [-AssignmentCollection <SPAssignmentCollection>] [-FirstName <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Not in use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Not in use
 ```
 
-{{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Not in use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-{{Fill FirstName Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-{{Fill LastName Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-{{Fill Role Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Not in use
 
 ```yaml
 Type: SPSitePipeBind
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
-{{Fill UserAlias Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -127,7 +127,36 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-{{Fill UserEmail Description}}
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -UserAlias
+Not in use
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2013
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -UserEmail
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -UserEmail
+Not in use 
+Required: True
+
 
 ```yaml
 Type: String
