@@ -7,7 +7,7 @@ schema: 2.0.0
 # Install-SPEduSites
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 ## SYNTAX
 
@@ -15,23 +15,20 @@ schema: 2.0.0
 Install-SPEduSites [-WebApplication] <SPWebApplicationPipeBind> [-MySiteHost] <SPSitePipeBind>
  [-SearchCenter] <SPSitePipeBind> [-AssignmentCollection <SPAssignmentCollection>] [<CommonParameters>]
 ```
-
-## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Do not use
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +44,9 @@ Accept wildcard characters: False
 ```
 
 ### -MySiteHost
-{{Fill MySiteHost Description}}
+Do not use
+## DESCRIPTION
+
 
 ```yaml
 Type: SPSitePipeBind
@@ -63,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchCenter
-{{Fill SearchCenter Description}}
+Do not use
 
 ```yaml
 Type: SPSitePipeBind
@@ -79,7 +78,55 @@ Accept wildcard characters: False
 ```
 
 ### -WebApplication
-{{Fill WebApplication Description}}
+```
+Do not use
+```
+
+
+## PARAMETERS
+
+### -AssignmentCollection
+Do not use
+
+```yaml
+Type: SPAssignmentCollection
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -MySiteHost
+```
+Do not use
+```
+
+
+## PARAMETERS
+
+### -AssignmentCollection
+Do not use
+
+```yaml
+Type: SPAssignmentCollection
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Server 2013
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: True (ByValue)
+Accept wildcard characters: False
+```
+
+### -MySiteHost
+Do not use
 
 ```yaml
 Type: SPWebApplicationPipeBind
