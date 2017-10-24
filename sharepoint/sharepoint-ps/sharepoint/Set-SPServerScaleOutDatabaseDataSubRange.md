@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-SPServerScaleOutDatabaseDataSubRange
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Creates a subrange for a specified scale-out database.
 
 
 ## SYNTAX
@@ -29,23 +29,27 @@ Set-SPServerScaleOutDatabaseDataSubRange -Database <SPDatabasePipeBind> -IsUpper
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [https://msdn.microsoft.com/library/dd878348(VS.85).aspx](Cmdlet Parameter Sets).
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Set-SPServerScaleOutDatabaseDataSubRange -Database $database -Range $state.Range -SubRangePoint $state.Range.RangeEnd -SubRangeMode ReadOnly -IsUpperSubRange $false
+
 ```
 
-{{ Add example description here }}
+This example creates a read-only subrange that starts from the data range start point and ends at the data range end point on the first scale-out database of the specified service application.
 
 
 ## PARAMETERS
 
 ### -ConnectionString
-{{Fill ConnectionString Description}}
+Specifies the connection string for the scale-out database to create the new data sub-range.
 
 
 ```yaml
@@ -62,7 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Database
-{{Fill Database Description}}
+Specifies the scale-out database to create the data subrange. 
 
 
 ```yaml
@@ -79,7 +83,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUpperSubRange
-{{Fill IsUpperSubRange Description}}
+Specifies whether to create the data subrange on the upper or lower side of the data range.
 
 
 ```yaml
@@ -96,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Range
-{{Fill Range Description}}
+Specifies the expected current range of the scale-out database prior to this operation.
 
 
 ```yaml
@@ -113,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -SubRangeMode
-{{Fill SubRangeMode Description}}
+
+
 
 
 ```yaml
@@ -130,7 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+Note: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 
 ```yaml
@@ -164,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreSubRangePointOnBoundary
-{{Fill IgnoreSubRangePointOnBoundary Description}}
+Specifies whether to complete without any errors if the new subrange’s start and end points are the same. If this parameter is specified, no errors are displayed.
 
 
 ```yaml
@@ -181,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsAzureDatabase
-{{Fill IsAzureDatabase Description}}
+Specifies whether the database is hosted on SQL Azure.
 
 
 ```yaml
@@ -198,8 +205,12 @@ Accept wildcard characters: False
 ```
 
 ### -SubRangePoint
-{{Fill SubRangePoint Description}}
+Specifies the start or end point of the data subrange to be created as defined by the following criteria: 
 
+--The start point if the data sub-range is created on the upper side of the data range.
+--The end point if the data sub-range is created on the lower side of the data range.
+
+The maximum value is NULL.
 
 ```yaml
 Type: Byte[]
