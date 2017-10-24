@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Queries a scale-out database for scale-out logs.
 
 
 
