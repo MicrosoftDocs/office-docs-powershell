@@ -33,7 +33,7 @@ Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollec
 
 ## DESCRIPTION
 
-This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [https://msdn.microsoft.com/library/dd878348(VS.85).aspx](Cmdlet Parameter Sets).
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [https://msdn.microsoft.com/library/dd878348(VS.85).aspx] (Cmdlet Parameter Sets).
 
 Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the distributed cache server to a local server. This is required to start the AppFabric service.
 
