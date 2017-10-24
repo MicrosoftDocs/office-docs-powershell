@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendantMenuOption
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the New-CsOrganizationalAutoAttendantMenuOption cmdlet to create a new menu option.
 
 ## SYNTAX
 
@@ -19,23 +19,41 @@ New-CsOrganizationalAutoAttendantMenuOption [-Action <Object>] [-DtmfResponse <O
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The New-CsOrganizationalAutoAttendantMenuOption cmdlet creates a new menu option for the Organizational Auto Attendant (OAA) service. The OAA service uses the menu options to respond to a caller with the appropriate action.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
-Insert example commands for example 1.
+$menuOption = New-CsOrganizationalAutoAttendantMenuOption -Action TransferCallToOperator -DtmfResponse Tone0
 ```
 
-Insert descriptive text for example 1.
+This example creates a menu option to call the operator when the 0 key is pressed.
+
+### -------------------------- Example 2 -------------------------- 
+```
+$troubleShootUri = "sip:troubleShoot@contoso.com"
+$troubleShootEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity $troubleShootUri -Type OrganizationalAutoAttendant
+$menuOption = New-CsOrganizationalAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -VoiceResponses "Sales" -CallTarget $troubleShootEntity
+```
+
+This example creates a menu option to transfer the call to an organizational auto attendant when the caller speaks the word "Sales" or presses the 1 key.
 
 
 ## PARAMETERS
 
 ### -Action
-PARAMVALUE: TransferCallToOperator
+PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.ActionType
+
+The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
+
+TransferCallToOperator - the call is transferred to the operator.
+
+TransferCallToTarget - The call is transferred to the menu option’s call target.
+
+DisconnectCall - The call is disconnected.
+
 
 ```yaml
 Type: Object
@@ -51,7 +69,14 @@ Accept wildcard characters: False
 ```
 
 ### -DtmfResponse
-PARAMVALUE: Tone0
+PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.DtmfTone
+
+The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
+
+Tone0:Tone9 - Corresponds to DTMF tones from 0 to 9.
+
+Automatic - The action is executed without user response.
+
 
 ```yaml
 Type: Object
@@ -83,7 +108,14 @@ Accept wildcard characters: False
 ```
 
 ### -CallTarget
-PARAMVALUE: CallableEntity
+PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity
+
+The CallTarget parameter represents the target for call transfer after the menu option is selected. 
+
+CallTarget is required if the action of the menu option is TransferCallToTarget.
+
+Use the New-CsOrganizationalAutoAttendantCallableEntity cmdlet to create new callable entities. 
+
 
 ```yaml
 Type: Object
@@ -99,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-PARAMVALUE: Fqdn
+PARAMVALUE: Microsoft.Rtc.Management.Deploy.Fqdn
 
 ```yaml
 Type: Object
@@ -115,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+PARAMVALUE: System.Management.Automation.SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -147,7 +179,12 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceResponses
-PARAMVALUE: String\[\]
+PARAMVALUE: System.Collections.Generic.List
+
+The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the organizational auto attendant. 
+
+Voice responses are currently limited to one voice response per menu option. 
+
 
 ```yaml
 Type: Object
@@ -183,9 +220,16 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
+### None
+
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.OAA.Models.MenuOption
+
 
 ## NOTES
 
 ## RELATED LINKS
 
+[New-CsOrganizationalAutoAttendantCallableEntity](New-CsOrganizationalAutoAttendantCallableEntity.md)
