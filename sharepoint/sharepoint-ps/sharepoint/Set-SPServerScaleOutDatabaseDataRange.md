@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-SPServerScaleOutDatabaseDataRange
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Extends the range of a specified scale-out database.
 
 
 ## SYNTAX
@@ -19,23 +19,26 @@ Set-SPServerScaleOutDatabaseDataRange -Database <SPDatabasePipeBind> -IsUpperSub
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPServerScaleOutDatabaseDataRange cmdlet to extend the range of a specified scale-out database in a specified direction.
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+$database = $databases[0]
+$state = Get-SPServerScaleOutDatabaseDataState -Database $database
+Set-SPServerScaleOutDatabaseDataRange -Database $database -Range $state.Range -NewRangePoint $null -IsUpperSubRange $true
 ```
 
-{{ Add example description here }}
+This example extends the data range end point of the first database in the specified service application up to the maximum range point.
 
 
 ## PARAMETERS
 
 ### -Database
-{{Fill Database Description}}
+Specifies the scale-out database to which to extend the data range.
 
 
 ```yaml
@@ -52,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsUpperSubRange
-{{Fill IsUpperSubRange Description}}
+Specifies whether to set the start point or the end point of the data range with the specified value in the NewRangePoint parameter.
 
 
 ```yaml
@@ -69,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Range
-{{Fill Range Description}}
+Specifies the expected data range of the scale-out database.
 
 
 ```yaml
@@ -86,7 +89,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+Note: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 
 ```yaml
@@ -120,10 +125,10 @@ Accept wildcard characters: False
 ```
 
 ### -NewRangePoint
-{{Fill NewRangePoint Description}}
+Specifies the new start point or end point of the database.
+The maximum value is NULL.
 
-
-```yaml
+``yaml
 Type: Byte[]
 Parameter Sets: (All)
 Aliases: 
