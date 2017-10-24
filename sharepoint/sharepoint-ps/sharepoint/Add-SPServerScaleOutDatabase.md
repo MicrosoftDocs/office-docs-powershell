@@ -8,8 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
-
+Adds an existing scale-out content database to the specified service application.
 
 
 ## SYNTAX
@@ -214,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeferUpgradeActions
-{{Fill DeferUpgradeActions Description}}
+Specifies whether upgrade actions are deferred duringi an Upgrade process. 
 
 ```yaml
 Type: SwitchParameter
