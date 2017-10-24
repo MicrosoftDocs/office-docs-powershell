@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Exports the data of the specified subscription.
 
 
 
