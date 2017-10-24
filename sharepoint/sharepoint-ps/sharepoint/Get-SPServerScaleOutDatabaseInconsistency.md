@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Displays all inconsistencies related to scale-out databases' ranges.
 
 
 
