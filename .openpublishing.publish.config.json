@@ -11,12 +11,6 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
-<<<<<<< HEAD
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-=======
         "RestApi": "Content",
         "AzurePsModulePage": "Content"
       },
@@ -34,7 +28,6 @@
       "monikerPath": [
         "mapping/monikerMapping.json"
       ]
->>>>>>> master
     },
     {
       "docset_name": "sharepoint-ps",
