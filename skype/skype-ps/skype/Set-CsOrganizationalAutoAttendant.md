@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an existing Organizational Auto Attendant (OAA).
 
 ## SYNTAX
 
@@ -18,22 +18,30 @@ Set-CsOrganizationalAutoAttendant [[-Instance] <Object>] [-BypassDualWrite <Obje
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an OAA. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
+
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+$oaa = Get-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
+$oaa.LineUris = [System.Uri] "tel:+##########"
+Set-CsOrganizationalAutoAttendant -Instance $oaa
 ```
 
-Insert descriptive text for example 1.
+This example changes the telephone number for the OAA that has a Primary URI of sip:mainoaa@contoso.com.
 
 
 ## PARAMETERS
 
 ### -Instance
 PARAMVALUE: OrgAutoAttendant
+
+The Instance parameter is the object reference to the OAA to be modified. 
+
+You can retrieve an object reference to an existing OAA by using the Get-CsOrganizationalAutoAttendant cmdlet and assigning the returned value to a variable.
+
 
 ```yaml
 Type: Object
@@ -165,8 +173,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant
+The Set-CsOrganizationalAutoAttendant cmdlet accepts a Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant object as the Instance parameter.
+
+
 ## OUTPUTS
+
+### None
+The Set-CsOrganizationalAutoAttendant cmdlet does not return any objects or values. Instead, the cmdlet modifies the instance of the Microsoft.Rtc.Management.Hosted.OAA.Models.OrgAutoAttendant object that is passed in as the Instance parameter.
+
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
