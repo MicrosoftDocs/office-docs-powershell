@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the Remove-CsOrganizationalAutoAttendant cmdlet to delete an Organizational Auto Attendant (OAA).
 
 ## SYNTAX
 
@@ -19,22 +19,25 @@ Remove-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <O
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Remove-CsOrganizationalAutoAttendant cmdlet deletes an OAA that is specified by using the PrimaryUri parameter.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Remove-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-Insert descriptive text for example 1.
+This example deletes the OAA that has a Primary URI of sip:mainoaa@contoso.com.
 
 
 ## PARAMETERS
 
 ### -PrimaryUri
 PARAMVALUE: Uri
+
+The PrimaryUri parameter represents the SIP address for the OAA to be removed.
+
 
 ```yaml
 Type: Object
@@ -182,7 +185,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### String
+The Remove-CsOrganizationalAutoAttendant cmdlet accepts a string as the PrimaryUri parameter.
+
+
 ## OUTPUTS
+
+### None
+
 
 ## NOTES
 

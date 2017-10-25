@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-SPEduClassMember
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 
 ## SYNTAX
@@ -18,23 +18,20 @@ Remove-SPEduClassMember [-AssignmentCollection <SPAssignmentCollection>] -ClassI
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 
 ## EXAMPLES
 
 ### ------------------EXAMPLE------------------
 ```
-PS C:\> {{ Add example code here }}
+Do not use
 ```
-
-{{ Add example description here }}
-
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -50,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-{{Fill ClassId Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -66,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Do not use
 
 ```yaml
 Type: SPSitePipeBind
@@ -82,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
-{{Fill UserAlias Description}}
+Do not use
 
 ```yaml
 Type: String

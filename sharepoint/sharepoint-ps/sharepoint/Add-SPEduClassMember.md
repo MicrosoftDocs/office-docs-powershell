@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-SPEduClassMember
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Not in use
 
 ## SYNTAX
 
@@ -17,21 +17,20 @@ Add-SPEduClassMember [-AssignmentCollection <SPAssignmentCollection>] -ClassId <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Not in use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Not in use
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Not in use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +46,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-{{Fill ClassId Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -63,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-{{Fill Role Description}}
+Not in use
 
 ```yaml
 Type: String
@@ -79,7 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Not in use
 
 ```yaml
 Type: SPSitePipeBind
@@ -95,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
-{{Fill UserAlias Description}}
+Not in use
 
 ```yaml
 Type: String

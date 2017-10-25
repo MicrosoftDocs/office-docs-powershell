@@ -11,10 +11,30 @@
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
+<<<<<<< HEAD
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
       "template_folder": "_themes"
+=======
+        "RestApi": "Content",
+        "AzurePsModulePage": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "version": 0,
+      "customized_template_paths": [
+        "_dependentPackages/azurecli.plugins/azurecli"
+      ],
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/PowerShellReference.ps1"
+        ]
+      },
+      "monikerPath": [
+        "mapping/monikerMapping.json"
+      ]
+>>>>>>> master
     },
     {
       "docset_name": "sharepoint-ps",

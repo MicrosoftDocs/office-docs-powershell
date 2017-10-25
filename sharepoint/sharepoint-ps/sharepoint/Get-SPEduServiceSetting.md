@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-SPEduServiceSetting
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Get-SPEduServiceSetting [-Service] <Services> [-AssignmentCollection <SPAssignme
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Do not use
 ```
 
-{{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -Service
-{{Fill Service Description}}
+Do not use
 
 ```yaml
 Type: Services
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Do not use
 
 ```yaml
 Type: SPSitePipeBind

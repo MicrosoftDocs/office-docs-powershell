@@ -8,7 +8,7 @@ schema: 2.0.0
 # Update-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Update-CsOrganizationalAutoAttendant \[-PrimaryUri\] \<uri\> \[-ApplicationId \<guid\>\] \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[\<CommonParameters\>\]
+Use Update-CsOrganizationalAutoAttendant cmdlet to force an update of resources associated with an Organizational Auto Attendant (OAA) provisioning.
 
 ## SYNTAX
 
@@ -19,16 +19,19 @@ Update-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <O
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet provides a way to update the resources associated with an organizational auto attendant configured for use in your organization.
+
+Note: This cmdlet only triggers the refresh of organizational auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of organizational auto attendant can be retrieved using Get-CsOrganizationalAutoAttendantStatus cmdlet.  
+
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Update-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-{{ Add example description here }}
+In Example 1, the Update-CsOrganizationalAutoAttendant cmdlet is used to update all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
@@ -97,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryUri
-{{Fill PrimaryUri Description}}
+The Primary URI represents the SIP address of the organizational auto attendant whose resources are to be updated.
+
 
 ```yaml
 Type: Object
@@ -149,12 +153,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### String
+The Update-CsOrganizationalAutoAttendant cmdlet accepts a string as the PrimaryUri parameter.
+
 
 ## OUTPUTS
 
-### System.Object
+### None
+
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOrganizationalAutoAttendantStatus](Get-CsOrganizationalAutoAttendantStatus.md)
