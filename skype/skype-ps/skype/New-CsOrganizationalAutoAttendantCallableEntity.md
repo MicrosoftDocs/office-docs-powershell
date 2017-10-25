@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendantCallableEntity
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity.
 
 ## SYNTAX
 
@@ -19,23 +19,40 @@ New-CsOrganizationalAutoAttendantCallableEntity [-Identity <Object>] [-Type <Obj
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Organizational Auto Attendant service. Callable entities can be created using either SIP or TEL URIs and can refer to any of the following entities:
+
+- User
+- OrganizationalAutoAttendant
+- HuntGroup
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+$callableEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity sip:operator@contoso.com -Type User
 ```
 
-Insert example commands for example 1.
+This example creates a user callable entity.
+
+### -------------------------- Example 2 --------------------------
+```
+$callableEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type OrganizationalAutoAttendant
 ```
 
-Insert descriptive text for example 1.
-
+This example creates an organizational auto attendant callable entity.
 
 ## PARAMETERS
 
 ### -Identity
 PARAMVALUE: String
+
+The Identity parameter represents the ID of the callable entity; this can be either a SIP URI or a TEL URI.
+
+- Only the SIP URIs of users that have Enterprise Voice enabled are supported.
+- Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported. 
+- SIP URIs can be used for a user only.
+- TEL URIs can be a user, an organizational auto attendant, or a hunt group (call queue).
 
 ```yaml
 Type: Object
@@ -52,6 +69,13 @@ Accept wildcard characters: False
 
 ### -Type
 PARAMVALUE: User | OrganizationalAutoAttendant | HuntGroup
+
+The Type parameter represents the type of the callable entity, which can be any of the following:
+
+- User
+- OrganizationalAutoAttendant
+- Huntgroup
+
 
 ```yaml
 Type: Object
@@ -151,7 +175,13 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
+### None
+
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity
+
 
 ## NOTES
 
