@@ -8,8 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
-
+Returns all scale-out database objects.
 
 
 
