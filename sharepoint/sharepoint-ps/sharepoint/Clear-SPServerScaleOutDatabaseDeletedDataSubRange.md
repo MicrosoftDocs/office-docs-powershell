@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Clears all partitions inside the specified deleted subrange.
 
 
 
