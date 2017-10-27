@@ -7,7 +7,7 @@ schema: 2.0.0
 # Split-SPServerScaleOutDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Moves a specified percentage of partitions from one scale-out database to another.
 
 
 ## SYNTAX
@@ -29,23 +29,28 @@ Split-SPServerScaleOutDatabase -SourceDatabase <SPDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](https://msdn.microsoft.com/library/dd878348(VS.85).aspx).
+
+Use the Split-SPServerScaleOutDatabase cmdlet to move a specified percentage of partitions from a source database to an existing target database or to a new database that you create with the specified parameters.
+
 
 
 ## EXAMPLES
 
 ### ---------------EXAMPLE---------------
 ```
-PS C:\> {{ Add example code here }}
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+database = $databases[0]
+Split-SPServerScaleOutDatabase -NewDatabaseName Database2 -NewDatabaseServer MyDatabaseServer -SourceDatabase $database -SourceServiceApplication $serviceApplication -SourcePercentage 30
 ```
 
-{{ Add example description here }}
+This example creates a new scale-out database named Database2 on the MyDatabaseServer database server in the given service application. The example also moves 30 percent of the data from the upper side of the data range in the first scale-out database of the given service application.
 
 
 ## PARAMETERS
 
 ### -NewDatabaseName
-{{Fill NewDatabaseName Description}}
+Specifies the name of a new scale-out database that you are creating.
 
 
 
@@ -63,8 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceDatabase
-{{Fill SourceDatabase Description}}
-
+The source scale-out database to move data from.
 
 ```yaml
 Type: SPDatabasePipeBind
@@ -80,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceServiceApplication
-{{Fill SourceServiceApplication Description}}
+The service application in which the data move operation will take place.
 
 
 ```yaml
@@ -97,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-{{Fill TargetDatabase Description}}
+The target scale-out database to move data to.
 
 
 ```yaml
@@ -114,7 +118,9 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+Note: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 
 ```yaml
@@ -148,7 +154,7 @@ Accept wildcard characters: False
 ```
 
 ### -MoveLowerHalf
-{{Fill MoveLowerHalf Description}}
+Specifies whether to move the lower or the upper side of the data range from the source scale-out database. If this parameter is not specified, the default behavior is to move the upper side of the source scale-out database data range.
 
 
 ```yaml
@@ -165,7 +171,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseCredentials
-{{Fill NewDatabaseCredentials Description}}
+Specifies the credentials to use when creating the scale-out database. These credentials will have owner permissions on the new scale-out database. If you do not provide a value, the credentials of the logged on user will be used.
 
 
 ```yaml
@@ -182,7 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseFailoverServer
-{{Fill NewDatabaseFailoverServer Description}}
+Specifies the failover server name of the new scale-out database. If you do not provide a value, the new scale-out database does not have a failover server.
 
 
 ```yaml
@@ -199,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewDatabaseServer
-{{Fill NewDatabaseServer Description}}
+Specifies the name of the server of the new scale-out database. If you do not provide a value, the name of the default database server is used.
 
 
 ```yaml
@@ -216,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourcePercentage
-{{Fill SourcePercentage Description}}
+Specifies the percentage of data in the source scale-out database to move. If you do not provide a value, the default value, 50 percent, is used.
 
 
 ```yaml
