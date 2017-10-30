@@ -13,7 +13,7 @@ git clone [URL to your forked repo]
 ```
 3. Keep your forked repo up-to-date with upstream repo.
 ```
-git remote add upstream https://github.com/MicrosoftDocs/office-docs-powershell.git
+git remote add upstream https://github.com/MicrosoftDocs/office-docs-powershell.git 
 ```
 ```
 git fetch upstream
