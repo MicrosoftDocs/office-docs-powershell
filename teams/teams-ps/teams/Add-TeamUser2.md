@@ -1,18 +1,24 @@
 ---
-external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
+external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
-title: Connect-MicrosoftTeams
+title: Add-TeamUser
 online version: 
 schema: 2.0.0
 ---
 
-# Connect-MicrosoftTeams
+# Add-TeamUser
 
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
+Adds an owner or member to the team.
+
 ## SYNTAX
+
+```
+Add-TeamUser -GroupId <String> -User <String> [-Role <String>]
+```
 
 ### UserCredential (Default)
 ```
