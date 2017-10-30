@@ -1,4 +1,4 @@
-﻿---
+---
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Module Name: MicrosoftTeams
 applicable: Microsoft Teams
@@ -10,7 +10,9 @@ schema: 2.0.0
 # Add-TeamUser
 
 ## SYNOPSIS
-Adds an owner or member to the team
+Note: This cmdlet is currently in Beta.
+
+Adds an owner or member to the team.
 
 ## SYNTAX
 
@@ -26,6 +28,8 @@ Add-TeamUser -GroupId <String> -User <String> [-Role <String>]
 ```
 Add-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
 ```
+
+Add user dmx@example.com to group.
 
 ## PARAMETERS
 
@@ -86,8 +90,10 @@ Accept wildcard characters: False
 
 ### Role
 
+
 ## OUTPUTS
 
 ## NOTES
 
 ## RELATED LINKS
+
