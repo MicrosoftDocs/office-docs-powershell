@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOrganizationalAutoAttendantCallableEntity.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallableEntity
 schema: 2.0.0
@@ -13,9 +13,7 @@ The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a cal
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallableEntity [-Identity <Object>] [-Type <Object>]
- [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -45,8 +43,6 @@ This example creates an organizational auto attendant callable entity.
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: String
-
 The Identity parameter represents the ID of the callable entity; this can be either a SIP URI or a TEL URI.
 
 - Only the SIP URIs of users that have Enterprise Voice enabled are supported.
@@ -55,12 +51,12 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 - TEL URIs can be a user, an organizational auto attendant, or a hunt group (call queue).
 
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -68,8 +64,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-PARAMVALUE: User | OrganizationalAutoAttendant | HuntGroup
-
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
@@ -83,55 +77,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -139,26 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
