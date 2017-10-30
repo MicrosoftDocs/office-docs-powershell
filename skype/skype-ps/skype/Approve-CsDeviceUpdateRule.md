@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Approve-CsDeviceUpdateRule
 schema: 2.0.0
 ---
 
@@ -179,10 +180,10 @@ Instead, the Approve-CsDeviceUpdateRule cmdlet approves instances of the Microso
 
 ## RELATED LINKS
 
-[Get-CsDeviceUpdateRule]()
+[Get-CsDeviceUpdateRule](Get-CsDeviceUpdateRule.md)
 
-[Remove-CsDeviceUpdateRule]()
+[Remove-CsDeviceUpdateRule](Remove-CsDeviceUpdateRule.md)
 
-[Reset-CsDeviceUpdateRule]()
+[Reset-CsDeviceUpdateRule](Reset-CsDeviceUpdateRule.md)
 
-[Restore-CsDeviceUpdateRule]()
+[Restore-CsDeviceUpdateRule](Restore-CsDeviceUpdateRule.md)

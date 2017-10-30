@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Remove-CsThirdPartyVideoSystem
 schema: 2.0.0
 ---
 
@@ -18,43 +19,40 @@ Remove-CsThirdPartyVideoSystem [-Identity] <UserIdParameter> [-Confirm] [-WhatIf
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
-Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
-VTC contact objects can be created by using the New-CsThirdPartyVideoSystem cmdlet.
-These contact objects can later be deleted by using the Remove-CsThirdPartyVideoSystem cmdlet.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+Associating each VTC device with a contact object makes it easy for administrators to track and to manage, these devices.
+VTC contact objects can be created by using the `New-CsThirdPartyVideoSystem` cmdlet.
+These contact objects can later be deleted by using the `Remove-CsThirdPartyVideoSystem` cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsThirdPartyVideoSystem -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com"
 ```
 
 The command shown in Example 1 removes the third-party video system that has the Identity CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
-Video system identities can be returned by using the Get-CsThirdPartyVideoSystem cmdlet.
+Video system identities can be returned by using the `Get-CsThirdPartyVideoSystem` cmdlet.
 
-Remove-CsThirdPartyVideoSystem -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-In Example 2, the Remove-CsThirdPartyVideoSystem cmdlet is used to delete the video system that has the Active Directory display name Redmond Video System.
-To do this, the command first uses Get-CsThirdPartyVideoSystem and the Filter parameter to retrieve the Redmond Video System contact object (and does this without having to specify an Identity like CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.) That contact object is then piped to, and deleted by, the Remove-CsThirdPartyVideoSystem cmdlet.
-
 Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video System"} | Remove-CsThirdPartyVideoSystem
-
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
 ```
 
+In Example 2, the `Remove-CsThirdPartyVideoSystem` cmdlet is used to delete the video system that has the Active Directory display name Redmond Video System.
+To do this, the command first uses `Get-CsThirdPartyVideoSystem` and the Filter parameter to retrieve the Redmond Video System contact object (and does this without having to specify an Identity like CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.) That contact object is then piped to and deleted by, the `Remove-CsThirdPartyVideoSystem` cmdlet.
+
+
+### -------------------------- Example 3 --------------------------
+```
+Get-CsThirdPartyVideoSystem | Remove-CsThirdPartyVideoSystem
 ```
 
 Example 3 removes all the third-party video systems configured for use in the organization.
-To do this, the command first uses the Get-CsThirdPartyVideoSystem cmdlet to return a collection of all the third-party video systems.
-Those video systems are then piped to, and removed by, the Remove-CsThirdPartyVideoSystem cmdlet.
+To do this, the command first uses the `Get-CsThirdPartyVideoSystem` cmdlet to return a collection of all the third-party video systems.
+Those video systems are then piped to and removed by, the `Remove-CsThirdPartyVideoSystem` cmdlet.
 
-Get-CsThirdPartyVideoSystem | Remove-CsThirdPartyVideoSystem
 
 ## PARAMETERS
 
@@ -62,7 +60,7 @@ Get-CsThirdPartyVideoSystem | Remove-CsThirdPartyVideoSystem
 Unique identifier for the third party video system to be removed.
 Video systems are identified by using the Active Directory distinguished name (DN) of the associated contact object.
 By default, these contacts use a globally unique identifier (GUID) as their common name; that means video systems will typically have an Identity similar to this: CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com.
-Because of that you might find it easier to retrieve video systems by using the Get-CsThirdPartyVideoSystem cmdlet, and then piping the returned objects to the Remove-CsThirdPartyVideoSystem cmdlet.
+Because of that you might find it easier to retrieve video systems by using the `Get-CsThirdPartyVideoSystem` cmdlet and then piping the returned objects to the `Remove-CsThirdPartyVideoSystem` cmdlet.
 
 ```yaml
 Type: UserIdParameter
@@ -115,25 +113,22 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Remove-CsThirdPartyVideoSystem cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADThirdPartyVideoSystemContact object.
+The `Remove-CsThirdPartyVideoSystem` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADThirdPartyVideoSystemContact object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Remove-CsThirdPartyVideoSystem cmdlet does not return any objects or data.
+The `Remove-CsThirdPartyVideoSystem` cmdlet does not return any objects or data.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystem]()
+[Get-CsThirdPartyVideoSystem](Get-CsThirdPartyVideoSystem.md)
 
-[Move-CsThirdPartyVideoSystem]()
+[Move-CsThirdPartyVideoSystem](Move-CsThirdPartyVideoSystem.md)
 
-[New-CsThirdPartyVideoSystem]()
+[New-CsThirdPartyVideoSystem](New-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystem]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/0cd4e84c-8f5b-4714-8fd4-016ff058ac4d(OCS.16).aspx)
-
+[Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)

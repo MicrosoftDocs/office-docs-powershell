@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsVoicePolicy
 schema: 2.0.0
 ---
 
@@ -150,12 +151,12 @@ Returns an object of type Microsoft.Rtc.Management.Voice.VoicePolicyTestResult.
 
 ## RELATED LINKS
 
-[New-CsVoicePolicy]()
+[New-CsVoicePolicy](New-CsVoicePolicy.md)
 
-[Remove-CsVoicePolicy]()
+[Remove-CsVoicePolicy](Remove-CsVoicePolicy.md)
 
-[Set-CsVoicePolicy]()
+[Set-CsVoicePolicy](Set-CsVoicePolicy.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Grant-CsVoicePolicy]()
+[Grant-CsVoicePolicy](Grant-CsVoicePolicy.md)

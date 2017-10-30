@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsLisLocation
 schema: 2.0.0
 ---
 
@@ -93,8 +94,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisLocation]()
+[Remove-CsLisLocation](Remove-CsLisLocation.md)
 
-[Set-CsLisLocation]()
+[Set-CsLisLocation](Set-CsLisLocation.md)
 
-[Get-CsLisCivicAddress]()
+[Get-CsLisCivicAddress](Get-CsLisCivicAddress.md)

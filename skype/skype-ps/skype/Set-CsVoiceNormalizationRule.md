@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Set-CsVoiceNormalizationRule
 schema: 2.0.0
 ---
 
@@ -354,14 +355,14 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsVoiceNormalizationRule]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Get-CsVoiceNormalizationRule]()
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)
 
-[Test-CsVoiceNormalizationRule]()
+[Test-CsVoiceNormalizationRule](Test-CsVoiceNormalizationRule.md)
 
-[Set-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)

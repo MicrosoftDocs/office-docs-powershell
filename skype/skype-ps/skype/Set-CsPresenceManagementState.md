@@ -1,14 +1,15 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsPresenceManagementState
 schema: 2.0.0
 ---
 
 # Set-CsPresenceManagementState
 
 ## SYNOPSIS
-Use the Set-CsPresenceManagementState cmdlet to modify the settings of the Skype for Business Server 2015 management state.
-The management state settings determine the batching and timing of Skype for Business Server 2015 notifications.
+Use the `Set-CsPresenceManagementState` cmdlet to modify the settings of the Skype for Business Server management state.
+The management state settings determine the batching and timing of Skype for Business Server notifications.
 
 ## SYNTAX
 
@@ -23,18 +24,17 @@ Set-CsPresenceManagementState [[-Fqdn] <Fqdn>] [-Confirm] [-Force] [-ManualOverr
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsPresenceManagementState -Fqdn "atl-mcs-001.litwareinc.com" -NotificationBatchSize 50
 ```
 
 This example set the NotificationBatchSize to 50 on the pool or computer named "atl-mcs-001.litwareinc.com".
 
-Set-CsPresenceManagementState -Fqdn "atl-mcs-001.litwareinc.com" -NotificationBatchSize 50
 
 ## PARAMETERS
 
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ### -Fqdn
 Specifies the computer or pool to modify.
 The computer or pool should be referenced by using its fully qualified domain name (FQDN).
-For example: -Fqdn "atl-mcs-001.litwareinc.com".
+For example: `-Fqdn "atl-mcs-001.litwareinc.com"`.
 If FQDN is not specified, the settings for the local machine will be modified.
 
 ```yaml
@@ -255,7 +255,4 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsPresenceManagementState]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/dbb6a81d-ebff-486e-b83f-4e73365a193c(OCS.16).aspx)
-
+[Get-CsPresenceManagementState](Get-CsPresenceManagementState.md)

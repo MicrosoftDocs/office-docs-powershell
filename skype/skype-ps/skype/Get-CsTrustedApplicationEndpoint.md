@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsTrustedApplicationEndpoint
 schema: 2.0.0
 ---
 
@@ -217,8 +218,8 @@ Accepts a pipelined string value representing the Identity of a user account.
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationEndpoint]()
+[New-CsTrustedApplicationEndpoint](New-CsTrustedApplicationEndpoint.md)
 
-[Remove-CsTrustedApplicationEndpoint]()
+[Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
-[Set-CsTrustedApplicationEndpoint]()
+[Set-CsTrustedApplicationEndpoint](Set-CsTrustedApplicationEndpoint.md)

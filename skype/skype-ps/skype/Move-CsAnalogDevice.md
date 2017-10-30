@@ -1,18 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Move-CsAnalogDevice
 schema: 2.0.0
 ---
 
 # Move-CsAnalogDevice
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Moves one or more analog devices to a new Registrar pool.
-An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Moves one or more analog devices to a new Registrar pool.
 An analog device is a telephone or other device that is connected to the public switched telephone network (PSTN).
@@ -44,50 +39,13 @@ Move-CsAnalogDevice [-Target] <Fqdn> -UserList <String> [-ConcurrentMovesPerFE <
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Analog devices include telephones, fax machines, modems, and  teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
-Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
-Instead, information is transmitted by using a continuous signal.
-This signal is commonly referred to as an analog signal; hence the term "analog devices."
-
-In order to enable administrators to manage analog devices, Microsoft Lync Server 2010 lets you associate analog devices with Active Directory contact objects.
-After a device has been associated with a contact object, you can then manage the analog device by assigning policies and dial plans to the contact.
-
-The Move-CsAnalogDevice cmdlet provides a way for you to move an existing analog device to a new Registrar pool.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsAnalogDevice cmdlet locally: RTCUniversalUserAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory organizational units (OUs) can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Move-CsAnalogDevice"}
-
-**Below Content Applies To:** Lync Server 2013
 
 Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
 Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
 Instead, information is transmitted by using a continuous signal.
 This signal is commonly referred to as an analog signal; hence the term "analog devices."
 
-In order to enable administrators to manage analog devices, Lync Server lets you associate analog devices with Active Directory contact objects.
-After a device has been associated with a contact object, you can then manage the analog device by assigning policies and dial plans to the contact.
-
-The Move-CsAnalogDevice cmdlet provides a way for you to move an existing analog device to a new Registrar pool.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Move-CsAnalogDevice cmdlet locally: RTCUniversalUserAdmins.
-Permissions to run this cmdlet for specific sites or specific Active Directory organizational units (OUs) can be assigned by using the Grant-CsOUPermission cmdlet.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Move-CsAnalogDevice"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Analog devices include telephones, fax machines, modems, and teletype/telecommunication device for the deaf (TTY/TDD) devices that are connected to the public switched telephone network (PSTN).
-Unlike devices that take advantage of Enterprise Voice (the Voice over Internet Protocol (VoIP) solution offered by Microsoft), analog devices do not transmit information by using digital packets.
-Instead, information is transmitted by using a continuous signal.
-This signal is commonly referred to as an analog signal; hence the term "analog devices."
-
-In order to enable administrators to manage analog devices, Skype for Business Server 2015 lets you associate analog devices with Active Directory contact objects.
+In order to enable administrators to manage analog devices, Skype for Business Server lets you associate analog devices with Active Directory contact objects.
 After a device has been associated with a contact object, you can then manage the analog device by assigning policies and dial plans to the contact.
 
 The Move-CsAnalogDevice cmdlet provides a way for you to move an existing analog device to a new Registrar pool.
@@ -96,56 +54,19 @@ The Move-CsAnalogDevice cmdlet provides a way for you to move an existing analog
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 Move-CsAnalogDevice -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com" -Target atl-cs-001.litwareinc.com
 ```
 
 The command shown in Example 1 moves the analog device with the Identity CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com to the Registrar pool atl-cs-001.litwareinc.com.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 moves the analog device with the Identity CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com to the Registrar pool atl-cs-001.litwareinc.com.
-
-Move-CsAnalogDevice -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com" -Target atl-cs-001.litwareinc.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 moves the analog device with the Identity CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com to the Registrar pool atl-cs-001.litwareinc.com.
-
-Move-CsAnalogDevice -Identity "CN={ce84964a-c4da-4622-ad34-c54ff3ed361f},OU=Redmond,DC=Litwareinc,DC=com" -Target atl-cs-001.litwareinc.com
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-Get-CsAnalogDevice | Where-Object {$_.DisplayName -eq "Building 14, Room 142"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
-```
-
-In Example 2, the analog device that has the Active Directory display name, "Building 14, Room 142", is moved to the Registrar pool atl-cs-001.litwareinc.com.
-To do this, Get-CsAnalogDevice is first called without any parameters in order to return a collection of all the analog devices currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out all the devices that have the display name "Building 14, Room 142".
-That filtered collection is then piped to Move-CsAnalogDevice, which moves all of the devices in the collection to the Registrar pool atl-cs-001.litwareinc.com.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, the analog device that has the Active Directory display name, "Building 14, Room 142", is moved to the Registrar pool atl-cs-001.litwareinc.com.
-To do this, Get-CsAnalogDevice is first called without any parameters in order to return a collection of all the analog devices currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out all the devices that have the display name "Building 14, Room 142".
-That filtered collection is then piped to Move-CsAnalogDevice, which moves all of the devices in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
 Get-CsAnalogDevice | Where-Object {$_.DisplayName -eq "Building 14, Room 142"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 2, the analog device that has the Active Directory display name, "Building 14, Room 142", is moved to the Registrar pool atl-cs-001.litwareinc.com.
@@ -153,33 +74,11 @@ To do this, the Get-CsAnalogDevice cmdlet is first called without any parameters
 This collection is then piped to the Where-Object cmdlet, which picks out all the devices that have the display name "Building 14, Room 142".
 That filtered collection is then piped to the Move-CsAnalogDevice cmdlet, which moves all of the devices in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
-Get-CsAnalogDevice | Where-Object {$_.DisplayName -eq "Building 14, Room 142"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
 
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-Get-CsAnalogDevice | Where-Object {$_.DisplayName -like "Building 14*"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
-```
-
-The preceding command moves all of the analog devices that have a display name that begins with the string value "Building 14".
-To carry out this task, the command first calls Get-CsAnalogDevice to return a collection of all the analog devices currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects all the devices that have a display name that begins with the string value "Building 14".
-The filtered collection is then piped to Move-CsAnalogDevice, which moves each device in the collection to the Registrar pool atl-cs-001.litwareinc.com.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 3 moves all of the analog devices that have a display name that begins with the string value "Building 14".
-To carry out this task, the command first calls Get-CsAnalogDevice to return a collection of all the analog devices currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which selects all the devices that have a display name that begins with the string value "Building 14".
-The filtered collection is then piped to Move-CsAnalogDevice, which moves each device in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
 Get-CsAnalogDevice | Where-Object {$_.DisplayName -like "Building 14*"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 3 moves all of the analog devices that have a display name that begins with the string value "Building 14".
@@ -187,7 +86,6 @@ To carry out this task, the command first calls the Get-CsAnalogDevice cmdlet to
 This collection is then piped to the Where-Object cmdlet, which selects all the devices that have a display name that begins with the string value "Building 14".
 The filtered collection is then piped to the Move-CsAnalogDevice cmdlet, which moves each device in the collection to the Registrar pool atl-cs-001.litwareinc.com.
 
-Get-CsAnalogDevice | Where-Object {$_.DisplayName -like "Building 14*"} | Move-CsAnalogDevice -Target atl-cs-001.litwareinc.com
 
 ## PARAMETERS
 
@@ -244,17 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyPool
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-This parameter is used only for Microsoft Lync Online 2010.
-It should not be used with an on-premises implementation of Lync Server.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 This parameter is used only for Skype for Business Online.
-It should not be used with an on-premises implementation of Skype for Business Server 2015.
+It should not be used with an on-premises implementation of Skype for Business Server.
 
 
 
@@ -402,23 +292,15 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-String.
-Move-CsAnalogDevice accepts a pipelined string value that represents the Identity of the analog device.
 
 ###  
 String.
 The Move-CsAnalogDevice cmdlet accepts a pipelined string value that represents the Identity of the analog device.
 
 ## OUTPUTS
-
-###  
-By default, Move-CsAnalogDevice does not return any objects or values.
-However, if you include the PassThru parameter, the cmdlet will return instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADAnalogDeviceContact object.
 
 ###  
 By default, the Move-CsAnalogDevice cmdlet does not return any objects or values.
@@ -428,17 +310,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/c629c5f8-93e7-4fe4-ad51-52bc0ae99a46(OCS.14).aspx)
+[Get-CsAnalogDevice](Get-CsAnalogDevice.md)
 
-[Get-CsAnalogDevice]()
+[New-CsAnalogDevice](New-CsAnalogDevice.md)
 
-[New-CsAnalogDevice]()
+[Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
-[Remove-CsAnalogDevice]()
-
-[Set-CsAnalogDevice]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c629c5f8-93e7-4fe4-ad51-52bc0ae99a46(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c629c5f8-93e7-4fe4-ad51-52bc0ae99a46(OCS.16).aspx)
-
+[Set-CsAnalogDevice](Set-CsAnalogDevice.md)

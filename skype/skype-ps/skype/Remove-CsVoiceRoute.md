@@ -1,29 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsVoiceRoute
 schema: 2.0.0
 ---
 
 # Remove-CsVoiceRoute
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Removes a voice route.
-Voice routes contain instructions that tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-
-**Below Content Applies To:** Lync Server 2013
-
-Removes a voice route.
-Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+Voice routes contain instructions that tell Skype for Business Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Removes a voice route.
-Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,111 +20,39 @@ Remove-CsVoiceRoute [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] [
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Use this cmdlet to remove an existing voice route.
 Voice routes are associated with voice policies through PSTN usages, so removing a voice route does not change any values relating to a voice policy, it simply changes the routing for the numbers that had matched the pattern for the deleted voice route.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsVoiceRoute cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsVoiceRoute"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Use this cmdlet to remove an existing voice route.
-Voice routes are associated with voice policies through PSTN usages, so removing a voice route does not change any values relating to a voice policy, it simply changes the routing for the numbers that had matched the pattern for the deleted voice route.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsVoiceRoute -Identity Route1
 ```
 
 Removes the settings for the voice route with the identity Route1.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Removes the settings for the voice route with the identity Route1.
-
-Remove-CsVoiceRoute -Identity Route1
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Removes the settings for the voice route with the identity Route1.
-
-Remove-CsVoiceRoute -Identity Route1
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsVoiceRoute | Remove-CsVoiceRoute
 ```
 
 This command removes all voice routes from the organization.
-First all voice routes are retrieved by the Get-CsVoiceRoute cmdlet.
-These voice routes are then piped to Remove-CsVoiceRoute, which removes each one.
+First all voice routes are retrieved by the `Get-CsVoiceRoute` cmdlet.
+These voice routes are then piped to the `Remove-CsVoiceRoute` cmdlet, which removes each one.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This command removes all voice routes from the organization.
-First all voice routes are retrieved by the Get-CsVoiceRoute cmdlet.
-These voice routes are then piped to Remove-CsVoiceRoute, which removes each one.
-
-Get-CsVoiceRoute | Remove-CsVoiceRoute
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command removes all voice routes from the organization.
-First all voice routes are retrieved by the Get-CsVoiceRoute cmdlet.
-These voice routes are then piped to the Remove-CsVoiceRoute cmdlet, which removes each one.
-
-Get-CsVoiceRoute | Remove-CsVoiceRoute
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsVoiceRoute -Filter *Redmond* | Remove-CsVoiceRoute
 ```
 
-This command removes all voice routes with an identity that includes the string "Redmond." First the Get-CsVoiceRoute cmdlet is called with the Filter parameter.
+This command removes all voice routes with an identity that includes the string "Redmond." First the `Get-CsVoiceRoute` cmdlet is called with the Filter parameter.
 The value of the Filter parameter is the string Redmond surrounded by wildcard characters (*), which specifies that the string can be anywhere within the Identity.
-After all of the voice routes with identities that include the string Redmond are retrieved, these voice routes are piped to Remove-CsVoiceRoute, which removes each one.
+After all of the voice routes with identities that include the string Redmond are retrieved, these voice routes are piped to the `Remove-CsVoiceRoute` cmdlet, which removes each one.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command removes all voice routes with an identity that includes the string "Redmond." First the Get-CsVoiceRoute cmdlet is called with the Filter parameter.
-The value of the Filter parameter is the string Redmond surrounded by wildcard characters (*), which specifies that the string can be anywhere within the Identity.
-After all of the voice routes with identities that include the string Redmond are retrieved, these voice routes are piped to Remove-CsVoiceRoute, which removes each one.
-
-Get-CsVoiceRoute -Filter *Redmond* | Remove-CsVoiceRoute
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command removes all voice routes with an identity that includes the string "Redmond." First the Get-CsVoiceRoute cmdlet is called with the Filter parameter.
-The value of the Filter parameter is the string Redmond surrounded by wildcard characters (*), which specifies that the string can be anywhere within the Identity.
-After all of the voice routes with identities that include the string Redmond are retrieved, these voice routes are piped to the Remove-CsVoiceRoute cmdlet, which removes each one.
-
-Get-CsVoiceRoute -Filter *Redmond* | Remove-CsVoiceRoute
 
 ## PARAMETERS
 
@@ -224,17 +139,10 @@ Removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voice.R
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/6687e538-e8f6-4bf0-b393-2c7b4a3f2f06(OCS.14).aspx)
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[New-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Set-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
-
-[Test-CsVoiceRoute]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6687e538-e8f6-4bf0-b393-2c7b4a3f2f06(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/6687e538-e8f6-4bf0-b393-2c7b4a3f2f06(OCS.16).aspx)
-
+[Test-CsVoiceRoute](Test-CsVoiceRoute.md)

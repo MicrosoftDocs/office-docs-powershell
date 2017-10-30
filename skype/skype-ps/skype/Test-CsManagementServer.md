@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Test-CsManagementServer
 schema: 2.0.0
 ---
 
@@ -74,4 +75,4 @@ The `Test-CsManagementServer` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Set-CsManagementServer]()
+[Set-CsManagementServer](Set-CsManagementServer.md)

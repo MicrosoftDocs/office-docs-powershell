@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineVoiceUserBulk
 schema: 2.0.0
 ---
 
@@ -21,14 +22,13 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -170,6 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cca7a740-0695-42fd-b57a-49c89a0b6105(OCS.15).aspx)
-

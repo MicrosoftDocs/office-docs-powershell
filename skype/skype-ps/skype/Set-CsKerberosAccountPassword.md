@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsKerberosAccountPassword
 schema: 2.0.0
 ---
 
 # Set-CsKerberosAccountPassword
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Locates each server running Web Services in a site that has been assigned a Kerberos account, and then updates the Internet Information Services (IIS) configuration settings on each of those servers.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-Locates each server running Web Services in a site that has been assigned a Kerberos account, and then updates the Internet Information Services (IIS) configuration settings on each of those servers.
+Locates each server running Web Services in a site that has been assigned a Kerberos account and then updates the Internet Information Services (IIS) configuration settings on each of those servers.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,120 +27,39 @@ Set-CsKerberosAccountPassword [-UserAccount] <String> [-Force] [-Report <String>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
 This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
-To help avoid the issue of expiring passwords, Microsoft Lync Server 2010 enables you to create a computer account (for a computer that doesn't actually exist) that can serve as the authentication principal for all the computers in a site that are running IIS.
-Because these accounts use the Kerberos authentication protocol, the accounts are referred to as Kerberos accounts, and the new authentication process is known as Kerberos web authentication.
+To help avoid the issue of expiring passwords, Skype for Business Server enables you to create a computer account (for a computer that doesn't actually exist) that can serve as the authentication principal for all the computers in a site that are running IIS.
+Because these accounts use the Kerberos authentication protocol, the accounts are referred to as Kerberos accounts and the new authentication process is known as Kerberos web authentication.
 This enables you to manage all your IIS servers by using a single account.
 
-To run your servers under this new authentication principal, you must first create a computer account by using the New-CsKerberosAccount cmdlet; this account is then assigned to one or more sites.
-After the assignment has been made, the association between the account and the Lync Server 2010 site is enabled by running the Enable-CsTopology cmdlet.
-Among other things, this creates the required service principal name (SPN) in Active Directory Domain Services (AD DS).
-SPNs provide a way for client applications to locate a particular service.
-
-After a new association has been made, the Set-CsKerberosAccountPassword cmdlet provides a way to modify the password assigned to the account and, equally important, update the password on every computer that uses the specified Kerberos test account for Kerberos web authentication.
-
-In addition, the cmdlet can also use the ToComputer and FromComputer parameters to copy this configuration information from one computer to another.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsKerberosAccountPassword cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsKerberosAccountPassword"}
-
-**Below Content Applies To:** Lync Server 2013
-
-In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
-This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
-To help avoid the issue of expiring passwords, Lync Server enables you to create a computer account (for a computer that doesn't actually exist) that can serve as the authentication principal for all the computers in a site that are running IIS.
-Because these accounts use the Kerberos authentication protocol, the accounts are referred to as Kerberos accounts, and the new authentication process is known as Kerberos web authentication.
-This enables you to manage all your IIS servers by using a single account.
-
-To run your servers under this new authentication principal, you must first create a computer account by using the New-CsKerberosAccount cmdlet; this account is then assigned to one or more sites.
-After the assignment has been made, the association between the account and the Lync Server site is enabled by running the Enable-CsTopology cmdlet.
-Among other things, this creates the required service principal name (SPN) in Active Directory Domain Services (AD DS).
-SPNs provide a way for client applications to locate a particular service.
-
-After a new association has been made, the Set-CsKerberosAccountPassword cmdlet provides a way to modify the password assigned to the account and, equally important, update the password on every computer that uses the specified Kerberos test account for Kerberos web authentication.
-
-In addition, the cmdlet can also use the ToComputer and FromComputer parameters to copy this configuration information from one computer to another.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsKerberosAccountPassword cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsKerberosAccountPassword"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Microsoft Office Communications Server 2007 and Microsoft Office Communications Server 2007 R2, IIS ran under a standard user account.
-This had the potential to cause issues: if that password expired you could lose your Web Services, an issue that was often difficult to diagnose.
-To help avoid the issue of expiring passwords, Skype for Business Server 2015 enables you to create a computer account (for a computer that doesn't actually exist) that can serve as the authentication principal for all the computers in a site that are running IIS.
-Because these accounts use the Kerberos authentication protocol, the accounts are referred to as Kerberos accounts, and the new authentication process is known as Kerberos web authentication.
-This enables you to manage all your IIS servers by using a single account.
-
-To run your servers under this new authentication principal, you must first create a computer account by using the New-CsKerberosAccount cmdlet; this account is then assigned to one or more sites.
-After the assignment has been made, the association between the account and the Skype for Business Server 2015 site is enabled by running the Enable-CsTopology cmdlet.
+To run your servers under this new authentication principal, you must first create a computer account by using the `New-CsKerberosAccount` cmdlet; this account is then assigned to one or more sites.
+After the assignment has been made, the association between the account and the Skype for Business Server site is enabled by running the `Enable-CsTopology` cmdlet.
 Among other things, this creates the required service principal name (SPN) in Active Directory Domain Services.
 SPNs provide a way for client applications to locate a particular service.
 
-After a new association has been made, the Set-CsKerberosAccountPassword cmdlet provides a way to modify the password assigned to the account and, equally important, update the password on every computer that uses the specified Kerberos test account for Kerberos web authentication.
+After a new association has been made, the `Set-CsKerberosAccountPassword` cmdlet provides a way to modify the password assigned to the account and, equally important, update the password on every computer that uses the specified Kerberos test account for Kerberos web authentication.
 
 In addition, the cmdlet can also use the ToComputer and FromComputer parameters to copy this configuration information from one computer to another.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsKerberosAccountPassword -UserAccount "litwareinc\kerberostest"
 ```
 
 The command shown in Example 1 sets the password for the Kerberos account litwareinc\kerberostest.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 sets the password for the Kerberos account litwareinc\kerberostest.
-
-Set-CsKerberosAccountPassword -UserAccount "litwareinc\kerberostest"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 sets the password for the Kerberos account litwareinc\kerberostest.
-
-Set-CsKerberosAccountPassword -UserAccount "litwareinc\kerberostest"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Set-CsKerberosAccountPassword -FromComputer "atl-cs-001.litwareinc.com" -ToComputer "dublin-cs-001.litwareinc.com"
 ```
 
 In Example 2, the Kerberos account password is copied from the computer atl-cs-001.litwareinc.com to the computer dublin-cs-001.litwareinc.com.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, the Kerberos account password is copied from the computer atl-cs-001.litwareinc.com to the computer dublin-cs-001.litwareinc.com.
-
-Set-CsKerberosAccountPassword -FromComputer "atl-cs-001.litwareinc.com" -ToComputer "dublin-cs-001.litwareinc.com"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, the Kerberos account password is copied from the computer atl-cs-001.litwareinc.com to the computer dublin-cs-001.litwareinc.com.
-
-Set-CsKerberosAccountPassword -FromComputer "atl-cs-001.litwareinc.com" -ToComputer "dublin-cs-001.litwareinc.com"
 
 ## PARAMETERS
 
@@ -186,7 +99,7 @@ Accept wildcard characters: False
 
 ### -UserAccount
 Account name for the account whose password should be changed.
-This account name must use the format domain_name\user_name; for example: -UserAccount "litwareinc\kerberostest".
+This account name must use the format domain_name\user_name; for example: `-UserAccount "litwareinc\kerberostest"`.
 
 Note that, despite the name UserAccount, the account is actually a computer account, not a user account.
 
@@ -221,7 +134,7 @@ Accept wildcard characters: False
 
 ### -Report
 Enables you to specify a file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\SetKerberosPassword.html".
+For example: `-Report "C:\Logs\SetKerberosPassword.html"`.
 
 ```yaml
 Type: String
@@ -279,20 +192,9 @@ None.
 ## OUTPUTS
 
 ###  
-Set-CsKerberosAccountPassword does not return any objects or values.
-Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.KerberosAccount.KerberosAccount object.
-
-###  
-The Set-CsKerberosAccountPassword cmdlet does not return any objects or values.
+The `Set-CsKerberosAccountPassword` cmdlet does not return any objects or values.
 Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.KerberosAccount.KerberosAccount object.
 
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/837292b9-3c08-4c3c-a49d-3f9492518ddd(OCS.14).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/837292b9-3c08-4c3c-a49d-3f9492518ddd(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/837292b9-3c08-4c3c-a49d-3f9492518ddd(OCS.16).aspx)
-

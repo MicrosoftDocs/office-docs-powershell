@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsDeviceUpdateConfiguration
 schema: 2.0.0
 ---
 
@@ -155,8 +156,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDeviceUpdateConfiguration]()
+[New-CsDeviceUpdateConfiguration](New-CsDeviceUpdateConfiguration.md)
 
-[Remove-CsDeviceUpdateConfiguration]()
+[Remove-CsDeviceUpdateConfiguration](Remove-CsDeviceUpdateConfiguration.md)
 
-[Set-CsDeviceUpdateConfiguration]()
+[Set-CsDeviceUpdateConfiguration](Set-CsDeviceUpdateConfiguration.md)

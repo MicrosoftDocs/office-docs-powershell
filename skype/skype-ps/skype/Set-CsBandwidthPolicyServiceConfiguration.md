@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsBandwidthPolicyServiceConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsBandwidthPolicyServiceConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing bandwidth policy service configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing bandwidth policy service configuration.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -35,80 +29,26 @@ Set-CsBandwidthPolicyServiceConfiguration [-Instance <PSObject>] [-EnableLogging
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 Call admission control (CAC) is a way of determining whether to allow real-time communications sessions, such as voice or video calls, to be established based on bandwidth constraints.
-Within the Microsoft Lync Server 2010 implementation of CAC, regions, sites, and subnets are defined within a network along with the relationships and links between those entities in order to place bandwidth constraints between them.
-Bandwidth Policy service is the component that performs CAC functionality in the Lync Server 2010 deployment, enabling the decision as to whether sufficient bandwidth exists for a call to be established.
+Within the Skype for Business Server implementation of CAC, regions, sites and subnets are defined within a network along with the relationships and links between those entities in order to place bandwidth constraints between them.
+Bandwidth Policy service is the component that performs CAC functionality in the Skype for Business Server deployment, enabling the decision as to whether sufficient bandwidth exists for a call to be established.
 This cmdlet modifies an existing bandwidth policy service configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsBandwidthPolicyServiceConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsBandwidthPolicyServiceConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Call admission control (CAC) is a way of determining whether to allow real-time communications sessions, such as voice or video calls, to be established based on bandwidth constraints.
-Within the Lync Server implementation of CAC, regions, sites, and subnets are defined within a network along with the relationships and links between those entities in order to place bandwidth constraints between them.
-Bandwidth Policy service is the component that performs CAC functionality in the Lync Server deployment, enabling the decision as to whether sufficient bandwidth exists for a call to be established.
-This cmdlet modifies an existing bandwidth policy service configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsBandwidthPolicyServiceConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsBandwidthPolicyServiceConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Call admission control (CAC) is a way of determining whether to allow real-time communications sessions, such as voice or video calls, to be established based on bandwidth constraints.
-Within the Skype for Business Server 2015 implementation of CAC, regions, sites, and subnets are defined within a network along with the relationships and links between those entities in order to place bandwidth constraints between them.
-Bandwidth Policy service is the component that performs CAC functionality in the Skype for Business Server 2015 deployment, enabling the decision as to whether sufficient bandwidth exists for a call to be established.
-This cmdlet modifies an existing bandwidth policy service configuration.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsBandwidthPolicyServiceConfiguration -Identity site:Redmond -EnableLogging $true -MaxTokenLifetime 3:00:00 -LogCleanUpInterval 5.00:00:00
 ```
 
 This example modifies the bandwidth policy service configuration for the site Redmond (-Identity site:Redmond).
-The configuration is modified to enable logging, change the maximum lifetime of a token to three hours, and the number of days before log cleanup to five days.
+The configuration is modified to enable logging, change the maximum lifetime of a token to three hours and the number of days before log cleanup to five days.
 This is all accomplished in this one command.
 To enable logging, the EnableLogging parameter is set to True ($true).
 Next the MaxTokenLifetime parameter receives a value of 3:00:00, which represents three hours.
 Finally, the LogCleanUpInterval parameter receives a value of 5.00:00:00, which signifies five days.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the bandwidth policy service configuration for the site Redmond (-Identity site:Redmond).
-The configuration is modified to enable logging, change the maximum lifetime of a token to three hours, and the number of days before log cleanup to five days.
-This is all accomplished in this one command.
-To enable logging, the EnableLogging parameter is set to True ($true).
-Next the MaxTokenLifetime parameter receives a value of 3:00:00, which represents three hours.
-Finally, the LogCleanUpInterval parameter receives a value of 5.00:00:00, which signifies five days.
-
-Set-CsBandwidthPolicyServiceConfiguration -Identity site:Redmond -EnableLogging $true -MaxTokenLifetime 3:00:00 -LogCleanUpInterval 5.00:00:00
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the bandwidth policy service configuration for the site Redmond (-Identity site:Redmond).
-The configuration is modified to enable logging, change the maximum lifetime of a token to three hours, and the number of days before log cleanup to five days.
-This is all accomplished in this one command.
-To enable logging, the EnableLogging parameter is set to True ($true).
-Next the MaxTokenLifetime parameter receives a value of 3:00:00, which represents three hours.
-Finally, the LogCleanUpInterval parameter receives a value of 5.00:00:00, which signifies five days.
-
-Set-CsBandwidthPolicyServiceConfiguration -Identity site:Redmond -EnableLogging $true -MaxTokenLifetime 3:00:00 -LogCleanUpInterval 5.00:00:00
 
 ## PARAMETERS
 
@@ -131,7 +71,7 @@ Accept wildcard characters: False
 
 ### -Instance
 A reference to a bandwidth policy service configuration object.
-This object must be of type BandwidthPolicyServiceConfiguration, which can be retrieved by calling the Get-CsBandwidthPolicyServiceConfiguration cmdlet.
+This object must be of type BandwidthPolicyServiceConfiguration, which can be retrieved by calling the `Get-CsBandwidthPolicyServiceConfiguration` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -287,15 +227,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.B
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/b39af1ca-465d-4598-96a3-e19283ddf731(OCS.14).aspx)
+[New-CsBandwidthPolicyServiceConfiguration](New-CsBandwidthPolicyServiceConfiguration.md)
 
-[New-CsBandwidthPolicyServiceConfiguration]()
+[Remove-CsBandwidthPolicyServiceConfiguration](Remove-CsBandwidthPolicyServiceConfiguration.md)
 
-[Remove-CsBandwidthPolicyServiceConfiguration]()
-
-[Get-CsBandwidthPolicyServiceConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b39af1ca-465d-4598-96a3-e19283ddf731(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b39af1ca-465d-4598-96a3-e19283ddf731(OCS.16).aspx)
-
+[Get-CsBandwidthPolicyServiceConfiguration](Get-CsBandwidthPolicyServiceConfiguration.md)

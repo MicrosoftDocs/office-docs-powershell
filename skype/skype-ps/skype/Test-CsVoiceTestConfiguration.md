@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsVoiceTestConfiguration
 schema: 2.0.0
 ---
 
@@ -246,16 +247,16 @@ This cmdlet returns an object of type Microsoft.Rtc.Management.Voice.OcsVoiceTes
 
 ## RELATED LINKS
 
-[New-CsVoiceTestConfiguration]()
+[New-CsVoiceTestConfiguration](New-CsVoiceTestConfiguration.md)
 
-[Remove-CsVoiceTestConfiguration]()
+[Remove-CsVoiceTestConfiguration](Remove-CsVoiceTestConfiguration.md)
 
-[Set-CsVoiceTestConfiguration]()
+[Set-CsVoiceTestConfiguration](Set-CsVoiceTestConfiguration.md)
 
-[Get-CsVoiceTestConfiguration]()
+[Get-CsVoiceTestConfiguration](Get-CsVoiceTestConfiguration.md)
 
-[Get-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Get-CsVoicePolicy]()
+[Get-CsVoicePolicy](Get-CsVoicePolicy.md)
 
-[Get-CsRoutingConfiguration]()
+[Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)

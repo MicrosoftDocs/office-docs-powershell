@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: New-CsAddressBookNormalizationRule
 schema: 2.0.0
 ---
 
@@ -8,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a new Address Book normalization rule.
-Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization rules are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -25,7 +26,7 @@ New-CsAddressBookNormalizationRule -Name <String> -Parent <String> [-Confirm] [-
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to a standard (E.164) format.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to a standard (E.164) format.
 (Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) The Address Book normalization rules handle these conversions and translations for Address Book servers.
 
 Although Address Book normalization rules are very similar to voice normalization rules, the two are not interchangeable: you cannot add voice normalization rules to an Address Book collection, nor can you add Address Book normalization rules to a dial plan.
@@ -33,9 +34,10 @@ That means that, in some cases, you might need to create identical rules: one fo
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsAddressBookNormalizationRule -Parent "site:Redmond" -Name RedmondFourDigit -Description "Dialing with internal four-digit extension" -Pattern '^(\d{4})$' -Translation '+1425555$1'
 ```
 
 The command shown in Example 1 creates a new Address book normalization rule named RedmondFourDigit; this rule will be included in the normalization rule collection assigned to the Redmond site.
@@ -46,7 +48,6 @@ For example, if the extension 1234 was dialed then this rule would translate the
 Note the single quotes around the Pattern and Translation values.
 Single quotes are required for these values; double quotes (or no quotes) will cause the command to fail.
 
-New-CsAddressBookNormalizationRule -Parent "site:Redmond" -Name RedmondFourDigit -Description "Dialing with internal four-digit extension" -Pattern '^(\d{4})$' -Translation '+1425555$1'
 
 ## PARAMETERS
 
@@ -254,7 +255,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -271,11 +272,8 @@ The New-CsAddressBookNormalizationRule cmdlet creates instances of the Microsoft
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationRule]()
+[Get-CsAddressBookNormalizationRule](Get-CsAddressBookNormalizationRule.md)
 
-[Remove-CsAddressBookNormalizationRule]()
+[Remove-CsAddressBookNormalizationRule](Remove-CsAddressBookNormalizationRule.md)
 
-[Set-CsAddressBookNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/17689540-aaa0-4dd8-82df-8c5d4d6543d5(OCS.16).aspx)
-
+[Set-CsAddressBookNormalizationRule](Set-CsAddressBookNormalizationRule.md)

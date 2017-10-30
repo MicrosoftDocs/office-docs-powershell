@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsTrunkConfiguration
 schema: 2.0.0
 ---
 
@@ -112,10 +113,10 @@ Returns a value of type Microsoft.Rtc.Management.Voice.TrunkConfigurationTestRes
 
 ## RELATED LINKS
 
-[New-CsTrunkConfiguration]()
+[New-CsTrunkConfiguration](New-CsTrunkConfiguration.md)
 
-[Remove-CsTrunkConfiguration]()
+[Remove-CsTrunkConfiguration](Remove-CsTrunkConfiguration.md)
 
-[Set-CsTrunkConfiguration]()
+[Set-CsTrunkConfiguration](Set-CsTrunkConfiguration.md)
 
-[Get-CsTrunkConfiguration]()
+[Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)

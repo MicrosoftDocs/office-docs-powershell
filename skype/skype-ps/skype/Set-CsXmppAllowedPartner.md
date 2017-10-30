@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsXmppAllowedPartner
 schema: 2.0.0
 ---
 
@@ -370,8 +371,8 @@ Instead, the `Set-CsXmppAllowedPartner` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsXmppAllowedPartner]()
+[Get-CsXmppAllowedPartner](Get-CsXmppAllowedPartner.md)
 
-[New-CsXmppAllowedPartner]()
+[New-CsXmppAllowedPartner](New-CsXmppAllowedPartner.md)
 
-[Remove-CsXmppAllowedPartner]()
+[Remove-CsXmppAllowedPartner](Remove-CsXmppAllowedPartner.md)

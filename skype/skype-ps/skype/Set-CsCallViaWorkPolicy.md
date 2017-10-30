@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
 
 # Set-CsCallViaWorkPolicy
 
 ## SYNOPSIS
-Use the Set-CsCallViaWorkPolicy to modify an existing call via work policy that enables and manages the characteristics of outbound calls placed through the Skype for Business client.
+Use the `Set-CsCallViaWorkPolicy` to modify an existing call via work policy that enables and manages the characteristics of outbound calls placed through the Skype for Business client.
 
 ## SYNTAX
 
@@ -27,18 +28,17 @@ Set-CsCallViaWorkPolicy [-AdminCallbackNumber <String>] [-Confirm] [-Enabled <Bo
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsCallViaWorkPolicy -Identity Site:Redmond -Enabled $true -AdminCallbackNumber +14258881234 -UseAdminCallbackNumber $true
 ```
 
 This example enables the existing call via work policy of the Redmond site and enforces the use of the specified callback number.
 
-Set-CsCallViaWorkPolicy -Identity Site:Redmond -Enabled $true -AdminCallbackNumber +14258881234 -UseAdminCallbackNumber $true
 
 ## PARAMETERS
 
@@ -115,11 +115,11 @@ Accept wildcard characters: False
 Specifies the unique identifier assigned to the policy when it was created.
 Call via work policies can be assigned at the global, site, or per-user scope.
 
-Global syntax: -Identity Global
+Global syntax: `-Identity Global`
 
-Site syntax: -Identity Site:Redmond
+Site syntax: `-Identity Site:Redmond`
 
-Per-user syntax: -Identity CallviaWorkStandard
+Per-user syntax: `-Identity CallviaWorkStandard`
 
 ```yaml
 Type: XdsIdentity
@@ -219,13 +219,10 @@ None.
 
 ## RELATED LINKS
 
-[Remove-CsCallViaWorkPolicy]()
+[Remove-CsCallViaWorkPolicy](Remove-CsCallViaWorkPolicy.md)
 
-[New-CsCallViaWorkPolicy]()
+[New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
-[Grant-CsCallViaWorkPolicy]()
+[Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
 
-[Get-CsCallViaWorkPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/72d772fa-6a1e-416a-bd85-c6ba27619092(OCS.16).aspx)
-
+[Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)

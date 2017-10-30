@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsTenantHybridConfiguration
 schema: 2.0.0
 ---
 
@@ -277,4 +278,4 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsTenantHybridConfiguration]()
+[Get-CsTenantHybridConfiguration](Get-CsTenantHybridConfiguration.md)

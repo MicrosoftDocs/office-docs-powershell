@@ -1,23 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsImFilterConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsImFilterConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing instant messaging (IM) filter configuration.
-IM filter settings are used to prevent users from sending instant messages that contain live (clickable) hyperlinks.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing instant messaging (IM) filter configuration.
 IM filter settings are used to prevent users from sending instant messages that contain live (clickable) hyperlinks.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -37,154 +30,52 @@ Set-CsImFilterConfiguration [-Instance <PSObject>] [-Action <UrlFilterAction>] [
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular web site or share.
-Microsoft Lync Server 2010 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
-(In other words, the participants can't simply click on the link and be taken to the site the URI refers to; they must copy and paste the link manually into a browser.)
-
-The Set-CsImFilterConfiguration cmdlet allows you to modify a list of URI prefixes that will be filtered, in addition to enabling and disabling filtering altogether, either globally or within a specific site.
-With this cmdlet you can also update various messages that provide warnings to users.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsImFilterConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsImFilterConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular web site or share.
-Lync Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
+Skype for Business Server can be configured so that hyperlinks with certain prefixes are blocked or are not active.
 (In other words, the participants can't simply click the link and go to the site the URI refers to; they must copy and paste the link manually into a browser.)
 
-The Set-CsImFilterConfiguration cmdlet allows you to modify a list of URI prefixes that will be filtered, in addition to enabling and disabling filtering altogether, either globally or within a specific site.
+The `Set-CsImFilterConfiguration` cmdlet allows you to modify a list of URI prefixes that will be filtered, in addition to enabling and disabling filtering altogether, either globally or within a specific site.
 With this cmdlet you can also update various messages that provide warnings to users.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsImFilterConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsImFilterConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When sending instant messages, users can embed a Uniform Resource Identifier (URI) within the text of that message to refer other participants in the conversation to a particular web site or share.
-Skype for Business Server 2015 can be configured so that hyperlinks with certain prefixes are blocked or are not active.
-(In other words, the participants can't simply click the link and go to the site the URI refers to; they must copy and paste the link manually into a browser.)
-
-The Set-CsImFilterConfiguration cmdlet allows you to modify a list of URI prefixes that will be filtered, in addition to enabling and disabling filtering altogether, either globally or within a specific site.
-With this cmdlet you can also update various messages that provide warnings to users.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsImFilterConfiguration -Identity site:Redmond -Enabled $False
 ```
 
 The command shown in this example disables URI filtering for the IM filter configuration with the Identity site:Redmond.
-To carry out this task, the Enabled parameter is specified in the call to the Set-CsImFilterConfiguration cmdlet with a value of $False.
+To carry out this task, the Enabled parameter is specified in the call to the `Set-CsImFilterConfiguration` cmdlet with a value of $False.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in this example disables URI filtering for the IM filter configuration with the Identity site:Redmond.
-To carry out this task, the Enabled parameter is specified in the call to the Set-CsImFilterConfiguration cmdlet with a value of $False.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Enabled $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in this example disables URI filtering for the IM filter configuration with the Identity site:Redmond.
-To carry out this task, the Enabled parameter is specified in the call to the Set-CsImFilterConfiguration cmdlet with a value of $False.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Enabled $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 $x = Get-CsImFilterConfiguration -Identity site:Redmond
+
 $x.Prefixes.Add("urn:")
+
 Set-CsImFilterConfiguration -Instance $x
-```
-
-The preceding set of commands adds a new URI prefix (urn:) to the list of prefixes prohibited by the IM filter configuration for site:Redmond.
-To add the new prefix, the Get-CsImFilterConfiguration cmdlet is used to retrieve the configuration for site:Redmond; the returned object representing that configuration is stored in a variable named $x.
-After the settings have been retrieved, the Add() method is called in line 2 to add urn: to the set of prefixes stored in the Prefixes property.
-This changes the value of the object reference $x.
-To change the actual configuration itself, line 3 calls the Set-CsImFilterConfiguration cmdlet, passing $x as the sole parameter value.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 2 adds a new URI prefix (urn:) to the list of prefixes prohibited by the IM filter configuration for site:Redmond.
-To add the new prefix, the Get-CsImFilterConfiguration cmdlet is used to retrieve the configuration for site:Redmond; the returned object representing that configuration is stored in a variable named $x.
+To add the new prefix, the `Get-CsImFilterConfiguration` cmdlet is used to retrieve the configuration for site:Redmond; the returned object representing that configuration is stored in a variable named $x.
 After the settings have been retrieved, the Add() method is called in line 2 to add urn: to the set of prefixes stored in the Prefixes property.
 This changes the value of the object reference $x.
-To change the actual configuration itself, line 3 calls the Set-CsImFilterConfiguration cmdlet, passing $x as the sole parameter value.
+To change the actual configuration itself, line 3 calls the `Set-CsImFilterConfiguration` cmdlet, passing $x as the sole parameter value.
 
-$x = Get-CsImFilterConfiguration -Identity site:Redmond
 
-$x.Prefixes.Add("urn:")
-
-Set-CsImFilterConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 adds a new URI prefix (urn:) to the list of prefixes prohibited by the IM filter configuration for site:Redmond.
-To add the new prefix, the Get-CsImFilterConfiguration cmdlet is used to retrieve the configuration for site:Redmond; the returned object representing that configuration is stored in a variable named $x.
-After the settings have been retrieved, the Add() method is called in line 2 to add urn: to the set of prefixes stored in the Prefixes property.
-This changes the value of the object reference $x.
-To change the actual configuration itself, line 3 calls the Set-CsImFilterConfiguration cmdlet, passing $x as the sole parameter value.
-
-$x = Get-CsImFilterConfiguration -Identity site:Redmond
-
-$x.Prefixes.Add("urn:")
-
-Set-CsImFilterConfiguration -Instance $x
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{add="urn:"}
 ```
 
 Example 3 performs the exact same action as Example 2, but it does it in one line.
-In this command the Prefixes parameter of the Set-CsImFilterConfiguration cmdlet is used to add urn: to the list of prefixes.
+In this command the Prefixes parameter of the `Set-CsImFilterConfiguration` cmdlet is used to add urn: to the list of prefixes.
 The add list modifier is used to add this value to the Prefixes list.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 3 performs the exact same action as Example 2, but it does it in one line.
-In this command the Prefixes parameter of the Set-CsImFilterConfiguration cmdlet is used to add urn: to the list of prefixes.
-The add list modifier is used to add this value to the Prefixes list.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{add="urn:"}
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 performs the exact same action as Example 2, but it does it in one line.
-In this command the Prefixes parameter of the Set-CsImFilterConfiguration cmdlet is used to add urn: to the list of prefixes.
-The add list modifier is used to add this value to the Prefixes list.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{add="urn:"}
-
-### -------------------------- Example 4 -------------------------- (Lync Server 2010)
+### -------------------------- Example 4 --------------------------
 ```
 Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{remove="urn:"}
 ```
@@ -192,25 +83,6 @@ Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{remove="urn:"}
 In this example the prefix urn: is removed from the list of prefixes blocked by the IM filter configuration for site:Redmond.
 This example is identical to Example 3 except that rather than calling the add list modifier to add a prefix to the list, the remove modifier is called to remove a prefix.
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In this example the prefix urn: is removed from the list of prefixes blocked by the IM filter configuration for site:Redmond.
-This example is identical to Example 3 except that rather than calling the add list modifier to add a prefix to the list, the remove modifier is called to remove a prefix.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{remove="urn:"}
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In this example the prefix urn: is removed from the list of prefixes blocked by the IM filter configuration for site:Redmond.
-This example is identical to Example 3 except that rather than calling the add list modifier to add a prefix to the list, the remove modifier is called to remove a prefix.
-
-Set-CsImFilterConfiguration -Identity site:Redmond -Prefixes @{remove="urn:"}
 
 ## PARAMETERS
 
@@ -233,7 +105,7 @@ Accept wildcard characters: False
 
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-This cmdlet accepts an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration, which can be retrieved by calling the Get-CsImFilterConfiguration cmdlet.
+This cmdlet accepts an object of type Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration, which can be retrieved by calling the `Get-CsImFilterConfiguration` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -249,49 +121,16 @@ Accept wildcard characters: False
 ```
 
 ### -Action
-**Below Content Applies To:** Lync Server 2010
-
 The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
 
 Allow - Hyperlinks are prefixed with an underscore so that the links are no longer active.
 In addition, if a message is specified in the AllowMessage property a notification message will be inserted at the beginning of each instant message containing hyperlinks.
 
-Block - Delivery of messages containing active hyperlinks are blocked and Lync Server 2010 sends an error message to the sender.
+Block - Delivery of messages containing active hyperlinks are blocked and Skype for Business Server sends an error message to the sender.
 
 Warn - Messages containing active hyperlinks are delivered to the receiving participants, along with a warning message that is inserted at the beginning of those messages.
 The warning message can be specified using the WarnMessage property.
 If Warn is specified and no WarnMessage is entered, IM filtering is disabled, although the settings for the BlockFileExtension property will still be honored.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
-
-Allow - Hyperlinks are prefixed with an underscore so that the links are no longer active.
-In addition, if a message is specified in the AllowMessage property a notification message will be inserted at the beginning of each instant message containing hyperlinks.
-
-Block - Delivery of messages containing active hyperlinks are blocked and Lync Server sends an error message to the sender.
-
-Warn - Messages containing active hyperlinks are delivered to the receiving participants, along with a warning message that is inserted at the beginning of those messages.
-The warning message can be specified using the WarnMessage property.
-If Warn is specified and no WarnMessage is entered, IM filtering is disabled, although the settings for the BlockFileExtension property will still be honored.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The value of this parameter determines the action that will be taken when a hyperlink is included in an instant message:
-
-Allow - Hyperlinks are prefixed with an underscore so that the links are no longer active.
-In addition, if a message is specified in the AllowMessage property a notification message will be inserted at the beginning of each instant message containing hyperlinks.
-
-Block - Delivery of messages containing active hyperlinks are blocked and Skype for Business Server 2015 sends an error message to the sender.
-
-Warn - Messages containing active hyperlinks are delivered to the receiving participants, along with a warning message that is inserted at the beginning of those messages.
-The warning message can be specified using the WarnMessage property.
-If Warn is specified and no WarnMessage is entered, IM filtering is disabled, although the settings for the BlockFileExtension property will still be honored.
-
 
 
 ```yaml
@@ -325,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlockFileExtension
-If this parameter is set to True, a hyperlink that contains a file path with an extension specified by the Extensions property defined in the Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.FileTransferFilterConfiguration class (retrieved by calling the Get-CsFileTransferFilterConfiguration cmdlet) is blocked and an error message is returned to the sender.
+If this parameter is set to True, a hyperlink that contains a file path with an extension specified by the Extensions property defined in the Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.FileTransferFilterConfiguration class (retrieved by calling the `Get-CsFileTransferFilterConfiguration` cmdlet) is blocked and an error message is returned to the sender.
 If this parameter is set to False, no special check is made for file paths and extensions.
 
 Default: True
@@ -478,26 +317,15 @@ Accepts pipelined input of IM filter configuration objects.
 ## OUTPUTS
 
 ###  
-Set-CsImFilterConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration object.
-
-###  
-The Set-CsImFilterConfiguration cmdlet does not return a value or object.
+The `Set-CsImFilterConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.ImFilter.ImFilterConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/c2b08cc0-8261-4b8b-b2e9-5efa902ceb40(OCS.14).aspx)
+[New-CsImFilterConfiguration](New-CsImFilterConfiguration.md)
 
-[New-CsImFilterConfiguration]()
+[Remove-CsImFilterConfiguration](Remove-CsImFilterConfiguration.md)
 
-[Remove-CsImFilterConfiguration]()
-
-[Get-CsImFilterConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c2b08cc0-8261-4b8b-b2e9-5efa902ceb40(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c2b08cc0-8261-4b8b-b2e9-5efa902ceb40(OCS.16).aspx)
-
+[Get-CsImFilterConfiguration](Get-CsImFilterConfiguration.md)

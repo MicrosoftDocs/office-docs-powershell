@@ -1,18 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsNetworkRegion
 schema: 2.0.0
 ---
 
 # New-CsNetworkRegion
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new network region.
-Network regions represent network hubs or backbones in an enterprise network.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network region.
 Network regions represent network hubs or backbones in an enterprise network.
@@ -38,33 +33,6 @@ New-CsNetworkRegion -CentralSite <String> -NetworkRegionID <String> [-AudioAlter
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-A network region interconnects various parts of a network across multiple geographic areas.
-Every network region must be associated with a central site.
-The central site is the data center site on which the call admission control (CAC) bandwidth policy service is running.
-Use this cmdlet to create a new network region.
-The parameters of this cmdlet allow you to provide settings that determine whether alternate paths through the Internet are allowed for audio and video connections, and can automatically generate the bypass ID.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkRegion cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsNetworkRegion"}
-
-**Below Content Applies To:** Lync Server 2013
-
-A network region interconnects various parts of a network across multiple geographic areas.
-Every network region must be associated with a central site.
-The central site is the data center site on which the call admission control (CAC) bandwidth policy service is running.
-Use this cmdlet to create a new network region.
-The parameters of this cmdlet allow you to provide settings that determine whether alternate paths through the Internet are allowed for audio and video connections, and can automatically generate the bypass ID.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkRegion cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkRegion"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 A network region interconnects various parts of a network across multiple geographic areas.
 Every network region must be associated with a central site.
@@ -76,62 +44,21 @@ The parameters of this cmdlet allow you to provide settings that determine wheth
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsNetworkRegion -Identity NorthAmerica -Description "All North American Locations" -CentralSite Redmond-NA-MLS
-```
-
-In this example a new network region named NorthAmerica is created.
-The region name is specified as the value for the Identity parameter.
-A value is also specified for the optional Description parameter, describing this region as being comprised of "All North American Locations." Finally, the CentralSite parameter receives a value of the name of the central site for this region, Redmond-NA-MLS.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 In this example a new network region named NorthAmerica is created.
 The region name is specified as the value for the Identity parameter.
 A value is also specified for the optional Description parameter, describing this region as being composed of "All North American Locations." Finally, the CentralSite parameter receives a value of the name of the central site for this region, Redmond-NA-MLS.
 
-New-CsNetworkRegion -Identity NorthAmerica -Description "All North American Locations" -CentralSite Redmond-NA-MLS
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-In this example a new network region named NorthAmerica is created.
-The region name is specified as the value for the Identity parameter.
-A value is also specified for the optional Description parameter, describing this region as being composed of "All North American Locations." Finally, the CentralSite parameter receives a value of the name of the central site for this region, Redmond-NA-MLS.
-
-New-CsNetworkRegion -Identity NorthAmerica -Description "All North American Locations" -CentralSite Redmond-NA-MLS
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -AudioAlternatePath $False
-```
-
-This example creates a new network region named EMEA that includes settings for an audio alternate path.
-To do this we call New-CsNetworkRegion, passing an Identity of EMEA.
-We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the AudioAlternatePath parameter, passing it the value $False.
-Setting AudioAlternatePath to False indicates that if adequate bandwidth is not available, the audio calls will not be routed to an alternate path; instead, they will simply not be completed.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example creates a new network region named EMEA that includes settings for an audio alternate path.
-To do this we call New-CsNetworkRegion, passing an Identity of EMEA.
-We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the AudioAlternatePath parameter, passing it the value $False.
-Setting AudioAlternatePath to False indicates that if adequate bandwidth is not available, the audio calls will not be routed to an alternate path; instead, they will simply not be completed.
 
 New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -AudioAlternatePath $False
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This example creates a new network region named EMEA that includes settings for an audio alternate path.
@@ -139,46 +66,12 @@ To do this we call the New-CsNetworkRegion cmdlet, passing an Identity of EMEA.
 We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the AudioAlternatePath parameter, passing it the value $False.
 Setting AudioAlternatePath to False indicates that if adequate bandwidth is not available, the audio calls will not be routed to an alternate path; instead, they will simply not be completed.
 
-New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -AudioAlternatePath $False
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-$a = New-CsNetworkBWAlternatePath -BWPolicyModality "audio" -AlternatePath $False
-New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -BWAlternatePaths $a
-```
-
-This example creates the same network region that was created in Example 2.
-However, in this case we use the BWAlternatePaths parameter to define alternate path settings rather than the AudioAlternatePath parameter.
-The first line in the example calls the New-CsNetworkBWAlternatePath cmdlet to create a new alternate path.
-An alternate path has only two properties: BWPolicyModality, which must be set to either audio or video (audio in this example); and AlternatePath, which must be either True or False (False in this example).
-We assign the output from this cmdlet, a reference to the alternate path object just created, to the variable $a.
-
-In line 2 of this example we use this newly created alternate path when we create a new network region.
-To do this we call New-CsNetworkRegion, passing an Identity of EMEA.
-We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the BWAlternatePaths parameter, passing it the variable ($a) containing the alternate path object we just created.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example creates the same network region that was created in Example 2.
-However, in this case we use the BWAlternatePaths parameter to define alternate path settings rather than the AudioAlternatePath parameter.
-The first line in the example calls the New-CsNetworkBWAlternatePath cmdlet to create a new alternate path.
-An alternate path has only two properties: BWPolicyModality, which must be set to either audio or video (audio in this example); and AlternatePath, which must be either True or False (False in this example).
-We assign the output from this cmdlet, a reference to the alternate path object just created, to the variable $a.
-
-In line 2 of this example we use this newly created alternate path when we create a new network region.
-To do this we call New-CsNetworkRegion, passing an Identity of EMEA.
-We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the BWAlternatePaths parameter, passing it the variable ($a) containing the alternate path object we just created.
 
 $a = New-CsNetworkBWAlternatePath -BWPolicyModality "audio" -AlternatePath $False
 
 New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -BWAlternatePaths $a
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 This example creates the same network region that was created in Example 2.
@@ -191,9 +84,6 @@ In line 2 of this example we use this newly created alternate path when we creat
 To do this we call the New-CsNetworkRegion cmdlet, passing an Identity of EMEA.
 We assign a value for the required parameter CentralSite (in this example the name of the central site for this region is Dublin-EU-Site), and then we specify the BWAlternatePaths parameter, passing it the variable ($a) containing the alternate path object we just created.
 
-$a = New-CsNetworkBWAlternatePath -BWPolicyModality "audio" -AlternatePath $False
-
-New-CsNetworkRegion -Identity EMEA -CentralSite Dublin-EU-Site -BWAlternatePaths $a
 
 ## PARAMETERS
 
@@ -251,21 +141,6 @@ Accept wildcard characters: False
 ```
 
 ### -AudioAlternatePath
-**Below Content Applies To:** Lync Server 2010
-
-This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
-
-This parameter populates the BWAlternatePaths property.
-The value supplied to this parameter is stored in the AlternatePath property for the alternate path element with a BWPolicyModality value of Audio.
-
-If you supply a value for this parameter, you cannot specify a value for the BWAlternatePaths parameter.
-
-Default: True.
-Set this parameter to False only if you need to turn off the offload to the Internet.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether audio calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -315,20 +190,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-A globally unique identifier (GUID).
-This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
-(Use this BypassID value in the call to New-CsNetworkMediaBypassConfiguration.)
-
-If you do not specify a value for this parameter, a value will be automatically generated.
-If you do specify a value, it must be in the format of a GUID (for example, 3b24a047-dce6-48b2-9f20-9fbff17ed62a).
-Auto-generation is recommended.
-If you supply a value for this parameter, you'll receive a confirmation prompt asking if you really want to supply this value rather than allow it to be auto-generated.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network regions to media bypass settings within a CAC or Enhanced 9-1-1 (E9-1-1) network configuration.
@@ -372,21 +233,6 @@ Accept wildcard characters: False
 ```
 
 ### -VideoAlternatePath
-**Below Content Applies To:** Lync Server 2010
-
-This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
-
-This parameter populates the BWAlternatePaths property.
-The value supplied to this parameter is stored in the AlternatePath property for the alternate path element with a BWPolicyModality value of Video.
-
-If you supply a value for this parameter you cannot specify a value for the BWAlternatePaths parameter.
-
-Default: True.
-Set this parameter to False only if you need to turn off the offload to the Internet.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This parameter determines whether video calls will be routed through an alternate path if adequate bandwidth does not exist in the primary path.
 
@@ -432,14 +278,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -492,7 +330,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -508,17 +346,11 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/33a8efed-23d3-4a03-bede-80f649eaa7b9(OCS.14).aspx)
+[Remove-CsNetworkRegion](Remove-CsNetworkRegion.md)
 
-[Remove-CsNetworkRegion]()
+[Set-CsNetworkRegion](Set-CsNetworkRegion.md)
 
-[Set-CsNetworkRegion]()
+[Get-CsNetworkRegion](Get-CsNetworkRegion.md)
 
-[Get-CsNetworkRegion]()
-
-[New-CsNetworkBWAlternatePath]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/33a8efed-23d3-4a03-bede-80f649eaa7b9(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/33a8efed-23d3-4a03-bede-80f649eaa7b9(OCS.16).aspx)
+[New-CsNetworkBWAlternatePath](New-CsNetworkBWAlternatePath.md)
 

@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineLisLocation
 schema: 2.0.0
 ---
 
 # Set-CsOnlineLisLocation
 
 ## SYNOPSIS
-Use the Set-CsOnlineLisLocation cmdlet to modify an existing emergency dispatch location.
+Use the `Set-CsOnlineLisLocation` cmdlet to modify an existing emergency dispatch location.
 There can be multiple locations in a civic address.
 Typically the civic address designates the building, and locations are specific parts of that building such as a floor, office, or wing.
 
@@ -23,23 +24,24 @@ Set-CsOnlineLisLocation [-CivicAddressId <Object>] [-LocationId <Object>] [-Bypa
 ```
 
 ## DESCRIPTION
+{{Fill in the Description}}
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Location "B5 2nd Floor"
 ```
 
 This example changes the location description of the location specified by its location identity.
 
-Set-CsOnlineLisLocation -LocationId 5aa884e8-d548-4b8e-a289-52bfd5265a6e -Location "B5 2nd Floor"
 
 ## PARAMETERS
 
 ### -CivicAddressId
 Specifies the unique identifier of the civic address that contains the location to be modified.
-Civic address identities can be discovered by using the Get-CsOnlineLisCivicAddress cmdlet.
+Civic address identities can be discovered by using the `Get-CsOnlineLisCivicAddress` cmdlet.
 
 ```yaml
 Type: Object
@@ -57,7 +59,7 @@ Accept wildcard characters: False
 ### -LocationId
 Specifies the unique identifier of the location to be modified.
 If specified, no other address parameters are allowed.
-Location identities can be discovered by using the Get-CsOnlineLisLocation cmdlet.
+Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
 
 ```yaml
 Type: Object
@@ -153,7 +155,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -442,6 +444,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/326b4379-3f6c-4393-b7e4-007e999812b3(OCS.15).aspx)
-

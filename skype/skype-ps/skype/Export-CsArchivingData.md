@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Export-CsArchivingData
 schema: 2.0.0
 ---
 
@@ -330,4 +331,4 @@ The Export-CsArchivingData cmdlet returns Archiving database records in EML form
 
 ## RELATED LINKS
 
-[Get-CsArchivingConfiguration]()
+[Get-CsArchivingConfiguration](Get-CsArchivingConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Set-CsUser
 schema: 2.0.0
 ---
 
@@ -441,12 +442,12 @@ The `Set-CsUser` cmdlet does not return any objects.
 
 ## RELATED LINKS
 
-[Disable-CsUser]()
+[Disable-CsUser](Disable-CsUser.md)
 
-[Enable-CsUser]()
+[Enable-CsUser](Enable-CsUser.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)
 
-[Move-CsUser]()
+[Move-CsUser](Move-CsUser.md)
 
-[Get-CsOnlineUser]()
+[Get-CsOnlineUser](Get-CsOnlineUser.md)

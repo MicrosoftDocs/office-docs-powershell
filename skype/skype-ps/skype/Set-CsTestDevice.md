@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTestDevice
 schema: 2.0.0
 ---
 
@@ -213,8 +214,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsTestDevice]()
+[Get-CsTestDevice](Get-CsTestDevice.md)
 
-[New-CsTestDevice]()
+[New-CsTestDevice](New-CsTestDevice.md)
 
-[Remove-CsTestDevice]()
+[Remove-CsTestDevice](Remove-CsTestDevice.md)

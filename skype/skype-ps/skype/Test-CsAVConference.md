@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsAVConference
 schema: 2.0.0
 ---
 
@@ -388,6 +389,6 @@ The `Test-CsAVConference` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Get-CsAVEdgeConfiguration]()
+[Get-CsAVEdgeConfiguration](Get-CsAVEdgeConfiguration.md)
 
-[Test-CsDialInConferencing]()
+[Test-CsDialInConferencing](Test-CsDialInConferencing.md)

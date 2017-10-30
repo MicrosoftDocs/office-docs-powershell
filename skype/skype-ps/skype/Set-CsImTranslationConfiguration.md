@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsImTranslationConfiguration
 schema: 2.0.0
 ---
 
@@ -30,14 +31,13 @@ This cmdlet is reserved for internal Microsoft use.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+This cmdlet is reserved for internal Microsoft use.
 ```
 
 This cmdlet is reserved for internal Microsoft use.
 
-This cmdlet is reserved for internal Microsoft use.
 
 ## PARAMETERS
 
@@ -227,6 +227,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f97084ac-6835-4d98-bb81-341980ec7cec(OCS.16).aspx)
-

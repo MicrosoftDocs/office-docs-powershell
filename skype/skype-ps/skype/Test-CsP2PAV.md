@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsP2PAV
 schema: 2.0.0
 ---
 
@@ -381,4 +382,4 @@ The `Test-CsP2PAV` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTran
 
 ## RELATED LINKS
 
-[Test-CsAVConference]()
+[Test-CsAVConference](Test-CsAVConference.md)

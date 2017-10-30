@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineLisCivicAddress
 schema: 2.0.0
 ---
 
 # Set-CsOnlineLisCivicAddress
 
 ## SYNOPSIS
-Use the Set-CsOnlineLisCivicAddress cmdlet to modify an existing civic address which has not been validated.
+Use the `Set-CsOnlineLisCivicAddress` cmdlet to modify an existing civic address which has not been validated.
 Validated civic addresses cannot be modified.
 
 ## SYNTAX
@@ -22,17 +23,18 @@ Set-CsOnlineLisCivicAddress [-CivicAddressId <Object>] [-BypassDualWrite <Object
 ```
 
 ## DESCRIPTION
+{{Fill in the Description}}
+
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
 ```
 
 This example modifies the description and company name of the civic address with the identity a363a9b8-1acd-41de-916a-296c7998a024.
 
-Set-CsOnlineLisCivicAddress -CivicAddressid a363a9b8-1acd-41de-916a-296c7998a024 -Description "City Center" -CompanyName Contoso
 
 ## PARAMETERS
 
@@ -133,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -427,6 +429,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/589d0ca6-606c-464e-9b38-41e4a4af1ddc(OCS.15).aspx)
-

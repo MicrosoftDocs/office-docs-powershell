@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Debug-CsUnifiedContactStore
 schema: 2.0.0
 ---
 
@@ -152,4 +153,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Test-CsUnifiedContactStore]()
+[Test-CsUnifiedContactStore](Test-CsUnifiedContactStore.md)

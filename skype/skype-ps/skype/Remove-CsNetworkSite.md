@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsNetworkSite
 schema: 2.0.0
 ---
 
 # Remove-CsNetworkSite
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes a network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes a network site that has been defined for call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -25,83 +19,30 @@ Remove-CsNetworkSite [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-WhatIf] 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet removes a site from the CAC or E9-1-1 configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsNetworkSite cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkSite"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
-This cmdlet removes a site from the CAC or E9-1-1 configuration.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsNetworkSite -Identity Vancouver
 ```
 
 This example removes the site with the Identity Vancouver from the CAC or E9-1-1 configuration.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example removes the site with the Identity Vancouver from the CAC or E9-1-1 configuration.
-
-Remove-CsNetworkSite -Identity Vancouver
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example removes the site with the Identity Vancouver from the CAC or E9-1-1 configuration.
-
-Remove-CsNetworkSite -Identity Vancouver
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsNetworkSite | Where-Object {$_.BWPolicyProfileID -eq "LowBWProfile"} | Remove-CsNetworkSite
 ```
 
 Example 2 removes all sites that are using the bandwidth policy profile named LowBWProfile from the CAC or E9-1-1 configuration.
-The example first calls Get-CsNetworkSite to retrieve all network sites.
-This collection of sites is piped to the Where-Object cmdlet, which narrows the collection to only those sites that have a BWPolicyProfileID equal to (-eq) LowBWProfile.
-This new collection is then piped to Remove-CsNetworkSite to remove those sites.
+The example first calls the `Get-CsNetworkSite` cmdlet to retrieve all network sites.
+This collection of sites is piped to the `Where-Object` cmdlet, which narrows the collection to only those sites that have a BWPolicyProfileID equal to (-eq) LowBWProfile.
+This new collection is then piped to the `Remove-CsNetworkSite` cmdlet to remove those sites.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 removes all sites that are using the bandwidth policy profile named LowBWProfile from the CAC or E9-1-1 configuration.
-The example first calls Get-CsNetworkSite to retrieve all network sites.
-This collection of sites is piped to the Where-Object cmdlet, which narrows the collection to only those sites that have a BWPolicyProfileID equal to (-eq) LowBWProfile.
-This new collection is then piped to Remove-CsNetworkSite to remove those sites.
-
-Get-CsNetworkSite | Where-Object {$_.BWPolicyProfileID -eq "LowBWProfile"} | Remove-CsNetworkSite
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 removes all sites that are using the bandwidth policy profile named LowBWProfile from the CAC or E9-1-1 configuration.
-The example first calls the Get-CsNetworkSite cmdlet to retrieve all network sites.
-This collection of sites is piped to the Where-Object cmdlet, which narrows the collection to only those sites that have a BWPolicyProfileID equal to (-eq) LowBWProfile.
-This new collection is then piped to the Remove-CsNetworkSite cmdlet to remove those sites.
-
-Get-CsNetworkSite | Where-Object {$_.BWPolicyProfileID -eq "LowBWProfile"} | Remove-CsNetworkSite
 
 ## PARAMETERS
 
@@ -190,15 +131,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/07b543a6-3aa0-4fce-85f9-9ddc75d7b14f(OCS.14).aspx)
+[New-CsNetworkSite](New-CsNetworkSite.md)
 
-[New-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)
 
-[Set-CsNetworkSite]()
-
-[Get-CsNetworkSite]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/07b543a6-3aa0-4fce-85f9-9ddc75d7b14f(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/07b543a6-3aa0-4fce-85f9-9ddc75d7b14f(OCS.16).aspx)
-
+[Get-CsNetworkSite](Get-CsNetworkSite.md)

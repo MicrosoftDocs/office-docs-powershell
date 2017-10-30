@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPersistentChatEndpoint
 schema: 2.0.0
 ---
 
@@ -239,6 +240,6 @@ String value representing the Identity or the SIP address of a Persistent Chat e
 
 ## RELATED LINKS
 
-[New-CsPersistentChatEndpoint]()
+[New-CsPersistentChatEndpoint](New-CsPersistentChatEndpoint.md)
 
-[Remove-CsPersistentChatEndpoint]()
+[Remove-CsPersistentChatEndpoint](Remove-CsPersistentChatEndpoint.md)

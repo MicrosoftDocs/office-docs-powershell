@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsDatabase
 schema: 2.0.0
 ---
 
@@ -298,8 +299,8 @@ The `Test-CsDatabase` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Get-CsDatabaseMirrorState]()
+[Get-CsDatabaseMirrorState](Get-CsDatabaseMirrorState.md)
 
-[Get-CsService]()
+[Get-CsService](Get-CsService.md)
 
-[Get-CsUserDatabaseState]()
+[Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)

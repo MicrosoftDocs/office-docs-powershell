@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsComputer
 schema: 2.0.0
 ---
 
@@ -153,8 +154,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsComputer]()
+[Disable-CsComputer](Disable-CsComputer.md)
 
-[Enable-CsComputer]()
+[Enable-CsComputer](Enable-CsComputer.md)
 
-[Test-CsComputer]()
+[Test-CsComputer](Test-CsComputer.md)

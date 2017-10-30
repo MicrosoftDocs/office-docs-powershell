@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsFIPSConfiguration
 schema: 2.0.0
 ---
 
@@ -152,8 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsFIPSConfiguration]()
+[New-CsFIPSConfiguration](New-CsFIPSConfiguration.md)
 
-[Remove-CsFIPSConfiguration]()
+[Remove-CsFIPSConfiguration](Remove-CsFIPSConfiguration.md)
 
-[Set-CsFIPSConfiguration]()
+[Set-CsFIPSConfiguration](Set-CsFIPSConfiguration.md)

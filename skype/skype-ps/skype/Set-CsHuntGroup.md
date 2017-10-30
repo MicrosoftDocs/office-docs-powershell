@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsHuntGroup
 schema: 2.0.0
 ---
 
@@ -26,14 +27,13 @@ Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-Insert example commands for example 1.
 
 ## PARAMETERS
 
@@ -447,6 +447,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ff59e690-3066-4541-8e21-8f7d119ac061(OCS.15).aspx)
-

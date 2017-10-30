@@ -1,23 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsPstnGateway
 schema: 2.0.0
 ---
 
 # Set-CsPstnGateway
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the properties of a public switched telephone network (PSTN) gateway.
-PSTN gateways help route calls between devices on the external PSTN network and devices on your internal Enterprise Voice network.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies the properties of a public switched telephone network (PSTN) gateway.
 PSTN gateways help route calls between devices on the external PSTN network and devices on your internal Enterprise Voice network.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -30,36 +23,18 @@ Set-CsPstnGateway [[-Identity] <XdsGlobalRelativeIdentity>] [-Default <Boolean>]
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-PSTN gateways enable your Enterprise Voice users to make phone calls to, and receive phone calls from, people on the PSTN network.
+PSTN gateways enable your Enterprise Voice users to make phone calls to and receive phone calls from, people on the PSTN network.
 These gateways act as a bridge between the Mediation Server and the PSTN network.
 
 PSTN gateways are typically required when you are using a Time Division Multiplex Public Branch Exchange (PBX) phone system; in that case, you will typically need to employ both a PSTN gateway and a Mediation Server in order to route Enterprise Voice calls to the PSTN network.
 By contrast, if you are using an IP-PBX system you can create a direct SIP connection between the PBX and the Mediation Server, eliminating the need for a PSTN gateway.
 
-After your PSTN gateways have been installed and configured, they can be managed by using the Set-CsPstnGateway cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsPstnGateway cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPstnGateway"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-PSTN gateways enable your Enterprise Voice users to make phone calls to, and receive phone calls from, people on the PSTN network.
-These gateways act as a bridge between the Mediation Server and the PSTN network.
-
-PSTN gateways are typically required when you are using a Time Division Multiplex Public Branch Exchange (PBX) phone system; in that case, you will typically need to employ both a PSTN gateway and a Mediation Server in order to route Enterprise Voice calls to the PSTN network.
-By contrast, if you are using an IP-PBX system you can create a direct SIP connection between the PBX and the Mediation Server, eliminating the need for a PSTN gateway.
-
-After your PSTN gateways have been installed and configured, they can be managed by using the Set-CsPstnGateway cmdlet.
-
+After your PSTN gateways have been installed and configured, they can be managed by using the `Set-CsPstnGateway` cmdlet.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsPstnGateway -Identity "PstnGateway:192.168.0.240" -Default $True
 ```
@@ -67,85 +42,30 @@ Set-CsPstnGateway -Identity "PstnGateway:192.168.0.240" -Default $True
 The command shown in Example 1 configures the gateway PstnGateway:192.168.0.240 to be the default gateway.
 That means that PstnGateway:192.168.0.240 can be used to handle calls originating from Office Communications Server 2007 R2.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 configures the gateway PstnGateway:192.168.0.240 to be the default gateway.
-That means that PstnGateway:192.168.0.240 can be used to handle calls originating from Office Communications Server 2007 R2.
-
-Set-CsPstnGateway -Identity "PstnGateway:192.168.0.240" -Default $True
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 configures the gateway PstnGateway:192.168.0.240 to be the default gateway.
-That means that PstnGateway:192.168.0.240 can be used to handle calls originating from Office Communications Server 2007 R2.
-
-Set-CsPstnGateway -Identity "PstnGateway:192.168.0.240" -Default $True
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsService -PstnGateway | ForEach-Object {Set-CsPstnGateway -Identity $_.Identity -Routable $True}
-```
-
-The preceding command configures all the PSTN gateways in the organization, ensuring that each of these gateways can be used in outbound routing.
-To do this, the command first uses the Get-CsService cmdlet and the PstnGateway parameter to return a collection of all the PSTN gateways currently in use.
-This collection is then piped to the ForEach-Object cmdlet.
-ForEach-Object runs the Set-CsPstnGateway cmdlet against each gateway in the collection, setting the Routable property of each one to True.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 2 configures all the PSTN gateways in the organization, ensuring that each of these gateways can be used in outbound routing.
-To do this, the command first uses the Get-CsService cmdlet and the PstnGateway parameter to return a collection of all the PSTN gateways currently in use.
-This collection is then piped to the ForEach-Object cmdlet.
-ForEach-Object runs the Set-CsPstnGateway cmdlet against each gateway in the collection, setting the Routable property of each one to True.
+To do this, the command first uses the `Get-CsService` cmdlet and the PstnGateway parameter to return a collection of all the PSTN gateways currently in use.
+This collection is then piped to the `ForEach-Object` cmdlet.
+The `ForEach-Object` cmdlet runs the `Set-CsPstnGateway` cmdlet against each gateway in the collection, setting the Routable property of each one to True.
 
-Get-CsService -PstnGateway | ForEach-Object {Set-CsPstnGateway -Identity $_.Identity -Routable $True}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 configures all the PSTN gateways in the organization, ensuring that each of these gateways can be used in outbound routing.
-To do this, the command first uses the Get-CsService cmdlet and the PstnGateway parameter to return a collection of all the PSTN gateways currently in use.
-This collection is then piped to the ForEach-Object cmdlet.
-The ForEach-Object cmdlet runs the Set-CsPstnGateway cmdlet against each gateway in the collection, setting the Routable property of each one to True.
-
-Get-CsService -PstnGateway | ForEach-Object {Set-CsPstnGateway -Identity $_.Identity -Routable $True}
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Service identity of the PSTN gateway to be modified.
-For example: -Identity "PstnGateway:192.168.0.240".
-
-Note that you can leave off the prefix "PstnGatewayServer:" when specifying a PSTN gateway.
-For example: -Identity "atl-cs-001.litwareinc.com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Service identity of the PSTN gateway to be modified.
 For example:
 
--Identity "PstnGateway:192.168.0.240"
+`-Identity "PstnGateway:192.168.0.240"`
 
 Note that you can leave off the prefix "PstnGatewayServer:" when specifying a PSTN gateway.
 For example:
 
--Identity "atl-cs-001.litwareinc.com"
-
+`-Identity "atl-cs-001.litwareinc.com"`
 
 
 ```yaml
@@ -213,20 +133,10 @@ Accept wildcard characters: False
 ```
 
 ### -MediationServer
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Service identity of the Mediation Server to be associated with the PSTN gateway.
-For example: -MediationServer "MediationServer:atl-cs-001.litwareinc.com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Service identity of the Mediation Server to be associated with the PSTN gateway.
 For example:
 
--MediationServer "MediationServer:atl-cs-001.litwareinc.com"
-
+`-MediationServer "MediationServer:atl-cs-001.litwareinc.com"`
 
 
 ```yaml
@@ -311,40 +221,13 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateByPassId
-**Below Content Applies To:** Lync Server 2010
-
-Globally unique identifier (GUID) representing the alternate bypass ID. 
-This ID is automatically generated by Lync Server 2010 and is used to help eliminate hairpin calls.
-Depending on the way you have configured your system, this allows hairpin calls to automatically bypass the Mediation Server without you having to define and associate individual subnets with all your sites and regions.
-
-To do this, you typically need to globally enable bypass to use network configuration sites and regions, then enable bypass on the trunk configuration for your PSTN gateway.
-
-A hairpin call occurs when an inbound call from the PSTN network is routed back to that network through call forwarding or simultaneous ringing.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
 Globally unique identifier (GUID) representing the alternate bypass ID.
-This ID is automatically generated by Lync Server and is used to help eliminate hairpin calls.
+This ID is automatically generated by Skype for Business Server and is used to help eliminate hairpin calls.
 Depending on the way you have configured your system, this allows hairpin calls to automatically bypass the Mediation Server without you having to define and associate individual subnets with all your sites and regions.
 
 To do this, you typically need to globally enable bypass to use network configuration sites and regions, then enable bypass on the trunk configuration for your PSTN gateway.
 
 A hairpin call occurs when an inbound call from the PSTN network is routed back to that network through call forwarding or simultaneous ringing.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Globally unique identifier (GUID) representing the alternate bypass ID.
-This ID is automatically generated by Skype for Business Server 2015 and is used to help eliminate hairpin calls.
-Depending on the way you have configured your system, this allows hairpin calls to automatically bypass the Mediation Server without you having to define and associate individual subnets with all your sites and regions.
-
-To do this, you typically need to globally enable bypass to use network configuration sites and regions, then enable bypass on the trunk configuration for your PSTN gateway.
-
-A hairpin call occurs when an inbound call from the PSTN network is routed back to that network through call forwarding or simultaneous ringing.
-
 
 
 ```yaml
@@ -361,16 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill Force Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Suppresses any confirmation prompts or non-fatal error messages that might occur when you run the cmdlet.
-
 
 
 ```yaml
@@ -393,31 +267,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Get-CsPstnGateway does not accept pipelined input.
-
-###  
-None.
-The Get-CsPstnGateway cmdlet does not accept pipelined input.
+The `Get-CsPstnGateway` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Set-CsPstnGateway does not return any objects or values.
-Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayPstnGateway object.
-
-###  
-The Set-CsPstnGateway cmdlet does not return any objects or values.
+The `Set-CsPstnGateway` cmdlet does not return any objects or values.
 Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayPstnGateway object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5d61e7e5-dacb-4dd3-bdd5-b757d98181d3(OCS.14).aspx)
-
-[Get-CsService]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5d61e7e5-dacb-4dd3-bdd5-b757d98181d3(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5d61e7e5-dacb-4dd3-bdd5-b757d98181d3(OCS.16).aspx)
-
+[Get-CsService](Get-CsService.md)

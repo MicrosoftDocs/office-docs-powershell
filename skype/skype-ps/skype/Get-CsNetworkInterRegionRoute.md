@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsNetworkInterRegionRoute
 schema: 2.0.0
 ---
 
@@ -140,8 +141,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkInterRegionRoute]()
+[New-CsNetworkInterRegionRoute](New-CsNetworkInterRegionRoute.md)
 
-[Remove-CsNetworkInterRegionRoute]()
+[Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
-[Set-CsNetworkInterRegionRoute]()
+[Set-CsNetworkInterRegionRoute](Set-CsNetworkInterRegionRoute.md)

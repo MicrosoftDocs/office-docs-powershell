@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsThirdPartyVideoSystem
 schema: 2.0.0
 ---
 
@@ -236,8 +237,8 @@ However, if you include the PassThru parameter the cmdlet will pass instances of
 
 ## RELATED LINKS
 
-[New-CsThirdPartyVideoSystem]()
+[New-CsThirdPartyVideoSystem](New-CsThirdPartyVideoSystem.md)
 
-[Remove-CsThirdPartyVideoSystem]()
+[Remove-CsThirdPartyVideoSystem](Remove-CsThirdPartyVideoSystem.md)
 
-[Set-CsThirdPartyVideoSystem]()
+[Set-CsThirdPartyVideoSystem](Set-CsThirdPartyVideoSystem.md)

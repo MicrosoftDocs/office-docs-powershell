@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Enable-CsPublicProvider
 schema: 2.0.0
 ---
 
@@ -177,12 +178,12 @@ Instead, the cmdlet enables instances of the Microsoft.Rtc.Management.WritableCo
 
 ## RELATED LINKS
 
-[Disable-CsPublicProvider]()
+[Disable-CsPublicProvider](Disable-CsPublicProvider.md)
 
-[Get-CsPublicProvider]()
+[Get-CsPublicProvider](Get-CsPublicProvider.md)
 
-[New-CsPublicProvider]()
+[New-CsPublicProvider](New-CsPublicProvider.md)
 
-[Remove-CsPublicProvider]()
+[Remove-CsPublicProvider](Remove-CsPublicProvider.md)
 
-[Set-CsPublicProvider]()
+[Set-CsPublicProvider](Set-CsPublicProvider.md)

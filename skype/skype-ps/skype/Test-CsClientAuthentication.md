@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsClientAuthentication
 schema: 2.0.0
 ---
 
@@ -238,6 +239,6 @@ The `Test-CsClientAuthentication` cmdlet returns an instance of the Microsoft.Rt
 
 ## RELATED LINKS
 
-[Get-CsWebServiceConfiguration]()
+[Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

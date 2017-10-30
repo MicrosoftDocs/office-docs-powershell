@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineVoiceUser
 schema: 2.0.0
 ---
 
 # Set-CsOnlineVoiceUser
 
 ## SYNOPSIS
-Use the Set-CsOnlineVoiceUser to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
+Use the `Set-CsOnlineVoiceUser` to set the PSTN specific parameters (like telephone numbers and emergency response locations.)
 
 ## SYNTAX
 
@@ -21,14 +22,13 @@ Set-CsOnlineVoiceUser [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Confi
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +4255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
 ```
 
 This example sets the telephone number and location for a user identified by the user ObjectID.
 
-Set-CsOnlineVoiceUser -Identity 3c37e1c7-78f9-4703-82ee-a6b68516794e -TelephoneNumber +4255037311 -LocationID c7c5a17f-00d7-47c0-9ddb-3383229d606b
 
 ## PARAMETERS
 
@@ -42,7 +42,7 @@ Example: sip:jphillips@contoso.com
 
 Example: 98403f08-577c-46dd-851a-f0460a13b03d
 
-You can use the Get-CsOnlineUser cmdlet to identify the users you want to modify.
+You can use the `Get-CsOnlineUser` cmdlet to identify the users you want to modify.
 
 ```yaml
 Type: Object
@@ -74,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 
 ### -LocationID
 Specifies the unique identifier of the emergency location to assign to the user.
-Location identities can be discovered by using the Get-CsOnlineLisLocation cmdlet.
+Location identities can be discovered by using the `Get-CsOnlineLisLocation` cmdlet.
 
 This parameter is required for users based in the US.
 
@@ -225,6 +225,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/bd50c2f3-a4d8-43c2-a720-0bab5066a088(OCS.15).aspx)
-

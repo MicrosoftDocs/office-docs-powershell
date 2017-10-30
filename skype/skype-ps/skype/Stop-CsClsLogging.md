@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Stop-CsClsLogging
 schema: 2.0.0
 ---
 
@@ -159,12 +160,12 @@ The `Stop-CsClsLogging` cmdlet does not return objects.
 
 ## RELATED LINKS
 
-[Search-CsClsLogging]()
+[Search-CsClsLogging](Search-CsClsLogging.md)
 
-[Show-CsClsLogging]()
+[Show-CsClsLogging](Show-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Sync-CsClsLogging]()
+[Sync-CsClsLogging](Sync-CsClsLogging.md)
 
-[Update-CsClsLogging]()
+[Update-CsClsLogging](Update-CsClsLogging.md)

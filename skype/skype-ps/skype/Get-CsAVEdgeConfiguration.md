@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsAVEdgeConfiguration
 schema: 2.0.0
 ---
 
@@ -165,8 +166,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAVEdgeConfiguration]()
+[New-CsAVEdgeConfiguration](New-CsAVEdgeConfiguration.md)
 
-[Remove-CsAVEdgeConfiguration]()
+[Remove-CsAVEdgeConfiguration](Remove-CsAVEdgeConfiguration.md)
 
-[Set-CsAVEdgeConfiguration]()
+[Set-CsAVEdgeConfiguration](Set-CsAVEdgeConfiguration.md)

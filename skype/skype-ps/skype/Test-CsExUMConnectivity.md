@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsExUMConnectivity
 schema: 2.0.0
 ---
 
@@ -295,4 +296,4 @@ The `Test-CsExUMConnectivity` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Test-CsExUMVoiceMail]()
+[Test-CsExUMVoiceMail](Test-CsExUMVoiceMail.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsSetupPermission
 schema: 2.0.0
 ---
 
@@ -163,6 +164,6 @@ The `Test-CsSetupPermission` cmdlet returns an instance of the Microsoft.Rtc.Syn
 
 ## RELATED LINKS
 
-[Grant-CsSetupPermission]()
+[Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 
-[Revoke-CsSetupPermission]()
+[Revoke-CsSetupPermission](Revoke-CsSetupPermission.md)

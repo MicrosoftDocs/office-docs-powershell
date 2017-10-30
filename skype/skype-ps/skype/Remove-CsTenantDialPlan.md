@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Remove-CsTenantDialPlan
 schema: 2.0.0
 ---
 
 # Remove-CsTenantDialPlan
 
 ## SYNOPSIS
-Use the Remove-CsTenantDialPlan cmdlet to remove a tenant dial plan.
+Use the `Remove-CsTenantDialPlan` cmdlet to remove a tenant dial plan.
 
 ## SYNTAX
 
@@ -17,24 +18,23 @@ Remove-CsTenantDialPlan [[-Identity] <Object>] [-BypassDualWrite <Object>] [-Con
 ```
 
 ## DESCRIPTION
-The Remove-CsTenantDialPlan cmdlet removes an existing tenant dial plan (also known as a location profile).
+The `Remove-CsTenantDialPlan` cmdlet removes an existing tenant dial plan (also known as a location profile).
 Tenant dial plans provide required information to allow Enterprise Voice users to make telephone calls.
 The Conferencing Attendant application also uses tenant dial plans for dial-in conferencing.
-A tenant dial plan determines such things as which normalization rules are applied, and whether a prefix must be dialed for external calls.
+A tenant dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
 Removing a tenant dial plan also removes any associated normalization rules.
 If no tenant dial plan is assigned to an organization, the Global dial plan is used.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 ```
 
 This example removes the Vt1TenantDialPlan2.
 
-Remove-CsTenantDialPlan -Identity Vt1TenantDialPlan2
 
 ## PARAMETERS
 
@@ -104,8 +104,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Object
@@ -162,6 +162,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/03791f50-7fe8-4e3f-935d-de9dff41050f(OCS.15).aspx)
-

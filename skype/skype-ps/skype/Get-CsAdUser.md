@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsAdUser
 schema: 2.0.0
 ---
 
@@ -272,4 +273,4 @@ The Get-CsAdUser cmdlet accepts a pipelined string value representing the Identi
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

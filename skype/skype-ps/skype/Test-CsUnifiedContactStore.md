@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsUnifiedContactStore
 schema: 2.0.0
 ---
 
@@ -308,6 +309,6 @@ The `Test-CsUnifiedContactStore` cmdlet returns instances of the Microsoft.Rtc.S
 
 ## RELATED LINKS
 
-[New-CsUserServicesPolicy]()
+[New-CsUserServicesPolicy](New-CsUserServicesPolicy.md)
 
-[Set-CsUserServicesPolicy]()
+[Set-CsUserServicesPolicy](Set-CsUserServicesPolicy.md)

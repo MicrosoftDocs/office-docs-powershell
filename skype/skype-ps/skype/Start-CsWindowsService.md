@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Start-CsWindowsService
 schema: 2.0.0
 ---
 
@@ -249,6 +250,6 @@ Instead, the `Start-CsWindowsService` cmdlet starts instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsWindowsService]()
+[Get-CsWindowsService](Get-CsWindowsService.md)
 
-[Stop-CsWindowsService]()
+[Stop-CsWindowsService](Stop-CsWindowsService.md)

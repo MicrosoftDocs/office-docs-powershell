@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Remove-CsTelemetryConfiguration
 schema: 2.0.0
 ---
 
 # Remove-CsTelemetryConfiguration
 
 ## SYNOPSIS
-Use the Remove-CsTelemetryConfiguration cmdlet to remove an existing telemetry configuration.
+Use the `Remove-CsTelemetryConfiguration` cmdlet to remove an existing telemetry configuration.
 UNRESOLVED_TOKEN_VAL(PS_TelemetryDataStatement)
 
 ## SYNTAX
@@ -21,24 +22,22 @@ For privacy information, see the Skype for Business Privacy Statement (http://go
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsTelemetryConfiguration -Identity Site:Redmond
 ```
 
 This example removes the telemetry configuration for the Redmond site.
 
-Remove-CsTelemetryConfiguration -Identity Site:Redmond
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
+```
+Get-CsTelemetryConfiguration -Filter "Site:*" | Remove-CsTelemetryConfiguration
 ```
 
-```
-
-This example uses the Get-CsTelemetryConfiguration cmdlet in combination with the Filter parameter to select the telemetry configurations that are configured at the site level and then pipelines them to the Remove-CsTelemetryConfiguration cmdlet for removal.
+This example uses the `Get-CsTelemetryConfiguration` cmdlet in combination with the Filter parameter to select the telemetry configurations that are configured at the site level and then pipelines them to the `Remove-CsTelemetryConfiguration` cmdlet for removal.
 The result is that all "Site" scoped telemetry configurations are removed.
 
-Get-CsTelemetryConfiguration -Filter "Site:*" | Remove-CsTelemetryConfiguration
 
 ## PARAMETERS
 
@@ -47,11 +46,11 @@ A unique identifier that includes the scope of the telemetry configuration.
 Telemetry configurations can be scoped at the Global, Site, or Service level.
 For example, "site:Redmond" (for site).
 The format of the service scope is "Service:\<Identity\>", where identity is derived from the topology.
-You can use the following commandss to identify the relevant services.
+You can use the following commands to identify the relevant services.
 
-Get-CsService -WebServer | fl Identity
+`Get-CsService -WebServer | fl Identity`
 
-Get-CsService -PoolFqdn \<pool\> | fl Identity
+`Get-CsService -PoolFqdn \<pool\> | fl Identity`
 
 The first command will give you all of the WebServices in the topology, regardless of the pool.
 The second will give you all of the services on the pool, regardless of their role.
@@ -127,7 +126,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-This cmdlet takes pipeline input of the Get-CsTelemetryConfiguration cmdlet as shown in Example 2.
+This cmdlet takes pipeline input of the `Get-CsTelemetryConfiguration` cmdlet as shown in Example 2.
 
 ## OUTPUTS
 
@@ -137,6 +136,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b7bf54a1-93ce-45d9-bb5f-5c988f4a7547(OCS.16).aspx)
-

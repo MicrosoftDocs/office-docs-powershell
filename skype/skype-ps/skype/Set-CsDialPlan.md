@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsDialPlan
 schema: 2.0.0
 ---
 
 # Set-CsDialPlan
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing dial plan.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing dial plan.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -37,93 +31,35 @@ Set-CsDialPlan [-Instance <PSObject>] [-Description <String>] [-DialinConferenci
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 This cmdlet modifies an existing dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
 Dial plans are also used by the Conferencing Attendant application for dial-in conferencing.
 A dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
 
-Note: While normalization rules of a dial plan can be modified with this cmdlet, it is recommended that the New-CsVoiceNormalizationRule, Set-CsVoiceNormalizationRule, or Remove-CsVoiceNormalizationRule cmdlets be used instead.
+Note: While normalization rules of a dial plan can be modified with this cmdlet, it is recommended that the `New-CsVoiceNormalizationRule` cmdlet, the `Set-CsVoiceNormalizationRule` cmdlet, or the `Remove-CsVoiceNormalizationRule` cmdlet be used instead.
 The changes made with those cmdlets will be reflected in the corresponding dial plan.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsDialPlan cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialPlan"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet modifies an existing dial plan (also known as a location profile).
-Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
-Dial plans are also used by the Conferencing Attendant application for dial-in conferencing.
-A dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
-
-Note: While normalization rules of a dial plan can be modified with this cmdlet, it is recommended that the New-CsVoiceNormalizationRule cmdlet, the Set-CsVoiceNormalizationRule cmdlet, or the Remove-CsVoiceNormalizationRule cmdlet be used instead.
-The changes made with those cmdlets will be reflected in the corresponding dial plan.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsDialPlan -Identity RedmondDialPlan -Description "This plan is for Redmond-based users only."
 ```
 
-In Example 1, Set-CsDialPlan is used to modify the dial plan with the Identity RedmondDialPlan.
+In Example 1, the `Set-CsDialPlan` cmdlet is used to modify the dial plan with the Identity RedmondDialPlan.
 In this case, the only property being modified is the Description; this modification is performed by specifying the Description parameter followed by the text for the new description.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 1, Set-CsDialPlan is used to modify the dial plan with the Identity RedmondDialPlan.
-In this case, the only property being modified is the Description; this modification is performed by specifying the Description parameter followed by the text for the new description.
-
-Set-CsDialPlan -Identity RedmondDialPlan -Description "This plan is for Redmond-based users only."
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, the Set-CsDialPlan cmdlet is used to modify the dial plan with the Identity RedmondDialPlan.
-In this case, the only property being modified is the Description; this modification is performed by specifying the Description parameter followed by the text for the new description.
-
-Set-CsDialPlan -Identity RedmondDialPlan -Description "This plan is for Redmond-based users only."
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsDialPlan | Set-CsDialPlan -ExternalAccessPrefix 8
 ```
 
-In this example, Set-CsDialPlan is used to change the value of the ExternalAccessPrefix property for all the dial plans configured for use in the organization.
-To do this, the command first uses Get-CsDialPlan to return a collection of all the dial plans in the organization.
-That collection is then piped to Set-CsDialPlan, which assigns the value 8 to the ExternalAccessPrefix property for each profile in the collection.
+In this example, the `Set-CsDialPlan` cmdlet is used to change the value of the ExternalAccessPrefix property for all the dial plans configured for use in the organization.
+To do this, the command first uses the `Get-CsDialPlan` cmdlet to return a collection of all the dial plans in the organization.
+That collection is then piped to the `Set-CsDialPlan` cmdlet, which assigns the value 8 to the ExternalAccessPrefix property for each profile in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In this example, Set-CsDialPlan is used to change the value of the ExternalAccessPrefix property for all the dial plans configured for use in the organization.
-To do this, the command first uses Get-CsDialPlan to return a collection of all the dial plans in the organization.
-That collection is then piped to Set-CsDialPlan, which assigns the value 8 to the ExternalAccessPrefix property for each profile in the collection.
-
-Get-CsDialPlan | Set-CsDialPlan -ExternalAccessPrefix 8
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In this example, the Set-CsDialPlan cmdlet is used to change the value of the ExternalAccessPrefix property for all the dial plans configured for use in the organization.
-To do this, the command first uses the Get-CsDialPlan cmdlet to return a collection of all the dial plans in the organization.
-That collection is then piped to the Set-CsDialPlan cmdlet, which assigns the value 8 to the ExternalAccessPrefix property for each profile in the collection.
-
-Get-CsDialPlan | Set-CsDialPlan -ExternalAccessPrefix 8
 
 ## PARAMETERS
 
@@ -148,7 +84,7 @@ Accept wildcard characters: False
 
 ### -Instance
 Allows you to pass a reference to an object to the cmdlet rather than set individual parameter values.
-You can retrieve this object reference by calling the Get-CsDialPlan cmdlet.
+You can retrieve this object reference by calling the `Get-CsDialPlan` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -185,7 +121,7 @@ Accept wildcard characters: False
 The name of the region associated with this dial plan.
 Specify a value for this parameter if the dial plan will be used for dial-in conferencing.
 This allows the correct access number to be assigned when the conference organizer sets up the conference.
-Available regions can be retrieved by calling the Get-CsNetworkRegion cmdlet.
+Available regions can be retrieved by calling the `Get-CsNetworkRegion` cmdlet.
 
 Maximum characters: 512
 
@@ -227,7 +163,7 @@ Accept wildcard characters: False
 ### -NormalizationRules
 A list of normalization rules that are applied to this dial plan.
 
-While this list and these rules can be modified directly with this cmdlet, it is recommended that you create normalization rules with the New-CsVoiceNormalizationRule cmdlet, which creates the rule and assigns it to the specified dial plan, and modify them with the Set-CsVoiceNormalizationRule cmdlet.
+While this list and these rules can be modified directly with this cmdlet, it is recommended that you create normalization rules with the `New-CsVoiceNormalizationRule` cmdlet, which creates the rule and assigns it to the specified dial plan and modify them with the `Set-CsVoiceNormalizationRule` cmdlet.
 
 ```yaml
 Type: PSListModifier
@@ -260,34 +196,11 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleName
-**Below Content Applies To:** Lync Server 2010
-
 A friendly name for the dial plan.
-Dial plan names must be unique among all dial plans within a Microsoft Lync Server 2010 deployment.
+Dial plan names must be unique among all dial plans within a Skype for Business Server deployment.
 
 This string can be up to 256 characters long.
-Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A friendly name for the dial plan.
-Dial plan names must be unique among all dial plans within a Lync Server deployment.
-
-This string can be up to 256 characters long.
-Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A friendly name for the dial plan.
-Dial plan names must be unique among all dial plans within a Skype for Business Server 2015 deployment.
-
-This string can be up to 256 characters long.
-Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
-
+Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_) and parentheses (()).
 
 
 ```yaml
@@ -411,38 +324,27 @@ Accepts pipelined input of dial plan objects.
 ## OUTPUTS
 
 ###  
-Set-CsDialPlan does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile object.
-
-###  
-The Set-CsDialPlan cmdlet does not return a value or object.
+The `Set-CsDialPlan` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.Voice.LocationProfile object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/80277dc6-8853-4cbd-87cb-e64f9e135d5f(OCS.14).aspx)
+[New-CsDialPlan](New-CsDialPlan.md)
 
-[New-CsDialPlan]()
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[New-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
-
-[Get-CsVoiceNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/80277dc6-8853-4cbd-87cb-e64f9e135d5f(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/80277dc6-8853-4cbd-87cb-e64f9e135d5f(OCS.16).aspx)
-
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsKerberosAccountAssignment
 schema: 2.0.0
 ---
 
@@ -107,10 +108,10 @@ The `Test-CsKerberosAccountAssignment` cmdlet does not return any objects or val
 
 ## RELATED LINKS
 
-[Get-CsKerberosAccountAssignment]()
+[Get-CsKerberosAccountAssignment](Get-CsKerberosAccountAssignment.md)
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

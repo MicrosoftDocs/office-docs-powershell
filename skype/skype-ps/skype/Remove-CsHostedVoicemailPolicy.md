@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsHostedVoicemailPolicy
 schema: 2.0.0
 ---
 
 # Remove-CsHostedVoicemailPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes a hosted voice mail policy.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes a hosted voice mail policy.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,78 +20,28 @@ Remove-CsHostedVoicemailPolicy [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Co
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 This cmdlet removes a policy that specifies how to route unanswered calls to the user to a hosted Exchange Unified Messaging (UM) service.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsHostedVoicemailPolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsHostedVoicemailPolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet removes a policy that specifies how to route unanswered calls to the user to a hosted Exchange Unified Messaging (UM) service.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsHostedVoicemailPolicy -Identity ExRedmond
 ```
 
 This command removes the hosted voice mail policy for the ExRedmond per-user policy.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This command removes the hosted voice mail policy for the ExRedmond per-user policy.
-
-Remove-CsHostedVoicemailPolicy -Identity ExRedmond
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command removes the hosted voice mail policy for the ExRedmond per-user policy.
-
-Remove-CsHostedVoicemailPolicy -Identity ExRedmond
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsHostedVoicemailPolicy -Filter tag* | Remove-CsHostedVoicemailPolicy
 ```
 
 The command in Example 2 removes all per-user hosted voice mail policies.
-The command starts by calling the Get-CsHostedVoicemailPolicy cmdlet with a Filter of tag*, which will retrieve all policies defined as per-user policies.
-That set of policies is then piped to Remove-CsHostedVoicemailPolicy, which deletes each one.
+The command starts by calling the `Get-CsHostedVoicemailPolicy` cmdlet with a Filter of tag*, which will retrieve all policies defined as per-user policies.
+That set of policies is then piped to the `Remove-CsHostedVoicemailPolicy` cmdlet, which deletes each one.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command in Example 2 removes all per-user hosted voice mail policies.
-The command starts by calling the Get-CsHostedVoicemailPolicy cmdlet with a Filter of tag*, which will retrieve all policies defined as per-user policies.
-That set of policies is then piped to Remove-CsHostedVoicemailPolicy, which deletes each one.
-
-Get-CsHostedVoicemailPolicy -Filter tag* | Remove-CsHostedVoicemailPolicy
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in Example 2 removes all per-user hosted voice mail policies.
-The command starts by calling the Get-CsHostedVoicemailPolicy cmdlet with a Filter of tag*, which will retrieve all policies defined as per-user policies.
-That set of policies is then piped to the Remove-CsHostedVoicemailPolicy cmdlet, which deletes each one.
-
-Get-CsHostedVoicemailPolicy -Filter tag* | Remove-CsHostedVoicemailPolicy
 
 ## PARAMETERS
 
@@ -167,30 +111,14 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for the hosted voicemail policy being deleted.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the hosted voicemail policy being deleted.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
-
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 ```yaml
@@ -225,17 +153,10 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Voic
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/13968bbe-1403-46de-b02a-ed61e712d1b3(OCS.14).aspx)
+[New-CsHostedVoicemailPolicy](New-CsHostedVoicemailPolicy.md)
 
-[New-CsHostedVoicemailPolicy]()
+[Set-CsHostedVoicemailPolicy](Set-CsHostedVoicemailPolicy.md)
 
-[Set-CsHostedVoicemailPolicy]()
+[Get-CsHostedVoicemailPolicy](Get-CsHostedVoicemailPolicy.md)
 
-[Get-CsHostedVoicemailPolicy]()
-
-[Grant-CsHostedVoicemailPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/13968bbe-1403-46de-b02a-ed61e712d1b3(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/13968bbe-1403-46de-b02a-ed61e712d1b3(OCS.16).aspx)
-
+[Grant-CsHostedVoicemailPolicy](Grant-CsHostedVoicemailPolicy.md)

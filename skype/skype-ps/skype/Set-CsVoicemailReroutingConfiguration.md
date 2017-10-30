@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsVoicemailReroutingConfiguration
 schema: 2.0.0
 ---
 
@@ -215,8 +216,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.E
 
 ## RELATED LINKS
 
-[New-CsVoicemailReroutingConfiguration]()
+[New-CsVoicemailReroutingConfiguration](New-CsVoicemailReroutingConfiguration.md)
 
-[Remove-CsVoicemailReroutingConfiguration]()
+[Remove-CsVoicemailReroutingConfiguration](Remove-CsVoicemailReroutingConfiguration.md)
 
-[Get-CsVoicemailReroutingConfiguration]()
+[Get-CsVoicemailReroutingConfiguration](Get-CsVoicemailReroutingConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsComputer
 schema: 2.0.0
 ---
 
@@ -102,8 +103,8 @@ The `Test-CsComputer` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Disable-CsComputer]()
+[Disable-CsComputer](Disable-CsComputer.md)
 
-[Enable-CsComputer]()
+[Enable-CsComputer](Enable-CsComputer.md)
 
-[Get-CsComputer]()
+[Get-CsComputer](Get-CsComputer.md)

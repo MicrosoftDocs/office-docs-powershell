@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsExternalAccessPolicy
 schema: 2.0.0
 ---
 
@@ -316,10 +317,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsExternalAccessPolicy]()
+[Grant-CsExternalAccessPolicy](Grant-CsExternalAccessPolicy.md)
 
-[New-CsExternalAccessPolicy]()
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[Remove-CsExternalAccessPolicy]()
+[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
-[Set-CsExternalAccessPolicy]()
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)

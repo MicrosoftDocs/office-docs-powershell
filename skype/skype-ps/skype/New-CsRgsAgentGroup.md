@@ -1,19 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsRgsAgentGroup
 schema: 2.0.0
 ---
 
 # New-CsRgsAgentGroup
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new Response Group agent group.
-An agent group is a collection of agents assigned to a Response Group queue.
-Agents are the users assigned to answer calls directed to a particular queue.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new Response Group agent group.
 An agent group is a collection of agents assigned to a Response Group queue.
@@ -32,41 +26,6 @@ New-CsRgsAgentGroup [-Parent] <RgsIdentity> -Name <String> [-AgentAlertTime <Int
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
-Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
-Alternatively, the call might be placed in a Response Group queue; there the caller will be put on hold until a designated person is available to answer the call.
-The people designated to answer calls are known as agents, and a collected group of agents are referred to as a Response Group agent group.
-Agent groups are associated with queues, and are further associated with similar job responsibilities: help desk personnel might be grouped in the Help Desk agent group while customer support agents might be grouped in the Customer Support agent group.
-
-If multiple groups are assigned to a queue, the Response Group application will start by ringing all the available agents in the first group assigned to that queue.
-If none of those agents answer, the application will then start ringing all the available agents in the next group assigned to the queue.
-
-New agent groups are created by using the New-CsRgsAgentGroup cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsRgsAgentGroup cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-**Below Content Applies To:** Lync Server 2013
-
-When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
-Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
-Alternatively, the call might be placed in a Response Group queue; there the caller will be put on hold until a designated person is available to answer the call.
-The people designated to answer calls are known as agents, and a collected group of agents are referred to as a Response Group agent group.
-Agent groups are associated with queues, and are further associated with similar job responsibilities: help desk personnel might be grouped in the Help Desk agent group while customer support agents might be grouped in the Customer Support agent group.
-
-If multiple groups are assigned to a queue, the Response Group application will start by ringing all the available agents in the first group assigned to that queue.
-If none of those agents answer, the application will then start ringing all the available agents in the next group assigned to the queue.
-
-New agent groups are created by using the New-CsRgsAgentGroup cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsRgsAgentGroup cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsRgsAgentGroup"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When someone calls a phone number associated with the Response Group application, the application first determines which workflow corresponds to the number called.
 Based on the configuration of that workflow, the call might be routed to a set of interactive voice response (IVR) questions (in which the caller is asked one or more questions along the lines of "Is this question about hardware support or software support?").
@@ -83,8 +42,9 @@ New agent groups are created by using the New-CsRgsAgentGroup cmdlet.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsRgsAgentGroup -Parent service:ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group"
 ```
 
@@ -93,32 +53,10 @@ To create the group, the command calls New-CsRgsAgentGroup along with the Parent
 In this example, no other group parameters are specified, meaning the group will use all the default property values.
 Because no agents have been assigned to this group any calls routed to the new agent group will automatically be disconnected.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 
-```
-
-The command shown in Example 1 creates a new Response Group agent group named Help Desk Group; this new group is located on the service ApplicationServer:atl-cs-001.litwareinc.com.
-To create the group, the command calls New-CsRgsAgentGroup along with the Parent and Name parameters.
-In this example, no other group parameters are specified, meaning the group will use all the default property values.
-Because no agents have been assigned to this group any calls routed to the new agent group will automatically be disconnected.
-
-New-CsRgsAgentGroup -Parent service:ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new Response Group agent group named Help Desk Group; this new group is located on the service ApplicationServer:atl-cs-001.litwareinc.com.
-To create the group, the command calls New-CsRgsAgentGroup along with the Parent and Name parameters.
-In this example, no other group parameters are specified, meaning the group will use all the default property values.
-Because no agents have been assigned to this group any calls routed to the new agent group will automatically be disconnected.
-
-New-CsRgsAgentGroup -Parent service:ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
 New-CsRgsAgentGroup -Parent service: ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group" -AgentsByUri "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com"
 ```
 
@@ -127,29 +65,6 @@ To do this, the command calls New-CsRgsAgentGroup along with the parameters Pare
 In addition, this example also includes the parameter AgentsByUri, accompanied by the parameter value "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com".
 This value is a comma-separated list of the SIP addresses to be added to the agent group.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 2, a new Response Group agent group is created and, at the same time, a pair of agents is assigned to that group.
-To do this, the command calls New-CsRgsAgentGroup along with the parameters Parent and Name.
-In addition, this example also includes the parameter AgentsByUri, accompanied by the parameter value "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com".
-This value is a comma-separated list of the SIP addresses to be added to the agent group.
-
-New-CsRgsAgentGroup -Parent service: ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group" -AgentsByUri "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, a new Response Group agent group is created and, at the same time, a pair of agents is assigned to that group.
-To do this, the command calls New-CsRgsAgentGroup along with the parameters Parent and Name.
-In addition, this example also includes the parameter AgentsByUri, accompanied by the parameter value "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com".
-This value is a comma-separated list of the SIP addresses to be added to the agent group.
-
-New-CsRgsAgentGroup -Parent service: ApplicationServer:atl-cs-001.litwareinc.com -Name "Help Desk Group" -AgentsByUri "sip:kenmyer@litwareinc.com","sip:pilarackerman@litwareinc.com"
 
 ## PARAMETERS
 
@@ -172,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Parent
 Service where the new agent group will be hosted.
-For example: -Parent "service:ApplicationServer:atl-cs-001.litwareinc.com".
+For example: `-Parent "service:ApplicationServer:atl-cs-001.litwareinc.com".`
 
 ```yaml
 Type: RgsIdentity
@@ -188,15 +103,6 @@ Accept wildcard characters: False
 ```
 
 ### -AgentAlertTime
-**Below Content Applies To:** Lync Server 2010
-
-Represents the amount of time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent.
-The AgentAlertTime can be set to any integer value between 10 and 600 seconds (10 minutes), inclusive.
-The default value is 20 seconds.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Represents the amount of time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent.
 The AgentAlertTime can be set to any integer value between 10 and 600 seconds (10 minutes), inclusive.
@@ -302,47 +208,6 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-**Below Content Applies To:** Lync Server 2010
-
-Specifies the method used to route new calls to agents.
-The RoutingMethod must be set to one of the following values:
-
-LongestIdle - Calls are routed to the agent who has been idle (that is, not involved in a Microsoft Lync 2010 activity) for the longest period of time.
-
-RoundRobin - Calls are routed to the next agent on the list.
-
-Serial - Calls are always routed to the first agent on the list, and are only routed to other agents if this person is not available or does not answer within the allotted time.
-
-Parallel - Calls are routed to all agents at the same time, except for agents whose presence status indicates that they are in a call or otherwise unavailable.
-
-Attendant - Calls are routed to all agents at the same time, even if the agent's presence status indicates that he or she is in a call or otherwise unavailable.
-The only exception occurs when an agent has set his or her presence to Do Not Disturb.
-
-The default routing method is Parallel.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Specifies the method used to route new calls to agents.
-The RoutingMethod must be set to one of the following values:
-
-LongestIdle - Calls are routed to the agent who has been idle (that is, not involved in a Lync activity) for the longest period of time.
-
-RoundRobin - Calls are routed to the next agent on the list.
-
-Serial - Calls are always routed to the first agent on the list, and are only routed to other agents if this person is not available or does not answer within the allotted time.
-
-Parallel - Calls are routed to all agents at the same time, except for agents whose presence status indicates that they are in a call or otherwise unavailable.
-
-Attendant - Calls are routed to all agents at the same time, even if the agent's presence status indicates that he or she is in a call or otherwise unavailable.
-The only exception occurs when an agent has set his or her presence to Do Not Disturb.
-
-The default routing method is Parallel.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the method used to route new calls to agents.
 The RoutingMethod must be set to one of the following values:
@@ -392,14 +257,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -420,13 +277,6 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:** Lync Server 2010
-
-Prompts you for confirmation before running the cmdlet.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
 
@@ -446,14 +296,6 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:** Lync Server 2010
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
@@ -473,7 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -490,15 +332,8 @@ New-CsRgsAgentGroup creates new instances of the Microsoft.Rtc.Rgs.Management.Wr
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/faaf46f9-1063-4d64-a36f-872e657cd869(OCS.14).aspx)
+[Get-CsRgsAgentGroup](Get-CsRgsAgentGroup.md)
 
-[Get-CsRgsAgentGroup]()
+[Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
 
-[Remove-CsRgsAgentGroup]()
-
-[Set-CsRgsAgentGroup]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/faaf46f9-1063-4d64-a36f-872e657cd869(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/faaf46f9-1063-4d64-a36f-872e657cd869(OCS.16).aspx)
-
+[Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)

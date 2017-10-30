@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Export-CsLisConfiguration
 schema: 2.0.0
 ---
 
@@ -140,12 +141,12 @@ Returns a byte array when the AsBytes parameter is used.
 
 ## RELATED LINKS
 
-[Import-CsLisConfiguration]()
+[Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
-[Debug-CsLisConfiguration]()
+[Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
-[Publish-CsLisConfiguration]()
+[Publish-CsLisConfiguration](Publish-CsLisConfiguration.md)
 
-[Unpublish-CsLisConfiguration]()
+[Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
-[Test-CsLisConfiguration]()
+[Test-CsLisConfiguration](Test-CsLisConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsAdminRoleAssignment
 schema: 2.0.0
 ---
 
@@ -121,4 +122,4 @@ The Get-CsAdminRoleAssignment cmdlet returns string values representing the RBAC
 
 ## RELATED LINKS
 
-[Get-CsAdminRole]()
+[Get-CsAdminRole](Get-CsAdminRole.md)

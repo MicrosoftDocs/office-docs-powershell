@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsTrustedApplication
 schema: 2.0.0
 ---
 
 # New-CsTrustedApplication
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Adds a trusted application to a pool.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Adds a trusted application to a pool.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,9 +27,7 @@ New-CsTrustedApplication -ApplicationId <String> -Port <Int32> -TrustedApplicati
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Microsoft Lync Server 2010 but that is not a built-in part of the product.
+A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server but that is not a built-in part of the product.
 This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
 
 Trusted applications need to be associated with Globally Routable User Agent URIs (GRUUs), both service GRUUs and computer GRUUs.
@@ -52,62 +44,11 @@ Similarly, if you enter an Identity of TrustPool.litwareinc.com/tapp2, the Ident
 
 When you specify the Port value with this cmdlet, the cmdlet does not open the port.
 You must open the port in the Windows firewall and any corporate firewalls in order for the trusted application to make contact with networks outside the firewall.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsTrustedApplication cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplication\b"}
-
-**Below Content Applies To:** Lync Server 2013
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Lync Server but that is not a built-in part of the product.
-This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
-
-Trusted applications need to be associated with Globally Routable User Agent URIs (GRUUs), both service GRUUs and computer GRUUs.
-This cmdlet automatically generates these values based on the computers and services associated with the pool on which this application is homed.
-
-When you use this cmdlet to create a trusted application, you must supply values either for the Identity parameter or for the ApplicationID and TrustedApplicationPoolFqdn parameters.
-The Identity is the TrustedApplicationPoolFqdn followed by a slash (/) followed by the ApplicationID.
-For example, TrustPool.litwareinc.com/tapp2, where TrustPool.litwareinc.com is the TrustedApplicationPoolFqdn and tapp2 is the ApplicationID.
-
-Note that when you enter an application ID (either as part of the Identity parameter or in the ApplicationID parameter) you need to enter only the name of the application.
-However, the full application ID will be automatically prefixed with the string urn:application:.
-For example, if you enter the value tapp2 for the ApplicationID, that ID will be stored as urn:application:tapp2.
-Similarly, if you enter an Identity of TrustPool.litwareinc.com/tapp2, the Identity will be stored in the system as TrustPool.litwareinc.com/urn:application:tapp2.
-
-When you specify the Port value with this cmdlet, the cmdlet does not open the port.
-You must open the port in the Windows firewall and any corporate firewalls in order for the trusted application to make contact with networks outside the firewall.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsTrustedApplication cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsTrustedApplication\b"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A trusted application is an application developed by a third party that is given trusted status to run as part of Skype for Business Server 2015 but that is not a built-in part of the product.
-This cmdlet adds a trusted application to a trusted application pool and assigns a port to the external service that runs the application.
-
-Trusted applications need to be associated with Globally Routable User Agent URIs (GRUUs), both service GRUUs and computer GRUUs.
-This cmdlet automatically generates these values based on the computers and services associated with the pool on which this application is homed.
-
-When you use this cmdlet to create a trusted application, you must supply values either for the Identity parameter or for the ApplicationID and TrustedApplicationPoolFqdn parameters.
-The Identity is the TrustedApplicationPoolFqdn followed by a slash (/) followed by the ApplicationID.
-For example, TrustPool.litwareinc.com/tapp2, where TrustPool.litwareinc.com is the TrustedApplicationPoolFqdn and tapp2 is the ApplicationID.
-
-Note that when you enter an application ID (either as part of the Identity parameter or in the ApplicationID parameter) you need to enter only the name of the application.
-However, the full application ID will be automatically prefixed with the string urn:application:.
-For example, if you enter the value tapp2 for the ApplicationID, that ID will be stored as urn:application:tapp2.
-Similarly, if you enter an Identity of TrustPool.litwareinc.com/tapp2, the Identity will be stored in the system as TrustPool.litwareinc.com/urn:application:tapp2.
-
-When you specify the Port value with this cmdlet, the cmdlet does not open the port.
-You must open the port in the Windows firewall and any corporate firewalls in order for the trusted application to make contact with networks outside the firewall.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 New-CsTrustedApplication -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -Port 6000
 ```
@@ -117,31 +58,8 @@ We use the TrustedApplicationPoolFqdn parameter to designate the trusted applica
 We also must specify a port for the application; in this example we used port 6000.
 Note that running this cmdlet by specifying an ApplicationId and a TrustedApplicationPoolFqdn will automatically generate an Identity that can later be used to retrieve, modify, or remove this application.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example creates a trusted application with the Application ID tapp1.
-We use the TrustedApplicationPoolFqdn parameter to designate the trusted application pool this application will be on, in this case the pool with the FQDN TrustPool.litwareinc.com.
-We also must specify a port for the application; in this example we used port 6000.
-Note that running this cmdlet by specifying an ApplicationId and a TrustedApplicationPoolFqdn will automatically generate an Identity that can later be used to retrieve, modify, or remove this application.
-
-New-CsTrustedApplication -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -Port 6000
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a trusted application with the Application ID tapp1.
-We use the TrustedApplicationPoolFqdn parameter to designate the trusted application pool this application will be on, in this case the pool with the FQDN TrustPool.litwareinc.com.
-We also must specify a port for the application; in this example we used port 6000.
-Note that running this cmdlet by specifying an ApplicationId and a TrustedApplicationPoolFqdn will automatically generate an Identity that can later be used to retrieve, modify, or remove this application.
-
-New-CsTrustedApplication -ApplicationId tapp1 -TrustedApplicationPoolFqdn TrustPool.litwareinc.com -Port 6000
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 New-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2 -Port 6100
 ```
@@ -150,33 +68,12 @@ This example creates a trusted application with the Identity TrustPool.litwarein
 Notice the format of the Identity.
 This value must be in the format \<trusted pool FQDN\>/\<Application ID\>.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example creates a trusted application with the Identity TrustPool.litwareinc.com/tapp2 on Port 6100.
-Notice the format of the Identity.
-This value must be in the format \<trusted pool FQDN\>/\<Application ID\>.
-
-New-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2 -Port 6100
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a trusted application with the Identity TrustPool.litwareinc.com/tapp2 on Port 6100.
-Notice the format of the Identity.
-This value must be in the format \<trusted pool FQDN\>/\<Application ID\>.
-
-New-CsTrustedApplication -Identity TrustPool.litwareinc.com/tapp2 -Port 6100
 
 ## PARAMETERS
 
 ### -Identity
 A unique identifier for the trusted application on the pool.
-Identity values must be entered in the format \<pool FQDN\>/\<application ID\>, where pool FQDN is the fully qualified domain name (FQDN) of the pool on which the application resides, and application ID is the name of the application.
+Identity values must be entered in the format \<pool FQDN\>/\<application ID\>, where pool FQDN is the fully qualified domain name (FQDN) of the pool on which the application resides and application ID is the name of the application.
 The application ID must be unique for a given pool.
 
 If you enter an Identity, you cannot specify values for the ApplicationId or TrustedApplicationPoolFqdn parameters.
@@ -195,23 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-**Below Content Applies To:** Lync Server 2010
-
-The name of the application.
-This must be a string that is unique within the pool that is specified in the TrustedApplicationPoolFqdn parameter.
-If you supply a value for ApplicationId, you must also supply a value for the TrustedApplicationPoolFqdn parameter.
-You cannot specify an ApplicationId and an Identity.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 The name of the application.
 This must be a string that is unique within the pool that is specified in the TrustedApplicationPoolFqdn parameter.
 The string cannot contain spaces.
 If you supply a value for ApplicationId, you must also supply a value for the TrustedApplicationPoolFqdn parameter.
 You cannot specify an ApplicationId and an Identity.
-
 
 
 ```yaml
@@ -368,15 +253,8 @@ Creates an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplication
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/1c804a97-f9b5-4c3e-adc6-a120b26c1f51(OCS.14).aspx)
+[Remove-CsTrustedApplication](Remove-CsTrustedApplication.md)
 
-[Remove-CsTrustedApplication]()
+[Set-CsTrustedApplication](Set-CsTrustedApplication.md)
 
-[Set-CsTrustedApplication]()
-
-[Get-CsTrustedApplication]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1c804a97-f9b5-4c3e-adc6-a120b26c1f51(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/1c804a97-f9b5-4c3e-adc6-a120b26c1f51(OCS.16).aspx)
-
+[Get-CsTrustedApplication](Get-CsTrustedApplication.md)

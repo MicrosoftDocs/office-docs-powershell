@@ -1,17 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsNetworkSite
 schema: 2.0.0
 ---
 
 # New-CsNetworkSite
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new network site for use with call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network site for use with call admission control (CAC) or Enhanced 9-1-1 (E9-1-1).
 This cmdlet was introduced in Lync Server 2010.
@@ -35,34 +31,6 @@ New-CsNetworkSite -NetworkSiteID <String> [-BWPolicyProfileID <String>] [-Bypass
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
-This cmdlet creates a new site and optionally associates it with a region.
-For example, a network region for North America might be associated with networks sites such as Chicago, Redmond, and Vancouver.
-A CAC network site must be created for every site within an organization, even if that site has no bandwidth limitations.
-
-The only parameter required to create a network site is the Identity.
-However, this simply creates an empty site with no associations to regions and will therefore be of no use until properties such as NetworkRegionID are supplied with values.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkSite cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSite"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
-This cmdlet creates a new site and optionally associates it with a region.
-For example, a network region for North America might be associated with networks sites such as Chicago, Redmond, and Vancouver.
-A CAC network site must be created for every site within an organization, even if that site has no bandwidth limitations.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkSite cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkSite"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Network sites are the offices or locations configured within each region of a CAC or E9-1-1 deployment.
 This cmdlet creates a new site and optionally associates it with a region.
@@ -73,39 +41,10 @@ A CAC network site must be created for every site within an organization, even i
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CsNetworkSite -Identity Vancouver -NetworkRegionID NorthAmerica
-```
-
-In this example a new network site named Vancouver is created.
-The site name is specified as the value for the Identity parameter.
-A value is also specified for the NetworkRegionID parameter, which associates the site with the region (in this example NorthAmerica).
-A BypassID value will be automatically generated.
-Manually setting a value for BypassID is not recommended.
-
-Notice that the command in this example did not include the BWPolicyProfileID parameter.
-Unless (or until) a value is added to this site later using Set-CsNetworkSite, it will have no bandwidth limitations for media connections.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In this example a new network site named Vancouver is created.
-The site name is specified as the value for the Identity parameter.
-A value is also specified for the NetworkRegionID parameter, which associates the site with the region (in this example NorthAmerica).
-A BypassID value will be automatically generated.
-Manually setting a value for BypassID is not recommended.
-
-Notice that the command in this example did not include the BWPolicyProfileID parameter.
-Unless (or until) a value is added to this site later using Set-CsNetworkSite, it will have no bandwidth limitations for media connections.
-
-New-CsNetworkSite -Identity Vancouver -NetworkRegionID NorthAmerica
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In this example a new network site named Vancouver is created.
@@ -117,9 +56,9 @@ Manually setting a value for BypassID is not recommended.
 Notice that the command in this example did not include the BWPolicyProfileID parameter.
 Unless (or until) a value is added to this site later using the Set-CsNetworkSite cmdlet, it will have no bandwidth limitations for media connections.
 
-New-CsNetworkSite -Identity Vancouver -NetworkRegionID NorthAmerica
 
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
 New-CsNetworkSite -Identity Paris -NetworkRegionID EMEA -BWPolicyProfileID LowBWLimits
 ```
@@ -131,54 +70,11 @@ Once again we are following the recommended path by allowing the cmdlet to gener
 Unlike Example 1, this example also specifies a value for the BWPolicyProfileID parameter: LowBWLimits.
 The policies associated with that profile will be used for this site.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 2 we create a new network site named Paris.
-The site name is specified as the value for the Identity parameter.
-As in Example 1 we also specify a value for the NetworkRegionID, this time the region EMEA.
-Once again we are following the recommended path by allowing the cmdlet to generate the BypassID.
-Unlike Example 1, this example also specifies a value for the BWPolicyProfileID parameter: LowBWLimits.
-The policies associated with that profile will be used for this site.
-
-New-CsNetworkSite -Identity Paris -NetworkRegionID EMEA -BWPolicyProfileID LowBWLimits
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2 we create a new network site named Paris.
-The site name is specified as the value for the Identity parameter.
-As in Example 1 we also specify a value for the NetworkRegionID, this time the region EMEA.
-Once again we are following the recommended path by allowing the cmdlet to generate the BypassID.
-Unlike Example 1, this example also specifies a value for the BWPolicyProfileID parameter: LowBWLimits.
-The policies associated with that profile will be used for this site.
-
-New-CsNetworkSite -Identity Paris -NetworkRegionID EMEA -BWPolicyProfileID LowBWLimits
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
-
-A unique identifier for the newly created network site.
-Sites are created only at the global scope, so this identifier does not need to specify a scope.
-Instead, it contains a string that is unique among all network sites within the Microsoft Lync Server 2010 deployment.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A unique identifier for the newly created network site.
-Sites are created only at the global scope, so this identifier does not need to specify a scope.
-Instead, it contains a string that is unique among all network sites within the Lync Server deployment.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 A unique identifier for the newly created network site.
 Sites are created only at the global scope, so this identifier does not need to specify a scope.
@@ -236,23 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-A globally unique identifier (GUID).
-This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
-(Use this BypassID value in the call to New-CsNetworkMediaBypassConfiguration.)
-
-If you do not specify a value for this parameter, a value will be automatically generated, but only if you supply a value for the NetworkRegionID parameter.
-If you do not supply a NetworkRegionID parameter, no BypassID will be generated.
-You also cannot explicitly supply a value for the BypassID parameter without also supplying a value for the NetworkRegionID parameter.
-
-If you explicitly specify a value, it must be in the format of a GUID (for example, 3b24a047-dce6-48b2-9f20-9fbff17ed62a).
-Auto-generation is recommended.
-If you manually enter a value, you will receive a confirmation prompt to verify that you don't want to auto-generate the value.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 A globally unique identifier (GUID).
 This GUID is used to map network sites to media bypass settings within a CAC or E9-1-1 network configuration.
@@ -351,14 +230,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -431,7 +302,7 @@ Accept wildcard characters: False
 Per-user voice routing policy to be assigned to the site.
 For example:
 
--VoiceRoutingPolicy "RedmondVoiceRouting"
+`-VoiceRoutingPolicy "RedmondVoiceRouting"`
 
 Note that you must specify a per-user policy; global and/or site policies cannot be assigned to a site using the VoiceRoutingPolicy parameter.
 
@@ -451,7 +322,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters:` -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -467,23 +338,17 @@ Create an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Networ
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/55134dd4-eb2b-483b-8b3d-e9e42ac1acc2(OCS.14).aspx)
+[Remove-CsNetworkSite](Remove-CsNetworkSite.md)
 
-[Remove-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)
 
-[Set-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[New-CsNetworkMediaBypassConfiguration](New-CsNetworkMediaBypassConfiguration.md)
 
-[New-CsNetworkMediaBypassConfiguration]()
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)
 
-[Get-CsLocationPolicy]()
-
-[Get-CsNetworkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/55134dd4-eb2b-483b-8b3d-e9e42ac1acc2(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/55134dd4-eb2b-483b-8b3d-e9e42ac1acc2(OCS.16).aspx)
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 

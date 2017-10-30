@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsRoutingConfiguration
 schema: 2.0.0
 ---
 
 # Remove-CsRoutingConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Resets the routing configuration to its default settings.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Resets the routing configuration to its default settings.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -25,48 +19,17 @@ Remove-CsRoutingConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Voice routes contain instructions that tell Microsoft Lync Server 2010 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Lync Server 2010 deployment.
+Voice routes contain instructions that tell Skype for Business Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
+This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Skype for Business Server deployment.
 "Removing" the routing configuration doesn't actually remove it; the Global (and only) instance is still there.
 However, it does set the list of voice routes to the default settings.
 
-WARNING: Removing the routing configuration (in other words, setting the list of voice routes to the default) deletes all defined voice routes for a Lync Server 2010 deployment and replaces them with a single route with default settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsRoutingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRoutingConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Voice routes contain instructions that tell Lync Server how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Lync Server deployment.
-"Removing" the routing configuration doesn't actually remove it; the Global (and only) instance is still there.
-However, it does set the list of voice routes to the default settings.
-
-WARNING: Removing the routing configuration (in other words, setting the list of voice routes to the default) deletes all defined voice routes for a Lync Server deployment and replaces them with a single route with default settings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsRoutingConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsRoutingConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Voice routes contain instructions that tell Skype for Business Server 2015 how to route calls from Enterprise Voice users to phone numbers on the public switched telephone network (PSTN) or a private branch exchange (PBX).
-This cmdlet removes the global (and only) routing configuration, which is a container for all voice routes defined for a Skype for Business Server 2015 deployment.
-"Removing" the routing configuration doesn't actually remove it; the Global (and only) instance is still there.
-However, it does set the list of voice routes to the default settings.
-
-WARNING: Removing the routing configuration (in other words, setting the list of voice routes to the default) deletes all defined voice routes for a Skype for Business Server 2015 deployment and replaces them with a single route with default settings.
-
+WARNING: Removing the routing configuration (in other words, setting the list of voice routes to the default) deletes all defined voice routes for a Skype for Business Server deployment and replaces them with a single route with default settings.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsRoutingConfiguration -Identity Global -Confirm
 ```
@@ -74,25 +37,6 @@ Remove-CsRoutingConfiguration -Identity Global -Confirm
 This example resets the Global (and only) routing configuration to the default settings.
 This action deletes all defined voice routes, so we added the Confirm parameter in order to receive a prompt asking whether we really want to perform this action before the removal takes place.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example resets the Global (and only) routing configuration to the default settings.
-This action deletes all defined voice routes, so we added the Confirm parameter in order to receive a prompt asking whether we really want to perform this action before the removal takes place.
-
-Remove-CsRoutingConfiguration -Identity Global -Confirm
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example resets the Global (and only) routing configuration to the default settings.
-This action deletes all defined voice routes, so we added the Confirm parameter in order to receive a prompt asking whether we really want to perform this action before the removal takes place.
-
-Remove-CsRoutingConfiguration -Identity Global -Confirm
 
 ## PARAMETERS
 
@@ -179,19 +123,12 @@ This cmdlet removes (resets) an object of type Microsoft.Rtc.Management.Policy.V
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/80239fed-89ef-4ccc-be9b-d9149182d0c3(OCS.14).aspx)
+[New-CsRoutingConfiguration](New-CsRoutingConfiguration.md)
 
-[New-CsRoutingConfiguration]()
+[Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 
-[Set-CsRoutingConfiguration]()
+[Get-CsRoutingConfiguration](Get-CsRoutingConfiguration.md)
 
-[Get-CsRoutingConfiguration]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Remove-CsVoiceRoute]()
-
-[Get-CsVoiceRoute]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/80239fed-89ef-4ccc-be9b-d9149182d0c3(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/80239fed-89ef-4ccc-be9b-d9149182d0c3(OCS.16).aspx)
-
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

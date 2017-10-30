@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsLisConfiguration
 schema: 2.0.0
 ---
 
@@ -489,12 +490,12 @@ The `Test-CsLisConfiguration` cmdlet returns an instance of the Microsoft.Rtc.Sy
 
 ## RELATED LINKS
 
-[Debug-CsLisConfiguration]()
+[Debug-CsLisConfiguration](Debug-CsLisConfiguration.md)
 
-[Publish-CsLisConfiguration]()
+[Publish-CsLisConfiguration](Publish-CsLisConfiguration.md)
 
-[Unpublish-CsLisConfiguration]()
+[Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
-[Import-CsLisConfiguration]()
+[Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
-[Export-CsLisConfiguration]()
+[Export-CsLisConfiguration](Export-CsLisConfiguration.md)

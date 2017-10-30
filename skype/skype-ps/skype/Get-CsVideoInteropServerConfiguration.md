@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Get-CsVideoInteropServerConfiguration
 schema: 2.0.0
 ---
 
@@ -41,47 +42,42 @@ You can use the New-CsVideoInteropServerConfiguration cmdlet to create additiona
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+Get-CsVideoInteropServerConfiguration
 ```
 
 This example returns information about all the VIS configuration settings in the organization.
 
-Get-CsVideoInteropServerConfiguration
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
+Get-CsVideoInteropServerConfiguration -Identity "site:Redmond"
 ```
 
 This example returns information for the collection of VIS configurations that are scoped to the Redmond site.
 
-Get-CsVideoInteropServerConfiguration -Identity "site:Redmond"
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 -------------------------- 
 ```
-
+Get-CsVideoInteropServerConfiguration -Filter "site:*"
 ```
 
 This example returns all the VIS collections configured at the site scope by including the Filter value "site:*".
 
-Get-CsVideoInteropServerConfiguration -Filter "site:*"
 
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 -------------------------- 
 ```
-
+Get-CsVideoInteropServerConfiguration | Where-Object {$_.EnableEnhancedVideoExperience -eq $True}
 ```
 
 This example returns information about all the VIS configurations where the enhanced video experience has been enabled.
 First, all the VIS configurations are returned by using Get-CsVideoInteropServerConfiguration to return a collection of all the available settings.
 That collection is then piped to the Where-Object cmdlet, which picks out only those settings where the EnableEnhancedVideoExperience value is equal to True ($True).
 
-Get-CsVideoInteropServerConfiguration | Where-Object {$_.EnableEnhancedVideoExperience -eq $True}
 
 ## PARAMETERS
 
@@ -169,11 +165,8 @@ The Get-CsVideoInteropServerConfiguration cmdlet returns instances of the Micros
 
 ## RELATED LINKS
 
-[New-CsVideoInteropServerConfiguration]()
+[New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
-[Remove-CsVideoInteropServerConfiguration]()
+[Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)
 
-[Set-CsVideoInteropServerConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/72cdb754-76cb-4738-bae2-245d1619ef30(OCS.16).aspx)
-
+[Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)

@@ -1,24 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsOutboundCallingNumberTranslationRule
 schema: 2.0.0
 ---
 
 # Set-CsOutboundCallingNumberTranslationRule
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
 Modifies an existing outbound calling number translation rule.
-An outbound calling number translation rule converts the E.164 phone numbers used by Microsoft Lync Server 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies an existing outbound calling number translation rule.
-An outbound calling number translation rule converts the E.164 phone numbers used by Skype for Business Server 2015 to a format that can be used by trunking peers that do not support E.164 numbers.
+An outbound calling number translation rule converts the E.164 phone numbers used by Skype for Business Server to a format that can be used by trunking peers that do not support E.164 numbers.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -36,25 +28,6 @@ Set-CsOutboundCallingNumberTranslationRule [-Confirm] [-Description <String>] [-
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-Outbound calling number translation rules convert the E.164 phone numbers used by Microsoft Lync 2013 Preview to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
-
-Outbound calling number translation rules must be bound to a collection of trunk configuration settings; when you create a new translation rule you must specify both the Identity of the trunking configuration settings and a name for the new rule (for example, site:Redmond/RedmondTranslationRule).
-Note that the trunking configuration settings do not necessarily have to exist at the time you create a new rule.
-For example, suppose you create the rule site:Redmond/RedmondTranslationRule but no trunk configuration settings have been created for the Redmond site.
-If the Redmond site is a valid site, trunk configuration settings will automatically be created for the site and the new translation rule will be assigned to that collection of settings.
-However, your command will fail if the Redmond site does not exist.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsOutboundCallingNumberTranslationRule"}
-
-Lync Server Control Panel: To edit an existing outbound calling number translation rule using the Lync Server Control Panel, click Voice Routing, click Trunk Configuration, and then double-click the configuration settings containing the rule to be modified.
-In the Edit Trunk Configuration dialog box, scroll down to the section labeled Calling number translation rules and then double-click the rule to be modified.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Outbound calling number translation rules convert the E.164 phone numbers used by Skype for Business to a format that can be used by trunking peers that do not support E.164 numbers; when you create a translation rule you supply a regular expression representing the outbound E.164 number (the Pattern) as well as a regular expression representing the converted number (the Translation).
 
 Outbound calling number translation rules must be bound to a collection of trunk configuration settings; when you create a new translation rule you must specify both the Identity of the trunking configuration settings and a name for the new rule (for example, site:Redmond/RedmondTranslationRule).
@@ -67,28 +40,16 @@ Skype for Business Server Control Panel: To edit an existing outbound calling nu
 In the Edit Trunk Configuration dialog box, scroll down to the section labeled Calling number translation rules and then double-click the rule to be modified.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOutboundCallingNumberTranslationRule -Identity "site:Redmond/SevenDigit" -Priority 0
 ```
 
 The command shown in Example 1 changes the Priority of the outbound calling number translation rule with the Identity site:Redmond/SevenDigit.
 In this example, the Priority is set to 0.
 
-Set-CsOutboundCallingNumberTranslationRule -Identity "site:Redmond/SevenDigit" -Priority 0
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 changes the Priority of the outbound calling number translation rule with the Identity site:Redmond/SevenDigit.
-In this example, the Priority is set to 0.
-
-Set-CsOutboundCallingNumberTranslationRule -Identity "site:Redmond/SevenDigit" -Priority 0
 
 ## PARAMETERS
 
@@ -146,7 +107,7 @@ Unique identifier of the translation rule to be modified.
 The Identity consists of the scope followed by a unique name within each scope.
 For example:
 
--Identity "site:Redmond/OutboundRule1"
+`-Identity "site:Redmond/OutboundRule1"`
 
 ```yaml
 Type: XdsIdentity
@@ -249,32 +210,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsOutboundCallingNumberTranslationRule accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
-
-###  
-The Set-CsOutboundCallingNumberTranslationRule cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
+The `Set-CsOutboundCallingNumberTranslationRule` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsOutboundCallingNumberTranslationRule modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
-
-###  
-None.
-Instead, the Set-CsOutboundCallingNumberTranslationRule cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
+Instead, the `Set-CsOutboundCallingNumberTranslationRule` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.CallingNumberTranslationRule#Decorated object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOutboundCallingNumberTranslationRule]()
+[Get-CsOutboundCallingNumberTranslationRule](Get-CsOutboundCallingNumberTranslationRule.md)
 
-[New-CsOutboundCallingNumberTranslationRule]()
+[New-CsOutboundCallingNumberTranslationRule](New-CsOutboundCallingNumberTranslationRule.md)
 
-[Remove-CsOutboundCallingNumberTranslationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e9a7190a-a50d-4d01-8f33-66ed88a52b9e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e9a7190a-a50d-4d01-8f33-66ed88a52b9e(OCS.16).aspx)
-
+[Remove-CsOutboundCallingNumberTranslationRule](Remove-CsOutboundCallingNumberTranslationRule.md)

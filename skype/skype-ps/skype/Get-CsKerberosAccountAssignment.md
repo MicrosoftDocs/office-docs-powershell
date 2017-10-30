@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsKerberosAccountAssignment
 schema: 2.0.0
 ---
 
@@ -149,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsKerberosAccountAssignment]()
+[New-CsKerberosAccountAssignment](New-CsKerberosAccountAssignment.md)
 
-[Remove-CsKerberosAccountAssignment]()
+[Remove-CsKerberosAccountAssignment](Remove-CsKerberosAccountAssignment.md)
 
-[Set-CsKerberosAccountAssignment]()
+[Set-CsKerberosAccountAssignment](Set-CsKerberosAccountAssignment.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTestUserCredential
 schema: 2.0.0
 ---
 
@@ -221,6 +222,6 @@ Instead, the `Set-CsTestUserCredential` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsTestUserCredential]()
+[Get-CsTestUserCredential](Get-CsTestUserCredential.md)
 
-[Remove-CsTestUserCredential]()
+[Remove-CsTestUserCredential](Remove-CsTestUserCredential.md)

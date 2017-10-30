@@ -1,12 +1,11 @@
 {
     "sharepoint-ps": {
-        "conceptualToc": "sharepoint/docs-conceptual/toc.md",
-        "packageRoot": "sharepoint",
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/sharepoint/sharepoint-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/sharepoint-ps/toc.json",
+        "packageRoot": "sharepoint-ps",
         "modules": {
-            "sharepoint": {
-                "_displayname": "SharePoint Module",
-                "_version": "vlatest"
-            }      
+            "sharepoint": {}     
         }
     }
 }

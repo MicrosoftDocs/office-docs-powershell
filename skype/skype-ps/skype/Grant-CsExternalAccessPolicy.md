@@ -1,31 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Grant-CsExternalAccessPolicy
 schema: 2.0.0
 ---
 
 # Grant-CsExternalAccessPolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
 
 Enables you to assign an external access policy to a user or a group of users.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated  organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Microsoft Lync Server 2010 over the Internet, without having to log on to your internal network.
-
-**Below Content Applies To:** Lync Server 2013
-
-Enables you to assign an external access policy to a user or a group of users.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Lync Server over the Internet, without having to log on to your internal network.
-This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Online
-
-Grant-CsExternalAccessPolicy \[-Identity\] \<UserIdParameter\> \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Enables you to assign an external access policy to a user or a group of users.
-External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Skype for Business Server 2015 over the Internet, without having to log on to your internal network.
+External access policies determine whether or not your users can: 1) communicate with users who have Session Initiation Protocol (SIP) accounts with a federated organization; 2) communicate with users who have SIP accounts with a public instant messaging (IM) provider such as MSN; and, 3) access Skype for Business Server over the Internet, without having to log on to your internal network.
 This cmdlet was introduced in Lync Server 2010.
 
 
@@ -38,49 +23,9 @@ Grant-CsExternalAccessPolicy [-Identity] <UserIdParameter> [[-PolicyName] <Strin
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-When you install Lync Server 2010 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
-In addition, users are not allowed to access Lync Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
-
-That might be sufficient to meet your communication needs.
-If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
-External access policies can grant (or revoke) the ability of your users to do any or all of the following:
-
-1.
-Communicate with people who have SIP accounts with a federated organization.
-Note that enabling federation will not automatically provide users with this capability.
-Instead, you must enable federation, and then assign users an external access policy that gives them the right to communicate with federated users.
-
-2.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
-
-3.
-Access Lync Server over the Internet, without having to first log on to your internal network.
-This enables your users to use Microsoft Lync 2010 and log on to Lync Server from an Internet café or other remote location.
-
-When you install Lync Server, a global external access policy is automatically created for you.
-In addition to this global policy, you can use New-CsExternalAccessPolicy to create additional external access policies configured at either the site or the per-user scope.
-
-When a policy is created at the site scope, it is automatically assigned to the site in question; for example, an external access policy with the Identity site:Redmond will automatically be assigned to the Redmond site.
-By contrast, policies created at the per-user scope are not automatically assigned to anyone.
-Instead, these policies must be explicitly assigned to a user or a group of users.
-Assigning per-user policies is the job of the Grant-CsExternalAccessPolicy cmdlet.
-
-Note that per-user policies always take precedent over site policies and the global policy.
-For example, suppose you create a per-user policy that allows communication with federated users, and you assign that policy to Ken Myer.
-As long as that policy is in force, Ken will be allowed to communicate with federated users even if this type of communication is not allowed by Ken's site policy or by the global policy.
-That's because the settings in the per-user policy take precedence.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Grant-CsExternalAccessPolicy cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "Grant-CsExternalAccessPolicy"}
-
-**Below Content Applies To:** Lync Server 2013
-
-When you install Lync Server your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services (AD DS).
-In addition, users are not allowed to access Lync Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Lync Server.
+When you install Skype for Business Server your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
+In addition, users are not allowed to access Skype for Business Server over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Skype for Business Server.
 
 That might be sufficient to meet your communication needs.
 If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
@@ -95,53 +40,10 @@ Instead, you must enable federation, and then assign users an external access po
 Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
 
 3.
-Access Lync Server over the Internet, without having to first log on to your internal network.
-This enables your users to use Lync and log on to Lync Server from an Internet café or other remote location.
+Access Skype for Business Server over the Internet, without having to first log on to your internal network.
+This enables your users to use Skype for Business and log on to Skype for Business Server from an Internet café or other remote location.
 
-When you install Lync Server, a global external access policy is automatically created for you.
-In addition to this global policy, you can use New-CsExternalAccessPolicy to create additional external access policies configured at either the site or the per-user scope.
-
-When a policy is created at the site scope, it is automatically assigned to the site in question; for example, an external access policy with the Identity site:Redmond will automatically be assigned to the Redmond site.
-By contrast, policies created at the per-user scope are not automatically assigned to anyone.
-Instead, these policies must be explicitly assigned to a user or a group of users.
-Assigning per-user policies is the job of the Grant-CsExternalAccessPolicy cmdlet.
-
-Note that per-user policies always take precedent over site policies and the global policy.
-For example, suppose you create a per-user policy that allows communication with federated users, and you assign that policy to Ken Myer.
-As long as that policy is in force, Ken will be allowed to communicate with federated users even if this type of communication is not allowed by Ken's site policy or by the global policy.
-That's because the settings in the per-user policy take precedence.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Grant-CsExternalAccessPolicy cmdlet locally: RTCUniversalUserAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Grant-CsExternalAccessPolicy"}
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill in the Description}}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When you install Skype for Business Server 2015 your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
-In addition, users are not allowed to access Skype for Business Server 2015 over the Internet; instead, they must be logged on to your internal network before they will be able to log on to Skype for Business Server 2015.
-
-That might be sufficient to meet your communication needs.
-If it doesn't meet your needs you can use external access policies to extend the ability of your users to communicate and collaborate.
-External access policies can grant (or revoke) the ability of your users to do any or all of the following:
-
-1.
-Communicate with people who have SIP accounts with a federated organization.
-Note that enabling federation will not automatically provide users with this capability.
-Instead, you must enable federation, and then assign users an external access policy that gives them the right to communicate with federated users.
-
-2.
-Communicate with people who have SIP accounts with a public instant messaging service such as MSN.
-
-3.
-Access Skype for Business Server 2015 over the Internet, without having to first log on to your internal network.
-This enables your users to use Skype for Business and log on to Skype for Business Server 2015 from an Internet café or other remote location.
-
-When you install Skype for Business Server 2015, a global external access policy is automatically created for you.
+When you install Skype for Business Server, a global external access policy is automatically created for you.
 In addition to this global policy, you can use the New-CsExternalAccessPolicy cmdlet to create additional external access policies configured at either the site or the per-user scope.
 
 When a policy is created at the site scope, it is automatically assigned to the site in question; for example, an external access policy with the Identity site:Redmond will automatically be assigned to the Redmond site.
@@ -158,199 +60,73 @@ That's because the settings in the per-user policy take precedence.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolicy
-```
-
-The preceding command assigns the external access policy RedmondAccessPolicy to the user with the Active Directory display name Ken Myer.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 assigns the external access policy RedmondAccessPolicy to the user with the Active Directory display name Ken Myer.
 
-Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolicy
 
-### Example 1 (Skype for Business Online)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 assigns the external access policy RedmondAccessPolicy to the user with the Active Directory display name Ken Myer.
-
-Grant-CsExternalAccessPolicy -Identity "Ken Myer" -PolicyName RedmondAccessPolicy
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-Get-CsUser -LDAPFilter "l=Redmond" | Grant-CsExternalAccessPolicy -PolicyName RedmondAccessPolicy
-```
-
-The command shown in Example 2 assigns the external access policy RedmondAccessPolicy to all the users who work in the city of Redmond.
-To do this, the command first uses Get-CsUser and the LDAPFilter parameter to return a collection of all the users who work in Redmond; the filter value "l=Redmond" limits returned data to those users who work in the city of Redmond (the l in the filter, a lowercase L, represents the locality).
-That collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy RedmondAccessPolicy to each user in the collection.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 2 assigns the external access policy RedmondAccessPolicy to all the users who work in the city of Redmond.
-To do this, the command first uses Get-CsUser and the LdapFilter parameter to return a collection of all the users who work in Redmond; the filter value "l=Redmond" limits returned data to those users who work in the city of Redmond (the l in the filter, a lowercase L, represents the locality).
-That collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy RedmondAccessPolicy to each user in the collection.
 
 Get-CsUser -LdapFilter "l=Redmond" | Grant-CsExternalAccessPolicy -PolicyName RedmondAccessPolicy
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 2 assigns the external access policy RedmondAccessPolicy to all the users who work in the city of Redmond.
 To do this, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who work in Redmond; the filter value "l=Redmond" limits returned data to those users who work in the city of Redmond (the l in the filter, a lowercase L, represents the locality).
 That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy RedmondAccessPolicy to each user in the collection.
 
-Get-CsUser -LdapFilter "l=Redmond" | Grant-CsExternalAccessPolicy -PolicyName RedmondAccessPolicy
 
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
-Get-CsUser -LDAPFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
-```
-
-In Example 3, all the users who have the job title "Sales Representative" are assigned the external access policy SalesAccessPolicy.
-To perform this task, the command first uses Get-CsUser and the LDAPFilter parameter to return a collection of all the Sales Representatives; the filter value "Title=Sales Representative" restricts the returned collection to users who have the job title "Sales Representative".
-This filtered collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy SalesAccessPolicy to each user in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3, all the users who have the job title "Sales Representative" are assigned the external access policy SalesAccessPolicy.
-To perform this task, the command first uses Get-CsUser and the LdapFilter parameter to return a collection of all the Sales Representatives; the filter value "Title=Sales Representative" restricts the returned collection to users who have the job title "Sales Representative".
-This filtered collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy SalesAccessPolicy to each user in the collection.
 
 Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 In Example 3, all the users who have the job title "Sales Representative" are assigned the external access policy SalesAccessPolicy.
 To perform this task, the command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the Sales Representatives; the filter value "Title=Sales Representative" restricts the returned collection to users who have the job title "Sales Representative".
 This filtered collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy SalesAccessPolicy to each user in the collection.
 
-Get-CsUser -LdapFilter "Title=Sales Representative" | Grant-CsExternalAccessPolicy -PolicyName SalesAccessPolicy
 
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 4 -------------------------- 
 ```
-Get-CsUser -Filter {ExternalAccessPolicy -eq $Null} | Grant-CsExternalAccessPolicy -PolicyName BasicAccessPolicy
-```
-
-The command shown in Example 4 assigns the external access policy BasicAccessPolicy to all the users who have not been explicitly assigned a per-user policy.
-(That is, users currently being governed by a site policy or by the global policy.) To do this, Get-CsUser and the Filter parameter are used to return the appropriate set of users; the filter value {ExternalAccessPolicy -eq $Null} limits the returned data to user accounts where the ExternalAccessPolicy property is equal to (-eq) a null value ($Null).
-By definition, ExternalAccessPolicy will be null only if users have not been assigned a per-user policy.
-
-This filtered collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy BasicAccessPolicy to each user in the collection.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 4 assigns the external access policy BasicAccessPolicy to all the users who have not been explicitly assigned a per-user policy.
-(That is, users currently being governed by a site policy or by the global policy.) To do this, Get-CsUser and the Filter parameter are used to return the appropriate set of users; the filter value {ExternalAccessPolicy -eq $Null} limits the returned data to user accounts where the ExternalAccessPolicy property is equal to (-eq) a null value ($Null).
-By definition, ExternalAccessPolicy will be null only if users have not been assigned a per-user policy.
 
 Get-CsUser -Filter {ExternalAccessPolicy -eq $Null} | Grant-CsExternalAccessPolicy -PolicyName BasicAccessPolicy
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 4 assigns the external access policy BasicAccessPolicy to all the users who have not been explicitly assigned a per-user policy.
 (That is, users currently being governed by a site policy or by the global policy.) To do this, the Get-CsUser cmdlet and the Filter parameter are used to return the appropriate set of users; the filter value {ExternalAccessPolicy -eq $Null} limits the returned data to user accounts where the ExternalAccessPolicy property is equal to (-eq) a null value ($Null).
 By definition, ExternalAccessPolicy will be null only if users have not been assigned a per-user policy.
 
-Get-CsUser -Filter {ExternalAccessPolicy -eq $Null} | Grant-CsExternalAccessPolicy -PolicyName BasicAccessPolicy
 
-### -------------------------- Example 5 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 5 -------------------------- 
 ```
-Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
-```
-
-The preceding command assigns the external access policy USAccessPolicy to all the users who have accounts in the US organizational unit (OU).
-The command starts off by calling Get-CsUser and the OU parameter; the parameter value "ou=US,dc=litwareinc,dc=com" limits the returned data to user accounts found in the US OU.
-The returned collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy USAccessPolicy to each user in the collection.
-
-### -------------------------- EXAMPLE 5 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 5 assigns the external access policy USAccessPolicy to all the users who have accounts in the US organizational unit (OU).
-The command starts off by calling Get-CsUser and the OU parameter; the parameter value "ou=US,dc=litwareinc,dc=com" limits the returned data to user accounts found in the US OU.
-The returned collection is then piped to Grant-CsExternalAccessPolicy, which assigns the policy USAccessPolicy to each user in the collection.
 
 Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
-
-### -------------------------- EXAMPLE 5 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 5 assigns the external access policy USAccessPolicy to all the users who have accounts in the US organizational unit (OU).
 The command starts off by calling the Get-CsUser cmdlet and the OU parameter; the parameter value "ou=US,dc=litwareinc,dc=com" limits the returned data to user accounts found in the US OU.
 The returned collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which assigns the policy USAccessPolicy to each user in the collection.
 
-Get-CsUser -OU "ou=US,dc=litwareinc,dc=com" | Grant-CsExternalAccessPolicy -PolicyName USAccessPolicy
 
-### -------------------------- Example 6 ------------------------ (Lync Server 2010)
+### -------------------------- EXAMPLE 6 -------------------------- 
 ```
+
 Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 ```
 
-Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Lync Server.
-To do this, the command calls Get-CsUser (without any additional parameters) in order to return a collection of all the users enabled for Lync Server.
-That collection is then piped to Grant-CsExternalAccessPolicy, which uses the syntax "-PolicyName $Null" to remove any per-user external access policy previously assigned to these users.
+Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Skype for Business Server.
+To do this, the command calls the Get-CsUser cmdlet (without any additional parameters) in order to return a collection of all the users enabled for Skype for Business Server.
+That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "`-PolicyName $Null`" to remove any per-user external access policy previously assigned to these users.
 
-### -------------------------- EXAMPLE 6 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Lync Server.
-To do this, the command calls Get-CsUser (without any additional parameters) in order to return a collection of all the users enabled for Lync Server.
-That collection is then piped to Grant-CsExternalAccessPolicy, which uses the syntax "-PolicyName $Null" to remove any per-user external access policy previously assigned to these users.
-
-Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
-
-### -------------------------- EXAMPLE 6 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Skype for Business Server 2015.
-To do this, the command calls the Get-CsUser cmdlet (without any additional parameters) in order to return a collection of all the users enabled for Skype for Business Server 2015.
-That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "-PolicyName $Null" to remove any per-user external access policy previously assigned to these users.
-
-Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Identity of the user account the policy should be assigned to.
 User Identities can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
@@ -359,11 +135,6 @@ User Identities can also be referenced by using the user's Active Directory dist
 In addition, you can use the asterisk (*) wildcard character when specifying the user Identity.
 For example, the Identity "* Smith" returns all the users with a display name that ends with the string value " Smith."
 
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Identity Description}}
 
 
 
@@ -381,19 +152,12 @@ Accept wildcard characters: False
 ```
 
 ### -PolicyName
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 "Name" of the policy to be assigned.
 The PolicyName is simply the policy Identity minus the policy scope (the "tag:" prefix).
 For example, a policy with the Identity tag:Redmond has a PolicyName equal to Redmond; a policy with the Identity tag:RedmondAccessPolicy has a PolicyName equal to RedmondAccessPolicy.
 
 To unassign a per-user policy previously assigned to a user, set the PolicyName parameter to $Null.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill PolicyName Description}}
 
 
 
@@ -411,20 +175,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
-If this parameter is not specified, then Grant-CsExternalAccessPolicy will contact the first available domain controller.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill DomainController Description}}
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Enables you to specify the fully qualified domain name (FQDN) of a domain controller to be contacted when assigning the new policy.
 If this parameter is not specified, then the Grant-CsExternalAccessPolicy cmdlet will contact the first available domain controller.
@@ -445,16 +195,10 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
 By default, the Grant-CsExternalAccessPolicy cmdlet does not pass objects through the pipeline.
 
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill PassThru Description}}
 
 
 
@@ -472,16 +216,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Describes what would happen if you executed the command without actually executing the command.
 
-
-
-**Below Content Applies To:** Skype for Business Online
-
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
 
 
 
@@ -499,15 +236,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Prompts you for confirmation before executing the command.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-Prompts you for confirmation before running the cmdlet.
 
 
 
@@ -557,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -589,17 +319,11 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/451fef34-3021-4261-8494-b36420b04c82(OCS.14).aspx)
+[Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 
-[Get-CsExternalAccessPolicy]()
+[New-CsExternalAccessPolicy](New-CsExternalAccessPolicy.md)
 
-[New-CsExternalAccessPolicy]()
+[Remove-CsExternalAccessPolicy](Remove-CsExternalAccessPolicy.md)
 
-[Remove-CsExternalAccessPolicy]()
-
-[Set-CsExternalAccessPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/451fef34-3021-4261-8494-b36420b04c82(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/451fef34-3021-4261-8494-b36420b04c82(OCS.16).aspx)
+[Set-CsExternalAccessPolicy](Set-CsExternalAccessPolicy.md)
 

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsHostingProvider
 schema: 2.0.0
 ---
 
@@ -210,12 +211,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-CsHostingProvider]()
+[Disable-CsHostingProvider](Disable-CsHostingProvider.md)
 
-[Enable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[New-CsHostingProvider]()
+[New-CsHostingProvider](New-CsHostingProvider.md)
 
-[Remove-CsHostingProvider]()
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)
 
-[Set-CsHostingProvider]()
+[Set-CsHostingProvider](Set-CsHostingProvider.md)

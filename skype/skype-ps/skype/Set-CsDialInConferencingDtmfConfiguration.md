@@ -1,23 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsDialInConferencingDtmfConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsDialInConferencingDtmfConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the dual-tone multifrequency (DTMF) signaling settings used for dial-in conferencing.
-DTMF enables users who dial in to a conference to control conference settings (such as muting and unmuting themselves or locking and unlocking the conference) by using the keypad on their telephone.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies the dual-tone multifrequency (DTMF) signaling settings used for dial-in conferencing.
 DTMF enables users who dial in to a conference to control conference settings (such as muting and unmuting themselves or locking and unlocking the conference) by using the keypad on their telephone.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -41,9 +34,7 @@ Set-CsDialInConferencingDtmfConfiguration [-Instance <PSObject>] [-AdmitAll <Str
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Microsoft Lync Server 2010 enables users to join conferences by dialing in over the telephone.
+Skype for Business Server enables users to join conferences by dialing in over the telephone.
 Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
 
 In addition to being able to join a conference, users are also able to manage selected portions of that conference by using their telephone keypad.
@@ -52,7 +43,7 @@ Participants can privately play the names of all the other people attending the 
 
 The ability to make selections like these using a telephone keypad is known as dual-tone multifrequency (DTMF) signaling: if you have ever dialed a phone number and been instructed to do something along the order of "Press 1 for English or press 2 for Spanish," then you have used DTMF signaling.
 
-The Set-CsDialInConferencingDtmfConfiguration cmdlet enables you to modify the keys used to trigger the commands supported in a Lync Server 2010 dial-in conference.
+The `Set-CsDialInConferencingDtmfConfiguration` cmdlet enables you to modify the keys used to trigger the commands supported in a Skype for Business Server dial-in conference.
 
 When modifying the DTMF commands keep two things in mind.
 First, you can only use the numeric keys 0 through 9; any other keys that might be found on your keypad (such as the # key) are not allowed.
@@ -64,101 +55,21 @@ That means that, when modifying the keys assigned to a command, you might want t
 For example, if you want to assign the 4 key to EnableDisableAnnouncementsCommand (default value: 9) you should, in the same command, assign the 9 key to AudienceMuteCommand.
 
 To disable a command, set its value to Null ($Null).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsDialInConferencingDtmfConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingDtmfConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server enables users to join conferences by dialing in over the telephone.
-Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
-
-In addition to being able to join a conference, users are also able to manage selected portions of that conference by using their telephone keypad.
-(The specific conference settings users can and cannot manage depend on whether or not the user is a presenter.) For example, by default users can press the 6 key on their keypad to mute or unmute themselves.
-Participants can privately play the names of all the other people attending the meeting, while presenters can do such things as mute and unmute all the meeting participants and enable or disable the announcement that is played any time someone joins or leaves a conference.
-
-The ability to make selections like these using a telephone keypad is known as dual-tone multifrequency (DTMF) signaling: if you have ever dialed a phone number and been instructed to do something along the order of "Press 1 for English or press 2 for Spanish," then you have used DTMF signaling.
-
-The Set-CsDialInConferencingDtmfConfiguration cmdlet enables you to modify the keys used to trigger the commands supported in a Lync Server dial-in conference.
-
-When modifying the DTMF commands keep two things in mind.
-First, you can only use the numeric keys 0 through 9; any other keys that might be found on your keypad (such as the # key) are not allowed.
-There is one exception to that rule: the CommandCharacter parameter allows you to use only the asterisk key (*), or the pound key (#); you cannot assign a numeric value to the CommandCharacter parameter.
-However, all the other command parameters will only accept numeric values.
-
-Second, commands must be assigned unique keys; for example, the 4 key cannot be used both to mute and unmute yourself and to lock and unlock a conference.
-That means that, when modifying the keys assigned to a command, you might want to swap the keys used by two different commands.
-For example, if you want to assign the 4 key to EnableDisableAnnouncementsCommand (default value: 9) you should, in the same command, assign the 9 key to AudienceMuteCommand.
-
-To disable a command, set its value to Null ($Null).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsDialInConferencingDtmfConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsDialInConferencingDtmfConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 enables users to join conferences by dialing in over the telephone.
-Dial-in users are not able to view video or exchange instant messages with other conference attendees, but they are able to fully participate in the audio portion of the meeting.
-
-In addition to being able to join a conference, users are also able to manage selected portions of that conference by using their telephone keypad.
-(The specific conference settings users can and cannot manage depend on whether or not the user is a presenter.) For example, by default users can press the 6 key on their keypad to mute or unmute themselves.
-Participants can privately play the names of all the other people attending the meeting, while presenters can do such things as mute and unmute all the meeting participants and enable or disable the announcement that is played any time someone joins or leaves a conference.
-
-The ability to make selections like these using a telephone keypad is known as dual-tone multifrequency (DTMF) signaling: if you have ever dialed a phone number and been instructed to do something along the order of "Press 1 for English or press 2 for Spanish," then you have used DTMF signaling.
-
-The Set-CsDialInConferencingDtmfConfiguration cmdlet enables you to modify the keys used to trigger the commands supported in a Skype for Business Server 2015 dial-in conference.
-
-When modifying the DTMF commands keep two things in mind.
-First, you can only use the numeric keys 0 through 9; any other keys that might be found on your keypad (such as the # key) are not allowed.
-There is one exception to that rule: the CommandCharacter parameter allows you to use only the asterisk key (*), or the pound key (#); you cannot assign a numeric value to the CommandCharacter parameter.
-However, all the other command parameters will only accept numeric values.
-
-Second, commands must be assigned unique keys; for example, the 4 key cannot be used both to mute and unmute yourself and to lock and unlock a conference.
-That means that, when modifying the keys assigned to a command, you might want to swap the keys used by two different commands.
-For example, if you want to assign the 4 key to EnableDisableAnnouncementsCommand (default value: 9) you should, in the same command, assign the 9 key to AudienceMuteCommand.
-
-To disable a command, set its value to Null ($Null).
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsDialInConferencingDtmfConfiguration -Identity global -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
 ```
 
 The command shown in Example 1 swaps the keys assigned to the command for enabling and disabling announcements (default value: 9) and the command for muting and unmuting all participants (default value: 4) for the global DTMF settings.
-To do this two different parameters are used: EnableDisableAnnoucementsCommand, which is given the parameter value 4; and AudienceMuteCommand, which is given the value 9.
+To do this two different parameters are used: EnableDisableAnnoucementsCommand, which is given the parameter value 4 and AudienceMuteCommand, which is given the value 9.
 Because no Identity is specified, these changes will affect the global DTMF settings.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 swaps the keys assigned to the command for enabling and disabling announcements (default value: 9) and the command for muting and unmuting all participants (default value: 4) for the global DTMF settings.
-To do this two different parameters are used: EnableDisableAnnoucementsCommand, which is given the parameter value 4; and AudienceMuteCommand, which is given the value 9.
-Because no Identity is specified, these changes will affect the global DTMF settings.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity global -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 swaps the keys assigned to the command for enabling and disabling announcements (default value: 9) and the command for muting and unmuting all participants (default value: 4) for the global DTMF settings.
-To do this two different parameters are used: EnableDisableAnnoucementsCommand, which is given the parameter value 4; and AudienceMuteCommand, which is given the value 9.
-Because no Identity is specified, these changes will affect the global DTMF settings.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity global -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Set-CsDialInConferencingDtmfConfiguration -Identity site:Redmond -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
 ```
@@ -166,27 +77,8 @@ Set-CsDialInConferencingDtmfConfiguration -Identity site:Redmond -EnableDisableA
 The command shown in Example 2 is a variation of the command shown in the first example.
 In this case, however, the changes affect the DTMF settings that have the Identity site:Redmond.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 2 is a variation of the command shown in the first example.
-In this case, however, the changes affect the DTMF settings that have the Identity site:Redmond.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity site:Redmond -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 2 is a variation of the command shown in the first example.
-In this case, however, the changes affect the DTMF settings that have the Identity site:Redmond.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity site:Redmond -EnableDisableAnnouncementsCommand 4 -AudienceMuteCommand 9
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Set-CsDialInConferencingDtmfConfiguration -Identity "site:Redmond" -PrivateRollCallCommand $Null
 ```
@@ -195,82 +87,26 @@ The command shown in Example 3 disables the roll call command (the ability to pl
 To disable this command, the PrivateRollCallCommand parameter is included, with the parameter value set to $Null.
 This means that no keypad key will be associated with the command, which makes the command unavailable to users.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 3 disables the roll call command (the ability to play back a list of all the people participating in the conference) for the Redmond site.
-To disable this command, the PrivateRollCallCommand parameter is included, with the parameter value set to $Null.
-This means that no keypad key will be associated with the command, which makes the command unavailable to users.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity "site:Redmond" -PrivateRollCallCommand $Null
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 3 disables the roll call command (the ability to play back a list of all the people participating in the conference) for the Redmond site.
-To disable this command, the PrivateRollCallCommand parameter is included, with the parameter value set to $Null.
-This means that no keypad key will be associated with the command, which makes the command unavailable to users.
-
-Set-CsDialInConferencingDtmfConfiguration -Identity "site:Redmond" -PrivateRollCallCommand $Null
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
+### -------------------------- Example 4 ------------------------
 ```
 Get-CsDialInConferencingDtmfConfiguration -Filter "site:*" | Set-CsDialInConferencingDtmfConfiguration -PrivateRollCallCommand $Null
 ```
 
 Example 4 is a variation on Example 3: in this example, the roll call command is disabled for all the DTMF settings configured at the site scope.
-To do this, the command first uses Get-CsDialInConferencingDtmfConfiguration and the Filter parameter to return a collection of all the settings configured at the site scope; the filter value "site:*" limits the returned data to those settings where the Identity begins with the characters "site:".
-This filtered collection is then piped to Set-CsDialInConferencingDtmfConfiguration, which sets the value of the PrivateRollCallCommand property to null ($Null).
+To do this, the command first uses the `Get-CsDialInConferencingDtmfConfiguration` cmdlet and the Filter parameter to return a collection of all the settings configured at the site scope; the filter value "site:*" limits the returned data to those settings where the Identity begins with the characters "site:".
+This filtered collection is then piped to the `Set-CsDialInConferencingDtmfConfiguration` cmdlet, which sets the value of the PrivateRollCallCommand property to null ($Null).
 
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 4 is a variation on Example 3: in this example, the roll call command is disabled for all the DTMF settings configured at the site scope.
-To do this, the command first uses Get-CsDialInConferencingDtmfConfiguration and the Filter parameter to return a collection of all the settings configured at the site scope; the filter value "site:*" limits the returned data to those settings where the Identity begins with the characters "site:".
-This filtered collection is then piped to Set-CsDialInConferencingDtmfConfiguration, which sets the value of the PrivateRollCallCommand property to null ($Null).
-
-Get-CsDialInConferencingDtmfConfiguration -Filter "site:*" | Set-CsDialInConferencingDtmfConfiguration -PrivateRollCallCommand $Null
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 4 is a variation on Example 3: in this example, the roll call command is disabled for all the DTMF settings configured at the site scope.
-To do this, the command first uses the Get-CsDialInConferencingDtmfConfiguration cmdlet and the Filter parameter to return a collection of all the settings configured at the site scope; the filter value "site:*" limits the returned data to those settings where the Identity begins with the characters "site:".
-This filtered collection is then piped to the Set-CsDialInConferencingDtmfConfiguration cmdlet, which sets the value of the PrivateRollCallCommand property to null ($Null).
-
-Get-CsDialInConferencingDtmfConfiguration -Filter "site:*" | Set-CsDialInConferencingDtmfConfiguration -PrivateRollCallCommand $Null
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Indicates the unique identifier for the collection of DTMF settings you want to modify.
-To refer to the global settings, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity site:Redmond.
+To refer to the global settings, use this syntax: `-Identity global`.
+To refer to a collection configured at the site scope, use syntax similar to this: `-Identity site:Redmond`.
 Note that you cannot use wildcards when specifying an Identity.
 
-If this parameter is not specified, then Set-CsDialInConferencingDtmfConfiguration will modify the global DTMF settings.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates the unique identifier for the collection of DTMF settings you want to modify.
-To refer to the global settings, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity site:Redmond.
-Note that you cannot use wildcards when specifying an Identity.
-
-If this parameter is not specified, then the Set-CsDialInConferencingDtmfConfiguration cmdlet will modify the global DTMF settings.
-
+If this parameter is not specified, then the `Set-CsDialInConferencingDtmfConfiguration` cmdlet will modify the global DTMF settings.
 
 
 ```yaml
@@ -406,18 +242,8 @@ Accept wildcard characters: False
 ```
 
 ### -MuteUnmuteCommand
-**Below Content Applies To:** Lync Server 2010
-
-Indicates the key to be pressed to mute or unmute yourself; the same key is used to toggle back and forth between muting and unmuting).
-The default key is 6.
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Indicates the key to be pressed to mute or unmute yourself; the same key is used to toggle back and forth between muting and unmuting.
 The default key is 6.
-
 
 
 ```yaml
@@ -522,35 +348,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingDtmfConfiguration object.
-Set-CsDialInConferencingDtmfConfiguration accepts pipelined instances of the dial-in conference DTMF configuration object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingDtmfConfiguration object.
-The Set-CsDialInConferencingDtmfConfiguration cmdlet accepts pipelined instances of the dial-in conference DTMF configuration object.
+The `Set-CsDialInConferencingDtmfConfiguration` cmdlet accepts pipelined instances of the dial-in conference DTMF configuration object.
 
 ## OUTPUTS
 
 ###  
-Set-CsDialInConferencingDtmfConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingDtmfConfiguration object.
-
-###  
-The Set-CsDialInConferencingDtmfConfiguration cmdlet does not return a value or object.
+The `Set-CsDialInConferencingDtmfConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.DialInConferencingSettings.DialInConferencingDtmfConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/cc22353e-6c14-49b1-bf23-f952c100bfd8(OCS.14).aspx)
+[Get-CsDialInConferencingDtmfConfiguration](Get-CsDialInConferencingDtmfConfiguration.md)
 
-[Get-CsDialInConferencingDtmfConfiguration]()
+[New-CsDialInConferencingDtmfConfiguration](New-CsDialInConferencingDtmfConfiguration.md)
 
-[New-CsDialInConferencingDtmfConfiguration]()
-
-[Remove-CsDialInConferencingDtmfConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cc22353e-6c14-49b1-bf23-f952c100bfd8(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cc22353e-6c14-49b1-bf23-f952c100bfd8(OCS.16).aspx)
-
+[Remove-CsDialInConferencingDtmfConfiguration](Remove-CsDialInConferencingDtmfConfiguration.md)

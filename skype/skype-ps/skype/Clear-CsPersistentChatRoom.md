@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Clear-CsPersistentChatRoom
 schema: 2.0.0
 ---
 
@@ -175,4 +176,4 @@ None. Instead, Clear-CsPersistentChatRoom modifies existing instances of the Mic
 
 ## RELATED LINKS
 
-[Remove-CsPersistentChatMessage]()
+[Remove-CsPersistentChatMessage](Remove-CsPersistentChatMessage.md)

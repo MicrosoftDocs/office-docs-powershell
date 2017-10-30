@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Uninstall-CsDatabase
 schema: 2.0.0
 ---
 
@@ -253,4 +254,4 @@ The `Uninstall-CsDatabase` cmdlet does not return any values or objects.
 
 ## RELATED LINKS
 
-[Install-CsDatabase]()
+[Install-CsDatabase](Install-CsDatabase.md)

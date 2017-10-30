@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
 ---
 
 # Set-CsOnlineEnhancedEmergencyServiceDisclaimer
 
 ## SYNOPSIS
-Use the Set-CsOnlineEnhancedEmergencyServiceDisclaimer cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
+Use the `Set-CsOnlineEnhancedEmergencyServiceDisclaimer` cmdlet to record your organization's acceptance of the enhanced emergency service terms and conditions.
 Any tenant administrator can accept the terms and conditions.
 
 ## SYNTAX
@@ -23,15 +24,14 @@ You must run this cmdlet prior to assigning phone numbers and locations to voice
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion US
 ```
 
 This example accepts the U.S.
 version of the enhanced emergency service terms and conditions.
 
-Set-CsOnlineEnhancedEmergencyServiceDisclaimer -CountryOrRegion US
 
 ## PARAMETERS
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -215,6 +215,3 @@ None
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/00fd6f13-f6a5-4f7f-886b-9d802f70b4da(OCS.15).aspx)
-

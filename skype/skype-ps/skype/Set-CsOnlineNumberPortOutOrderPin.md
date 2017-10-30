@@ -1,13 +1,15 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineNumberPortOutOrderPin
 schema: 2.0.0
 ---
 
 # Set-CsOnlineNumberPortOutOrderPin
 
 ## SYNOPSIS
-Set-CsOnlineNumberPortOutOrderPin \[-Tenant \<guid\>\] \[-PortOrderPin \<string\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
+
 
 ## SYNTAX
 
@@ -21,7 +23,7 @@ Set-CsOnlineNumberPortOutOrderPin [-BypassDualWrite <Object>] [-Confirm] [-Domai
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -173,4 +175,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

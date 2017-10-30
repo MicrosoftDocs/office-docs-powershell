@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsVoiceRoute
 schema: 2.0.0
 ---
 
@@ -156,10 +157,10 @@ Returns an object of type Microsoft.Rtc.Management.Voice.VoiceRouteTestResult.
 
 ## RELATED LINKS
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Remove-CsVoiceRoute]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Set-CsVoiceRoute]()
+[Set-CsVoiceRoute](Set-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)

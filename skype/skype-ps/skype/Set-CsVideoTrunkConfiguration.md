@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsVideoTrunkConfiguration
 schema: 2.0.0
 ---
 
@@ -269,8 +270,8 @@ The `Set-CsVideoTrunkConfiguration` cmdlet modifies existing instances of the Mi
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunkConfiguration]()
+[Get-CsVideoTrunkConfiguration](Get-CsVideoTrunkConfiguration.md)
 
-[New-CsVideoTrunkConfiguration]()
+[New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
-[Remove-CsVideoTrunkConfiguration]()
+[Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)

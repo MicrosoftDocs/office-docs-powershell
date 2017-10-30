@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsPstnPeerToPeerCall
 schema: 2.0.0
 ---
 
@@ -394,4 +395,4 @@ The `Test-CsPstnPeerToPeerCall` cmdlet returns an instance of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[Test-CsPstnOutboundCall]()
+[Test-CsPstnOutboundCall](Test-CsPstnOutboundCall.md)

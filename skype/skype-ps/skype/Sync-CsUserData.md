@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Sync-CsUserData
 schema: 2.0.0
 ---
 
@@ -123,10 +124,10 @@ None.
 
 ## RELATED LINKS
 
-[Convert-CsUserData]()
+[Convert-CsUserData](Convert-CsUserData.md)
 
-[Export-CsUserData]()
+[Export-CsUserData](Export-CsUserData.md)
 
-[Import-CsUserData]()
+[Import-CsUserData](Import-CsUserData.md)
 
-[Update-CsUserData]()
+[Update-CsUserData](Update-CsUserData.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsExStorageNotification
 schema: 2.0.0
 ---
 
@@ -144,4 +145,4 @@ The `Test-CsExStorageNotification` cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Test-CsExStorageConnectivity]()
+[Test-CsExStorageConnectivity](Test-CsExStorageConnectivity.md)

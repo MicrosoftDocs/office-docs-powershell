@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPersistentChatRoom
 schema: 2.0.0
 ---
 
@@ -377,10 +378,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-CsPersistentChatRoom]()
+[Clear-CsPersistentChatRoom](Clear-CsPersistentChatRoom.md)
 
-[New-CsPersistentChatRoom]()
+[New-CsPersistentChatRoom](New-CsPersistentChatRoom.md)
 
-[Remove-CsPersistentChatRoom]()
+[Remove-CsPersistentChatRoom](Remove-CsPersistentChatRoom.md)
 
-[Set-CsPersistentChatRoom]()
+[Set-CsPersistentChatRoom](Set-CsPersistentChatRoom.md)

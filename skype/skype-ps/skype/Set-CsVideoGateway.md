@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsVideoGateway
 schema: 2.0.0
 ---
 
@@ -184,4 +185,4 @@ The `Set-CsVideoGateway` cmdlet does not return any objects or values.
 
 ## RELATED LINKS
 
-[Get-CsVideoTrunk]()
+[Get-CsVideoTrunk](Get-CsVideoTrunk.md)

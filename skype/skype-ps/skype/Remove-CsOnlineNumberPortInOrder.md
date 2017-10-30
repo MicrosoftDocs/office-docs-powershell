@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Remove-CsOnlineNumberPortInOrder
 schema: 2.0.0
 ---
 
@@ -18,13 +19,17 @@ Remove-CsOnlineNumberPortInOrder [-PortInOrderId <Object>] [-BypassDualWrite <Ob
 ```
 
 ## DESCRIPTION
+Provide the detailed description here.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
+```
+Insert example commands for example 1.
 ```
 
-```
+Insert descriptive text for example 1.
+
 
 ## PARAMETERS
 
@@ -166,6 +171,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f566b223-efde-46ba-9454-2632e5549b68(OCS.15).aspx)
-

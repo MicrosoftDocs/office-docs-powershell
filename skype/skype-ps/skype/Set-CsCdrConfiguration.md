@@ -1,25 +1,17 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsCdrConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsCdrConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Modifies an existing collection of call detail recording (CDR) settings.
-CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
-This usage data includes information about who called whom, when they called, and how long they talked.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-Modifies an existing collection of call detail recording (CDR) settings.
-CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
-This usage data includes information about who called whom, when they called, and how long they talked.
+CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls and conferencing calls.
+This usage data includes information about who called whom, when they called and how long they talked.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -39,9 +31,7 @@ Set-CsCdrConfiguration [-Instance <PSObject>] [-EnableCDR <Boolean>] [-EnablePur
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server 2010 capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
+Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
 However, CDR does not make a recording of the call itself.
 
@@ -52,177 +42,52 @@ In addition, you can make this decision globally (in which case CDR will either 
 For example, you could use CDR in the Redmond site but not use CDR in the Paris site.
 
 Administrators can also manage the CDR database; for example, you can specify the number of days CDR records are maintained before they are purged from that database.
-Changes such as these can be made by using the Set-CsCdrConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCdrConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCdrConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Call detail recording (CDR) provides a way for you to track usage of Lync Server capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
-CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
-However, CDR does not make a recording of the call itself.
-
-CDR also keeps track of call error information: detailed diagnostic data for both peer-to-peer sessions and for conferencing calls.
-
-As an administrator, you can determine whether or not CDR is used in your organization; assuming that the Monitoring Service has been deployed, you can easily enable or disable CDR.
-In addition, you can make this decision globally (in which case CDR will either be enabled or disabled throughout the organization) or on a site-by-site basis.
-For example, you could use CDR in the Redmond site but not use CDR in the Paris site.
-
-Administrators can also manage the CDR database; for example, you can specify the number of days CDR records are maintained before they are purged from that database.
-Changes such as these can be made by using the Set-CsCdrConfiguration cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCdrConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCdrConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over Internet Protocol (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
-CDR (which is available only if you have deployed the Monitoring service) keeps usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
-However, CDR does not make a recording of the call itself.
-
-CDR also keeps track of call error information: detailed diagnostic data for both peer-to-peer sessions and for conferencing calls.
-
-As an administrator, you can determine whether or not CDR is used in your organization; assuming that the Monitoring Service has been deployed, you can easily enable or disable CDR.
-In addition, you can make this decision globally (in which case CDR will either be enabled or disabled throughout the organization) or on a site-by-site basis.
-For example, you could use CDR in the Redmond site but not use CDR in the Paris site.
-
-Administrators can also manage the CDR database; for example, you can specify the number of days CDR records are maintained before they are purged from that database.
-Changes such as these can be made by using the Set-CsCdrConfiguration cmdlet.
-
+Changes such as these can be made by using the `Set-CsCdrConfiguration` cmdlet.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsCdrConfiguration -Identity site:Redmond -PurgeHourOfDay 23
-```
-
-The preceding example sets the time of day for purging old records.
-In this case the time is set to 23 (11:00 P.M.
-on a 24-hour clock).
-The Identity parameter is used to ensure that these changes are only made to the CDR settings that have the Identity site:Redmond.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 sets the time of day for purging old records.
-In this case the time is set to 23 (11:00 P.M.
-on a 24-hour clock).
+In this case the time is set to 23 (11:00 P.M. on a 24-hour clock).
 The Identity parameter is used to ensure that these changes are only made to the CDR settings that have the Identity site:Redmond.
 
-Set-CsCdrConfiguration -Identity site:Redmond -PurgeHourOfDay 23
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 sets the time of day for purging old records.
-In this case the time is set to 23 (11:00 P.M.
-on a 24-hour clock).
-The Identity parameter is used to ensure that these changes are only made to the CDR settings that have the Identity site:Redmond.
-
-Set-CsCdrConfiguration -Identity site:Redmond -PurgeHourOfDay 23
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsCdrConfiguration | Set-CsCdrConfiguration -PurgeHourOfDay 23
 ```
 
 Example 2 is a variation of the command shown in Example 1.
 In this case, the PurgeHourOfDay property is modified for each collection of CDR configuration settings currently in use in the organization.
-To do this, the command first calls Get-CsCdrConfiguration without any parameters in order to return a collection of all the CDR settings currently in use.
-This collection is then piped to Set-CsCdrConfiguration, which takes each item in the collection and changes the value of the PurgeHourOfDay property to 11:00 PM (23).
+To do this, the command first calls the `Get-CsCdrConfiguration` cmdlet without any parameters in order to return a collection of all the CDR settings currently in use.
+This collection is then piped to the `Set-CsCdrConfiguration` cmdlet, which takes each item in the collection and changes the value of the PurgeHourOfDay property to 11:00 PM (23).
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 2 is a variation of the command shown in Example 1.
-In this case, the PurgeHourOfDay property is modified for each collection of CDR configuration settings currently in use in the organization.
-To do this, the command first calls Get-CsCdrConfiguration without any parameters in order to return a collection of all the CDR settings currently in use.
-This collection is then piped to Set-CsCdrConfiguration, which takes each item in the collection and changes the value of the PurgeHourOfDay property to 11:00 PM (23).
-
-Get-CsCdrConfiguration | Set-CsCdrConfiguration -PurgeHourOfDay 23
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 is a variation of the command shown in Example 1.
-In this case, the PurgeHourOfDay property is modified for each collection of CDR configuration settings currently in use in the organization.
-To do this, the command first calls the Get-CsCdrConfiguration cmdlet without any parameters in order to return a collection of all the CDR settings currently in use.
-This collection is then piped to the Set-CsCdrConfiguration cmdlet, which takes each item in the collection and changes the value of the PurgeHourOfDay property to 11:00 PM (23).
-
-Get-CsCdrConfiguration | Set-CsCdrConfiguration -PurgeHourOfDay 23
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsCdrConfiguration -Filter "site:*"| Set-CsCdrConfiguration -PurgeHourOfDay 23
 ```
 
 Another variation of the command used in Example 1 is shown in Example 3.
 In this example, the PurgeHourOfDay property is changed for all the CDR settings that have been configured at the site scope.
-To perform this task, the command first calls Get-CsCdrConfiguration along with the Filter parameter; the filter value "site:*" ensures that only CDR settings that have an Identity that begins with the string value "site:" will be returned.
-The filtered collection is then piped to Set-CsCdrConfiguration, which changes the PurgeHourOfDay property for each item in that collection.
+To perform this task, the command first calls the `Get-CsCdrConfiguration` cmdlet along with the Filter parameter; the filter value "site:*" ensures that only CDR settings that have an Identity that begins with the string value "site:" will be returned.
+The filtered collection is then piped to the `Set-CsCdrConfiguration` cmdlet, which changes the PurgeHourOfDay property for each item in that collection.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Another variation of the command used in Example 1 is shown in Example 3.
-In this example, the PurgeHourOfDay property is changed for all the CDR settings that have been configured at the site scope.
-To perform this task, the command first calls Get-CsCdrConfiguration along with the Filter parameter; the filter value "site:*" ensures that only CDR settings that have an Identity that begins with the string value "site:" will be returned.
-The filtered collection is then piped to Set-CsCdrConfiguration, which changes the PurgeHourOfDay property for each item in that collection.
-
-Get-CsCdrConfiguration -Filter "site:*"| Set-CsCdrConfiguration -PurgeHourOfDay 23
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Another variation of the command used in Example 1 is shown in Example 3.
-In this example, the PurgeHourOfDay property is changed for all the CDR settings that have been configured at the site scope.
-To perform this task, the command first calls the Get-CsCdrConfiguration cmdlet along with the Filter parameter; the filter value "site:*" ensures that only CDR settings that have an Identity that begins with the string value "site:" will be returned.
-The filtered collection is then piped to the Set-CsCdrConfiguration cmdlet, which changes the PurgeHourOfDay property for each item in that collection.
-
-Get-CsCdrConfiguration -Filter "site:*"| Set-CsCdrConfiguration -PurgeHourOfDay 23
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Unique identifier assigned to the collection of CDR configuration settings.
-To refer to the global settings, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity site:Redmond.
+To refer to the global settings, use this syntax: `-Identity global`.
+To refer to a collection configured at the site scope, use syntax similar to this: `-Identity site:Redmond`.
 Note that you cannot use wildcard characters when specifying an Identity.
 
-If this parameter is omitted then Set-CsCdrConfiguration will modify the global settings.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Unique identifier assigned to the collection of CDR configuration settings.
-To refer to the global settings, use this syntax: -Identity global.
-To refer to a collection configured at the site scope, use syntax similar to this: -Identity site:Redmond.
-Note that you cannot use wildcard characters when specifying an Identity.
-
-If this parameter is omitted then the Set-CsCdrConfiguration cmdlet will modify the global settings.
-
+If this parameter is omitted then the `Set-CsCdrConfiguration` cmdlet will modify the global settings.
 
 
 ```yaml
@@ -310,34 +175,11 @@ Accept wildcard characters: False
 ```
 
 ### -KeepErrorReportForDays
-**Below Content Applies To:** Lync Server 2010
-
-Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
-CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2010.
-
-You can set this property to any integer value between 1 and 2562 days (approximately 7 years).
-The default value is 60.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
-CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2013 Preview.
-
-You can set this property to any integer value between 1 and 2562 days (approximately 7 years).
-The default value is 60.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
 CDR error reports are diagnostic reports uploaded by client applications such as Skype for Business.
 
 You can set this property to any integer value between 1 and 2562 days (approximately 7 years).
 The default value is 60.
-
 
 
 ```yaml
@@ -431,35 +273,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.CallDetailRecording.CdrSettings.
-Set-CsCdrConfiguration accepts pipelined input of call detail recording configuration objects.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.CallDetailRecording.CdrSettings.
-The Set-CsCdrConfiguration cmdlet accepts pipelined input of call detail recording configuration objects.
+The `Set-CsCdrConfiguration` cmdlet accepts pipelined input of call detail recording configuration objects.
 
 ## OUTPUTS
 
 ###  
-Set-CsCdrConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CallDetailRecording.CDRSettings object.
-
-###  
-The Set-CsCdrConfiguration cmdlet does not return a value or object.
+The `Set-CsCdrConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CallDetailRecording.CDRSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/977f0d3e-796b-43a3-bc0c-82ea91741c52(OCS.14).aspx)
+[Get-CsCdrConfiguration](Get-CsCdrConfiguration.md)
 
-[Get-CsCdrConfiguration]()
+[New-CsCdrConfiguration](New-CsCdrConfiguration.md)
 
-[New-CsCdrConfiguration]()
-
-[Remove-CsCdrConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/977f0d3e-796b-43a3-bc0c-82ea91741c52(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/977f0d3e-796b-43a3-bc0c-82ea91741c52(OCS.16).aspx)
-
+[Remove-CsCdrConfiguration](Remove-CsCdrConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsWebServiceConfiguration
 schema: 2.0.0
 ---
 
@@ -840,8 +841,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsWebServiceConfiguration]()
+[Get-CsWebServiceConfiguration](Get-CsWebServiceConfiguration.md)
 
-[New-CsWebServiceConfiguration]()
+[New-CsWebServiceConfiguration](New-CsWebServiceConfiguration.md)
 
-[Remove-CsWebServiceConfiguration]()
+[Remove-CsWebServiceConfiguration](Remove-CsWebServiceConfiguration.md)

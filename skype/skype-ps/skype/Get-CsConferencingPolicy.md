@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsConferencingPolicy
 schema: 2.0.0
 ---
 
@@ -286,12 +287,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsConferencingPolicy]()
+[Grant-CsConferencingPolicy](Grant-CsConferencingPolicy.md)
 
-[New-CsConferencingPolicy]()
+[New-CsConferencingPolicy](New-CsConferencingPolicy.md)
 
-[Remove-CsConferencingPolicy]()
+[Remove-CsConferencingPolicy](Remove-CsConferencingPolicy.md)
 
-[Set-CsConferencingPolicy]()
+[Set-CsConferencingPolicy](Set-CsConferencingPolicy.md)
 
-[Get-CsConferencingPolicy]()
+[Get-CsConferencingPolicy](Get-CsConferencingPolicy.md)

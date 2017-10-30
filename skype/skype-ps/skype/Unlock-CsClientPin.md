@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Unlock-CsClientPin
 schema: 2.0.0
 ---
 
@@ -146,8 +147,8 @@ Instead, the cmdlet configures one or more instances of the Microsoft.Rtc.Manage
 
 ## RELATED LINKS
 
-[Get-CsClientPinInfo]()
+[Get-CsClientPinInfo](Get-CsClientPinInfo.md)
 
-[Lock-CsClientPin]()
+[Lock-CsClientPin](Lock-CsClientPin.md)
 
-[Set-CsClientPin]()
+[Set-CsClientPin](Set-CsClientPin.md)

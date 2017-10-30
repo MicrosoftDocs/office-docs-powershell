@@ -1,32 +1,17 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsClientVersionConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsClientVersionConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Modifies the specified collection of client version configuration settings.
-Client version configuration settings determine whether or not Microsoft Lync Server 2010 checks the version number of each client application that logs on to the system.
-If client version filtering is enabled, then the ability of that client application to access the system will be based on settings configured in the appropriate client version policy.
-
-**Below Content Applies To:** Lync Server 2013
-
-Modifies the specified collection of client version configuration settings.
-Client version configuration settings determine whether or not Lync Server checks the version number of each client application that logs on to the system.
+Client version configuration settings determine whether or not Skype for Business Server checks the version number of each client application that logs on to the system.
 If client version filtering is enabled, then the ability of that client application to access the system will be based on settings configured in the appropriate client version policy.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies the specified collection of client version configuration settings.
-Client version configuration settings determine whether or not Skype for Business Server 2015 checks the version number of each client application that logs on to the system.
-If client version filtering is enabled, then the ability of that client application to access the system will be based on settings configured in the appropriate client version policy.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -44,191 +29,64 @@ Set-CsClientVersionConfiguration [-Instance <PSObject>] [-DefaultAction <Default
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Lync Server 2010 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
-For example, there is no technical reason that requires users to log on to Lync Server 2010 by using Microsoft Lync 2010; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
-
-On the other hand, there might be some non-technical reasons why you would prefer that your users do not log on by using Office Communicator 2007 R2.
-For example, Office Communicator 2007 R2 does not support all of the features and capabilities found in Lync 2010; as a result, users who log on with Office Communicator 2007 R2 will have a different experience than users who log on by using Lync 2010.
-This can create difficulties for your users; it can also create difficulties for help desk personnel, who must provide support for a number of different client applications.
-
-If this could be a problem for your organization you can employ client version filtering in order to specify which client applications can be used to log on to Lync Server 2010.
-When you install Lync Server 2010, a global set of client version configuration settings is installed and enabled.
-These settings are used to determine whether or not client version filtering is enabled.
-In addition to the global settings, client version configuration settings can also be applied at the site scope; in those instances, the site settings will have precedence over the global settings.
-
-The Set-CsClientVersionConfiguration cmdlet enables you to modify an existing collection of client version configuration settings.
-
-Note that client version configuration is not a security feature.
-The technology relies on self-reporting from client applications, and does not attempt to verify that an application is really the application and the version number of that application that it claims to be.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsClientVersionConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Lync Server gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
-For example, there is no technical reason that requires users to log on to Lync Server by using Lync; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
-
-On the other hand, there might be some non-technical reasons why you would prefer that your users do not log on by using Office Communicator 2007 R2.
-For example, Office Communicator 2007 R2 does not support all of the features and capabilities found in Lync; as a result, users who log on with Office Communicator 2007 R2 will have a different experience than users who log on by using Lync.
-This can create difficulties for your users; it can also create difficulties for help desk personnel, who must provide support for a number of different client applications.
-
-If this could be a problem for your organization you can employ client version filtering in order to specify which client applications can be used to log on to Lync Server.
-When you install Lync Server, a global set of client version configuration settings is installed and enabled.
-These settings are used to determine whether or not client version filtering is enabled.
-In addition to the global settings, client version configuration settings can also be applied at the site scope; in those instances, the site settings will have precedence over the global settings.
-
-The Set-CsClientVersionConfiguration cmdlet enables you to modify an existing collection of client version configuration settings.
-
-Note that client version configuration is not a security feature.
-The technology relies on self-reporting from client applications, and does not attempt to verify that an application is really the application and the version number of that application that it claims to be.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsClientVersionConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClientVersionConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Skype for Business Server 2015 gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
-For example, there is no technical reason that requires users to log on to Skype for Business Server 2015 by using Skype for Business; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
+Skype for Business Server gives administrators considerable leeway when it comes to specifying the client software (and, equally important, the version number of that software) that users can use to log on to the system.
+For example, there is no technical reason that requires users to log on to Skype for Business Server by using Skype for Business; there are no technical limitations that would prevent users from logging on by using Microsoft Office Communicator 2007 R2.
 
 On the other hand, there might be some non-technical reasons why you would prefer that your users do not log on by using Office Communicator 2007 R2.
 For example, Office Communicator 2007 R2 does not support all of the features and capabilities found in Skype for Business; as a result, users who log on with Office Communicator 2007 R2 will have a different experience than users who log on by using Skype for Business.
 This can create difficulties for your users; it can also create difficulties for help desk personnel, who must provide support for a number of different client applications.
 
-If this could be a problem for your organization you can employ client version filtering in order to specify which client applications can be used to log on to Skype for Business Server 2015.
-When you install Skype for Business Server 2015, a global set of client version configuration settings is installed and enabled.
+If this could be a problem for your organization you can employ client version filtering in order to specify which client applications can be used to log on to Skype for Business Server.
+When you install Skype for Business Server, a global set of client version configuration settings is installed and enabled.
 These settings are used to determine whether or not client version filtering is enabled.
 In addition to the global settings, client version configuration settings can also be applied at the site scope; in those instances, the site settings will have precedence over the global settings.
 
-The Set-CsClientVersionConfiguration cmdlet enables you to modify an existing collection of client version configuration settings.
+The `Set-CsClientVersionConfiguration` cmdlet enables you to modify an existing collection of client version configuration settings.
 
 Note that client version configuration is not a security feature.
-The technology relies on self-reporting from client applications, and does not attempt to verify that an application is really the application and the version number of that application that it claims to be.
-
+The technology relies on self-reporting from client applications and does not attempt to verify that an application is really the application and the version number of that application that it claims to be.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsClientVersionConfiguration -Identity site:Redmond -Enabled $False
 ```
 
-In Example 1, Set-CsClientVersionConfiguration is used to modify the settings collection with the Identity "site:Redmond".
+In Example 1, the `Set-CsClientVersionConfiguration` cmdlet is used to modify the settings collection with the Identity "site:Redmond".
 In this case, the Enabled parameter is set to False in order to disable the client version configuration settings.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 1, Set-CsClientVersionConfiguration is used to modify the settings collection with the Identity "site:Redmond".
-In this case, the Enabled parameter is set to False in order to disable the client version configuration settings.
-
-Set-CsClientVersionConfiguration -Identity site:Redmond -Enabled $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, the Set-CsClientVersionConfiguration cmdlet is used to modify the settings collection with the Identity "site:Redmond".
-In this case, the Enabled parameter is set to False in order to disable the client version configuration settings.
-
-Set-CsClientVersionConfiguration -Identity site:Redmond -Enabled $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsClientVersionConfiguration | Set-CsClientVersionConfiguration -DefaultURL "https://litwareinc.com/csclients"
-```
-
-In the preceding example, the DefaultUrl property is modified for all the client version configuration settings currently in use in the organization.
-To do this, the command first calls Get-CsClientVersionConfiguration without any additional parameters in order to return all of the client version configuration settings.
-That information is then piped to Set-CsClientVersionConfiguration, which sets the value of the DefaultUrl for each configuration collection to https://litwareinc.com/csclients.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 In Example 2, the DefaultUrl property is modified for all the client version configuration settings currently in use in the organization.
-To do this, the command first calls Get-CsClientVersionConfiguration without any additional parameters in order to return all of the client version configuration settings.
-That information is then piped to Set-CsClientVersionConfiguration, which sets the value of the DefaultUrl for each configuration collection to https://litwareinc.com/csclients.
+To do this, the command first calls the `Get-CsClientVersionConfiguration` cmdlet without any additional parameters in order to return all of the client version configuration settings.
+That information is then piped to the `Set-CsClientVersionConfiguration` cmdlet, which sets the value of the DefaultUrl for each configuration collection to https://litwareinc.com/csclients.
 
-Get-CsClientVersionConfiguration | Set-CsClientVersionConfiguration -DefaultURL "https://litwareinc.com/csclients"
 
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 2, the DefaultUrl property is modified for all the client version configuration settings currently in use in the organization.
-To do this, the command first calls the Get-CsClientVersionConfiguration cmdlet without any additional parameters in order to return all of the client version configuration settings.
-That information is then piped to the Set-CsClientVersionConfiguration cmdlet, which sets the value of the DefaultUrl for each configuration collection to https://litwareinc.com/csclients.
-
-Get-CsClientVersionConfiguration | Set-CsClientVersionConfiguration -DefaultURL "https://litwareinc.com/csclients"
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- Example 3 --------------------------
 ```
 Get-CsClientVersionConfiguration | Where-Object {$_.DefaultAction -eq "Block"} | Set-CsClientVersionConfiguration -DefaultAction "BlockWithUrl" -DefaultURL "https://litwareinc.com/csclients"
 ```
 
 In Example 3, modifications are made to all the client version configuration settings where the DefaultAction is currently set to Block.
-To carry out this task, the command first uses Get-CsClientVersionConfiguration to return all of the client version configuration settings currently in use.
-That information is then piped to the Where-Object cmdlet, which picks out only those items where the DefaultAction property is equal to "Block".
-In turn, that filtered collection is then piped to Set-CsClientVersionConfiguration, which does two things to each item in the collection: 1) sets the DefaultAction to BlockWithUrl; and, 2) sets the DefaultUrl to https://litwareinc.com/csclients.
+To carry out this task, the command first uses the `Get-CsClientVersionConfiguration` cmdlet to return all of the client version configuration settings currently in use.
+That information is then piped to the `Where-Object` cmdlet, which picks out only those items where the DefaultAction property is equal to "Block".
+In turn, that filtered collection is then piped to the `Set-CsClientVersionConfiguration` cmdlet, which does two things to each item in the collection: 1) sets the DefaultAction to BlockWithUrl and 2) sets the DefaultUrl to https://litwareinc.com/csclients.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3, modifications are made to all the client version configuration settings where the DefaultAction is currently set to Block.
-To carry out this task, the command first uses Get-CsClientVersionConfiguration to return all of the client version configuration settings currently in use.
-That information is then piped to the Where-Object cmdlet, which picks out only those items where the DefaultAction property is equal to "Block".
-In turn, that filtered collection is then piped to Set-CsClientVersionConfiguration, which does two things to each item in the collection: 1) sets the DefaultAction to BlockWithUrl; and, 2) sets the DefaultUrl to https://litwareinc.com/csclients.
-
-Get-CsClientVersionConfiguration | Where-Object {$_.DefaultAction -eq "Block"} | Set-CsClientVersionConfiguration -DefaultAction "BlockWithUrl" -DefaultURL "https://litwareinc.com/csclients"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 3, modifications are made to all the client version configuration settings where the DefaultAction is currently set to Block.
-To carry out this task, the command first uses the Get-CsClientVersionConfiguration cmdlet to return all of the client version configuration settings currently in use.
-That information is then piped to the Where-Object cmdlet, which picks out only those items where the DefaultAction property is equal to "Block".
-In turn, that filtered collection is then piped to the Set-CsClientVersionConfiguration cmdlet, which does two things to each item in the collection: 1) sets the DefaultAction to BlockWithUrl; and, 2) sets the DefaultUrl to https://litwareinc.com/csclients.
-
-Get-CsClientVersionConfiguration | Where-Object {$_.DefaultAction -eq "Block"} | Set-CsClientVersionConfiguration -DefaultAction "BlockWithUrl" -DefaultURL "https://litwareinc.com/csclients"
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Represents the unique identifier of the client version configuration settings to be modified.
-To modify the global settings, use syntax like this: -Identity global.
-To modify settings assigned to the site scope, use syntax similar to this: "site:Redmond".
+To modify the global settings, use syntax like this: `-Identity global`.
+To modify settings assigned to the site scope, use syntax similar to this: `"site:Redmond"`.
 
-If this parameter is not included, Set-CsClientVersionConfiguration will automatically configure the global settings.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Represents the unique identifier of the client version configuration settings to be modified.
-To modify the global settings, use syntax like this: -Identity global.
-To modify settings assigned to the site scope, use syntax similar to this: "site:Redmond".
-
-If this parameter is not included, the Set-CsClientVersionConfiguration cmdlet will automatically configure the global settings.
-
+If this parameter is not included, the `Set-CsClientVersionConfiguration` cmdlet will automatically configure the global settings.
 
 
 ```yaml
@@ -364,7 +222,7 @@ Accept wildcard characters: False
 
 ### -DefaultURL
 Specifies the URL of the webpage where users can download an approved client application.
-If specified, and if the DefaultAction is set to BlockWithURL, this URL will appear in the "Access denied" message box displayed any time a user tries to log on from an unsupported client application.
+If specified and if the DefaultAction is set to BlockWithURL, this URL will appear in the "Access denied" message box displayed any time a user tries to log on from an unsupported client application.
 
 ```yaml
 Type: String
@@ -386,35 +244,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Policy.ClientVersion.ClientVersionConfiguration object.
-Set-CsClientVersionConfiguration accepts pipelined instances of the client version configuration object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Policy.ClientVersion.ClientVersionConfiguration object.
-The Set-CsClientVersionConfiguration cmdlet accepts pipelined instances of the client version configuration object.
+The `Set-CsClientVersionConfiguration` cmdlet accepts pipelined instances of the client version configuration object.
 
 ## OUTPUTS
 
 ###  
-Set-CsClientVersionConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ClientVersion.ClientVersionConfiguration object.
-
-###  
-The Set-CsClientVersionConfiguration cmdlet does not return a value or object.
+The `Set-CsClientVersionConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ClientVersion.ClientVersionConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/7cd2e86f-2d31-4db2-9d0f-f1418fd4aba2(OCS.14).aspx)
+[Get-CsClientVersionConfiguration](Get-CsClientVersionConfiguration.md)
 
-[Get-CsClientVersionConfiguration]()
+[New-CsClientVersionConfiguration](New-CsClientVersionConfiguration.md)
 
-[New-CsClientVersionConfiguration]()
-
-[Remove-CsClientVersionConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7cd2e86f-2d31-4db2-9d0f-f1418fd4aba2(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/7cd2e86f-2d31-4db2-9d0f-f1418fd4aba2(OCS.16).aspx)
-
+[Remove-CsClientVersionConfiguration](Remove-CsClientVersionConfiguration.md)

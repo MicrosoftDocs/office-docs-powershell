@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Convert-CsUserData
 schema: 2.0.0
 ---
 
@@ -193,10 +194,10 @@ The Convert-CsUserData cmdlet creates either XML or ZIP files, depending on whet
 
 ## RELATED LINKS
 
-[Export-CsUserData]()
+[Export-CsUserData](Export-CsUserData.md)
 
-[Import-CsUserData]()
+[Import-CsUserData](Import-CsUserData.md)
 
-[Sync-CsUserData]()
+[Sync-CsUserData](Sync-CsUserData.md)
 
-[Update-CsUserData]()
+[Update-CsUserData](Update-CsUserData.md)

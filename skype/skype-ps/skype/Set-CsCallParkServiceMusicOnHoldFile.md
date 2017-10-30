@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsCallParkServiceMusicOnHoldFile
 schema: 2.0.0
 ---
 
 # Set-CsCallParkServiceMusicOnHoldFile
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Changes the audio file that will be played to callers who are on hold in a parked call.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Changes the audio file that will be played to callers who are on hold in a parked call.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,130 +20,43 @@ Set-CsCallParkServiceMusicOnHoldFile [-Service] <String> -Content <Byte[]> [-For
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Call parking is a service that allows a user to "park" an incoming phone call.
-Parking a call transfers it  to a number in a specified range and immediately places it on hold.
-Based on configuration settings for the Call Park service, music on hold can be played to the caller while the call is parked.
-Use this cmdlet to change the audio file (music on hold) that is played to a parked caller who is on hold.
-
-Music on hold is played only if the EnableMusicOnHold property of the Call Park service has been set to True.
-You can check this property by calling Get-CsCpsConfiguration.
-You can set the property either when the Call Park configuration is created with New-CsCpsConfiguration or after the Call Park configuration exists by calling Set-CsCpsConfiguration.
-This property is True by default.
-
-Microsoft Lync Server 2010 ships with a default Call Park service music on hold file.
-If you don't assign an audio file, the default file will be used.
-
-Audio files must be in the following format: Windows Media Audio 9, 44 kHz, 16 bits, Mono, CBR, or 32 kbps.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCallParkServiceMusicOnHoldFile cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCallParkServiceMusicOnHoldFile"}
-
-**Below Content Applies To:** Lync Server 2013
-
 Call parking is a service that allows a user to "park" an incoming phone call.
 Parking a call transfers it to a number in a specified range and immediately places it on hold.
 Based on configuration settings for the Call Park service, music on hold can be played to the caller while the call is parked.
 Use this cmdlet to change the audio file (music on hold) that is played to a parked caller who is on hold.
 
 Music on hold is played only if the EnableMusicOnHold property of the Call Park service has been set to True.
-You can check this property by calling Get-CsCpsConfiguration.
-You can set the property either when the Call Park configuration is created with New-CsCpsConfiguration or after the Call Park configuration exists by calling Set-CsCpsConfiguration.
+You can check this property by calling the `Get-CsCpsConfiguration` cmdlet.
+You can set the property either when the Call Park configuration is created with the `New-CsCpsConfiguration` cmdlet or after the Call Park configuration exists by calling the `Set-CsCpsConfiguration` cmdlet.
 This property is True by default.
 
-Lync Server ships with a default Call Park service music on hold file.
+Skype for Business Server ships with a default Call Park service music on hold file.
 If you don't assign an audio file, the default file will be used.
 
 Audio files must be in the following format: Windows Media Audio 9, 44 kHz, 16 bits, Mono, CBR, or 32 kbps.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsCallParkServiceMusicOnHoldFile cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsCallParkServiceMusicOnHoldFile"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Call parking is a service that allows a user to "park" an incoming phone call.
-Parking a call transfers it to a number in a specified range and immediately places it on hold.
-Based on configuration settings for the Call Park service, music on hold can be played to the caller while the call is parked.
-Use this cmdlet to change the audio file (music on hold) that is played to a parked caller who is on hold.
-
-Music on hold is played only if the EnableMusicOnHold property of the Call Park service has been set to True.
-You can check this property by calling the Get-CsCpsConfiguration cmdlet.
-You can set the property either when the Call Park configuration is created with the New-CsCpsConfiguration cmdlet or after the Call Park configuration exists by calling the Set-CsCpsConfiguration cmdlet.
-This property is True by default.
-
-Skype for Business Server 2015 ships with a default Call Park service music on hold file.
-If you don't assign an audio file, the default file will be used.
-
-Audio files must be in the following format: Windows Media Audio 9, 44 kHz, 16 bits, Mono, CBR, or 32 kbps.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 $a = Get-Content -ReadCount 0 -Encoding byte "C:\MoHFiles\soothingmusic.wma"
+
 Set-CsCallParkServiceMusicOnHoldFile -Service ApplicationServer:pool0.litwareinc.com -Content $a
 ```
 
 This example sets the file SoothingMusic.wma to be the audio file that is played to callers whose calls are parked.
-The first line of this example is a call to the built-in Windows PowerShell cmdlet Get-Content.
+The first line of this example is a call to the `Get-Content` cmdlet.
 This cmdlet simply reads the contents of a file and assigns them, in this case, to the variable $a.
-We pass a value of 0 to the ReadCount parameter so Get-Content will read the entire file at once (rather than try to read it line by line, which doesn't apply to an audio file).
+We pass a value of 0 to the ReadCount parameter so the `Get-Content` cmdlet will read the entire file at once (rather than try to read it line by line, which doesn't apply to an audio file).
 We set the Encoding parameter to byte.
-This tells Get-Content that the content we want to read into variable $a is a byte array rather than the audio file in .wma format.
+This tells the `Get-Content` cmdlet that the content we want to read into variable $a is a byte array rather than the audio file in .wma format.
 
 Line 2 in this example is where we actually assign the audio file.
-We call Set-CsCallParkServiceMusicOnHoldFile and specify the service ID where the Call Park service is running.
+We call the `Set-CsCallParkServiceMusicOnHoldFile` cmdlet and specify the service ID where the Call Park service is running.
 We then pass the audio file contents that we read into variable $a to the Content parameter.
 (Remember that these contents must be in byte format.)
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example sets the file SoothingMusic.wma to be the audio file that is played to callers whose calls are parked.
-The first line of this example is a call to the built-in Windows PowerShell cmdlet Get-Content.
-This cmdlet simply reads the contents of a file and assigns them, in this case, to the variable $a.
-We pass a value of 0 to the ReadCount parameter so Get-Content will read the entire file at once (rather than try to read it line by line, which doesn't apply to an audio file).
-We set the Encoding parameter to byte.
-This tells Get-Content that the content we want to read into variable $a is a byte array rather than the audio file in .wma format.
-
-Line 2 in this example is where we actually assign the audio file.
-We call Set-CsCallParkServiceMusicOnHoldFile and specify the service ID where the Call Park service is running.
-We then pass the audio file contents that we read into variable $a to the Content parameter.
-(Remember that these contents must be in byte format.)
-
-$a = Get-Content -ReadCount 0 -Encoding byte "C:\MoHFiles\soothingmusic.wma"
-
-Set-CsCallParkServiceMusicOnHoldFile -Service ApplicationServer:pool0.litwareinc.com -Content $a
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example sets the file SoothingMusic.wma to be the audio file that is played to callers whose calls are parked.
-The first line of this example is a call to the Get-Content cmdlet.
-This cmdlet simply reads the contents of a file and assigns them, in this case, to the variable $a.
-We pass a value of 0 to the ReadCount parameter so the Get-Content cmdlet will read the entire file at once (rather than try to read it line by line, which doesn't apply to an audio file).
-We set the Encoding parameter to byte.
-This tells the Get-Content cmdlet that the content we want to read into variable $a is a byte array rather than the audio file in .wma format.
-
-Line 2 in this example is where we actually assign the audio file.
-We call the Set-CsCallParkServiceMusicOnHoldFile cmdlet and specify the service ID where the Call Park service is running.
-We then pass the audio file contents that we read into variable $a to the Content parameter.
-(Remember that these contents must be in byte format.)
-
-$a = Get-Content -ReadCount 0 -Encoding byte "C:\MoHFiles\soothingmusic.wma"
-
-Set-CsCallParkServiceMusicOnHoldFile -Service ApplicationServer:pool0.litwareinc.com -Content $a
 
 ## PARAMETERS
 
@@ -172,7 +79,7 @@ Accept wildcard characters: False
 ### -Content
 The contents of the audio file in byte format.
 
-Use the Get-Content cmdlet to retrieve the contents of the audio file in byte format.
+Use the `Get-Content` cmdlet to retrieve the contents of the audio file in byte format.
 (For details, see the Examples section in this topic.)
 
 ```yaml
@@ -254,17 +161,10 @@ This cmdlet does not return a value.
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/af5e7573-4bfd-47b1-a92b-83b06a537158(OCS.14).aspx)
+[New-CsCpsConfiguration](New-CsCpsConfiguration.md)
 
-[New-CsCpsConfiguration]()
+[Remove-CsCpsConfiguration](Remove-CsCpsConfiguration.md)
 
-[Remove-CsCpsConfiguration]()
+[Set-CsCpsConfiguration](Set-CsCpsConfiguration.md)
 
-[Set-CsCpsConfiguration]()
-
-[Get-CsCpsConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/af5e7573-4bfd-47b1-a92b-83b06a537158(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/af5e7573-4bfd-47b1-a92b-83b06a537158(OCS.16).aspx)
-
+[Get-CsCpsConfiguration](Get-CsCpsConfiguration.md)

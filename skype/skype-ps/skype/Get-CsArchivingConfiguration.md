@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsArchivingConfiguration
 schema: 2.0.0
 ---
 
@@ -163,10 +164,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsArchivingConfiguration]()
+[New-CsArchivingConfiguration](New-CsArchivingConfiguration.md)
 
-[Remove-CsArchivingConfiguration]()
+[Remove-CsArchivingConfiguration](Remove-CsArchivingConfiguration.md)
 
-[Set-CsArchivingConfiguration]()
+[Set-CsArchivingConfiguration](Set-CsArchivingConfiguration.md)
 
-[Set-CsArchivingServer]()
+[Set-CsArchivingServer](Set-CsArchivingServer.md)

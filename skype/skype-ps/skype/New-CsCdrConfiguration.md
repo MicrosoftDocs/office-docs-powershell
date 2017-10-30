@@ -1,19 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsCdrConfiguration
 schema: 2.0.0
 ---
 
 # New-CsCdrConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new set of call detail recording (CDR) settings.
-CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
-This usage data includes information about who called whom, when they called, and how long they talked.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new set of call detail recording (CDR) settings.
 CDR enables you to track usage of such things as peer-to-peer instant messaging sessions, Voice over Internet Protocol (VoIP) phone calls, and conferencing calls.
@@ -31,51 +25,8 @@ New-CsCdrConfiguration [-Identity] <XdsIdentity> [-EnableCDR <Boolean>] [-Enable
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
-Call detail recording (CDR) provides a way for you to track usage of Microsoft Lync Server 2010 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
-CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
-(However, CDR not make a recording of the call itself.)
-
-CDR also keeps track of call error information: detailed diagnostic data for both peer-to-peer sessions and for conferencing calls.
-
-As an administrator, you can determine whether or not CDR is used in your organization; if the Monitoring Service has been deployed, you can easily enable or disable CDR.
-In addition, you can make this decision globally (in which case CDR will either be enabled or disabled throughout the organization) or on a site-by-site basis; for example, you could use CDR in the Redmond site but not use CDR in the Paris site.
-
-The New-CsCdrConfiguration cmdlet enables you to create new CDR setting collections at the site scope.
-(New settings cannot be created at the global scope.) Note that a site can only host a single collection of CDR settings.
-That means that you cannot create a new collection for the Redmond site if the site already has a set of CDR configuration settings.
-If you try this, the command will fail.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsCdrConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsCdrConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Call detail recording (CDR) provides a way for you to track usage of Lync Server capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
-CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
-(However, CDR not make a recording of the call itself.)
-
-CDR also keeps track of call error information: detailed diagnostic data for both peer-to-peer sessions and for conferencing calls.
-
-As an administrator, you can determine whether or not CDR is used in your organization; if the Monitoring Service has been deployed, you can easily enable or disable CDR.
-In addition, you can make this decision globally (in which case CDR will either be enabled or disabled throughout the organization) or on a site-by-site basis; for example, you could use CDR in the Redmond site but not use CDR in the Paris site.
-
-The New-CsCdrConfiguration cmdlet enables you to create new CDR setting collections at the site scope.
-(New settings cannot be created at the global scope.) Note that a site can only host a single collection of CDR settings.
-That means that you cannot create a new collection for the Redmond site if the site already has a set of CDR configuration settings.
-If you try this, the command will fail.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsCdrConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsCdrConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server 2015 capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
+Call detail recording (CDR) provides a way for you to track usage of Skype for Business Server capabilities such as Voice over IP (VoIP) phone calls; instant messaging (IM); file transfers; audio/video (A/V) conferencing; and application sharing sessions.
 CDR (which is available only if you have deployed the Monitoring service) keeps track of usage information: it logs information such as the parties involved in the call; the length of the call; and whether or not any files were transferred.
 (However, CDR not make a recording of the call itself.)
 
@@ -93,8 +44,9 @@ If you try this, the command will fail.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsCdrConfiguration -Identity site:Redmond -EnableCDR $False
 ```
 
@@ -102,65 +54,15 @@ The command in Example 1 uses the New-CsCdrConfiguration cmdlet to create a new 
 In addition to the Identity site:Redmond, the new settings also have the EnableCDR property set to False.
 Because site settings take precedence over global settings, this means that CDR will not be used in the Redmond site, regardless of whether or not CDR has been enabled at the global scope.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-The command in Example 1 uses the New-CsCdrConfiguration cmdlet to create a new set of CDR settings with the Identity site:Redmond.
-In addition to the Identity site:Redmond, the new settings also have the EnableCDR property set to False.
-Because site settings take precedence over global settings, this means that CDR will not be used in the Redmond site, regardless of whether or not CDR has been enabled at the global scope.
-
-New-CsCdrConfiguration -Identity site:Redmond -EnableCDR $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in Example 1 uses the New-CsCdrConfiguration cmdlet to create a new set of CDR settings with the Identity site:Redmond.
-In addition to the Identity site:Redmond, the new settings also have the EnableCDR property set to False.
-Because site settings take precedence over global settings, this means that CDR will not be used in the Redmond site, regardless of whether or not CDR has been enabled at the global scope.
-
-New-CsCdrConfiguration -Identity site:Redmond -EnableCDR $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-$x = New-CsCdrConfiguration -Identity site:Redmond -InMemory
-$x.EnableCDR = $False
-Set-CsCdrConfiguration -Instance $x
-```
-
-Example 2 uses the InMemory parameter to demonstrate how you can create a new collection of CDR configuration settings that initially exist only in memory.
-To do this, the example first uses New-CsCdrConfiguration and the InMemory parameter to create a virtual collection of settings with the Identity site:Redmond.
-This virtual collection is stored in the variable $x; if the collection was not stored in a variable it would be created and then immediately disappear.
-
-After the virtual collection has been created, the command shown in line 2 sets the value of the EnableCDR property to False ($False).
-In line 3, Set-CsCdrConfiguration is then used to transform the virtual collection $x into an actual collection of CDR configuration settings that is applied to the Redmond site.
-If Set-CsCdrConfiguration was not called, the virtual collection would disappear as soon as the Windows PowerShell session was terminated or the variable $x was deleted.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 uses the InMemory parameter to demonstrate how you can create a new collection of CDR configuration settings that initially exist only in memory.
-To do this, the example first uses New-CsCdrConfiguration and the InMemory parameter to create a virtual collection of settings with the Identity site:Redmond.
-This virtual collection is stored in the variable $x; if the collection was not stored in a variable it would be created and then immediately disappear.
-
-After the virtual collection has been created, the command shown in line 2 sets the value of the EnableCDR property to False ($False).
-In line 3, Set-CsCdrConfiguration is then used to transform the virtual collection $x into an actual collection of CDR configuration settings that is applied to the Redmond site.
-If Set-CsCdrConfiguration was not called, the virtual collection would disappear as soon as the Windows PowerShell session was terminated or the variable $x was deleted.
 
 $x = New-CsCdrConfiguration -Identity site:Redmond -InMemory
 
 $x.EnableCDR = $False
 
 Set-CsCdrConfiguration -Instance $x
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 uses the InMemory parameter to demonstrate how you can create a new collection of CDR configuration settings that initially exist only in memory.
@@ -171,11 +73,6 @@ After the virtual collection has been created, the command shown in line 2 sets 
 In line 3,the Set-CsCdrConfiguration cmdlet is then used to transform the virtual collection $x into an actual collection of CDR configuration settings that is applied to the Redmond site.
 If the Set-CsCdrConfiguration cmdlet was not called, the virtual collection would disappear as soon as the Windows PowerShell session was terminated or the variable $x was deleted.
 
-$x = New-CsCdrConfiguration -Identity site:Redmond -InMemory
-
-$x.EnableCDR = $False
-
-Set-CsCdrConfiguration -Instance $x
 
 ## PARAMETERS
 
@@ -252,27 +149,6 @@ Accept wildcard characters: False
 ```
 
 ### -KeepErrorReportForDays
-**Below Content Applies To:** Lync Server 2010
-
-Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
-CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2010.
-
-You can set this property to any integer value between 1 and 2562 days (approximately 7 years).
-The default value is 60.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
-CDR error reports are diagnostic reports uploaded by client applications such as Microsoft Lync 2013 Preview.
-
-You can set this property to any integer value between 1 and 2562 days (approximately 7 years).
-The default value is 60.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Indicates the number of days that CDR error reports are kept; any reports older than the specified number of days will automatically be deleted.
 CDR error reports are diagnostic reports uploaded by client applications such as Skype for Business.
@@ -336,14 +212,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -396,13 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsCdrConfiguration does not accept pipelined input.
 
 ###  
 None.
@@ -411,24 +275,15 @@ The New-CsCdrConfiguration cmdlet does not accept pipelined input.
 ## OUTPUTS
 
 ###  
-Creates instances of the Microsoft.Rtc.Management.WritebleConfig.Settings.CallDetailRecording.CdrSettings object.
-
-###  
 Creates instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CallDetailRecording.CdrSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e5890ac3-7a6c-4609-a866-84c39b76d3a9(OCS.14).aspx)
+[Get-CsCdrConfiguration](Get-CsCdrConfiguration.md)
 
-[Get-CsCdrConfiguration]()
+[Remove-CsCdrConfiguration](Remove-CsCdrConfiguration.md)
 
-[Remove-CsCdrConfiguration]()
-
-[Set-CsCdrConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e5890ac3-7a6c-4609-a866-84c39b76d3a9(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e5890ac3-7a6c-4609-a866-84c39b76d3a9(OCS.16).aspx)
+[Set-CsCdrConfiguration](Set-CsCdrConfiguration.md)
 

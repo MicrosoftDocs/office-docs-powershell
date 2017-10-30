@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPoolFabricState
 schema: 2.0.0
 ---
 
@@ -319,4 +320,4 @@ String value representing the fabric state.
 
 ## RELATED LINKS
 
-[Reset-CsPoolFabricState]()
+[Reset-CsPoolFabricState](Reset-CsPoolFabricState.md)

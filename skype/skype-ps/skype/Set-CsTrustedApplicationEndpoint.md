@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTrustedApplicationEndpoint
 schema: 2.0.0
 ---
 
@@ -330,8 +331,8 @@ It modifies an object of type Microsoft.Rtc.Management.ADConnect.Schema.OCSADApp
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationEndpoint]()
+[New-CsTrustedApplicationEndpoint](New-CsTrustedApplicationEndpoint.md)
 
-[Remove-CsTrustedApplicationEndpoint]()
+[Remove-CsTrustedApplicationEndpoint](Remove-CsTrustedApplicationEndpoint.md)
 
-[Get-CsTrustedApplicationEndpoint]()
+[Get-CsTrustedApplicationEndpoint](Get-CsTrustedApplicationEndpoint.md)

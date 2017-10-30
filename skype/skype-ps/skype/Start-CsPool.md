@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Start-CsPool
 schema: 2.0.0
 ---
 
@@ -177,6 +178,6 @@ None
 
 ## RELATED LINKS
 
-[Backup-CsPool]()
+[Backup-CsPool](Backup-CsPool.md)
 
-[Get-CsPool]()
+[Get-CsPool](Get-CsPool.md)

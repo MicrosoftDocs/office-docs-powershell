@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsPresence
 schema: 2.0.0
 ---
 
@@ -399,4 +400,4 @@ The `Test-CsPresence` cmdlet returns an instance of the Microsoft.Rtc.SyntheticT
 
 ## RELATED LINKS
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

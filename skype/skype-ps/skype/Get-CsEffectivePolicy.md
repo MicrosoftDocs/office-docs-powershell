@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsEffectivePolicy
 schema: 2.0.0
 ---
 
@@ -206,4 +207,4 @@ The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

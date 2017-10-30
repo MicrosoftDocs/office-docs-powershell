@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsMediaConfiguration
 schema: 2.0.0
 ---
 
@@ -140,8 +141,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsMediaConfiguration]()
+[New-CsMediaConfiguration](New-CsMediaConfiguration.md)
 
-[Remove-CsMediaConfiguration]()
+[Remove-CsMediaConfiguration](Remove-CsMediaConfiguration.md)
 
-[Set-CsMediaConfiguration]()
+[Set-CsMediaConfiguration](Set-CsMediaConfiguration.md)

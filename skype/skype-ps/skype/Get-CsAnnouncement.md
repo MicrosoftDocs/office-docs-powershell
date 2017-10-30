@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsAnnouncement
 schema: 2.0.0
 ---
 
@@ -181,10 +182,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsAnnouncement]()
+[New-CsAnnouncement](New-CsAnnouncement.md)
 
-[Remove-CsAnnouncement]()
+[Remove-CsAnnouncement](Remove-CsAnnouncement.md)
 
-[Set-CsAnnouncement]()
+[Set-CsAnnouncement](Set-CsAnnouncement.md)
 
-[Import-CsAnnouncementFile]()
+[Import-CsAnnouncementFile](Import-CsAnnouncementFile.md)

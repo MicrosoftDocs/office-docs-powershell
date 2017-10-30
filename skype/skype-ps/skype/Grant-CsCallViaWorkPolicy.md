@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Grant-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
 
@@ -20,18 +21,18 @@ Grant-CsCallViaWorkPolicy [-Identity] <UserIdParameter> [-PolicyName] <String> [
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
 
+Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName StandardUserCvW
 ```
 
 This example assigns the policy named "StandardUserCvW" to "Ken Myer".
 
-Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName StandardUserCvW
 
 ## PARAMETERS
 
@@ -69,7 +70,7 @@ The PolicyName is the policy identity minus the policy scope ("tag:").
 A policy that has an identity of "Tag:Redmond" has a PolicyName of "Redmond".
 A policy with the identity "Tag:RedmondCalloutPolicy" has a PolicyName of "RedmondCalloutPolicy".
 If you set PolicyName to a null value, then the command will unassign any individual policy assigned to the user.
-For example: Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName $Null
+For example: `Grant-CsCallViaWorkPolicy -Identity "Ken Myer" -PolicyName $Null`
 
 ```yaml
 Type: String
@@ -151,7 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -167,13 +168,11 @@ None.
 
 ## RELATED LINKS
 
-[Remove-CsCallViaWorkPolicy]()
+[Remove-CsCallViaWorkPolicy](Remove-CsCallViaWorkPolicy.md)
 
-[Set-CsCallViaWorkPolicy]()
+[Set-CsCallViaWorkPolicy](Set-CsCallViaWorkPolicy.md)
 
-[New-CsCallViaWorkPolicy]()
+[New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
-[Get-CsCallViaWorkPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/aef9db27-23ac-469f-917a-789be09c0fc3(OCS.16).aspx)
+[Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)
 

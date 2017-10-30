@@ -1,17 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsNetworkInterSitePolicy
 schema: 2.0.0
 ---
 
 # New-CsNetworkInterSitePolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,17 +31,6 @@ New-CsNetworkInterSitePolicy -InterNetworkSitePolicyID <String> -NetworkSiteID1 
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
-This cmdlet creates a network site policy that associates a bandwidth limitation policy with two directly connected sites.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkInterSitePolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkInterSitePolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet creates a network site policy that associates a bandwidth limitation policy with two directly connected sites.
@@ -54,33 +39,16 @@ This cmdlet creates a network site policy that associates a bandwidth limitation
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsNetworkInterSitePolicy -Identity Reno_Portland -NetworkSiteID1 Reno -NetworkSiteID2 Portland -BWPolicyProfileID LowBWLimits
-```
-
-This example creates a new network inter-site policy that limits bandwidth between the connected sites Reno and Portland.
-The bandwidth limitations for audio and video connections between these sites are limited based on the setting configured for the bandwidth policy profile LowBWLimits.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
 ```
 
 This example creates a new network inter-site policy that limits bandwidth between the connected sites Reno and Portland.
 The bandwidth limitations for audio and video connections between these sites are limited based on the setting configured for the bandwidth policy profile LowBWLimits.
 
-New-CsNetworkInterSitePolicy -Identity Reno_Portland -NetworkSiteID1 Reno -NetworkSiteID2 Portland -BWPolicyProfileID LowBWLimits
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example creates a new network inter-site policy that limits bandwidth between the connected sites Reno and Portland.
-The bandwidth limitations for audio and video connections between these sites are limited based on the setting configured for the bandwidth policy profile LowBWLimits.
-
-New-CsNetworkInterSitePolicy -Identity Reno_Portland -NetworkSiteID1 Reno -NetworkSiteID2 Portland -BWPolicyProfileID LowBWLimits
 
 ## PARAMETERS
 
@@ -187,14 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -247,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -263,15 +223,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/e127153f-a1c3-4a31-8dd3-f08d45eca800(OCS.14).aspx)
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Remove-CsNetworkInterSitePolicy]()
+[Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)
 
-[Set-CsNetworkInterSitePolicy]()
-
-[Get-CsNetworkInterSitePolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e127153f-a1c3-4a31-8dd3-f08d45eca800(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e127153f-a1c3-4a31-8dd3-f08d45eca800(OCS.16).aspx)
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)
 

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Export-CsRgsConfiguration
 schema: 2.0.0
 ---
 
@@ -156,4 +157,4 @@ The Export-CsRgsConfiguration cmdlet creates compressed files with the .ZIP file
 
 ## RELATED LINKS
 
-[Import-CsRgsConfiguration]()
+[Import-CsRgsConfiguration](Import-CsRgsConfiguration.md)

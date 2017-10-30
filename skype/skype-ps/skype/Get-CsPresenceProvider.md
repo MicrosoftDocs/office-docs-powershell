@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPresenceProvider
 schema: 2.0.0
 ---
 
@@ -153,10 +154,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsUserServicesConfiguration]()
+[Get-CsUserServicesConfiguration](Get-CsUserServicesConfiguration.md)
 
-[New-CsPresenceProvider]()
+[New-CsPresenceProvider](New-CsPresenceProvider.md)
 
-[Remove-CsPresenceProvider]()
+[Remove-CsPresenceProvider](Remove-CsPresenceProvider.md)
 
-[Set-CsPresenceProvider]()
+[Set-CsPresenceProvider](Set-CsPresenceProvider.md)

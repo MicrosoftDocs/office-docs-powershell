@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Get-CsVideoTrunkConfiguration
 schema: 2.0.0
 ---
 
@@ -24,7 +25,7 @@ Get-CsVideoTrunkConfiguration [[-Identity] <XdsIdentity>] [-LocalStore] [<Common
 
 ## DESCRIPTION
 Video Trunk configuration settings are scoped to appropriate Video Gateway instances, and will govern the behavior of the SIP Trunk between each Video Gateway instance and the paired Video Interop Server instance that together define the Video Trunk.
-The Video Interop Server in Skype for Business Server 2015 enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server 2015 infrastructure.
+The Video Interop Server in Skype for Business Server 2015 enables you to incorporate 3rd party video teleconferencing systems (VTCs) into your Skype for Business Server infrastructure.
 The Video Interop Server is a Skype service that runs on a standalone pool and cannot be co-located on an FE pool.
 
 To enable the Video Interop Server, you must use Topology Builder to define at least one VIS instance.
@@ -48,44 +49,39 @@ However, administrators can use the New-CsVideoTrunkConfiguration cmdlet to crea
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+Get-CsVideoTrunkConfiguration
 ```
 
 This example returns information about all the Video Trunk configurations in the organization.
 
-Get-CsVideoTrunkConfiguration
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
+Get-CsVideoTrunkConfiguration -Identity "site:Seattle"
 ```
 
 This example returns information for a collection of Video Trunk configuration settings scoped to the Seattle site.
 
-Get-CsVideoTrunkConfiguration -Identity "site:Seattle"
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 -------------------------- 
 ```
-
+Get-CsVideoTrunkConfiguration -Filter "site:*"
 ```
 
 This example returns all the Video Trunk configurations configured at the site scope.
 This is done by including the Filter parameter and the filter value "site:*".
 
-Get-CsVideoTrunkConfiguration -Filter "site:*"
-
-### -------------------------- Example 4 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 -------------------------- 
 ```
-
+Get-CsVideoTrunkConfiguration | Where-Object {$_.EnableSessionTimer -eq $True}
 ```
 
 This example returns information about all the Video Trunk configurations for which session timers have been enabled.
 This is done by first using Get-CsVideoTrunkConfiguration to return a collection of all the available configurations.
 That collection is then piped to the Where-Object cmdlet, which filters the output by the EnableSessionTimer property setting.
 
-Get-CsVideoTrunkConfiguration | Where-Object {$_.EnableSessionTimer -eq $True}
 
 ## PARAMETERS
 
@@ -165,11 +161,8 @@ The Get-CsVideoTrunkConfiguration cmdlet returns instances of the Microsoft.Rtc.
 
 ## RELATED LINKS
 
-[New-CsVideoTrunkConfiguration]()
+[New-CsVideoTrunkConfiguration](New-CsVideoTrunkConfiguration.md)
 
-[Set-CsVideoTrunkConfiguration]()
+[Set-CsVideoTrunkConfiguration](Set-CsVideoTrunkConfiguration.md)
 
-[Remove-CsVideoTrunkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a315bd1a-d682-435c-89ee-9bc649f474a0(OCS.16).aspx)
-
+[Remove-CsVideoTrunkConfiguration](Remove-CsVideoTrunkConfiguration.md)

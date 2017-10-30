@@ -1,24 +1,17 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: New-CsNetworkMediaBypassConfiguration
 schema: 2.0.0
 ---
 
 # New-CsNetworkMediaBypassConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates new global settings for media bypass.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates new global settings for media bypass.
 This cmdlet was introduced in Lync Server 2010.
 
-**Below Content Applies To:** Skype for Business Online
-
-New-CsNetworkMediaBypassConfiguration \[-Enabled \<bool\>\] \[-InternalBypassMode \<BypassModeEnumType\>\] \[-ExternalBypassMode \<BypassModeEnumType\>\] \[-AlwaysBypass \<bool\>\] \[-BypassID \<string\>\] \[-EnabledForAudioVideoConferences \<bool\>\] \[-Tenant \<guid\>\] \[-EnableDefaultBypassID \<bool\>\] \[\<CommonParameters\>\]
 
 
 
@@ -32,47 +25,10 @@ New-CsNetworkMediaBypassConfiguration [-AlwaysBypass <Boolean>] [-BypassID <Stri
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
 This cmdlet creates global settings for media bypass of audio connections.
 
-Unlike most New- cmdlets in Microsoft Lync Server 2010, this cmdlet does not immediately save the new configuration; it creates the settings only in memory.
-The object created by this cmdlet must be saved to a variable and then assigned to the MediaBypassSettings property of the network configuration.
-(For more details, see the Examples section in this topic.)
-
-The settings created with this cmdlet can be retrieved only by accessing the MediaBypassSettings property of the global network configuration.
-To retrieve these settings, run this command: (Get-CsNetworkConfiguration).MediaBypassSettings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkMediaBypassConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkMediaBypassConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-This cmdlet creates global settings for media bypass of audio connections.
-
-Unlike most New- cmdlets in Lync Server, this cmdlet does not immediately save the new configuration; it creates the settings only in memory.
-The object created by this cmdlet must be saved to a variable and then assigned to the MediaBypassSettings property of the network configuration.
-(For more details, see the Examples section in this topic.)
-
-The settings created with this cmdlet can be retrieved only by accessing the MediaBypassSettings property of the global network configuration.
-To retrieve these settings, run this command: (Get-CsNetworkConfiguration).MediaBypassSettings.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkMediaBypassConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkMediaBypassConfiguration"}
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill in the Description}}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-This cmdlet creates global settings for media bypass of audio connections.
-
-Unlike most New- cmdlets in Skype for Business Server 2015, this cmdlet does not immediately save the new configuration; it creates the settings only in memory.
+Unlike most New- cmdlets in Skype for Business Server, this cmdlet does not immediately save the new configuration; it creates the settings only in memory.
 The object created by this cmdlet must be saved to a variable and then assigned to the MediaBypassSettings property of the network configuration.
 (For more details, see the Examples section in this topic.)
 
@@ -83,48 +39,11 @@ To retrieve these settings, run this command: (Get-CsNetworkConfiguration).Media
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
-$a = New-CsNetworkMediaBypassConfiguration -AlwaysBypass $true -Enabled $true
-Set-CsNetworkConfiguration -MediaBypassSettings $a
-```
-
-The commands in this example enable media bypass and configure it to always attempt bypass.
-The first line in the example is a call to the New-CsNetworkMediaBypassConfiguration cmdlet.
-We pass two parameters to this cmdlet: AlwaysBypass and Enabled, setting both to True ($true).
-Setting Enabled to True enables media bypass, while setting AlwaysBypass to True assures that media bypass will be attempted on all calls.
-(Note that setting these two parameters will automatically generate a value for the BypassID property.) New-CsNetworkMediaBypassConfiguration creates the object only in memory, so we assign that object to the variable $a.
-
-The media bypass configuration is stored with the network configuration settings.
-Therefore, in line 2 of the example, we save the media bypass configuration changes to the network configuration by calling the Set-CsNetworkConfiguration cmdlet and passing the media bypass configuration object ($a) we created in line 1 to the MediaBypassSettings parameter.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands in this example enable media bypass and configure it to always attempt bypass.
-The first line in the example is a call to the New-CsNetworkMediaBypassConfiguration cmdlet.
-We pass two parameters to this cmdlet: AlwaysBypass and Enabled, setting both to True ($true).
-Setting Enabled to True enables media bypass, while setting AlwaysBypass to True assures that media bypass will be attempted on all calls.
-(Note that setting these two parameters will automatically generate a value for the BypassID property.) New-CsNetworkMediaBypassConfiguration creates the object only in memory, so we assign that object to the variable $a.
-
-The media bypass configuration is stored with the network configuration settings.
-Therefore, in line 2 of the example, we save the media bypass configuration changes to the network configuration by calling the Set-CsNetworkConfiguration cmdlet and passing the media bypass configuration object ($a) we created in line 1 to the MediaBypassSettings parameter.
-
 $a = New-CsNetworkMediaBypassConfiguration -AlwaysBypass $true -Enabled $true
 
 Set-CsNetworkConfiguration -MediaBypassSettings $a
-
-### Example 1 (Skype for Business Online)
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
 
 ```
 
@@ -137,60 +56,19 @@ Setting Enabled to True enables media bypass, while setting AlwaysBypass to True
 The media bypass configuration is stored with the network configuration settings.
 Therefore, in line 2 of the example, we save the media bypass configuration changes to the network configuration by calling the Set-CsNetworkConfiguration cmdlet and passing the media bypass configuration object ($a) we created in line 1 to the MediaBypassSettings parameter.
 
-$a = New-CsNetworkMediaBypassConfiguration -AlwaysBypass $true -Enabled $true
 
-Set-CsNetworkConfiguration -MediaBypassSettings $a
 
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-$a = (Get-CsNetworkConfiguration).MediaBypassSettings
-$a.AlwaysBypass = $false
-Set-CsNetworkConfiguration -MediaBypassSettings $a
-```
-
-There is no Set-CsNetworkMediaBypassConfiguration cmdlet in Lync Server, so in order to modify existing settings you must either create a new configuration (as shown in Example 1) to replace the existing configuration, or you must modify the settings by retrieving the existing settings, modifying them, and then using the Set-CsNetworkConfiguration cmdlet to save the changes.
-This example demonstrates turning off the Always Bypass option by using this latter option.
-
-The first line in the example retrieves the existing media bypass settings.
-It does this by calling Get-CsNetworkConfiguration.
-The call to this cmdlet is within parentheses to ensure the cmdlet is completed before any other part of the command is run.
-Get-CsNetworkConfiguration retrieves all settings for an entire network configuration.
-Because we're interested in only the media bypass settings, we specify the MediaBypassSettings property to retrieve only those settings.
-We assign those settings to the variable $a.
-
-In line 2 we modify the settings stored in variable $a by assigning the value False ($false) to the AlwaysBypass property.
-Finally, in line 3 we call Set-CsNetworkConfiguration, passing the MediaBypassSettings parameter the variable $a, which saves the change we made to the AlwaysBypass property.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-There is no Set-CsNetworkMediaBypassConfiguration cmdlet in Lync Server, so in order to modify existing settings you must either create a new configuration (as shown in Example 1) to replace the existing configuration, or you must modify the settings by retrieving the existing settings, modifying them, and then using the Set-CsNetworkConfiguration cmdlet to save the changes.
-This example demonstrates turning off the Always Bypass option by using this latter option.
-
-The first line in the example retrieves the existing media bypass settings.
-It does this by calling Get-CsNetworkConfiguration.
-The call to this cmdlet is within parentheses to ensure the cmdlet is completed before any other part of the command is run.
-Get-CsNetworkConfiguration retrieves all settings for an entire network configuration.
-Because we're interested in only the media bypass settings, we specify the MediaBypassSettings property to retrieve only those settings.
-We assign those settings to the variable $a.
-
-In line 2 we modify the settings stored in variable $a by assigning the value False ($false) to the AlwaysBypass property.
-Finally, in line 3 we call Set-CsNetworkConfiguration, passing the MediaBypassSettings parameter the variable $a, which saves the change we made to the AlwaysBypass property.
 
 $a = (Get-CsNetworkConfiguration).MediaBypassSettings
 
 $a.AlwaysBypass = $false
 
 Set-CsNetworkConfiguration -MediaBypassSettings $a
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
 ```
 
-```
-
-There is no Set-CsNetworkMediaBypassConfiguration cmdlet in Skype for Business Server 2015, so in order to modify existing settings you must either create a new configuration (as shown in Example 1) to replace the existing configuration, or you must modify the settings by retrieving the existing settings, modifying them, and then using the Set-CsNetworkConfiguration cmdlet to save the changes.
+There is no Set-CsNetworkMediaBypassConfiguration cmdlet in Skype for Business Server, so in order to modify existing settings you must either create a new configuration (as shown in Example 1) to replace the existing configuration, or you must modify the settings by retrieving the existing settings, modifying them, and then using the Set-CsNetworkConfiguration cmdlet to save the changes.
 This example demonstrates turning off the Always Bypass option by using this latter option.
 
 The first line in the example retrieves the existing media bypass settings.
@@ -203,16 +81,10 @@ We assign those settings to the variable $a.
 In line 2 we modify the settings stored in variable $a by assigning the value False ($false) to the AlwaysBypass property.
 Finally, in line 3 we call the Set-CsNetworkConfiguration cmdlet, passing the MediaBypassSettings parameter the variable $a, which saves the change we made to the AlwaysBypass property.
 
-$a = (Get-CsNetworkConfiguration).MediaBypassSettings
-
-$a.AlwaysBypass = $false
-
-Set-CsNetworkConfiguration -MediaBypassSettings $a
 
 ## PARAMETERS
 
 ### -AlwaysBypass
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Setting this parameter to True will attempt media bypass on all calls.
 
@@ -233,12 +105,6 @@ Default: False
 
 
 
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill AlwaysBypass Description}}
-
-
-
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -253,7 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassID
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The media bypass ID.
 If the AlwaysBypass parameter is set to True and a value is supplied for this parameter, this BypassID will be associated with all subnets.
@@ -262,12 +127,6 @@ If AlwaysBypass is False, the BypassID value is associated with all subnets that
 This ID must be in the format of a GUID (for example, 96f14dea-5170-429a-b92b-f1cb909c4bb6).
 However, you will typically not have to set or change this parameter.
 This value is automatically generated when Enabled is set to True and either: 1) AlwaysBypass is set to True, or 2) the EnableDefaultBypassID parameter is set to True.
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill BypassID Description}}
 
 
 
@@ -285,7 +144,6 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Set this parameter to True to enable media bypass.
 At that point bypass decisions will be based on the value of the AlwaysBypass setting as follows:
@@ -294,13 +152,6 @@ At that point bypass decisions will be based on the value of the AlwaysBypass se
 - If AlwaysBypass is False, use the network configuration site and region to determine whether bypass is possible.
 
 Default: False
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill Enabled Description}}
-
 
 
 ```yaml
@@ -317,22 +168,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDefaultBypassID
-**Below Content Applies To:** Lync Server 2010
-
-This value applies only when AlwaysBypass is set to False.
-
-Setting this value to True will automatically generate a default bypass ID.
-This auto-generated value will be stored in the BypassID property.
-
-This parameter is useful when there is a well-connected core with remote sites that have bandwidth constrained links.
-The administrator will need to define only the subnets associated with the remote sites via network configuration sites and regions.
-Any subnets associated with the core need not be defined and bypass will automatically be attempted between those subnets.
-
-Default: False
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 This value applies only when AlwaysBypass is set to False.
 
@@ -344,12 +179,6 @@ The administrator will need to define only the subnets associated with the remot
 Any subnets associated with the core need not be defined and bypass will automatically be attempted between those subnets.
 
 Default: False
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill EnableDefaultBypassID Description}}
 
 
 
@@ -367,34 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalBypassMode
-**Below Content Applies To:** Lync Server 2010
 
 Reserved for future use.
-External media bypass is not supported in Lync Server 2010.
-
-Default: Off
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Reserved for future use.
-External media bypass is not supported in Lync Server.
-
-Default: Off
-
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill ExternalBypassMode Description}}
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Reserved for future use.
-External media bypass is not supported in Skype for Business Server 2015.
+External media bypass is not supported in Skype for Business Server.
 
 Default: Off
 
@@ -414,7 +218,6 @@ Accept wildcard characters: False
 ```
 
 ### -InternalBypassMode
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 The value of this parameter controls when clients connecting from inside the organization's network can try to perform media bypass.
 If Enabled is set to True, this value will automatically be changed to Any.
@@ -422,11 +225,6 @@ Other values for this parameter are reserved for future use.
 
 Default: Off
 
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill InternalBypassMode Description}}
 
 
 
@@ -444,16 +242,10 @@ Accept wildcard characters: False
 ```
 
 ### -EnabledForAudioVideoConferences
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Indicates whether media bypass should be used for audio/video conferences.
 The default value is False ($False).
 
-
-
-**Below Content Applies To:** Skype for Business Online
-
-{{Fill EnabledForAudioVideoConferences Description}}
 
 
 
@@ -503,14 +295,12 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
 ###  
 None.
-
-### None
 
 ## OUTPUTS
 
@@ -523,13 +313,6 @@ Creates an object reference of type Microsoft.Rtc.Management.WritableConfig.Sett
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/24055ae5-7fc8-4ca5-9e65-ac3a1f17b405(OCS.14).aspx)
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 
-[Get-CsNetworkConfiguration]()
-
-[Set-CsNetworkConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/24055ae5-7fc8-4ca5-9e65-ac3a1f17b405(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/24055ae5-7fc8-4ca5-9e65-ac3a1f17b405(OCS.16).aspx)
-
+[Set-CsNetworkConfiguration](Set-CsNetworkConfiguration.md)

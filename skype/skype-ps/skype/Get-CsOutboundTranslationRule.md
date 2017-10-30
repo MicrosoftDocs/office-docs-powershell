@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsOutboundTranslationRule
 schema: 2.0.0
 ---
 
@@ -132,8 +133,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[Remove-CsOutboundTranslationRule]()
+[Remove-CsOutboundTranslationRule](Remove-CsOutboundTranslationRule.md)
 
-[Set-CsOutboundTranslationRule]()
+[Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)

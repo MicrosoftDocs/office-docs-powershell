@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Clear-CsDeviceUpdateFile
 schema: 2.0.0
 ---
 
@@ -129,6 +130,6 @@ The Clear-CsDeviceUpdateFile cmdlet does not return any values.
 ## NOTES
 
 ## RELATED LINKS
-[Clear-CsDeviceUpdateLog]()
+[Clear-CsDeviceUpdateLog](Clear-CsDeviceUpdateLog.md)
 
-[Get-CsDeviceUpdateConfiguration]()
+[Get-CsDeviceUpdateConfiguration](Get-CsDeviceUpdateConfiguration.md)

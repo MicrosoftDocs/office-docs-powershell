@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsArchivingPolicy
 schema: 2.0.0
 ---
 
@@ -195,10 +196,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsArchivingPolicy]()
+[Grant-CsArchivingPolicy](Grant-CsArchivingPolicy.md)
 
-[New-CsArchivingPolicy]()
+[New-CsArchivingPolicy](New-CsArchivingPolicy.md)
 
-[Remove-CsArchivingPolicy]()
+[Remove-CsArchivingPolicy](Remove-CsArchivingPolicy.md)
 
-[Set-CsArchivingPolicy]()
+[Set-CsArchivingPolicy](Set-CsArchivingPolicy.md)

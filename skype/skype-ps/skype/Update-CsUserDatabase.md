@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Update-CsUserDatabase
 schema: 2.0.0
 ---
 
@@ -101,6 +102,6 @@ Instead, the `Update-CsUserDatabase` cmdlet updates instances of the Microsoft.R
 
 ## RELATED LINKS
 
-[Get-CsUserDatabaseState]()
+[Get-CsUserDatabaseState](Get-CsUserDatabaseState.md)
 
-[Set-CsUserDatabaseState]()
+[Set-CsUserDatabaseState](Set-CsUserDatabaseState.md)

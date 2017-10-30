@@ -1,18 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsNetworkBandwidthPolicyProfile
 schema: 2.0.0
 ---
 
 # New-CsNetworkBandwidthPolicyProfile
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new network bandwidth policy profile.
-This cmdlet can also be used to set the bandwidth policies within the profile.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new network bandwidth policy profile.
 This cmdlet can also be used to set the bandwidth policies within the profile.
@@ -29,36 +24,9 @@ New-CsNetworkBandwidthPolicyProfile [-Identity] <XdsGlobalRelativeIdentity> [-Au
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
 
 As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
-(In Microsoft Lync Server 2010, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
-You define the individual policies within the container by specifying the audio and video bandwidth limitations when you call this cmdlet.
-
-Bandwidth policy profiles are applied to network sites by calling the New-CsNetworkSite or Set-CsNetworkSite cmdlets.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkBandwidthPolicyProfile cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBandwidthPolicyProfile"}
-
-**Below Content Applies To:** Lync Server 2013
-
-As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
-(In Lync Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
-You define the individual policies within the container by specifying the audio and video bandwidth limitations when you call this cmdlet.
-
-Bandwidth policy profiles are applied to network sites by calling the New-CsNetworkSite or Set-CsNetworkSite cmdlets.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkBandwidthPolicyProfile cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkBandwidthPolicyProfile"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-As part of call admission control (CAC), a bandwidth policy is used to define bandwidth limitations for certain modalities.
-(In Skype for Business Server 2015, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
+(In Skype for Business Server, only audio and video modalities can be assigned bandwidth limitations.) This cmdlet creates a container profile for these policies.
 You define the individual policies within the container by specifying the audio and video bandwidth limitations when you call this cmdlet.
 
 Bandwidth policy profiles are applied to network sites by calling the New-CsNetworkSite cmdlet or the Set-CsNetworkSite cmdlet.
@@ -67,39 +35,18 @@ Bandwidth policy profiles are applied to network sites by calling the New-CsNetw
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
+
 New-CsNetworkBandwidthPolicyProfile -Identity LowBWLimits -AudioBWLimit 2000 -AudioBWSessionLimit 200 -VideoBWLimit 1400 -VideoBWSessionLimit 500
-```
-
-Example 1 creates a new bandwidth policy profile named LowBWLimits.
-This new profile will have two policies assigned, an audio policy and a video policy (the only two policies possible in Lync Server 2010).
-The audio policy is added to the profile by using the AudioBWLimit parameter to assign a limit of (in this case) 2000 kbps to overall audio connections, and the AudioBWSessionLimit parameter to assign 200 kbps as the limit for individual audio sessions.
-The same is done to create video session limits, but using the VideoBWLimit and VideoBWSessionLimit parameters.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
 ```
 
 Example 1 creates a new bandwidth policy profile named LowBWLimits.
-This new profile will have two policies assigned, an audio policy and a video policy (the only two policies possible in Lync Server).
+This new profile will have two policies assigned, an audio policy and a video policy (the only two policies possible in Skype for Business Server).
 The audio policy is added to the profile by using the AudioBWLimit parameter to assign a limit of (in this case) 2000 kbps to overall audio connections, and the AudioBWSessionLimit parameter to assign 200 kbps as the limit for individual audio sessions.
 The same is done to create video session limits, but using the VideoBWLimit and VideoBWSessionLimit parameters.
-
-New-CsNetworkBandwidthPolicyProfile -Identity LowBWLimits -AudioBWLimit 2000 -AudioBWSessionLimit 200 -VideoBWLimit 1400 -VideoBWSessionLimit 500
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 creates a new bandwidth policy profile named LowBWLimits.
-This new profile will have two policies assigned, an audio policy and a video policy (the only two policies possible in Skype for Business Server 2015).
-The audio policy is added to the profile by using the AudioBWLimit parameter to assign a limit of (in this case) 2000 kbps to overall audio connections, and the AudioBWSessionLimit parameter to assign 200 kbps as the limit for individual audio sessions.
-The same is done to create video session limits, but using the VideoBWLimit and VideoBWSessionLimit parameters.
-
-New-CsNetworkBandwidthPolicyProfile -Identity LowBWLimits -AudioBWLimit 2000 -AudioBWSessionLimit 200 -VideoBWLimit 1400 -VideoBWSessionLimit 500
 
 ## PARAMETERS
 
@@ -269,14 +216,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -329,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -345,17 +284,10 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/84940891-37a6-45fc-972d-05b95aa71ba9(OCS.14).aspx)
+[Remove-CsNetworkBandwidthPolicyProfile](Remove-CsNetworkBandwidthPolicyProfile.md)
 
-[Remove-CsNetworkBandwidthPolicyProfile]()
+[Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)
 
-[Set-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
-
-[New-CsNetworkBWPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/84940891-37a6-45fc-972d-05b95aa71ba9(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/84940891-37a6-45fc-972d-05b95aa71ba9(OCS.16).aspx)
-
+[New-CsNetworkBWPolicy](New-CsNetworkBWPolicy.md)

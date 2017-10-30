@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Debug-CsDataConference
 schema: 2.0.0
 ---
 
@@ -117,4 +118,4 @@ The Debug-CsDataConference cmdlet does not accept pipelined input.
 
 ## RELATED LINKS
 
-[Test-CsDataConference]()
+[Test-CsDataConference](Test-CsDataConference.md)

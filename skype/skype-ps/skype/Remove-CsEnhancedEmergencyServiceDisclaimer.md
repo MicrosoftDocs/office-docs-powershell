@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsEnhancedEmergencyServiceDisclaimer
 schema: 2.0.0
 ---
 
 # Remove-CsEnhancedEmergencyServiceDisclaimer
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes the disclaimer text that is used globally to prompt for location information for an Enhanced 9-1-1 (E9-1-1) implementation.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes the disclaimer text that is used globally to prompt for location information for an Enhanced 9-1-1 (E9-1-1) implementation.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,32 +20,16 @@ Remove-CsEnhancedEmergencyServiceDisclaimer [-Identity] <XdsIdentity> [-Force] [
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-In order for an Enterprise Voice implementation to provide E9-1-1 service, locations must be mapped to ports, subnets, switches, and wireless access points to identify the caller's location.
+In order for an Enterprise Voice implementation to provide E9-1-1 service, locations must be mapped to ports, subnets, switches and wireless access points to identify the caller's location.
 When the caller is connecting from outside one of these mapped points, he must enter his location manually for it to be received by emergency services.
 This cmdlet removes the text string that will be displayed to users who choose not to enter their location information.
 This message will be displayed only if the LocationRequired property of the user's location policy is set to Disclaimer.
-(You can retrieve location policy settings by calling Get-CsLocationPolicy.) After calling this cmdlet, a blank message will be displayed to users in this case.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsEnhancedEmergencyServiceDisclaimer cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsEnhancedEmergencyServiceDisclaimer"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In order for an Enterprise Voice implementation to provide E9-1-1 service, locations must be mapped to ports, subnets, switches, and wireless access points to identify the caller's location.
-When the caller is connecting from outside one of these mapped points, he must enter his location manually for it to be received by emergency services.
-This cmdlet removes the text string that will be displayed to users who choose not to enter their location information.
-This message will be displayed only if the LocationRequired property of the user's location policy is set to Disclaimer.
-(You can retrieve location policy settings by calling the Get-CsLocationPolicy cmdlet.) After calling this cmdlet, a blank message will be displayed to users in this case.
-
+(You can retrieve location policy settings by calling the `Get-CsLocationPolicy` cmdlet.) After calling this cmdlet, a blank message will be displayed to users in this case.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsEnhancedEmergencyServiceDisclaimer -Identity global
 ```
@@ -60,27 +38,6 @@ This command removes the text of the enhanced emergency service disclaimer.
 Note that this does not remove the global disclaimer; it still exists.
 It simply sets the Body property to an empty string.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command removes the text of the enhanced emergency service disclaimer.
-Note that this does not remove the global disclaimer; it still exists.
-It simply sets the Body property to an empty string.
-
-Remove-CsEnhancedEmergencyServiceDisclaimer -Identity global
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command removes the text of the enhanced emergency service disclaimer.
-Note that this does not remove the global disclaimer; it still exists.
-It simply sets the Body property to an empty string.
-
-Remove-CsEnhancedEmergencyServiceDisclaimer -Identity global
 
 ## PARAMETERS
 
@@ -167,15 +124,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Policy.Loc
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/30a5aa8c-04b8-4c1f-92b3-88c86bf69a52(OCS.14).aspx)
+[Set-CsEnhancedEmergencyServiceDisclaimer](Set-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Set-CsEnhancedEmergencyServiceDisclaimer]()
+[Get-CsEnhancedEmergencyServiceDisclaimer](Get-CsEnhancedEmergencyServiceDisclaimer.md)
 
-[Get-CsEnhancedEmergencyServiceDisclaimer]()
-
-[Get-CsLocationPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/30a5aa8c-04b8-4c1f-92b3-88c86bf69a52(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/30a5aa8c-04b8-4c1f-92b3-88c86bf69a52(OCS.16).aspx)
-
+[Get-CsLocationPolicy](Get-CsLocationPolicy.md)

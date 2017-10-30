@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsNetworkInterRegionRoute
 schema: 2.0.0
 ---
 
 # Set-CsNetworkInterRegionRoute
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing route that connects network regions within a call admission control (CAC) configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing route that connects network regions within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -35,28 +29,14 @@ Set-CsNetworkInterRegionRoute [-Instance <PSObject>] [-NetworkRegionID1 <String>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Every region within a CAC configuration must have some way to access every other region.
 While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
 This cmdlet modifies that route association.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsNetworkInterRegionRoute cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkInterRegionRoute"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Every region within a CAC configuration must have some way to access every other region.
-While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
-This cmdlet modifies that route association.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinkIDs "NA_SA,SA_APAC"
 ```
@@ -64,27 +44,8 @@ Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinkIDs "NA_
 This example modifies the route NA_APAC_Route by changing the region links that will be traversed along the route.
 The NetworkRegionLinkIDs parameter is used with a value of "NA_SA,SA_APAC", which replaces any existing links with the two specified in that string.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This example modifies the route NA_APAC_Route by changing the region links that will be traversed along the route.
-The NetworkRegionLinkIDs parameter is used with a value of "NA_SA,SA_APAC", which replaces any existing links with the two specified in that string.
-
-Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinkIDs "NA_SA,SA_APAC"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the route NA_APAC_Route by changing the region links that will be traversed along the route.
-The NetworkRegionLinkIDs parameter is used with a value of "NA_SA,SA_APAC", which replaces any existing links with the two specified in that string.
-
-Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinkIDs "NA_SA,SA_APAC"
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinks @{add="SA_EMEA"}
 ```
@@ -95,62 +56,16 @@ In this case, the link SA_EMEA is added to the route.
 The syntax @{add=\<link\>} adds an element to the list of links.
 You can also use the syntax @{replace=\<link\>} to replace all existing links with those specified by \<link\> (which essentially behaves the same as using NetworkRegionLinkIDs), or the syntax @{remove=\<link\>} to remove a link from the list.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
+
+### -------------------------- Example 3 --------------------------
 ```
-
-```
-
-Like Example 1, Example 2 modifies the links within the NA_APAC_Route route.
-However, in this example, instead of replacing all links for that route by using the NetworkRegionLinkIDs parameter, the NetworkRegionLinks parameter is used to add a link to the list of links that already exists on that route.
-In this case, the link SA_EMEA is added to the route.
-The syntax @{add=\<link\>} adds an element to the list of links.
-You can also use the syntax @{replace=\<link\>} to replace all existing links with those specified by \<link\> (which essentially behaves the same as using NetworkRegionLinkIDs), or the syntax @{remove=\<link\>} to remove a link from the list.
-
-Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinks @{add="SA_EMEA"}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Like Example 1, Example 2 modifies the links within the NA_APAC_Route route.
-However, in this example, instead of replacing all links for that route by using the NetworkRegionLinkIDs parameter, the NetworkRegionLinks parameter is used to add a link to the list of links that already exists on that route.
-In this case, the link SA_EMEA is added to the route.
-The syntax @{add=\<link\>} adds an element to the list of links.
-You can also use the syntax @{replace=\<link\>} to replace all existing links with those specified by \<link\> (which essentially behaves the same as using NetworkRegionLinkIDs), or the syntax @{remove=\<link\>} to remove a link from the list.
-
-Set-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionLinks @{add="SA_EMEA"}
-
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
-```
-Set-CsNetworkInterRegionRoute -Identity NA_Route5 -NetworkRegionID2 SoutAmerica -NetworkRegionLinkIDs "NA_SA,SA_APAC"
-```
-
-Example 3 modifies the route named NA_Route5.
-This example changes one of the regions that comprises this route.
-The NetworkRegionID2 parameter is used to specify the new region, and then the NetworkRegionLinkIDs parameter is used to create a new list of links to connect the regions of this route.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
+Set-CsNetworkInterRegionRoute -Identity NA_Route5 -NetworkRegionID2 SouthAmerica -NetworkRegionLinkIDs "NA_SA,SA_APAC"
 ```
 
 Example 3 modifies the route named NA_Route5.
 This example changes one of the regions that comprise this route.
-The NetworkRegionID2 parameter is used to specify the new region, and then the NetworkRegionLinkIDs parameter is used to create a new list of links to connect the regions of this route.
+The NetworkRegionID2 parameter is used to specify the new region and then the NetworkRegionLinkIDs parameter is used to create a new list of links to connect the regions of this route.
 
-Set-CsNetworkInterRegionRoute -Identity NA_Route5 -NetworkRegionID2 SouthAmerica -NetworkRegionLinkIDs "NA_SA,SA_APAC"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 3 modifies the route named NA_Route5.
-This example changes one of the regions that comprise this route.
-The NetworkRegionID2 parameter is used to specify the new region, and then the NetworkRegionLinkIDs parameter is used to create a new list of links to connect the regions of this route.
-
-Set-CsNetworkInterRegionRoute -Identity NA_Route5 -NetworkRegionID2 SouthAmerica -NetworkRegionLinkIDs "NA_SA,SA_APAC"
 
 ## PARAMETERS
 
@@ -174,7 +89,7 @@ Accept wildcard characters: False
 
 ### -Instance
 An object reference to an existing region route.
-This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType, which can be retrieved by calling the Get-CsNetworkInterRegionRoute cmdlet.
+This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType, which can be retrieved by calling the `Get-CsNetworkInterRegionRoute` cmdlet.
 
 ```yaml
 Type: PSObject
@@ -316,10 +231,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType object.
-Accepts pipelined input of network inter-region route objects.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkRegionRouteType object.
 Accepts pipelined input of network interregion route objects.
 
 ## OUTPUTS
@@ -332,15 +243,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/5d9da3c0-56fc-401d-baf3-ed6c0f50f53d(OCS.14).aspx)
+[New-CsNetworkInterRegionRoute](New-CsNetworkInterRegionRoute.md)
 
-[New-CsNetworkInterRegionRoute]()
+[Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
-[Remove-CsNetworkInterRegionRoute]()
-
-[Get-CsNetworkInterRegionRoute]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5d9da3c0-56fc-401d-baf3-ed6c0f50f53d(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5d9da3c0-56fc-401d-baf3-ed6c0f50f53d(OCS.16).aspx)
-
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)

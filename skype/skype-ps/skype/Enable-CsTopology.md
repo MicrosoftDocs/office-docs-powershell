@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Enable-CsTopology
 schema: 2.0.0
 ---
 
@@ -200,12 +201,12 @@ Instead, the Enable-CsTopology cmdlet enables instances of the Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[Get-CsTopology]()
+[Get-CsTopology](Get-CsTopology.md)
 
-[Grant-CsSetupPermission]()
+[Grant-CsSetupPermission](Grant-CsSetupPermission.md)
 
-[Publish-CsTopology]()
+[Publish-CsTopology](Publish-CsTopology.md)
 
-[Test-CsSetupPermission]()
+[Test-CsSetupPermission](Test-CsSetupPermission.md)
 
-[Test-CsTopology]()
+[Test-CsTopology](Test-CsTopology.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: New-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
 ---
 
@@ -19,34 +20,33 @@ New-CsThirdPartyVideoSystemPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] 
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
-Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+Associating each VTC device with a contact object makes it easy for administrators to track and to manage, these devices.
 
 One key management task related to VTC devices is to enable (or disable) the ability of these devices to send low-resolution video.
 By default, VTC devices are allowed to send low-resolution video.
 However, administrators can create third-party video system policies that disable the use of low-resolution video.
 This might be useful for devices located in conference rooms or other areas where low-resolution video is not considered acceptable.
-The New-CsThirdPartyVideoSystem cmdlet provides a way for administrators to create these third-party video system policies.
+The `New-CsThirdPartyVideoSystem` cmdlet provides a way for administrators to create these third-party video system policies.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsThirdPartyVideoSystemPolicy -Identity "site:Redmond" -SupportsSendingLowResolution $False
 ```
 
 The command shown in Example 1 creates a new third-party video system policy assigned to the Redmond site.
 With this policy, VTCs will not be allowed to send low resolution video; that's because the SupportsSendingLowResolution parameter has been set to False ($False).
 
-New-CsThirdPartyVideoSystemPolicy -Identity "site:Redmond" -SupportsSendingLowResolution $False
 
 ## PARAMETERS
 
 ### -Identity
 Indicates the unique Identity to be assigned to the policy.
 Third party video system policies can be created at the site or per-user scope.
-To create a policy at the site scope, use syntax similar to this: -Identity "site:Redmond".
-To create a policy at the per-user scope, use syntax similar to this: -Identity "RedmondVideoSystemPolicy".
+To create a policy at the site scope, use syntax similar to this: `-Identity "site:Redmond"`.
+To create a policy at the per-user scope, use syntax similar to this: `-Identity "RedmondVideoSystemPolicy"`.
 
 ```yaml
 Type: XdsIdentity
@@ -131,11 +131,11 @@ Accept wildcard characters: False
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for the third-party video system policy being created.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 ```yaml
 Type: Guid
@@ -173,24 +173,21 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The New-CsThirdPartyVideoSystemPolicy cmdlet does not accept pipelined input.
+The `New-CsThirdPartyVideoSystemPolicy` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The New-CsThirdPartyVideoSystemPolicy cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
+The `New-CsThirdPartyVideoSystemPolicy` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Policy.ThirdPartyVideoSystem.ThirdPartyVideoSystemPolicy object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[Grant-CsThirdPartyVideoSystemPolicy]()
+[Grant-CsThirdPartyVideoSystemPolicy](Grant-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystemPolicy]()
+[Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/ab6f880f-9b9f-45dd-b729-de9a837324ef(OCS.16).aspx)
-
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

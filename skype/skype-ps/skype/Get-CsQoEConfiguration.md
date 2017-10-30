@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsQoEConfiguration
 schema: 2.0.0
 ---
 
@@ -142,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsQoEConfiguration]()
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[Remove-CsQoEConfiguration]()
+[Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
-[Set-CsQoEConfiguration]()
+[Set-CsQoEConfiguration](Set-CsQoEConfiguration.md)

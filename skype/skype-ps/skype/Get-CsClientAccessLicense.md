@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsClientAccessLicense
 schema: 2.0.0
 ---
 
@@ -225,4 +226,4 @@ The Get-CsClientAccessLicense cmdlet returns licensing information.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

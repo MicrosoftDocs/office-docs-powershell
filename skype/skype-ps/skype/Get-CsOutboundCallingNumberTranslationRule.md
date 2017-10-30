@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsOutboundCallingNumberTranslationRule
 schema: 2.0.0
 ---
 
@@ -157,8 +158,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsOutboundCallingNumberTranslationRule]()
+[New-CsOutboundCallingNumberTranslationRule](New-CsOutboundCallingNumberTranslationRule.md)
 
-[Remove-CsOutboundCallingNumberTranslationRule]()
+[Remove-CsOutboundCallingNumberTranslationRule](Remove-CsOutboundCallingNumberTranslationRule.md)
 
-[Set-CsOutboundCallingNumberTranslationRule]()
+[Set-CsOutboundCallingNumberTranslationRule](Set-CsOutboundCallingNumberTranslationRule.md)

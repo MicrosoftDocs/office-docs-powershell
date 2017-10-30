@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsUcwaConference
 schema: 2.0.0
 ---
 
@@ -353,8 +354,8 @@ The `Test-CsUcwaConference` cmdlet returns instances of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Test-CsASConference]()
+[Test-CsASConference](Test-CsASConference.md)
 
-[Test-CsDataConference]()
+[Test-CsDataConference](Test-CsDataConference.md)
 
-[Test-CsAVConference]()
+[Test-CsAVConference](Test-CsAVConference.md)

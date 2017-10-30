@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Get-CsTenantPublicProvider
 schema: 2.0.0
 ---
 
@@ -131,6 +132,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration]()
+[Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
-[Set-CsTenantPublicProvider]()
+[Set-CsTenantPublicProvider](Set-CsTenantPublicProvider.md)

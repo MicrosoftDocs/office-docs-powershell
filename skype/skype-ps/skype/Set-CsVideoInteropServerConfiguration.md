@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsVideoInteropServerConfiguration
 schema: 2.0.0
 ---
 
@@ -194,8 +195,8 @@ The `Set-CsVideoInteropServerConfiguration` cmdlet modifies existing instances o
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerConfiguration]()
+[Get-CsVideoInteropServerConfiguration](Get-CsVideoInteropServerConfiguration.md)
 
-[New-CsVideoInteropServerConfiguration]()
+[New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
-[Remove-CsVideoInteropServerConfiguration]()
+[Remove-CsVideoInteropServerConfiguration](Remove-CsVideoInteropServerConfiguration.md)

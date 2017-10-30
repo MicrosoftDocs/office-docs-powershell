@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsClsRegion
 schema: 2.0.0
 ---
 
@@ -149,8 +150,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClsRegion]()
+[New-CsClsRegion](New-CsClsRegion.md)
 
-[Remove-CsClsRegion]()
+[Remove-CsClsRegion](Remove-CsClsRegion.md)
 
-[Set-CsClsRegion]()
+[Set-CsClsRegion](Set-CsClsRegion.md)

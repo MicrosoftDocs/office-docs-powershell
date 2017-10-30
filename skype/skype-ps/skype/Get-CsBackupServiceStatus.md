@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsBackupServiceStatus
 schema: 2.0.0
 ---
 
@@ -114,4 +115,4 @@ Returns information about the backup service.
 
 ## RELATED LINKS
 
-[Get-CsBackupServiceConfiguration]()
+[Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)

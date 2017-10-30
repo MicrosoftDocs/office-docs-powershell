@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsConfigurationStoreLocation
 schema: 2.0.0
 ---
 
@@ -102,6 +103,6 @@ The Get-CsConfigurationStoreLocation cmdlet reports back the location of the con
 
 ## RELATED LINKS
 
-[Remove-CsConfigurationStoreLocation]()
+[Remove-CsConfigurationStoreLocation](Remove-CsConfigurationStoreLocation.md)
 
-[Set-CsConfigurationStoreLocation]()
+[Set-CsConfigurationStoreLocation](Set-CsConfigurationStoreLocation.md)

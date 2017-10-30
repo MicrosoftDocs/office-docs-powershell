@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPersistentChatAddin
 schema: 2.0.0
 ---
 
@@ -126,8 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPersistentChatAddin]()
+[New-CsPersistentChatAddin](New-CsPersistentChatAddin.md)
 
-[Remove-CsPersistentChatAddin]()
+[Remove-CsPersistentChatAddin](Remove-CsPersistentChatAddin.md)
 
-[Set-CsPersistentChatAddin]()
+[Set-CsPersistentChatAddin](Set-CsPersistentChatAddin.md)

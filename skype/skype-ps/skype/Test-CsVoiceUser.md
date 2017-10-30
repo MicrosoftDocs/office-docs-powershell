@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsVoiceUser
 schema: 2.0.0
 ---
 
@@ -130,4 +131,4 @@ Returns an object of type Microsoft.Rtc.Management.Voice.OcsVoiceUserTestResult.
 
 ## RELATED LINKS
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

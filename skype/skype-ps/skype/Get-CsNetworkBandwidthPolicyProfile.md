@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsNetworkBandwidthPolicyProfile
 schema: 2.0.0
 ---
 
@@ -126,8 +127,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkBandwidthPolicyProfile]()
+[New-CsNetworkBandwidthPolicyProfile](New-CsNetworkBandwidthPolicyProfile.md)
 
-[Remove-CsNetworkBandwidthPolicyProfile]()
+[Remove-CsNetworkBandwidthPolicyProfile](Remove-CsNetworkBandwidthPolicyProfile.md)
 
-[Set-CsNetworkBandwidthPolicyProfile]()
+[Set-CsNetworkBandwidthPolicyProfile](Set-CsNetworkBandwidthPolicyProfile.md)

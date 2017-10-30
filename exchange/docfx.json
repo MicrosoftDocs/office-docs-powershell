@@ -1,0 +1,67 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "exchange-ps",
+        "dest": "exchange",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "exchange-ps",
+        "dest": "exchange/exchange-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "exchange-ps",
+      "version": "exchange-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "exchange-ps",
+      "version": "exchange-ps",
+      "dest": "module/exchange-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "exchange-ps": {
+        "dest": "exchange-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "author" : "kenwith",
+      "ms.author" : "kenwith",
+      "ms.date" : "09/25/2017",
+      "ms.topic" : "reference",
+      "ms.service" : "exchange-powershell",
+      "ms.devlang" : "powershell"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "exchange-ps"
+  }
+}

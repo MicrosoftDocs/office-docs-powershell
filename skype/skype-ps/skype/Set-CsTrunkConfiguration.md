@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTrunkConfiguration
 schema: 2.0.0
 ---
 
@@ -710,14 +711,14 @@ This cmdlet does not return a value; it modifies an object of type Microsoft.Rtc
 
 ## RELATED LINKS
 
-[New-CsTrunkConfiguration]()
+[New-CsTrunkConfiguration](New-CsTrunkConfiguration.md)
 
-[Remove-CsTrunkConfiguration]()
+[Remove-CsTrunkConfiguration](Remove-CsTrunkConfiguration.md)
 
-[Get-CsTrunkConfiguration]()
+[Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)
 
-[Test-CsTrunkConfiguration]()
+[Test-CsTrunkConfiguration](Test-CsTrunkConfiguration.md)
 
-[New-CsOutboundTranslationRule]()
+[New-CsOutboundTranslationRule](New-CsOutboundTranslationRule.md)
 
-[Set-CsOutboundTranslationRule]()
+[Set-CsOutboundTranslationRule](Set-CsOutboundTranslationRule.md)

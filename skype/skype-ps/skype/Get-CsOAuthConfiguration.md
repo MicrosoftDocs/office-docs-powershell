@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsOAuthConfiguration
 schema: 2.0.0
 ---
 
@@ -200,4 +201,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOAuthConfiguration]()
+[Set-CsOAuthConfiguration](Set-CsOAuthConfiguration.md)

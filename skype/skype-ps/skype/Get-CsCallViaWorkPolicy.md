@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Get-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
 
@@ -135,10 +136,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsCallViaWorkPolicy]()
+[Remove-CsCallViaWorkPolicy](Remove-CsCallViaWorkPolicy.md)
 
-[Set-CsCallViaWorkPolicy]()
+[Set-CsCallViaWorkPolicy](Set-CsCallViaWorkPolicy.md)
 
-[New-CsCallViaWorkPolicy]()
+[New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
-[Grant-CsCallViaWorkPolicy]()
+[Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsProxyConfiguration
 schema: 2.0.0
 ---
 
@@ -162,8 +163,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsProxyConfiguration]()
+[New-CsProxyConfiguration](New-CsProxyConfiguration.md)
 
-[Remove-CsProxyConfiguration]()
+[Remove-CsProxyConfiguration](Remove-CsProxyConfiguration.md)
 
-[Set-CsProxyConfiguration]()
+[Set-CsProxyConfiguration](Set-CsProxyConfiguration.md)

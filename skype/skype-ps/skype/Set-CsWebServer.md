@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsWebServer
 schema: 2.0.0
 ---
 
@@ -624,4 +625,4 @@ Instead, the `Set-CsWebServer` cmdlet modifies instances of the Microsoft.Rtc.Ma
 
 ## RELATED LINKS
 
-[Get-CsService]()
+[Get-CsService](Get-CsService.md)

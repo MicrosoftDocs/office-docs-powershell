@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Enable-CsMeetingRoom
 schema: 2.0.0
 ---
 
@@ -332,10 +333,10 @@ The cmdlet also accepts pipelined instances of the Active Directory user object.
 
 ## RELATED LINKS
 
-[Disable-CsMeetingRoom]()
+[Disable-CsMeetingRoom](Disable-CsMeetingRoom.md)
 
-[Get-CsMeetingRoom]()
+[Get-CsMeetingRoom](Get-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
-[Set-CsMeetingRoom]()
+[Set-CsMeetingRoom](Set-CsMeetingRoom.md)

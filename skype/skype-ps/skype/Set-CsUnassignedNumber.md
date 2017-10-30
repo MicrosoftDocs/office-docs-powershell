@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsUnassignedNumber
 schema: 2.0.0
 ---
 
@@ -294,14 +295,14 @@ It modifies an object of type Microsoft.Rtc.Management.Voice.Helpers.DisplayAnno
 
 ## RELATED LINKS
 
-[New-CsUnassignedNumber]()
+[New-CsUnassignedNumber](New-CsUnassignedNumber.md)
 
-[Remove-CsUnassignedNumber]()
+[Remove-CsUnassignedNumber](Remove-CsUnassignedNumber.md)
 
-[Get-CsUnassignedNumber]()
+[Get-CsUnassignedNumber](Get-CsUnassignedNumber.md)
 
-[New-CsAnnouncement]()
+[New-CsAnnouncement](New-CsAnnouncement.md)
 
-[Get-CsAnnouncement]()
+[Get-CsAnnouncement](Get-CsAnnouncement.md)
 
-[Get-CsExUmContact]()
+[Get-CsExUmContact](Get-CsExUmContact.md)

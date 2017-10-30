@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPersistentChatComplianceConfiguration
 schema: 2.0.0
 ---
 
@@ -169,8 +170,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPersistentChatComplianceConfiguration]()
+[New-CsPersistentChatComplianceConfiguration](New-CsPersistentChatComplianceConfiguration.md)
 
-[Remove-CsPersistentChatComplianceConfiguration]()
+[Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)
 
-[Set-CsPersistentChatComplianceConfiguration]()
+[Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsCommonAreaPhone
 schema: 2.0.0
 ---
 
@@ -256,10 +257,10 @@ Represents the Identity of the common area phone.
 
 ## RELATED LINKS
 
-[Move-CsCommonAreaPhone]()
+[Move-CsCommonAreaPhone](Move-CsCommonAreaPhone.md)
 
-[New-CsCommonAreaPhone]()
+[New-CsCommonAreaPhone](New-CsCommonAreaPhone.md)
 
-[Remove-CsCommonAreaPhone]()
+[Remove-CsCommonAreaPhone](Remove-CsCommonAreaPhone.md)
 
-[Set-CsCommonAreaPhone]()
+[Set-CsCommonAreaPhone](Set-CsCommonAreaPhone.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Debug-CsAddressBookReplication
 schema: 2.0.0
 ---
 
@@ -298,6 +299,6 @@ The Debug-CsAddressBookReplication cmdlet returns instances of the Microsoft.Rtc
 
 ## RELATED LINKS
 
-[Test-CsAddressBookService]()
+[Test-CsAddressBookService](Test-CsAddressBookService.md)
 
-[Test-CsAddressBookWebQuery]()
+[Test-CsAddressBookWebQuery](Test-CsAddressBookWebQuery.md)

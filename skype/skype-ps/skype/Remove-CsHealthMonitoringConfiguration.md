@@ -1,23 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsHealthMonitoringConfiguration
 schema: 2.0.0
 ---
 
 # Remove-CsHealthMonitoringConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes an existing collection of health monitoring configuration settings.
-These settings enable administrators to run quality assurance tests without having to supply the user names and passwords for the required test accounts.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes an existing collection of health monitoring configuration settings.
 These settings enable administrators to run quality assurance tests without having to supply the user names and passwords for the required test accounts.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -28,9 +21,7 @@ Remove-CsHealthMonitoringConfiguration [-Identity] <XdsGlobalRelativeIdentity> [
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Synthetic transactions are used in Microsoft Lync Server 2010 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
+Synthetic transactions are used in Skype for Business Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
 These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
 
 Synthetic transactions can be conducted in two different ways.
@@ -43,57 +34,12 @@ Alternatively, administrators can run a synthetic transaction using actual user 
 For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts).
 If you decide to conduct a synthetic transaction using actual user accounts you will have to supply the credentials for each user.
 
-The Remove-CsHealthMonitoringConfiguration cmdlet provides a way for you to remove any of the  health monitoring configuration settings that have been configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsHealthMonitoringConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsHealthMonitoringConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-Synthetic transactions are used in Lync Server to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions can be conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test accounts for each of their Registrar pools.
-These test accounts are a pair of user accounts that have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) When these test accounts are configured for a pool, administrators can run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-Instead, the synthetic transaction will automatically use the preconfigured test accounts when performing its checks.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts).
-If you decide to conduct a synthetic transaction using actual user accounts you will have to supply the credentials for each user.
-
-The Remove-CsHealthMonitoringConfiguration cmdlet provides a way for you to remove any of the health monitoring configuration settings that have been configured for use in your organization.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsHealthMonitoringConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsHealthMonitoringConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Synthetic transactions are used in Skype for Business Server 2015 to verify that users are able to successfully complete common tasks such as logging on to the system, exchanging instant messages, or making calls to a phone located on the public switched telephone network (PSTN).
-These tests can be conducted manually by an administrator, or they can be automatically run by an application such as Microsoft System Center Operations Manager (formerly Microsoft Operations Manager).
-
-Synthetic transactions can be conducted in two different ways.
-Many administrators will use the CsHealthMonitoringConfiguration cmdlets to set up test accounts for each of their Registrar pools.
-These test accounts are a pair of user accounts that have been preconfigured for use with synthetic transactions.
-(Typically these are test accounts and not accounts that belong to actual users.) When these test accounts are configured for a pool, administrators can run a synthetic transaction against that pool without having to specify the identities of (and supply the credentials for) the user accounts involved in the test.
-Instead, the synthetic transaction will automatically use the preconfigured test accounts when performing its checks.
-
-Alternatively, administrators can run a synthetic transaction using actual user accounts.
-For example, if two users are unable to exchange instant messages, an administrator can run a synthetic transaction using the two user accounts in question (as opposed to a pair of test accounts).
-If you decide to conduct a synthetic transaction using actual user accounts you will have to supply the credentials for each user.
-
-The Remove-CsHealthMonitoringConfiguration cmdlet provides a way for you to remove any of the health monitoring configuration settings that have been configured for use in your organization.
-
+The `Remove-CsHealthMonitoringConfiguration` cmdlet provides a way for you to remove any of the health monitoring configuration settings that have been configured for use in your organization.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Remove-CsHealthMonitoringConfiguration -Identity atl-cs-001.litwareinc.com
 ```
@@ -101,121 +47,37 @@ Remove-CsHealthMonitoringConfiguration -Identity atl-cs-001.litwareinc.com
 The command shown in Example 1 deletes the collection of health monitoring configuration settings with the Identity atl-cs-001.litwareinc.com.
 Because identities must be unique, this command will delete, at most, a single collection of settings.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 deletes the collection of health monitoring configuration settings with the Identity atl-cs-001.litwareinc.com.
-Because identities must be unique, this command will delete, at most, a single collection of settings.
-
-Remove-CsHealthMonitoringConfiguration -Identity atl-cs-001.litwareinc.com
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 deletes the collection of health monitoring configuration settings with the Identity atl-cs-001.litwareinc.com.
-Because identities must be unique, this command will delete, at most, a single collection of settings.
-
-Remove-CsHealthMonitoringConfiguration -Identity atl-cs-001.litwareinc.com
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsHealthMonitoringConfiguration | Remove-CsHealthMonitoringConfiguration
 ```
 
 Example 2 deletes all the health monitoring configuration settings currently in use.
-To do this, the command first calls Get-CsHealthMonitoringConfiguration without any parameters; this returns a collection of all the health monitoring configuration settings in the organization.
-This collection is then piped to Remove-CsHealthMonitoringConfiguration, which deletes each item in the collection.
+To do this, the command first calls the `Get-CsHealthMonitoringConfiguration` cmdlet without any parameters; this returns a collection of all the health monitoring configuration settings in the organization.
+This collection is then piped to the `Remove-CsHealthMonitoringConfiguration` cmdlet, which deletes each item in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
+
+### -------------------------- Example 3 ------------------------
 ```
-
-```
-
-Example 2 deletes all the health monitoring configuration settings currently in use.
-To do this, the command first calls Get-CsHealthMonitoringConfiguration without any parameters; this returns a collection of all the health monitoring configuration settings in the organization.
-This collection is then piped to Remove-CsHealthMonitoringConfiguration, which deletes each item in the collection.
-
-Get-CsHealthMonitoringConfiguration | Remove-CsHealthMonitoringConfiguration
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 deletes all the health monitoring configuration settings currently in use.
-To do this, the command first calls the Get-CsHealthMonitoringConfiguration cmdlet without any parameters; this returns a collection of all the health monitoring configuration settings in the organization.
-This collection is then piped to the Remove-CsHealthMonitoringConfiguration cmdlet, which deletes each item in the collection.
-
-Get-CsHealthMonitoringConfiguration | Remove-CsHealthMonitoringConfiguration
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
-```
-Get-CsHealthMonitoringConfiguration -Filter *.litwareinc.com  | Remove-CsHealthMonitoringConfiguration
-```
-
-The preceding command deletes all the health monitoring configuration settings that have been created for the domain litwareinc.com.
-To do this, Get-CsHealthMonitoringConfiguration is called along with the Filter parameter; the filter value "*.litwareinc.com" ensures that only those settings that have an Identity that ends with the string value ".litwareinc.com" will be returned.
-The filtered collection is then piped to Remove-CsHealthMonitoringConfiguration, which deletes each item in the collection.
-
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
+Get-CsHealthMonitoringConfiguration -Filter *.litwareinc.com | Remove-CsHealthMonitoringConfiguration
 ```
 
 Example 3 deletes all the health monitoring configuration settings that have been created for the domain litwareinc.com.
-To do this, Get-CsHealthMonitoringConfiguration is called along with the Filter parameter; the filter value "*.litwareinc.com" ensures that only those settings that have an Identity that ends with the string value ".litwareinc.com" will be returned.
-The filtered collection is then piped to Remove-CsHealthMonitoringConfiguration, which deletes each item in the collection.
+To do this, the `Get-CsHealthMonitoringConfiguration` cmdlet is called along with the Filter parameter; the filter value "*.litwareinc.com" ensures that only those settings that have an Identity that ends with the string value ".litwareinc.com" will be returned.
+The filtered collection is then piped to the `Remove-CsHealthMonitoringConfiguration` cmdlet, which deletes each item in the collection.
 
-Get-CsHealthMonitoringConfiguration -Filter *.litwareinc.com | Remove-CsHealthMonitoringConfiguration
 
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 4 ------------------------
 ```
-
-```
-
-Example 3 deletes all the health monitoring configuration settings that have been created for the domain litwareinc.com.
-To do this, the Get-CsHealthMonitoringConfiguration cmdlet is called along with the Filter parameter; the filter value "*.litwareinc.com" ensures that only those settings that have an Identity that ends with the string value ".litwareinc.com" will be returned.
-The filtered collection is then piped to the Remove-CsHealthMonitoringConfiguration cmdlet, which deletes each item in the collection.
-
-Get-CsHealthMonitoringConfiguration -Filter *.litwareinc.com | Remove-CsHealthMonitoringConfiguration
-
-### -------------------------- Example 4 ------------------------ (Lync Server 2010)
-```
-(Get-CsHealthMonitoringConfiguration | Where-Object {$_.FirstTestUserSipUri -eq "sip:kenmyer@litwareinc.com" -or $_.SecondTestUserSipUri -eq " sip:kenmyer@litware.com"}) | Remove-CsHealthMonitoringConfiguration
-```
-
-The command shown in Example 4 deletes all the health monitoring configuration settings that include the user with the SIP address sip:kenmyer@litwareinc.com as one of the test users.
-To perform this task, the command starts off by calling Get-CsHealthMonitoringConfiguration without any parameters; this returns a collection of all the health monitoring configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the FirstTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com" or where the SecondTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com".
-In turn, those settings are piped to, and removed by, Remove-CsHealthMonitoringConfiguration.
-
-### -------------------------- EXAMPLE 4 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 4 deletes all the health monitoring configuration settings that include the user with the SIP address sip:kenmyer@litwareinc.com as one of the test users.
-To perform this task, the command starts off by calling Get-CsHealthMonitoringConfiguration without any parameters; this returns a collection of all the health monitoring configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the FirstTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com" or where the SecondTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com".
-In turn, those settings are piped to, and removed by, Remove-CsHealthMonitoringConfiguration.
-
 (Get-CsHealthMonitoringConfiguration | Where-Object {$_.FirstTestUserSipUri -eq "sip:kenmyer@litwareinc.com" -or $_.SecondTestUserSipUri -eq " sip:kenmyer@litwareinc.com"}) | Remove-CsHealthMonitoringConfiguration
-
-### -------------------------- EXAMPLE 4 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The command shown in Example 4 deletes all the health monitoring configuration settings that include the user with the SIP address sip:kenmyer@litwareinc.com as one of the test users.
-To perform this task, the command starts off by calling the Get-CsHealthMonitoringConfiguration cmdlet without any parameters; this returns a collection of all the health monitoring configuration settings currently in use in the organization.
-This collection is then piped to the Where-Object cmdlet, which picks out only those settings where the FirstTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com" or where the SecondTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com".
-In turn, those settings are piped to, and removed by, the Remove-CsHealthMonitoringConfiguration cmdlet.
+To perform this task, the command starts off by calling the `Get-CsHealthMonitoringConfiguration` cmdlet without any parameters; this returns a collection of all the health monitoring configuration settings currently in use in the organization.
+This collection is then piped to the `Where-Object` cmdlet, which picks out only those settings where the FirstTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com" or where the SecondTestUserSipUri property is equal to "sip:kenmyer@litwareinc.com".
+In turn, those settings are piped to and removed by, the `Remove-CsHealthMonitoringConfiguration` cmdlet.
 
-(Get-CsHealthMonitoringConfiguration | Where-Object {$_.FirstTestUserSipUri -eq "sip:kenmyer@litwareinc.com" -or $_.SecondTestUserSipUri -eq " sip:kenmyer@litwareinc.com"}) | Remove-CsHealthMonitoringConfiguration
 
 ## PARAMETERS
 
@@ -291,35 +153,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
-Remove-CsHealthMonitoringConfiguration accepts pipelined instances of the health monitoring configuration object.
-
-###  
-Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
-The Remove-CsHealthMonitoringConfiguration cmdlet accepts pipelined instances of the health monitoring configuration object.
+The `Remove-CsHealthMonitoringConfiguration` cmdlet accepts pipelined instances of the health monitoring configuration object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Remove-CsHealthMonitoringConfiguration deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
-
-###  
-None.
-Instead, the Remove-CsHealthMonitoringConfiguration cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
+Instead, the `Remove-CsHealthMonitoringConfiguration` cmdlet deletes existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.HealthMonitoring.HealthMonitoringSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/2e401908-2366-4e67-ba5b-68ba7ece166e(OCS.14).aspx)
+[Get-CsHealthMonitoringConfiguration](Get-CsHealthMonitoringConfiguration.md)
 
-[Get-CsHealthMonitoringConfiguration]()
+[New-CsHealthMonitoringConfiguration](New-CsHealthMonitoringConfiguration.md)
 
-[New-CsHealthMonitoringConfiguration]()
-
-[Set-CsHealthMonitoringConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2e401908-2366-4e67-ba5b-68ba7ece166e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/2e401908-2366-4e67-ba5b-68ba7ece166e(OCS.16).aspx)
-
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)

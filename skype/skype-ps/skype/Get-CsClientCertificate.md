@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsClientCertificate
 schema: 2.0.0
 ---
 
@@ -147,4 +148,4 @@ The cmdlet also accepts pipelined input of user objects.
 
 ## RELATED LINKS
 
-[Revoke-CsClientCertificate]()
+[Revoke-CsClientCertificate](Revoke-CsClientCertificate.md)

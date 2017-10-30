@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Search-CsOnlineTelephoneNumberInventory
 schema: 2.0.0
 ---
 
 # Search-CsOnlineTelephoneNumberInventory
 
 ## SYNOPSIS
-Use the Search-CsOnlineTelephoneNumberInventory cmdlet to reserve a telephone numbers that are in inventory and available to be acquired.
+Use the `Search-CsOnlineTelephoneNumberInventory` cmdlet to reserve a telephone numbers that are in inventory and available to be acquired.
 
 ## SYNTAX
 
@@ -23,18 +24,17 @@ Acquiring tenant telephone numbers is a two step process.
 
 +12127539059 +1 (212) 753 9059
 
-Select-CsOnlineTelephoneNumberInventory -ReservationId 76ce711f-9da4-46d9-b81d-471172450443 -TelephoneNumbers 12127539058,12127539059 -Region NOAM -Country US -Area NY -City NY
+`Select-CsOnlineTelephoneNumberInventory -ReservationId 76ce711f-9da4-46d9-b81d-471172450443 -TelephoneNumbers 12127539058,12127539059 -Region NOAM -Country US -Area NY -City NY`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Search-CsOnlineTelephoneNumberInventory -InventoryType Service -Region NOAM -Country US -Area NY -City NY -Quantity 10
 ```
 
 This example reserves 10 Service type telephone numbers in New York, New York.
 
-Search-CsOnlineTelephoneNumberInventory -InventoryType Service -Region NOAM -Country US -Area NY -City NY -Quantity 10
 
 ## PARAMETERS
 
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies your tenant identifier.
-To find your tenant id use the command: Get-CsTenant | fl objectid.
+To find your tenant id use the command: `Get-CsTenant | fl objectid`.
 
 ```yaml
 Type: Object
@@ -275,6 +275,3 @@ This cmdlets returns an Microsoft.Rtc.Management.Hosted.Bvd.Types.NumberReservat
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b0336c63-6798-4ac0-9e2a-e8d66caca8bb(OCS.15).aspx)
-

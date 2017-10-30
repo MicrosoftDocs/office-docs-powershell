@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsRgsHoursOfBusiness
 schema: 2.0.0
 ---
 
@@ -184,8 +185,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsRgsHoursOfBusiness]()
+[New-CsRgsHoursOfBusiness](New-CsRgsHoursOfBusiness.md)
 
-[Remove-CsRgsHoursOfBusiness]()
+[Remove-CsRgsHoursOfBusiness](Remove-CsRgsHoursOfBusiness.md)
 
-[Set-CsRgsHoursOfBusiness]()
+[Set-CsRgsHoursOfBusiness](Set-CsRgsHoursOfBusiness.md)

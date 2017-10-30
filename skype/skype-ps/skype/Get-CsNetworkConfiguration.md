@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsNetworkConfiguration
 schema: 2.0.0
 ---
 
@@ -186,20 +187,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsNetworkConfiguration]()
+[Remove-CsNetworkConfiguration](Remove-CsNetworkConfiguration.md)
 
-[Set-CsNetworkConfiguration]()
+[Set-CsNetworkConfiguration](Set-CsNetworkConfiguration.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)
 
-[Get-CsNetworkRegionLink]()
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)
 
-[Get-CsNetworkInterSitePolicy]()
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)
 
-[Get-CsNetworkInterRegionRoute]()
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)
 
-[Get-CsNetworkRegion]()
+[Get-CsNetworkRegion](Get-CsNetworkRegion.md)
 
-[Get-CsNetworkSubnet]()
+[Get-CsNetworkSubnet](Get-CsNetworkSubnet.md)
 
-[Get-CsNetworkBandwidthPolicyProfile]()
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)

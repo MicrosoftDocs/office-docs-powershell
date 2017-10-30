@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsMeetingConfiguration
 schema: 2.0.0
 ---
 
@@ -235,8 +236,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsMeetingConfiguration]()
+[New-CsMeetingConfiguration](New-CsMeetingConfiguration.md)
 
-[Remove-CsMeetingConfiguration]()
+[Remove-CsMeetingConfiguration](Remove-CsMeetingConfiguration.md)
 
-[Set-CsMeetingConfiguration]()
+[Set-CsMeetingConfiguration](Set-CsMeetingConfiguration.md)

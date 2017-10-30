@@ -1,105 +1,40 @@
 ---
-external help file: 
+external help file: Get-CsOrganizationalAutoAttendantTenantInformation.xml
 applicable: Skype for Business Online
+title: Get-CsOrganizationalAutoAttendantTenantInformation
 schema: 2.0.0
 ---
 
 # Get-CsOrganizationalAutoAttendantTenantInformation
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Gets the default tenant information for Organizational Auto Attendant (OAA) feature.
 
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantTenantInformation [-BypassDualWrite <Object>] [-DomainController <Object>]
- [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOrganizationalAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default tenant information for Organizational Auto Attendant (OAA) feature.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Get-CsOrganizationalAutoAttendantTenantInformation
 ```
 
-Insert descriptive text for example 1.
+Gets the default organizational auto attendant information for the logged in tenant.
 
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -116,7 +51,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.OAA.Models.TenantInformation
 
 ## NOTES
 

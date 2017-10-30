@@ -1,23 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsConferenceServer
 schema: 2.0.0
 ---
 
 # Set-CsConferenceServer
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies the properties of an A/V Conferencing Server (also known as a Conference Server).
-The Conference Server provides audio and video (A/V) capabilities to your conferences.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies the properties of an A/V Conferencing Server (also known as a Conference Server).
 The Conference Server provides audio and video (A/V) capabilities to your conferences.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -31,107 +24,40 @@ Set-CsConferenceServer [[-Identity] <XdsGlobalRelativeIdentity>] [-AppSharingSip
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Conference Servers (also known as A/V Conferencing Servers) are used to provide audio and video capabilities to conferences.
-In turn, the Set-CsConferenceServer cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic, and application sharing.
-You can also use Set-CsConferenceServer to associate a given server with a Edge Server or Archiving Server.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsConferenceServer cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsConferenceServer"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Conference Servers (also known as A/V Conferencing Servers) are used to provide audio and video capabilities to conferences.
-In turn, the Set-CsConferenceServer cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic, and application sharing.
-You can also use the Set-CsConferenceServer cmdlet to associate a given server with a Edge Server or Archiving Server.
-
+In turn, the `Set-CsConferenceServer` cmdlet can be used to modify the properties of these servers; in particular, you can specify which ports are used for such things as audio traffic, video traffic and application sharing.
+You can also use the `Set-CsConferenceServer` cmdlet to associate a given server with a Edge Server or Archiving Server.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsConferenceServer -Identity "ConferencingServer:atl-cs-001.litwareinc.com" -ImSipPort 5075
-```
-
-The command shown in Example 1 modifies the instant messaging SIP port for the Conference Server ConferenceServer:atl-cs-001.litwareinc.com.
-In this example, the port is changed to 5075.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 The command shown in Example 1 modifies the instant messaging SIP port for the Conference Server ConferencingServer:atl-cs-001.litwareinc.com.
 In this example, the port is changed to 5075.
 
-Set-CsConferenceServer -Identity "ConferencingServer:atl-cs-001.litwareinc.com" -ImSipPort 5075
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 ------------------------
 ```
-
-```
-
-The command shown in Example 1 modifies the instant messaging SIP port for the Conference Server ConferencingServer:atl-cs-001.litwareinc.com.
-In this example, the port is changed to 5075.
-
-Set-CsConferenceServer -Identity "ConferencingServer:atl-cs-001.litwareinc.com" -ImSipPort 5075
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
-```
-Get-CsService -ConferenceServer | ForEach-Object {Set-CsConferenceServer -Identity $_.Identity -ImSipPort 5075}
-```
-
-Example 2 is a variation of the command shown in Example 1; in this case, however, the instant messaging SIP port is changed for all the Conference Servers in the organization.
-To do this, the command first uses Get-CsService and the ConferenceServer parameter to return a collection of all the Conference Servers currently in use.
-That collection is then piped to the ForEach-Object cmdlet, which runs the Set-CsConferenceServer against each server in the collection, setting the ImSipPort to 5075.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 is a variation of the command shown in Example 1; in this case, however, the instant messaging SIP port is changed for all the Conference Servers in the organization.
-To do this, the command first uses Get-CsService and the ConferencingServer parameter to return a collection of all the Conferencing Servers currently in use.
-That collection is then piped to the ForEach-Object cmdlet, which runs the Set-CsConferenceServer against each server in the collection, setting the ImSipPort to 5075.
-
 Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -Identity $_.Identity -ImSipPort 5075}
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 Example 2 is a variation of the command shown in Example 1; in this case, however, the instant messaging SIP port is changed for all the Conference Servers in the organization.
-To do this, the command first uses the Get-CsService cmdlet and the ConferencingServer parameter to return a collection of all the Conferencing Servers currently in use.
-That collection is then piped to the ForEach-Object cmdlet, which runs the Set-CsConferenceServer cmdlet against each server in the collection, setting the ImSipPort to 5075.
+To do this, the command first uses the `Get-CsService` cmdlet and the ConferencingServer parameter to return a collection of all the Conferencing Servers currently in use.
+That collection is then piped to the `ForEach-Object` cmdlet, which runs the `Set-CsConferenceServer` cmdlet against each server in the collection, setting the ImSipPort to 5075.
 
-Get-CsService -ConferencingServer | ForEach-Object {Set-CsConferenceServer -Identity $_.Identity -ImSipPort 5075}
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
-
 Service location of the Conference Server to be modified.
-For example: -Identity "ConferenceServer:atl-cs-001.litwareinc.com".
+For example: `-Identity "ConferencingServer:atl-cs-001.litwareinc.com"`.
 
 Note that you can leave off the prefix "ConferencingServer:" when specifying a Conference Server.
-For example: -Identity "atl-cs-001.litwareinc.com".
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
-Service location of the Conference Server to be modified.
-For example: -Identity "ConferencingServer:atl-cs-001.litwareinc.com".
-
-Note that you can leave off the prefix "ConferencingServer:" when specifying a Conference Server.
-For example: -Identity "atl-cs-001.litwareinc.com".
-
+For example: `-Identity "atl-cs-001.litwareinc.com"`.
 
 
 ```yaml
@@ -184,7 +110,7 @@ Accept wildcard characters: False
 
 ### -AppSharingPortStart
 First port in the range of media ports allocated for application sharing.
-For example: -AppSharingPortStart 60000.
+For example: `-AppSharingPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -219,7 +145,7 @@ Accept wildcard characters: False
 
 ### -AudioPortStart
 First port in the range of media ports allocated for sending and receiving audio traffic.
-For example: -AudioPortStart 60000.
+For example: `-AudioPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -236,7 +162,7 @@ Accept wildcard characters: False
 
 ### -AudioVideoSipPort
 SIP port used to listen for incoming requests for audio and video service.
-The ports actually used for audio and video traffic are configured using AudioPortCount, AudioPortStart, VideoPortCount, and VideoPortStart.
+The ports actually used for audio and video traffic are configured using AudioPortCount, AudioPortStart, VideoPortCount and VideoPortStart.
 
 ```yaml
 Type: UInt16
@@ -269,7 +195,7 @@ Accept wildcard characters: False
 
 ### -EdgeServer
 Service location of the Edge Server to be associated with the Conference Server.
-For example: -EdgeServer "EdgeServer:atl-edge-001.litwareinc.com".
+For example: `-EdgeServer "EdgeServer:atl-edge-001.litwareinc.com"`.
 
 ```yaml
 Type: String
@@ -352,7 +278,7 @@ Accept wildcard characters: False
 
 ### -VideoPortStart
 First port in the range of ports allocated for sending and receiving video traffic.
-For example: -VideoPortStart 60000.
+For example: `-VideoPortStart 60000`.
 
 ```yaml
 Type: UInt16
@@ -422,33 +348,18 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-Set-CsConferenceServer does not accept pipelined input.
-
-###  
-None.
-The Set-CsConferenceServer cmdlet does not accept pipelined input.
+The `Set-CsConferenceServer` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-Set-CsConferenceServer does not return any objects or values.
-Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayConferenceServer object.
-
-###  
-The Set-CsConferenceServer cmdlet does not return any objects or values.
+The `Set-CsConferenceServer` cmdlet does not return any objects or values.
 Instead, the cmdlet modifies existing instances of the Microsoft.Rtc.Management.Xds.DisplayConferenceServer object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/90f9f1f1-0029-4f97-a8f4-719523cfad56(OCS.14).aspx)
+[Get-CsConferencingConfiguration](Get-CsConferencingConfiguration.md)
 
-[Get-CsConferencingConfiguration]()
-
-[Get-CsService]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/90f9f1f1-0029-4f97-a8f4-719523cfad56(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/90f9f1f1-0029-4f97-a8f4-719523cfad56(OCS.16).aspx)
-
+[Get-CsService](Get-CsService.md)

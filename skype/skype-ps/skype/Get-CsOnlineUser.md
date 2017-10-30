@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Get-CsOnlineUser
 schema: 2.0.0
 ---
 
@@ -322,4 +323,4 @@ A String must represent a valid user account Identity (for example, "sip:kenmyer
 
 ## RELATED LINKS
 
-[Set-CsUser]()
+[Set-CsUser](Set-CsUser.md)

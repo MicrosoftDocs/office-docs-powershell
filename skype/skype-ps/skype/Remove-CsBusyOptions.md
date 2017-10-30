@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Remove-CsBusyOptions
 schema: 2.0.0
 ---
 
@@ -20,7 +21,7 @@ Remove-CsBusyOptions [-Identity] <UserIdParameter> [-Confirm] [-PassThru] [-What
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -108,4 +109,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

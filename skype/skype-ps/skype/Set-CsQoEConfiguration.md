@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsQoEConfiguration
 schema: 2.0.0
 ---
 
 # Set-CsQoEConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing collection of QoE (Quality of Experience) settings.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Modifies an existing collection of QoE (Quality of Experience) settings.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -37,73 +31,25 @@ Set-CsQoEConfiguration [-Instance <PSObject>] [-EnableExternalConsumer <Boolean>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
+QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise and the amount of "jitter" (differences in packet delay).
 These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
 Use this cmdlet to modify settings that configure QoE at the global or site level.
 
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Microsoft Lync Server 2010 installation before QoE recording takes effect or any QoE data can be collected.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsQoEConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsQoEConfiguration"}
-
-**Below Content Applies To:** Lync Server 2013
-
-QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
-These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
-Use this cmdlet to modify settings that configure QoE at the global or site level.
-
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Lync Server installation before QoE recording takes effect or any QoE data can be collected.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsQoEConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsQoEConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-QoE metrics track the quality of audio and video calls made in your organization, including such things as the number of network packets lost, background noise, and the amount of "jitter" (differences in packet delay).
-These metrics are stored in a database apart from other data (such as call detail records), which allows you to enable and disable QoE independent of other data recording.
-Use this cmdlet to modify settings that configure QoE at the global or site level.
-
-QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Skype for Business Server 2015 installation before QoE recording takes effect or any QoE data can be collected.
-
+QoE is part of the Monitoring Server role; therefore Monitoring Server must be deployed on your Skype for Business Server installation before QoE recording takes effect or any QoE data can be collected.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
 ```
 
-The command in Example 1 uses the Set-CsQoEConfiguration cmdlet to modify the Quality of Experience settings for the Redmond site (-Identity site:Redmond).
+The command in Example 1 uses the `Set-CsQoEConfiguration` cmdlet to modify the Quality of Experience settings for the Redmond site (-Identity site:Redmond).
 The new settings turn off QoE by setting the EnableQoE parameter to False.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command in Example 1 uses the Set-CsQoEConfiguration cmdlet to modify the Quality of Experience settings for the Redmond site (-Identity site:Redmond).
-The new settings turn off QoE by setting the EnableQoE parameter to False.
-
-Set-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command in Example 1 uses the Set-CsQoEConfiguration cmdlet to modify the Quality of Experience settings for the Redmond site (-Identity site:Redmond).
-The new settings turn off QoE by setting the EnableQoE parameter to False.
-
-Set-CsQoEConfiguration -Identity site:Redmond -EnableQoE $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Set-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 45 -PurgeHourOfDay 4
 ```
@@ -114,54 +60,12 @@ In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older
 
 Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This command modifies QoE settings that apply to the Dublin site.
-In this example we've set the KeepQoEDataForDays parameter to 45, so QoE data will be purged from the database after 45 days.
-In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older than the 45 days we just specified will be purged at 4:00 AM.
-
-Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
-
-Set-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 45 -PurgeHourOfDay 4
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This command modifies QoE settings that apply to the Dublin site.
-In this example we've set the KeepQoEDataForDays parameter to 45, so QoE data will be purged from the database after 45 days.
-In addition, we've set the PurgeHourOfDay parameter to 4, meaning any data older than the 45 days we just specified will be purged at 4:00 AM.
-
-Note: If you have enabled QoE and call detail recording (CDR), for performance reasons it's a good idea to make sure the PurgeHourOfDay setting is different for QoE than for CDR.
-
-Set-CsQoEConfiguration -Identity site:Dublin -KeepQoEDataForDays 45 -PurgeHourOfDay 4
 
 ## PARAMETERS
 
 ### -Identity
-**Below Content Applies To:** Lync Server 2010
-
 The unique identifier of the settings you want to modify.
-Possible values are global and site:\<site name\>, where \<site name\> is the name of the site in your Lync Server 2010 deployment to which you want to apply the changes.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-The unique identifier of the settings you want to modify.
-Possible values are global and site:\<site name\>, where \<site name\> is the name of the site in your Lync Server deployment to which you want to apply the changes.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The unique identifier of the settings you want to modify.
-Possible values are global and site:\<site name\>, where \<site name\> is the name of the site in your Skype for Business Server 2015 deployment to which you want to apply the changes.
-
+Possible values are global and site:\<site name\>, where \<site name\> is the name of the site in your Skype for Business Server deployment to which you want to apply the changes.
 
 
 ```yaml
@@ -178,18 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 An object reference to a QoE configuration object.
-This object must be of type QoESettings and can be retrieved by calling Get-CsQoEConfiguration.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-An object reference to a QoE configuration object.
-This object must be of type QoESettings and can be retrieved by calling the Get-CsQoEConfiguration cmdlet.
-
+This object must be of type QoESettings and can be retrieved by calling the `Get-CsQoEConfiguration` cmdlet.
 
 
 ```yaml
@@ -401,26 +295,15 @@ Accepts pipelined input of QoE configuration objects.
 ## OUTPUTS
 
 ###  
-Set-CsQoEConfiguration does not return a value or object.
-Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.QoE.QoESettings object.
-
-###  
-The Set-CsQoEConfiguration cmdlet does not return a value or object.
+The `Set-CsQoEConfiguration` cmdlet does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.QoE.QoESettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/199f0127-7444-4f88-993a-8e6a33fdcb61(OCS.14).aspx)
+[New-CsQoEConfiguration](New-CsQoEConfiguration.md)
 
-[New-CsQoEConfiguration]()
+[Remove-CsQoEConfiguration](Remove-CsQoEConfiguration.md)
 
-[Remove-CsQoEConfiguration]()
-
-[Get-CsQoEConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/199f0127-7444-4f88-993a-8e6a33fdcb61(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/199f0127-7444-4f88-993a-8e6a33fdcb61(OCS.16).aspx)
-
+[Get-CsQoEConfiguration](Get-CsQoEConfiguration.md)

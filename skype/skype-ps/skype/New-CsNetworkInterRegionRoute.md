@@ -1,17 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsNetworkInterRegionRoute
 schema: 2.0.0
 ---
 
 # New-CsNetworkInterRegionRoute
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new route that connects network regions within a call admission control (CAC) configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new route that connects network regions within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
@@ -35,18 +31,6 @@ New-CsNetworkInterRegionRoute -InterNetworkRegionRouteID <String> -NetworkRegion
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Every region within a CAC configuration must have some way to access every other region.
-While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
-This cmdlet creates that route association.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsNetworkInterRegionRoute cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsNetworkInterRegionRoute"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Every region within a CAC configuration must have some way to access every other region.
 While region links set bandwidth limitations on the connections between regions and also represent the physical links, a route determines which linked path the connection will traverse from one region to another.
@@ -56,21 +40,9 @@ This cmdlet creates that route association.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionID1 NorthAmerica -NetworkRegionID2 APAC -NetworkRegionLinkIDs "NA_EMEA,EMEA_APAC"
-```
-
-Example 1 creates a new network region route between the NorthAmerica region and the APAC region.
-We give the new route the Identity NA_APAC_Route.
-(This will automatically be assigned as the InterNetworkRegionRouteID.) The regions being connected are NorthAmerica, which is passed as the value to the NetworkRegionID1 parameter, and APAC, which is passed as the value to the NetworkRegionID2 parameter.
-In this example we're assuming there is no region link configured to link NorthAmerica directly to APAC.
-However, there are links from NorthAmerica to EMEA (NA_EMEA), and from EMEA to APAC (EMEA_APAC).
-We use both those links, separated by commas, as the value of the NetworkRegionLinkIDs parameter.
-This will route connections from NorthAmerica to APAC through EMEA and apply any bandwidth limitations to audio and video connections associated with those links.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
 ```
 
@@ -82,22 +54,6 @@ However, there are links from NorthAmerica to EMEA (NA_EMEA), and from EMEA to A
 We use both those links, separated by commas, as the value of the NetworkRegionLinkIDs parameter.
 This will route connections from NorthAmerica to APAC through EMEA and apply any bandwidth limitations to audio and video connections associated with those links.
 
-New-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionID1 NorthAmerica -NetworkRegionID2 APAC -NetworkRegionLinkIDs "NA_EMEA,EMEA_APAC"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 creates a new network region route between the NorthAmerica region and the APAC region.
-We give the new route the Identity NA_APAC_Route.
-(This will automatically be assigned as the InterNetworkRegionRouteID.) The regions being connected are NorthAmerica, which is passed as the value to the NetworkRegionID1 parameter, and APAC, which is passed as the value to the NetworkRegionID2 parameter.
-In this example we're assuming there is no region link configured to link NorthAmerica directly to APAC.
-However, there are links from NorthAmerica to EMEA (NA_EMEA), and from EMEA to APAC (EMEA_APAC).
-We use both those links, separated by commas, as the value of the NetworkRegionLinkIDs parameter.
-This will route connections from NorthAmerica to APAC through EMEA and apply any bandwidth limitations to audio and video connections associated with those links.
-
-New-CsNetworkInterRegionRoute -Identity NA_APAC_Route -NetworkRegionID1 NorthAmerica -NetworkRegionID2 APAC -NetworkRegionLinkIDs "NA_EMEA,EMEA_APAC"
 
 ## PARAMETERS
 
@@ -226,14 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -286,7 +234,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -302,15 +250,9 @@ Creates an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Netwo
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/97deeba5-b49f-4078-9843-fee7b2d1e72e(OCS.14).aspx)
+[Remove-CsNetworkInterRegionRoute](Remove-CsNetworkInterRegionRoute.md)
 
-[Remove-CsNetworkInterRegionRoute]()
+[Set-CsNetworkInterRegionRoute](Set-CsNetworkInterRegionRoute.md)
 
-[Set-CsNetworkInterRegionRoute]()
-
-[Get-CsNetworkInterRegionRoute]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/97deeba5-b49f-4078-9843-fee7b2d1e72e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/97deeba5-b49f-4078-9843-fee7b2d1e72e(OCS.16).aspx)
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)
 

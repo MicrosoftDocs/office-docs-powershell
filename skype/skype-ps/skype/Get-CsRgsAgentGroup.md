@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsRgsAgentGroup
 schema: 2.0.0
 ---
 
@@ -170,8 +171,8 @@ A string value representing the Identity of the Response Group agent group.
 
 ## RELATED LINKS
 
-[New-CsRgsAgentGroup]()
+[New-CsRgsAgentGroup](New-CsRgsAgentGroup.md)
 
-[Remove-CsRgsAgentGroup]()
+[Remove-CsRgsAgentGroup](Remove-CsRgsAgentGroup.md)
 
-[Set-CsRgsAgentGroup]()
+[Set-CsRgsAgentGroup](Set-CsRgsAgentGroup.md)

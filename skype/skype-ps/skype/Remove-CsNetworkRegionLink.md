@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsNetworkRegionLink
 schema: 2.0.0
 ---
 
 # Remove-CsNetworkRegionLink
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Removes a link between two regions configured for call admission control (CAC).
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Removes a link between two regions configured for call admission control (CAC).
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -26,86 +20,31 @@ Remove-CsNetworkRegionLink [-Identity] <XdsGlobalRelativeIdentity> [-Force] [-Wh
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 Regions within a network are linked through physical WAN connectivity.
 This cmdlet does not impact any physical connections, but it does remove the link from the CAC configuration.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsNetworkRegionLink cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkRegionLink"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Regions within a network are linked through physical WAN connectivity.
-This cmdlet does not impact any physical connections, but it does remove the link from the CAC configuration.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsNetworkRegionLink -Identity NA_EMEA
 ```
 
 This first example removes the network region link with the Identity NA_EMEA.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-This first example removes the network region link with the Identity NA_EMEA.
-
-Remove-CsNetworkRegionLink -Identity NA_EMEA
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This first example removes the network region link with the Identity NA_EMEA.
-
-Remove-CsNetworkRegionLink -Identity NA_EMEA
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
+### -------------------------- Example 2 --------------------------
 ```
 Get-CsNetworkRegionLink | Where-Object {$_.BWPolicyProfileID -eq "HighBWLimits"} | Remove-CsNetworkRegionLink
 ```
 
 Example 2 removes all network region links that are using the bandwidth policy profile named HighBWLimits.
-The first cmdlet called in the example is Get-CsNetworkRegionLink (with no parameters), which will retrieve all region links.
-This collection of links is then piped to the Where-Object cmdlet.
-Where-Object looks through each member of the collection one-by-one, checking the value of the BWPolicyProfileID property.
-If this property is equal to (-eq) HighBWLimits, we pipe that member to the Remove-CsNetworkRegionLink cmdlet, which removes the link.
+The first cmdlet called in the example is the `Get-CsNetworkRegionLink` cmdlet (with no parameters), which will retrieve all region links.
+This collection of links is then piped to the `Where-Object` cmdlet.
+The `Where-Object` cmdlet looks through each member of the collection one-by-one, checking the value of the BWPolicyProfileID property.
+If this property is equal to (-eq) HighBWLimits, we pipe that member to the `Remove-CsNetworkRegionLink` cmdlet, which removes the link.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 removes all network region links that are using the bandwidth policy profile named HighBWLimits.
-The first cmdlet called in the example is Get-CsNetworkRegionLink (with no parameters), which will retrieve all region links.
-This collection of links is then piped to the Where-Object cmdlet.
-Where-Object looks through each member of the collection one-by-one, checking the value of the BWPolicyProfileID property.
-If this property is equal to (-eq) HighBWLimits, we pipe that member to the Remove-CsNetworkRegionLink cmdlet, which removes the link.
-
-Get-CsNetworkRegionLink | Where-Object {$_.BWPolicyProfileID -eq "HighBWLimits"} | Remove-CsNetworkRegionLink
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 removes all network region links that are using the bandwidth policy profile named HighBWLimits.
-The first cmdlet called in the example is the Get-CsNetworkRegionLink cmdlet (with no parameters), which will retrieve all region links.
-This collection of links is then piped to the Where-Object cmdlet.
-The Where-Object cmdlet looks through each member of the collection one-by-one, checking the value of the BWPolicyProfileID property.
-If this property is equal to (-eq) HighBWLimits, we pipe that member to the Remove-CsNetworkRegionLink cmdlet, which removes the link.
-
-Get-CsNetworkRegionLink | Where-Object {$_.BWPolicyProfileID -eq "HighBWLimits"} | Remove-CsNetworkRegionLink
 
 ## PARAMETERS
 
@@ -194,15 +133,8 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f26cde90-e789-44a7-a304-695c85e64403(OCS.14).aspx)
+[New-CsNetworkRegionLink](New-CsNetworkRegionLink.md)
 
-[New-CsNetworkRegionLink]()
+[Set-CsNetworkRegionLink](Set-CsNetworkRegionLink.md)
 
-[Set-CsNetworkRegionLink]()
-
-[Get-CsNetworkRegionLink]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f26cde90-e789-44a7-a304-695c85e64403(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f26cde90-e789-44a7-a304-695c85e64403(OCS.16).aspx)
-
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)

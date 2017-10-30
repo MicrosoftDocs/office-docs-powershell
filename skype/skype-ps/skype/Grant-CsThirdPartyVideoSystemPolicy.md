@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Grant-CsThirdPartyVideoSystemPolicy
 schema: 2.0.0
 ---
 
@@ -19,7 +20,7 @@ Grant-CsThirdPartyVideoSystemPolicy [-Identity] <UserIdParameter> [-PolicyName] 
 
 ## DESCRIPTION
 Third-party video systems are VTC devices that provide remote users with telepresence capabilities (most notably audio and video).
-In Skype for Business Server 2015, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
+In Skype for Business Server, third-party VTC devices can be configured as Active Directory contact objects, much in the same way that analog phones and common area phones can be configured as contact objects.
 Associating each VTC device with a contact object makes it easy for administrators to track, and to manage, these devices.
 
 One key management task related to VTC devices is to enable (or disable) the ability of these devices to send low-resolution video.
@@ -33,38 +34,38 @@ If you want a VTC device to be managed by the global policy or (if available) th
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Device"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName "RedmondVideoSystemPolicy"
 ```
 
 The command shown in Example 1 assigns the third-party video system policy RedmondVideoSystemPolicy to the VTC device with the Active Directory display name Redmond Video Device.
 To do this, the command first uses the Get-CsThirdPartyVideoSystem cmdlet and the Filter parameter to return the device with the display name Redmond Video Device.
 This device is then piped to the Grant-CsThirdPartyVideoSystemPolicy cmdlet, which assigns the device the policy RedmondVideoSystemPolicy.
 
-Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Device"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName "RedmondVideoSystemPolicy"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
 
+Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Contact"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName $Null
 ```
 
 The command shown in Example 2 is effectively the inverse of the command shown in Example 1: in this case, any per-user policy previously assigned to Redmond Video Device is removed.
 (Per-user policies can be removed by setting the PolicyName to a null value.) After the policy has been removed, the device will be managed by using the appropriate site policy.
 If no site policy exists then Redmond Video Device will be managed by using the global policy.
 
-Get-CsThirdPartyVideoSystem -Filter {DisplayName -eq "Redmond Video Contact"} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName $Null
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 -------------------------- 
 ```
 
+Get-CsThirdPartyVideoSystem -Filter {ThirdPartyVideoSystemPolicy -eq $Null} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName "RedmondVideoSystemPolicy"
 ```
 
 Example 3 assigns the per-user video system policy RedmondVideoSystemPolicy to any VTC device that has not been assigned a per-user policy.
 To do this, the command first uses the Get-CsUser cmdlet and the Filter parameter to return a collection of all the devices that have not been assigned a per-user policy.
 (In other words, all the devices whose ThirdPartyVideoSystemPolicy property has been set to a null value.) That collection is then piped to the Grant-CsThirdPartyVideoSystemPolicy cmdlet, which assigns each device the RedmondVideoSystemPolicy policy.
 
-Get-CsThirdPartyVideoSystem -Filter {ThirdPartyVideoSystemPolicy -eq $Null} | Grant-CsThirdPartyVideoSystemPolicy -PolicyName "RedmondVideoSystemPolicy"
 
 ## PARAMETERS
 
@@ -173,7 +174,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -192,13 +193,10 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsThirdPartyVideoSystemPolicy]()
+[Get-CsThirdPartyVideoSystemPolicy](Get-CsThirdPartyVideoSystemPolicy.md)
 
-[New-CsThirdPartyVideoSystemPolicy]()
+[New-CsThirdPartyVideoSystemPolicy](New-CsThirdPartyVideoSystemPolicy.md)
 
-[Remove-CsThirdPartyVideoSystemPolicy]()
+[Remove-CsThirdPartyVideoSystemPolicy](Remove-CsThirdPartyVideoSystemPolicy.md)
 
-[Set-CsThirdPartyVideoSystemPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/5b2d87b0-b66c-4f32-aa51-93e696d9b9d1(OCS.16).aspx)
-
+[Set-CsThirdPartyVideoSystemPolicy](Set-CsThirdPartyVideoSystemPolicy.md)

@@ -1,26 +1,17 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsPersistentChatCategory
 schema: 2.0.0
 ---
 
 # Set-CsPersistentChatCategory
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Modifies an existing Persistent Chat category.
-A Persistent Chat category represents a collection of Persistent Chat chat rooms.
-Each chat room must be associated with a category.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Modifies an existing Persistent Chat category.
 A Persistent Chat category represents a collection of Persistent Chat chat rooms.
 Each chat room must be associated with a category.
 This cmdlet was introduced in Lync Server 2013.
-
 
 
 ## SYNTAX
@@ -44,32 +35,11 @@ Set-CsPersistentChatCategory -Instance <Category>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
 
-Persistent Chat categories provide a way for administrators to organize, and manage, Persistent Chat chat rooms.
-Categories provide a way for administrators to group related chat rooms; for example, all chat rooms used by the finance department can be grouped in the same category.
-Likewise, categories provide a way for administrators to manage permissions to these rooms, dictating which users are allowed access to the rooms, which users are denied access to the rooms, and which users are allowed to create new chat rooms within the category.
-
-Note that all chat rooms must belong to a category; you cannot create a chat room without assigning that room to a category.
-That means that you must create at least one category before you can add any chat rooms to your Persistent Chat implementation.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsPersistentChatCategory"}
-
-Lync Server Control Panel: To modify an existing Persistent Chat category using the Lync Server Control Panel, click Persistent Chat, click Category, then double-click the category to be modified.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-Persistent Chat categories provide a way for administrators to organize, and manage, Persistent Chat chat rooms.
+Persistent Chat categories provide a way for administrators to organize and manage, Persistent Chat chat rooms.
 Categories provide a way for administrators to group related chat rooms; for example, all chat rooms used by the finance department can be grouped in the same category.
 Likewise, categories provide a way for administrators to manage permissions to these rooms, dictating which users are allowed access to the rooms, which users are denied access to the rooms, and which users are allowed to create new chat rooms within the category.
 
@@ -79,48 +49,25 @@ That means that you must create at least one category before you can add any cha
 Skype for Business Server Control Panel: To modify an existing Persistent Chat category using the Skype for Business Server Control Panel, click Persistent Chat, click Category, then double-click the category to be modified.
 
 
-
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsPersistentChatCategory -Identity "atl-cs-001.litwareinc.com\helpdesk" -FileUpload $False
 ```
 
 In Example 1, file uploads are disabled for the Persistent Chat category atl-cs-001.litwareinc.com\helpdesk.
 
-Set-CsPersistentChatCategory -Identity "atl-cs-001.litwareinc.com\helpdesk" -FileUpload $False
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-In Example 1, file uploads are disabled for the Persistent Chat category atl-cs-001.litwareinc.com\helpdesk.
-
-Set-CsPersistentChatCategory -Identity "atl-cs-001.litwareinc.com\helpdesk" -FileUpload $False
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-Example 2 disables file uploads for all the Persistent Chat categories currently in use in the organization.
-To carry out this task, the command first calls Get-CsPersistentChatCategory without any parameters in order to return a collection of all the Persistent Chat categories.
-The categories in this collection are then piped to the Set-CsPersistentChatCategory cmdlet to disable file uploads for each category.
-
-Get-CsPersistentChatCategory | Set-CsPersistentChatCategory-FileUpload $False
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 disables file uploads for all the Persistent Chat categories currently in use in the organization.
-To carry out this task, the command first calls the Get-CsPersistentChatCategory cmdlet without any parameters in order to return a collection of all the Persistent Chat categories.
-The categories in this collection are then piped to the Set-CsPersistentChatCategory cmdlet to disable file uploads for each category.
-
 Get-CsPersistentChatCategory | Set-CsPersistentChatCategory -FileUpload $False
+```
+
+Example 2 disables file uploads for all the Persistent Chat categories currently in use in the organization.
+To carry out this task, the command first calls the `Get-CsPersistentChatCategory` cmdlet without any parameters in order to return a collection of all the Persistent Chat categories.
+The categories in this collection are then piped to the `Set-CsPersistentChatCategory` cmdlet to disable file uploads for each category.
+
 
 ## PARAMETERS
 
@@ -128,7 +75,7 @@ Get-CsPersistentChatCategory | Set-CsPersistentChatCategory -FileUpload $False
 Unique identifier for the chat room category.
 The Identity consists of the Persistent Chat pool were the category is located followed by the category Name; for example:
 
--Identity "atl-gc-001.litwareinc.com\ITChat"
+`-Identity "atl-gc-001.litwareinc.com\ITChat"`
 
 ```yaml
 Type: String
@@ -163,28 +110,28 @@ Accept wildcard characters: False
 Lists the users who are allowed to access chat rooms within the category.
 To add a new user to the Members list, use syntax similar to this:
 
--Members @{Add="sip:kenmyer@litwareinc.com"}
+`-Members @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--Members @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-Members @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the Members list use the Remove method:
 
--Members @{Remove="sip:kenmyer@litwareinc.com"}
+`-Members @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the Members list, set the value of the Members property to null:
 
--AllowedMembers $Null
+`-AllowedMembers $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command enables all the users in the IT OU to access chat rooms:
 
--Members @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-Members @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To add all the users in a distribution list, use the Active Directory distinguished name of that distribution list:
 
--Members @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}
+`-Members @{Add="CN=ChatSupportGroup,OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -200,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsObject
-When specified, Active Directory display names are used when adding users to or removing users from the AllowedMembers, DeniedMembers, and Creators lists.
+When specified, Active Directory display names are used when adding users to or removing users from the AllowedMembers, DeniedMembers and Creators lists.
 When not specified, SIP addresses are used when managing these lists.
 
 ```yaml
@@ -253,28 +200,28 @@ Accept wildcard characters: False
 Lists the users who are allowed to create chat rooms within the category.
 To add a new user to the Creators list, use syntax similar to this:
 
--Creators @{Add="sip:kenmyer@litwareinc.com"}
+`-Creators @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--Creators @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-Creators @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the Creators list use the Remove method:
 
--Creators @{Remove="sip:kenmyer@litwareinc.com"}
+`-Creators @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the Creators list, set the value of the Creators property to null:
 
--Creators $Null
+`-Creators $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command enables all the users in the IT OU to create chat rooms:
 
--Creators @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-Creators @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To add all the users in a distribution list, use the Active Directory distinguished name of that distribution list:
 
--Creators @{Add="CN=ChatSupportGroup.OU=IT,DC=litwareinc,DC=com"}
+`-Creators @{Add="CN=ChatSupportGroup.OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -293,28 +240,28 @@ Accept wildcard characters: False
 Lists the users who are not allowed to access chat rooms within the category.
 To add a new user to the DeniedMembers list, use syntax similar to this:
 
--DeniedMembers @{Add="sip:kenmyer@litwareinc.com"}
+`-DeniedMembers @{Add="sip:kenmyer@litwareinc.com"}`
 
 Multiple users can be added by separating the user SIP addresses with commas:
 
--DeniedMembers @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}
+`-DeniedMembers @{Add="sip:kenmyer@litwareinc.com", "sip:pilar@litwareinc.com"}`
 
 To remove a user from the DeniedMembers list use the Remove method:
 
--DeniedMembers @{Remove="sip:kenmyer@litwareinc.com"}
+`-DeniedMembers @{Remove="sip:kenmyer@litwareinc.com"}`
 
 To remove all the users from the DeniedMembers list, set the value of the DeniedMembers property to null:
 
--DeniedMembers $Null
+`-DeniedMembers $Null`
 
 In addition to working with individual users you can also work with entire OUs.
 For example, this command denies chat room access to all the users in the IT OUs:
 
--DeniedMembers @{Add="OU=IT,DC=litwareinc,DC=com"}
+`-DeniedMembers @{Add="OU=IT,DC=litwareinc,DC=com"}`
 
 To deny access to all the users in a distribution list, use the Active Directory distinguished name of that distribution list:
 
--DeniedMembers @{Add="CN=ChatSupportGroup.OU=IT,DC=litwareinc,DC=com"}
+`-DeniedMembers @{Add="CN=ChatSupportGroup.OU=IT,DC=litwareinc,DC=com"}`
 
 ```yaml
 Type: System.Management.Automation.PSListModifier`1[System.String]
@@ -418,32 +365,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsPersistentChatCategory accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
-
-###  
-The Set-CsPersistentChatCategory cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
+The `Set-CsPersistentChatCategory` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsPersistentChatCategory modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
-
-###  
-None.
-Instead, the Set-CsPersistentChatCategory cmdlet modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
+Instead, the `Set-CsPersistentChatCategory` cmdlet modifies existing instances of the Microsoft.Rtc.Management.PersistentChat.Cmdlets.CategoryObject object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatCategory]()
+[Get-CsPersistentChatCategory](Get-CsPersistentChatCategory.md)
 
-[New-CsPersistentChatCategory]()
+[New-CsPersistentChatCategory](New-CsPersistentChatCategory.md)
 
-[Remove-CsPersistentChatCategory]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/61f44b61-c1bb-46a8-af12-8d1c543fcda5(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/61f44b61-c1bb-46a8-af12-8d1c543fcda5(OCS.16).aspx)
-
+[Remove-CsPersistentChatCategory](Remove-CsPersistentChatCategory.md)

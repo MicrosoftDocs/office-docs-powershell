@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsXmppGatewayConfiguration
 schema: 2.0.0
 ---
 
@@ -307,4 +308,4 @@ Instead, the `Set-CsXmppGatewayConfiguration` cmdlet modifies existing instances
 
 ## RELATED LINKS
 
-[Get-CsXmppGatewayConfiguration]()
+[Get-CsXmppGatewayConfiguration](Get-CsXmppGatewayConfiguration.md)

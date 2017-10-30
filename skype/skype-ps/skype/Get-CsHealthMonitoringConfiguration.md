@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsHealthMonitoringConfiguration
 schema: 2.0.0
 ---
 
@@ -150,8 +151,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsHealthMonitoringConfiguration]()
+[New-CsHealthMonitoringConfiguration](New-CsHealthMonitoringConfiguration.md)
 
-[Remove-CsHealthMonitoringConfiguration]()
+[Remove-CsHealthMonitoringConfiguration](Remove-CsHealthMonitoringConfiguration.md)
 
-[Set-CsHealthMonitoringConfiguration]()
+[Set-CsHealthMonitoringConfiguration](Set-CsHealthMonitoringConfiguration.md)

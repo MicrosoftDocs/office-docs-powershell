@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Debug-CsLisConfiguration
 schema: 2.0.0
 ---
 
@@ -94,12 +95,12 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Publish-CsLisConfiguration]()
+[Publish-CsLisConfiguration](Publish-CsLisConfiguration.md)
 
-[Unpublish-CsLisConfiguration]()
+[Unpublish-CsLisConfiguration](Unpublish-CsLisConfiguration.md)
 
-[Import-CsLisConfiguration]()
+[Import-CsLisConfiguration](Import-CsLisConfiguration.md)
 
-[Export-CsLisConfiguration]()
+[Export-CsLisConfiguration](Export-CsLisConfiguration.md)
 
-[Test-CsLisConfiguration]()
+[Test-CsLisConfiguration](Test-CsLisConfiguration.md)

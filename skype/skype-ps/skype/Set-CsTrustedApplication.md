@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTrustedApplication
 schema: 2.0.0
 ---
 
@@ -145,8 +146,8 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayTrustedApplica
 
 ## RELATED LINKS
 
-[New-CsTrustedApplication]()
+[New-CsTrustedApplication](New-CsTrustedApplication.md)
 
-[Remove-CsTrustedApplication]()
+[Remove-CsTrustedApplication](Remove-CsTrustedApplication.md)
 
-[Get-CsTrustedApplication]()
+[Get-CsTrustedApplication](Get-CsTrustedApplication.md)

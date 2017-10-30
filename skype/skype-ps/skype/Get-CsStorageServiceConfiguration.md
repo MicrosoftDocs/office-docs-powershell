@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
 
@@ -154,8 +155,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsStorageServiceConfiguration]()
+[New-CsStorageServiceConfiguration](New-CsStorageServiceConfiguration.md)
 
-[Remove-CsStorageServiceConfiguration]()
+[Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)
 
-[Set-CsStorageServiceConfiguration]()
+[Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)

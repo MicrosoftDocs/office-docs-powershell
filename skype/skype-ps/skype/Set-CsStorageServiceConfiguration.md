@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
 
@@ -226,8 +227,8 @@ The `Set-CsStorageServiceConfiguration` cmdlet does not return any data or objec
 
 ## RELATED LINKS
 
-[Get-CsStorageServiceConfiguration]()
+[Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 
-[New-CsStorageServiceConfiguration]()
+[New-CsStorageServiceConfiguration](New-CsStorageServiceConfiguration.md)
 
-[Remove-CsStorageServiceConfiguration]()
+[Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)

@@ -1,21 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsNetworkInterSitePolicy
 schema: 2.0.0
 ---
 
 # Set-CsNetworkInterSitePolicy
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Modifies an existing network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Modifies an existing network inter-site policy that defines bandwidth limitations between sites that are directly linked within a call admission control (CAC) configuration.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,26 +28,13 @@ Set-CsNetworkInterSitePolicy [-Instance <PSObject>] [-BWPolicyProfileID <String>
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
 This cmdlet modifies a network inter-site policy that associates a bandwidth limitation policy with two directly connected sites.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsNetworkInterSitePolicy cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsNetworkInterSitePolicy"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-When network sites share a direct link, bandwidth limitations for audio and video connections can be defined between those two sites.
-This cmdlet modifies a network inter-site policy that associates a bandwidth limitation policy with two directly connected sites.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Set-CsNetworkInterSitePolicy -Identity Reno_Portland -BWPolicyProfileID HighBWLimits
 ```
@@ -60,25 +42,6 @@ Set-CsNetworkInterSitePolicy -Identity Reno_Portland -BWPolicyProfileID HighBWLi
 This example modifies the network site policy with the Identity Reno_Portland.
 We use the BWPolicyProfileID parameter to change the bandwidth policy profile associated with this network site policy to HighBWLimits.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example modifies the network site policy with the Identity Reno_Portland.
-We use the BWPolicyProfileID parameter to change the bandwidth policy profile associated with this network site policy to HighBWLimits.
-
-Set-CsNetworkInterSitePolicy -Identity Reno_Portland -BWPolicyProfileID HighBWLimits
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example modifies the network site policy with the Identity Reno_Portland.
-We use the BWPolicyProfileID parameter to change the bandwidth policy profile associated with this network site policy to HighBWLimits.
-
-Set-CsNetworkInterSitePolicy -Identity Reno_Portland -BWPolicyProfileID HighBWLimits
 
 ## PARAMETERS
 
@@ -101,18 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 An object reference to a site policy that has been modified in memory.
-This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType, and can be retrieved by calling Get-CsNetworkInterSitePolicy.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-An object reference to a site policy that has been modified in memory.
-This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType, and can be retrieved by calling the Get-CsNetworkInterSitePolicy cmdlet.
-
+This object must be of type Microsoft.Rtc.Management.WritableConfig.Settings.NetworkConfiguration.InterNetworkSitePolicyType and can be retrieved by calling the `Get-CsNetworkInterSitePolicy` cmdlet.
 
 
 ```yaml
@@ -130,7 +83,7 @@ Accept wildcard characters: False
 
 ### -BWPolicyProfileID
 The Identity of the bandwidth policy profile that will define the limitations for this site policy.
-You can retrieve a list of available profiles by calling the Get-CsNetworkBandwidthPolicyProfile cmdlet.
+You can retrieve a list of available profiles by calling the `Get-CsNetworkBandwidthPolicyProfile` cmdlet.
 
 ```yaml
 Type: String
@@ -246,15 +199,8 @@ It modifies an object of type Microsoft.Rtc.Management.WritableConfig.Settings.N
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/973979bc-db2c-47a6-909e-5949a927f51c(OCS.14).aspx)
+[New-CsNetworkInterSitePolicy](New-CsNetworkInterSitePolicy.md)
 
-[New-CsNetworkInterSitePolicy]()
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Remove-CsNetworkInterSitePolicy]()
-
-[Get-CsNetworkInterSitePolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/973979bc-db2c-47a6-909e-5949a927f51c(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/973979bc-db2c-47a6-909e-5949a927f51c(OCS.16).aspx)
-
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)

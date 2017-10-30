@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Grant-CsGraphPolicy
 schema: 2.0.0
 ---
 
@@ -24,18 +25,18 @@ Use the Grant-CsGraphPolicy cmdlet to assign a predefined graph policy to users 
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Grant-CsGraphPolicy -PolicyName "GraphDisabled" -Identity Ken.Myer
 ```
 
 This example grants the "GraphDisabled" policy to Ken Myer.
 
-Grant-CsGraphPolicy -PolicyName "GraphDisabled" -Identity Ken.Myer
 
 ## PARAMETERS
 
@@ -44,10 +45,10 @@ Specifies the name of the graph policy to grant to the tenant or user.
 The two options are:
 
 Graph Enabled: Granting this policy will enable the pre-loading content or files that are attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, Grant-CsGraphPolicy -PolicyName "Graph Enabled".
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Enabled".`
 
 Graph Disabled: Granting this policy will disable the pre-loading of content, files or attachments attached to an Outlook meeting invitation into a Skype for Business Online meeting.
-For example, Grant-CsGraphPolicy -PolicyName "Graph Disabled".
+For example, `Grant-CsGraphPolicy -PolicyName "Graph Disabled".`
 
 ```yaml
 Type: Object
@@ -177,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -192,6 +193,4 @@ The Grant-CsGraphPolicy cmdlet returns an object of type Microsoft.Rtc.Managemen
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/67d74914-c00a-4aa3-a873-29ddb9708d35(OCS.15).aspx)
 

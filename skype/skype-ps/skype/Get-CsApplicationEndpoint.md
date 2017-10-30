@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsApplicationEndpoint
 schema: 2.0.0
 ---
 
@@ -219,4 +220,4 @@ Accepts a pipelined string value representing the Identity of the application en
 
 ## RELATED LINKS
 
-[Move-CsApplicationEndpoint]()
+[Move-CsApplicationEndpoint](Move-CsApplicationEndpoint.md)

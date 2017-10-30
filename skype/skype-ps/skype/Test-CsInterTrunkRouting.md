@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsInterTrunkRouting
 schema: 2.0.0
 ---
 
@@ -134,6 +135,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsTrunk]()
+[Get-CsTrunk](Get-CsTrunk.md)
 
-[Get-CsTrunkConfiguration]()
+[Get-CsTrunkConfiguration](Get-CsTrunkConfiguration.md)

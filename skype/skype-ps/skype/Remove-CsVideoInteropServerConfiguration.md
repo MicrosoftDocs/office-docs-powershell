@@ -1,14 +1,15 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Remove-CsVideoInteropServerConfiguration
 schema: 2.0.0
 ---
 
 # Remove-CsVideoInteropServerConfiguration
 
 ## SYNOPSIS
-Use the Remove-CsVideoInteropServerConfiguration cmdlet to remove an existing collection of Video Interop Server (VIS) configuration settings.
-Video Interop Server configuration settings are scoped to appropriate Video Interop Server (VIS) instances, and will govern the behavior of those instances.
+Use the `Remove-CsVideoInteropServerConfiguration` cmdlet to remove an existing collection of Video Interop Server (VIS) configuration settings.
+Video Interop Server configuration settings are scoped to appropriate Video Interop Server (VIS) instances and will govern the behavior of those instances.
 
 ## SYNTAX
 
@@ -30,44 +31,41 @@ You can manage the Video Interop Server (VIS) by using VIS configuration setting
 These settings are used to enable or disable the enhanced video experience (in which a single video stream is converted to multiple streams in order to accommodate the needs of devices that use different frame rates or video resolutions).
 
 By default, Skype for Business Server ships with a single, global collection of Video Interop Server configuration settings.
-You can use the New-CsVideoInteropServerConfiguration cmdlet to create additional settings at the site or the service scope (for the VIS service only.) These custom settings can later be removed by using the Remove-CsVideoInteropServerConfiguration cmdlet.
+You can use the `New-CsVideoInteropServerConfiguration` cmdlet to create additional settings at the site or the service scope (for the VIS service only.) These custom settings can later be removed by using the `Remove-CsVideoInteropServerConfiguration` cmdlet.
 This cmdlet can also be run against the global collection of VIS settings.
 The global collection will not be removed, but all the properties in the global collection will be reset to their default values.
-Skype for Business Server 2015 does not allow you to delete the global settings.
+Skype for Business Server does not allow you to delete the global settings.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsVideoInteropServerConfiguration -Identity "site:Redmond"
 ```
 
 This example deletes the VIS configuration settings assigned to the Redmond site.
 
-Remove-CsVideoInteropServerConfiguration -Identity "site:Redmond"
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 --------------------------
 ```
-
+Get-CsVideoInteropServerConfiguration -Filter "site:*" | Remove-CsVideoInteropServerConfiguration
 ```
 
 This example deletes all the VIS settings that have been assigned to the site scope are deleted.
-The command calls the Get-CsVideoInteropServerConfiguration and filters the configuration by using the Filter parameter value "site:*".
-Those configuration objects are then piped to, and deleted by, the Remove-CsVideoInteropServerConfiguration cmdlet.
+The command calls the `Get-CsVideoInteropServerConfiguration` and filters the configuration by using the Filter parameter value "site:*".
+Those configuration objects are then piped to and deleted by, the `Remove-CsVideoInteropServerConfiguration` cmdlet.
 
-Get-CsVideoInteropServerConfiguration -Filter "site:*" | Remove-CsVideoInteropServerConfiguration
 
-### -------------------------- Example 3 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 3 --------------------------
 ```
-
+Get-CsVideoInteropServerConfiguration | Where-Object {$_.EnableEnhancedVideoExperience -eq $True} | Remove-CsVideoInteropServerConfiguration
 ```
 
 This example deletes all the VIS settings where the enhanced video experience has been enabled.
-The command first calls Get-CsVideoInteropServerConfiguration to return a collection of all the VIS settings in use in the organization.
-Those configuration objects then piped to the Where-Object cmdlet, which filters for VIS configuration objects in which EnableEnhancedVideoExperience property has been set to True ($True).
-Those configuration objects are then piped to and deleted by the Remove-CsVideoInteropServerConfiguration.
+The command first calls `Get-CsVideoInteropServerConfiguration` to return a collection of all the VIS settings in use in the organization.
+Those configuration objects then piped to the `Where-Object` cmdlet, which filters for VIS configuration objects in which EnableEnhancedVideoExperience property has been set to True ($True).
+Those configuration objects are then piped to and deleted by the `Remove-CsVideoInteropServerConfiguration`.
 
-Get-CsVideoInteropServerConfiguration | Where-Object {$_.EnableEnhancedVideoExperience -eq $True} | Remove-CsVideoInteropServerConfiguration
 
 ## PARAMETERS
 
@@ -76,10 +74,10 @@ Unique identity assigned to the video interop service configuration settings whe
 Video interop settings can be assigned at the global, site, or service scope (for the VideoInteropServer service only).
 For example, to remove settings configured at the site scope use the following syntax:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 Wildcard characters such as the asterisk (*) cannot be used with the Identity parameter.
-The Remove-CsVideoInteropServerConfiguration cmdlet can be run against the global settings collection.
+The `Remove-CsVideoInteropServerConfiguration` cmdlet can be run against the global settings collection.
 However, the global collection will not be deleted.
 Instead, all the properties within the collection will be reset to their default values.
 
@@ -150,23 +148,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-The Remove-CsVideoInteropServerConfiguration cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
+The `Remove-CsVideoInteropServerConfiguration` cmdlet accepts pipelined input of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
 
 ## OUTPUTS
 
 ###  
 None.
-The Remove-CsVideoInteropServerConfiguration cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
+The `Remove-CsVideoInteropServerConfiguration` cmdlet deletes instances of the Microsoft.Rtc.Management.WritableConfig.Settings.VideoInteropServer.VideoInteropServerConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerConfiguration]()
+[Get-CsVideoInteropServerConfiguration](Get-CsVideoInteropServerConfiguration.md)
 
-[New-CsVideoInteropServerConfiguration]()
+[New-CsVideoInteropServerConfiguration](New-CsVideoInteropServerConfiguration.md)
 
-[Set-CsVideoInteropServerConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/62a93c97-f8bc-4420-a611-7f6c1e1d7200(OCS.16).aspx)
-
+[Set-CsVideoInteropServerConfiguration](Set-CsVideoInteropServerConfiguration.md)

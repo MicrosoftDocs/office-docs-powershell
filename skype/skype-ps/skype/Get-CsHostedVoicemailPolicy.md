@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsHostedVoicemailPolicy
 schema: 2.0.0
 ---
 
@@ -199,10 +200,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsHostedVoicemailPolicy]()
+[New-CsHostedVoicemailPolicy](New-CsHostedVoicemailPolicy.md)
 
-[Remove-CsHostedVoicemailPolicy]()
+[Remove-CsHostedVoicemailPolicy](Remove-CsHostedVoicemailPolicy.md)
 
-[Set-CsHostedVoicemailPolicy]()
+[Set-CsHostedVoicemailPolicy](Set-CsHostedVoicemailPolicy.md)
 
-[Grant-CsHostedVoicemailPolicy]()
+[Grant-CsHostedVoicemailPolicy](Grant-CsHostedVoicemailPolicy.md)

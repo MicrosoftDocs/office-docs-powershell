@@ -1,12 +1,11 @@
 {
     "exchange-ps": {
-        "conceptualToc": "exchange/docs-conceptual/toc.md",
-        "packageRoot": "exchange",
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/exchange/exchange-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/exchange-ps/toc.json",
+        "packageRoot": "exchange-ps",
         "modules": {
-            "exchange": {
-                "_displayname": "Exchange Module",
-                "_version": "vlatest"
-            }      
+            "exchange": {}     
         }
     }
 }

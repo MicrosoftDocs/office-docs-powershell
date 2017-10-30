@@ -1,19 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: New-CsOAuthServer
 schema: 2.0.0
 ---
 
 # New-CsOAuthServer
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new Open Authorization (OAuth) server for use by the organization.
-OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new Open Authorization (OAuth) server for use by the organization.
 OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
@@ -30,29 +24,12 @@ New-CsOAuthServer [[-Identity] <XdsGlobalRelativeIdentity>] -MetadataUrl <String
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
-In Microsoft Lync Server 2013 Preview, server-to-server authentication (for example, the authentication that enables Lync Server 2013 Preview and Microsoft Exchange Server 2013 Preview to share information) is carried out using the OAuth security protocol.
+In Skype for Business Server, server-to-server authentication (for example, the authentication that enables Skype for Business Server and Exchange to share information) is carried out using the OAuth security protocol.
 This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
 If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
 
-If you are using an on-premises version of Lync Server 2013 Preview and you need to communicate with another server product that fully supports the OAuth protocol (for example, Exchange 2013 Preview or Microsoft SharePoint 2013) then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
-However, if you need to communicate with another server product (including server products found on Office 365) then you will need to use a token servers.
-These token servers can be managed by using the CsOAuthServer cmdlets.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsOAuthServer"}
-
-Lync Server Control Panel: The functions carried out by the New-CsOAuthServer cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-In Skype for Business Server 2015, server-to-server authentication (for example, the authentication that enables Skype for Business Server 2015 and Exchange to share information) is carried out using the OAuth security protocol.
-This type of authentication typically requires three servers: the two servers that need to communicate with one another (Server A and B) and a third-party security token server.
-If Servers A and B need to communicate with one another, the two servers contact the token server (also known as an OAuth server) and obtain mutually-trusted security tokens that the two servers can exchange in order to prove their identities.
-
-If you are using an on-premises version of Skype for Business Server 2015 and you need to communicate with another server product that fully supports the OAuth then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
+If you are using an on-premises version of Skype for Business Server and you need to communicate with another server product that fully supports the OAuth then you typically do not need to use a token server; that's because these server products are able to issue their own security tokens.
 However, if you need to communicate with another server product then you will need to use a token servers.
 These token servers can be managed by using the CsOAuthServer cmdlets.
 
@@ -62,25 +39,15 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
 ```
 
 Example 1 creates a new OAuth Server named "Office 365".
 The new server uses the metadata URL https://sts.office365.microsoft.com/metadata/json/1.
 
-New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 creates a new OAuth Server named "Office 365".
-The new server uses the metadata URL https://sts.office365.microsoft.com/metadata/json/1.
-
-New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.microsoft.com/metadata/json/1"
 
 ## PARAMETERS
 
@@ -168,17 +135,9 @@ Accept wildcard characters: False
 ```
 
 ### -Realm
-**Below Content Applies To:** Lync Server 2013
 
 Server-to-server security container.
-By default, Lync Server 2013 Preview uses your default SIP domain as its OAuth realm.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Server-to-server security container.
-By default, Skype for Business Server 2015 uses your default SIP domain as its OAuth realm.
+By default, Skype for Business Server uses your default SIP domain as its OAuth realm.
 
 
 
@@ -196,29 +155,15 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-**Below Content Applies To:** Lync Server 2013
-
-Globally unique identifier (GUID) of the Office 365 tenant account for which the new OAuth server is being created.
-For example:
-
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
-
-You can return the tenant ID for each of your tenants by running this command:
-
-Get-CsTenant | Select-Object DisplayName, TenantID
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Globally unique identifier (GUID) of the Skype for Business Online tenant account for which the new OAuth server is being created.
 For example:
 
--Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
+`-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`
 
 You can return the tenant ID for each of your tenants by running this command:
 
-Get-CsTenant | Select-Object DisplayName, TenantID
+`Get-CsTenant | Select-Object DisplayName, TenantID`
 
 
 
@@ -305,13 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None.
-New-CsOAuthServer does not accept pipelined input.
 
 ###  
 None.
@@ -320,22 +261,15 @@ The New-CsOAuthServer cmdlet does not accept pipelined input.
 ## OUTPUTS
 
 ###  
-New-CsOAuthServer creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
-
-###  
 The New-CsOAuthServer cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SSAuth.OAuthServer#Decorated object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsOAuthServer]()
+[Get-CsOAuthServer](Get-CsOAuthServer.md)
 
-[Remove-CsOAuthServer]()
+[Remove-CsOAuthServer](Remove-CsOAuthServer.md)
 
-[Set-CsOAuthServer]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b9d10216-a743-4e62-9cf0-6d5fb55dd64e(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b9d10216-a743-4e62-9cf0-6d5fb55dd64e(OCS.16).aspx)
+[Set-CsOAuthServer](Set-CsOAuthServer.md)
 

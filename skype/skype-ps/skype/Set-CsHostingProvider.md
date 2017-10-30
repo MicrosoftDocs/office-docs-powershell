@@ -1,32 +1,17 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsHostingProvider
 schema: 2.0.0
 ---
 
 # Set-CsHostingProvider
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Modifies a hosting provider currently in use in your organization.
-A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
-Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
-
-**Below Content Applies To:** Lync Server 2013
-
-Modifies a hosting provider currently in use in your organization.
-A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
-Hosting providers, such as Microsoft Lync Online 2010, differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
+A hosting provider is a third-party organization that provides instant messaging, presence and related services for a domain that you would like to federate with.
+Hosting providers differ from public providers (such as Yahoo!, MSN and AOL) in that their services are not offered to the general public.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Modifies a hosting provider currently in use in your organization.
-A hosting provider is a third-party organization that provides instant messaging, presence, and related services for a domain that you would like to federate with.
-Hosting providers differ from public providers (such as Yahoo!, MSN, and AOL) in that their services are not offered to the general public.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -47,181 +32,59 @@ Set-CsHostingProvider [-Instance <PSObject>] [-Enabled <Boolean>] [-EnabledShare
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups. 
-When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Lync 2010.
-Microsoft Lync Server 2010 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-A hosting provider is an organization that provides SIP communication services for other organizations; for example, Fabrikam, Inc.
-might host users from Contoso, Northwind Traders, and Wingtip Toys.
-When you establish a federation relationship with a hosting provider, you effectively establish federation with any organization hosted by that provider.
-For example, if you federate with Fabrikam, your users will be able to exchange instant messages and presence information with users from Contoso, Northwind Traders, and Wingtip Toys.
-
-Hosting providers are also used in split domain scenarios.
-In a split domain scenario, some of your Lync Server 2010 users have accounts hosted on-premises (that is, hosted on your local implementation of Lync Server).
-Other users have their accounts maintained off-premises by the third-party hosting provider.
-Federating with the hosting provider enables on-premises and off-premises users to communicate with one another.
-
-In order to federate with a third-party hosting provider you need to create and enable a new hosting provider.
-(In addition, the third-party provider will need to create a federation relationship with you.) After a hosting provider has been created, you can use the Set-CsHostingProvider cmdlet to modify the properties of that provider.
-For example, you can use this cmdlet to change the fully qualified domain name (FQDN) of the provider's proxy server, or use the cmdlet to change the verification level for that provider.
-
-Note that you cannot federate with a hosting provider if your Edge Servers are configured to use default routing rather than Domain Name System (DNS) server routing.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsHostingProvider cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostingProvider"}
-
-**Below Content Applies To:** Lync Server 2013
-
 Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
-When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Microsoft Lync 2013 Preview.
-Lync Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
+When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications and otherwise communicate with one another using SIP applications such as Skype for Business.
+Skype for Business Server allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider and 3) federation between your organization and a third-party hosting provider.
 
 A hosting provider is an organization that provides SIP communication services for other organizations; for example, Fabrikam, Inc.
-might host users from Contoso, Northwind Traders, and Wingtip Toys.
+might host users from Contoso, Northwind Traders and Wingtip Toys.
 When you establish a federation relationship with a hosting provider, you effectively establish federation with any organization hosted by that provider.
-For example, if you federate with Fabrikam, your users will be able to exchange instant messages and presence information with users from Contoso, Northwind Traders, and Wingtip Toys.
+For example, if you federate with Fabrikam, your users will be able to exchange instant messages and presence information with users from Contoso, Northwind Traders and Wingtip Toys.
 
 Hosting providers are also used in split domain scenarios.
-In a split domain scenario, some of your Lync Server users have accounts hosted on-premises (that is, hosted on your local implementation of Lync Server).
+In a split domain scenario, some of your Skype for Business Server users have accounts hosted on-premises (that is, hosted on your local implementation of Skype for Business Server).
 Other users have their accounts maintained off-premises by the third-party hosting provider.
 Federating with the hosting provider enables on-premises and off-premises users to communicate with one another.
 
 In order to federate with a third-party hosting provider you need to create and enable a new hosting provider.
-(In addition, the third-party provider will need to create a federation relationship with you.) After a hosting provider has been created, you can use the Set-CsHostingProvider cmdlet to modify the properties of that provider.
+(In addition, the third-party provider will need to create a federation relationship with you.) After a hosting provider has been created, you can use the `Set-CsHostingProvider` cmdlet to modify the properties of that provider.
 For example, you can use this cmdlet to change the fully qualified domain name (FQDN) of the provider's proxy server, or use the cmdlet to change the verification level for that provider.
 
 Note that you cannot federate with a hosting provider if your Edge Servers are configured to use default routing rather than Domain Name System (DNS) server routing.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsHostingProvider cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsHostingProvider"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Federation is a means by which two organizations can set up a trust relationship that facilitates communication between the two groups.
-When a federation has been established, users in the two organizations can send each other instant messages, subscribe for presence notifications, and otherwise communicate with one another using SIP applications such as Skype for Business.
-Skype for Business Server 2015 allows for three types of federation: 1) direct federation between your organization and another; 2) federation between your organization and a public provider; and, 3) federation between your organization and a third-party hosting provider.
-
-A hosting provider is an organization that provides SIP communication services for other organizations; for example, Fabrikam, Inc.
-might host users from Contoso, Northwind Traders, and Wingtip Toys.
-When you establish a federation relationship with a hosting provider, you effectively establish federation with any organization hosted by that provider.
-For example, if you federate with Fabrikam, your users will be able to exchange instant messages and presence information with users from Contoso, Northwind Traders, and Wingtip Toys.
-
-Hosting providers are also used in split domain scenarios.
-In a split domain scenario, some of your Skype for Business Server 2015 users have accounts hosted on-premises (that is, hosted on your local implementation of Skype for Business Server 2015).
-Other users have their accounts maintained off-premises by the third-party hosting provider.
-Federating with the hosting provider enables on-premises and off-premises users to communicate with one another.
-
-In order to federate with a third-party hosting provider you need to create and enable a new hosting provider.
-(In addition, the third-party provider will need to create a federation relationship with you.) After a hosting provider has been created, you can use the Set-CsHostingProvider cmdlet to modify the properties of that provider.
-For example, you can use this cmdlet to change the fully qualified domain name (FQDN) of the provider's proxy server, or use the cmdlet to change the verification level for that provider.
-
-Note that you cannot federate with a hosting provider if your Edge Servers are configured to use default routing rather than Domain Name System (DNS) server routing.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsHostingProvider -Identity "Fabrikam.com" -VerificationLevel "AlwaysUnverifiable"
-```
-
-The preceding command modifies the hosting provider with the Identity Fabrikam.com.
-In this example, the VerificationLevel property is set to AlwaysUnverifiable.
-
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 1 modifies the hosting provider with the Identity Fabrikam.com.
 In this example, the VerificationLevel property is set to AlwaysUnverifiable.
 
-Set-CsHostingProvider -Identity "Fabrikam.com" -VerificationLevel "AlwaysUnverifiable"
 
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 1 modifies the hosting provider with the Identity Fabrikam.com.
-In this example, the VerificationLevel property is set to AlwaysUnverifiable.
-
-Set-CsHostingProvider -Identity "Fabrikam.com" -VerificationLevel "AlwaysUnverifiable"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Get-CsHostingProvider | Set-CsHostingProvider -VerificationLevel "AlwaysUnverifiable"
 ```
 
 Example 2 is a variation of the command shown in Example 1; in this case, however, the verification level for all the hosting providers is set to AlwaysUnverifiable.
-To do this, Get-CsHostingProvider is first used to return a collection of all the hosting providers configured for use in the organization.
-This collection is then piped to Set-CsHostingProvider, which modifies the VerificationLevel property for each provider in the collection.
+To do this, `Get-CsHostingProvider` is first used to return a collection of all the hosting providers configured for use in the organization.
+This collection is then piped to `Set-CsHostingProvider`, which modifies the VerificationLevel property for each provider in the collection.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
 
-```
-
-Example 2 is a variation of the command shown in Example 1; in this case, however, the verification level for all the hosting providers is set to AlwaysUnverifiable.
-To do this, Get-CsHostingProvider is first used to return a collection of all the hosting providers configured for use in the organization.
-This collection is then piped to Set-CsHostingProvider, which modifies the VerificationLevel property for each provider in the collection.
-
-Get-CsHostingProvider | Set-CsHostingProvider -VerificationLevel "AlwaysUnverifiable"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 is a variation of the command shown in Example 1; in this case, however, the verification level for all the hosting providers is set to AlwaysUnverifiable.
-To do this, Get-CsHostingProvider is first used to return a collection of all the hosting providers configured for use in the organization.
-This collection is then piped to Set-CsHostingProvider, which modifies the VerificationLevel property for each provider in the collection.
-
-Get-CsHostingProvider | Set-CsHostingProvider -VerificationLevel "AlwaysUnverifiable"
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Get-CsHostingProvider | Where-Object {$_.EnabledSharedAddressSpace -eq $True -and $_.HostsOCSUsers -eq $True} | Set-CsHostingProvider -EnabledSharedAddressSpace $False -HostsOCSUsers $False
 ```
 
 In Example 3 all the hosting providers currently configured for use in a split domain setup are modified so that they are no longer used for split domain federation.
-In this example, Get-CsHostingProvider is first called in order to return a collection of all the available hosting providers.
-This collection is then piped to the Where-Object cmdlet, which selects only those providers that meet two criteria: 1) the HostsOCSUsers property is equal to True; and, 2) the EnabledSharedAddressSpace property is equal to True.
-This filtered collection is then piped to Set-CsHostingProvider, which sets both the EnabledSharedAddressSpace and the HostsOCSUsers properties to False.
+In this example, `Get-CsHostingProvider` is first called in order to return a collection of all the available hosting providers.
+This collection is then piped to the `Where-Object` cmdlet, which selects only those providers that meet two criteria: 1) the HostsOCSUsers property is equal to True and 2) the EnabledSharedAddressSpace property is equal to True.
+This filtered collection is then piped to `Set-CsHostingProvider`, which sets both the EnabledSharedAddressSpace and the HostsOCSUsers properties to False.
 When this is done any hosting providers in the collection will still be enabled for federation; however, they will no longer be used in a split domain scenario.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3 all the hosting providers currently configured for use in a split domain setup are modified so that they are no longer used for split domain federation.
-In this example, Get-CsHostingProvider is first called in order to return a collection of all the available hosting providers.
-This collection is then piped to the Where-Object cmdlet, which selects only those providers that meet two criteria: 1) the HostsOCSUsers property is equal to True; and, 2) the EnabledSharedAddressSpace property is equal to True.
-This filtered collection is then piped to Set-CsHostingProvider, which sets both the EnabledSharedAddressSpace and the HostsOCSUsers properties to False.
-When this is done any hosting providers in the collection will still be enabled for federation; however, they will no longer be used in a split domain scenario.
-
-Get-CsHostingProvider | Where-Object {$_.EnabledSharedAddressSpace -eq $True -and $_.HostsOCSUsers -eq $True} | Set-CsHostingProvider -EnabledSharedAddressSpace $False -HostsOCSUsers $False
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 3 all the hosting providers currently configured for use in a split domain setup are modified so that they are no longer used for split domain federation.
-In this example, Get-CsHostingProvider is first called in order to return a collection of all the available hosting providers.
-This collection is then piped to the Where-Object cmdlet, which selects only those providers that meet two criteria: 1) the HostsOCSUsers property is equal to True; and, 2) the EnabledSharedAddressSpace property is equal to True.
-This filtered collection is then piped to Set-CsHostingProvider, which sets both the EnabledSharedAddressSpace and the HostsOCSUsers properties to False.
-When this is done any hosting providers in the collection will still be enabled for federation; however, they will no longer be used in a split domain scenario.
-
-Get-CsHostingProvider | Where-Object {$_.EnabledSharedAddressSpace -eq $True -and $_.HostsOCSUsers -eq $True} | Set-CsHostingProvider -EnabledSharedAddressSpace $False -HostsOCSUsers $False
 
 ## PARAMETERS
 
@@ -294,28 +157,9 @@ Accept wildcard characters: False
 ```
 
 ### -HostsOCSUsers
-**Below Content Applies To:** Lync Server 2010
-
-If True, indicates that the hosting provider is used to host Lync Server 2010 accounts.
+If True, indicates that the hosting provider is used to host Skype for Business Server accounts.
 If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
 The default value is False.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-If True, indicates that the hosting provider is used to host Lync Server accounts.
-If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
-The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-If True, indicates that the hosting provider is used to host Skype for Business Server 2015 accounts.
-If False, that indicates that the provider hosts other account types, such as Microsoft Exchange Server accounts.
-The default value is False.
-
 
 
 ```yaml
@@ -332,18 +176,8 @@ Accept wildcard characters: False
 ```
 
 ### -IsLocal
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-If True, indicates that the proxy server used by the hosting provider is contained within your own Lync Server topology.
+If True, indicates that the proxy server used by the hosting provider is contained within your own Skype for Business Server topology.
 The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-If True, indicates that the proxy server used by the hosting provider is contained within your own Skype for Business Server 2015 topology.
-The default value is False.
-
 
 
 ```yaml
@@ -439,18 +273,8 @@ Accept wildcard characters: False
 ```
 
 ### -AutodiscoverUrl
-**Below Content Applies To:** Lync Server 2013
-
-URL for the autodiscover service used by a hosting provider that hosts Lync Server accounts.
+URL for the autodiscover service used by a hosting provider that hosts Skype for Business Server accounts.
 The autodiscover service enables client applications such as Microsoft Lync Mobile to determine how to access resources such as a user's home pool.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-URL for the autodiscover service used by a hosting provider that hosts Skype for Business Server 2015 accounts.
-The autodiscover service enables client applications such as Microsoft Lync Mobile to determine how to access resources such as a user's home pool.
-
 
 
 ```yaml
@@ -468,10 +292,10 @@ Accept wildcard characters: False
 
 ### -SipClientPort
 Port used by the provider for communicating with SIP clients; the default value is 443.
-Note that, by default, the SipClientPort is not displayed when you run the Get-CsHostingProvider cmdlet.
+Note that, by default, the SipClientPort is not displayed when you run the `Get-CsHostingProvider` cmdlet.
 To see the SipClientPort, use a command similar to this:
 
-Get-CsHostingProvider | Select-Object *
+`Get-CsHostingProvider | Select-Object *`
 
 ```yaml
 Type: UInt64
@@ -493,31 +317,24 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider object.
-Set-CsHostingProvider accepts pipelined instances of the hosting provider object.
+`Set-CsHostingProvider` accepts pipelined instances of the hosting provider object.
 
 ## OUTPUTS
 
 ###  
-Set-CsHostingProvider does not return a value or object.
+`Set-CsHostingProvider` does not return a value or object.
 Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.WritableConfig.Settings.Edge.DisplayHostingProvider object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/709567e3-1af6-4829-b9ce-5f488f9db372(OCS.14).aspx)
+[Disable-CsHostingProvider](Disable-CsHostingProvider.md)
 
-[Disable-CsHostingProvider]()
+[Enable-CsHostingProvider](Enable-CsHostingProvider.md)
 
-[Enable-CsHostingProvider]()
+[Get-CsHostingProvider](Get-CsHostingProvider.md)
 
-[Get-CsHostingProvider]()
+[New-CsHostingProvider](New-CsHostingProvider.md)
 
-[New-CsHostingProvider]()
-
-[Remove-CsHostingProvider]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/709567e3-1af6-4829-b9ce-5f488f9db372(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/709567e3-1af6-4829-b9ce-5f488f9db372(OCS.16).aspx)
-
+[Remove-CsHostingProvider](Remove-CsHostingProvider.md)

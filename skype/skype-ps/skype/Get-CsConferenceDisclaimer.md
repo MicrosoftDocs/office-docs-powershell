@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsConferenceDisclaimer
 schema: 2.0.0
 ---
 
@@ -117,6 +118,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsConferenceDisclaimer]()
+[Remove-CsConferenceDisclaimer](Remove-CsConferenceDisclaimer.md)
 
-[Set-CsConferenceDisclaimer]()
+[Set-CsConferenceDisclaimer](Set-CsConferenceDisclaimer.md)

@@ -1,21 +1,15 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsAudioTestServiceApplication
 schema: 2.0.0
 ---
 
 # Set-CsAudioTestServiceApplication
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Enables you to modify the property values for any of the Audio Test service application contacts currently in use in your organization.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Enables you to modify the property values for any of the Audio Test service application contacts currently in use in your organization.
 This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -30,45 +24,7 @@ Set-CsAudioTestServiceApplication [-Identity] <UserIdParameter> [-Enabled <Boole
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
-The Audio Test service enables Microsoft Lync 2010 users to test their voice connections before they make a voice call.
-To do this, users click the Check call quality button found on the Audio Device tab of the Lync 2010 Options dialog box.
-When a user clicks this button, a call will be made to the automated Audio Test service.
-The call will be answered and, after an introductory prompt is played, the caller will be asked to record a brief message (10 seconds maximum).
-That recording will then be replayed, enabling the caller to hear what he or she sounds like over the current connection.
-
-The Audio Test service relies, in part, on Active Directory contact objects.
-These objects are automatically created for you when you install Audio Bot; there is no way to manually create these objects.
-However, administrators can use the Get-CsAudioTestServiceApplication cmdlet to retrieve information about the various test service contacts currently in use in the organization.
-Administrators can also use the Set-CsAudioTestServiceApplication to modify the properties of these contacts.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAudioTestServiceApplication cmdlet: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAudioTestServiceApplication"}
-
-**Below Content Applies To:** Lync Server 2013
-
-The Audio Test service enables Lync Server users to test their voice connections before they make a voice call.
-To do this, users click the Check call quality button found on the Audio Device tab of the Lync Options dialog box.
-When a user clicks this button, a call will be made to the automated Audio Test service.
-The call will be answered and, after an introductory prompt is played, the caller will be asked to record a brief message (10 seconds maximum).
-That recording will then be replayed, enabling the caller to hear what he or she sounds like over the current connection.
-
-The Audio Test service relies, in part, on Active Directory contact objects.
-These objects are automatically created for you when you install Audio Bot; there is no way to manually create these objects.
-However, administrators can use the Get-CsAudioTestServiceApplication cmdlet to retrieve information about the various test service contacts currently in use in the organization.
-Administrators can also use the Set-CsAudioTestServiceApplication to modify the properties of these contacts.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Set-CsAudioTestServiceApplication cmdlet: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsAudioTestServiceApplication"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Audio Test service enables Skype for Business Server 2015 users to test their voice connections before they make a voice call.
+The Audio Test service enables Skype for Business Server users to test their voice connections before they make a voice call.
 To do this, users click the Check call quality button found on the Audio Device tab of the Skype for Business Options dialog box.
 When a user clicks this button, a call will be made to the automated Audio Test service.
 The call will be answered and, after an introductory prompt is played, the caller will be asked to record a brief message (10 seconds maximum).
@@ -76,14 +32,13 @@ That recording will then be replayed, enabling the caller to hear what he or she
 
 The Audio Test service relies, in part, on Active Directory contact objects.
 These objects are automatically created for you when you install Audio Bot; there is no way to manually create these objects.
-However, administrators can use the Get-CsAudioTestServiceApplication cmdlet to retrieve information about the various test service contacts currently in use in the organization.
-Administrators can also use the Set-CsAudioTestServiceApplication cmdlet to modify the properties of these contacts.
-
+However, administrators can use the `Get-CsAudioTestServiceApplication` cmdlet to retrieve information about the various test service contacts currently in use in the organization.
+Administrators can also use the `Set-CsAudioTestServiceApplication` cmdlet to modify the properties of these contacts.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage "en-US"
 ```
@@ -91,90 +46,27 @@ Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com
 In Example 1, the primary language for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com is set to U.S.
 English (en-US).
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-In Example 1, the primary language for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com is set to U.S.
-English (en-US).
-
-Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage "en-US"
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 1, the primary language for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com is set to U.S.
-English (en-US).
-
-Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage "en-US"
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage $Null
-```
-
-The preceding example clears the value of the PrimaryLanguage property for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com.
-This is done by including the PrimaryLanguage parameter and setting the parameter value to $Null.
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
 ```
 
 Example 2 clears the value of the PrimaryLanguage property for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com.
 This is done by including the PrimaryLanguage parameter and setting the parameter value to $Null.
 
-Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage $Null
 
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 clears the value of the PrimaryLanguage property for the Audio Test service contact sip:RedmondAudioTest@litwareinc.com.
-This is done by including the PrimaryLanguage parameter and setting the parameter value to $Null.
-
-Set-CsAudioTestServiceApplication -Identity "sip:RedmondAudioTest@litwareinc.com" -PrimaryLanguage $Null
-
-### -------------------------- Example 3 ------------------------ (Lync Server 2010)
+### -------------------------- Example 3 ------------------------
 ```
 Get-CsAudioTestServiceApplication | Set-CsAudioTestServiceApplication -PrimaryLanguage "en-US"
 ```
 
 In Example 3, all the Audio Test service contacts in use in the organization are configured to use U.S.
 English as their primary language.
-To do this, Get-CsAudioTestServiceApplication is first called without any parameters in order to return a collection of the Audio Test service contacts.
-This collection is then piped to the Set-CsAudioTestServiceApplication, which assigns U.S.
+To do this, the `Get-CsAudioTestServiceApplication` cmdlet is first called without any parameters in order to return a collection of the Audio Test service contacts.
+This collection is then piped to the `Set-CsAudioTestServiceApplication`, which assigns U.S.
 English (en-Us) to the PrimaryLanguage property for each contact in the collection.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
-
-```
-
-In Example 3, all the Audio Test service contacts in use in the organization are configured to use U.S.
-English as their primary language.
-To do this, Get-CsAudioTestServiceApplication is first called without any parameters in order to return a collection of the Audio Test service contacts.
-This collection is then piped to the Set-CsAudioTestServiceApplication, which assigns U.S.
-English (en-Us) to the PrimaryLanguage property for each contact in the collection.
-
-Get-CsAudioTestServiceApplication | Set-CsAudioTestServiceApplication -PrimaryLanguage "en-US"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-In Example 3, all the Audio Test service contacts in use in the organization are configured to use U.S.
-English as their primary language.
-To do this, the Get-CsAudioTestServiceApplication cmdlet is first called without any parameters in order to return a collection of the Audio Test service contacts.
-This collection is then piped to the Set-CsAudioTestServiceApplication, which assigns U.S.
-English (en-Us) to the PrimaryLanguage property for each contact in the collection.
-
-Get-CsAudioTestServiceApplication | Set-CsAudioTestServiceApplication -PrimaryLanguage "en-US"
 
 ## PARAMETERS
 
@@ -195,25 +87,8 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-**Below Content Applies To:** Lync Server 2010
-
-Indicates whether or not the contact object has been enabled for Lync Server 2010.
-If you set this value to False ($False), the contact will no longer be able to log on to Lync Server; setting this value to True ($True) re-enables the contact's logon privileges.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Indicates whether or not the contact object has been enabled for Lync Server.
-If you set this value to False ($False), the contact will no longer be able to log on to Lync Server; setting this value to True ($True) re-enables the contact's logon privileges.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Indicates whether or not the contact object has been enabled for Skype for Business Server 2015.
-If you set this value to False ($False), the contact will no longer be able to log on to Skype for Business Server 2015; setting this value to True ($True) re-enables the contact's logon privileges.
-
+Indicates whether or not the contact object has been enabled for Skype for Business Server.
+If you set this value to False ($False), the contact will no longer be able to log on to Skype for Business Server; setting this value to True ($True) re-enables the contact's logon privileges.
 
 
 ```yaml
@@ -301,7 +176,7 @@ The language must be configured using one of the allowed language codes; for exa
 English; fr-FR for French; etc.
 To return a list of the available language codes, type the following command at the Windows PowerShell prompt:
 
-Get-CsDialInConferencingLanguageList | Select-Object -ExpandProperty Languages.
+`Get-CsDialInConferencingLanguageList | Select-Object -ExpandProperty Languages`.
 
 ```yaml
 Type: String
@@ -333,25 +208,8 @@ Accept wildcard characters: False
 ```
 
 ### -SipAddress
-**Below Content Applies To:** Lync Server 2010
-
-Unique identifier that allows the contact object to communicate by using SIP devices such as Lync 2010.
-The SIP address must be prefaced by sip:; for example: -SipAddress "sip:kenmyer@litwareinc.com".
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Unique identifier that allows the contact object to communicate by using SIP devices such as Lync.
-The SIP address must be prefaced by sip:; for example: -SipAddress "sip:kenmyer@litwareinc.com".
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 This parameter is currently disabled.
-You cannot change the SIP address using Set-CsAudioTestServiceApplication.
-
+You cannot change the SIP address using `Set-CsAudioTestServiceApplication`.
 
 
 ```yaml
@@ -386,7 +244,7 @@ Accept wildcard characters: False
 
 ### -PassThru
 Enables you to pass a user object through the pipeline that represents the user being assigned the policy.
-By default, the Set-CsAudioTestServiceApplication cmdlet does not pass objects through the pipeline.
+By default, the `Set-CsAudioTestServiceApplication` cmdlet does not pass objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
@@ -450,20 +308,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeArchivingPolicy
-**Below Content Applies To:** Lync Server 2013
-
-Indicates where the contact's instant messaging sessions are archived.
-Allowed values are:
-
-* Uninitialized
-* UseLyncArchivingPolicy
-* ArchivingToExchange
-* NoArchiving
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Indicates where the contact's instant messaging sessions are archived.
 Allowed values are:
 
@@ -474,7 +318,6 @@ UseLyncArchivingPolicy
 ArchivingToExchange
 
 NoArchiving
-
 
 
 ```yaml
@@ -496,28 +339,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsAudioTestServiceApplication accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADApplicationContact object.
-
-###  
-The Set-CsAudioTestServiceApplication cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADApplicationContact object.
+The `Set-CsAudioTestServiceApplication` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.ADConnect.Schema.OCSADApplicationContact object.
 
 ## OUTPUTS
 
 ###  
-Set-CsAudioTestServiceApplication does not return any objects or values.
-
-###  
-The Set-CsAudioTestServiceApplication cmdlet does not return any objects or values.
+The `Set-CsAudioTestServiceApplication` cmdlet does not return any objects or values.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d2c6880b-58df-43d1-9f26-d2b9f54d3f0b(OCS.14).aspx)
-
-[Get-CsAudioTestServiceApplication]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d2c6880b-58df-43d1-9f26-d2b9f54d3f0b(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d2c6880b-58df-43d1-9f26-d2b9f54d3f0b(OCS.16).aspx)
-
+[Get-CsAudioTestServiceApplication](Get-CsAudioTestServiceApplication.md)

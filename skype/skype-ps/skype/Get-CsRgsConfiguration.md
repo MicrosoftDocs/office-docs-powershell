@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsRgsConfiguration
 schema: 2.0.0
 ---
 
@@ -105,6 +106,6 @@ A string value representing the Identity of the Response Group configuration set
 
 ## RELATED LINKS
 
-[Move-CsRgsConfiguration]()
+[Move-CsRgsConfiguration](Move-CsRgsConfiguration.md)
 
-[Set-CsRgsConfiguration]()
+[Set-CsRgsConfiguration](Set-CsRgsConfiguration.md)

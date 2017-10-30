@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Update-CsClsLogging
 schema: 2.0.0
 ---
 
@@ -171,12 +172,12 @@ String value.
 
 ## RELATED LINKS
 
-[Search-CsClsLogging]()
+[Search-CsClsLogging](Search-CsClsLogging.md)
 
-[Show-CsClsLogging]()
+[Show-CsClsLogging](Show-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Stop-CsClsLogging]()
+[Stop-CsClsLogging](Stop-CsClsLogging.md)
 
-[Sync-CsClsLogging]()
+[Sync-CsClsLogging](Sync-CsClsLogging.md)

@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: New-CsTeamsMeetingPolicy
 schema: 2.0.0
 ---
 
 # New-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-New-CsTeamsMeetingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-AllowTeamsMeeting \<bool\>\] \[-AllowChannelMeetingScheduling \<bool\>\] \[-AllowMeetNow \<bool\>\] \[-AllowCloudRecording \<bool\>\] \[-EnableLowBandwidthConsumption \<bool\>\] \[-EnableOutlookAddIn \<bool\>\] \[-InMemory\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -23,7 +24,7 @@ New-CsTeamsMeetingPolicy [[-Identity] <Object>] [-AllowChannelMeetingScheduling 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -271,4 +272,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

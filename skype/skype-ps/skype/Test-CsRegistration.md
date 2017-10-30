@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsRegistration
 schema: 2.0.0
 ---
 
@@ -322,4 +323,4 @@ The `Test-CsRegistration` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Test-CsClientAuth]()
+[Test-CsClientAuth](Test-CsClientAuth.md)

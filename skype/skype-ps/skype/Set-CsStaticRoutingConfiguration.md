@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsStaticRoutingConfiguration
 schema: 2.0.0
 ---
 
@@ -220,10 +221,10 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsStaticRoutingConfiguration]()
+[Get-CsStaticRoutingConfiguration](Get-CsStaticRoutingConfiguration.md)
 
-[New-CsStaticRoute]()
+[New-CsStaticRoute](New-CsStaticRoute.md)
 
-[New-CsStaticRoutingConfiguration]()
+[New-CsStaticRoutingConfiguration](New-CsStaticRoutingConfiguration.md)
 
-[Remove-CsStaticRoutingConfiguration]()
+[Remove-CsStaticRoutingConfiguration](Remove-CsStaticRoutingConfiguration.md)

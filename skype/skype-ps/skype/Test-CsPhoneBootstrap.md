@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsPhoneBootstrap
 schema: 2.0.0
 ---
 
@@ -276,4 +277,4 @@ The `Test-CsPhoneBootstrap` cmdlet returns an instance of the Microsoft.Rtc.Synt
 
 ## RELATED LINKS
 
-[Test-CsRegistration]()
+[Test-CsRegistration](Test-CsRegistration.md)

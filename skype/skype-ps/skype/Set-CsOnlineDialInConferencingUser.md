@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineDialInConferencingUser
 schema: 2.0.0
 ---
 
 # Set-CsOnlineDialInConferencingUser
 
 ## SYNOPSIS
-Use the Set-CsOnlineDialInConferencingUser cmdlet to modify the properties of a user that has been enabled for Microsoft's audio conferencing service.
+Use the `Set-CsOnlineDialInConferencingUser` cmdlet to modify the properties of a user that has been enabled for Microsoft's audio conferencing service.
 
 ## SYNTAX
 
@@ -21,35 +22,33 @@ Set-CsOnlineDialInConferencingUser [[-Identity] <Object>] [-TenantDomain <Object
 ```
 
 ## DESCRIPTION
-The Set-CsOnlineDialInConferencingUser cmdlet is used to modify properties for a Microsoft audio conferencing user.
+The `Set-CsOnlineDialInConferencingUser` cmdlet is used to modify properties for a Microsoft audio conferencing user.
 This cmdlet will not work for users with third-party conferencing providers.
 The cmdlet will verify that the correct license is assigned to the user.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-This example shows how to set a ConferenceId for a user, reset the meeting leader's PIN, and set the audio conferencing provider default meeting phone number.
-
 Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -ConferenceId 3542699 -ResetLeaderPin -ServiceNumber 14255037265
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
 ```
 
+This example shows how to set a ConferenceId for a user, reset the meeting leader's PIN and set the audio conferencing provider default meeting phone number.
+
+
+### -------------------------- Example 2 --------------------------
+```
+Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge" -ConferenceId 3542699
 ```
 
 This example sets a user's ConferenceId and conference bridge assignment.
 
-Set-CsOnlineDialInConferencingUser -Identity "Ken Meyers" -BridgeName "Conference Bridge" -ConferenceId 3542699
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the Identity of the user account to be to be modified.
-A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer); and, 4) the user's Active Directory display name (for example, Ken Myer).
+A user identity can be specified by using one of four formats: 1) the user's SIP address; 2) the user's user principal name (UPN); 3) the user's domain name and logon name, in the form domain\logon (for example, litwareinc\kenmyer) and 4) the user's Active Directory display name (for example, Ken Myer).
 You can also reference a user account by using the user's Active Directory distinguished name.
 
 ```yaml
@@ -176,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -195,9 +194,9 @@ Accept wildcard characters: False
 Specifies the domain controller that's used by the cmdlet to read or write the specified data.
 Valid inputs for this parameter include:
 
-Fully qualified domain name (FQDN): -DomainController atl-cs-001.Contoso.com.
+Fully qualified domain name (FQDN): `-DomainController atl-cs-001.Contoso.com.`
 
-Computer name: -DomainController atl-cs-001
+Computer name: `-DomainController atl-cs-001`
 
 This parameter is reserved for internal Microsoft use.
 
@@ -356,8 +355,8 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the globally unique identifier (GUID) of your Skype for Business Online tenant account.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
-You can find your tenant ID by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
+You can find your tenant ID by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 This parameter is reserved for internal Microsoft use.
 
@@ -449,6 +448,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/e0a9fcb2-f73e-4635-9334-309935b2413b(OCS.15).aspx)
-

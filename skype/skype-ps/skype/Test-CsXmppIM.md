@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsXmppIM
 schema: 2.0.0
 ---
 
@@ -296,4 +297,4 @@ The `Test-CsXmppIM` cmdlet returns instances of the Microsoft.Rtc.SyntheticTrans
 
 ## RELATED LINKS
 
-[Set-CsXmppGatewayConfiguration]()
+[Set-CsXmppGatewayConfiguration](Set-CsXmppGatewayConfiguration.md)

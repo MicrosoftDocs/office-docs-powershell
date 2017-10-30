@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsAnalogDevice
 schema: 2.0.0
 ---
 
@@ -282,10 +283,10 @@ The Get-CsAnalogDevice cmdlet accepts a pipelined string value that represents t
 
 ## RELATED LINKS
 
-[Move-CsAnalogDevice]()
+[Move-CsAnalogDevice](Move-CsAnalogDevice.md)
 
-[New-CsAnalogDevice]()
+[New-CsAnalogDevice](New-CsAnalogDevice.md)
 
-[Remove-CsAnalogDevice]()
+[Remove-CsAnalogDevice](Remove-CsAnalogDevice.md)
 
-[Set-CsAnalogDevice]()
+[Set-CsAnalogDevice](Set-CsAnalogDevice.md)

@@ -1,29 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Remove-CsNetworkConfiguration
 schema: 2.0.0
 ---
 
 # Remove-CsNetworkConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Resets all the network configuration settings for a Microsoft Lync Server 2010 deployment to the default values.
-This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
-
-**Below Content Applies To:** Lync Server 2013
-
-Resets all the network configuration settings for a Lync Server deployment to the default values.
+Resets all the network configuration settings for a Skype for Business Server deployment to the default values.
 This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Resets all the network configuration settings for a Skype for Business Server 2015 deployment to the default values.
-This deletes an entire call admission control (CAC) deployment and related E9-1-1 configuration.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -33,50 +20,19 @@ Remove-CsNetworkConfiguration [-Identity] <XdsIdentity> [-Force] [-WhatIf] [-Con
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
 WARNING: Running this cmdlet will delete an entire network configuration, including CAC, E9-1-1 regions and sites, and media bypass.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the Remove-CsNetworkConfiguration cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Remove-CsNetworkConfiguration"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-WARNING: Running this cmdlet will delete an entire network configuration, including CAC, E9-1-1 regions and sites, and media bypass.
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+### -------------------------- Example 1 --------------------------
 ```
 Remove-CsNetworkConfiguration -Identity Global -Confirm
 ```
 
-This example removes all CAC, location, E9-1-1 network, and media bypass settings.
+This example removes all CAC, location, E9-1-1 network and media bypass settings.
 The Confirm parameter is used so you'll be prompted to verify you really want to do this before everything is deleted.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
-
-```
-
-This example removes all CAC, location, E9-1-1 network, and media bypass settings.
-The Confirm parameter is used so you'll be prompted to verify you really want to do this before everything is deleted.
-
-Remove-CsNetworkConfiguration -Identity Global -Confirm
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-This example removes all CAC, location, E9-1-1 network, and media bypass settings.
-The Confirm parameter is used so you'll be prompted to verify you really want to do this before everything is deleted.
-
-Remove-CsNetworkConfiguration -Identity Global -Confirm
 
 ## PARAMETERS
 
@@ -164,27 +120,20 @@ It removes an object of type Microsoft.Rtc.Management.WritableConfig.Settings.Ne
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/d6945015-67f7-4f04-87ae-7cb977650d96(OCS.14).aspx)
+[Set-CsNetworkConfiguration](Set-CsNetworkConfiguration.md)
 
-[Set-CsNetworkConfiguration]()
+[Get-CsNetworkConfiguration](Get-CsNetworkConfiguration.md)
 
-[Get-CsNetworkConfiguration]()
+[Get-CsNetworkSite](Get-CsNetworkSite.md)
 
-[Get-CsNetworkSite]()
+[Get-CsNetworkRegionLink](Get-CsNetworkRegionLink.md)
 
-[Get-CsNetworkRegionLink]()
+[Get-CsNetworkInterSitePolicy](Get-CsNetworkInterSitePolicy.md)
 
-[Get-CsNetworkInterSitePolicy]()
+[Get-CsNetworkInterRegionRoute](Get-CsNetworkInterRegionRoute.md)
 
-[Get-CsNetworkInterRegionRoute]()
+[Get-CsNetworkRegion](Get-CsNetworkRegion.md)
 
-[Get-CsNetworkRegion]()
+[Get-CsNetworkSubnet](Get-CsNetworkSubnet.md)
 
-[Get-CsNetworkSubnet]()
-
-[Get-CsNetworkBandwidthPolicyProfile]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d6945015-67f7-4f04-87ae-7cb977650d96(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/d6945015-67f7-4f04-87ae-7cb977650d96(OCS.16).aspx)
-
+[Get-CsNetworkBandwidthPolicyProfile](Get-CsNetworkBandwidthPolicyProfile.md)

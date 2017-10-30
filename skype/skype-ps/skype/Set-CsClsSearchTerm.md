@@ -1,24 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsClsSearchTerm
 schema: 2.0.0
 ---
 
 # Set-CsClsSearchTerm
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Modifies one or more centralized logging search terms.
-Search terms help define the personally identifiable information available to technical support personnel who are searching the centralized trace logs.
-Search terms are intended for use with Lync Online Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Modifies one or more centralized logging search terms.
 Search terms help define the personally identifiable information available to technical support personnel who are searching the centralized trace logs.
 Search terms are intended for use with Skype for Business Online.
-
 
 
 ## SYNTAX
@@ -36,63 +28,30 @@ Set-CsClsSearchTerm [-Confirm] [-Force] [-Inserts <String>] [-Instance <PSObject
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
-
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Microsoft Lync Server 2013 Preview.
-Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
+The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server.
+Centralized logging enables administrators to stop, start and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
 This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
-In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using Windows PowerShell and the Search-CsClsLogging cmdlet.
-
-In the Office 365 version of Lync Server, administrators can use search terms to mask personally identifiable information from support personnel who are viewing the log files.
-For example, a user's name, such as Ken Myer, would not appear when viewed using the support console; instead, the name might appear as FIRST1 LAST1.
-Likewise, the phone number +12065551219 might be displayed as PHONE1.
-
-The Set-CsClsSearchTerm cmdlet enables you to modify any of the search terms currently assigned to a collection of centralized logging configuration settings.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "Set-CsClsSearchTerm"}
-
-Lync Server Control Panel: The functions carried out by the Set-CsClsSearchTerm cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The centralized logging service (which replaces the OCSLogger and OCSTracer tools used in Microsoft Lync Server 2010) provides a way for administrators to manage logging and tracing for all computers and pools running Skype for Business Server 2015.
-Centralized logging enables administrators to stop, start, and configure logging for one or more pools and computers by using a single command; for example, you can use one command to enable Address Book service logging on all your Address Book servers.
-This differs from the OCSLogger and OCSTracer tools, which had to be individually managed (including individually stopped and started) on each server.
-In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using the Windows PowerShell command-line interface and the Search-CsClsLogging cmdlet.
+In addition, the centralized logging service also provides a way for administrators to search trace logs from the command, using the Windows PowerShell command-line interface and the `Search-CsClsLogging` cmdlet.
 
 In Skype for Business Online, administrators can use search terms to mask personally identifiable information from support personnel who are viewing the log files.
 For example, a user's name, such as Ken Myer, would not appear when viewed using the support console; instead, the name might appear as FIRST1 LAST1.
 Likewise, the phone number +12065551219 might be displayed as PHONE1.
 
-The Set-CsClsSearchTerm cmdlet enables you to modify any of the search terms currently assigned to a collection of centralized logging configuration settings.
+The `Set-CsClsSearchTerm` cmdlet enables you to modify any of the search terms currently assigned to a collection of centralized logging configuration settings.
 
-Skype for Business Server Control Panel: The functions carried out by the Set-CsClsSearchTerm cmdlet are not available in the Skype for Business Server Control Panel.
-
+Skype for Business Server Control Panel: The functions carried out by the `Set-CsClsSearchTerm` cmdlet are not available in the Skype for Business Server Control Panel.
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 --------------------------
 ```
-
-```
-
-The command shown in sets the Inserts property for the search term "site:Redmond/IP".
-In this example, a single Insert is configured: ItemURI.
-
-Set-CsSearchTerm -Identity "site:Redmond/IP" -Inserts "ItemURI"
-
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in sets the Inserts property for the search term "site:Redmond/IP".
-In this example, a single Insert is configured: ItemURI.
-
 Set-CsClsSearchTerm -Identity "site:Redmond/IP" -Inserts "ItemURI"
+```
+
+The command shown in sets the Inserts property for the search term "site:Redmond/IP".
+In this example, a single Insert is configured: ItemURI.
+
 
 ## PARAMETERS
 
@@ -133,7 +92,7 @@ Unique identifier of the search term to be modified.
 A search term consists of two parts: the scope where the term is configured (that is, the collection of centralized logging configuration settings where the term can be found) and the term name.
 For example:
 
--Identity "site:Redmond/CallID"
+`-Identity "site:Redmond/CallID"`
 
 You cannot use wildcards when specifying the Identity.
 
@@ -210,28 +169,16 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ###  
-Set-CsSearchTerm accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
-
-###  
-The Set-CsClsSearchTerm cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
+The `Set-CsClsSearchTerm` cmdlet accepts pipelined instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
 
 ## OUTPUTS
 
 ###  
 None.
-Instead, Set-CsSearchTerm modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
-
-###  
-None.
-Instead, the Set-CsClsSearchTerm cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
+Instead, the `Set-CsClsSearchTerm` cmdlet modifies existing instances of the Microsoft.Rtc.Management.WritableConfig.Settings.CentralizedLogging.SearchTerm#Decorated object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsClsSearchTerm]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/57ccaf25-31ab-4059-8dc4-144f29f3af68(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/57ccaf25-31ab-4059-8dc4-144f29f3af68(OCS.16).aspx)
-
+[Get-CsClsSearchTerm](Get-CsClsSearchTerm.md)

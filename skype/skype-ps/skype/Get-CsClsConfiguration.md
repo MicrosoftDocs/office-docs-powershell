@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsClsConfiguration
 schema: 2.0.0
 ---
 
@@ -171,8 +172,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsClsConfiguration]()
+[New-CsClsConfiguration](New-CsClsConfiguration.md)
 
-[Remove-CsClsConfiguration]()
+[Remove-CsClsConfiguration](Remove-CsClsConfiguration.md)
 
-[Set-CsClsConfiguration]()
+[Set-CsClsConfiguration](Set-CsClsConfiguration.md)

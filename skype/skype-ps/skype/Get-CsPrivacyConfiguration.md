@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsPrivacyConfiguration
 schema: 2.0.0
 ---
 
@@ -243,8 +244,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPrivacyConfiguration]()
+[New-CsPrivacyConfiguration](New-CsPrivacyConfiguration.md)
 
-[Remove-CsPrivacyConfiguration]()
+[Remove-CsPrivacyConfiguration](Remove-CsPrivacyConfiguration.md)
 
-[Set-CsPrivacyConfiguration]()
+[Set-CsPrivacyConfiguration](Set-CsPrivacyConfiguration.md)

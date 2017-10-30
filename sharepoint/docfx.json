@@ -1,0 +1,67 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "sharepoint-ps",
+        "dest": "sharepoint",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "sharepoint-ps",
+        "dest": "sharepoint/sharepoint-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "sharepoint-ps",
+      "version": "sharepoint-ps",
+      "dest": "module/sharepoint-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "sharepoint-ps": {
+        "dest": "sharepoint-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "author" : "kenwith",
+      "ms.author" : "kenwith",
+      "ms.date" : "09/25/2017",
+      "ms.topic" : "reference",
+      "ms.service" : "sharepoint-powershell",
+      "ms.devlang" : "powershell"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "sharepoint-ps"
+  }
+}

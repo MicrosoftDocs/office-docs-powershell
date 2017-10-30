@@ -1,19 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: New-CsPersistentChatComplianceConfiguration
 schema: 2.0.0
 ---
 
 # New-CsPersistentChatComplianceConfiguration
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new collection of Persistent Chat compliance configuration settings at the site or the service scope.
-Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
-This cmdlet was introduced in Lync Server 2013 Preview.
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates a new collection of Persistent Chat compliance configuration settings at the site or the service scope.
 Persistent Chat compliance enables administrators to maintain an archive of Persistent Chat items and activities including: new messages; new events (for example, a user entering or existing a chat room); file uploads and downloads; and searches run against the chat history.
@@ -32,31 +26,13 @@ New-CsPersistentChatComplianceConfiguration [-Identity] <XdsIdentity> [-AdapterN
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2013
 
 The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
 Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
 Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
 
 Many organizations (including organizations involved in health care and organizations involved in the financial industry) are required to maintain archives of all their electronic communications; this includes conversations that might take place using the Persistent Chat service.
-Lync Server allows you to create a separate compliance database that keeps a detailed of archive of everything that happens in your Persistent Chat chat rooms.
-Persistent Chat compliance can be enabled or disabled at the site scope or at the service scope (that is, compliance can be enabled or disabled for a given Persistent Chat pool).
-In addition, Persistent Chat compliance can only be managed using Windows PowerShell; there are no options available in the Lync Server 2013 Preview Control Panel for managing Persistent Chat compliance.
-
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsPersistentChatComplianceConfiguration"}
-
-Lync Server Control Panel: The functions carried out by the New-CsPersistentChatComplianceConfiguration cmdlet are not available in the Lync Server Control Panel.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-The Persistent Chat service (which replaces the Group Chat service used in Microsoft Lync Server 2010) provides organizations with messaging and collaboration capabilities similar to those found in Internet discussion forums: users can exchange messages in real-time, yet can also revisit and restart those conversations at any time.
-Conversations can be based around specific topics, and these conversations can be made available to everyone or to only a selected set of users.
-Likewise, individual chat rooms can be configured so that anyone can post a message or configured so that only designated presenters can post messages.
-
-Many organizations (including organizations involved in health care and organizations involved in the financial industry) are required to maintain archives of all their electronic communications; this includes conversations that might take place using the Persistent Chat service.
-Skype for Business Server 2015 allows you to create a separate compliance database that keeps a detailed of archive of everything that happens in your Persistent Chat chat rooms.
+Skype for Business Server allows you to create a separate compliance database that keeps a detailed of archive of everything that happens in your Persistent Chat chat rooms.
 Persistent Chat compliance can be enabled or disabled at the site scope or at the service scope (that is, compliance can be enabled or disabled for a given Persistent Chat pool).
 In addition, Persistent Chat compliance can only be managed using the Windows PowerShell command-line interface; there are no options available in the Skype for Business Server Control Panel for managing Persistent Chat compliance.
 
@@ -66,45 +42,25 @@ Skype for Business Server Control Panel: The functions carried out by the New-Cs
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2013)
+### -------------------------- Example 1 -------------------------- 
 ```
+New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -AddUserDetails $True -AddChatRoomDetails $True
 
 ```
 
 The command shown in Example 1 creates a new collection of Persistent Chat compliance configuration settings for the Redmond site.
 In this example, both the AddUserDetails and the AddChatRoomDetails properties are set to True ($True).
 
-New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -AddUserDetails $True -AddChatRoomDetails $True
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 creates a new collection of Persistent Chat compliance configuration settings for the Redmond site.
-In this example, both the AddUserDetails and the AddChatRoomDetails properties are set to True ($True).
-
-New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -AddUserDetails $True -AddChatRoomDetails $True
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2013)
-```
+New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -RunInterval "00:30:00"
 
 ```
 
 Example 2 also demonstrates how to create a new collection of Persistent Chat compliance configuration settings for the Redmond site.
 In this example, the RunInterval property is set to 30 minutes; that is, 00 hours : 30 minutes : 00 seconds.
 
-New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -RunInterval "00:30:00"
-
-### -------------------------- Example 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-Example 2 also demonstrates how to create a new collection of Persistent Chat compliance configuration settings for the Redmond site.
-In this example, the RunInterval property is set to 30 minutes; that is, 00 hours : 30 minutes : 00 seconds.
-
-New-CsPersistentChatComplianceConfiguration -Identity "site:Redmond" -RunInterval "00:30:00"
 
 ## PARAMETERS
 
@@ -113,11 +69,11 @@ Unique identifier for the new Persistent Chat compliance settings being created.
 New compliance settings can be created at either the site or the service scope (for the Persistent Chat Server service, only).
 To create new settings at the site scope, use syntax similar to this:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 To create new settings at the service scope, use syntax like this:
 
--Identity "service:PersistentChatServer:atl-gc-001.litwareinc.com"
+`-Identity "service:PersistentChatServer:atl-gc-001.litwareinc.com"`
 
 ```yaml
 Type: XdsIdentity
@@ -167,21 +123,6 @@ Accept wildcard characters: False
 ```
 
 ### -AdapterType
-**Below Content Applies To:** Lync Server 2013
-
-Specifies the format that compliance information will be saved to.
-Lync Server 2013 Preview supports the following adapter types (and thus the following compliance formats):
-
-* Akonix
-* Assentor
-* Facetime
-* XML
-
-If you do not specify an adapter type Persistent Chat will not save compliance data.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Specifies the fully qualified name of a .Net managed type that implements the Microsoft.Rtc.Internal.Chat.Server.Compliance.IComplianceAdapter interface.
 This adapter is supplied by a third-party or can be set to the internal XML adapter, "Microsoft.Rtc.Internal.Chat.Server.Compliance.XmlAdapter,compliance".
@@ -204,16 +145,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddChatRoomDetails
-**Below Content Applies To:** Lync Server 2013
-
-When set to True, additional details about each chat room are recorded in the non-compliance database.
-This has the ability to greatly increase the size of that database.
-
-The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional details about each chat room are provided to the adapter.
 This has the potential to greatly increase the size of the compliance data.
@@ -236,16 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -AddUserDetails
-**Below Content Applies To:** Lync Server 2013
-
-When set to True, additional details about each chat room user are recorded in the non-compliance database.
-This has the ability to greatly increase the size of that database.
-
-The default value is False.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional details about each chat room user are provided to the adapter.
 This has the potential to greatly increase the size of the compliance data.
@@ -284,14 +205,6 @@ Accept wildcard characters: False
 ```
 
 ### -CreateFileAttachmentsManifest
-**Below Content Applies To:** Lync Server 2013
-
-When set to True, additional output files will be created to track file transfers within chat rooms.
-These files will have the file extension .ATTACH.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 When set to True, additional output files will be created to track file transfers within chat rooms.
 These files will have the file extension .ATTACH and are placed in the location specified by the AdapterOutputDirectory.
@@ -312,14 +225,6 @@ Accept wildcard characters: False
 ```
 
 ### -CustomConfiguration
-**Below Content Applies To:** Lync Server 2013
-
-XSLT transform script that enables Persistent Chat to save compliance data in a custom format of your design.
-This property should only be configured if you are using one of these scripts.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 XSLT transform script that enables Persistent Chat to save compliance data in a custom format of your design.
 
@@ -393,7 +298,7 @@ Amount of time that the server waits before generating the next output file.
 The RunInterval must be specified using the format days.hours:minutes:seconds.
 For example, to specify a RunInterval of 30 minutes (the default value) use this syntax:
 
--RunInterval 00:30:00
+`-RunInterval 00:30:00`
 
 The RunInterval can be set to any value between 1 minute (00:01.00) and 30 days (30.00:00:00), inclusive.
 The default value is 15 minutes (00:15:00).
@@ -428,12 +333,9 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
-
-###  
-None New-CsPersistentChatComplianceConfiguration does not accept pipelined input.
 
 ###  
 None.
@@ -442,22 +344,15 @@ The New-CsPersistentChatComplianceConfiguration cmdlet does not accept pipelined
 ## OUTPUTS
 
 ###  
-New-CsPersistentChatComplianceConfiguration creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.PersistentChat.PersistentChatComplianceConfiguration object.
-
-###  
 The New-CsPersistentChatComplianceConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.PersistentChat.PersistentChatComplianceConfiguration object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsPersistentChatComplianceConfiguration]()
+[Get-CsPersistentChatComplianceConfiguration](Get-CsPersistentChatComplianceConfiguration.md)
 
-[Remove-CsPersistentChatComplianceConfiguration]()
+[Remove-CsPersistentChatComplianceConfiguration](Remove-CsPersistentChatComplianceConfiguration.md)
 
-[Set-CsPersistentChatComplianceConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a61b76a9-0e2b-4f64-b2fa-cddadc15451c(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/a61b76a9-0e2b-4f64-b2fa-cddadc15451c(OCS.16).aspx)
+[Set-CsPersistentChatComplianceConfiguration](Set-CsPersistentChatComplianceConfiguration.md)
 

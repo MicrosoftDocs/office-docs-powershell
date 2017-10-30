@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsPresencePolicy
 schema: 2.0.0
 ---
 
@@ -242,10 +243,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Grant-CsPresencePolicy]()
+[Grant-CsPresencePolicy](Grant-CsPresencePolicy.md)
 
-[New-CsPresencePolicy]()
+[New-CsPresencePolicy](New-CsPresencePolicy.md)
 
-[Remove-CsPresencePolicy]()
+[Remove-CsPresencePolicy](Remove-CsPresencePolicy.md)
 
-[Set-CsPresencePolicy]()
+[Set-CsPresencePolicy](Set-CsPresencePolicy.md)

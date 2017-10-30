@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsHybridPSTNSite
 schema: 2.0.0
 ---
 
 # Set-CsHybridPSTNSite
 
 ## SYNOPSIS
-Use the Set-CsHybridPSTNSite cmdlet to modify an existing hybrid public switched telephone network (PSTN) site's attributes.
+Use the `Set-CsHybridPSTNSite` cmdlet to modify an existing hybrid public switched telephone network (PSTN) site's attributes.
 
 ## SYNTAX
 
@@ -18,29 +19,28 @@ Set-CsHybridPSTNSite [[-Identity] <Object>] [-BitsUpdateTimeWindow <Object>] [-B
 ```
 
 ## DESCRIPTION
-Hybrid PSTN sites are created, retrieved, modified, and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set, and Remove .) The hybrid PSTN sites can be reviewed in your hybrid configuration by using the Get-CsTenantHybridConfiguration cmdlet.
+Hybrid PSTN sites are created, retrieved, modified and deleted by the CsHybridPSTNSite cmdlet group (New, Get, Set and Remove.) The hybrid PSTN sites can be reviewed in your hybrid configuration by using the `Get-CsTenantHybridConfiguration` cmdlet.
 However, you can't create or modify hybrid PSTN sites through the CsTenantHybridConfiguration cmdlets, you must use the CsHybridPSTNSite cmdlets to manage hybrid PSTN sites.
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned, run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<CmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsHybridPSTNSite -Identity "SeattlePSTN" -EdgeFQDN "Contoso.Denver.Edge.com" -BitsUpdateTimeWindow @{add="FirstWeekend","Night"} -OsUpdateTimeWindow @{add="Weekday"}
 ```
 
 This example sets the "SeattlePSTN" site's edge server to "Contoso.Denver.Edge.com".
 
-Set-CsHybridPSTNSite -Identity "SeattlePSTN" -EdgeFQDN "Contoso.Denver.Edge.com" -BitsUpdateTimeWindow @{add="FirstWeekend","Night"} -OsUpdateTimeWindow @{add="Weekday"}
 
 ## PARAMETERS
 
 ### -Identity
 Specifies the identity of the hybrid public switched telephone network (PSTN) site.
-For example: -Identity "SeattlePSTN".
+For example: `-Identity "SeattlePSTN"`.
 
 ```yaml
 Type: Object
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 
 ### -EdgeFQDN
 Specifies the fully qualified domain name of the edge server.
-For example: -EdgeFQDN Contoso.Denver.Edge.com
+For example: `-EdgeFQDN Contoso.Denver.Edge.com`
 
 ```yaml
 Type: Object
@@ -190,9 +190,9 @@ Accept wildcard characters: False
 
 ### -Tenant
 Specifies the global unique identifier (GUID) of the Skype for Business Online tenant account on which the cmdlet will operate.
-For example: -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308".
+For example: `-Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"`.
 
-You can find the tenant ID for your Skype for Business Online tenants by running this command: Get-CsTenant | Select-Object DisplayName, TenantID
+You can find the tenant ID for your Skype for Business Online tenants by running this command: `Get-CsTenant | Select-Object DisplayName, TenantID`
 
 If you are using a remote session of Windows PowerShell and are connected only to Skype for Business Online you do not have to include the Tenant parameter.
 Instead, the tenant ID will be determined by your connection and credentials.
@@ -260,6 +260,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/cd022a68-bd6c-4cf0-9d5f-4451e02b9345(OCS.15).aspx)
-

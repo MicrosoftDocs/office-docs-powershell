@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsDatabaseMirrorState
 schema: 2.0.0
 ---
 
@@ -164,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Install-CsMirrorDatabase]()
+[Install-CsMirrorDatabase](Install-CsMirrorDatabase.md)
 
-[Uninstall-CsMirrorDatabase]()
+[Uninstall-CsMirrorDatabase](Uninstall-CsMirrorDatabase.md)

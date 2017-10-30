@@ -1,15 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsExternalUserCommunicationPolicy
 schema: 2.0.0
 ---
 
 # Set-CsExternalUserCommunicationPolicy
 
 ## SYNOPSIS
-Set-CsExternalUserCommunicationPolicy \[\[-Identity\] \<XdsIdentity\>\] \[-Tenant \<guid\>\] \[-EnableFileTransfer \<bool\>\] \[-EnableP2PFileTransfer \<bool\>\] \[-AllowPresenceVisibility \<bool\>\] \[-AllowTitleVisibility \<bool\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
-
-Set-CsExternalUserCommunicationPolicy \[-Tenant \<guid\>\] \[-EnableFileTransfer \<bool\>\] \[-EnableP2PFileTransfer \<bool\>\] \[-AllowPresenceVisibility \<bool\>\] \[-AllowTitleVisibility \<bool\>\] \[-Instance \<psobject\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -25,7 +24,7 @@ Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisi
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 ------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -241,4 +240,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Export-CsConfiguration
 schema: 2.0.0
 ---
 
@@ -147,4 +148,4 @@ If called along with the AsBytes parameter, the Export-CsConfiguration cmdlet re
 
 ## RELATED LINKS
 
-[Import-CsConfiguration]()
+[Import-CsConfiguration](Import-CsConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Grant-CsIPPhonePolicy
 schema: 2.0.0
 ---
 
@@ -24,25 +25,25 @@ IP phone policies are applied each time a user accesses the system, regardless o
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
 ```
 
 This example assigns the IP phone policy "SkypePolicy" to the user with the identity "Ken Myer".
 
-Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName SkypePolicy
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 -------------------------- 
 ```
 
+Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
 ```
 
 This example assigns all the users in the "Sales" department to the "SalesPolicy" IP phone policy.
 The command first uses the Get-CsUser cmdlet and the LdapFilter parameter to return a collection of all the users who are members of the "Sales" department.
 This collection of users is piped to the Grant-CsIPPhonePolicy cmdlet, which assigns "SalesPolicy" to each user in the collection.
 
-Get-CsUser -LDAPFilter "Department=Sales" | Grant-CsIPPhonePolicy -PolicyName SalesPolicy
 
 ## PARAMETERS
 
@@ -51,7 +52,7 @@ Specifies the name of the policy to be assigned.
 The PolicyName is the policy Identity minus the policy scope ("tag:").
 For example, a policy that has the identity "tag:Redmond" has a PolicyName equal to "Redmond".
 If you set PolicyName to a null value, then the command will unassign any per-user policy assigned to the user.
-For example: Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null
+For example: `Grant-CsIPPhonePolicy -Identity "Ken Myer" -PolicyName $Null`
 
 ```yaml
 Type: Object
@@ -188,7 +189,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -205,9 +206,7 @@ However, if you include the PassThru parameter, the cmdlet will return instances
 
 ## RELATED LINKS
 
-[Get-CsIPPhonePolicy]()
+[Get-CsIPPhonePolicy](Get-CsIPPhonePolicy.md)
 
-[Set-CsIPPhonePolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/424d4672-8d71-418f-be64-b19547ee128e(OCS.15).aspx)
+[Set-CsIPPhonePolicy](Set-CsIPPhonePolicy.md)
 

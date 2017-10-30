@@ -1,14 +1,15 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: New-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
 
 # New-CsStorageServiceConfiguration
 
 ## SYNOPSIS
-Creates new instances of the Skype for Business Server 2015 Storage Service.
-The storage service provides a common infrastructure that enables Skype for Business Server 2015 components to use Exchange as a backend data store.
+Creates new instances of the Skype for Business Server Storage Service.
+The storage service provides a common infrastructure that enables Skype for Business Server components to use Exchange as a backend data store.
 
 ## SYNTAX
 
@@ -19,27 +20,26 @@ New-CsStorageServiceConfiguration [-Identity] <XdsIdentity> [-Confirm] [-EnableA
 ```
 
 ## DESCRIPTION
-The Skype for Business Server 2015 Storage Service enables Skype for Business Server 2015 components, such as archiving, to use Exchange as a back-end data store.
-This helps to reduce operating costs: for example, you do not need to have separate storage solutions for Exchange archiving and for Skype for Business Server 2015 archiving.
-The Storage Service also enables Skype for Business Server 2015 to leverage the heavy investment that has been made in Exchange archiving and storage, and prevents administrators from having to use multiple tools to retrieve archived data.
+The Skype for Business Server Storage Service enables Skype for Business Server components, such as archiving, to use Exchange as a back-end data store.
+This helps to reduce operating costs: for example, you do not need to have separate storage solutions for Exchange archiving and for Skype for Business Server archiving.
+The Storage Service also enables Skype for Business Server to leverage the heavy investment that has been made in Exchange archiving and storage; and prevents administrators from having to use multiple tools to retrieve archived data.
 
-Separate instances of the Skype for Business Server 2015 Storage Service can be configured at the global, site, and service scope (for the Registrar service only).
-By default, Skype for Business Server 2015 provides you with a single, global collection of Storage Service configuration settings.
-However, administrators have the option of creating custom settings by using the New-CsStorageServiceConfiguration cmdlet.
-Those custom settings can later be deleted by using the Remove-CsStorageServiceConfiguration cmdlet.
+Separate instances of the Skype for Business Server Storage Service can be configured at the global, site and service scope (for the Registrar service only).
+By default, Skype for Business Server provides you with a single, global collection of Storage Service configuration settings.
+However, administrators have the option of creating custom settings by using the `New-CsStorageServiceConfiguration` cmdlet.
+Those custom settings can later be deleted by using the `Remove-CsStorageServiceConfiguration` cmdlet.
 
-Skype for Business Server Control Panel: The functions carried out by the New-CsStorageServiceConfiguration cmdlet are not available in the Skype for Business Server Control Panel.
+Skype for Business Server Control Panel: The functions carried out by the `New-CsStorageServiceConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+New-CsStorageServiceConfiguration -Identity "site:Redmond"
 ```
 
 The command shown in Example 1 creates a new collection of storage service configuration settings applied to the Redmond site.
 
-New-CsStorageServiceConfiguration -Identity "site:Redmond"
 
 ## PARAMETERS
 
@@ -48,11 +48,11 @@ Unique identifier for the new collection of storage service configuration settin
 Storage service settings can be created at the site scope or the service scope (but only for the Registrar service).
 To create a new collections of settings at the site scope, use syntax similar to this:
 
--Identity "site:Redmond"
+`-Identity "site:Redmond"`
 
 To create settings at the service scope, use syntax similar to this:
 
--Identity "service:Registrar:atl-cs-001.litwareinc.com"
+`-Identity "service:Registrar:atl-cs-001.litwareinc.com"`
 
 Note that your command will fail if the specified site or service already hosts a collection of storage service configuration settings.
 
@@ -205,22 +205,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-The New-CsStorageServiceConfiguration cmdlet does not accept pipelined input.
+The `New-CsStorageServiceConfiguration` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-The New-CsStorageServiceConfiguration cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.StorageService.StorageServiceSettings object.
+The `New-CsStorageServiceConfiguration` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.StorageService.StorageServiceSettings object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Get-CsStorageServiceConfiguration]()
+[Get-CsStorageServiceConfiguration](Get-CsStorageServiceConfiguration.md)
 
-[Remove-CsStorageServiceConfiguration]()
+[Remove-CsStorageServiceConfiguration](Remove-CsStorageServiceConfiguration.md)
 
-[Set-CsStorageServiceConfiguration]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/194b507b-19d0-4950-8334-67d677d7dfe5(OCS.16).aspx)
-
+[Set-CsStorageServiceConfiguration](Set-CsStorageServiceConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Set-CsWatcherNodeConfiguration
 schema: 2.0.0
 ---
 
@@ -375,10 +376,10 @@ Instead, the `Set-CsWatcherNodeConfiguration` cmdlet modifies existing instances
 
 ## RELATED LINKS
 
-[Get-CsWatcherNodeConfiguration]()
+[Get-CsWatcherNodeConfiguration](Get-CsWatcherNodeConfiguration.md)
 
-[New-CsWatcherNodeConfiguration]()
+[New-CsWatcherNodeConfiguration](New-CsWatcherNodeConfiguration.md)
 
-[Remove-CsWatcherNodeConfiguration]()
+[Remove-CsWatcherNodeConfiguration](Remove-CsWatcherNodeConfiguration.md)
 
-[Test-CsWatcherNodeConfiguration]()
+[Test-CsWatcherNodeConfiguration](Test-CsWatcherNodeConfiguration.md)

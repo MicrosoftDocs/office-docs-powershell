@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Set-CsVideoInteropServerSyntheticTransactionConfiguration
 schema: 2.0.0
 ---
 
@@ -169,10 +170,10 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Get-CsVideoInteropServerSyntheticTransactionConfiguration](Get-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[New-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[New-CsVideoInteropServerSyntheticTransactionConfiguration](New-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Remove-CsVideoInteropServerSyntheticTransactionConfiguration]()
+[Remove-CsVideoInteropServerSyntheticTransactionConfiguration](Remove-CsVideoInteropServerSyntheticTransactionConfiguration.md)
 
-[Test-CsP2PVideoInteropServerSipTrunkAV]()
+[Test-CsP2PVideoInteropServerSipTrunkAV](Test-CsP2PVideoInteropServerSipTrunkAV.md)

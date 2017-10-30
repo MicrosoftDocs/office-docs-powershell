@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsNetworkInterSitePolicy
 schema: 2.0.0
 ---
 
@@ -142,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkInterSitePolicy]()
+[New-CsNetworkInterSitePolicy](New-CsNetworkInterSitePolicy.md)
 
-[Remove-CsNetworkInterSitePolicy]()
+[Remove-CsNetworkInterSitePolicy](Remove-CsNetworkInterSitePolicy.md)
 
-[Set-CsNetworkInterSitePolicy]()
+[Set-CsNetworkInterSitePolicy](Set-CsNetworkInterSitePolicy.md)

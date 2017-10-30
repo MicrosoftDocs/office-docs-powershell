@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsRgsQueue
 schema: 2.0.0
 ---
 
@@ -171,8 +172,8 @@ A string value representing the Identity of the Response Group queue.
 
 ## RELATED LINKS
 
-[New-CsRgsQueue]()
+[New-CsRgsQueue](New-CsRgsQueue.md)
 
-[Remove-CsRgsQueue]()
+[Remove-CsRgsQueue](Remove-CsRgsQueue.md)
 
-[Set-CsRgsQueue]()
+[Set-CsRgsQueue](Set-CsRgsQueue.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsClientPinInfo
 schema: 2.0.0
 ---
 
@@ -144,10 +145,10 @@ The cmdlet also accepts pipelined input of user objects.
 
 ## RELATED LINKS
 
-[Get-CsPinPolicy]()
+[Get-CsPinPolicy](Get-CsPinPolicy.md)
 
-[Lock-CsClientPin]()
+[Lock-CsClientPin](Lock-CsClientPin.md)
 
-[Set-CsClientPin]()
+[Set-CsClientPin](Set-CsClientPin.md)
 
-[Unlock-CsClientPin]()
+[Unlock-CsClientPin](Unlock-CsClientPin.md)

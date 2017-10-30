@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsLisServiceProvider
 schema: 2.0.0
 ---
 
@@ -54,6 +55,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsLisServiceProvider]()
+[Remove-CsLisServiceProvider](Remove-CsLisServiceProvider.md)
 
-[Set-CsLisServiceProvider]()
+[Set-CsLisServiceProvider](Set-CsLisServiceProvider.md)

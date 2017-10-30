@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPartnerApplication
 schema: 2.0.0
 ---
 
@@ -175,8 +176,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsPartnerApplication]()
+[New-CsPartnerApplication](New-CsPartnerApplication.md)
 
-[Remove-CsPartnerApplication]()
+[Remove-CsPartnerApplication](Remove-CsPartnerApplication.md)
 
-[Set-CsPartnerApplication]()
+[Set-CsPartnerApplication](Set-CsPartnerApplication.md)

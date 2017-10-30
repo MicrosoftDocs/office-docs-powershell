@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsCallParkOrbit
 schema: 2.0.0
 ---
 
@@ -197,8 +198,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsCallParkOrbit]()
+[New-CsCallParkOrbit](New-CsCallParkOrbit.md)
 
-[Remove-CsCallParkOrbit]()
+[Remove-CsCallParkOrbit](Remove-CsCallParkOrbit.md)
 
-[Set-CsCallParkOrbit]()
+[Set-CsCallParkOrbit](Set-CsCallParkOrbit.md)

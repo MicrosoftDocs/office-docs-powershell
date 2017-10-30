@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Debug-CsIntraPoolReplication
 schema: 2.0.0
 ---
 
@@ -240,6 +241,6 @@ Debug-CsIntraPoolReplication returns instances of the Microsoft.Rtc.Management.U
 
 ## RELATED LINKS
 
-[Get-CsManagementStoreReplicationStatus]()
+[Get-CsManagementStoreReplicationStatus](Get-CsManagementStoreReplicationStatus.md)
 
-[Test-CsReplica]()
+[Test-CsReplica](Test-CsReplica.md)

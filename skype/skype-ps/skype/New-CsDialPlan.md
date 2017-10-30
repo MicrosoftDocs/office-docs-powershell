@@ -1,17 +1,13 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsDialPlan
 schema: 2.0.0
 ---
 
 # New-CsDialPlan
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
-Creates a new dial plan.
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
 
 Creates a new dial plan.
 This cmdlet was introduced in Lync Server 2010.
@@ -28,23 +24,6 @@ New-CsDialPlan [-Identity] <XdsIdentity> [-Description <String>] [-DialinConfere
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-This cmdlet creates a new dial plan (also known as a location profile).
-Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
-Dial plans are also used by the Conferencing Attendant application for dial-in conferencing.
-A dial plan determines such things as which normalization rules are applied and whether a prefix must be dialed for external calls.
-
-Creating a dial plan automatically creates a default voice normalization rule.
-Normalization rules can be modified by calling the Set-CsVoiceNormalizationRule cmdlet.
-New normalization rules can be added to a dial plan by calling the New-CsVoiceNormalizationRule cmdlet.
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsDialPlan cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsDialPlan"}
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 This cmdlet creates a new dial plan (also known as a location profile).
 Dial plans provide information required to enable Enterprise Voice users to make telephone calls.
@@ -59,7 +38,8 @@ New normalization rules can be added to a dial plan by calling the New-CsVoiceNo
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Lync Server 2010)
+
+### -------------------------- EXAMPLE 1 -------------------------- 
 ```
 New-CsDialPlan -Identity RedmondDialPlan
 ```
@@ -68,64 +48,12 @@ The command shown in Example 1 creates a new dial plan with the Identity Redmond
 (The absence of a scope in the Identity value indicates that this is a per-user policy.
 Dial plans created at the per-user scope can be directly assigned to users and groups.) All other properties of the dial plan will be assigned default values.
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
+
+### -------------------------- EXAMPLE 2 -------------------------- 
 ```
-
-```
-
-The command shown in Example 1 creates a new dial plan with the Identity RedmondDialPlan.
-(The absence of a scope in the Identity value indicates that this is a per-user policy.
-Dial plans created at the per-user scope can be directly assigned to users and groups.) All other properties of the dial plan will be assigned default values.
-
-New-CsDialPlan -Identity RedmondDialPlan
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new dial plan with the Identity RedmondDialPlan.
-(The absence of a scope in the Identity value indicates that this is a per-user policy.
-Dial plans created at the per-user scope can be directly assigned to users and groups.) All other properties of the dial plan will be assigned default values.
-
-New-CsDialPlan -Identity RedmondDialPlan
-
-### -------------------------- Example 2 -------------------------- (Lync Server 2010)
-```
-New-CsDialPlan -Identity site:Redmond -SimpleName RedmondSiteDialPlan
-New-CsVoiceNormalizationRule -Identity "site:Redmond/SeattlePrefix" -Pattern "^9(\d*){1,5}$" -Translation "+1206$1"
-```
-
-The commands shown in Example 2 create a new dial plan with the Identity site:Redmond (meaning the dial plan applies to all users on the Redmond site who do not have a per-user or service-level dial plan assigned to them) and the SimpleName RedmondSiteDialPlan.
-The next line in the example then creates a new normalization rule associated with that plan.
-A default normalization rule is created for a dial plan, but this is created mostly as a placeholder--the values are of limited use.
-So after calling the New-CsDialPlan cmdlet to create a new dial plan, you should call New-CsVoiceNormalizationRule to create a named rule that is functional for your organization.
-That's exactly what line 2 of this example does: it calls New-CsVoiceNormalizationRule and creates a rule for the Redmond site with the name SeattlePrefix and specifying the Pattern and Translation properties for the rule.
-No further steps need to be taken to modify the dial plan; the changes to the normalization rule are automatically applied to the dial plan with the identity matching that of the normalization rule.
-(The site:Redmond portion of the Identity matches the dial plan Identity; SeattlePrefix is the name of the normalization rule.
-Multiple normalization rules can be applied to one dial plan, so each normalization rule needs a unique name within a given scope.)
-
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The commands shown in Example 2 create a new dial plan with the Identity site:Redmond (meaning the dial plan applies to all users on the Redmond site who do not have a per-user or service-level dial plan assigned to them) and the SimpleName RedmondSiteDialPlan.
-The next line in the example then creates a new normalization rule associated with that plan.
-A default normalization rule is created for a dial plan, but this is created mostly as a placeholder--the values are of limited use.
-So after calling the New-CsDialPlan cmdlet to create a new dial plan, you should call New-CsVoiceNormalizationRule to create a named rule that is functional for your organization.
-That's exactly what line 2 of this example does: it calls New-CsVoiceNormalizationRule and creates a rule for the Redmond site with the name SeattlePrefix and specifying the Pattern and Translation properties for the rule.
-No further steps need to be taken to modify the dial plan; the changes to the normalization rule are automatically applied to the dial plan with the identity matching that of the normalization rule.
-(The site:Redmond portion of the Identity matches the dial plan Identity; SeattlePrefix is the name of the normalization rule.
-Multiple normalization rules can be applied to one dial plan, so each normalization rule needs a unique name within a given scope.)
-
 New-CsDialPlan -Identity site:Redmond -SimpleName RedmondSiteDialPlan
 
 New-CsVoiceNormalizationRule -Identity "site:Redmond/SeattlePrefix" -Pattern "^9(\d*){1,5}$" -Translation "+1206$1"
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
 ```
 
 The commands shown in Example 2 create a new dial plan with the Identity site:Redmond (meaning the dial plan applies to all users on the Redmond site who do not have a per-user or service-level dial plan assigned to them) and the SimpleName RedmondSiteDialPlan.
@@ -137,11 +65,9 @@ No further steps need to be taken to modify the dial plan; the changes to the no
 (The site:Redmond portion of the Identity matches the dial plan Identity; SeattlePrefix is the name of the normalization rule.
 Multiple normalization rules can be applied to one dial plan, so each normalization rule needs a unique name within a given scope.)
 
-New-CsDialPlan -Identity site:Redmond -SimpleName RedmondSiteDialPlan
 
-New-CsVoiceNormalizationRule -Identity "site:Redmond/SeattlePrefix" -Pattern "^9(\d*){1,5}$" -Translation "+1206$1"
 
-### -------------------------- Example 3 -------------------------- (Lync Server 2010)
+### -------------------------- EXAMPLE 3 -------------------------- 
 ```
 New-CsDialPlan -Identity RedmondDialPlan -Description "Dial plan for Redmond users"
 ```
@@ -149,25 +75,7 @@ New-CsDialPlan -Identity RedmondDialPlan -Description "Dial plan for Redmond use
 The command shown in Example 3 creates a new dial plan with the Identity RedmondDialPlan and specifies a Description to explain what the dial plan is for.
 (Dial plans created at the per-user scope can be directly assigned to users and groups.) The default values will be assigned for all other parameters.
 
-### -------------------------- EXAMPLE 3 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 3 creates a new dial plan with the Identity RedmondDialPlan and specifies a Description to explain what the dial plan is for.
-(Dial plans created at the per-user scope can be directly assigned to users and groups.) The default values will be assigned for all other parameters.
-
-New-CsDialPlan -Identity RedmondDialPlan -Description "Dial plan for Redmond users"
-
-### -------------------------- EXAMPLE 3 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 3 creates a new dial plan with the Identity RedmondDialPlan and specifies a Description to explain what the dial plan is for.
-(Dial plans created at the per-user scope can be directly assigned to users and groups.) The default values will be assigned for all other parameters.
-
-New-CsDialPlan -Identity RedmondDialPlan -Description "Dial plan for Redmond users"
 
 ## PARAMETERS
 
@@ -254,39 +162,6 @@ Accept wildcard characters: False
 ```
 
 ### -NormalizationRules
-**Below Content Applies To:** Lync Server 2010
-
-A list of normalization rules that are applied to this dial plan.
-
-While this list and these rules can be created directly with this cmdlet, it is recommended that you create the normalization rules with the New-CsVoiceNormalizationRule cmdlet, which creates the rule and assigns it to the specified dial plan.
-
-Each time a new dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user dial plan.
-By default the Identity of the new voice normalization rule is the dial plan Identity followed by a slash followed by the name Prefix All.
-For example, site:Redmond/Prefix All.
-
-Default: {Description=;Pattern=^(\d11)$;Translation=+$1;Name=Prefix All;IsInternalExtension=False } Note: This default is only a placeholder.
-For the dial plan to be useful, you should either modify the normalization rule created by the dial plan or create a new rule for the site, service, or user.
-You can create a new normalization rule by calling the New-CsVoiceNormalizationRule cmdlet; modify a normalization rule by calling Set-CsVoiceNormalizationRule.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-A list of normalization rules that are applied to this dial plan.
-
-While this list and these rules can be created directly with this cmdlet, we recommend that you create the normalization rules with the New-CsVoiceNormalizationRule cmdlet, which creates the rule and assigns it to the specified dial plan.
-
-Each time a new dial plan is created, a new voice normalization rule with default settings is also created for that site, service, or per-user dial plan.
-By default the Identity of the new voice normalization rule is the dial plan Identity followed by a slash followed by the name Prefix All.
-For example, site:Redmond/Prefix All.
-
-Default: {Description=;Pattern=^(\d11)$;Translation=+$1;Name=Prefix All;IsInternalExtension=False } Note: This default is only a placeholder.
-For the dial plan to be useful, you should either modify the normalization rule created by the dial plan or create a new rule for the site, service, or user.
-You can create a new normalization rule by calling the New-CsVoiceNormalizationRule cmdlet; modify a normalization rule by calling Set-CsVoiceNormalizationRule.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 A list of normalization rules that are applied to this dial plan.
 
@@ -335,46 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -SimpleName
-**Below Content Applies To:** Lync Server 2010
-
-A friendly name for the dial plan.
-This name must be unique among all dial plans within the Lync Server deployment.
-
-This string can be up to 256 characters long.
-Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
-
-This parameter must contain a value.
-However, if you don't provide a value in the call to New-CsDialPlan, a default value will be supplied.
-The default value for a Global dial plan is Prefix All.
-The default for a site-level dial plan is the name of the site.
-The default for a service is the name of the service (Registrar or PSTN gateway) followed by an underscore, followed by the service fully qualified domain name (FQDN).
-For example, Registrar_pool0.litwareinc.com.
-The default for a per-user dial plan is the Identity of the dial plan.
-
-
-
-**Below Content Applies To:** Lync Server 2013
 
 A display name for the dial plan.
-This name must be unique among all dial plans within the Lync Server deployment.
-
-This string can be up to 256 characters long.
-Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
-
-This parameter must contain a value.
-However, if you don't provide a value in the call to New-CsDialPlan, a default value will be supplied.
-The default value for a Global dial plan is Prefix All.
-The default for a site-level dial plan is the name of the site.
-The default for a service is the name of the service (Registrar or PSTN gateway) followed by an underscore, followed by the service fully qualified domain name (FQDN).
-For example, Registrar_pool0.litwareinc.com.
-The default for a per-user dial plan is the Identity of the dial plan.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-A display name for the dial plan.
-This name must be unique among all dial plans within the Skype for Business Server 2015 deployment.
+This name must be unique among all dial plans within the Skype for Business Server deployment.
 
 This string can be up to 256 characters long.
 Valid characters are alphabetic or numeric characters, hyphen (-), dot (.), plus (+), underscore (_), and parentheses (()).
@@ -467,14 +305,6 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
 
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
@@ -527,7 +357,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -543,27 +373,20 @@ This cmdlet creates an object of type Microsoft.Rtc.Management.WritableConfig.Po
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/3889c696-1070-47bd-beb9-da7e18ec90f0(OCS.14).aspx)
+[Remove-CsDialPlan](Remove-CsDialPlan.md)
 
-[Remove-CsDialPlan]()
+[Set-CsDialPlan](Set-CsDialPlan.md)
 
-[Set-CsDialPlan]()
+[Get-CsDialPlan](Get-CsDialPlan.md)
 
-[Get-CsDialPlan]()
+[Grant-CsDialPlan](Grant-CsDialPlan.md)
 
-[Grant-CsDialPlan]()
+[Test-CsDialPlan](Test-CsDialPlan.md)
 
-[Test-CsDialPlan]()
+[New-CsVoiceNormalizationRule](New-CsVoiceNormalizationRule.md)
 
-[New-CsVoiceNormalizationRule]()
+[Set-CsVoiceNormalizationRule](Set-CsVoiceNormalizationRule.md)
 
-[Set-CsVoiceNormalizationRule]()
+[Remove-CsVoiceNormalizationRule](Remove-CsVoiceNormalizationRule.md)
 
-[Remove-CsVoiceNormalizationRule]()
-
-[Get-CsVoiceNormalizationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3889c696-1070-47bd-beb9-da7e18ec90f0(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3889c696-1070-47bd-beb9-da7e18ec90f0(OCS.16).aspx)
-
+[Get-CsVoiceNormalizationRule](Get-CsVoiceNormalizationRule.md)

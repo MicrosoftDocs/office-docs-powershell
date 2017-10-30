@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Show-CsClsLogging
 schema: 2.0.0
 ---
 
@@ -138,12 +139,12 @@ The `Show-CsClsLogging` cmdlet does not return objects.
 
 ## RELATED LINKS
 
-[Search-CsClsLogging]()
+[Search-CsClsLogging](Search-CsClsLogging.md)
 
-[Start-CsClsLogging]()
+[Start-CsClsLogging](Start-CsClsLogging.md)
 
-[Stop-CsClsLogging]()
+[Stop-CsClsLogging](Stop-CsClsLogging.md)
 
-[Sync-CsClsLogging]()
+[Sync-CsClsLogging](Sync-CsClsLogging.md)
 
-[Update-CsClsLogging]()
+[Update-CsClsLogging](Update-CsClsLogging.md)

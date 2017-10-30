@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Enable-CsComputer
 schema: 2.0.0
 ---
 
@@ -167,8 +168,8 @@ Instead, the Enable-CsComputer cmdlet enables instances of the Microsoft.Rtc.Man
 
 ## RELATED LINKS
 
-[Disable-CsComputer]()
+[Disable-CsComputer](Disable-CsComputer.md)
 
-[Get-CsComputer]()
+[Get-CsComputer](Get-CsComputer.md)
 
-[Test-CsComputer]()
+[Test-CsComputer](Test-CsComputer.md)

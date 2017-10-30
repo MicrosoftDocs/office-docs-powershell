@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Backup-CsPool
 schema: 2.0.0
 ---
 
@@ -279,8 +280,8 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsBackupServiceConfiguration]()
+[Get-CsBackupServiceConfiguration](Get-CsBackupServiceConfiguration.md)
 
-[Get-CsBackupServiceStatus]()
+[Get-CsBackupServiceStatus](Get-CsBackupServiceStatus.md)
 
-[Get-CsPoolBackupRelationship]()
+[Get-CsPoolBackupRelationship](Get-CsPoolBackupRelationship.md)

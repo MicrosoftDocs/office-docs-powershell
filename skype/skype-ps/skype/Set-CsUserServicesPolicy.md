@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Set-CsUserServicesPolicy
 schema: 2.0.0
 ---
 
@@ -331,10 +332,10 @@ Instead, the `Set-CsUserServicesPolicy` cmdlet modifies existing instances of th
 
 ## RELATED LINKS
 
-[Get-CsUserServicesPolicy]()
+[Get-CsUserServicesPolicy](Get-CsUserServicesPolicy.md)
 
-[Grant-CsUserServicesPolicy]()
+[Grant-CsUserServicesPolicy](Grant-CsUserServicesPolicy.md)
 
-[New-CsUserServicesPolicy]()
+[New-CsUserServicesPolicy](New-CsUserServicesPolicy.md)
 
-[Remove-CsUserServicesPolicy]()
+[Remove-CsUserServicesPolicy](Remove-CsUserServicesPolicy.md)

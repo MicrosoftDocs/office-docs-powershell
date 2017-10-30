@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Remove-CsCallViaWorkPolicy
 schema: 2.0.0
 ---
 
 # Remove-CsCallViaWorkPolicy
 
 ## SYNOPSIS
-Use the Remove-CsCallViaWorkPolicy cmdlet to delete an existing call via work policy.
+Use the `Remove-CsCallViaWorkPolicy` cmdlet to delete an existing call via work policy.
 Call via work policies enable and manage the characteristics of outbound calls placed through the Skype for Business client.
 
 ## SYNTAX
@@ -20,18 +21,17 @@ Remove-CsCallViaWorkPolicy [-Identity] <XdsIdentity> [-Confirm] [-Force] [-Tenan
 ## DESCRIPTION
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 --------------------------
 ```
-
+Remove-CsCallViaWorkPolicy -Identity CvWStandardPolicy
 ```
 
 This example removes a per-user scoped policy named "CvWStandardPolicy".
 
-Remove-CsCallViaWorkPolicy -Identity CvWStandardPolicy
 
 ## PARAMETERS
 
@@ -41,9 +41,9 @@ Call via work policies can be specified at the global, site, or per-user scope.
 
 The global policy will not be removed, but the parameters will be reset to the defaults.
 
-Site syntax: -Identity Site:Redmond
+Site syntax: `-Identity Site:Redmond`
 
-Per-user syntax: -Identity CallviaWorkStandard
+Per-user syntax: `-Identity CallviaWorkStandard`
 
 ```yaml
 Type: XdsIdentity
@@ -139,13 +139,10 @@ None.
 
 ## RELATED LINKS
 
-[Set-CsCallViaWorkPolicy]()
+[Set-CsCallViaWorkPolicy](Set-CsCallViaWorkPolicy.md)
 
-[New-CsCallViaWorkPolicy]()
+[New-CsCallViaWorkPolicy](New-CsCallViaWorkPolicy.md)
 
-[Grant-CsCallViaWorkPolicy]()
+[Grant-CsCallViaWorkPolicy](Grant-CsCallViaWorkPolicy.md)
 
-[Get-CsCallViaWorkPolicy]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f2a7b538-1d95-4def-a247-fc9619290a97(OCS.16).aspx)
-
+[Get-CsCallViaWorkPolicy](Get-CsCallViaWorkPolicy.md)

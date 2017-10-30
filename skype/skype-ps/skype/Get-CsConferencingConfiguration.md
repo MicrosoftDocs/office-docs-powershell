@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsConferencingConfiguration
 schema: 2.0.0
 ---
 
@@ -164,8 +165,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsConferencingConfiguration]()
+[New-CsConferencingConfiguration](New-CsConferencingConfiguration.md)
 
-[Remove-CsConferencingConfiguration]()
+[Remove-CsConferencingConfiguration](Remove-CsConferencingConfiguration.md)
 
-[Set-CsConferencingConfiguration]()
+[Set-CsConferencingConfiguration](Set-CsConferencingConfiguration.md)

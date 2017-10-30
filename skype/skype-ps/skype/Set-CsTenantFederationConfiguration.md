@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsTenantFederationConfiguration
 schema: 2.0.0
 ---
 
@@ -365,6 +366,6 @@ Instead, the `Set-CsTenantFederationConfiguration` cmdlet modifies existing inst
 
 ## RELATED LINKS
 
-[Get-CsTenantFederationConfiguration]()
+[Get-CsTenantFederationConfiguration](Get-CsTenantFederationConfiguration.md)
 
-[Get-CsTenantPublicProvider]()
+[Get-CsTenantPublicProvider](Get-CsTenantPublicProvider.md)

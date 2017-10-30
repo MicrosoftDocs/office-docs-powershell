@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Remove-CsTeamsMeetingPolicy
 schema: 2.0.0
 ---
 
 # Remove-CsTeamsMeetingPolicy
 
 ## SYNOPSIS
-Remove-CsTeamsMeetingPolicy \[-Identity\] \<XdsIdentity\> \[-Tenant \<guid\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
@@ -21,7 +22,7 @@ Remove-CsTeamsMeetingPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -157,4 +158,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

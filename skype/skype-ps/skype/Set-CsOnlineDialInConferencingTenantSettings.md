@@ -1,14 +1,15 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Set-CsOnlineDialInConferencingTenantSettings
 schema: 2.0.0
 ---
 
 # Set-CsOnlineDialInConferencingTenantSettings
 
 ## SYNOPSIS
-Use the Set-CsOnlineDialInConferencingTenantSettings to modify the tenant level settings of dial-in conferencing.
-Dial-in conferencing tenant settings control the conference experience of users, and manage some conferencing administrative functions.
+Use the `Set-CsOnlineDialInConferencingTenantSettings` to modify the tenant level settings of dial-in conferencing.
+Dial-in conferencing tenant settings control the conference experience of users and manage some conferencing administrative functions.
 
 ## SYNTAX
 
@@ -28,31 +29,29 @@ Dial-in conferencing tenant settings control what functions are available during
 For example, whether or not entries and exits from the call are announced.
 The settings also manage some of the administrative functions, such as when users get notification of administrative actions, like a PIN change.
 By contrast, the higher level dial-in conferencing configuration only maintains a flag for whether dial-in conferencing is enabled for your organization.
-For more information, see Get-CsOnlineDialinConferencingTenantConfiguration.
+For more information, see `Get-CsOnlineDialinConferencingTenantConfiguration`.
 
 There is always a single instance of the dial-in conferencing settings per tenant.
-You can modify the settings using Set-CsOnlineDialInConferencingTenantSettings, and revert those settings to their defaults by using Remove-CsOnlineDialInConferencingTenantSettings.
+You can modify the settings using `Set-CsOnlineDialInConferencingTenantSettings` and revert those settings to their defaults by using `Remove-CsOnlineDialInConferencingTenantSettings`.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-
+Set-CsOnlineDialInConferencingTenantSettings -EnableEntryExitNotifications $True -EnableNameRecording $True -PinLength 7
 ```
 
 This example sets the tenant's conferencing settings to enable entry and exit notifications supported by name recording.
 The PIN length is set to 7.
 
-Set-CsOnlineDialInConferencingTenantSettings -EnableEntryExitNotifications $True -EnableNameRecording $True -PinLength 7
 
-### -------------------------- Example 2 -------------------------- (Skype for Business Online)
+### -------------------------- Example 2 --------------------------
 ```
-
-```
-
-This example defines the contact information to be used in dial-in conferencing email notifications, and enables the default address to be overridden.
-
 Set-CsOnlineDialInConferencingTenantSettings -SendEmailFromOverride $true -SendEmailFromAddress admin@contoso.com -SendEmailFromDisplayName "Conferencing Administrator"
+```
+
+This example defines the contact information to be used in dial-in conferencing email notifications and enables the default address to be overridden.
+
 
 ## PARAMETERS
 
@@ -68,7 +67,7 @@ The new default value will only be applied to users that are subsequently enable
 The "AllowPSTNOnlyMeetings" setting of a user defines if unauthenticated callers can start a meeting if they are the first person to join.
 An unauthenticated caller is defined as a participant who joins a meeting over the phone and doesn't provide the organizer PIN when joining the meeting.
 
-For more information on the "AllowPSTNOnlyMeetings" user setting, see Set-CsOnlineDialInConferencingUser.
+For more information on the "AllowPSTNOnlyMeetings" user setting, see `Set-CsOnlineDialInConferencingUser`.
 
 ```yaml
 Type: Object
@@ -158,7 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+The Confirm switch causes the command to pause processing and requires confirmation to proceed.
 
 ```yaml
 Type: SwitchParameter
@@ -473,6 +472,3 @@ None.
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/3f9540c1-6fd9-4833-8718-eb5270693b40(OCS.15).aspx)
-

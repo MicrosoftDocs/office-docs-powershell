@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Disable-CsUser
 schema: 2.0.0
 ---
 
@@ -180,6 +181,6 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.ADConne
 
 ## RELATED LINKS
 
-[Enable-CsUser]()
+[Enable-CsUser](Enable-CsUser.md)
 
-[Get-CsUser]()
+[Get-CsUser](Get-CsUser.md)

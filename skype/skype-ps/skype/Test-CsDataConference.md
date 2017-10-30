@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Test-CsDataConference
 schema: 2.0.0
 ---
 
@@ -388,4 +389,4 @@ The `Test-CsDataConference` cmdlet returns instances of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Test-CsASConference]()
+[Test-CsASConference](Test-CsASConference.md)

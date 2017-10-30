@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Online
+title: Get-CsUserSession
 schema: 2.0.0
 ---
 
@@ -20,18 +21,16 @@ Use the Get-CsUserSession cmdlet to retrieve session information for users withi
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command:
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Online)
+### -------------------------- Example 1 -------------------------- 
 ```
-
+Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartDate "02/22/2016 07:30:15 PM"
 ```
 
 This example returns user session information for Ken Myer from "02/22/2016 07:30:15 PM" to the current date.
-
-Get-CsUserSession -User "Ken.Myer@Contoso.com" -StartDate "02/22/2016 07:30:15 PM"
 
 ## PARAMETERS
 
@@ -117,6 +116,3 @@ The Get-CsUserSession cmdlet returns an instance of the Microsoft.Rtc.Management
 ## NOTES
 
 ## RELATED LINKS
-
-[Online Version](http://technet.microsoft.com/EN-US/library/c8990b1c-ad0d-432e-a90f-c1074b4bbfa7(OCS.15).aspx)
-

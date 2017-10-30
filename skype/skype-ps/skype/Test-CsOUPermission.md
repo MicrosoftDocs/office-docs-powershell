@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Test-CsOUPermission
 schema: 2.0.0
 ---
 
@@ -204,6 +205,6 @@ The `Test-CsOUPermission` cmdlet returns an instance of the Microsoft.Rtc.Synthe
 
 ## RELATED LINKS
 
-[Grant-CsOUPermission]()
+[Grant-CsOUPermission](Grant-CsOUPermission.md)
 
-[Revoke-CsOUPermission]()
+[Revoke-CsOUPermission](Revoke-CsOUPermission.md)

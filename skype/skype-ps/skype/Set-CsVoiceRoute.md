@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsVoiceRoute
 schema: 2.0.0
 ---
 
@@ -349,14 +350,14 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[New-CsVoiceRoute]()
+[New-CsVoiceRoute](New-CsVoiceRoute.md)
 
-[Remove-CsVoiceRoute]()
+[Remove-CsVoiceRoute](Remove-CsVoiceRoute.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
 
-[Test-CsVoiceRoute]()
+[Test-CsVoiceRoute](Test-CsVoiceRoute.md)
 
-[Get-CsPstnUsage]()
+[Get-CsPstnUsage](Get-CsPstnUsage.md)
 
-[Get-CsService]()
+[Get-CsService](Get-CsService.md)

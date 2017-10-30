@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsDiagnosticConfiguration
 schema: 2.0.0
 ---
 
@@ -410,13 +411,13 @@ The New-CsDiagnosticConfiguration cmdlet creates new instances of the Microsoft.
 
 [Online Version](http://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.14).aspx)
 
-[Get-CsDiagnosticConfiguration]()
+[Get-CsDiagnosticConfiguration](Get-CsDiagnosticConfiguration.md)
 
-[New-CsDiagnosticsFilter]()
+[New-CsDiagnosticsFilter](New-CsDiagnosticsFilter.md)
 
-[Remove-CsDiagnosticConfiguration]()
+[Remove-CsDiagnosticConfiguration](Remove-CsDiagnosticConfiguration.md)
 
-[Set-CsDiagnosticConfiguration]()
+[Set-CsDiagnosticConfiguration](Set-CsDiagnosticConfiguration.md)
 
 [Online Version](http://technet.microsoft.com/EN-US/library/9028d9c1-e812-4055-bdf0-59cb83c6f50f(OCS.15).aspx)
 

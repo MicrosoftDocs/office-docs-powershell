@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Set-CsTrustedApplicationPool
 schema: 2.0.0
 ---
 
@@ -312,10 +313,10 @@ It modifies an object of type Microsoft.Rtc.Management.Xds.DisplayExternalServer
 
 ## RELATED LINKS
 
-[New-CsTrustedApplicationPool]()
+[New-CsTrustedApplicationPool](New-CsTrustedApplicationPool.md)
 
-[Remove-CsTrustedApplicationPool]()
+[Remove-CsTrustedApplicationPool](Remove-CsTrustedApplicationPool.md)
 
-[Get-CsTrustedApplicationPool]()
+[Get-CsTrustedApplicationPool](Get-CsTrustedApplicationPool.md)
 
-[New-CsTrustedApplicationComputer]()
+[New-CsTrustedApplicationComputer](New-CsTrustedApplicationComputer.md)

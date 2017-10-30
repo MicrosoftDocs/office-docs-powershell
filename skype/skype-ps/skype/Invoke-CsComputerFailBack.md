@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: Invoke-CsComputerFailBack
 schema: 2.0.0
 ---
 
 # Invoke-CsComputerFailBack
 
 ## SYNOPSIS
-Use the Invoke-CsComputerFailBack to flag a server as available for load balancing in a Skype for Business Server 2015 pool.
+Use the Invoke-CsComputerFailBack to flag a server as available for load balancing in a Skype for Business Server pool.
 To successfully run this cmdlet you need to run it using an account that has administrator privileges on each server in the source and target pools.
 
 ## SYNTAX
@@ -22,25 +23,25 @@ The Invoke-CsComputerFailBack cmdlet functionality is not available in the Skype
 
 To return a list of all the Role-Based Access Control (RBAC) roles a cmdlet has been assigned to (including any custom RBAC roles you have created), run the following command from the Windows PowerShell prompt.
 
-Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}
+`Get-CsAdminRole | Where-Object {$_.Cmdlets -Match "\<DesiredCmdletName\>"}`
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
 ```
 
+Invoke-CsComputerFailBack -ComputerName "atl-mcs-001.litwareinc.com" -NoStart
 ```
 
 This example marks the computer "atl-mcs-001.litwareinc.com" as available to the pool and enables the services, but does not start them.
 
-Invoke-CsComputerFailBack -ComputerName "atl-mcs-001.litwareinc.com" -NoStart
 
 ## PARAMETERS
 
 ### -ComputerName
 Specifies the computer name to fail back.
 The computer should be referenced by using its fully qualified domain name (FQDN).
-For example, -ComputerName "atl-mcs-001.litwareinc.com".
+For example, `-ComputerName "atl-mcs-001.litwareinc.com".`
 The computer name used during failback must be the same name used during failover.
 
 ```yaml
@@ -92,7 +93,7 @@ Accept wildcard characters: False
 
 ### -Report
 Specifies the file path for the log file created when the cmdlet runs.
-For example: -Report "C:\Logs\Server1FailbackLog.html".
+For example: `-Report "C:\Logs\Server1FailbackLog.html".`
 If this file already exists, it will be overwritten.
 By default, reports are written to the AppData\Local\Temp folder in your user profile.
 
@@ -160,7 +161,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -177,7 +178,4 @@ None.
 
 ## RELATED LINKS
 
-[Invoke-CsComputerFailOver]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/b3fae621-ed11-4f65-99f9-a67bf4fdd684(OCS.16).aspx)
-
+[Invoke-CsComputerFailOver](Invoke-CsComputerFailOver.md)

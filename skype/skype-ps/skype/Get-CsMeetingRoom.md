@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Get-CsMeetingRoom
 schema: 2.0.0
 ---
 
@@ -251,10 +252,10 @@ The Get-CsMeetingRoom cmdlet accepts a pipelined string value representing the I
 
 ## RELATED LINKS
 
-[Disable-CsMeetingRoom]()
+[Disable-CsMeetingRoom](Disable-CsMeetingRoom.md)
 
-[Enable-CsMeetingRoom]()
+[Enable-CsMeetingRoom](Enable-CsMeetingRoom.md)
 
-[Move-CsMeetingRoom]()
+[Move-CsMeetingRoom](Move-CsMeetingRoom.md)
 
-[Set-CsMeetingRoom]()
+[Set-CsMeetingRoom](Set-CsMeetingRoom.md)

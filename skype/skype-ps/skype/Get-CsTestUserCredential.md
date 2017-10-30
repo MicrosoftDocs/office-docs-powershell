@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2013, Skype for Business Server 2015
+title: Get-CsTestUserCredential
 schema: 2.0.0
 ---
 
@@ -107,6 +108,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-CsTestUserCredential]()
+[Remove-CsTestUserCredential](Remove-CsTestUserCredential.md)
 
-[Set-CsTestUserCredential]()
+[Set-CsTestUserCredential](Set-CsTestUserCredential.md)

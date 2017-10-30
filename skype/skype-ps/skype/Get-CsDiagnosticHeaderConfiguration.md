@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsDiagnosticHeaderConfiguration
 schema: 2.0.0
 ---
 
@@ -170,8 +171,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsDiagnosticHeaderConfiguration]()
+[New-CsDiagnosticHeaderConfiguration](New-CsDiagnosticHeaderConfiguration.md)
 
-[Remove-CsDiagnosticHeaderConfiguration]()
+[Remove-CsDiagnosticHeaderConfiguration](Remove-CsDiagnosticHeaderConfiguration.md)
 
-[Set-CsDiagnosticHeaderConfiguration]()
+[Set-CsDiagnosticHeaderConfiguration](Set-CsDiagnosticHeaderConfiguration.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Set-CsUCPhoneConfiguration
 schema: 2.0.0
 ---
 
@@ -466,8 +467,8 @@ Instead, the cmdlet configures instances of the Microsoft.Rtc.Management.Writabl
 
 ## RELATED LINKS
 
-[Get-CsUCPhoneConfiguration]()
+[Get-CsUCPhoneConfiguration](Get-CsUCPhoneConfiguration.md)
 
-[New-CsUCPhoneConfiguration]()
+[New-CsUCPhoneConfiguration](New-CsUCPhoneConfiguration.md)
 
-[Remove-CsUCPhoneConfiguration]()
+[Remove-CsUCPhoneConfiguration](Remove-CsUCPhoneConfiguration.md)

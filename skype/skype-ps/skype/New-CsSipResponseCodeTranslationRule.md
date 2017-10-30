@@ -1,29 +1,16 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: New-CsSipResponseCodeTranslationRule
 schema: 2.0.0
 ---
 
 # New-CsSipResponseCodeTranslationRule
 
 ## SYNOPSIS
-**Below Content Applies To:** Lync Server 2010
-
 Creates a new SIP response code translation rule.
-These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Microsoft Lync Server 2010.
-
-**Below Content Applies To:** Lync Server 2013
-
-Creates a new SIP response code translation rule.
-These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Lync Server.
+These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Skype for Business Server.
 This cmdlet was introduced in Lync Server 2010.
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Creates a new SIP response code translation rule.
-These rules enable administrators to map SIP response codes with values between 400 and 699 to the values used by Skype for Business Server 2015.
-This cmdlet was introduced in Lync Server 2010.
-
 
 
 ## SYNTAX
@@ -43,84 +30,29 @@ New-CsSipResponseCodeTranslationRule -TranslatedResponseCode <Int32> -Name <Stri
 ```
 
 ## DESCRIPTION
-**Below Content Applies To:** Lync Server 2010
-
 SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
-In Lync Server 2010, the Mediation Server uses trunking peers to interact with the PSTN network.
+In Skype for Business Server, the Mediation Server uses trunking peers to interact with the PSTN network.
 When an outgoing call fails on the PSTN network, an ISDN User Part (ISUP) cause code is automatically generated.
 For example, a PSTN gateway might send cause code 34 to indicate that no circuit or channel was available for completing the call.
 When a Mediation Server trunking peer receives that ISUP cause code, it converts that code to a SIP response code, which is then sent to the Mediation Server itself.
-In turn, Lync Server uses these response codes to make its outbound routing decisions.
-For example, a malfunctioning gateway might automatically be assigned a "less-preferred" status; this minimizes the use of the malfunctioning gateway, and thus maximizes the chance of a call being successfully completed.
+In turn, Skype for Business Server uses these response codes to make its outbound routing decisions.
+For example, a malfunctioning gateway might automatically be assigned a "less-preferred" status; this minimizes the use of the malfunctioning gateway and thus maximizes the chance of a call being successfully completed.
 
-However, not all gateways use the recommended ISUP cause code to SIP response code mapping used by Lync Server.
-For these gateways, administrators can use the CsSipResponseCodeTranslationRule cmdlets to map the gateway SIP response code (in combination with the ISUP cause code, if that cause code is available) to a SIP response code used by Lync Server.
+However, not all gateways use the recommended ISUP cause code to SIP response code mapping used by Skype for Business Server.
+For these gateways, administrators can use the CsSipResponseCodeTranslationRule cmdlets to map the gateway SIP response code (in combination with the ISUP cause code, if that cause code is available) to a SIP response code used by Skype for Business Server.
 For example, a gateway might map ISUP cause code 34 ("No circuit/channel is available") to SIP response code 486 ("Busy here").
-Based on a response code of 486, the outbound routing logic of Lync Server will not attempt to find a new gateway in order to complete the call.
+Based on a response code of 486, the outbound routing logic of Skype for Business Server will not attempt to find a new gateway in order to complete the call.
 
-For Lync Server, however, that SIP response code of 486 should instead be mapped to SIP response code 503.
-A response code of 503 triggers the retry mechanism in the outbound routing logic of Lync Server; that means that the system will try to find another gateway in order to complete the call.
+For Skype for Business Server, however, that SIP response code of 486 should instead be mapped to SIP response code 503.
+A response code of 503 triggers the retry mechanism in the outbound routing logic of Skype for Business Server; that means that the system will try to find another gateway in order to complete the call.
 To handle this situation, you can create a translation rule that maps the combination of ISUP cause code 34 and SIP response code 486 to a SIP response code of 503.
-These new translation rules are created by using the New-CsSipResponseCodeTranslationRule cmdlet.
+These new translation rules are created by using the `New-CsSipResponseCodeTranslationRule` cmdlet.
 Translation rules can be assigned to the global scope, the site scope, or to the service scope (for the PSTN Gateway service only).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsSipResponseCodeTranslationRule cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object  {$_.Cmdlets -match "New-CsSipResponseCodeTranslationRule"}
-
-**Below Content Applies To:** Lync Server 2013
-
-SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
-In Lync Server, the Mediation Server uses trunking peers to interact with the PSTN network.
-When an outgoing call fails on the PSTN network, an ISDN User Part (ISUP) cause code is automatically generated.
-For example, a PSTN gateway might send cause code 34 to indicate that no circuit or channel was available for completing the call.
-When a Mediation Server trunking peer receives that ISUP cause code, it converts that code to a SIP response code, which is then sent to the Mediation Server itself.
-In turn, Lync Server uses these response codes to make its outbound routing decisions.
-For example, a malfunctioning gateway might automatically be assigned a "less-preferred" status; this minimizes the use of the malfunctioning gateway, and thus maximizes the chance of a call being successfully completed.
-
-However, not all gateways use the recommended ISUP cause code to SIP response code mapping used by Lync Server.
-For these gateways, administrators can use the CsSipResponseCodeTranslationRule cmdlets to map the gateway SIP response code (in combination with the ISUP cause code, if that cause code is available) to a SIP response code used by Lync Server.
-For example, a gateway might map ISUP cause code 34 ("No circuit/channel is available") to SIP response code 486 ("Busy here").
-Based on a response code of 486, the outbound routing logic of Lync Server will not attempt to find a new gateway in order to complete the call.
-
-For Lync Server, however, that SIP response code of 486 should instead be mapped to SIP response code 503.
-A response code of 503 triggers the retry mechanism in the outbound routing logic of Lync Server; that means that the system will try to find another gateway in order to complete the call.
-To handle this situation, you can create a translation rule that maps the combination of ISUP cause code 34 and SIP response code 486 to a SIP response code of 503.
-These new translation rules are created by using the New-CsSipResponseCodeTranslationRule cmdlet.
-Translation rules can be assigned to the global scope, the site scope, or to the service scope (for the PSTN Gateway service only).
-
-Who can run this cmdlet: By default, members of the following groups are authorized to run the New-CsSipResponseCodeTranslationRule cmdlet locally: RTCUniversalServerAdmins.
-To return a list of all the role-based access control (RBAC) roles this cmdlet has been assigned to (including any custom RBAC roles you have created yourself), run the following command from the Windows PowerShell prompt:
-
-Get-CsAdminRole | Where-Object {$_.Cmdlets -match "New-CsSipResponseCodeTranslationRule"}
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-SIP trunking provides a way to connect a Voice over Internet Protocol (VoIP) network (such as Enterprise Voice) with the public switched telephone network (PSTN).
-In Skype for Business Server 2015, the Mediation Server uses trunking peers to interact with the PSTN network.
-When an outgoing call fails on the PSTN network, an ISDN User Part (ISUP) cause code is automatically generated.
-For example, a PSTN gateway might send cause code 34 to indicate that no circuit or channel was available for completing the call.
-When a Mediation Server trunking peer receives that ISUP cause code, it converts that code to a SIP response code, which is then sent to the Mediation Server itself.
-In turn, Skype for Business Server 2015 uses these response codes to make its outbound routing decisions.
-For example, a malfunctioning gateway might automatically be assigned a "less-preferred" status; this minimizes the use of the malfunctioning gateway, and thus maximizes the chance of a call being successfully completed.
-
-However, not all gateways use the recommended ISUP cause code to SIP response code mapping used by Skype for Business Server 2015.
-For these gateways, administrators can use the CsSipResponseCodeTranslationRule cmdlets to map the gateway SIP response code (in combination with the ISUP cause code, if that cause code is available) to a SIP response code used by Skype for Business Server 2015.
-For example, a gateway might map ISUP cause code 34 ("No circuit/channel is available") to SIP response code 486 ("Busy here").
-Based on a response code of 486, the outbound routing logic of Skype for Business Server 2015 will not attempt to find a new gateway in order to complete the call.
-
-For Skype for Business Server 2015, however, that SIP response code of 486 should instead be mapped to SIP response code 503.
-A response code of 503 triggers the retry mechanism in the outbound routing logic of Skype for Business Server 2015; that means that the system will try to find another gateway in order to complete the call.
-To handle this situation, you can create a translation rule that maps the combination of ISUP cause code 34 and SIP response code 486 to a SIP response code of 503.
-These new translation rules are created by using the New-CsSipResponseCodeTranslationRule cmdlet.
-Translation rules can be assigned to the global scope, the site scope, or to the service scope (for the PSTN Gateway service only).
-
 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 ------------------------ (Lync Server 2010)
+### -------------------------- Example 1 ------------------------
 ```
 New-CsSipResponseCodeTranslationRule -Identity "PstnGateway:192.168.0.240/Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
 ```
@@ -128,27 +60,8 @@ New-CsSipResponseCodeTranslationRule -Identity "PstnGateway:192.168.0.240/Rule40
 The command shown in Example 1 creates a new SIP response code translation rule with the Identity PstnGateway:192.168.0.240/Rule404.
 This rule translates a received response code of 434 to the standard SIP response code 404 (Not Found).
 
-### -------------------------- EXAMPLE 1 -------------------------- (Lync Server 2013)
-```
 
-```
-
-The command shown in Example 1 creates a new SIP response code translation rule with the Identity PstnGateway:192.168.0.240/Rule404.
-This rule translates a received response code of 434 to the standard SIP response code 404 (Not Found).
-
-New-CsSipResponseCodeTranslationRule -Identity "PstnGateway:192.168.0.240/Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
-
-### -------------------------- EXAMPLE 1 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 1 creates a new SIP response code translation rule with the Identity PstnGateway:192.168.0.240/Rule404.
-This rule translates a received response code of 434 to the standard SIP response code 404 (Not Found).
-
-New-CsSipResponseCodeTranslationRule -Identity "PstnGateway:192.168.0.240/Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
-
-### -------------------------- Example 2 ------------------------ (Lync Server 2010)
+### -------------------------- Example 2 ------------------------
 ```
 New-CsSipResponseCodeTranslationRule -Parent "PstnGateway:192.168.0.240" -Name "Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
 ```
@@ -157,27 +70,6 @@ The command shown in Example 2 performs the same task as the command shown in Ex
 In Example 2, however, the Parent and Name parameters are used instead of the Identity parameter.
 This simply shows an alternate way of creating a new SIP response code translation rule that has the Identity PstnGateway:192.168.0.240/Rule404.
 
-### -------------------------- EXAMPLE 2 -------------------------- (Lync Server 2013)
-```
-
-```
-
-The command shown in Example 2 performs the same task as the command shown in Example 1.
-In Example 2, however, the Parent and Name parameters are used instead of the Identity parameter.
-This simply shows an alternate way of creating a new SIP response code translation rule that has the Identity PstnGateway:192.168.0.240/Rule404.
-
-New-CsSipResponseCodeTranslationRule -Parent "PstnGateway:192.168.0.240" -Name "Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
-
-### -------------------------- EXAMPLE 2 -------------------------- (Skype for Business Server 2015)
-```
-
-```
-
-The command shown in Example 2 performs the same task as the command shown in Example 1.
-In Example 2, however, the Parent and Name parameters are used instead of the Identity parameter.
-This simply shows an alternate way of creating a new SIP response code translation rule that has the Identity PstnGateway:192.168.0.240/Rule404.
-
-New-CsSipResponseCodeTranslationRule -Parent "PstnGateway:192.168.0.240" -Name "Rule404" -ReceivedResponseCode 434 -TranslatedResponseCode 404
 
 ## PARAMETERS
 
@@ -202,25 +94,8 @@ Accept wildcard characters: False
 ```
 
 ### -TranslatedResponseCode
-**Below Content Applies To:** Lync Server 2010
-
-Value of the Lync Server 2010 SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
+Value of the Skype for Business Server SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
 Translated response codes can be any integer value between 400 and 699, inclusive.
-
-
-
-**Below Content Applies To:** Lync Server 2013
-
-Value of the Lync Server SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
-Translated response codes can be any integer value between 400 and 699, inclusive.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
-Value of the Skype for Business Server 2015 SIP response code that the ReceivedResponseCode and/or the ReceivedISUPCauseCode should be translated to.
-Translated response codes can be any integer value between 400 and 699, inclusive.
-
 
 
 ```yaml
@@ -257,34 +132,20 @@ Accept wildcard characters: False
 ```
 
 ### -Parent
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Scope where the new translation rule is to be assigned.
-To assign a rule to the global scope, use this syntax: -Parent global.
-To assign a rule to the site scope, use syntax like this: -Parent site:Redmond.
-To assign a rule to the service scope, use syntax similar to this: -Parent PstnGateway:192.168.0.242.
-
-The Parent parameter must always be used in conjunction with the Name parameter.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Scope where the new translation rule is to be assigned.
 To assign a rule to the global scope, use this syntax:
 
--Parent global
+`-Parent global`
 
 To assign a rule to the site scope, use syntax like this:
 
--Parent site:Redmond
+`-Parent site:Redmond`
 
 To assign a rule to the service scope, use syntax similar to this:
 
--Parent PstnGateway:192.168.0.242
+`-Parent PstnGateway:192.168.0.242`
 
 The Parent parameter must always be used in conjunction with the Name parameter.
-
 
 
 ```yaml
@@ -302,7 +163,7 @@ Accept wildcard characters: False
 
 ### -Priority
 Relative priority of the translation rule.
-Rules are processed in order of their assigned priority; the first rule to be processed has a priority of 0; the second rule to be processed has a priority of 1; and so on.
+Rules are processed in order of their assigned priority; the first rule to be processed has a priority of 0; the second rule to be processed has a priority of 1 and so on.
 If not specified the new rule will be given the lowest priority in its scope.
 
 ```yaml
@@ -339,18 +200,8 @@ Accept wildcard characters: False
 ```
 
 ### -InMemory
-**Below Content Applies To:** Lync Server 2010, Lync Server 2013
-
-Creates an object reference without actually committing the object as a permanent change.
-If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set- cmdlet.
-
-
-
-**Below Content Applies To:** Skype for Business Server 2015
-
 Creates an object reference without actually committing the object as a permanent change.
 If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-\<cmdlet\>.
-
 
 
 ```yaml
@@ -415,17 +266,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReceivedISUPCauseValue
-**Below Content Applies To:** Lync Server 2010
-
-{{Fill ReceivedISUPCauseValue Description}}
-
-
-
-**Below Content Applies To:** Lync Server 2013, Skype for Business Server 2015
-
 Value of the ISDN User Part (ISUP) code that must be present in the SIP response message used by a gateway when responding to an INVITE message.
 A value of -1 indicates that only the SIP response code will be used when executing the translation rule; the ISUP cause code will be ignored.
-
 
 
 ```yaml
@@ -448,33 +290,19 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ###  
 None.
-New-CsSipResponseCodeTranslationRule does not accept pipelined input.
-
-###  
-None.
-The New-CsSipResponseCodeTranslationRule cmdlet does not accept pipelined input.
+The `New-CsSipResponseCodeTranslationRule` cmdlet does not accept pipelined input.
 
 ## OUTPUTS
 
 ###  
-New-CsSipResponseCodeTranslationRule creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.SipResponseCodeTRanslationRule#Decorated object.
-
-###  
-The New-CsSipResponseCodeTranslationRule cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.SipResponseCodeTRanslationRule#Decorated object.
+The `New-CsSipResponseCodeTranslationRule` cmdlet creates new instances of the Microsoft.Rtc.Management.WritableConfig.Settings.TrunkConfiguration.SipResponseCodeTRanslationRule#Decorated object.
 
 ## NOTES
 
 ## RELATED LINKS
 
-[Online Version](http://technet.microsoft.com/EN-US/library/f7667ffd-3d11-40ec-87d4-7f9b1a861aae(OCS.14).aspx)
+[Get-CsSipResponseCodeTranslationRule](Get-CsSipResponseCodeTranslationRule.md)
 
-[Get-CsSipResponseCodeTranslationRule]()
+[Remove-CsSipResponseCodeTranslationRule](Remove-CsSipResponseCodeTranslationRule.md)
 
-[Remove-CsSipResponseCodeTranslationRule]()
-
-[Set-CsSipResponseCodeTranslationRule]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f7667ffd-3d11-40ec-87d4-7f9b1a861aae(OCS.15).aspx)
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f7667ffd-3d11-40ec-87d4-7f9b1a861aae(OCS.16).aspx)
-
+[Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)

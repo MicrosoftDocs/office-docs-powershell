@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+title: Set-CsUserAcp
 schema: 2.0.0
 ---
 
@@ -329,6 +330,6 @@ None.
 
 ## RELATED LINKS
 
-[Get-CsUserAcp]()
+[Get-CsUserAcp](Get-CsUserAcp.md)
 
-[Remove-CsUserAcp]()
+[Remove-CsUserAcp](Remove-CsUserAcp.md)

@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsPool
 schema: 2.0.0
 ---
 
@@ -166,6 +167,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-CsSite]()
+[Get-CsSite](Get-CsSite.md)
 
-[Get-CsTopology]()
+[Get-CsTopology](Get-CsTopology.md)

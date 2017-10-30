@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsNetworkSite
 schema: 2.0.0
 ---
 
@@ -137,8 +138,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsNetworkSite]()
+[New-CsNetworkSite](New-CsNetworkSite.md)
 
-[Remove-CsNetworkSite]()
+[Remove-CsNetworkSite](Remove-CsNetworkSite.md)
 
-[Set-CsNetworkSite]()
+[Set-CsNetworkSite](Set-CsNetworkSite.md)

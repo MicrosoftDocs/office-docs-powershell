@@ -1,19 +1,19 @@
 ---
-external help file: 
+external help file: Get-CsOrganizationalAutoAttendantSupportedTimeZone.xml
 applicable: Skype for Business Online
+title: Get-CsOrganizationalAutoAttendantSupportedTimeZone
 schema: 2.0.0
 ---
 
 # Get-CsOrganizationalAutoAttendantSupportedTimeZone
 
 ## SYNOPSIS
-The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Organizational Auto Attendant (OAA)service.
+The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Organizational Auto Attendant (OAA) service.
 
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantSupportedTimeZone [[-Identity] <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOrganizationalAutoAttendantSupportedTimeZone [-Identity] <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,66 +33,16 @@ This example gets all supported time zones.
 Get-CsOrganizationalAutoAttendantSupportedTimeZone -Identity "Pacific Standard Time"
 ```
 
-This example gets the Pacific Standard time zone.
+This example gets the timezone that the Identity parameter specifies (Pacific Standard Time).
 
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
 
-PARAMVALUE: String
-
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -105,26 +55,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

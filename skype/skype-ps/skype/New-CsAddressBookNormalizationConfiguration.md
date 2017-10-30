@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Skype for Business Server 2015
+title: New-CsAddressBookNormalizationConfiguration
 schema: 2.0.0
 ---
 
@@ -8,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 Creates a new collection of Address Book normalization configuration settings.
-Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server 2015.
+Address Book normalization settings are used to convert phone numbers to a format readily understood by Skype for Business Server.
 
 ## SYNTAX
 
@@ -19,8 +20,8 @@ New-CsAddressBookNormalizationConfiguration [-Identity] <XdsIdentity>
 ```
 
 ## DESCRIPTION
-Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server 2015 format to a standard (E.164) format.
-(Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) In Skype for Business Server 2015, the Address Book normalization configuration settings represent collections of normalization rules that carry out these conversions and translations for Address Book servers.
+Normalization rules define the requirements for converting (or translating) numbers from an internal Skype for Business Server format to a standard (E.164) format.
+(Note that an understanding of regular expressions is helpful in order to understand what normalization rules do and how they do it.) In Skype for Business Server, the Address Book normalization configuration settings represent collections of normalization rules that carry out these conversions and translations for Address Book servers.
 (These settings can be defined at the global scope or at the site scope.) The New-CsAddressBookNormalizationConfiguration cmdlet provides a way create new collections scoped to a specified site.
 
 In general, you will typically find it easier to add rules to a new collection by using the New-CsAddressBookNormalizationRule cmdlet; that cmdlet enables you to add a rule by using one simple command.
@@ -31,22 +32,22 @@ That means that, in some cases, you might need to create identical rules: one fo
 
 ## EXAMPLES
 
-### -------------------------- Example 1 -------------------------- (Skype for Business Server 2015)
+### -------------------------- Example 1 -------------------------- 
 ```
 
+New-CsAddressBookNormalizationConfiguration -Identity "site:Redmond"
 ```
 
 The command shown in Exercise 1 creates a new set of Address Book normalization configuration settings assigned to the Redmond site.
 Note that this collection will not contain any Address Book normalization rules.
 Those rules are most-easily created using the New-CsAddressBookNormalizationRule cmdlet after the new settings collection is in place.
 
-New-CsAddressBookNormalizationConfiguration -Identity "site:Redmond"
 
 ## PARAMETERS
 
 ### -Identity
 Unique identifier for the new collection of Address Book normalization rules.
-Because new rule collections can only be created at the site scope, the Identity will always be similar to this: -Identity "site:Redmond"
+Because new rule collections can only be created at the site scope, the Identity will always be similar to this: `-Identity "site:Redmond"`
 
 ```yaml
 Type: XdsIdentity
@@ -145,7 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).`
 
 ## INPUTS
 
@@ -162,13 +163,11 @@ The New-CsAddressBookNormalizationConfiguration cmdlet creates new instances of 
 
 ## RELATED LINKS
 
-[Get-CsAddressBookNormalizationConfiguration]()
+[Get-CsAddressBookNormalizationConfiguration](Get-CsAddressBookNormalizationConfiguration.md)
 
-[Remove-CsAddressBookNormalizationConfiguration]()
+[Remove-CsAddressBookNormalizationConfiguration](Remove-CsAddressBookNormalizationConfiguration.md)
 
-[Set-CsAddressBookNormalizationConfiguration]()
+[Set-CsAddressBookNormalizationConfiguration](Set-CsAddressBookNormalizationConfiguration.md)
 
-[Import-CsCompanyPhoneNormalizationRules]()
-
-[Online Version](http://technet.microsoft.com/EN-US/library/f73862d8-7382-4502-a9fa-3cfdab5f7207(OCS.16).aspx)
+[Import-CsCompanyPhoneNormalizationRules](Import-CsCompanyPhoneNormalizationRules.md)
 

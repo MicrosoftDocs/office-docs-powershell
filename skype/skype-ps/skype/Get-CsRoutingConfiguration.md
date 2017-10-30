@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
+title: Get-CsRoutingConfiguration
 schema: 2.0.0
 ---
 
@@ -110,10 +111,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsRoutingConfiguration]()
+[New-CsRoutingConfiguration](New-CsRoutingConfiguration.md)
 
-[Remove-CsRoutingConfiguration]()
+[Remove-CsRoutingConfiguration](Remove-CsRoutingConfiguration.md)
 
-[Set-CsRoutingConfiguration]()
+[Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 
-[Get-CsVoiceRoute]()
+[Get-CsVoiceRoute](Get-CsVoiceRoute.md)
