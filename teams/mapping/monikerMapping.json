@@ -1,0 +1,11 @@
+{
+    "teams-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/teams/teams-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/teams-ps/toc.json",
+        "packageRoot": "teams-ps",
+        "modules": {
+            "teams": {}     
+        }
+    }
+}
