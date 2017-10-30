@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOrganizationalAutoAttendantCallFlow.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallFlow
 schema: 2.0.0
@@ -13,8 +13,7 @@ Use the New-CsOrganizationalAutoAttendantCallFlow cmdlet to create a new call fl
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallFlow [-Menu <Object>] [-Name <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Greetings <Object>] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,88 +43,35 @@ This example creates a new call flow that plays a greeting before rendering the 
 
 ## PARAMETERS
 
-### -Menu
-PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.Menu
+### -Name
+The Name parameter represents a unique friendly name for the call flow.
 
-The Menu parameter identifies the menu to render when the call flow is executed. 
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Menu
+The Menu parameter identifies the menu to render when the call flow is executed.
 
 You can create a new menu by using the New-CsOrganizationalAutoAttendantMenu cmdlet.
 
 
 ```yaml
-Type: Object
+Type: System.Object
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Name
-PARAMVALUE: String
-
-The Name parameter represents the friendly name for the call flow.
-
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Microsoft.Rtc.Management.Deploy.Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: System.Management.Automation.SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,15 +79,13 @@ Accept wildcard characters: False
 ```
 
 ### -Greetings
-PARAMVALUE: System.Collections.Generic.List
-
 If present, the prompts specified by the Greetings parameter (either TTS or Audio) are played before the call flow’s menu is rendered.
 
 You can create prompts by using the New-CsOrganizationalAutoAttendantPrompt cmdlet.
 
 
 ```yaml
-Type: Object
+Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -154,26 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

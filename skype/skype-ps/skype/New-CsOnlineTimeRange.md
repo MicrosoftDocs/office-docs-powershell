@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOnlineTimeRange.xml
 applicable: Skype for Business Online
 title: New-CsOnlineTimeRange
 schema: 2.0.0
@@ -13,29 +13,26 @@ The New-CsOnlineTimeRange cmdlet creates a new time range.
 ## SYNTAX
 
 ```
-New-CsOnlineTimeRange [-End <Object>] [-Start <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsOnlineTimeRange -Start <TimeSpan> -End <TimeSpan> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsOnlineTimeRange cmdlet creates a new time range to be used with the Organizational Auto Attendant (OAA) service. Time ranges are used to form schedules.
 
-Note: The start and end bounds of the time range must obey the relation start < end.
-A time range can only be formed of minute/hour increments.
-A time range can span from one minute to 24 hours.
+**NOTE**
+- The start bound of the range must be less than its end bound.
+- A time range must be aligned with 30/60-minutes boundaries.
+- A time range can span from one minute to 24 hours.
  
-
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-
 $workdayTimeRange = New-CsOnlineTimeRange -Start 09:00 -End 17:00
-
 ```
 
-This example creates a time range for a 9am to 5pm work day.
+This example creates a time range for a 9AM to 5PM work day.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -47,31 +44,11 @@ This example creates a 24-hour time range.
 
 ## PARAMETERS
 
-### -End
-PARAMVALUE: TimeSpan
-
-The End parameter represents the end bound of the time range.
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Start
-PARAMVALUE: TimeSpan
-
 The Start parameter represents the start bound of the time range.
 
 ```yaml
-Type: Object
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -83,48 +60,16 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
+### -End
+The End parameter represents the end bound of the time range.
 
 ```yaml
-Type: Object
+Type: System.TimeSpan
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -132,26 +77,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

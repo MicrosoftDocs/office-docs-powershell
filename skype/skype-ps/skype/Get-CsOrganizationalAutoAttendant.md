@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Get-CsOrganizationalAutoAttendant.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -13,9 +13,7 @@ Use the Get-CsOrganizationalAutoAttendant cmdlet to get information about Organi
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <Object>]
- [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
- [-First <Object>] [-IncludeStatus] [-Skip <Object>] [<CommonParameters>]
+Get-CsOrganizationalAutoAttendant [-PrimaryUri] <Uri> [-First <UInt64>] [-Skip <UInt64>] [-IncludeStatus] [-ApplicationId <Guid>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,113 +52,17 @@ This example skips initial 5 organizational auto attendants and gets the next 10
 
 ## PARAMETERS
 
-### -ApplicationId
-PARAMVALUE: Guid
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the OAA to be retrieved. If this parameter is not specified, then all created OAAs in the organization are returned.
 
 ```yaml
-Type: Object
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-PARAMVALUE: Guid
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -170,23 +72,7 @@ Accept wildcard characters: False
 The First parameter indicates the maximum number of organizational auto attendants to retrieve as the result. It is intended to be used for pagination purposes.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeStatus
-{{Fill IncludeStatus Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.UInt64
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,7 +88,54 @@ Accept wildcard characters: False
 The Skip parameter indicates the number of initial organizational auto attendants to skip in the result. It is intended to be used for pagination purposes.
 
 ```yaml
-Type: Object
+Type: System.UInt64
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeStatus
+If specified, the status records for each organzational auto attendant in the result set are also retrieved.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplicationId
+Specifies a custom application ID to use for organizational auto attendants. This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: System.Guid
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -233,3 +166,9 @@ The String is used as the PrimaryUri input.
 
 
 ## RELATED LINKS
+
+[New-CsOrganizationalAutoAttendant](New-CsOrganizationalAutoAttendant.md)
+
+[Set-CsOrganizationalAutoAttendant](Set-CsOrganizationalAutoAttendant.md)
+
+[Remove-CsOrganizationalAutoAttendant](Remove-CsOrganizationalAutoAttendant.md)

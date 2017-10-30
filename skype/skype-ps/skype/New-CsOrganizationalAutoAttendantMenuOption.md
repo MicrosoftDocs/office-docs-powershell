@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOrganizationalAutoAttendantMenuOption.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantMenuOption
 schema: 2.0.0
@@ -13,9 +13,7 @@ Use the New-CsOrganizationalAutoAttendantMenuOption cmdlet to create a new menu 
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantMenuOption [-Action <Object>] [-DtmfResponse <Object>]
- [-BypassDualWrite <Object>] [-CallTarget <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>]
- [-VoiceResponses <Object>] [-AsJob] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantMenuOption -Action <DisconnectCall | TransferCallToOperator | TransferCallToTarget> -DtmfResponse <Tone0 | Tone1 | Tone2 | Tone3 | Tone4 | Tone5 | Tone6 | Tone7 | Tone8 | Tone9 | Automatic> [-VoiceResponses <Object>] [-CallTarget <Object>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,16 +42,11 @@ This example creates a menu option to transfer the call to an organizational aut
 ## PARAMETERS
 
 ### -Action
-PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.ActionType
-
 The Action parameter represents the action to be taken when the menu option is activated. The Action must be set to one of the following values:
 
-TransferCallToOperator - the call is transferred to the operator.
-
-TransferCallToTarget - The call is transferred to the menu option’s call target.
-
-DisconnectCall - The call is disconnected.
-
+- DisconnectCall - The call is disconnected.
+- TransferCallToOperator - the call is transferred to the operator.
+- TransferCallToTarget - The call is transferred to the menu option’s call target.
 
 ```yaml
 Type: Object
@@ -61,7 +54,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -69,13 +62,10 @@ Accept wildcard characters: False
 ```
 
 ### -DtmfResponse
-PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.DtmfTone
-
 The DtmfResponse parameter indicates the key on the telephone keypad to be pressed to activate the menu option. The DtmfResponse must be set to one of the following values:
 
-Tone0:Tone9 - Corresponds to DTMF tones from 0 to 9.
-
-Automatic - The action is executed without user response.
+- Tone0 to Tone9 - Corresponds to DTMF tones from 0 to 9.
+- Automatic - The action is executed without user response.
 
 
 ```yaml
@@ -84,18 +74,21 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
+### -VoiceResponses
+The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the organizational auto attendant. 
+
+Voice responses are currently limited to one voice response per menu option. 
+
 
 ```yaml
-Type: Object
+Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -108,8 +101,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallTarget
-PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.CallableEntity
-
 The CallTarget parameter represents the target for call transfer after the menu option is selected. 
 
 CallTarget is required if the action of the menu option is TransferCallToTarget.
@@ -130,80 +121,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DomainController
-PARAMVALUE: Microsoft.Rtc.Management.Deploy.Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: System.Management.Automation.SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -VoiceResponses
-PARAMVALUE: System.Collections.Generic.List
-
-The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the organizational auto attendant. 
-
-Voice responses are currently limited to one voice response per menu option. 
-
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
