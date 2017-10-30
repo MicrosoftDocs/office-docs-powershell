@@ -13,7 +13,7 @@ git clone [URL to your forked repo]
 ```
 3. Keep your forked repo up-to-date with upstream repo.
 ```
-git remote add upstream https://github.com/MicrosoftDocs/office-powershell-docs.git 
+git remote add upstream https://github.com/MicrosoftDocs/office-docs-powershell.git 
 ```
 ```
 git fetch upstream
@@ -45,7 +45,7 @@ https://help.github.com/articles/about-two-factor-authentication/.
 
 Fork the GitHub project into your own account so you have a place to work on it.
 To Fork the project, point your web browser to the repository at
-https://github.com/MicrosoftDocs/office-powershell-docs 
+https://github.com/MicrosoftDocs/office-docs-powershell
 and then click the Fork button on the upper right corner of the repository page as shown in screenshot.
 
 ![Image of Fork button on Github](images/fork_button_on_github.png)
@@ -86,7 +86,7 @@ Using Visual Studio Code and Git Bash you can clone a repository as follows:
 git clone [URL to your forked repo]
 ```
 
-For example, `git clone https://github.com/kenwith/office-powershell-docs.git`
+For example, `git clone https://github.com/kenwith/office-docs-powershell.git`
 
 Note that in this example my user is 
 **kenwith**
@@ -99,7 +99,7 @@ It is best to use your own working branch so this will be covered in the next se
 To update your copy of the repo with the upstream copy you first need to add a remote origin and then fetch the upstream branch. 
 There are many ways to do this but one way is to use Git Bash as follows:
 ```
-git remote add upstream https://github.com/MicrosoftDocs/office-powershell-docs.git 
+git remote add upstream https://github.com/MicrosoftDocs/office-docs-powershell.git 
 ```
 ```
 git fetch upstream
@@ -176,7 +176,7 @@ To get your work back into the upstream repo you create a Pull Request.
 A Pull Request asks the maintainers of the upstream repo to pull your work into the main project.
 
 1. To create a Pull Request, Open your web browser and navigate to the main upstream repo site at:
-https://github.com/MicrosoftDocs/office-powershell-docs
+https://github.com/MicrosoftDocs/office-docs-powershell
 2. Click the New Pull Request button towards the top of the page.
 3. Click the link to "compare across forks".
 4. Select the upstream branch and your local branch.
@@ -197,7 +197,7 @@ Your work will also show up in the Office products themselves when a user types 
 You just joined an elite club of contributors to Microsoft Office documentation!
 Your edits will be pulled into the product and show up under Get-Help when someone is viewing reference content for the cmdlet you edited. 
 See your status here:
-https://github.com/MicrosoftDocs/office-powershell-docs/graphs/contributors
+https://github.com/MicrosoftDocs/office-docs-powershell/graphs/contributors
 
 Don't forget to ~~brag~~ share on social media! 
 Sharing helps sustain the community and advertises to others to contribute to the open source content as well!
