@@ -7,12 +7,10 @@ online version:
 schema: 2.0.0
 ---
 
-# Add-TeamUser 
+# Add-TeamUser
 
 ## SYNOPSIS
-Note: This cmdlet is currently in Beta.
-
-Adds an owner or member to the team.
+Adds an owner or member to the team
 
 ## SYNTAX
 
