@@ -24,100 +24,50 @@ Add-TeamUser -GroupId <String> -User <String> [-Role <String>]
 
 ## EXAMPLES
 
+### --------------------------  Example 1  --------------------------
+```
+Add-TeamUser -GroupId 31f1ff6c-d48c-4f8a-b2e1-abca7fd399df -User dmx@example.com
+```
+
+Add user dmx@example.com to group.
+
 ## PARAMETERS
 
-### -TenantId
-@{Text=}
+### -GroupId
+GroupId of the team
 
 ```yaml
 Type: String
-Parameter Sets: UserCredential, AccessToken
-Aliases: Domain, TenantDomain
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: ServicePrincipalCertificate
-Aliases: Domain, TenantDomain
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Credential
-@{Text=}
-
-```yaml
-Type: PSCredential
-Parameter Sets: UserCredential
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AccountId
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: UserCredential
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LogLevel
-@{Text=}
-
-```yaml
-Type: LogLevel
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -LogFilePath
-@{Text=}
+### -User
+User's UPN (user principal name - e.g.
+johndoe@example.com)
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Role
+Member or Owner
 
 ```yaml
 Type: String
@@ -128,103 +78,7 @@ Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-@{Text=}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CertificateThumbprint
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: ServicePrincipalCertificate
-Aliases:
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApplicationId
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: ServicePrincipalCertificate
-Aliases:
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AadAccessToken
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MsAccessToken
-@{Text=}
-
-```yaml
-Type: String
-Parameter Sets: AccessToken
-Aliases:
-Applicable: Microsoft Teams
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
