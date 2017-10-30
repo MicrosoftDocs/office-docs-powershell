@@ -20,24 +20,6 @@ Adds an owner or member to the team.
 Add-TeamUser -GroupId <String> -User <String> [-Role <String>]
 ```
 
-### UserCredential (Default)
-```
-Connect-MicrosoftTeams [-TenantId <String>] [-Credential <PSCredential>] [-AccountId <String>]
- [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm]
-```
-
-### ServicePrincipalCertificate
-```
-Connect-MicrosoftTeams -TenantId <String> -CertificateThumbprint <String> -ApplicationId <String>
- [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm]
-```
-
-### AccessToken
-```
-Connect-MicrosoftTeams [-TenantId <String>] -AadAccessToken <String> [-MsAccessToken <String>]
- -AccountId <String> [-LogLevel <LogLevel>] [-LogFilePath <String>] [-WhatIf] [-Confirm]
-```
-
 ## DESCRIPTION
 
 ## EXAMPLES
