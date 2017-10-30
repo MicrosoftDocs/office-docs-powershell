@@ -7,7 +7,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Add-TeamUser
+# Add-TeamUser 
 
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
