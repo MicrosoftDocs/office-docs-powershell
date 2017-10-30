@@ -101,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeStatus
-If specified, the status records for each organzational auto attendant in the result set are also retrieved.
+If specified, the status records for each organizational auto attendant in the result set are also retrieved.
 
 ```yaml
 Type: SwitchParameter
