@@ -23,7 +23,8 @@ Set-CsHuntGroup [-PrimaryUri <Object>] [-AgentAlertTime <Object>] [-BypassDualWr
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+
+The following parameters are not applicable to Skype for Business Online: AllowOptOut, AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and RoutingMethod
 
 ## EXAMPLES
 

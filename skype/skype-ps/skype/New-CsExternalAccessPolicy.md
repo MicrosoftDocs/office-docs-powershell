@@ -55,7 +55,7 @@ New external access policies can be created by using the New-CsExternalAccessPol
 Note that these policies can only be created at the site or the per-user scope; you cannot create a new policy at the global scope.
 In addition, you can have only one external access policy per site: if the Redmond site already has been assigned an external access policy you cannot create a second policy for the site.
 
-
+The following parameters are not applicable to Skype for Business Online: AsJob, Description, EnableXmppAccess, Force, Identity, InMemory, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
