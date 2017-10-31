@@ -7,7 +7,7 @@ schema: 2.0.0
 # New-SPEduClass
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 ## SYNTAX
 
@@ -18,21 +18,21 @@ New-SPEduClass [-AssignmentCollection <SPAssignmentCollection>] [-Building <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Do not use
 ```
 
-{{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 ```
 
 ### -Building
-{{Fill Building Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-{{Fill ClassId Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -80,7 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassName
-{{Fill ClassName Description}}
+{Do not use
 
 ```yaml
 Type: String
@@ -96,7 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -DayOfWeek
-{{Fill DayOfWeek Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -112,7 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-{{Fill EndDate Description}}
+Do not use
 
 ```yaml
 Type: DateTime
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -EndTime
-{{Fill EndTime Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -144,7 +144,7 @@ Accept wildcard characters: False
 ```
 
 ### -Room
-{{Fill Room Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Do not use
 
 ```yaml
 Type: SPSitePipeBind
@@ -176,7 +176,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-{{Fill StartDate Description}}
+Do not use
 
 ```yaml
 Type: DateTime
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-{{Fill StartTime Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Year
-{{Fill Year Description}}
+Do not use
 
 ```yaml
 Type: String

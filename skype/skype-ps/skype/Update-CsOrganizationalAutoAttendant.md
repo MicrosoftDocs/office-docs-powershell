@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Update-CsOrganizationalAutoAttendant.xml
 applicable: Skype for Business Online
 title: Update-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -8,115 +8,52 @@ schema: 2.0.0
 # Update-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Update-CsOrganizationalAutoAttendant \[-PrimaryUri\] \<uri\> \[-ApplicationId \<guid\>\] \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-BypassDualWrite \<bool\>\] \[-Force\] \[\<CommonParameters\>\]
+Use Update-CsOrganizationalAutoAttendant cmdlet to force an update of resources associated with an Organizational Auto Attendant (OAA) provisioning.
 
 ## SYNTAX
 
 ```
-Update-CsOrganizationalAutoAttendant [[-PrimaryUri] <Object>] [-ApplicationId <Object>]
- [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
- [<CommonParameters>]
+Update-CsOrganizationalAutoAttendant [-PrimaryUri] <Uri> [-ApplicationId <Guid>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet provides a way to update the resources associated with an organizational auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status and the SIP provisioning status of an organizational auto attendant.
+
+Note: This cmdlet only triggers the refresh of organizational auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of organizational auto attendant can be retrieved using Get-CsOrganizationalAutoAttendantStatus cmdlet.  
+
 
 ## EXAMPLES
 
-### Example 1
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Update-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-{{ Add example description here }}
+In Example 1, the Update-CsOrganizationalAutoAttendant cmdlet is used to update all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
-### -ApplicationId
-{{Fill ApplicationId Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-{{Fill DomainController Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-{{Fill Force Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PrimaryUri
-{{Fill PrimaryUri Description}}
+The Primary URI represents the SIP address of the organizational auto attendant whose resources are to be updated.
 
 ```yaml
-Type: Object
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Tenant
-{{Fill Tenant Description}}
+### -ApplicationId
+Specifies a custom application ID to use for OAAs. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -128,11 +65,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
+### -Tenant
 
 ```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -149,12 +85,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### String
+The Update-CsOrganizationalAutoAttendant cmdlet accepts a string as the PrimaryUri parameter.
+
 
 ## OUTPUTS
 
-### System.Object
+### None
+
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOrganizationalAutoAttendantStatus](Get-CsOrganizationalAutoAttendantStatus.md)

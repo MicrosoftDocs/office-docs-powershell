@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Get-CsOrganizationalAutoAttendantSupportedLanguage.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantSupportedLanguage
 schema: 2.0.0
@@ -13,8 +13,7 @@ The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets languages tha
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantSupportedLanguage [[-Identity] <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOrganizationalAutoAttendantSupportedLanguage [-Identity] <System.String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,65 +33,15 @@ This example gets all supported languages.
 Get-CsOrganizationalAutoAttendantSupportedLanguage -Identity "en-US"
 ```
 
-The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets all languages (and their corresponding voices/speakers) that are supported by the OAA service.
+This example gets the language that the Identity parameter specifies (en-US).
 
 ## PARAMETERS
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Identity
 The Identity parameter designates a specific language to be retrieved. If this parameter is not specified, then all supported languages are returned.
 
-PARAMVALUE: String
-
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -105,26 +54,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

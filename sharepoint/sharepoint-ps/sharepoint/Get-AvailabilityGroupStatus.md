@@ -7,7 +7,7 @@ schema: 2.0.0
 # Get-AvailabilityGroupStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns one or more objects representing the availability groups known to the SharePoint farm.
 
 ## SYNTAX
 
@@ -23,15 +23,18 @@ Get-AvailabilityGroupStatus [-AssignmentCollection <SPAssignmentCollection>] [-I
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Get-AvailabilityGroupStatus -Identity MyAvailabilityGroup 
+
 ```
 
-{{ Add example description here }}
+This example returns an availability group named "MyAvailabilityGroup".
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+NOTE: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +50,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Finds the availability group whose name property matches this string. Otherwise, returns all availability groups.
 
 ```yaml
 Type: String

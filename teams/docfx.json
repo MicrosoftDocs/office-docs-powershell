@@ -1,0 +1,67 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "teams-ps",
+        "dest": "teams",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "teams-ps",
+        "dest": "teams/teams-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "teams-ps",
+      "version": "teams-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "teams-ps",
+      "version": "teams-ps",
+      "dest": "module/teams-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "teams-ps": {
+        "dest": "teams-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "author" : "kenwith",
+      "ms.author" : "kenwith",
+      "ms.date" : "09/25/2017",
+      "ms.topic" : "reference",
+      "ms.service" : "teams-powershell",
+      "ms.devlang" : "powershell"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "teams-ps"
+  }
+}
