@@ -15,7 +15,7 @@ These policies also manage a user's ability to employ Call via Work, a feature t
 Mobility policies can also be used to require Wi-Fi connections when making or receiving calls.
 This cmdlet was introduced in the cumulative update for Lync Server 2010: November 2011.
 
-
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, InMemory, PipelineVariable, RequireIntune, Tenant, and VoiceSettings
 
 ## SYNTAX
 

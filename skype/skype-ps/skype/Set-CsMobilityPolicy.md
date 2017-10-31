@@ -73,6 +73,7 @@ In turn, that means that the user will not be able to use Call via Work, regardl
 
 To use Call via Work, users must be managed by a voice policy that allows simultaneous ringing.
 
+The following parameters are not applicable to Skype for Business Online: AllowAutomaticPstnFallback, AllowCustomerExperienceImprovementProgram, AllowExchangeConnectivity, AllowSaveCallLogs, AsJob, Description, EncryptAppData, Force, Identity, Instance, PipelineVariable, RequireIntune, Tenant, VoiceSettings
 
 ## EXAMPLES
 

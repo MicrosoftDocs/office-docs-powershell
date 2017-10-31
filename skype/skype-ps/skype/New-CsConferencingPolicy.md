@@ -59,6 +59,8 @@ The New-CsConferencingPolicy cmdlet enables you to create new conferencing polic
 You cannot create a new global policy because the global policy already exists.
 However, you can modify the property values of the global policy by using the Set-CsConferencingPolicy cmdlet.
 
+The following parameters are not applicable to Skype for Business Online: ApplicationSharingMode, AppSharingBitRateKb, AsJob, AudioBitRateKb, Description, EnableMultiViewJoin, EnableOnlineMeetingPromptForLyncResources, EnableReliableConferenceDeletion, FileTransferBitRateKb, Force, Identity, InMemory, MaxMeetingSize, MaxVideoConferenceResolution, PipelineVariable, Tenant, TotalReceiveVideoBitRateKb, and VideoBitRateKb
+
 
 
 ## EXAMPLES
@@ -717,9 +719,6 @@ Accept wildcard characters: False
 Bit rate (in kilobits) used for application sharing.
 The default value is 50000.
 
-{{Fill AppSharingBitRateKb Description}}
-
-
 
 ```yaml
 Type: Int64
@@ -1023,7 +1022,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
 
 ```yaml
 Type: Object
@@ -1076,7 +1074,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableReliableConferenceDeletion
-{{Fill EnableReliableConferenceDeletion Description}}
+PARAMVALUE: $true | $false
 
 ```yaml
 Type: Object
@@ -1118,7 +1116,6 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter

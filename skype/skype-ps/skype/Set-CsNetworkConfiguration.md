@@ -62,6 +62,7 @@ If at any point in the validation you choose to stop validation (by typing N at 
 If EnableBandwidthPolicyCheck is already set to True, you can call the `Set-CsNetworkConfiguration` cmdlet and pass a value of True to the parameter EnableBandwidthPolicyCheck to run the validation without modifying any settings.
 In addition, when EnableBandwidthPolicyCheck is True, any changes you attempt to make by calling the `Set-CsNetworkConfiguration` cmdlet will again cause the validation check to run.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, BWPolicyProfiles, EnableBandwidthPolicyCheck, Force, Identity, Instance, InterNetworkRegionRoutes, InterNetworkSitePolicies, NetworkRegionLinks, NetworkRegions, NetworkSites, PipelineVariable, Subnets, and Tenant
 
 ## EXAMPLES
 

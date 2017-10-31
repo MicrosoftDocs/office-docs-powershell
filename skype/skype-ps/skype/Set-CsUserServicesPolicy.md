@@ -53,6 +53,7 @@ After that, you must then use the `Invoke-CsUcsRollback` cmdlet to "manually" mi
 
 Skype for Business Server Control Panel: The functions carried out by the `Set-CsUserServicesPolicy` cmdlet are not available in the Skype for Business Server Control Panel.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, Force, Identity, Instance, MigrationDelayInDays, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
