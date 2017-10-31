@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Returns the state information about the specified scale-out database.
 
 
 

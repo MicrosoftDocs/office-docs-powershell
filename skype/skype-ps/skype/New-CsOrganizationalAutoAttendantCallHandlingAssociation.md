@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOrganizationalAutoAttendantCallHandlingAssociation.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantCallHandlingAssociation
 schema: 2.0.0
@@ -13,9 +13,7 @@ Use the New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet to creat
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallHandlingAssociation [-ScheduleId <Object>] [-Type <Object>]
- [-BypassDualWrite <Object>] [-Disable] [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob]
- [-CallFlowId <Object>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallHandlingAssociation -CallFlowId <String> -ScheduleId <String> -Type <AfterHours> [-Disable] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,10 +32,11 @@ $menuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "To re
 $menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName 
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
 $callFlowId = $callFlow.Id
+
 $callHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId
 ```
 
-This example creates a new call handling association.
+This example creates a new after-hours call handling association.
 
 ### -------------------------- Example 2 -------------------------- 
 ```
@@ -49,28 +48,46 @@ $menuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "To re
 $menu = New-CsOrganizationalAutoAttendantMenu -Name "Default Menu" -Prompts $menuPrompt -EnableDialByName 
 $callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default Call Flow" -Menu $menu
 $callFlowId = $callFlow.Id
+
 $disabledCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $scheduleId -CallFlowId $callFlowId -Disable
 ```
 
-This example creates a disabled call handling association.
+This example creates a disabled after-hours call handling association.
 
 ## PARAMETERS
 
-### -ScheduleId
-PARAMVALUE: String
+### -CallFlowId
+The CallFlowId parameter represents the call flow to be associated with the schedule. 
 
+You can create a call flow by using the New-CsOrganizationalAutoAttendantCallFlow cmdlet.
+
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ScheduleId
 The ScheduleId parameter represents the schedule to be associated with the call flow. 
 
 You can create a schedule by using the New-CsOnlineSchedule cmdlet 
 
 
 ```yaml
-Type: Object
+Type: System.String
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -78,8 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-PARAMVALUE: Microsoft.Rtc.Management.Hosted.OAA.Models.CallHandlingAssociationType
-
 The Type parameter represents the type of the call handling association. Currently, only AfterHours is supported. 
 
 
@@ -89,23 +104,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -113,41 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Disable
-PARAMVALUE: System.Management.Automation.SwitchParameter
-
-The Disable parameter, if set, establishes that the call handling association is created as disabled.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Microsoft.Rtc.Management.Deploy.Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: System.Management.Automation.SwitchParameter
+The Disable parameter, if set, establishes that the call handling association is created as disabled. This parameter can only be used when the Type parameter is set to AfterHours.
 
 ```yaml
 Type: SwitchParameter
@@ -163,47 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -CallFlowId
-PARAMVALUE: System.String
-
-The CallFlowId parameter represents the call flow to be associated with the schedule. 
-
-You can create a call flow by using the New-CsOrganizationalAutoAttendantCallFlow cmdlet.
-
-
-```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

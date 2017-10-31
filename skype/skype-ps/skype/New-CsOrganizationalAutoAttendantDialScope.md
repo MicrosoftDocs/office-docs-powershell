@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOrganizationalAutoAttendantDialScope.xml
 applicable: Skype for Business Online
 title: New-CsOrganizationalAutoAttendantDialScope
 schema: 2.0.0
@@ -13,14 +13,14 @@ Use New-CsOrganizationalAutoAttendantDialScope cmdlet to create dial-scopes for 
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantDialScope [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force]
- [-GroupIds <Object>] [-GroupScope] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds <List> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 This cmdlet creates a new dial-scope to be used with Organizational Auto Attendant (OAA) service. OAAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature. 
 
-Note: The returned dial-scope model composes a member for the underlying type/implementation. E.g. in case of the group-based dial scope, in order to modify its Group Ids you can access them through DialScope.GroupScope.GroupIds.  
+**NOTE**
+- The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.  
 
 
 ## EXAMPLES
@@ -35,41 +35,8 @@ In Example 1, the New-CsOrganizationalAutoAttendantDialScope cmdlet is used to c
 
 ## PARAMETERS
 
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Microsoft.Rtc.Management.Deploy.Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: System.Management.Automation.SwitchParameter
-
+### -GroupScope
+Indicates that a dial-scope based on groups (distribution lists, security groups) is to be created.
 
 ```yaml
 Type: SwitchParameter
@@ -77,7 +44,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -85,41 +52,17 @@ Accept wildcard characters: False
 ```
 
 ### -GroupIds
-PARAMVALUE: System.Collections.Generic.List
+Refers to the IDs of the groups that are to be included in the dial-scope.
 
-Refers to the ids of the groups that are to be included in the dial-scope.
-
-Group ids can be obtained by using the Find-CsGroup cmdlet. 
-
-This parameter becomes mandatory when GroupScope parameter is specified.
-
+Group IDs can be obtained by using the Find-CsGroup cmdlet. 
 
 ```yaml
-Type: Object
+Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupScope
-PARAMVALUE: System.Management.Automation.SwitchParameter
-
-Indicates that a dial-scope based on groups (distribution lists, security groups) is to be created.
-
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -127,26 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online

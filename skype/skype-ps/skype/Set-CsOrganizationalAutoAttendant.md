@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Set-CsOrganizationalAutoAttendant.xml
 applicable: Skype for Business Online
 title: Set-CsOrganizationalAutoAttendant
 schema: 2.0.0
@@ -13,12 +13,11 @@ Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an 
 ## SYNTAX
 
 ```
-Set-CsOrganizationalAutoAttendant [[-Instance] <Object>] [-BypassDualWrite <Object>] [-Confirm]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Set-CsOrganizationalAutoAttendant [-Instance] <Object> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an OAA. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
+The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an organizational auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
 
 
 ## EXAMPLES
@@ -36,12 +35,9 @@ This example changes the telephone number for the OAA that has a Primary URI of 
 ## PARAMETERS
 
 ### -Instance
-PARAMVALUE: OrgAutoAttendant
-
 The Instance parameter is the object reference to the OAA to be modified. 
 
 You can retrieve an object reference to an existing OAA by using the Get-CsOrganizationalAutoAttendant cmdlet and assigning the returned value to a variable.
-
 
 ```yaml
 Type: Object
@@ -49,114 +45,17 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Confirm
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -186,5 +85,7 @@ The Set-CsOrganizationalAutoAttendant cmdlet does not return any objects or valu
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsOrganizationalAutoAttendant](New-CsOrganizationalAutoAttendant.md)
 
 [Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)
