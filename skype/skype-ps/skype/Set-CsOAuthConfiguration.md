@@ -48,6 +48,7 @@ Each Skype for Business Online tenant is also limited to a single collection of 
 
 Skype for Business Server Control Panel: The functions carried out by the `Set-CsOAuthConfiguration` cmdlet are not available in the Skype for Business Server Control Panel.
 
+The following parameters are not applicable to Skype for Business Online: AdditionalAudienceUrls, AlternateAudienceUrl, AsJob, ClientAuthorizationOAuthServerIdentity, ExchangeAutodiscoverAllowedDomains, ExchangeAutodiscoverUrl, Force, Identity, Instance, PipelineVariable, Realm, ServiceName, and Tenant
 
 ## EXAMPLES
 

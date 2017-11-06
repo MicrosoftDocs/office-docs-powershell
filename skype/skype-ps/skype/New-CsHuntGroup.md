@@ -30,6 +30,8 @@ Note, you need to specify UseDefaultMusicOnHold $True (default is none), or prov
 
 MusicOnHoldFileName and MusicOnHoldFileContent cannot be empty so you must specify a valid MusicOnHoldFileName and MusicOnHoldFileContent or set UseDefaultMusicOnHold to true.
 
+The following parameters are not applicable to Skype for Business Online: AllowOptOut, AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, Ring, and RoutingMethod
+
 
 ## EXAMPLES
 

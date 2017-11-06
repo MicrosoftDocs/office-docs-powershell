@@ -20,7 +20,8 @@ Set-CsOnlineApplicationEndpoint [[-Uri] <Object>] [-Audience <Object>] [-BypassD
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+
+The following parameters are not applicable to Skype for Business Online: AsJob, Audience, CallbackUri, DomainController, Force, IsInternalRun, PipelineVariable, Ring, and RunFullProvisioningFlow
 
 ## EXAMPLES
 

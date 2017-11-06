@@ -56,6 +56,7 @@ In addition to creating new collections of UC phone settings, you can use the `S
 For example, by default logging is disabled for UC phones.
 To enable logging at the global level, you can use the `Set-CsUCPhoneConfiguration` cmdlet to change the value of the global collection's LoggingLevel property to True.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, CalendarPollInterval, Force, Identity, Instance, PipelineVariable, SIPSecurityMode, Tenant, Voice8021p, and VoiceDiffServTag
 
 ## EXAMPLES
 
