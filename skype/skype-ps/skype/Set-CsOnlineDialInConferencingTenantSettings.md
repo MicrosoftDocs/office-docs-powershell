@@ -34,6 +34,8 @@ For more information, see `Get-CsOnlineDialinConferencingTenantConfiguration`.
 There is always a single instance of the dial-in conferencing settings per tenant.
 You can modify the settings using `Set-CsOnlineDialInConferencingTenantSettings` and revert those settings to their defaults by using `Remove-CsOnlineDialInConferencingTenantSettings`.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, EnableDialOutJoinConfirmation, IncludeTollFreeNumberInMeetingInvites, MigrateServiceNumbersOnCrossForestMove, and UseUniqueConferenceIds
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------

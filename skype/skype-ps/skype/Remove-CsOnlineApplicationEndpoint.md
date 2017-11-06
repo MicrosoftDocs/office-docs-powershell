@@ -19,7 +19,7 @@ Remove-CsOnlineApplicationEndpoint [[-Uri] <Object>] [-Audience <Object>] [-Bypa
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The following parameters are not applicable to Skype for Business Online: AsJob, Audience, DomainController, Force, IsInternalRun, PhoneNumber, PipelineVariable, Ring, and RunFullProvisioningFlow
 
 ## EXAMPLES
 

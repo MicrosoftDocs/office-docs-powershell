@@ -56,6 +56,7 @@ Setting Enabled to True enables media bypass, while setting AlwaysBypass to True
 The media bypass configuration is stored with the network configuration settings.
 Therefore, in line 2 of the example, we save the media bypass configuration changes to the network configuration by calling the Set-CsNetworkConfiguration cmdlet and passing the media bypass configuration object ($a) we created in line 1 to the MediaBypassSettings parameter.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, BypassID, EnableDefaultBypassID, EnabledForAudioVideoConferences, ExternalBypassMode, InternalBypassMode, PipelineVariable, and Tenant
 
 
 ### -------------------------- EXAMPLE 2 -------------------------- 
