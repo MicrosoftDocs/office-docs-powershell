@@ -19,15 +19,25 @@ New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List
 [-SaturdayHours <List>] [-SundayHours <List>] [-Complement] [-Tenant <Guid>] [-CommonParameters]
 ```
 
+### FixedSchedule
+```
+New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [-CommonParameters]
+=======
+```
+
 ## DESCRIPTION
 The New-CsOnlineSchedule cmdlet creates a new schedule for the Organizational Auto Attendant (OAA) service. The OAA service uses schedules to conditionally execute call flows when a specific schedule is in effect.
 
 **NOTE**
 - The type of the schedule cannot be altered after the schedule is created.
-- Currently, only one type of schedule can be created: WeeklyRecurrentSchedule.
+- Currently, only two types of schedules can be created: WeeklyRecurrentSchedule or FixedSchedule.
+- The schedule types are mutually exclusive. So a weekly recurrent schedule cannot be a fixed schedule and vice versa.
 - For a weekly recurrent schedule, at least one day should have time ranges specified.
 - You can create a new time range by using New-CsOnlineTimeRange cmdlet.
-- The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday’s time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property.
+- A fixed schedule can be created without any date-time ranges. In this case, it would never be in effect.
+- For a fixed schedule, at most 10 date-time ranges can be specified.
+- You can create a new date-time range for a fixed schedule by using the New-CsOnlineDateTimeRange cmdlet.
+- The return type of this cmdlet composes a member for the underlying type/implementation. For example, in case of the weekly recurrent schedule, you can modify Monday’s time ranges through the Schedule.WeeklyRecurrentSchedule.MondayHours property. Similarly, date-time ranges of a fixed schedule can be modified by using the Schedule.FixedSchedule.DateTimeRanges property.
 
 ## EXAMPLES
 
@@ -48,6 +58,32 @@ $afterHours = New-CsOnlineSchedule -Name " After Hours" -WeeklyRecurrentSchedule
 ```
 
 This example creates a weekly recurrent schedule that is active at all times except Monday-Friday, 9AM-12PM and 1PM-5PM.
+
+### -------------------------- Example 3 -------------------------- 
+```
+$dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+```
+
+This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017.
+
+### -------------------------- Example 4 -------------------------- 
+```
+$dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
+$christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr1, $dtr2)
+```
+
+This example creates a fixed schedule that is active from December 24, 2017 to December 26, 2017 and then from December 24, 2018 to December 26, 2018.
+
+### -------------------------- Example 5 -------------------------- 
+```
+$dtr1 = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$dtr2 = New-CsOnlineDateTimeRange -Start "24/12/2018" -End "26/12/2018"
+$notInEffectSchedule = New-CsOnlineSchedule -Name “NotInEffect” -FixedSchedule
+```
+
+This example creates a fixed schedule that is never active.
 
 ## PARAMETERS
 
@@ -201,8 +237,40 @@ When Complement is enabled, the schedule is used as the inverse of the provided 
 For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FixedSchedule
+The FixedSchedule parameter indicates that a fixed schedule is to be created.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: FixedSchedule
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DateTimeRanges
+List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can be specified using this parameter.
+
+```yaml
+Type: System.Collections.Generic.List
+Parameter Sets: FixedSchedule
 Aliases: 
 Applicable: Skype for Business Online
 
@@ -246,5 +314,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 ## RELATED LINKS
 
 [New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
+
+[New-CsOnlineDateTimeRange](New-CsOnlineDateTimeRange.md)
 
 [New-CsOrganizationalAutoAttendantCallFlow](New-CsOrganizationalAutoAttendantCallFlow.md)
