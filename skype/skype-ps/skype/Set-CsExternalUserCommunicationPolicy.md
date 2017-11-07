@@ -20,7 +20,8 @@ Set-CsExternalUserCommunicationPolicy [[-Identity] <Object>] [-AllowPresenceVisi
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+The following parameters are not applicable to Skype for Business Online: AllowPresenceVisibility, AllowTitleVisibility, AsJob, EnableFileTransfer, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 

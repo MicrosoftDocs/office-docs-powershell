@@ -99,7 +99,6 @@ The ScheduleId parameter represents the schedule to be associated with the call 
 
 You can create a schedule by using the New-CsOnlineSchedule cmdlet 
 
-
 ```yaml
 Type: System.String
 Parameter Sets: (All)

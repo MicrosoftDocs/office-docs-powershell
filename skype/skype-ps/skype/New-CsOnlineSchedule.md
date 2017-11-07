@@ -22,6 +22,7 @@ New-CsOnlineSchedule -Name <String> -WeeklyRecurrentSchedule [-MondayHours <List
 ### FixedSchedule
 ```
 New-CsOnlineSchedule -Name <String> -FixedSchedule [-DateTimeRanges <List>] [-Tenant <Guid>] [-CommonParameters]
+=======
 ```
 
 ## DESCRIPTION
@@ -236,7 +237,7 @@ When Complement is enabled, the schedule is used as the inverse of the provided 
 For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
 
 ```yaml
-Type: SwitchParameter
+Type: System.Collections.Generic.List
 Parameter Sets: WeeklyRecurrentSchedule
 Aliases: 
 Applicable: Skype for Business Online

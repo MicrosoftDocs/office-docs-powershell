@@ -63,6 +63,7 @@ After an external access policy has been created, you can use the `Set-CsExterna
 For example, by default the global policy does not allow users to communicate with people who have accounts with a federated organization.
 If you would like to grant this capability to all of your users you can call the `Set-CsExternalAccessPolicy` cmdlet and set the value of the global policy's EnableFederationAccess property to True.
 
+The following parameters are not applicable to Skype for Business Online: AsJob, Description, EnableXmppAccess, Force, Identity, Instance, PipelineVariable, and Tenant
 
 ## EXAMPLES
 
