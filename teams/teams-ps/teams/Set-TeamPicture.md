@@ -14,6 +14,9 @@ Note: This cmdlet is currently in Beta.
 
 Update the team picture.
 
+Note: the command will return immediately, but the Teams application will not reflect the update immediately. 
+The Teams application may need to be open for up to an hour before changes are reflected.
+
 ## SYNTAX
 
 ```
