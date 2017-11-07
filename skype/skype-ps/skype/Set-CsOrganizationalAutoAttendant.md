@@ -19,6 +19,8 @@ Set-CsOrganizationalAutoAttendant [-Instance] <Object> [-Tenant <Guid>] [<Common
 ## DESCRIPTION
 The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an organizational auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
 
+**NOTE**
+- **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
 
 ## EXAMPLES
 
@@ -31,6 +33,28 @@ Set-CsOrganizationalAutoAttendant -Instance $oaa
 
 This example changes the telephone number for the OAA that has a Primary URI of sip:mainoaa@contoso.com.
 
+### -------------------------- Example 2 --------------------------
+```
+$oaa = Get-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
+
+$christmasGreetingPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+$christmasMenuOption = New-CsOrganizationalAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic 
+$christmasMenu = New-CsOrganizationalAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
+$christmasCallFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
+
+$dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+
+$christmasCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
+
+$oaa.CallFlows = $oaa.CallFlows + @($christmasCallFlow)
+$oaa.Schedules = $oaa.Schedules + @($christmasSchedule)
+$oaa.CallHandlingAssociations = $oaa.CallHandlingAssociations + @($christmasCallHandlingAssociation)
+
+Set-CsOrganizationalAutoAttendant -Instance $oaa
+```
+
+This example adds a Christmas holiday to an OAA that a Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
