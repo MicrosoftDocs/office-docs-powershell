@@ -4,7 +4,7 @@ Microsoft PowerShell is a command-line shell and scripting language that provide
 
 By default,  Powershell is located at the following path:  <%SystemRoot%>\System32\WindowsPowerShell\v1.0\PowerShell.exe.
 
-For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets] (sharepoint-server-cmdlets.md)
+For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets](sharepoint-server-cmdlets.md)
 
-For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets] (sharepoint-online-cmdlets.md)
+For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online-cmdlets.md)
 
