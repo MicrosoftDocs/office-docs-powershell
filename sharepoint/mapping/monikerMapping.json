@@ -6,8 +6,8 @@
         "packageRoot": "sharepoint-ps",
         "modules": {
             "sharepoint-online": {},
-            "sharepoint-server": {}
-     
+            "sharepoint-server": {},
+            "sharepoint-pnp": {}
         }
     }
 }
