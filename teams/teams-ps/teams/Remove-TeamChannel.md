@@ -15,6 +15,9 @@ Note: This cmdlet is currently in Beta.
 Delete a channel.
 This will not delete content in associated tabs.
 
+Note: The channel will be "soft deleted", meaning the contents are not permanently deleted for a time. 
+So a subsequent call to Add-TeamChannel using the same channel name will fail if enough time has not passed.
+
 ## SYNTAX
 
 ```
