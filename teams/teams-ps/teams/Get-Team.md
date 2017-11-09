@@ -62,3 +62,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[New-Team](New-Team.md)
+
+[Set-Team](Set-Team.md)
