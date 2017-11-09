@@ -5,6 +5,26 @@ A repository to hold the help reference content for Office PowerShell cmdlets.
 Anyone who is interested can contribute to the Microsoft Office PowerShell reference topics. 
 When you contribute your work will go directly into the Microsoft Office products and show up in Get-Help for the given Office cmdlet.
 
+# Contribute using the GitHub website (simplest)
+
+## The easiest way to make a quick change is to use the GitHub website
+1. Open your browser, login to GitHub, and then navigate to https://github.com/microsoftdocs/office-docs-powershell
+2. Browse to the file you want to edit. In this example we will edit https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/New-Team.md and add a link in the Related Links section.
+3. Click the Edit icon which looks like a pencil in the upper right corner. 
+![Image of Edit button on Github](images/edit_icon.png)
+
+4. Your browser will then open the file in an edit window. We want to add a link so we scroll down to the Related Links section and add the link in the correct format.
+![Image of Edit button on Github](images/add_related_link.png)
+
+**Note** that since you are likely not a maintainer of the Git repository GitHub will automatically 'Fork' the project into your personal GitHub account. A fork is just an exact copy of the repository in your own account so that you have total access to make edits. You are now 'editing' a copy of the project in your own GitHub account. You can always find it again by looking at your GitHub Repositories in your GitHub Profile (drop-down from your name in top right).
+![Image of Automatic Fork message on Github](images/auto_fork.png)
+
+5. You can click the Preview changes link to see what the changes will look like. 
+6. Once you are satisified with your work you submit a Pull Request which asks the maintainer of the main repository (known as Upstream) to pull your edits up. To submit a Pull Request you navigate back to the main repository, https://github.com/microsoftdocs/office-docs-powershell, and click the '''New pull request''' button. You will then request your edits to be pulled up into the main repo.
+
+
+# Contribute using tools such as Git and Visual Studio Code (advanced)
+
 ## Steps in a nutshell
 1. Fork Office PowerShell repo to your own account.
 2. Clone your repo to your local development computer.
