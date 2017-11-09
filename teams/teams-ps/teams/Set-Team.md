@@ -140,3 +140,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Get-Team](Get-Team.md)
+
+[New-Team](New-Team.md)
