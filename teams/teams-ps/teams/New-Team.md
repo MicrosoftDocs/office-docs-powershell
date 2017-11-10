@@ -27,16 +27,19 @@ Creates a new team with user specified settings, and returns a Group object with
 
 ## EXAMPLES
 
-### --------------------------  Example 1  --------------------------
+### Example 1
 ```
 New-Team -DisplayName "Tech Reads"
 ```
 
-### --------------------------  Example 2  --------------------------
+### Example 2
+
 ```
 New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -AccessType Public
 ```
-### --------------------------  Example 3  --------------------------
+
+### Example 3 - Create a team with some members and channels
+
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
 $group = New-Team -alias “TestTeam” -displayname “Test Teams” -AccessType “private”
@@ -47,6 +50,18 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Q4 planning"
 New-TeamChannel -GroupId $group.GroupId -DisplayName "Exec status"
 New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
+```
+
+### Example 4 - Iterate over all Groups and create corresponding Teams
+
+```
+Get-MsolGroup -SearchString "TestyTest" | Where-Object DisplayName -eq TestyTest | foreach-object -process {
+    $name = "TestConvert" + $_.DisplayName
+    $group = New-Team -displayname $name
+    Get-MsolGroupMember -GroupObjectId $_.ObjectId | foreach-object -process {
+        Add-TeamUser -GroupId $group.GroupId -User $_.EmailAddress
+    }
+}
 ```
 
 ## PARAMETERS
