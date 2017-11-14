@@ -49,6 +49,22 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 ```
 
+Create a team with some members and channels.
+
+### --------------------------  Example 4  --------------------------
+```
+Get-MsolGroup -SearchString "TestyTest" | Where-Object DisplayName -eq TestyTest | foreach-object -process { 
+    $name = "TestConvert" + $_.DisplayName 
+    $group = New-Team -displayname $name 
+    Get-MsolGroupMember -GroupObjectId $_.ObjectId | foreach-object -process { 
+        Add-TeamUser -GroupId $group.GroupId -User $_.EmailAddress 
+    } 
+} 
+```
+
+Iterate over all Groups and create corresponding Teams.
+
+
 ## PARAMETERS
 
 ### -AccessType
