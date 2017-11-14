@@ -7,7 +7,8 @@ schema: 2.0.0
 # Remove-SPExcelBIServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+
+Removes an instance of Analysis Services.
 
 
 ## SYNTAX
@@ -18,23 +19,32 @@ Remove-SPExcelBIServer [-Identity] <SPExcelBIServerPipeBind> [-AssignmentCollect
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+
+Use the Remove-SPExcelBIServer cmdlet to remove an instance of Analysis Services from the Allow List of BI servers to be used with
+Excel Services.
+
+
+
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPExcelBIServer -ExcelServiceApplication "MyExcel"
+
 ```
 
-{{ Add example description here }}
+This example removes the instance of the anaylsis services that uses the Excel Service Application named, "MyExcel".
+
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+**NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 ```yaml
 Type: SPAssignmentCollection
@@ -66,8 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcelServiceApplication
-{{Fill ExcelServiceApplication Description}}
-
+Specifies the Excel Services Application Web service application that contains the SPExcelFileLocation list object.The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh; a valid name of an Excel Services Application Web service application in the farm (for example, MyExcelService1); or an instance of a valid SPExcelServiceApplication object.
 ```yaml
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
@@ -82,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the ExcelServiceApplication identity.
 
 ```yaml
 Type: SPExcelBIServerPipeBind
