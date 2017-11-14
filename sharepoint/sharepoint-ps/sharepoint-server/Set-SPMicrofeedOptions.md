@@ -7,7 +7,7 @@ schema: 2.0.0
 # Set-SPMicrofeedOptions
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Sets the feed cache settings. 
 
 
 ## SYNTAX
@@ -20,28 +20,29 @@ Set-SPMicrofeedOptions [-AssignmentCollection <SPAssignmentCollection>] [-AsyncR
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Set-SPMicrofeedOptions cmdlet to set the feed cache settings for the current user profile application.
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPMicrofeedOptions -ProfileServiceApplicationProxy c6681d53-e6c4-432f-9f31-22d3de81b00c
 ```
 
-{{ Add example description here }}
+This example sets the settings for the specified User Profile Service Application Proxy.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+**NOTE:** When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
 
 ```yaml
 Type: SPAssignmentCollection
 Parameter Sets: (All)
-Aliases: 
 Applicable: SharePoint Server 2016
 
 Required: False
@@ -52,7 +53,9 @@ Accept wildcard characters: False
 ```
 
 ### -AsyncRefs
-{{Fill AsyncRefs Description}}
+Performs reference-posts via async threads. If the value is set to True, each @mention in a thread is handled in its own .NET threadpool async thread.
+
+
 
 ```yaml
 Type: Boolean
@@ -68,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCacheMs
-{{Fill MaxCacheMs Description}}
+Specifies the permissible range of cache loop up time.
 
 ```yaml
 Type: Int32
@@ -84,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMentions
-{{Fill MaxMentions Description}}
+Specifies the maximum number @mentions per post and reply.
 
 ```yaml
 Type: Int32
@@ -100,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxPostLength
-{{Fill MaxPostLength Description}}
+Sets the maximum number of characters in a Microfeed post.
 
 ```yaml
 Type: Int32
@@ -116,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxTags
-{{Fill MaxTags Description}}
+Specifies the maximum number #tags per post and reply.
 
 ```yaml
 Type: Int32
@@ -132,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProfileServiceApplicationProxy
-{{Fill ProfileServiceApplicationProxy Description}}
+Specifies the unique identifier for the proxy.
 
 ```yaml
 Type: SPServiceApplicationProxyPipeBind
@@ -148,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscription
-{{Fill SiteSubscription Description}}
+Specifies the account under which this service should run. This parameter is mandatory in a hosted-environment and optional in a non-hosted environment.
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
