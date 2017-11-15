@@ -7,13 +7,19 @@ Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# teams Module
+# Microsoft Teams Module
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for Microsoft Teams.
 
-## teams Cmdlets
+## Microsoft Teams Cmdlets
 ### [Add-TeamUser](Add-TeamUser.md)
 {{Manually Enter Add-TeamUser Description Here}}
+
+### [Connect-MicrosoftTeams](Connect-MicrosoftTeams.md)
+{{Manually Connect-MicrosoftTeams Description Here}}
+
+### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
+{{Manually Enter Disconnect-MicrosoftTeams Description Here}}
 
 ### [Get-Team](Get-Team.md)
 {{Manually Enter Get-Team Description Here}}
