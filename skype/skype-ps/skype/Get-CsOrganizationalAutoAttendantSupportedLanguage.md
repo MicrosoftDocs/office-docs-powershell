@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantSupportedLanguage
 
 ## SYNOPSIS
-The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets languages that are supported by the Organizational Auto Attendant (OAA) service.
+The Get-CsOrganizationalAutoAttendantSupportedLanguage cmdlet gets languages that are supported by the Auto Attendant (AA) service.
 
 ## SYNTAX
 

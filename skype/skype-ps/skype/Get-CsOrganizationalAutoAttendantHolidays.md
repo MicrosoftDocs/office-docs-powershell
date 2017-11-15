@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
-Use Get-CsOrganizationalAutoAttendantHolidays cmdlet to get the holiday information for an existing Organizational Auto Attendant (OAA).
+Use Get-CsOrganizationalAutoAttendantHolidays cmdlet to get the holiday information for an existing Auto Attendant (AA).
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-CsOrganizationalAutoAttendantHolidays [-PrimaryUri] <Uri> [-Years <List>] [-
 ```
 
 ## DESCRIPTION
-The Get-CsOrganizationalAutoAttendantHolidays provides a convenient way to visualize the information of all the holidays contained within an organizational auto attendant.
+The Get-CsOrganizationalAutoAttendantHolidays provides a convenient way to visualize the information of all the holidays contained within an auto attendant.
 
 **NOTE**
 - **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
@@ -29,34 +29,34 @@ The Get-CsOrganizationalAutoAttendantHolidays provides a convenient way to visua
 Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get all holidays in an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get all holidays in an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" -Years @(2017)
 ```
 
-In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get all holidays in year 2017 in an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get all holidays in year 2017 in an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 3 --------------------------
 ```
 Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" –Years @(2017) -Name @("Christmas")
 ```
 
-In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to get holiday named Christmas in the year 2017 in an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 4 --------------------------
 ```
 Get-CsOrganizationalAutoAttendantHolidays -PrimaryUri "sip:mainoaa@contoso.com" | Format-Table -Wrap -AutoSize
 ```
 
-In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to retrieve all holidays in an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com and the result is formatted as a table.
+In this example, the Get-CsOrganizationalAutoAttendantHolidays cmdlet is used to retrieve all holidays in an auto attendant with Primary URI of sip:mainoaa@contoso.com and the result is formatted as a table.
 
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address of the organizational auto attendant whose holidays are to be retrieved.
+The PrimaryUri parameter represents the SIP address of the auto attendant whose holidays are to be retrieved.
 
 ```yaml
 Type: System.Uri

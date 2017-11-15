@@ -28,7 +28,7 @@ New-CsOrganizationalAutoAttendantPrompt -ActiveType <None | TextToSpeech | Audio
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantPrompt cmdlet creates a new prompt for the Organizational Auto Attendant (OAA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None. 
+The New-CsOrganizationalAutoAttendantPrompt cmdlet creates a new prompt for the Auto Attendant (AA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None. 
 
 
 ## EXAMPLES

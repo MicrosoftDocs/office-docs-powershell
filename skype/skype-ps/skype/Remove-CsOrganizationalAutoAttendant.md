@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Use the Remove-CsOrganizationalAutoAttendant cmdlet to delete an Organizational Auto Attendant (OAA).
+Use the Remove-CsOrganizationalAutoAttendant cmdlet to delete an Auto Attendant (AA).
 
 ## SYNTAX
 

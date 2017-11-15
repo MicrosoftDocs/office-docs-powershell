@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendantCallableEntity -Identity <String> -Type <User |
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Organizational Auto Attendant service. Callable entities can be created using either SIP or TEL URIs and can refer to any of the following entities:
+The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either SIP or TEL URIs and can refer to any of the following entities:
 
 - User
 - OrganizationalAutoAttendant
@@ -38,7 +38,7 @@ This example creates a user callable entity.
 $callableEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity "tel:+1234567890" -Type OrganizationalAutoAttendant
 ```
 
-This example creates an organizational auto attendant callable entity.
+This example creates an auto attendant callable entity.
 
 ## PARAMETERS
 
@@ -48,7 +48,7 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 - Only the SIP URIs of users that have Enterprise Voice enabled are supported.
 - Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported. 
 - SIP URIs can be used for a user only.
-- TEL URIs can be a user, an organizational auto attendant, or a hunt group (call queue).
+- TEL URIs can be a user, an auto attendant, or a hunt group (call queue).
 
 ```yaml
 Type: System.String

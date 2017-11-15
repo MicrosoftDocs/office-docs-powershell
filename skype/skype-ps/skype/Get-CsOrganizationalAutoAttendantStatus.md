@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantStatus
 
 ## SYNOPSIS
-Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Organizational Auto Attendant (OAA) provisioning.
+Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Auto Attendant (AA) provisioning.
 
 
 ## SYNTAX
@@ -19,7 +19,7 @@ Get-CsOrganizationalAutoAttendantStatus [-PrimaryUri] <Uri> [-IncludeResources <
 
 
 ## DESCRIPTION
-This cmdlet provides a way to return the provisioning status of an organizational auto attendant configured for use in your organization. 
+This cmdlet provides a way to return the provisioning status of an auto attendant configured for use in your organization. 
 
 
 ## EXAMPLES
@@ -29,19 +29,19 @@ This cmdlet provides a way to return the provisioning status of an organizationa
 Get-CsOrganizationalAutoAttendantStatus -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-In Example 1, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records for all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In Example 1, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records for all resources of an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsOrganizationalAutoAttendantStatus -PrimaryUri sip:mainoaa@contoso.com -IncludeResources @("AudioFile")
 ```
 
-In Example 2, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In Example 2, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The Primary URI represents the SIP address of the organizational auto attendant whose provisioning status is to be retrieved.
+The Primary URI represents the SIP address of the auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
 Type: System.Uri
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeResources
-The IncludeResources parameter identities the organizational auto attendant resources whose status is to be retrieved. Available resources are:
+The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
 - AudioFile: Indicates status for audio files used by OAA.
 - DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with OAA.
 - SipProvisioning: Indicates status for calling OAA through its SIP (Primary) URI.
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationId
-Specifies a custom application ID to use for organizational auto attendants. This parameter is reserved for Microsoft internal use only.
+Specifies a custom application ID to use for auto attendants. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid

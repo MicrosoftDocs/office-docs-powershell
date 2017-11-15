@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greeti
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantCallFlow cmdlet creates a new call flow for use with the Organizational Auto Attendant (OAA) service. The OAA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
+The New-CsOrganizationalAutoAttendantCallFlow cmdlet creates a new call flow for use with the Auto Attendant (AA) service. The OAA service uses the call flow to handle inbound calls by playing a greeting (if present), and provide callers with actions through a menu.
 
 
 ## EXAMPLES

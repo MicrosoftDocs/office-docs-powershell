@@ -16,7 +16,7 @@ The following cmdlet references are for Microsoft Teams.
 {{Manually Enter Add-TeamUser Description Here}}
 
 ### [Connect-MicrosoftTeams](Connect-MicrosoftTeams.md)
-{{Manually Connect-MicrosoftTeams Description Here}}
+{{Manually Enter Connect-MicrosoftTeams Description Here}}
 
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Manually Enter Disconnect-MicrosoftTeams Description Here}}
