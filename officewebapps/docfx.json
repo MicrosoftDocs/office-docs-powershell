@@ -54,10 +54,10 @@
     "externalReference": [],
     "globalMetadata": {
       "author" : "kenwith",
-      "ms.author" : "kenwith",
-      "ms.date" : "09/25/2017",
+      "ms.author" : "mikeplum",
+      "ms.date" : "11/28/2017",
       "ms.topic" : "reference",
-      "ms.service" : "officewebapps-powershell",
+      "ms.prod" : "office-online-server-powershell",
       "ms.devlang" : "powershell"
     },
     "fileMetadata": {},
