@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Start-SPOSiteContentMove
 schema: 2.0.0
 ---
 

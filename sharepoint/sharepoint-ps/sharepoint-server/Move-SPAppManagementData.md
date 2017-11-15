@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2016
+title: Move-SPAppManagementData
 schema: 2.0.0
 ---
 

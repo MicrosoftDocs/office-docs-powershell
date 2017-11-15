@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2013, SharePoint Server 2016
+title: Get-SPAuthenticationRealm
 schema: 2.0.0
 ---
 

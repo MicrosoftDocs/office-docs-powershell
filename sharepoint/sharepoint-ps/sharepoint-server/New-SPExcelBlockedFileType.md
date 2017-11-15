@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2013
+title: New-SPExcelBlockedFileType
 schema: 2.0.0
 ---
 

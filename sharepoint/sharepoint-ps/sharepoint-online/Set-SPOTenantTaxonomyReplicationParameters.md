@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Set-SPOTenantTaxonomyReplicationParameters
 schema: 2.0.0
 ---
 

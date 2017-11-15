@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Get-SPOPublicCdnOrigins
 schema: 2.0.0
 ---
 

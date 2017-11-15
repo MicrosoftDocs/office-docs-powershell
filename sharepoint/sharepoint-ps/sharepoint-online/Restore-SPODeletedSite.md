@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Restore-SPODeletedSite
 schema: 2.0.0
 ---
 

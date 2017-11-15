@@ -53,11 +53,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "author" : "kenwith",
-      "ms.author" : "kenwith",
-      "ms.date" : "09/25/2017",
+      "author" : "techwriter40",
+      "ms.author" : "kirks",
+      "ms.date" : "11/28/2017",
       "ms.topic" : "reference",
-      "ms.service" : "sharepoint-powershell",
+      "ms.prod" : "sharepoint-2016-powershell",
       "ms.devlang" : "powershell"
     },
     "fileMetadata": {},
