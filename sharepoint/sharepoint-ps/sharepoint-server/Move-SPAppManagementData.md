@@ -8,7 +8,7 @@ schema: 2.0.0
 # Move-SPAppManagementData
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do Not Use
 
 ## SYNTAX
 
@@ -19,21 +19,20 @@ Move-SPAppManagementData [-AssignmentCollection <SPAssignmentCollection>] [-Conf
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do Not Use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Do Not Use}}
 ```
 
-{{ Add example description here }}
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do Not Use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -65,7 +64,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverWrite
-{{Fill OverWrite Description}}
+Do Not Use
 
 ```yaml
 Type: SwitchParameter
@@ -81,8 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -SiteSubscriptionId
-{{Fill SiteSubscriptionId Description}}
-
+Do Not Use
 ```yaml
 Type: Guid
 Parameter Sets: (All)
@@ -97,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceAppManagementDatabase
-{{Fill SourceAppManagementDatabase Description}}
-
+Do Not Use
 ```yaml
 Type: SPDatabasePipeBind
 Parameter Sets: (All)
@@ -113,7 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetContentDatabase
-{{Fill TargetContentDatabase Description}}
+Do Not Use
 
 ```yaml
 Type: SPContentDatabasePipeBind
