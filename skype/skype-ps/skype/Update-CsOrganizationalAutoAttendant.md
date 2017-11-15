@@ -8,7 +8,7 @@ schema: 2.0.0
 # Update-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Use Update-CsOrganizationalAutoAttendant cmdlet to force an update of resources associated with an Organizational Auto Attendant (OAA) provisioning.
+Use Update-CsOrganizationalAutoAttendant cmdlet to force an update of resources associated with an Auto Attendant (AA) provisioning.
 
 ## SYNTAX
 
@@ -17,9 +17,9 @@ Update-CsOrganizationalAutoAttendant [-PrimaryUri] <Uri> [-ApplicationId <Guid>]
 ```
 
 ## DESCRIPTION
-This cmdlet provides a way to update the resources associated with an organizational auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status and the SIP provisioning status of an organizational auto attendant.
+This cmdlet provides a way to update the resources associated with an auto attendant configured for use in your organization. Currently, it repairs the Dial-by-Name recognition status and the SIP provisioning status of an auto attendant.
 
-Note: This cmdlet only triggers the refresh of organizational auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of organizational auto attendant can be retrieved using Get-CsOrganizationalAutoAttendantStatus cmdlet.  
+Note: This cmdlet only triggers the refresh of auto attendant resources. It does not wait until all the resources have been refreshed. The last completed status of auto attendant can be retrieved using Get-CsOrganizationalAutoAttendantStatus cmdlet.  
 
 
 ## EXAMPLES
@@ -29,12 +29,12 @@ Note: This cmdlet only triggers the refresh of organizational auto attendant res
 Update-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-In Example 1, the Update-CsOrganizationalAutoAttendant cmdlet is used to update all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In Example 1, the Update-CsOrganizationalAutoAttendant cmdlet is used to update all resources of an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The Primary URI represents the SIP address of the organizational auto attendant whose resources are to be updated.
+The Primary URI represents the SIP address of the auto attendant whose resources are to be updated.
 
 ```yaml
 Type: System.Uri

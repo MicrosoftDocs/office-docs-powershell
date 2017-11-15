@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendantDialScope
 
 ## SYNOPSIS
-Use New-CsOrganizationalAutoAttendantDialScope cmdlet to create dial-scopes for use with Organizational Auto Attendant (OAA) service.
+Use New-CsOrganizationalAutoAttendantDialScope cmdlet to create dial-scopes for use with Auto Attendant (AA) service.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds <List> [-Tenant
 ```
 
 ## DESCRIPTION
-This cmdlet creates a new dial-scope to be used with Organizational Auto Attendant (OAA) service. OAAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature. 
+This cmdlet creates a new dial-scope to be used with Auto Attendant (AA) service. OAAs use dial-scopes to restrict the scope of call transfers that can be made through directory lookup feature. 
 
 **NOTE**
 - The returned dial-scope model composes a member for the underlying type/implementation, e.g. in case of the group-based dial scope, in order to modify its Group IDs, you can access them through `DialScope.GroupScope.GroupIds`.  

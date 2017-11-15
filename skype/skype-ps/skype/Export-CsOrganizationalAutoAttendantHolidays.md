@@ -8,7 +8,7 @@ schema: 2.0.0
 # Export-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
-Use Export-CsOrganizationalAutoAttendantHolidays cmdlet to export holiday schedules of an existing auto attendant (OAA). The data is exported as a byte array from the cmdlet, which can be dumped to disk as a CSV file and can later be imported using the Import-CsOrganizationalAutoAttendantHolidays cmdlet.
+Use Export-CsOrganizationalAutoAttendantHolidays cmdlet to export holiday schedules of an existing Auto Attendant (AA). The data is exported as a byte array from the cmdlet, which can be dumped to disk as a CSV file and can later be imported using the Import-CsOrganizationalAutoAttendantHolidays cmdlet.
 
 ## SYNTAX
 

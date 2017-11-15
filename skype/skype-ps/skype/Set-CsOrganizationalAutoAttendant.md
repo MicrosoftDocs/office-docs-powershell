@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an existing Organizational Auto Attendant (OAA).
+Use the Set-CsOrganizationalAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Set-CsOrganizationalAutoAttendant [-Instance] <Object> [-Tenant <Guid>] [<Common
 ```
 
 ## DESCRIPTION
-The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an organizational auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
+The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
 
 **NOTE**
 - **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
