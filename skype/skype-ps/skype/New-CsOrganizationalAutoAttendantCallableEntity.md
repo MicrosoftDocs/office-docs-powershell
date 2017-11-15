@@ -13,14 +13,14 @@ The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a cal
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallableEntity -Identity <String> -Type <User | AutoAttendant | HuntGroup> [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallableEntity -Identity <String> -Type <User | OrganizationalAutoAttendant | HuntGroup> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsOrganizationalAutoAttendantCallableEntity cmdlet lets you create a callable entity for use with call transfers from the Auto Attendant service. Callable entities can be created using either SIP or TEL URIs and can refer to any of the following entities:
 
 - User
-- AutoAttendant
+- OrganizationalAutoAttendant
 - HuntGroup
 
 
@@ -67,7 +67,7 @@ Accept wildcard characters: False
 The Type parameter represents the type of the callable entity, which can be any of the following:
 
 - User
-- AutoAttendant
+- OrganizationalAutoAttendant
 - Huntgroup
 
 
