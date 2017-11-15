@@ -8,7 +8,7 @@ schema: 2.0.0
 # Import-CsOrganizationalAutoAttendantHolidays
 
 ## SYNOPSIS
-Use Import-CsOrganizationalAutoAttendantHolidays cmdlet to import holiday schedules of an existing organizational auto attendant (OAA) that were previously exported using the Export-CsOrganizationalAutoAttendantHolidays cmdlet.
+Use Import-CsOrganizationalAutoAttendantHolidays cmdlet to import holiday schedules of an existing Auto Attendant (AA) that were previously exported using the Export-CsOrganizationalAutoAttendantHolidays cmdlet.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Import-CsOrganizationalAutoAttendantHolidays [-PrimaryUri] <Uri> -Input <byte[]>
 ```
 
 ## DESCRIPTION
-The Export-CsOrganizationalAutoAttendantHolidays cmdlet and the Import-CsOrganizationalAutoAttendantHolidays cmdlet enable you to export holiday schedules in your organizational auto attendant and then later import that information. This can be extremely useful in a situation where you need to configure same holiday sets in multiple organizational auto attendants.
+The Export-CsOrganizationalAutoAttendantHolidays cmdlet and the Import-CsOrganizationalAutoAttendantHolidays cmdlet enable you to export holiday schedules in your auto attendant and then later import that information. This can be extremely useful in a situation where you need to configure same holiday sets in multiple auto attendants.
 
 The Export-CsOrganizationalAutoAttendantHolidays cmdlet returns the holiday schedule information in serialized form (as a byte array). The caller can then write the bytes to the disk to obtain a CSV file. Similarly, the Import-CsOrganizationalAutoAttendantHolidays cmdlet accepts the holiday schedule information as a byte array, which can be read from the aforementioned CSV file. The first line of the CSV file is considered a header record and is always ignored.
 
@@ -32,7 +32,7 @@ The Export-CsOrganizationalAutoAttendantHolidays cmdlet returns the holiday sche
     - StartDateTimeX and EndDateTimeX specify a date/time range for the holiday and are optional. If no date-time ranges are defined, then the holiday is imported without any date/time ranges. They follow the same format as New-CsOnlineDateTimeRange cmdlet.
     - EndDateTimeX is optional. If it is not specified, the end bound of the date time range is set to 00:00 of the day after the start date.
 - The first line of the CSV file is considered a header record and is always ignored by Import-CsOrganizationalAutoAttendantHolidays cmdlet.
-- If the destination organizational auto attendant for the import already contains a call flow or schedule by the same name as one of the holidays being imported, the corresponding CSV record is skipped.
+- If the destination auto attendant for the import already contains a call flow or schedule by the same name as one of the holidays being imported, the corresponding CSV record is skipped.
 - For holidays that are successfully imported, a default call flow is created which is configured without any greeting and simply disconnects the call on being executed.
 
 ## EXAMPLES
@@ -43,7 +43,7 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsOrganizationalAutoAttendantHolidays -PrimaryUri sip:mainoaa@contoso.com -Input $bytes
 ```
 
-In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
+In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ### -------------------------- Example 2 --------------------------
 ```
@@ -51,12 +51,12 @@ $bytes = [System.IO.File]::ReadAllBytes("C:\Imports\Holidays.csv")
 Import-CsOrganizationalAutoAttendantHolidays -PrimaryUri sip:mainoaa@contoso.com -Input $bytes | Format-Table -Wrap -AutoSize
 ```
 
-In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com. The result of the import process is formatted as a table.
+In this example, the Import-CsOrganizationalAutoAttendantHolidays cmdlet is used to import holiday schedule information from a file at path “C:\Imports\Holidays.csv” to an auto attendant with Primary URI of sip:mainoaa@contoso.com. The result of the import process is formatted as a table.
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The Primary URI represents the SIP address of the organizational auto attendant in where the holiday schedule information is to be imported.
+The Primary URI represents the SIP address of the auto attendant in where the holiday schedule information is to be imported.
 
 ```yaml
 Type: System.Uri

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantSupportedTimeZone
 
 ## SYNOPSIS
-The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Organizational Auto Attendant (OAA) service.
+The Get-CsOrganizationalAutoAttendantSupportedTimeZone cmdlet gets supported time zones for the Auto Attendant (AA) service.
 
 ## SYNTAX
 

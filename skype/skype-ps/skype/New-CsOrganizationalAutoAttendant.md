@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Organizational Auto Attendant (OAA).
+Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Auto Attendant (AA).
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendant -Name <String> -LanguageId <String> -TimeZoneI
 ```
 
 ## DESCRIPTION
-Organizational Auto Attendants (OAAs) are a key element in the Cloud PBX application.
+Auto Attendants (AAs) are a key element in the Cloud PBX application.
 Each OAA can be associated with a phone number that allows callers to reach specific people in the organization through a directory lookup. 
 Alternatively, it can route the calls to an operator, a user, another OAA, or a call queue.
 
@@ -60,10 +60,10 @@ $afterHoursCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandli
 $inclusionScopeGroupIds = @(“4c3053a6-20bf-43df-bf7a-156124168856”)
 $inclusionScope = New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
-$o=New-CsOrganizationalAutoAttendant -Name "Main organizational auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
+$o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
 ```
 
-This example creates a new OAA named _Main organizational auto attendant_ that has the following properties:
+This example creates a new OAA named _Main auto attendant_ that has the following properties:
 
 - A phone number is assigned.
 - It sets a default call flow.
@@ -107,10 +107,10 @@ $christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -Date
 
 $christmasCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-$o=New-CsOrganizationalAutoAttendant -Name "Main organizational auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule, $christmasSchedule) -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
+$o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule, $christmasSchedule) -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
 ```
 
-This example creates a new OAA named _Main organizational auto attendant_ that has the following properties:
+This example creates a new OAA named _Main auto attendant_ that has the following properties:
 
 - A phone number is assigned.
 - It sets a default call flow.
