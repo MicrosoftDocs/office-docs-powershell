@@ -57,10 +57,16 @@
       "ms.author" : "kirks",
       "ms.date" : "11/28/2017",
       "ms.topic" : "reference",
-      "ms.prod" : "sharepoint-2016-powershell",
       "ms.devlang" : "powershell"
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service":{
+        "sharepoint-online/*.md":"sharepoint-powershell"
+      },
+      "ms.prod":{
+        "sharepoint-server/*.md":"sharepoint-2016-powershell"
+      }
+    },
     "template": [],
     "dest": "sharepoint-ps"
   }
