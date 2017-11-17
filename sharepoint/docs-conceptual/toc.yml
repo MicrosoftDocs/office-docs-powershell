@@ -5,10 +5,11 @@
     href: intro.md
   - name: SharePoint Online Cmdlets
     href: sharepoint-online\sharepoint-online-cmdlets.md
-        - name: Connect to SharePoint Online
-        href: sharepoint-online\connect-sharepoint-online.md
-        - name: Introduction to the SharePoint Online Management Shell
-        href: sharepoint-online\introduction-sharepoint-online-management-shell.md
+    items:
+    - name: Connect to SharePoint Online
+      href: sharepoint-online\connect-sharepoint-online.md
+    - name: Introduction to the SharePoint Online Management Shell
+      href: sharepoint-online\introduction-sharepoint-online-management-shell.md
   - name: SharePoint Server Cmdlets
     href: sharepoint-pnp\sharepoint-server-cmdlets.md
   - name: SharePoint PnP Cmdlets
