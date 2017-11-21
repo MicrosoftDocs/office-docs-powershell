@@ -38,7 +38,7 @@ In order to use Windows PowerShell for SharePoint Products, a user must be a mem
 However, the result of running this cmdlet is that the user specified with the UserName parameter will have the dbo_owner role access on the affected databases as described above.
 Therefore, you should carefully plan which users are given this access.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
+For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at [http://go.microsoft.com/fwlink/p/?LinkId=251831](http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
