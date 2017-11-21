@@ -1,3 +1,3 @@
 #SharePoint Server Cmdlets
 
-This page contains a listing of SharePoint Server (on prem) cmdlets.
+For a listing of the SharePoint Server cmdlets, see [SharePoint Server cmdlets](sharepoint-server.md)
