@@ -455,7 +455,7 @@ Cmdlet|Description|Platform
 **[Stop&#8209;PnPWorkflowInstance](StopPnPWorkflowInstance.md)** |Stops a workflow instance|All
 **[Add&#8209;PnPWorkflowSubscription](../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowSubscription.md)** |Adds a workflow subscription to a list|All
 **[Get&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowSubscription.md)** |Returns a workflow subscriptions from a list|All
-**[Remove&#8209;PnPWorkflowSubscription](../../module/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Removes a workflow subscription|All
+**[Remove&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Removes a workflow subscription|All
 
 
 ## Additional resources
