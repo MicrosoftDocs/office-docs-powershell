@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Remove-CsHuntGroup.xml
 applicable: Skype for Business Online
 title: Remove-CsHuntGroup
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsHuntGroup
 
 ## SYNOPSIS
-Provide the topic introduction here.
+The Remove-CsHuntGroup cmdlet deletes an existing call queue.
 
 ## SYNTAX
 
@@ -18,16 +18,20 @@ Remove-CsHuntGroup [-PrimaryUri <Object>] [-BypassDualWrite <Object>] [-Confirm]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The Remove-CsHuntGroup cmdlet deletes an existing call queue specified by the PrimaryUri parameter.
+
+If you are a hybrid tenant, you may need to execute additional cmdlets on your on-premise deployments. The Remove-CsHuntGroup will request further steps, if those steps are necessary for you.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
 ```
-Insert example commands for example 1.
+Remove-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com"
 ```
 
-Insert descriptive text for example 1.
+This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com".
+
+
 
 
 ## PARAMETERS
@@ -41,7 +45,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -145,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -164,8 +168,11 @@ Accept wildcard characters: False
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+### System.Uri
+Represents the SIP uri of a call queue.
 
 ## OUTPUTS
+### Microsoft.Skype.Rgs.Configuration.Huntgroup
 
 ## NOTES
 
