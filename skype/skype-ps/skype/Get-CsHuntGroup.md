@@ -22,7 +22,7 @@ The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues i
 
 If called without parameters, Get-CsHuntgroup returns a collection of all call queues configured to be used in your organization.
 
-If you are a hybrid tenant, you may need to execute additional cmdlets on your on-premise deployments. The Get-CsHuntGroup will request further steps, if those steps are necessary for you.
+The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
 
 ## EXAMPLES
 

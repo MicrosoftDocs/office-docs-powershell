@@ -20,7 +20,7 @@ Remove-CsHuntGroup [-PrimaryUri <Object>] [-BypassDualWrite <Object>] [-Confirm]
 ## DESCRIPTION
 The Remove-CsHuntGroup cmdlet deletes an existing call queue specified by the PrimaryUri parameter.
 
-If you are a hybrid tenant, you may need to execute additional cmdlets on your on-premise deployments. The Remove-CsHuntGroup will request further steps, if those steps are necessary for you.
+The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
 
 ## EXAMPLES
 

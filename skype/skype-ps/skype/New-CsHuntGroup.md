@@ -13,11 +13,11 @@ Creates new Call Queue in your Skype for Business Online organization. Call Queu
 ## SYNTAX
 
 ```
-New-CsHuntGroup [-Domain <Object>] [-Name <Object>] [-AgentAlertTime <Object>] [-AllowOptOut <Object>]
+New-CsHuntGroup [-Domain <Object>] [-Name <Object>] [-AgentAlertTime <Object>] 
  [-BypassDualWrite <Object>] [-ClientAudience <Object>] [-DistributionLists <Object>]
  [-DomainController <Object>] [-Force] [-HuntGroupServiceCallbackUri <Object>] [-LineUri <Object>]
  [-MusicOnHoldFileContent <Object>] [-MusicOnHoldFileName <Object>] [-OverflowAction <Object>]
- [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>] [-Ring <Object>] [-RoutingMethod <Object>] 
+ [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>] [-Ring <Object>]
  [-Tenant <Object>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Object>] [-TimeoutThreshold <Object>]
  [-UseDefaultMusicOnHold <Object>] [-WelcomeMusicFileContent <Object>] [-WelcomeMusicFileName <Object>]
  [-AsJob] [<CommonParameters>]
@@ -30,7 +30,7 @@ Note, you need to specify UseDefaultMusicOnHold $True (default is none), or prov
 
 MusicOnHoldFileName and MusicOnHoldFileContent cannot be empty so you must specify a valid MusicOnHoldFileName and MusicOnHoldFileContent or set UseDefaultMusicOnHold to true.
 
-If you are a hybrid tenant, you may need to execute additional cmdlets on your on-premise deployments. The New-CsHuntGroup will request further steps, if those steps are necessary for you.
+The New-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
 
 The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and Ring.
 
@@ -105,21 +105,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowOptOut
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -BypassDualWrite
 PARAMVALUE: $true | $false
@@ -315,22 +300,6 @@ Accept wildcard characters: False
 
 ### -Ring
 PARAMVALUE: String
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -RoutingMethod
-PARAMVALUE: Attendant | Serial
 
 ```yaml
 Type: Object
