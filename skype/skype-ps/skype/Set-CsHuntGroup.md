@@ -27,7 +27,7 @@ Set-CsHuntGroup [-PrimaryUri <Object>] [-AgentAlertTime <Object>]
 
 Set-CsHuntGroup cmdlet provides a way for you to modify the properties of an existing call queue; for example, you can change the phone number for the call queue, the distribution lists associated with the huntgroup, or the welcome audio file. 
 
-The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+The Set-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
 
 The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, and PipelineVariable
 
