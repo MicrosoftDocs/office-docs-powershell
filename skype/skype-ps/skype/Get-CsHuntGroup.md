@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Get-CsHuntGroup.xml
 applicable: Skype for Business Online
 title: Get-CsHuntGroup
 schema: 2.0.0
@@ -18,7 +18,11 @@ Get-CsHuntGroup [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force
 ```
 
 ## DESCRIPTION
-The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue. 
+The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue.
+
+If called without parameters, Get-CsHuntgroup returns a collection of all call queues configured to be used in your organization.
+
+The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
 
 ## EXAMPLES
 
@@ -31,10 +35,10 @@ This example gets all call queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsHuntGroup -PrimaryUri "sip:helpdesk@litwareinc.com"
+Get-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com"
 ```
 
-This example gets all call queues for helpdesk@litwareinc.com.
+This example gets the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no call queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
 
 
 ## PARAMETERS
@@ -88,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the call queue.
+The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
 
 ```yaml
 Type: Object
@@ -120,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter

@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Find-CsGroup.xml
 applicable: Skype for Business Online
 title: Find-CsGroup
 schema: 2.0.0
@@ -47,7 +47,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
