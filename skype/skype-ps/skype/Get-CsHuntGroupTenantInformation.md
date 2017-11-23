@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Get-CsHuntGroupTenantInformation.xml
 applicable: Skype for Business Online
 title: Get-CsHuntGroupTenantInformation
 schema: 2.0.0
@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsHuntGroupTenantInformation
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+The Get-CsHuntGroupTenantInformation cmdlet returns additional call queue information for the tenant.
 
 ## SYNTAX
 
@@ -18,22 +18,20 @@ Get-CsHuntGroupTenantInformation [-BypassDualWrite <Object>] [-DomainController 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Get-CsHuntGroupTenantInformation cmdlet returns additional call queue information for the tenant.
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-{{ Add example code here }}
+Get-CsHuntGroupTenantInformation
 ```
-
-{{ Add example description here }}
-
+This example returns additional call queue information for the tenant.
 
 ## PARAMETERS
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
+PARAMVALUE: $true | $false
 
 ```yaml
 Type: Object
@@ -49,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-{{Fill DomainController Description}}
+PARAMVALUE: Fqdn
 
 ```yaml
 Type: Object
@@ -65,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-{{Fill Force Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
@@ -81,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-{{Fill Tenant Description}}
+PARAMVALUE: Guid
 
 ```yaml
 Type: Object
@@ -97,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
