@@ -13,7 +13,7 @@ Creates new Call Queue in your Skype for Business Online organization. Call Queu
 ## SYNTAX
 
 ```
-New-CsHuntGroup [-Domain <Object>] [-Name <Object>] [-AgentAlertTime <Object>] 
+New-CsHuntGroup [-Domain <Object>] [-Name <Object>] [-AgentAlertTime <Object>]
  [-BypassDualWrite <Object>] [-ClientAudience <Object>] [-DistributionLists <Object>]
  [-DomainController <Object>] [-Force] [-HuntGroupServiceCallbackUri <Object>] [-LineUri <Object>]
  [-MusicOnHoldFileContent <Object>] [-MusicOnHoldFileName <Object>] [-OverflowAction <Object>]
@@ -39,7 +39,7 @@ The following parameters are not applicable to Skype for Business Online: AsJob,
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-New-CsHuntGroup -Name "Help Desk" -Domain "litwareinc.com" -UseDefaultMusicOnHold $true
+New-CsHuntGroup -Name "Help Desk" -Domain "litwareinc.com" -UseDefaultMusicOnHold $true
 ```
 
 This example creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using default music on hold.
@@ -48,7 +48,7 @@ This example creates a call queue for the organization named "Help Desk" in the 
 ```
 $musicOnHoldContent = Get-Content ".\MusicOnHold.wav" -ReadCount 0 -Encoding Byte
 $welcomeMusicContent = Get-Content ".\WelcomeMusic.wav" -ReadCount 0 -Encoding Byte
-New-CsHuntGroup -Name "Help desk" -Domain "litwareinc.com" -LineUri "tel:+19998881234" -RoutingMethod Attendant -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -AllowOptOut $false -AgentAlertTime 30 -OverflowThreshold 15 -OverflowAction Forward -OverflowActionTarget "sip:backup_user@litwareinc.com" -TimeoutThreshold 30 -TimeoutAction Disconnect -MusicOnHoldFileName "MusicOnHold.wav" -MusicOnHoldFileContent $musicOnHoldContent -WelcomeMusicFileName "WelcomeMusic.wav"
+New-CsHuntGroup -Name "Help desk" -Domain "litwareinc.com" -LineUri "tel:+19998881234" -RoutingMethod Attendant -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -AllowOptOut $false -AgentAlertTime 30 -OverflowThreshold 15 -OverflowAction Forward -OverflowActionTarget "sip:backup_user@litwareinc.com" -TimeoutThreshold 30 -TimeoutAction Disconnect -MusicOnHoldFileName "MusicOnHold.wav" -MusicOnHoldFileContent $musicOnHoldContent -WelcomeMusicFileName "WelcomeMusic.wav"
 ```
 
 This example saves the contents of music on hold and welcome music files in temporary variables. Then, it creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using those contents and other configurable parameters.
