@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Invoke-SPOMigrationEncryptUploadSubmit
 schema: 2.0.0
 ---
 

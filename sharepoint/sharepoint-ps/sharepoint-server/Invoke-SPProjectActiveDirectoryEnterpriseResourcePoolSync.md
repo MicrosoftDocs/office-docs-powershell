@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2016
+title: Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync
 schema: 2.0.0
 ---
 

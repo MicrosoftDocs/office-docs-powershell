@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsHuntGroup.xml
 applicable: Skype for Business Online
 title: New-CsHuntGroup
 schema: 2.0.0
@@ -13,12 +13,12 @@ Creates new Call Queue in your Skype for Business Online organization. Call Queu
 ## SYNTAX
 
 ```
-New-CsHuntGroup [-Domain <Object>] [-LineUri <Object>] [-Name <Object>] [-AgentAlertTime <Object>]
+New-CsHuntGroup [-Domain <Object>] [-Name <Object>] [-AgentAlertTime <Object>]
  [-BypassDualWrite <Object>] [-ClientAudience <Object>] [-DistributionLists <Object>]
- [-DomainController <Object>] [-Force] [-HuntGroupServiceCallbackUri <Object>]
+ [-DomainController <Object>] [-Force] [-HuntGroupServiceCallbackUri <Object>] [-LineUri <Object>]
  [-MusicOnHoldFileContent <Object>] [-MusicOnHoldFileName <Object>] [-OverflowAction <Object>]
- [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>] [-Ring <Object>] [-Tenant <Object>]
- [-TimeoutAction <Object>] [-TimeoutActionTarget <Object>] [-TimeoutThreshold <Object>]
+ [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>] [-Ring <Object>]
+ [-Tenant <Object>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Object>] [-TimeoutThreshold <Object>]
  [-UseDefaultMusicOnHold <Object>] [-WelcomeMusicFileContent <Object>] [-WelcomeMusicFileName <Object>]
  [-AsJob] [<CommonParameters>]
 ```
@@ -30,18 +30,28 @@ Note, you need to specify UseDefaultMusicOnHold $True (default is none), or prov
 
 MusicOnHoldFileName and MusicOnHoldFileContent cannot be empty so you must specify a valid MusicOnHoldFileName and MusicOnHoldFileContent or set UseDefaultMusicOnHold to true.
 
-The following parameters are not applicable to Skype for Business Online: AllowOptOut, AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, Ring, and RoutingMethod
+The New-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+
+The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and Ring.
 
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-
-Insert example commands for example 1.
+New-CsHuntGroup -Name "Help Desk" -Domain "litwareinc.com" -UseDefaultMusicOnHold $true
 ```
 
-Insert descriptive text for example 1.
+This example creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using default music on hold.
+
+### -------------------------- Example 2 -------------------------- 
+```
+$musicOnHoldContent = Get-Content ".\MusicOnHold.wav" -ReadCount 0 -Encoding Byte
+$welcomeMusicContent = Get-Content ".\WelcomeMusic.wav" -ReadCount 0 -Encoding Byte
+New-CsHuntGroup -Name "Help desk" -Domain "litwareinc.com" -LineUri "tel:+19998881234" -RoutingMethod Attendant -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -AllowOptOut $false -AgentAlertTime 30 -OverflowThreshold 15 -OverflowAction Forward -OverflowActionTarget "sip:backup_user@litwareinc.com" -TimeoutThreshold 30 -TimeoutAction Disconnect -MusicOnHoldFileName "MusicOnHold.wav" -MusicOnHoldFileContent $musicOnHoldContent -WelcomeMusicFileName "WelcomeMusic.wav"
+```
+
+This example saves the contents of music on hold and welcome music files in temporary variables. Then, it creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using those contents and other configurable parameters.
 
 
 ## PARAMETERS
@@ -62,21 +72,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LineUri
-PARAMVALUE: Uri
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Name
 PARAMVALUE: String
@@ -109,6 +104,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -BypassDualWrite
 PARAMVALUE: $true | $false
@@ -191,6 +187,22 @@ Accept wildcard characters: False
 ```
 
 ### -HuntGroupServiceCallbackUri
+PARAMVALUE: Uri
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LineUri
 PARAMVALUE: Uri
 
 ```yaml
@@ -415,7 +427,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter

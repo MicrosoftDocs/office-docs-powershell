@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2016
+title: Invoke-SPProjectActiveDirectoryGroupSync
 schema: 2.0.0
 ---
 

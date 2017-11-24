@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Get-SPOTenantLogLastAvailableTimeInUtc
 schema: 2.0.0
 ---
 

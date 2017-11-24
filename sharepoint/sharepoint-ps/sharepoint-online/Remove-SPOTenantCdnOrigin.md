@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Remove-SPOTenantCdnOrigin
 schema: 2.0.0
 ---
 

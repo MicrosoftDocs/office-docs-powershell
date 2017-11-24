@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Server 2013
+title: Remove-SPExcelUserDefinedFunction
 schema: 2.0.0
 ---
 

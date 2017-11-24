@@ -1,13 +1,14 @@
 ---
 external help file: 
 applicable: SharePoint Server 2016
+title: Upgrade-SPAppManagementServiceApplication
 schema: 2.0.0
 ---
 
 # Upgrade-SPAppManagementServiceApplication
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do Not Use
 
 ## SYNTAX
 
@@ -25,21 +26,21 @@ Upgrade-SPAppManagementServiceApplication [-AssignmentCollection <SPAssignmentCo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do Not Use
 
 ## EXAMPLES
 
 ### --------------EXAMPLE-----------------
 ```
-PS C:\> {{ Add example code here }}
+Do Not Use
 ```
 
-{{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do Not Use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -71,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseIds
-{{Fill DatabaseIds Description}}
+Do Not Use
 
 ```yaml
 Type: Guid[]
@@ -87,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Do Not Use
 
 ```yaml
 Type: SPServiceApplicationPipeBind
@@ -103,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Do Not Use
 
 ```yaml
 Type: String

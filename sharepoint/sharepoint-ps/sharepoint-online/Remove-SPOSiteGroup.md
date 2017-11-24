@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: Remove-SPOSiteGroup
 schema: 2.0.0
 ---
 

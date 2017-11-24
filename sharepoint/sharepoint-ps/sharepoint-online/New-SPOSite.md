@@ -1,6 +1,7 @@
 ---
 external help file: 
 applicable: SharePoint Online
+title: New-SPOSite
 schema: 2.0.0
 ---
 

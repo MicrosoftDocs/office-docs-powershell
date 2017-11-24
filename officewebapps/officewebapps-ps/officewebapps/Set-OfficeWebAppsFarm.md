@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: Set-OfficeWebAppsFarm
 online version:
 schema: 2.0.0
 ---

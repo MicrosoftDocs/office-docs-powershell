@@ -4,9 +4,9 @@ Microsoft PowerShell is a command-line shell and scripting language that provide
 
 By default,  Powershell is located at the following path:  <%SystemRoot%>\System32\WindowsPowerShell\v1.0\PowerShell.exe.
 
-For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets](sharepoint-server.md)
+For a list of SharePoint Server on-premises cmdlets, see [SharePoint Server cmdlets](sharepoint-server\sharepoint-server-cmdlets.md)
 
-For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online.md)
+For a list of SharePoint Online cmdlets, see [SharePoint Online cmdlets](sharepoint-online\sharepoint-online-cmdlets.md)
 
 ## Accessing PowerShell for SharePoint Server ##
 
@@ -30,7 +30,7 @@ Before you can use the Add-SPShellAdmin cmdlet to grant permissions for users to
 
 **NOTE:** If these permissions are not satisfied, contact your Setup administrator or SQL Server administrator to request these permissions.
 
-For additional information about PowerShell permissions, see [Add-SPShellAdmin](Add-SPShellAdmin.md).
+For additional information about PowerShell permissions, see [Add-SPShellAdmin](../sharepoint-ps/sharepoint-server/Add-SPShellAdmin.md).
 
 If you do not have membership in the **SharePoint_Shell_Access** role or **WSS_Admin_WPG** local group, use the **Add-SPShellAdmin** cmdlet to add the **WSS_Admin_WPG** group in all front-end web servers in the SharePoint farm and the **SharePoint_Shell_Access** role. If the SQL Server database does not have a **SharePoint_Shell_Access** role, the role is automatically created when you run the **Add-SPShellAdmin** cmdlet. After you run the **Add-SPShellAdmin** cmdlet, users can run SharePoint PowerShell cmdlets in a multiple-server farm environment.
 

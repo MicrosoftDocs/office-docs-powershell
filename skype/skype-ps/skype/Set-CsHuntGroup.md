@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Set-CsHuntGroup.xml
 applicable: Skype for Business Online
 title: Set-CsHuntGroup
 schema: 2.0.0
@@ -8,32 +8,45 @@ schema: 2.0.0
 # Set-CsHuntGroup
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Updates a Call Queue in your Skype for Business Online organization.
 
 ## SYNTAX
 
 ```
-Set-CsHuntGroup [-PrimaryUri <Object>] [-AgentAlertTime <Object>] [-BypassDualWrite <Object>]
- [-ClientAudience <Object>] [-Confirm] [-DistributionLists <Object>] [-DomainController <Object>] [-Force]
- [-HuntGroupServiceCallbackUri <Object>] [-LineUri <Object>] [-MusicOnHoldFileContent <Object>]
- [-MusicOnHoldFileName <Object>] [-Name <Object>] [-OverflowAction <Object>] [-OverflowActionTarget <Object>]
- [-OverflowThreshold <Object>] [-Tenant <Object>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Object>]
+Set-CsHuntGroup [-PrimaryUri <Object>] [-AgentAlertTime <Object>]
+ [-BypassDualWrite <Object>] [-ClientAudience <Object>] [-Confirm] [-DistributionLists <Object>]
+ [-DomainController <Object>] [-Force] [-HuntGroupServiceCallbackUri <Object>] [-LineUri <Object>]
+ [-MusicOnHoldFileContent <Object>] [-MusicOnHoldFileName <Object>] [-Name <Object>]
+ [-OverflowAction <Object>] [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>]
+ [-Tenant <Object>] [-TimeoutAction <Object>] [-TimeoutActionTarget <Object>]
  [-TimeoutThreshold <Object>] [-UseDefaultMusicOnHold <Object>] [-WelcomeMusicFileContent <Object>]
  [-WelcomeMusicFileName <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 
-The following parameters are not applicable to Skype for Business Online: AllowOptOut, AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, PipelineVariable, and RoutingMethod
+Set-CsHuntGroup cmdlet provides a way for you to modify the properties of an existing call queue; for example, you can change the phone number for the call queue, the distribution lists associated with the huntgroup, or the welcome audio file. 
+
+The Set-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+
+The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, and PipelineVariable
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### -------------------------- Example 1 -------------------------- 
 ```
-Insert example commands for example 1.
+Set-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" -UseDefaultMusicOnHold $true
 ```
 
-Insert descriptive text for example 1.
+This example updates the call queue with primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" by making it use the default music on hold.
+
+### -------------------------- Example 2 -------------------------- 
+```
+$musicOnHoldContent = Get-Content ".\MusicOnHold.wav" -ReadCount 0 -Encoding Byte
+Set-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" -LineUri "tel:+19998881234" -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldFileName "MusicOnHold.wav" -MusicOnHoldFileContent $musicOnHoldContent
+```
+
+This example saves the contents of music on hold to a temporary variable. Then, it updates the call queue with new phone number, distribution lists, and the name and content of the music on hold file.
 
 
 ## PARAMETERS
@@ -47,7 +60,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -69,6 +82,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -BypassDualWrite
 PARAMVALUE: $true | $false
@@ -294,6 +308,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
 ### -Tenant
 PARAMVALUE: Guid
 
@@ -423,7 +438,7 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
