@@ -338,7 +338,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online
+Applicable: Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
