@@ -104,7 +104,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
                         <h3>SharePoint Server</h3>
                         <p><a href="/powershell/sharepoint/overview? view=sharepoint-ps&branch=master#permissions">Permissions</a></p>
                         <p><a href="/powershell/module/sharepoint-server/install-spsolution?view=sharepoint-ps">Install-SPSolution</a></p>
-                        <p><a href="/powershell/module/sharepoint-server/get-spsite?view=sharepoi">Restore-SPSite</a></p>
+                        <p><a href="/powershell/module/sharepoint-server/restore-spsite?view=sharepoint-ps">Restore-SPSite</a></p>
                         <p><a href="/powershell/module/sharepoint-server/get-spsite?view=sharepoint">Get-SPSite</a></p>
                     </div>
                 </div>
