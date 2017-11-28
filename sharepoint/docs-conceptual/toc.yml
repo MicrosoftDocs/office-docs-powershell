@@ -1,7 +1,7 @@
-- name: Overview
-  href: overview.md
+- name: Home
+  href: index.md
   items:
-  - name: Introduction
+  - name: Overview
     href: overview.md
   - name: SharePoint Online Cmdlets
     href: sharepoint-online/sharepoint-online-cmdlets.md
