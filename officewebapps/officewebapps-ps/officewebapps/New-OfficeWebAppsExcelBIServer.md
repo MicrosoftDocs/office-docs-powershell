@@ -18,7 +18,7 @@ New-OfficeWebAppsExcelBIServer -ServerId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Configures Analysis Services servers to work with Excel Online.
 
 ## EXAMPLES
 

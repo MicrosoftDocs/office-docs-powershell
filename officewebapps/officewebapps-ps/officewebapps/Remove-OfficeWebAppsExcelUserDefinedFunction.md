@@ -18,7 +18,7 @@ Remove-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes an existing UDF definition.
 
 ## EXAMPLES
 
