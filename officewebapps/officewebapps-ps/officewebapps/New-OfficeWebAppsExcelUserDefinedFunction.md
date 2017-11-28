@@ -19,7 +19,7 @@ New-OfficeWebAppsExcelUserDefinedFunction -Assembly <String> [-AssemblyLocation 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a definition for a UDF binary.
 
 ## EXAMPLES
 

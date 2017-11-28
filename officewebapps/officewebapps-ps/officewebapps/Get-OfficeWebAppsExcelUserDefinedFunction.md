@@ -18,7 +18,7 @@ Get-OfficeWebAppsExcelUserDefinedFunction [[-Identity] <UserDefinedFunction>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns a list of currently configured UDF definitions.
 
 ## EXAMPLES
 

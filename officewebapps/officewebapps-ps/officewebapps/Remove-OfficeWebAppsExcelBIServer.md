@@ -18,7 +18,7 @@ Remove-OfficeWebAppsExcelBIServer -ServerId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes an instance of Analysis Services from the Allow List of BI servers to be used with Excel Online.
 
 ## EXAMPLES
 

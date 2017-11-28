@@ -19,7 +19,7 @@ Set-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [-As
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets properties on existing UDF definitions.
 
 ## EXAMPLES
 
