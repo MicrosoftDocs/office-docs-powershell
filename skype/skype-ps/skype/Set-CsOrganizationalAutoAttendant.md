@@ -19,8 +19,6 @@ Set-CsOrganizationalAutoAttendant [-Instance] <Object> [-Tenant <Guid>] [<Common
 ## DESCRIPTION
 The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of an organizational auto attendant. For example, you can change the phone number, the operator, the greeting, or the menu prompts.
 
-**NOTE**
-- **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
 
 ## EXAMPLES
 

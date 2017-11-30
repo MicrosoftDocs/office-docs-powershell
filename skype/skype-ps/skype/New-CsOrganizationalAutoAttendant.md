@@ -24,7 +24,6 @@ Alternatively, it can route the calls to an operator, a user, another OAA, or a 
 You can create new OAAs by using the New-CsOrganizationalAutoAttendant cmdlet; each newly created OAA gets assigned a random Primary (SIP) URI that serves as the identity of the OAA. 
 
 **NOTE**
-- **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
 - PrimaryUri of OAAs is a SIP URI.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
 - Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.

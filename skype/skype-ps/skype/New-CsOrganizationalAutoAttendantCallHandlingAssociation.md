@@ -19,9 +19,6 @@ New-CsOrganizationalAutoAttendantCallHandlingAssociation -CallFlowId <String> -S
 ## DESCRIPTION
 The New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet creates a new call handling association to be used with the Organizational Auto Attendant (OAA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
-**NOTE**
-- **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
