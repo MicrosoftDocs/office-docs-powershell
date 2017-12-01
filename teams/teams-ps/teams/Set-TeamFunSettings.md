@@ -4,7 +4,7 @@ Module Name: MicrosoftTeams
 applicable: Microsoft Teams
 title: Set-TeamFunSettings
 online version: 
-## https://docs.microsoft.com/en-us/powershell/module/teams/Set-TeamFunSettings?view=teams-ps
+
 ## On the page where it states: In this article on the right-hand menu there are 5 links for Input pointing to the same link.
 
 schema: 2.0.0
