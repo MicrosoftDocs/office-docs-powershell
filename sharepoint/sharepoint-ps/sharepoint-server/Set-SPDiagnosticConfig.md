@@ -351,9 +351,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogCutInterval
-Specifies a time period to roll over to the next log file.
+Specifies the number of minutes between log file rollovers.
 
-The type must be a valid number between 0 and 1440.
+The value must be a valid integer between 0 and 1440.
 
 The default value is 30.
 
