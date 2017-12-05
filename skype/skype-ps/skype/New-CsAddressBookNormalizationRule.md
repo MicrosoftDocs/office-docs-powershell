@@ -95,7 +95,7 @@ Accept wildcard characters: False
 The scope at which the new normalization rule will be created.
 Address book normalization rules can be created at the global scope, the site scope, or the service scope (for the Address Book service only).
 Note that a collection of Address Book normalization configuration settings must already be assigned to the specified scope before you can add a rule to that scope.
-For example, you cannot add a rule to the Redmond site unless you have already creation Address Book normalization configuration settings for that site.
+For example, you cannot add a rule to the Redmond site unless you have already created Address Book normalization configuration settings for that site.
 
 The Parent parameter is required unless the Identity parameter is specified.
 You cannot include the Identity parameter and the Parent parameter in the same command.
