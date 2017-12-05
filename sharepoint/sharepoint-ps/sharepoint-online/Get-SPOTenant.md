@@ -21,7 +21,7 @@ The Get-SPOTenant cmdlet returns organization-level site collection properties s
 
 Currently, there are no parameters for this cmdlet.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online service administrator (able to access SharePoint Admin Center) to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
