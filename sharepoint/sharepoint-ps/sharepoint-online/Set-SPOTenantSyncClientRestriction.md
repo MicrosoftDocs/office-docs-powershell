@@ -48,7 +48,7 @@ The **Set-SPOTenantSyncClientRestriction** cmdlet is used to control a variety o
 
 * Controls whether users can continue to sync OneDrive for Business libraries with the old OneDrive for Business sync client.
 
-#### Restrict non-domain joined machines from syncing ####
+## Restrict non-domain joined machines from syncing ##
 
 The **Set-SPOTenantSyncClientRestriction** cmdlet can be used to enable the feature for tenancy and set the domain GUIDs in the safe recipients list. When this feature is enabled it can take up to 24 hours for the change to take effect. However, any changes to the safe domains list are reflected within five minutes.
 
