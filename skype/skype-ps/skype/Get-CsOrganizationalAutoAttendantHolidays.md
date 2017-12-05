@@ -19,9 +19,6 @@ Get-CsOrganizationalAutoAttendantHolidays [-PrimaryUri] <Uri> [-Years <List>] [-
 ## DESCRIPTION
 The Get-CsOrganizationalAutoAttendantHolidays provides a convenient way to visualize the information of all the holidays contained within an auto attendant.
 
-**NOTE**
-- **The Holiday feature of auto attendants is currently available to PREVIEW customers only.**
-
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
