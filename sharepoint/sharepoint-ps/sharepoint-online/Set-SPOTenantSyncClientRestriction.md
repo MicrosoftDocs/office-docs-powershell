@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPOTenantSyncClientRestriction
 
 ## SYNOPSIS
-Controls tenant-wide options and restrictions specific to syncing files.
+Controls tenant-wide options and restrictions specific to syncing files .
 
 
 ## SYNTAX
