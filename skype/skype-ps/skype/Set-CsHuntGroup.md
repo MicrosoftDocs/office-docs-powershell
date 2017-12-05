@@ -133,6 +133,8 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionLists
+The DistributionLists parameter lets you add all the members of the distribution lists to the hunt group. This is a list of distribution list GUID. A service wide configurable maximum number of DLs per HuntGroup are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are not supported. If a DL has nested DLs, the parent DL is ignored. O365 Groups can also be used to add members to the hunt group.
+
 PARAMVALUE: List
 
 ```yaml
@@ -358,6 +360,9 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutThreshold
+The TimeoutThreshold parameter defines the time (in seconds) that a call can be in the queue before that call times out. At that point, the system will take the action specified by the TimeoutAction parameter. 
+The TimeoutAction can be any integer value between 0 and 2700 seconds, inclusive; the default value is 1200 seconds.
+
 PARAMVALUE: Int16
 
 ```yaml
@@ -368,7 +373,7 @@ Applicable: Skype for Business Online
 
 Required: False
 Position: Named
-Default value: None
+Default value: 1200
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -433,6 +438,38 @@ Applicable: Skype for Business Online
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowOptOut
+PARAMVALUE: $true | $false
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: $true
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RoutingMethod
+PARAMVALUE: Serial | Attendant
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: Attendant
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
