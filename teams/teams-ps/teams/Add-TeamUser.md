@@ -6,7 +6,7 @@ title: Add-TeamUser
 online version: 
 schema: 2.0.0
 ---
-
+#On the page where it states: In this article on the right-hand menu there are 4 links for Input pointing to the same link.
 # Add-TeamUser
 
 ## SYNOPSIS
