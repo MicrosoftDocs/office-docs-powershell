@@ -94,6 +94,8 @@ Accept wildcard characters: False
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
 
+PARAMVALUE: Uri
+
 ```yaml
 Type: Object
 Parameter Sets: (All)

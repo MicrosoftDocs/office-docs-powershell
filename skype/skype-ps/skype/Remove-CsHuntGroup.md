@@ -37,6 +37,8 @@ This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474
 ## PARAMETERS
 
 ### -PrimaryUri
+The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+
 PARAMVALUE: Uri
 
 ```yaml
@@ -69,6 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
@@ -125,7 +129,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -133,6 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
 PARAMVALUE: SwitchParameter
 
 ```yaml

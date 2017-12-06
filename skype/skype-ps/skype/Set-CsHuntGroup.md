@@ -52,6 +52,8 @@ This example saves the contents of music on hold to a temporary variable. Then, 
 ## PARAMETERS
 
 ### -PrimaryUri
+The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+
 PARAMVALUE: Uri
 
 ```yaml
@@ -68,6 +70,8 @@ Accept wildcard characters: False
 ```
 
 ### -AgentAlertTime
+The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive. The default value is 30 seconds.
+
 PARAMVALUE: Int16
 
 ```yaml
@@ -117,6 +121,8 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
@@ -199,6 +205,8 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
+The LineUri parameter is the phone number for the hunt group. The line Uniform Resource Identifier (URI) must be specified by using the following format: the TEL: prefix followed by a plus sign, followed by the country/region calling code, area code, and phone number (using only digits: no blank spaces, periods, or hyphens). For example: -LineUri "TEL:+14255551219".
+
 PARAMVALUE: Uri
 
 ```yaml
@@ -215,6 +223,8 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldFileContent
+The MusicOnHoldFileContent parameter represents music to play when callers are placed on hold. This is the content of the audio file. Supported formats are: .wav, .mp3, and .wma. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
+
 PARAMVALUE: Byte\[\]
 
 ```yaml
@@ -231,6 +241,8 @@ Accept wildcard characters: False
 ```
 
 ### -MusicOnHoldFileName
+The MusicOnHoldFileName parameter represents music to play when callers are placed on hold. This is the name of the audio file. Supported formats are: .wav, .mp3, and .wma. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
+
 PARAMVALUE: String
 
 ```yaml
@@ -247,6 +259,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
+The Name parameter specifies a unique name for the hunt group.
+
 PARAMVALUE: String
 
 ```yaml
@@ -255,7 +269,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -263,6 +277,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowAction
+The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following three values: DisconnectWithBusy, Forward, and Voicemail The default value is DisconnectWithBusy.
+
 PARAMVALUE: DisconnectWithBusy | Forward | Voicemail
 
 ```yaml
@@ -279,6 +295,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
+The OverflowActionTarget parameter represents the target of the overflow action. For example, if the OverFlowAction is set to Forward, this parameter might be set to a SIP address or a PSTN phone number. This parameter is optional unless the OverflowAction is set to Forward, which requires either a SIP address or a PSTN phone number.
+
 PARAMVALUE: Uri
 
 ```yaml
@@ -295,6 +313,8 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowThreshold
+The OverflowThreshold parameter defines the number of simultaneous calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. The default value is 50. A value of 0 causes the overflow action to be taken immediately.
+
 PARAMVALUE: Int16
 
 ```yaml
@@ -320,7 +340,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -328,6 +348,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutAction
+The TimeoutAction parameter defines the action to take if the timeout threshold is reached. The TimeoutAction property must be set to one of the following three values: Disconnect, Forward, and Voicemail. The default value is Disconnect. In MVP1, the busy tone may not be played before disconnecting.
+
 PARAMVALUE: Disconnect | Forward | Voicemail
 
 ```yaml
@@ -344,6 +366,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
+The TimeoutActionTarget represents the target of the timeout action. For example, if the TimeoutAction is set to Forward, this parameter might be set to a SIP address or a PSTN phone number. This field is optional unless the TimeoutAction is set to Forward, which requires either a SIP address or a PSTN phone number.
+
 PARAMVALUE: Uri
 
 ```yaml
@@ -379,6 +403,8 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultMusicOnHold
+The UseDefaultMusicOnHold parameter indicates that this hunt group uses the default music on hold. This parameter cannot be specified together with MusicOnHoldFileName and MusicOnHoldFileContent.
+
 PARAMVALUE: $true | $false
 
 ```yaml
@@ -395,6 +421,8 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileContent
+The WelcomeMusicFileContent parameter represents the audio file to play when callers are connected with the hunt group. This is the content of the audio file. Supported formats are: .wav, .mp3, .and wma.
+
 PARAMVALUE: Byte\[\]
 
 ```yaml
@@ -411,6 +439,8 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileName
+The WelcomeMusicFileName parameter represents audio file to play when callers are connected with the hunt group. This is the name to the audio file. Supported formats are: .wav, .mp3, and .wma.
+
 PARAMVALUE: String
 
 ```yaml
@@ -427,6 +457,8 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
+
 PARAMVALUE: SwitchParameter
 
 ```yaml
@@ -443,6 +475,8 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOptOut
+The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a hunt group.
+
 PARAMVALUE: $true | $false
 
 ```yaml
@@ -459,6 +493,8 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
+The RoutingMethod defines how agents will be called in a hunt group. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+
 PARAMVALUE: Serial | Attendant
 
 ```yaml
