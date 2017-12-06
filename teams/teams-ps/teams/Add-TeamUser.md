@@ -92,12 +92,7 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### GroupId
-
-### User
-
-### Role
-
+### GroupId, User, Role
 
 ## OUTPUTS
 
