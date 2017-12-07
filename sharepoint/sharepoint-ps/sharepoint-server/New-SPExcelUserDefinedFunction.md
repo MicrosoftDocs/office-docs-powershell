@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: New-SPExcelUserDefinedFunction
 schema: 2.0.0
 ---
@@ -58,7 +58,7 @@ The type must be a string of alphanumeric characters; for example:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -76,7 +76,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ The type must be one of the following: GAC or LocalFile.
 Type: AssemblyLocation
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -117,7 +117,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -134,7 +134,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -154,7 +154,7 @@ The type must be a valid string of alphanumeric characters; for example, this is
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -171,7 +171,7 @@ The default value is True.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -188,7 +188,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

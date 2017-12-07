@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelServiceApplication
 schema: 2.0.0
 ---
@@ -77,7 +77,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: 1
@@ -99,7 +99,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -116,7 +116,7 @@ The default is true when the parameter is not specified on the command.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -133,7 +133,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -149,7 +149,7 @@ Specifies that trusted workbooks and data connection files can be requested and 
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -169,7 +169,7 @@ The type must be one of the following: None or Connection.
 Type: EncryptedConnectionMode
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -193,7 +193,7 @@ The default value is 1800.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ The type must be one of the following: UseImpersonation or UseFileAccessAccount.
 Type: FileAccessMethod
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -233,7 +233,7 @@ The type must be one of the following: RoundRobin, Local, or WorkbookURL.
 Type: LoadBalancingScheme
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -254,7 +254,7 @@ The type must be an integer in the range of 0 to 95.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -275,7 +275,7 @@ The type must be -1 or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -296,7 +296,7 @@ The type must be -1 or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -317,7 +317,7 @@ The type must be -1, 0, or any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -333,7 +333,7 @@ Terminates Excel Services Application when an access violation occurs in the pro
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -354,7 +354,7 @@ The type must be an integer value in the range of 0 to 2073600.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -378,7 +378,7 @@ An unattended account is required when workbook connections specify None for aut
 Type: String
 Parameter Sets: ExistingTargetApplicationParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -398,7 +398,7 @@ The type must be -1, or an integer in the range of 1 to 34560.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -415,7 +415,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -438,7 +438,7 @@ The type must be a valid path in either of the following forms:
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -457,7 +457,7 @@ The type must be any positive integer.
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -473,7 +473,7 @@ Accept wildcard characters: False
 Type: PSCredential
 Parameter Sets: NewTargetApplicationParameterSet
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

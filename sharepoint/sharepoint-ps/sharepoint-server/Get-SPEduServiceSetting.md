@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPEduServiceSetting
 schema: 2.0.0
 ---
@@ -38,7 +38,7 @@ Do not use
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ Type: Services
 Parameter Sets: (All)
 Aliases: 
 Accepted values: Lync, Exchange, StudyGroup
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: 0
@@ -71,7 +71,7 @@ Do not use
 Type: SPSitePipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named

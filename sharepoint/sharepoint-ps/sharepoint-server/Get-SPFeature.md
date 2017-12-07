@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Get-SPFeature
 schema: 2.0.0
 ---
@@ -86,7 +86,7 @@ The type must be the full or partial name, in the form  Feature1, or a GUID, in 
 Type: SPFeatureDefinitionPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: 1
@@ -108,7 +108,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -124,7 +124,7 @@ Specifies that if this parameter is used, only enabled farm Features are display
 Type: SwitchParameter
 Parameter Sets: FarmFeatures
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -144,7 +144,7 @@ The default value is 200.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -162,7 +162,7 @@ The type must be a valid URL for a site collection, in the form http://server_na
 Type: SPSitePipeBind
 Parameter Sets: SiteFeatures
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -180,7 +180,7 @@ The type must be a valid URL, in the form  http://server_name , or a GUID, in th
 Type: SPWebPipeBind
 Parameter Sets: WebFeatures
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ The type must be a valid URL to the Web application in the form http://server_na
 Type: SPWebApplicationPipeBind
 Parameter Sets: WebApplicationFeatures
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Accept wildcard characters: False
 Type: Int32
 Parameter Sets: FarmFeatureDefinitions
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -230,7 +230,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: SiteFeatures
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

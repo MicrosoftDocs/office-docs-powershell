@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: Set-SPWebApplication
 schema: 2.0.0
 ---
@@ -70,7 +70,7 @@ The type must be a valid name, in the form WebApplication-1212, or URL, in the f
 Type: SPWebApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: 1
@@ -87,7 +87,7 @@ The type must be a valid address; for example, someone@example.com.
 Type: String
 Parameter Sets: UpdateMailSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -105,7 +105,7 @@ The type must be a valid address; for example, someone@example.com.
 Type: String
 Parameter Sets: UpdateMailSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -121,7 +121,7 @@ Specifies the new outbound SMTP server that this Web application will use.
 Type: String
 Parameter Sets: UpdateMailSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -140,7 +140,7 @@ The type must be any one of the following values: Default, Intranet, Internet, E
 Type: SPUrlZone
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -156,7 +156,7 @@ Adds a specific claim provider to the defined Web application.
 Type: SPClaimProviderPipeBind[]
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -178,7 +178,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -195,7 +195,7 @@ The valid values are NTLM or Kerberos.
 Type: String
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -211,7 +211,7 @@ Defines the authentication provider(s) that applies to the Web application.
 Type: SPAuthenticationProviderPipeBind[]
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -228,7 +228,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -244,7 +244,7 @@ Specifies the new default site quota template for this Web application.
 Type: String
 Parameter Sets: UpdateGeneralSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -260,7 +260,7 @@ Specifies the default time zone for new site collections in this Web application
 Type: Int32
 Parameter Sets: UpdateGeneralSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -276,7 +276,7 @@ Suppresses confirmation messages involved in settings for a Web application.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -294,7 +294,7 @@ If this parameter is not specified, the farm's default proxy group is used.
 Type: SPServiceApplicationProxyGroupPipeBind
 Parameter Sets: UpdateGeneralSettings
 Aliases: ProxyGroup
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -310,7 +310,7 @@ Sets the sign-in redirect URL to point to the URL that is defined in the specifi
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -326,7 +326,7 @@ Specifies the sign-in redirect URL for the Web application.
 Type: String
 Parameter Sets: UpdateClaimSettings
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -343,7 +343,7 @@ For more information, type the following command: `get-help about_commonparamete
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named

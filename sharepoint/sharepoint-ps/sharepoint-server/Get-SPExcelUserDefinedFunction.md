@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Get-SPExcelUserDefinedFunction
 schema: 2.0.0
 ---
@@ -55,7 +55,7 @@ The type must be a valid name of the code assembly (for example, SampleCompany.S
 Type: SPExcelUDFPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: 1
@@ -73,7 +73,7 @@ The type must be a valid GUID, in the form 12345678-90ab-cdef-1234-567890bcdefgh
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -95,7 +95,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named

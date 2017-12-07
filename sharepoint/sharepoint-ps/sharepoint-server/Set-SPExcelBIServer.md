@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013
+applicable: SharePoint Server 2010, SharePoint Server 2013
 title: Set-SPExcelBIServer
 schema: 2.0.0
 ---
@@ -50,7 +50,7 @@ Manages objects for the purpose of proper disposal. Use of objects, such as SPWe
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -82,7 +82,7 @@ Specifies the description of the Analysis server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -98,7 +98,7 @@ Specifies the Excel Services Application Web service application that contains t
 Type: SPExcelServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: Named
@@ -114,7 +114,7 @@ Specifies the ExcelServiceApplication identity.
 Type: SPExcelBIServerPipeBind
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: True
 Position: 0
@@ -130,7 +130,7 @@ The name of the Analysis Services server.
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
@@ -147,7 +147,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
-Applicable: SharePoint Server 2013
+Applicable: SharePoint Server 2010, SharePoint Server 2013
 
 Required: False
 Position: Named
