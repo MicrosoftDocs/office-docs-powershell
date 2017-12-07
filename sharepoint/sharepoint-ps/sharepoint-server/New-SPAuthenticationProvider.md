@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2013, SharePoint Server 2016
+applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 title: New-SPAuthenticationProvider
 schema: 2.0.0
 ---
@@ -88,7 +88,7 @@ The value must be a valid name of an ASP.NET membership provider; for example, m
 Type: String
 Parameter Sets: Forms
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -106,7 +106,7 @@ The value must be a valid name of an ASP.NET role provider; for example, myRoleP
 Type: String
 Parameter Sets: Forms
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -128,7 +128,7 @@ The value must be in one of the following forms:
 Type: SPTrustedIdentityTokenIssuerPipeBind
 Parameter Sets: Trusted
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: True
 Position: Named
@@ -144,7 +144,7 @@ Specifies whether the web application allows anonymous access.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -166,7 +166,7 @@ If objects are not immediately used, or disposed of by using the Stop-SPAssignme
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -182,7 +182,7 @@ Specifies whether the web application disables Kerberos authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -198,7 +198,7 @@ Specifies whether the web application uses Basic authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
@@ -214,7 +214,7 @@ Specifies whether the web application uses Integrated Windows authentication.
 Type: SwitchParameter
 Parameter Sets: Windows
 Aliases: 
-Applicable: SharePoint Server 2013, SharePoint Server 2016
+Applicable: SharePoint Server 2010, SharePoint Server 2013, SharePoint Server 2016
 
 Required: False
 Position: Named
