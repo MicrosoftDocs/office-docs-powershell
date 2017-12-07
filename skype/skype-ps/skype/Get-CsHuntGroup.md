@@ -40,7 +40,7 @@ Get-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.
 This example gets the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no call queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
 
 
-## PARAMETERS
+## OPTIONAL PARAMETERS
 
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".

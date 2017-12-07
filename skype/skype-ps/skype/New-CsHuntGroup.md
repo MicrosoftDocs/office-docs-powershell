@@ -51,7 +51,7 @@ New-CsHuntGroup -Name "Help desk" -Domain "litwareinc.com" -LineUri "tel:+199988
 This example saves the contents of music on hold and welcome music files in temporary variables. Then, it creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using those contents and other configurable parameters.
 
 
-## PARAMETERS
+## REQUIRED PARAMETERS
 
 ### -Domain
 The Domain parameter denotes the domain part of the primary uri for the hunt group. This domain name is validated against the list of domains that the tenant owns.
@@ -84,6 +84,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+## OPTIONAL PARAMETERS
 
 ### -AgentAlertTime
 The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive. The default value is 30 seconds.

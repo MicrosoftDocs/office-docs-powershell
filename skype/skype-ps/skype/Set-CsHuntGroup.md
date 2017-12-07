@@ -48,7 +48,7 @@ Set-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.
 This example saves the contents of music on hold to a temporary variable. Then, it updates the call queue with new phone number, distribution lists, and the name and content of the music on hold file.
 
 
-## PARAMETERS
+## REQUIRED PARAMETERS
 
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
@@ -65,6 +65,8 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+## OPTIONAL PARAMETERS
 
 ### -AgentAlertTime
 The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive.
