@@ -13,8 +13,7 @@ The Remove-CsHuntGroup cmdlet deletes an existing call queue.
 ## SYNTAX
 
 ```
-Remove-CsHuntGroup [-PrimaryUri <Object>] [-BypassDualWrite <Object>] [-Confirm] [-DomainController <Object>]
- [-Force] [-Tenant <Object>] [-WhatIf] [-AsJob] [<CommonParameters>]
+Remove-CsHuntGroup -PrimaryUri <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -39,10 +38,8 @@ This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
 
-PARAMVALUE: Uri
-
 ```yaml
-Type: Object
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -54,11 +51,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
+### -AsJob
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Object
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: System.Boolean
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -71,9 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-The Confirm switch causes the command to pause processing, and requires confirmation to proceed.
-
-PARAMVALUE: SwitchParameter
+The Confirm switch causes the command to pause processing, and requires confirmation to proceed. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
@@ -89,6 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
+This parameter is reserved for Microsoft internal use only.
+
 PARAMVALUE: Fqdn
 
 ```yaml
@@ -105,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-PARAMVALUE: SwitchParameter
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
@@ -121,10 +134,10 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -137,9 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes.
-
-PARAMVALUE: SwitchParameter
+The WhatIf switch causes the command to simulate its results. By using this switch, you can view what changes would occur without having to commit those changes. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
@@ -154,31 +165,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
-### System.Uri
-Represents the SIP uri of a call queue.
 
 ## OUTPUTS
-### Microsoft.Skype.Rgs.Configuration.Huntgroup
+
+### Microsoft.Rtc.Management.Hosted.HuntGroup.RemoveCsHuntGroupCmdlet
 
 ## NOTES
 
