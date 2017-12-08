@@ -267,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
-The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter might be set to a SIP address. Otherwise, this field is optional.
+The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a SIP address. Otherwise, this field is optional.
 
 ```yaml
 Type: System.Uri
