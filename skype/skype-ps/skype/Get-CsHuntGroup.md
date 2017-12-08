@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsHuntGroup
 
 ## SYNOPSIS
-The Get-CsHuntGroup cmdlet returns the identified call queues.
+The Get-CsHuntGroup cmdlet returns the identified Call Queues.
 
 ## SYNTAX
 
@@ -17,11 +17,11 @@ Get-CsHuntGroup [-PrimaryUri <System.Uri>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue.
+The Get-CsHuntGroup cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
 
-If called without parameters, Get-CsHuntgroup returns a collection of all call queues configured to be used in your organization.
+If called without parameters, Get-CsHuntgroup returns a collection of all Call Queues configured to be used in your organization.
 
-The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 ## EXAMPLES
 
@@ -30,20 +30,20 @@ The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the
 Get-CsHuntGroup
 ```
 
-This example gets all call queues in the organization.
+This example gets all Call Queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com"
 ```
 
-This example gets the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no call queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
+This example gets the Call Queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no Call Queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
 
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+The PrimaryUri parameter represents the SIP address for the Call Queue. It must start with "sip:".
 
 ```yaml
 Type: System.Uri

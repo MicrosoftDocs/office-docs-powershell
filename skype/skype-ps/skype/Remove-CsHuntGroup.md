@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-CsHuntGroup
 
 ## SYNOPSIS
-The Remove-CsHuntGroup cmdlet deletes an existing call queue.
+The Remove-CsHuntGroup cmdlet deletes an existing Call Queue.
 
 ## SYNTAX
 
@@ -17,9 +17,9 @@ Remove-CsHuntGroup -PrimaryUri <System.Uri> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Remove-CsHuntGroup cmdlet deletes an existing call queue specified by the PrimaryUri parameter.
+The Remove-CsHuntGroup cmdlet deletes an existing Call Queue specified by the PrimaryUri parameter.
 
-The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 ## EXAMPLES
 
@@ -28,7 +28,7 @@ The Remove-CsHuntGroup cmdlet may suggest additional steps required to complete 
 Remove-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com"
 ```
 
-This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com".
+This example deletes the Call Queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com".
 
 
 
@@ -36,7 +36,7 @@ This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474
 ## PARAMETERS
 
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+The PrimaryUri parameter represents the SIP address for the Call Queue. It must start with "sip:".
 
 ```yaml
 Type: System.Uri

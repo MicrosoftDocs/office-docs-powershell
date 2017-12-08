@@ -13,7 +13,7 @@ Updates a Call Queue in your Skype for Business Online organization.
 ## SYNTAX
 
 ```
-Set-CsHuntGroup -PrimaryUri <System.Uri> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections>] [-LineUri <System.Uri>]
+Set-CsHuntGroup -PrimaryUri <System.Uri> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections.Generic.List`1[System.Guid]>] [-LineUri <System.Uri>]
  [-MusicOnHoldFileContent <System.Byte[]>] [-MusicOnHoldFileName <System.String>] [-Name <System.String>]
  [-OverflowAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction>] [-OverflowActionTarget <System.Uri>] [-OverflowThreshold <Int16>]
  [-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>]
@@ -23,9 +23,9 @@ Set-CsHuntGroup -PrimaryUri <System.Uri> [-AgentAlertTime <Int16>] [-AllowOptOut
 
 ## DESCRIPTION
 
-Set-CsHuntGroup cmdlet provides a way for you to modify the properties of an existing call queue; for example, you can change the phone number for the call queue, the distribution lists associated with the call queue, or the welcome audio file. 
+Set-CsHuntGroup cmdlet provides a way for you to modify the properties of an existing Call Queue; for example, you can change the phone number for the Call Queue, the distribution lists associated with the Call Queue, or the welcome audio file. 
 
-The Set-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+The Set-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 The following parameters are not applicable to Skype for Business Online: AsJob, ClientAudience, DomainController, Force, HuntGroupServiceCallbackUri, and PipelineVariable
 
@@ -36,7 +36,7 @@ The following parameters are not applicable to Skype for Business Online: AsJob,
 Set-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" -UseDefaultMusicOnHold $true
 ```
 
-This example updates the call queue with primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" by making it use the default music on hold.
+This example updates the Call Queue with primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" by making it use the default music on hold.
 
 ### -------------------------- Example 2 -------------------------- 
 ```
@@ -44,13 +44,13 @@ $musicOnHoldContent = Get-Content ".\MusicOnHold.wav" -ReadCount 0 -Encoding Byt
 Set-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com" -LineUri "tel:+19998881234" -DistributionLists @("8521b0e3-51bd-4a4b-a8d6-b219a77a0a6a", "868dccd8-d723-4b4f-8d74-ab59e207c357") -MusicOnHoldFileName "MusicOnHold.wav" -MusicOnHoldFileContent $musicOnHoldContent
 ```
 
-This example saves the contents of music on hold to a temporary variable. Then, it updates the call queue with new phone number, distribution lists, and the name and content of the music on hold file.
+This example saves the contents of music on hold to a temporary variable. Then, it updates the Call Queue with new phone number, distribution lists, and the name and content of the music on hold file.
 
 
 ## PARAMETERS
 
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+The PrimaryUri parameter represents the SIP address for the Call Queue. It must start with "sip:".
 
 ```yaml
 Type: System.Uri
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOptOut
-The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a call queue.
+The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a Call Queue.
 
 ```yaml
 Type: System.Boolean
@@ -98,10 +98,10 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionLists
-The DistributionLists parameter lets you add all the members of the distribution lists to the call queue. This is a list of distribution list GUIDs. A service wide configurable maximum number of DLs per call queue are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are supported. O365 Groups can also be used to add members to the call queue.
+The DistributionLists parameter lets you add all the members of the distribution lists to the Call Queue. This is a list of distribution list GUIDs. A service wide configurable maximum number of DLs per Call Queue are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are supported. O365 Groups can also be used to add members to the Call Queue.
 
 ```yaml
-Type: System.Collections
+Type: System.Collections.Generic.List`1[System.Guid]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -114,7 +114,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
-The LineUri parameter is the phone number for the call queue. The line Uniform Resource Identifier (URI) must be specified by using the following format: the tel: prefix followed by a plus sign, followed by the country/region calling code, area code, and phone number (using only digits: no blank spaces, periods, or hyphens). For example: -LineUri "tel:+14255551219".
+The LineUri parameter is the phone number for the Call Queue. The line Uniform Resource Identifier (URI) must be specified by using the following format: the tel: prefix followed by a plus sign, followed by the country/region calling code, area code, and phone number (using only digits: no blank spaces, periods, or hyphens). For example: -LineUri "tel:+14255551219".
 
 ```yaml
 Type: System.Uri
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the call queue.
+The Name parameter specifies a unique name for the Call Queue.
 
 ```yaml
 Type: System.String
@@ -170,7 +170,7 @@ Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-The RoutingMethod defines how agents will be called in a call queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+The RoutingMethod defines how agents will be called in a Call Queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
 
 PARAMVALUE: Attendant | Serial
 
@@ -297,7 +297,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultMusicOnHold
-The UseDefaultMusicOnHold parameter indicates that this call queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldFileName and MusicOnHoldFileContent.
+The UseDefaultMusicOnHold parameter indicates that this Call Queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldFileName and MusicOnHoldFileContent.
 
 ```yaml
 Type: System.Boolean
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileContent
-The WelcomeMusicFileContent parameter represents the audio file to play when callers are connected with the call queue. This is the content of the audio file. Supported formats are: .wav, .mp3, .and wma.
+The WelcomeMusicFileContent parameter represents the audio file to play when callers are connected with the Call Queue. This is the content of the audio file. Supported formats are: .wav, .mp3, .and wma.
 
 ```yaml
 Type: System.Byte[]
@@ -329,7 +329,7 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileName
-The WelcomeMusicFileName parameter represents audio file to play when callers are connected with the call queue. This is the name to the audio file. Supported formats are: .wav, .mp3, and .wma.
+The WelcomeMusicFileName parameter represents audio file to play when callers are connected with the Call Queue. This is the name to the audio file. Supported formats are: .wav, .mp3, and .wma.
 
 ```yaml
 Type: System.String
