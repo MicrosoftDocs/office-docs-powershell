@@ -50,7 +50,7 @@ Skype for Business Server Control Panel: The functions carried out by the Instal
 ### -------------------------- Example 1 -------------------------- 
 ```
 
-Install-CsMirrorDatabase -ConfiguredDatabases -FileShare "\\\\atl-fs-001\DbBackup" -SqlServerFqdn "atl-primary-001.litwareinc.com" -DropExisitingDatabasesOnMirror
+Install-CsMirrorDatabase -ConfiguredDatabases -FileShare "\\atl-fs-001.litware.com\DbBackup" -SqlServerFqdn "atl-primary-001.litwareinc.com" -DropExisitingDatabasesOnMirror
 ```
 
 The command shown in Example 1 installs any predefined database.
