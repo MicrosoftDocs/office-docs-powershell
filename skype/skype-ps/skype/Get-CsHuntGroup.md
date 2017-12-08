@@ -13,7 +13,7 @@ The Get-CsHuntGroup cmdlet returns the identified call queues.
 ## SYNTAX
 
 ```
-Get-CsHuntGroup [-PrimaryUri <Object>] [<CommonParameters>] 
+Get-CsHuntGroup [-PrimaryUri <System.Uri>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
@@ -40,7 +40,7 @@ Get-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.
 This example gets the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no call queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
 
 
-## OPTIONAL PARAMETERS
+## PARAMETERS
 
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
@@ -147,7 +147,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.HuntGroup.GetCsHuntGroupCmdlet
+### Microsoft.Rtc.Management.Hosted.HuntGroup.Models.HuntGroup
 
 ## NOTES
 

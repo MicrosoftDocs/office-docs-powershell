@@ -13,11 +13,10 @@ Creates new Call Queue in your Skype for Business Online organization. Call Queu
 ## SYNTAX
 
 ```
-New-CsHuntGroup -Domain <Object> -Name <Object> [-AgentAlertTime <Object>] [-DistributionLists <Object>]
- [-LineUri <Object>] [-MusicOnHoldFileContent <Object>] [-MusicOnHoldFileName <Object>] [-OverflowAction <Object>]
- [-OverflowActionTarget <Object>] [-OverflowThreshold <Object>]  [-TimeoutAction <Object>] 
- [-TimeoutActionTarget <Object>] [-TimeoutThreshold <Object>] [-UseDefaultMusicOnHold <Object>] 
- [-WelcomeMusicFileContent <Object>] [-WelcomeMusicFileName <Object>] [<CommonParameters>]
+New-CsHuntGroup -Domain <System.String> -Name <System.String> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections>]
+ [-LineUri <System.Uri>] [-MusicOnHoldFileContent <System.Byte[]>] [-MusicOnHoldFileName <System.String>] [-OverflowAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction>]
+ [-OverflowActionTarget <System.Uri>] [-OverflowThreshold <Int16>] [-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>] [-TimeoutActionTarget <System.Uri>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <System.Boolean>] 
+ [-WelcomeMusicFileContent <System.Byte[]>] [-WelcomeMusicFileName <System.String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -51,10 +50,10 @@ New-CsHuntGroup -Name "Help desk" -Domain "litwareinc.com" -LineUri "tel:+199988
 This example saves the contents of music on hold and welcome music files in temporary variables. Then, it creates a call queue for the organization named "Help Desk" in the domain "litwareinc.com" using those contents and other configurable parameters.
 
 
-## REQUIRED PARAMETERS
+## PARAMETERS
 
 ### -Domain
-The Domain parameter denotes the domain part of the primary uri for the hunt group. This domain name is validated against the list of domains that the tenant owns.
+The Domain parameter denotes the domain part of the primary uri for the call queue. This domain name is validated against the list of domains that the tenant owns.
 
 ```yaml
 Type: System.String
@@ -70,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The Name parameter specifies a unique name for the hunt group.
+The Name parameter specifies a unique name for the call queue.
 
 ```yaml
 Type: System.String
@@ -84,8 +83,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-## OPTIONAL PARAMETERS
 
 ### -AgentAlertTime
 The AgentAlertTime parameter represents the time (in seconds) that a call can remain unanswered before it is automatically routed to the next agent. The AgentAlertTime can be set to any integer value between 30 and 180 seconds (3 minutes), inclusive. The default value is 30 seconds.
@@ -104,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowOptOut
-The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a hunt group.
+The AllowOptOut parameter indicates whether or not agents can opt in or opt out from taking calls from a call queue.
 
 ```yaml
 Type: System.Boolean
@@ -120,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -DistributionLists
-The DistributionLists parameter lets you add all the members of the distribution lists to the hunt group. This is a list of distribution list GUID. A service wide configurable maximum number of DLs per HuntGroup are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are supported. O365 Groups can also be used to add members to the hunt group.
+The DistributionLists parameter lets you add all the members of the distribution lists to the call queue. This is a list of distribution list GUIDs. A service wide configurable maximum number of DLs per call queue are allowed. Only the first N (service wide configurable) agents from all distribution lists combined are considered for accepting the call. Nested DLs are supported. O365 Groups can also be used to add members to the call queue.
 
 ```yaml
 Type: System.Collections
@@ -136,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -LineUri
-The LineUri parameter is the phone number for the hunt group. The line Uniform Resource Identifier (URI) must be specified by using the following format: the TEL: prefix followed by a plus sign, followed by the country/region calling code, area code, and phone number (using only digits: no blank spaces, periods, or hyphens). For example: -LineUri "TEL:+14255551219".
+The LineUri parameter is the phone number for the call queue. The line Uniform Resource Identifier (URI) must be specified by using the following format: the tel: prefix followed by a plus sign, followed by the country/region calling code, area code, and phone number (using only digits: no blank spaces, periods, or hyphens). For example: -LineUri "tel:+14255551219".
 
 ```yaml
 Type: System.Uri
@@ -155,7 +152,7 @@ Accept wildcard characters: False
 The MusicOnHoldFileContent parameter represents music to play when callers are placed on hold. This is the content of the audio file. Supported formats are: .wav, .mp3, and .wma. This parameter is required if the UseDefaultMusicOnHold parameter is not specified.
 
 ```yaml
-Type: System.Byte
+Type: System.Byte[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -184,12 +181,12 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowAction
-The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following three values: DisconnectWithBusy, Forward, and Voicemail. The default value is DisconnectWithBusy.
+The OverflowAction parameter designates the action to take if the overflow threshold is reached. The OverflowAction property must be set to one of the following three values: DisconnectWithBusy, Forward, and Voicemail.
 
 PARAMVALUE: DisconnectWithBusy | Forward | Voicemail
 
 ```yaml
-Type: Object
+Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -202,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
-The OverflowActionTarget parameter represents the target of the overflow action. For example, if the OverFlowAction is set to Forward, this parameter might be set to a SIP address or a PSTN phone number. This parameter is optional unless the OverflowAction is set to Forward, which requires a SIP address.
+The OverflowActionTarget parameter represents the target of the overflow action. For example, if the OverFlowAction is set to Forward, this parameter might be set to a SIP address. This parameter is optional unless the OverflowAction is set to Forward, which requires a SIP address.
 
 ```yaml
 Type: System.Uri
@@ -218,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowThreshold
-The OverflowThreshold parameter defines the number of simultaneous calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. The default value is 50. A value of 0 causes the overflow action to be taken immediately.
+The OverflowThreshold parameter defines the number of calls that can be in the queue at any one time before the overflow action is triggered. The OverflowThreshold can be any integer value between 0 and 200, inclusive. A value of 0 causes calls not to reach agents and the overflow action to be taken immediately
 
 ```yaml
 Type: Int16
@@ -234,12 +231,12 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingMethod
-The RoutingMethod defines how agents will be called in a hunt group. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
+The RoutingMethod defines how agents will be called in a call queue. If the routing method is set to Serial, then agents will be called one at a time. If the routing method is set to Attendant, then agents will be called in parallel.
 
-PARAMVALUE: Serial | Attendant
+PARAMVALUE: Attendant | Serial
 
 ```yaml
-Type: Object
+Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -257,7 +254,7 @@ The TimeoutAction parameter defines the action to take if the timeout threshold 
 PARAMVALUE: Disconnect | Forward | Voicemail
 
 ```yaml
-Type: Object
+Type: Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -270,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
-The TimeoutActionTarget represents the target of the timeout action. For example, if the TimeoutAction is set to Forward, this parameter might be set to a SIP address or a PSTN phone number. This field is optional unless the TimeoutAction is set to Forward, which requires a SIP address.
+The TimeoutActionTarget represents the target of the timeout action. For example, if the TimeoutAction is set to Forward, this parameter might be set to a SIP address. This field is optional unless the TimeoutAction is set to Forward, which requires a SIP address.
 
 ```yaml
 Type: System.Uri
@@ -287,7 +284,7 @@ Accept wildcard characters: False
 
 ### -TimeoutThreshold
 The TimeoutThreshold parameter defines the time (in seconds) that a call can be in the queue before that call times out. At that point, the system will take the action specified by the TimeoutAction parameter. 
-The TimeoutAction can be any integer value between 0 and 2700 seconds (inclusive), and is rounded to the nearest 15th interval. For example, if set to 47 seconds, then it is rounded down to 45. If set to 0, welcome music is played, and then the timoue action will be taken.
+The TimeoutAction can be any integer value between 0 and 2700 seconds (inclusive), and is rounded to the nearest 15th interval. For example, if set to 47 seconds, then it is rounded down to 45. If set to 0, welcome music is played, and then the timeout action will be taken.
 
 ```yaml
 Type: Int16
@@ -303,7 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseDefaultMusicOnHold
-The UseDefaultMusicOnHold parameter indicates that this hunt group uses the default music on hold. This parameter cannot be specified together with MusicOnHoldFileName and MusicOnHoldFileContent.
+The UseDefaultMusicOnHold parameter indicates that this call queue uses the default music on hold. This parameter cannot be specified together with MusicOnHoldFileName and MusicOnHoldFileContent.
 
 ```yaml
 Type: System.Boolean
@@ -319,10 +316,10 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileContent
-The WelcomeMusicFileContent parameter represents the audio file to play when callers are connected with the hunt group. This is the content of the audio file. Supported formats are: .wav, .mp3, .and wma.
+The WelcomeMusicFileContent parameter represents the audio file to play when callers are connected with the call queue. This is the content of the audio file. Supported formats are: .wav, .mp3, .and wma.
 
 ```yaml
-Type: System.Byte
+Type: System.Byte[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -335,7 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### -WelcomeMusicFileName
-The WelcomeMusicFileName parameter represents audio file to play when callers are connected with the hunt group. This is the name to the audio file. Supported formats are: .wav, .mp3, and .wma.
+The WelcomeMusicFileName parameter represents audio file to play when callers are connected with the call queue. This is the name to the audio file. Supported formats are: .wav, .mp3, and .wma.
 
 ```yaml
 Type: System.String
@@ -487,7 +484,7 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.HuntGroup.NewCsHuntGroupCmdlet
+### Microsoft.Rtc.Management.Hosted.HuntGroup.Models.HuntGroup
 
 ## NOTES
 

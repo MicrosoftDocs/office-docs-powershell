@@ -13,7 +13,7 @@ The Remove-CsHuntGroup cmdlet deletes an existing call queue.
 ## SYNTAX
 
 ```
-Remove-CsHuntGroup -PrimaryUri <Object> [<CommonParameters>]
+Remove-CsHuntGroup -PrimaryUri <System.Uri> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -33,7 +33,7 @@ This example deletes the call queue with the primary uri "sip:hg_a82e2406b9b5474
 
 
 
-## REQUIRED PARAMETERS
+## PARAMETERS
 
 ### -PrimaryUri
 The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
@@ -50,8 +50,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-## OPTIONAL PARAMETERS
 
 ### -AsJob
 This parameter is reserved for Microsoft internal use only.
@@ -172,9 +170,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
+### System.Uri
+
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.HuntGroup.RemoveCsHuntGroupCmdlet
+### Microsoft.Rtc.Management.Hosted.HuntGroup.Models.HuntGroup
 
 ## NOTES
 
