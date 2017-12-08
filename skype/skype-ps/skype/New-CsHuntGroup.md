@@ -15,7 +15,7 @@ Creates new Call Queue in your Skype for Business Online organization. Call Queu
 ```
 New-CsHuntGroup -Domain <System.String> -Name <System.String> [-AgentAlertTime <Int16>] [-AllowOptOut <System.Boolean>] [-DistributionLists <System.Collections>]
  [-LineUri <System.Uri>] [-MusicOnHoldFileContent <System.Byte[]>] [-MusicOnHoldFileName <System.String>] [-OverflowAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.OverflowAction>]
- [-OverflowActionTarget <System.Uri>] [-OverflowThreshold <Int16>] [-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>] [-TimeoutActionTarget <System.Uri>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <System.Boolean>] 
+ [-OverflowActionTarget <System.Uri>] [-OverflowThreshold <Int16>] [-RoutingMethod <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.RoutingMethod>] [-TimeoutAction <Microsoft.Rtc.Management.Hosted.HuntGroup.Models.TimeoutAction>] [-TimeoutActionTarget <System.Uri>] [-TimeoutThreshold <Int16>] [-UseDefaultMusicOnHold <System.Boolean>]
  [-WelcomeMusicFileContent <System.Byte[]>] [-WelcomeMusicFileName <System.String>] [<CommonParameters>]
 ```
 
