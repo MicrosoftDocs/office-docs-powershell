@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverflowActionTarget
-The OverflowActionTarget parameter represents the target of the overflow action. For example, if the OverFlowAction is set to Forward, this parameter might be set to a SIP address. This parameter is optional unless the OverflowAction is set to Forward, which requires a SIP address.
+The OverflowActionTarget parameter represents the target of the overflow action. If the OverFlowAction is set to Forward, this parameter must be set to a SIP address. Otherwise, this parameter is optional.
 
 ```yaml
 Type: System.Uri
@@ -264,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeoutActionTarget
-The TimeoutActionTarget represents the target of the timeout action. For example, if the TimeoutAction is set to Forward, this parameter might be set to a SIP address. This field is optional unless the TimeoutAction is set to Forward, which requires a SIP address.
+The TimeoutActionTarget represents the target of the timeout action. If the TimeoutAction is set to Forward, this parameter must be set to a SIP address. Otherwise, this field is optional.
 
 ```yaml
 Type: System.Uri
