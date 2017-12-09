@@ -8,21 +8,20 @@ schema: 2.0.0
 # Get-CsHuntGroup
 
 ## SYNOPSIS
-The Get-CsHuntGroup cmdlet returns the identified call queues.
+The Get-CsHuntGroup cmdlet returns the identified Call Queues.
 
 ## SYNTAX
 
 ```
-Get-CsHuntGroup [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-PrimaryUri <Object>]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsHuntGroup [-PrimaryUri <System.Uri>] [<CommonParameters>] 
 ```
 
 ## DESCRIPTION
-The Get-CsHuntGroup cmdlet lets you retrieve information about the call queues in your organization. Call queue output contains statistical data on the number of active calls that are in the queue.
+The Get-CsHuntGroup cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
 
-If called without parameters, Get-CsHuntgroup returns a collection of all call queues configured to be used in your organization.
+If called without parameters, Get-CsHuntgroup returns a collection of all Call Queues configured to be used in your organization.
 
-The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the call queue setup.
+The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the Call Queue setup.
 
 ## EXAMPLES
 
@@ -31,87 +30,23 @@ The Get-CsHuntGroup cmdlet may suggest additional steps required to complete the
 Get-CsHuntGroup
 ```
 
-This example gets all call queues in the organization.
+This example gets all Call Queues in the organization.
 
 ### -------------------------- Example 2 --------------------------
 ```
 Get-CsHuntGroup -PrimaryUri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com"
 ```
 
-This example gets the call queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no call queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
+This example gets the Call Queue with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com". If no Call Queue exists with the primary uri "sip:hg_a82e2406b9b5474a9878e9659f32dbc3@litwareinc.com", then this example generates an error.
 
 
 ## PARAMETERS
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PrimaryUri
-The PrimaryUri parameter represents the SIP address for the call queue. It must start with "sip:".
+The PrimaryUri parameter represents the SIP address for the Call Queue. It must start with "sip:".
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-PARAMVALUE: Guid
-
-```yaml
-Type: Object
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -124,10 +59,76 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-PARAMVALUE: SwitchParameter
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BypassDualWrite
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainController
+This parameter is reserved for Microsoft internal use only.
+
+PARAMVALUE: Fqdn
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases: DC
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: Skype for Business Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -144,14 +145,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### System.Uri
-Represents the SIP uri of a call queue.
-
-
 ## OUTPUTS
 
-### Microsoft.Skype.Rgs.Configuration.Huntgroup
-
+### Microsoft.Rtc.Management.Hosted.HuntGroup.Models.HuntGroup
 
 ## NOTES
 
