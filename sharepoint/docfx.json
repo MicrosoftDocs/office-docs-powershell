@@ -61,10 +61,10 @@
     },
     "fileMetadata": {
       "ms.service":{
-        "sharepoint-ps/sharepoint-online/*.md":"sharepoint-powershell"
+        "sharepoint-ps/sharepoint-online/*.md":"sharepoint-online-powershell"
       },
       "ms.prod":{
-        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-2016-powershell"
+        "sharepoint-ps/sharepoint-server/*.md":"sharepoint-on-premises-powershell"
       },
       "ROBOTS":{
         "sharepoint-ps/sharepoint-pnp/*.md":"NOINDEX,NOFOLLOW"
