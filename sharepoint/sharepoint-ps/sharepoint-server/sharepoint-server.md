@@ -2600,3 +2600,233 @@ Locale: en-US
 ### [Upgrade-SPSiteMapDatabase](Upgrade-SPSiteMapDatabase.md)
 {{Manually Enter Upgrade-SPSiteMapDatabase Description Here}}
 
+### [Add-FASTSearchResource](Add-FASTSearchResource.md)
+{{Manually Enter Add-FASTSearchResource Description Here}}
+
+### [Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)
+{{Manually Enter Add-FASTSearchSpelltuning Description Here}}
+
+### [Clear-FASTSearchContentCollection](Clear-FASTSearchContentCollection.md)
+{{Manually Enter Clear-FASTSearchContentCollection Description Here}}
+
+### [Get-FASTSearchContentCollection](Get-FASTSearchContentCollection.md)
+{{Manually Enter Get-FASTSearchContentCollection Description Here}}
+
+### [Get-FASTSearchDocumentProcessingPipeline](Get-FASTSearchDocumentProcessingPipeline.md)
+{{Manually Enter Get-FASTSearchDocumentProcessingPipeline Description Here}}
+
+### [Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)
+{{Manually Enter Get-FASTSearchMetadataCategory Description Here}}
+
+### [Get-FASTSearchMetadataCrawledProperty](Get-FASTSearchMetadataCrawledProperty.md)
+{{Manually Enter Get-FASTSearchMetadataCrawledProperty Description Here}}
+
+### [Get-FASTSearchMetadataCrawledPropertyMapping](Get-FASTSearchMetadataCrawledPropertyMapping.md)
+{{Manually Enter Get-FASTSearchMetadataCrawledPropertyMapping Description Here}}
+
+### [Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)
+{{Manually Enter Get-FASTSearchMetadataFullTextIndex Description Here}}
+
+### [Get-FASTSearchMetadataFullTextIndexMapping](Get-FASTSearchMetadataFullTextIndexMapping.md)
+{{Manually Enter Get-FASTSearchMetadataFullTextIndexMapping Description Here}}
+
+### [Get-FASTSearchMetadataManagedProperty](Get-FASTSearchMetadataManagedProperty.md)
+{{Manually Enter Get-FASTSearchMetadataManagedProperty Description Here}}
+
+### [Get-FASTSearchMetadataRankProfile](Get-FASTSearchMetadataRankProfile.md)
+{{Manually Enter Get-FASTSearchMetadataRankProfile Description Here}}
+
+### [Get-FASTSearchResource](Get-FASTSearchResource.md)
+{{Manually Enter Get-FASTSearchResource Description Here}}
+
+### [Get-FASTSearchSearchSettingGroup](Get-FASTSearchSearchSettingGroup.md)
+{{Manually Enter Get-FASTSearchSearchSettingGroup Description Here}}
+
+### [Get-FASTSearchSecurityAliaser](Get-FASTSearchSecurityAliaser.md)
+{{Manually Enter Get-FASTSearchSecurityAliaser Description Here}}
+
+### [Get-FASTSearchSecurityCCTKServer](Get-FASTSearchSecurityCCTKServer.md)
+{{Manually Enter Get-FASTSearchSecurityCCTKServer Description Here}}
+
+### [Get-FASTSearchSecurityClaimsUserStore](Get-FASTSearchSecurityClaimsUserStore.md)
+{{Manually Enter Get-FASTSearchSecurityClaimsUserStore Description Here}}
+
+### [Get-FASTSearchSecurityCompleteGroupExpansion](Get-FASTSearchSecurityCompleteGroupExpansion.md)
+{{Manually Enter Get-FASTSearchSecurityCompleteGroupExpansion Description Here}}
+
+### [Get-FASTSearchSecurityDecodedSid](Get-FASTSearchSecurityDecodedSid.md)
+{{Manually Enter Get-FASTSearchSecurityDecodedSid Description Here}}
+
+### [Get-FASTSearchSecurityDefaultUserStore](Get-FASTSearchSecurityDefaultUserStore.md)
+{{Manually Enter Get-FASTSearchSecurityDefaultUserStore Description Here}}
+
+### [Get-FASTSearchSecurityEncodedSid](Get-FASTSearchSecurityEncodedSid.md)
+{{Manually Enter Get-FASTSearchSecurityEncodedSid Description Here}}
+
+### [Get-FASTSearchSecurityGeneralSettings](Get-FASTSearchSecurityGeneralSettings.md)
+{{Manually Enter Get-FASTSearchSecurityGeneralSettings Description Here}}
+
+### [Get-FASTSearchSecurityLogLevel](Get-FASTSearchSecurityLogLevel.md)
+{{Manually Enter Get-FASTSearchSecurityLogLevel Description Here}}
+
+### [Get-FASTSearchSecurityLotusNotesUserStore](Get-FASTSearchSecurityLotusNotesUserStore.md)
+{{Manually Enter Get-FASTSearchSecurityLotusNotesUserStore Description Here}}
+
+### [Get-FASTSearchSecurityPublicFilter](Get-FASTSearchSecurityPublicFilter.md)
+{{Manually Enter Get-FASTSearchSecurityPublicFilter Description Here}}
+
+### [Get-FASTSearchSecurityRegexAliaser](Get-FASTSearchSecurityRegexAliaser.md)
+{{Manually Enter Get-FASTSearchSecurityRegexAliaser Description Here}}
+
+### [Get-FASTSearchSecurityUserFilter](Get-FASTSearchSecurityUserFilter.md)
+{{Manually Enter Get-FASTSearchSecurityUserFilter Description Here}}
+
+### [Get-FASTSearchSecurityUserStore](Get-FASTSearchSecurityUserStore.md)
+{{Manually Enter Get-FASTSearchSecurityUserStore Description Here}}
+
+### [Get-FASTSearchSecurityUserStoreGroupExpansion](Get-FASTSearchSecurityUserStoreGroupExpansion.md)
+{{Manually Enter Get-FASTSearchSecurityUserStoreGroupExpansion Description Here}}
+
+### [Get-FASTSearchSecurityWorkerNode](Get-FASTSearchSecurityWorkerNode.md)
+{{Manually Enter Get-FASTSearchSecurityWorkerNode Description Here}}
+
+### [Get-FASTSearchSecurityXMLAliaser](Get-FASTSearchSecurityXMLAliaser.md)
+{{Manually Enter Get-FASTSearchSecurityXMLAliaser Description Here}}
+
+### [Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)
+{{Manually Enter Get-FASTSearchSpelltuningStatus Description Here}}
+
+### [Install-FASTSearchAdminDatabase](Install-FASTSearchAdminDatabase.md)
+{{Manually Enter Install-FASTSearchAdminDatabase Description Here}}
+
+### [New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)
+{{Manually Enter New-FASTSearchContentCollection Description Here}}
+
+### [New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)
+{{Manually Enter New-FASTSearchMetadataCategory Description Here}}
+
+### [New-FASTSearchMetadataCrawledProperty](New-FASTSearchMetadataCrawledProperty.md)
+{{Manually Enter New-FASTSearchMetadataCrawledProperty Description Here}}
+
+### [New-FASTSearchMetadataCrawledPropertyMapping](New-FASTSearchMetadataCrawledPropertyMapping.md)
+{{Manually Enter New-FASTSearchMetadataCrawledPropertyMapping Description Here}}
+
+### [New-FASTSearchMetadataFullTextIndex](New-FASTSearchMetadataFullTextIndex.md)
+{{Manually Enter New-FASTSearchMetadataFullTextIndex Description Here}}
+
+### [New-FASTSearchMetadataFullTextIndexMapping](New-FASTSearchMetadataFullTextIndexMapping.md)
+{{Manually Enter New-FASTSearchMetadataFullTextIndexMapping Description Here}}
+
+### [New-FASTSearchMetadataManagedProperty](New-FASTSearchMetadataManagedProperty.md)
+{{Manually Enter New-FASTSearchMetadataManagedProperty Description Here}}
+
+### [New-FASTSearchMetadataRankProfile](New-FASTSearchMetadataRankProfile.md)
+{{Manually Enter New-FASTSearchMetadataRankProfile Description Here}}
+
+### [New-FASTSearchSearchSettingGroup](New-FASTSearchSearchSettingGroup.md)
+{{Manually Enter New-FASTSearchSearchSettingGroup Description Here}}
+
+### [New-FASTSearchSecurityClaimsUserStore](New-FASTSearchSecurityClaimsUserStore.md)
+{{Manually Enter New-FASTSearchSecurityClaimsUserStore Description Here}}
+
+### [New-FASTSearchSecurityLotusNotesUserStore](New-FASTSearchSecurityLotusNotesUserStore.md)
+{{Manually Enter New-FASTSearchSecurityLotusNotesUserStore Description Here}}
+
+### [New-FASTSearchSecurityRegexAliaser](New-FASTSearchSecurityRegexAliaser.md)
+{{Manually Enter New-FASTSearchSecurityRegexAliaser Description Here}}
+
+### [New-FASTSearchSecurityRegexAliaserPattern](New-FASTSearchSecurityRegexAliaserPattern.md)
+{{Manually Enter New-FASTSearchSecurityRegexAliaserPattern Description Here}}
+
+### [New-FASTSearchSecurityXMLAliaser](New-FASTSearchSecurityXMLAliaser.md)
+{{Manually Enter New-FASTSearchSecurityXMLAliaser Description Here}}
+
+### [Remove-FASTSearchContentCollection](Remove-FASTSearchContentCollection.md)
+{{Manually Enter Remove-FASTSearchContentCollection Description Here}}
+
+### [Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)
+{{Manually Enter Remove-FASTSearchMetadataCategory Description Here}}
+
+### [Remove-FASTSearchMetadataCrawledPropertyMapping](Remove-FASTSearchMetadataCrawledPropertyMapping.md)
+{{Manually Enter Remove-FASTSearchMetadataCrawledPropertyMapping Description Here}}
+
+### [Remove-FASTSearchMetadataFullTextIndex](Remove-FASTSearchMetadataFullTextIndex.md)
+{{Manually Enter Remove-FASTSearchMetadataFullTextIndex Description Here}}
+
+### [Remove-FASTSearchMetadataFullTextIndexMapping](Remove-FASTSearchMetadataFullTextIndexMapping.md)
+{{Manually Enter Remove-FASTSearchMetadataFullTextIndexMapping Description Here}}
+
+### [Remove-FASTSearchMetadataManagedProperty](Remove-FASTSearchMetadataManagedProperty.md)
+{{Manually Enter Remove-FASTSearchMetadataManagedProperty Description Here}}
+
+### [Remove-FASTSearchMetadataRankProfile](Remove-FASTSearchMetadataRankProfile.md)
+{{Manually Enter Remove-FASTSearchMetadataRankProfile Description Here}}
+
+### [Remove-FASTSearchResource](Remove-FASTSearchResource.md)
+{{Manually Enter Remove-FASTSearchResource Description Here}}
+
+### [Remove-FASTSearchSearchSettingGroup](Remove-FASTSearchSearchSettingGroup.md)
+{{Manually Enter Remove-FASTSearchSearchSettingGroup Description Here}}
+
+### [Remove-FASTSearchSecurityAliaser](Remove-FASTSearchSecurityAliaser.md)
+{{Manually Enter Remove-FASTSearchSecurityAliaser Description Here}}
+
+### [Remove-FASTSearchSecurityUserStore](Remove-FASTSearchSecurityUserStore.md)
+{{Manually Enter Remove-FASTSearchSecurityUserStore Description Here}}
+
+### [Remove-FASTSearchSpelltuning](Remove-FASTSearchSpelltuning.md)
+{{Manually Enter Remove-FASTSearchSpelltuning Description Here}}
+
+### [Set-FASTSearchConfiguration](Set-FASTSearchConfiguration.md)
+{{Manually Enter Set-FASTSearchConfiguration Description Here}}
+
+### [Set-FASTSearchIPSec](Set-FASTSearchIPSec.md)
+{{Manually Enter Set-FASTSearchIPSec Description Here}}
+
+### [Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)
+{{Manually Enter Set-FASTSearchMetadataCategory Description Here}}
+
+### [Set-FASTSearchMetadataCrawledProperty](Set-FASTSearchMetadataCrawledProperty.md)
+{{Manually Enter Set-FASTSearchMetadataCrawledProperty Description Here}}
+
+### [Set-FASTSearchMetadataCrawledPropertyMapping](Set-FASTSearchMetadataCrawledPropertyMapping.md)
+{{Manually Enter Set-FASTSearchMetadataCrawledPropertyMapping Description Here}}
+
+### [Set-FASTSearchMetadataFullTextIndex](Set-FASTSearchMetadataFullTextIndex.md)
+{{Manually Enter Set-FASTSearchMetadataFullTextIndex Description Here}}
+
+### [Set-FASTSearchMetadataFullTextIndexMapping](Set-FASTSearchMetadataFullTextIndexMapping.md)
+{{Manually Enter Set-FASTSearchMetadataFullTextIndexMapping Description Here}}
+
+### [Set-FASTSearchMetadataManagedProperty](Set-FASTSearchMetadataManagedProperty.md)
+{{Manually Enter Set-FASTSearchMetadataManagedProperty Description Here}}
+
+### [Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)
+{{Manually Enter Set-FASTSearchMetadataRankProfile Description Here}}
+
+### [Set-FASTSearchSecurityCCTKServer](Set-FASTSearchSecurityCCTKServer.md)
+{{Manually Enter Set-FASTSearchSecurityCCTKServer Description Here}}
+
+### [Set-FASTSearchSecurityClaimsUserStore](Set-FASTSearchSecurityClaimsUserStore.md)
+{{Manually Enter Set-FASTSearchSecurityClaimsUserStore Description Here}}
+
+### [Set-FASTSearchSecurityDefaultUserStore](Set-FASTSearchSecurityDefaultUserStore.md)
+{{Manually Enter Set-FASTSearchSecurityDefaultUserStore Description Here}}
+
+### [Set-FASTSearchSecurityLogLevel](Set-FASTSearchSecurityLogLevel.md)
+{{Manually Enter Set-FASTSearchSecurityLogLevel Description Here}}
+
+### [Set-FASTSearchSecurityLotusNotesUserStore](Set-FASTSearchSecurityLotusNotesUserStore.md)
+{{Manually Enter Set-FASTSearchSecurityLotusNotesUserStore Description Here}}
+
+### [Set-FASTSearchSecurityPublicFilter](Set-FASTSearchSecurityPublicFilter.md)
+{{Manually Enter Set-FASTSearchSecurityPublicFilter Description Here}}
+
+### [Set-FASTSearchSecurityRegexAliaser](Set-FASTSearchSecurityRegexAliaser.md)
+{{Manually Enter Set-FASTSearchSecurityRegexAliaser Description Here}}
+
+### [Set-FASTSearchSecurityXMLAliaser](Set-FASTSearchSecurityXMLAliaser.md)
+{{Manually Enter Set-FASTSearchSecurityXMLAliaser Description Here}}
+
+### [Uninstall-FASTSearchAdminDatabase](Uninstall-FASTSearchAdminDatabase.md)
+{{Manually Enter Uninstall-FASTSearchAdminDatabase Description Here}}
