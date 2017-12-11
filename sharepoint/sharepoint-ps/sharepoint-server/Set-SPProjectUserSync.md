@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: Project Server 2013, Project Server 2016
 title: Set-SPProjectUserSync
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ Specifies the URL of the Project Web App instance to set the Project User Sync s
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: True
 Position: 2
@@ -60,7 +60,7 @@ Disabled completely disables WSS User Sync; EnablePWA enables WSS User sync for 
 Type: UserSyncParameterValues[]
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: True
 Position: 3
@@ -82,7 +82,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named

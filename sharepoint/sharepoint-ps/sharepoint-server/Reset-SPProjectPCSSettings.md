@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: Project Server 2013, Project Server 2016
 title: Reset-SPProjectPCSSettings
 schema: 2.0.0
 ---
@@ -44,7 +44,7 @@ The Project Server service application for which the settings are to be read.
 Type: PsiServiceApplicationPipeBind
 Parameter Sets: (All)
 Aliases: sa
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named
@@ -66,7 +66,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named

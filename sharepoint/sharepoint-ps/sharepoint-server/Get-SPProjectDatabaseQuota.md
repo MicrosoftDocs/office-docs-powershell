@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: Project Server 2013, Project Server 2016
 title: Get-SPProjectDatabaseQuota
 schema: 2.0.0
 ---
@@ -37,7 +37,7 @@ Microsoft internal use only.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: True
 Position: Named
@@ -53,7 +53,7 @@ Microsoft internal use only.
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named
