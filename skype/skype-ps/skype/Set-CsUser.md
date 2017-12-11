@@ -191,6 +191,8 @@ This is due to the fact that, depending on your setup, those two numbers could a
 For example, in some organizations dialing 1-425-555-1297 routes your call to an Exchange Auto Attendant.
 Conversely, dialing just the extension (51297) or using Skype for Business to dial the number 1-425-555-1297 extension 51297 will route your call directly to the user.
 
+Note: Extension should be part of the E164 Number. For example if you have 5 digit Extensions then the last 5 digits of the E164 Number should always match the 5 digit extension TEL:+14255551297;ext=51297 
+
 
 ```yaml
 Type: String

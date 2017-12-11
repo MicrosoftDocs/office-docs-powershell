@@ -115,17 +115,11 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### GroupId
+### GroupId, AllowGiphy, GiphyContentRating, AllowStickersAndMemes, AllowCustomMemes
 
-### AllowGiphy
-
-### GiphyContentRating
-
-### AllowStickersAndMemes
-
-### AllowCustomMemes
 
 ## OUTPUTS
+
 
 ## NOTES
 
