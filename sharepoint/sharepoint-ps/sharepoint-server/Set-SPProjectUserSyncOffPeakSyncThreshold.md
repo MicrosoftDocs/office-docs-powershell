@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: Project Server 2013, Project Server 2016
 title: Set-SPProjectUserSyncOffPeakSyncThreshold
 schema: 2.0.0
 ---
@@ -47,7 +47,7 @@ The URL of the Project Web App instance where you want to set the threshold.
 Type: Uri
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: True
 Position: 2
@@ -63,7 +63,7 @@ A whole number consisting of the number of projects multiplied by the number of 
 Type: Int32
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: True
 Position: 3
@@ -85,7 +85,7 @@ If objects are not immediately used, or disposed of by using the `Stop-SPAssignm
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named

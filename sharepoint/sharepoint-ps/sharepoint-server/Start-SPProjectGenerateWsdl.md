@@ -1,6 +1,6 @@
 ---
 external help file: 
-applicable: SharePoint Server 2016
+applicable: Project Server 2013, Project Server 2016
 title: Start-SPProjectGenerateWsdl
 schema: 2.0.0
 ---
@@ -39,7 +39,7 @@ PS C:\> {{ Add example code here }}
 Type: SPAssignmentCollection
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 Type: String
 Parameter Sets: (All)
 Aliases: 
-Applicable: SharePoint Server 2016
+Applicable: Project Server 2013, Project Server 2016
 
 Required: False
 Position: Named
