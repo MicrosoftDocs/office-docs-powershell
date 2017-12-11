@@ -581,7 +581,13 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSettings
-{{Fill VoiceSettings Description}}
+Controls how audio is connected by mobile devices joining a meeting or a peer-to-peer call. Acceptable values are: 
+
+VoIPAlways: Allows audio over cellular (3G/4G) or a WiFi connection.
+
+VoIPOverWiFi: Allows audio over a WiFi connection only.
+
+Cellular: Allows audio over cellular (3G/4G) connection only.
 
 ```yaml
 Type: Object
