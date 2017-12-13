@@ -263,7 +263,7 @@ FileDownloadOnly
 Type: AddressBookAvailability
 Parameter Sets: (All)
 Aliases: 
-Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Online, Skype for Business Server 2015
+Applicable: Lync Server 2010, Lync Server 2013, Skype for Business Server 2015
 
 Required: False
 Position: Named
