@@ -91,7 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerOnly
-{{Fill ServerOnly Description}}
+Specifies to only upgrade local server.
 
 ```yaml
 Type: SwitchParameter
@@ -107,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDatabaseUpgrade
-{{Fill SkipDatabaseUpgrade Description}}
+Specifies to not upgrade databases and their child objects when performing upgrade.
 
 ```yaml
 Type: SwitchParameter
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipSiteUpgrade
-{{Fill SkipSiteUpgrade Description}}
+Specifies to not upgrade all site objects when performing upgrade.
 
 ```yaml
 Type: SwitchParameter
