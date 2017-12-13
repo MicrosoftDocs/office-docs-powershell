@@ -32,7 +32,7 @@ Upgrade-SPContentDatabase [-ForceDeleteLock] -Name <String> -WebApplication <SPW
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
 You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
-For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
+For more information about how to use parameter sets, see [Cmdlet Parameter Sets](http://go.microsoft.com/fwlink/?LinkID=187810).
 
 Use the `Upgrade-SPContentDatabase` cmdlet to resume a failed database upgrade or begin a build-to-build database upgrade against a SharePoint content database.
 The `Upgrade-SPContentDatabase` cmdlet initiates an upgrade of an existing content database that is attached to the current farm.
@@ -44,9 +44,9 @@ After upgrade users see upgraded content.
 
 The default behavior of this cmdlet causes an upgrade of the schema of the database and initiates build-to-build upgrades for all site collections within the specified content database if required.
 To prevent build-to-build upgrades of site collections, use the NoB2BSiteUpgrade parameter.
+
 This cmdlet does not trigger version-to-version upgrade of any site collections.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnattached
-{{Fill AllowUnattached Description}}
+Lets the upgrade process to proceed on a content database which is not currently attached to a SharePoint farm.
 
 ```yaml
 Type: SwitchParameter
@@ -287,7 +287,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipSiteUpgrade
-{{Fill SkipSiteUpgrade Description}}
+Specifies to not upgrade databases and their child objects when performing upgrade.
 
 ```yaml
 Type: SwitchParameter
