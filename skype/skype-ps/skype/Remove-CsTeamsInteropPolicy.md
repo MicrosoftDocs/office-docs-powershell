@@ -48,6 +48,7 @@ Prompts you for confirmation before running the cmdlet.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
+Applicable: Skype for Business Online 
 
 Required: False
 Position: Named
@@ -63,6 +64,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+Applicable: Skype for Business Online 
 
 Required: False
 Position: Named
@@ -78,6 +80,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
+Applicable: Skype for Business Online 
 
 Required: False
 Position: 1
@@ -93,6 +96,7 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
+Applicable: Skype for Business Online 
 
 Required: False
 Position: Named
@@ -109,6 +113,7 @@ The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+Applicable: Skype for Business Online 
 
 Required: False
 Position: Named
@@ -124,6 +129,7 @@ Accept wildcard characters: False
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
+Applicable: Skype for Business Online 
 
 Required: False
 Position: Named
