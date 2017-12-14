@@ -45,7 +45,6 @@ The Add-SPDiagnosticsPerformanceCounter cmdlet adds a performance counter to a f
 A performance counter is read and recorded in the usage database.
 By default, the new performance counter is added to the database servers in the farm.
 
-For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
 ## EXAMPLES
 

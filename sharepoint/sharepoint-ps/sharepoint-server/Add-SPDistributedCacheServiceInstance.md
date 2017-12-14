@@ -9,7 +9,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-{{Fill in the Synopsis}}
+Adds an instance of the distributed cache service to a local server.
 
 
 
@@ -34,7 +34,9 @@ Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollec
 
 ## DESCRIPTION
 
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see [Cmdlet Parameter Sets](http://go.microsoft.com/fwlink/?LinkID=187810).
+
+Use the Add-SPDistributedCacheServiceInstance cmdlet to add an instance of the distributed cache server to a local server. This is required to start the AppFabric service.
 
 
 
@@ -42,16 +44,18 @@ Add-SPDistributedCacheServiceInstance [-AssignmentCollection <SPAssignmentCollec
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Add-SPDistributedCacheServiceInstance
 ```
 
-{{ Add example description here }}
+This example adds an instance of the distributed cache service to a local server.
 
 ## PARAMETERS
 
 ### -AssignmentCollection
 
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+**NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
 
 
 
@@ -69,7 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -CacheSizeInMB
-{{Fill CacheSizeInMB Description}}
+Specifies the amount of RAM to allocate for the Distributed Cache service instance.
+
+If this parameter is not specified, the default value will be used.
 
 ```yaml
 Type: Int32
@@ -85,7 +91,15 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-{{Fill Role Description}}
+Specifies the type of server role that the Distributed Cache service instance should be configured for. 
+
+This parameter is typically used when you are going to do a server role conversion to the specified server role.
+
+The valid values are:
+
+* SingleServerFarm
+* DistributedCache
+* WebFrontEndWithDistributedCache
 
 ```yaml
 Type: SPServerRole
@@ -116,5 +130,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-SPDistributedCacheServiceInstance]()
+[Remove-SPDistributedCacheServiceInstance](Remove-SPDistributedCacheServiceInstance.md)
 
