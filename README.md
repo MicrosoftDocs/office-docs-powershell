@@ -259,3 +259,43 @@ When a product team ships an update or new version they can use the PlatyPS tool
 The XML contains the latest version of the reference content on GitHub.
 Ideally the Online versions will always have the latest content from GitHub and the On Premises products will always have the latest help with Update-Help. 
 The work to make this happen is not yet done so the content is only refreshed on product team releases.
+
+## What metadata do reference topics need to have?
+
+Every cmdlet reference topic needs at least the following in the metadata field at the top of the reference article:
+
+```
+external help file: 
+applicable: Skype for Business Server 2015
+title: Add-CsSlaDelegates
+schema: 2.0.0
+```
+The *external help file* tag is for the docs.microsoft.com infrastructure. 
+It can be empty but without it the build will fail.
+
+The *applicable* tag is so that when PlatyPS is run to generate the XML that goes in the product it can only pull help content for specific product versions.
+Every applicable tag is located in the [Applicable Tags](https://github.com/MicrosoftDocs/office-docs-powershell/wiki/Applicable-Tags) wiki page.
+These tags have to be added to the docs.microsoft.com infrastructure. 
+If you try to include a tag that has not been added then the build will fail.
+
+The *title* tag is for metrics. More information about metrics coming.
+
+The *schema* tag let's the build system know what schema to use. 
+The 2.0.0 is the only supported schema currently.
+The schema can be viewed on the PlatyPS site, see https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md. 
+
+## What is the special Table of Contents (TOC) file all about?
+
+Every folder has a special file that is a table of contents for all the files in the folder.
+
+Some examples are:
+* Teams: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/teams/teams-ps/teams/teams.md
+* Skype: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/skype/skype-ps/skype/skype.md
+* SharePoint Server: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/sharepoint-ps/sharepoint-server/sharepoint-server.md
+
+Every folder must have this TOC file.
+When you browse the list of cmdlets in the Reference folder this is the file you see.
+For example, https://docs.microsoft.com/en-us/powershell/module/skype/?view=skype-ps.
+Note that docs.microsoft.com automatically strips out the note about manually entering a description.
+It ONLY strips this out if it is in the exact format given. 
+Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
