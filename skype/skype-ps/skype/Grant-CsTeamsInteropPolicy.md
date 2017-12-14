@@ -222,7 +222,7 @@ Teams users cannot be enabled for PSTN calling capabilities using CCE or OPCH.
 **IP Phone Support**
 Currently, changing CallingDefaultClient to Teams will also affect calls to Skype for Business IP phones. 
 Incoming calls will not be received on the phones and will only ring Teams clients. 
-Please consult the Skype for Business to Microsoft Teams Capabilities Roadmap for information about support for existing certified SIP phones.
+Please consult the [Skype for Business to Microsoft Teams Capabilities Roadmap](https://aka.ms/skype2teamsroadmap) for information about support for existing certified SIP phones.
 
 
 ## RELATED LINKS
