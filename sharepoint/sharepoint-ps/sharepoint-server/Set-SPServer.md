@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPServer
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Changes the role of the server.
 
 
 ## SYNTAX
@@ -19,23 +19,25 @@ Set-SPServer [-Identity] <SPServerPipeBind> [-AssignmentCollection <SPAssignment
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The Set-SPServer cmdlet changes the role of the server in the farm by using the Role parameter. A new cmdlet in SharePoint Server 2016 that is used in MinRole.
 
 
 ## EXAMPLES
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPServer -Role SingleServerFarm
 ```
 
-{{ Add example description here }}
+This example changes the server to SingleServerFarm role.
 
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used. 
+
+**NOTE**: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.                 
 
 ```yaml
 Type: SPAssignmentCollection
@@ -51,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the name of the server in the farm.
 
 ```yaml
 Type: SPServerPipeBind
@@ -67,7 +69,19 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-{{Fill Role Description}}
+Specifies the name of the server role you want to change. 
+
+The valid values are:
+
+* WebFrontEnd
+* Application
+* SingleServerFarm
+* Distributed Cache
+* Search
+* Custom
+* ApplicationWithSearch
+* WebFrontEndWithDistributedCache
+
 
 ```yaml
 Type: SPServerRole
@@ -84,7 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-{{Fill Status Description}}
+Sets the status of the server in the farm.
 
 ```yaml
 Type: SPObjectStatus
