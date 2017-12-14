@@ -224,19 +224,16 @@ Sharing helps sustain the community and advertises to others to contribute to th
 
 # Generate Your Own Markdown
 **SECTION IN PROGRESS**
+
 Use PlatyPS to generate Markdown. See, https://github.com/PowerShell/platyPS. 
 
-## Install PlatyPS.
-**SECTION IN PROGRESS**
+Install PlatyPS.
 
-## Get to where you can run Get-Help and see cmdlets.
-**SECTION IN PROGRESS**
+Get to where you can run Get-Help and see cmdlets.
 
-## Generate help with PlatyPS.
-**SECTION IN PROGRESS**
+Generate help with PlatyPS.
 
-## If you want to merge multiple versions into a single version then use the PlatyPS merge command.
-**SECTION IN PROGRESS**
+If you want to merge multiple versions into a single version then use the PlatyPS merge command.
 
 
 # Frequently Asked Questions
@@ -246,7 +243,7 @@ Use PlatyPS to generate Markdown. See, https://github.com/PowerShell/platyPS.
 When you submit a Pull Request it goes through a validation check and the results are shown on the Pull Request page in GitHub.
 Once the checks are completed, and there are no errors or warnings, and the appropriate sign off has been completed by the product team, a GitHub maintainer will merged the Pull Request into the Master branch on GitHub.
 
-A site located at review.docs.microsoft.com shows a mirror of the docs.microsoft.com and pulls from the Review branch.
+A site located at review.docs.microsoft.com shows a mirror of the docs.microsoft.com and pulls from the Master branch.
 Unfortunately the review site requires a Microsoft login at this time.
 This review site provides an opportunity for Microsoft product teams, support, and other internal stakeholders to review any changes before they are pushed to the live site.
 
