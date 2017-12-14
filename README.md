@@ -284,6 +284,10 @@ The *schema* tag let's the build system know what schema to use.
 The 2.0.0 is the only supported schema currently.
 The schema can be viewed on the PlatyPS site, see https://github.com/PowerShell/platyPS/blob/master/platyPS.schema.md. 
 
+There is also metadata at the global level for the folder. 
+This metadata is contained in the docfx.json file of the folder. 
+For example, SharePoint is here: https://github.com/MicrosoftDocs/office-docs-powershell/blob/master/sharepoint/docfx.json
+
 ## What is the special Table of Contents (TOC) file all about?
 
 Every folder has a special file that is a table of contents for all the files in the folder.
