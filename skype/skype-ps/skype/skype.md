@@ -3006,3 +3006,17 @@ Locale: en-US
 ### [Update-CsUserDatabase](Update-CsUserDatabase.md)
 {{Manually Enter Update-CsUserDatabase Description Here}}
 
+### [Get-CsTeamsInteropPolicy](Get-CsTeamsInteropPolicy.md)
+{{Manually Enter Get-CsTeamsInteropPolicy Description Here}}
+
+### [Grant-CsTeamsInteropPolicy](Grant-CsTeamsInteropPolicy.md)
+{{Manually Enter Grant-CsTeamsInteropPolicy Description Here}}
+
+### [New-CsTeamsInteropPolicy](New-CsTeamsInteropPolicy.md)
+{{Manually Enter New-CsTeamsInteropPolicy Description Here}}
+
+### [Remove-CsTeamsInteropPolicy](Remove-CsTeamsInteropPolicy.md)
+{{Manually Enter Remove-CsTeamsInteropPolicy Description Here}}
+
+### [Set-CsTeamsInteropPolicy](Set-CsTeamsInteropPolicy.md)
+{{Manually Enter Set-CsTeamsInteropPolicy Description Here}}
