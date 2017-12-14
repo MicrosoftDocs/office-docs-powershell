@@ -1,7 +1,7 @@
 ---
-external help file: tmp_etapwmkb.i42-help.xml
-Module Name: tmp_etapwmkb.i42
-online version: http://technet.microsoft.com/EN-US/library/089fd324-a267-4e53-ad32-924875d15ef9(OCS.15).aspx
+external help file: 
+applicable: Skype for Business Online
+title: Get-CsStorageServiceConfiguration
 schema: 2.0.0
 ---
 
@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Determines how calls are routed between Skype for Business and Microsoft Teams. This cmdlet s typically used by organizations that have users on both Skype for Business and Microsoft Teams and want to configure how calls are handled in their organization.
 
-**Note**: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
+Note: This document is provided for early evaluation of Calling Plans support for Microsoft Teams. TeamsInteropPolicy does not currently respect the policy’s chat settings and the current implementation may change in the future.
 
 Grant-CsTeamsInteropPolicy \[\[-Identity\] \<UserIdParameter\>\] \[-PolicyName\] \<string\> \[-Tenant \<guid\>\] \[-DomainController \<Fqdn\>\] \[-PassThru\] \[-WhatIf\] \[-Confirm\] \[\<CommonParameters\>\]
 
