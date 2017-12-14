@@ -240,19 +240,25 @@ Use PlatyPS to generate Markdown. See, https://github.com/PowerShell/platyPS.
 
 
 # Frequently Asked Questions
-* When will my content go live?
+
+## When will my content go live?
+
 When you submit a Pull Request it goes through a validation check and the results are shown on the Pull Request page in GitHub.
 Once the checks are completed, and there are no errors or warnings, and the appropriate sign off has been completed by the product team, a GitHub maintainer will merged the Pull Request into the Master branch on GitHub.
-A site located at review.docs.microsoft.com shows a mirror of the docs.microsoft.com.
+
+A site located at review.docs.microsoft.com shows a mirror of the docs.microsoft.com and pulls from the Review branch.
 Unfortunately the review site requires a Microsoft login at this time.
 This review site provides an opportunity for Microsoft product teams, support, and other internal stakeholders to review any changes before they are pushed to the live site.
 
-The next step is for a GitHub maintainer to merge the Master branch into the Live branch. Once this is complete the Pull Request will go live and show up on docs.microsoft.com. 
+The next step is for a GitHub maintainer to merge the Master branch into the Live branch. 
+Once this is complete the changes in the Pull Request will show up on docs.microsoft.com (docs.microsoft.com pulls its content from the Live branch).
 There is not a set schedule for this to happen but the maintainers are good about doing this fairly quickly.
 
-* When does the GitHub content show up in the products with Get-Help?
+## When does the GitHub content show up in the products with Get-Help?
+
 The one source of truth for Office PowerShell cmdlets is the GitHub repository. 
 When a product team ships an update or new version they can use the PlatyPS tool to generate XML and add that to the release.
+
 The XML contains the latest version of the reference content on GitHub.
-Ideally I would like to have the Online versions always have the latest content from GitHub and the On Premises products always have the latest help with Update-Help. 
-Current I am not done with this work yet so the content is only refreshed on product team releases.
+Ideally the Online versions will always have the latest content from GitHub and the On Premises products will always have the latest help with Update-Help. 
+The work to make this happen is not yet done so the content is only refreshed on product team releases.
