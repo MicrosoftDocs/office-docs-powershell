@@ -5,7 +5,7 @@ title: staffhub
 Locale: en-US
 ---
 
-# Microsoft StaffHub Module
+# Microsoft StaffHub PowerShell
 ## Description
 The following cmdlet references are for Microsoft StaffHub.
 

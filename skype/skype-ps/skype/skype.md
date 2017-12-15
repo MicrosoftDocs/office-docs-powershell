@@ -2,14 +2,12 @@
 Module Name: skype
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: skype
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# Skype for Business Cmdlet Reference
+# Skype for Business PowerShell
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for Skype for Business.
 
 ## Skype for Business Cmdlets
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
