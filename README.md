@@ -242,11 +242,15 @@ Your Pull Request will have its own page where you can discuss and modify your r
 
 
 ## Confirm your work shows up on docs.microsoft.com
-Once your Pull Request is approved and your branch merged into Master your changes will show on 
-docs.microsoft.com, here: 
-**need link**
+Once your Pull Request is approved and your branch merged into Master your changes will show up on the review.docs.microsoft.com site.
+Unfortunately this site requires a Microsoft login.
 
-Your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
+The next step is for a maintainer to merge the Master branch into the Live branch.
+Once this is done your work will show up on docs.microsoft.com. 
+
+The easiest way to find a cmdlet on docs.microsoft.com is to use the PowerShell browser here: https://docs.microsoft.com/powershell/module
+
+When the product team releases a new build your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
 
 ### Congratulations are in order!
 You just joined an elite club of contributors to Microsoft Office documentation!
