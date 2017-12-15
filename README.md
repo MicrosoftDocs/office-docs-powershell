@@ -303,3 +303,13 @@ For example, https://docs.microsoft.com/en-us/powershell/module/skype/?view=skyp
 Note that docs.microsoft.com automatically strips out the note about manually entering a description.
 It ONLY strips this out if it is in the exact format given. 
 Any slight deviation from the format and it won't strip it out and you will see that "manually enter description" text.
+
+## I can't find the cmdlet I am looking for, what can I do?
+
+Finding a cmdlet can sometimes be a challenge. 
+This is because you might need to use cmdlets that are in various modules and across multiple products.
+For example, you might need a Windows cmdlet, then an Azure cmdlet, then a SharePoint cmdlet, then an Office 365 cmdlet.
+
+The best way to find cmdlets is to use the PowerShell Browser and search. 
+The PowerShell Browser searches across all products and platforms.
+You can find the PowerShell Browser here: https://docs.microsoft.com/powershell/module
