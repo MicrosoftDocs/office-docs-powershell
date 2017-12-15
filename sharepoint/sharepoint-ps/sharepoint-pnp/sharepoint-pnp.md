@@ -1,14 +1,13 @@
 ---
 Module Name: sharepoint-pnp
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+title: sharepoint-pnp
 Locale: en-US
 ---
 
-# sharepoint-pnp Module
+# SharePoint Patterns and Practices (PnP) PowerShell
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for SharePoint Patterns and Practices (PnP).
 
 ## sharepoint-pnp Cmdlets
 ### [Add-PnPApp](Add-PnPApp.md)

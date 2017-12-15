@@ -1,14 +1,13 @@
 ---
 Module Name: sharepoint-online
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+title: sharepoint-online
 Locale: en-US
 ---
 
-# sharepoint-online Module
+# SharePoint Online PowerShell
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for SharePoint Online.
 
 ## sharepoint-online Cmdlets
 ### [Add-SPOGeoAdministrator](Add-SPOGeoAdministrator.md)

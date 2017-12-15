@@ -1,10 +1,7 @@
 ---
 Module Name: Microsoft Teams
-Module Location: https://www.powershellgallery.com/packages/MicrosoftTeams/
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-title: Microsoft Teams
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
+title: teams
 Locale: en-US
 ---
 
