@@ -44,7 +44,7 @@ Set-SPOTenant [-BccExternalSharingInvitations <Boolean>] [-BccExternalSharingInv
 You can use the `Set-SPOTenant` cmdlet to enable external services and to specify the versions in which site collections can be created.
 You can also use the `Set-SPOSite` cmdlet together with the `Set-SPOTenant` cmdlet to block access to a site in your organization and redirect traffic to another site.
 
-You must be a SharePoint Online global administrator to run the cmdlet.
+You must be a SharePoint Online Service Administrator or higher (account is able to access SharePoint Admin Center) to run the cmdlet.
 
 
 ## EXAMPLES

@@ -19,7 +19,7 @@ Add-SPProfileLeader [-ProfileServiceApplicationProxy] <SPServiceApplicationProxy
 ```
 
 ## DESCRIPTION
-This cmdlet was introduced in SharePoint Server with Service Pack 1 (SP1) and SharePoint Foundation with Service Pack 1 (SP1).
+This cmdlet was introduced in SharePoint Server 2013 with Service Pack 1 (SP1) and SharePoint Foundation 2013 with Service Pack 1 (SP1).
 
 Use the Add-SPProfileLeader cmdlet to add a user as the company leader.
 
