@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
-Module Name: Microsoft Teams
-=======
 Module Name: Microsoft Teams PowerShell
->>>>>>> master
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: teams
 Locale: en-US
