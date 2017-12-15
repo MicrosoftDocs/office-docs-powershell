@@ -248,7 +248,8 @@ Unfortunately this site requires a Microsoft login.
 The next step is for a maintainer to merge the Master branch into the Live branch.
 Once this is done your work will show up on docs.microsoft.com. 
 
-The easiest way to find a cmdlet on docs.microsoft.com is to use the PowerShell browser here: https://docs.microsoft.com/powershell/module
+The easiest way to find a cmdlet on docs.microsoft.com is to use the PowerShell Browser here: https://docs.microsoft.com/powershell/module
+If you know a cmdlet exists but doesn't show up in the PowerShell Browser search then open an Issue (link at top of this repo).
 
 When the product team releases a new build your work will also show up in the Office products themselves when a user types Get-Help for the cmdlets that you worked on.
 
