@@ -7,7 +7,7 @@ Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# Microsoft Teams Module
+# Microsoft Teams PowerShell
 ## Description
 The following cmdlet references are for Microsoft Teams.
 
