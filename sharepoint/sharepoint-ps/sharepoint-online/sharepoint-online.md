@@ -1,5 +1,5 @@
 ---
-Module Name: sharepoint-online
+Module Name: SharePoint Online PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-online
 Locale: en-US

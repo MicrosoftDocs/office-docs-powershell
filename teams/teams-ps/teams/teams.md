@@ -1,5 +1,5 @@
 ---
-Module Name: teams
+Module Name: Microsoft Teams PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: teams
 Locale: en-US
