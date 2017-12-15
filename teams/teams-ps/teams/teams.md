@@ -1,7 +1,7 @@
 ---
 Module Name: Microsoft Teams PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-title: Microsoft Teams
+title: Microsoft Teams Table of Contents
 Locale: en-US
 ---
 
