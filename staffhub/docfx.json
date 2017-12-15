@@ -2,19 +2,36 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.md",
-          "**/*.yml"
-        ],
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "staffhub-ps",
+        "dest": "staffhub",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
-        ]
-      }
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "staffhub-ps",
+        "dest": "staffhub/staffhub-ps"
+      },
+      {
+      "files": ["**/*.md"],
+      "src": "staffhub-ps",
+      "version": "staffhub-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "staffhub-ps",
+      "version": "staffhub-ps",
+      "dest": "module/staffhub-ps"
+    }
     ],
     "resource": [
       {
@@ -28,11 +45,20 @@
         ]
       }
     ],
+    "versions": {
+      "staffhub-ps": {
+        "dest": "staffhub-ps"
+      }
+    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/powershell/breadcrumb/toc.json",
-      "extendBreadcrumb": true
+      "author" : "kenwith",
+      "ms.author" : "kenwith",
+      "ms.date" : "01/01/2018",
+      "ms.topic" : "reference",
+      "ms.service" : "staffhub-powershell",
+      "ms.devlang" : "powershell"
     },
     "fileMetadata": {},
     "template": [],
