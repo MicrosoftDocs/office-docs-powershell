@@ -1,5 +1,5 @@
 ---
-Module Name: staffhub
+Module Name: Microsoft StaffHub PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: staffhub
 Locale: en-US

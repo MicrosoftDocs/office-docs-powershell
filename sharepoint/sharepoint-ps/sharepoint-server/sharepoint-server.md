@@ -1,5 +1,5 @@
 ---
-Module Name: sharepoint-server
+Module Name: SharePoint Server PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-server
 Locale: en-US

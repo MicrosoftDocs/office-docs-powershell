@@ -1,5 +1,5 @@
 ---
-Module Name: sharepoint-pnp
+Module Name: SharePoint Patterns and Practices (PnP) PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: sharepoint-pnp
 Locale: en-US

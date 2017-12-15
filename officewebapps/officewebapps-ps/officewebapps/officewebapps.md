@@ -1,5 +1,5 @@
 ---
-Module Name: officewebapps
+Module Name: Office Online Server PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: officewebapps
 Locale: en-US

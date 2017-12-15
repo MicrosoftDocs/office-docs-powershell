@@ -1,5 +1,5 @@
 ---
-Module Name: skype
+Module Name: Skype for Business PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: skype
 Locale: en-US
