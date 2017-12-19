@@ -353,3 +353,9 @@ For example, you might need a Windows cmdlet, then an Azure cmdlet, then a Share
 The best way to find cmdlets is to use the PowerShell Browser and search. 
 The PowerShell Browser searches across all products and platforms.
 You can find the PowerShell Browser here: https://docs.microsoft.com/powershell/module
+
+## I am a Microsoft employee but new to GitHub, what should I do?
+
+You can learn about workign with GitHub as a Microsoft employee here: https://docs.opensource.microsoft.com/github/
+
+In a nutshell you need to create a GitHub account and link it with your Microsoft account so you can contribute openly.
