@@ -36,7 +36,7 @@ The Get-SPManagedPath cmdlet returns the SharePoint managed path that matches th
 If an Identity parameter is not provided, all managed paths for the given scope are returned.
 
 Host-named sites (no matter the Web application in which they are contained) share a single set of managed paths.
-Use the HostHeader parameter to return host-named scoped managed paths.
+Use the HostHeader parameter to return host-named site collections-scoped managed paths.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
@@ -54,7 +54,7 @@ This example returns all managed paths for the specified Web application.
 C:\PS>Get-SPManagedPath -identity "Sites" -HostHeader
 ```
 
-This example gets the Sites managed path from the host-named scoped managed paths.
+This example gets the Sites managed path from the host-named site collections-scoped managed paths.
 
 ## PARAMETERS
 
