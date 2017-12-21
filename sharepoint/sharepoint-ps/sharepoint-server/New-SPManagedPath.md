@@ -31,7 +31,7 @@ You may only use parameters from one parameter set and you may not combine param
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
 The `New-SPManagedPath` cmdlet adds a new managed path to a given Web application or for use with all host header site collections.
-If the HostHeader switch is provided, the managed path is shared among all host header site collections; otherwise, a Web application must be specified to create this managed path within.
+If the HostHeader switch is provided, the managed path is shared among all host-named site collections; otherwise, a Web application must be specified to create this managed path within.
 The relative URL is a partial URL that represents the managed path.
 When the slash mark (/) is used, the root is defined.
 If the Explicit parameter is not provided, the new managed path is a wildcard path.
