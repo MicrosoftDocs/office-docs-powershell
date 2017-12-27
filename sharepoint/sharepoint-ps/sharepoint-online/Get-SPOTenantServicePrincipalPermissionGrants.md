@@ -20,20 +20,7 @@ Get-SPOTenantServicePrincipalPermissionGrants
 ```
 
 ## DESCRIPTION
-Gets the collection of permission grants for the "SharePoint Online Client" service principal
-
-## EXAMPLES
-
-### ------------------EXAMPLE 1------------------
-```powershell
-Get-SPOTenantServicePrincipalPermissionGrants
-```
-
 Gets the collection of permission grants for the "SharePoint Online Client" service principal.
-
-## RETURNS
-
-### Permission grant object
 
 A permission grant contains the following properties:
 
@@ -48,3 +35,12 @@ A permission grant contains the following properties:
 - ResourceId: The objectId of the resource service principal to which access has been granted.
 
 - Scope: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
+
+## EXAMPLES
+
+### ------------------EXAMPLE 1------------------
+```powershell
+Get-SPOTenantServicePrincipalPermissionGrants
+```
+
+Gets the collection of permission grants for the "SharePoint Online Client" service principal.
