@@ -55,7 +55,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
         </a>
     </li>
     <li>
-        <a href="/powershell/module/sharepoint-online/">
+        <a href="/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -73,7 +73,7 @@ Find out how to manage SharePoint Server and SharePoint Online using PowerShell 
         </a>
     </li>
     <li>
-        <a href="/powershell/module/sharepoint-pnp/">
+        <a href="/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
