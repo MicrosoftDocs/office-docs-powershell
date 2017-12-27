@@ -33,8 +33,8 @@ For more information about how to use parameter sets, see Cmdlet Parameter Sets 
 The `Remove-SPManagedPath` cmdlet deletes the managed path specified by the Identity parameter from the host header or the Web application.
 The Identity must be the partial URL of the managed path to be deleted.
 
-If you are using host headers, specify the HostHeader parameter.
-To delete a HostHeader managed path, provide the HostHeader switch.
+If you are using host-named site collections, specify the HostHeader parameter.
+To delete a host-named site collection managed path, provide the HostHeader switch.
 Otherwise, you must specify the Web application that contains the managed path to be deleted.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
@@ -47,7 +47,7 @@ For permissions and the most current information about Windows PowerShell for Sh
 C:\PS>Remove-SPManagedPath "sites" -HostHeader
 ```
 
-This example removes the sites managed path from the list of HostHeader managed paths.
+This example removes the sites managed path from the list of host-named site collection managed paths.
 
 Depending on the confirmation level of the local system, the preceding example can prompt prior to execution.
 
