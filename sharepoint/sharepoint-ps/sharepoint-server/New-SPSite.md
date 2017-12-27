@@ -48,7 +48,7 @@ C:\PS>$w = Get-SPWebApplication http://<site name>
 C:\PS>New-SPSite http://www.contoso.com -OwnerAlias "DOMAIN\jdow" -HostHeaderWebApplication $w -Name "Contoso" -Template "STS#0"
 ```
 
-This example creates a host header site collection.
+This example creates a host-named site collection.
 Because the template is provided, the root web of this site collection will be created.
 
 
@@ -219,7 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeaderWebApplication
-Specifies that if the URL provided is a host header, the HostHeaderWebApplication parameter must be the name, URL, GUID, or SPWebApplication object for the web application in which this site collection is created.
+Specifies that if the URL provided is to be a host-named site collection, the HostHeaderWebApplication parameter must be the name, URL, GUID, or SPWebApplication object for the web application in which this site collection is created.
 If no value is specified, the value is left blank.
 
 The type must be a valid name in one of the following forms:

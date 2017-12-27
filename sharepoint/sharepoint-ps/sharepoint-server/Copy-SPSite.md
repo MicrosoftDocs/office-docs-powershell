@@ -113,7 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostHeaderWebApplication
-Use when the site collection is a host header named site collection that allows the site to land on the correct web application.
+Use when the site collection is a host-named site collection that allows the site to land on the correct web application.
 
 ```yaml
 Type: String
