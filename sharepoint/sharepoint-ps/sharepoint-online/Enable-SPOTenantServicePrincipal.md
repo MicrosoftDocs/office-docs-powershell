@@ -3,13 +3,14 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Enable-SPOTenantServicePrincipal
 
-> [!WARNING]
-> This is a preview feature and should not be used in production.
+# Enable-SPOTenantServicePrincipal
 
 ## SYNOPSIS
 Enables the current tenant's "SharePoint Online Client" service principal.
+
+> [!WARNING]
+> This is a preview feature and should not be used in production.
 
 ## SYNTAX
 

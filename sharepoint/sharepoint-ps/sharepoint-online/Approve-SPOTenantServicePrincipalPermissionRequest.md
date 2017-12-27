@@ -3,13 +3,14 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Approve-SPOTenantServicePrincipalPermissionRequest
 
-> [!WARNING]
-> This is a preview feature and should not be used in production.
+# Approve-SPOTenantServicePrincipalPermissionRequest
 
 ## SYNOPSIS
 Approves a permission request for the current tenant's "SharePoint Online Client" service principal
+
+> [!WARNING]
+> This is a preview feature and should not be used in production.
 
 ## SYNTAX
 

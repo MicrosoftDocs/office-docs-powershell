@@ -5,11 +5,11 @@ schema: 2.0.0
 ---
 # Revoke-SPOTenantServicePrincipalPermission
 
-> [!WARNING]
-> This is a preview feature and should not be used in production.
-
 ## SYNOPSIS
 Revokes a permission that was previously granted to the "SharePoint Online Client" service principal
+
+> [!WARNING]
+> This is a preview feature and should not be used in production.
 
 ## SYNTAX
 

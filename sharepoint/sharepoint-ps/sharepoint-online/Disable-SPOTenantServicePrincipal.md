@@ -3,13 +3,14 @@ external help file:
 applicable: SharePoint Online
 schema: 2.0.0
 ---
-# Disable-SPOTenantServicePrincipal
 
-> [!WARNING]
-> This is a preview feature and should not be used in production.
+# Disable-SPOTenantServicePrincipal
 
 ## SYNOPSIS
 Disables the current tenant's "SharePoint Online Client" service principal.
+
+> [!WARNING]
+> This is a preview feature and should not be used in production.
 
 ## SYNTAX
 
