@@ -9,8 +9,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Denies a permission request for the current tenant's "SharePoint Online Client" service principal
 
-> [!WARNING]
-> This is a preview feature and should not be used in production.
+> **Note** - This is a preview feature and should not be used in production.
+
 
 ## SYNTAX
 
