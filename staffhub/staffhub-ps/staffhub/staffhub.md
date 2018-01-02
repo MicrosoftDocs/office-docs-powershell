@@ -10,9 +10,9 @@ Locale: en-US
 The following cmdlet references are for Microsoft StaffHub.
 
 ## Microsoft StaffHub Cmdlets
-### [cmdlet](cmdlet.md)
+### [staffhub](staffhub.md)
 {{Manually Enter cmdlet Description Here}}
 
-EXAMPLE: DELETE FROM HERE DOWN
-### [Connect-MicrosoftTeams](Connect-MicrosoftTeams.md)
+EXAMPLE: DELETE FROM HERE DOWN, CHANGE BELOW LINK
+### [Connect-MicrosoftTeams](staffhub.md)
 {{Manually Enter Connect-MicrosoftTeams Description Here}}
