@@ -40,7 +40,7 @@ The following example creates a new Caller ID policy that sets the Caller ID to 
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" ServiceNumber "14258828080" -EnableUserOverride False -Verbose 
+New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
 ```
 
 The following example creates a new Caller ID policy that sets the Caller ID to a specified service number.
