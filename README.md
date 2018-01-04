@@ -278,6 +278,12 @@ If you want to merge multiple versions into a single version then use the PlatyP
 
 # Frequently Asked Questions
 
+## What are best practices for content on GitHub?
+It is best practice to keep each sentence or idea on its own line.
+This is so that anyone that is reviewing a commit can quickly and easily see what changed.
+If you have a giant string of text on a single line then Git just flags that entire line as a 'change'.
+To learn more about this concept, see http://rhodesmill.org/brandon/2012/one-sentence-per-line/. 
+
 ## When will my content go live?
 
 When you submit a Pull Request it goes through a validation check and the results are shown on the Pull Request page in GitHub.
