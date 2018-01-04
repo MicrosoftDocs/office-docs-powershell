@@ -299,7 +299,7 @@ Accept wildcard characters: False
 Date and time when the certificate can first be used.
 For example, to configure a certificate for first use at 8:00 AM on July 31, 2012 use this syntax on a server running under the US English Region and Language settings:
 
-`-EffectiveTime "7/31/2012 8:00 AM"`
+`-EffectiveDate "7/31/2012 8:00 AM"`
 
 ```yaml
 Type: DateTime
