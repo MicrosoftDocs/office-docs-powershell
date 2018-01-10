@@ -1,6 +1,8 @@
 ---
 external help file: Microsoft.OutlookApps.StaffHub.PowershellCmdlets.dll-Help.xml
 Module Name: Microsoft.OutlookApps.StaffHub.PowershellCmdlets
+applicable: Microsoft StaffHub
+title: Import-StaffHubMember
 online version: 
 schema: 2.0.0
 ---
