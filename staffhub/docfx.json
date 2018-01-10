@@ -57,7 +57,7 @@
       "ms.author" : "kenwith",
       "ms.date" : "01/01/2018",
       "ms.topic" : "reference",
-      "ms.custom" : "staffhub",
+      "ms.service" : "staffhub-powershell",
       "ms.devlang" : "powershell"
     },
     "fileMetadata": {},
