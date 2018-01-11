@@ -9,10 +9,34 @@ Locale: en-US
 ## Description
 The following cmdlet references are for Microsoft StaffHub.
 
-## Microsoft StaffHub Cmdlets
-### [staffhub](staffhub.md)
-{{Manually Enter cmdlet Description Here}}
+## staffhub Cmdlets
+### [Add-StaffHubMember](Add-StaffHubMember.md)
+{{Manually Enter Add-StaffHubMember Description Here}}
 
-EXAMPLE: DELETE FROM HERE DOWN, CHANGE BELOW LINK
-### [Connect-MicrosoftTeams](staffhub.md)
-{{Manually Enter Connect-MicrosoftTeams Description Here}}
+### [Add-StaffHubShift](Add-StaffHubShift.md)
+{{Manually Enter Add-StaffHubShift Description Here}}
+
+### [Add-StaffHubTeam](Add-StaffHubTeam.md)
+{{Manually Enter Add-StaffHubTeam Description Here}}
+
+### [Connect-StaffHub](Connect-StaffHub.md)
+{{Manually Enter Connect-StaffHub Description Here}}
+
+### [Get-StaffHubMember](Get-StaffHubMember.md)
+{{Manually Enter Get-StaffHubMember Description Here}}
+
+### [Get-StaffHubTeamsForTenant](Get-StaffHubTeamsForTenant.md)
+{{Manually Enter Get-StaffHubTeamsForTenant Description Here}}
+
+### [Import-StaffHubMember](Import-StaffHubMember.md)
+{{Manually Enter Import-StaffHubMember Description Here}}
+
+### [Import-StaffHubShift](Import-StaffHubShift.md)
+{{Manually Enter Import-StaffHubShift Description Here}}
+
+### [Import-StaffHubTeam](Import-StaffHubTeam.md)
+{{Manually Enter Import-StaffHubTeam Description Here}}
+
+### [Remove-StaffHubMember](Remove-StaffHubMember.md)
+{{Manually Enter Remove-StaffHubMember Description Here}}
+
