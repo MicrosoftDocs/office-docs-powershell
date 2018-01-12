@@ -45,9 +45,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   ------------ Example 1 --------------------
 ```
-{example code}
+PS C:\> Get-SPODeletedSite -IncludePersonalSite
 ```
-{example description}
+The command in this example returns all deleted site collections from the Recycle Bin including Personal Sites.
 
 
 ## PARAMETERS
