@@ -20,7 +20,9 @@ Get-StaffHubTeamsForTenant [[-ContinuationToken] <String>] [[-Top] <Int32>]
 ```
 
 ## DESCRIPTION
-Get all the teams in the tenant of the logged in user
+Get all the teams in the tenant of the logged in user.
+ContinuationToken from the call is stored in $nextToken Variable. 
+So the next call can be made like Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken
 
 ## EXAMPLES
 
@@ -30,7 +32,10 @@ Get-StaffHubTeamsForTenant -Top 10
 ```
 
 Get first 10 teams in the tenant by ascending creation time order.
-If not specified, then it defaults it to 1000.
+If 'Top' parameter is not specified, then it defaults it to 1000.
+This returns a continuation token stored in $nextToken variable which can be used by the following call.
+Eg: Get-StaffHubTeamsForTenant -Top 10 -ContinuationToken $nextToken
+
 
 ### Example 2
 ```
