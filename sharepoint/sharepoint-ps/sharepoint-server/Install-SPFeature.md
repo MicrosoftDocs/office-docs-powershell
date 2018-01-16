@@ -160,7 +160,7 @@ Accept wildcard characters: False
 Specifies the version of feature to install.
 When the version is not specified it will default to the web applications MaxVersion value.
 
-The values for this can be either SharePoint Server or SharePoint Server 
+The values for this can be either 14 or 15.
 
 ```yaml
 Type: Int32
