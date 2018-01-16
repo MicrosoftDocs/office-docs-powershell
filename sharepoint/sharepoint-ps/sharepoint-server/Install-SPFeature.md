@@ -69,7 +69,7 @@ This is commonly done after an upgrade process.
 C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
-This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
+This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
 ### --------------EXAMPLE 4----------------- 
 ```
