@@ -29,13 +29,6 @@ Get-TeamMessagingSettings -GroupId <String>
 Get-TeamMessagingSettings -GroupId 2f162b0e-36d2-4e15-8ba3-ba229cecdccf
 ```
 
-### --------------------------    --------------------------
-@{paragraph=PS C:\\\>}
-
-```
-
-```
-
 ## PARAMETERS
 
 ### -GroupId

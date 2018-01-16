@@ -69,7 +69,7 @@ This is commonly done after an upgrade process.
 C:\PS>Install-SPFeature -path "MyCustomFeature"  -CompatibilityLevel 14
 ```
 
-This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\15\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
+This example installs a new feature at $env:ProgramFiles\Common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\FEATURES\MyCustomFeature\feature.xml.
 
 ### --------------EXAMPLE 4----------------- 
 ```
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 Specifies the version of feature to install.
 When the version is not specified it will default to the web applications MaxVersion value.
 
-The values for this can be either SharePoint Server or SharePoint Server 
+The values for this can be either 14 or 15.
 
 ```yaml
 Type: Int32
