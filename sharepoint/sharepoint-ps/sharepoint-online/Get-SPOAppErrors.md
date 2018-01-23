@@ -104,6 +104,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Get-SPOAppInfo]()
+[Get-SPOAppInfo](Get-SPOAppInfo.md)
 
 
