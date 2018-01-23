@@ -100,10 +100,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Get-SPOAppErrors]()
+[Get-SPOAppErrors](Get-SPOAppErrors.md)
 
-[Get-SPOSite]()
+[Get-SPOSite](Get-SPOSite.md)
 
-[New-SPOSite]()
+[New-SPOSite](New-SPOSite.md)
 
-[Repair-SPOSite]()
+[Repair-SPOSite](Repair-SPOSite.md)

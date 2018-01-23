@@ -95,11 +95,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[New-SPOSiteGroup]()
+[New-SPOSiteGroup](New-SPOSiteGroup.md)
 
-[Get-SPOUser]()
+[Get-SPOUser](Get-SPOUser.md)
 
-[Set-SPOUser]()
+[Set-SPOUser](Set-SPOUser.md)
 
-[Remove-SPOUser]()
+[Remove-SPOUser](Remove-SPOUser.md)
 

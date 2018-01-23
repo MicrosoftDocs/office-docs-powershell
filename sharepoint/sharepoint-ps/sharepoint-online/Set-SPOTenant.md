@@ -977,6 +977,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Upgrade-SPOSite]()
+[Upgrade-SPOSite](Upgrade-SPOSite.md)
 
-[Set-SPOSite]()
+[Set-SPOSite](Set-SPOSite.md)
