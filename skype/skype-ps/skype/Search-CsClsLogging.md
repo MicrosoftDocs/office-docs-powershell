@@ -171,7 +171,7 @@ Specified in local time zone.
 Defaults to 5 minutes after current time if no StartTime specified, otherwise defaults to 30 minutes after StartTime.
 For example, on computer running the US English version of Skype for Business Server, this syntax limits the search to entries recorded prior to 8:00 AM on August 31, 2012:
 
-`-StartTime "8/31/2012 8:00AM"`
+`-EndTime "8/31/2012 8:00AM"`
 
 
 ```yaml
