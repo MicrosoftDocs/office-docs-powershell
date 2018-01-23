@@ -101,4 +101,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Get-SPOExternalUser]()
+[Get-SPOExternalUser](Get-SPOExternalUser.md)

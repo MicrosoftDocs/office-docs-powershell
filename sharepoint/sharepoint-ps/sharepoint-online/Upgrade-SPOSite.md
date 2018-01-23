@@ -153,6 +153,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Request-SPOUpgradeEvaluationSite]()
+[Request-SPOUpgradeEvaluationSite](Request-SPOUpgradeEvaluationSite.md)
 
-[New-SPOSite]()
+[New-SPOSite](New-SPOSite.md)

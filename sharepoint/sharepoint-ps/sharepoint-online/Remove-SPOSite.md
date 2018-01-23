@@ -120,6 +120,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
-[Remove-SPODeletedSite]()
+[Remove-SPODeletedSite](Remove-SPODeletedSite.md)
 
-[Restore-SPODeletedSite]()
+[Restore-SPODeletedSite](Restore-SPODeletedSite.md)
