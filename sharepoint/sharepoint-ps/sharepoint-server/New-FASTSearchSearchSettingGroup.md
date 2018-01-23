@@ -59,7 +59,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSearchSettingGroup]()
+[Get-FASTSearchSearchSettingGroup](Get-FASTSearchSearchSettingGroup.md)
 
-[Remove-FASTSearchSearchSettingGroup]()
+[Remove-FASTSearchSearchSettingGroup](Remove-FASTSearchSearchSettingGroup.md)
 

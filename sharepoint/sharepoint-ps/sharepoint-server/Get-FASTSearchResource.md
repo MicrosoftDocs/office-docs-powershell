@@ -76,7 +76,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-FASTSearchResource]()
+[Remove-FASTSearchResource](Remove-FASTSearchResource.md)
 
-[Add-FASTSearchResource]()
+[Add-FASTSearchResource](Add-FASTSearchResource.md)
 

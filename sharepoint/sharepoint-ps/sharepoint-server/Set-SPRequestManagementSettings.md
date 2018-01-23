@@ -139,6 +139,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPRequestManagementSettings]()
+[Get-SPRequestManagementSettings](Get-SPRequestManagementSettings.md)
 
-[New-SPRequestManagementRuleCriteria]()
+[New-SPRequestManagementRuleCriteria](New-SPRequestManagementRuleCriteria.md)

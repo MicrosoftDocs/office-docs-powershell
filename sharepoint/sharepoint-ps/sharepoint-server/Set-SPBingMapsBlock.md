@@ -122,8 +122,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPBingMapsBlock]()
+[Get-SPBingMapsBlock](Get-SPBingMapsBlock.md)
 
-[Get-SPBingMapsKey]()
+[Get-SPBingMapsKey](Get-SPBingMapsKey.md)
 
-[Set-SPBingMapskey]()
+[Set-SPBingMapskey](Set-SPBingMapskey.md)

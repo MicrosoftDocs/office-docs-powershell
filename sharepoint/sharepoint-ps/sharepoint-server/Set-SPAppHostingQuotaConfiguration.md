@@ -161,4 +161,4 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Get-SPAppHostingQuotaConfiguration]()
+[Get-SPAppHostingQuotaConfiguration](Get-SPAppHostingQuotaConfiguration.md)

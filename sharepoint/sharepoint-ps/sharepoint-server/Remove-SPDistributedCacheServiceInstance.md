@@ -65,4 +65,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPDistributedCacheServiceInstance]()
+[Add-SPDistributedCacheServiceInstance](Add-SPDistributedCacheServiceInstance.md)

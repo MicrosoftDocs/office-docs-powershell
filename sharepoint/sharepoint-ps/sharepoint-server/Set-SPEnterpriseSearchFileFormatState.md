@@ -177,8 +177,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchFileFormat]()
+[New-SPEnterpriseSearchFileFormat](New-SPEnterpriseSearchFileFormat.md)
 
-[Get-SPEnterpriseSearchFileFormat]()
+[Get-SPEnterpriseSearchFileFormat](Get-SPEnterpriseSearchFileFormat.md)
 
-[Remove-SPEnterpriseSearchFileFormat]()
+[Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)

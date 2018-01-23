@@ -79,5 +79,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPAppDeniedEndpointList]()
+[Clear-SPAppDeniedEndpointList](Clear-SPAppDeniedEndpointList.md)
 

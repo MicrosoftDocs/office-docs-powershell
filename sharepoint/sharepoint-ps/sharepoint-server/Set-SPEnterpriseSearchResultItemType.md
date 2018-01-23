@@ -331,14 +331,14 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchResultItemType]()
+[New-SPEnterpriseSearchResultItemType](New-SPEnterpriseSearchResultItemType.md)
 
-[Get-SPEnterpriseSearchResultItemType]()
+[Get-SPEnterpriseSearchResultItemType](Get-SPEnterpriseSearchResultItemType.md)
 
-[Remove-SPEnterpriseSearchResultItemType]()
+[Remove-SPEnterpriseSearchResultItemType](Remove-SPEnterpriseSearchResultItemType.md)
 
-[Get-SPEnterpriseSearchOwner]()
+[Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)
 
-[Get-SPEnterpriseSearchPropertyRule]()
+[Get-SPEnterpriseSearchPropertyRule](Get-SPEnterpriseSearchPropertyRule.md)
 
-[Get-SPEnterpriseSearchPropertyRuleCollection]()
+[Get-SPEnterpriseSearchPropertyRuleCollection](Get-SPEnterpriseSearchPropertyRuleCollection.md)

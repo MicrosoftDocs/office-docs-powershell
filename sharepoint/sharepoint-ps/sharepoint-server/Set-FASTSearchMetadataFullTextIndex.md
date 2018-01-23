@@ -126,9 +126,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchMetadataFullTextIndex]()
+[New-FASTSearchMetadataFullTextIndex](New-FASTSearchMetadataFullTextIndex.md)
 
-[Remove-FASTSearchMetadataFullTextIndex]()
+[Remove-FASTSearchMetadataFullTextIndex](Remove-FASTSearchMetadataFullTextIndex.md)
 
-[Get-FASTSearchMetadataFullTextIndex]()
+[Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)
 

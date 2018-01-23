@@ -178,6 +178,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPRequestManagementSettings]()
+[Get-SPRequestManagementSettings](Get-SPRequestManagementSettings.md)
 
-[Set-SPRequestManagementSettings]()
+[Set-SPRequestManagementSettings](Set-SPRequestManagementSettings.md)

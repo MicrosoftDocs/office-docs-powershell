@@ -111,5 +111,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPDistributedCacheClientSetting]()
+[Set-SPDistributedCacheClientSetting](Set-SPDistributedCacheClientSetting.md)
 

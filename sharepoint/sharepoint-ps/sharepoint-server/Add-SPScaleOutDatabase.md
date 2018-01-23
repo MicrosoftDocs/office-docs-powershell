@@ -204,9 +204,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPScaleOutDatabase]()
+[Get-SPScaleOutDatabase](Get-SPScaleOutDatabase.md)
 
-[Remove-SPScaleOutDatabase]()
+[Remove-SPScaleOutDatabase](Remove-SPScaleOutDatabase.md)
 
-[Split-SPScaleOutDatabase]()
+[Split-SPScaleOutDatabase](Split-SPScaleOutDatabase.md)
 

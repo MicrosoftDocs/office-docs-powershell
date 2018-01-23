@@ -152,6 +152,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPPowerPointConversionServiceApplication]()
+[New-SPPowerPointConversionServiceApplication](New-SPPowerPointConversionServiceApplication.md)
 
-[Set-SPPowerPointConversionServiceApplication]()
+[Set-SPPowerPointConversionServiceApplication](Set-SPPowerPointConversionServiceApplication.md)

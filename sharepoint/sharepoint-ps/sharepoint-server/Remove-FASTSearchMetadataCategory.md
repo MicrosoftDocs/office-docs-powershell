@@ -150,11 +150,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchMetadataCategory]()
+[Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)
 
-[Set-FASTSearchMetadataCategory]()
+[Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)
 
-[New-FASTSearchMetadataCategory]()
+[New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)
 
-[Set-FASTSearchMetadataCrawledProperty]()
+[Set-FASTSearchMetadataCrawledProperty](Set-FASTSearchMetadataCrawledProperty.md)
 

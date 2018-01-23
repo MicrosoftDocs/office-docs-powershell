@@ -143,8 +143,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use Office Web Apps with SharePoint 2013]()
 
-[Get-SPWOPIBinding]()
+[Get-SPWOPIBinding](Get-SPWOPIBinding.md)
 
-[Remove-SPWOPIBinding]()
+[Remove-SPWOPIBinding](Remove-SPWOPIBinding.md)
 
-[New-SPWOPIBinding]()
+[New-SPWOPIBinding](New-SPWOPIBinding.md)

@@ -89,5 +89,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPSiteSubscriptionIRMConfig]()
+[Set-SPSiteSubscriptionIRMConfig](Set-SPSiteSubscriptionIRMConfig.md)
 

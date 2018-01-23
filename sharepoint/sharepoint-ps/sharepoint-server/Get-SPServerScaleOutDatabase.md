@@ -149,9 +149,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPServerScaleOutDatabase]()
+[Add-SPServerScaleOutDatabase](Add-SPServerScaleOutDatabase.md)
 
-[Remove-SPServerScaleOutDatabase]()
+[Remove-SPServerScaleOutDatabase](Remove-SPServerScaleOutDatabase.md)
 
-[Split-SPServerScaleOutDatabase]()
+[Split-SPServerScaleOutDatabase](Split-SPServerScaleOutDatabase.md)
 

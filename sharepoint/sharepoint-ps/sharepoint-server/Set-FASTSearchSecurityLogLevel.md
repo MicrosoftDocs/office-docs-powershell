@@ -189,5 +189,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityLogLevel]()
+[Get-FASTSearchSecurityLogLevel](Get-FASTSearchSecurityLogLevel.md)
 

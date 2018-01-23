@@ -108,15 +108,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-FASTSearchMetadataFullTextIndexMapping]()
+[Remove-FASTSearchMetadataFullTextIndexMapping](Remove-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Set-FASTSearchMetadataFullTextIndexMapping]()
+[Set-FASTSearchMetadataFullTextIndexMapping](Set-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Get-FASTSearchMetadataFullTextIndexMapping]()
+[Get-FASTSearchMetadataFullTextIndexMapping](Get-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Set-FASTSearchMetadataRankProfile]()
+[Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)
 
-[Get-FASTSearchMetadataManagedProperty]()
+[Get-FASTSearchMetadataManagedProperty](Get-FASTSearchMetadataManagedProperty.md)
 
-[Get-FASTSearchMetadataFullTextIndex]()
+[Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)
 

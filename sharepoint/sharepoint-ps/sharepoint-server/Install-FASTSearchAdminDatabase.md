@@ -157,5 +157,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Uninstall-FASTSearchAdminDatabase]()
+[Uninstall-FASTSearchAdminDatabase](Uninstall-FASTSearchAdminDatabase.md)
 

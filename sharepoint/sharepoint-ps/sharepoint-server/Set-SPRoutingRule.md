@@ -164,8 +164,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPRoutingRule]()
+[Add-SPRoutingRule](Add-SPRoutingRule.md)
 
-[Get-SPRoutingRule]()
+[Get-SPRoutingRule](Get-SPRoutingRule.md)
 
-[Remove-SPRoutingRule]()
+[Remove-SPRoutingRule](Remove-SPRoutingRule.md)

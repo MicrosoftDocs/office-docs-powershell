@@ -88,9 +88,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPTrustedSecurityTokenIssuer]()
+[New-SPTrustedSecurityTokenIssuer](New-SPTrustedSecurityTokenIssuer.md)
 
-[Remove-SPTrustedSecurityTokenIssuer]()
+[Remove-SPTrustedSecurityTokenIssuer](Remove-SPTrustedSecurityTokenIssuer.md)
 
-[Set-SPTrustedSecurityTokenIssuer]()
+[Set-SPTrustedSecurityTokenIssuer](Set-SPTrustedSecurityTokenIssuer.md)
 

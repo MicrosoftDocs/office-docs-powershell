@@ -168,4 +168,4 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Get-SPAppAcquisitionConfiguration]()
+[Get-SPAppAcquisitionConfiguration](Get-SPAppAcquisitionConfiguration.md)

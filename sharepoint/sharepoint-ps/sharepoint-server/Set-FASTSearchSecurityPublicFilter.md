@@ -91,5 +91,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityPublicFilter]()
+[Get-FASTSearchSecurityPublicFilter](Get-FASTSearchSecurityPublicFilter.md)
 

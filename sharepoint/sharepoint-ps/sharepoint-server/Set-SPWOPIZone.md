@@ -139,4 +139,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use Office Web Apps with SharePoint 2013]()
 
-[Get-SPWOPIZone]()
+[Get-SPWOPIZone](Get-SPWOPIZone.md)

@@ -45,9 +45,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSpelltuningStatus]()
+[Get-FASTSearchSpelltuningStatus](Get-FASTSearchSpelltuningStatus.md)
 
-[Reset-FASTSearchSpelltuning]()
+[Reset-FASTSearchSpelltuning](Reset-FASTSearchSpelltuning.md)
 
-[Add-FASTSearchSpelltuning]()
+[Add-FASTSearchSpelltuning](Add-FASTSearchSpelltuning.md)
 

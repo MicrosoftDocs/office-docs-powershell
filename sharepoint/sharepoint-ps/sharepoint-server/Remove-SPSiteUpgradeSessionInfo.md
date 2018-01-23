@@ -121,4 +121,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPSiteUpgradeSessionInfo]()
+[Get-SPSiteUpgradeSessionInfo](Get-SPSiteUpgradeSessionInfo.md)

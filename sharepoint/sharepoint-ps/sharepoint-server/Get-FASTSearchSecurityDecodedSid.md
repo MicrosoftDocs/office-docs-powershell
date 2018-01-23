@@ -59,5 +59,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityEncodedSid]()
+[Get-FASTSearchSecurityEncodedSid](Get-FASTSearchSecurityEncodedSid.md)
 

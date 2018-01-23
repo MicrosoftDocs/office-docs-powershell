@@ -97,9 +97,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-SPAppAutoProvision]()
+[Disable-SPAppAutoProvision](Disable-SPAppAutoProvision.md)
 
-[Get-SPAppAutoProvisionConnection]()
+[Get-SPAppAutoProvisionConnection](Get-SPAppAutoProvisionConnection.md)
 
-[Set-SPAppAutoProvisionConnection]()
+[Set-SPAppAutoProvisionConnection](Set-SPAppAutoProvisionConnection.md)
 

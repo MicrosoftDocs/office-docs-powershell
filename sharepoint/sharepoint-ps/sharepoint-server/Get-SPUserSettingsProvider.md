@@ -95,9 +95,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPUserSettingsProvider]()
+[New-SPUserSettingsProvider](New-SPUserSettingsProvider.md)
 
-[Remove-SPUserSettingsProvider]()
+[Remove-SPUserSettingsProvider](Remove-SPUserSettingsProvider.md)
 
-[Get-SPUserSettingsProviderManager]()
+[Get-SPUserSettingsProviderManager](Get-SPUserSettingsProviderManager.md)
 

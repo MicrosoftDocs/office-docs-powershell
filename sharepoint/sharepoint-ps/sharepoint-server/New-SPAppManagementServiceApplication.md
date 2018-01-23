@@ -222,5 +222,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPAppManagementServiceApplicationProxy]()
+[New-SPAppManagementServiceApplicationProxy](New-SPAppManagementServiceApplicationProxy.md)
 

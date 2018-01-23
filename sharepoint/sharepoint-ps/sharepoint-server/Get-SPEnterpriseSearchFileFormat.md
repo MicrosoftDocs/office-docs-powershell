@@ -119,9 +119,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchFileFormat]()
+[New-SPEnterpriseSearchFileFormat](New-SPEnterpriseSearchFileFormat.md)
 
-[Set-SPEnterpriseSearchFileFormatState]()
+[Set-SPEnterpriseSearchFileFormatState](Set-SPEnterpriseSearchFileFormatState.md)
 
-[Remove-SPEnterpriseSearchFileFormat]()
+[Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)
 

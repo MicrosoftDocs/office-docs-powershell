@@ -120,6 +120,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPUserLicenseMapping]()
+[Add-SPUserLicenseMapping](Add-SPUserLicenseMapping.md)
 
-[Get-SPUserLicenseMapping]()
+[Get-SPUserLicenseMapping](Get-SPUserLicenseMapping.md)

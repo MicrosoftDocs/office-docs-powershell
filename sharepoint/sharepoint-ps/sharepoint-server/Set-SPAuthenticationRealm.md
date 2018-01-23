@@ -138,4 +138,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAuthenticationRealm]()
+[Get-SPAuthenticationRealm](Get-SPAuthenticationRealm.md)

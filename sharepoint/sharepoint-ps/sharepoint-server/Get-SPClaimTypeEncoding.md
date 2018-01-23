@@ -117,5 +117,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPClaimTypeEncoding]()
+[New-SPClaimTypeEncoding](New-SPClaimTypeEncoding.md)
 

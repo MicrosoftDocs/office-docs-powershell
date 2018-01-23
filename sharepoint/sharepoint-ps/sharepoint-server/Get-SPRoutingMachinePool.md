@@ -105,9 +105,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPRoutingMachinePool]()
+[Add-SPRoutingMachinePool](Add-SPRoutingMachinePool.md)
 
-[Remove-SPRoutingMachinePool]()
+[Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)
 
-[Set-SPRoutingMachinePool]()
+[Set-SPRoutingMachinePool](Set-SPRoutingMachinePool.md)
 

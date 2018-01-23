@@ -165,7 +165,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchSecurityXMLAliaser]()
+[New-FASTSearchSecurityXMLAliaser](New-FASTSearchSecurityXMLAliaser.md)
 
-[Get-FASTSearchSecurityXMLAliaser]()
+[Get-FASTSearchSecurityXMLAliaser](Get-FASTSearchSecurityXMLAliaser.md)
 

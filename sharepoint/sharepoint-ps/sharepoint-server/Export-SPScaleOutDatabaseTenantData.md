@@ -168,7 +168,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPScaleOutDatabaseTenantData]()
+[Clear-SPScaleOutDatabaseTenantData](Clear-SPScaleOutDatabaseTenantData.md)
 
-[Import-SPScaleOutDatabaseTenantData]()
+[Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)
 

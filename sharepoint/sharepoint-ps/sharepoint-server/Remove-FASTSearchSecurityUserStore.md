@@ -123,5 +123,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityUserStore]()
+[Get-FASTSearchSecurityUserStore](Get-FASTSearchSecurityUserStore.md)
 

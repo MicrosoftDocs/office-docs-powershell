@@ -139,6 +139,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPPowerPointConversionServiceApplicationProxy]()
+[New-SPPowerPointConversionServiceApplicationProxy](New-SPPowerPointConversionServiceApplicationProxy.md)
 
-[Set-SPPowerPointConversionServiceApplication]()
+[Set-SPPowerPointConversionServiceApplication](Set-SPPowerPointConversionServiceApplication.md)

@@ -178,6 +178,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPEnterpriseSearchCrawlLogReadPermission]()
+[Get-SPEnterpriseSearchCrawlLogReadPermission](Get-SPEnterpriseSearchCrawlLogReadPermission.md)
 
-[Remove-SPEnterpriseSearchCrawlLogReadPermission]()
+[Remove-SPEnterpriseSearchCrawlLogReadPermission](Remove-SPEnterpriseSearchCrawlLogReadPermission.md)

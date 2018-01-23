@@ -169,9 +169,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchSecurityRegexAliaser]()
+[New-FASTSearchSecurityRegexAliaser](New-FASTSearchSecurityRegexAliaser.md)
 
-[Get-FASTSearchSecurityRegexAliaser]()
+[Get-FASTSearchSecurityRegexAliaser](Get-FASTSearchSecurityRegexAliaser.md)
 
-[New-FASTSearchSecurityRegexAliaserPattern]()
+[New-FASTSearchSecurityRegexAliaserPattern](New-FASTSearchSecurityRegexAliaserPattern.md)
 

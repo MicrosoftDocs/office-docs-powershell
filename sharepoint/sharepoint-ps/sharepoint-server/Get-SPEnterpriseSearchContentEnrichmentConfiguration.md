@@ -86,9 +86,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPEnterpriseSearchContentEnrichmentConfiguration]()
+[Set-SPEnterpriseSearchContentEnrichmentConfiguration](Set-SPEnterpriseSearchContentEnrichmentConfiguration.md)
 
-[New-SPEnterpriseSearchContentEnrichmentConfiguration]()
+[New-SPEnterpriseSearchContentEnrichmentConfiguration](New-SPEnterpriseSearchContentEnrichmentConfiguration.md)
 
-[Remove-SPEnterpriseSearchContentEnrichmentConfiguration]()
+[Remove-SPEnterpriseSearchContentEnrichmentConfiguration](Remove-SPEnterpriseSearchContentEnrichmentConfiguration.md)
 

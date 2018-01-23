@@ -71,7 +71,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Disable-SPUserLicensing]()
+[Disable-SPUserLicensing](Disable-SPUserLicensing.md)
 
-[Enable-SPUserLicensing]()
+[Enable-SPUserLicensing](Enable-SPUserLicensing.md)
 
