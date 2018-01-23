@@ -83,7 +83,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPProjectPermissionMode]()
+[Set-SPProjectPermissionMode](Set-SPProjectPermissionMode.md)
 
-[Invoke-SPProjectActiveDirectoryGroupSync]()
+[Invoke-SPProjectActiveDirectoryGroupSync](Invoke-SPProjectActiveDirectoryGroupSync.md)
 

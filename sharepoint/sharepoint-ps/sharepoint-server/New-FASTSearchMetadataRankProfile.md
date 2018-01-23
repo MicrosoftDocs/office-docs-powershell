@@ -99,9 +99,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-FASTSearchMetadataRankProfile]()
+[Remove-FASTSearchMetadataRankProfile](Remove-FASTSearchMetadataRankProfile.md)
 
-[Set-FASTSearchMetadataRankProfile]()
+[Set-FASTSearchMetadataRankProfile](Set-FASTSearchMetadataRankProfile.md)
 
-[Get-FASTSearchMetadataRankProfile]()
+[Get-FASTSearchMetadataRankProfile](Get-FASTSearchMetadataRankProfile.md)
 

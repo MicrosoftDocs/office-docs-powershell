@@ -144,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchMetadataCrawledProperty]()
+[New-FASTSearchMetadataCrawledProperty](New-FASTSearchMetadataCrawledProperty.md)
 
-[Get-FASTSearchMetadataCrawledProperty]()
+[Get-FASTSearchMetadataCrawledProperty](Get-FASTSearchMetadataCrawledProperty.md)
 

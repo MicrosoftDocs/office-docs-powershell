@@ -116,7 +116,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPSecureStoreSystemAccount]()
+[Get-SPSecureStoreSystemAccount](Get-SPSecureStoreSystemAccount.md)
 
-[Remove-SPSecureStoreSystemAccount]()
+[Remove-SPSecureStoreSystemAccount](Remove-SPSecureStoreSystemAccount.md)
 

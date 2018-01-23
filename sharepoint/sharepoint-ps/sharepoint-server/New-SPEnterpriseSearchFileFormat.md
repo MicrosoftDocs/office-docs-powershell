@@ -180,8 +180,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPEnterpriseSearchFileFormat]()
+[Get-SPEnterpriseSearchFileFormat](Get-SPEnterpriseSearchFileFormat.md)
 
-[Set-SPEnterpriseSearchFileFormatState]()
+[Set-SPEnterpriseSearchFileFormatState](Set-SPEnterpriseSearchFileFormatState.md)
 
-[Remove-SPEnterpriseSearchFileFormat]()
+[Remove-SPEnterpriseSearchFileFormat](Remove-SPEnterpriseSearchFileFormat.md)

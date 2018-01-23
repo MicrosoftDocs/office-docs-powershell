@@ -204,10 +204,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPEnterpriseSearchLinksDatabase]()
+[Set-SPEnterpriseSearchLinksDatabase](Set-SPEnterpriseSearchLinksDatabase.md)
 
-[Get-SPEnterpriseSearchLinksDatabase]()
+[Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
 
-[Remove-SPEnterpriseSearchLinksDatabase]()
+[Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
 
-[Repartition-SPEnterpriseSearchLinksDatabases]()
+[Repartition-SPEnterpriseSearchLinksDatabases](Repartition-SPEnterpriseSearchLinksDatabases.md)

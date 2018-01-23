@@ -121,9 +121,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-FASTSearchContentCollection]()
+[Clear-FASTSearchContentCollection](Clear-FASTSearchContentCollection.md)
 
-[New-FASTSearchContentCollection]()
+[New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)
 
-[Get-FASTSearchContentCollection]()
+[Get-FASTSearchContentCollection](Get-FASTSearchContentCollection.md)
 

@@ -91,4 +91,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Update-SPRepopulateMicroblogFeedCache]()
+[Update-SPRepopulateMicroblogFeedCache](Update-SPRepopulateMicroblogFeedCache.md)

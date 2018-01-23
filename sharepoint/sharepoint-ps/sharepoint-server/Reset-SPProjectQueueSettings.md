@@ -81,6 +81,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPProjectQueueSettings]()
+[Set-SPProjectQueueSettings](Set-SPProjectQueueSettings.md)
 
-[Get-SPProjectQueueSettings]()
+[Get-SPProjectQueueSettings](Get-SPProjectQueueSettings.md)

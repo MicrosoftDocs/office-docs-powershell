@@ -212,8 +212,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPTrustedSecurityTokenIssuer]()
+[Get-SPTrustedSecurityTokenIssuer](Get-SPTrustedSecurityTokenIssuer.md)
 
-[New-SPTrustedSecurityTokenIssuer]()
+[New-SPTrustedSecurityTokenIssuer](New-SPTrustedSecurityTokenIssuer.md)
 
-[Remove-SPTrustedSecurityTokenIssuer]()
+[Remove-SPTrustedSecurityTokenIssuer](Remove-SPTrustedSecurityTokenIssuer.md)

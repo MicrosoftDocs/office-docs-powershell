@@ -67,4 +67,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Start-SPDiagnosticsSession]()
+[Start-SPDiagnosticsSession](Start-SPDiagnosticsSession.md)

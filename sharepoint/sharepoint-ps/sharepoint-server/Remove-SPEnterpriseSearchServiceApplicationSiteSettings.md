@@ -163,4 +163,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings]()
+[Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings](Upgrade-SPEnterpriseSearchServiceApplicationSiteSettings.md)

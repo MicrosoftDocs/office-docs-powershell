@@ -89,9 +89,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-FASTSearchMetadataCategory]()
+[Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)
 
-[Set-FASTSearchMetadataCategory]()
+[Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)
 
-[New-FASTSearchMetadataCategory]()
+[New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)
 

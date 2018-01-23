@@ -272,8 +272,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPServerScaleOutDatabase]()
+[Add-SPServerScaleOutDatabase](Add-SPServerScaleOutDatabase.md)
 
-[Get-SPServerScaleOutDatabase]()
+[Get-SPServerScaleOutDatabase](Get-SPServerScaleOutDatabase.md)
 
-[Remove-SPServerScaleOutDatabase]()
+[Remove-SPServerScaleOutDatabase](Remove-SPServerScaleOutDatabase.md)

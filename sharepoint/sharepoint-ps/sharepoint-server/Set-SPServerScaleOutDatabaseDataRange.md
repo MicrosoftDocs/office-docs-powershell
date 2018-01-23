@@ -176,6 +176,6 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Set-SPServerScaleOutDatabaseDataSubRange]()
+[Set-SPServerScaleOutDatabaseDataSubRange](Set-SPServerScaleOutDatabaseDataSubRange.md)
 
-[Clear-SPServerScaleOutDatabaseDeletedDataSubRange]()
+[Clear-SPServerScaleOutDatabaseDeletedDataSubRange](Clear-SPServerScaleOutDatabaseDeletedDataSubRange.md)

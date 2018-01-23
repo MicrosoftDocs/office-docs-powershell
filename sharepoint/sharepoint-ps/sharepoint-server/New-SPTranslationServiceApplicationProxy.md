@@ -203,8 +203,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPTranslationServiceApplication]()
+[New-SPTranslationServiceApplication](New-SPTranslationServiceApplication.md)
 
-[Set-SPTranslationServiceApplication]()
+[Set-SPTranslationServiceApplication](Set-SPTranslationServiceApplication.md)
 
-[Set-SPTranslationServiceApplicationProxy]()
+[Set-SPTranslationServiceApplicationProxy](Set-SPTranslationServiceApplicationProxy.md)

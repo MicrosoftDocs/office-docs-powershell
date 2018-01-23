@@ -145,11 +145,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchResultSource]()
+[New-SPEnterpriseSearchResultSource](New-SPEnterpriseSearchResultSource.md)
 
-[Set-SPEnterpriseSearchResultSource]()
+[Set-SPEnterpriseSearchResultSource](Set-SPEnterpriseSearchResultSource.md)
 
-[Remove-SPEnterpriseSearchResultSource]()
+[Remove-SPEnterpriseSearchResultSource](Remove-SPEnterpriseSearchResultSource.md)
 
-[Get-SPEnterpriseSearchOwner]()
+[Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)
 

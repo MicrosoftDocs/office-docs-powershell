@@ -149,8 +149,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPEnterpriseSearchTopology]()
+[Get-SPEnterpriseSearchTopology](Get-SPEnterpriseSearchTopology.md)
 
-[New-SPEnterpriseSearchTopology]()
+[New-SPEnterpriseSearchTopology](New-SPEnterpriseSearchTopology.md)
 
-[Remove-SPEnterpriseSearchTopology]()
+[Remove-SPEnterpriseSearchTopology](Remove-SPEnterpriseSearchTopology.md)

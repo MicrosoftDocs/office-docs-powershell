@@ -118,7 +118,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityClaimsUserStore]()
+[Get-FASTSearchSecurityClaimsUserStore](Get-FASTSearchSecurityClaimsUserStore.md)
 
-[Set-FASTSearchSecurityClaimsUserStore]()
+[Set-FASTSearchSecurityClaimsUserStore](Set-FASTSearchSecurityClaimsUserStore.md)
 

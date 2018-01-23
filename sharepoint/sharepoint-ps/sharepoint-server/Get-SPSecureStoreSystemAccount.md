@@ -65,7 +65,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPSecureStoreSystemAccount]()
+[Add-SPSecureStoreSystemAccount](Add-SPSecureStoreSystemAccount.md)
 
-[Remove-SPSecureStoreSystemAccount]()
+[Remove-SPSecureStoreSystemAccount](Remove-SPSecureStoreSystemAccount.md)
 

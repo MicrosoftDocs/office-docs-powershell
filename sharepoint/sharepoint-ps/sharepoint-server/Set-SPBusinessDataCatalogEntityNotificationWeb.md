@@ -119,6 +119,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPBusinessDataCatalogEntityNotificationWeb]()
+[Clear-SPBusinessDataCatalogEntityNotificationWeb](Clear-SPBusinessDataCatalogEntityNotificationWeb.md)
 
-[Get-SPBusinessDataCatalogEntityNotificationWeb]()
+[Get-SPBusinessDataCatalogEntityNotificationWeb](Get-SPBusinessDataCatalogEntityNotificationWeb.md)

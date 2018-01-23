@@ -194,10 +194,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchResultItemType]()
+[New-SPEnterpriseSearchResultItemType](New-SPEnterpriseSearchResultItemType.md)
 
-[Set-SPEnterpriseSearchResultItemType]()
+[Set-SPEnterpriseSearchResultItemType](Set-SPEnterpriseSearchResultItemType.md)
 
-[Get-SPEnterpriseSearchResultItemType]()
+[Get-SPEnterpriseSearchResultItemType](Get-SPEnterpriseSearchResultItemType.md)
 
-[Get-SPEnterpriseSearchOwner]()
+[Get-SPEnterpriseSearchOwner](Get-SPEnterpriseSearchOwner.md)

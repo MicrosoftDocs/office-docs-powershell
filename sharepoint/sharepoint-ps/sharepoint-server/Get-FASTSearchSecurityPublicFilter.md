@@ -67,5 +67,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-FASTSearchSecurityPublicFilter]()
+[Set-FASTSearchSecurityPublicFilter](Set-FASTSearchSecurityPublicFilter.md)
 

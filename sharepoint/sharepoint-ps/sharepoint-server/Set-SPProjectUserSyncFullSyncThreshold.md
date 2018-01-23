@@ -105,8 +105,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPProjectUserSync]()
+[Set-SPProjectUserSync](Set-SPProjectUserSync.md)
 
-[Set-SPProjectUserSyncDisabledSyncThreshold]()
+[Set-SPProjectUserSyncDisabledSyncThreshold](Set-SPProjectUserSyncDisabledSyncThreshold.md)
 
-[Set-SPProjectUserSyncOffPeakSyncThreshold]()
+[Set-SPProjectUserSyncOffPeakSyncThreshold](Set-SPProjectUserSyncOffPeakSyncThreshold.md)

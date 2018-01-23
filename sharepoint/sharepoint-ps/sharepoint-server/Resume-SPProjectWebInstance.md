@@ -88,4 +88,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Pause-SPProjectWebInstance]()
+[Pause-SPProjectWebInstance](Pause-SPProjectWebInstance.md)

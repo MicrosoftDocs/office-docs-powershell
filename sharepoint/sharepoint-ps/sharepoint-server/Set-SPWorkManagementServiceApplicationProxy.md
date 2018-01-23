@@ -153,8 +153,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPWorkManagementServiceApplication]()
+[New-SPWorkManagementServiceApplication](New-SPWorkManagementServiceApplication.md)
 
-[New-SPWorkManagementServiceApplicationProxy]()
+[New-SPWorkManagementServiceApplicationProxy](New-SPWorkManagementServiceApplicationProxy.md)
 
-[Set-SPWorkManagementServiceApplication]()
+[Set-SPWorkManagementServiceApplication](Set-SPWorkManagementServiceApplication.md)

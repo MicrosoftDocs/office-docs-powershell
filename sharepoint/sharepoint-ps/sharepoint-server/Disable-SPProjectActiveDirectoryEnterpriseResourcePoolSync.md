@@ -99,5 +99,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync]()
+[Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync](Invoke-SPProjectActiveDirectoryEnterpriseResourcePoolSync.md)
 

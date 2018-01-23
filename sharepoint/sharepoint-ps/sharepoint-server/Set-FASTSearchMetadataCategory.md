@@ -155,9 +155,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchMetadataCategory]()
+[Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)
 
-[Remove-FASTSearchMetadataCategory]()
+[Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)
 
-[New-FASTSearchMetadataCategory]()
+[New-FASTSearchMetadataCategory](New-FASTSearchMetadataCategory.md)
 

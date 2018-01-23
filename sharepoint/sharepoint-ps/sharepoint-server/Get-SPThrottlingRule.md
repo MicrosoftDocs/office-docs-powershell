@@ -105,9 +105,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPThrottlingRule]()
+[Add-SPThrottlingRule](Add-SPThrottlingRule.md)
 
-[Remove-SPThrottlingRule]()
+[Remove-SPThrottlingRule](Remove-SPThrottlingRule.md)
 
-[Set-SPThrottlingRule]()
+[Set-SPThrottlingRule](Set-SPThrottlingRule.md)
 

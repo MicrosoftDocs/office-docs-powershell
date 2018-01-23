@@ -141,5 +141,5 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Set-SPAppAcquisitionConfiguration]()
+[Set-SPAppAcquisitionConfiguration](Set-SPAppAcquisitionConfiguration.md)
 

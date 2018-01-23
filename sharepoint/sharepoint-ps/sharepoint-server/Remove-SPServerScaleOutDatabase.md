@@ -159,8 +159,8 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Add-SPServerScaleOutDatabase]()
+[Add-SPServerScaleOutDatabase](Add-SPServerScaleOutDatabase.md)
 
-[Get-SPServerScaleOutDatabase]()
+[Get-SPServerScaleOutDatabase](Get-SPServerScaleOutDatabase.md)
 
-[Split-SPServerScaleOutDatabase]()
+[Split-SPServerScaleOutDatabase](Split-SPServerScaleOutDatabase.md)

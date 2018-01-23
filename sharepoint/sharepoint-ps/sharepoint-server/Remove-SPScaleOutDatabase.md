@@ -155,6 +155,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Add-SPScaleOutDatabase]()
+[Add-SPScaleOutDatabase](Add-SPScaleOutDatabase.md)
 
-[Get-SPScaleOutDatabase]()
+[Get-SPScaleOutDatabase](Get-SPScaleOutDatabase.md)

@@ -269,7 +269,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityLotusNotesUserStore]()
+[Get-FASTSearchSecurityLotusNotesUserStore](Get-FASTSearchSecurityLotusNotesUserStore.md)
 
-[New-FASTSearchSecurityLotusNotesUserStore]()
+[New-FASTSearchSecurityLotusNotesUserStore](New-FASTSearchSecurityLotusNotesUserStore.md)
 

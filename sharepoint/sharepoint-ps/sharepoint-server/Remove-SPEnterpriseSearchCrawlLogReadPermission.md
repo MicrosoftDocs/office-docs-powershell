@@ -181,6 +181,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPEnterpriseSearchCrawlLogReadPermission]()
+[Set-SPEnterpriseSearchCrawlLogReadPermission](Set-SPEnterpriseSearchCrawlLogReadPermission.md)
 
-[Get-SPEnterpriseSearchCrawlLogReadPermission]()
+[Get-SPEnterpriseSearchCrawlLogReadPermission](Get-SPEnterpriseSearchCrawlLogReadPermission.md)

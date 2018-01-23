@@ -95,13 +95,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchMetadataFullTextIndexMapping]()
+[New-FASTSearchMetadataFullTextIndexMapping](New-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Remove-FASTSearchMetadataFullTextIndexMapping]()
+[Remove-FASTSearchMetadataFullTextIndexMapping](Remove-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Set-FASTSearchMetadataFullTextIndexMapping]()
+[Set-FASTSearchMetadataFullTextIndexMapping](Set-FASTSearchMetadataFullTextIndexMapping.md)
 
-[Get-FASTSearchMetadataFullTextIndex]()
+[Get-FASTSearchMetadataFullTextIndex](Get-FASTSearchMetadataFullTextIndex.md)
 
-[Get-FASTSearchMetadataManagedProperty]()
+[Get-FASTSearchMetadataManagedProperty](Get-FASTSearchMetadataManagedProperty.md)
 

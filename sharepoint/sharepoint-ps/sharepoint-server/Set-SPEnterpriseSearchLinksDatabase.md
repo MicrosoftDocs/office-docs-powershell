@@ -222,10 +222,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchLinksDatabase]()
+[New-SPEnterpriseSearchLinksDatabase](New-SPEnterpriseSearchLinksDatabase.md)
 
-[Get-SPEnterpriseSearchLinksDatabase]()
+[Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
 
-[Remove-SPEnterpriseSearchLinksDatabase]()
+[Remove-SPEnterpriseSearchLinksDatabase](Remove-SPEnterpriseSearchLinksDatabase.md)
 
-[Move-SPEnterpriseSearchLinksDatabases]()
+[Move-SPEnterpriseSearchLinksDatabases](Move-SPEnterpriseSearchLinksDatabases.md)

@@ -94,5 +94,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPAppSiteSubscriptionName]()
+[Set-SPAppSiteSubscriptionName](Set-SPAppSiteSubscriptionName.md)
 

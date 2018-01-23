@@ -122,9 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPRoutingMachinePool]()
+[Get-SPRoutingMachinePool](Get-SPRoutingMachinePool.md)
 
-[Remove-SPRoutingMachinePool]()
+[Remove-SPRoutingMachinePool](Remove-SPRoutingMachinePool.md)
 
-[Set-SPRoutingMachinePool]()
+[Set-SPRoutingMachinePool](Set-SPRoutingMachinePool.md)
 

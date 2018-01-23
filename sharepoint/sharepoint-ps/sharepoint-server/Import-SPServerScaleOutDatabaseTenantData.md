@@ -188,7 +188,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPServerScaleOutDatabaseTenantData]()
+[Clear-SPServerScaleOutDatabaseTenantData](Clear-SPServerScaleOutDatabaseTenantData.md)
 
-[Export-SPServerScaleOutDatabaseTenantData]()
+[Export-SPServerScaleOutDatabaseTenantData](Export-SPServerScaleOutDatabaseTenantData.md)
 

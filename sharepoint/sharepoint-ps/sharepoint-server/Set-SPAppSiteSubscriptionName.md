@@ -165,4 +165,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAppSiteSubscriptionName]()
+[Get-SPAppSiteSubscriptionName](Get-SPAppSiteSubscriptionName.md)

@@ -143,10 +143,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-SPEnterpriseSearchLinksDatabase]()
+[New-SPEnterpriseSearchLinksDatabase](New-SPEnterpriseSearchLinksDatabase.md)
 
-[Set-SPEnterpriseSearchLinksDatabase]()
+[Set-SPEnterpriseSearchLinksDatabase](Set-SPEnterpriseSearchLinksDatabase.md)
 
-[Get-SPEnterpriseSearchLinksDatabase]()
+[Get-SPEnterpriseSearchLinksDatabase](Get-SPEnterpriseSearchLinksDatabase.md)
 
-[Move-SPEnterpriseSearchLinksDatabases]()
+[Move-SPEnterpriseSearchLinksDatabases](Move-SPEnterpriseSearchLinksDatabases.md)

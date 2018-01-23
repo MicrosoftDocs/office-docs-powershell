@@ -136,7 +136,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Export-SPScaleOutDatabaseTenantData]()
+[Export-SPScaleOutDatabaseTenantData](Export-SPScaleOutDatabaseTenantData.md)
 
-[Import-SPScaleOutDatabaseTenantData]()
+[Import-SPScaleOutDatabaseTenantData](Import-SPScaleOutDatabaseTenantData.md)
 
