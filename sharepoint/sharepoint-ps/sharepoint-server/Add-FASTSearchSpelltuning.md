@@ -27,7 +27,7 @@ For permissions and the most current information about FAST Search Server 2010 f
 
 ###   (FAST Server for SharePoint 2010)
 ```
-C:\PS>
+
 ```
 
 ## PARAMETERS
