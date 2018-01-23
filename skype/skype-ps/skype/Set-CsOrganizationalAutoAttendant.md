@@ -25,7 +25,7 @@ The Set-CsOrganizationalAutoAttendant cmdlet lets you modify the properties of a
 ### -------------------------- Example 1 --------------------------
 ```
 $oaa = Get-CsOrganizationalAutoAttendant -PrimaryUri "sip:mainoaa@contoso.com"
-$oaa.LineUris = @([System.Uri] "tel:+##########")
+$oaa.LineUris = @([System.Uri] "tel:+11098765432")
 Set-CsOrganizationalAutoAttendant -Instance $oaa
 ```
 
