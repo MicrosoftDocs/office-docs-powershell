@@ -67,9 +67,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-FASTSearchContentCollection]()
+[Clear-FASTSearchContentCollection](Clear-FASTSearchContentCollection.md)
 
-[New-FASTSearchContentCollection]()
+[New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)
 
-[Remove-FASTSearchContentCollection]()
+[Remove-FASTSearchContentCollection](Remove-FASTSearchContentCollection.md)
 

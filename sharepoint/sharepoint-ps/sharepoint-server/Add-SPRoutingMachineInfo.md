@@ -183,9 +183,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPRoutingMachineInfo]()
+[Get-SPRoutingMachineInfo](Get-SPRoutingMachineInfo.md)
 
-[Remove-SPRoutingMachineInfo]()
+[Remove-SPRoutingMachineInfo](Remove-SPRoutingMachineInfo.md)
 
-[Set-SPRoutingMachineInfo]()
+[Set-SPRoutingMachineInfo](Set-SPRoutingMachineInfo.md)
 

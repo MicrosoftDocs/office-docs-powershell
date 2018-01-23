@@ -119,4 +119,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAppPrincipal]()
+[Get-SPAppPrincipal](Get-SPAppPrincipal.md)

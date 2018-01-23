@@ -67,7 +67,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchSearchSettingGroup]()
+[New-FASTSearchSearchSettingGroup](New-FASTSearchSearchSettingGroup.md)
 
-[Remove-FASTSearchSearchSettingGroup]()
+[Remove-FASTSearchSearchSettingGroup](Remove-FASTSearchSearchSettingGroup.md)
 

@@ -121,9 +121,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPAppDeniedEndpoints]()
+[Clear-SPAppDeniedEndpoints](Clear-SPAppDeniedEndpoints.md)
 
-[Get-SPAppDeniedEndpoints]()
+[Get-SPAppDeniedEndpoints](Get-SPAppDeniedEndpoints.md)
 
-[Remove-SPAppDeniedEndpoint]()
+[Remove-SPAppDeniedEndpoint](Remove-SPAppDeniedEndpoint.md)
 

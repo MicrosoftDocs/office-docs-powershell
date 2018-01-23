@@ -103,5 +103,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Install-FASTSearchAdminDatabase]()
+[Install-FASTSearchAdminDatabase](Install-FASTSearchAdminDatabase.md)
 

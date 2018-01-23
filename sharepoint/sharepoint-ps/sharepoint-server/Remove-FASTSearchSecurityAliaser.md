@@ -121,5 +121,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchSecurityAliaser]()
+[Get-FASTSearchSecurityAliaser](Get-FASTSearchSecurityAliaser.md)
 

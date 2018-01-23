@@ -196,6 +196,6 @@ Microsoft.SharePoint.PowerShell.SPAssignmentCollection
 
 ## RELATED LINKS
 
-[Get-SPWebApplicationAppDomain]()
+[Get-SPWebApplicationAppDomain](Get-SPWebApplicationAppDomain.md)
 
-[Remove-SPWebApplicationAppDomain]()
+[Remove-SPWebApplicationAppDomain](Remove-SPWebApplicationAppDomain.md)

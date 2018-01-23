@@ -120,4 +120,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPInternalAppStateUpdateInterval]()
+[Get-SPInternalAppStateUpdateInterval](Get-SPInternalAppStateUpdateInterval.md)

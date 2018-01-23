@@ -165,6 +165,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPSiteUrl]()
+[Get-SPSiteUrl](Get-SPSiteUrl.md)
 
-[Remove-SPSiteUrl]()
+[Remove-SPSiteUrl](Remove-SPSiteUrl.md)

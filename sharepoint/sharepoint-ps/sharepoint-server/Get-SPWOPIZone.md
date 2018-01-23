@@ -73,5 +73,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use Office Web Apps with SharePoint 2013]()
 
-[Set-SPWOPIZone]()
+[Set-SPWOPIZone](Set-SPWOPIZone.md)
 

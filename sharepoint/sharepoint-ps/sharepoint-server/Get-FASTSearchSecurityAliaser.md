@@ -71,5 +71,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-FASTSearchSecurityAliaser]()
+[Remove-FASTSearchSecurityAliaser](Remove-FASTSearchSecurityAliaser.md)
 

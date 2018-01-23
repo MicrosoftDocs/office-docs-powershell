@@ -125,5 +125,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPAppDeniedEndpointList]()
+[Get-SPAppDeniedEndpointList](Get-SPAppDeniedEndpointList.md)
 

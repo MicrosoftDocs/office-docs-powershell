@@ -63,7 +63,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-FASTSearchSecurityClaimsUserStore]()
+[Set-FASTSearchSecurityClaimsUserStore](Set-FASTSearchSecurityClaimsUserStore.md)
 
-[New-FASTSearchSecurityClaimsUserStore]()
+[New-FASTSearchSecurityClaimsUserStore](New-FASTSearchSecurityClaimsUserStore.md)
 

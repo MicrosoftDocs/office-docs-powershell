@@ -176,8 +176,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPScaleOutDatabaseDataSubRange]()
+[Set-SPScaleOutDatabaseDataSubRange](Set-SPScaleOutDatabaseDataSubRange.md)
 
-[Get-SPScaleOutDatabase]()
+[Get-SPScaleOutDatabase](Get-SPScaleOutDatabase.md)
 
-[Get-SPScaleOutDatabaseDataState]()
+[Get-SPScaleOutDatabaseDataState](Get-SPScaleOutDatabaseDataState.md)

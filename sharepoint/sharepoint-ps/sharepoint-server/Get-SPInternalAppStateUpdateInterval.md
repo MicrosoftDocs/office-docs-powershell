@@ -69,5 +69,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPInternalAppStateUpdateInterval]()
+[Set-SPInternalAppStateUpdateInterval](Set-SPInternalAppStateUpdateInterval.md)
 

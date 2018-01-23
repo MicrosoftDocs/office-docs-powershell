@@ -85,13 +85,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-FASTSearchMetadataCategory]()
+[Get-FASTSearchMetadataCategory](Get-FASTSearchMetadataCategory.md)
 
-[Remove-FASTSearchMetadataCategory]()
+[Remove-FASTSearchMetadataCategory](Remove-FASTSearchMetadataCategory.md)
 
-[Set-FASTSearchMetadataCategory]()
+[Set-FASTSearchMetadataCategory](Set-FASTSearchMetadataCategory.md)
 
-[New-FASTSearchMetadataCrawledProperty]()
+[New-FASTSearchMetadataCrawledProperty](New-FASTSearchMetadataCrawledProperty.md)
 
-[Set-FASTSearchMetadataCrawledProperty]()
+[Set-FASTSearchMetadataCrawledProperty](Set-FASTSearchMetadataCrawledProperty.md)
 

@@ -114,6 +114,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-SPProjectPermissionMode]()
+[Get-SPProjectPermissionMode](Get-SPProjectPermissionMode.md)
 
-[Invoke-SPProjectActiveDirectoryGroupSync]()
+[Invoke-SPProjectActiveDirectoryGroupSync](Invoke-SPProjectActiveDirectoryGroupSync.md)

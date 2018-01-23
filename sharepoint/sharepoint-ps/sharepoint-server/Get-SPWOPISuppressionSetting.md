@@ -73,7 +73,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Use Office Web Apps with SharePoint 2013]()
 
-[New-SPWOPISuppressionSetting]()
+[New-SPWOPISuppressionSetting](New-SPWOPISuppressionSetting.md)
 
-[Remove-SPWOPISuppressionSetting]()
+[Remove-SPWOPISuppressionSetting](Remove-SPWOPISuppressionSetting.md)
 

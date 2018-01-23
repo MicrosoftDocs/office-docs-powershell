@@ -261,4 +261,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Clear-SPScaleOutDatabaseDeletedDataSubRange]()
+[Clear-SPScaleOutDatabaseDeletedDataSubRange](Clear-SPScaleOutDatabaseDeletedDataSubRange.md)

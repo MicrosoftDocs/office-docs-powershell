@@ -74,9 +74,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchMetadataManagedProperty]()
+[New-FASTSearchMetadataManagedProperty](New-FASTSearchMetadataManagedProperty.md)
 
-[Set-FASTSearchMetadataManagedProperty]()
+[Set-FASTSearchMetadataManagedProperty](Set-FASTSearchMetadataManagedProperty.md)
 
-[Remove-FASTSearchMetadataManagedProperty]()
+[Remove-FASTSearchMetadataManagedProperty](Remove-FASTSearchMetadataManagedProperty.md)
 

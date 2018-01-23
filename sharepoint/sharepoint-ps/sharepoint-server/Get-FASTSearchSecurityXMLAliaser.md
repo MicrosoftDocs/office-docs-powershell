@@ -70,7 +70,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-FASTSearchSecurityXMLAliaser]()
+[New-FASTSearchSecurityXMLAliaser](New-FASTSearchSecurityXMLAliaser.md)
 
-[Set-FASTSearchSecurityXMLAliaser]()
+[Set-FASTSearchSecurityXMLAliaser](Set-FASTSearchSecurityXMLAliaser.md)
 

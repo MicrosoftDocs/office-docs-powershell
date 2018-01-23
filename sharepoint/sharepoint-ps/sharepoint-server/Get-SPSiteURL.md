@@ -125,7 +125,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-SPSiteUrl]()
+[Remove-SPSiteUrl](Remove-SPSiteUrl.md)
 
-[Set-SPSiteUrl]()
+[Set-SPSiteUrl](Set-SPSiteUrl.md)
 

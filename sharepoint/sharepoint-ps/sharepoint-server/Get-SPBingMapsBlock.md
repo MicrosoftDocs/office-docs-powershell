@@ -69,9 +69,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-SPBingMapsBlock]()
+[Set-SPBingMapsBlock](Set-SPBingMapsBlock.md)
 
-[Get-SPBingMapsKey]()
+[Get-SPBingMapsKey](Get-SPBingMapsKey.md)
 
-[Set-SPBingMapskey]()
+[Set-SPBingMapskey](Set-SPBingMapskey.md)
 
