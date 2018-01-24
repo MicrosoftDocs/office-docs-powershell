@@ -55,12 +55,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### Example 1: Set a new title for an existing site collection
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> Set-SPOSite -Identity https://contoso.sharepoint.com/sites/demo -Title "New Title"
 ```
 
-{{ Add example description here }}
+This command sets a new title for an existing site collection
 
 
 ## PARAMETERS
