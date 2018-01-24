@@ -17,7 +17,7 @@ Add-SPOUser -Group <String> -LoginName <String> -Site <SpoSitePipeBind> [<Common
 ```
 
 ## DESCRIPTION
-Along with the group memberships that are normally required to run Windows PowerShell, you must be a SharePoint Online global administrator and a site collection administrator to use the Add-SPOUser cmdlet.
+Along with the group memberships that are normally required to run Windows PowerShell, you must be a SharePoint Online global administrator and a site collection administrator to use the `Add-SPOUser` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
@@ -25,15 +25,21 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ###   ------------ Example 1 --------------------
 ```
-{example code}
+Add-SPOUser -Site https://contoso.sharepoint.com/sites/sc1 -LoginName joe.healy@contoso.com -Group "SC1 Owners"
 ```
-{example description}
+Example 1 adds a user who has the e-mail address joe.healy@contoso.com to the group "SC1 Owners" in the site collection https://contoso.sharepoint.com/sites/sc1.
+
+###   ------------ Example 2 --------------------
+```
+Add-SPOUser -Site https://contoso.sharepoint.com -LoginName melissa.kerr@contoso.com -Group "Team Site Members"
+```
+Example 2 adds a user who has the e-mail address melissa.kerr@contoso.com to the group "Team Site Members" in the site collection https://contoso.sharepoint.com.
 
 
 ## PARAMETERS
 
 ### -Group
-{{Fill Group Description}}
+Specifies the name of the SharePoint group to add the user or the security group to.
 
 ```yaml
 Type: String
@@ -49,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-{{Fill LoginName Description}}
+Specifies the login name of the user to add.
 
 ```yaml
 Type: String
@@ -65,7 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the URL of the site collection to which you want to add the user.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -102,4 +108,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set-SPOUser](Set-SPOUser.md)
 
 [Remove-SPOUser](Remove-SPOUser.md)
-
