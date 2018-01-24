@@ -31,12 +31,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### Example 1: Create a new site collection based on Team Site template (classic experience)
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-SPOSite -Url https://contoso.sharepoint.com/sites/teamsite -Title "Classic Team Site" -Owner admin@contoso.onmicrosoft.com -StorageQuota 20 -Template STS#0
 ```
 
-{{ Add example description here }}
+This command creates a new site collection based on Team Site template (classic experience).
 
 
 ## PARAMETERS
