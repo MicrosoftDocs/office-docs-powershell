@@ -376,3 +376,14 @@ If it is an emergency you can look through the merge history and see who has wor
 
 If you are a Microsoft employee you can email the distribution group which includes the maintainers of the repository.
 The distribution group is Office Docs PowerShell Maintainers (od-powershell).
+
+## Git is getting on my nerves, do you have any advice?
+
+One of the most confusing things with Git and GitHub is that there are many, many ways to do things.
+
+You can use the command line with a cmd prompt or you can use a command line with git bash or you can use a GUI like GitHub Desktop https://desktop.github.com/.
+
+If you are working with the command line using Git Bash, this will help:
+https://www.codeproject.com/Articles/457305/Basic-Git-Command-Line-Reference-for-Windows-Users
+
+Also check out Git Kraken https://www.gitkraken.com/ which has a great user interface and visualizations.
