@@ -19,7 +19,7 @@ Note: the command will return immediately, but the Teams application will not re
 The Teams application may need to be open for up to an hour before changes are reflected.
 
 To turn an existing Member into an Owner, 
-first Add-TeamUser -Role Owner -User foo to add them to the owners list,
+first Add-TeamUser -Role Owner -User to add them to the owners list,
 then Remove-TeamUser -User foo to remove them from the members list.
 
 ## SYNTAX
