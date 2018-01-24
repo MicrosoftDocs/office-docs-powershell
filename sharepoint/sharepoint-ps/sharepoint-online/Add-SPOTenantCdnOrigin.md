@@ -18,7 +18,7 @@ Add-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <String
 ```
 
 ## DESCRIPTION
-Configures a new origin to public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library, and requests that content in that library should be retrievable by using a CDN. 
+Configures a new origin to public or private CDN, on either Tenant level or on a single Site level. Effectively, a tenant admin points out to a document library, or a folder in the document library and requests that content in that library should be retrievable by using a CDN. 
 
 You must be a SharePoint Online global administrator and a site collection administrator to run the cmdlet.
 
@@ -38,7 +38,6 @@ Add-SPOTenantCdnOrigin -CdnType public -OriginUrl */subfolder
 
 This example configures a public CDN on a site level.
 ```
-
 
 
 ## PARAMETERS
@@ -79,8 +78,6 @@ Accept wildcard characters: False
 Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask. 
 
 Relative-Relative path depends on the OriginScope.  If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site.  The path must point to the valid Document Library or a folder with a document library. 
-
-
 
 
 ```yaml
@@ -127,4 +124,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
