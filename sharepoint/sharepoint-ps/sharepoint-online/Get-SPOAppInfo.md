@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-SPOAppInfo
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns all installed applications.
 
 ## SYNTAX
 
@@ -17,21 +17,36 @@ Get-SPOAppInfo [[-ProductId] <Guid>] [[-Name] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Get-SPOAppInfo` cmdlet gets all the installed applications from an external marketplace or from the App Catalog that contain Name in their application names or the installed application with mentioned ProductId. ProductId takes precedence if not empty.
+
+Either ProductId or Name must be given. Name is ignored if ProductId is specified. 
+
+The returned collection of installed applications contains Product ID (GUID), Product name and Source. Values for source type are as follows: 0 = App Catalog and 1 = Marketplace.
+
+You must be a SharePoint Online global administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
+
 
 ## EXAMPLES
 
-### Example 1 
+###   ------------ Example 1 --------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOAppInfo -Name "Excel Service"
 ```
+Example 1 returns all the installed applications from the external marketplace or from the App Catalog that contain "Excel Service" in their application names.
 
-{{ Add example description here }}
+###   ------------ Example 2 --------------------
+```
+Get-SPOAppInfo -ProductId 6751729b-e017-409d-681a-66f1dd18f0ff
+```
+Example 2 returns the installed application that has the GUID 6751729b-e017-409d-681a-66f1dd18f0ff. 
+
 
 ## PARAMETERS
 
 ### -Name
-{{Fill Name Description}}
+Specifies the application’s name.
 
 ```yaml
 Type: String
@@ -47,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductId
-{{Fill ProductId Description}}
+Specifies the application’s GUID.
 
 ```yaml
 Type: Guid
@@ -76,4 +91,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
