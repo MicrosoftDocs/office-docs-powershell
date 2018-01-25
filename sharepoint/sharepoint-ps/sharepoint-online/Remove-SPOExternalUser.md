@@ -29,16 +29,17 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+$user = Get-SPOExternalUser -Filter someone@example.com
+Remove-SPOExternalUser -UniqueIDs @($user.UniqueId)
 ```
-
-{{ Add example description here }}
+This example removes a specific external user who has the address “someone@example.com”. Organization members may still see the external user name displayed in the Shared With dialog, but the external user will not be able to sign in and will not be able to access any tenant resources.
 
 
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
+
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -UniqueIDs
-{{Fill UniqueIDs Description}}
+Specifies an ID that can be used to identify an external user based on their Windows Live ID.
+
 
 ```yaml
 Type: String[]
@@ -72,6 +74,7 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
+
 
 ```yaml
 Type: SwitchParameter
