@@ -21,17 +21,19 @@ Get-SPOUserOneDriveLocation -UserPrincipalName <String> [<CommonParameters>]
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
 
+
 ## PARAMETERS
 
 ### -UserPrincipalName
-{{Fill UserPrincipalName Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -60,4 +62,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
