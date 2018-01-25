@@ -30,16 +30,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### --------------------EXAMPLE---------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOUser -Site https://contoso.sharepoint.com/sites/marketing -LoginName melissa.kerr@contoso.com -IsSiteCollectionAdmin $true 
 ```
-
-{{ Add example description here }}
+This example makes melissa.kerr@contoso.com a SharePoint Online site collection administrator on https://contoso.sharepoint.com/sites/marketing.
 
 
 ## PARAMETERS
 
 ### -IsSiteCollectionAdmin
-{{Fill IsSiteCollectionAdmin Description}}
+Specifies whether the user is a site collection administrator.
+
 
 ```yaml
 Type: Boolean
@@ -55,7 +55,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-{{Fill LoginName Description}}
+Specifies the user name.
+
 
 ```yaml
 Type: String
@@ -71,7 +72,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the full URL of the site collection. It must be in a valid managed path in the company’s site.
+
 
 ```yaml
 Type: SpoSitePipeBind
