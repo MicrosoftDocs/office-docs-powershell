@@ -17,7 +17,7 @@ Get-SPOTenant [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-SPOTenant cmdlet returns organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated, and SiteCreationMode.
+The `Get-SPOTenant` cmdlet returns organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated and SiteCreationMode.
 
 Currently, there are no parameters for this cmdlet.
 
@@ -25,13 +25,15 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
 ###   ------------ Example 1 --------------------
 ```
-{example code}
+Get-SPOTenant
 ```
-{example description}
+This example returns the organization-level site collection properties such as StorageQuota, StorageQuotaAllocated, ResourceQuota, ResourceQuotaAllocated, SiteCreationMode and OneDriveStorageQuota.
+
 
 ## PARAMETERS
 
@@ -51,5 +53,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
-
-
