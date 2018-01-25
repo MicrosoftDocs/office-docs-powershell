@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOTenantLogEntry
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Retrieves SharePoint Online company logs.
+
 
 ## SYNTAX
 
@@ -31,21 +32,59 @@ Get-SPOTenantLogEntry [[-StartTimeInUtc] <DateTime>] [[-EndTimeInUtc] <DateTime>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets.
+
+The `Get-SPOTenantLogEntry` cmdlet cannot retrieve all SharePoint Online errors. This cmdlet retrieves a subset of errors that happen due to external systems.
+
+For Beta 2, the only company logs available are for Business Connectivity Services (BCS).
+
+Note:  
+If you do not use any parameter, the first 1000 rows in descending time range are returned.  
+
+You must be a SharePoint Online global administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
+
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOTenantLogLastAvailableTimeInUtc
 ```
+This example retrieves all logs that are available.
 
-{{ Add example description here }}
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOTenantLogLastAvailableTimeInUtc -MaxRows 500
+```
+This example retrieves the first 500 log entries.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+$endTimeinUTC = Get-SPOTenantLogLastAvailableTimeInUtc
+$startTimeinUTC = $endTimeinUTC.AddDays (-14)
+$tenantlogs = Get-SPOTenantLogEntry -StartTimeinUtc $startTimeinUTC -EndTimeinUTC $endTimeinUTC
+```
+This example retrieves log entries recorded over that previous 14 days.
+
+
+### -----------------------EXAMPLE 4-----------------------------
+```
+$endTimeinUTC = Get-SPOTenantLogLastAvailableTimeInUtc
+$startTimeinUTC = $endTimeinUTC.AddDays (-14)
+$tenantlogs = Get-SPOTenantLogEntry -StartTimeinUtc $startTimeinUTC -EndTimeinUTC $endTimeinUTC -CorrelationId e2c2be70-6382-4ce7-8a44-ae7dadff5597
+```
+This example retrieves log entries recorded over that previous 14 days that have the CorrelationId of “e2c2be70-6382-4ce7-8a44-ae7dadff5597”.
+
 
 ## PARAMETERS
 
 ### -CorrelationId
-{{Fill CorrelationId Description}}
+Specifies the Correlation ID as a filter.
+
 
 ```yaml
 Type: Guid
@@ -61,7 +100,8 @@ Accept wildcard characters: False
 ```
 
 ### -EndTimeInUtc
-{{Fill EndTimeInUtc Description}}
+Specifies the end time in UTC to search for logs.
+
 
 ```yaml
 Type: DateTime
@@ -77,7 +117,8 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRows
-{{Fill MaxRows Description}}
+Specifies the maximum number of rows in the descending order of timestamp. The value must be less than 5000. The default value is 1000.
+
 
 ```yaml
 Type: UInt32
@@ -93,7 +134,8 @@ Accept wildcard characters: False
 ```
 
 ### -Source
-{{Fill Source Description}}
+Specifies the component that logs the errors.
+
 
 ```yaml
 Type: Int32
@@ -109,7 +151,8 @@ Accept wildcard characters: False
 ```
 
 ### -StartTimeInUtc
-{{Fill StartTimeInUtc Description}}
+Specifies the start time in Coordinated Universal Time (UTC) to search for the logs — for example, 01032011:12:00.
+
 
 ```yaml
 Type: DateTime
@@ -125,7 +168,8 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{Fill User Description}}
+Specifies the log-on identity as a filter.
+
 
 ```yaml
 Type: String
@@ -154,4 +198,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
