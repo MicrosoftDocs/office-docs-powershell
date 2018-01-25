@@ -18,19 +18,22 @@ Get-SPOTenantLogLastAvailableTimeInUtc [<CommonParameters>]
 
 ## DESCRIPTION
 This cmdlet retrieves the time in Coordinated Universal Time (UTC) when the logs were last collected.
-After you know the time, you can use the Get-SPOTenantLogEntry cmdlet to retrieve the logs.
+After you know the time, you can use the `Get-SPOTenantLogEntry` cmdlet to retrieve the logs.
 
 You must be a SharePoint Online global administrator to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-{example code}
+Get-SPOTenantLogLastAvailableTimeInUtc
 ```
-{example description}
+
+This example returns the time in UTC when the SharePoint Online organization logs were most recently collected.
+
 
 ## PARAMETERS
 
@@ -52,5 +55,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Get-SPOAppErrors](Get-SPOAppErrors.md)
 
 [Get-SPOTenantLogEntry](Get-SPOTenantLogEntry.md)
-
-
