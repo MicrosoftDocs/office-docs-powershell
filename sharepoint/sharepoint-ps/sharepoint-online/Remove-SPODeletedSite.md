@@ -29,10 +29,9 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/sitetoremove
 ```
-
-{{ Add example description here }}
+This example removes a SharePoint Online deleted site collection named https://contoso.sharepoint.com/sites/sitetoremove from the Recycle Bin and deletes it permanently.
 
 
 ## PARAMETERS
@@ -54,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to remove.
 
 ```yaml
 Type: SpoSitePipeBind
@@ -70,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+PARAMVALUE: SwitchParameter
 
 ```yaml
 Type: SwitchParameter
