@@ -27,9 +27,10 @@ You must be a SharePoint Online global administrator and a site collection admin
 ### Example 1 
 ```
 Add-SPOTenantCdnOrigin -CdnType public -OriginUrl /sites/site/subfolder
+```
 
 This example configures a public CDN on a site level.
-```
+
 
 
 ## PARAMETERS
