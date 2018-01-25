@@ -25,7 +25,7 @@ Get-SPODeletedSite [[-Identity] <SpoSitePipeBind>] [-IncludePersonalSite] [-Limi
 ```
 
 ## DESCRIPTION
-The Get-SPODeletedSite cmdlet returns all deleted site collections that match the given criteria from the Recycle Bin.
+The `Get-SPODeletedSite` cmdlet returns all deleted site collections that match the given criteria from the Recycle Bin.
 
 By default the cmdlet only returns site and site collections that are not Personal Sites (My Sites).
 To include personal sites, use the IncludePersonalSite parameter.
@@ -35,11 +35,12 @@ These two Switch Parameters are in different parameter sets, so you can only use
 
 This action does not restore these returned sites or site collection.
 It only returns their properties so that you can see what sites or site collections have been deleted.
-To restore the site or site collections, forward the results to the Restore-SPODeletedSite cmdlet in the pipeline.
+To restore the site or site collections, forward the results to the `Restore-SPODeletedSite` cmdlet in the pipeline.
 
 You must be a SharePoint Online global administrator and a site collection administrator for the deleted site collections to run the cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
+
 
 ## EXAMPLES
 
@@ -139,5 +140,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Restore-SPODeletedSite](Restore-SPODeletedSite.md)
 
 [Remove-SPODeletedSite](Remove-SPODeletedSite.md)
-
-
