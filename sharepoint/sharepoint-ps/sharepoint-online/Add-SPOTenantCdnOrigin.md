@@ -34,7 +34,7 @@ This example configures a public CDN on a tenant level.
 
 --------EXAMPLE 2--------
 
-Add-SPOTenantCdnOrigin -CdnType public -OriginUrl */subfolder
+Add-SPOTenantCdnOrigin -CdnType public -OriginUrl /sites/site/subfolder
 
 This example configures a public CDN on a site level.
 ```
