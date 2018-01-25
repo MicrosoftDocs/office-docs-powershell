@@ -31,12 +31,18 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ----------------------EXAMPLE-----------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Request-SPOUpgradeEvaluationSite http://contoso.sharepoint.com/sites/marketing
 ```
+Example 1 requests a site upgrade evaluation for the marketing site http://contoso.sharepoint.com/sites/marketing using the default options of sending an email message and automatically trying to upgrade the evaluation site.
 
-{{ Add example description here }}
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Request-SPOUpgradeEvaluationSite http://contoso.sharepoint.com/sites/marketing -NoEmail $true -NoUpgrade $true
+```
+This example requests a site upgrade evaluation for the marketing site http://contoso.sharepoint.com/sites/marketing. It specifies to not send email messages and not automatically try upgrade of the evaluation site. By using the cmdlet in this way, a SharePoint Online global administrator can make changes to the upgrade evaluation site before starting the actual upgrade.
 
 
 ## PARAMETERS
@@ -58,7 +64,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the SharePoint Online site collection for which you want to request a copy for the new Upgrade or Evaluation site collection.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -74,7 +81,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoEmail
-{{Fill NoEmail Description}}
+Specifies that the system not send the requester and site collection administrators an email message at the end of the upgrade evaluation site creation process.
+
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +98,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoUpgrade
-{{Fill NoUpgrade Description}}
+Specifies that the system not perform an upgrade as part of the evaluation site creation process.
+
 
 ```yaml
 Type: SwitchParameter
