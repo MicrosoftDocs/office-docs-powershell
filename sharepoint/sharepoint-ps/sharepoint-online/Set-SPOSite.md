@@ -55,12 +55,47 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Example 1: Set a new title for an existing site collection
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> Set-SPOSite -Identity https://contoso.sharepoint.com/sites/demo -Title "New Title"
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -Owner joe.healy@contoso.com -NoWait
 ```
 
-This command sets a new title for an existing site collection
+Example 1 updates the owner of site collection https://contoso.sharepoint.com/sites/site1 to the person whose email address is joe.healy@contoso.com. This cmdlet is executed immediately without delay.
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -ResourceQuota 0 -StorageQuota 15000
+```
+
+Example 2 updates the settings of site collection https://contoso.sharepoint.com/sites/site1. The storage quota is updated to 15000 megabytes and the resource quota is updated to 0 megabytes. 
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+Set-SPOSite -Identity https://contoso.sharepoint.com -StorageQuota 3000 -StorageQuotaWarningLevel 2000
+```
+
+This example updates the settings of site collection https://contoso.sharepoint.com. The storage quota is updated to 3000 megabytes and the storage quota warning level is updated to 2000 megabytes. 
+
+
+### -----------------------EXAMPLE 4-----------------------------
+```
+Set-SPOSite -Identity https://contoso.sharepoint.com -DisableSharingForNonOwners
+```
+
+Example 4 prevents non-owners of a site from inviting new users to the site.
+
+
+### -----------------------EXAMPLE 5-----------------------------
+```
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/groupname -StorageQuota 3000 -StorageQuotaWarningLevel 2000
+```
+
+This example sets the quota for the site.
+
+Note:  
+If Site Collection Storage Management is enabled for the tenant, you will not be able to set quota and will have a generic error returned. To workaround this issue, set the site collection storage management to "manual" temporarily, set your quotas and then set the site collection storage management setting back to its original setting.  
 
 
 ## PARAMETERS
@@ -68,6 +103,7 @@ This command sets a new title for an existing site collection
 ### -EnablePWA
 Determines whether site can include Project Web App.
 For more information about Project Web App, see Plan SharePoint groups in Project Server.
+
 
 ```yaml
 Type: Boolean
@@ -85,6 +121,7 @@ Accept wildcard characters: False
 ### -Identity
 Specifies the URL of the site collection to update.
 
+
 ```yaml
 Type: SpoSitePipeBind
 Parameter Sets: (All)
@@ -100,6 +137,7 @@ Accept wildcard characters: False
 
 ### -AllowSelfServiceUpgrade
 Determines whether site collection administrators can upgrade their site collections.
+
 
 ```yaml
 Type: Boolean
@@ -117,6 +155,7 @@ Accept wildcard characters: False
 ### -Confirm
 PARAMVALUE: SwitchParameter
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
@@ -133,6 +172,7 @@ Accept wildcard characters: False
 ### -DenyAddAndCustomizePages
 Determines whether the Add And Customize Pages right is denied on the site collection.
 For more information about permission levels, see User permissions and permission levels in SharePoint.
+
 
 ```yaml
 Type: Boolean
@@ -152,6 +192,7 @@ This parameter prevents non-owners from invited new users to the site.
 
 This parameter is available only in SharePoint Online Management Shell Version 16.0.4613.1211 or later.
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet3
@@ -168,6 +209,7 @@ Accept wildcard characters: False
 ### -LocaleId
 Specifies the language of this site collection.
 For more information, see Locale IDs Assigned by Microsoft (http://go.microsoft.com/fwlink/p/?LinkId=242911) (http://go.microsoft.com/fwlink/p/?LinkId=242911).
+
 
 ```yaml
 Type: UInt32
@@ -189,6 +231,7 @@ When the lock state of a site is NoAccess, all traffic to the site will be block
 If parameter NoAccessRedirectUrl in the `Set-SPOTenant` cmdlet is set, traffic to sites that have a lock state NoAccess will be redirected to that URL.
 If parameter NoAccessRedirectUrl is not set, a 403 error will be returned.
 
+
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
@@ -205,6 +248,7 @@ Accept wildcard characters: False
 ### -NoWait
 Specifies to continue executing script immediately.
 
+
 ```yaml
 Type: SwitchParameter
 Parameter Sets: ParamSet1
@@ -220,6 +264,7 @@ Accept wildcard characters: False
 
 ### -Owner
 Specifies the owner of the site collection.
+
 
 ```yaml
 Type: String
@@ -239,6 +284,7 @@ Specifies the resource quota in megabytes of the site collection.
 The default value is 0.
 For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (http://msdn.microsoft.com/en-us/library/gg615462.aspx) (http://msdn.microsoft.com/en-us/library/gg615462.aspx).
 
+
 ```yaml
 Type: Double
 Parameter Sets: ParamSet1
@@ -255,6 +301,7 @@ Accept wildcard characters: False
 ### -ResourceQuotaWarningLevel
 Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the resource quota.
 
+
 ```yaml
 Type: Double
 Parameter Sets: ParamSet1
@@ -270,6 +317,7 @@ Accept wildcard characters: False
 
 ### -SandboxedCodeActivationCapability
 PARAMVALUE: Unknown | Check | Disabled | Enabled
+
 
 ```yaml
 Type: SandboxedCodeActivationCapabilities
@@ -290,6 +338,7 @@ The possible values are: Disabled - external user sharing (share by email) and g
 
 For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
 
+
 ```yaml
 Type: SharingCapabilities
 Parameter Sets: ParamSet1
@@ -305,6 +354,7 @@ Accept wildcard characters: False
 
 ### -StorageQuota
 Specifies the storage quota in megabytes of the site collection.
+
 
 ```yaml
 Type: Int64
@@ -322,6 +372,7 @@ Accept wildcard characters: False
 ### -StorageQuotaWarningLevel
 Specifies the warning level in megabytes of the site collection to warn the site collection administrator that the site is approaching the storage quota.
 
+
 ```yaml
 Type: Int64
 Parameter Sets: ParamSet1
@@ -338,6 +389,7 @@ Accept wildcard characters: False
 ### -Title
 Specifies the title of the site collection.
 
+
 ```yaml
 Type: String
 Parameter Sets: ParamSet1
@@ -353,6 +405,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
@@ -400,7 +453,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommentsOnSitePagesDisabled
-{{Fill CommentsOnSitePagesDisabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -416,7 +470,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableAppViews
-{{Fill DisableAppViews Description}}
+PARAMVALUE: Unknown | Disabled | NotDisabled
+
 
 ```yaml
 Type: AppViewsPolicy
@@ -432,7 +487,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableCompanyWideSharingLinks
-{{Fill DisableCompanyWideSharingLinks Description}}
+PARAMVALUE: Unknown | Disabled | NotDisabled
+
 
 ```yaml
 Type: CompanyWideSharingLinksPolicy
@@ -448,7 +504,8 @@ Accept wildcard characters: False
 ```
 
 ### -DisableFlows
-{{Fill DisableFlows Description}}
+PARAMVALUE: Unknown | Disabled | NotDisabled
+
 
 ```yaml
 Type: FlowsPolicy
@@ -464,7 +521,8 @@ Accept wildcard characters: False
 ```
 
 ### -NewUrl
-{{Fill NewUrl Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -480,7 +538,8 @@ Accept wildcard characters: False
 ```
 
 ### -RestrictedToGeo
-{{Fill RestrictedToGeo Description}}
+PARAMVALUE: NoRestriction | BlockMoveOnly | BlockFull | Unknown
+
 
 ```yaml
 Type: RestrictedToRegion
@@ -496,7 +555,10 @@ Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
-{{Fill SharingAllowedDomainList Description}}
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+
 
 ```yaml
 Type: String
@@ -512,7 +574,10 @@ Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
-{{Fill SharingBlockedDomainList Description}}
+Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+
 
 ```yaml
 Type: String
@@ -528,7 +593,18 @@ Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
-{{Fill SharingDomainRestrictionMode Description}}
+Specifies the external sharing mode for domains.
+
+The following values are:
+
+None
+
+AllowList
+
+BlockList
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+
 
 ```yaml
 Type: SharingDomainRestrictionModes
@@ -544,7 +620,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-{{Fill ShowPeoplePickerSuggestionsForGuestUsers Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -560,7 +637,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaReset
-{{Fill StorageQuotaReset Description}}
+Resets the OneDrive for Business storage quota to the tenant’s new default storage space. 
+
 
 ```yaml
 Type: SwitchParameter
