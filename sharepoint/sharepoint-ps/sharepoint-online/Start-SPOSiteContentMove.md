@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ### UrlAndDestinationDataLocation
@@ -35,6 +36,7 @@ Start-SPOSiteContentMove [-Url] <String> [-DestinationUrl] <String> [[-Preferred
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
 ### ---------------EXAMPLE--------------
@@ -44,10 +46,12 @@ PS C:\> {{ Add example code here }}
 
 {{ Add example description here }}
 
+
 ## PARAMETERS
 
 ### -DestinationDataLocation
-{{Fill DestinationDataLocation Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -63,7 +67,8 @@ Accept wildcard characters: False
 ```
 
 ### -DestinationUrl
-{{Fill DestinationUrl Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -79,7 +84,8 @@ Accept wildcard characters: False
 ```
 
 ### -GroupName
-{{Fill GroupName Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -95,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveBeginDate
-{{Fill PreferredMoveBeginDate Description}}
+PARAMVALUE: DateTime
+
 
 ```yaml
 Type: DateTime
@@ -111,7 +118,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreferredMoveEndDate
-{{Fill PreferredMoveEndDate Description}}
+PARAMVALUE: DateTime
+
 
 ```yaml
 Type: DateTime
@@ -127,7 +135,8 @@ Accept wildcard characters: False
 ```
 
 ### -Reserved
-{{Fill Reserved Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -145,6 +154,7 @@ Accept wildcard characters: False
 ### -Url
 {{Fill Url Description}}
 
+
 ```yaml
 Type: String
 Parameter Sets: UrlAndDestinationDataLocation, UrlAndDestinationUrl
@@ -159,7 +169,8 @@ Accept wildcard characters: False
 ```
 
 ### -ValidationOnly
-{{Fill ValidationOnly Description}}
+PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
