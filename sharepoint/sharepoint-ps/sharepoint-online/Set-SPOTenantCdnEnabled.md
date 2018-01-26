@@ -8,7 +8,7 @@ schema: 2.0.0
 # Set-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. 
 
 
 ## SYNTAX
@@ -19,23 +19,24 @@ Set-SPOTenantCdnEnabled [-CdnType <SPOTenantCdnTypeClient>] [-Confirm] [-Enable 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Enables or disables Public content delivery network (CDN) or Private CDN on the tenant level. 
 
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOTenantCdnEnabled -CdnType public -Enable $true
 ```
 
-{{ Add example description here }}
+The example enables a CDN.
 
 
 ## PARAMETERS
 
 ### -CdnType
-{{Fill CdnType Description}}
+Specifies the CDN type. The valid values are: public or private.
+
 
 ```yaml
 Type: SPOTenantCdnTypeClient
@@ -68,7 +69,10 @@ Accept wildcard characters: False
 ```
 
 ### -Enable
-{{Fill Enable Description}}
+Specifies if the CDN is enabled.
+
+The valid values are: $True and $False.
+
 
 ```yaml
 Type: Boolean
@@ -84,7 +88,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoDefaultOrigins
-{{Fill NoDefaultOrigins Description}}
+PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
