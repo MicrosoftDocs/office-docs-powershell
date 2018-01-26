@@ -30,18 +30,19 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOSite -Identity https://contoso.sharepoint.com/sites/site1 -NoWait
 ```
 
-{{ Add example description here }}
+This example immediately removes the site collection named https://contoso.sharepoint.com/sites/site1 from the site collections list and moves it to the Recycle Bin. 
 
 
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
+
 
 ```yaml
 Type: SwitchParameter
@@ -57,7 +58,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to remove.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -73,7 +75,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+Specifies to continue executing script immediately.
+
 
 ```yaml
 Type: SwitchParameter
@@ -91,6 +94,7 @@ Accept wildcard characters: False
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
+
 
 ```yaml
 Type: SwitchParameter
