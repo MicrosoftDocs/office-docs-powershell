@@ -40,11 +40,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-###   ------------ Example 1 --------------------
+###   Example 1: Get the first 5 users or groups from a specific site collection
 ```
-{example code}
+PS C:\> $site = Get-SPOSite -Identity https://contoso.sharepoint.com
+PS C:\> Get-SPOUser -Limit 5 -Site $site
 ```
-{example description}
+This command retrieves the users or security groups in a site.
 
 ## PARAMETERS
 
