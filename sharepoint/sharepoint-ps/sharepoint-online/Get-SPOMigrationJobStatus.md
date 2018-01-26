@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOMigrationJobStatus
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cmdlet to monitor the status of a submitted SharePoint Online Migration job.
+
 
 ## SYNTAX
 
@@ -20,9 +21,10 @@ Get-SPOMigrationJobStatus -Credentials <CredentialCmdletPipeBind> [-JobId <Guid>
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
@@ -32,7 +34,8 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -Credentials
-{{Fill Credentials Description}}
+(Optional) The credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
+
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -48,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobId
-{{Fill JobId Description}}
+(optional) The ID of a migration job that exists on the target site collection.
+
 
 ```yaml
 Type: Guid
@@ -64,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+(optional) Indicates to not create a log file. The default is to create a new DeleteMigrationJob log file within the current directory.
+
 
 ```yaml
 Type: SwitchParameter
@@ -80,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+The fully qualified target web URL where the package will be imported. This must include the same TargetWebUrl that was used during `ConvertTo-SPOMigrationTargetedPackage`.
+
 
 ```yaml
 Type: String
@@ -109,4 +115,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
