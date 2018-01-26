@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-SPOMigrationPackage
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
 
 ## SYNTAX
@@ -22,23 +22,32 @@ New-SPOMigrationPackage [-SourceFilesPath] <String> [-OutputPackagePath] <String
 
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Cmdlet to create a new migration package based on source files in a local or network shared folder.
 
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
-```
+New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg
 
-{{ Add example description here }}
+New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents" -TargetDocumentLibrarySubFolderPath "Sub Folder/Target Folder"
+```
+This example creates a new set of migration source package metadata files, using default URL values, in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location.
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
+```
+This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path “https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents”.
 
 
 ## PARAMETERS
 
 ### -IgnoreHidden
-{{Fill IgnoreHidden Description}}
+Switch to ignore hidden files and folders.
+
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +63,8 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeFileSharePermissions
-{{Fill IncludeFileSharePermissions Description}}
+Used to include permissions and sharing information into the generated manifest files in the package metadata. 
+
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +80,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoAzureADLookup
-{{Fill NoAzureADLookup Description}}
+Switch to not lookup local user accounts in Azure Active Directory.
+
 
 ```yaml
 Type: SwitchParameter
@@ -86,7 +97,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Used to not create a log file. The default is to create a new CreateMigrationPackage log file within the directory specified within the OutputPackagePath parameter.
+
 
 ```yaml
 Type: SwitchParameter
@@ -102,7 +114,8 @@ Accept wildcard characters: False
 ```
 
 ### -OutputPackagePath
-{{Fill OutputPackagePath Description}}
+The directory location where the output package metadata files will be saved. If the directory does not exist, it will be created. 
+
 
 ```yaml
 Type: String
@@ -118,7 +131,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplaceInvalidCharacters
-{{Fill ReplaceInvalidCharacters Description}}
+Switch to replace characters in file and folder names that would be invalid in SharePoint Online.
+
 
 ```yaml
 Type: SwitchParameter
@@ -134,7 +148,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceFilesPath
-{{Fill SourceFilesPath Description}}
+The directory location where the source content files exist. This directory will be enumerated to create the package metadata files. 
+
 
 ```yaml
 Type: String
@@ -150,7 +165,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibraryPath
-{{Fill TargetDocumentLibraryPath Description}}
+The web relative document library to use as the document library part of the base URL in the package metadata. If this is not supplied, “Documents” will be used within the package metadata instead.
+
 
 ```yaml
 Type: String
@@ -166,7 +182,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDocumentLibrarySubFolderPath
-{{Fill TargetDocumentLibrarySubFolderPath Description}}
+Specifies the document library relative subfolder to use as the folder path part of the base URL in the package metadata. If this is not provided, no value will be used within the package metadata. The files will be homed under the document library root.
+
 
 ```yaml
 Type: String
@@ -182,7 +199,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+The fully qualified web URL to use as the web address part of the base URL in the package metadata. If this is not provided, “http://fileserver/sites/user” will be used instead within the package metadata.
+
 
 ```yaml
 Type: String
