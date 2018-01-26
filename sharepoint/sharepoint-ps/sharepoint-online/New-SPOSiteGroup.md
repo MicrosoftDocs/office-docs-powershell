@@ -28,18 +28,25 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------------EXAMPLE------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+New-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/siteA -Group "Project Leads" -PermissionLevels "Full Control"
 ```
 
-{{ Add example description here }}
+This example creates a group named Project Leads with the Full Control permission level on the site collection https://contoso.sharepoint.com/sites/siteA.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+New-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/marketing -Group "NewGroupName" -PermissionLevels "Design"
+```
+This example creates a group named NewGroupName with the Design permission level on the site collection https://contoso.sharepoint.com/sites/marketing.
 
 
 ## PARAMETERS
 
 ### -Group
-{{Fill Group Description}}
+Specifies the name of the group to add.
+
 
 ```yaml
 Type: String
@@ -55,7 +62,11 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionLevels
-{{Fill PermissionLevels Description}}
+Specifies the permission levels to grant to the newly created group. It can be any permission level that exists on the site collection on which the group is being created.
+
+Note:  
+Permission levels are defined by SharePoint Online administrators in the SharePoint Online Administration Center.  
+
 
 ```yaml
 Type: String[]
@@ -71,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the site collection to add the group to.
+
 
 ```yaml
 Type: SpoSitePipeBind
