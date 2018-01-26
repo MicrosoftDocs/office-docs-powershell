@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOMigrationJobProgress
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+This cmdlet lets you report on SPO migration jobs that are in progress. 
+
 
 ## SYNTAX
 
@@ -28,21 +29,54 @@ Get-SPOMigrationJobProgress -Credentials <CredentialCmdletPipeBind> [-DontWaitFo
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet lets you report on SPO migration jobs that are in progress. 
+
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
-```
+$myQueueUri = <uri to azure report queue>
 
-{{ Add example description here }}
+Get-SPOMigrationJobProgress -AzureQueueUri $myQueueUri
+```
+This will report on ALL jobs within the report queue.
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+$jobIds = @(<jobid1>,<jobId2>....)
+
+Get-SPOMigrationJobProgress  -AzureQueueUri $myQueueUri -JobIds $jobIds
+```
+This will report only jobs defined within the $jobIds collection from the report queue.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+$targetWebUrl = <myTargetWebUrl>
+$creds = <my site credentials>
+
+Get-SPOMigrationJobProgress - AzureQueueUri $myQueueUri - TargetWebUrl $targetWebUrl  -Credentials $creds
+```
+This will report on any currently queued or in progress jobs and wait for all jobs to complete 
+
+
+### -----------------------EXAMPLE 4-----------------------------
+```
+$targetWebUrl = <myTargetWebUrl>
+$creds = <my site credentials>
+
+Get-SPOMigrationJobProgress - AzureQueueUri $myQueueUri - TargetWebUrl  $targetWebUrl -Credentials $creds  -DontWaitForJobEnd
+```
+This will report on any currently queued or in progress jobs and not wait for all jobs to complete
+
 
 ## PARAMETERS
 
 ### -AzureQueueUri
-{{Fill AzureQueueUri Description}}
+An optional fully qualified URL and SAS token representing the Azure Storage Reporting Queue where import operations will list events during import.
+
 
 ```yaml
 Type: String
@@ -58,7 +92,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-{{Fill Credentials Description}}
+Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection. 
+
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -74,7 +109,8 @@ Accept wildcard characters: False
 ```
 
 ### -DontWaitForEndJob
-{{Fill DontWaitForEndJob Description}}
+Tells the cmdlet to not wait for the job to end. It will only process as many messages as are currently in the queue and then terminate. If this flag is set to $false, it will wait for the job to end before terminating.
+
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +126,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionParameters
-{{Fill EncryptionParameters Description}}
+PARAMVALUE: EncryptionParameters
+
 
 ```yaml
 Type: EncryptionParameters
@@ -106,7 +143,8 @@ Accept wildcard characters: False
 ```
 
 ### -JobIds
-{{Fill JobIds Description}}
+Id of a previously created migration job that exists on the target site collection.
+
 
 ```yaml
 Type: Guid[]
@@ -122,7 +160,8 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationPackageAzureLocations
-{{Fill MigrationPackageAzureLocations Description}}
+A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage containers that hold the package content and metadata files and an optional Azure Storage Reporting Queue. This object is returned during successful processing of the `Set-SPOMigrationPackageAzureSource`
+
 
 ```yaml
 Type: MigrationPackageAzureLocations
@@ -138,7 +177,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Indicates to not create a log file. The default is to create a new CopyMigrationPackage log file within the directory specified within the SourcePackagePath parameter. 
+
 
 ```yaml
 Type: SwitchParameter
@@ -154,7 +194,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`. 
+
 
 ```yaml
 Type: String
@@ -183,4 +224,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
