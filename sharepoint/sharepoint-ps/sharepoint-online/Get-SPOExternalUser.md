@@ -25,11 +25,12 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### ------------ Example 1 --------------------
+### Example 1: Get the external users for a specific site collection
 ```
-{example code}
+PS C:\> $site = "https://contoso.sharepoint.com/"
+PS C:\> Get-SPOExternalUser -SiteUrl $site
 ```
-{example description}
+This command retrieves external users in your tenant
 
 ## PARAMETERS
 
