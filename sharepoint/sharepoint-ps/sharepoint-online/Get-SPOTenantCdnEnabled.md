@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOTenantCdnEnabled
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. 
+
 
 ## SYNTAX
 
@@ -17,21 +18,24 @@ Get-SPOTenantCdnEnabled -CdnType <SPOTenantCdnType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns whether Public content delivery network (CDN) or Private CDN is enabled on the tenant level. 
+
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOTenantCdnEnabled -CdnType Public
 ```
 
-{{ Add example description here }}
+The example returns a CDN with a type of public.
+
 
 ## PARAMETERS
 
 ### -CdnType
-{{Fill CdnType Description}}
+Specifies the CDN type. The valid values are Public or Private.
+
 
 ```yaml
 Type: SPOTenantCdnType
@@ -61,4 +65,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

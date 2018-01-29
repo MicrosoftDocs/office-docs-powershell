@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ### GroupName
@@ -25,19 +26,22 @@ Get-SPOSiteContentMoveState [-SourceSiteUrl] <String> [<CommonParameters>]
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
 
+
 ## PARAMETERS
 
 ### -GroupName
-{{Fill GroupName Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -53,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -SourceSiteUrl
-{{Fill SourceSiteUrl Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -82,4 +87,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

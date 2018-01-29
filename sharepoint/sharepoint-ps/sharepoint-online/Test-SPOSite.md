@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Tests a SharePoint Online site collection.
 
+
 ## SYNTAX
 
 ```
@@ -25,20 +26,22 @@ You must be a SharePoint Online global administrator to run the `Test-SPOSite` c
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-### ---------------EXAMPLE--------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Test-SPOSite https://contoso.sharepoint.com/sites/marketing
 ```
 
-{{ Add example description here }}
+This example runs all the site collection health checks on the https://contoso.sharepoint.com/sites/marketing site collection.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the SharePoint Online site collection to test.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -54,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -RuleId
-{{Fill RuleId Description}}
+Specifies the health check rule to run.
+
 
 ```yaml
 Type: Guid
@@ -70,7 +74,8 @@ Accept wildcard characters: False
 ```
 
 ### -RunAlways
-{{Fill RunAlways Description}}
+Displays a message that states the effect of the command instead of executing the command.
+
 
 ```yaml
 Type: SwitchParameter

@@ -8,7 +8,7 @@ schema: 2.0.0
 # Remove-SPOTenantCdnOrigin
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a new origin from the Public or Private content delivery network (CDN).
 
 
 ## SYNTAX
@@ -19,23 +19,31 @@ Remove-SPOTenantCdnOrigin -CdnType <SPOTenantCdnType> [-Confirm] -OriginUrl <Str
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes a new origin from the Public or Private content delivery network (CDN).
 
 
 ## EXAMPLES
 
-### -----------------------EXAMPLE-----------------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOTenantCdnOrigin -CdnType Public -OriginScope Tenant -OriginUrl sites/pubsite/siteassets/subfolder
 ```
 
-{{ Add example description here }}
+The example removes a CDN from a tenant level.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Remove-SPOTenantCdnOrigin -CdnType Public -OriginScope Site  -Site https://contoso.sharepoint.com/sites/pubsite -OriginUrl siteassets/subfolder
+```
+
+The example removes a CDN from a site level.
 
 
 ## PARAMETERS
 
 ### -CdnType
-{{Fill CdnType Description}}
+Specifies the CDN type. The valuid values are: Public or Private.
+
 
 ```yaml
 Type: SPOTenantCdnType
@@ -68,7 +76,14 @@ Accept wildcard characters: False
 ```
 
 ### -OriginUrl
-{{Fill OriginUrl Description}}
+Specifies a path to the doc library to be configured. It can be provided in two ways: relative path, or a mask. 
+
+Relative-Relative path depends on the OriginScope. If the originScope is Tenant, a path must be a relative path under the tenant root. If the originScope is Site, a path must be a relative path under the given Site. The path must point to the valid Document Library or a folder with a document library. 
+
+Any asset stored under the path provided (in the container itself or any of its subfolders) will be exposed via CDN
+
+Mask - Mask allows to configure a partial URL match. It must start with */, and must not include * anywhere else. I.e. an origin “*/masterpates” will expose all the assets under all the masterpages libraries, either under the tenant root (means, anywhere in the tenancy) or in the given site collection, depends on the OriginScope parameter. Equally, */masterpages/subfolder will enable items in “subfolder” and below.
+
 
 ```yaml
 Type: String

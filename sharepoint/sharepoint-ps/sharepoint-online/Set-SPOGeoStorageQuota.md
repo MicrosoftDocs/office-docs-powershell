@@ -34,7 +34,8 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -GeoLocation
-{{Fill GeoLocation Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -50,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuotaMB
-{{Fill StorageQuotaMB Description}}
+PARAMVALUE: Int64
+
 
 ```yaml
 Type: Int64

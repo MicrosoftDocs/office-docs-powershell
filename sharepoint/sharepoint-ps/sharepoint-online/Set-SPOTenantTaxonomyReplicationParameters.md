@@ -40,7 +40,8 @@ PS C:\> {{ Add example code here }}
 ## PARAMETERS
 
 ### -ReplicateAllGroups
-{{Fill ReplicateAllGroups Description}}
+PARAMVALUE: SwitchParameter
+
 
 ```yaml
 Type: SwitchParameter
@@ -56,7 +57,8 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicatedGroups
-{{Fill ReplicatedGroups Description}}
+PARAMVALUE: String[]
+
 
 ```yaml
 Type: String[]

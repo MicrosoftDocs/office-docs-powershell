@@ -8,7 +8,7 @@ schema: 2.0.0
 # Revoke-SPOUserSession
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Provides IT administrators the ability to invalidate a particular users' O365 sessions across all their devices. 
 
 
 ## SYNTAX
@@ -18,17 +18,38 @@ Revoke-SPOUserSession [-User] <String> [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+You must be a SharePoint Online global administrator to run the cmdlet.
+
+Requires a valid `Connect-SPOService` context to identify the tenant. For information about how to connect to the tenant, see `Connect-SPOService`.
+
+When the cmdlet is ran the following will occur: 
+
+User will be signed out of browser, desktop and mobile applications accessing Office 365 resources across all devices. 
+
+Will not be applicable for guest users.
+
+Possible results for this cmdlet are: 
+
+Results                        														   				Reason
+ 
+Warning : We couldn't find the user@contoso.com. Check for typos and try again.         			Invalid input for -User parameter. 
+ 
+We successfully signed out <user> from all devices. 												Successful instantaneous revocation. 
+
+It can take up to an hour to sign out <user> from all devices. 										Successful non-instantaneous revocation. 
+
+Sorry, something went wrong and we couldn't sign out <user> from any device. 						The cmdlet did not successfully execute. 
+
+The cmdlet will be available in the future, but it isn't ready for use in your organization yet.    The cmdlet has been disabled for the tenant.
 
 
 ## EXAMPLES
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+Revoke-SPOUserSession -User user1@contoso.com
 ```
-
-{{ Add example description here }}
+This example signs out user1 in the contoso tenancy from all devices. 
 
 
 ## PARAMETERS
@@ -50,7 +71,8 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{Fill User Description}}
+Specifies a user name. For example, user1@contoso.com
+
 
 ```yaml
 Type: String

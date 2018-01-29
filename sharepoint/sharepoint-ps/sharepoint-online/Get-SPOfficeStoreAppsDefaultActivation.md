@@ -12,7 +12,6 @@ schema: 2.0.0
 Returns the properties of apps for Office.
 
 
-
 ## SYNTAX
 
 ### AppsForOfficeSettingsInSiteSubscription
@@ -29,23 +28,24 @@ Get-SPOfficeStoreAppsDefaultActivation -WebApplication <SPWebApplicationPipeBind
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-Use the Get-SPOfficeStoreAppsDefaultActivation cmdlet to return settings for apps for Office that run in a specific web application.
+Use the `Get-SPOfficeStoreAppsDefaultActivation` cmdlet to return settings for apps for Office that run in a specific web application.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### --------EXAMPLE 1------ 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 C:\PS>Get-SPOfficeStoreAppsDefaultActivation -WebApplication http://sphvm-8044
 ```
 
 This examples returns the setting for the web application http://sphvm-8044.
 
-### --------EXAMPLE 2------ 
+### -----------------------EXAMPLE 2-----------------------------
 ```
 C:\PS>Get-SPOfficeStoreAppsDefaultActivation -SiteSubscription efca5b88-b3a3-448d-afbc-ef620f4744f1
 ```
@@ -56,6 +56,7 @@ This examples returns the Subscription ID setting for the tenant
 
 ### -SiteSubscription
 Specifies the Site Group to which the settings apply.
+
 
 ```yaml
 Type: SPSiteSubscriptionPipeBind
@@ -72,6 +73,7 @@ Accept wildcard characters: False
 
 ### -WebApplication
 Specifies the URL, GUID, or name of the web application to which the setting applies.
+
 
 ```yaml
 Type: SPWebApplicationPipeBind
@@ -93,7 +95,8 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
 
 ```yaml
 Type: SPAssignmentCollection
@@ -120,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [Set-SPOfficeStoreAppsDefaultActivation](Set-SPOfficeStoreAppsDefaultActivation.md)
-

@@ -8,7 +8,8 @@ schema: 2.0.0
 # Submit-SPOMigrationJob
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Cmdlet to submit a new migration job referenced to a previously uploaded package in Azure Blob storage into to a site collection. 
+
 
 ## SYNTAX
 
@@ -27,21 +28,32 @@ Submit-SPOMigrationJob [-TargetWebUrl] <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet contains more than one parameter set. You may only use parameters from one parameter set and you may not combine parameters from different parameter sets. For more information about how to use parameter sets, see Cmdlet Parameter Sets. 
+
+This cmdlet returns a GUID value which represents the MigrationJobId, or returns an empty GUID if the job was not successfully created.
+
 
 ## EXAMPLES
 
-### --------------EXAMPLE-----------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Submit-SPOMigrationJob -TargetUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -FileContainerUri "https://migrationstore.blob.core.windows.net/migration-files?sv=2014-02-14&sr=c&sig=THTTJoeGHysxRLgv22j473XYS2blH1YAVIdsfWrPhq8=&se=2015-04-06T05:09:36Z&sp=rl" -PackageContainerUri "https://migrationstore.blob.core.windows.net/migration-package?sv=2014-02-14&sr=c&sig=2PCBJtiXsVWiK5GrY7jBEdyEAwtunQNJLH8uo6I0+Ew=&se=2015-04-06T05:09:37Z&sp=rwl"
 ```
+This example creates a new migration job in the target site collection for the web at the URL ‘https://contoso.sharepoint.com/sites/TargetSite/TargetWeb’. The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
 
-{{ Add example description here }}
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Submit-SPOMigrationJob -TargetUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -MigrationPackageAzureLocations $azurelocations
+```
+This example creates a new migration job in the target site collection for the web at the URL ‘https://contoso.sharepoint.com/sites/TargetSite/TargetWeb’. The migration job includes information about the file and package metadata Azure Storage containers that are passed into the command.
+
 
 ## PARAMETERS
 
 ### -AzureQueueUri
-{{Fill AzureQueueUri Description}}
+An optional fully qualified URL and SAS token representing the Azure Storage Reporting Queue where import operations will list events during import.
+
 
 ```yaml
 Type: String
@@ -57,7 +69,8 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-{{Fill Credentials Description}}
+Optional credentials of a site collection administrator to use to connect to the site collection. The credentials should supply the username in UPN format (e.g. user@company.onmicrosoft.com). If this property is not set, the current tenant admin credentials from the session’s previous call to `Connect-SPOService` will be used to connect to the site collection.
+
 
 ```yaml
 Type: CredentialCmdletPipeBind
@@ -73,7 +86,8 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionParameters
-{{Fill EncryptionParameters Description}}
+PARAMVALUE: EncryptionParameters
+
 
 ```yaml
 Type: EncryptionParameters
@@ -89,7 +103,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileContainerUri
-{{Fill FileContainerUri Description}}
+A fully qualified URL and SAS token representing the Azure Blob Storage container that holds the package content files.
+
 
 ```yaml
 Type: String
@@ -105,7 +120,8 @@ Accept wildcard characters: False
 ```
 
 ### -MigrationPackageAzureLocations
-{{Fill MigrationPackageAzureLocations Description}}
+A set of fully qualified URLs and SAS tokens representing the Azure Blob Storage containers that hold the package content and metadata files and an optional Azure Storage Reporting Queue. This object is returned during successful processing of the `Set-SPOMigrationPackageAzureSource` cmdlet.
+
 
 ```yaml
 Type: MigrationPackageAzureLocations
@@ -121,7 +137,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoLogFile
-{{Fill NoLogFile Description}}
+Indicates to not create a log file. The default is to create a new CreateMigrationJob log file within the current directory.
+
 
 ```yaml
 Type: SwitchParameter
@@ -137,7 +154,8 @@ Accept wildcard characters: False
 ```
 
 ### -PackageContainerUri
-{{Fill PackageContainerUri Description}}
+A fully qualified URL and SAS token representing the Azure Blob Storage container that holds the package metadata files.
+
 
 ```yaml
 Type: String
@@ -153,7 +171,8 @@ Accept wildcard characters: False
 ```
 
 ### -TargetWebUrl
-{{Fill TargetWebUrl Description}}
+The fully qualified target web URL where the package will be imported into. This must include the same TargetWebURL that was used during `ConvertTo-SPOMigrationTargetedPackage`. 
+
 
 ```yaml
 Type: String

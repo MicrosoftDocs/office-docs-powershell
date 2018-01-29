@@ -12,7 +12,6 @@ schema: 2.0.0
 Returns Business Connectivity Services OData connection properties.
 
 
-
 ## SYNTAX
 
 ```
@@ -21,7 +20,7 @@ Get-SPODataConnectionSetting -ServiceContext <SPServiceContextPipeBind>
 ```
 
 ## DESCRIPTION
-Use the Get-SPODataConnectionSetting cmdlet to display Business Connectivity Services OData connection properties for a specified Business Connectivity Services connection.
+Use the `Get-SPODataConnectionSetting` cmdlet to display Business Connectivity Services OData connection properties for a specified Business Connectivity Services connection.
 
 If the name of the connection is not specified by using the Name parameter, this cmdlet will return the list of the connections for the specified BDC service context.
 
@@ -30,27 +29,30 @@ You cannot use this command in the SharePoint Online Management Shell.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Products, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251831 (http://go.microsoft.com/fwlink/p/?LinkId=251831).
 
+
 ## EXAMPLES
 
-### ----------------EXAMPLE 1------------ 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 C:\PS>Get-SPODataConnectionSetting -ServiceContext  "http://contoso" -Name "ContosoServiceApp"
 ```
 
 This example returns properties of the BCS connection named ContosoServiceApp
 
-### ----------------EXAMPLE 2------------ 
+### -----------------------EXAMPLE 2-----------------------------
 ```
 C:\PS>Get-SPODataConnectionSetting -ServiceContext "http://contoso"
 ```
 
 This example returns a list of BCS connections for the service context named http://contoso
 
+
 ## PARAMETERS
 
 ### -ServiceContext
 Specifies the service context which is in the form of an instance of an SPServiceContext object, an SPSiteAdministration object identifier, or a SPSite object.
 An example of a service context value is an identifier from the ID field, a string identifier, a URI, or a string representation of a GUID.
+
 
 ```yaml
 Type: SPServiceContextPipeBind
@@ -72,7 +74,8 @@ Using the SPAssignment object, you can assign objects to a variable and dispose 
 When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
 
 When the Global parameter is used, all objects are contained in the global store.
-If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur.
+If objects are not immediately used, or disposed of by using the `Stop-SPAssignment` command, an out-of-memory scenario can occur.
+
 
 ```yaml
 Type: SPAssignmentCollection
@@ -89,6 +92,7 @@ Accept wildcard characters: False
 
 ### -Name
 Specifies the name of the Business Connectivity Services connection object.
+
 
 ```yaml
 Type: String
@@ -119,4 +123,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPODataConnectionSetting](Remove-SPODataConnectionSetting.md)
 
 [Set-SPODataConnectionSetting](Set-SPODataConnectionSetting.md)
-

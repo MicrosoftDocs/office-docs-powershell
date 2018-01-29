@@ -49,12 +49,33 @@ You must be a SharePoint Online global administrator to run the cmdlet.
 
 ## EXAMPLES
 
-### --------------------EXAMPLE---------------------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Set-SPOSite -Identity https://contoso.sharepoint.com/sites/team1 -LockState NoAccess
+Set-SPOTenant -NoAcessRedirectUrl 'http://www.contoso.com'
 ```
+This example blocks access to https://contoso.sharepoint.com/sites/team1 and redirects traffic to http://www.contoso.com. 
 
-{{ Add example description here }}
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Set-SPOTenant -ShowEveryoneExceptExternalUsersClaim $false 
+```
+This example hides the "Everyone Except External Users" claim in People Picker.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+Set-SPOTenant -ShowAllUsersClaim $false 
+```
+This example hides the "All Users" claim group in People Picker.
+
+
+### -----------------------EXAMPLE 4-----------------------------
+```
+Set-SPOTenant -UsePersistentCookiesForExplorerView $true 
+```
+This example enables the use of special persisted cookie for Open with Explorer.
 
 
 ## PARAMETERS
@@ -65,6 +86,7 @@ When the feature is enabled, all external sharing invitations that are sent will
 The valid values are:  
 False (default) - BCC for external sharing is disabled.  
 True - All external sharing invitations that are sent will blind copy the e-mail messages listed in the BccExternalSharingsInvitationList.
+
 
 ```yaml
 Type: Boolean
@@ -87,6 +109,7 @@ The valid values are:
 "" (default) - Blank by default, this will also clear any value that has been set.  
 Single or Multiple e-mail addresses - joe@contoso.com or joe@contoso.com,bob@contoso.com
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -106,6 +129,7 @@ Determines whether tenant users see the Start a Site menu option.
 The valid values are:  
 True (default) - Tenant users will see the Start a Site menu option.  
 False - Start a Site is hidden from the menu.
+
 
 ```yaml
 Type: Boolean
@@ -128,6 +152,7 @@ The valid values are:
 True (default) - External services are enabled for the tenant.  
 False - External services that are outside of the Office 365 datacenters cannot interact with SharePoint.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -144,6 +169,7 @@ Accept wildcard characters: False
 ### -MaxCompatibilityLevel
 Specifies the upper bound on the compatibility level for new sites.
 
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -159,6 +185,7 @@ Accept wildcard characters: False
 
 ### -MinCompatibilityLevel
 Specifies the lower bound on the compatibility level for new sites.
+
 
 ```yaml
 Type: Int32
@@ -180,6 +207,7 @@ The valid values are:
 "" (default) - Blank by default, this will also remove or clear any value that has been set.  
 Full URL - Example: https://contoso.sharepoint.com/Pages/Locked.aspx
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -199,6 +227,7 @@ When set to true this will disable the ability to use Modern Authentication that
 The valid values are:  
 False (default) - Modern Authentication is enabled/allowed.  
 True - Modern Authentication via ADAL is disabled.
+
 
 ```yaml
 Type: Boolean
@@ -222,6 +251,7 @@ False - No folder is created when the site and OneDrive for Business document li
 
 The default behavior of the Shared with Everyone folder changed in August 2015.  
 For additional information about the change, see Provision the Shared with Everyone folder in OneDrive for Business (https://support.office.com/en-us/article/Provision-the-Shared-with-Everyone-folder-in-OneDrive-for-Business-6bb02c91-fd0b-42ba-9457-3921cb6dc5b2?ui=en-US&rs=en-US&ad=US)
+
 
 ```yaml
 Type: Boolean
@@ -247,6 +277,7 @@ The valid values are:
 False (default) - When a document is shared with an external user, bob@contoso.com, it can be accepted by any user with access to the invitation link in the original e-mail.  
 True - User must accept this invitation with bob@contoso.com.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -268,6 +299,7 @@ SharePoint Administrators will still be able to use starts with or partial name 
 The valid values are:  
 False (default) - Starts with / partial name search functionality is available.  
 True - Disables starts with / partial name search functionality for all SharePoint users, except SharePoint Admins.
+
 
 ```yaml
 Type: Boolean
@@ -291,6 +323,7 @@ Disabled - External user sharing (share by email) and guest link sharing are bot
 ExternalUserSharingOnly - External user sharing (share by email) is enabled, but guest link sharing is disabled.
 
 For more information about sharing, see Manage external sharing for your SharePoint online environment (http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/manage-external-sharing-for-your-sharepoint-online-environment-HA102849864.aspx).
+
 
 ```yaml
 Type: SharingCapabilities
@@ -317,6 +350,7 @@ The valid values are:
 True (default) - The All Users claim groups are displayed in People Picker.  
 False - The All Users claim groups are hidden in People Picker.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -340,6 +374,7 @@ The valid values are:
 True (default) - The Everyone claim group is displayed in People Picker.  
 False - The Everyone claim group is hidden from the People Picker.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -360,6 +395,7 @@ When users share an item with "Everyone except external users", it is accessible
 The valid values are:  
 True (default) - The Everyone except external users is displayed in People Picker.  
 False - The Everyone except external users claim is not visible in People Picker.
+
 
 ```yaml
 Type: Boolean
@@ -391,6 +427,7 @@ The valid values are:
 "" (default) - Blank by default, this will also remove or clear any value that has been set.  
 Login Domain - For example: "contoso.com"
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -410,6 +447,7 @@ Specifies URL of the form to load in the Start a Site dialog.
 The valid values are:  
 "" (default) - Blank by default, this will also remove or clear any value that has been set.  
 Full URL - Example: "https://contoso.sharepoint.com/path/to/form"
+
 
 ```yaml
 Type: String
@@ -437,6 +475,7 @@ The valid values are:
 False (default) - No special cookie is generated and the normal Office 365 sign-in length/timing applies.  
 True - Generates a special cookie that will allow "Open with Explorer" to function if the "Keep Me Signed In" box is not checked at sign-in.
 
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -451,7 +490,8 @@ Accept wildcard characters: False
 ```
 
 ### -CommentsOnSitePagesDisabled
-{{Fill CommentsOnSitePagesDisabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -467,7 +507,19 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultSharingLinkType
-{{Fill DefaultSharingLinkType Description}}
+Lets administrators choose what type of link appears is selected in the “Get a link” sharing dialog box in OneDrive for Business and SharePoint Online.
+
+For additional information about how to change the default link type, see Change the default link type when users get links for sharing.
+
+Note:  
+Setting this value to “none” will default “get a link” to the most permissive link available (that is, if anonymous links are enabled, the default link will be anonymous access; if they are disabled then the default link will be internal.  
+
+The values are: 
+None
+Direct
+Internal
+AnonymousAccess
+
 
 ```yaml
 Type: SharingLinkType
@@ -483,7 +535,10 @@ Accept wildcard characters: False
 ```
 
 ### -DisallowInfectedFileDownload
-{{Fill DisallowInfectedFileDownload Description}}
+Prevents the Download button from being displayed on the Virus Found warning page. 
+
+Accepts a value of true (enabled) to hide the Download button or false (disabled) to display the Download button. By default this feature is set to false.
+
 
 ```yaml
 Type: Boolean
@@ -499,7 +554,11 @@ Accept wildcard characters: False
 ```
 
 ### -EnableGuestSignInAcceleration
-{{Fill EnableGuestSignInAcceleration Description}}
+Accelerates guest-enabled site collections as well as member-only site collections when the SignInAccelerationDomain parameter is set. 
+
+Note:  
+If enabled, your identity provider must be capable of authenticating guest users. If it is not, guest users will be unable to log in and access content that was shared with them.  
+
 
 ```yaml
 Type: Boolean
@@ -515,7 +574,8 @@ Accept wildcard characters: False
 ```
 
 ### -FileAnonymousLinkType
-{{Fill FileAnonymousLinkType Description}}
+PARAMVALUE: None | View | Edit
+
 
 ```yaml
 Type: AnonymousLinkType
@@ -531,7 +591,8 @@ Accept wildcard characters: False
 ```
 
 ### -FolderAnonymousLinkType
-{{Fill FolderAnonymousLinkType Description}}
+PARAMVALUE: None | View | Edit
+
 
 ```yaml
 Type: AnonymousLinkType
@@ -547,7 +608,13 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressAllowList
-{{Fill IPAddressAllowList Description}}
+Configures multiple IP addresses or IP address ranges (IPv4 or IPv6).
+
+Use commas to separate multiple IP addresses or IP address ranges. Verify there are no overlapping IP addresses and ensure IP ranges use Classless Inter-Domain Routing (CIDR) notation. For example, 172.16.0.0, 192.168.1.0/27.
+
+Note:  
+The IPAddressAllowList parameter only lets administrators set IP addresses or ranges that are recognized as trusted. To only grant access from these IP addresses or ranges, set the IPAddressEnforcement parameter to $true.  
+
 
 ```yaml
 Type: String
@@ -563,7 +630,12 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressEnforcement
-{{Fill IPAddressEnforcement Description}}
+Allows access from network locations that are defined by an administrator.
+
+The values are $true and $false. The default value is $false which means the setting is disabled.
+
+Before the IPAddressEnforcement parameter is set, make sure you add a valid IPv4 or IPv6 address to the IPAddressAllowList parameter.
+
 
 ```yaml
 Type: Boolean
@@ -579,7 +651,8 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressWACTokenLifetime
-{{Fill IPAddressWACTokenLifetime Description}}
+PARAMVALUE: Int32
+
 
 ```yaml
 Type: Int32
@@ -595,7 +668,18 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyAuthProtocolsEnabled
-{{Fill LegacyAuthProtocolsEnabled Description}}
+By default this value is set to $True. 
+
+Setting this parameter prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+
+A value of True- Enables Office clients using non-modern authentication protocols (such as, Forms-Based Authentication (FBA) or Identity Client Runtime Library (IDCRL)) to access SharePoint resources. 
+
+A value of False-Prevents Office clients using non-modern authentication protocols from accessing SharePoint Online resources.
+
+Note:  
+This may also prevent third-party apps from accessing SharePoint Online resources.
+Also, this will also block apps using the SharePointOnlineCredentials class to access SharePoint Online resources. For additional information about SharePointOnlineCredentials, see SharePointOnlineCredentials class.  
+
 
 ```yaml
 Type: Boolean
@@ -611,7 +695,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationsInOneDriveForBusinessEnabled
-{{Fill NotificationsInOneDriveForBusinessEnabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -627,7 +712,8 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationsInSharePointEnabled
-{{Fill NotificationsInSharePointEnabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -643,7 +729,12 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOwnersWhenInvitationsAccepted
-{{Fill NotifyOwnersWhenInvitationsAccepted Description}}
+When this parameter is set to $true and when an external user accepts an invitation to a resource in a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+
+For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
+
+The values are $true and $false.
+
 
 ```yaml
 Type: Boolean
@@ -659,7 +750,12 @@ Accept wildcard characters: False
 ```
 
 ### -NotifyOwnersWhenItemsReshared
-{{Fill NotifyOwnersWhenItemsReshared Description}}
+When this parameter is set to $true and another user re-shares a document from a user’s OneDrive for Business, the OneDrive for Business owner is notified by e-mail.
+
+For additional information about how to configure notifications for external sharing, see Configure notifications for external sharing for OneDrive for Business.
+
+The values are $true and $false.
+
 
 ```yaml
 Type: Boolean
@@ -675,7 +771,16 @@ Accept wildcard characters: False
 ```
 
 ### -ODBAccessRequests
-{{Fill ODBAccessRequests Description}}
+Lets administrators set policy on access requests and requests to share in OneDrive for Business.
+
+Values:
+
+On- Users without permission to share can trigger sharing requests to the OneDrive for Business owner when they attempt to share. Also, users without permission to a file or folder can trigger access requests to the OneDrive for Business owner when they attempt to access an item they do not have permissions to.
+
+Off- Prevent access requests and requests to share on OneDrive for Business.
+
+Unspecified- Let each OneDrive for Business owner enable or disable access requests and requests to share on their OneDrive.
+
 
 ```yaml
 Type: SharingState
@@ -691,7 +796,16 @@ Accept wildcard characters: False
 ```
 
 ### -ODBMembersCanShare
-{{Fill ODBMembersCanShare Description}}
+Lets administrators set policy on re-sharing behavior in OneDrive for Business.
+
+Values:
+
+On- Users with edit permissions can re-share.
+
+Off- Only OneDrive for Business owner can share. The value of ODBAccessRequests defines whether a request to share gets sent to the owner.
+
+Unspecified- Let each OneDrive for Business owner enable or disable re-sharing behavior on their OneDrive.
+
 
 ```yaml
 Type: SharingState
@@ -707,7 +821,14 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveForGuestsEnabled
-{{Fill OneDriveForGuestsEnabled Description}}
+Lets OneDrive for Business creation for administrator managed guest users. Administrator managed Guest users use credentials in the resource tenant to access the resources.
+
+The valid values are the following: 
+
+$true-Administrator managed Guest users can be given OneDrives, provided needed licenses are assigned.
+
+$false- Administrator managed Guest users can't be given OneDrives as functionality is turned off.
+
 
 ```yaml
 Type: Boolean
@@ -723,7 +844,14 @@ Accept wildcard characters: False
 ```
 
 ### -OneDriveStorageQuota
-{{Fill OneDriveStorageQuota Description}}
+Sets a default OneDrive for Business storage quota for the tenant. It will be used for new OneDrive for Business sites created.
+
+A typical use will be to reduce the amount of storage associated with OneDrive for Business to a level below what the License entitles the users. For example, it could be used to set the quota to 10 gigabytes (GB) by default.
+
+If value is set to 0, the parameter will have no effect.
+
+If the value is set larger than the Maximum allowed OneDrive for Business quota, it will have no effect.
+
 
 ```yaml
 Type: Int64
@@ -739,7 +867,10 @@ Accept wildcard characters: False
 ```
 
 ### -OrphanedPersonalSitesRetentionPeriod
-{{Fill OrphanedPersonalSitesRetentionPeriod Description}}
+Specifies the number of days after a user's Active Directory account is deleted that their OneDrive for Business content will be deleted. 
+
+The value range is in days, between 30 and 3650. The default value is 30.
+
 
 ```yaml
 Type: Int32
@@ -755,7 +886,8 @@ Accept wildcard characters: False
 ```
 
 ### -OwnerAnonymousNotification
-{{Fill OwnerAnonymousNotification Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -771,7 +903,14 @@ Accept wildcard characters: False
 ```
 
 ### -PermissiveBrowserFileHandlingOverride
-{{Fill PermissiveBrowserFileHandlingOverride Description}}
+Enables the Permissive browser file handling. By default, the browser file handling is set to Strict. The Strict setting adds headers that force the browser to download certain types of files. The forced download improves security by disallowing the automatic execution of Web content. When the setting is set to Permissive, no headers are added and certain types of files can be executed in the browser instead of download. 
+
+The valid values are:
+
+True- Enable the Permissive browser file handling setting.
+
+False- Keep the default Strict browser file handling setting.
+
 
 ```yaml
 Type: Boolean
@@ -787,7 +926,8 @@ Accept wildcard characters: False
 ```
 
 ### -PreventExternalUsersFromResharing
-{{Fill PreventExternalUsersFromResharing Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -803,7 +943,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicCdnAllowedFileTypes
-{{Fill PublicCdnAllowedFileTypes Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -819,7 +960,8 @@ Accept wildcard characters: False
 ```
 
 ### -PublicCdnEnabled
-{{Fill PublicCdnEnabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -835,7 +977,10 @@ Accept wildcard characters: False
 ```
 
 ### -RequireAnonymousLinksExpireInDays
-{{Fill RequireAnonymousLinksExpireInDays Description}}
+Specifies all anonymous links that have been created (or will be created) will expire after the set number of days .
+
+To remove the expiration requirement, set the value to zero (0). 
+
 
 ```yaml
 Type: Int32
@@ -851,7 +996,10 @@ Accept wildcard characters: False
 ```
 
 ### -SharingAllowedDomainList
-{{Fill SharingAllowedDomainList Description}}
+Specifies a list of email domains that is allowed for sharing with the external collaborators. Use the space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business
+
 
 ```yaml
 Type: String
@@ -867,7 +1015,10 @@ Accept wildcard characters: False
 ```
 
 ### -SharingBlockedDomainList
-{{Fill SharingBlockedDomainList Description}}
+Specifies a list of email domains that is blocked or prohibited for sharing with the external collaborators. Use space character as the delimiter for entering multiple values. For example, “contoso.com fabrikam.com”. 
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business
+
 
 ```yaml
 Type: String
@@ -883,7 +1034,15 @@ Accept wildcard characters: False
 ```
 
 ### -SharingDomainRestrictionMode
-{{Fill SharingDomainRestrictionMode Description}}
+Specifies the external sharing mode for domains.
+
+The following values are:
+None
+AllowList
+BlockList
+
+For additional information about how to restrict a domain sharing, see Restricted Domains Sharing in Office 365 SharePoint Online and OneDrive for Business.
+
 
 ```yaml
 Type: SharingDomainRestrictionModes
@@ -899,7 +1058,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowPeoplePickerSuggestionsForGuestUsers
-{{Fill ShowPeoplePickerSuggestionsForGuestUsers Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -915,7 +1075,19 @@ Accept wildcard characters: False
 ```
 
 ### -SpecialCharactersStateInFileFolderNames
-{{Fill SpecialCharactersStateInFileFolderNames Description}}
+Permits the use of special characters in file and folder names in SharePoint Online and OneDrive for Business document libraries. 
+
+Note:  
+The only two characters that can be managed at this time are the # and % characters.  
+
+The following are the valid values: 
+
+NoPreference- Support for feature will be enabled by Microsoft on your Office 365 tenant.
+
+Allowed- Lets the # and % characters in file and folder names in SharePoint Online and OneDrive for Business document libraries.
+
+Disallowed- Disallows the # and % characters in file and folder names in SharePoint Online and OneDrive for Business document libraries.
+
 
 ```yaml
 Type: SpecialCharactersState
@@ -931,7 +1103,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseFindPeopleInPeoplePicker
-{{Fill UseFindPeopleInPeoplePicker Description}}
+Note:  
+When set to $true, users aren't able to share with non-email enabled security groups or SharePoint groups.  
+
 
 ```yaml
 Type: Boolean
@@ -947,7 +1121,8 @@ Accept wildcard characters: False
 ```
 
 ### -UserVoiceForFeedbackEnabled
-{{Fill UserVoiceForFeedbackEnabled Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean

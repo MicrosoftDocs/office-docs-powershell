@@ -18,7 +18,7 @@ Request-SPOPersonalSite [-NoWait] -UserEmails <String[]> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Request-SPOPersonalSite cmdlet requests that the users specified be enqueued so that a Personal Site be created for each. The actual Personal site is created by a Timer Job later.
+The `Request-SPOPersonalSite` cmdlet requests that the users specified be enqueued so that a Personal Site be created for each. The actual Personal site is created by a Timer Job later.
 
 **Note**: You must specify a string array of user logins that contains one or more valid user email (logins) and cannot contain any empty fields. The command will stop if it encounters any empty strings in the array. A maximum of 200 users can be specified.
 
@@ -32,17 +32,19 @@ Request-SPOPersonalSite –UserEmails $emails -Verbose
 ```
 
 This example requests that two users to be enqueued for the creation of a Personal Site and the status of the command will be displayed.
+
 ### ----------------------EXAMPLE 2-----------------------
-
-```Request-SPOPersonalSite –UserEmails $emails -NoWait
-
 ```
-This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. The  status of the operation will not be displayed.
+Request-SPOPersonalSite –UserEmails $emails -NoWait
+```
+This example requests that many users to be queued for the creation of a Personal Site. The users are previously defined using the variable $emails. The status of the operation will not be displayed.
+
 
 ## PARAMETERS
 
 ### -NoWait
 Continues without the status being polled. Polling the action can slow it’s progress if lots of user emails are specified.
+
 
 ```yaml
 Type: SwitchParameter
@@ -59,6 +61,7 @@ Accept wildcard characters: False
 
 ### -UserEmails
 Specifies one or more user logins to be enqueued for the creation of a Personal Site. The Personal site is created by a Timer Job later. You can specify between 1 and 200 users.
+
 
 ```yaml
 Type: String[]

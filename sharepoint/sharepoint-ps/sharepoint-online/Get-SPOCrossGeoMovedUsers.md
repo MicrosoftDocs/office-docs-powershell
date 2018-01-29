@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ```
@@ -19,19 +20,21 @@ Get-SPOCrossGeoMovedUsers -Direction <String> [<CommonParameters>]
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
-
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -Direction
-{{Fill Direction Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -61,4 +64,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
