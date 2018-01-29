@@ -1,11 +1,11 @@
 ---
 external help file: 
 applicable: SharePoint Online
-title: Get-SPOGeoAdministrators
+title: Get-SPOGeoAdministrator
 schema: 2.0.0
 ---
 
-# Get-SPOGeoAdministrators
+# Get-SPOGeoAdministrator
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -13,7 +13,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-SPOGeoAdministrators [<CommonParameters>]
+Get-SPOGeoAdministrator [<CommonParameters>]
 ```
 
 ## DESCRIPTION
