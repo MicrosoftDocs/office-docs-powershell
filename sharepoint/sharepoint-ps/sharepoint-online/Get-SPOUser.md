@@ -62,7 +62,6 @@ Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -Group "Team Site
 ```
 Example 3 returns one user or security group account inside group Team Site Members from the site collection http://contoso.sharepoint.com/sites/finance. 
 
-
 ## PARAMETERS
 
 ### -Group

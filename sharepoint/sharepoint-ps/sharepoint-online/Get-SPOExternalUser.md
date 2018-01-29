@@ -47,7 +47,6 @@ Get-SPOExternalUser -Position 0 -PageSize 30 -Filter https://contosoe.testsite.c
 ```
 Example 3 returns the first 30 users that match the filter, https://contosoe.testsite.com.
 
-
 ## PARAMETERS
 
 ### -Filter
