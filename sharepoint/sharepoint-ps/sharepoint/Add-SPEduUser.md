@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-SPEduUser
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Do not use
 
 ## SYNTAX
 
@@ -17,21 +17,21 @@ Add-SPEduUser [-AssignmentCollection <SPAssignmentCollection>] [-FirstName <Stri
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Do not use
 
 ## EXAMPLES
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+Do not use
 ```
 
-{{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+Do not use
 
 ```yaml
 Type: SPAssignmentCollection
@@ -47,7 +47,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-{{Fill FirstName Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-{{Fill LastName Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -79,7 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Role
-{{Fill Role Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Do not use
 
 ```yaml
 Type: SPSitePipeBind
@@ -111,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserAlias
-{{Fill UserAlias Description}}
+Do not use
 
 ```yaml
 Type: String
@@ -127,7 +127,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserEmail
-{{Fill UserEmail Description}}
+Do not use
 
 ```yaml
 Type: String

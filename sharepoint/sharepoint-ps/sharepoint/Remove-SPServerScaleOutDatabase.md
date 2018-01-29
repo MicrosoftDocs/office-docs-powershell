@@ -7,7 +7,7 @@ schema: 2.0.0
 # Remove-SPServerScaleOutDatabase
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Removes a specific scale-out database.
 
 
 ## SYNTAX
@@ -19,24 +19,25 @@ Remove-SPServerScaleOutDatabase -Database <SPDatabasePipeBind>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Use the Remove-SPServerScaleOutDatabase cmdlet to remove a specific scale-out database from a specified service application.
 
 
 ## EXAMPLES
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+$databases = Get-SPServerScaleOutDatabase -ServiceApplication $serviceApplication
+
 ```
 
-{{ Add example description here }}
+This example removes the specified scale-out database from the specified service application.
 
 
 ## PARAMETERS
 
 ### -Database
-{{Fill Database Description}}
 
+Specifies the scale-out database to remove.
 
 ```yaml
 Type: SPDatabasePipeBind
@@ -52,7 +53,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceApplication
-{{Fill ServiceApplication Description}}
+Specifies the service application of the scale-out database to remove.
 
 
 ```yaml
@@ -69,7 +70,11 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentCollection
-{{Fill AssignmentCollection Description}}
+
+Manages objects for the purpose of proper disposal. Use of objects, such as SPWeb or SPSite, can use large amounts of memory and use of these objects in Windows PowerShell scripts requires proper memory management. Using the SPAssignment object, you can assign objects to a variable and dispose of the objects after they are needed to free up memory. When SPWeb, SPSite, or SPSiteAdministration objects are used, the objects are automatically disposed of if an assignment collection or the Global parameter is not used.
+
+Note: When the Global parameter is used, all objects are contained in the global store. If objects are not immediately used, or disposed of by using the Stop-SPAssignment command, an out-of-memory scenario can occur. 
+
 
 
 ```yaml
@@ -103,7 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteData
-{{Fill DeleteData Description}}
+Specifies whether to delete data when the scale out database is removed.
 
 
 ```yaml

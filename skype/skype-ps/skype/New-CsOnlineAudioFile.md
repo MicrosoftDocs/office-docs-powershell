@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: New-CsOnlineAudioFile.xml
 applicable: Skype for Business Online
 title: New-CsOnlineAudioFile
 schema: 2.0.0
@@ -8,105 +8,55 @@ schema: 2.0.0
 # New-CsOnlineAudioFile
 
 ## SYNOPSIS
-Provide the topic introduction here.
+Use the New-CsOnlineAudioFile cmdlet to create a new audio file.
 
 ## SYNTAX
 
 ```
-New-CsOnlineAudioFile [-Content <Object>] [-FileName <Object>] [-BypassDualWrite <Object>]
- [-DomainController <Object>] [-Force] [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+New-CsOnlineAudioFile -FileName <String> -Content <Byte[]> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Provide the detailed description here.
+The New-CsOnlineAudioFile cmdlet creates a new audio file for use with the Organizational Auto Attendant (OAA) service.
 
 ## EXAMPLES
 
 ### -------------------------- Example 1 -------------------------- 
 ```
-Insert example commands for example 1.
+$content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
+$audioFile = New-CsOnlineAudioFile -FileName "Hello.wav" -Content $content
 ```
 
-Insert descriptive text for example 1.
-
-
+This example creates a new audio file using the WAV content that has a filename of Hello.wav.
 
 ## PARAMETERS
 
-### -Content
-PARAMVALUE: Byte\[\]
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -FileName
-PARAMVALUE: String
+The FileName parameter is the name of the audio file. For example, the file name for the file C:\Media\Welcome.wav is Welcome.wav. 
 
 ```yaml
-Type: Object
+Type: System.string
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -BypassDualWrite
-PARAMVALUE: $true | $false
+### -Content
+The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
 
 ```yaml
-Type: Object
+Type: System.Byte[]
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-PARAMVALUE: Fqdn
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-PARAMVALUE: SwitchParameter
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -114,26 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AsJob
-{{Fill AsJob Description}}
-
-```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -150,7 +83,11 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 
 ## INPUTS
 
+### None
+
 ## OUTPUTS
+
+### Microsoft.Rtc.Management.Hosted.Online.Models.AudioFile
 
 ## NOTES
 

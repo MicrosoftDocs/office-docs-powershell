@@ -8,7 +8,7 @@ schema: 2.0.0
 
 ## SYNOPSIS
 
-Applies to:
+Removes all data related to the specified site subscription.
 
 
 

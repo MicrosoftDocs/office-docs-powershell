@@ -1,5 +1,5 @@
 ---
-external help file: 
+external help file: Get-CsOrganizationalAutoAttendantStatus.xml
 applicable: Skype for Business Online
 title: Get-CsOrganizationalAutoAttendantStatus
 schema: 2.0.0
@@ -8,102 +8,62 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantStatus
 
 ## SYNOPSIS
+Use Get-CsOrganizationalAutoAttendantStatus cmdlet to get the status of an Organizational Auto Attendant (OAA) provisioning.
 
 
 ## SYNTAX
 
 ```
-Get-CsOrganizationalAutoAttendantStatus [[-PrimaryUri] <Object>] [-ApplicationId <Object>]
- [-BypassDualWrite <Object>] [-DomainController <Object>] [-Force] [-IncludeResources <Object>]
- [-Tenant <Object>] [-AsJob] [<CommonParameters>]
+Get-CsOrganizationalAutoAttendantStatus [-PrimaryUri] <Uri> [-IncludeResources <List>] [-ApplicationId <Guid>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 
 ## DESCRIPTION
-{{Fill in the Description}}
+This cmdlet provides a way to return the provisioning status of an organizational auto attendant configured for use in your organization. 
 
 
 ## EXAMPLES
 
-### Example 1 (Skype for Business Online)
+### -------------------------- Example 1 --------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-CsOrganizationalAutoAttendantStatus -PrimaryUri "sip:mainoaa@contoso.com"
 ```
 
-{{ Add example description here }}
+In Example 1, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records for all resources of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
+### -------------------------- Example 2 --------------------------
+```
+Get-CsOrganizationalAutoAttendantStatus -PrimaryUri sip:mainoaa@contoso.com -IncludeResources @("AudioFile")
+```
+
+In Example 2, the Get-CsOrganizationalAutoAttendantStatus cmdlet is used to get status records pertaining to audio files only of an organizational auto attendant with Primary URI of sip:mainoaa@contoso.com.
 
 ## PARAMETERS
 
-### -ApplicationId
-{{Fill ApplicationId Description}}
+### -PrimaryUri
+The Primary URI represents the SIP address of the organizational auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
-Type: Object
+Type: System.Uri
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DomainController
-{{Fill DomainController Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: DC
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Force
-{{Fill Force Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: Named
+Required: True
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -IncludeResources
-{{Fill IncludeResources Description}}
+The IncludeResources parameter identities the organizational auto attendant resources whose status is to be retrieved. Available resources are:
+- AudioFile: Indicates status for audio files used by OAA.
+- DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with OAA.
+- SipProvisioning: Indicates status for calling OAA through its SIP (Primary) URI.
 
 ```yaml
-Type: Object
+Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases: 
 Accepted values: AudioFile, DialByNameVoiceResponses, SipProvisioning
@@ -116,27 +76,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PrimaryUri
-{{Fill PrimaryUri Description}}
+### -ApplicationId
+Specifies a custom application ID to use for organizational auto attendants. This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-Applicable: Skype for Business Online
-
-Required: False
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Tenant
-{{Fill Tenant Description}}
-
-```yaml
-Type: Object
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -148,11 +92,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AsJob
-{{Fill AsJob Description}}
+### -Tenant
 
 ```yaml
-Type: SwitchParameter
+Type: System.Guid
 Parameter Sets: (All)
 Aliases: 
 Applicable: Skype for Business Online
@@ -169,12 +112,15 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### None
+### System.String
+The Get-CsOrganizationalAutoAttendantStatus cmdlet accepts a string as the PrimaryUri parameter.
 
 ## OUTPUTS
 
-### System.Object
+### Microsoft.Rtc.Management.OAA.Models.StatusRecord
 
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsOrganizationalAutoAttendant](Get-CsOrganizationalAutoAttendant.md)

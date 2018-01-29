@@ -7,7 +7,7 @@ schema: 2.0.0
 # Add-DatabaseToAvailabilityGroup
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Adds an availability group
 
 ## SYNTAX
 
