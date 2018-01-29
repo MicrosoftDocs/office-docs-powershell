@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ```
@@ -19,19 +20,22 @@ Get-SPOGeoMoveCompatibilityStatus [-AllLocations <Boolean>] [<CommonParameters>]
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
 
 {{ Add example description here }}
 
+
 ## PARAMETERS
 
 ### -AllLocations
-{{Fill AllLocations Description}}
+PARAMVALUE: $true | $false
+
 
 ```yaml
 Type: Boolean
@@ -60,4 +64,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -29,16 +29,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### -----------------------EXAMPLE-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Remove-SPOSiteGroup -Site https://contoso.sharepoint.com/sites/marketing -Identity GroupToRemove
 ```
-
-{{ Add example description here }}
+This example removes a group named GroupToRemove from the site collection https://contoso.sharepoint.com/sites/marketing.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the name of the group to remove.
+
 
 ```yaml
 Type: String
@@ -54,7 +54,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the site collection to remove the group from.
+
 
 ```yaml
 Type: SpoSitePipeBind

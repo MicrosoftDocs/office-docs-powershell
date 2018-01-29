@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Starts the upgrade process on a site collection.
 
+
 ## SYNTAX
 
 ```
@@ -29,20 +30,29 @@ You must be a SharePoint Online global administrator and a site collection admin
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-### -----------EXAMPLE---------
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Upgrade-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing
 ```
 
-{{ Add example description here }}
+Example 1 runs a build-to-build upgrade of the existing site collection https://contoso.sharepoint.com/sites/marketing. The CompatibilityLevel property associated with the site collection is not changed by this operation. For more information about CompatibilityLevel, see `New-SPOSite`.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Upgrade-SPOSite -Identity https://contoso.sharepoint.com/sites/marketing -VersionUpgrade
+```
+
+Example 2 runs a version-to-version upgrade of the existing site collection https://contoso.sharepoint.com/sites/marketing. The CompatibilityLevel property associated with the site collection is changed to a value of SharePoint 2013 by this operation. For more information about CompatibilityLevel, see `New-SPOSite`.
 
 
 ## PARAMETERS
 
 ### -Confirm
 Prompts you for confirmation before running the cmdlet.
+
 
 ```yaml
 Type: SwitchParameter
@@ -58,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the SharePoint Online site collection to upgrade.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -74,7 +85,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoEmail
-{{Fill NoEmail Description}}
+Specifies that the system not send the requester and site collection administrators a notification e-mail message at the end of the upgrade process.
+
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +102,8 @@ Accept wildcard characters: False
 ```
 
 ### -QueueOnly
-{{Fill QueueOnly Description}}
+Adds the site collection to the upgrade queue. The upgrade does not occur immediately.
+
 
 ```yaml
 Type: SwitchParameter
@@ -106,7 +119,8 @@ Accept wildcard characters: False
 ```
 
 ### -VersionUpgrade
-{{Fill VersionUpgrade Description}}
+Specifies whether to perform a version-to-version upgrade on the site collection. When this parameter is set, it internally triggers any available build-to-build upgrade associated with the current site collection operating mode and continues with version-to-version upgrade. When this parameter is not set, it triggers only build-to-build upgrade on the site collection.
+
 
 ```yaml
 Type: SwitchParameter

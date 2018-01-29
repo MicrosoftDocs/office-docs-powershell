@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns the SharePoint Online user or security group accounts that match a given search criteria.
 
+
 ## SYNTAX
 
 ### ByGroup
@@ -29,28 +30,43 @@ Get-SPOUser [-LoginName <String>] -Site <SpoSitePipeBind> [<CommonParameters>]
 
 ## DESCRIPTION
 This cmdlet contains more than one parameter set.
-You may only use parameters from one parameter set, and you may not combine parameters from different parameter sets.
+You may only use parameters from one parameter set and you may not combine parameters from different parameter sets.
 For more information about how to use parameter sets, see Cmdlet Parameter Sets (http://go.microsoft.com/fwlink/?LinkID=187810).
 
-The Get-SPOUser cmdlet matches one and only one user or security group.
+The `Get-SPOUser` cmdlet matches one and only one user or security group.
 
-You must be a SharePoint Online global administrator and a site collection administrator to run the Get-SPOUser cmdlet.
+You must be a SharePoint Online global administrator and a site collection administrator to run the `Get-SPOUser` cmdlet.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-###   Example 1: Get the first 5 users or groups from a specific site collection
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> $site = Get-SPOSite -Identity https://contoso.sharepoint.com
-PS C:\> Get-SPOUser -Limit 5 -Site $site
+Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance
 ```
-This command retrieves the users or security groups in a site.
+Example 1 returns all user or security group accounts from the site collection http://contoso.sharepoint.com/sites/finance. 
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -LoginName melissa.kerr@contoso.com
+```
+Example 2 returns one user or security group account whose user name is HYPERLINK "mailto:melissa.kerr@contoso.com" melissa.kerr@contoso.com from the site collection https://contoso.sharepoint.com/sites/finance.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+Get-SPOUser -Site https://contoso.sharepoint.com/sites/finance -Group "Team Site Members"
+```
+Example 3 returns one user or security group account inside group Team Site Members from the site collection http://contoso.sharepoint.com/sites/finance. 
 
 ## PARAMETERS
 
 ### -Group
-{{Fill Group Description}}
+Specifies the group to get the users from.
+
 
 ```yaml
 Type: String
@@ -66,7 +82,8 @@ Accept wildcard characters: False
 ```
 
 ### -Limit
-{{Fill Limit Description}}
+Specifies the maximum number of users returned. The default value is to return 500 users. To return all users specify the value “All”. 
+
 
 ```yaml
 Type: String
@@ -82,7 +99,8 @@ Accept wildcard characters: False
 ```
 
 ### -LoginName
-{{Fill LoginName Description}}
+Specifies the user name.
+
 
 ```yaml
 Type: String
@@ -98,7 +116,8 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-{{Fill Site Description}}
+Specifies the URL of the site collection to get the user from.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -133,5 +152,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Remove-SPOUser](Remove-SPOUser.md)
 
 [Set-SPOUser](Set-SPOUser.md)
-
-

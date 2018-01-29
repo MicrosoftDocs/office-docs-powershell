@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 {{Fill in the Synopsis}}
 
+
 ## SYNTAX
 
 ### Group
@@ -25,19 +26,21 @@ Add-SPOGeoAdministrator [-User] <String> [<CommonParameters>]
 ## DESCRIPTION
 {{Fill in the Description}}
 
+
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
 PS C:\> {{ Add example code here }}
 ```
-
 {{ Add example description here }}
+
 
 ## PARAMETERS
 
 ### -Group
-{{Fill Group Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -53,7 +56,8 @@ Accept wildcard characters: False
 ```
 
 ### -User
-{{Fill User Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -82,4 +86,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

@@ -10,6 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Returns external users in the tenant's folder.
 
+
 ## SYNTAX
 
 ```
@@ -19,23 +20,38 @@ Get-SPOExternalUser [[-Position] <Int32>] [[-PageSize] <Int32>] [[-Filter] <Stri
 ```
 
 ## DESCRIPTION
-The Get-SPOExternalUser cmdlet returns external users that are located in the tenant's folder based on specified criteria.
+The `Get-SPOExternalUser` cmdlet returns external users that are located in the tenant's folder based on specified criteria.
 
 For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832 (http://go.microsoft.com/fwlink/p/?LinkId=251832).
 
+
 ## EXAMPLES
 
-### Example 1: Get the external users for a specific site collection
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> $site = "https://contoso.sharepoint.com/"
-PS C:\> Get-SPOExternalUser -SiteUrl $site
+Get-SPOExternalUser -Position 0 -PageSize 2
 ```
-This command retrieves external users in your tenant
+Example 1 returns the first two external users in the collection.
+
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOExternalUser -Position 2 -PageSize 2
+```
+Example 2 returns two external users from the third page of the collection.
+
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+Get-SPOExternalUser -Position 0 -PageSize 30 -Filter https://contosoe.testsite.com
+```
+Example 3 returns the first 30 users that match the filter, https://contosoe.testsite.com.
 
 ## PARAMETERS
 
 ### -Filter
 Limits the results to only those users whose first name, last name or email address begins with the text in the string, using a case-insensitive comparison
+
 
 ```yaml
 Type: String
@@ -55,6 +71,7 @@ Specifies the maximum number of users to be returned in the collection.
 
 The value must be less than or equal to 50.
 
+
 ```yaml
 Type: Int32
 Parameter Sets: (All)
@@ -70,6 +87,7 @@ Accept wildcard characters: False
 
 ### -Position
 Use to specify the zero-based index of the position in the sorted collection of the first result to be returned.
+
 
 ```yaml
 Type: Int32
@@ -88,6 +106,7 @@ Accept wildcard characters: False
 Specifies the site to retrieve external users for.
 If no site is specified, the external users for all sites are returned.
 
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -104,6 +123,7 @@ Accept wildcard characters: False
 ### -SortOrder
 Specifies the sort results in Ascending or Descending order on the SPOUser.Email property should occur.
 
+
 ```yaml
 Type: SortOrder
 Parameter Sets: (All)
@@ -118,7 +138,8 @@ Accept wildcard characters: False
 ```
 
 ### -ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount
-{{Fill ShowOnlyUsersWithAcceptingAccountNotMatchInvitedAccount Description}}
+System.Boolean
+
 
 ```yaml
 Type: Boolean
@@ -149,5 +170,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [Set up the SharePoint Online Management Shell Windows PowerShell environment]()
 
 [Remove-SPOExternalUser](Remove-SPOExternalUser.md)
-
-

@@ -27,16 +27,16 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ### ----------------------EXAMPLE-----------------------
 ```
-PS C:\> {{ Add example code here }}
+Restore-SPODeletedSite -Identity https://contoso.sharepoint.com/sites/arecycledsite
 ```
-
-{{ Add example description here }}
+This example restores a SharePoint Online deleted site collection named HYPERLINK "https://contoso.sharepoint.com/sites/arecycledsite" https://contoso.sharepoint.com/sites/arecycledsite from the Recycle Bin.
 
 
 ## PARAMETERS
 
 ### -Identity
-{{Fill Identity Description}}
+Specifies the URL of the site collection to restore.
+
 
 ```yaml
 Type: SpoSitePipeBind
@@ -52,7 +52,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+Specifies to continue executing script immediately.
+
 
 ```yaml
 Type: SwitchParameter

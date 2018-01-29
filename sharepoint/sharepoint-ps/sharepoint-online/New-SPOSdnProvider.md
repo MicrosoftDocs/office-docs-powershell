@@ -51,7 +51,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-{{Fill Identity Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String
@@ -67,7 +68,8 @@ Accept wildcard characters: False
 ```
 
 ### -License
-{{Fill License Description}}
+PARAMVALUE: String
+
 
 ```yaml
 Type: String

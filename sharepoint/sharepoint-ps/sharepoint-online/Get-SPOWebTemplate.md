@@ -8,7 +8,8 @@ schema: 2.0.0
 # Get-SPOWebTemplate
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Displays all site templates that match the given identity.
+
 
 ## SYNTAX
 
@@ -18,21 +19,34 @@ Get-SPOWebTemplate [[-LocaleId] <UInt32>] [-CompatibilityLevel <Int32>] [-Name <
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+The `Get-SPOWebTemplate` cmdlet displays all site templates that match the given identity and are available in SharePoint Online.
+
+You must be a SharePoint Online global administrator to run the cmdlet.
+
+For permissions and the most current information about Windows PowerShell for SharePoint Online, see the online documentation at http://go.microsoft.com/fwlink/p/?LinkId=251832.
+
 
 ## EXAMPLES
 
-### Example 1 
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> {{ Add example code here }}
+Get-SPOWebTemplate
 ```
+Example 1 returns all the site templates in the language of the administrator site.
 
-{{ Add example description here }}
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+Get-SPOWebTemplate -LocaleID 1036
+```
+Example 2 returns a list of all the French site templates.
+
 
 ## PARAMETERS
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the compatibility level of the site template.
+
 
 ```yaml
 Type: Int32
@@ -48,7 +62,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleId
-{{Fill LocaleId Description}}
+Specifies the Locale ID of the site template.
+
 
 ```yaml
 Type: UInt32
@@ -64,7 +79,8 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-{{Fill Name Description}}
+Specifies the name of the site template.
+
 
 ```yaml
 Type: String
@@ -80,7 +96,8 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-{{Fill Title Description}}
+Specifies the Locale ID of the site template.
+
 
 ```yaml
 Type: String
@@ -109,4 +126,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-

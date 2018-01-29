@@ -31,18 +31,36 @@ For permissions and the most current information about Windows PowerShell for Sh
 
 ## EXAMPLES
 
-### Example 1: Create a new site collection based on Team Site template (classic experience)
+### -----------------------EXAMPLE 1-----------------------------
 ```
-PS C:\> New-SPOSite -Url https://contoso.sharepoint.com/sites/teamsite -Title "Classic Team Site" -Owner admin@contoso.onmicrosoft.com -StorageQuota 20 -Template STS#0
+New-SPOSite -Url http://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -Title "My new site collection"
 ```
 
-This command creates a new site collection based on Team Site template (classic experience).
+Example 1 creates a new site collection for the current company with specified site URL, title and owner. The storage quota is set to 1000 megabytes.
+
+### -----------------------EXAMPLE 2-----------------------------
+```
+New-SPOSite -Url http://contoso.sharepoint.com/sites/mynewsite -Owner joe.healy@contoso.com -StorageQuota 1000 -CompatibilityLevel 15 -LocaleID 1033 -ResourceQuota 300 -Template "STS#0" -TimeZoneId 13 -Title "My new site collection"
+```
+
+Example 2 creates a new site collection for the current company with specified site URL, title, owner and template. The storage quota is set to 1000 megabytes and the resource quota is set to 300 megabytes. The template compatibility level is set to 15 which means that the site collection only supports the SharePoint 2013 template. The language is set to English - United States (LocaleID = 1033) and the time zone is set to (GMT-08:00) Pacific Time (US and Canada) (TimeZone = 13).
+
+### -----------------------EXAMPLE 3-----------------------------
+```
+New-SPOSite -Url https://contoso.sharepoint.com/sites/accounting -Owner admin@contoso.com -StorageQuota 100 -NoWait -ResourceQuota 50 -Template STS#0
+```
+
+Example 3 creates a new site collection for the current company with specified site URL, owner and template. The storage quota is set to 100 megabytes and the resource quota is set to 50 megabytes. This cmdlet is executed immediately without delay.
 
 
 ## PARAMETERS
 
 ### -CompatibilityLevel
-{{Fill CompatibilityLevel Description}}
+Specifies the version of templates to use when you are creating a new site collection. This value sets the initial CompatibilityLevel value for the site collection. The values for this parameter can be SharePoint Server. When this parameter is not specified, the CompatibilityLevel will be by default the highest possible version for the Web application.
+
+Note:  
+For SharePoint Online Preview, it can only be set to "14" or "15". "14" indicates SharePoint 2010 Products, "15" indicates SharePoint 2013. Other values are not valid and will cause error.
+
 
 ```yaml
 Type: Int32
@@ -58,7 +76,8 @@ Accept wildcard characters: False
 ```
 
 ### -LocaleId
-{{Fill LocaleId Description}}
+Specifies the language of this site collection. For more information, see Locale IDs Assigned by Microsoft (https://go.microsoft.com/fwlink/p/?LinkId=242911). The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+
 
 ```yaml
 Type: UInt32
@@ -74,7 +93,8 @@ Accept wildcard characters: False
 ```
 
 ### -NoWait
-{{Fill NoWait Description}}
+Specifies to continue executing script immediately.
+
 
 ```yaml
 Type: SwitchParameter
@@ -90,7 +110,8 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-{{Fill Owner Description}}
+Specifies the user name of the site collection’s primary owner. The owner must be a user instead of a security group or an email-enabled security group.
+
 
 ```yaml
 Type: String
@@ -106,7 +127,8 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceQuota
-{{Fill ResourceQuota Description}}
+Specifies the quota for this site collection in Sandboxed Solutions units. This value must not exceed the company’s aggregate available Sandboxed Solutions quota. The default value is 0. For more information, see Resource Usage Limits on Sandboxed Solutions in SharePoint (https://msdn.microsoft.com/en-us/library/gg615462.aspx).
+
 
 ```yaml
 Type: Double
@@ -122,7 +144,8 @@ Accept wildcard characters: False
 ```
 
 ### -StorageQuota
-{{Fill StorageQuota Description}}
+Specifies the storage quota for this site collection in megabytes. This value must not exceed the company’s available quota.
+
 
 ```yaml
 Type: Int64
@@ -138,7 +161,8 @@ Accept wildcard characters: False
 ```
 
 ### -Template
-{{Fill Template Description}}
+Specifies the site collection template type. Use the `Get-SPOWebTemplate` cmdlet to get the list of valid templates. If no template is specified, one can be added later. The Template and LocaleId parameters must be a valid combination as returned from the `Get-SPOWebTemplate` cmdlet.
+
 
 ```yaml
 Type: String
@@ -154,7 +178,8 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZoneId
-{{Fill TimeZoneId Description}}
+Specifies the time zone of the site collection. For more information, see SPRegionalSettings.TimeZones Property (https://go.microsoft.com/fwlink/p/?LinkId=242912).
+
 
 ```yaml
 Type: Int32
@@ -170,7 +195,8 @@ Accept wildcard characters: False
 ```
 
 ### -Title
-{{Fill Title Description}}
+Specifies the title of the site collection.
+
 
 ```yaml
 Type: String
@@ -186,7 +212,8 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+Specifies the full URL of the new site collection. It must be in a valid managed path in the company’s site. For example, for company contoso, valid managed paths are https://contoso.sharepoint.com/sites and https://contoso.sharepoint.com/teams.
+
 
 ```yaml
 Type: UrlCmdletPipeBind
