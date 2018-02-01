@@ -28,7 +28,7 @@ SHORT VIDEO COMING SOON!
 
 Looking for more in-depth content? Check out the following:
 * [Frequently Asked Questions (FAQ)](repo_docs/FAQ.md)
-* [Using more advanced tools with the PowerShell GitHub repo](repo_docs/ADVANCED.mD)
+* [Using more advanced tools with the PowerShell GitHub repo](repo_docs/ADVANCED.md)
 * [Creating content for brand new cmdlets](repo_docs/NEW_CMDLETS.md)
 
 # Microsoft Open Source Code of Conduct
