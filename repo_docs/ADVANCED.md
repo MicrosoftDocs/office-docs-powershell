@@ -43,11 +43,11 @@ To Fork the project, point your web browser to the repository at
 https://github.com/MicrosoftDocs/office-docs-powershell
 and then click the Fork button on the upper right corner of the repository page as shown in screenshot.
 
-![Image of Fork button on Github](images/fork_button_on_github.png)
+![Image of Fork button on Github](../images/fork_button_on_github.png)
 
 You now have your very own copy (fork) of the main Office PowerShell repository. You can see it by clicking on your profile drop-down in the upper right of the page and choosing Your Profile and then clicking the Repositories tab of your GitHub account as shown in the diagram. 
 
-![View Your Forked Repos on Github](images/view_your_forked_repos.png)
+![View Your Forked Repos on Github](../images/view_your_forked_repos.png)
 
 Your repository is an exact copy of the original Office PowerShell repository and is located in your GitHub account. 
 In GitHub terms the main Office PowerShell repository is the Upstream repository and your forked version is the Downstream repository.
@@ -59,7 +59,7 @@ The next section covers cloning and updating your repo with the upstream repo.
 Now that you have your own copy of the repository on GitHub the next step is to get the actual files on your local computer so you can work with them. 
 To do this you clone your GitHub repository to your local computer. Here is a diagram:
 
-![Diagram of repository flow on Github](images/github_flow.png)
+![Diagram of repository flow on Github](../images/github_flow.png)
 
 Tip: You can clone your repository to muliple computers if you choose. 
 You just have to make sure you save your local work by pushing it back up to your repository.
