@@ -1104,7 +1104,7 @@ Accept wildcard characters: False
 
 ### -UseFindPeopleInPeoplePicker
 Note:  
-When set to $true, users aren't able to share with non-email enabled security groups or SharePoint groups.  
+When set to $true, users aren't able to share with security groups or SharePoint groups.  
 
 
 ```yaml
