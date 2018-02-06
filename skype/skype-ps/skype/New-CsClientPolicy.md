@@ -1165,7 +1165,8 @@ Accept wildcard characters: False
 Indicates which Microsoft Outlook contact folders (if any) should not be searched any time Skype for Business searches for new contacts.
 Multiple folders can be specified by separating the folder names using semicolons; for example, `-ExcludedContactFolders "SenderPhotoContacts;OtherContacts".`
 
-
+NOTE: When using a Skype for Business client, with either Office 2013 or Office 2016, this policy won't work in the same way.
+In that combination, the Skype for Business client uses the search capabilities of Office (mso.dll), which finds contacts from Exchange mailbox contact folders. There isn't an option to suppress the search of those contact folders for the Office search component.
 
 ```yaml
 Type: String
