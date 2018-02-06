@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -PassThru
-The presence of the passthru switch causes the cmdlet to pass the current objects through the pipeline. 
+The presence of the passthru switch causes the cmdlet to pass the current objects through the pipeline.
 
 ```yaml
 Type: SwitchParameter
