@@ -192,6 +192,8 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+
+Note: Do not add ‘+’ to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx.
 ```
 
 ### -Tenant
