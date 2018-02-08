@@ -6,14 +6,6 @@ schema: 2.0.0
 # Set-MapiVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-MapiVirtualDirectory cmdlet to modify Messaging Application Programming Interface (MAPI) virtual directories on MicrosoftExchange 2013 servers. A MAPI virtual directory is used by supported versions of MicrosoftOutlook to connect to mailboxes by using the MAPIHTTP protocol.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MapiVirtualDirectory cmdlet to modify Messaging Application Programming Interface (MAPI) virtual directories that are used in Internet Information Services (IIS) on Microsoft Exchange servers. A MAPI virtual directory is used by supported versions of Microsoft Outlook to connect to mailboxes by using the MAPIHTTP protocol.
@@ -22,46 +14,25 @@ Use the Set-MapiVirtualDirectory cmdlet to modify Messaging Application Programm
 
 ```
 Set-MapiVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-ApplyDefaults <$true | $false>] [-Confirm]
- [-DomainController <Fqdn>] [-ExtendedProtectionFlags <MultiValuedProperty>]
- [-ExtendedProtectionSPNList <MultiValuedProperty>] [-ExtendedProtectionTokenChecking <None | Allow | Require>]
- [-ExternalUrl <Uri>] [-IISAuthenticationMethods <MultiValuedProperty>] [-InternalUrl <Uri>] [-WhatIf]
+ [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-IISAuthenticationMethods <MultiValuedProperty>] [-InternalUrl <Uri>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access virtual directory settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" -InternalUrl https://contoso.com/mapi -IISAuthenticationMethods NTLM,Negotiate
-```
-
-This example makes the following configuration changes to the MAPI virtual directory on the default web site of the server named ContosoMail:
-
-
-Internal URL https://contoso/mapi.
-
-IIS authentication methods NTLM and Negotiate.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-MapiVirtualDirectory -Identity "ContosoMail\mapi (Default Web Site)" -InternalUrl https://contoso.com/mapi -IISAuthenticationMethods NTLM,Negotiate,OAuth
 ```
 
 This example makes the following configuration changes to the MAPI virtual directory on the default web site of the server named ContosoMail:
 
+- Internal URL: https://contoso/mapi.
 
-Internal URL: https://contoso/mapi.
-
-IIS authentication methods: NTLM, Negotiate, and OAuth.
+- IIS authentication methods: NTLM, Negotiate, and OAuth.
 
 ## PARAMETERS
 
@@ -92,7 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplyDefaults
-The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange setup during the installation of Exchange Cumulative Updates or Service Packs, and you shouldn't need to use it.
+The ApplyDefaults switch specifies whether to apply the correct defaults to the related internal IIS application settings. Typically, this switch is used only by Exchange setup during the installation of Exchange Cumulative Updates or Service Packs and you shouldn't need to use it.
 
 This switch doesn't affect the values you configure by using the IISAuthenticationMethods, InternalUrl or ExternalUrl parameters.
 
@@ -145,54 +116,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExtendedProtectionFlags
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExtendedProtectionSPNList
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ExtendedProtectionTokenChecking
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: None | Allow | Require
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ExternalUrl
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
 
@@ -214,24 +137,6 @@ Accept wildcard characters: False
 ```
 
 ### -IISAuthenticationMethods
-!!! Exchange Server 2013
-
-The IISAuthenticationMethods parameter specifies the authentication methods that are enabled on the virtual directory in Internet Information Services (IIS). Valid values for this parameter are:
-
-- Basic
-
-- Negotiate
-
-- NTLM
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
-
-!!! Exchange Server 2016
-
 The IISAuthenticationMethods parameter specifies the authentication methods that are enabled on the virtual directory in Internet Information Services (IIS). Valid values are:
 
 - Basic
@@ -245,8 +150,6 @@ The IISAuthenticationMethods parameter specifies the authentication methods that
 You can specify multiple values separated by commas.
 
 The default values are NTLM, OAuth, and Negotiate. We recommend that you always have the virtual directory configured for OAuth.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -298,7 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
 
@@ -315,4 +218,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c9308fe6-3b61-4d99-a5f2-ef47abbc7656.aspx)
-
