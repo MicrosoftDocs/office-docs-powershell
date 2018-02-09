@@ -52,9 +52,12 @@ Example 1 shows how a SharePoint Online global administrator with credential adm
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-$username = "admin@contoso.sharepoint.com"$password = "password"$cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)Connect-SPOService -Url http://contoso-admin.sharepoint.com/ -Credential $cred
+$username = "admin@contoso.sharepoint.com"
+$password = "password"
+$cred = New-Object -TypeName System.Management.Automation.PSCredential -argumentlist $userName, $(convertto-securestring $Password -asplaintext -force)
+Connect-SPOService -Url http://contoso-admin.sharepoint.com/ -Credential $cred
 ```
-Example 2 shows how a SharePoint Online global administrator with a user name and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
+Example 2 shows how a SharePoint Online global administrator with a username and password connects to a SharePoint Online Administration Center that has the URL http://contoso-admin.sharepoint.com/.
 
 
 ## PARAMETERS
