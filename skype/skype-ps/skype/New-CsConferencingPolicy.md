@@ -1064,7 +1064,7 @@ The default value is False.
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Applicable: Skype for Business Online, Skype for Business Server 2015
+Applicable: Skype for Business Server 2015
 
 Required: False
 Position: Named
