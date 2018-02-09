@@ -21,7 +21,7 @@ Set-CsOnlineVoicemailPolicy [[-Identity] <Object>] [-BypassDualWrite <Object>] [
 ## DESCRIPTION
 Online Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
 
-By default, users enabled for Phone System will be enabled for Online Voicemail, and Online Voicemail policy controls whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user. Both Online Voicemail transcription and profanity masking are enabled by default, and you can modify existing policies to match your organization's requirements.
+By default, users enabled for Phone System will be enabled for Online Voicemail, and Online Voicemail policy controls whether or not voicemail transcription and profanity masking for the voicemail transcriptions are enabled for a user. Online Voicemail transcription is enabled by default and transcription profanity masking is disabled by default, and you can modify existing policies to match your organization's requirements.
 
 ## EXAMPLES
 
