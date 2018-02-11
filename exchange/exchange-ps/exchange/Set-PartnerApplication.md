@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-PartnerApplication
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-PartnerApplication cmdlet to configure a partner application.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-PartnerApplication cmdlet to configure partner application configurations.
@@ -28,8 +18,8 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
  [-AcceptSecurityIdentifierInformation <$true | $false>] [-ActAsPermissions <String[]>]
- [-ApplicationIdentifier <String>] [-AppOnlyPermissions <String[]>] [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-IssuerIdentifier <String>] [-LinkedAccount <UserIdParameter>] [-Name <String>]
+ [-ApplicationIdentifier <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>] 
+ [-LinkedAccount <UserIdParameter>] [-Name <String>]
  [-Realm <String>] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
 ```
 
@@ -37,8 +27,8 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
  [-AcceptSecurityIdentifierInformation <$true | $false>] [-ActAsPermissions <String[]>]
- [-AppOnlyPermissions <String[]>] [-AuthMetadataUrl <String>] [-Confirm] [-DomainController <Fqdn>]
- [-Enabled <$true | $false>] [-IssuerIdentifier <String>] [-LinkedAccount <UserIdParameter>] [-Name <String>]
+ [-AuthMetadataUrl <String>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>] 
+ [-LinkedAccount <UserIdParameter>] [-Name <String>]
  [-TrustAnySSLCertificate] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>]
  [<CommonParameters>]
 ```
@@ -47,41 +37,19 @@ Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
 ```
 Set-PartnerApplication [-Identity] <PartnerApplicationIdParameter>
  [-AcceptSecurityIdentifierInformation <$true | $false>] [-ActAsPermissions <String[]>]
- [-AppOnlyPermissions <String[]>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-IssuerIdentifier <String>] [-LinkedAccount <UserIdParameter>] [-Name <String>] [-RefreshAuthMetadata]
+ [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ [-LinkedAccount <UserIdParameter>] [-Name <String>] [-RefreshAuthMetadata]
  [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Microsoft Exchange Server 2013, you can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange 2013 resources. For details, see Integration with SharePoint and Lync. We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the \\Exchange Server\\V15\\Scripts folder to configure partner applications.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can configure partner applications such as SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business. We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-PartnerApplication HRApp -RefreshAuthMetadata
-```
-
-This example refreshes the auth metadata for the HRApp partner application.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-PartnerApplication HRApp -RefreshAuthMetadata
-```
-
-This example refreshes the auth metadata for the HRApp partner application.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-PartnerApplication HRApp -RefreshAuthMetadata
 ```
@@ -91,14 +59,6 @@ This example refreshes the auth metadata for the HRApp partner application.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the partner application you want to modify.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the partner application you want to modify. You can use any value that uniquely identifies the partner application. For example:
 
 - Name
@@ -108,8 +68,6 @@ The Identity parameter specifies the partner application you want to modify. You
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: PartnerApplicationIdParameter
@@ -141,19 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActAsPermissions
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ActAsPermissions parameter specifies the delegate permissions that are allowed for the partner application. You can specify multiple values separated by commas.
-
-
 
 ```yaml
 Type: String[]
@@ -184,24 +130,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AppOnlyPermissions
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AuthMetadataUrl
 This parameter is available only in on-premises Exchange.
 
@@ -221,25 +149,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -288,22 +202,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IssuerIdentifier
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LinkedAccount
 The LinkedAccount parameter specifies a linked Active Directory user account for the application. Exchange evaluates Role Based Access Control (RBAC) permissions for the linked account when authorizing a token used to perform a task.
 
@@ -337,21 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -Realm
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Realm parameter specifies a security realm for the partner application. If the token is from a domain that's not an accepted domain, Exchange checks the realm specified in the token. In such a scenario, only tokens with the same realm specified in the partner application can access Exchange 2013 resources.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Realm parameter specifies a security realm for the partner application. If the token is from a domain that's not an accepted domain, Exchange checks the realm specified in the token. In such a scenario, only tokens with the same realm specified in the partner application can access Exchange resources.
-
-
 
 ```yaml
 Type: String
@@ -456,4 +342,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/22550369-102f-424a-bfa3-98144695ecbe.aspx)
-
