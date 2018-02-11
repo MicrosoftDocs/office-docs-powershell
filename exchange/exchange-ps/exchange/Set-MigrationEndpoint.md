@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations, and remote moves.
+Use the Set-MigrationEndpoint cmdlet to edit settings for cutover or staged Exchange migrations, IMAP migrations and remote moves.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -17,41 +17,15 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Set-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter>
  [-Authentication <Basic | Digest | Ntlm | Fba | WindowsIntegrated | LiveIdFba | LiveIdBasic | WSSecurity | Certificate | NegoEx | OAuth | Adfs | Kerberos | Negotiate | LiveIdNegotiate | Misconfigured>]
- [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>] [-EmailAddress <SmtpAddress>]
- [-ExchangeServer <String>] [-MailboxPermission <Admin | FullAccess>]
- [-MaxConcurrentIncrementalSyncs <Unlimited>] [-MaxConcurrentMigrations <Unlimited>] [-NspiServer <String>]
+ [-Confirm] [-Credentials <PSCredential>] [-DomainController <Fqdn>]  [-ExchangeServer <String>] 
+ [-MailboxPermission <Admin | FullAccess>]  [-MaxConcurrentIncrementalSyncs <Unlimited>] 
+ [-MaxConcurrentMigrations <Unlimited>] [-NspiServer <String>]
  [-Port <Int32>] [-RemoteServer <Fqdn>] [-RpcProxyServer <Fqdn>] [-Security <None | Ssl | Tls>]
  [-SkipVerification] [-SourceMailboxLegacyDN <String>] [-TestMailbox <MailboxIdParameter>] [-WhatIf]
  [-Partition <MailboxIdParameter>] [-PublicFolderDatabaseServerLegacyDN <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Use the Set-MigrationEndpoint cmdlet to configure settings for different types of migration:
-
-- Cross-forest move Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
-
-- Remote move In a hybrid deployment, a remote move involves onboarding or offboarding migrations. Remote moves require the use of a RemoteMove endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online in Office 365, and uses a RemoteMove endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online in Office 365 to an on-premises Exchange organization and uses a RemoteMove endpoint as the target endpoint of the migration batch.
-
-- Cutover Exchange migration Migrate all mailboxes in an on-premises Exchange organization to Exchange Online in Office 365. Cutover Exchange migration requires the use of an Exchange endpoint.
-
-- Staged Exchange migration Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. Staged Exchange migration requires the use of an Exchange endpoint.
-
-- IMAP migration Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-
-- Local Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
-
-For more information about the different move and migration scenarios, see:
-
-- Mailbox moves in Exchange 2013
-
-- Manage on-premises moves
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Use the Set-MigrationEndpoint cmdlet to configure settings for different types of migration:
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
@@ -76,42 +50,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-MigrationEndpoint -Identity CutoverExchangeEndpoint01 -MaxConcurrentIncrementalSyncs 50 -NspiServer Server01.contoso.com
 ```
 
 This example changes the MaxConcurrentIncrementalSyncs setting to 50 on the CutoverExchangeEndpoint01 migration endpoint using the NSPI server Server01.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MigrationEndpoint -Identity CutoverExchangeEndpoint01 -MaxConcurrentIncrementalSyncs 50 -NspiServer Server01.contoso.com
-```
-
-This example changes the MaxConcurrentIncrementalSyncs setting to 50 on the CutoverExchangeEndpoint01 migration endpoint using the NSPI server Server01.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MigrationEndpoint -Identity CutoverExchangeEndpoint01 -MaxConcurrentIncrementalSyncs 50 -NspiServer Server01.contoso.com
-```
-
-This example changes the MaxConcurrentIncrementalSyncs setting to 50 on the CutoverExchangeEndpoint01 migration endpoint using the NSPI server Server01.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MigrationEndpoint -Identity Onboardingmigrationendpoint01 -MaxConcurrentMigrations 10 -RemoteServer Server01.contoso.com
-```
-
-This example changes the MaxConcurrentMigrations setting to 10 on the Onboardingmigrationendpoint01 migration endpoint using the remote server, Server01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MigrationEndpoint -Identity Onboardingmigrationendpoint01 -MaxConcurrentMigrations 10 -RemoteServer Server01.contoso.com
-```
-
-This example changes the MaxConcurrentMigrations setting to 10 on the Onboardingmigrationendpoint01 migration endpoint using the remote server, Server01.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-MigrationEndpoint -Identity Onboardingmigrationendpoint01 -MaxConcurrentMigrations 10 -RemoteServer Server01.contoso.com
 ```
@@ -175,20 +121,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-!!! Exchange Server 2013
-
-The Credentials parameter specifies the credentials to use for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credentials parameter specifies the credentials to use for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
 
 
 ```yaml
@@ -214,24 +149,6 @@ Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EmailAddress
-This parameter is available only in the cloud-based service.
-
-The EmailAddress parameter specifies the email address of an administrator account that can access the remote server.
-
-```yaml
-Type: SmtpAddress
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -351,25 +268,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteServer
-!!! Exchange Server 2013
-
-The RemoteServer parameter specifies the remote server depending on the protocol type for moves.
-
-- For Microsoft Exchange Server 2013 and Exchange Server 2010 moves, this parameter refers to the FQDN of a Client Access server or array, or group of Client Access servers behind a supported network load balancer.
-
-- For IMAP moves, this parameter refers to the FQDN of the IMAP server.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RemoteServer parameter specifies the remote server depending on the protocol type for moves:
 
 - Exchange server moves: The FQDN of an Exchange server that has the Client Access role installed, a Client Access server array, or a group of Client Access servers that are located behind a supported network load balancer.
 
 - IMAP moves: The FQDN of the IMAP server.
-
-
 
 ```yaml
 Type: Fqdn
@@ -536,4 +439,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bebd0d6e-0bae-416b-a596-81dba35b4bab.aspx)
-
