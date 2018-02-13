@@ -547,26 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -ChangePasswordEnabled
-!!! Exchange Server 2010
-
-The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook Web App.
-
-
-
-!!! Exchange Server 2013
-
-The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook Web App.
-
-Valid input for this parameter is $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016
-
-The ChangePasswordEnabled parameter specifies whether users can change their passwords from inside Outlook on the web.
-
-Valid input for this parameter is $true or $false. The default value is $true.
-
+This parameter has been deprecated and is no longer used.
 
 
 ```yaml

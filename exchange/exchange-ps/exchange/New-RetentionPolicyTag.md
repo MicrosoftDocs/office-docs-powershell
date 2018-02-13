@@ -206,6 +206,11 @@ Accept wildcard characters: False
 ### -AgeLimitForRetention
 The AgeLimitForRetention parameter specifies the age at which retention is enforced on an item. The age limit corresponds to the number of days from the date the item was delivered, or the date an item was created if it wasn't delivered. If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
 
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+
+Valid values are 1.00:00:00 to 24855.03:14:07.
+
+
 ```yaml
 Type: EnhancedTimeSpan
 Parameter Sets: Set1
