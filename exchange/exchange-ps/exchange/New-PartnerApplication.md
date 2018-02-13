@@ -17,32 +17,19 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 New-PartnerApplication [-Name] <String> -ApplicationIdentifier <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-ActAsPermissions <String[]>]
- [-AppOnlyPermissions <String[]>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-IssuerIdentifier <String>] [-LinkedAccount <UserIdParameter>] [-Realm <String>] [-WhatIf]
- [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
+ [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ [-LinkedAccount <UserIdParameter>] [-Realm <String>] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] 
+ [<CommonParameters>]
 ```
 
 ### Set1
 ```
 New-PartnerApplication [-Name] <String> -AuthMetadataUrl <String>
- [-AcceptSecurityIdentifierInformation <$true | $false>] [-ActAsPermissions <String[]>]
- [-AppOnlyPermissions <String[]>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
- [-IssuerIdentifier <String>] [-LinkedAccount <UserIdParameter>] [-TrustAnySSLCertificate] [-WhatIf]
- [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
+ [-AcceptSecurityIdentifierInformation <$true | $false>] [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $false>]
+ [-LinkedAccount <UserIdParameter>] [-TrustAnySSLCertificate] [-WhatIf] [-AccountType <OrganizationalAccount | ConsumerAccount>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Microsoft Exchange Server 2013, you can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange 2013 resources. For details, see Integration with SharePoint and Lync.
-
-We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the \\Exchange Server\\V15\\Scripts folder to configure partner applications.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can configure partner applications such as Microsoft SharePoint to access Exchange resources. Use the New-PartnerApplication cmdlet to create a partner application configuration for an application that needs to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business.
 
 We recommend that you use the Configure-EnterprisePartnerApplication.ps1 script in the %ExchangeInstallPath%Scripts folder to configure partner applications.
@@ -51,21 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-PartnerApplication HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac00-000000000000 -Realm contoso.com -UseAuthServer $true
-```
-
-This example creates the HRApp partner application and configures it to use an authorization server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-PartnerApplication -Name HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac00-000000000000
-```
-
-This example creates a new HRApp partner application named HRApp.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-PartnerApplication -Name HRApp -ApplicationIdentifier 00000006-0000-0dd1-ac00-000000000000
 ```
@@ -140,42 +113,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ActAsPermissions
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AppOnlyPermissions
-This parameter is available only in on-premises Exchange.
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String[]
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Confirm
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -230,22 +167,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -IssuerIdentifier
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LinkedAccount
 The LinkedAccount parameter specifies a linked Active Directory user account for the application. Exchange evaluates Role Based Access Control (RBAC) permissions for the linked account when authorizing a token used to perform a task.
 
@@ -263,21 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -Realm
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Realm parameter specifies a security realm for the partner application. If the token is from a domain that's not an accepted domain, Exchange checks the realm specified in the token. In such a scenario, only tokens with the same realm specified in the partner application can access Exchange 2013 resources.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Realm parameter specifies a security realm for the partner application. If the token is from a domain that's not an accepted domain, Exchange checks the realm specified in the token. In such a scenario, only tokens with the same realm specified in the partner application can access Exchange resources.
-
-
 
 ```yaml
 Type: String
@@ -366,4 +275,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e7cce1f0-d4f1-4eb9-a136-551725a35599.aspx)
-
