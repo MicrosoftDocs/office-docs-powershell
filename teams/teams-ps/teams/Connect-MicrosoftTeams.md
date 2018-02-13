@@ -267,5 +267,12 @@ Accept wildcard characters: False
 
 ## NOTES
 
+Tips for troubleshooting:
+1. Confirm SAML 2.0 is being used. 
+IDP is outputting invalid SAML information. Needs to have SAML 2.0 vs. SAML 1.0 for the module to connect.
+You might experience an error if the Identity Provider (IDP) only allows the use of SAML1.0 when trying to auth via basic authentication. 
+Which in turn, isn't expected to work because the cmdlet expects either OAUTH2 (which is used when doing just connect-microsofteams), or SAML2.0.
+2. Confirm you have the latest version of the cmdlet. You can find the version by running: `get-module -listavailable` and then looking for the MicrosoftTeams name and the version to the left of it.
+
 ## RELATED LINKS
 
