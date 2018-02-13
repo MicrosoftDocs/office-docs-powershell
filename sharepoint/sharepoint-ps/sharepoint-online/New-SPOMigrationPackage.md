@@ -29,16 +29,16 @@ Cmdlet to create a new migration package based on source files in a local or net
 
 ### -----------------------EXAMPLE 1-----------------------------
 ```
-New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg
+New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg
 
-New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents" -TargetDocumentLibrarySubFolderPath "Sub Folder/Target Folder"
+New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents" -TargetDocumentLibrarySubFolderPath "Sub Folder/Target Folder"
 ```
 This example creates a new set of migration source package metadata files, using default URL values, in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location.
 
 
 ### -----------------------EXAMPLE 2-----------------------------
 ```
-New-SPOMigrationPackage -SourcePath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
+New-SPOMigrationPackage -SourceFilesPath \\fileserver\share\folder1 -OutputPackagePath d:\MigrationPackages\Folder1_SrcPkg -TargetWebUrl https://contoso.sharepoint.com/sites/TargetSite/TargetWeb -TargetDocumentLibraryPath "Shared Documents"
 ```
 This example creates a new set of migration source package metadata files in the d:\MigrationPackages\Folder1_SrcPkg directory based on content files found in the \\fileserver\share\folder1 source location. The package is prepared using the document library path “https://contoso.sharepoint.com/sites/TargetSite/TargetWeb/Shared Documents”.
 
