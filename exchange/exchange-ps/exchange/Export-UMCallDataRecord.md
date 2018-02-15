@@ -6,12 +6,6 @@ schema: 2.0.0
 # Export-UMCallDataRecord
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-UMCallDataRecord cmdlet to export Unified Messaging (UM) call data records for UM dial plans and UM IP gateways for a date that you've specified.
-
-!!! Exchange Server 2013
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Export-UMCallDataRecord cmdlet to export Unified Messaging (UM) call data records for UM dial plans and UM IP gateways for a date that you've specified.
@@ -22,23 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Export-UMCallDataRecord -ClientStream <Stream> -Date <ExDateTime> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-UMDialPlan <UMDialPlanIdParameter>]
- [-UMIPGateway <UMIPGatewayIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-UMDialPlan <UMDialPlanIdParameter>] [-UMIPGateway <UMIPGatewayIdParameter>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Export-UMCallDataRecord cmdlet exports Unified Messaging call data records for a specified date to a comma separated value (.csv) file. You can filter call data records for specific UM dial plans and/or UM IP gateways; however, if you don't specify a UM IP gateway, all call data records will be returned.
-
-The Export-UMCallDataRecord cmdlet is available when you're using the Exchange Control Panel. You can't use the cmdlet from the Exchange Management Shell.
-
-After this task is completed, a report is generated that contains Unified Messaging call data records.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call data and summary reports" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
 The Export-UMCallDataRecord cmdlet exports Unified Messaging call data records for a specified date to a comma-separated value (CSV) file. You can filter call data records for specific UM dial plans or UM IP gateways. However, if you don't specify a UM IP gateway, all call data records are returned.
 
 The Export-UMCallDataRecord cmdlet is available when you're using the Exchange Administration Center. You can't use the cmdlet from the Exchange Management Shell.
@@ -49,28 +30,14 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Export-UMCallDataRecord -Date 02/01/10
-```
-
-This example returns all Unified Messaging call data records and exports them to a CSV file.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Export-UMCallDataRecord -Date 02/01/12
 ```
 
 This example returns all Unified Messaging call data records on February 1, 2012, and exports them to a CSV file.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Export-UMCallDataRecord -Date 02/01/10 -UMDialPlan MyUMDialPlan
-```
-
-This example exports all Unified Messaging call data records for February 1, 2010 for the UM dial plan MyUMDialPlan.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Export-UMCallDataRecord -Date 02/01/12 -UMDialPlan MyUMDialPlan
 ```
@@ -96,17 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Date
-!!! Exchange Server 2010
-
-The Date parameter specifies the date of Unified Messaging call data records to retrieve, in the last 90 days. If there are no call records for the date specified, the report will be empty.
-
-
-
-!!! Exchange Server 2013
-
 The Date parameter specifies the date of Unified Messaging call data records to retrieve. If there are no call records for the date specified, the report will be empty.
-
-
 
 ```yaml
 Type: ExDateTime
@@ -142,19 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -169,34 +116,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UMDialPlan
-!!! Exchange Server 2010
-
-The UMDialPlan parameter specifies the UM dial plan to export statistics for. If you don't specify a UM dial plan, statistics include all UM dial plans in the organization
-
-
-
-!!! Exchange Server 2013
-
 The UMDialPlan parameter specifies the UM dial plan to export statistics for. If you don't specify a UM dial plan, statistics include all UM dial plans in the organization.
-
-
 
 ```yaml
 Type: UMDialPlanIdParameter
@@ -261,4 +182,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/974bfc60-6c9c-4452-877b-3a302f39dd95.aspx)
-
