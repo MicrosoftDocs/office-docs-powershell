@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-OrganizationRelationship
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-OrganizationRelationship cmdlet to verify that the organization relationship is properly configured and functioning as expected.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Test-OrganizationRelationship cmdlet to verify that the organization relationship is properly configured and functioning as expected.
@@ -23,28 +17,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 Test-OrganizationRelationship [[-Identity] <OrganizationRelationshipIdParameter>]
  -UserIdentity <RecipientIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-OrganizationRelationship cmdlet doesn't include any functional tests of federated sharing features, such as accessing user free/busy information or moving mailboxes between organizations. It only verifies that the configuration will allow these features to work correctly.
-
-Before you can test an organization relationship, you must first create an organization relationship. For more information, see Create an Organization Relationship.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Organization relationships" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-OrganizationRelationship cmdlet doesn't include any functional tests of federated sharing features, such as accessing user free/busy information or moving mailboxes between organizations. It only verifies that the configuration will allow these features to work correctly.
-
-Before you can test an organization relationship, you must first create an organization relationship. For more information, see Create an organization relationship.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Organization relationships" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Test-OrganizationRelationship cmdlet doesn't include any functional tests of federated sharing features, such as accessing user free/busy information or moving mailboxes between organizations. It only verifies that the configuration will allow these features to work correctly.
 
 Before you can test an organization relationship, you must first create an organization relationship. For more information, see Create an organization relationship.
@@ -53,28 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-OrganizationRelationship -UserIdentity katherine@contoso.com -Identity contoso.com -Confirm
-```
-
-This example validates the organization relationship deployed in the Microsoft Exchange Server 2010 organization and checks whether a delegation token can be retrieved for a mailbox for the external organization domain contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-OrganizationRelationship -UserIdentity katherine@contoso.com -Identity contoso.com -Confirm
-```
-
-This example validates the organization relationship deployed in the Exchange organization and checks whether a delegation token can be retrieved for a mailbox for the external organization domain contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-OrganizationRelationship -UserIdentity katherine@contoso.com -Identity contoso.com -Confirm
-```
-
-This example validates the organization relationship deployed in the Exchange organization and checks whether a delegation token can be retrieved for a mailbox for the external organization domain contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Test-OrganizationRelationship -UserIdentity katherine@contoso.com -Identity contoso.com -Confirm
 ```
@@ -84,30 +39,6 @@ This example validates the organization relationship deployed in the Exchange or
 ## PARAMETERS
 
 ### -UserIdentity
-!!! Exchange Server 2010
-
-The UserIdentity parameter specifies the mailbox for which a delegation token is requested to access the external organization's configuration information. You can use any of the following values:
-
-- Distinguished name (DN)
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Exchange DN
-
-- Primary SMTP e-mail address
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The UserIdentity parameter specifies the mailbox for which a delegation token is requested to access the external organization's configuration information. You can use any of the following values:
 
 - Distinguished name (DN)
@@ -125,8 +56,6 @@ The UserIdentity parameter specifies the mailbox for which a delegation token is
 - Exchange DN
 
 - Primary SMTP email address
-
-
 
 ```yaml
 Type: RecipientIdParameter
@@ -162,19 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -208,22 +127,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -261,4 +164,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/80be049b-61f2-4751-906a-7de5fb63e4f3.aspx)
-
