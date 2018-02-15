@@ -6,11 +6,7 @@ schema: 2.0.0
 # Get-LogonStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-LogonStatistics cmdlet to retrieve logon statistics, such as user name, logon time, last access time, client version, and adapter speed.
-
-!!! Exchange Server 2013
+This cmdlet is available only in on-premises Exchange and is only functional in Exchange Server 2010.
 
 The Get-LogonStatistics cmdlet has been deprecated and is no longer used.
 
@@ -41,39 +37,24 @@ Get-LogonStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] [<Com
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
 The Get-LogonStatistics cmdlet retrieves logon information about currently active sessions. On Mailbox servers only, you can use the Get-LogonStatistics cmdlet without parameters. In this case, the cmdlet returns the logon statistics for all mailboxes on all databases on the local server.
 
 Users who log on to their mailboxes using Microsoft Office Outlook Web App aren't continually connected to the Mailbox server. An Outlook Web App client connects to the server, performs tasks, and then disconnects from the server. Therefore, you may see few or no logon statistics for Outlook Web App, even if users are logged on with this client.
 
 You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
 
-!!! Exchange Server 2013
-
-This cmdlet has been deprecated and is no longer used.
-
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-LogonStatistics -Server Server01
 ```
 
 This example returns logon statistics for all users connected to the server Server01.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-LogonStatistics
-```
-
-This cmdlet has been deprecated and is no longer used.
-
 ## PARAMETERS
 
 ### -Database
-!!! Exchange Server 2010
-
 The Database parameter specifies the name of the mailbox database. When you specify a value for the Database parameter, the Exchange Management Shell returns logon statistics for all the mailboxes in the database specified.
 
 You can use the following value:
@@ -81,14 +62,6 @@ You can use the following value:
 - Database
 
 This parameter accepts pipeline input from the Get-MailboxDatabase command.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -104,8 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
 The Identity parameter specifies a mailbox for which you want to obtain logon statistics. You can use one of the following values:
 
 - GUID
@@ -123,14 +94,6 @@ The Identity parameter specifies a mailbox for which you want to obtain logon st
 - Alias
 
 This parameter accepts pipeline input from the Get-Mailbox command.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: LogonableObjectIdParameter
@@ -159,8 +122,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
 The Server parameter specifies the server from which you want to obtain logon statistics. You can use one of the following values:
 
 - Fully qualified domain name (FQDN)
@@ -170,14 +131,6 @@ The Server parameter specifies the server from which you want to obtain logon st
 When you specify a value for the Server parameter, the command returns logon statistics for all the mailboxes on all the databases, including recovery databases, on the specified server. If you don't specify this parameter, the command returns logon statistics for the local server.
 
 This parameter accepts pipeline input from the Get-ExchangeServer and Get-MailboxServer commands.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -193,17 +146,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: Fqdn
@@ -236,4 +179,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c06f202e-2302-4122-a514-9d11b6ad2c47.aspx)
-
