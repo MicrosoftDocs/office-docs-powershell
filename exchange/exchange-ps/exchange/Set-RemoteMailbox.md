@@ -6,20 +6,6 @@ schema: 2.0.0
 # set-RemoteMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-RemoteMailbox cmdlet to modify the mail-related attributes of an existing user in Active Directory that's associated with a mailbox in the cloud-based service.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-RemoteMailbox cmdlet to modify the mail-related attributes of an existing user in Active Directory that's associated with a mailbox in the cloud-based service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-RemoteMailbox cmdlet to modify remote mailboxes. A remote mailbox is a mail user in Active Directory that's associated with a mailbox in the cloud-based service.
@@ -57,30 +43,6 @@ set-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-AcceptMessagesOnlyFro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-RemoteMailbox cmdlet configures Exchange attributes for an on-premises mail-enabled user. The configuration set on the on-premises mail-enabled user is synchronized to its associated mailbox in the service.
-
-Some attributes on mailboxes in the service can only be configured by connecting to the service and using the Set-Mailbox cmdlet.
-
-Directory synchronization must be configured correctly for changes made to an on-premises mail-enabled user to be applied to a mailbox in the service. Changing the configuration of the mailbox in the service isn't immediate and depends on the directory synchronization schedule.
-
-For more information about remote mailboxes, see Understanding Recipients.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in theMailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-RemoteMailbox cmdlet configures Exchange attributes for an on-premises mail-enabled user. The configuration set on the on-premises mail-enabled user is synchronized to its associated mailbox in the service.
-
-Some attributes on mailboxes in the service can only be configured by connecting to the service and using the Set-Mailbox cmdlet.
-
-Directory synchronization must be configured correctly for changes made to an on-premises mail-enabled user to be applied to a mailbox in the service. Changing the configuration of the mailbox in the service isn't immediate and depends on the directory synchronization schedule.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Set-RemoteMailbox cmdlet configures Exchange attributes for an on-premises mail user. The configuration set on the on-premises mail user is synchronized to its associated mailbox in the service.
 
 Some attributes on mailboxes in the service can only be configured by connecting to the service and using the Set-Mailbox cmdlet.
@@ -91,42 +53,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-RemoteMailbox davids -Type Room
-```
-
-This example configures the mailbox in the service that's associated with the specified mail-enabled user as a room resource mailbox. This example assumes that directory synchronization has been configured.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-RemoteMailbox davids -Type Room
-```
-
-This example configures the mailbox in the service that's associated with the specified mail-enabled user as a room resource mailbox. This example assumes that directory synchronization has been configured.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-RemoteMailbox davids -Type Room
 ```
 
 This example configures the mailbox in the service that's associated with the specified mail user as a room resource mailbox. This example assumes that directory synchronization has been configured.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-RemoteMailbox kima -AcceptMessagesOnlyFrom davids, "Executive Team", bill@contoso.com
-```
-
-This example configures delivery restrictions for the mailbox in the service that's associated with the specified mail-enabled user. This example assumes that directory synchronization has been configured.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-RemoteMailbox kima -AcceptMessagesOnlyFrom davids, "Executive Team", bill@contoso.com
-```
-
-This example configures delivery restrictions for the mailbox in the service that's associated with the specified mail-enabled user. This example assumes that directory synchronization has been configured.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-RemoteMailbox kima -AcceptMessagesOnlyFrom davids, "Executive Team", bill@contoso.com
 ```
@@ -136,52 +70,6 @@ This example configures delivery restrictions for the mailbox in the service tha
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the mail-enabled user. You can use one of the following values:
-
-- ADObjectID
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\SamAccountName
-
-- User principal name (UPN)
-
-- Legacy DN
-
-- E-mail address
-
-- User alias
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the mail-enabled user. You can use one of the following values:
-
-- ADObjectID
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\SamAccountName
-
-- User principal name (UPN)
-
-- Legacy DN
-
-- Email address
-
-- User alias
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the remote mailbox (mail user) that you want to modify. You can use any value that uniquely identifies the mail user. For example:
 
 - ADObjectID
@@ -200,8 +88,6 @@ The Identity parameter specifies the remote mailbox (mail user) that you want to
 
 - User alias
 
-
-
 ```yaml
 Type: RemoteMailboxIdParameter
 Parameter Sets: (All)
@@ -216,60 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFrom
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFrom parameter specifies the mailbox users and mail-enabled users that can send e-mail messages to this mail-enabled user. You can also specify Exchange as a valid recipient for this parameter. If you configure a mail-enabled user to accept messages only from the Exchange recipient, the mail-enabled user only receives system-generated messages.
-
-You can use one of the following values for the valid senders:
-
-- DN
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Exchange DN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFrom parameter specifies the mailbox users and mail-enabled users that can send email messages to this mail-enabled user. You can also specify Exchange as a valid recipient for this parameter. If you configure a mail-enabled user to accept messages only from the Exchange recipient, the mail-enabled user only receives system-generated messages.
-
-You can use one of the following values for the valid senders:
-
-- DN
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Exchange DN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
@@ -296,8 +128,6 @@ The senders you specify for this parameter are automatically copied to the Accep
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -312,52 +142,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFromDLMembers
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFromDLMembers parameter specifies the distribution groups whose members are allowed to send e-mail messages to this mail-enabled user. You can use any of the following values for the allowed distribution groups:
-
-- DN
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFromDLMembers parameter specifies the distribution groups whose members are allowed to send email messages to this mail-enabled user. You can use any of the following values for the allowed distribution groups:
-
-- DN
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
@@ -384,8 +168,6 @@ The groups you specify for this parameter are automatically copied to the Accept
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all groups.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -400,56 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFromSendersOrMembers
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFromSendersOrMembers parameter specifies the recipients who are allowed to send e-mail messages to this mail-enabled user. You can use any of the following values for the allowed recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFromSendersOrMembers parameter specifies the recipients who are allowed to send email messages to this mail-enabled user. You can use any of the following values for the allowed recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The AcceptMessagesOnlyFromSendersOrMembers parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are individual senders and groups in your organization. Individual senders are mailboxes, mail users, and mail contacts. Groups are distribution groups, mail-enabled security groups, and dynamic distribution groups. Specifying a group means all members of the group are allowed to send messages to this recipient.
@@ -478,8 +210,6 @@ The individual senders and groups you specify for this parameter are automatical
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -494,14 +224,6 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Alias parameter specifies the alias (mail nickname) of the mail-enabled user. The alias can be a combination of characters separated by a period with no intervening spaces. Don't use special characters in the alias.
-
-
-
-!!! Exchange Server 2016
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -517,8 +239,6 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
-
-
 
 ```yaml
 Type: String
@@ -566,60 +286,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassModerationFromSendersOrMembers
-!!! Exchange Server 2010
-
-The BypassModerationFromSendersOrMembers parameter specifies the recipients whose messages bypass moderation when sending to this mail-enabled user. You can use any of the following values:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-This value makes sure that all messages are moderated when this mail-enabled user is configured for moderation.
-
-Senders designated as moderators for this mail-enabled user are never moderated.
-
-
-
-!!! Exchange Server 2013
-
-The BypassModerationFromSendersOrMembers parameter specifies the recipients whose messages bypass moderation when sending to this mail-enabled user. You can use any of the following values:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-This value makes sure that all messages are moderated when this mail-enabled user is configured for moderation.
-
-Senders designated as moderators for this mail-enabled user are never moderated.
-
-
-
-!!! Exchange Server 2016
-
 The BypassModerationFromSendersOrMembers parameter specifies who is allowed to send messages to this moderated recipient without approval from a moderator. Valid values for this parameter are individual senders and groups in your organization. Specifying a group means all members of the group are allowed to send messages to this recipient without approval from a moderator.
 
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
@@ -643,8 +309,6 @@ To enter multiple senders and overwrite any existing entries, use the following 
 To add or remove one or more senders without affecting any existing entries, use the following syntax: @{Add="\<sender1\>","\<sender2\>"...; Remove="\<sender3\>","\<sender4\>"...}.
 
 This parameter is meaningful only when moderation is enabled for the recipient. By default, this parameter is blank ($null), which means messages from all senders other than the designated moderators are moderated. When a moderator sends a message to this recipient, the message is isn't moderated. In other words, you don't need to use this parameter to include the moderators.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -920,17 +584,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DisplayName parameter specifies the display name for the user account associated with this mail-enabled user.
-
-
-
-!!! Exchange Server 2016
-
 The DisplayName parameter specifies the display name for the mail user. The display name is visible in the Exchange admin center, address lists, and Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -962,24 +616,6 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-!!! Exchange Server 2010
-
-The EmailAddresses parameter specifies the e-mail alias of the mail-enabled user. All valid Exchange e-mail address types may be used. You can specify multiple values for the EmailAddresses parameter as a comma-delimited list.
-
-Exchange doesn't validate custom addresses for proper formatting. You must ensure that the custom address you specify complies with the format requirements for that address type. Because X.400 addresses are considered custom addresses in Exchange, they're also not validated, and you must provide the correct syntax when specifying an X.400 address.
-
-
-
-!!! Exchange Server 2013
-
-The EmailAddresses parameter specifies the email alias of the mail-enabled user. All valid Exchange email address types may be used. You can specify multiple values for the EmailAddresses parameter as a comma-delimited list.
-
-Exchange doesn't validate custom addresses for proper formatting. You must ensure that the custom address you specify complies with the format requirements for that address type. Because X.400 addresses are considered custom addresses in Exchange, they're also not validated, and you must provide the correct syntax when specifying an X.400 address.
-
-
-
-!!! Exchange Server 2016
-
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
 
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>.... The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
@@ -1006,8 +642,6 @@ To replace all existing proxy email addresses with the values you specify, use t
 
 To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>"...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>"...}.
 
-
-
 ```yaml
 Type: ProxyAddressCollection
 Parameter Sets: (All)
@@ -1022,27 +656,11 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddressPolicyEnabled
-!!! Exchange Server 2010
-
-The EmailAddressPolicyEnabled parameter specifies whether the e-mail addresses for the mail-enabled user are automatically updated based on the e-mail address policies defined. The two possible values for this parameter are $true or $false. When this parameter is set to $true, you can't change the PrimarySmtpAddress or WindowsEmailAddress parameters.
-
-
-
-!!! Exchange Server 2013
-
-The EmailAddressPolicyEnabled parameter specifies whether the email addresses for the mail-enabled user are automatically updated based on the email address policies defined. The two possible values for this parameter are $true or $false. When this parameter is set to $true, you can't change the PrimarySmtpAddress or WindowsEmailAddress parameters.
-
-
-
-!!! Exchange Server 2016
-
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
 
 - $true: Email address policies are applied to this recipient. This is the default value.
 
 - $false: Email address policies aren't applied to this recipient.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1058,21 +676,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeGuid
-!!! Exchange Server 2010, Exchange Server 2016
-
 The ExchangeGuid parameter specifies the ExchangeGuid property value of the mail user, which should match the ExchangeGuid value of the corresponding cloud mailbox.
 
 The ExchangeGuid property is a unique Exchange mailbox identifier, and corresponds to the msExchMailboxGuid attribute in Active Directory. An example value is d5a0bd9b-4e95-49b5-9736-14fde1eec1e3. Although the syntax is the same, this value is different than the GUID property value, which corresponds to the objectGUID attribute in Active Directory.
-
-
-
-!!! Exchange Server 2013
-
-The ExchangeGuid parameter specifies the ExchangeGuid property value of the remote mailbox (mail user), which should match the ExchangeGuid value of the corresponding cloud mailbox.
-
-The ExchangeGuid property is a unique Exchange mailbox identifier, and corresponds to the msExchMailboxGuid attribute in Active Directory. An example value is d5a0bd9b-4e95-49b5-9736-14fde1eec1e3. Although the syntax is the same, this value is different than the GUID property value, which corresponds to the objectGUID attribute in Active Directory.
-
-
 
 ```yaml
 Type: Guid
@@ -1088,35 +694,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute1
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1132,35 +714,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1176,35 +734,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1220,35 +754,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1264,35 +774,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1324,21 +810,11 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The HiddenFromAddressListsEnabled parameter specifies whether the mail-enabled user appears in the address list. The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
 
 - $false: The recipient is visible in address lists. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1354,18 +830,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016
-
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
@@ -1373,8 +837,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1390,19 +852,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ImmutableId parameter is used by Outlook Live Directory Sync (OLSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mail-enabled user and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable identifier based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into off-premises mailboxes and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for cross-premise Exchange organizations.
-
-
-
-!!! Exchange Server 2016
-
 The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com.
 
 You need to set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
-
-
 
 ```yaml
 Type: String
@@ -1418,14 +870,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailTipTranslations
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailTipTranslations parameter specifies additional languages when you want to provide the MailTip parameter information for this recipient in multiple languages. For each language, you must provide the locale, followed by a colon and the specific MailTip parameter message in that language. Each MailTip parameter message must be less than or equal to 250 characters. Multiple languages can be separated by commas.
-
-
-
-!!! Exchange Server 2016
-
 The MailTipTranslations parameter specifies additional languages for the custom MailTip text that's defined by the MailTip parameter. HTML tags are automatically added to the MailTip translation, additional HTML tags aren't supported, and the length of the MailTip translation can't exceed 175 displayed characters.
 
 To add or remove MailTip translations without affecting the default MailTip or other MailTip translations, use the following syntax:
@@ -1435,8 +879,6 @@ To add or remove MailTip translations without affecting the default MailTip or o
 \<culture\> is a valid ISO 639 two-letter culture code that's associated with the language.
 
 For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: @{Add="ES:Esta caja no se supervisa."}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1452,16 +894,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModeratedBy parameter specifies the users responsible for moderating the messages sent to the mail-enabled user. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true. If you leave this parameter blank and there's a user already specified as the manager of this mail-enabled user, the ModeratedBy parameter is automatically set by the ManagedBy parameter of the distribution group. Otherwise, an error is returned.
-
-
-
-!!! Exchange Server 2016
-
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
 
 For example:
@@ -1486,8 +918,6 @@ To add or remove one or more values without affecting any existing entries, use 
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1502,16 +932,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModerationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModerationEnabled parameter specifies whether to enable moderation for the mail-enabled user. The two possible values for this parameter are $true or $false. To enable moderation, set this parameter to $true. To disable moderation, set this parameter to $false.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
@@ -1519,8 +939,6 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1536,17 +954,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the name of the mail-enabled user.
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name of the mail user. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -1562,17 +970,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PrimarySmtpAddress parameter specifies the primary SMTP address.
-
-
-
-!!! Exchange Server 2016
-
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -1588,56 +986,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFrom
-!!! Exchange Server 2010
-
-The RejectMessagesFrom parameter specifies the recipients from which to reject messages. You can use any of the following values to specify the recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFrom parameter specifies the recipients from which to reject messages. You can use any of the following values to specify the recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The RejectMessagesFrom parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
@@ -1664,8 +1012,6 @@ The senders you specify for this parameter are automatically copied to the Rejec
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1680,56 +1026,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFromDLMembers
-!!! Exchange Server 2010
-
-The RejectMessagesFromDLMembers parameter specifies the distribution list members from which to reject messages. You can use any of the following values to specify the recipients:
-
-- DN
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFromDLMembers parameter specifies the distribution list members from which to reject messages. You can use any of the following values to specify the recipients:
-
-- DN
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
@@ -1756,8 +1052,6 @@ The groups you specify for this parameter are automatically copied to the Reject
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all groups.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1772,56 +1066,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFromSendersOrMembers
-!!! Exchange Server 2010
-
-The RejectMessagesFromSendersOrMembers parameter specifies the recipients who aren't allowed to send e-mail messages to this mail-enabled user. You can use any of the following values to specify the recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP e-mail address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFromSendersOrMembers parameter specifies the recipients who aren't allowed to send email messages to this mail-enabled user. You can use any of the following values to specify the recipients:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- DN
-
-- GUID
-
-- Name
-
-- LegacyExchangeDN
-
-- Primary SMTP email address
-
-By default, this parameter is blank, which enables the mail-enabled user to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016
-
 The RejectMessagesFromSendersOrMembers parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are individual senders and groups in your organization. Individual senders are mailboxes, mail users, and mail contacts. Groups are distribution groups, mail-enabled security groups, and dynamic distribution groups. Specifying a group means all members of the group aren't allowed to send messages to this recipient.
@@ -1850,8 +1094,6 @@ The individual senders and groups you specify for this parameter are automatical
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1866,21 +1108,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteRoutingAddress
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that's associated with this mail-enabled user.
-
-You shouldn't have to change the remote routing address if the address was automatically configured by Exchange when the mail-enabled user and its associated mailbox in the service were created.
-
-
-
-!!! Exchange Server 2016
-
 The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that's associated with this mail user.
 
 You shouldn't have to change the remote routing address if the address was automatically configured by Exchange when the mail user and its associated mailbox in the service were created.
-
-
 
 ```yaml
 Type: ProxyAddress
@@ -1896,19 +1126,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemovePicture
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RemovePicture parameter specifies whether to remove the picture that a user has added to a mailbox.
-
-
-
-!!! Exchange Server 2016
-
 The RemovePictureswitch specifies whether to remove the picture from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1924,19 +1144,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveSpokenName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RemoveSpokenName parameter specifies whether to remove the spoken name that a user has added to a mailbox.
-
-
-
-!!! Exchange Server 2016
-
 The RemoveSpokenNameswitch specifies whether to remove the spoken name from the mail user. You don't need to specify a value with this switch.
 
 You can add a picture to a mail user by using the Import-RecipientDataProperty cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1952,14 +1162,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSenderAuthenticationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated recipients. The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
@@ -1967,8 +1169,6 @@ The RequireSenderAuthenticationEnabled parameter specifies whether to accept mes
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
 
 The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1984,21 +1184,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResetPasswordOnNextLogon
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResetPasswordOnNextLogon parameter specifies whether to require the mail-enabled users to change their password the next time they sign in to the cloud-based service. The two possible values for this parameter are $true or $false. If the ResetPasswordOnNextLogon parameter is set to $true, the mail-enabled users are required to change their password the next time they sign in to the cloud-based service.
-
-
-
-!!! Exchange Server 2016
-
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
 
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2014,75 +1204,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-!!! Exchange Server 2010
-
-The SamAccountName parameter specifies the logon name used to support clients and servers running older versions of the operating system, such as Microsoft Windows NT 4.0, Windows 98, Windows 95, and LAN Manager. This attribute must contain fewer than 20 characters. An account name can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- -
-
-- .
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2013
-
-The SamAccountName parameter specifies the logon name used to support clients and servers running older versions of the operating system, such as MicrosoftWindows NT 4.0, Windows 98, Windows 95, and LAN Manager. This attribute must contain fewer than 20 characters. An account name can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- -
-
-- .
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2016
-
 The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
-
-
 
 ```yaml
 Type: String
@@ -2098,30 +1220,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendModerationNotifications
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SendModerationNotifications parameter specifies whether status notifications are sent to users when they send a message to the moderated mail-enabled user. You can use one of the following values:
-
-- Always
-
-- Internal
-
-- Never
-
-If you want notifications to be sent to all senders, set this parameter to Always.
-
-If you want notifications to be sent only to the senders who are internal to your organization, set this parameter to Internal.
-
-To disable all status notifications, set this parameter to Never.
-
-The sender is always notified if the message is rejected by the moderators, regardless of the value of this parameter.
-
-The default value is Never.
-
-
-
-!!! Exchange Server 2016
-
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
@@ -2133,8 +1231,6 @@ The SendModerationNotifications parameter specifies when moderation notification
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
 
 The default value is Never.
-
-
 
 ```yaml
 Type: Never | Internal | Always
@@ -2150,20 +1246,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Type parameter specifies the type for the mailbox in the service. You can use the following values:
-
-- Regular
-
-- Room
-
-- Equipment
-
-
-
-!!! Exchange Server 2016
-
 The Type parameter specifies the type for the mailbox in the service. Valid values are:
 
 - Regular
@@ -2171,8 +1253,6 @@ The Type parameter specifies the type for the mailbox in the service. Valid valu
 - Room
 
 - Equipment
-
-
 
 ```yaml
 Type: Regular | Room | Equipment
@@ -2188,17 +1268,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UserPrincipalName parameter specifies a UPN for the user.
-
-
-
-!!! Exchange Server 2016
-
 The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
-
-
 
 ```yaml
 Type: String
@@ -2230,20 +1300,6 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsEmailAddress
-!!! Exchange Server 2010
-
-The WindowsEmailAddress parameter specifies the Windows e-mail address for this mail-enabled user. This address isn't used by Exchange.
-
-
-
-!!! Exchange Server 2013
-
-The WindowsEmailAddress parameter specifies the Windows email address for this mail-enabled user. This address isn't used by Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
@@ -2251,8 +1307,6 @@ The WindowsEmailAddress parameter specifies the Windows email address for this r
 - In cloud environments or in on-premises environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -2284,14 +1338,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailTip
-!!! Exchange Server 2013
-
-The MailTip parameter specifies the message displayed to senders when they start drafting an email message to this mail-enabled user. The MailTip parameter message must be less than or equal to 250 characters.
-
-
-
-!!! Exchange Server 2016
-
 The MailTip parameter specifies the custom MailTip text for this recipient. The MailTip is shown to senders when they start drafting an email message to this recipient. If the value contains spaces, enclose the value in quotation marks (").
 
 When you add a MailTip to a recipient, two things happen:
@@ -2299,8 +1345,6 @@ When you add a MailTip to a recipient, two things happen:
 - HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
 
 - The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
-
-
 
 ```yaml
 Type: String
@@ -2316,14 +1360,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoverableItemsQuota
-!!! Exchange Server 2013
-
-The RecoverableItemsQuota parameter specifies the size limit for the Recoverable Items folder for a remote mailbox or remote archive mailbox in the cloud-based service.
-
-
-
-!!! Exchange Server 2016
-
 The RecoverableItemsQuota parameter specifies the maximum size for the Recoverable Items folder of the mailbox. If the Recoverable Items folder reaches or exceeds this size, it no longer accepts messages.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 30 gigabytes (32212254720 bytes).
@@ -2344,8 +1380,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The RecoverableItemsQuota value must be greater than or equal to the RecoverableItemsWarningQuota value.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2360,14 +1394,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecoverableItemsWarningQuota
-!!! Exchange Server 2013
-
-The RecoverableItemsWarningQuota parameter specifies the size of the Recoverable Item folder before Exchange sends a warning message to the mailbox owner and logs an event to the application event log.
-
-
-
-!!! Exchange Server 2016
-
 The RecoverableItemsWarningQuota parameter specifies the warning threshold for the size of the Recoverable Items folder for the mailbox. If the Recoverable Items folder reaches or exceeds this size, Exchange logs an event to the application event log.
 
 A valid value is a number up to 1.999999999 terabytes (2199023254528 bytes) or the value unlimited. The default value is 20 gigabytes (21474836480 bytes).
@@ -2387,8 +1413,6 @@ When you enter a number, you can qualify it with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The RecoverableItemsWarningQuota value must be less than or equal to the RecoverableItemsQuota value.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2421,4 +1445,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/20bdcdc4-5a7c-4cef-9e7c-cef17e470efd.aspx)
-
