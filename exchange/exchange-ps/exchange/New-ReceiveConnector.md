@@ -1335,7 +1335,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see https://technet.microsoft.com/en-us/library/17751a60-39fe-433f-84d2-bfc14ff4ba51(v=exchg.160)#PermissionGroups.
+For more information about the default permissions and security principals for permission groups, see https://technet.microsoft.com/library/17751a60-39fe-433f-84d2-bfc14ff4ba51#PermissionGroups.
 
 ```yaml
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
