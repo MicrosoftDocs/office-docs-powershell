@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-MailboxServer
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxServer cmdlet to modify attributes on a computer running Microsoft Exchange with the Mailbox server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-MailboxServer cmdlet to modify the mailbox configuration settings and attributes of an Exchange 2013 Mailbox server.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MailboxServer cmdlet to modify the mailbox configuration settings and attributes of Mailbox servers.
@@ -57,138 +43,83 @@ Set-MailboxServer [-Identity] <MailboxServerIdParameter>
  [-TopNWorkCycle <EnhancedTimeSpan>] [-TopNWorkCycleCheckpoint <EnhancedTimeSpan>]
  [-UMReportingWorkCycle <EnhancedTimeSpan>] [-UMReportingWorkCycleCheckpoint <EnhancedTimeSpan>] [-WhatIf]
  [-AutoDagServerConfigured <$true | $false>] [-CalendarRepairMode <ValidateOnly | RepairAndValidate>]
- [-DarTaskStoreTimeBasedAssistantWorkCycle <EnhancedTimeSpan>]
- [-DarTaskStoreTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-DatabaseCopyActivationDisabledAndMoveNow <$true | $false>] [-DirectoryProcessorWorkCycle <EnhancedTimeSpan>]
- [-DirectoryProcessorWorkCycleCheckpoint <EnhancedTimeSpan>] [-FaultZone <String>]
- [-GroupMailboxWorkCycle <EnhancedTimeSpan>] [-GroupMailboxWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-InferenceDataCollectionWorkCycle <EnhancedTimeSpan>]
- [-InferenceDataCollectionWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-InferenceTrainingWorkCycle <EnhancedTimeSpan>] [-InferenceTrainingWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-JunkEmailOptionsCommitterWorkCycle <EnhancedTimeSpan>]
- [-MailboxAssociationReplicationWorkCycle <EnhancedTimeSpan>]
- [-MailboxAssociationReplicationWorkCycleCheckpoint <EnhancedTimeSpan>]
+ [-DatabaseCopyActivationDisabledAndMoveNow <$true | $false>] [-FaultZone <String>]
  [-MailboxProcessorWorkCycle <EnhancedTimeSpan>] [-MaximumPreferredActiveDatabases <Int32>]
  [-MigrationLogFilePath <LocalLongFullPath>]
  [-MigrationLogLoggingLevel <None | Error | Warning | Information | Verbose | Instrumentation>]
  [-MigrationLogMaxAge <EnhancedTimeSpan>] [-MigrationLogMaxDirectorySize <ByteQuantifiedSize>]
  [-MigrationLogMaxFileSize <ByteQuantifiedSize>] [-OABGeneratorWorkCycle <EnhancedTimeSpan>]
- [-OABGeneratorWorkCycleCheckpoint <EnhancedTimeSpan>] [-PeopleCentricTriageWorkCycle <EnhancedTimeSpan>]
- [-PeopleCentricTriageWorkCycleCheckpoint <EnhancedTimeSpan>] [-PeopleRelevanceWorkCycle <EnhancedTimeSpan>]
- [-PeopleRelevanceWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-ProbeTimeBasedAssistantWorkCycle <EnhancedTimeSpan>]
- [-ProbeTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>] [-PublicFolderWorkCycle <EnhancedTimeSpan>]
+ [-OABGeneratorWorkCycleCheckpoint <EnhancedTimeSpan>] [-PublicFolderWorkCycle <EnhancedTimeSpan>]
  [-PublicFolderWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-SearchIndexRepairTimeBasedAssistantWorkCycle <EnhancedTimeSpan>]
- [-SearchIndexRepairTimeBasedAssistantWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-SharePointSignalStoreWorkCycle <EnhancedTimeSpan>]
- [-SharePointSignalStoreWorkCycleCheckpoint <EnhancedTimeSpan>] [-SiteMailboxWorkCycle <EnhancedTimeSpan>]
- [-SiteMailboxWorkCycleCheckpoint <EnhancedTimeSpan>] [-StoreDsMaintenanceWorkCycle <EnhancedTimeSpan>]
- [-StoreDsMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>] [-StoreIntegrityCheckWorkCycle <EnhancedTimeSpan>]
- [-StoreIntegrityCheckWorkCycleCheckpoint <EnhancedTimeSpan>] [-StoreMaintenanceWorkCycle <EnhancedTimeSpan>]
- [-StoreMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-StoreScheduledIntegrityCheckWorkCycle <EnhancedTimeSpan>]
- [-StoreScheduledIntegrityCheckWorkCycleCheckpoint <EnhancedTimeSpan>]
- [-StoreUrgentMaintenanceWorkCycle <EnhancedTimeSpan>]
+ [-SiteMailboxWorkCycleCheckpoint <EnhancedTimeSpan>] [-StoreUrgentMaintenanceWorkCycle <EnhancedTimeSpan>]
  [-StoreUrgentMaintenanceWorkCycleCheckpoint <EnhancedTimeSpan>] [-WacDiscoveryEndpoint <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox server configuration" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Server Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxServer -Identity Server1 -SubmissionServerOverrideList HubServer01,HubServer02,HubServer03
-```
-
-This example sets the server override list to HubServer01, HubServer02, and HubServer03.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-MailboxServer -Identity MBX02 -CalendarRepairWorkCycle 7.00:00:00 -CalendarRepairWorkCycleCheckpoint 7.00:00:00
 ```
 
-This example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-MailboxServer -Identity MBX01 -CalendarRepairIntervalEndWindow 40 -CalendarRepairLogDirectorySizeLimit 750MB -CalendarRepairLogFileAgeLimit 15.00:00:00 -CalendarRepairLogPath "D:\Exchange Logs\Calendar Repair Assistant"
 ```
 
 This example changes some of the default settings of the Calendar Repair Assistant on the server named MBX01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-MailboxServer -Identity MBX02 -CalendarRepairWorkCycle 7.00:00:00 -CalendarRepairWorkCycleCheckpoint 7.00:00:00
 ```
 
-This example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Calendar Repair Assistant to detect and repair calendar inconsistencies for the Mailbox server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Set-MailboxServer -Identity MBX02 -ManagedFolderWorkCycle 10.00:00:00 -ManagedFolderWorkCycleCheckpoint 10.00:00:00
 ```
 
-This example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Set-MailboxServer -Identity MBX02 -ManagedFolderWorkCycle 10.00:00:00 -ManagedFolderWorkCycleCheckpoint 10.00:00:00
 ```
 
-This example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Managed Folder Assistant, which applies message retention settings to all mailboxes for the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 6
 ```
 Set-MailboxServer -Identity MBX02 -SharingPolicyWorkCycle 7.00:00:00 -SharingPolicyWorkCycleCheckpoint 7.00:00:00 -SharingSyncWorkCycle 7.00:00:00 -SharingSyncWorkCycleCheckpoint 7.00:00:00
 ```
 
-This example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2013, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 7
 ```
 Set-MailboxServer -Identity MBX02 -SharingPolicyWorkCycle 7.00:00:00 -SharingPolicyWorkCycleCheckpoint 7.00:00:00 -SharingSyncWorkCycle 7.00:00:00 -SharingSyncWorkCycleCheckpoint 7.00:00:00
 ```
 
-This example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the Sharing Policy and Sharing Sync Assistants to apply sharing policies, sync shared calendars, and free/busy information for the mailboxes on server MBX02 in a 7-day period. During that 7-day period, all mailboxes will be scanned, and at the end of the period, the process will start over.
 
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 8
 ```
 Set-MailboxServer -Identity MBX02 -TopNWorkCycle 10.00:00:00 -TopNWorkCycleCheckpoint 10.00:00:00 -UMReportingWorkCycle 10.00:00:00 -UMReportingWorkCycleCheckpoint 10.00:00:00
 ```
 
-This example throttles the TopN Words Assistant and the Unified Messaging Reporting Assistant for mailboxes that reside on the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes that have Unified Messaging enabled will be scanned, and at the end of the period, the process will start over.
+In Exchange 2010, this example throttles the TopN Words Assistant and the Unified Messaging Reporting Assistant for mailboxes that reside on the Mailbox server MBX02 in a 10-day period. During that 10-day period, all mailboxes that have Unified Messaging enabled will be scanned, and at the end of the period, the process will start over.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the Mailbox server. You can use the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Name of a Mailbox server
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the Mailbox server that you want to modify. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -196,8 +127,6 @@ The Identity parameter specifies the Mailbox server that you want to modify. You
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -213,36 +142,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDatabaseMountDial
-!!! Exchange Server 2010
-
-The AutoDatabaseMountDial parameter specifies the automatic database mount behavior for a continuous replication environment after a database failover. You can use the following values:
-
-- BestAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
-- GoodAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to six. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than six, the database doesn't automatically mount. When the copy queue length is less than or equal to six, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
-- Lossless If you specify this value, the database doesn't automatically mount until all logs that were generated on the active copy have been copied to the passive copy. This setting also causes Active Manager's best copy selection algorithm to sort potential candidates for activation based on the database copy's activation preference value and not its copy queue length.
-
-The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the transport dumpster feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in the transport dumpster queue.
-
-
-
-!!! Exchange Server 2013
-
-The AutoDatabaseMountDial parameter specifies the automatic database mount behavior for a continuous replication environment after a database failover on the Mailbox server. You can use the following values:
-
-- BestAvailability The database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
-- GoodAvailability The database automatically mounts immediately after a failover if the copy queue length is less than or equal to six. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than six, the database doesn't automatically mount. When the copy queue length is less than or equal to six, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
-
-- Lossless The database doesn't automatically mount until all logs that were generated on the active copy have been copied to the passive copy. This setting also causes Active Manager's best copy selection algorithm to sort potential candidates for activation based on the database copy's activation preference value and not its copy queue length.
-
-The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
-
-
-
-!!! Exchange Server 2016
-
 The AutoDatabaseMountDial parameter specifies the automatic database mount behavior for a continuous replication environment after a database failover on the Mailbox server. You can use the following values:
 
 - BestAvailability: The database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and mounts the database.
@@ -252,8 +151,6 @@ The AutoDatabaseMountDial parameter specifies the automatic database mount behav
 - Lossless: The database doesn't automatically mount until all logs that were generated on the active copy have been copied to the passive copy. This setting also causes Active Manager's best copy selection algorithm to sort potential candidates for activation based on the database copy's activation preference value and not its copy queue length.
 
 The default value is GoodAvailability. If you specify either BestAvailability or GoodAvailability, and all of the logs from the active copy haven't been replicated to the passive copy, you may lose some mailbox data. However, the Safety Net feature, (which is enabled by default) helps protect against data loss by resubmitting messages that are in Safety Net.
-
-
 
 ```yaml
 Type: Lossless | GoodAvailability | BestAvailability
@@ -269,17 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairIntervalEndWindow
-!!! Exchange Server 2010
-
-The CalendarRepairIntervalEndWindow parameter specifies the number of days into the future to repair calendars. For example, if this parameter is set to 90, the Calendar Repair Assistant repairs calendars on this Mailbox server 90 days from now. The default value is 30 days.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CalendarRepairIntervalEndWindow parameter specifies the number of days into the future to repair calendar items in mailboxes on the Mailbox server. The default value is 30. This means the Calendar Repair Assistant repairs meetings in calendars up to 30 days from now. Meetings that are scheduled to occur more than 30 days in the future aren't repaired.
-
-
 
 ```yaml
 Type: Int32
@@ -295,58 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogDirectorySizeLimit
-!!! Exchange Server 2010
-
-The CalendarRepairLogDirectorySizeLimit parameter specifies the size limit for all log files for the Calendar Repair Assistant. After the limit is reached, the oldest files are deleted.
-
-The maximum size of the calendar repair log directory is calculated as the total size of all log files that have the same name prefix. Other files that don't follow the name prefix convention aren't counted in the total directory size calculation. Renaming old log files or copying other files into the calendar repair log directory could cause the directory to exceed its specified maximum size.
-
-Calendar repair log files for the Mailbox server role have names that begin with prefix CRA.
-
-The default value is unlimited. However, the maximum unit size that you can enter for this value is 2 GB (gigabytes).
-
-When you enter a value, qualify the value by using one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes.
-
-
-
-!!! Exchange Server 2013
-
-The CalendarRepairLogDirectorySizeLimit parameter specifies the maximum size of calendar repair log directory on the Mailbox server. When the directory reaches its maximum size, the server deletes the oldest log files first.
-
-Calendar repair log files begin with the name prefix CRA. The maximum size of the calendar repair log directory is calculated as the total size of all log files that have the CRA name prefix. Other files aren't counted in the total directory size calculation. Renaming old log files or copying other files into the calendar repair log directory could cause the directory to exceed its specified maximum size.
-
-The default value is 500 megabytes (MB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-If you enter the value unlimited, no size limit is imposed on the calendar repair log directory.
-
-
-
-!!! Exchange Server 2016
-
 The CalendarRepairLogDirectorySizeLimit parameter specifies the maximum size of calendar repair log directory on the Mailbox server. When the directory reaches its maximum size, the server deletes the oldest log files first.
 
 Calendar repair log files begin with the name prefix CRA. The maximum size of the calendar repair log directory is calculated as the total size of all log files that have the CRA name prefix. Other files aren't counted in the total directory size calculation. Renaming old log files or copying other files into the calendar repair log directory could cause the directory to exceed its specified maximum size.
@@ -369,8 +204,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 If you enter the value unlimited, no size limit is imposed on the calendar repair log directory.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -385,16 +218,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogEnabled
-!!! Exchange Server 2010
-
-The CalendarRepairLogEnabled parameter specifies whether the Calendar Repair Attendant logs items that it repairs. The repair log doesn't contain failed repair attempts.
-
-The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CalendarRepairLogEnabled parameter specifies whether the Calendar Repair Attendant logs items that it repairs on the Mailbox server. The repair log doesn't contain failed repair attempts.
 
 Valid input for this parameter is $true or $false. The default value is $true.
@@ -408,8 +231,6 @@ The value of this parameter affects the following parameters:
 - CalendarRepairLogPath
 
 - CalendarRepairLogSubjectLoggingEnabled
-
-
 
 ```yaml
 Type: $true | $false
@@ -425,35 +246,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogFileAgeLimit
-!!! Exchange Server 2010
-
-The CalendarRepairLogFileAgeLimit parameter specifies how long to retain calendar repair logs. Log files that exceed the maximum retention period are deleted.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify a 30-day interval, enter 30.00:00:00. The default value is 00.00:00:00, which specifies that there's no limit on file retention (and not that files are overwritten immediately).
-
-
-
-!!! Exchange Server 2013
-
-The CalendarRepairLogFileAgeLimit parameter specifies the calendar repair log maximum file age on the Mailbox server. Log files older than the specified value are deleted. The default value is 10 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 30 days, enter 30.00:00:00. The value 00:00:00 prevents the automatic removal of calendar repair log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The CalendarRepairLogFileAgeLimit parameter specifies the calendar repair log maximum file age on the Mailbox server. Log files older than the specified value are deleted. The default value is 10 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 30 days, enter 30.00:00:00. The value 00:00:00 prevents the automatic removal of calendar repair log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -469,17 +266,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogPath
-!!! Exchange Server 2010
-
-The CalendarRepairLogPath parameter specifies the path to the directory that stores the calendar repair log files. The default value is \<Exchange installation path\>v14\\Logging\\Calendar Repair Assistant.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CalendarRepairLogPath parameter specifies the location of the calendar repair log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\Calendar Repair Assistant.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -495,17 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairLogSubjectLoggingEnabled
-!!! Exchange Server 2010
-
-The CalendarRepairLogSubjectLoggingEnabled parameter specifies that the subject of the repaired calendar item is logged in the calendar repair log. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CalendarRepairLogSubjectLoggingEnabled parameter specifies whether to include the subject of repaired calendar items in the calendar repair log on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -521,23 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairMissingItemFixDisabled
-!!! Exchange Server 2010
-
-The CalendarRepairMissingItemFixDisabled parameter specifies that the Calendar Repair Assistant won't fix missing attendee calendar items for mailboxes homed on this Mailbox server. The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant won't fix missing calendar items in mailboxes on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The CalendarRepairMissingItemFixDisabled parameter specifies whether the Calendar Repair Assistant won't fix missing calendar items in mailboxes on the Mailbox server.Valid input for this parameter is $true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -589,18 +350,6 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairWorkCycle
-!!! Exchange Server 2010
-
-The CalendarRepairWorkCycle parameter specifies the time span in which all mailboxes on the specified server will be scanned by the Calendar Repair Assistant. Calendars that have inconsistencies will be flagged and repaired according to the interval specified by the CalendarRepairWorkCycleCheckpoint parameter.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The Calendar Repair Assistant will process all mailboxes on this server every 7 days.
-
-
-
-!!! Exchange Server 2013
-
 The CalendarRepairWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Calendar Repair Assistant. The default value is 1 day.
 
 Calendars that have inconsistencies will be flagged and repaired according to the interval specified by the CalendarRepairWorkCycleCheckpoint parameter.
@@ -608,8 +357,6 @@ Calendars that have inconsistencies will be flagged and repaired according to th
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -625,25 +372,11 @@ Accept wildcard characters: False
 ```
 
 ### -CalendarRepairWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The CalendarRepairWorkCycleCheckpoint parameter specifies the time span at which all mailboxes will be identified as needing work completed on them.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 1 day for this parameter, use 1.00:00:00. The Calendar Repair Assistant will process all mailboxes on this server every day.
-
-
-
-!!! Exchange Server 2013
-
 The CalendarRepairWorkCycleCheckpoint parameter specifies the time span at which all mailboxes on the Mailbox server will be identified as needing work completed on them. The default value is 1 day.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Calendar Repair Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -679,32 +412,6 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseCopyAutoActivationPolicy
-!!! Exchange Server 2010
-
-The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the selected Mailbox servers. Values for this parameter are:
-
-- Blocked Databases can't be automatically activated on the selected Mailbox servers.
-
-- IntrasiteOnlyThe database copy is allowed to be activated on servers in the same Active Directory site. This prevents cross-site failover or activation. This property is for incoming mailbox database copies (for example, a passive copy being made an active copy). Databases can't be activated on this Mailbox server for database copies that are active in another Active Directory site.
-
-- Unrestricted There are no special restrictions on activating mailbox database copies on the selected Mailbox servers.
-
-
-
-!!! Exchange Server 2013
-
-The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the specified Mailbox server. Valid values for this parameter are:
-
-- Blocked: Databases can't be automatically activated on the specified Mailbox server. In Exchange 2013 prior to Cumulative Update 7 (CU7), this setting stops server locator requests to the specified server, which prevents all client access to manually activated databases on the server if all DAG members are configured with a value of Blocked. In Exchange 2013 CU7 or later versions of Exchange, server locator requests are sent to a blocked server if no other Mailbox servers are available, thus client access is not impacted.
-
-- IntrasiteOnly The database copy is allowed to be activated only on Mailbox servers in the same Active Directory site. This prevents cross-site failover and activation.
-
-- Unrestricted There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This is the default value.
-
-
-
-!!! Exchange Server 2016
-
 The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic activation available for mailbox database copies on the specified Mailbox server. Valid values for this parameter are:
 
 - Blocked: Databases can't be automatically activated on the specified Mailbox server. In Exchange 2013 prior to Cumulative Update 7 (CU7), this setting stops server locator requests to the specified server, which prevents all client access to manually activated databases on the server if all DAG members are configured with a value of Blocked. In Exchange 2013 CU7 or later versions of Exchange, server locator requests are sent to a blocked server if no other Mailbox servers are available, thus client access is not impacted.
@@ -712,8 +419,6 @@ The DatabaseCopyAutoActivationPolicy parameter specifies the type of automatic a
 - IntrasiteOnly: The database copy is allowed to be activated only on Mailbox servers in the same Active Directory site. This prevents cross-site failover and activation.
 
 - Unrestricted: There are no special restrictions on activating mailbox database copies on the specified Mailbox server. This is the default value.
-
-
 
 ```yaml
 Type: Unrestricted | IntrasiteOnly | Blocked
@@ -745,40 +450,6 @@ Accept wildcard characters: False
 ```
 
 ### -FolderLogForManagedFoldersEnabled
-!!! Exchange Server 2010
-
-The FolderLogForManagedFoldersEnabled parameter specifies whether the folder log for managed folders is enabled for messages that were moved to managed folders. The two possible values for this parameter are $true or $false. If you specify $true, information about folders that have managed folder mailbox policies applied to them is logged.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The FolderLogForManagedFoldersEnabled parameter specifies whether managed folder logging is enabled on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $false.
-
-If you specify $true, managed folder logging is enabled. Message activity in folders that have managed folder mailbox policies applied to them is logged.
-
-The value of this parameter affects the following parameters:
-
-- JournalingLogForManagedFoldersEnabled
-
-- LogDirectorySizeLimitForManagedFolders
-
-- LogFileAgeLimitForManagedFolders
-
-- LogFileSizeLimitForManagedFolders
-
-- LogPathForManagedFolders
-
-- RetentionLogForManagedFoldersEnabled
-
-- SubjectLogForManagedFoldersEnabled
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The FolderLogForManagedFoldersEnabled parameter specifies whether managed folder logging is enabled on the Mailbox server. Valid input for this parameter is$true or $false. The default value is $false.
@@ -801,8 +472,6 @@ The value of this parameter affects the following parameters:
 
 - SubjectLogForManagedFoldersEnabled
 
-
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -817,21 +486,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceGroupMetricsGeneration
-!!! Exchange Server 2010
-
-The ForceGroupMetrics parameter specifies that group metrics information must be generated on the Mailbox server regardless of whether that server generates an offline address book (OAB). By default, group metrics are generated only on servers that generate OABs. Group metrics information is used by MailTips to inform senders of how many recipients their messages will be sent to. You need to use this parameter if your organization doesn't generate OABs and you want the group metrics data to be available.
-
-For more information, see Understanding Group Metrics.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ForceGroupMetricsGeneration parameter specifies that group metrics information must be generated on the Mailbox server regardless of whether that server generates an offline address book (OAB). Valid input for this parameter is $true or $false. The default value is $false.
 
 By default, group metrics are generated only on servers that generate OABs. Group metrics information is used by MailTips to inform senders about how many recipients their messages will be sent to. You need to set this parameter to $true if your organization doesn't generate OABs and you want the group metrics data to be available.
-
-
 
 ```yaml
 Type: $true | $false
@@ -885,7 +542,7 @@ Accept wildcard characters: False
 ### -IrmLogMaxAge
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 Setting the value of the IrmLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
 
@@ -979,27 +636,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsExcludedFromProvisioning
-!!! Exchange Server 2010
-
-The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. If the IsExcludedFromProvisioning parameter is set to $true, the server won't be used for provisioning a new OAB or for moving existing OABs.
-
-
-
-!!! Exchange Server 2013
-
-The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. Valid input for this parameter is $true or $false. The default value is $false.
-
-If you specify $true, the server won't be used for provisioning a new OAB or for moving existing OABs.
-
-
-
-!!! Exchange Server 2016
-
 The IsExcludedFromProvisioning parameter specifies that the Mailbox server isn't considered by the OAB provisioning load balancer. Valid input for this parameter is $true or $false. The default value is $false.
 
 If you specify$true, the server won't be used for provisioning a new OAB or for moving existing OABs.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1015,29 +654,9 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingLogForManagedFoldersEnabled
-!!! Exchange Server 2010
-
-The JournalingLogForManagedFoldersEnabled parameter specifies whether the log for managed folders is enabled for journaling. The two possible values for this parameter are $true or $false. If you specify $true, information about messages that were journaled is logged. The logs are located at the location you specify with the LogPathForManagedFolders parameter.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The JournalingLogForManagedFoldersEnabled parameter specifies whether journaling activity is recorded in the managed folder log on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $false.
-
-If you specify $true, information about messages that were journaled in managed folders is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
-
-
-
-!!! Exchange Server 2016
-
 The JournalingLogForManagedFoldersEnabled parameter specifies whether journaling activity is recorded in the managed folder log on the Mailbox server.Valid input for this parameter is$true or $false. The default value is $false.
 
 If you specify $true, information about messages that were journaled in managed folders is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1053,22 +672,6 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-!!! Exchange Server 2010
-
-The Locale parameter specifies the locale. A locale is a collection of language-related user preferences such as writing system, calendar, and date format. The following are examples:
-
-- en-US (English - United States)
-
-- de-AT (German - Austria)
-
-- es-CL (Spanish - Chile)
-
-For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkid=68806).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Locale parameter specifies the locale of the Mailbox server. A locale is a collection of language-related user preferences such as writing system, calendar, and date format. The following are examples:
 
 - en-US (English - United States)
@@ -1082,8 +685,6 @@ For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1099,56 +700,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogDirectorySizeLimitForManagedFolders
-!!! Exchange Server 2010
-
-The LogDirectorySizeLimitForManagedFolders parameter specifies the size limit for all managed folder log files from a single message database. After the limit is reached for a set of managed folder log files from a message database, the oldest files are deleted to make space for new files.
-
-The size of the managed folder log files is calculated as the total size of all log files that have the same name prefix. For example, for a file with the name Managed\_Folder\_Assistant[Mailbox Database 01]20061018-1.log, the prefix is Managed\_Folder\_Assistant[Mailbox Database 01]. If you rename log files or copy other files into the managed folder log directory, these files aren't counted in the log files size calculation. The managed folder log files for each message database have a unique name prefix. Therefore, this limit applies to the log files for each message database, and not to all the log files in the directory. If you have more than one message database, the maximum size of the managed folder log directory isn't the size specified in the LogDirectorySizeLimitForManagedFolders parameter because the managed folder log files generated by different databases have different name prefixes. The maximum size of the managed folder log directory is X times the specified value if you have X message databases.
-
-You must specify either an integer or unlimited. The default value is unlimited. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The LogDirectorySizeLimitForManagedFolders parameter specifies the maximum size of all managed folder logs from a single mailbox database in the managed folder log directory on the Mailbox server. When a set of log files reaches its maximum size, the server deletes the oldest log files first.
-
-Every mailbox database on the server uses a different log file name prefix (for example, Managed\_Folder\_Assistant[Mailbox database name]). Therefore, the maximum size of the managed folder log directory is the number of mailbox databases multiplied by the value of the LogDirectorySizeLimitForManagedFolders parameter. Other files aren't counted in the total size calculation. Renaming old log files or copying other files into the managed folder log directory could cause the directory to exceed its specified maximum size.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The default value is unlimited, which means no size limit is imposed on the managed folder log directory.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The LogDirectorySizeLimitForManagedFolders parameter specifies the maximum size of all managed folder logs from a single mailbox database in the managed folder log directory on the Mailbox server. When a set of log files reaches its maximum size, the server deletes the oldest log files first.
@@ -1170,8 +721,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The default value is unlimited, which means no size limit is imposed on the managed folder log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1187,30 +736,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogFileAgeLimitForManagedFolders
-!!! Exchange Server 2010
-
-The LogFileAgeLimitForManagedFolders parameter specifies how long to retain managed folder logs. Log files that exceed the maximum retention period are deleted.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify a 30-day interval, enter 30.00:00:00. The default value is 00.00:00:00, which specifies that there's no limit on file retention (and not that files are overwritten immediately).
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The LogFileAgeLimitForManagedFolders parameter specifies how long to retain managed folder logs on the Mailbox server. Log files older than the specified value are deleted.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify a 30 days, enter 30.00:00:00. The default value is 00:00:00, which prevents the automatic removal of managed folder log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The LogFileAgeLimitForManagedFolders parameter specifies how long to retain managed folder logs on the Mailbox server. Log files older than the specified value are deleted.
@@ -1218,8 +743,6 @@ The LogFileAgeLimitForManagedFolders parameter specifies how long to retain mana
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify a 30 days, enter 30.00:00:00. The default value is 00:00:00, which prevents the automatic removal of managed folder log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1235,50 +758,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogFileSizeLimitForManagedFolders
-!!! Exchange Server 2010
-
-The LogFileSizeLimtiForManagedFolders parameter specifies the maximum size for each managed folder log file. When the log file size limit is reached, a new log file is created. The default value is 10 megabytes (MB). When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The LogFileSizeLimitForManagedFolders parameter specifies the maximum size for each managed folder log file on the Mailbox server. When a log file reaches its maximum size, a new log file is created. The default value is 10 megabytes (MB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-If you enter the value unlimited, no size limit is imposed on a managed folder log file.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The LogFileSizeLimitForManagedFolders parameter specifies the maximum size for each managed folder log file on the Mailbox server. When a log file reaches its maximum size, a new log file is created. The default value is 10 megabytes (MB).
@@ -1299,8 +778,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 If you enter the value unlimited, no size limit is imposed on a managed folder log file.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -1315,27 +792,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogPathForManagedFolders
-!!! Exchange Server 2010
-
-The LogPathForManagedFolders parameter specifies the path to the directory that stores the managed folder log files. The default value is \<Exchange installation path\>v14\\Logging\\Managed Folder Assistant.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The LogPathForManagedFolders parameter specifies the location of the managed folder log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\ Managed Folder Assistant.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The LogPathForManagedFolders parameter specifies the location of the managed folder log files on the Mailbox server. The default value is %ExchangeInstallPath%Logging\\ Managed Folder Assistant.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -1351,34 +810,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderAssistantSchedule
-!!! Exchange Server 2010
-
-The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
-
-- Full name of the day
-
-- Abbreviated name of the day
-
-- Integer from 0 through 6, where 0 = Sunday
-
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
-
-The following are examples:
-
-- "Sun.11:30 PM-Mon.1:30 AM"
-
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday at 10:15 PM.)
-
-- "Monday.4:30 AM-Monday.5:30 AM","Wednesday.4:30 AM-Wednesday.5:30 AM" (The assistant will run on Monday and Wednesday mornings from 4:30 until 5:30.)
-
-- "Sun.1:15 AM-Monday.23:00"
-
-If the managed folder assistant doesn't finish processing the mailboxes on the server during the time that you've scheduled, it automatically resumes processing where it left off the next time it runs.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ManagedFolderAssistantSchedule parameter specifies the intervals each week during which the Managed Folder Assistant applies messaging records management (MRM) settings to managed folders in mailboxes on the Mailbox server. The interval format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
 
 - Full name of the day
@@ -1401,8 +832,6 @@ The following are examples:
 
 If the Managed Folder Assistant doesn't finish processing the mailboxes on the server during the time that you've scheduled, it automatically resumes processing where it left off the next time it runs.
 
-
-
 ```yaml
 Type: ScheduleInterval[]
 Parameter Sets: (All)
@@ -1417,27 +846,13 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderWorkCycle
-!!! Exchange Server 2010
-
-The ManagedFolderWorkCycle parameter specifies the time span in which all mailboxes on the specified server will be processed by the Managed Folder Assistant. The Managed Folder Assistant applies retention policies according to the ManagedFolderWorkCycleCheckpoint interval.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The Managed Folder Assistant will process all mailboxes on this server every 7 days.
-
-
-
-!!! Exchange Server 2013
-
 The ManagedFolderWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be processed by the Managed Folder Assistant. The default value is 1 day.
 
 The Managed Folder Assistant applies retention policies according to the ManagedFolderWorkCycleCheckpoint interval.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Managed Folder Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1453,27 +868,13 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The ManagedFolderWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes so that new mailboxes that have been created or moved will be part of the work queue. Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 24 hours for this parameter, use 24:00:00.
-
-
-
-!!! Exchange Server 2013
-
 The ManagedFolderWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
 Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1489,23 +890,7 @@ Accept wildcard characters: False
 ```
 
 ### -MAPIEncryptionRequired
-!!! Exchange Server 2010
-
-The MAPIEncryptionRequired parameter specifies whether Exchange blocks MAPI clients that don't use encrypted remote procedure calls (RPCs). The two possible values for this parameter are $true or $false.
-
-
-
-!!! Exchange Server 2013
-
-The MAPIEncryptionRequired parameter specifies whether Exchange blocks MAPI client connections to the Mailbox server that don't use encrypted remote procedure calls (RPCs). Valid input for this parameter is $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The MAPIEncryptionRequired parameter specifies whether Exchange blocks MAPI client connections to the Mailbox server that don't use encrypted remote procedure calls (RPCs). Valid input for this parameter is$true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1521,23 +906,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumActiveDatabases
-!!! Exchange Server 2010
-
-The MaximumActiveDatabases parameter specifies the number of databases that can be mounted on this Mailbox server. This parameter accepts numeric values.
-
-When the maximum number is reached, the database copies on the server won't be activated if a failover or switchover occurs. If the copies are already active on a server, the server won't allow databases to be mounted.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The MaximumActiveDatabases parameter specifies the maximum number of databases that can be mounted on the Mailbox server.
 
 When the maximum number is reached, the database copies on the server won't be activated if a failover or switchover occurs. If the copies are already active on a server, the Information Store on the server won't allow databases to be mounted.
 
 The default value is blank ($null), which means no maximum value is configured.
-
-
 
 ```yaml
 Type: Int32
@@ -1571,7 +944,7 @@ Accept wildcard characters: False
 ### -MessageTrackingLogMaxAge
 The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 The valid input range for this parameter is 00:00:00 to 24855.03:14:07. Setting the value of the MessageTrackingLogMaxAge parameter to 00:00:00 prevents the automatic removal of message tracking log files because of their age.
 
@@ -1683,31 +1056,11 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionLogForManagedFoldersEnabled
-!!! Exchange Server 2010
-
-The RetentionLogForManagedFoldersEnabled parameter specifies whether the Managed Folder Assistant logs information about messages that have reached their retention limits. The two possible values for this parameter are $true or $false. If you specify $true, information about messages that have been processed because they have reached their retention limits is logged.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The RetentionLogForManagedFoldersEnabled parameter specifies whether retention policy activity is recorded in the managed folder log on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $false.
-
-If you specify $true, information about messages in managed folders that have been processed because they have reached their retention limits is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The RetentionLogForManagedFoldersEnabled parameter specifies whether retention policy activity is recorded in the managed folder log on the Mailbox server. Valid input for this parameter is$true or $false. The default value is $false.
 
 If you specify $true, information about messages in managed folders that have been processed because they have reached their retention limits is logged. The managed folder log directory is specified by the LogPathForManagedFolders parameter.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1723,28 +1076,6 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicySchedule
-!!! Exchange Server 2010
-
-The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
-
-- Full name of the day
-
-- Abbreviated name of the day
-
-- Integer from 0 through 6, where 0 = Sunday
-
-The start time and end time must be at least 15 minutes apart. Minutes are rounded down to 0, 15, 30, or 45. If you specify more than one interval, there must be at least 15 minutes between each interval.
-
-The following are examples:
-
-- "Sun.11:30 PM-Mon.1:30 AM"
-
-- 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday 10:15 PM.)
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The SharingPolicySchedule parameter specifies the intervals each week during which the sharing policy runs on the Mailbox server. The Sharing Policy Assistant checks permissions on shared calendar items and contact folders in users' mailboxes against the assigned sharing policy. The assistant lowers or removes permissions according to the policy. The format is StartDay.Time-EndDay.Time. You can use the following values for the start and end days:
 
 - Full name of the day
@@ -1761,8 +1092,6 @@ The following are examples:
 
 - 6.22:00-6.22:15 (The assistant will run from Saturday at 10:00 PM until Saturday 10:15 PM.)
 
-
-
 ```yaml
 Type: ScheduleInterval[]
 Parameter Sets: (All)
@@ -1777,27 +1106,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicyWorkCycle
-!!! Exchange Server 2010
-
-The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the specified server will be scanned by the Sharing Policy Assistant. The Sharing Policy Assistant scans all mailboxes and enables or disables sharing polices according to the interval specified by the SharingPolicyWorkCycleCheckpoint parameter.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The Sharing Policy Assistant will process all mailboxes on this server every 7 days.
-
-
-
-!!! Exchange Server 2013
-
 The SharingPolicyWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be scanned by the Sharing Policy Assistant. The default value is 1 day.
 
 The Sharing Policy Assistant scans all mailboxes and enables or disables sharing polices according to the interval specified by the SharingPolicyWorkCycle.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1813,27 +1128,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharingPolicyWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The SharingPolicyWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes so that new mailboxes that have been created or moved will be part of the work queue. Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 1 day for this parameter, use 1.00:00:00. The Sharing Policy Assistant will process all mailboxes on this server every day.
-
-
-
-!!! Exchange Server 2013
-
 The SharingPolicyWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
 Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Sharing Policy Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1849,27 +1150,13 @@ Accept wildcard characters: False
 ```
 
 ### -SharingSyncWorkCycle
-!!! Exchange Server 2010
-
-The SharingSyncWorkCycle parameter specifies the time span in which all mailboxes on the specified server will be synced to the cloud-based service by the Sharing Sync Assistant. Mailboxes that require syncing will be synced according to the interval specified by the SharingSyncWorkCycleCheckpoint parameter.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The Sharing Sync Assistant will process all mailboxes on this server every 7 days.
-
-
-
-!!! Exchange Server 2013
-
 The SharingSyncWorkCycle parameter specifies the time span in which all mailboxes on the Mailbox server will be synced to the cloud-based service by the Sharing Sync Assistant. The default value is 3 hours.
 
 Mailboxes that require syncing will be synced according to the interval specified by the SharingSyncWorkCycleCheckpoint parameter.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant will then process all mailboxes on this server every 8 hours.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1885,18 +1172,6 @@ Accept wildcard characters: False
 ```
 
 ### -SharingSyncWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The SharingSyncWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes so that new mailboxes that have been created or moved will be part of the work queue. Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 1 day for this parameter, use 1.00:00:00. The Sharing Sync Assistant will process all mailboxes on this server every day.
-
-
-
-!!! Exchange Server 2013
-
 The SharingSyncWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 3 hours.
 
 Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
@@ -1904,8 +1179,6 @@ Also, as mailboxes are prioritized, existing mailboxes that haven't been success
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
 For example, to specify 8 hours for this parameter, use 08:00:00. The Sharing Sync Assistant will then process all mailboxes on this server every 8 hours.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1921,31 +1194,11 @@ Accept wildcard characters: False
 ```
 
 ### -SubjectLogForManagedFoldersEnabled
-!!! Exchange Server 2010
-
-The SubjectLogForManagedFoldersEnabled parameter specifies whether the subject of messages is displayed in managed folder logs. The two possible values for this parameter are $true or $false. If you specify $false, the subject of messages is blank in the managed folder logs. The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is used for coexistence with Exchange 2007 and Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
-
-The SubjectLogForManagedFoldersEnabled parameter specifies whether to include the subject of messages in the managed folder logs on the Mailbox server. Valid input for this parameter is $true or $false. The default value is $false.
-
-By default, the subject of messages is blank in the managed folder log.
-
-
-
-!!! Exchange Server 2016
-
 This parameter is used for coexistence with Exchange 2010. Specifically, this parameter works with messaging records management (MRM) 1.0 (managed folders). This parameter doesn't work with MRM 2.0 (retention policies) that were introduced in Exchange 2010 Service Pack 1 (SP1).
 
 The SubjectLogForManagedFoldersEnabled parameter specifies whether to include the subject of messages in the managed folder logs on the Mailbox server. Valid input for this parameter is$true or $false. The default value is $false.
 
 By default, the subject of messages is blank in the managed folder log.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1961,17 +1214,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubmissionServerOverrideList
-!!! Exchange Server 2010
-
-The SubmissionServerOverrideList parameter specifies a static list of Hub Transport servers (which exist in the same Active Directory site as the Mailbox server) that the Mailbox server notifies when messages are ready for retrieval from a sender's outbox. This list overrides the list of dynamically discovered Hub Transport servers and can be used temporarily when you're troubleshooting a Hub Transport server and don't want it to receive mail submission notifications, or can be used to override the automatic load-balancing of notifications among all Hub Transport servers in the same Active Directory site as the Mailbox server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1987,27 +1230,13 @@ Accept wildcard characters: False
 ```
 
 ### -TopNWorkCycle
-!!! Exchange Server 2010
-
-The TopNWorkCycle parameter specifies the time span in which all mailboxes that have Unified Messaging on the specified server will be scanned by the TopN Words Assistant. The TopN Words Assistant scans voice mail for the most frequently used words to aid in transcription. The most common words are then indexed according to the interval specified by the TopNWorkCycleCheckpoint parameter.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The TopN Words Assistant will process all mailboxes on which Unified Messaging is enabled on this server every 7 days.
-
-
-
-!!! Exchange Server 2013
-
 The TopNWorkCycle parameter specifies the time span in which all mailboxes that have Unified Messaging on the Mailbox server will be scanned by the TopN Words Assistant. The default value is 7 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 The TopN Words Assistant scans voice mail for the most frequently used words to aid in transcription. The most common words are then indexed according to the interval specified by the TopNWorkCycleCheckpoint parameter.
 
 For example, to specify 10 days for this parameter, use 10.00:00:00. The TopN Words Assistant will then process all mailboxes on which Unified Messaging is enabled on this server every 10 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2023,27 +1252,13 @@ Accept wildcard characters: False
 ```
 
 ### -TopNWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The TopNWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes so that new mailboxes that have been created or moved will be part of the work queue. Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 1 day for this parameter, use 1.00:00:00. The TopN Words Assistant will process all mailboxes on this server every day.
-
-
-
-!!! Exchange Server 2013
-
 The TopNWorkCycleCheckpoint parameter specifies the time span at which to refresh the list of mailboxes on the Mailbox server so that new mailboxes that have been created or moved will be part of the work queue. The default value is 1 day.
 
 Also, as mailboxes are prioritized, existing mailboxes that haven't been successfully processed for a long time will be placed higher in the queue and will have a greater chance of being processed again in the same work cycle.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00. The TopN Words Assistant will then process all mailboxes on this server every 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2059,20 +1274,6 @@ Accept wildcard characters: False
 ```
 
 ### -UMReportingWorkCycle
-!!! Exchange Server 2010
-
-The UMReportingWorkCycle parameter specifies the time span in which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the specified server will be scanned by the Unified Messaging Reporting Assistant. The Unified Messaging Reporting Assistant updates the Call Statistics reports by reading Unified Messaging call data records for an organization on a regular basis. By default, it's scheduled to run once every 24 hours.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 7 days for this parameter, use 07.00:00:00. The Unified Messaging Reporting Assistant will process all mailboxes that have Unified Messaging enabled on this server every 7 days.
-
-Changing the default work cycle for this assistant might impact the performance of the Mailbox server for your organization.
-
-
-
-!!! Exchange Server 2013
-
 The UMReportingWorkCycle parameter specifies the time span in which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be scanned by the Unified Messaging Reporting Assistant. The default value is 1 day.
 
 The Unified Messaging Reporting Assistant updates the Call Statistics reports by reading Unified Messaging call data records for an organization on a regular basis.
@@ -2082,8 +1283,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hou
 For example, to specify 2 days for this parameter, use 2.00:00:00. The Unified Messaging Reporting Assistant will then process all mailboxes that have Unified Messaging enabled on this server every 2 days.
 
 Changing the default work cycle for this assistant might impact the performance of the Mailbox server.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2099,25 +1298,11 @@ Accept wildcard characters: False
 ```
 
 ### -UMReportingWorkCycleCheckpoint
-!!! Exchange Server 2010
-
-The UMReportingWorkCycleCheckpoint parameter specifies the time span at which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} will be marked by processing.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, if you specify 1 day for this parameter, use 1.00:00:00.
-
-
-
-!!! Exchange Server 2013
-
 The UMReportingWorkCycleCheckpoint parameter specifies the time span at which the arbitration mailbox named SystemMailbox{e0dc1c29-89c3-4034-b678-e6c29d823ed9} on the Mailbox server will be marked by processing. The default value is 1 day.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
 For example, to specify 2 days for this parameter, use 2.00:00:00.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2180,96 +1365,18 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -DarTaskStoreTimeBasedAssistantWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DarTaskStoreTimeBasedAssistantWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -DatabaseCopyActivationDisabledAndMoveNow
-!!! Exchange Server 2013
-
-The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prevent databases from being mounted on this Mailbox server if there are other healthy copies of the databases on other Mailbox servers. It will also immediately move any mounted databases on the server to other servers if copies exist and are healthy.
-
-Valid input for this parameter is $true or $false. The default value is $false.
-
-Setting this parameter to $true won't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
-
-
-
-!!! Exchange Server 2016
-
 The DatabaseCopyActivationDisabledAndMoveNow parameter specifies whether to prevent databases from being mounted on this Mailbox server if there are other healthy copies of the databases on other Mailbox servers. It will also immediately move any mounted databases on the server to other servers if copies exist and are healthy.
 
 Valid input for this parameter is $true or $false. The default value is $false.
 
 Setting this parameter to $truewon't cause databases to move to a server that has the DatabaseCopyAutoActivationPolicy parameter set to Blocked.
 
-
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DirectoryProcessorWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DirectoryProcessorWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -2294,154 +1401,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -GroupMailboxWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -GroupMailboxWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InferenceDataCollectionWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InferenceDataCollectionWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InferenceTrainingWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -InferenceTrainingWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -JunkEmailOptionsCommitterWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxAssociationReplicationWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailboxAssociationReplicationWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MailboxProcessorWorkCycle
 The MailboxProcessorWorkCycle parameter specifies how often to scan for locked mailboxes on the Mailbox server. The default value is 1 day.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2457,21 +1420,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumPreferredActiveDatabases
-!!! Exchange Server 2013
-
-The MaximumPreferredActiveDatabases parameter specifies a preferred maximum number of databases that the Mailbox server should have. This value is different from the actual maximum, which is configured using the MaximumActiveDatabases parameter. The value of MaximumPreferredActiveDatabases is only honored during best copy and server selection, database and server switchovers, and when rebalancing the DAG.
-
-The default value is blank ($null), which means no maximum value is configured.
-
-
-
-!!! Exchange Server 2016
-
 The MaximumPreferredActiveDatabases parameter specifies a preferred maximum number of databases that theMailbox server should have. This value is different from the actual maximum, which is configured using the MaximumActiveDatabases parameter. The value of MaximumPreferredActiveDatabases is only honored during best copy and server selection, database and server switchovers, and when rebalancing the DAG.
 
 The default value is blank ($null), which means no maximum value is configured.
-
-
 
 ```yaml
 Type: Int32
@@ -2569,7 +1520,7 @@ Accept wildcard characters: False
 ### -OABGeneratorWorkCycle
 The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server will be processed. The default value is 8 hours.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 16 hours for this parameter, use 16:00:00.
 
@@ -2589,105 +1540,9 @@ Accept wildcard characters: False
 ### -OABGeneratorWorkCycleCheckpoint
 The OABGeneratorWorkCycleCheckpoint parameter specifies the time span at which to run OAB generation on the Mailbox server. The default value is 1 hour.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 2 hours for this parameter, use 02:00:00.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PeopleCentricTriageWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PeopleCentricTriageWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PeopleRelevanceWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -PeopleRelevanceWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProbeTimeBasedAssistantWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ProbeTimeBasedAssistantWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2705,7 +1560,7 @@ Accept wildcard characters: False
 ### -PublicFolderWorkCycle
 The PublicFolderWorkCycle parameter is used by the public folder assistant to determine how often the mailboxes in a database are processed by the assistant on the Mailbox server. The default value is 1 day.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2723,71 +1578,7 @@ Accept wildcard characters: False
 ### -PublicFolderWorkCycleCheckpoint
 The PublicFolderWorkCycleCheckpoint determines how often the mailbox list for a database is evaluated on the Mailbox server. The processing speed is also calculated. The default value is 1 day.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchIndexRepairTimeBasedAssistantWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SearchIndexRepairTimeBasedAssistantWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointSignalStoreWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharePointSignalStoreWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2805,7 +1596,7 @@ Accept wildcard characters: False
 ### -SiteMailboxWorkCycle
 The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server will be processed. The default value is 6 hours.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 8 hours for this parameter, use 08:00:00.
 
@@ -2828,166 +1619,6 @@ The SiteMailboxWorkCycleCheckpoint parameter specifies the time span at which to
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
 
 For example, to specify 8 hours for this parameter, use 08:00:00.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreDsMaintenanceWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreDsMaintenanceWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreIntegrityCheckWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreIntegrityCheckWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMaintenanceWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreMaintenanceWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreScheduledIntegrityCheckWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreScheduledIntegrityCheckWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreUrgentMaintenanceWorkCycle
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: EnhancedTimeSpan
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -StoreUrgentMaintenanceWorkCycleCheckpoint
-This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -3038,4 +1669,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6a229126-b863-4f07-b024-a39c93b253f7.aspx)
-
