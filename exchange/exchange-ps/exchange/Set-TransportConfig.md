@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-TransportConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-TransportConfig cmdlet to modify the transport configuration settings for the whole Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-TransportConfig cmdlet to modify the transport configuration settings for the whole Exchange organization.
@@ -27,7 +21,7 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>] [-ClearCategories <$
  [-ExternalDsnMaxMessageAttachSize <ByteQuantifiedSize>] [-ExternalDsnReportingAuthority <SmtpDomain>]
  [-ExternalDsnSendHtml <$true | $false>] [-ExternalPostmasterAddress <SmtpAddress>]
  [-GenerateCopyOfDSNFor <MultiValuedProperty>]
- [-HeaderPromotionModeSetting <NoCreate | MayCreate | MustCreate>] [-HygieneSuite <Standard | Premium>]
+ [-HeaderPromotionModeSetting <NoCreate | MayCreate | MustCreate>]
  [-InternalDelayDsnEnabled <$true | $false>] [-InternalDsnDefaultLanguage <CultureInfo>]
  [-InternalDsnLanguageDetectionEnabled <$true | $false>]
  [-InternalDsnMaxMessageAttachSize <ByteQuantifiedSize>] [-InternalDsnReportingAuthority <SmtpDomain>]
@@ -35,7 +29,6 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>] [-ClearCategories <$
  [-JournalingReportNdrTo <SmtpAddress>] [-LegacyJournalingMigrationEnabled <$true | $false>]
  [-MaxDumpsterSizePerDatabase <ByteQuantifiedSize>] [-MaxDumpsterTime <EnhancedTimeSpan>]
  [-MaxReceiveSize <Unlimited>] [-MaxRecipientEnvelopeLimit <Unlimited>] [-MaxSendSize <Unlimited>]
- [-MigrationEnabled <$true | $false>] [-OpenDomainRoutingEnabled <$true | $false>]
  [-OrganizationFederatedMailbox <SmtpAddress>] [-Rfc2231EncodingEnabled <$true | $false>]
  [-ShadowHeartbeatRetryCount <Int32>] [-ShadowHeartbeatTimeoutInterval <EnhancedTimeSpan>]
  [-ShadowMessageAutoDiscardInterval <EnhancedTimeSpan>] [-ShadowRedundancyEnabled <$true | $false>]
@@ -57,101 +50,30 @@ Set-TransportConfig [[-Identity] <OrganizationIdParameter>] [-ClearCategories <$
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
-```
-
-This example configures the Exchange 2010 organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the postmaster e-mail account.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
 ```
 
 This example configures the Exchange organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the postmaster email account.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
-```
-
-This example configures the Exchange organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the postmaster email account.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-TransportConfig -GenerateCopyOfDSNFor 5.7.1,5.7.2,5.7.3
-```
-
-This example configures the Exchange organization to forward all DSN messages that have the DSN codes 5.7.1, 5.7.2, and 5.7.3 to the postmaster email account.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
-```
-
-This example configures the Exchange 2010 organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the e-mail account journalingndr@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
 ```
 
 This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
-
-
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see Transport and Mailbox rules in Exchange Online or in on-premises Exchange Server don't work as expected (https://go.microsoft.com/fwlink/p/?linkid=787472&clcid=0x409).
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
-```
-
-This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
-
-
-To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see Transport and Mailbox rules in Exchange Online or in on-premises Exchange Server don't work as expected (https://go.microsoft.com/fwlink/p/?linkid=787472&clcid=0x409).
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-TransportConfig -JournalingReportNdrTo journalingndr@contoso.com
-```
-
-This example configures the Exchange organization to redirect all journaling reports that can't be delivered to the journaling mailbox to the email account journalingndr@contoso.com.
-
 
 To avoid journaling issues, we recommend that you set JournalingReportNdrTo to a dedicated mailbox without any transport rule or mailbox rule. Or, set JournalingReportNdrTo to an external address. In Exchange Online, you can configure this setting by using the Office 365 portal or Exchange Online PowerShell. In on-premises Exchange Server, you can configure this setting by using the Exchange Management Shell. For more information, see Transport and Mailbox rules in Exchange Online or in on-premises Exchange Server don't work as expected (https://go.microsoft.com/fwlink/p/?linkid=787472&clcid=0x409).
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Identity parameter specifies the identity of the tenant organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -167,17 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClearCategories
-!!! Exchange Server 2010
-
-The ClearCategories parameter specifies whether to clear Microsoft Office Outlook categories during content conversion. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ClearCategories parameter keeps or removes Microsoft Outlook message categories during content conversion. Valid input for this parameter is $true or $false. The default value is $true. This means that by default, Outlook message categories are removed during content conversion.
-
-
 
 ```yaml
 Type: $true | $false
@@ -213,22 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConvertDisclaimerWrapperToEml
-!!! Exchange Server 2010
-
-The ConvertDisclaimerWrapperToEml parameter specifies whether the original message will be added as a TNEF attachment or a regular EML attachment to a disclaimer when all of the following are true:
-
-- Message is sent to an external user.
-
-- The sender has signed the message.
-
-- The message is processed by a Transport rule that adds a disclaimer.
-
-When a Transport rule that adds disclaimers to outbound messages encounters a message signed by the sender, the Transport rule can't add the disclaimer directly to the message. As a result, the disclaimer is sent to the intended recipient with the original message as an attachment. If you set this parameter to $true, the original message is sent as an EML attachment. Otherwise, it is sent as a TNEF attachment. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ConvertDisclaimerWrapperToEml parameter specifies whether the original message will be added as a TNEF attachment or a regular EML attachment to a disclaimer when all of the following are true:
 
 - Message is sent to an external user.
@@ -240,8 +136,6 @@ The ConvertDisclaimerWrapperToEml parameter specifies whether the original messa
 When a Transport rule that adds disclaimers to outbound messages encounters a message signed by the sender, the Transport rule can't add the disclaimer directly to the message. As a result, the disclaimer is sent to the intended recipient with the original message as an attachment.
 
 Valid input for this parameter is $true or $false. The default value is $false. If you set this parameter to $true, the original message is sent as an EML attachment. Otherwise, it is sent as a TNEF attachment.
-
-
 
 ```yaml
 Type: $true | $false
@@ -257,23 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -289,44 +171,6 @@ Accept wildcard characters: False
 ```
 
 ### -DSNConversionMode
-!!! Exchange Server 2010
-
-The DSNConversionMode parameter controls how Exchange handles delivery status notifications (DSNs) that are generated by earlier versions of Exchange or non-Exchange messaging systems. You can specify one of the following values for this parameter:
-
-- UseExchangeDSNs
-
-- PreserveDSNBody
-
-- DoNotConvert
-
-By default, this parameter is set to UseExchangeDSNs and Exchange converts the DSNs to the Exchange 2010 DSN format. Any customized text or attachments that were associated with the original DSN are overwritten.
-
-If you set this parameter to PreserveDSNBody, Exchange converts the DSNs to Exchange 2010 DSN format. However, the text in the body of the DSN message is retained.
-
-If you set this parameter to DoNotConvert, Exchange does not modify the DSN message. Instead, Exchange 2010 delivers the message as a standard message.
-
-
-
-!!! Exchange Server 2013
-
-The DSNConversionMode parameter controls how Exchange handles delivery status notifications (DSNs) that are generated by earlier versions of Exchange or non-Exchange messaging systems. You can specify one of the following values for this parameter:
-
-- UseExchangeDSNs
-
-- PreserveDSNBody
-
-- DoNotConvert
-
-By default, this parameter is set to PreserveDSNBody.Exchange converts the DSNs to the Exchange 2013 DSN format, and the text in the body of the DSN message is retained.
-
-If you set this parameter to UseExchangeDSNs, Exchange converts the DSNs to the Exchange 2013 DSN format, which is the same as the Exchange 2010 DSN format. However, any customized text or attachments that were associated with the original DSN are overwritten.
-
-If you set this parameter to DoNotConvert, Exchange does not modify the DSN message. Instead, Exchange delivers the message as a standard message.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DSNConversionMode parameter controls how Exchange handles delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) that are generated by earlier versions of Exchange or other messaging systems. Valid values are:
 
 - DoNotConvert: DSNs aren't modified. The DSN is delivered as a standard message.
@@ -334,8 +178,6 @@ The DSNConversionMode parameter controls how Exchange handles delivery status no
 - PreserveDSNBody: DSNs are converted to the Exchange 2010 or later format, and the text in the body of the DSN message is retained. This is the default value.
 
 - UseExchangeDSNs: DSNs are converted to the Exchange 2010 or later format. However, any customized text or attachments that were associated with the original DSN are overwritten.
-
-
 
 ```yaml
 Type: UseExchangeDSNs | PreserveDSNBody | DoNotConvert
@@ -351,17 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDelayDsnEnabled
-!!! Exchange Server 2010
-
-The ExternalDelayDsnEnabled parameter specifies whether a delay delivery status notification (DSN) message should be created for external messages that couldn't be immediately delivered. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ExternalDelayDsnEnabled parameter specifies whether a delay delivery status notification (DSN) message should be created for external messages that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -377,17 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnDefaultLanguage
-!!! Exchange Server 2010
-
-The ExternalDsnDefaultLanguage parameter specifies which Exchange server language should be used by default when you create external DSN messages. The default value is the default Microsoft Windows server language.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ExternalDsnDefaultLanguage parameter specifies which Exchange server language should be used by default when you create external DSN messages. The default value is the default Windows server language.
-
-
 
 ```yaml
 Type: CultureInfo
@@ -403,17 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnLanguageDetectionEnabled
-!!! Exchange Server 2010
-
-The ExternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an external DSN message in the same language as the original message that generated the notification. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ExternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an external DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false.The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -429,46 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnMaxMessageAttachSize
-!!! Exchange Server 2010
-
-The ExternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message attached to an external DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 megabytes (MB). When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the external DSN message.
-
-
-
-!!! Exchange Server 2013
-
-The ExternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message attached to an external DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 megabytes (MB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the external DSN message.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message attached to an external DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 megabytes (MB).
 
 When you enter a value, qualify the value with one of the following units:
@@ -486,8 +258,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the external DSN message.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -519,17 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalDsnSendHtml
-!!! Exchange Server 2010
-
-The ExternalDsnSendHtml parameter specifies whether external DSN messages should be sent by using HTML or whether messages should be sent in plain text. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ExternalDsnSendHtml parameter specifies whether external DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false.The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -545,17 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalPostmasterAddress
-!!! Exchange Server 2010
-
-The ExternalPostmasterAddress parameter specifies the e-mail address in the From header field of an external DSN message. The default value is $null. On a Hub Transport server, the value of the external postmaster e-mail address is postmaster@\<defaultaccepteddomain\>. If an Edge Transport server hasn't yet been through the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster e-mail address on the Edge Transport server is postmaster@\<edgetransportserverfqdn\>. If an Edge Transport server has completed the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster e-mail address on the Edge Transport server is postmaster@\<defaultaccepteddomain\>. To override the default behavior, you can specify an e-mail address for the ExternalPostMasterAddress parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ExternalPostmasterAddress parameter specifies the email address in the From header field of an external DSN message. The default value is $null. In the Transport service on a Mailbox server, the value of the external postmaster email address is postmaster@\<defaultaccepteddomain\>. If an Edge Transport server hasn't yet been through the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<edgetransportserverfqdn\>. If an Edge Transport server has completed the EdgeSync process, and the ExternalPostmasterAddress parameter is set to $null, the external postmaster email address on the Edge Transport server is postmaster@\<defaultaccepteddomain\>. To override the default behavior, you can specify an email address for the ExternalPostMasterAddress parameter.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -571,34 +321,6 @@ Accept wildcard characters: False
 ```
 
 ### -GenerateCopyOfDSNFor
-!!! Exchange Server 2010
-
-The GenerateCopyOfDSNFor parameter controls the non-delivery reports (NDRs) that are copied to a mailbox by specifying the DSN codes that you want to monitor. You must configure the list of monitored DSNs on one Hub Transport server and locally on each Edge Transport server in your Exchange 2010 organization.
-
-On a Hub Transport server, NDRs are copied to the mailbox assigned to the Exchange recipient. On Edge Transport servers, NDRs are copied to the mailbox assigned to the external postmaster address.
-
-DSN codes are entered as x.y.z and are separated by commas. By default, the following DSN codes are monitored:
-
-- 5.4.8
-
-- 5.4.6
-
-- 5.4.4
-
-- 5.2.4
-
-- 5.2.0
-
-- 5.1.4
-
-Although these DSN codes are monitored by default, the associated NDRs aren't copied to the Exchange recipient or to the external postmaster address if no mailbox is assigned to the Exchange recipient or to the external postmaster address. By default, no mailbox is assigned to the Exchange recipient or to the external postmaster address.
-
-To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default e-mail address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The GenerateCopyOfDSNFor parameter controls the non-delivery reports (NDRs) that are copied to a mailbox by specifying the DSN codes that you want to monitor. You must configure the list of monitored DSNs on one Mailbox server and locally on each Edge Transport server in your Exchange organization.
@@ -627,8 +349,6 @@ Although these DSN codes are monitored by default, the associated NDRs aren't co
 
 To assign a mailbox to the Exchange recipient, use the Set-OrganizationConfig cmdlet with the MicrosoftExchangeRecipientReplyRecipient parameter. To assign a mailbox to the external postmaster address, create a new mailbox postmaster. The default email address policy of the Exchange organization should automatically add an SMTP address of postmaster@\<Authoritative domain\> to the mailbox.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -643,20 +363,6 @@ Accept wildcard characters: False
 ```
 
 ### -HeaderPromotionModeSetting
-!!! Exchange Server 2010, Exchange Server 2013
-
-The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. You can use one of the following values:
-
-- MustCreate Exchange creates a named property for each new custom X-header.
-
-- MayCreate Exchange creates a named property for each new custom X-header on messages received from authenticated senders. No named properties are created for custom X-headers on messages received from unauthenticated senders.
-
-- NoCreate Exchange won't create any named properties based on custom X-headers on incoming messages.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The HeaderPromotionModeSetting parameter specifies whether named properties are created for custom X-headers on messages received from outside the Exchange organization. You can use one of the following values:
 
 - MustCreate: Exchange creates a named property for each new custom X-header.
@@ -665,29 +371,11 @@ The HeaderPromotionModeSetting parameter specifies whether named properties are 
 
 - NoCreate: Exchange won't create any named properties based on custom X-headers on incoming messages.
 
-
-
 ```yaml
 Type: NoCreate | MayCreate | MustCreate
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HygieneSuite
-The HygieneSuite parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Standard | Premium
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -706,8 +394,6 @@ The InternalDelayDsnEnabled parameter specifies whether a delay DSN message shou
 !!! Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 The InternalDelayDsnEnabled parameter specifies whether a delay DSN message should be created for messages sent to or from recipients or senders in the same Exchange organization that couldn't be immediately delivered. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -739,17 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnLanguageDetectionEnabled
-!!! Exchange Server 2010
-
-The InternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an internal DSN message in the same language as the original message that generated the notification. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The InternalDsnLanguageDetectionEnabled parameter specifies whether the server should try to send an internal DSN message in the same language as the original message that generated the notification. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -765,46 +441,6 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnMaxMessageAttachSize
-!!! Exchange Server 2010
-
-The InternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message that generated an internal DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
-
-
-
-!!! Exchange Server 2013
-
-The InternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message that generated an internal DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The InternalDsnMaxMessageAttachSize parameter specifies the maximum size of the original message that generated an internal DSN message. If the original message exceeds this size, only the headers of the original message are included in the DSN message. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -822,8 +458,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2147483647 bytes. If you specify a value of 0, only the original message headers are included in the internal DSN message.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -855,17 +489,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalDsnSendHtml
-!!! Exchange Server 2010
-
-The InternalDsnSendHtml parameter specifies whether internal DSN messages should be sent by using HTML or whether messages should be sent in plain text. The default is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The InternalDsnSendHtml parameter specifies whether internal DSN messages should be sent by using HTML or whether messages should be sent in plain text. Valid input for this parameter is $true or $false. The default is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -881,14 +505,6 @@ Accept wildcard characters: False
 ```
 
 ### -InternalSMTPServers
-!!! Exchange Server 2010
-
-The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The InternalSMTPServers parameter specifies a list of internal SMTP server IP addresses or IP address ranges that should be ignored by Sender ID and connection filtering.
@@ -896,8 +512,6 @@ The InternalSMTPServers parameter specifies a list of internal SMTP server IP ad
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -913,17 +527,7 @@ Accept wildcard characters: False
 ```
 
 ### -JournalingReportNdrTo
-!!! Exchange Server 2010
-
-The JournalingReportNdrTo parameter specifies the e-mail address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The JournalingReportNdrTo parameter specifies the email address to which journal reports are sent if the journaling mailbox is unavailable. By default, if this parameter is left empty, Exchange continues to try to deliver the journal report to the journaling mailbox. We recommended that you use a dedicated (non-user) mailbox as the argument to JournalingReportNdrTo.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -957,56 +561,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDumpsterSizePerDatabase
-!!! Exchange Server 2010
-
-The MaxDumpsterSizePerDatabase parameter specifies the maximum size of the transport dumpster on a Hub Transport server for each database. The default value is 18 MB. The valid input range for this parameter is from 0 through 2147483647 KB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as kilobytes.
-
-To enable the transport dumpster, the value of the MaxDumpsterSizePerDatabase parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-This parameter isn't used by Microsoft Exchange Server 2013. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
-
-The MaxDumpsterSizePerDatabase parameter specifies the maximum size of the transport dumpster on a Hub Transport server for each database. The default value is 18 MB. The valid input range for this parameter is from 0 through 2147483647 KB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-To enable the transport dumpster, the value of the MaxDumpsterSizePerDatabase parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
-
-This parameter has no replacement in Exchange 2013.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
@@ -1031,8 +585,6 @@ To enable the transport dumpster, the value of the MaxDumpsterSizePerDatabase pa
 
 There's no replacement for this parameter in later versions of Exchange.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -1047,38 +599,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxDumpsterTime
-!!! Exchange Server 2010
-
-The MaxDumpsterTime parameter specifies how long an e-mail message should remain in the transport dumpster on a Hub Transport server. The default value is seven days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is 00:00:00 to 24855.03:14:07.
-
-To enable the transport dumpster, the value of the MaxDumpsterSizePerStorageGroup parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-This parameter isn't used by Microsoft Exchange Server 2013. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
-
-The MaxDumpsterTime parameter specifies how long an email message should remain in the transport dumpster on a Hub Transport server. The default value is seven days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is 00:00:00 to 24855.03:14:07.
-
-To enable the transport dumpster, the value of the MaxDumpsterSizePerStorageGroup parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
-
-This parameter is replaced by the SafetyNetHoldTime parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
@@ -1092,8 +612,6 @@ For example, to specify 10 days for this parameter, use 10.00:00:00. The valid i
 To enable the transport dumpster, the value of the MaxDumpsterSizePerStorageGroup parameter must be greater than 0, and the value of the MaxDumpsterTime parameter must be greater than 00:00:00.
 
 This parameter is replaced by the SafetyNetHoldTime parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1109,46 +627,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-!!! Exchange Server 2010
-
-The MaxReceiveSize parameter specifies the maximum message size that can be received by recipients in the organization. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as kilobytes. The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be received by recipients in the organization.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MaxReceiveSize parameter specifies the maximum message size that can be received by recipients in the organization. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be received by recipients in the organization.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxReceiveSize parameter specifies the maximum message size that can be received by recipients in the organization. The default value is 10 MB.
@@ -1168,8 +646,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be received by recipients in the organization.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1185,19 +661,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRecipientEnvelopeLimit
-!!! Exchange Server 2010
-
-The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. The default value is 5000. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message. Exchange 2010 treats an unexpanded distribution group as one recipient.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxRecipientEnvelopeLimit parameter specifies the maximum number of recipients in a message. The default value is 5000. The valid input range for this parameter is from 0 through 2147483647. If you enter a value of Unlimited, no limit is imposed on the number of recipients in a message. Exchange treats an unexpanded distribution group as one recipient.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1213,46 +679,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSendSize
-!!! Exchange Server 2010
-
-The MaxSendSize parameter specifies the maximum message size that can be sent by senders in the organization. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as kilobytes. The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be sent by senders in the organization.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MaxSendSize parameter specifies the maximum message size that can be sent by senders in the organization. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be sent by senders in the organization.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxSendSize parameter specifies the maximum message size that can be sent by senders in the organization. The default value is 10 MB.
@@ -1273,45 +699,11 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The valid input range for this parameter is from 0 through 2097151 KB. If you enter a value of Unlimited, no limit is imposed on the message size that can be sent by senders in the organization.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MigrationEnabled
-The MigrationEnabled parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OpenDomainRoutingEnabled
-The OpenDomainRoutingEnabled parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -1337,17 +729,7 @@ Accept wildcard characters: False
 ```
 
 ### -Rfc2231EncodingEnabled
-!!! Exchange Server 2010
-
-The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Rfc2231EncodingEnabled parameter specifies whether the RFC 2231 encoding of MIME parameters for outbound messages is enabled in your organization. Valid input for this parameter is $true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1363,28 +745,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowHeartbeatRetryCount
-!!! Exchange Server 2010
-
-The ShadowHeartbeatRetryCount parameter specifies the number of time-outs a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable.
-
-The default value is 3 in Exchange 2010 RTM. The default value is 12 in Exchange 2010 SP1 or later.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-This parameter isn't used by Microsoft Exchange Server 2013. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
-
-The ShadowHeartbeatRetryCount parameter specifies the number of time-outs a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable. Valid input for this parameter is an integer between 1 and 15. The default value is 12.
-
-This parameter is replaced by the ShadowResubmitTimeSpan parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
@@ -1392,8 +752,6 @@ This parameter isn't used by Microsoft Exchange Server 2016. It's only used by M
 The ShadowHeartbeatRetryCount parameter specifies the number of time-outs a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable. Valid input for this parameter is an integer between 1 and 15. The default value is 12.
 
 This parameter is replaced by the ShadowResubmitTimeSpan parameter.
-
-
 
 ```yaml
 Type: Int32
@@ -1409,32 +767,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowHeartbeatTimeoutInterval
-!!! Exchange Server 2010
-
-The ShadowHeartbeatTimeoutInterval parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
-
-The default value is 300 seconds in Exchange 2010 RTM. The default value is 900 seconds in Exchange 2010 SP1 or later.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-This parameter isn't used by Microsoft Exchange Server 2013. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
-
-The ShadowHeartbeatTimeoutInterval parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:15:00 or 15 minutes.
-
-This parameter is replaced by the ShadowHeartbeatFrequency parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
@@ -1446,8 +778,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:15:00 or 15 minutes.
 
 This parameter is replaced by the ShadowHeartbeatFrequency parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1463,28 +793,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowMessageAutoDiscardInterval
-!!! Exchange Server 2010
-
-The ShadowMessageAutoDiscardInterval specifies how long a server retains discard events for shadow messages. A primary server queues discard events until queried by the shadow server. However, if the shadow server doesn't query the primary server for the duration specified in this parameter, the primary server deletes the queued discard events.
-
-The default value is 2 days.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ShadowMessageAutoDiscardInterval parameter specifies how long a server retains discard events for shadow messages. A primary server queues discard events until queried by the shadow server. However, if the shadow server doesn't query the primary server for the duration specified in this parameter, the primary server deletes the queued discard events.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Valid input for this parameter is 00:00:05 to 90.00:00:00. The default value is 2.00:00:00 or 2 days.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ShadowMessageAutoDiscardInterval parameter specifies how long a server retains discard events for shadow messages. A primary server queues discard events until queried by the shadow server. However, if the shadow server doesn't query the primary server for the duration specified in this parameter, the primary server deletes the queued discard events.
@@ -1492,8 +800,6 @@ The ShadowMessageAutoDiscardInterval parameter specifies how long a server retai
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Valid input for this parameter is 00:00:05 to 90.00:00:00. The default value is 2.00:00:00 or 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1509,19 +815,9 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowRedundancyEnabled
-!!! Exchange Server 2010
-
-The ShadowRedundancyEnabled parameter specifies whether shadow redundancy is enabled in the organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ShadowRedundancyEnabled parameter specifies whether shadow redundancy is enabled in the organization. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1537,23 +833,11 @@ Accept wildcard characters: False
 ```
 
 ### -SupervisionTags
-!!! Exchange Server 2010
-
-The SupervisionTags parameter specifies the various tags that are used for transport supervision in the organization.
-
-When you install Exchange 2010, two tags, Allow and Reject, are created by default.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The SupervisionTags parameter specifies the various tags that are used for transport supervision in the organization.
 
 When you install Exchange, two tags, Allow and Reject, are created by default.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1569,22 +853,6 @@ Accept wildcard characters: False
 ```
 
 ### -TLSReceiveDomainSecureList
-!!! Exchange Server 2010
-
-The TLSReceiveDomainSecureList parameter specifies the domains from which you want to receive domain secured e-mail by using mutual Transport Layer Security (TLS) authentication. To fully support mutual TLS authentication, you must also perform the following steps:
-
-- Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified with the TLSReceiveDomainSecureList parameter.
-
-- Specify the domains to which you want to send domain secured e-mail by using the TLSSendDomainSecureList parameter.
-
-- Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
-
-Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The TLSReceiveDomainSecureList parameter specifies the domains from which you want to receive domain secured email by using mutual Transport Layer Security (TLS) authentication. To fully support mutual TLS authentication, you must also perform the following steps:
@@ -1601,8 +869,6 @@ To add or remove one or more values without affecting any existing entries, use 
 
 The wildcard character (\*) isn't supported in the domains listed in the TLSReceiveDomainSecureList parameter or in the TLSSendDomainSecureList parameter. The default value for both parameters is an empty list ({}).
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1617,22 +883,6 @@ Accept wildcard characters: False
 ```
 
 ### -TLSSendDomainSecureList
-!!! Exchange Server 2010
-
-The TLSSendDomainSecureList parameter specifies the domains from which you want to send domain secured e-mail by using mutual TLS authentication. To fully support mutual TLS authentication, you must also perform the following steps:
-
-- Enable Domain Security (Mutual Auth TLS) on the Send connectors that send messages to the domains that you specified in the TLSSendDomainSecureList parameter.
-
-- Specify the domains from which you want to receive domain secured e-mail by using the TLSReceiveDomainSecureList parameter.
-
-- Enable Domain Security (Mutual Auth TLS) and the TLS authentication method on the Receive connectors that receive messages from the domains that you specified in the TLSReceiveDomainSecureList parameter.
-
-Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The TLSSendDomainSecureList parameter specifies the domains from which you want to send domain secured email by using mutual TLS authentication. To fully support mutual TLS authentication, you must also perform the following steps:
@@ -1649,8 +899,6 @@ To add or remove one or more values without affecting any existing entries, use 
 
 Multiple domains may be separated by commas. The wildcard character (\*) isn't supported in the domains listed in the TLSSendDomainSecureList parameter or in the TLSReceiveSecureList parameter. The default values for both parameters are an empty list ({}).
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1665,14 +913,6 @@ Accept wildcard characters: False
 ```
 
 ### -VerifySecureSubmitEnabled
-!!! Exchange Server 2010
-
-The VerifySecureSubmitEnabled parameter verifies that e-mail clients submitting messages from mailboxes on Mailbox servers are using encrypted MAPI submission. The valid values for this parameter are $true or $false. The default value is $false. By default, Microsoft Office Outlook 2007 uses encrypted MAPI submission to send messages from Exchange 2010 mailboxes. By default, previous versions of Outlook don't use encrypted MAPI submission to send messages from an Exchange mailbox. If the VerifySecureSubmitEnabled parameter is set to the value of $true, and Outlook 2010 is used to submit the message, the message is marked as secure. If a previous version of Outlook is used to submit the message, the message is marked as anonymous. If the VerifySecureSubmitEnabled parameter is set to the value of $false, all MAPI message submissions are marked as secure. Messages submitted from mailboxes on the Mailbox server by using any MAPI client aren't checked for encrypted MAPI submission. If you use previous Outlook versions in your Exchange organization, you should set the VerifySecureSubmitEnabled parameter to $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The VerifySecureSubmitEnabled parameter verifies that email clients submitting messages from mailboxes on Mailbox servers are using encrypted MAPI submission. The valid values for this parameter are $true or $false. The default value is $false
@@ -1680,8 +920,6 @@ The VerifySecureSubmitEnabled parameter verifies that email clients submitting m
 If the VerifySecureSubmitEnabled parameter is set to $true, and Outlook 2010 or later is used to submit the message, the message is marked as secure. If a previous version of Outlook is used to submit the message, the message is marked as anonymous.
 
 If the VerifySecureSubmitEnabled parameter is set to $false, all MAPI message submissions are marked as secure. Messages submitted from mailboxes on the Mailbox server by using any MAPI client aren't checked for encrypted MAPI submission. If you use previous Outlook versions in your Exchange organization, you should set the VerifySecureSubmitEnabled parameter to $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1697,19 +935,9 @@ Accept wildcard characters: False
 ```
 
 ### -VoicemailJournalingEnabled
-!!! Exchange Server 2010
-
-The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The VoicemailJournalingEnabled parameter specifies whether Unified Messaging voice mail messages are journaled by the Journaling agent. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1741,19 +969,9 @@ Accept wildcard characters: False
 ```
 
 ### -Xexch50Enabled
-!!! Exchange Server 2010
-
-The Xexch50Enabled parameter specifies whether Xexch50 authentication should be enabled for backward compatibility with computers running Exchange 2003. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Xexch50Enabled parameter specifies whether Xexch50 authentication should be enabled for backward compatibility with computers running Exchange 2003. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1769,21 +987,9 @@ Accept wildcard characters: False
 ```
 
 ### -AddressBookPolicyRoutingEnabled
-!!! Exchange Server 2013
-
-The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
-
-The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see Address book policies.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AddressBookPolicyRoutingEnabled parameter controls how recipients are resolved in an organization that uses address book policies to create separate virtual organizations within the same Exchange organization. Specifically, the global address list (GAL) that's specified in the user's address book policy controls how recipients are resolved. When the value of this parameter is $true, users that are assigned different GALs appear as external recipients. When the value of this parameter is $false, users that are assigned different GALs appear as internal recipients.
 
 The default value is $false. Note that this parameter has no effect if your organization doesn't use address book policies, or if the address book policy routing agent isn't installed and enabled. Also note that changing the value of this parameter may take up to 30 minutes to take effect. For more information about address book policies, see Address book policies in Exchange 2016.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1861,17 +1067,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1993,25 +1189,11 @@ Accept wildcard characters: False
 ```
 
 ### -QueueDiagnosticsAggregationInterval
-!!! Exchange Server 2013
-
 This parameter is available only in on-premises Exchange.
 
 The QueueDiagnosticsAggregationInterval parameter specifies the polling interval that's used to retrieve message queue diagnostic information. The default value is 00:01:00 or one minute.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-This parameter is available only in on-premises Exchange.
-
-The QueueDiagnosticsAggregationInterval parameter specifies the polling interval that's used to retrieve message queue diagnostic information. The default value is 00:01:00 or one minute.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2027,20 +1209,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessageOnShadowFailure
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The RejectMessageOnShadowFailure parameter accepts or rejects messages when a shadow copy of a message can't be created. Valid input for this parameter is $true or $false. The default value is $true.
-
-When this parameter is set to $true, messages are rejected with the SMTP code 450 4.5.1. When this parameter is set to $false, the message is accepted without making a shadow copy.
-
-The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RejectMessageOnShadowFailure parameter specifies whether to accept or reject messages when shadow copies of the messages can't be created. Valid values are:
@@ -2050,8 +1218,6 @@ The RejectMessageOnShadowFailure parameter specifies whether to accept or reject
 - $false: Messages are accepted without making shadow copies. This is the default value.
 
 The number of attempts to make a shadow copy of the message and where to make the shadow copy are controlled by the MaxRetriesForLocalSiteShadow, MaxRetriesForRemoteSiteShadow, and ShadowMessagePreferenceSetting parameter settings.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2067,20 +1233,6 @@ Accept wildcard characters: False
 ```
 
 ### -SafetyNetHoldTime
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The SafetyNetHoldTime parameter specifies how long a copy of a successfully processed message is retained in Safety Net. Unacknowledged shadow copies of messages auto-expire from Safety Net based on adding the values of the SafetyNetHoldTime parameter and the MessageExpirationTimeout parameter on the Set-TransportService cmdlet.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The default value is 2.00:00:00 or 2 days.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The SafetyNetHoldTime parameter specifies how long a copy of a successfully processed message is retained in Safety Net. Unacknowledged shadow copies of messages auto-expire from Safety Net based on adding the values of the SafetyNetHoldTime parameter and the MessageExpirationTimeout parameter on the Set-TransportService cmdlet.
@@ -2088,8 +1240,6 @@ The SafetyNetHoldTime parameter specifies how long a copy of a successfully proc
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is 2.00:00:00 or 2 days.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2105,20 +1255,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowHeartbeatFrequency
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ShadowHeartbeatFrequency parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:02:00 or 2 minutes.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ShadowHeartbeatFrequency parameter specifies the amount of time a server waits before establishing a connection to a primary server to query the discard status of shadow messages.
@@ -2126,8 +1262,6 @@ The ShadowHeartbeatFrequency parameter specifies the amount of time a server wai
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 00:02:00 or 2 minutes.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2169,22 +1303,6 @@ Accept wildcard characters: False
 ```
 
 ### -ShadowResubmitTimeSpan
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ShadowResubmitTimeSpan parameter specifies amount of time a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 03:00:00 or 3 hours.
-
-This parameter replaces the ShadowHeartbeatRetryCount parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ShadowResubmitTimeSpan parameter specifies amount of time a server waits before deciding that a primary server has failed and assumes ownership of shadow messages in the shadow queue for the primary server that's unreachable.
@@ -2194,8 +1312,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Valid input for this parameter is 00:00:01 to 1.00:00:00. The default value is 03:00:00 or 3 hours.
 
 This parameter replaces the ShadowHeartbeatRetryCount parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2211,32 +1327,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransportRuleAttachmentTextScanLimit
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The TransportRuleAttachmentTextScanLimit parameter specifies the maximum size of text to extract from attachments for scanning by attachment scanning predicates in transport rules and data loss prevention (DLP) policies. The default value is 150 kilobytes (KB).
@@ -2256,8 +1346,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 If the amount of text in the attachment is larger than the value of this parameter, only the specified amount of text is scanned. For example, if a 5 megabyte attachment contains 300 kilobytes of text, and the value of TransportRuleAttachmentTextScanLimit is 150 kilobytes, only the first 150 kilobytes of text are extracted and scanned.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -2289,7 +1377,21 @@ Valid values for this parameter are:
 
 - $true: Authenticated SMTP is disabled.
 
-- $false: Authenticated SMTP is enabled. This is the default value.### CommonParameters
+- $false: Authenticated SMTP is enabled. This is the default value.
+
+```yaml
+Type: $true | $false
+Parameter Sets: Exchange Online
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
@@ -2307,4 +1409,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ad3910a5-2227-47a2-8ccc-a208ce6210bb.aspx)
-
