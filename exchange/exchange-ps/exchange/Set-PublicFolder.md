@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-PublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-PublicFolder cmdlet to set the attributes of public folders.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-PublicFolder cmdlet to set the attributes of public folders.
@@ -44,54 +38,30 @@ Set-PublicFolder [-Identity] <PublicFolderIdParameter> [-AgeLimit <EnhancedTimeS
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-PublicFolder "\Customer Service Requests" -UseDatabaseReplicationSchedule $false
 ```
 
-This example changes a public folder so that it doesn't use the database default replication schedule.
+In Exchange 2010, this example changes a public folder so that it doesn't use the database default replication schedule.
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-PublicFolder "\Customer Service Requests" -OverrideContentMailbox North_America
 ```
 
 This example changes the content location of the public folder hierarchy mailbox to North\_America.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-PublicFolder "\Customer Service Requests" -OverrideContentMailbox North_America
-```
-
-This example changes the content location of the public folder hierarchy mailbox to North\_America.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-PublicFolder "\Customer Service Requests" -OverrideContentMailbox North_America
-```
-
-This example changes the content location of the public folder hierarchy mailbox to North\_America.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-PublicFolder \MyPublicFolder -ReplicationSchedule "Saturday.12:00 AM-Monday.12:00 AM"
 ```
 
-This example sets the folder to replicate only on weekends.
+In Exchange 2010, this example sets the folder to replicate only on weekends.
 
 ## PARAMETERS
 
@@ -112,27 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -AgeLimit
-!!! Exchange Server 2010
-
-The AgeLimit parameter specifies the overall age limit on the folder. Replicas of this public folder are automatically deleted when the age limit is exceeded. This parameter is mutually exclusive with the UseDatabaseAgeDefaults parameter.
-
-
-
-!!! Exchange Server 2013
-
-The AgeLimit parameter specifies the overall age limit on the folder. Replicas of this public folder are automatically deleted when the age limit is exceeded.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AgeLimit parameter specifies the overall age limit on the folder. Replicas of this public folder are automatically deleted when the age limit is exceeded.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -168,19 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -196,17 +138,7 @@ Accept wildcard characters: False
 ```
 
 ### -EformsLocaleId
-!!! Exchange Server 2010
-
-The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkid=184859).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
 
 ```yaml
 Type: CultureInfo
@@ -238,52 +170,6 @@ Accept wildcard characters: False
 ```
 
 ### -IssueWarningQuota
-!!! Exchange Server 2010
-
-The IssueWarningQuota parameter specifies the public folder size that triggers a warning to public folder owners stating that the folder is almost full.
-
-The default value is 250 megabytes (MB). When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the public folder.
-
-
-
-!!! Exchange Server 2013
-
-The IssueWarningQuota parameter specifies the public folder size that triggers a warning to public folder owners stating that the folder is almost full.
-
-The default value is unlimited, which is 2 terabytes.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 1 through 2TB.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IssueWarningQuota parameter specifies the public folder size that triggers a warning to public folder owners stating that the folder is almost full.
 
 The default value is unlimited, which is 2 terabytes.
@@ -303,8 +189,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 1 through 2TB.
-
-
 
 ```yaml
 Type: Unlimited
@@ -336,48 +220,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxItemSize
-!!! Exchange Server 2010
-
-The MaxItemSize parameter specifies the maximum size for posted items. Items larger than the value of the MaxItemSize parameter are rejected. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the public folder.
-
-
-
-!!! Exchange Server 2013
-
-The MaxItemSize parameter specifies the maximum size for posted items. Items larger than the value of the MaxItemSize parameter are rejected. The default value is unlimited, which is 2 gigabytes. When you enter a value, qualify the value with one of the following units:
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 1 through 2GB.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MaxItemSize parameter specifies the maximum size for posted items. Items larger than the value of the MaxItemSize parameter are rejected. The default value is unlimited, which is 2 gigabytes. When you enter a value, qualify the value with one of the following units:
 
 When you enter a value, qualify the value with one of the following units:
@@ -395,8 +237,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 1 through 2GB.
-
-
 
 ```yaml
 Type: Unlimited
@@ -444,50 +284,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProhibitPostQuota
-!!! Exchange Server 2010
-
-The ProhibitPostQuota parameter specifies the size of a public folder at which users are notified that the public folder is full. Users can't post to a folder whose size is larger than the ProhibitPostQuota parameter value.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the public folder.
-
-
-
-!!! Exchange Server 2013
-
-The ProhibitPostQuota parameter specifies the size of a public folder at which users are notified that the public folder is full. Users can't post to a folder whose size is larger than the ProhibitPostQuota parameter value. The default value is unlimited, which is 2 terabytes.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 1 through 2TB.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ProhibitPostQuota parameter specifies the size of a public folder at which users are notified that the public folder is full. Users can't post to a folder whose size is larger than the ProhibitPostQuota parameter value. The default value is unlimited, which is 2 terabytes.
 
 When you enter a value, qualify the value with one of the following units:
@@ -505,8 +301,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 1 through 2TB.
-
-
 
 ```yaml
 Type: Unlimited
@@ -578,27 +372,9 @@ Accept wildcard characters: False
 ```
 
 ### -RetainDeletedItemsFor
-!!! Exchange Server 2010
-
-The RetainDeletedItemsFor parameter specifies the retention time for deleted items. This parameter is mutually exclusive with the UseDatabaseRetentionDefaults parameter.
-
-
-
-!!! Exchange Server 2013
-
-The RetainDeletedItemsFor parameter specifies the retention time for deleted items.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RetainDeletedItemsFor parameter specifies the retention time for deleted items.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -710,17 +486,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -823,4 +589,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/657a8e15-2587-41b5-986c-2289b2772c89.aspx)
-

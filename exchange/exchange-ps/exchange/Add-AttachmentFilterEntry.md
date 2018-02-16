@@ -6,18 +6,6 @@ schema: 2.0.0
 # add-attachmentfilterentry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-AttachmentFilterEntry cmdlet to add an entry to the attachment filter list on a computer that has the Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Add-AttachmentFilterEntry cmdlet to add an entry to the attachment filter list that's used by the Attachment Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Add-AttachmentFilterEntry cmdlet to add an entry to the attachment filter list that's used by the Attachment Filtering agent on Edge Transport servers.
@@ -30,64 +18,20 @@ add-attachmentfilterentry [-Name] <String> -Type <ContentType | FileName> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Attachment Filter agent can block attachments from entering your Microsoft Exchange Server 2010 organization based on the content type and the file name of the attachment. You can use the Add-AttachmentFilterEntry cmdlet to add file names or MIME content types to the list of attachments that are filtered.
-
-The configuration of the Attachment Filter agent determines how attachments are processed. For more information about how to configure the Attachment Filter agent, see Set-AttachmentFilterListConfig.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-AttachmentFilterEntry -Name *.txt -Type FileName
-```
-
-This example adds an attachment filter entry based on a file name. After running this command, the Attachment Filter agent filters all attachments that have a .txt extension.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Add-AttachmentFilterEntry -Name *.txt -Type FileName
 ```
 
 This example adds an attachment filter entry based on a file name. After running this command, the Attachment Filtering agent filters all attachments that have a .txt extension.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Add-AttachmentFilterEntry -Name *.txt -Type FileName
-```
-
-This example adds an attachment filter entry based on a file name. After running this command, the Attachment Filtering agent filters all attachments that have a .txt extension.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
-```
-
-This example adds an attachment filter entry based on the MIME content type image/jpeg, which is a JPEG image binary file. After running this command, the Attachment Filter agent filters all attachments of the MIME content type image/jpeg.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
-```
-
-This example adds an attachment filter entry based on the MIME content type image/jpeg, which is a JPEG image binary file. After running this command, the Attachment Filtering agent filters all attachments of the MIME content type image/jpeg.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Add-AttachmentFilterEntry -Name image/jpeg -Type ContentType
 ```
@@ -113,25 +57,11 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Type parameter specifies what type of attachment the attachment filter entry blocks. Valid values are ContentType and FileName:
-
-- ContentType This value matches the attachment filter entry against the MIME content type specified in the Name parameter.
-
-- FileName This value matches the attachment filter entry against the simple file name specified in the Name parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Type parameter specifies what type of attachment the attachment filter entry blocks. Valid values are ContentType and FileName:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type specified in the Name parameter.
 
 - FileName: This value matches the attachment filter entry against the simple file name specified in the Name parameter.
-
-
 
 ```yaml
 Type: ContentType | FileName
@@ -218,4 +148,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9c9d35c8-2833-443f-ab50-c7232be4aba4.aspx)
-

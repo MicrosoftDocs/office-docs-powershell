@@ -6,12 +6,6 @@ schema: 2.0.0
 # Write-AdminAuditLog
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Write-AdminAuditLog cmdlet to write a comment to the administrator audit log.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Write-AdminAuditLog cmdlet to write a comment to the administrator audit log.
@@ -26,24 +20,6 @@ Write-AdminAuditLog [[-Identity] <OrganizationIdParameter>] -Comment <String> [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When the Write-AdminAuditLog cmdlet runs, the value provided in the Comment parameter is included in the log entry.
-
-For the Write-AdminAuditLog cmdlet to write to the audit log, it must be included in the list of cmdlets being logged by administrator audit logging. For more information about configuring administrator audit logging, see Configure Administrator Audit Logging.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Write to audit log" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-When the Write-AdminAuditLog cmdlet runs, the value provided in the Comment parameter is included in the log entry.
-
-For the Write-AdminAuditLog cmdlet to write to the audit log, it must be included in the list of cmdlets being logged by administrator audit logging.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Write to audit log" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When the Write-AdminAuditLog cmdlet runs, the value provided in the Comment parameter is included in the log entry.
 
 For the Write-AdminAuditLog cmdlet to write to the audit log, it must be included in the list of cmdlets being logged by administrator audit logging.
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Write-AdminAuditLog -Comment "Ran custom script."
-```
-
-This example adds a comment to the administrator audit log.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Write-AdminAuditLog -Comment "Ran custom script."
-```
-
-This example adds a comment to the administrator audit log.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Write-AdminAuditLog -Comment "Ran custom script."
-```
-
-This example adds a comment to the administrator audit log.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Write-AdminAuditLog -Comment "Ran custom script."
 ```
@@ -121,19 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -200,4 +145,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/58732728-40b6-4a44-a39e-9cf47e59090e.aspx)
-
