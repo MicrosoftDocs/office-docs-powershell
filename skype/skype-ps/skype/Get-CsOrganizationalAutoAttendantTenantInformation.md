@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-CsOrganizationalAutoAttendantTenantInformation
 
 ## SYNOPSIS
-Gets the default tenant information for Organizational Auto Attendant (OAA) feature.
+Gets the default tenant information for Auto Attendant (AA) feature.
 
 ## SYNTAX
 
@@ -17,7 +17,7 @@ Get-CsOrganizationalAutoAttendantTenantInformation [-Tenant <Guid>] [<CommonPara
 ```
 
 ## DESCRIPTION
-The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default tenant information for Organizational Auto Attendant (OAA) feature.
+The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default tenant information for Auto Attendant (AA) feature.
 
 ## EXAMPLES
 
@@ -26,7 +26,7 @@ The Get-CsOrganizationalAutoAttendantTenantInformation cmdlet gets the default t
 Get-CsOrganizationalAutoAttendantTenantInformation
 ```
 
-Gets the default organizational auto attendant information for the logged in tenant.
+Gets the default auto attendant information for the logged in tenant.
 
 
 ## PARAMETERS

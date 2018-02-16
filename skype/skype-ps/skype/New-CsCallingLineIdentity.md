@@ -40,7 +40,7 @@ The following example creates a new Caller ID policy that sets the Caller ID to 
 
 ### -------------------------- Example 2 --------------------------
 ```
-New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" ServiceNumber "14258828080" -EnableUserOverride False -Verbose 
+New-CsCallingLineIdentity -Identity "UKOrgAA" -CallingIdSubstitute "Service" -ServiceNumber "14258828080" -EnableUserOverride $false -Verbose 
 ```
 
 The following example creates a new Caller ID policy that sets the Caller ID to a specified service number.
@@ -229,7 +229,7 @@ PARAMVALUE: String
 
 The ServiceNumber parameter lets you add any valid service number for the CallingIdSubstitute. 
 
-Note: Do not add ‘+’ to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx  
+Note: Do not add ‘+’ to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
 
 
 ```yaml

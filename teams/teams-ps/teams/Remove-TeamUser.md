@@ -12,8 +12,16 @@ schema: 2.0.0
 ## SYNOPSIS
 Note: This cmdlet is currently in Beta.
 
-Remove an owner or member from a team. 
+Remove an owner or member from a team,
+and to the unified group which backs the team. 
+
+Note: the command will return immediately, but the Teams application will not reflect the update immediately. The Teams application may need to be open for up to an hour before changes are reflected.
+
 Note: last owner cannot be removed from the team.
+
+To turn an existing Member into an Owner, 
+first Add-TeamUser -Role Owner -User foo,
+then Remove-TeamUser -User foo to remove them from the members list.
 
 ## SYNTAX
 

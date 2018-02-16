@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: Remove-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
 ---
@@ -17,7 +18,7 @@ Remove-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Removes an existing UDF definition.
 
 ## EXAMPLES
 

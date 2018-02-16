@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: New-OfficeWebAppsExcelBIServer
 online version:
 schema: 2.0.0
 ---
@@ -17,7 +18,7 @@ New-OfficeWebAppsExcelBIServer -ServerId <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Configures Analysis Services servers to work with Excel Online.
 
 ## EXAMPLES
 

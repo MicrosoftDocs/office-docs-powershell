@@ -48,7 +48,7 @@ Example 1 starts logging the AlwaysOn scenario on all the computers in the curre
 
 ### -------------------------- Example 2 --------------------------
 ```
-Start-CsClsLogging -Scenario "cps" -Pools "atl-cs-001.litwareinc.com" -Duration 12:0
+Start-CsClsLogging -Scenario "cps" -Pools "atl-cs-001.litwareinc.com" -Duration 12:00
 ```
 
 The command shown in Example 2 starts CPS logging on all the computers in the pool `atl-cs-001.litwareinc.com` with duration of 12 hours.

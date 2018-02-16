@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendantMenu -Name <String> -MenuOptions <List> [-Promp
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantMenu cmdlet creates a new menu for the Organizational Auto Attendant (OAA) service. The OAA service uses menus to provide callers with choices, and then takes action based on the selection.
+The New-CsOrganizationalAutoAttendantMenu cmdlet creates a new menu for the Auto Attendant (AA) service. The OAA service uses menus to provide callers with choices, and then takes action based on the selection.
 
 
 ## EXAMPLES

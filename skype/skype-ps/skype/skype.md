@@ -1,15 +1,13 @@
 ---
-Module Name: skype
+Module Name: Skype for Business PowerShell
 Module Guid: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 title: skype
-Download Help Link: {{Please enter FwLink manually}}
-Help Version: {{Please enter version of help manually (X.X.X.X) format}}
 Locale: en-US
 ---
 
-# Skype for Business Cmdlet Reference
+# Skype for Business PowerShell
 ## Description
-{{Manually Enter Description Here}}
+The following cmdlet references are for Skype for Business.
 
 ## Skype for Business Cmdlets
 ### [Add-CsSlaDelegates](Add-CsSlaDelegates.md)
@@ -3006,3 +3004,17 @@ Locale: en-US
 ### [Update-CsUserDatabase](Update-CsUserDatabase.md)
 {{Manually Enter Update-CsUserDatabase Description Here}}
 
+### [Get-CsTeamsInteropPolicy](Get-CsTeamsInteropPolicy.md)
+{{Manually Enter Get-CsTeamsInteropPolicy Description Here}}
+
+### [Grant-CsTeamsInteropPolicy](Grant-CsTeamsInteropPolicy.md)
+{{Manually Enter Grant-CsTeamsInteropPolicy Description Here}}
+
+### [New-CsTeamsInteropPolicy](New-CsTeamsInteropPolicy.md)
+{{Manually Enter New-CsTeamsInteropPolicy Description Here}}
+
+### [Remove-CsTeamsInteropPolicy](Remove-CsTeamsInteropPolicy.md)
+{{Manually Enter Remove-CsTeamsInteropPolicy Description Here}}
+
+### [Set-CsTeamsInteropPolicy](Set-CsTeamsInteropPolicy.md)
+{{Manually Enter Set-CsTeamsInteropPolicy Description Here}}

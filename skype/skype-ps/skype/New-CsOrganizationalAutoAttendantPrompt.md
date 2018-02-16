@@ -28,7 +28,7 @@ New-CsOrganizationalAutoAttendantPrompt -ActiveType <None | TextToSpeech | Audio
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantPrompt cmdlet creates a new prompt for the Organizational Auto Attendant (OAA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None. 
+The New-CsOrganizationalAutoAttendantPrompt cmdlet creates a new prompt for the Auto Attendant (AA) service. A prompt is either an audio file that is played, or text that is read aloud to give callers additional information. A prompt can be disabled by setting the ActiveType to None. 
 
 
 ## EXAMPLES
@@ -55,7 +55,7 @@ This example creates a new prompt that plays the selected audio file.
 ```
 $content = Get-Content "C:\Media\Welcome.wav" -Encoding byte -ReadCount 0
 $audioFile = New-CsOnlineAudioFile -FileName "hello.wav" -Content $content
-$dualPrompt = New-CsOrganizationalAutoAttendantPrompt -ActiveType -AudioFile AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
+$dualPrompt = New-CsOrganizationalAutoAttendantPrompt -ActiveType AudioFile -AudioFilePrompt $audioFile -TextToSpeechPrompt "Welcome to Contoso!"
 ```
 
 This example creates a new prompt that has both audio file and text-to-speech data, but will play the audio file when the prompt is activated (rendered).

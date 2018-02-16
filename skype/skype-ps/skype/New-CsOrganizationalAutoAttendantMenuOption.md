@@ -17,7 +17,7 @@ New-CsOrganizationalAutoAttendantMenuOption -Action <DisconnectCall | TransferCa
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantMenuOption cmdlet creates a new menu option for the Organizational Auto Attendant (OAA) service. The OAA service uses the menu options to respond to a caller with the appropriate action.
+The New-CsOrganizationalAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The OAA service uses the menu options to respond to a caller with the appropriate action.
 
 
 ## EXAMPLES
@@ -36,7 +36,7 @@ $troubleShootEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity 
 $menuOption = New-CsOrganizationalAutoAttendantMenuOption -Action TransferCallToTarget -DtmfResponse Tone1 -VoiceResponses "Sales" -CallTarget $troubleShootEntity
 ```
 
-This example creates a menu option to transfer the call to an organizational auto attendant when the caller speaks the word "Sales" or presses the 1 key.
+This example creates a menu option to transfer the call to an auto attendant when the caller speaks the word "Sales" or presses the 1 key.
 
 
 ## PARAMETERS
@@ -82,7 +82,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceResponses
-The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the organizational auto attendant. 
+The VoiceResponses parameter represents the voice responses to select a menu option when Voice Responses are enabled for the auto attendant. 
 
 Voice responses are currently limited to one voice response per menu option. 
 

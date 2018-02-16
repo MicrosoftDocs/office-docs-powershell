@@ -13,12 +13,11 @@ Use the New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet to creat
 ## SYNTAX
 
 ```
-New-CsOrganizationalAutoAttendantCallHandlingAssociation -CallFlowId <String> -ScheduleId <String> -Type <AfterHours> [-Disable] [-Tenant <Guid>] [<CommonParameters>]
+New-CsOrganizationalAutoAttendantCallHandlingAssociation -CallFlowId <String> -ScheduleId <String> -Type <AfterHours | Holiday> [-Disable] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet creates a new call handling association to be used with the Organizational Auto Attendant (OAA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
-
+The New-CsOrganizationalAutoAttendantCallHandlingAssociation cmdlet creates a new call handling association to be used with the Auto Attendant (AA) service. The OAA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
 
 ## EXAMPLES
 
@@ -53,6 +52,23 @@ $disabledCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandling
 ```
 
 This example creates a disabled after-hours call handling association.
+
+### -------------------------- Example 3 -------------------------- 
+```
+$dtr = New-CsOnlineDateTimeRange -Start "24/12/2017"
+$schedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+$scheduleId = $schedule.Id
+
+$menuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "We are closed for Christmas. Please call back later."
+$menuOption = New-CsOrganizationalAutoAttendantMenuOption -DtmfResponse Automatic -Action DisconnectCall
+$menu = New-CsOrganizationalAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($menuOption)
+$callFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Christmas" -Greetings @($greeting) -Menu $menu
+$callFlowId = $callFlow.Id
+
+$callHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $scheduleId -CallFlowId $callFlowId
+```
+
+This example creates a holiday call handling association.
 
 ## PARAMETERS
 
@@ -95,7 +111,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Type parameter represents the type of the call handling association. Currently, only AfterHours is supported. 
+The Type parameter represents the type of the call handling association. Currently, only AfterHours and Holiday are supported. 
 
 
 ```yaml

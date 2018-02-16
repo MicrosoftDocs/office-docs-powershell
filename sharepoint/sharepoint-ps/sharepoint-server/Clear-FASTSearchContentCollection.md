@@ -1,0 +1,129 @@
+---
+external help file: 
+applicable: FAST Server for SharePoint 2010
+schema: 2.0.0
+title: Clear-FASTSearchContentCollection
+---
+
+# Clear-FASTSearchContentCollection
+
+## SYNOPSIS
+Clears the content of a Microsoft FAST Search Server 2010 for SharePoint content collection.
+
+## SYNTAX
+
+```
+Clear-FASTSearchContentCollection [-Name] <String> [-Confirm] [-Force] [-WhatIf] [<CommonParameters>]
+```
+
+## DESCRIPTION
+This cmdlet deletes from the index all items that are associated with the specified collection without removing the collection.
+
+For permissions and the most current information about FAST Search Server 2010 for SharePoint cmdlets, see the online documentation, (http://go.microsoft.com/fwlink/?LinkId=163227).
+
+## EXAMPLES
+
+### ---------------EXAMPLE 1----------------- (FAST Server for SharePoint 2010)
+```
+C:\PS>Clear-FASTSearchContentCollection -Name newscollection
+```
+
+This example clears the content of the "newscollection" content collection.
+
+### ---------------EXAMPLE 2----------------- (FAST Server for SharePoint 2010)
+```
+C:\PS>Clear-FASTSearchContentCollection -Name newscollection -Force
+```
+
+This example clears the content of the "newscollection" content collection.
+The user does not have to confirm the operation.
+
+## PARAMETERS
+
+### -Name
+The name of the content collection to clear.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+Applicable: FAST Server for SharePoint 2010
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Confirm
+Activates user prompting to confirm the operation.
+If set, prompting is activated.
+
+If Confirm is false (-Confirm:$false), you will not be prompted.
+
+In cases where Confirm is not specified, the cmdlet will prompt if the $ConfirmPreference shell variable is equal to or greater than the ConfirmImpact setting of the cmdlet (HIGH).
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+Applicable: FAST Server for SharePoint 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+Overrides any user prompting settings so the user is not asked to confirm the operation.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+Applicable: FAST Server for SharePoint 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+Displays a message that describes the effect of the command instead of executing the command.
+For more information, type the following command: get-help about_commonparameters
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+Applicable: FAST Server for SharePoint 2010
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+
+[New-FASTSearchContentCollection](New-FASTSearchContentCollection.md)
+
+[Remove-FASTSearchContentCollection](Remove-FASTSearchContentCollection.md)
+
+[Get-FASTSearchContentCollection](Get-FASTSearchContentCollection.md)
+

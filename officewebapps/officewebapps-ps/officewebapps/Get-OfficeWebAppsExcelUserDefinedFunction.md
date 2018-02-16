@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: Get-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
 ---
@@ -17,7 +18,7 @@ Get-OfficeWebAppsExcelUserDefinedFunction [[-Identity] <UserDefinedFunction>]
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns a list of currently configured UDF definitions.
 
 ## EXAMPLES
 

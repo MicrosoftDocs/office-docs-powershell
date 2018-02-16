@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: New-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
 ---
@@ -18,7 +19,7 @@ New-OfficeWebAppsExcelUserDefinedFunction -Assembly <String> [-AssemblyLocation 
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Creates a definition for a UDF binary.
 
 ## EXAMPLES
 

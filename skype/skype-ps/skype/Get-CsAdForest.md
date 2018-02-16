@@ -24,9 +24,9 @@ Before you can install Skype for Business Server 2015, you must make a number of
 This includes creating display specifiers and objects specific to Skype for Business Server 2015, creating the universal security groups that are needed to manage Skype for Business Server 2015, and granting global settings object access permissions to these groups.
 The Get-CsAdForest cmdlet returns a single value that tells you whether or not Skype for Business Server 2015 can be installed in a forest.
 If the Get-CsAdForest cmdlet returns the value LC_FORESTSETTINGS_STATE_READY then you can install Skype for Business Server 2015 in the forest.
-If the cmdlet returns LC_FORESTSETTINGS_STATE_NOT_READY then you will need to correctly prepare the forest before trying to install Skype for Business Server 2015.
+If the cmdlet returns LC_FORESTSETTINGS_STATE_NOT_READY then you need to prepare the forest before trying to install Skype for Business Server 2015.
 
-The Get-CsAdForest cmdlet runs as part of the Setup Wizard; if the Wizard determines that the forest is not correctly prepared, then you will receive an error message and Setup will stop.
+The Get-CsAdForest cmdlet runs as part of the Setup Wizard; if the Wizard determines that the forest is not correctly prepared, then you receive an error message and Setup stops.
 However, you can also run the Get-CsAdForest cmdlet independently of the Setup Wizard in order to verify the forest status before you try to install Skype for Business Server 2015.
 
 Historical Note: Get-CsAdForest performs the same function as the following Microsoft Office Communications Server 2007 R2 command:
@@ -42,14 +42,14 @@ Typically all domain members have this permission.
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------
-```
+```powershell
 Get-CsAdForest
 ```
 
 Example 1 returns information indicating whether your Active Directory forest has been correctly configured to allow for the installation of Skype for Business Server.
 
 ### -------------------------- Example 2 --------------------------
-```
+```powershell
 Get-CsAdForest -Report C:\Logs\ForestState.html
 ```
 

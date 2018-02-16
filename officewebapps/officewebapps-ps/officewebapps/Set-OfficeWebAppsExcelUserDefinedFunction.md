@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: Set-OfficeWebAppsExcelUserDefinedFunction
 online version:
 schema: 2.0.0
 ---
@@ -18,7 +19,7 @@ Set-OfficeWebAppsExcelUserDefinedFunction [-Identity] <UserDefinedFunction> [-As
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Sets properties on existing UDF definitions.
 
 ## EXAMPLES
 

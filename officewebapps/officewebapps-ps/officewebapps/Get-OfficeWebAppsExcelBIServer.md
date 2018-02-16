@@ -1,6 +1,7 @@
 ---
 external help file:
 Module Name: officewebapps
+title: Get-OfficeWebAppsExcelBIServer
 online version:
 schema: 2.0.0
 ---
@@ -17,7 +18,7 @@ Get-OfficeWebAppsExcelBIServer
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Returns the server ID of the instance of Analysis Services that has been configured as a data model server in Office Online Server.
 
 ## EXAMPLES
 

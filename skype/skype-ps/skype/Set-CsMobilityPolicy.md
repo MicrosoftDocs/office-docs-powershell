@@ -581,7 +581,13 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceSettings
-{{Fill VoiceSettings Description}}
+Controls how audio is connected by a mobile device joining a meeting or a peer-to-peer call. When the Skype for Business client is first run, and the user is enabled for Phone System with a Calling Plan, they are prompted to configure a call back phone number. This number is stored in settings under the **Calls and Meetings** section and will be used based on the value chosen for this parameter. Acceptable values are: 
+
+**VoIPAlways:** WiFi will be used when available, otherwise a call back will be performed.
+
+**VoIPOverWiFi:** If WiFi is not available, a call back to the pre-defined phone number will be performed.
+
+**Cellular:** Always perform a call back to the pre-defined phone number.
 
 ```yaml
 Type: Object

@@ -13,16 +13,17 @@ schema: 2.0.0
 Note: This cmdlet is currently in Beta.
 
 Creates a new team.
+The new team will be backed by a new unified group.
 
 ## SYNTAX
 
 ```
 New-Team -DisplayName <String> [-Description <String>] [-Alias <String>] [-Classification <String>]
- [-Visibility <String>] [-DontAddMeAsMember <Boolean>]
+ [-AccessType <String>] [-AddCreatorAsMember <Boolean>]
 ```
 
 ## DESCRIPTION
-Creates a new team with user specified settings, and and returns a Group object with a GroupID property.
+Creates a new team with user specified settings, and returns a Group object with a GroupID property.
 
 ## EXAMPLES
 
@@ -33,12 +34,12 @@ New-Team -DisplayName "Tech Reads"
 
 ### --------------------------  Example 2  --------------------------
 ```
-New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -Visibility Public
+New-Team -DisplayName "Tech Reads" -Description "Team to post technical articles and blogs" -AccessType Public
 ```
 ### --------------------------  Example 3  --------------------------
 ```
 Connect-MicrosoftTeams -AccountId myaccount@example.com
-$group = New-Team -alias “TestTeam” -displayname “Test Teams” -Visibility “private”
+$group = New-Team -alias “TestTeam” -displayname “Test Teams” -AccessType “private”
 Add-TeamUser -GroupId $group.GroupId -User "fred@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "john@example.com"
 Add-TeamUser -GroupId $group.GroupId -User "wilma@example.com"
@@ -48,28 +49,29 @@ New-TeamChannel -GroupId $group.GroupId -DisplayName "Contracts"
 Set-TeamFunSettings -GroupId $group.GroupId -AllowCustomMemes true
 ```
 
-## PARAMETERS
+Create a team with some members and channels.
 
-### -DisplayName
-Team display name.
-Team Name Characters Limit - 256.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-Applicable: Microsoft Teams
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: True (ByPropertyName)
-Accept wildcard characters: False
+### --------------------------  Example 4  --------------------------
+```
+Get-MsolGroup -SearchString "TestyTest" | Where-Object DisplayName -eq TestyTest | foreach-object -process { 
+    $name = "TestConvert" + $_.DisplayName 
+    $group = New-Team -displayname $name 
+    Get-MsolGroupMember -GroupObjectId $_.ObjectId | foreach-object -process { 
+        Add-TeamUser -GroupId $group.GroupId -User $_.EmailAddress 
+    } 
+} 
 ```
 
-### -Description
-Team description.
-Team Description Characters Limit - 1024.
+Iterate over all Groups and create corresponding Teams.
+
+
+## PARAMETERS
+
+### -AccessType
+Team access type.
+Valid values are "Private" and "Public".
+Default is "Private".
+(This parameter has the same meaning as -AccessType in New-UnifiedGroup.)
 
 ```yaml
 Type: String
@@ -81,6 +83,23 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AddCreatorAsMember
+This setting lets you decide if you will be added as a member of the team. 
+The default is true.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -117,10 +136,9 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Visibility
-Team access type.
-Valid values are "Private" and "Public".
-Default is "Private"
+### -Description
+Team description.
+Team Description Characters Limit - 1024.
 
 ```yaml
 Type: String
@@ -135,19 +153,20 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DontAddMeAsMember
-This settings will not add you as a member on the team
+### -DisplayName
+Team display name.
+Team Name Characters Limit - 256.
 
 ```yaml
-Type: Boolean
+Type: String
 Parameter Sets: (All)
 Aliases:
 Applicable: Microsoft Teams
 
-Required: False
+Required: True
 Position: Named
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -161,3 +180,6 @@ Accept wildcard characters: False
 
 ## RELATED LINKS
 
+[Get-Team](Get-Team.md)
+
+[Set-Team](Set-Team.md)

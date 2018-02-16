@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-CsOrganizationalAutoAttendant
 
 ## SYNOPSIS
-Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Organizational Auto Attendant (OAA).
+Use the New-CsOrganizationalAutoAttendant cmdlet to create a new Auto Attendant (AA).
 
 ## SYNTAX
 
@@ -17,8 +17,8 @@ New-CsOrganizationalAutoAttendant -Name <String> -LanguageId <String> -TimeZoneI
 ```
 
 ## DESCRIPTION
-Organizational Auto Attendants (OAAs) are a key element in the Cloud PBX application.
-Each OAA is associated with a phone number that allows callers to reach specific people in the organization through a directory lookup. 
+Auto Attendants (AAs) are a key element in the Cloud PBX application.
+Each OAA can be associated with a phone number that allows callers to reach specific people in the organization through a directory lookup. 
 Alternatively, it can route the calls to an operator, a user, another OAA, or a call queue.
 
 You can create new OAAs by using the New-CsOrganizationalAutoAttendant cmdlet; each newly created OAA gets assigned a random Primary (SIP) URI that serves as the identity of the OAA. 
@@ -26,6 +26,7 @@ You can create new OAAs by using the New-CsOrganizationalAutoAttendant cmdlet; e
 **NOTE**
 - PrimaryUri of OAAs is a SIP URI.
 - The default call flow has the lowest precedence, and any custom call flow has a higher precedence and is executed if the schedule associated with it is in effect.
+- Holiday call flows have higher priority than after-hours call flows. Thus, if a holiday schedule and an after-hours schedule are both in effect at a particular time, the call flow corresponding to the holiday call flow will be rendered.
 - The default call flow can be used either as the 24/7 call flow if no other call flows are specified, or as the business hours call flow if an “after hours” call flow was specified together with the corresponding schedule and call handling association.
 - If a user is present in both inclusion and exclusion scopes, then exclusion scope always takes priority, i.e., the user will not be able to be contacted through directory lookup feature.
 
@@ -58,10 +59,10 @@ $afterHoursCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandli
 $inclusionScopeGroupIds = @(“4c3053a6-20bf-43df-bf7a-156124168856”)
 $inclusionScope = New-CsOrganizationalAutoAttendantDialScope -GroupScope -GroupIds $inclusionScopeGroupIds
 
-$o=New-CsOrganizationalAutoAttendant -Name "Main organizational auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
+$o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule) -CallFlows @($afterHoursCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity -InclusionScope $inclusionScope
 ```
 
-This example creates a new OAA named _Main organizational auto attendant_ that has the following properties:
+This example creates a new OAA named _Main auto attendant_ that has the following properties:
 
 - A phone number is assigned.
 - It sets a default call flow.
@@ -70,6 +71,53 @@ This example creates a new OAA named _Main organizational auto attendant_ that h
 - The default language is en-US.
 - The time zone is set to UTC.
 - An inclusion scope is specified.
+
+### -------------------------- Example 2 -------------------------- 
+```
+$lineUri = [System.Uri] "tel:+11098765432"
+
+$operatorUri = "sip:operator@contoso.com"
+$operatorEntity = New-CsOrganizationalAutoAttendantCallableEntity -Identity $operatorUri -Type User
+
+$dcfGreetingPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso!"
+$dcfMenuOptionZero = New-CsOrganizationalAutoAttendantMenuOption -Action TransferCallToOperator -DtmfResponse Tone0
+$dcfMenuPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "To reach your party by name, enter it now, followed by the pound sign or press 0 to reach the operator."
+$dcfMenu=New-CsOrganizationalAutoAttendantMenu -Name "Default menu" -Prompts @($dcfMenuPrompt) -MenuOptions @($dcfMenuOptionZero) -EnableDialByName
+$defaultCallFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Default call flow" -Greetings @($dcfGreetingPrompt) -Menu $dcfMenu
+
+$afterHoursGreetingPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Welcome to Contoso! Unfortunately, you have reached us outside of our business hours. We value your call please call us back Monday to Friday, between 9 A.M. to 12 P.M. and 1 P.M. to 5 P.M. Goodbye!"
+$afterHoursMenuOption = New-CsOrganizationalAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic 
+$afterHoursMenu=New-CsOrganizationalAutoAttendantMenu -Name "After Hours menu" -MenuOptions @($afterHoursMenuOption)
+$afterHoursCallFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "After Hours call flow" -Greetings @($afterHoursGreetingPrompt) -Menu $afterHoursMenu
+
+$timerange1 = New-CsOnlineTimeRange -Start 09:00 -end 12:00
+$timerange2 = New-CsOnlineTimeRange -Start 13:00 -end 17:00
+$afterHoursSchedule = New-CsOnlineSchedule -Name "After Hours Schedule" -WeeklyRecurrentSchedule -MondayHours @($timerange1, $timerange2) -TuesdayHours @($timerange1, $timerange2) -WednesdayHours @($timerange1, $timerange2) -ThursdayHours @($timerange1, $timerange2) -FridayHours @($timerange1, $timerange2) -Complement
+
+$afterHoursCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type AfterHours -ScheduleId $afterHoursSchedule.Id -CallFlowId $afterHoursCallFlow.Id
+
+$christmasGreetingPrompt = New-CsOrganizationalAutoAttendantPrompt -TextToSpeechPrompt "Our offices are closed for Christmas from December 24 to December 26. Please call back later."
+$christmasMenuOption = New-CsOrganizationalAutoAttendantMenuOption -Action DisconnectCall -DtmfResponse Automatic 
+$christmasMenu = New-CsOrganizationalAutoAttendantMenu -Name "Christmas Menu" -MenuOptions @($christmasMenuOption)
+$christmasCallFlow = New-CsOrganizationalAutoAttendantCallFlow -Name "Christmas" -Greetings @($christmasGreetingPrompt) -Menu $christmasMenu
+
+$dtr = New-CsOnlineDateTimeRange -Start "24/12/2017" -End "26/12/2017"
+$christmasSchedule = New-CsOnlineSchedule -Name "Christmas" -FixedSchedule -DateTimeRanges @($dtr)
+
+$christmasCallHandlingAssociation = New-CsOrganizationalAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
+
+$o=New-CsOrganizationalAutoAttendant -Name "Main auto attendant" -LineUris @($lineUri) -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -Schedules @($afterHoursSchedule, $christmasSchedule) -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -Language "en-US" -TimeZoneId "UTC" -Operator $operatorEntity
+```
+
+This example creates a new OAA named _Main auto attendant_ that has the following properties:
+
+- A phone number is assigned.
+- It sets a default call flow.
+- It sets an after-hours call flow.
+- It sets a call flow for Christmas holiday.
+- It enables voice response.
+- The default language is en-US.
+- The time zone is set to UTC.
 
 ## PARAMETERS
 
