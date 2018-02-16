@@ -6,18 +6,6 @@ schema: 2.0.0
 # New-ReceiveConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-ReceiveConnector cmdlet to create a new Receive connector on a computer that has the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-ReceiveConnector cmdlet to create a new Receive connector.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-ReceiveConnector cmdlet to create Receive connectors on Mailbox servers and Edge Transport servers. Receive connectors listen for inbound SMTP connections on the Exchange server.
@@ -36,7 +24,7 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> -RemoteIPR
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -67,7 +55,7 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Internet
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -98,7 +86,7 @@ New-ReceiveConnector [-Name] <String> -Bindings <MultiValuedProperty> [-Partner]
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -129,7 +117,7 @@ New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Intern
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -160,7 +148,7 @@ New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Client
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -191,7 +179,7 @@ New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Remote
  [-DomainSecureEnabled <$true | $false>] [-EightBitMimeEnabled <$true | $false>]
  [-EnableAuthGSSAPI <$true | $false>] [-Enabled <$true | $false>]
  [-EnhancedStatusCodesEnabled <$true | $false>] [-ExtendedProtectionPolicy <None | Allow | Require>]
- [-Fqdn <Fqdn>] [-LiveCredentialEnabled <$true | $false>] [-LongAddressesEnabled <$true | $false>]
+ [-Fqdn <Fqdn>] [-LongAddressesEnabled <$true | $false>]
  [-MaxAcknowledgementDelay <EnhancedTimeSpan>] [-MaxHeaderSize <ByteQuantifiedSize>] [-MaxHopCount <Int32>]
  [-MaxInboundConnection <Unlimited>] [-MaxInboundConnectionPercentagePerSource <Int32>]
  [-MaxInboundConnectionPerSource <Unlimited>] [-MaxLocalHopCount <Int32>] [-MaxLogonFailures <Int32>]
@@ -211,16 +199,6 @@ New-ReceiveConnector [-Name] <String> [-Bindings <MultiValuedProperty>] [-Remote
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Receive connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Receive connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 On Mailbox servers, you can create Receive connectors in the Front End Transport service, and the Transport (Hub) service. On Edge Transport servers, you can create Receive connectors in the Transport service.
 
 For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors.
@@ -229,37 +207,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ReceiveConnector -Name Test -Usage Custom -Bindings 10.10.1.1:25 -RemoteIPRanges 192.168.0.1-192.168.0.24
 ```
 
 This example creates the custom Receive connector Test with the following properties:
-
-
-It listens for incoming SMTP connections on the IP address 10.10.1.1 and port 25.
-
-It accepts incoming SMTP connections only from the IP range 192.168.0.1-192.168.0.24
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-ReceiveConnector -Name Test -Usage Custom -Bindings 10.10.1.1:25 -RemoteIPRanges 192.168.0.1-192.168.0.24
-```
-
-This example creates the custom Receive connector Test with the following properties:
-
-
-It listens for incoming SMTP connections on the IP address 10.10.1.1 and port 25.
-
-It accepts incoming SMTP connections only from the IP range 192.168.0.1-192.168.0.24
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-ReceiveConnector -Name Test -Usage Custom -Bindings 10.10.1.1:25 -RemoteIPRanges 192.168.0.1-192.168.0.24
-```
-
-This example creates the custom Receive connector Test with the following properties:
-
 
 It listens for incoming SMTP connections on the IP address 10.10.1.1 and port 25.
 
@@ -268,17 +221,7 @@ It accepts incoming SMTP connections only from the IP range 192.168.0.1-192.168.
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the administrator-supplied name of the connector. Enter the Name parameter as a string, for example: "New Receive Connector".
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name for the Receive connector. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks.
-
-
 
 ```yaml
 Type: String
@@ -294,64 +237,6 @@ Accept wildcard characters: False
 ```
 
 ### -Bindings
-!!! Exchange Server 2010
-
-The Bindings parameter specifies the local IP address and TCP port numbers used by the Receive connector to listen for inbound messages. Valid syntax for this parameter is \<IP Address\>:\<TCP Port\>, such as 192.168.1.1:25. The IP address 0.0.0.0 indicates that the Receive connector uses all IP addresses configured on all network adapters to listen for inbound messages.
-
-You must specify a local IP address that's valid for the Hub Transport server or Edge Transport server on which the Receive connector is located. If you specify an invalid local IP address, the Microsoft Exchange Transport service may fail to start when the service is restarted. To specify all IP addresses configured on all network adapters, you can use the IP address 0.0.0.0.
-
-You must specify a value for the Bindings parameter when the following parameters are specified:
-
-- Internet or Usage parameter with a value of Internet
-
-- Partner or Usage parameter with a value of Partner
-
-- Custom or Usage parameter with a value of Custom
-
-The values that you specify by using the Bindings parameter must satisfy one of the following requirements for uniqueness:
-
-- You can specify a unique combination of IP address and TCP port that doesn't conflict with the IP address or TCP port used in the Bindings parameter of another Receive connector on the server.
-
-- You can use an existing combination of IP address and TCP port, but use the RemoteIPRanges parameter to restrict the remote servers serviced by the Receive connector. However, when you use this command to create a Receive connector, you can only use the RemoteIPRanges parameter and the Bindings parameter together when the following parameters are specified: Custom or Usage parameter with a value of Custom. Partner or Usage parameter with a value of Partner.
-
-You can't specify a value for the Bindings parameter with this command when the following parameters are specified:
-
-- Client or Usage parameter with a value of Client. The default value of the Bindings parameter is 0.0.0.0:587. This value indicates that the connector accepts connections on TCP port 587 on all IP addresses configured on all network adapters in the server.
-
-- Internal or Usage parameter with a value of Internal. The default value of the Bindings parameter is 0.0.0.0:25. This value indicates that the connector accepts connections on TCP port 25 on all IP addresses configured on all network adapters in the server.
-
-
-
-!!! Exchange Server 2013
-
-The Bindings parameter specifies the local IP address and TCP port number used by the Receive connector to listen for inbound messages. Valid syntax for this parameter is \<IP Address\>:\<TCP Port\>, such as 192.168.1.1:25. The IP address 0.0.0.0 indicates that the Receive connector uses all IP addresses configured on all network adapters to listen for inbound messages.
-
-You must specify a local IP address that's valid for the Mailbox server or Edge server on which the Receive connector is located. If you specify an invalid local IP address, the Microsoft Exchange Transport service may fail to start when the service is restarted.
-
-You must specify a value for the Bindings parameter when the following parameters are specified:
-
-- Internet or Usage parameter with a value of Internet
-
-- Partner or Usage parameter with a value of Partner
-
-- Custom or Usage parameter with a value of Custom
-
-The values that you specify using the Bindings parameter must satisfy one of the following requirements for uniqueness:
-
-- You can specify a unique combination of IP address and TCP port that doesn't conflict with the IP address or TCP port used in the Bindings parameter of another Receive connector on the server.
-
-- You can use an existing combination of IP address and TCP port, but use the RemoteIPRanges parameter to restrict the remote servers serviced by the Receive connector. However, when you use this command to create a Receive connector, you can only use the RemoteIPRanges parameter and the Bindings parameter together when the following parameters are specified: Custom or Usage parameter with a value of Custom. Partner or Usage parameter with a value of Partner.
-
-You can't specify a value for the Bindings parameter with this command when the following parameters are specified:
-
-- Client or Usage parameter with a value of Client. The default value of the Bindings parameter is 0.0.0.0:587. This value indicates that the connector accepts connections on TCP port 587 on all IP addresses configured on all network adapters in the server.
-
-- Internal or Usage parameter with a value of Internal. The default value of the Bindings parameter is 0.0.0.0:25. This value indicates that the connector accepts connections on TCP port 25 on all IP addresses configured on all network adapters in the server.
-
-
-
-!!! Exchange Server 2016
-
 The Bindings parameter specifies the local IP address and TCP port number that's used by the Receive connector. This parameter uses the syntax "\<IPv4 Address\>:\<TCP Port\>","\<IPv6 Address\>:\<TCP Port\>". You can specify an IPv4 address and port, and IPv6 address and port, or both. The IP address values 0.0.0.0 or [::]: indicate that the Receive connector uses all available local IPv4 or all IPv6 addresses.
 
 You need to specify a valid local IP address from the network adapters of the Exchange server. If you specify an invalid local IP address, the Microsoft Exchange Transport service might fail to start when the service is restarted.
@@ -375,8 +260,6 @@ The values for this parameter must satisfy one of the following uniqueness requi
 - The combination of IP address and TCP port doesn't conflict with the IP address and TCP port that's used on another Receive connector on the server.
 
 - You use an existing combination of IP address and TCP port that's configured on another Receive connector on the server, but you restrict the remote IP addresses by using the RemoteIPRanges parameter. When you create a Receive connector, you can only use the RemoteIPRanges and Bindings parameters together with the Custom and Partner switches (or the Usage parameter with the value Custom or Partner).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -405,48 +288,6 @@ Accept wildcard characters: False
 ```
 
 ### -Client
-!!! Exchange Server 2010
-
-The Client parameter can be used to specify the Client usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Client parameter, you can't use any of the following parameters:
-
-- Internal
-
-- Internet
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Client parameter, you must specify a value for the RemoteIPRanges parameter. If you don't specify a value for a required parameter, this command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Understanding Receive Connectors.
-
-
-
-!!! Exchange Server 2013
-
-The Client parameter specifies the Client usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Client parameter, you can't use any of the following parameters:
-
-- Internal
-
-- Internet
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Client parameter, you must specify a value for the RemoteIPRanges parameter. If you don't specify a value for a required parameter, this command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors.
-
-
-
-!!! Exchange Server 2016
-
 The Client switch specifies the Client usage type for the Receive connector. You don't need to specify a value with this switch.
 
 This usage type assigns the following default permission groups and authentication methods:
@@ -458,8 +299,6 @@ This usage type assigns the following default permission groups and authenticati
 When you use this switch, you also need to use the RemoteIPRanges parameter, and you can't use the Bindings parameter (the default value is 0.0.0.0:587).
 
 You can't use this switch with any other usage type parameters (Internal, Internet, Partner, Custom, or Usage).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -475,48 +314,6 @@ Accept wildcard characters: False
 ```
 
 ### -Internal
-!!! Exchange Server 2010
-
-The Internal parameter specifies the Internal usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Internal parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internet
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Internal parameter, you must specify a value for the RemoteIPRanges parameter. If you don't specify a value for a required parameter, the command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Understanding Receive Connectors.
-
-
-
-!!! Exchange Server 2013
-
-The Internal parameter specifies the Internal usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Internal parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internet
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Internal parameter, you must specify a value for the RemoteIPRanges parameter. If you don't specify a value for a required parameter, the command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors.
-
-
-
-!!! Exchange Server 2016
-
 The Internal switch specifies the Internal usage type for the Receive connector. You don't need to specify a value with this switch.
 
 This usage type assigns the following default permission groups and authentication methods:
@@ -528,8 +325,6 @@ This usage type assigns the following default permission groups and authenticati
 When you use this switch, you also need to use the RemoteIPRanges parameter, and you can't use the Bindings parameter (the default value is 0.0.0.0:25).
 
 You can't use this switch with any other usage type parameters (Client, Internet, Partner, Custom, or Usage).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -545,48 +340,6 @@ Accept wildcard characters: False
 ```
 
 ### -Internet
-!!! Exchange Server 2010
-
-The Internet parameter specifies the Internet usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Internet parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Internet parameter, you must specify a value for the Bindings parameter. If you don't provide a value for a required parameter, this command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Understanding Receive Connectors.
-
-
-
-!!! Exchange Server 2013
-
-The Internet parameter specifies the Internet usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Internet parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Partner
-
-- Custom
-
-- Usage
-
-If you specify the Internet parameter, you must specify a value for the Bindings parameter. If you don't provide a value for a required parameter, this command prompts you so that it may continue.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors.
-
-
-
-!!! Exchange Server 2016
-
 The Internet switch specifies the Internet usage type for the Receive connector. You don't need to specify a value with this switch.
 
 This usage type assigns the following default permission groups and authentication methods:
@@ -598,8 +351,6 @@ This usage type assigns the following default permission groups and authenticati
 When you use this switch, you also need to use the Bindings parameter, and you can't use the RemoteIPRanges parameter (the default value is 0.0.0.0-255.255.255.255).
 
 You can't use this switch with any other usage type parameters (Client, Internal, Partner, Custom, or Usage).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -615,32 +366,6 @@ Accept wildcard characters: False
 ```
 
 ### -Partner
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Partner parameter specifies the Partner usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Partner parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Internet
-
-- Custom
-
-- Usage
-
-If you specify the Partner parameter, you must specify a value for the following parameters:
-
-- Bindings
-
-- RemoteIPRanges
-
-If you don't provide a value for a required parameter, this command prompts you so that it may continue.
-
-
-
-!!! Exchange Server 2016
-
 The Partner switch specifies the Partner usage type for the Receive connector. You don't need to specify a value with this switch.
 
 This usage type assigns the following default permission groups and authentication methods:
@@ -652,8 +377,6 @@ This usage type assigns the following default permission groups and authenticati
 When you use this switch, you also need to use the Bindings and RemoteIPRanges parameters.
 
 You can't use this switch with any other usage type parameters (Client, Internal, Internet, Custom, or Usage).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -669,28 +392,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteIPRanges
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RemoteIPRanges parameter specifies the remote IP addresses from which this connector accepts messages. Valid syntax for this parameter is \<Starting IP Address\>-\<Ending IP Address\>, such as 192.168.1.1-192.168.1.10. You can specify multiple IP address ranges separated by commas.
-
-You must specify a value for the RemoteIPRanges parameter when the following parameters are specified:
-
-- Client or Usage parameter with a value of Client
-
-- Internal or Usage parameter with a value of Internal
-
-- Partner or Usage parameter with a value of Partner
-
-- Custom or Usage parameter with a value of Custom
-
-Multiple Receive connectors on the same server can have overlapping remote IP address ranges as long as one IP address range is completely overlapped by another IP address. When remote IP address ranges overlap, the remote IP address range with the most specific match to the IP address of the connecting server is used.
-
-The default value of the RemoteIPRanges parameter for the Internet usage type is 0.0.0.0-255.255.255.255. This value indicates that the connector accepts connections from all remote IP addresses.
-
-
-
-!!! Exchange Server 2016
-
 The RemoteIPRanges parameter specifies the remote IP addresses that the Receive connector accepts messages from. Valid values are:
 
 - Single IP address: For example, 192.168.1.1 or fe80::39bd:88f7:6969:d223%11.
@@ -723,8 +424,6 @@ You need to use this parameter with the following usage type parameters:
 
 You can't use this parameter with the Internet usage type (the default value is 0.0.0.0-255.255.255.255).
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: Set1, Set5, Set3, Set4
@@ -752,88 +451,6 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-!!! Exchange Server 2010
-
-The Usage parameter specifies the default permission groups and authentication methods assigned to the Receive connector. The valid values for the Usage parameter are as follows: Client, Custom, Internal, Internet, and Partner.
-
-If you specify a value for the Usage parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Internet
-
-- Partner
-
-- Custom
-
-A value for the Bindings parameter is required if you specify any of the following values for the Usage parameter:
-
-- Internet
-
-- Partner
-
-- Custom
-
-A value for the RemoteIPRanges parameter is required if you specify any of the following values for the Usage parameter:
-
-- Client
-
-- Internal
-
-- Partner
-
-- Custom
-
-If you don't specify a value for a required parameter, the command ends unsuccessfully. This command won't prompt you for the missing required parameters.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Understanding Receive Connectors.
-
-
-
-!!! Exchange Server 2013
-
-The Usage parameter specifies the default permission groups and authentication methods assigned to the Receive connector. The valid values for the Usage parameter are as follows: Client, Custom, Internal, Internet, and Partner.
-
-If you specify a value for the Usage parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Internet
-
-- Partner
-
-- Custom
-
-A value for the Bindings parameter is required if you specify any of the following values for the Usage parameter:
-
-- Internet
-
-- Partner
-
-- Custom
-
-A value for the RemoteIPRanges parameter is required if you specify any of the following values for the Usage parameter:
-
-- Client
-
-- Internal
-
-- Partner
-
-- Custom
-
-If you don't specify a value for a required parameter, the command ends unsuccessfully. This command won't prompt you for the missing required parameters.
-
-For more information about Receive connector usage types, permission groups, and authentication methods, see Receive connectors.
-
-
-
-!!! Exchange Server 2016
-
 The Usage parameter specifies the default permission groups and authentication methods that are assigned to the Receive connector. Valid values are:
 
 - Client
@@ -868,8 +485,6 @@ For a description of the default permission groups and authentication methods th
 
 You can't use this parameter with any other usage type switches (Client, Internal, Internet, Custom, or Partner).
 
-
-
 ```yaml
 Type: Custom | Internet | Internal | Client | Partner
 Parameter Sets: Set6
@@ -884,31 +499,11 @@ Accept wildcard characters: False
 ```
 
 ### -AdvertiseClientSettings
-!!! Exchange Server 2010
-
-The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings are displayed in the Outlook Web App About page, accessed from the Help menu.
-
-The default value is $true.
-
-
-
-!!! Exchange Server 2013
-
-The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings are displayed in the Outlook Web App, accessed from Settings \> Options \> Account \> my Account \> Settings for POP or IMAP access.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The AdvertiseClientSettings parameter specifies whether the SMTP server name, port number, and authentication settings for the Receive connector are displayed to users in the options of Outlook on the web. Valid values are:
 
 - $true: The SMTP values are displayed in Outlook on the web. Typically, you would only use this setting for a Receive connector with the usage type Client (authenticated SMTP connections on TCP port 587 for POP3 and IMAP4 clients).
 
 - $false: The SMTP values are displayed in Outlook on the web. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -924,14 +519,6 @@ Accept wildcard characters: False
 ```
 
 ### -AuthMechanism
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AuthMechanism parameter specifies the advertised and accepted authentication mechanisms. The authentication options are None, Tls, Integrated, BasicAuth, BasicAuthRequireTLS, ExchangeServer, and ExternalAuthoritative. You can enter multiple values for the AuthMechanism parameter by separating the values with commas. If the RequireTLS parameter is set to $true, the AuthMechanism parameter must be set to Tls. If you set the AuthMechanism parameter to BasicAuthRequireTLS, you must also select BasicAuth and Tls. The AuthMechanism parameter value ExternalAuthoritative may only coexist with the value Tls. If you set the AuthMechanism parameter to ExternalAuthoritative, the PermissionGroups parameter must also have the value ExchangeServers.
-
-
-
-!!! Exchange Server 2016
-
 The AuthMechanism parameter specifies the advertised and accepted authentication mechanisms for the Receive connector. Valid values are:
 
 - None
@@ -960,8 +547,6 @@ You can specify multiple values separated by commas, but some values have depend
 
 - The value ExternalAuthoritative requires you to set the value of the PermissionGroups parameter to ExchangeServers.
 
-
-
 ```yaml
 Type: None | Tls | Integrated | BasicAuth | BasicAuthRequireTLS | ExchangeServer | ExternalAuthoritative
 Parameter Sets: (All)
@@ -976,29 +561,11 @@ Accept wildcard characters: False
 ```
 
 ### -Banner
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Banner parameter specifies an SMTP 220 banner and overrides the default SMTP 220 banner. When the value of the Banner parameter is blank, the default SMTP banner is the following:
-
-220 \<Servername\> Microsoft ESMTP MAIL service ready at \<RegionalDay-Date-24HourTimeFormat\> \<RegionalTimeZoneOffset\>
-
-When you specify a value for the Banner parameter, you must use the following syntax:
-
-220 \<RemainingBannerText\>.
-
-220 is the default Service ready SMTP response code as defined in RFC 2821.
-
-
-
-!!! Exchange Server 2016
-
 The Banner parameter specifies a custom SMTP 220 banner that's displayed to remote messaging servers that connect to the Receive connector. When you specify a value, enclose the value in quotation marks, and start the value with 220 (the default "Service ready" SMTP response code).
 
 The default value of this parameter is blank ($null), which uses the following SMTP banner:
 
 220 \<Servername\> Microsoft ESMTP MAIL service ready at \<RegionalDay-Date-24HourTimeFormat\>\<RegionalTimeZoneOffset\>
-
-
 
 ```yaml
 Type: String
@@ -1014,14 +581,6 @@ Accept wildcard characters: False
 ```
 
 ### -BinaryMimeEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The BinaryMimeEnabled parameter specifies whether the BINARYMIME EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. The default value is $true. When the BinaryMimeEnabled parameter is set to $true, the BINARYMIME EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the BinaryMimeEnabled parameter is set to $false, the BINARYMIME EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled.
-
-
-
-!!! Exchange Server 2016
-
 The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: BINARYMIME is enabled and is advertised in the EHLO response. This setting requires that the ChunkingEnabled parameter is also set to the value $true. This is the default value.
@@ -1029,8 +588,6 @@ The BinaryMimeEnabled parameter specifies whether the BINARYMIME Extended SMTP e
 - $false: BINARYMIME is disabled and isn't advertised in the EHLO response.
 
 The binary MIME extension is defined in RFC 3030.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1046,14 +603,6 @@ Accept wildcard characters: False
 ```
 
 ### -ChunkingEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ChunkingEnabled parameter specifies whether the CHUNKING EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid input for this parameter is $true or $false. The default value is $true. When the ChunkingEnabled parameter is set to $true, the CHUNKING EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the ChunkingEnabled parameter is set to $false, the CHUNKING EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled.
-
-
-
-!!! Exchange Server 2016
-
 The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: CHUNKING is enabled and is advertised in the EHLO response. This is the default value.
@@ -1061,8 +610,6 @@ The ChunkingEnabled parameter specifies whether the CHUNKING Extended SMTP exten
 - $false: CHUNKING is disabled and isn't advertised in the EHLO response.
 
 Chunking is defined in RFC 3030.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1078,17 +625,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-!!! Exchange Server 2010
-
-The Comment parameter specifies an optional comment. You must encapsulate the Comment parameter in quotation marks ("), for example: "this is an admin note".
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
-
-
 
 ```yaml
 Type: String
@@ -1124,24 +661,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionInactivityTimeout
-!!! Exchange Server 2010
-
-The ConnectionInactivityTimeout parameter specifies the maximum amount of idle time before a connection to a Receive connector is closed. The default value for a Receive connector configured on a Hub Transport server is 5 minutes. The default value for a Receive connector configured on an Edge Transport server is 1 minute. To specify a value, enter the value as a time span: dd.hh:mm:ss, where d = days, h = hours, m = minutes, and s = seconds. The value specified by the ConnectionTimeout parameter must be greater than the value specified by the ConnectionInactivityTimeout parameter. The valid input range for either parameter is 00:00:01 to 1.00:00:00.
-
-
-
-!!! Exchange Server 2013
-
-The ConnectionInactivityTimeout parameter specifies the maximum amount of idle time before a connection to a Receive connector is closed. The default value for a Receive connector configured on a Mailbox server is 5 minutes. The default value for a Receive connector configured on an Edge server is 1 minute.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The value specified by the ConnectionTimeout parameter must be greater than the value specified by the ConnectionInactivityTimeout parameter. The valid input range for either parameter is 00:00:01 to 1.00:00:00.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectionInactivityTimeout parameter specifies the maximum amount of idle time before a connection to the Receive connector is closed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -1151,8 +670,6 @@ A valid value for this parameter is 00:00:01 (one second) to 1.00:00:00 (one day
 The default value for Receive connectors on Mailbox servers is 00:05:00 (5 minutes). The default value for Receive connectors on Edge Transport servers is 00:01:00 (1 minute).
 
 The value of this parameter must be less than the value of the ConnectionTimeout parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1168,32 +685,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionTimeout
-!!! Exchange Server 2010
-
-The ConnectionTimeout parameter specifies the maximum time that a connection can remain open, even if the connection is actively transmitting data. The default value for a Receive connector configured on a Hub Transport server is 10 minutes The default value for a Receive connector configured on an Edge Transport server is 5 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify a connection time-out of 5 minutes, enter 00.00:05:00.
-
-The value specified by the ConnectionTimeout parameter must be greater than the value specified by the ConnectionInactivityTimeout parameter. The valid input range for either parameter is from 00:00:01 through 1.00:00:00.
-
-
-
-!!! Exchange Server 2013
-
-The ConnectionTimeout parameter specifies the maximum time that a connection can remain open, even if the connection is actively transmitting data. The default value for a Receive connector configured on a Mailbox server is 10 minutes. The default value for a Receive connector configured on an Edge server is 5 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify a connection time-out of 5 minutes, enter 00.00:05:00.
-
-The value specified by the ConnectionTimeout parameter must be greater than the value specified by the ConnectionInactivityTimeout parameter. The valid input range for either parameter is from 00:00:01 through 1.00:00:00.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectionTimeout parameter specifies the maximum time that the connection to the Receive connector can remain open, even if the connection is actively transmitting data.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -1203,8 +694,6 @@ A valid value for this parameter is 00:00:01 (one second) to 1.00:00:00 (one day
 The default value for Receive connectors on Mailbox servers is 00:10:00 (10 minutes). The default value for Receive connectors on Edge Transport servers is 00:05:00 (5 minutes).
 
 The value of this parameter must be greater than the value of the ConnectionInactivityTimeout parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1220,32 +709,6 @@ Accept wildcard characters: False
 ```
 
 ### -Custom
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Custom parameter specifies the Custom usage type. The usage type specifies the default permission groups and authentication methods assigned to the Receive connector. If you use the Custom parameter, you can't use any of the following parameters:
-
-- Client
-
-- Internal
-
-- Internet
-
-- Partner
-
-- Usage
-
-If you specify the Custom parameter, you must specify a value for the following parameters:
-
-- Bindings
-
-- RemoteIPRanges
-
-If you don't provide a value for a required parameter, this command prompts you so that it may continue.
-
-
-
-!!! Exchange Server 2016
-
 The Custom switch specifies the Custom usage type for the Receive connector. You don't need to specify a value with this switch.
 
 This usage type assigns the following default permission groups and authentication methods:
@@ -1259,8 +722,6 @@ When you use this switch, you also need to use the Bindings and RemoteIPRanges p
 If you don't also use the PermissionGroups parameter to assign at least one permission group, you'll need to use the PermissionGroups parameter on the Set-ReceiveConnector cmdlet after you create the Receive connector (otherwise, the Receive connector can't accept inbound SMTP connections).
 
 You can't use this switch with any other usage type parameters (Client, Internal, Internet, Partner, or Usage).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1276,14 +737,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDomain
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DefaultDomain parameter specifies the domain name to append to values that are submitted to MAIL FROM or RCPT TO in the message envelope by a sending server if no domain name is provided.
-
-
-
-!!! Exchange Server 2016
-
 The DefaultDomain parameter specifies the default accepted domain to use for the Exchange organization. You can use any value that uniquely identifies the accepted domain. For example:
 
 - Name
@@ -1300,8 +753,6 @@ Although you can configure any accepted domain as the default domain, you typica
 
 - The primary address for all recipients in the default email address policy. If you configure another accepted domain as the default domain, the default email address policy isn't automatically updated.
 
-
-
 ```yaml
 Type: AcceptedDomainIdParameter
 Parameter Sets: (All)
@@ -1316,14 +767,6 @@ Accept wildcard characters: False
 ```
 
 ### -DeliveryStatusNotificationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DeliveryStatusNotificationEnabled parameter specifies whether the delivery status notification (DSN) EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. The default value is $true. When the DeliveryStatusNotificationEnabled parameter is set to $true, the DSN EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the DeliveryStatusNotificationEnabled parameter is set to $false, the DSN EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled. The DSN extension to extended SMTP (ESMTP) provides enhanced DSN functionality specified in RFC 1891.
-
-
-
-!!! Exchange Server 2016
-
 The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (delivery status notification) Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: DSN is enabled and is advertised in the EHLO response. This is the default value.
@@ -1331,8 +774,6 @@ The DeliveryStatusNotificationEnabled parameter specifies whether the DSN (deliv
 - $false: DSN is disabled and isn't advertised in the EHLO response.
 
 Delivery status notifications are defined in RFC 3461.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1366,52 +807,6 @@ Accept wildcard characters: False
 ```
 
 ### -DomainSecureEnabled
-!!! Exchange Server 2010
-
-The DomainSecureEnabled parameter specifies the first part of the process to enable mutual Transport Layer Security (TLS) authentication for the domains serviced by this Receive connector. Mutual TLS authentication functions correctly only if the following conditions are true:
-
-- The value of the DomainSecureEnabled parameter is $true.
-
-- The AuthMechanism parameter contains the value Tls and doesn't contain the value ExternalAuthoritative.
-
-- The value of the AuthMechanism parameter contains Tls.
-
-- The TLSReceiveDomainSecureList parameter in the Get-TransportConfig command contains at least one domain serviced by this Receive connector. The wildcard character (\*) isn't supported in domains that are configured for mutual TLS authentication. The same domain must also be defined on the corresponding Send connector, and in the value of the TLSSendDomainSecureList parameter in the Get-TransportConfig command.
-
-The default value for the DomainSecureEnabled parameter is $false for the following types of Receive connectors:
-
-- All Receive connectors defined on a Hub Transport server
-
-- User-created Receive connectors defined on an Edge Transport server
-
-The default value for the DomainSecureEnabled parameter is $true for default Receive connectors defined on an Edge Transport server.
-
-
-
-!!! Exchange Server 2013
-
-The DomainSecureEnabled parameter enables mutual Transport Layer Security (TLS) authentication for the domains serviced by this Receive connector. Mutual TLS authentication functions correctly only if the following conditions are true:
-
-- The value of the DomainSecureEnabled parameter is $true.
-
-- The AuthMechanism parameter contains the value Tls and doesn't contain the value ExternalAuthoritative.
-
-- The value of the AuthMechanism parameter contains Tls.
-
-- The TLSReceiveDomainSecureList parameter in the Get-TransportConfig command contains at least one domain serviced by this Receive connector. The wildcard character (\*) isn't supported in domains that are configured for mutual TLS authentication. The same domain must also be defined on the corresponding Send connector, and in the value of the TLSSendDomainSecureList parameter in the Get-TransportConfig command.
-
-The default value for the DomainSecureEnabled parameter is $false for the following types of Receive connectors:
-
-- All Receive connectors defined in the Transport service on a Mailbox server
-
-- User-created Receive connectors defined on an Edge server
-
-The default value for the DomainSecureEnabled parameter is $true for default Receive connectors defined on an Edge server.
-
-
-
-!!! Exchange Server 2016
-
 The DomainSecureEnabled parameter specifies whether to enable or disable mutual Transport Layer Security (TLS) authentication (also known as Domain Secure) for the domains that are serviced by the Receive connector. Valid values are:
 
 - $true: Mutual TLS authentication is enabled.
@@ -1430,8 +825,6 @@ Note that setting this parameter to the value $true is only part of the requirem
 
 - The TLSSendDomainSecureList parameter on the Set-TransportConfig cmdlet.
 
-
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -1446,14 +839,6 @@ Accept wildcard characters: False
 ```
 
 ### -EightBitMimeEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The EightBitMimeEnabled parameter specifies whether the 8BITMIME EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. The default value is $true. When the EightBitMimeEnabled parameter is set to $true, the 8BITMIME EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the EightBitMimeEnabled parameter is set to $false, the 8BITMIME EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled.
-
-
-
-!!! Exchange Server 2016
-
 The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: 8BITMIME is enabled and is advertised in the EHLO response. This is the default value.
@@ -1461,8 +846,6 @@ The EightBitMimeEnabled parameter specifies whether the 8BITMIME Extended SMTP e
 - $false: 8BITMIME is disabled and isn't advertised in the EHLO response.
 
 8-bit data transmission is defined in RFC 6152.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1478,28 +861,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableAuthGSSAPI
-!!! Exchange Server 2010
-
-The EnableAuthGSSAPI parameter specifies the advertisement of the Generic Security Services application programming interface (GSSAPI) authentication method when Integrated Windows authentication is enabled on this connector. If the AuthMechanism parameter contains Integrated, and the EnableAuthGSSAPI parameter is set to $true, the AUTH GSSAPI NTLM keyword is advertised in the EHLO response of the Receive connector. Clients may use Kerberos or NTLM to authenticate with the Receive connector. If the AuthMechanism parameter contains Integrated, and the EnableAuthGSSAPI parameter is set to $false, the AUTH NTLM keyword is advertised in the EHLO response of the Receive connector. Clients may only use NTLM to authenticate with the Receive connector.
-
-If you have Internet Information Services (IIS) messaging servers that authenticate with this Receive connector, you should set the value of the EnableAuthGSSAPI parameter to $false. Authentication with computers running Microsoft Exchange Server 2003 aren't affected by the value of the EnableAuthGSSAPI parameter. Exchange 2003 servers use the authentication methods advertised in the X-EXPS keyword. The X-EXPS keyword is advertised in the EHLO response of the Receive connector when the AuthMechanism parameter contains ExchangeServer.
-
-The valid values for this parameter is $true or $false. The default value is $false. By default, the EnableAuthGSSAPI parameter is set to $true only on the default Receive connector Client \<Server Name\> created only on Hub Transport servers.
-
-
-
-!!! Exchange Server 2013
-
-The EnableAuthGSSAPI parameter specifies the advertisement of the Generic Security Services application programming interface (GSSAPI) authentication method, when Integrated Windows authentication is enabled on this connector. If the AuthMechanism parameter contains Integrated, and the EnableAuthGSSAPI parameter is set to $true, the AUTH GSSAPI NTLM keyword is advertised in the EHLO response of the Receive connector. Clients may use Kerberos or NTLM to authenticate with the Receive connector. If the AuthMechanism parameter contains Integrated, and the EnableAuthGSSAPI parameter is set to $false, the AUTH NTLM keyword is advertised in the EHLO response of the Receive connector. Clients may use only NTLM to authenticate with the Receive connector.
-
-If you have Internet Information Services (IIS) messaging servers that authenticate with this Receive connector, you should set the value of the EnableAuthGSSAPI parameter to $false. Authentication with computers running Microsoft Exchange Server 2003 aren't affected by the value of the EnableAuthGSSAPI parameter. Exchange 2003 servers use the authentication methods advertised in the X-EXPS keyword. The X-EXPS keyword is advertised in the EHLO response of the Receive connector when the AuthMechanism parameter contains ExchangeServer.
-
-The valid values for this parameter is $true or $false. The default value is $false. By default, the EnableAuthGSSAPI parameter is set to $true only on the default Receive connector Client \<Server Name\> created only in the Transport service on a Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The EnableAuthGSSAPI parameter enables or disables Kerberos when Integrated Windows authentication is available on the Receive connector (the AuthMechanism parameter contains the value Integrated). Valid values are:
 
 - $true: Kerberos is enabled. The Extended SMTP keyword AUTH GSSAPI NTLM is advertised in the EHLO response. Clients can use Kerberos or NTLM for Integrated Windows authentication.
@@ -1507,8 +868,6 @@ The EnableAuthGSSAPI parameter enables or disables Kerberos when Integrated Wind
 - $false: Kerberos is disabled. The Extended SMTP keyword AUTH NTLM is advertised in the EHLO response. Clients can only use NTLM for Integrated Windows authentication.
 
 The Generic Security Services application programming interface (GSSAPI) is an IETF standard for accessing security services.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1524,21 +883,11 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Enabled parameter specifies whether to enable the connector. Valid values for this parameter are $true or $false. The default value is $true. Use the Enabled parameter to enable or disable the connector.
-
-
-
-!!! Exchange Server 2016
-
 The Enabled parameter specifies whether to enable or disable the Receive connector. Valid values are:
 
 - $true: The Receive connector is enabled. This is the default value.
 
 - $false: The Receive connector is disabled.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1554,20 +903,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnhancedStatusCodesEnabled
-!!! Exchange Server 2010
-
-The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. The default value is $true. When the EnhancedStatusCodesEnabled parameter is set to $true, the ENHANCEDSTATUSCODES EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the EnhancedStatusCodesEnabled parameter is set to $false, the ENHANCEDSTATUSCODES EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled. The ENHANCEDSTATUSCODES extension provides enhanced error and status information in DSNs sent to remote servers.
-
-
-
-!!! Exchange Server 2013
-
-The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. The default value is $true. When the EnhancedStatusCodesEnabled parameter is set to $true, the ENHANCEDSTATUSCODES EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the EnhancedStatusCodesEnabled parameter is set to $false, the ENHANCEDSTATUSCODES EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled. The ENHANCEDSTATUSCODES extension provides enhanced error and status information in delivery status notification messages sent to remote servers.
-
-
-
-!!! Exchange Server 2016
-
 The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCODES Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: ENHANCEDSTATUSCODES is enabled and is advertised in the EHLO response. This is the default value.
@@ -1575,8 +910,6 @@ The EnhancedStatusCodesEnabled parameter specifies whether the ENHANCEDSTATUSCOD
 - $false: ENHANCEDSTATUSCODES is disabled and isn't advertised in the EHLO response.
 
 Enhanced status codes are defined in RFC 2034.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1592,36 +925,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionPolicy
-!!! Exchange Server 2010
-
-The ExtendedProtectionPolicy parameter specifies how you want to use Extended Protection for Authentication on this Receive connector. By default, this parameter is set to None. The ExtendedProtectionPolicy parameter may have the following values:
-
-- None Extended Protection for Authentication won't be used.
-
-- Allow Extended Protection for Authentication will be used only if the connecting host supports it. Otherwise, the connections will be established without Extended Protection for Authentication.
-
-- Require Extended Protection for Authentication will be required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection will be rejected.
-
-Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you're using Integrated Windows authentication.
-
-
-
-!!! Exchange Server 2013
-
-The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is implemented on this Receive connector. By default, this parameter is set to None. The ExtendedProtectionPolicy parameter may have the following values:
-
-- None Extended Protection for Authentication isn't used.
-
-- Allow Extended Protection for Authentication is used only if the connecting host supports it. Otherwise, connections are established without Extended Protection for Authentication.
-
-- Require Extended Protection for Authentication is required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection is rejected.
-
-Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you are using Integrated Windows authentication.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionPolicy parameter specifies how Extended Protection for Authentication is implemented on the Receive connector. Valid values are:
 
 - None: Extended Protection for Authentication isn't used. This is the default value.
@@ -1631,8 +934,6 @@ The ExtendedProtectionPolicy parameter specifies how Extended Protection for Aut
 - Require: Extended Protection for Authentication is required for all incoming connections to this Receive connector. If the connecting host doesn't support Extended Protection for Authentication, the connection is rejected.
 
 Extended Protection for Authentication enhances the protection and handling of credentials when authenticating network connections using Integrated Windows authentication. Integrated Windows authentication is also known as NTLM. We strongly recommend that you use Extended Protection for Authentication if you are using Integrated Windows authentication.
-
-
 
 ```yaml
 Type: None | Allow | Require
@@ -1648,44 +949,6 @@ Accept wildcard characters: False
 ```
 
 ### -Fqdn
-!!! Exchange Server 2010
-
-The Fqdn parameter specifies the FQDN used as the destination server for connected messaging servers that use the Receive connector to send incoming messages. The value of this parameter is displayed to connected messaging servers whenever a destination server name is required, as in the following examples:
-
-- In the default SMTP banner of the Receive connector
-
-- In the EHLO/HELO response of the Receive connector
-
-- In the most recent Received header field in the incoming message when the message enters the Hub Transport server or Edge Transport server
-
-- During TLS authentication
-
-The default value of the Fqdn parameter is the FQDN of the Hub Transport server or Edge Transport server that contains the Receive connector.
-
-Don't modify the FQDN value on the default Receive connector Default \<Server Name\> that's automatically created on Hub Transport servers. If you have multiple Hub Transport servers in your Exchange organization and you change the FQDN value on the Default \<Server Name\> Receive connector, internal mail flow between Hub Transport servers will fail.
-
-
-
-!!! Exchange Server 2013
-
-The Fqdn parameter specifies the FQDN used as the destination server for connected messaging servers that use the Receive connector to send incoming messages. The value of this parameter is displayed to connected messaging servers whenever a destination server name is required, as in the following examples:
-
-- In the default SMTP banner of the Receive connector
-
-- In the EHLO/HELO response of the Receive connector
-
-- In the most recent Received header field in the incoming message when the message enters the Transport service of a Mailbox server or an Edge server
-
-- During TLS authentication
-
-The default value of the Fqdn parameter is the FQDN of the Mailbox server or Edge server that contains the Receive connector.
-
-Don't modify the FQDN value on the default Receive connector Default \<Server Name\> that's automatically created in the Transport service of a Mailbox server. If you have multiple Mailbox servers in your Exchange organization and you change the FQDN value on the Default \<Server Name\> Receive connector, internal mail flow between Mailbox servers will fail.
-
-
-
-!!! Exchange Server 2016
-
 The Fqdn parameter specifies the destination FQDN that's shown to connected messaging servers. This value is used in the following locations:
 
 - In the default SMTP banner of the Receive connector.
@@ -1697,8 +960,6 @@ The Fqdn parameter specifies the destination FQDN that's shown to connected mess
 - During TLS authentication.
 
 The default value is the FQDN of theExchange server that contains the Receive connector (for example edge01.contoso.com). You can specify a different FQDN (for example, mail.contoso.com).
-
-
 
 ```yaml
 Type: Fqdn
@@ -1713,65 +974,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -LiveCredentialEnabled
-The LiveCredentialEnabled parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LongAddressesEnabled
-!!! Exchange Server 2010
-
-The LongAddressesEnabled parameter specifies whether to enable the Receive connector to accept long X.400 e-mail addresses. The X.400 e-mail addresses are encapsulated in SMTP e-mail addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method.
-
-When the value of this parameter is $false, the maximum length for a complete SMTP e-mail address is 571 characters.
-
-When the value of this parameter is $true, the following changes are made:
-
-- The XLONGADDR keyword is advertised in the EHLO response of the Receive connector.
-
-- The accepted line length of an SMTP session is increased to 8,000 characters.
-
-- Valid long addresses are accepted by the MAIL FROM and RCPT TO SMTP commands.
-
-Therefore, X.400 e-mail addresses can be up to 1,860 characters long after IMCEA encapsulation.
-
-The valid values for this parameter are $true or $false. The default value is $false. You can only modify this parameter on Receive connectors configured on Hub Transport servers.
-
-
-
-!!! Exchange Server 2013
-
-The LongAddressesEnabled parameter specifies whether the Receive connector accepts long X.400 email addresses. The X.400 email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method.
-
-When the value of this parameter is $false, the maximum length for a complete SMTP email address is 571 characters.
-
-When the value of this parameter is $true, the following changes are made:
-
-- The XLONGADDR keyword is advertised in the EHLO response of the Receive connector.
-
-- The accepted line length of an SMTP session is increased to 8,000 characters.
-
-- Valid long addresses are accepted by the MAIL FROM and RCPT TO SMTP commands.
-
-Therefore, X.400 email addresses can be up to 1,860 characters long after IMCEA encapsulation.
-
-The valid values for this parameter are $true or $false. The default value is $false. You can modify this parameter only on Receive connectors configured in the Transport service on a Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The LongAddressesEnabled parameter specifies whether the Receive connector accepts long X.400 email addresses. The X.400 email addresses are encapsulated in SMTP email addresses by using the Internet Mail Connector Encapsulated Address (IMCEA) encapsulation method. Valid values are
 
 - $true: X.400 email addresses can be up to 1,860 characters long after IMCEA encapsulation.
@@ -1788,8 +991,6 @@ When you set this parameter to the value $true, the following changes are made t
 
 You can only configure this parameter on Receive connectors in the Transport service on Mailbox servers.
 
-
-
 ```yaml
 Type: $true | $false
 Parameter Sets: (All)
@@ -1804,28 +1005,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxAcknowledgementDelay
-!!! Exchange Server 2010
-
-The MaxAcknowledgementDelay parameter specifies the maximum period the transport server delays acknowledgement until it verifies that the message has been successfully delivered to all recipients. When receiving messages from a host that doesn't support shadow redundancy, an Exchange Server 2010 transport server will delay issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server will time out and issue an acknowledgement anyway.
-
-The default value is 30 seconds.
-
-
-
-!!! Exchange Server 2013
-
-This parameter isn't used by Microsoft Exchange Server 2013. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
-
-The MaxAcknowledgementDelay parameter specifies the maximum period the transport server delays acknowledgement until it verifies that the message has been successfully delivered to all recipients. When receiving messages from a host that doesn't support shadow redundancy, an Exchange Server 2010 transport server will delay issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server will time out and issue an acknowledgement anyway.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The default value is 30 seconds.
-
-
-
-!!! Exchange Server 2016
-
 This parameter isn't used by Microsoft Exchange Server 2016. It's only used by Microsoft Exchange 2010 servers in a coexistence environment.
 
 The MaxAcknowledgementDelay parameter specifies the maximum period the transport server delays acknowledgement until it verifies that the message has been successfully delivered to all recipients. When receiving messages from a host that doesn't support shadow redundancy, an Exchange Server 2010 transport server will delay issuing an acknowledgement until it verifies that the message has been successfully delivered to all recipients. However, if it takes too long to verify successful delivery, the transport server will time out and issue an acknowledgement anyway.
@@ -1833,8 +1012,6 @@ The MaxAcknowledgementDelay parameter specifies the maximum period the transport
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is 30 seconds.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1850,46 +1027,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxHeaderSize
-!!! Exchange Server 2010
-
-The MaxHeaderSize parameter specifies in bytes the maximum size of the SMTP message header that the Receive connector accepts before it closes the connection. The default value is 65536 bytes. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 through 2147483647 bytes.
-
-
-
-!!! Exchange Server 2013
-
-The MaxHeaderSize parameter specifies in bytes the maximum size of the SMTP message header that the Receive connector accepts before it closes the connection. The default value is 65536 bytes.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 1 through 2147483647 bytes.
-
-
-
-!!! Exchange Server 2016
-
 The MaxHeaderSize parameter specifies the maximum size of the SMTP message header before the Receive connector closes the connection. The default value is 256 kilobytes (262144 bytes).
 
 When you enter a value, qualify the value with one of the following units:
@@ -1908,8 +1045,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is from 1 to 2147483647 bytes.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -1924,19 +1059,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxHopCount
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaxHopCount parameter specifies the maximum number of hops that a message can take before the message is rejected by the Receive connector. The maximum number of hops is determined by the number of Received header fields that exist in a submitted message. The default value is 30. The valid input range for this parameter is from 1 through 500.
-
-
-
-!!! Exchange Server 2016
-
 The MaxHopCount parameter specifies the maximum number of hops that a message can take before the message is rejected by the Receive connector. The maximum number of hops is determined by the number of Received header fields that exist in a submitted message.
 
 A valid value is from 1 to 500. The default value is 30.
-
-
 
 ```yaml
 Type: Int32
@@ -1952,21 +1077,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxInboundConnection
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaxInboundConnection parameter specifies the maximum number of inbound connections that this Receive connector serves at the same time. The default value is 5000. The valid input range for this parameter is from 1 through 2147483647. To disable the inbound connection limit on a Receive connector, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The MaxInboundConnection parameter specifies the maximum number of inbound connections that this Receive connector serves at the same time.
 
 A valid value is from 1 to 2147483647, or the value unlimited. The default value is 5000.
 
 To disable the inbound connection limit on a Receive connector, enter a value of unlimited.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1982,25 +1097,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxInboundConnectionPercentagePerSource
-!!! Exchange Server 2010
-
-The MaxInboundConnectionPercentagePerSource parameter specifies the maximum number of connections that a Receive connector serves at the same time from a single IP address, expressed as the percentage of available remaining connections on a Receive connector. Enter the value as an integer without the percent sign (%). The default value is 2 percent. The valid input range for this parameter is from 1 through 100.
-
-
-
-!!! Exchange Server 2013
-
-The MaxInboundConnectionPercentagePerSource parameter specifies the maximum number of connections that a Receive connector serves at the same time from a single IP address, expressed as the percentage of available remaining connections on a Receive connector. Enter the value as an integer without the percent sign (%). The default value is 2 percent. The valid input range for this parameter is 1 to 100.
-
-
-
-!!! Exchange Server 2016
-
 The MaxInboundConnectionPercentagePerSource parameter specifies the maximum number of connections that a Receive connector serves at the same time from a single IP address, expressed as the percentage of available remaining connections on a Receive connector.
 
 A valid value is from 1 to 100 without the percent sign (%). The default value is 2 percent.
-
-
 
 ```yaml
 Type: Int32
@@ -2016,21 +1115,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxInboundConnectionPerSource
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaxInboundConnectionPerSource parameter specifies the maximum number of connections that this Receive connector serves at the same time from a single IP address. The default value is 20. The valid input range for this parameter is from 1 through 10000. To disable the inbound connection per source limit on a Receive connector, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The MaxInboundConnectionPerSource parameter specifies the maximum number of connections that this Receive connector serves at the same time from a single IP address.
 
 A valid value is from 1 to 10000, or the value unlimited. The default value is 20.
 
 To disable the inbound connection per source limit on a Receive connector, enter a value of unlimited.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2046,27 +1135,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxLocalHopCount
-!!! Exchange Server 2010
-
-The MaxLocalHopCount parameter specifies the maximum number of local hops that a message can take before the message is rejected by the Receive connector. The maximum number of local hops is determined by the number of Received headers with local server addresses in a submitted message. The default value is 8. The valid input range for this parameter is from 0 through 50. When you specify a value of 0, the message is never rejected based on the number of local hops.
-
-
-
-!!! Exchange Server 2013
-
-The MaxLocalHopCount parameter specifies the maximum number of local hops that a message can take before the message is rejected by the Receive connector. The maximum number of local hops is determined by the number of Received headers with local server addresses in a submitted message. The default value is 8. The valid input range for this parameter is 0 to 50. When you specify a value of 0, the message is never rejected based on the number of local hops.
-
-
-
-!!! Exchange Server 2016
-
 The MaxLocalHopCount parameter specifies the maximum number of local hops that a message can take before the message is rejected by the Receive connector. The maximum number of local hops is determined by the number of Received headers with local server addresses in a submitted message.
 
 A valid value is from 0 to 50. The default value is 8.
 
 When you specify the value 0, the message is never rejected based on the number of local hops.
-
-
 
 ```yaml
 Type: Int32
@@ -2082,21 +1155,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxLogonFailures
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaxLogonFailures parameter specifies the number of logon failures that the Receive connector retries before it closes the connection. The default value is 3. The valid input range for this parameter is from 0 through 10. When you specify a value of 0, the connection is never closed because of logon failures.
-
-
-
-!!! Exchange Server 2016
-
 The MaxLogonFailures parameter specifies the number of logon failures that the Receive connector retries before it closes the connection.
 
 A valid value is from 0 to 10. The default value is 3.
 
 When you specify the value 0, the connection is never closed because of logon failures.
-
-
 
 ```yaml
 Type: Int32
@@ -2112,46 +1175,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMessageSize
-!!! Exchange Server 2010
-
-The MaxMessageSize parameter specifies the maximum size of a message. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 65536 through 2147483647 bytes.
-
-
-
-!!! Exchange Server 2013
-
-The MaxMessageSize parameter specifies the maximum size of a message. The default value is 25 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 65536 through 2147483647 bytes.
-
-
-
-!!! Exchange Server 2016
-
 The MaxMessageSize parameter specifies the maximum size of a message that's allowed through the Receive connector. The default value is 36 MB, which results in a realistic maximum message size of 25 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -2172,8 +1195,6 @@ A valid value for this parameter is from 65536 to 2147483647 bytes.
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -2188,21 +1209,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxProtocolErrors
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaxProtocolErrors parameter specifies the maximum number of SMTP protocol errors that the Receive connector accepts before closing the connection. The default value is 5. The valid input range for this parameter is from 0 through 2147483647. When you specify a value of unlimited, a connection is never closed because of protocol errors.
-
-
-
-!!! Exchange Server 2016
-
 The MaxProtocolErrors parameter specifies the maximum number of SMTP protocol errors that the Receive connector accepts before closing the connection.
 
 A valid value is from 0 to 2147483647, or the value unlimited. The default value is 5.
 
 When you specify the value unlimited, a connection is never closed because of protocol errors.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2218,25 +1229,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaxRecipientsPerMessage
-!!! Exchange Server 2010
-
-The MaxRecipientsPerMessage parameter specifies the maximum number of recipients per message that the Receive connector accepts before closing the connection. The default value is 200. The valid input range for this parameter is from 1 through 512000.
-
-
-
-!!! Exchange Server 2013
-
-The MaxRecipientsPerMessage parameter specifies the maximum number of recipients per message that the Receive connector accepts before closing the connection. The default value is 200. The valid input range for this parameter is 1 to 512000.
-
-
-
-!!! Exchange Server 2016
-
 The MaxRecipientsPerMessage parameter specifies the maximum number of recipients per message that the Receive connector accepts before closing the connection.
 
 A valid value is from 1 to 512000. The default value is 200.
-
-
 
 ```yaml
 Type: Int32
@@ -2252,20 +1247,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRateLimit
-!!! Exchange Server 2010
-
-The MessageRateLimit parameter specifies the maximum number of messages that can be sent by a single client IP address per minute. The default value for a Receive connector configured on a Hub Transport server is unlimited. The default value for a Receive connector configured on an Edge Transport server is 600 messages per minute. The valid input range for this parameter is from 1 through 2147483647. To remove the message rate limit on a Receive connector, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2013
-
-The MessageRateLimit parameter specifies the maximum number of messages that can be sent by a single client IP address per minute. The default value for a Receive connector configured on a Mailbox server is unlimited. The default value for a Receive connector configured on an Edge server is 600 messages per minute. The valid input range for this parameter is 1 to 2147483647. To remove the message rate limit on a Receive connector, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The MessageRateLimit parameter specifies the maximum number of messages that can be sent by a single client IP address per minute.
 
 A valid value is from 1 to 2147483647, or the value unlimited.
@@ -2273,8 +1254,6 @@ A valid value is from 1 to 2147483647, or the value unlimited.
 To remove the message rate limit on a Receive connector, enter a value of unlimited.
 
 The default value for Receive connectors on Mailbox servers is unlimited. The default value for Receive connectors on an Edge Transport servers is 600.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2290,36 +1269,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRateSource
-!!! Exchange Server 2010
-
-The MessageRateSource parameter specifies how the message submission rate is calculated. It can have one of the following values:
-
-- None The message submission rate isn't calculated.
-
-- User The message submission rate is calculated for sending users (specified with the MAIL FROM SMTP command).
-
-- IPAddress The message submission rate is calculated for sending hosts.
-
-- All The message submission rate is calculated for both sending users and sending hosts.
-
-
-
-!!! Exchange Server 2013
-
-The MessageRateSource parameter specifies how the message submission rate is calculated. It can have one of the following values:
-
-- None: The message submission rate isn't calculated.
-
-- User: The message submission rate is calculated for sending users (specified with the MAIL FROM SMTP command).
-
-- IPAddress: The message submission rate is calculated for sending hosts.
-
-- All: The message submission rate is calculated for both sending users and sending hosts.
-
-
-
-!!! Exchange Server 2016
-
 The MessageRateSource parameter specifies how the message submission rate is calculated. Valid values are:
 
 - None: The message submission rate isn't calculated.
@@ -2329,8 +1278,6 @@ The MessageRateSource parameter specifies how the message submission rate is cal
 - IPAddress: The message submission rate is calculated for sending hosts.
 
 - All: The message submission rate is calculated for both sending users and sending hosts.
-
-
 
 ```yaml
 Type: None | IPAddress | User | All
@@ -2346,24 +1293,6 @@ Accept wildcard characters: False
 ```
 
 ### -OrarEnabled
-!!! Exchange Server 2010
-
-The OrarEnabled parameter enables the Originator Requested Alternate Recipient (ORAR). When the value of this parameter is $false, ORAR isn't supported. When the value of this parameter is $true, ORAR is supported by advertising the XORAR keyword in the EHLO response of the Receive connector. The actual ORAR information is transmitted in the RCPT TO SMTP command.
-
-The valid values for this parameter are $true or $false. The default value is $false. If the e-mail address specified in the ORAR information is a long X.400 e-mail address, the LongAddressesEnabled parameter must be $true.
-
-
-
-!!! Exchange Server 2013
-
-The OrarEnabled parameter enables the Originator Requested Alternate Recipient (ORAR). When the value of this parameter is $false, ORAR isn't supported. When the value of this parameter is $true, ORAR is supported by advertising the XORAR keyword in the EHLO response of the Receive connector. The actual ORAR information is transmitted in the RCPT TO SMTP command.
-
-The valid values for this parameter are $true or $false. The default value is $false. If the email address specified in the ORAR information is a long X.400 email address, the LongAddressesEnabled parameter must be $true.
-
-
-
-!!! Exchange Server 2016
-
 The OrarEnabled parameter enables or disables Originator Requested Alternate Recipient (ORAR) on the Receive connector. Valid values are:
 
 - $true: ORAR is enabled and is advertised in the XORAR keyword in the EHLO response. The actual ORAR information is transmitted in the RCPT TO SMTP command.
@@ -2371,8 +1300,6 @@ The OrarEnabled parameter enables or disables Originator Requested Alternate Rec
 - $false: ORAR is disabled and is isn't advertised in the EHLO response. This is the default value.
 
 If the email address specified in the ORAR information is a long X.400 email address, you need to set the LongAddressesEnabled parameter to the value $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2388,20 +1315,6 @@ Accept wildcard characters: False
 ```
 
 ### -PermissionGroups
-!!! Exchange Server 2010
-
-The PermissionGroups parameter specifies the groups or roles that can submit messages to the Receive connector and the permissions assigned to those groups. A permission group is a predefined set of permissions granted to well-known security principals. The valid values for this parameter are as follows: None, AnonymousUsers, ExchangeUsers, ExchangeServers, ExchangeLegacyServersPartners, and Custom. The default permission groups assigned to a Receive connector depend on the connector usage type that was specified by the Usage parameter when the Receive connector was created. For more information about Receive connector usage types, see Understanding Receive Connectors.
-
-
-
-!!! Exchange Server 2013
-
-The PermissionGroups parameter specifies the groups or roles that can submit messages to the Receive connector and the permissions assigned to those groups. A permission group is a predefined set of permissions granted to well-known security principals. The valid values for this parameter are as follows: None, AnonymousUsers, ExchangeUsers, ExchangeServers, ExchangeLegacyServersPartners, and Custom. The default permission groups assigned to a Receive connector depend on the connector usage type that was specified by the Usage parameter when the Receive connector was created. For more information about Receive connector usage types, see Receive connectors.
-
-
-
-!!! Exchange Server 2016
-
 The PermissionGroups parameter specifies the well-known security principals who are authorized to use the Receive connector, and the permissions that are assigned to them. Valid values are:
 
 - None
@@ -2422,9 +1335,7 @@ The default permission groups that are assigned to a Receive connector depend on
 
 When you use the value Custom, you need to configure individual permissions by using the Add-ADPermission cmdlet.
 
-For more information about the default permissions and security principals for permission groups, see .
-
-
+For more information about the default permissions and security principals for permission groups, see https://technet.microsoft.com/en-us/library/17751a60-39fe-433f-84d2-bfc14ff4ba51(v=exchg.160)#PermissionGroups.
 
 ```yaml
 Type: None | AnonymousUsers | ExchangeUsers | ExchangeServers | ExchangeLegacyServers | Partners | Custom
@@ -2440,14 +1351,6 @@ Accept wildcard characters: False
 ```
 
 ### -PipeliningEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PipeliningEnabled parameter specifies whether the PIPELINING EHLO keyword is advertised in the EHLO response to the remote server and is available for use. Valid values for this parameter are $true or $false. When the PipeliningEnabled parameter is set to $true, the PIPELINING EHLO keyword is advertised in the EHLO response to the remote server and is available for use. When the PipeliningEnabled parameter is set to $false, the PIPELINING EHLO keyword isn't advertised in the EHLO response to the remote server and is disabled. The PIPELINING extension enables the remote server to send requests without waiting for a response from this Receive connector. The default value is $true.
-
-
-
-!!! Exchange Server 2016
-
 The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: PIPELINING is enabled and is advertised in the EHLO response. This is the default value.
@@ -2455,8 +1358,6 @@ The PipeliningEnabled parameter specifies whether the PIPELINING Extended SMTP e
 - $false: PIPELINING is disabled and isn't advertised in the EHLO response.
 
 Pipelining is defined in RFC 2920.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2472,20 +1373,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProtocolLoggingLevel
-!!! Exchange Server 2010
-
-The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for the specified Receive connector. A value of Verbose enables protocol logging for the connector. A value of None disables protocol logging for the connector. The default value is None. The location of the Receive connector protocol logs for all Receive connectors configured on a Hub Transport server or an Edge Transport server is specified by using the ReceiveProtocolLogPath parameter of the Set-TransportServer cmdlet.
-
-
-
-!!! Exchange Server 2013
-
-The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for a Receive connector. A value of Verbose enables protocol logging for the connector. A value of None disables protocol logging for the connector. The default value is None. The location of the Receive connector protocol logs for all Receive connectors configured on a Mailbox server or an Edge server is specified by using the ReceiveProtocolLogPath parameter of the Set-TransportService cmdlet.
-
-
-
-!!! Exchange Server 2016
-
 The ProtocolLoggingLevel parameter specifies whether to enable or disable protocol logging for the Receive connector. Valid values are:
 
 - None: Protocol logging is disabled on the Receive connector. This is the default value.
@@ -2493,8 +1380,6 @@ The ProtocolLoggingLevel parameter specifies whether to enable or disable protoc
 - Verbose: Protocol logging is enabled on the Receive connector.
 
 For more information about protocol logging, see Protocol logging.
-
-
 
 ```yaml
 Type: None | Verbose
@@ -2510,21 +1395,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireEHLODomain
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequireEHLODomain parameter specifies whether the remote computer must provide a domain name in the EHLO handshake after the SMTP connection is established. Valid values for this parameter are $true or $false. The default value is $false. When the RequireEHLODomain parameter is set to $true, the remote computer must provide a domain name in the EHLO handshake after the SMTP connection is established. If the remote computer doesn't provide the domain name, the SMTP connection is closed.
-
-
-
-!!! Exchange Server 2016
-
 The RequireEHLODomain parameter specifies whether the client must provide a domain name in the EHLO handshake after the SMTP connection is established. Valid values are:
 
 - $true: The client must provide a domain name in the EHLO handshake. If it doesn't, the SMTP connection is closed.
 
 - $false: The client isn't required to provide a domain name in the EHLO handshake. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2540,21 +1415,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireTLS
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequireTLS parameter specifies that all messages received by this connector require TLS transmission. Valid values for thisparameter are $true or $false. The default value is $false. When the RequireTLS parameter is set to $true, all messages received by this connector require TLS transmission.
-
-
-
-!!! Exchange Server 2016
-
 The RequireTLS parameter specifies whether to require TLS transmission for inbound messages on the Receive connector. Valid values are:
 
 - $true: Inbound messages on the Receive connector require TLS transmission.
 
 - $false: Inbound messages on the Receive connector don't require TLS transmission. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2570,20 +1435,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the server on which the new Receive connector should be created.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the server on which the new Receive connector is created.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -2595,8 +1446,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -2612,20 +1461,6 @@ Accept wildcard characters: False
 ```
 
 ### -SizeEnabled
-!!! Exchange Server 2010
-
-The SizeEnabled parameter specifies whether the SIZE SMTP extension is enabled. Valid values for this parameter are Enabled, Disabled, or EnabledwithoutValue. The default value is Enabled. When the SizeEnabled parameter is set to Enabled, the SIZE SMTP extension is enabled, and the maximum allowed message size value from the MaxMessageSize parameter is advertised in the EHLO banner. When the SizeEnabled parameter is set to Disabled, the SIZE SMTP extension isn't used, and the maximum allowed message size value is never disclosed to the remote server. When the SizeEnabled parameter is set to EnabledWithoutValue, the SIZE SMTP extension is enabled. However, the maximum allowed message size value from the MaxMessageSize parameter isn't advertised in the EHLO banner. This allows the message to bypass message size checks for authenticated connections between Hub Transport servers. The SIZE SMTP extension is defined in RFC 1870. The SIZE SMTP extension enables the source server to declare the size of the inbound message to the target server. It also allows the target server to declare the maximum message size that it's allowed to accept to the sending server. If the advertised size of the inbound message exceeds the value in the MaxMessageSize parameter, the Receive connector responds to the remote server by using an error code and closes the connection.
-
-
-
-!!! Exchange Server 2013
-
-The SizeEnabled parameter specifies whether the SIZE SMTP extension is enabled. Valid values for this parameter are Enabled, Disabled, or EnabledwithoutValue. The default value is Enabled. When the SizeEnabled parameter is set to Enabled, the SIZE SMTP extension is enabled, and the maximum allowed message size value from the MaxMessageSize parameter is advertised in the EHLO banner. When the SizeEnabled parameter is set to Disabled, the SIZE SMTP extension isn't used, and the maximum allowed message size value is never disclosed to the remote server. When the SizeEnabled parameter is set to EnabledWithoutValue, the SIZE SMTP extension is enabled. However, the maximum allowed message size value from the MaxMessageSize parameter isn't advertised in the EHLO banner. This allows the message to bypass message size checks for authenticated connections between Mailbox servers. The SIZE SMTP extension is defined in RFC 1870. The SIZE SMTP extension enables the source server to declare the size of the inbound message to the target server. It also allows the target server to declare the maximum message size that it's allowed to accept to the sending server. If the advertised size of the inbound message exceeds the value in the MaxMessageSize parameter, the Receive connector responds to the remote server by using an error code and closes the connection.
-
-
-
-!!! Exchange Server 2016
-
 The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used on the Receive connector. Valid values are:
 
 - Enabled: SIZE is enabled and is advertised in the EHLO response along with the value of the MaxMessageSize parameter. If the size of the inbound message exceeds the specified value, the Receive connector closes the connection with an error code. This is the default value.
@@ -2635,8 +1470,6 @@ The SizeEnabled parameter specifies how the SIZE Extended SMTP extension is used
 - EnabledwithoutValue: SIZE is enabled and is advertised in the EHLO response, but the value of the MaxMessageSize parameter isn't disclosed in the EHLO response. This setting allows messages to bypass message size checks for authenticated connections between Mailbox servers.
 
 SIZE is defined in RFC 1870.
-
-
 
 ```yaml
 Type: Disabled | Enabled | EnabledWithoutValue
@@ -2652,24 +1485,6 @@ Accept wildcard characters: False
 ```
 
 ### -SuppressXAnonymousTls
-!!! Exchange Server 2010
-
-The SuppressXAnonymousTls parameter specifies whether this Receive connector supports the standard TLS encryption for incoming connections. By default, all communications between Exchange 2010 Hub Transport servers is protected with TLS. However, if you need to disable TLS on a specific connection in your organization, you can create a specific Receive connector and set the SuppressXAnonymousTls parameter to $true. The default value is $false.
-
-Before you can set this parameter to $true, you must use the Set-TransportServer cmdlet to set the UseDownGradedExchangeServerAuth parameter to $true on the server this Receive connector is configured.
-
-
-
-!!! Exchange Server 2013
-
-The SuppressXAnonymousTls parameter specifies whether this Receive connector supports the standard TLS encryption for incoming connections. By default, all communications between servers is protected with TLS. However, if you need to disable TLS on a specific connection in your organization, you can create a specific Receive connector and set the SuppressXAnonymousTls parameter to $true. The default value is $false.
-
-Before you can set this parameter to $true, you must use the Set-TransportService cmdlet to set the UseDownGradedExchangeServerAuth parameter to $true on the server this Receive connector is configured.
-
-
-
-!!! Exchange Server 2016
-
 The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extended SMTP extension is enabled or disabled on the Receive connector. Valid values are:
 
 - $true: X-ANONYMOUSTLS is disabled and isn't advertised in the EHLO response. This setting also requires that you set the UseDownGradedExchangeServerAuth parameter to the value $true on the Set-TransportService cmdlet on the server.
@@ -2677,8 +1492,6 @@ The SuppressXAnonymousTls parameter specifies whether the X-ANONYMOUSTLS Extende
 - $false: X-ANONYMOUSTLS is enabled and is advertised in the EHLO response. This is the default value.
 
 The X-ANONYMOUSTLS extension is important when the AuthMechanism parameter contains the value ExchangeServer.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2694,26 +1507,6 @@ Accept wildcard characters: False
 ```
 
 ### -TarpitInterval
-!!! Exchange Server 2010
-
-The TarpitInterval parameter specifies the amount of time to delay an SMTP response to a remote server that Exchange determines may be abusing the connection. Authenticated connections are never delayed in this manner.
-
-The default value is 5 seconds. To specify a value, enter the value as a time span: dd.hh:mm:ss, where d = days, h = hours, m = minutes, and s = seconds. The valid input range for this parameter is from 00:00:00 through 00:10:00. When you set the value to 00:00:00, you disable the tarpitting interval.
-
-
-
-!!! Exchange Server 2013
-
-The TarpitInterval parameter specifies the amount of time to delay an SMTP response to a remote server that may be abusing the connection. Authenticated connections are never delayed in this manner. The default value is 5 seconds.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The valid input range for this parameter is from 00:00:00 through 00:10:00. When you set the value to 00:00:00, you disable the tarpit interval.
-
-
-
-!!! Exchange Server 2016
-
 The TarpitInterval parameter specifies the amount of time to delay an SMTP response to a remote server that may be abusing the connection. The default value is 00:00:05 (5 seconds.).
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -2721,8 +1514,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 When you set the value to 00:00:00, you disable the tarpit interval. Setting this value to more than a few seconds can cause timeouts and mail flow issues.
 
 You can configure the delay for authentication failure responses by using the AuthTarpitInterval parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2738,52 +1529,6 @@ Accept wildcard characters: False
 ```
 
 ### -TlsDomainCapabilities
-!!! Exchange Server 2010
-
-The TlsDomainCapabilities parameter specifies the different capabilities this Receive connector will make available to specific hosts outside your organization. TLS with certificate validation is used to authenticate remote hosts before these capabilities are offered.
-
-To specify capabilities for a domain, use the following syntax:
-
-\<domain name 1\>:\<capability 1, capability 2,…,capability N\>
-
-If you're specifying capabilities for multiple domains, list the configuration for each domain in quotation marks ("), separated by commas. For example:
-
-"contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,AcceptOorgHeader"
-
-You can configure the capabilities for non-TLS encrypted incoming connections using the special "NO-TLS" domain.
-
-You can configure the following capabilities for a domain:
-
-- AcceptOorgProtocol
-
-- AcceptOorgHeader
-
-
-
-!!! Exchange Server 2013
-
-The TlsDomainCapabilities parameter specifies the capabilities this Receive connector will make available to specific hosts outside your organization. TLS with certificate validation is used to authenticate remote hosts before these capabilities are offered.
-
-To specify capabilities for a domain, use the following syntax:
-
-\<domain name 1\>:\<capability 1, capability 2,…,capability N\>
-
-If you're specifying capabilities for multiple domains, list the configuration for each domain in quotation marks ("), separated by commas. For example:
-
-"contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,AcceptOorgHeader"
-
-You can configure the capabilities for non-TLS encrypted incoming connections using the special "NO-TLS" domain.
-
-You can configure the following capabilities for a domain:
-
-- AcceptOorgProtocol
-
-- AcceptOorgHeader
-
-
-
-!!! Exchange Server 2016
-
 The TlsDomainCapabilities parameter specifies the capabilities that the Receive connector makes available to specific hosts outside of the organization. Remote hosts are authenticated with TLS with certificate validation before these capabilities are offered.
 
 This parameter uses the following syntax:
@@ -2799,8 +1544,6 @@ The available \<capability\> values are:
 The available \<domainy\> values are an SMTP domain (for example, contoso.com), or the value NO-TLS for non-TLS encrypted inbound connections.
 
 For example, "contoso.com:AcceptOorgProtocol","fabrikam.com:AcceptOorgProtocol,AcceptOorgHeader"
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2832,17 +1575,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServiceDiscoveryFqdn
-!!! Exchange Server 2013
-
-The service discovery fully-qualified domain name (FQDN).
-
-
-
-!!! Exchange Server 2016
-
 The ServiceDiscoveryFqdn parameter specifies the service discovery fully-qualified domain name (FQDN) for the Receive connector.
-
-
 
 ```yaml
 Type: Fqdn
@@ -2858,17 +1591,7 @@ Accept wildcard characters: False
 ```
 
 ### -TlsCertificateName
-!!! Exchange Server 2013
-
-The TlsCertificateName parameter specifies the X.509 certificate to use with TLS sessions and secure mail. Valid input for this parameter is [I]Issuer[S]Subject. The Issuer value is found in the certificate's Issuer field, and the Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet.
-
-
-
-!!! Exchange Server 2016
-
 The TlsCertificateName parameter specifies the X.509 certificate to use for TLS encryption. A valid value for this parameter is "\<I\>X.500Issuer\<S\>X.500Subject". The X.500Issuer value is found in the certificate's Issuer field, and the X.500Subject value is found in the certificate's Subject field. You can find these values by running the Get-ExchangeCertificate cmdlet. Or, after you run Get-ExchangeCertificate to find the thumbprint value of the certificate, run the command $TLSCert = Get-ExchangeCertificate -Thumbprint \<Thumbprint\>, run the command $TLSCertName = "\<I\>$($TLSCert.Issuer)\<S\>$($TLSCert.Subject)", and then use the value $TLSCertName for this parameter.
-
-
 
 ```yaml
 Type: SmtpX509Identifier
@@ -2884,21 +1607,11 @@ Accept wildcard characters: False
 ```
 
 ### -TransportRole
-!!! Exchange Server 2013
-
-The TransportRole parameter designates the server role associated with this connector. Types include FrontendTransport and HubTransport. Typically used to specify the server role when you host multiple server roles on a single computer.
-
-
-
-!!! Exchange Server 2016
-
 The TransportRole parameter specifies the transport service on the Mailbox server where the Receive connector is created.. Valid values are:
 
 - FrontendTransport: The Front End Transport service where client or external SMTP connections occur.
 
 - HubTransport: The Transport service where Exchange server and proxied client SMTP connections occur.
-
-
 
 ```yaml
 Type: None | Cafe | Mailbox | ClientAccess | UnifiedMessaging | HubTransport | Edge | All | Monitoring | CentralAdmin | CentralAdminDatabase | DomainController | WindowsDeploymentServer | ProvisionedServer | LanguagePacks | FrontendTransport | CafeArray | FfoWebService | OSP | ARR | ManagementFrontEnd | ManagementBackEnd | SCOM | CentralAdminFrontEnd | NAT | DHCP
@@ -3013,4 +1726,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eb527447-ed68-4a55-943b-aad8c8a94d01.aspx)
-
