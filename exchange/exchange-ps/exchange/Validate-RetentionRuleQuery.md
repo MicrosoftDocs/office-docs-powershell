@@ -23,14 +23,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Validate-RetentionRuleQuery -KqlQueryString 'from:"Ann Beebe" AND subject:northwind'
-```
-
-This example validates the specified KQL content search filter.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Validate-RetentionRuleQuery -KqlQueryString 'from:"Ann Beebe" AND subject:northwind'
 ```
@@ -75,4 +68,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7e630b2a-d199-495e-91f7-349d426f6e8c.aspx)
-
