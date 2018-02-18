@@ -6,12 +6,6 @@ schema: 2.0.0
 # new-ActiveSyncMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-ActiveSyncMailboxPolicy cmdlet to create a new Microsoft Exchange ActiveSync mailbox policy object.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-ActiveSyncMailboxPolicy cmdlet to create a Microsoft Mobile Device mailbox policy object.
@@ -47,7 +41,7 @@ new-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | Handsfr
  [-MaxInactivityTimeDeviceLock <Unlimited>] [-MinDevicePasswordComplexCharacters <Int32>]
  [-MinDevicePasswordLength <Int32>]
  [-MobileOTAUpdateMode <MajorVersionUpdates | MinorVersionUpdates | BetaVersionUpdates>]
- [-Organization <OrganizationIdParameter>] [-PasswordRecoveryEnabled <$true | $false>]
+ [-PasswordRecoveryEnabled <$true | $false>]
  [-RequireDeviceEncryption <$true | $false>] [-RequireEncryptedSMIMEMessages <$true | $false>]
  [-RequireEncryptionSMIMEAlgorithm <TripleDES | DES | RC2128bit | RC264bit | RC240bit>]
  [-RequireManualSyncWhenRoaming <$true | $false>] [-RequireSignedSMIMEAlgorithm <SHA1 | MD5>]
@@ -58,24 +52,6 @@ new-ActiveSyncMailboxPolicy [-Name] <String> [-AllowBluetooth <Disable | Handsfr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-ActiveSyncMailboxPolicy cmdlet creates an Exchange ActiveSync policy for mailboxes accessed by mobile phones.
-
-Some Exchange ActiveSync policy settings require the mobile phone to have certain built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This allows devices that can't enforce all policy settings to synchronize with your server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync mailbox policy settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-ActiveSyncMailboxPolicy cmdlet creates a Mobile Device mailbox policy for mailboxes accessed by mobile devices.
-
-Some Mobile Device mailbox policy settings require the mobile device to have certain built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This allows devices that can't enforce all policy settings to synchronize with your server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile Device mailbox policy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-ActiveSyncMailboxPolicy cmdlet creates a Mobile Device mailbox policy for mailboxes accessed by mobile devices.
 
 Some Mobile Device mailbox policy settings require the mobile device to have certain built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This allows devices that can't enforce all policy settings to synchronize with your server.
@@ -84,84 +60,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefaultPolicy:$false -AttachmentsEnabled:$false -AllowStorageCard: $true
-```
-
-This example creates a new Exchange ActiveSync policy named SalesPolicy that has several preconfigured values.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefault:$false -AttachmentsEnabled:$false -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy SalesPolicy that has several preconfigured values.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefault:$false -AttachmentsEnabled:$false -AllowStorageCard:$true
-```
-
-This example creates the Mobile Device mailbox policy SalesPolicy that has several preconfigured values.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-ActiveSyncMailboxPolicy -Name:"SalesPolicy" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -IsDefault:$false -AttachmentsEnabled:$false -AllowStorageCard:$true
-```
-
-This example creates the Mobile Device mailbox policy SalesPolicy that has several preconfigured values.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:$true -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:10 -AllowWiFi:$true -AllowStorageCard:$true -AllowPOPIMAPEmail:$false
-```
-
-This example creates a new Exchange ActiveSync policy named Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:Allow -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:OneWeek -AllowWiFi:$true -AllowStorageCard:$true
 ```
 
 This example creates the Mobile Device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:Allow -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:OneWeek -AllowWiFi:$true -AllowStorageCard:$true
-```
-
-This example creates the Mobile Device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-ActiveSyncMailboxPolicy -Name:"Management" -AllowBluetooth:Allow -AllowBrowser:$true -AllowCamera:$true -AllowPOPIMAPEmail:$false -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MaxEmailAgeFilter:OneWeek -AllowWiFi:$true -AllowStorageCard:$true
-```
-
-This example creates the Mobile Device mailbox policy Management that has several preconfigured values. Users assigned to this policy should have an Enterprise client access license (CAL) to use many of these features.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefaultPolicy:$true -DevicePasswordHistory:10
-```
-
-This example creates a new Exchange ActiveSync policy named Contoso that has several preconfigured values. This policy is configured to be the default policy for the organization. The default policy will be assigned to all new users.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefault:$true -DevicePasswordHistory:10
-```
-
-This example creates the Mobile Device mailbox policy Contoso that has several preconfigured values. This policy is configured to be the default policy for the organization. The default policy will be assigned to all new users.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefault:$true -DevicePasswordHistory:10
-```
-
-This example creates the Mobile Device mailbox policy Contoso that has several preconfigured values. This policy is configured to be the default policy for the organization. The default policy will be assigned to all new users.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 New-ActiveSyncMailboxPolicy -Name:"Contoso" -DevicePasswordEnabled:$true -AlphanumericDevicePasswordRequired:$true -PasswordRecoveryEnabled:$true -MinDevicePasswordComplexCharacters:3 -IsDefault:$true -DevicePasswordHistory:10
 ```
@@ -203,17 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowBrowser
-!!! Exchange Server 2010
-
-The AllowBrowser parameter indicates whether Microsoft Pocket Internet Explorer is allowed on the mobile phone. The default value is $true. This parameter doesn't affect third-party browsers.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowBrowser parameter specifies whether Microsoft Pocket Internet Explorer is allowed on the mobile phone. The default value is $true. This parameter doesn't affect third-party browsers.
-
-
 
 ```yaml
 Type: $true | $false
@@ -229,17 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCamera
-!!! Exchange Server 2010
-
-The AllowCamera parameter indicates whether the mobile phone's camera is allowed. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowCamera parameter specifies whether the mobile phone's camera is allowed. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -255,17 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowConsumerEmail
-!!! Exchange Server 2010
-
-The AllowConsumerEmail parameter indicates whether the mobile phone user can configure a personal e-mail account on the device. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowConsumerEmail parameter specifies whether the mobile phone user can configure a personal email account on the device. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -313,17 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowHTMLEmail
-!!! Exchange Server 2010
-
-The AllowHTMLEmail parameter specifies whether HTML e-mail is enabled on the device. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowHTMLEmail parameter specifies whether HTML email is enabled on the device. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -387,17 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowNonProvisionableDevices
-!!! Exchange Server 2010
-
-When set to $true, the AllowNonProvisionableDevices parameter enables all devices to synchronize with the computer running Exchange, regardless of whether the device can enforce all the specific settings established in the Exchange ActiveSync policy. This also includes devices managed by a separate device management system. When set to $false, this parameter blocks these devices that aren't provisioned from synchronizing with the server running Exchange. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 When set to $true, the AllowNonProvisionableDevices parameter enables all devices to synchronize with the computer running Exchange, regardless of whether the device can enforce all the specific settings established in the Mobile Device mailbox policy. This also includes devices managed by a separate device management system. When set to $false, this parameter blocks these devices that aren't provisioned from synchronizing with the server running Exchange. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -413,17 +276,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPOPIMAPEmail
-!!! Exchange Server 2010
-
-The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 e-mail account on the device. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowPOPIMAPEmail parameter specifies whether the user can configure a POP3 or IMAP4 email account on the device. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -583,17 +436,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlphanumericDevicePasswordRequired
-!!! Exchange Server 2010
-
-The AlphanumericDevicePasswordRequired parameter specifies that the device password must be alphanumeric. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AlphanumericDevicePasswordRequired parameter specifies whether the device password must be alphanumeric. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -609,17 +452,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApprovedApplicationList
-!!! Exchange Server 2010
-
-The ApprovedApplicationList parameter contains a list of approved applications for the device.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ApprovedApplicationList parameter specifies a list of approved applications for the device.
-
-
 
 ```yaml
 Type: ApprovedApplicationCollection
@@ -671,19 +504,7 @@ Accept wildcard characters: False
 ```
 
 ### -DeviceEncryptionEnabled
-!!! Exchange Server 2010
-
-The DeviceEncryptionEnabled parameter, when set to $true, requires that the storage card of the device be encrypted. The default value is $false.
-
-We recommend that you do not use this setting but instead use the RequireStorageCardEncryption parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The DeviceEncryptionEnabled parameter, when set to $true, enables device encryption on the mobile phone. The default value is $false. Currently, only the storage card can be encrypted on devices running Windows Mobile 6.0 or later. We recommend that you don't use this setting and use the RequireStorageCardEncryption parameter instead.
-
-
 
 ```yaml
 Type: $true | $false
@@ -699,17 +520,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePasswordEnabled
-!!! Exchange Server 2010
-
-When set to $true, the DevicePasswordEnabled parameter requires that the user set a password for the device. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 When set to $true, the DevicePasswordEnabled parameter specifies that the user set a password for the device. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -741,17 +552,7 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePasswordHistory
-!!! Exchange Server 2010
-
-The DevicePasswordHistory parameter specifies the number of previously used passwords to store. When a user creates a new password, the user can't reuse a stored password that was previously used.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The DevicePasswordHistory parameter specifies the number of previously used passwords to store. When a user creates a password, the user can't reuse a stored password that was previously used.
-
-
 
 ```yaml
 Type: Int32
@@ -783,19 +584,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -827,19 +618,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultPolicy
-!!! Exchange Server 2010
-
-The IsDefaultPolicy parameter specifies whether this policy is the default Exchange ActiveSync mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The IsDefault parameter specifies whether this policy is the default Mobile Device mailbox policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-
-
-
 
 ```yaml
 Type: $true | $false
@@ -913,32 +692,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxEmailAgeFilter
-!!! Exchange Server 2010
-
-The MaxEmailAgeFilter parameter specifies the maximum number of days of e-mail items to synchronize to the device.
-
-Possible values are:
-
-- All
-
-- OneDay
-
-- ThreeDays
-
-- OneWeek
-
-- TwoWeeks
-
-- OneMonth
-
-- ThreeMonths
-
-- SixMonths
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The MaxEmailAgeFilter parameter specifies the maximum number of days of email items to synchronize to the device.
 
 Possible values are:
@@ -959,8 +712,6 @@ Possible values are:
 
 - SixMonths
 
-
-
 ```yaml
 Type: All | OneDay | ThreeDays | OneWeek | TwoWeeks | OneMonth
 Parameter Sets: (All)
@@ -975,17 +726,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxEmailBodyTruncationSize
-!!! Exchange Server 2010
-
-The MaxEmailBodyTruncationSize parameter specifies the maximum size at which e-mail messages are truncated when synchronized to the device. The value is specified in kilobytes (KB).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The MaxEmailBodyTruncationSize parameter specifies the maximum size at which email messages are truncated when synchronized to the device. The value is specified in kilobytes (KB).
-
-
 
 ```yaml
 Type: Unlimited
@@ -1001,17 +742,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxEmailHTMLBodyTruncationSize
-!!! Exchange Server 2010
-
-The MaxEmailHTMLBodyTruncationSize parameter specifies the maximum size at which HTML-formatted e-mail messages are synchronized to the device. The value is specified in KB.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The MaxEmailHTMLBodyTruncationSize parameter specifies the maximum size at which HTML-formatted email messages are synchronized to the device. The value is specified in KB.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1090,42 +821,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PasswordRecoveryEnabled
-!!! Exchange Server 2010
-
-The PasswordRecoveryEnabled parameter specifies whether you can store the recovery password for the device on an Exchange server. When set to $true, you can store the recovery password for the device on an Exchange server. The default value is $false. The recovery password can be viewed from either Microsoft Office Outlook Web App or the Exchange Management Console.
-
-
-
-!!! Exchange Server 2013
-
-The PasswordRecoveryEnabled parameter specifies whether you can store the recovery password for the device on an Exchange server. When set to $true, you can store the recovery password for the device on an Exchange server. The default value is $false. The recovery password can be viewed from either Microsoft OfficeOutlook Web App or the Exchange Administration Center.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PasswordRecoveryEnabled parameter specifies whether you can store the recovery password for the device on an Exchange server. When set to $true, you can store the recovery password for the device on an Exchange server. The default value is $false. The recovery password can be viewed from either Outlook on the web or the Exchange admin center.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1237,17 +934,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireStorageCardEncryption
-!!! Exchange Server 2010
-
-The RequireStorageCardEncryption parameter, when set to $true, requires that the storage card of the device be encrypted. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The RequireStorageCardEncryption parameter specifies whether encryption of a storage card is required. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1279,17 +966,7 @@ Accept wildcard characters: False
 ```
 
 ### -UNCAccessEnabled
-!!! Exchange Server 2010
-
-The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled. Access to specific shares is configured on the Exchange ActiveSync virtual directory.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled. Access to specific shares is configured on the Microsoft Exchange ActiveSync virtual directory.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1388,4 +1065,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/90d6872e-8e2b-4e53-9554-a2120e99cc20.aspx)
-
