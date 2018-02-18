@@ -41,28 +41,13 @@ Set-MailboxTransportService [-Identity] <MailboxTransportServerIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Mailbox Transport service runs on all Mailbox servers and is responsible for delivering messages to and accepting messages from local mailbox databases using a remote procedure call (RPC). The Mailbox Transport service also uses SMTP to send messages to and from the Transport service that runs on all Mailbox servers for routing messages to their ultimate destinations.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Transport service" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Mailbox Transport service runs on all Mailbox servers and is responsible for delivering messages to and accepting messages from local mailbox databases using a remote procedure call (RPC). The Mailbox Transport service also uses SMTP to send messages to and from the Transport service that runs on all Mailbox servers for routing messages to their ultimate destinations.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxTransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
-```
-
-This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs\\Receive.log for the Mailbox Transport service on server Mailbox01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-MailboxTransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
@@ -124,25 +109,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxAge
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ConnectivityLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ConnectivityLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -158,30 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -199,8 +146,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -216,30 +161,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxFileSize
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log files.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -257,8 +178,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -344,25 +263,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryAgentLogMaxAge
-!!! Exchange Server 2013
-
-The MailboxDeliveryAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Delivery service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Setting the value of the MailboxDeliveryAgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Delivery service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Setting the value of the MailboxDeliveryAgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -378,30 +283,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryAgentLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The MailboxDeliveryAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Delivery service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Delivery service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -419,8 +300,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -436,30 +315,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryAgentLogMaxFileSize
-!!! Exchange Server 2013
-
-The MailboxDeliveryAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Delivery service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Delivery service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -477,8 +332,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxDeliveryAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -510,21 +363,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryConnectorProtocolLoggingLevel
-!!! Exchange Server 2013
-
-The MailboxDeliveryConnectorProtocolLoggingLevel parameter sets the protocol logging level for messages transferred from the Transport service to the Mailbox Transport Delivery service on Mailbox servers using SMTP. Valid values for this parameter are None and Verbose. The default value is None.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Valid values are:
 
 - None: Protocol logging is disabled for the mailbox delivery Receive connector. This is the default value.
 
 - Verbose: Protocol logging is enabled for the mailbox delivery Receive connector. The location of the log files is controlled by the ReceiveProtocolLogPath parameter.
-
-
 
 ```yaml
 Type: None | Verbose
@@ -556,25 +399,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryThrottlingLogMaxAge
-!!! Exchange Server 2013
-
-The MailboxDeliveryThrottlingLogMaxAge parameter specifies the maximum age for the mailbox delivery throttling log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Setting the value of the MailboxDeliveryThrottlingLogMaxAge parameter to 00:00:00 prevents the automatic removal of mailbox delivery throttling log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryThrottlingLogMaxAge parameter specifies the maximum age for the mailbox delivery throttling log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Setting the value of the MailboxDeliveryThrottlingLogMaxAge parameter to 00:00:00 prevents the automatic removal of mailbox delivery throttling log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -590,30 +419,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryThrottlingLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The MailboxDeliveryThrottlingLogMaxDirectorySize parameter specifies the maximum size of all mailbox delivery throttling logs in the mailbox delivery throttling log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 200 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryThrottlingLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the mailbox delivery throttling log directory.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryThrottlingLogMaxDirectorySize parameter specifies the maximum size of all mailbox delivery throttling logs in the mailbox delivery throttling log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 200 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -631,8 +436,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryThrottlingLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the mailbox delivery throttling log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -648,30 +451,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDeliveryThrottlingLogMaxFileSize
-!!! Exchange Server 2013
-
-The MailboxDeliveryThrottlingLogMaxFileSize parameter specifies the maximum size of each mailbox delivery throttling log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryThrottlingLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the mailbox delivery throttling log files.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxDeliveryThrottlingLogMaxFileSize parameter specifies the maximum size of each mailbox delivery throttling log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -689,8 +468,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxDeliveryThrottlingLogMaxFileSize parameter must be less than or equal to the value of the MailboxDeliveryThrottlingLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the mailbox delivery throttling log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -738,25 +515,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxSubmissionAgentLogMaxAge
-!!! Exchange Server 2013
-
-The MailboxSubmissionAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Submission service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Setting the value of the MailboxSubmissionAgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxSubmissionAgentLogMaxAge parameter specifies the maximum age for the agent log file of the Mailbox Transport Submission service. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Setting the value of the MailboxSubmissionAgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -772,30 +535,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxSubmissionAgentLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The MailboxSubmissionAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Submission service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxSubmissionAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxSubmissionAgentLogMaxDirectorySize parameter specifies the maximum size of all Mailbox Transport Submission service agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -813,8 +552,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxSubmissionAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -830,30 +567,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxSubmissionAgentLogMaxFileSize
-!!! Exchange Server 2013
-
-The MailboxSubmissionAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Submission service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxSubmissionAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxSubmissionAgentLogMaxFileSize parameter specifies the maximum size of each agent log file for the Mailbox Transport Submission service. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -871,8 +584,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MailboxSubmissionAgentLogMaxFileSize parameter must be less than or equal to the value of the MailboxSubmissionAgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -990,18 +701,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxAge
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxAge parameter specifies the maximum age of the Receive connector protocol log file. Log files that are older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 20 days for this parameter, use 20.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ReceiveProtocolLogMaxAge parameter to 00:00:00 prevents the automatic removal of Receive connector protocol log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxAge parameter specifies the maximum age of a protocol log file for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. Log files that are older than the specified value are automatically deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -1011,8 +710,6 @@ Valid values are 00:00:00 to 24855.03:14:07. The default value is 30.00:00:00 (3
 The value00:00:00 prevents the automatic removal of Receive connector protocol log files because of their age.
 
 This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggingLevel parameter is set to the value Verbose.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1028,30 +725,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the Receive connector protocol log directory shared by all the Receive connectors that exist on the server. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ReceiveProtocolLogMaxFileSize parameter must be less than or equal to the value of the ReceiveProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Receive connector protocol log directory.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. When the maximum directory size is reached, the server deletes the oldest log files first.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 250 megabytes (262144000 bytes).
@@ -1074,8 +747,6 @@ The value of this parameter must be greater than or equal to the value of the Re
 
 This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggingLevel parameter is set to the value Verbose.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -1090,30 +761,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxFileSize
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of the Receive connector protocol log files shared by all the Receive connectors that exist on the server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ReceiveProtocolLogMaxFileSize parameter must be less than or equal to the value of the ReceiveProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Receive connector protocol log files.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. When a log file reaches its maximum file size, a new log file is created.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 10 megabytes (10485760 bytes).
@@ -1136,8 +783,6 @@ The value of this parameter must be less than or equal to the value of the Recei
 
 This parameter is only meaningful when the MailboxDeliveryConnectorProtocolLoggingLevel parameter is set to the value Verbose.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -1152,19 +797,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible mailbox delivery Receive connector in the Mailbox Transport Delivery service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpReceive. The log files are automatically stored in the Delivery subdirectory.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for the mailbox delivery Receive connector. To disable protocol logging for this connector, use the value None for the MailboxDeliveryConnectorProtocolLoggingLevel parameter.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -1180,18 +815,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxAge
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxAge parameter specifies the Send connector protocol log file maximum age. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the SendProtocolLogMaxAge parameter to 00:00:00 prevents the automatic removal of Send connector protocol log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxAge parameter specifies the maximum age of a protocol log file for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. Log files that are older than the specified value are automatically deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -1199,8 +822,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Valid values are 00:00:00 to 24855.03:14:07. The default value is 30.00:00:00 (30 days). The value 00:00:00 prevents the automatic removal of Send connector protocol log files because of their age.
 
 This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel parameter on the Set-TransportService cmdlet is set to the value Verbose.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1216,30 +837,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the Send connector protocol log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the SendProtocolLogMaxFileSize parameter must be less than or equal to the value of the SendProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Send connector protocol log directory.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. When the maximum directory size is reached, the server deletes the oldest log files first.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 250 megabytes (262144000 bytes).
@@ -1262,8 +859,6 @@ The value of this parameter must be less than or equal to the value of the SendP
 
 This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel parameter on the Set-TransportService cmdlet is set to the value Verbose.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -1278,30 +873,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxFileSize
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxFileSize parameter specifies the maximum size of the Send connector protocol log files shared by all the Send connectors that exist on a server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following:
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the SendProtocolLogMaxFileSize parameter must be less than or equal to the value of the SendProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Send connector protocol log files.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. When a log file reaches its maximum file size, a new log file is created.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 10 megabytes (10485760 bytes).
@@ -1324,8 +895,6 @@ The value this parameter must be less than or equal to the value of the SendProt
 
 This parameter is only meaningful when the IntraOrgConnectorProtocolLoggingLevel parameter on the Set-TransportService cmdlet is set to the value Verbose.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -1340,14 +909,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-!!! Exchange Server 2013
-
-The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogPath parameter specifies the location of the protocol log directory for the implicit and invisible intra-organization Send connector in the Mailbox Transport Submission service. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Mailbox\\ProtocolLog\\SmtpSend. Log files are automatically stored in the following subdirectories:
 
 - Submission: Protocol log files for the intra-organization Send connector in the Mailbox Transport Submission service.
@@ -1355,8 +916,6 @@ The SendProtocolLogPath parameter specifies the location of the protocol log dir
 - Delivery: Protocol log files for side effect messages that are submitted after messages are delivered to mailboxes. For example, a message delivered to a mailbox triggers an Inbox rule that redirects the message to another recipient.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for the intra-organization Send connector in the Mailbox Transport Submission service. To disable protocol logging for this connector, use the value None for the IntraOrgConnectorProtocolLoggingLevel parameter on the Set-TransportService cmdlet.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -1489,4 +1048,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/72ed234d-cd25-4070-a5b2-ae5f056cc6a0.aspx)
-
