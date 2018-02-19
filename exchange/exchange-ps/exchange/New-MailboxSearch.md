@@ -6,30 +6,6 @@ schema: 2.0.0
 # New-MailboxSearch
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailboxSearch cmdlet to start a new mailbox search.
-
-Mailbox searches are performed across all servers running Microsoft Exchange Server 2010 in an Exchange organization, unless the search is constrained to fewer mailboxes by using the SourceMailboxes parameter.
-
-For more information about Exchange 2010 Multi-Mailbox Search, see Understanding Multi-Mailbox Search.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-MailboxSearch cmdlet to create a mailbox search and either get an estimate of search results, place search results on In-Place Hold or copy them to a Discovery mailbox. You can also place all contents in a mailbox on hold by not specifying a search query, which accomplishes similar results as litigation hold in Microsoft Exchange Server 2010.
-
-Mailbox searches are performed across all mailboxes on Microsoft Exchange Server 2013 servers in an Exchange organization, unless the search is constrained to fewer mailboxes by using the SourceMailboxes parameter.
-
-When you create a mailbox search using this cmdlet on an Exchange 2013 server, mailboxes on previous versions of Exchange aren't searched. You must search mailboxes on Exchange Server 2010 by running the command on an Exchange 2010 server.
-
-For more information, see In-Place eDiscovery and In-Place Hold and Litigation Hold.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 On July 1, 2017, you'll no longer be able to use the New-MailboxSearch cmdlet to create In-Place eDiscovery searches and In-Place Holds in Exchange Online. To create eDiscovery searches and eDiscovery case holds, please start using New-ComplianceSearch and New-CaseHoldPolicy in the Office 365 Security & Compliance Center. You'll still be able to use Set-MailboxSearch to modify existing In-Place eDiscovery searches and In-Place Holds. Creating new searches and holds in Exchange Server 2013 will still be supported, and searches run from your on-premises organization in an Exchange hybrid deployment aren't affected by this change.
@@ -70,73 +46,18 @@ New-MailboxSearch [-Name] <String> [-AllPublicFolderSources <$true | $false>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-MailboxSearch cmdlet creates a mailbox search. Unless specified, mailboxes on all Exchange 2010 servers in an organization are searched. You can stop, start, modify, or remove the search.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Multi-Mailbox Search" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-MailboxSearch cmdlet creates an In-Place eDiscovery search or an In-Place Hold. Unless specified, mailboxes on all Exchange 2013 servers in an organization are searched. You can stop, start, modify, or remove the search.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "In-Place eDiscovery" and "In-Place Hold" entries in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-MailboxSearch cmdlet creates an In-Place eDiscovery search or an In-Place Hold. Unless specified, mailboxes on all Mailbox servers in an organization are searched. You can stop, start, modify, or remove the search.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2005" -EndDate "12/31/2006" -Recipients "*@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
-```
-
-This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the query:
-
-
-SourceMailboxes This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
-
-Recipients This parameter specifies that the search includes all mail sent to the domain contoso.com.
-
-SearchQuery This parameter specifies an AQS query for messages with either the words project or report and for messages with attachments.
-
-StartDate and EndDate These parameters specify the start date of January 1, 2005, and end date of December 31, 2006, for the search.
-
-TargetMailbox This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
-
-StatusMailRecipeints This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2011" -EndDate "12/31/2011" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
-```
-
-This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the query:
-
-
-SourceMailboxes This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
-
-Recipients This parameter specifies that the search includes all mail sent to the domain contoso.com.
-
-SearchQuery This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
-
-StartDate and EndDate These parameters specify the start date of January 1, 2011, and end date of December 31, 2011, for the search.
-
-TargetMailbox This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
-
-StatusMailRecipeints This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2015" -EndDate "12/31/2015" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
 ```
 
 This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
-
 
 SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
 
@@ -150,76 +71,21 @@ TargetMailbox: This parameter specifies that search results should be copied to 
 
 StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-MailboxSearch -Name "Legal-ProjectX" -SourceMailboxes DG-Marketing,DG-Executives -TargetMailbox LegalDiscovery@contoso.com -StartDate "01/01/2015" -EndDate "12/31/2015" -Recipients "@contoso.com" -SearchQuery "project report hasattachments:true" -StatusMailRecipients "DG-DiscoveryTeam"
-```
-
-This example creates the mailbox search Legal-ProjectX. The search uses several parameters to restrict the search query:
-
-
-SourceMailboxes: This parameter restricts the search to members of the DG-Marketing and DG-Executives distribution groups.
-
-Recipients: This parameter specifies that the search includes all mail sent to the domain contoso.com.
-
-SearchQuery: This parameter specifies a KQL query for messages with either the words project or report and for messages with attachments.
-
-StartDate and EndDate: These parameters specify the start date of January 1, 2015, and end date of December 31, 2015, for the search.
-
-TargetMailbox: This parameter specifies that search results should be copied to the discovery mailbox LegalDiscovery.
-
-StatusMailRecipeints: This parameter specifies that the distribution group DG-DiscoveryTeam is to receive a notification when the search is complete.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-MailboxSearch -Name "Hold-ProjectX" -SourceMailboxes DG-Finance -InPlaceHoldEnabled $true
 ```
 
 This example creates an In-Place Hold Hold-ProjectX and places all members of the distribution group DG-Finance on hold. Because the search doesn't specify the SearchQuery and ItemHoldPeriod parameters, all messages in mailboxes returned are placed on indefinite In-Place Hold.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-MailboxSearch -Name "Hold-ProjectX" -SourceMailboxes DG-Finance -InPlaceHoldEnabled $true
-```
-
-This example creates an In-Place Hold Hold-ProjectX and places all members of the distribution group DG-Finance on hold. Because the search doesn't specify the SearchQuery and ItemHoldPeriod parameters, all messages in mailboxes returned are placed on indefinite In-Place Hold.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-MailboxSearch -Name "Hold-ProjectX" -SourceMailboxes DG-Finance -InPlaceHoldEnabled $true
-```
-
-This example creates an In-Place Hold Hold-ProjectX and places all members of the distribution group DG-Finance on hold. Because the search doesn't specify the SearchQuery and ItemHoldPeriod parameters, all messages in mailboxes returned are placed on indefinite In-Place Hold.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery "'Patent' AND 'Project tailspintoys'" -InPlaceHoldEnabled $true
 ```
 
 This example creates an In-Place Hold Hold-tailspintoys and places all members of the distribution group DG-Research on hold. Because the search specifies the SearchQuery parameter, only messages that match the search query are placed on indefinite In-Place Hold.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery "'Patent' AND 'Project tailspintoys'" -InPlaceHoldEnabled $true
-```
-
-This example creates an In-Place Hold Hold-tailspintoys and places all members of the distribution group DG-Research on hold. Because the search specifies the SearchQuery parameter, only messages that match the search query are placed on indefinite In-Place Hold.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-New-MailboxSearch -Name "Hold-tailspintoys" -SourceMailboxes DG-Research -SearchQuery "'Patent' AND 'Project tailspintoys'" -InPlaceHoldEnabled $true
-```
-
-This example creates an In-Place Hold Hold-tailspintoys and places all members of the distribution group DG-Research on hold. Because the search specifies the SearchQuery parameter, only messages that match the search query are placed on indefinite In-Place Hold.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-New-MailboxSearch -Name "Hold for all PFs" -AllPublicFolderSources $true -InPlaceHoldEnabled $true
-```
-
-In on-premises Exchange, this example creates an In-Place Hold named Hold for all PFs that places all content in all public folders on In-Place hold, with an unlimited hold duration.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 New-MailboxSearch -Name "Hold for all PFs" -AllPublicFolderSources $true -InPlaceHoldEnabled $true
 ```
@@ -229,25 +95,9 @@ In on-premises Exchange, this example creates an In-Place Hold named Hold for al
 ## PARAMETERS
 
 ### -EstimateOnly
-!!! Exchange Server 2010
-
-The EstimateOnly switch specifies that only an estimate of the number of items that will be returned is provided. Messages aren't copied to the target mailbox.
-
-
-
-!!! Exchange Server 2013
-
-The EstimateOnly switch specifies that only an estimate of the number of items that will be returned is provided. If not specified, messages are copied to the target mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The EstimateOnly switch specifies that only an estimate of the number of items that will be returned is provided. You don't need to specify a value with this switch.
 
 If you don't use this switch, messages are copied to the target mailbox.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -276,19 +126,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies a friendly name for the search. Search results are copied to a folder in the mailbox specified by the TargetMailbox parameter. The folder name is the same as the search name.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies a friendly name for the search. If the value contains spaces, enclose the value in quotation marks (").
 
 The value of this parameter is used to create the top-level folder that holds the search results in the target mailbox that's specified by the TargetMailbox parameter.
-
-
 
 ```yaml
 Type: String
@@ -324,19 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -368,27 +198,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-!!! Exchange Server 2010
-
-The EndDate parameter specifies an end date and time for the search. Messages dated on or before the end date will be searched. The default time is the current time. When you enter a specific date, use the short date format defined in the Regional Options settings configured on the local computer. For example, if your computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2006 to specify March 1, 2006. You can enter the date only, for example, 10/05/2005. Or you can enter the date and time of day. If you enter a time of day and date, you must enclose the argument in quotation marks ("), for example, "10/05/2005 5:00:00 PM".
-
-
-
-!!! Exchange Server 2013
-
-The EndDate parameter specifies an end date and time for the search. Messages dated on or before the end date will be searched. The default time is the current time.
-
-When you enter a specific date, use the short date format, mm/dd/yyyy, even if the Regional Options settings on the local computer are configured with a different format, such as dd/mm/yyyy. For example, use 03/01/2012 to specify March 1, 2012. You can enter the date only, for example, 10/05/2011. Or you can enter the date and time of day. If you enter a time of day and date, you must enclose the argument in quotation marks ("), for example, "10/05/2011 5:00:00 PM".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: ExDateTime
@@ -404,21 +216,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeDuplicateMessages
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExcludeDuplicateMessages parameter eliminates duplication of messages in search results. Set the parameter to $true to copy a single instance of a message if the same message exists in multiple folders or mailboxes.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExcludeDuplicateMessages parameter eliminates duplication of messages in search results. Valid values are:
 
 - $true: Copy a single instance of a message if the same message exists in multiple folders or mailboxes. This is the default value.
 
 - $false: Copy all instances of a message if the same message exists in multiple folders or mailboxes.
-
-
 
 ```yaml
 Type: $true | $false
@@ -434,17 +236,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Force parameter creates the search, overwriting any existing searches with the same name.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -460,27 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeUnsearchableItems
-!!! Exchange Server 2010
-
-The IncludeUnsearchableItems parameter specifies whether items that couldn't be indexed by Exchange Search should be included in the search results. The IncludeUnsearchableItems parameter doesn't require a value.
-
-
-
-!!! Exchange Server 2013
-
-The IncludeUnsearchableItems switch specifies whether items that couldn't be indexed by Exchange Search should be included in the search results. The IncludeUnsearchableItems parameter doesn't require a value.
-
-In Exchange 2013, specifying this switch doesn't result in unsearchable items being placed on hold. To place unsearchable items on hold, create a search without specifying search parameters, which accomplishes the same results as litigation hold in Exchange 2010.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeUnsearchableItems switch specifies that items that couldn't be indexed by Exchange Search should be included in the results. You don't need to specify a value with this switch.
 
 Unsearchable items aren't placed on hold for a query-based In-Place Hold. If you need to place unsearchable items on hold, you need to create an indefinite hold (a hold without specifying any search parameters, which provides functionality similar to Litigation Hold.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -496,19 +270,9 @@ Accept wildcard characters: False
 ```
 
 ### -Language
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Language parameter specifies a locale for the search.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Language parameter specifies a locale for the search.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
 
 ```yaml
 Type: CultureInfo
@@ -524,20 +288,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LogLevel parameter specifies the logging level for the search. It can have one of the following values:
-
-- Suppress No logs are kept.
-
-- Basic Basic information about the query and who ran it is kept.
-
-- Full In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LogLevel parameter specifies the logging level for the search. Valid values are:
 
 - Suppress: No logs are kept.
@@ -545,8 +295,6 @@ The LogLevel parameter specifies the logging level for the search. Valid values 
 - Basic: Basic information about the query and who ran it is kept. This is the default value.
 
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
-
-
 
 ```yaml
 Type: Suppress | Basic | Full
@@ -562,32 +310,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTypes
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MessageTypes parameter specifies the message types to include in the search. Valid values can be one or more of the following:
-
-- Email
-
-- Meetings
-
-- Tasks
-
-- Notes
-
-- Docs
-
-- Journals
-
-- Contacts
-
-- IM
-
-If not specified, all message types are included.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MessageTypes parameter specifies the message types to include in the search query. Valid values are:
 
 - Contacts
@@ -610,8 +332,6 @@ You can specify multiple values separated by commas.
 
 The default value is blank ($null), which means all message types are included.
 
-
-
 ```yaml
 Type: KindKeyword[]
 Parameter Sets: (All)
@@ -626,19 +346,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recipients
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Recipients parameter specifies one or more recipients. Messages that have the recipients in the To, Cc, and Bcc fields are returned.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Recipients parameter specifies one or more recipients to include in the search query. Messages that have the specified recipients in the To, Cc, and Bcc fields are returned in the search results.
 
 You can specify multiple recipients separated by commas.
-
-
 
 ```yaml
 Type: String[]
@@ -670,24 +380,6 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-!!! Exchange Server 2010
-
-The SearchQuery parameter specifies a search string or a query formatted using Advance Query Syntax (AQS).
-
-If this parameter is empty, all messages from all mailboxes specified in the SourceMailboxes parameter are returned.
-
-
-
-!!! Exchange Server 2013
-
-The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL).
-
-If this parameter is empty, all messages from all mailboxes specified in the SourceMailboxes parameter are returned.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SearchQuery parameter specifies keywords for the search query by using the Keyword Query Language (KQL). For more information about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
 
 If you use this parameter with other search query parameters, the query combines these parameters by using the AND operator.
@@ -704,8 +396,6 @@ The other search query parameters are:
 
 - StartDate
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -720,19 +410,9 @@ Accept wildcard characters: False
 ```
 
 ### -Senders
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Senders parameter specifies the SMTP address of one or more senders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Senders parameter specifies one or more senders to include in the search query. Messages that have the specified sender are returned in the search results. Senders can include users, distribution groups (messages sent by members of the group), SMTP addresses, or domains.
 
 You can specify multiple senders separated by commas. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String[]
@@ -748,24 +428,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceMailboxes
-!!! Exchange Server 2010
-
-The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched.
-
-If not specified, all mailboxes in the Exchange organization are searched.
-
-
-
-!!! Exchange Server 2013
-
-The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched.
-
-If not specified, all mailboxes in the Exchange 2013 organization are searched. To enable In-Place Hold, you must specify the SourceMailboxes parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SourceMailboxes parameter specifies the identity of one or more mailboxes to be searched. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -796,8 +458,6 @@ To enable In-Place Hold on the search results, you need to set the AllSourceMail
 
 - In on-premises Exchange, set the AllPublicFolderSources parameter to $true.
 
-
-
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
@@ -812,21 +472,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-!!! Exchange Server 2010, Exchange Server 2013
-
-The StartDate parameter specifies a start date and time for the search.
-
-For valid date and time formatting options, refer to the description of the EndDate parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: ExDateTime
@@ -842,20 +490,6 @@ Accept wildcard characters: False
 ```
 
 ### -StatusMailRecipients
-!!! Exchange Server 2010
-
-The StatusMailRecipients parameter specifies one or more recipients to receive a status e-mail message upon completion of the search.
-
-
-
-!!! Exchange Server 2013
-
-The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StatusMailRecipients parameter specifies one or more recipients to receive a status email message upon completion of the search. You can use any value that uniquely identifies the recipient.
 
 For example:
@@ -876,8 +510,6 @@ For example:
 
 You can specify multiple values separated by commas.
 
-
-
 ```yaml
 Type: RecipientIdParameter[]
 Parameter Sets: (All)
@@ -892,52 +524,6 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailbox
-!!! Exchange Server 2010
-
-The TargetMailbox parameter specifies the identity of the destination mailbox where search results are copied. You can use the following values:
-
-- Alias
-
-- Display name
-
-- Domain\\Account
-
-- SMTP address
-
-- Distinguished name (DN)
-
-- Object GUID
-
-- User Principal Name (UPN)
-
-- LegacyExchangeDN
-
-
-
-!!! Exchange Server 2013
-
-The TargetMailbox parameter specifies the identity of the destination mailbox where search results are copied. You can use the following values:
-
-- Alias
-
-- Display name
-
-- Domain\\Account
-
-- SMTP address
-
-- Distinguished name (DN)
-
-- Object GUID
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The TargetMailbox parameter specifies the destination mailbox where the search results are copied. You can use any value that uniquely identifies themailbox.
 
 For example:
@@ -963,8 +549,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -996,14 +580,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllPublicFolderSources
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AllPublicFolderSources parameter specifies whether to include all public folders in the organization in the search. Valid values are:
@@ -1011,8 +587,6 @@ The AllPublicFolderSources parameter specifies whether to include all public fol
 - $true: All public folders are included in the search. This value is required when the value of the AllSourceMailboxes parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
 
 - $false: No public folders are included in the search. This is the default value. You can use this value when the value of the AllSourceMailboxes parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
-
-
 
 ```yaml
 Type: $true | $false
@@ -1028,14 +602,6 @@ Accept wildcard characters: False
 ```
 
 ### -AllSourceMailboxes
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AllSourceMailboxes parameter specifies whether to include all mailboxes in the search. Valid values are:
@@ -1043,8 +609,6 @@ The AllSourceMailboxes parameter specifies whether to include all mailboxes in t
 - $true: All mailboxes are included in the search. This value is required when the value of the AllPublicFolderSources parameter is $falseand you don't specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value is blank [$null]).
 
 - $false: All mailboxes aren't included in the search. This is the default value. You can use this value when the value of the AllPublicFolderSources parameter is $trueor you specify one or more source mailboxes by using the SourceMailboxes parameter (the parameter value isn't blank [$null]).
-
-
 
 ```yaml
 Type: $true | $false
@@ -1060,17 +624,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-!!! Exchange Server 2013
-
-The Description parameter specifies a description for the search. The description isn't displayed to users.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Description parameter specifies a description for the search. The description isn't displayed to users. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -1086,17 +640,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeKeywordStatistics
-!!! Exchange Server 2013
-
-The IncludeKeywordStatistics switch returns keyword statistics (number of instances for each keyword) in search results.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeKeywordStatistics switch returns keyword statistics (number of instances for each keyword) in search results. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1112,14 +656,6 @@ Accept wildcard characters: False
 ```
 
 ### -InPlaceHoldEnabled
-!!! Exchange Server 2013
-
-The InPlaceHoldEnabled parameter specifies whether an In-Place Hold has been placed on items matching the search query. Set the parameter to $true to enable In-Place Hold. If the ItemHoldPeriod parameter isn't specified, items are held until the hold is removed by deleting the search or removing a mailbox from the search. You can add or remove mailboxes from a mailbox search by modifying the SourceMailboxes parameter. If you don't specify a search query, all items in the specified mailboxes are placed on hold.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on items in the search results. Valid values are:
 
 - $true: In-Place Hold is enabled on the search results.
@@ -1129,8 +665,6 @@ The InPlaceHoldEnabled parameter specifies whether to set an In-Place Hold on it
 You can't set an In-Place Hold on the search results when the AllSourceMailboxes parameter is $true.
 
 If you attempt to place a hold but don't specify mailboxes using the SourceMailboxes parameter, the command may succeed but the mailboxes are not placed on In-Place Hold.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1162,21 +696,11 @@ Accept wildcard characters: False
 ```
 
 ### -ItemHoldPeriod
-!!! Exchange Server 2013
-
-The ItemHoldPeriod parameter specifies the number of days for which to hold mailbox items matching the search query. The duration is calculated from the time the item is received or created in the mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ItemHoldPeriod parameter specifies the number of days for the In-Place Hold onthe mailbox items (all mailbox items or the items that are returned in the search query results). The duration is calculated from the time the item is received or created in the mailbox. Valid values are:
 
 - An integer.
 
 - The value unlimited. This is the default value. Items are held until you remove the In-Place Hold by removing the search by using the Remove-MailboxSearch cmdlet, removing the source mailbox from the search by using the Set-MailboxSearch cmdlet and the SourceMailboxes parameter, or in on-premises Exchange, you remove all public folders from the search by using the Set-MailboxSearch cmdlet to change the AllPublicFolderSources parameter from $true to $false.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1225,4 +749,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/74303b47-bb49-407c-a43b-590356eae35c.aspx)
-
