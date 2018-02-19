@@ -6,20 +6,6 @@ schema: 2.0.0
 # New-RemoteMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-RemoteMailbox cmdlet to create a mail-enabled user in the on-premises Active Directory and also create an associated mailbox in the cloud-based service.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-RemoteMailbox cmdlet to create a mail-enabled user in the on-premises Active Directory and also create an associated mailbox in the cloud-based service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-RemoteMailbox cmdlet to create a mail user in the on-premises Active Directory and also create an associated mailbox in the cloud-based service.
@@ -94,30 +80,6 @@ New-RemoteMailbox [-Name] <String> [-Password <SecureString>] [-UserPrincipalNam
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-RemoteMailbox cmdlet creates an on-premises mail-enabled user. The mail-enabled user contains a specific attribute, which indicates that an associated mailbox in the service should be created when the user is synchronized to the service using directory synchronization.
-
-Directory synchronization must be configured correctly for a mailbox to be created in the service. Creation of the mailbox in the service isn't immediate and depends on the directory synchronization schedule.
-
-For more information about remote mailboxes, see Understanding Recipients.
-
-The policies that you apply to recipients in the on-premises Exchange organization, such as Unified Messaging or compliance policies, aren't applied to mailboxes in the service. You must configure policies in the service if you want policies to be applied to recipients in the service.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-RemoteMailbox cmdlet creates an on-premises mail-enabled user. The mail-enabled user contains a specific attribute, which indicates that an associated mailbox in the service should be created when the user is synchronized to the service using directory synchronization.
-
-Directory synchronization must be configured correctly for a mailbox to be created in the service. Creation of the mailbox in the service isn't immediate and depends on the directory synchronization schedule.
-
-The policies that you apply to recipients in the on-premises Exchange organization, such as Unified Messaging or compliance policies, aren't applied to mailboxes in the service. You must configure policies in the service if you want policies to be applied to recipients in the service.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in theRecipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The New-RemoteMailbox cmdlet creates an on-premises mail user. The mail user contains a specific attribute, which indicates that an associated mailbox in the service should be created when the user is synchronized to the service using directory synchronization.
 
 Directory synchronization must be configured correctly for a mailbox to be created in the service. Creation of the mailbox in the service isn't immediate and depends on the directory synchronization schedule.
@@ -128,84 +90,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
-```
-
-This example creates an on-premises mail-enabled user and its associated mailbox in the service. The remote routing address doesn't need to be specified because mail flow between the on-premises organization and the service has been configured. Using this configuration, the New-RemoteMailbox cmdlet automatically calculates the SMTP address of the mailbox to be used with the RemoteRoutingAddress parameter. This example also assumes directory synchronization has been configured.
-
-
-The first command stores the password to use with the new remote mailbox in a variable by using the Get-Credential cmdlet. The last command creates the mail user.
-
-
-After the new mail user is created, directory synchronization synchronizes the new mail user to the service and the associated mailbox is created.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
 ```
 
 This example creates an on-premises mail user and its associated mailbox in the service. The remote routing address doesn't need to be specified because mail flow between the on-premises organization and the service has been configured. Using this configuration, the New-RemoteMailbox cmdlet automatically calculates the SMTP address of the mailbox to be used with the RemoteRoutingAddress parameter. This example also assumes directory synchronization has been configured.
 
-
 The first command stores the password to use with the new remote mailbox in a variable by using the Get-Credential cmdlet. The last command creates the mail user.
-
 
 After the new mail user is created, directory synchronization synchronizes the new mail user to the service and the associated mailbox is created.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com
-```
-
-This example creates an on-premises mail user and its associated mailbox in the service. The remote routing address doesn't need to be specified because mail flow between the on-premises organization and the service has been configured. Using this configuration, the New-RemoteMailbox cmdlet automatically calculates the SMTP address of the mailbox to be used with the RemoteRoutingAddress parameter. This example also assumes directory synchronization has been configured.
-
-
-The first command stores the password to use with the new remote mailbox in a variable by using the Get-Credential cmdlet. The last command creates the mail user.
-
-
-After the new mail user is created, directory synchronization synchronizes the new mail user to the service and the associated mailbox is created.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 $Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
 ```
 
 This example does the following steps:
-
-
-Creates an on-premises mail user. The mail user is placed in the contoso.com/Archive Users OU. The OU has no effect on the mailbox in the service.
-
-Creates the associated mailbox in the service.
-
-Creates an archive mailbox in the service for the mailbox.
-
-As in Example 1, this example assumes that mail flow and directory synchronization have been properly configured.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
-```
-
-This example does the following steps:
-
-
-Creates an on-premises mail user. The mail user is placed in the contoso.com/Archive Users OU. The OU has no effect on the mailbox in the service.
-
-Creates the associated mailbox in the service.
-
-Creates an archive mailbox in the service for the mailbox.
-
-As in Example 1, this example assumes that mail flow and directory synchronization have been properly configured.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-$Credentials = Get-Credential; New-RemoteMailbox -Name "Kim Akers" -Password $Credentials.Password -UserPrincipalName kim@corp.contoso.com -OnPremisesOrganizationalUnit "corp.contoso.com/Archive Users" -Archive
-```
-
-This example does the following steps:
-
 
 Creates an on-premises mail user. The mail user is placed in the contoso.com/Archive Users OU. The OU has no effect on the mailbox in the service.
 
@@ -218,17 +119,7 @@ As in Example 1, this example assumes that mail flow and directory synchronizati
 ## PARAMETERS
 
 ### -AccountDisabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AccountDisabled switch specifies whether to create the mail-enabled user in a disabled state. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The AccountDisabled switch specifies whether to create the mail user in a disabled state. You don't have to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -262,17 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the common name (CN) of the on-premises mail-enabled user and its associated mailbox in the service.
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name of the on-premises mail user and the associated mailbox in the service. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -288,19 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Password parameter specifies the password used by the mail user to secure his or her account and associated mailbox in the service.
-
-
-
-!!! Exchange Server 2016
-
 The Password parameter specifies the password used by the mail user to secure his or her account and associated mailbox in the service.
 
 This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
-
-
 
 ```yaml
 Type: SecureString
@@ -347,23 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-!!! Exchange Server 2010
-
-The UserPrincipalName parameter defines the name of a system user in an e-mail address format (for example, ed@contoso.com).
-
-
-
-!!! Exchange Server 2013
-
-The UserPrincipalName parameter specifies the logon name for the user. This is the name the user will use for authentication. The UPN can be different than the user's email address. For example. a user could have a UPN of user@corp.contoso.com, but their email address could be user@contoso.com.
-
-
-
-!!! Exchange Server 2016
-
 The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
-
-
 
 ```yaml
 Type: String
@@ -392,24 +247,6 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-!!! Exchange Server 2010
-
-The Alias parameter specifies the e-mail alias of the user and its associated mailbox in the service that you're creating.
-
-The alias can be a combination of characters separated by a period with no intervening spaces. Don't use special characters in the alias.
-
-
-
-!!! Exchange Server 2013
-
-The Alias parameter specifies the email alias of the user and its associated mailbox in the service that you're creating.
-
-The alias can be a combination of characters separated by a period with no intervening spaces. Don't use special characters in the alias.
-
-
-
-!!! Exchange Server 2016
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -425,8 +262,6 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
-
-
 
 ```yaml
 Type: String
@@ -496,25 +331,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010
-
-The DisplayName parameter specifies the name displayed in Microsoft Outlook for the mail user and its associated mailbox in the service.
-
-
-
-!!! Exchange Server 2013
-
-The DisplayName parameter specifies the name displayed in MicrosoftOutlook for the mail user and its associated mailbox in the service.
-
-
-
-!!! Exchange Server 2016
-
 The DisplayName parameter specifies the display name of the mail user and the associated mailbox in the service. The display name is visible in the Exchange admin center, in address lists, and in Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 If you don't use the DisplayName parameter, the value of the Name parameter is used for the display name.
-
-
 
 ```yaml
 Type: String
@@ -546,17 +365,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The FirstName parameter specifies the first name of the user that you create.
-
-
-
-!!! Exchange Server 2016
-
 The FirstName parameter specifies the user's first name.
-
-
 
 ```yaml
 Type: String
@@ -572,27 +381,11 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-!!! Exchange Server 2010
-
-The ImmutableId parameter is used by GAL Synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange will create the value for the immutable identifier based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premise Exchange deployment scenario.
-
-
-
-!!! Exchange Server 2013
-
-The ImmutableId parameter is used by GAL Synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable identifier based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premise Exchange deployment scenario.
-
-
-
-!!! Exchange Server 2016
-
 The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com.
 
 You need to set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
 
 The ImmutableId parameter is used by GAL Synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable identifier based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premise Exchange deployment scenario.
-
-
 
 ```yaml
 Type: String
@@ -608,17 +401,7 @@ Accept wildcard characters: False
 ```
 
 ### -Initials
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Initials parameter specifies the initials of the user that you create.
-
-
-
-!!! Exchange Server 2016
-
 The Initials parameter specifies the user's middle initials.
-
-
 
 ```yaml
 Type: String
@@ -634,17 +417,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LastName parameter specifies the last name of the user that you create.
-
-
-
-!!! Exchange Server 2016
-
 The LastName parameter specifies the user's last name.
-
-
 
 ```yaml
 Type: String
@@ -660,24 +433,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-!!! Exchange Server 2010
-
-The ModeratedBy parameter specifies the users responsible for moderating the messages sent to this mail user and its associated mailbox in the service. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true. If you leave this parameter blank and there is a user already specified as the manager of this mail user, the ModeratedBy parameter is automatically set by the ManagedBy parameter of the mail user. Otherwise, an error is returned.
-
-
-
-!!! Exchange Server 2013
-
-The ModeratedBy parameter specifies the users responsible for moderating the messages sent to this mail user and its associated mailbox in the service. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true.
-
-
-
-!!! Exchange Server 2016
-
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
 
 For example:
@@ -700,8 +455,6 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -716,16 +469,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModerationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModerationEnabled parameter specifies whether to enable or disable moderation for the mail user. The two possible values for this parameter are $true or $false. To enable moderation, set this parameter to $true. To disable moderation, set this parameter to $false.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
@@ -733,8 +476,6 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
-
-
 
 ```yaml
 Type: $true | $false
@@ -750,16 +491,6 @@ Accept wildcard characters: False
 ```
 
 ### -OnPremisesOrganizationalUnit
-!!! Exchange Server 2010, Exchange Server 2013
-
-The OnPremisesOrganizationalUnit parameter specifies the organizational unit (OU) in the on-premises organization in which the new mailbox is added (for example, redmond.contoso.com/Users).
-
-This parameter has no effect on the mailbox in the service.
-
-
-
-!!! Exchange Server 2016
-
 The OnPremisesOrganizationalUnit parameter specifies the organizational unit (OU) in the on-premises organization in which the new mailbox is added (for example, redmond.contoso.com/Users).
 
 Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
@@ -773,8 +504,6 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 - GUID
 
 This parameter has no effect on the mailbox in the service.
-
-
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -790,23 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-!!! Exchange Server 2010
-
-The PrimarySmtpAddress parameter specifies the primary SMTP address for the mail user. By default, the primary SMTP address is generated based on the default e-mail address policy. If you specify a primary SMTP address by using this parameter, the command sets the EmailAddressPolicyEnabled attribute of the mail user to $false, and the e-mail addresses of this mail user aren't automatically updated based on e-mail address policies.
-
-
-
-!!! Exchange Server 2013
-
-The PrimarySmtpAddress parameter specifies the primary SMTP address for the mail user. By default, the primary SMTP address is generated based on the default email address policy. If you specify a primary SMTP address by using this parameter, the command sets the EmailAddressPolicyEnabled attribute of the mail user to $false, and the email addresses of this mail user aren't automatically updated based on email address policies.
-
-
-
-!!! Exchange Server 2016
-
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -822,31 +535,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-!!! Exchange Server 2010
-
-The RemotePowerShellEnabled parameter specifies whether the user can use Remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell or the Exchange Management Console on Mailbox, Hub Transport, Unified Messaging, and Client Access servers. Access to Remote PowerShell is required even if you're trying to open the Shell or the console on the local server.
-
-The valid values are $True and $False. The default value depends on the management role groups assigned to the user. For more information, see Overview of Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The RemotePowerShellEnabled parameter specifies whether the user can use remote Windows PowerShell. Remote Windows PowerShell is required to open the Exchange Management Shell on Mailbox and Client Access servers. Access to remote Windows PowerShell is required even if you're trying to open the Shell on the local server.
-
-The valid values are $True and $False. The default value is $True.
-
-
-
-!!! Exchange Server 2016
-
 The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
 
 - $true: The user can use remote PowerShell. This is the default value.
 
 - $false: The user can't use remote PowerShell.
-
-
 
 ```yaml
 Type: $true | $false
@@ -862,21 +555,9 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteRoutingAddress
-!!! Exchange Server 2010
-
-The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with.
-
-If you've configured mail flow between the on-premises organization and the service, you don't need to specify this parameter. The remote routing address is calculated automatically.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The RemoteRoutingAddress parameter specifies the SMTP address of the mailbox in the service that this user is associated with. This address is created automatically when the service is initially configured in the format of \<your domain\>.mail.onmicrosoft.com.
 
 If you've configured mail flow between the on-premises organization and the service, such as in a hybrid deployment, you don't need to specify this parameter. The remote routing address is calculated automatically and assigned to the email address policy for the on-premises organization by the Hybrid Configuration wizard.
-
-
 
 ```yaml
 Type: ProxyAddress
@@ -892,21 +573,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResetPasswordOnNextLogon
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResetPasswordOnNextLogon parameter specifies whether the password in the Password parameter must be reset the next time the user logs on. If set to $true, the ResetPasswordOnNextLogon parameter specifies that the password in the Password parameter must be reset the next time the user logs on.
-
-
-
-!!! Exchange Server 2016
-
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
 
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -922,43 +593,7 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SamAccountName parameter defines the logon name used to support clients and servers running older versions of the operating system. This attribute must contain fewer than 20 characters. An account name can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- -
-
-- .
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2016
-
-The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
-
-
+The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, } and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
 
 ```yaml
 Type: String
@@ -974,30 +609,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendModerationNotifications
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SendModerationNotifications parameter specifies whether status notifications are sent to users when they send a message to the moderated distribution group. You can specify one of the following values:
-
-- Always
-
-- Internal
-
-- Never
-
-Set this parameter to Always if you want notifications to be sent to all senders.
-
-Set this parameter to Internal if you want notifications to be sent only to the senders who are internal to your organization.
-
-Set this parameter to Never to disable all status notifications.
-
-The default value is Never.
-
-The sender is always notified if the message is rejected by the moderators, regardless of the value of this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
@@ -1007,8 +618,6 @@ The SendModerationNotifications parameter specifies when moderation notification
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
-
-
 
 ```yaml
 Type: Never | Internal | Always
@@ -1073,4 +682,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f9e000c3-5f77-494b-8caf-05176aa75c8a.aspx)
-
