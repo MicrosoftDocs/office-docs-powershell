@@ -48,16 +48,6 @@ Set-MobileDeviceMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Mobile device mailbox policies define settings for mobile devices that are used to access mailboxes in your organization. The default mobile device mailbox policy is applied to all new mailboxes that you create. You can assign a mobile device mailbox policy to existing mailboxes by using the Set-CASMailbox cmdlet, or by editing the mailbox properties in the Exchange admin center (EAC).
-
-Some mobile device mailbox policy settings require the mobile device to have specific built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This applies to devices that can't enforce all policy settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile device mailbox policy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Mobile device mailbox policies define settings for mobile devices that are used to access mailboxes in your organization. The default mobile device mailbox policy is applied to all new mailboxes that you create. You can assign a mobile device mailbox policy to existing mailboxes by using the Set-CASMailbox cmdlet, or by editing the mailbox properties in the Exchange admin center (EAC).
 
 Some mobile device mailbox policy settings require the mobile device to have specific built-in features that enforce these security and device management settings. If your organization allows all devices, you must set the AllowNonProvisionableDevices parameter to $true. This applies to devices that can't enforce all policy settings.
@@ -66,63 +56,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-MobileDeviceMailboxPolicy -Identity "Sales Policy" -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AttachmentsEnabled $true -MaxInactivityTimeLock 15:00 -IsDefault $false
 ```
 
 This example sets several policy settings for the mobile device mailbox policy Sales Policy.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MobileDeviceMailboxPolicy -Identity "Sales Policy" -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AttachmentsEnabled $true -MaxInactivityTimeLock 15:00 -IsDefault $false
-```
-
-This example sets several policy settings for the mobile device mailbox policy Sales Policy.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MobileDeviceMailboxPolicy -Identity "Sales Policy" -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AttachmentsEnabled $true -MaxInactivityTimeLock 15:00 -IsDefault $false
-```
-
-This example sets several policy settings for the mobile device mailbox policy Sales Policy.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-MobileDeviceMailboxPolicy -Identity Management -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowCamera $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false
 ```
 
 This example sets several policy settings for the mobile device mailbox policy Management.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MobileDeviceMailboxPolicy -Identity Management -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowCamera $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false
-```
-
-This example sets several policy settings for the mobile device mailbox policy Management.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-MobileDeviceMailboxPolicy -Identity Management -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowCamera $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false
-```
-
-This example sets several policy settings for the mobile device mailbox policy Management.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-MobileDeviceMailboxPolicy -Identity Default -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false -IsDefault $true -AllowTextMessaging $true -Confirm $true
-```
-
-This example sets several policy settings for the mobile device mailbox policy Default and requires confirmation before applying the settings.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-MobileDeviceMailboxPolicy -Identity Default -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false -IsDefault $true -AllowTextMessaging $true -Confirm $true
-```
-
-This example sets several policy settings for the mobile device mailbox policy Default and requires confirmation before applying the settings.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-MobileDeviceMailboxPolicy -Identity Default -PasswordEnabled $true -AlphanumericPasswordRequired $true -PasswordRecoveryEnabled $true -AllowWiFi $false -AllowStorageCard $true -AllowPOPIMAPEmail $false -IsDefault $true -AllowTextMessaging $true -Confirm $true
 ```
@@ -270,21 +218,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowGooglePushNotifications
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The AllowGooglePushNotifications parameter controls whether the user can receive push notifications from Google for OWA for Devices. Valid input for this parameter is $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The AllowGooglePushNotifications parameter controls whether the user can receive push notifications from Google for Outlook on the web for devices. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -656,25 +592,11 @@ Accept wildcard characters: False
 ```
 
 ### -DevicePolicyRefreshInterval
-!!! Exchange Server 2013
-
-The DevicePolicyRefreshInterval parameter specifies how often the policy is sent to the mobile device.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The default value is Unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DevicePolicyRefreshInterval parameter specifies how often the policy is sent to the mobile device.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is Unlimited.
-
-
 
 ```yaml
 Type: Unlimited
@@ -862,27 +784,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxInactivityTimeLock
-!!! Exchange Server 2013
-
-The MaxInactivityTimeLock parameter specifies the length of time that the mobile device can be inactive before the password is required to reactivate it. This parameter accepts the following values:
-
-- Timespan hh:mm:ss, where hh = hours, mm = minutes and ss= seconds. The valid input range is 00:01:00 to 01:00:00 (one minute to one hour).
-
-- The value Unlimited.
-
-The default value is Unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MaxInactivityTimeLock parameter specifies the length of time that the mobile device can be inactive before the password is required to reactivate it. Valid values are:
 
 - A timespan: hh:mm:ss, where hh = hours, mm = minutes and ss= seconds. The valid input range is 00:01:00 to 01:00:00 (one minute to one hour).
 
 - The value Unlimited. This is the default value.
-
-
 
 ```yaml
 Type: Unlimited
@@ -938,7 +844,7 @@ For Windows Phone 10 devices, the value specifies the following password complex
 
 - Digits, lower case letters, and upper case letters.
 
-- Digits, lower case letters, upper case letters, and special characters.
+- Digits, lower case letters, upper case letters and special characters.
 
 ```yaml
 Type: Int32
@@ -1006,27 +912,11 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordExpiration
-!!! Exchange Server 2013
-
-The PasswordExpiration parameter specifies how long a password can be used on a mobile device before the user is forced to change the password. This parameter accepts the following values:
-
-- Timespan ddd.hh:mm:ss, where ddd = days, hh = hours, mm = minutes and ss= seconds. The valid input range is 1.00:00:00 to 730.00:00:00 (one day to two years).
-
-- The value Unlimited.
-
-The default value is Unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PasswordExpiration parameter specifies how long a password can be used on a mobile device before the user is forced to change the password. Valid values are:
 
 - A timespan: ddd.hh:mm:ss, where ddd = days, hh = hours, mm = minutes and ss= seconds. The valid input range is 1.00:00:00 to 730.00:00:00 (one day to two years).
 
 - The value Unlimited. This is the default value
-
-
 
 ```yaml
 Type: Unlimited
@@ -1060,21 +950,9 @@ Accept wildcard characters: False
 ```
 
 ### -PasswordRecoveryEnabled
-!!! Exchange Server 2013
-
-The PasswordRecoveryEnabled parameter specifies whether the recovery password for the mobile device is stored in Exchange. Valid input for this parameter is $true or $false. The default value is $false.
-
-When set to $true, this parameter enables you to store the recovery password for the mobile device in Exchange. The recovery password can be viewed from Microsoft Outlook Web App or the Exchange admin center.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PasswordRecoveryEnabled parameter specifies whether the recovery password for the mobile device is stored in Exchange. Valid input for this parameter is $true or $false. The default value is $false.
 
 When set to $true, this parameter enables you to store the recovery password for the mobile device in Exchange. The recovery password can be viewed in Outlook on the web or the Exchange admin center.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1234,17 +1112,7 @@ Accept wildcard characters: False
 ```
 
 ### -UNCAccessEnabled
-!!! Exchange Server 2013
-
-The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled from the mobile device. In on-premises Exchange 2013 organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The UNCAccessEnabled parameter specifies whether access to Microsoft Windows file shares is enabled from the mobile device. In on-premises Exchange organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1276,17 +1144,7 @@ Accept wildcard characters: False
 ```
 
 ### -WSSAccessEnabled
-!!! Exchange Server 2013
-
-The WSSAccessEnabled parameter specifies whether access to Microsoft Windows SharePoint Services is enabled from the mobile device. In on-premises Exchange 2013 organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WSSAccessEnabled parameter specifies whether access to Microsoft Windows SharePoint Services is enabled from the mobile device. In on-premises Exchange organizations, access to specific shares is configured on the Exchange ActiveSync virtual directory.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1319,4 +1177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e125023b-45a6-4078-9984-27a5005cca1d.aspx)
-
