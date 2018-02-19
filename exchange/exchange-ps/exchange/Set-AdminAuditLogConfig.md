@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-AdminAuditLogConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-AdminAuditLogConfig cmdlet to configure the administrator audit logging configuration settings.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-AdminAuditLogConfig cmdlet to configure the administrator audit logging configuration settings.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-AdminAuditLogConfig cmdlet to configure the administrator audit logging configuration settings.
@@ -38,32 +24,6 @@ Set-AdminAuditLogConfig [[-Identity] <OrganizationIdParameter>] [-AdminAuditLogA
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When audit logging is enabled, a log entry is created for each cmdlet that's run, excluding Get cmdlets. In the release to manufacturing (RTM) version of Microsoft Exchange Server 2010, log entries are stored in the audit log mailbox you specified and viewed using an e-mail client or Microsoft Office Outlook Web App. With Exchange 2010 Service Pack 1 (SP1), log entries are stored in a hidden mailbox and accessed using the Search-AdminAuditLog or New-AdminAuditLogSearch cmdlets. For more information about administrator audit logging, see Overview of Administrator Audit Logging.
-
-The Set-AdminAuditLogConfig, Enable-CmdletExtensionAgent, and Disable-CmdletExtensionAgent cmdlets are logged when they're run regardless of whether administrator audit logging is enabled or disabled.
-
-Administrator audit logging relies on Active Directory replication to replicate the configuration settings you specify to the domain controllers in your organization. Depending on your replication settings, the changes you make may not be immediately applied to all computers running Exchange 2010 in your organization.
-
-Changes to the audit log configuration may take up to 60 minutes to be applied on computers that have the Exchange Management Shell open at the time a configuration change is made. If you want to apply the changes immediately, close and reopen the Shell on each computer.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Administrator audit logging" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-When audit logging is enabled, a log entry is created for each cmdlet run, excluding Get cmdlets. In Microsoft Exchange Server 2013, log entries are stored in a hidden mailbox and accessed using the Search-AdminAuditLog or New-AdminAuditLogSearch cmdlets.
-
-The Set-AdminAuditLogConfig, Enable-CmdletExtensionAgent, and Disable-CmdletExtensionAgent cmdlets are logged when they're run regardless of whether administrator audit logging is enabled or disabled.
-
-Administrator audit logging relies on Active Directory replication to replicate the configuration settings you specify to the domain controllers in your organization. Depending on your replication settings, the changes you make may not be immediately applied to all computers running Exchange 2013 in your organization.
-
-Changes to the audit log configuration may take up to 60 minutes to be applied on computers that have the Exchange Management Shell open at the time a configuration change is made. If you want to apply the changes immediately, close and reopen the Shell on each computer.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Administrator audit logging" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When audit logging is enabled, a log entry is created for each cmdlet run, excluding Get cmdlets. Log entries are stored in a hidden mailbox and accessed using the Search-AdminAuditLog or New-AdminAuditLogSearch cmdlets.
 
 The Set-AdminAuditLogConfig, Enable-CmdletExtensionAgent, and Disable-CmdletExtensionAgent cmdlets are logged when they're run regardless of whether administrator audit logging is enabled or disabled.
@@ -76,84 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
 ```
 
 This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets * -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for every cmdlet and every parameter in the organization, with the exception of Get cmdlets.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox, *Management*, *TransportRule* -AdminAuditLogParameters *
 ```
 
 This example enables administrator audit logging for specific cmdlets run in the organization. Any parameter used on the specified cmdlets is logged. Every time a specified cmdlet is run, a log entry is added to the audit log.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox, *Management*, *TransportRule* -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for specific cmdlets run in the organization. Any parameter used on the specified cmdlets is logged. Every time a specified cmdlet is run, a log entry is added to the audit log.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox, *Management*, *TransportRule* -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for specific cmdlets run in the organization. Any parameter used on the specified cmdlets is logged. Every time a specified cmdlet is run, a log entry is added to the audit log.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox, *Management*, *TransportRule* -AdminAuditLogParameters *
-```
-
-This example enables administrator audit logging for specific cmdlets run in the organization. Any parameter used on the specified cmdlets is logged. Every time a specified cmdlet is run, a log entry is added to the audit log.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox* -AdminAuditLogParameters *Address*
-```
-
-This example enables administrator audit logging only for specific parameters that are specified when running specific cmdlets. The parameter name and the cmdlet name must match the strings specified with the AdminAuditLogCmdlets and AdminAuditLogParameters parameters. For example, a log entry is generated only when a parameter with the string "Address" in the name is run on a cmdlet with the string "Mailbox" in its name.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox* -AdminAuditLogParameters *Address*
-```
-
-This example enables administrator audit logging only for specific parameters that are specified when running specific cmdlets. The parameter name and the cmdlet name must match the strings specified with the AdminAuditLogCmdlets and AdminAuditLogParameters parameters. For example, a log entry is generated only when a parameter with the string "Address" in the name is run on a cmdlet with the string "Mailbox" in its name.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox* -AdminAuditLogParameters *Address*
-```
-
-This example enables administrator audit logging only for specific parameters that are specified when running specific cmdlets. The parameter name and the cmdlet name must match the strings specified with the AdminAuditLogCmdlets and AdminAuditLogParameters parameters. For example, a log entry is generated only when a parameter with the string "Address" in the name is run on a cmdlet with the string "Mailbox" in its name.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-AdminAuditLogConfig -AdminAuditLogEnabled $true -AdminAuditLogCmdlets *Mailbox* -AdminAuditLogParameters *Address*
 ```
@@ -163,36 +60,6 @@ This example enables administrator audit logging only for specific parameters th
 ## PARAMETERS
 
 ### -AdminAuditLogAgeLimit
-!!! Exchange Server 2010
-
-The AdminAuditLogAgeLimit parameter specifies how long each log entry should be kept before it's deleted. The default age limit is one year.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-To clear the age limit, specify a value of $null. If you clear the age limit, log entries will never be deleted.
-
-Setting the age limit to a value less than the current limit will cause log entries older than the new limit to be deleted.
-
-Setting the age limit to 0 purges the audit log of all entries.
-
-
-
-!!! Exchange Server 2013
-
-The AdminAuditLogAgeLimit parameter specifies how long each log entry should be kept before it's deleted. The default age limit is 90 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to set the audit log age limit to 120 days, use the syntax 120.00:00:00.
-
-Setting the age limit to a value less than the current limit causes log entries older than the new limit to be deleted.
-
-Setting the age limit to 0 purges the audit log of all entries.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogAgeLimit parameter specifies how long each log entry should be kept before it's deleted. The default age limit is 90 days.
@@ -204,8 +71,6 @@ For example, to set the audit log age limit to 120 days, use the syntax 120.00:0
 Setting the age limit to a value less than the current limit causes log entries older than the new limit to be deleted.
 
 Setting the age limit to 0 purges the audit log of all entries.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -221,19 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAuditLogCmdlets
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AdminAuditLogCmdlets parameter specifies which cmdlets should be audited. You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. To audit all cmdlets, specify only the wildcard character (\*).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogCmdlets parameter specifies which cmdlets should be audited. You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. To audit all cmdlets, specify only the wildcard character (\*).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -249,23 +104,11 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAuditLogEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $false. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
-
-Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogEnabled parameter specifies whether administrator audit logging is enabled. The default value is $false. The valid values are $true and $false. You must specify an administrator audit log mailbox before you enable logging.
 
 Changes to the administrator audit log configuration are always logged, regardless of whether audit logging is enabled or disabled.
-
-
 
 ```yaml
 Type: $true | $false
@@ -281,28 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAuditLogExcludedCmdlets
-!!! Exchange Server 2010
-
-The AdminAuditLogExcludedCmdlets parameter specifies which cmdlets should be excluded from auditing. Use this parameter if you want to exclude specific cmdlets you don't want to audit even if they match a wildcard string specified in the AdminAuditLogCmdlets parameter.
-
-You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. You can't specify only the wildcard character (\*).
-
-If you want to clear the list, specify a value of $Null.
-
-
-
-!!! Exchange Server 2013
-
-The AdminAuditLogExcludedCmdlets parameter specifies which cmdlets should be excluded from auditing. Use this parameter if you want to exclude specific cmdlets you don't want to audit even if they match a wildcard string specified in the AdminAuditLogCmdlets parameter.
-
-You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. You can't specify only the wildcard character (\*).
-
-If you want to clear the list, specify a value of $null.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogExcludedCmdlets parameter specifies which cmdlets should be excluded from auditing. Use this parameter if you want to exclude specific cmdlets you don't want to audit even if they match a wildcard string specified in the AdminAuditLogCmdlets parameter.
@@ -310,8 +131,6 @@ The AdminAuditLogExcludedCmdlets parameter specifies which cmdlets should be exc
 You can specify one or more cmdlets, separated by commas. You can also use the wildcard character (\*) to match multiple cmdlets in one or more of the entries in the cmdlet list. You can't specify only the wildcard character (\*).
 
 If you want to clear the list, specify a value of $null.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -327,19 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAuditLogParameters
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AdminAuditLogParameters parameter specifies which parameters should be audited on the cmdlets you specified using the AdminAuditLogCmdlets parameter. You can specify one or more parameters, separated by commas. You can also use the wildcard character (\*) to match multiple parameters in one or more of the entries in the parameters list. To audit all parameters, specify only the wildcard character (\*).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The AdminAuditLogParameters parameter specifies which parameters should be audited on the cmdlets you specified using the AdminAuditLogCmdlets parameter. You can specify one or more parameters, separated by commas. You can also use the wildcard character (\*) to match multiple parameters in one or more of the entries in the parameters list. To audit all parameters, specify only the wildcard character (\*).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -375,19 +184,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -403,17 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -429,19 +218,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Identity parameter specifies the identity of the tenant organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -457,23 +234,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the name of the AdminAuditLogConfig object.
-
-You don't need to specify this parameter when configuring administrator audit logging. It doesn't affect your configuration or how administrator audit logging works.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Name parameter specifies the name of the AdminAuditLogConfig object.
 
 You don't need to specify this parameter when you configure administrator audit logging. It doesn't affect your configuration or how administrator audit logging works.
-
-
 
 ```yaml
 Type: String
@@ -489,23 +254,11 @@ Accept wildcard characters: False
 ```
 
 ### -TestCmdletLoggingEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
-
-Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The TestCmdletLoggingEnabled parameter specifies whether the execution of test cmdlets should be logged. Test cmdlets begin with the verb Test. Valid values are $true and $false. The default value is $false.
 
 Test cmdlets can produce a large amount of information. As such, you should only enable logging of test cmdlets for a short period of time.
-
-
 
 ```yaml
 Type: $true | $false
@@ -537,23 +290,11 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-!!! Exchange Server 2013
-
-The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
-
-By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded, and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The LogLevel parameter specifies whether additional properties should be included in the log entries. Valid values are None and Verbose.
 
-By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded, and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
-
-
+By default, the CmdletName, ObjectName, Parameters (values), and the Caller, Succeeded and RunDate properties are included in log entries. When the Verbose value is used, the ModifiedProperties (old and new) and ModifiedObjectResolvedName properties are included in the log entries.
 
 ```yaml
 Type: None | Verbose
@@ -640,4 +381,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9d77294d-a501-4af6-8c3b-753235c741a7.aspx)
-
