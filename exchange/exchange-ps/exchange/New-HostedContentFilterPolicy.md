@@ -50,25 +50,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-HostedContentFilterPolicy -Name "Contoso Content Filter Policy" -HighConfidenceSpamAction Redirect -SpamAction Redirect -RedirectToRecipients chris@contoso.com -FalsePositiveAdditionalRecipients michelle@contoso.com
 ```
 
 This example creates a content filter policy named Contoso Content Filter Policy with the following settings:
-
-
-Redirect messages that are definitely spam or that may be spam to chris@contoso.com.
-
-Send copies of spam quarantine false positive submissions to michelle@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-HostedContentFilterPolicy -Name "Contoso Content Filter Policy" -HighConfidenceSpamAction Redirect -SpamAction Redirect -RedirectToRecipients chris@contoso.com -FalsePositiveAdditionalRecipients michelle@contoso.com
-```
-
-This example creates a content filter policy named Contoso Content Filter Policy with the following settings:
-
 
 Redirect messages that are definitely spam or that may be spam to chris@contoso.com.
 
@@ -1034,4 +1021,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4d15128d-9e16-42a1-8ac5-36f07d4bbbf0.aspx)
-
