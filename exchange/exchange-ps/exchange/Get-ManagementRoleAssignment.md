@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-ManagementRoleAssignment
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ManagementRoleAssignment cmdlet to retrieve management role assignments.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-ManagementRoleAssignment cmdlet to retrieve management role assignments.
@@ -29,7 +23,7 @@ Get-ManagementRoleAssignment [[-Identity] <RoleAssignmentIdParameter>]
  [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
  [-WritableDatabase <DatabaseIdParameter>] [-WritableRecipient <GeneralRecipientIdParameter>]
@@ -46,7 +40,7 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
  [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Exclusive <$true | $false>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-GetEffectiveUsers]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-Role <RoleIdParameter>] [-RoleAssignee <RoleAssigneeIdParameter>]
  [-RoleAssigneeType <User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup>]
@@ -56,24 +50,6 @@ Get-ManagementRoleAssignment [-AssignmentMethod <AssignmentMethod[]>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can retrieve role assignments in a variety of ways including by assignment type, scope type, or name, and whether the assignment is enabled or disabled. You can also view a list of role assignments that provide access to a specified recipient, server, or database.
-
-For more information about management role assignments, see Understanding Management Role Assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-You can retrieve role assignments in a variety of ways including by assignment type, scope type, or name, and whether the assignment is enabled or disabled. You can also view a list of role assignments that provide access to a specified recipient, server, or database.
-
-For more information about management role assignments, see Understanding management role assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You can retrieve role assignments in a variety of ways including by assignment type, scope type, or name, and whether the assignment is enabled or disabled. You can also view a list of role assignments that provide access to a specified recipient, server, or database.
 
 For more information about management role assignments, see Understanding management role assignments.
@@ -82,245 +58,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
-```
-
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with Command Output.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
 ```
 
 This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
-```
-
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
-```
-
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment "Denver Help Desk" | Format-List
-```
-
-This example retrieves the Denver Help Desk role assignment using the Get-ManagementRoleAssignment cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementRoleAssignment -Enabled $True -Delegating $True
-```
-
-This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-ManagementRoleAssignment -Enabled $true -Delegating $true
 ```
 
 This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment -Enabled $true -Delegating $true
-```
-
-This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -Enabled $true -Delegating $true
-```
-
-This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment -Enabled $true -Delegating $true
-```
-
-This example retrieves all the role assignments that are enabled and have been designated as delegating role assignments.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
 ```
 
 This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
-```
-
-This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
-```
-
-This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
-```
-
-This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment -RecipientWriteScope MyGAL
-```
-
-This example retrieves all the role assignments that include the MyGAL recipient-based scope restriction type.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementRoleAssignment -Role "Mail Recipients"
-```
-
-This example retrieves all the role assignments associated with the Organization Management management role.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment -Role "Mail Recipients"
-```
-
-This example retrieves all the role assignments associated with the Organization Management management role.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Get-ManagementRoleAssignment -Role "Mail Recipients"
 ```
 
 This example retrieves all the role assignments associated with the Mail Recipients management role.
 
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -Role "Mail Recipients"
-```
-
-This example retrieves all the role assignments associated with the Mail Recipients management role.
-
-### Example 4 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment -Role "Mail Recipients"
-```
-
-This example retrieves all the role assignments associated with the Mail Recipients management role.
-
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
 ```
 
 This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
 
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
-```
-
-This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
-
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
-```
-
-This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
-
-### Example 5 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
-```
-
-This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
-
-### Example 5 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment -WritableRecipient Bob -GetEffectiveUsers
-```
-
-This example retrieves a list of all the users and the role assignments that can modify the recipient Bob.
-
-### Example 6 -------------------------- (Exchange Server 2010)
+### Example 6
 ```
 Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
 ```
 
 This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
 
-### Example 6 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
-```
-
-This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
-```
-
-This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
-
-### Example 6 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
-```
-
-This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
-
-### Example 6 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment -ExclusiveConfigWriteScope "Redmond Executive Servers" -GetEffectiveUsers
-```
-
-This example retrieves a list of all exclusive scopes that can modify server objects that match Redmond Executive Servers. The command also lists the users who are effectively assigned the role assignments through role groups or USGs.
-
-### Example 7 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
-```
-
-This example retrieves all the role assignments that can modify the database Contoso Sales.
-
-### Example 7 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
-```
-
-This example retrieves all the role assignments that can modify the database Contoso Sales.
-
-### Example 7 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
-```
-
-This example retrieves all the role assignments that can modify the database Contoso Sales.
-
-### Example 7 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
-```
-
-This example retrieves all the role assignments that can modify the database Contoso Sales.
-
-### Example 7 -------------------------- (Exchange Online Protection)
+### Example 7
 ```
 Get-ManagementRoleAssignment -WritableDatabase "Contoso Sales"
 ```
@@ -390,18 +170,6 @@ Accept wildcard characters: False
 ```
 
 ### -CustomConfigWriteScope
-!!! Exchange Server 2010
-
-The CustomConfigWriteScope parameter returns only the regular role assignments that include the specified configuration-based regular scope.
-
-This parameter can only be used to retrieve regular configuration-based scopes. To retrieve a list of exclusive configuration-based scopes, use the ExclusiveConfigWriteScope parameter instead.
-
-If the scope name contains spaces, enclose it in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The CustomConfigWriteScope parameter returns only the regular role assignments that include the specified configuration-based regular scope.
@@ -409,8 +177,6 @@ The CustomConfigWriteScope parameter returns only the regular role assignments t
 This parameter can only be used to retrieve regular configuration-based scopes. To retrieve a list of exclusive configuration-based scopes, use the ExclusiveConfigWriteScope parameter instead.
 
 If the scope name contains spaces, enclose it in quotation marks (").
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -446,21 +212,9 @@ Accept wildcard characters: False
 ```
 
 ### -Delegating
-!!! Exchange Server 2010
-
-The Delegating parameter specifies whether delegating or regular role assignments should be returned.
-
-By default, both delegating and regular scopes are returned. To return only delegating role assignments, specify a value of $True. To return only regular role assignments, specify a value of $False.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Delegating parameter specifies whether delegating or regular role assignments should be returned.
 
 By default, both delegating and regular scopes are returned. To return only delegating role assignments, specify a value of $true. To return only regular role assignments, specify a value of $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -476,19 +230,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -504,17 +248,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether enabled or disabled role assignments should be returned. To return enabled role assignments, specify a value of $True. To return disabled role assignments, specify a value of $False.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Enabled parameter specifies whether enabled or disabled role assignments should be returned. To return enabled role assignments, specify a value of $true. To return disabled role assignments, specify a value of $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -530,21 +264,9 @@ Accept wildcard characters: False
 ```
 
 ### -Exclusive
-!!! Exchange Server 2010
-
-The Exclusive parameter specifies whether exclusive or regular role assignments should be returned.
-
-By default, both exclusive and regular scopes are returned. To return only exclusive role assignments, specify a value of $True. To return only regular role assignments, specify a value of $False.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Exclusive parameter specifies whether exclusive or regular role assignments should be returned.
 
 By default, both exclusive and regular scopes are returned. To return only exclusive role assignments, specify a value of $true. To return only regular role assignments, specify a value of $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -560,18 +282,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusiveConfigWriteScope
-!!! Exchange Server 2010
-
-The ExclusiveConfigWriteScope parameter returns only the exclusive role assignments that include the specified configuration-based exclusive scope.
-
-This parameter can only be used to retrieve exclusive configuration-based scopes. To retrieve a list of regular configuration-based scopes, use the CustomConfigWriteScope parameter instead.
-
-If the scope name contains spaces, enclose it in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ExclusiveConfigWriteScope parameter returns only the exclusive role assignments that include the specified configuration-based exclusive scope.
@@ -579,8 +289,6 @@ The ExclusiveConfigWriteScope parameter returns only the exclusive role assignme
 This parameter can only be used to retrieve exclusive configuration-based scopes. To retrieve a list of regular configuration-based scopes, use the CustomConfigWriteScope parameter instead.
 
 If the scope name contains spaces, enclose it in quotation marks (").
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -631,24 +339,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RecipientOrganizationalUnitScope
 The RecipientOrganizationalUnitScope parameter returns only the role assignments that include the specified organizational unit (OU). If the OU tree contains spaces, enclose it in quotation marks (").
 
@@ -666,7 +356,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientWriteScope
-The RecipientWriteScope parameter returns only the role assignments associated with the recipient scope restriction type specified. The valid values are None, MyGAL, Self, OU, CustomRecipientScope, MyDistributionGroups, and ExclusiveRecipientScope.
+The RecipientWriteScope parameter returns only the role assignments associated with the recipient scope restriction type specified. The valid values are None, MyGAL, Self, OU, CustomRecipientScope, MyDistributionGroups and ExclusiveRecipientScope.
 
 ```yaml
 Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
@@ -700,7 +390,7 @@ Accept wildcard characters: False
 ### -RoleAssignee
 The RoleAssignee parameter specifies the role group, assignment policy, user, or universal security group (USG) for which you want to view role assignments. If the RoleAssignee parameter is used, you can't use the Identity parameter.
 
-By default, the command returns both direct role assignments to the role assignee, and indirect role assignments granted to a role assignee through role groups or assignment policies.
+By default, the command returns both direct role assignments to the role assignee and indirect role assignments granted to a role assignee through role groups or assignment policies.
 
 If the name of the user or USG contains spaces, enclose it in quotation marks (").
 
@@ -718,23 +408,7 @@ Accept wildcard characters: False
 ```
 
 ### -RoleAssigneeType
-!!! Exchange Server 2010
-
-The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup,and LinkedRoleGroup.
-
-
-
-!!! Exchange Server 2013
-
-The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup,LinkedRoleGroup, and Computer.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup, LinkedRoleGroup, and Computer.
-
-
+The RoleAssigneeType parameter specifies the type of role assignee to return. The valid values are User, SecurityGroup, RoleAssignmentPolicy, ForeignSecurityPrincipal, RoleGroup, LinkedRoleGroup and Computer.
 
 ```yaml
 Type: User | SecurityGroup | RoleAssignmentPolicy | MailboxPlan | ForeignSecurityPrincipal | RoleGroup | LinkedRoleGroup | Computer | PartnerLinkedRoleGroup
@@ -750,23 +424,11 @@ Accept wildcard characters: False
 ```
 
 ### -WritableDatabase
-!!! Exchange Server 2010
-
-The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the database name contains spaces, enclose it in quotation marks (").
-
-If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users, and USGs directly assigned the role assignment are returned.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The WritableDatabase parameter specifies the database object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the database name contains spaces, enclose it in quotation marks (").
 
-If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users, and USGs directly assigned the role assignment are returned.
-
-
+If this parameter is used with the GetEffectiveUsers switch, all the users who can modify the database object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -784,7 +446,7 @@ Accept wildcard characters: False
 ### -WritableRecipient
 The WritableRecipient parameter specifies the recipient object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the recipient name contains spaces, enclose it in quotation marks (").
 
-If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the recipient object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users, and USGs directly assigned the role assignment are returned.
+If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the recipient object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
 
 ```yaml
 Type: GeneralRecipientIdParameter
@@ -800,23 +462,11 @@ Accept wildcard characters: False
 ```
 
 ### -WritableServer
-!!! Exchange Server 2010
-
-The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the server object name contains spaces, enclose it in quotation marks (").
-
-If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users, and USGs directly assigned the role assignment are returned.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The WritableServer parameter specifies the server object you want to test to determine which role assignments allow it to be modified. The command takes into account the roles and scopes associated with each role assignment. If the server object name contains spaces, enclose it in quotation marks (").
 
-If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users, and USGs directly assigned the role assignment are returned.
-
-
+If this parameter is used with the GetEffectiveUsers switch, all of the users who can modify the server object indirectly through role groups and USGs are also returned. Without the GetEffectiveUsers switch, only the role groups, users and USGs directly assigned the role assignment are returned.
 
 ```yaml
 Type: ServerIdParameter
@@ -869,4 +519,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a3a6ee46-061b-444a-8639-43a416309445.aspx)
-
