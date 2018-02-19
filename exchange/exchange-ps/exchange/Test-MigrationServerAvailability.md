@@ -107,28 +107,6 @@ Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Test-MigrationServerAvailability cmdlet verifies that you can communicate with the on-premises mail server that houses the mailbox data that you want to migrate to cloud-based mailboxes. When you run this cmdlet, you must specify the migration type. You can specify whether to communicate with an IMAP server or with an Exchange server.
-
-For an IMAP migration, this cmdlet uses the server's fully qualified domain name (FQDN) and a port number to verify the connection. If the verification is successful, use the same connection settings when you create a migration request with the New-MigrationBatch cmdlet.
-
-For an Exchange migration, this cmdlet uses one of the following settings to communicate with the on-premises server:
-
-- For Exchange 2003, it uses the server's FQDN and credentials for an administrator account that can access the server.
-
-- For Exchange Server 2007 and later versions, you can connect using the Autodiscover service and the email address of an administrator account that can access the server.
-
-If the verification is successful, you can use the same settings to create a migration endpoint. For more information, see:
-
-- New-MigrationEndpoint
-
-- New-MigrationBatch
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Test-MigrationServerAvailability cmdlet verifies that you can communicate with the on-premises mail server that houses the mailbox data that you want to migrate to cloud-based mailboxes. When you run this cmdlet, you must specify the migration type. You can specify whether to communicate with an IMAP server or with an Exchange server.
 
 For an IMAP migration, this cmdlet uses the server's fully qualified domain name (FQDN) and a port number to verify the connection. If the verification is successful, use the same connection settings when you create a migration request with the New-MigrationBatch cmdlet.
@@ -149,98 +127,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
 ```
 
 For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
-```
-
-For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Test-MigrationServerAvailability -Imap -RemoteServer imap.contoso.com -Port 143
-```
-
-For IMAP migrations, this example verifies the connection to the IMAP mail server imap.contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
 ```
 
 This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
-```
-
-This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials
-```
-
-This example uses the Autodiscover and ExchangeOutlookAnywhere parameters to verify the connection to an on-premises Exchange server in preparation for migrating on-premises mailboxes to Exchange Online. You can use a similar example to test the connection settings for a staged Exchange migration or a cutover Exchange migration.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 $Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
 ```
 
 This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
-```
-
-This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-$Credentials = Get-Credential; Test-MigrationServerAvailability -ExchangeOutlookAnywhere -ExchangeServer exch2k3.contoso.com -Credentials $Credentials -RPCProxyServer mail.contoso.com -Authentication NTLM
-```
-
-This example verifies the connection to a server running Microsoft Exchange Server 2003 named exch2k3.contoso.com and uses NTLM for the authentication method.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-$Credentials = Get-Credential; $TSMA = Test-MigrationServerAvailability -ExchangeRemoteMove -Autodiscover -EmailAddress administrator@contoso.com -Credentials $Credentials; New-MigrationEndpoint -ExchangeRemoteMove -Name ContosoEndpoint -ConnectionSettings $TSMA.ConnectionSettings
-```
-
-This example verifies the connection settings to a remote server, and then uses those settings to create a migration endpoint.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Test-MigrationServerAvailability -Endpoint endpoint.contoso.com
 ```
 
 This example verifies the connection settings to a remote server using the settings stored in an existing migration endpoint in Exchange Online.
 
-### Example 4 -------------------------- (Exchange Online)
-```
-Test-MigrationServerAvailability -Endpoint endpoint.contoso.com
-```
-
-This example verifies the connection settings to a remote server using the settings stored in an existing migration endpoint in Exchange Online.
-
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-$MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
-```
-
-This example tests multiple existing endpoints.
-
-### Example 5 -------------------------- (Exchange Online)
+### Example 5
 ```
 $MRSEndpoints = (Get-MigrationEndpoint).RemoteServer; Foreach ($MEP in $MRSEndpoints) {Test-MigrationServerAvailability -Endpoint $MEP}
 ```
@@ -250,17 +165,7 @@ This example tests multiple existing endpoints.
 ## PARAMETERS
 
 ### -Autodiscover
-!!! Exchange Server 2013
-
-The Autodiscover parameter specifies that the cmdlet should use the Autodiscover service to obtain the connection settings for the target server.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Autodiscover parameter specifies that the cmdlet should use the Autodiscover service to obtain the connection settings for the target server. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -276,21 +181,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credentials
-!!! Exchange Server 2013
-
-The Credentials parameter specifies the logon credentials for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credentials parameter specifies the logon credentials for an account that can access mailboxes on the target server. Specify the username in the domain\\username format or the user principal name (UPN) (user@example.com) format.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -610,24 +503,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxPermission
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The MailboxPermission parameter specifies what permissions are assigned to the migration administrator account defined by the Credentials parameter. You make the permissions assignment to test the connectivity to a user mailbox on the source mail server when you're testing the connection settings in preparation for a staged or cutover Exchange migration or for creating an Exchange Outlook Anywhere migration endpoint.
-
-Specify one of the following values for the account defined by the Credentials parameter:
-
-- FullAccess The account has been assigned the Full-Access permission to the mailboxes that will be migrated.
-
-- Admin The account is a member of the Domain Admins group in the organization that hosts the mailboxes that will be migrated.
-
-This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The MailboxPermission parameter specifies what permissions are assigned to the migration administrator account defined by the Credentials parameter. You make the permissions assignment to test the connectivity to a user mailbox on the source mail server when you're testing the connection settings in preparation for a staged or cutover Exchange migration or for creating an Exchange Outlook Anywhere migration endpoint.
@@ -639,8 +514,6 @@ Specify one of the following values for the account defined by the Credentials p
 - Admin: The account is a member of the Domain Admins group in the organization that hosts the mailboxes that will be migrated.
 
 This parameter isn't used for testing the connection to the remote server for a remote move migration or an IMAP migration.
-
-
 
 ```yaml
 Type: Admin | FullAccess
@@ -805,4 +678,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a0959dbe-94ae-4f2e-8e2c-e5d5bd5e1521.aspx)
-
