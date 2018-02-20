@@ -6,16 +6,6 @@ schema: 2.0.0
 # New-SyncMailPublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 script to create mail-enabled public folder recipient objects in Microsoft Office 365 prior to starting a public folder migration. This cmdlet should only be used if directed by support personnel or by documentation.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 The New-SyncMailPublicFolder cmdlet is used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts to create mail-enabled public folder recipient objects in Azure Active Directory in Office 365 (the scripts synchronize mail-enabled public folder objects from the source on-premises Exchange organization to Office 365). Don't use this cmdlet unless you are directed to do so by Microsoft Customer Service and Support or by specific documentation.
@@ -42,28 +32,13 @@ New-SyncMailPublicFolder [-Alias] <String> [-Name] <String> -EntryId <String> [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-This cmdlet is only used by the Import-MailPublicFoldersForMigration.ps1 script. Don't run this cmdlet in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders, mail-enabled" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 This cmdlet is only used by the Import-MailPublicFoldersForMigration.ps1 and Sync-MailPublicFolders.ps1 scripts. Don't run this cmdlet in the Exchange Management Shell or in Exchange Online PowerShell.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-SyncMailPublicFolder
-```
-
-This cmdlet is only used by the Import-MailPublicFoldersForMigration.ps1 script. Don't run this cmdlet in the Shell.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-SyncMailPublicFolder
 ```
@@ -73,16 +48,6 @@ This cmdlet is only used by the Import-MailPublicFoldersForMigration.ps1 and Syn
 ## PARAMETERS
 
 ### -Alias
-!!! Exchange Server 2013
-
-The Alias parameter specifies the email alias of the public folder that you're creating.
-
-The alias can be a combination of characters separated by a period with no intervening spaces. Don't use special characters in the alias.
-
-
-
-!!! Exchange Server 2016
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -98,8 +63,6 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
-
-
 
 ```yaml
 Type: String
@@ -131,19 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2013
-
-The Name parameter specifies the common name (CN) of the mail-enabled public folder.
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name of the mail-enabled public folder. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 This value is also used for the DisplayName property if you don't use the DisplayName parameter.
-
-
 
 ```yaml
 Type: String
@@ -197,14 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-!!! Exchange Server 2013
-
-The EmailAddresses parameter specifies the email alias of the mail-enabled public folder. All valid Exchange email address types may be used. You can specify multiple values for the EmailAddresses parameter as a comma-delimited list.
-
-
-
-!!! Exchange Server 2016
-
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
 
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>.... The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
@@ -228,10 +173,6 @@ To specify the primary SMTP email address, you can use any of the following meth
 - If it's available, use the PrimarySmtpAddress parameter instead. You can't use the EmailAddresses parameter and the PrimarySmtpAddress parameter in the same command.
 
 To enter multiple proxy email addresses, use the following syntax: "\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>"....
-
-
-
-
 
 ```yaml
 Type: ProxyAddress[]
@@ -263,21 +204,11 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-!!! Exchange Server 2013
-
-The HiddenFromAddressListsEnabled parameter specifies whether the public folder appears in the address list. The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016
-
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
 
 - $false: The recipient is visible in address lists. This is the default value.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -325,14 +256,6 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsEmailAddress
-!!! Exchange Server 2013
-
-The WindowsEmailAddress parameter specifies an email address in the format EmailAddress@contoso.com.
-
-
-
-!!! Exchange Server 2016
-
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
@@ -340,8 +263,6 @@ The WindowsEmailAddress parameter specifies the Windows email address for this r
 - In cloud environments or in on-premises environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -956,4 +877,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/93c537dd-5769-4307-abe1-aab2c71f7397.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Move-ActiveMailboxDatabase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Move-ActiveMailboxDatabase cmdlet to perform a database switchover and specify a Mailbox server host for the active copy of a mailbox database. You can also use the Move-ActiveMailboxDatabase cmdlet to perform a server switchover.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Move-ActiveMailboxDatabase cmdlet to perform a database or server switchover.
@@ -62,98 +56,32 @@ Move-ActiveMailboxDatabase [-ActivatePreferredOnServer] <MailboxServerIdParamete
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Mailbox Database Copy Permissions" section in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Move-ActiveMailboxDatabase DB2 -ActivateOnServer MBX1 -MountDialOverride:None
-```
-
-This example performs a switchover of a database named DB2 to a Mailbox server named MBX1. When the command completes, MBX1 hosts the active copy of DB2. Because the MountDialOverride parameter is set to None, MBX1 mounts the database using its own defined database auto mount dial settings.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Move-ActiveMailboxDatabase DB2 -ActivateOnServer MBX1 -MountDialOverride:None
 ```
 
 This example performs a switchover of the database DB2 to the Mailbox server MBX1. When the command completes, MBX1 hosts the active copy of DB2. Because the MountDialOverride parameter is set to None, MBX1 mounts the database using its own defined database auto mount dial settings.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Move-ActiveMailboxDatabase DB2 -ActivateOnServer MBX1 -MountDialOverride:None
-```
-
-This example performs a switchover of the database DB2 to the Mailbox server MBX1. When the command completes, MBX1 hosts the active copy of DB2. Because the MountDialOverride parameter is set to None, MBX1 mounts the database using its own defined database auto mount dial settings.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Move-ActiveMailboxDatabase DB1 -ActivateOnServer MBX3 -MountDialOverride:GoodAvailability
-```
-
-This example performs a switchover of a database named DB1 to a Mailbox server named MBX3. When the command completes, MBX3 hosts the active copy of DB1. Because the MountDialOverride parameter is specified with a value of Good Availability, MBX3 mounts the database using a database auto mount dial setting of GoodAvailability.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Move-ActiveMailboxDatabase DB1 -ActivateOnServer MBX3 -MountDialOverride:GoodAvailability
 ```
 
 This example performs a switchover of the database DB1 to the Mailbox server MBX3. When the command completes, MBX3 hosts the active copy of DB1. Because the MountDialOverride parameter is specified with a value of Good Availability, MBX3 mounts the database using a database auto mount dial setting of GoodAvailability.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Move-ActiveMailboxDatabase DB1 -ActivateOnServer MBX3 -MountDialOverride:GoodAvailability
-```
-
-This example performs a switchover of the database DB1 to the Mailbox server MBX3. When the command completes, MBX3 hosts the active copy of DB1. Because the MountDialOverride parameter is specified with a value of Good Availability, MBX3 mounts the database using a database auto mount dial setting of GoodAvailability.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Move-ActiveMailboxDatabase DB3 -ActivateOnServer MBX4
-```
-
-This example performs a switchover of a database named DB3 to a Mailbox server named MBX4. When the command completes, MBX4 hosts the active copy of DB3. Because the MountDialOverride parameter isn't specified, MBX4 mounts the database using a database auto mount dial setting of Lossless.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Move-ActiveMailboxDatabase DB3 -ActivateOnServer MBX4
 ```
 
 This example performs a switchover of the database DB3 to the Mailbox server MBX4. When the command completes, MBX4 hosts the active copy of DB3. Because the MountDialOverride parameter isn't specified, MBX4 mounts the database using a database auto mount dial setting of Lossless.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Move-ActiveMailboxDatabase DB3 -ActivateOnServer MBX4
-```
-
-This example performs a switchover of the database DB3 to the Mailbox server MBX4. When the command completes, MBX4 hosts the active copy of DB3. Because the MountDialOverride parameter isn't specified, MBX4 mounts the database using a database auto mount dial setting of Lossless.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Move-ActiveMailboxDatabase -Server MBX1
-```
-
-This example performs a server switchover for a Mailbox server named MBX1. All active mailbox database copies on MBX1 will be activated on one or more other Mailbox servers with healthy copies of the active databases on MBX1.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Move-ActiveMailboxDatabase -Server MBX1
-```
-
-This example performs a server switchover for the Mailbox server MBX1. All active mailbox database copies on MBX1 will be activated on one or more other Mailbox servers with healthy copies of the active databases on MBX1.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Move-ActiveMailboxDatabase -Server MBX1
 ```
@@ -163,14 +91,6 @@ This example performs a server switchover for the Mailbox server MBX1. All activ
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the identity of the mailbox database being activated.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the mailbox database that you want to activate. You can use any value that uniquely identifies the database. For example:
 
 - Name
@@ -180,8 +100,6 @@ The Identity parameter specifies the mailbox database that you want to activate.
 - GUID
 
 You can't use this parameter with the Server parameter
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -197,14 +115,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the identity of the server from which to move all active mailbox databases.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the server that you want to move all active mailbox databases from. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -216,8 +126,6 @@ The Server parameter specifies the server that you want to move all active mailb
 - GUID
 
 You can't use this parameter with the Identity parameter
-
-
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -285,38 +193,6 @@ Accept wildcard characters: False
 ```
 
 ### -MountDialOverride
-!!! Exchange Server 2010
-
-The MountDialOverride parameter is used to override the auto mount dial setting for the target server and specify an alternate setting. Possible values are:
-
-- Lossless This is the default value. When using this value, the database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
-
-- GoodAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
-- BestEffort If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
-
-- BestAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
-
-
-!!! Exchange Server 2013
-
-The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. The following are possible values:
-
-- None When using this value, the currently configured auto database mount dial setting on the target server will be used.
-
-- Lossless This is the default value. When using this value, the database doesn't automatically mount until all log files that were generated on the original active copy have been copied to the passive copy.
-
-- GoodAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 6. If the copy queue length is greater than 6, the database doesn't automatically mount. When the copy queue length is less than or equal to 6, Microsoft Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
-- BestEffort If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
-
-- BestAvailability If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
-
-
-!!! Exchange Server 2016
-
 The MountDialOverride parameter is used to override the auto database mount dial (AutoDatabaseMountDial) setting for the target server and specify an alternate setting. The following are possible values:
 
 - None: When using this value, the currently configured auto database mount dial setting on the target server will be used.
@@ -328,8 +204,6 @@ The MountDialOverride parameter is used to override the auto database mount dial
 - BestEffort: If you specify this value, the database automatically mounts regardless of the size of the copy queue length. Because the database will mount with any amount of log loss, using this value could result in a large amount of data loss.
 
 - BestAvailability: If you specify this value, the database automatically mounts immediately after a failover if the copy queue length is less than or equal to 12. The copy queue length is the number of logs recognized by the passive copy that needs to be replicated. If the copy queue length is more than 12, the database doesn't automatically mount. When the copy queue length is less than or equal to 12, Exchange attempts to replicate the remaining logs to the passive copy and then mounts the database.
-
-
 
 ```yaml
 Type: None | Lossless | GoodAvailability | BestAvailability | BestEffort
@@ -361,25 +235,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipActiveCopyChecks
-!!! Exchange Server 2010
-
-The SkipActiveCopyChecks parameter specifies whether to skip checking the current active copy to see if it is currently a seeding source for any passive databases. Be aware that when using this parameter you can move a database that is currently a seeding source, which cancels the seed operation.
-
-
-
-!!! Exchange Server 2013
-
-The SkipActiveCopyChecks parameter specifies whether to skip checking the current active copy to see if it's currently a seeding source for any passive databases. Be aware that when using this parameter, you can move a database that's currently a seeding source, which cancels the seed operation.
-
-
-
-!!! Exchange Server 2016
-
 The SkipActiveCopyChecks switch specifies whether to skip checking the current active copy to see if it's currently a seeding source for any passive databases. You don't need to specify a value with this switch.
 
 Note: When you use this switch, you can move a database that's currently a seeding source, which cancels the seed operation.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -395,19 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipClientExperienceChecks
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SkipClientExperienceChecks parameter specifies whether to skip the search catalog (content index) state check to see if the search catalog is healthy and up to date. If the search catalog for the database copy you're activating is in an unhealthy or unusable state and you use this parameter to skip the search catalog health check and activate the database copy, you will need to either re-crawl or reseed the search catalog.
-
-
-
-!!! Exchange Server 2016
-
 The SkipClientExperienceChecks switch specifies whether to skip the search catalog (content index) state check to see if the search catalog is healthy and up to date. You don't need to specify a value with this switch.
 
 If the search catalog for the database copy you're activating is in an unhealthy or unusable state and you use this parameter to skip the search catalog health check and activate the database copy, you will need to either re-crawl or reseed the search catalog.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -423,25 +271,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipHealthChecks
-!!! Exchange Server 2010
-
-The SkipHealthChecks parameter specifies whether to bypass passive copy health checks. With the SkipHealthChecks parameter, you can move the active copy to a database copy that's in the Failed state. This parameter should be used only if the initial attempt to move the active database has failed. This is because SkipHealthChecks performs additional validation to ensure that the log files are consistent, which can take a considerable amount of time.
-
-
-
-!!! Exchange Server 2013
-
-The SkipHealthChecks parameter specifies whether to bypass passive copy health checks. With the SkipHealthChecks parameter, you can move the active copy to a database copy that's in the Failed state. This parameter should be used only if the initial attempt to move the active database has failed. This is because the SkipHealthChecks parameter performs additional validation to ensure that the log files are consistent, which can take a considerable amount of time.
-
-
-
-!!! Exchange Server 2016
-
 The SkipHealthChecks switch specifies whether to bypass passive copy health checks. You don't need to specify a value with this switch.
 
 When you use this switch, you can move the active copy to a database copy that's in the Failed state. You should only use this switch if the initial attempt to move the active database has failed. This is because the SkipHealthChecks switch performs additional validation to ensure that the log files are consistent, which can take a considerable amount of time.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -457,17 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipLagChecks
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SkipLagChecks parameter specifies whether to allow a copy to be activated that has replay and copy queues outside of the configured criteria.
-
-
-
-!!! Exchange Server 2016
-
 The SkipLagChecks switch specifies whether to allow a copy to be activated that has replay and copy queues outside of the configured criteria. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -483,17 +305,7 @@ Accept wildcard characters: False
 ```
 
 ### -TerminateOnWarning
-!!! Exchange Server 2010, Exchange Server 2013
-
-The TerminateOnWarning parameter specifies whether to terminate the task and output an error message if a warning is encountered during the switchover operation.
-
-
-
-!!! Exchange Server 2016
-
 The TerminateOnWarning switch specifies whether to terminate the task and output an error message if a warning is encountered during the switchover operation. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -525,14 +337,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActivatePreferredOnServer
-!!! Exchange Server 2013
-
-The ActivatePreferredOnServer parameter specifies the name of a Mailbox server on which to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use this parameter as part of ending maintenance mode on a Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The ActivatePreferredOnServer parameter specifies the Mailbox server where you want to activate all mailbox databases that have copies with an ActivationPreference value of 1. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -543,9 +347,7 @@ The ActivatePreferredOnServer parameter specifies the Mailbox server where you w
 
 - GUID
 
-:You can use this parameter as part of ending maintenance mode on a Mailbox server.
-
-
+You can use this parameter as part of ending maintenance mode on a Mailbox server.
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -561,19 +363,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipMaximumActiveDatabasesChecks
-!!! Exchange Server 2013
-
-The SkipMaximumActiveDatabasesChecks is used to skip checking the value of MaximumPreferredActiveDatabases during the best copy and server selection (BCSS) process. Any configured value for MaximumActiveDatabases will still be honored during the BCSS process and by the Information Store.
-
-
-
-!!! Exchange Server 2016
-
 The SkipMaximumActiveDatabasesChecks switch specifies whether to skip checking the value of MaximumPreferredActiveDatabases during the best copy and server selection (BCSS) process. You don't need to specify a value with this switch.
 
 Any configured value for MaximumActiveDatabases will still be honored during the BCSS process and by the Information Store.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -674,4 +466,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/755d1ecb-95d1-45e3-9a21-56df9f196f37.aspx)
-

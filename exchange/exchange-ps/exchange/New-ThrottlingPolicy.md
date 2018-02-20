@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-ThrottlingPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-ThrottlingPolicy cmdlet to create a non-default throttling policy.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-ThrottlingPolicy cmdlet to create a non-default user throttling policy.
@@ -84,26 +78,6 @@ New-ThrottlingPolicy [-Name] <String> [-AnonymousMaxConcurrency <UInt32>] [-Anon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-By default, there is one default throttling policy. Microsoft Exchange Server 2010 Setup creates a default client throttling policy when you install the Exchange 2010 Client Access server role. There is no way to replace, re-create, or remove the existing default throttling policy. However, you can modify the default policy using the Set-ThrottlingPolicy cmdlet.
-
-Unified Messaging users are considered Exchange Web Services users and are therefore throttled by Exchange Web Services parameters such as EWSMaxConcurrency, EWSPercentTimeInAD, EWSPercentTimeInCAS, and EWSPercentTimeInMailboxRPC.
-
-For more information, see Understanding Client Throttling Policies and Managing Performance with Client Throttling Policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client throttling settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-By default, there is one default throttling policy named GlobalThrottlingPolicy\_\<GUID\> with a throttling scope of Global. Microsoft Exchange Server 2013 Setup creates a default client throttling policy when you install the Exchange 2013 Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
-
-For more information about how to control how resources are consumed by individual users, see Exchange workload management.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 By default, there is one default throttling policy named GlobalThrottlingPolicy\_\<GUID\> with a throttling scope of Global. Microsoft Exchange Setup creates a default client throttling policy as part of the Client Access server role. You should not replace, re-create, or remove the existing default throttling policy. However, you can create additional throttling policies with the scope of Organization or Regular to change your user throttling settings. You can also edit policies with the scope of Organization and Regular that you've created using the Set-ThrottlingPolicy cmdlet.
 
 For more information about how to control how resources are consumed by individual users, see User workload management in Exchange 2016.
@@ -112,105 +86,49 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ThrottlingPolicy -Name <NewPolicyName> -EWSPercentTimeInCAS 80 -EWSPercentTimeInAD $null
 ```
 
-This example creates a non-default throttling policy. Any parameters that you omit inherit the values from the default throttling policy.
+In Exchange Server 2010, this example creates a non-default throttling policy. Any parameters that you omit inherit the values from the default throttling policy.
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
 ```
 
 This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-ThrottlingPolicy -Name ITUserPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Regular
-```
-
-This example creates a non-default user throttling policy that can be associated with specific users. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>. After you create this policy, you must associate it with specific users.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-ThrottlingPolicy -Name <NewPolicyName > EWSPercentTimeInCAS 80
 ```
 
-This example creates a policy for a tenant that sets the EWSPercentTimeInCAS parameter value to 80.
+In Exchange Server 2010, this example creates a policy for a tenant that sets the EWSPercentTimeInCAS parameter value to 80.
 
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
 ```
 
 This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-ThrottlingPolicy -Name AllUsersEWSPolicy -EwsMaxConcurrency 4 -ThrottlingPolicyScope Organization
-```
-
-This example creates a policy that applies to all users in your organization. Any parameters that you omit inherit the values from the default throttling policy GlobalThrottlingPolicy\_\<GUID\>.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-ThrottlingPolicy <NewPolicyName> -PowerShellMaxConcurrency 3 -PowerShellMaxCmdletQueueDepth 12
-```
-
-This example creates a throttling policy that restricts the number of connections for a user to three. The users associated with this policy are only able to create three remote Exchange Management Shell sessions. This policy also restricts to three the number of Exchange Control Panel operations or Exchange Web Services operations that can be executed at the same time.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-ThrottlingPolicy -Name RemoteSiteUserPolicy -PowerShellMaxConcurrency 3 -PowerShellMaxCmdletQueueDepth 12
-```
-
-This example creates a throttling policy RemoteSiteUserPolicy that restricts the number of connections for a user to three. The users associated with this policy are only able to create three remote Exchange Management Shell sessions. This policy also restricts to three the number of Exchange Administration Center operations or Exchange Web Services operations that can be executed at the same time.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 5
 ```
 New-ThrottlingPolicy -Name RemoteSiteUserPolicy -PowerShellMaxConcurrency 3 -PowerShellMaxCmdletQueueDepth 12
 ```
 
 This example creates a throttling policy RemoteSiteUserPolicy that restricts the number of connections for a user to three. The users associated with this policy are only able to create three remote Exchange Management Shell sessions. This policy also restricts to three the number of Exchange admin center (EAC) operations or Exchange Web Services (EWS) operations that can be executed at the same time.
 
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-New-ThrottlingPolicy <NewPolicyName> -PowerShellMaxCmdlets 10 -PowerShellMaxCmdletsTimePeriod 5
-```
-
-This example creates a throttling policy that restricts a user to be able to only execute 10 cmdlets in a period of five seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 6
 ```
 New-ThrottlingPolicy -Name ITStaffUserPolicyCmdletMax -PowerShellMaxCmdlets 10 -PowerShellMaxCmdletsTimePeriod 5
 ```
 
 This example creates a throttling policy that restricts a user to be able to only execute 10 cmdlets in a period of five seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-New-ThrottlingPolicy -Name ITStaffUserPolicyCmdletMax -PowerShellMaxCmdlets 10 -PowerShellMaxCmdletsTimePeriod 5
-```
-
-This example creates a throttling policy that restricts a user to be able to only execute 10 cmdlets in a period of five seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
-
-### Example 5 -------------------------- (Exchange Server 2010)
-```
-New-ThrottlingPolicy <NewPolicyName> -PowerShellMaxDestructiveCmdlets 10 -PowerShellMaxDestructiveCmdletsTimePeriod 60
-```
-
-This example creates a throttling policy that restricts a user to be able to only execute 10 destructive cmdlets in 60 seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
-
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-New-ThrottlingPolicy -Name ITStaffUserPolicyDestructiveCmdlets -PowerShellMaxDestructiveCmdlets 10 -PowerShellMaxDestructiveCmdletsTimePeriod 60
-```
-
-This example creates a throttling policy that restricts a user to be able to only execute 10 destructive cmdlets in 60 seconds. If the users associated with this policy exceed this number, the cmdlet pipeline execution is stopped with a throttling error message. The user needs to wait for and then resubmit the execution of cmdlets on the open connection.
-
-### Example 5 -------------------------- (Exchange Server 2016)
+### Example 7
 ```
 New-ThrottlingPolicy -Name ITStaffUserPolicyDestructiveCmdlets -PowerShellMaxDestructiveCmdlets 10 -PowerShellMaxDestructiveCmdletsTimePeriod 60
 ```
@@ -320,17 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPAMaxConcurrency
-!!! Exchange Server 2010
-
-The CPAMaxConcurrency parameter specifies how many concurrent connections a cross-premises user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The CPAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CpaMaxConcurrency parameter specifies how many concurrent connections a cross-premises user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The CpaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -394,19 +302,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -422,23 +320,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxConcurrency
-!!! Exchange Server 2010
-
-The EASMaxConcurrency parameter specifies how many concurrent connections a Microsoft Exchange ActiveSync user can have against a server running Exchange 2010 at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EASMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The EasMaxConcurrency parameter specifies how many concurrent connections an Exchange ActiveSync user can have against a server running Exchange 2013 at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EasMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2016
-
 The EasMaxConcurrency parameter specifies how many concurrent connections an Exchange ActiveSync user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EasMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -454,17 +336,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxDeviceDeletesPerMonth
-!!! Exchange Server 2010
-
-The EASMaxDeviceDeletesPerMonth parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can delete per month. By default, each user can delete a maximum of 20 partnerships per calendar month. When the limit is reached, the partnership deletion attempt fails and an error message is displayed to the user.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EasMaxDeviceDeletesPerMonth parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can delete per month. By default, each user can delete a maximum of 20 partnerships per calendar month. When the limit is reached, the partnership deletion attempt fails and an error message is displayed to the user.
-
-
 
 ```yaml
 Type: UInt32
@@ -480,23 +352,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxDevices
-!!! Exchange Server 2010
-
-The EASMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 10 Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An e-mail error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
-
-!!! Exchange Server 2013
-
-The EasMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 100Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An email error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
-
-!!! Exchange Server 2016
-
 The EasMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 100 Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An email error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
 
 ```yaml
 Type: UInt32
@@ -592,17 +448,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSMaxConcurrency
-!!! Exchange Server 2010
-
-The EWSMaxConcurrency parameter specifies how many concurrent connections an Exchange Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EWSMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EwsMaxConcurrency parameter specifies how many concurrent connections an Exchange Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EwsMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -618,23 +464,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSMaxSubscriptions
-!!! Exchange Server 2010
-
-The EWSMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that a user can have on a specified Client Access server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
-
-!!! Exchange Server 2013
-
-The EwsMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that an Exchange Web Services user can have on a specified Client Access server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
-
-!!! Exchange Server 2016
-
 The EwsMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that an Exchange Web Services user can have on a specified Exchange server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
 
 ```yaml
 Type: UInt32
@@ -732,17 +562,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPMaxConcurrency
-!!! Exchange Server 2010
-
-The IMAPMaxConcurrency parameter specifies how many concurrent connections an IMAP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The IMAPMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ImapMaxConcurrency parameter specifies how many concurrent connections an IMAP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The ImapMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -806,29 +626,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRateLimit
-!!! Exchange Server 2010
-
-The MessageRateLimit parameter specifies the number of messages per minute that can be submitted to transport on each Hub Transport server. For example, if you set the value of this parameter to 10, but you have 5 Hub Transport servers in your organization, a user could submit up to 10 \* 5 or 50 messages per minute.
-
-For messages submitted through the Mailbox server role (using Microsoft Outlook, Microsoft Office Outlook Web App, Exchange ActiveSync, or Exchange Web Services), this results in the deferral of messages until the quota for the user is available. Specifically, messages appear in the Outbox or Drafts folder for longer periods of time when users submit messages at a rate greater than the MessageRateLimit parameter.
-
-For POP or IMAP clients submitting messages directly to transport using SMTP, clients receive a transient error if they submit at a rate that exceeds the MessageRateLimit parameter. Exchange attempts to connect and send the messages at a later time.
-
-
-
-!!! Exchange Server 2013
-
-The MessageRateLimit parameter specifies the number of messages per minute that can be submitted to transport. For messages submitted through the Mailbox server role (using Microsoft Outlook, Microsoft OfficeOutlook Web App, Exchange ActiveSync, or Exchange Web Services), this results in the deferral of messages until the quota for the user is available. Specifically, messages appear in the Outbox or Drafts folder for longer periods of time when users submit messages at a rate greater than the MessageRateLimit parameter.
-
-For POP or IMAP clients submitting messages directly to transport using SMTP, clients receive a transient error if they submit at a rate that exceeds the MessageRateLimit parameter. Exchange attempts to connect and send the messages at a later time.
-
-
-
-!!! Exchange Server 2016
-
 The MessageRateLimit parameter specifies the number of messages per minute that can be submitted to transport by POP3 or IMAP4 clients that use SMTP. Clients receive a transient error if they submit messages at a rate that exceeds the value of this parameter. Exchange attempts to connect and send the messages at a later time.
-
-
 
 ```yaml
 Type: UInt32
@@ -862,23 +660,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMaxConcurrency
-!!! Exchange Server 2010
-
-The OWAMaxConcurrency parameter specifies how many concurrent connections an Outlook Web App user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OWAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook Web App user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2016
-
 The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -942,17 +724,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPMaxConcurrency
-!!! Exchange Server 2010
-
-The POPMaxConcurrency parameter specifies how many concurrent connections a POP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The POPMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The PopMaxConcurrency parameter specifies how many concurrent connections a POP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The PopMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -1016,23 +788,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellMaxCmdletQueueDepth
-!!! Exchange Server 2010
-
-The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed by per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter won't affect Exchange Control Panel operations or Exchange Web Services operations.
-
-
-
-!!! Exchange Server 2013
-
-The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter won't affect Exchange Administration Center operations or Exchange Web Services operations.
-
-
-
-!!! Exchange Server 2016
-
 The PowerShellMaxCmdletQueueDepth parameter specifies the number of operations allowed to be executed by the user. This value directly affects the behavior of the PowerShellMaxCmdlets and PowerShellMaxConcurrency parameters. For example, the PowerShellMaxConcurrency parameter consumes at least two operations defined by the PowerShellMaxCmdletQueueDepth parameter but additional operations are also consumed per cmdlet execution. The number of operations depends on the cmdlets executed. We recommend that the value for the PowerShellMaxCmdletQueueDepth parameter be at least three times larger than the value of the PowerShellMaxConcurrency parameter. This parameter won't affect Exchange admin center operations or Exchange Web Services operations.
-
-
 
 ```yaml
 Type: UInt32
@@ -1080,20 +836,6 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellMaxConcurrency
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PowerShellMaxConcurrency parameter specifies different information depending on context:
-
-- In the context of Remote PowerShell, the PowerShellMaxConcurrency parameter specifies the maximum number of Remote PowerShell sessions that a Remote PowerShell user can have open at the same time.
-
-- In the context of Exchange Web Services, the PowerShellMaxConcurrency parameter specifies the number of concurrent cmdlet executions that a user can have at the same time.
-
-This parameter value doesn't necessarily correlate to the number of browsers opened by the user.
-
-
-
-!!! Exchange Server 2016
-
 The PowerShellMaxConcurrency parameter specifies different information depending on context:
 
 - In the context of remote PowerShell, the PowerShellMaxConcurrency parameter specifies the maximum number of remote PowerShell sessions that a remote PowerShell user can have open at the same time.
@@ -1101,8 +843,6 @@ The PowerShellMaxConcurrency parameter specifies different information depending
 - In the context of Exchange Web Services, the PowerShellMaxConcurrency parameter specifies the number of concurrent cmdlet executions that a user can have at the same time.
 
 This parameter value doesn't necessarily correlate to the number of browsers opened by the user.
-
-
 
 ```yaml
 Type: UInt32
@@ -1118,46 +858,6 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellMaxDestructiveCmdlets
-!!! Exchange Server 2010
-
-The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets may help prevent accidental data loss. The following cmdlets are designated as destructive:
-
-- Disable-Mailbox
-
-- Move-ActiveMailboxDatabase
-
-- Remove-AcceptedDomain
-
-- Remove-Mailbox
-
-- Remove-MailUser
-
-- Remove-Organization
-
-- Remove-SecondaryDomain
-
-- Remove-SyncMailbox
-
-- Remove-SyncMailUser
-
-- Set-Mailbox
-
-- Set-MailUser
-
-- Set-SyncMailbox
-
-- Set-SyncMailUser
-
-- Start-OrganizationUpgrade
-
-- Update-MailboxDatabaseCopy
-
-The time period used for this limit is specified by the PowerShellMaxDestructiveCmdletsTimePeriod parameter. Both values should be set at the same time. This feature isn't on by default. For more information, see the example later in this topic.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructive cmdlets that can be executed within a specific time period before their execution is stopped. Destructive cmdlets are cmdlets that can make significant changes to user data and configuration settings in your Exchange organization. Throttling these cmdlets may help prevent accidental data loss. The following cmdlets are designated as destructive:
 
 - Disable-Mailbox
@@ -1180,8 +880,6 @@ The PowerShellMaxDestructiveCmdlets parameter specifies the number of destructiv
 
 The time period used for this limit is specified by the PowerShellMaxDestructiveCmdletsTimePeriod parameter. Both values should be set at the same time. This feature isn't on by default. For more information, see the "Examples" section.
 
-
-
 ```yaml
 Type: UInt32
 Parameter Sets: (All)
@@ -1196,17 +894,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerShellMaxDestructiveCmdletsTimePeriod
-!!! Exchange Server 2010
-
-The PowerShellMaxDestructiveCmdletsTimePeriod parameter specifies the time period, in seconds, that the throttling policy uses to determine how many destructive cmdlets can be run. You set a value for this parameter when you set the PowerShellMaxDesctructiveCmdlets parameter. Both values should be set at the same time. For more information, see the description for the PowerShellMaxDesctructiveCmdlets parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The PowerShellMaxDestructiveCmdletsTimePeriod parameter specifies the time period, in seconds, that the throttling policy uses to determine how many destructive cmdlets can be run. You set a value for this parameter when you set the PowerShellMaxDestructiveCmdlets parameter. Both values should be set at the same time. For more information, see the description for the PowerShellMaxDestructiveCmdlets parameter.
-
-
 
 ```yaml
 Type: UInt32
@@ -1222,31 +910,11 @@ Accept wildcard characters: False
 ```
 
 ### -RCAMaxConcurrency
-!!! Exchange Server 2010
-
-The RCAMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against a server running Exchange 2010 at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The RCAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The RcaMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against a server running Exchange 2013 at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
-
-A valid value is an integer from 0 through 4294967295, or the value unlimited. The default value is 40.
-
-To indicate that the number of concurrent connections should be unthrottled (no limit), set the value to unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The RcaMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against an Exchange server at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
 
 A valid value is an integer from 0 through 4294967295, or the value unlimited. The default value is 40.
 
 To indicate that the number of concurrent connections should be unthrottled (no limit), set the value to unlimited.
-
-
 
 ```yaml
 Type: UInt32
@@ -1454,17 +1122,7 @@ Accept wildcard characters: False
 ```
 
 ### -CPAMaxConcurrency
-!!! Exchange Server 2010
-
-The CPAMaxConcurrency parameter specifies how many concurrent connections a cross-premises user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The CPAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CpaMaxConcurrency parameter specifies how many concurrent connections a cross-premises user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The CpaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -1528,17 +1186,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxKeywordsPerPage
-!!! Exchange Server 2013
-
-The DiscoveryMaxKeywordsPerPage parameter specifies the number of keywords for which to show statistics on a single page in the Exchange Administration Center (EAC).
-
-
-
-!!! Exchange Server 2016
-
 The DiscoveryMaxKeywordsPerPage parameter specifies the number of keywords for which to show statistics on a single page in the EAC.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1618,17 +1266,7 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoveryMaxStatsSearchMailboxes
-!!! Exchange Server 2013
-
-The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search without being able to view the statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, the user must copy the search results to a discovery mailbox to view the statistics for the discovery search. For more information, see In-Place eDiscovery.
-
-
-
-!!! Exchange Server 2016
-
 The DiscoveryMaxStatsSearchMailboxes parameter specifies the maximum number of mailboxes that a user can search in an In-Place eDiscovery search without being able to view the statistics. When the number of mailboxes configured with the DiscoveryMaxStatsSearchMailboxes parameter is exceeded, the user must copy the search results to a discovery mailbox to view the statistics for the discovery search. For more information, see In-Place eDiscovery in Exchange 2016.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1676,17 +1314,7 @@ Accept wildcard characters: False
 ```
 
 ### -EasCutoffBalance
-!!! Exchange Server 2013
-
-The EasCutoffBalance parameter specifies the resource consumption limits for a Microsoft Exchange ActiveSync user before that user is completely blocked from performing operations on a specific component.
-
-
-
-!!! Exchange Server 2016
-
 The EasCutoffBalance parameter specifies the resource consumption limits for an Exchange ActiveSync user before that user is completely blocked from performing operations on a specific component.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1718,23 +1346,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxConcurrency
-!!! Exchange Server 2010
-
-The EASMaxConcurrency parameter specifies how many concurrent connections a Microsoft Exchange ActiveSync user can have against a server running Exchange 2010 at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EASMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The EasMaxConcurrency parameter specifies how many concurrent connections an Exchange ActiveSync user can have against a server running Exchange 2013 at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EasMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2016
-
 The EasMaxConcurrency parameter specifies how many concurrent connections an Exchange ActiveSync user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EasMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -1750,17 +1362,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxDeviceDeletesPerMonth
-!!! Exchange Server 2010
-
-The EASMaxDeviceDeletesPerMonth parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can delete per month. By default, each user can delete a maximum of 20 partnerships per calendar month. When the limit is reached, the partnership deletion attempt fails and an error message is displayed to the user.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EasMaxDeviceDeletesPerMonth parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can delete per month. By default, each user can delete a maximum of 20 partnerships per calendar month. When the limit is reached, the partnership deletion attempt fails and an error message is displayed to the user.
-
-
 
 ```yaml
 Type: UInt32
@@ -1776,23 +1378,7 @@ Accept wildcard characters: False
 ```
 
 ### -EASMaxDevices
-!!! Exchange Server 2010
-
-The EASMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 10 Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An e-mail error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
-
-!!! Exchange Server 2013
-
-The EasMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 100Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An email error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
-
-!!! Exchange Server 2016
-
 The EasMaxDevices parameter specifies a limit to the number of Exchange ActiveSync partnerships that a user can have at one time. By default, each user can create 100 Exchange ActiveSync partnerships with their Exchange account. After users exceed the limit, they must delete one of their existing partnerships before they can create any more new partnerships. An email error message describing the limitation is sent to the user when the limit is exceeded. Additionally, an event is logged in the Application log when a user exceeds the limit.
-
-
 
 ```yaml
 Type: UInt32
@@ -2000,17 +1586,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSMaxConcurrency
-!!! Exchange Server 2010
-
-The EWSMaxConcurrency parameter specifies how many concurrent connections an Exchange Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EWSMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EwsMaxConcurrency parameter specifies how many concurrent connections an Exchange Web Services user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The EwsMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 10. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -2026,23 +1602,7 @@ Accept wildcard characters: False
 ```
 
 ### -EWSMaxSubscriptions
-!!! Exchange Server 2010
-
-The EWSMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that a user can have on a specified Client Access server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
-
-!!! Exchange Server 2013
-
-The EwsMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that an Exchange Web Services user can have on a specified Client Access server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
-
-!!! Exchange Server 2016
-
 The EwsMaxSubscriptions parameter specifies the maximum number of active push and pull subscriptions that an Exchange Web Services user can have on a specified Exchange server at the same time. If a user tries to create more subscriptions than the configured maximum, the subscription fails, and an event is logged in Event Viewer.
-
-
 
 ```yaml
 Type: UInt32
@@ -2106,17 +1666,7 @@ Accept wildcard characters: False
 ```
 
 ### -IMAPMaxConcurrency
-!!! Exchange Server 2010
-
-The IMAPMaxConcurrency parameter specifies how many concurrent connections an IMAP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The IMAPMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ImapMaxConcurrency parameter specifies how many concurrent connections an IMAP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The ImapMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -2282,17 +1832,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaCutoffBalance
-!!! Exchange Server 2013
-
-The OwaCutoffBalance parameter specifies the resource consumption limits for an Outlook Web App user before that user is completely blocked from performing operations on a specific component.
-
-
-
-!!! Exchange Server 2016
-
 The OwaCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web user before that user is completely blocked from performing operations on a specific component.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2308,17 +1848,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaMaxBurst
-!!! Exchange Server 2013
-
-The OwaMaxBurst parameter specifies the amount of time that an Outlook Web App user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
-
-
-
-!!! Exchange Server 2016
-
 The OwaMaxBurst parameter specifies the amount of time that an Outlook on the web user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2334,23 +1864,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAMaxConcurrency
-!!! Exchange Server 2010
-
-The OWAMaxConcurrency parameter specifies how many concurrent connections an Outlook Web App user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OWAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook Web App user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2016
-
 The OwaMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -2366,17 +1880,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaRechargeRate
-!!! Exchange Server 2013
-
-The OwaRechargeRate parameter specifies the rate at which an Outlook Web App user's budget is charged (budget grows by) during the budget time.
-
-
-
-!!! Exchange Server 2016
-
 The OwaRechargeRate parameter specifies the rate at which an Outlook on the web user's budget is charged (budget grows by) during the budget time.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2392,17 +1896,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaVoiceCutoffBalance
-!!! Exchange Server 2013
-
-The OwaVoiceCutoffBalance parameter specifies the resource consumption limits for an Outlook Web App voice user before that user is completely blocked from performing operations on a specific component.
-
-
-
-!!! Exchange Server 2016
-
 The OwaVoiceCutoffBalance parameter specifies the resource consumption limits for an Outlook on the web voice user before that user is completely blocked from performing operations on a specific component.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2418,17 +1912,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaVoiceMaxBurst
-!!! Exchange Server 2013
-
-The OwaVoiceMaxBurst parameter specifies the amount of time that an Outlook Web App voice user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
-
-
-
-!!! Exchange Server 2016
-
 The OwaVoiceMaxBurst parameter specifies the amount of time that an Outlook on the web voice user can consume an elevated amount of resources before being throttled. This is measured in milliseconds. This value is set separately for each component.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2444,17 +1928,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaVoiceMaxConcurrency
-!!! Exchange Server 2013
-
-The OwaVoiceMaxConcurrency parameter specifies how many concurrent connections an Outlook Web App voice user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaVoiceMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2016
-
 The OwaVoiceMaxConcurrency parameter specifies how many concurrent connections an Outlook on the web voice user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The OwaVoiceMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 5. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2470,17 +1944,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaVoiceRechargeRate
-!!! Exchange Server 2013
-
-The OwaVoiceRechargeRate parameter specifies the rate at which an Outlook Web App voice user's budget is charged (budget grows by) during the budget time.
-
-
-
-!!! Exchange Server 2016
-
 The OwaVoiceRechargeRate parameter specifies the rate at which an Outlook on the web voice user's budget is charged (budget grows by) during the budget time.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2528,17 +1992,7 @@ Accept wildcard characters: False
 ```
 
 ### -POPMaxConcurrency
-!!! Exchange Server 2010
-
-The POPMaxConcurrency parameter specifies how many concurrent connections a POP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The POPMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The PopMaxConcurrency parameter specifies how many concurrent connections a POP user can have against an Exchange server at one time. A connection is held from the moment a request is received until a response is sent in its entirety to the requestor. If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The PopMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
 
 ```yaml
 Type: UInt32
@@ -2653,8 +2107,6 @@ Accept wildcard characters: False
 The PowerShellMaxTenantConcurrency parameter limits the number of concurrent Windows PowerShell connections per tenant organization. By default, the limit for concurrent Windows PowerShell connections per tenant organization is set to 9. If users in a tenant organization try to make more concurrent requests than the limit set by the PowerShellMaxTenantConcurrency parameter, the new connection attempt fails. However, the existing connections remain valid. This limit is enforced even if a single user hasn't exceeded the per-user limit set by the PowerShellMaxConcurrency parameter. The PowerShellMaxTenantConcurrency parameter has a valid range from 0 through 100 inclusive. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
 
 This property can only be set for the default throttling policy.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2896,31 +2348,11 @@ Accept wildcard characters: False
 ```
 
 ### -RCAMaxConcurrency
-!!! Exchange Server 2010
-
-The RCAMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against a server running Exchange 2010 at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid. The RCAMaxConcurrency parameter has a valid range from 0 through 2147483647 inclusive. The default value is 20. To indicate that the number of concurrent connections should be unthrottled (no limit), this value should be set to $null.
-
-
-
-!!! Exchange Server 2013
-
-The RcaMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against a server running Exchange 2013 at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
-
-A valid value is an integer from 0 through 4294967295, or the value unlimited. The default value is 40.
-
-To indicate that the number of concurrent connections should be unthrottled (no limit), set the value to unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The RcaMaxConcurrency parameter specifies how many concurrent connections an RPC Client Access user can have against an Exchange server at one time. A connection is held from the moment a request is received until the connection is closed or the connection is otherwise disconnected (for example, if the user goes offline). If users attempt to make more concurrent requests than their policy allows, the new connection attempt fails. However, the existing connections remain valid.
 
 A valid value is an integer from 0 through 4294967295, or the value unlimited. The default value is 40.
 
 To indicate that the number of concurrent connections should be unthrottled (no limit), set the value to unlimited.
-
-
 
 ```yaml
 Type: UInt32
@@ -2936,17 +2368,7 @@ Accept wildcard characters: False
 ```
 
 ### -RcaRechargeRate
-!!! Exchange Server 2013
-
-The RcaRechargeRate parameter specifies the rate at which the user budget is charged (budget grows by) during the budget time.
-
-
-
-!!! Exchange Server 2016
-
 The RcaRechargeRate parameter specifies the rate at which the budget for the user is charged (how much the budget grows by) during the budget time.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2962,22 +2384,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThrottlingPolicyScope
-!!! Exchange Server 2013
-
-The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values.
-
-- Regular Specifies a custom policy that applies to specific users.
-
-- Organization Specifies a custom policy that applies to all users in your organization.
-
-- Global Reserved for the default throttling policy.
-
-For more information about throttling policy scopes, see Exchange workload management.
-
-
-
-!!! Exchange Server 2016
-
 The ThrottlingPolicyScope parameter specifies the scope of the throttling policy. You can use the following values.
 
 - Regular: Specifies a custom policy that applies to specific users.
@@ -2987,8 +2393,6 @@ The ThrottlingPolicyScope parameter specifies the scope of the throttling policy
 - Global: Reserved for the default throttling policy.
 
 For more information about throttling policy scopes, see User workload management in Exchange 2016.
-
-
 
 ```yaml
 Type: Regular | Organization | Global
@@ -3359,4 +2763,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/aa6afac5-12bf-41b5-829c-a39e1d276e8b.aspx)
-

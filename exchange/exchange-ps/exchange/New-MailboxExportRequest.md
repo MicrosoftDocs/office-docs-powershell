@@ -6,24 +6,6 @@ schema: 2.0.0
 # New-MailboxExportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailboxExportRequest cmdlet to begin the process of exporting contents of a primary mailbox or archive to a .pst file. You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you have to specify a unique name when creating the export request. You can remove existing export requests by using the Remove-MailboxExportRequest cmdlet before you start a new request that uses the default request name \<alias\>\\MailboxExportX (where X = 0-9).
-
-When you run the New-MailboxExportRequest cmdlet, the "modified date" value of the exported mail items is changed in the .pst file to the date when the command is issued. However, the "send/receive date" values are not changed. The "modified date" value is changed regardless of whether the mailbox is in litigation hold or not. This behavior occurs because exporting a mailbox to the .pst file is considered an important change that should be audited when forensic tools are run on the .pst file.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-MailboxExportRequest cmdlet to begin the process of exporting contents of a primary mailbox or archive to a .pst file.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-MailboxExportRequest cmdlet to begin the process of exporting contents of a primary mailbox or archive to a .pst file.
@@ -81,28 +63,6 @@ New-MailboxExportRequest [-Mailbox] <MailboxLocationIdParameter> -FilePath <Long
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-You need to grant read/write permission to the group Exchange Trusted Subsystem to the network share where you'll export or import mailboxes. If you don't grant this permission, you'll receive an error message stating that Exchange is unable to establish a connection to the target mailbox.
-
-!!! Exchange Server 2013
-
-You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name \<alias\>\\MailboxExportX (where X = 0-9).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
-
-- To import PST files from the share: Read permission
-
-- To save exported PST files to the share: Read/Write permission.
-
-If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-!!! Exchange Server 2016
-
 You can create more than one mailbox export request per mailbox, and each mailbox export request must have a unique name. Microsoft Exchange automatically generates up to 10 unique names for a mailbox export request. However, to create more than 10 export requests for a mailbox, you need to specify a unique name when creating the export request. You can remove existing export requests with the Remove-MailboxExportRequest cmdlet before starting a new request with the default request name \<alias\>\\MailboxExportX (where X = 0-9).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
@@ -117,87 +77,28 @@ If you don't grant this permission, you will receive an error message stating th
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-MailboxExportRequest -Mailbox AylaKol -FilePath "\\SERVER01\PSTFileShare\Ayla_Recovered.pst"
 ```
 
 This example exports the user Ayla Kol's primary mailbox to a .pst file on the network shared folder PSTFileShare on SERVER01.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-MailboxExportRequest -Mailbox AylaKol -FilePath "\\SERVER01\PSTFileShare\Ayla_Recovered.pst"
-```
-
-This example exports the user Ayla Kol's primary mailbox to a .pst file on the network shared folder PSTFileShare on SERVER01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-MailboxExportRequest -Mailbox AylaKol -FilePath "\\SERVER01\PSTFileShare\Ayla_Recovered.pst"
-```
-
-This example exports the user Ayla Kol's primary mailbox to a .pst file on the network shared folder PSTFileShare on SERVER01.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-MailboxExportRequest -Mailbox Kweku -FilePath "\\SERVER01\PSTFileShare\Kweku_Archive.pst" -IsArchive
 ```
 
 This example exports the user Kweku's archive to a .pst file on the network shared folder PSTFileShare on SERVER01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-MailboxExportRequest -Mailbox Kweku -FilePath "\\SERVER01\PSTFileShare\Kweku_Archive.pst" -IsArchive
-```
-
-This example exports the user Kweku's archive to a .pst file on the network shared folder PSTFileShare on SERVER01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-MailboxExportRequest -Mailbox Kweku -FilePath "\\SERVER01\PSTFileShare\Kweku_Archive.pst" -IsArchive
-```
-
-This example exports the user Kweku's archive to a .pst file on the network shared folder PSTFileShare on SERVER01.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2010")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
-```
-
-This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2010.
-
-
-For more information about how to use the ContentFilter parameter, see Filterable Properties for the -ContentFilter Parameter.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2012")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
 ```
 
 This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2012.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-MailboxExportRequest -Mailbox Tony -ContentFilter {(body -like "*company*") -and (body -like "*profit*") -and (Received -lt "01/01/2012")} -FilePath "\\SERVER01\PSTFileShare\Tony_CompanyProfits.pst"
-```
-
-This example exports messages that contain the words "company" and "profit" in the body of the message for the user Tony received before January 1, 2012.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-New-MailboxExportRequest -Mailbox Kweku -IncludeFolders "#Inbox#" -FilePath \\SERVER01\PSTFileShare\Kweku\LegalHold.pst
-```
-
-This example exports all messages from Kweku's Inbox to the .pst file LegalHold.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-New-MailboxExportRequest -Mailbox Kweku -IncludeFolders "#Inbox#" -FilePath \\SERVER01\PSTFileShare\Kweku\InPlaceHold.pst
-```
-
-This example exports all messages from Kweku's Inbox to the .pst file InPlaceHold.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 New-MailboxExportRequest -Mailbox Kweku -IncludeFolders "#Inbox#" -FilePath \\SERVER01\PSTFileShare\Kweku\InPlaceHold.pst
 ```
@@ -207,20 +108,6 @@ This example exports all messages from Kweku's Inbox to the .pst file InPlaceHol
 ## PARAMETERS
 
 ### -Mailbox
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Mailbox parameter specifies the mailbox or mail-enabled user from which to export contents. You can use the following values:
-
-- Alias
-
-- SMTP address
-
-- Display name
-
-
-
-!!! Exchange Server 2016
-
 The Mailbox parameter specifies the mailbox that you want to export from. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -247,8 +134,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxOrMailUserIdParameter
 Parameter Sets: (All)
@@ -263,16 +148,6 @@ Accept wildcard characters: False
 ```
 
 ### -FilePath
-!!! Exchange Server 2010
-
-The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
-
-You need to grant read/write permission to the group Exchange Trusted Subsystem to the network share where you'll export or import mailboxes. If you don't grant this permission, you'll receive an error message stating that Exchange is unable to establish a connection to the target mailbox.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The FilePath parameter specifies the network share path of the .pst file to which data is exported, for example, \\\\SERVER01\\PST Files\\exported.pst.
 
 You need to grant the following permission to the group Exchange Trusted Subsystem to the network share where you want to export or import PST files:
@@ -282,8 +157,6 @@ You need to grant the following permission to the group Exchange Trusted Subsyst
 - To save exported PST files to the share: Read/Write permission.
 
 If you don't grant this permission, you will receive an error message stating that Exchange is unable to establish a connection to the PST file on the network share.
-
-
 
 ```yaml
 Type: LongPath
@@ -299,17 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-!!! Exchange Server 2010
-
-The AcceptLargeDataLoss parameter specifies that a large amount of data loss is acceptable if the BadItemLimit is set to 51 or higher. Items are considered corrupted if the item can't be read from the source database or can't be written to the target database. Corrupted items won't be available in the destination mailbox or .pst file.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -325,36 +188,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedMessagesCopyOption
-!!! Exchange Server 2010
-
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages aren't copied. This parameter accepts the following values:
-
-- DoNotCopy The associated messages aren't copied. This is the default option.
-
-- MapByMessageClass This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-
-- Copy This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated.
-
-Content filtering doesn't apply to associated messages.
-
-
-
-!!! Exchange Server 2013
-
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
-
-- DoNotCopy The associated messages aren't copied.
-
-- MapByMessageClass This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-
-- Copy This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
-
-Content filtering doesn't apply to associated messages.
-
-
-
-!!! Exchange Server 2016
-
 The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
 
 - DoNotCopy: The associated messages aren't copied.
@@ -364,8 +197,6 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 - Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
 
 Content filtering doesn't apply to associated messages.
-
-
 
 ```yaml
 Type: DoNotCopy | MapByMessageClass | Copy
@@ -381,23 +212,11 @@ Accept wildcard characters: False
 ```
 
 ### -BadItemLimit
-!!! Exchange Server 2010
-
-The BadItemLimit parameter specifies the number of bad items to skip if the request encounters corruption in the mailbox. Use 0 to not skip bad items. The valid input range for this parameter is from 0 through 2147483647. The default value is 0. We recommend that you keep the default value 0 and only change the BadItemLimit parameter value if the request fails.
-
-If you set the BadItemLimit parameter to more than 50, the command fails, and you receive a warning stating: "Please confirm your intention to accept a large amount of data loss by specifying AcceptLargeDataLoss." If you receive this warning, you need to run the command again, this time using the AcceptLargeDataLoss parameter. No further warnings appear, and any corrupted items aren't available after the process is complete.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -449,22 +268,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConflictResolutionOption
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConflictResolutionOption parameter specifies the action for the Microsoft Exchange Mailbox Replication service (MRS) to take if there are multiple matching messages in the target. This parameter takes the following values:
-
-- KeepSourceItem
-
-- KeepLatestItem
-
-- KeepAll
-
-The default value is KeepSourceItem.
-
-
-
-!!! Exchange Server 2016
-
 The ConflictResolutionOption parameter specifies what to do if there are multiple matching messages in the target. Valid values are:
 
 - ForceCopy
@@ -478,8 +281,6 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - KeepTargetItem
 
 - UpdateFromSource
-
-
 
 ```yaml
 Type: KeepSourceItem | KeepLatestItem | KeepAll
@@ -495,19 +296,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilter
-!!! Exchange Server 2010
-
-The ContentFilter parameter specifies message content to search for. If the command finds a message that contains the match to the content filter, it exports the message.
-
-For more information about filterable properties, see Filterable Properties for the -ContentFilter Parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ContentFilter parameter specifies message content to search for. Only contents that match the ContentFilter parameter will be exported into the .pst file.
-
-
 
 ```yaml
 Type: String
@@ -523,29 +312,9 @@ Accept wildcard characters: False
 ```
 
 ### -ContentFilterLanguage
-!!! Exchange Server 2010
-
-The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
-
-The valid input for the ContentFilterLanguage parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkid=184859).
-
-
-
-!!! Exchange Server 2013
-
-The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
-
-The valid input for the ContentFilterLanguage parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
-
-!!! Exchange Server 2016
-
 The ContentFilterLanguage parameter specifies the language being used in the ContentFilter parameter for string searches.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
 
 ```yaml
 Type: CultureInfo
@@ -599,58 +368,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeFolders
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExcludeFolders parameter specifies the list of folders to exclude during the export.
-
-Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
-
-\<FolderName\>/\* Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
-
-\#\<FolderName\>\#/\* Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
-
-- Inbox
-
-- SentItems
-
-- DeletedItems
-
-- Calendar
-
-- Contacts
-
-- Drafts
-
-- Journal
-
-- Tasks
-
-- Notes
-
-- JunkEmail
-
-- CommunicationHistory
-
-- Voicemail
-
-- Fax
-
-- Conflicts
-
-- SyncIssues
-
-- LocalFailures
-
-- ServerFailures
-
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
-
-Wildcard characters can't be used in folder names.
-
-
-
-!!! Exchange Server 2016
-
 The ExcludeFolders parameter specifies the list of folders to exclude during the export.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
@@ -696,8 +413,6 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
 
 Wildcard characters can't be used in folder names.
-
-
 
 ```yaml
 Type: String[]
@@ -713,58 +428,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeFolders
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IncludeFolders parameter specifies the list of folders to include during the export.
-
-Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
-
-\<FolderName\>/\* Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
-
-\#\<FolderName\>\#/\* Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
-
-- Inbox
-
-- SentItems
-
-- DeletedItems
-
-- Calendar
-
-- Contacts
-
-- Drafts
-
-- Journal
-
-- Tasks
-
-- Notes
-
-- JunkEmail
-
-- CommunicationHistory
-
-- Voicemail
-
-- Fax
-
-- Conflicts
-
-- SyncIssues
-
-- LocalFailures
-
-- ServerFailures
-
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
-
-Wildcard characters can't be used in folder names.
-
-
-
-!!! Exchange Server 2016
-
 The IncludeFolders parameter specifies the list of folders to include during the export.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
@@ -811,8 +474,6 @@ If the user creates a personal folder with the same name as a well-known folder 
 
 Wildcard characters can't be used in folder names.
 
-
-
 ```yaml
 Type: String[]
 Parameter Sets: (All), Set1
@@ -827,17 +488,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsArchive
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IsArchive switch specifies that you're exporting from the user's archive.
-
-
-
-!!! Exchange Server 2016
-
 The IsArchive switch specifies that you're exporting from the user's archive. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -887,14 +538,6 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time.
-
-
-
-!!! Exchange Server 2016
-
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
 - Lowest
@@ -912,8 +555,6 @@ The Priority parameter specifies the order in which the request should be proces
 - Highest
 
 - Emergency
-
-
 
 ```yaml
 Type: Normal | High
@@ -945,17 +586,7 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-!!! Exchange Server 2010
-
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request. You don't have to specify a value with this switch.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1051,24 +682,6 @@ Accept wildcard characters: False
 ```
 
 ### -LargeItemLimit
-!!! Exchange Server 2013
-
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2013 Message size limits
-
-- Exchange Online Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
-
-!!! Exchange Server 2016
-
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
 For more information about maximum message size values, see the following topics:
@@ -1080,8 +693,6 @@ For more information about maximum message size values, see the following topics
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1247,4 +858,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1625c25a-7cc9-459c-97ea-281ac421bbce.aspx)
-

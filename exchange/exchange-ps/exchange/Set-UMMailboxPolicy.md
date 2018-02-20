@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-UMMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-UMMailboxPolicy cmdlet to modify a Unified Messaging (UM) mailbox policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UMMailboxPolicy cmdlet to modify a Unified Messaging (UM) mailbox policy.
@@ -45,24 +39,6 @@ Set-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-AllowAutomaticSpeec
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When the Set-UMMailboxPolicy cmdlet is used to modify UM mailbox policy objects, you can change settings such as PIN policies, message text settings, and dialing restrictions for a single UM-enabled recipient or multiple UM-enabled recipients. UM mailbox policies are associated with UM-enabled mailboxes and can be configured to increase the level of security for UM-enabled users.
-
-After this task is completed, the parameters and values specified are configured on the UM mailbox policy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-When the Set-UMMailboxPolicy cmdlet is used to modify UM mailbox policy objects, you can change settings such as PIN policies, message text settings, and dialing restrictions for a single UM-enabled recipient or multiple UM-enabled recipients. UM mailbox policies are associated with UM-enabled mailboxes and can be configured to increase the level of security for UM-enabled users.
-
-After this task is completed, the parameters and values specified are configured on the UM mailbox policy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When the Set-UMMailboxPolicy cmdlet is used to modify UM mailbox policy objects, you can change settings such as PIN policies, message text settings, and dialing restrictions for a single UM-enabled recipient or multiple UM-enabled recipients. UM mailbox policies are associated with UM-enabled mailboxes and can be configured to increase the level of security for UM-enabled users.
 
 After this task is completed, the parameters and values specified are configured on the UM mailbox policy.
@@ -71,84 +47,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
 ```
 
 This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
-```
-
-This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
-```
-
-This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -LogonFailuresBeforePINReset 8 -MaxLogonAttempts 12 -MinPINLength 8 -PINHistoryCount 10 -PINLifetime 60 -ResetPINText "The PIN used to allow you access to your mailbox using Outlook Voice Access has been reset."
-```
-
-This example sets the PIN settings for users associated with the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowDialPlanSubscribers $true -AllowedInCountryOrRegionGroups InCountry/RegionGroup1,InCountry/RegionGroup2 -AllowedInternationalGroups InternationalGroup1,InternationalGroup2 -AllowExtensions $true
 ```
 
 This example selects the in-country or region groups and international groups from those configured on the UM dial plan associated with the UM mailbox policy. UM-enabled users associated with this UM mailbox policy can place outbound calls according to the rules defined on these groups.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowDialPlanSubscribers $true -AllowedInCountryOrRegionGroups InCountry/RegionGroup1,InCountry/RegionGroup2 -AllowedInternationalGroups InternationalGroup1,InternationalGroup2 -AllowExtensions $true
-```
-
-This example selects the in-country or region groups and international groups from those configured on the UM dial plan associated with the UM mailbox policy. UM-enabled users associated with this UM mailbox policy can place outbound calls according to the rules defined on these groups.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowDialPlanSubscribers $true -AllowedInCountryOrRegionGroups InCountry/RegionGroup1,InCountry/RegionGroup2 -AllowedInternationalGroups InternationalGroup1,InternationalGroup2 -AllowExtensions $true
-```
-
-This example selects the in-country or region groups and international groups from those configured on the UM dial plan associated with the UM mailbox policy. UM-enabled users associated with this UM mailbox policy can place outbound calls according to the rules defined on these groups.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -AllowDialPlanSubscribers $true -AllowedInCountryOrRegionGroups InCountry/RegionGroup1,InCountry/RegionGroup2 -AllowedInternationalGroups InternationalGroup1,InternationalGroup2 -AllowExtensions $true
-```
-
-This example selects the in-country or region groups and international groups from those configured on the UM dial plan associated with the UM mailbox policy. UM-enabled users associated with this UM mailbox policy can place outbound calls according to the rules defined on these groups.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -UMEnabledText "You have been enabled for Unified Messaging." -VoiceMailText "You have received a voice mail message from Microsoft Exchange 2010 Unified Messaging."
-```
-
-This example configures the text of voice mail messages sent to UM-enabled users and the text included in an e-mail message sent to a user that's UM-enabled.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -UMEnabledText "You have been enabled for Unified Messaging." -VoiceMailText "You have received a voice mail message from Microsoft Exchange 2013 Unified Messaging."
-```
-
-This example configures the text of voice mail messages sent to UM-enabled users and the text included in an email message sent to a user who is UM-enabled.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -UMEnabledText "You have been enabled for Unified Messaging." -VoiceMailText "You have received a voice mail message from Microsoft Exchange Unified Messaging."
-```
-
-This example configures the text of voice mail messages sent to UM-enabled users and the text included in an email message sent to a user who is UM-enabled.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-UMMailboxPolicy -Identity MyUMMailboxPolicy -UMEnabledText "You have been enabled for Unified Messaging." -VoiceMailText "You have received a voice mail message from Microsoft Exchange Unified Messaging."
 ```
@@ -318,27 +231,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMissedCallNotifications
-!!! Exchange Server 2010
-
-The AllowMissedCallNotifications parameter specifies whether missed call notifications are enabled for users associated with the UM mailbox policy. The default value is $true.
-
-
-
-!!! Exchange Server 2013
-
-The AllowMissedCallNotifications parameter specifies whether missed call notifications are enabled for users associated with the UM mailbox policy. The default value is $true.
-
-When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2007 or Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AllowMissedCallNotifications parameter specifies whether missed call notifications are enabled for users associated with the UM mailbox policy. The default value is $true.
 
 When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
-
-
 
 ```yaml
 Type: $true | $false
@@ -354,17 +249,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowPinlessVoiceMailAccess
-!!! Exchange Server 2010
-
-The AllowPinlessVoiceMailAccess parameter specifies whether users associated with the UM mailbox policy are required to use a PIN to access their voice mail. A PIN is still required to access their e-mail and calendar. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowPinlessVoiceMailAccess parameter specifies whether users associated with the UM mailbox policy are required to use a PIN to access their voice mail. A PIN is still required to access their email and calendar. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -396,17 +281,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowSMSNotification
-!!! Exchange Server 2010
-
-The AllowSMSNotification parameter specifies whether UM-enabled users associated with the UM mailbox policy are allowed to get SMS or text messages sent to their mobile phones. If this parameter is set to $true, you also want to set the Set-UMMailbox cmdlet UMSMSNotificationOption parameter for the UM-enabled user to either voicemail or VoiceMailAndMissedCalls. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowSMSNotification parameter specifies whether UM-enabled users associated with the UM mailbox policy are allowed to get SMS or text messages sent to their mobile phones. If this parameter is set to $true, you also want to set the Set-UMMailbox cmdlet UMSMSNotificationOption parameter for the UM-enabled user to either VoiceMail or VoiceMailAndMissedCalls. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -470,17 +345,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTUIAccessToEmail
-!!! Exchange Server 2010
-
-The AllowTUIAccessToEmail parameter specifies whether users associated with the UM mailbox policy can access their individual e-mail messages over the telephone. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowTUIAccessToEmail parameter specifies whether users associated with the UM mailbox policy can access their individual email messages over the telephone. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -544,17 +409,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowVoiceResponseToOtherMessageTypes
-!!! Exchange Server 2010
-
-The AllowVoiceResponseToOtherMessageTypes parameter specifies whether UM-enabled users associated with the UM mailbox policy can record and attach a voice mail message when replying to e-mail messages and calendar items.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowVoiceResponseToOtherMessageTypes parameter specifies whether UM-enabled users associated with the UM mailbox policy can record and attach a voice mail message when replying to email messages and calendar items.
-
-
 
 ```yaml
 Type: $true | $false
@@ -590,19 +445,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -634,23 +479,7 @@ Accept wildcard characters: False
 ```
 
 ### -FaxServerURI
-!!! Exchange Server 2010
-
-The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Microsoft Exchange Server 2010 Unified Messaging servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy.
-
-
-
-!!! Exchange Server 2013
-
-The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Microsoft Exchange Server 2013 Client Access and Mailbox servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI will be used by Client Access and Mailbox servers running UM services.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FaxServerURI parameter specifies the Session Initiation Protocol (SIP) Uniform Resource Identifier (URI) for the fax solution that serves the UM-enabled users associated with the UM mailbox policy. This fax product or fax service accepts incoming fax calls that were redirected from Exchange Server 2016 Mailbox servers and creates inbound fax messages for the UM-enabled users associated with the UM mailbox policy. Although you can enter more than one fax server URI, only one URI will be used by Mailbox servers running UM services.
-
-
 
 ```yaml
 Type: String
@@ -666,23 +495,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-!!! Exchange Server 2010
-
-The ForceUpgrade parameter specifies whether you're prompted for confirmation before a UM mailbox policy is upgraded.
-
-
-
-!!! Exchange Server 2013
-
-The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM mailbox policy is upgraded.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ForceUpgrade switch specifies whether to suppress the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -826,17 +639,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectAuthenticatedVoiceMail
-!!! Exchange Server 2010
-
-The ProtectAuthenticatedVoiceMail parameter specifies whether Unified Messaging servers that answer Outlook Voice Access calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ProtectAuthenticatedVoiceMail parameter specifies whether Mailbox servers that answer Outlook Voice Access calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
-
-
 
 ```yaml
 Type: None | Private | All
@@ -868,17 +671,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProtectUnauthenticatedVoiceMail
-!!! Exchange Server 2010
-
-The ProtectUnauthenticatedVoiceMail parameter specifies whether the Unified Messaging servers that answer calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. This also applies when a message is sent from a UM auto attendant to a UM-enabled user associated with the UM mailbox policy. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ProtectUnauthenticatedVoiceMail parameter specifies whether the Mailbox servers that answer calls for UM-enabled users associated with the UM mailbox policy create protected voice mail messages. This also applies when a message is sent from a UM auto attendant to a UM-enabled user associated with the UM mailbox policy. The default setting is None. This means that no protection is applied to voice mail messages. If the value is set to Private, only messages marked as private are protected. If the value is set to All, every voice mail message is protected.
-
-
 
 ```yaml
 Type: None | Private | All
@@ -894,17 +687,7 @@ Accept wildcard characters: False
 ```
 
 ### -RequireProtectedPlayOnPhone
-!!! Exchange Server 2010
-
-The RequireProtectedPlayOnPhone parameter specifies whether users associated with the UM mailbox policy can only use Play on Phone for protected voice mail messages or whether users can use multimedia software to play the protected message. The default value is $false. Users are able to use both methods to listen to protected voice mail messages.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The RequireProtectedPlayOnPhone parameter specifies whether users associated with the UM mailbox policy can only use Play on Phone for protected voice mail messages or whether users can use multimedia software to play the protected message. The default value is $false. When set to $false, users are able to use both methods to listen to protected voice mail messages.
-
-
 
 ```yaml
 Type: $true | $false
@@ -920,17 +703,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetPINText
-!!! Exchange Server 2010
-
-The ResetPINText parameter specifies the text to be included in the PIN reset e-mail message. This text is limited to 512 characters.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ResetPINText parameter specifies the text to be included in the PIN reset email message. This text is limited to 512 characters.
-
-
 
 ```yaml
 Type: String
@@ -1026,17 +799,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceMailPreviewPartnerMaxDeliveryDelay
-!!! Exchange Server 2010
-
-The VoiceMailPreviewPartnerMaxDeliveryDelay parameter specifies the number of seconds that a Unified Messaging server waits for a Voice Mail Preview partner system to return a message with a Voice Mail Preview. If this time is exceeded, the Unified Messaging server delivers the voice mail message without a preview. The default value is 1200. The minimum number for this parameter is 300.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The VoiceMailPreviewPartnerMaxDeliveryDelay parameter specifies the number of seconds that a Mailbox server waits for a Voice Mail Preview partner system to return a message with a Voice Mail Preview. If this time is exceeded, the Mailbox server delivers the voice mail message without a preview. The default value is 1200. The minimum value for this parameter is 300.
-
-
 
 ```yaml
 Type: Int32
@@ -1052,17 +815,7 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceMailPreviewPartnerMaxMessageDuration
-!!! Exchange Server 2010
-
-The VoiceMailPreviewPartnerMaxMessageDuration parameter specifies the maximum duration, in seconds, of voice mail messages sent to the Voice Mail Preview partner that's contracted to provide transcription services for UM-enabled users in this UM mailbox policy. The default value is 180. The minimum number for this parameter is 60. This setting should be set equal to the maximum value that's allowed by the Voice Mail Preview partner.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The VoiceMailPreviewPartnerMaxMessageDuration parameter specifies the maximum duration, in seconds, of voice mail messages sent to the Voice Mail Preview partner that's contracted to provide transcription services for UM-enabled users in this UM mailbox policy. The default value is 180. The minimum number for this parameter is 60. This setting should be set equal to the maximum value allowed by the Voice Mail Preview partner.
-
-
 
 ```yaml
 Type: Int32
@@ -1127,4 +880,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/df67ae65-cfae-4f52-9d12-19f863808705.aspx)
-

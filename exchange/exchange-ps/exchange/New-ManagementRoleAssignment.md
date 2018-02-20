@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-ManagementRoleAssignment
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-ManagementRoleAssignment cmdlet to assign a management role to a management role group, management role assignment policy, user, or universal security group (USG).
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-ManagementRoleAssignment cmdlet to assign a management role to a management role group, management role assignment policy, user, or universal security group (USG).
@@ -27,7 +21,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Computer <ComputerIdParameter> 
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [<CommonParameters>]
@@ -40,7 +34,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Policy <MailboxPolicyIdParamete
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [<CommonParameters>]
@@ -53,7 +47,7 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter>
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating] [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [<CommonParameters>]
@@ -66,35 +60,13 @@ New-ManagementRoleAssignment [[-Name] <String>] -Role <RoleIdParameter> -User <U
  [-CustomRecipientWriteScope <ManagementScopeIdParameter>] [-Delegating] [-DomainController <Fqdn>]
  [-ExclusiveConfigWriteScope <ManagementScopeIdParameter>]
  [-ExclusiveRecipientWriteScope <ManagementScopeIdParameter>] [-Force]
- [-Organization <OrganizationIdParameter>] [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
+ [-RecipientOrganizationalUnitScope <OrganizationalUnitIdParameter>]
  [-RecipientRelativeWriteScope <None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate>]
  [-UnScopedTopLevel] [-WhatIf] [-RecipientAdministrativeUnitScope <AdministrativeUnitIdParameter>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you add a new role assignment, you can specify a built-in or custom role that was created using the New-ManagementRole cmdlet and specify an organizational unit (OU) or predefined or custom management scope to restrict the assignment.
-
-You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, or predefined or custom scope, the implicit write scope of the role applies to the role assignment.
-
-For more information about management role assignments, see Understanding Management Role Assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-When you add a new role assignment, you can specify a built-in or custom role that was created using the New-ManagementRole cmdlet and specify an organizational unit (OU) or predefined or custom management scope to restrict the assignment.
-
-You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, or predefined or custom scope, the implicit write scope of the role applies to the role assignment.
-
-For more information about management role assignments, see Understanding management role assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 When you add a new role assignment, you can specify a built-in or custom role that was created using the New-ManagementRole cmdlet and specify an organizational unit (OU) or predefined or custom management scope to restrict the assignment.
 
 You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, or predefined or custom scope, the implicit write scope of the role applies to the role assignment.
@@ -105,277 +77,61 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-ManagementRoleAssignment -Name "Mail Recipients_Tier 2 Help Desk" -Role "Mail Recipients" -SecurityGroup "Tier 2 Help Desk"
-```
-
-This example assigns the Mail Recipients role to the Tier 2 Help Desk role group.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Tier 2 Help Desk"
 ```
 
 This example assigns the Mail Recipients role to the Tier 2 Help Desk role group.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Tier 2 Help Desk"
-```
-
-This example assigns the Mail Recipients role to the Tier 2 Help Desk role group.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Tier 2 Help Desk"
-```
-
-This example assigns the Mail Recipients role to the Tier 2 Help Desk role group.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Role "Mail Recipients" -SecurityGroup "Tier 2 Help Desk"
-```
-
-This example assigns the Mail Recipients role to the Tier 2 Help Desk role group.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Name "MyVoiceMail_Sales end-users" -Role "MyVoiceMail" -Policy "Sales end-users"
-```
-
-This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role. After the role has been verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
-```
-
-This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy.
-
-
-The first command verifies that the IsEndUserRole property on the MyVoiceMail role is set to $true, indicating it's an end-user role. The second command assigns the role to the "Sales end-users" role assignment policy.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
 ```
 
 This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.
 
-
 After the role has been verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
-```
-
-This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.
-
-
-After the role has been verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRole "MyVoiceMail" | Format-Table Name, IsEndUserRole; New-ManagementRoleAssignment -Role "MyVoiceMail" -Policy "Sales end-users"
-```
-
-This example assigns the MyVoiceMail role to the "Sales end-users" role assignment policy. First, the IsEndUserRole property on the MyVoiceMail role is verified to be sure it's set to $true, indicating it's an end-user role.
-
-
-After the role has been verified to be an end-user role, the role is assigned to the "Sales end-users" role assignment policy.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-ManagementRoleAssignment -Name "Eng Help Desk_Eng HD Personnel" -Role "Eng Help Desk" -SecurityGroup "Eng HD Personnel" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
-```
-
-This example assigns the Eng Help Desk role to the Eng HD Personnel role group. The assignment restricts the recipient write scope of the role to the contoso.com/Engineering/Users OU. Users who are members of the Eng HD Personnel role group can only create, modify, or remove objects contained with that OU.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 New-ManagementRoleAssignment -Role "Eng Help Desk" -SecurityGroup "Eng HD Personnel" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
 ```
 
 This example assigns the Eng Help Desk role to the Eng HD Personnel role group. The assignment restricts the recipient write scope of the role to the contoso.com/Engineering/Users OU. Users who are members of the Eng HD Personnel role group can only create, modify, or remove objects contained within that OU.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Role "Eng Help Desk" -SecurityGroup "Eng HD Personnel" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
-```
-
-This example assigns the Eng Help Desk role to the Eng HD Personnel role group. The assignment restricts the recipient write scope of the role to the contoso.com/Engineering/Users OU. Users who are members of the Eng HD Personnel role group can only create, modify, or remove objects contained within that OU.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Role "Eng Help Desk" -SecurityGroup "Eng HD Personnel" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
-```
-
-This example assigns the Eng Help Desk role to the Eng HD Personnel role group. The assignment restricts the recipient write scope of the role to the contoso.com/Engineering/Users OU. Users who are members of the Eng HD Personnel role group can only create, modify, or remove objects contained within that OU.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Role "Eng Help Desk" -SecurityGroup "Eng HD Personnel" -RecipientOrganizationalUnitScope contoso.com/Engineering/Users
-```
-
-This example assigns the Eng Help Desk role to the Eng HD Personnel role group. The assignment restricts the recipient write scope of the role to the contoso.com/Engineering/Users OU. Users who are members of the Eng HD Personnel role group can only create, modify, or remove objects contained within that OU.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-New-ManagementRoleAssignment -Name "Distribution Groups_North America Exec Assistants" -Role "Distribution Groups" -SecurityGroup "North America Exec Assistants" -CustomRecipientWriteScope "North America Recipients"
-```
-
-This example assigns the Distribution Groups role to the North America Exec Assistants role group. The assignment restricts the recipient write scope of the role to the scope specified in the North America Recipients custom recipient management scope. Users who are members of the North America Exec Assistants role group can only create, modify, or remove distribution group objects that match the specified custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 New-ManagementRoleAssignment -Role "Distribution Groups" -SecurityGroup "North America Exec Assistants" -CustomRecipientWriteScope "North America Recipients"
 ```
 
 This example assigns the Distribution Groups role to the North America Exec Assistants role group. The assignment restricts the recipient write scope of the role to the scope specified in the North America Recipients custom recipient management scope. Users who are members of the North America Exec Assistants role group can only create, modify, or remove distribution group objects that match the specified custom recipient management scope.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Role "Distribution Groups" -SecurityGroup "North America Exec Assistants" -CustomRecipientWriteScope "North America Recipients"
-```
-
-This example assigns the Distribution Groups role to the North America Exec Assistants role group. The assignment restricts the recipient write scope of the role to the scope specified in the North America Recipients custom recipient management scope. Users who are members of the North America Exec Assistants role group can only create, modify, or remove distribution group objects that match the specified custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Role "Distribution Groups" -SecurityGroup "North America Exec Assistants" -CustomRecipientWriteScope "North America Recipients"
-```
-
-This example assigns the Distribution Groups role to the North America Exec Assistants role group. The assignment restricts the recipient write scope of the role to the scope specified in the North America Recipients custom recipient management scope. Users who are members of the North America Exec Assistants role group can only create, modify, or remove distribution group objects that match the specified custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Role "Distribution Groups" -SecurityGroup "North America Exec Assistants" -CustomRecipientWriteScope "North America Recipients"
-```
-
-This example assigns the Distribution Groups role to the North America Exec Assistants role group. The assignment restricts the recipient write scope of the role to the scope specified in the North America Recipients custom recipient management scope. Users who are members of the North America Exec Assistants role group can only create, modify, or remove distribution group objects that match the specified custom recipient management scope.
-
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 New-ManagementRoleAssignment -Name "Exchange Servers_John" -Role "Exchange Servers" -User John -CustomConfigWriteScope "Sydney Servers"
 ```
 
 This example assigns the Exchange Servers role to John. Because John should only manage the servers running Exchange located in Sydney, the role assignment restricts the configuration write scope of the role to the scope specified in the Sydney Servers custom configuration role group. John can only manage servers that match the specified custom configuration management scope.
 
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-New-ManagementRoleAssignment -Name "Exchange Servers_John" -Role "Exchange Servers" -User John -CustomConfigWriteScope "Sydney Servers"
-```
-
-This example assigns the Exchange Servers role to John. Because John should only manage the servers running Exchange located in Sydney, the role assignment restricts the configuration write scope of the role to the scope specified in the Sydney Servers custom configuration role group. John can only manage servers that match the specified custom configuration management scope.
-
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Name "Exchange Servers_John" -Role "Exchange Servers" -User John -CustomConfigWriteScope "Sydney Servers"
-```
-
-This example assigns the Exchange Servers role to John. Because John should only manage the servers running Exchange located in Sydney, the role assignment restricts the configuration write scope of the role to the scope specified in the Sydney Servers custom configuration role group. John can only manage servers that match the specified custom configuration management scope.
-
-### Example 5 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Name "Exchange Servers_John" -Role "Exchange Servers" -User John -CustomConfigWriteScope "Sydney Servers"
-```
-
-This example assigns the Exchange Servers role to John. Because John should only manage the servers running Exchange located in Sydney, the role assignment restricts the configuration write scope of the role to the scope specified in the Sydney Servers custom configuration role group. John can only manage servers that match the specified custom configuration management scope.
-
-### Example 5 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Name "Exchange Servers_John" -Role "Exchange Servers" -User John -CustomConfigWriteScope "Sydney Servers"
-```
-
-This example assigns the Exchange Servers role to John. Because John should only manage the servers running Exchange located in Sydney, the role assignment restricts the configuration write scope of the role to the scope specified in the Sydney Servers custom configuration role group. John can only manage servers that match the specified custom configuration management scope.
-
-### Example 6 -------------------------- (Exchange Server 2010)
-```
-New-ManagementRoleAssignment -Name "Excl-Mail Recipients_Executive Administrators" -Role "Mail Recipients" -SecurityGroup "Executive Administrators" -ExclusiveRecipientWriteScope "Exclusive-Executive Recipients"
-```
-
-This example assigns the Mail Recipients role to the Executive Administrators role group. The assignment restricts the recipient write scope of the role to the scope specified in the Exclusive-Executive Recipients exclusive recipient management scope. Because the Exclusive-Executive Recipients scope is an exclusive scope, only users of the Executive Administrators can manage the executive recipients that match the exclusive recipient scope. No other users, unless they are also assigned an assignment that uses an exclusive scope that matches the same users, can modify the executive recipients.
-
-### Example 6 -------------------------- (Exchange Server 2013)
+### Example 6
 ```
 New-ManagementRoleAssignment -Name "Excl-Mail Recipients_Executive Administrators" -Role "Mail Recipients" -SecurityGroup "Executive Administrators" -ExclusiveRecipientWriteScope "Exclusive-Executive Recipients"
 ```
 
 This example assigns the Mail Recipients role to the Executive Administrators role group. The assignment restricts the recipient write scope of the role to the scope specified in the Exclusive-Executive Recipients exclusive recipient management scope. Because the Exclusive-Executive Recipients scope is an exclusive scope, only users of the Executive Administrators can manage the executive recipients that match the exclusive recipient scope. No other users, unless they're also assigned an assignment that uses an exclusive scope that matches the same users, can modify the executive recipients.
 
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Name "Excl-Mail Recipients_Executive Administrators" -Role "Mail Recipients" -SecurityGroup "Executive Administrators" -ExclusiveRecipientWriteScope "Exclusive-Executive Recipients"
-```
-
-This example assigns the Mail Recipients role to the Executive Administrators role group. The assignment restricts the recipient write scope of the role to the scope specified in the Exclusive-Executive Recipients exclusive recipient management scope. Because the Exclusive-Executive Recipients scope is an exclusive scope, only users of the Executive Administrators can manage the executive recipients that match the exclusive recipient scope. No other users, unless they're also assigned an assignment that uses an exclusive scope that matches the same users, can modify the executive recipients.
-
-### Example 6 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Name "Excl-Mail Recipients_Executive Administrators" -Role "Mail Recipients" -SecurityGroup "Executive Administrators" -ExclusiveRecipientWriteScope "Exclusive-Executive Recipients"
-```
-
-This example assigns the Mail Recipients role to the Executive Administrators role group. The assignment restricts the recipient write scope of the role to the scope specified in the Exclusive-Executive Recipients exclusive recipient management scope. Because the Exclusive-Executive Recipients scope is an exclusive scope, only users of the Executive Administrators can manage the executive recipients that match the exclusive recipient scope. No other users, unless they're also assigned an assignment that uses an exclusive scope that matches the same users, can modify the executive recipients.
-
-### Example 6 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Name "Excl-Mail Recipients_Executive Administrators" -Role "Mail Recipients" -SecurityGroup "Executive Administrators" -ExclusiveRecipientWriteScope "Exclusive-Executive Recipients"
-```
-
-This example assigns the Mail Recipients role to the Executive Administrators role group. The assignment restricts the recipient write scope of the role to the scope specified in the Exclusive-Executive Recipients exclusive recipient management scope. Because the Exclusive-Executive Recipients scope is an exclusive scope, only users of the Executive Administrators can manage the executive recipients that match the exclusive recipient scope. No other users, unless they're also assigned an assignment that uses an exclusive scope that matches the same users, can modify the executive recipients.
-
-### Example 7 -------------------------- (Exchange Server 2010)
+### Example 7
 ```
 New-ManagementRoleAssignment -Name "Mail Recipients_Contoso Seattle" -Role "Mail Recipients" -SecurityGroup "Contoso Sub - Seattle" -CustomConfigWriteScope "Contoso Databases" -RecipientOrganizationalUnitScope adatum.com/Contoso/Seattle/Users
 ```
 
-This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees that are located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope, and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
-
-### Example 7 -------------------------- (Exchange Server 2013)
-```
-New-ManagementRoleAssignment -Name "Mail Recipients_Contoso Seattle" -Role "Mail Recipients" -SecurityGroup "Contoso Sub - Seattle" -CustomConfigWriteScope "Contoso Databases" -RecipientOrganizationalUnitScope adatum.com/Contoso/Seattle/Users
-```
-
-This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope, and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
-
-### Example 7 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRoleAssignment -Name "Mail Recipients_Contoso Seattle" -Role "Mail Recipients" -SecurityGroup "Contoso Sub - Seattle" -CustomConfigWriteScope "Contoso Databases" -RecipientOrganizationalUnitScope adatum.com/Contoso/Seattle/Users
-```
-
-This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope, and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
-
-### Example 7 -------------------------- (Exchange Online)
-```
-New-ManagementRoleAssignment -Name "Mail Recipients_Contoso Seattle" -Role "Mail Recipients" -SecurityGroup "Contoso Sub - Seattle" -CustomConfigWriteScope "Contoso Databases" -RecipientOrganizationalUnitScope adatum.com/Contoso/Seattle/Users
-```
-
-This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope, and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
-
-### Example 7 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRoleAssignment -Name "Mail Recipients_Contoso Seattle" -Role "Mail Recipients" -SecurityGroup "Contoso Sub - Seattle" -CustomConfigWriteScope "Contoso Databases" -RecipientOrganizationalUnitScope adatum.com/Contoso/Seattle/Users
-```
-
-This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope, and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
+This example assigns the Mail Recipients role to the Contoso Sub - Seattle role group. The administrators in this role group should only be allowed to create and manage mail recipients in specific databases that have been allocated for use by the Contoso subsidiary, A. Datum Corporation (adatum.com). Also, this group of administrators should only be allowed to manage the Contoso employees located in the Seattle office. This is done by creating a role assignment with both a database scope, to limit management of mail recipients to only the databases in the database scope and a recipient OU scope, to limit access to only the recipient objects within the Contoso Seattle OU.
 
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies a name for the new management role assignment. The maximum length of the name is 64 characters. If the management role assignment name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Name parameter specifies a name for the new management role assignment. The maximum length of the name is 64 characters. If the management role assignment name contains spaces, enclose the name in quotation marks ("). If you don't specify a name, one will be created automatically.
-
-
 
 ```yaml
 Type: String
@@ -391,23 +147,11 @@ Accept wildcard characters: False
 ```
 
 ### -Computer
-!!! Exchange Server 2010
-
-The Computer parameter specifies the name of the computer to assign the management role to.
-
-If you specify the Computer parameter, you can't specify the SecurityGroup, User, or Policy parameters.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The Computer parameter specifies the name of the computer to assign the management role to.
 
 If you specify the Computer parameter, you can't specify the SecurityGroup, User, or Policy parameters.
-
-
 
 ```yaml
 Type: ComputerIdParameter
@@ -459,21 +203,9 @@ Accept wildcard characters: False
 ```
 
 ### -SecurityGroup
-!!! Exchange Server 2010
-
-The SecurityGroup parameter specifies the name of the management role group or universal security group (USG) to assign the management role to.
-
-If you specify the SecurityGroup parameter, you can't specify the Policy, Computer, or User parameters. If the role group or USG name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The SecurityGroup parameter specifies the name of the management role group or universal USG to assign the management role to.
 
 If you specify the SecurityGroup parameter, you can't specify the Policy, Computer, or User parameters. If the role group or USG name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: SecurityGroupIdParameter
@@ -527,19 +259,9 @@ Accept wildcard characters: False
 ```
 
 ### -CustomConfigWriteScope
-!!! Exchange Server 2010
-
-The CustomConfigWriteScope parameter specifies the existing configuration scope to associate with this management role assignment. If you use the CustomConfigWriteScope parameter you can't use the ExclusiveConfigWriteScope parameter. If the management scope name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The CustomConfigWriteScope parameter specifies the existing configuration scope to associate with this management role assignment. If you use the CustomConfigWriteScope parameter you can't use the ExclusiveConfigWriteScope parameter. If the management scope name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -587,19 +309,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -615,19 +327,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusiveConfigWriteScope
-!!! Exchange Server 2010
-
-The ExclusiveConfigWriteScope parameter specifies the exclusive configuration-based management scope to associate with the new role assignment. If you use the ExclusiveConfigWriteScope parameter, you can't use the CustomConfigWriteScope parameter. If the scope name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ExclusiveConfigWriteScope parameter specifies the exclusive configuration-based management scope to associate with the new role assignment. If you use the ExclusiveConfigWriteScope parameter, you can't use the CustomConfigWriteScope parameter. If the scope name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -659,49 +361,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -727,21 +393,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRelativeWriteScope
-!!! Exchange Server 2010
-
-The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope. The available types are None, Organization, MyGAL, Self, and MyDistributionGroups. The RecipientRelativeWriteScope parameter is automatically set when the CustomRecipientWriteScope or RecipientOrganizationalUnitScope parameters are used.
-
-Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They are used internally by the cmdlet.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope. The available types are None, Organization, MyGAL, Self, and MyDistributionGroups. The RecipientRelativeWriteScope parameter is automatically set when the CustomRecipientWriteScope or RecipientOrganizationalUnitScope parameters are used.
 
 Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They are used internally by the cmdlet.
-
-
 
 ```yaml
 Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
@@ -826,4 +480,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/34d4f2e3-f2c5-49e1-a6a9-1366da65a78c.aspx)
-

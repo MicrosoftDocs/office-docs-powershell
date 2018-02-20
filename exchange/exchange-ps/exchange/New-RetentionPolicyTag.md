@@ -6,24 +6,6 @@ schema: 2.0.0
 # New-RetentionPolicyTag
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-RetentionPolicyTag cmdlet to create a retention tag.
-
-For more information about retention tags, see Understanding Retention Tags and Retention Policies.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-RetentionPolicyTag cmdlet to create a retention tag.
-
-For more information about retention tags, see Retention tags and retention policies.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-RetentionPolicyTag cmdlet to create a retention tag.
@@ -36,12 +18,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ### Set1
 ```
-New-RetentionPolicyTag [-Name] <String> [-AddressForJournaling <RecipientIdParameter>]
- [-AgeLimitForRetention <EnhancedTimeSpan>] [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
- [-JournalingEnabled <$true | $false>] [-LabelForJournaling <String>] [-LocalizedComment <MultiValuedProperty>]
+New-RetentionPolicyTag [-Name] <String> [-AgeLimitForRetention <EnhancedTimeSpan>] 
+ [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
+ [-LocalizedComment <MultiValuedProperty>]
  [-LocalizedRetentionPolicyTagName <MultiValuedProperty>] [-MessageClass <String>]
- [-MessageFormatForJournaling <UseMsg | UseTnef>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>]
+ [-MustDisplayCommentEnabled <$true | $false>]
  [-RetentionAction <MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive>]
  [-RetentionEnabled <$true | $false>] [-RetentionId <Guid>] [-SystemTag <$true | $false>]
  [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
@@ -53,30 +34,11 @@ New-RetentionPolicyTag [-Name] <String> [-AddressForJournaling <RecipientIdParam
 New-RetentionPolicyTag [-Name] <String> [-Comment <String>] [-Confirm] [-DomainController <Fqdn>]
  [-LocalizedComment <MultiValuedProperty>] [-LocalizedRetentionPolicyTagName <MultiValuedProperty>]
  [-ManagedFolderToUpgrade <ELCFolderIdParameter>] [-MustDisplayCommentEnabled <$true | $false>]
- [-Organization <OrganizationIdParameter>] [-SystemTag <$true | $false>]
- [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
+ [-SystemTag <$true | $false>] [-Type <Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems>]
  [-WhatIf] [-IsDefaultAutoGroupPolicyTag] [-IsDefaultModeratedRecipientsPolicyTag] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Retention tags are used to apply message retention settings to folders and items in a mailbox.
-
-Retention tags support a display of the tag name and an optional comment in localized languages. Language culture codes from the CultureInfo class are used for this purpose.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Retention tags are used to apply message retention settings to folders and items in a mailbox.
-
-Retention tags support a display of the tag name and an optional comment in localized languages. Language culture codes from the CultureInfo class are used for this purpose.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Retention tags are used to apply message retention settings to folders and items in a mailbox.
 
 Retention tags support a display of the tag name and an optional comment in localized languages. Language culture codes from the CultureInfo class are used for this purpose.
@@ -85,84 +47,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-RetentionPolicyTag "Finance-DeletedItems" -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction PermanentlyDelete
 ```
 
 This example creates the retention policy tag Finance-DeletedItems for the Deleted Items default folder. When applied to a mailbox as a part of a retention policy, the tag permanently deletes items of all types in the Deleted Items folder in 30 days.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-RetentionPolicyTag "Finance-DeletedItems" -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention policy tag Finance-DeletedItems for the Deleted Items default folder. When applied to a mailbox as a part of a retention policy, the tag permanently deletes items of all types in the Deleted Items folder in 30 days.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-RetentionPolicyTag "Finance-DeletedItems" -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention policy tag Finance-DeletedItems for the Deleted Items default folder. When applied to a mailbox as a part of a retention policy, the tag permanently deletes items of all types in the Deleted Items folder in 30 days.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-RetentionPolicyTag "Finance-DeletedItems" -Type DeletedItems -RetentionEnabled $true -AgeLimitForRetention 30 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention policy tag Finance-DeletedItems for the Deleted Items default folder. When applied to a mailbox as a part of a retention policy, the tag permanently deletes items of all types in the Deleted Items folder in 30 days.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-RetentionPolicyTag "Finance-Default" -Type All -RetentionEnabled $true -AgeLimitForRetention 365 -RetentionAction PermanentlyDelete
 ```
 
 This example creates the default policy tag Finance-Default. When applied to a mailbox as part of a retention policy, the tag permanently deletes all items without a retention tag within 365 days. Items of a particular message class such as Voicemail, for which a default tag (a retention tag of type All) exists, aren't impacted.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-RetentionPolicyTag "Finance-Default" -Type All -RetentionEnabled $true -AgeLimitForRetention 365 -RetentionAction PermanentlyDelete
-```
-
-This example creates the default policy tag Finance-Default. When applied to a mailbox as part of a retention policy, the tag permanently deletes all items without a retention tag within 365 days. Items of a particular message class such as Voicemail, for which a default tag (a retention tag of type All) exists, aren't impacted.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-RetentionPolicyTag "Finance-Default" -Type All -RetentionEnabled $true -AgeLimitForRetention 365 -RetentionAction PermanentlyDelete
-```
-
-This example creates the default policy tag Finance-Default. When applied to a mailbox as part of a retention policy, the tag permanently deletes all items without a retention tag within 365 days. Items of a particular message class such as Voicemail, for which a default tag (a retention tag of type All) exists, aren't impacted.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-RetentionPolicyTag "Finance-Default" -Type All -RetentionEnabled $true -AgeLimitForRetention 365 -RetentionAction PermanentlyDelete
-```
-
-This example creates the default policy tag Finance-Default. When applied to a mailbox as part of a retention policy, the tag permanently deletes all items without a retention tag within 365 days. Items of a particular message class such as Voicemail, for which a default tag (a retention tag of type All) exists, aren't impacted.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-RetentionPolicyTag "Business Critical" -Type Personal -Comment "Use this tag for all business critical mail" -RetentionEnabled $true -AgeLimitForRetention 2556 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention tag Business Critical of type Personal. When applied to mailbox items as part of a retention policy, the items are permanently deleted in approximately seven years.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-RetentionPolicyTag "Business Critical" -Type Personal -Comment "Use this tag for all business critical mail" -RetentionEnabled $true -AgeLimitForRetention 2556 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention tag Business Critical of type Personal. When applied to mailbox items as part of a retention policy, the items are permanently deleted in approximately seven years.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-RetentionPolicyTag "Business Critical" -Type Personal -Comment "Use this tag for all business critical mail" -RetentionEnabled $true -AgeLimitForRetention 2556 -RetentionAction PermanentlyDelete
-```
-
-This example creates the retention tag Business Critical of type Personal. When applied to mailbox items as part of a retention policy, the items are permanently deleted in approximately seven years.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 New-RetentionPolicyTag "Business Critical" -Type Personal -Comment "Use this tag for all business critical mail" -RetentionEnabled $true -AgeLimitForRetention 2556 -RetentionAction PermanentlyDelete
 ```
@@ -187,29 +86,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AddressForJournaling
-This parameter isn't available in this release.
-
-```yaml
-Type: RecipientIdParameter
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AgeLimitForRetention
 The AgeLimitForRetention parameter specifies the age at which retention is enforced on an item. The age limit corresponds to the number of days from the date the item was delivered, or the date an item was created if it wasn't delivered. If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-Valid values are 1.00:00:00 to 24855.03:14:07.
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -261,19 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -288,56 +156,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -JournalingEnabled
-This parameter isn't available in this release.
-
-```yaml
-Type: $true | $false
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LabelForJournaling
-This parameter isn't available in this release.
-
-```yaml
-Type: String
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -LocalizedComment
-!!! Exchange Server 2010
-
-The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, Microsoft Outlook and Microsoft Office Outlook Web App display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
-
-
-
-!!! Exchange Server 2013
-
-The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, Microsoft Outlook and Microsoft OfficeOutlook Web App display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LocalizedComment parameter specifies localized comments and their languages. When the user's language setting matches a language specified for this parameter, MicrosoftOutlook and Outlook on the web display the corresponding localized comment. Comments are specified in the form of ISO Language Code:Comment, for example, LocalizedComment EN-US:"This is a localized comment in U.S. English".
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -353,17 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalizedRetentionPolicyTagName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LocalizedRetentionPolicyTagName parameter specifies localized tag names and their languages. When the user's language setting matches a language specified for this parameter, Outlook and Outlook Web App display the corresponding localized tag name. Names are specified in the form of ISO Language Code:Name, for example, LocalizedRetentionPolicyTagName EN-US:"Business Critical".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LocalizedRetentionPolicyTagName parameter specifies localized tag names and their languages. When the user's language setting matches a language specified for this parameter, Outlook and Outlook on the web display the corresponding localized tag name. Names are specified in the form of ISO Language Code:Name, for example, LocalizedRetentionPolicyTagName EN-US:"Business Critical".
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -379,19 +189,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedFolderToUpgrade
-!!! Exchange Server 2010
-
-The ManagedFolderToUpgrade parameter specifies the name of a managed folder to use as a template for a retention tag.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ManagedFolderToUpgrade parameter specifies the name of a managed folder to use as a template for a retention tag.
-
-
 
 ```yaml
 Type: ELCFolderIdParameter
@@ -407,20 +207,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageClass
-!!! Exchange Server 2010
-
-The MessageClass parameter specifies the message type to which the tag applies. If not specified, the default value is set to \*.
-
-With the exception of a default policy tag (DPT) for voicemail, Exchange 2010 doesn't support retention tags for different message types. Only tags with a MessageClass of \* are supported, and they apply to all message types.
-
-To create a DPT for voice mail messages, set the MessageClass parameter to voicemail and the Type parameter to All.
-
-A DPT for voice mail messages applies only to Microsoft Exchange Unified Messaging voice mail messages (identified by the PR\_MESSAGE\_CLASS MAPI property value IPM.Note.Microsoft.Voicemail\*).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The MessageClass parameter specifies the message type to which the tag applies. If not specified, the default value is set to \*.
 
 With the exception of a default policy tag (DPT) for voicemail, Exchange doesn't support retention tags for different message types. Only tags with a MessageClass of \* are supported, and they apply to all message types.
@@ -429,29 +215,11 @@ To create a DPT for voice mail messages, set the MessageClass parameter to voice
 
 A DPT for voice mail messages applies only to Microsoft Exchange Unified Messaging voice mail messages (identified by the PR\_MESSAGE\_CLASS MAPI property value IPM.Note.Microsoft.Voicemail\*).
 
-
-
 ```yaml
 Type: String
 Parameter Sets: Set1
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MessageFormatForJournaling
-This parameter isn't available in this release.
-
-```yaml
-Type: UseMsg | UseTnef
-Parameter Sets: Set1
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -476,78 +244,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -RetentionAction
-!!! Exchange Server 2010
-
-The RetentionAction parameter specifies one of the following actions:
-
-- MarkAsPastRetentionLimit This action isn't availableee for retention tags. If you specify this action for a retention tag, messages that have the tag applied aren't deleted or marked as past the retention limit.
-
-- DeleteAndAllowRecovery This action deletes a message and allows recovery from the Recoverable Items folder.
-
-- PermanentlyDelete This action permanently deletes a message. A message that has been permanently deleted can't be recovered using the Recoverable Items folder. Permanently deleted messages aren't returned in a Discovery search, unless litigation hold is enabled for the mailbox.
-
-- MoveToArchive This action moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal and RecoverableItems.
-
-The MoveToDeletedItems and MoveToFolder actions are available, but don't work. These actions are available for upgrades from messaging records management (MRM) 1.0 (managed folders) to MRM 2.0 (retention policies). MRM 2.0 was introduced in Exchange 2010 Service Pack 1 (SP1).
-
-If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
-
-
-
-!!! Exchange Server 2013
-
-The RetentionAction parameter specifies one of the following actions:
-
-- MarkAsPastRetentionLimit If you specify this action for a retention tag, messages that have the tag applied are marked as past the retention limit.
-
-- DeleteAndAllowRecovery This action deletes a message and allows recovery from the Recoverable Items folder.
-
-- PermanentlyDelete This action permanently deletes a message. A message that has been permanently deleted can't be recovered using the Recoverable Items folder. Permanently deleted messages aren't returned in a Discovery search, unless litigation hold is enabled for the mailbox.
-
-- MoveToArchive This action moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal, and RecoverableItems.
-
-The MoveToDeletedItems and MoveToFolder actions are available, but don't work. These actions are available for upgrades from messaging records management (MRM) 1.0 (managed folders) to MRM 2.0 (retention policies). MRM 2.0 was introduced in Exchange 2010 Service Pack 1 (SP1).
-
-If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RetentionAction parameter specifies the action for the retention policy. Valid values are:
 
 - DeleteAndAllowRecovery: Deletes a message and allows recovery from the Recoverable Items folder.
 
 - MarkAsPastRetentionLimit: Messages are marked as past the retention limit.
 
-- MoveToArchive: Moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal, and RecoverableItems.
+- MoveToArchive: Moves a message to the user's archive mailbox. You can use this action for retention tags of type All, Personal and RecoverableItems.
 
 - PermanentlyDelete: Permanently deletes a message. A message that has been permanently deleted can't be recovered using the Recoverable Items folder. Permanently deleted messages aren't returned in a Discovery search, unless litigation hold is enabled for the mailbox.
 
 The MoveToDeletedItems and MoveToFolder actions are available, but don't work. These actions are available for upgrades from messaging records management (MRM) 1.0 (managed folders) to MRM 2.0 (retention policies). MRM 2.0 was introduced in Exchange 2010 Service Pack 1 (SP1).
 
 If this parameter isn't present and the RetentionEnabled parameter is set to $true, an error is returned.
-
-
 
 ```yaml
 Type: MoveToDeletedItems | MoveToFolder | DeleteAndAllowRecovery | PermanentlyDelete | MarkAsPastRetentionLimit | MoveToArchive
@@ -615,94 +325,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-!!! Exchange Server 2010
-
-The Type parameter specifies the type of retention tag being created. Valid values include:
-
-- Calendar
-
-- Contacts
-
-- DeletedItems
-
-- Drafts
-
-- Inbox
-
-- JunkEmail
-
-- Journal
-
-- Notes
-
-- Outbox
-
-- SentItems
-
-- All
-
-- RecoverableItems
-
-- RssSubscriptions
-
-- SyncIssues
-
-- Tasks
-
-- ConversationHistory
-
-- Personal
-
-To create a default policy tag (DPT), specify type All. Retention tags for the Calendar and Tasks folders are supported in Exchange 2010 SP2 RU4 and later. For tags of type RecoverableItems, the only valid retention action is MoveToArchive.
-
-
-
-!!! Exchange Server 2013
-
-The Type parameter specifies the type of retention tag being created. Valid values include:
-
-- Calendar
-
-- Clutter Available in Exchange Online only.
-
-- Contacts
-
-- DeletedItems
-
-- Drafts
-
-- Inbox
-
-- JunkEmail
-
-- Journal
-
-- Notes
-
-- Outbox
-
-- SentItems
-
-- Tasks
-
-- All
-
-- RecoverableItems
-
-- RssSubscriptions
-
-- SyncIssues
-
-- ConversationHistory
-
-- Personal
-
-To create a default policy tag (DPT), specify type All. For tags of type RecoverableItems, the only valid retention action is MoveToArchive.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Type parameter specifies the type of retention tag being created. Valid values include:
 
 - All
@@ -748,8 +370,6 @@ The Type parameter specifies the type of retention tag being created. Valid valu
 - Tasks
 
 To create a default policy tag (DPT), specify type All. For tags of type RecoverableItems, the only valid retention action is MoveToArchive.
-
-
 
 ```yaml
 Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems
@@ -830,4 +450,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3f047d2e-1171-4f53-9b7e-e1625c954325.aspx)
-
