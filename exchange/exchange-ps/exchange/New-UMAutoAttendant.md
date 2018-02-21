@@ -16,8 +16,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-UMAutoAttendant [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SharedUMDialPlan] [-SpeechEnabled <$true | $false>]
- [-Status <Enabled | Disabled>] [-WhatIf] [<CommonParameters>]
+ [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SpeechEnabled <$true | $false>] [-Status <Enabled | Disabled>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -139,22 +138,6 @@ Type: MultiValuedProperty
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -SharedUMDialPlan
-The SharedUMDialPlan parameter specifies if the auto attendant being created is linked or associated with a dial plan outside the scope of the organization. If you specify this parameter, the auto attendant can be linked with another tenant's dial plan. This parameter is used during tenant provisioning and is only used in a data center.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
