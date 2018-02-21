@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-MailboxRestoreRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailboxRestoreRequest cmdlet to remove fully or partially completed restore requests.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-MailboxRestoreRequest cmdlet to remove fully or partially completed restore requests.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MailboxRestoreRequest cmdlet to remove fully or partially completed restore requests.
@@ -41,24 +27,6 @@ Remove-MailboxRestoreRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParame
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed restore request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed restore request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The parameter set that requires the Identity parameter allows you to remove a fully or partially completed restore request.
 
 The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
@@ -67,84 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
 ```
 
 This example removes the second restore request Ayla\\MailboxRestore1.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
-```
-
-This example removes the second restore request Ayla\\MailboxRestore1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
-```
-
-This example removes the second restore request Ayla\\MailboxRestore1.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1"
-```
-
-This example removes the second restore request Ayla\\MailboxRestore1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
 ```
 
 This example removes all restore requests that have the status of Completed.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
-```
-
-This example removes all restore requests that have the status of Completed.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
-```
-
-This example removes all restore requests that have the status of Completed.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxRestoreRequest -Status Completed | Remove-MailboxRestoreRequest
-```
-
-This example removes all restore requests that have the status of Completed.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the restore request by using the RequestGuid parameter for a request stored on MBXDB01. The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only. You should only use this parameter set if instructed by Microsoft Customer Service and Support.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the restore request by using the RequestGuid parameter for a request stored on MBXDB01. The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only. You should only use this parameter set if instructed by Microsoft Customer Service and Support.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the restore request by using the RequestGuid parameter for a request stored on MBXDB01. The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only. You should only use this parameter set if instructed by Microsoft Customer Service and Support.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Remove-MailboxRestoreRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
@@ -172,29 +77,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-!!! Exchange Server 2010
-
-The RequestGuid parameter specifies the unique identifier for the restore request. To find the GUID, use the Get-MailboxRestoreRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2013
-
-The RequestGuid parameter specifies the unique identifier for the restore request. To find the GUID, use the Get-MailboxRestoreRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
-
-This parameter can't be used in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the unique identifier for the restore request. To find the GUID, use the Get-MailboxRestoreRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter.
 
 This parameter can't be used in conjunction with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -210,32 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2010
-
-The RequestQueue parameter specifies the target mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-This parameter can't be used in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2013
-
-The RequestQueue parameter specifies the target mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-If you specify the RequestQueue parameter, you must also specify the RequestGuid parameter. This parameter can't be used in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter specifies the target mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
@@ -245,8 +106,6 @@ The RequestQueue parameter specifies the target mailbox database on which the ma
 - Database name
 
 If you specify the RequestQueue parameter, you must also specify the RequestGuid parameter. This parameter can't be used in conjunction with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -282,19 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -359,4 +208,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a3d3327e-99b0-4d44-bd81-3e8f59eab41d.aspx)
-
