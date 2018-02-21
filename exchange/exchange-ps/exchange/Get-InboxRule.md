@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-InboxRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-InboxRule cmdlet to view Inbox rule properties. Inbox rules are used to process messages in the Inbox based on conditions specified and take actions such as moving a message to a specified folder or deleting a message.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-InboxRule cmdlet to view Inbox rule properties. Inbox rules are used to process messages in the Inbox based on conditions specified and take actions such as moving a message to a specified folder or deleting a message.
@@ -27,70 +21,18 @@ Get-InboxRule [[-Identity] <InboxRuleIdParameter>] [-DescriptionTimeFormat <Stri
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Inbox rules" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Inbox rules" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-InboxRule -Mailbox Joe@Contoso.com
 ```
 
 This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-InboxRule -Mailbox Joe@Contoso.com
-```
-
-This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-InboxRule -Mailbox Joe@Contoso.com
-```
-
-This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-InboxRule -Mailbox Joe@Contoso.com
-```
-
-This example retrieves all Inbox rules for the mailbox Joe@Contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
-```
-
-This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
-```
-
-This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
-```
-
-This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@contoso.com on which the ReceivedBeforeDate parameter was set when the rule was created. The DescriptionTimeFormat and DescriptionTimeZone parameters are used in this example to specify formatting of the time and the time zone used in the rule's Description property.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-InboxRule "ReceivedLastYear" -Mailbox joe@contoso.com -DescriptionTimeFormat "mm/dd/yyyy" -DescriptionTimeZone "Pacific Standard Time"
 ```
@@ -100,29 +42,9 @@ This example retrieves the Inbox rule ReceivedLastYear from the mailbox joe@cont
 ## PARAMETERS
 
 ### -DescriptionTimeFormat
-!!! Exchange Server 2010
-
-The DecriptionTimeFormat parameter specifies the format in which time values are returned in the rule description. You must use standard time value format settings, for example:
-
-mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit date, and yyyy is the 4-digit year.
-
-
-
-!!! Exchange Server 2013
-
-The DescriptionTimeFormat parameter specifies the format in which time values are returned in the rule description. You must use standard time value format settings, for example:
-
-mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit day, and yyyy is the 4-digit year.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DescriptionTimeFormat parameter specifies the format for time values in the rule description. For example:
 
-mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit day, and yyyy is the 4-digit year.
-
-
+mm/dd/yyyy, where mm is the 2-digit month, dd is the 2-digit day and yyyy is the 4-digit year.
 
 ```yaml
 Type: String
@@ -138,28 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -DescriptionTimeZone
-!!! Exchange Server 2010
-
-The DescriptionTimeZone parameter specifies the format in which the time zone for time values is returned in the rule description. Use a valid Microsoft Windows time zone name.
-
-You can use the Windows PowerShell command-line interface to retrieve time zone names from the registry, for example:
-
-$timezone = Get-ChildItem "HKLM :\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | For-Each {Get-ItemProperty $\_.PSPath}; $timezone | ft pschildname,display -auto
-
-
-
-!!! Exchange Server 2013
-
-The DescriptionTimeZone parameter specifies the format in which the time zone for time values is returned in the rule description. Use a valid Microsoft Windows time zone name.
-
-You can use the Windows PowerShell command-line interface to retrieve time zone names from the registry, for example:
-
-$timezone = Get-ChildItem "HKLM :\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | For-Each {Get-ItemProperty $\_.PSPath}; $timezone | Format-Table pschildname,display -auto
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DescriptionTimeZone parameter specifies time zone that's used for time values in the rule description.
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
@@ -167,8 +67,6 @@ A valid value for this parameter is a supported time zone key name (for example,
 To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
-
-
 
 ```yaml
 Type: ExTimeZoneValue
@@ -184,19 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -212,14 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the identity of an Inbox rule.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the Inbox rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -229,8 +109,6 @@ The Identity parameter specifies the Inbox rule that you want to view. You can u
 - Exchange Online: \<mailbox alias\>\\\<RuleIdentity\> (for example, rzaher\\16752869479666417665.
 
 - On-premises Exchange: \<mailbox canonical name\>\\\<RuleIdentity\> (for example, contoso.com/Users/Rick Zaher\\16752869479666417665.
-
-
 
 ```yaml
 Type: InboxRuleIdParameter
@@ -246,28 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Mailbox parameter specifies the mailbox to which the Inbox rule belongs. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -294,8 +150,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -310,19 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHidden
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The IncludeHidden switch specifies whether to include hidden Inbox rules in the results. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -389,4 +233,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b02ad57a-460a-4dc2-a521-788cd893c269.aspx)
-
