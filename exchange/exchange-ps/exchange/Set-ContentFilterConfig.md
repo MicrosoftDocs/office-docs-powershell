@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-ContentFilterConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ContentFilterConfig cmdlet to modify the content filter configuration on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ContentFilterConfig cmdlet to modify the content filter configuration on a Mailbox server or an Edge Transport server.
@@ -29,78 +23,25 @@ Set-ContentFilterConfig [-BypassedRecipients <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ContentFilterConfig -BypassedSenderDomains woodgrovebank.com
 ```
 
 This example specifies the sender domain woodgrovebank.com as a bypassed domain. Messages received from that domain bypass the Content Filter agent.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ContentFilterConfig -BypassedSenderDomains woodgrovebank.com
-```
-
-This example specifies the sender domain woodgrovebank.com as a bypassed domain. Messages received from that domain bypass the Content Filter agent.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ContentFilterConfig -BypassedSenderDomains woodgrovebank.com
-```
-
-This example specifies the sender domain woodgrovebank.com as a bypassed domain. Messages received from that domain bypass the Content Filter agent.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-ContentFilterConfig -SCLQuarantineEnabled $true -SCLRejectEnabled $true -SCLDeleteEnabled $true -SCLQuarantineThreshold 5 -SCLRejectThreshold 6 -SCLDeleteThreshold 8 -QuarantineMailbox SpamQuarantineMailbox@contoso.com -RejectionResponse "Message rejected due to content restrictions" -BypassedRecipients user1@contoso.com,user2@contoso.com
 ```
 
 This example makes the following modifications to the Content Filter agent configuration:
 
-
-It enables and configures the SCL threshold functionalities that quarantine, reject, and delete messages to 5, 6, and 8 respectively.
-
-It specifies SpamQuarantineMailbox@contoso.com as the spam quarantine mailbox.
-
-It defines two users for whom the Content Filter won't process messages.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-ContentFilterConfig -SCLQuarantineEnabled $true -SCLRejectEnabled $true -SCLDeleteEnabled $true -SCLQuarantineThreshold 5 -SCLRejectThreshold 6 -SCLDeleteThreshold 8 -QuarantineMailbox SpamQuarantineMailbox@contoso.com -RejectionResponse "Message rejected due to content restrictions" -BypassedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following modifications to the Content Filter agent configuration:
-
-
-It enables and configures the SCL threshold functionalities that quarantine, reject, and delete messages to 5, 6, and 8 respectively.
-
-It specifies SpamQuarantineMailbox@contoso.com as the spam quarantine mailbox.
-
-It defines two users for whom the Content Filter won't process messages.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-ContentFilterConfig -SCLQuarantineEnabled $true -SCLRejectEnabled $true -SCLDeleteEnabled $true -SCLQuarantineThreshold 5 -SCLRejectThreshold 6 -SCLDeleteThreshold 8 -QuarantineMailbox SpamQuarantineMailbox@contoso.com -RejectionResponse "Message rejected due to content restrictions" -BypassedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following modifications to the Content Filter agent configuration:
-
-
-It enables and configures the SCL threshold functionalities that quarantine, reject, and delete messages to 5, 6, and 8 respectively.
+It enables and configures the SCL threshold functionalities that quarantine, reject and delete messages to 5, 6 and 8 respectively.
 
 It specifies SpamQuarantineMailbox@contoso.com as the spam quarantine mailbox.
 
@@ -195,17 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether the Content Filter agent is enabled on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true. When the Enabled parameter is set to $true, the Content Filter agent is enabled on the computer on which you're running the command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Enabled parameter enables or disables the Content Filter agent on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -253,17 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookEmailPostmarkValidationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The OutlookEmailPostmarkValidationEnabled parameter specifies whether the Content Filter agent sends a computational puzzle to the sender's e-mail system for processing. Valid input for the OutlookEmailPostmarkValidationEnabled parameter is $true or $false. When the OutlookEmailPostmarkValidationEnabled parameter is set to $true, the Content Filter agent sends a computational puzzle to the sender's e-mail system for processing. The results of the puzzle validation are factored into the overall spam confidence level (SCL). This functionality is exposed to the Microsoft Outlook user as Office Outlook 2007 E-mail Postmark validation. The default setting is $false.
-
-
-
-!!! Exchange Server 2016
-
 The OutlookEmailPostmarkValidationEnabled parameter specifies whether the Content Filter agent sends a computational puzzle to the sender's e-mail system for processing. Valid input for the OutlookEmailPostmarkValidationEnabled parameter is $true or $false. When the OutlookEmailPostmarkValidationEnabled parameter is set to $true, the Content Filter agent sends a computational puzzle to the sender's e-mail system for processing. The results of the puzzle validation are factored into the overall spam confidence level (SCL). This functionality is exposed to the Microsoft Outlook user as Outlook E-mail Postmark validation. The default setting is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -440,4 +361,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/23900d4c-2b88-466e-9746-3f5c5b80f267.aspx)
-

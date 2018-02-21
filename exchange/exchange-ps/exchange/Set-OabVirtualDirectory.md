@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-OabVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-OABVirtualDirectory cmdlet to change configuration settings for an offline address book (OAB) virtual directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-OABVirtualDirectory cmdlet to change configuration settings for an offline address book (OAB) virtual directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-OABVirtualDirectory cmdlet to modify offline address book (OAB) virtual directories that are used in Internet Information Services (IIS) on Exchange servers.
@@ -37,35 +23,11 @@ Set-OabVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-BasicAuthent
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "OAB virtual directories" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Offline address book connectivity" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-OABVirtualDirectory -Identity "Server1\OAB (Default Web Site)" -ExternalUrl "https://www.contoso.com/OAB"
-```
-
-This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to https://www.contoso.com/OAB.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-OABVirtualDirectory -Identity "Server1\OAB (Default Web Site)" -ExternalUrl "https://www.contoso.com/OAB"
-```
-
-This example changes the external URL of the OAB virtual directory OAB (Default Web Site) to https://www.contoso.com/OAB.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-OABVirtualDirectory -Identity "Server1\OAB (Default Web Site)" -ExternalUrl "https://www.contoso.com/OAB"
 ```
@@ -75,14 +37,6 @@ This example changes the external URL of the OAB virtual directory OAB (Default 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the GUID, distinguished name (DN), or OAB virtual directory name that represents a specific OAB virtual directory. You can also include the path by using the format Server\\OfflineAddressBookVirtualDirectoryName.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the OAB virtual directory that you want to modify.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -94,8 +48,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -111,14 +63,6 @@ Accept wildcard characters: False
 ```
 
 ### -BasicAuthentication
-!!! Exchange Server 2010, Exchange Server 2013
-
-The BasicAuthentication parameter specifies whether Basic authentication is enabled on the OAB virtual directory. This parameter can be used with the WindowsAuthentication parameter.
-
-
-
-!!! Exchange Server 2016
-
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Basic authentication is enabled. This is the default value.
@@ -126,8 +70,6 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 You can use this parameter with the WindowsAuthentication parameter.
-
-
 
 ```yaml
 Type: $true | $false
@@ -179,24 +121,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionFlags
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExtendedProtectionFlags parameter is used to customize the options you use if you're using Extended Protection for Authentication. The possible values are:
-
-- None Default setting.
-
-- Proxy Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
-
-- ProxyCoHosting Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
-
-- AllowDotlessSPN Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-
-- NoServiceNameCheck Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
@@ -208,8 +132,6 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
 
 - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -225,27 +147,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionSPNList
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the specified virtual directory.
-
-The possible values are:
-
-- Null This is the default value.
-
-- Single SPN or comma delimited list of valid SPNs By default, you must specify the fully qualified domain name (FQDN) (for example mail.contoso.com) for each SPN. If you want to add an SPN that's not an FQDN (for example, ContosoMail), you must also use the ExtendedProtectionTokenChecking parameter with the AllowDotlessSPN value. You specify the domain in SPN format. The SPN format is \<protocol\>/\<FQDN\>. For example, a valid entry could be HTTP/mail.contoso.com.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
 
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -261,42 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionTokenChecking
-!!! Exchange Server 2010
-
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
-
-- None Extended Protection for Authentication won't be used. Connections between the client and Exchange won't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-
-- Allow Extended Protection for Authentication will be used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-- Require Extended Protection for Authentication will be used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
-
-To learn more about Extended Protection for Authentication, see Understanding Extended Protection for Authentication.
-
-
-
-!!! Exchange Server 2013
-
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
-
-- None: Extended Protection for Authentication isn't used. Connections between the client and Exchange don't use Extended Protection for Authentication on the virtual directory. This is the default value.
-
-- Allow: Extended Protection for Authentication is used for connections between the client and Exchange on the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
-
-- Require: Extended Protection for Authentication is used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support it, the connection between the client and server will fail. If you use this value, you also need to set a value for the ExtendedProtectionSPNList parameter.
-
-Note:
-
-If you use the value Allow or Require, and you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) using the ExtendedProtectionSPNList parameter.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
@@ -308,8 +178,6 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 Note:
 
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-
 
 ```yaml
 Type: None | Allow | Require
@@ -325,17 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUrl
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExternalUrl parameter specifies the external URL that the OAB virtual directory points to.
-
-
-
-!!! Exchange Server 2016
-
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
-
-
 
 ```yaml
 Type: Uri
@@ -351,17 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalUrl
-!!! Exchange Server 2010, Exchange Server 2013
-
-The InternalUrl parameter specifies the internal URL that the OAB virtual directory points to.
-
-
-
-!!! Exchange Server 2016
-
 The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
-
-
 
 ```yaml
 Type: Uri
@@ -377,17 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -PollInterval
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PollInterval parameter specifies the time interval that the distribution service should poll the generation server for new updates (in minutes).
-
-
-
-!!! Exchange Server 2016
-
 The PollInterval parameter specifies the time interval in minutes that the distribution service should poll the offline address book generation server for updates.
-
-
 
 ```yaml
 Type: Int32
@@ -403,21 +241,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSSL
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequireSSL parameter specifies whether to require Secure Sockets Layer (SSL) when accessing the OAB virtual directory. When set to $true, the RequireSSL parameter requires SSL when accessing the OAB virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The RequireSSL parameter specifies whether the client connection to the virtual directory requires Secure Sockets Layer (SSL) encryption. Valid values are:
 
 - $true: SSL encryption is required to connect to the virtual directory. This is the default value.
 
 - $false: SSL encryption isn't required to connect to the virtual directory.
-
-
 
 ```yaml
 Type: $true | $false
@@ -449,14 +277,6 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsAuthentication
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WindowsAuthentication parameter specifies whether Integrated Windows authentication is permitted on the OAB virtual directory. This parameter can be used with the BasicAuthentication parameter.
-
-
-
-!!! Exchange Server 2016
-
 The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Integrated Windows authentication is enabled. This is the default value.
@@ -464,8 +284,6 @@ The WindowsAuthentication parameter specifies whether Integrated Windows authent
 - $false: Integrated Windows authentication is disabled.
 
 You can use this parameter with the BasicAuthentication parameter.
-
-
 
 ```yaml
 Type: $true | $false
@@ -514,4 +332,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d1184716-920c-47cf-9e03-638434c16462.aspx)
-

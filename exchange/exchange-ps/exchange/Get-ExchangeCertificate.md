@@ -6,23 +6,9 @@ schema: 2.0.0
 # Get-ExchangeCertificate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ExchangeCertificate cmdlet to view certificates in the local certificate store.
-
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-ExchangeCertificate cmdlet to view certificates in the local certificate store.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-ExchangeCertificate cmdlet to view Exchange certificates that are installed on Exchange servers. This cmdlet returns Exchange self-signed certificates, certificates that were issued by a certification authority, and pending certificate requests (also known as certificate signing requests or CSRs).
+Use the Get-ExchangeCertificate cmdlet to view Exchange certificates that are installed on Exchange servers. This cmdlet returns Exchange self-signed certificates, certificates that were issued by a certification authority and pending certificate requests (also known as certificate signing requests or CSRs).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -48,16 +34,6 @@ Get-ExchangeCertificate [-DomainController <Fqdn>] [-DomainName <MultiValuedProp
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 By default, this cmdlet returns the following certificate properties in the summary list view:
 
 - Thumbprint: The unique digest of the certificate data. An example thumbprint value is 78E1BE82F683EE6D8CB9B9266FC1185AE0890C41.
@@ -138,76 +114,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ExchangeCertificate
-```
-
-This example returns all certificates stored in the local computer certificate store.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ExchangeCertificate -Server ClientAccess01
-```
-
-This example returns all certificates stored on the Client Access server named ClientAccess01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ExchangeCertificate -Server Mailbox01
 ```
 
 This example returns a summary list of all Exchange certificates and pending certificate requests on the server named Mailbox01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ExchangeCertificate 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List *
-```
-
-This example returns the properties of a specified certificate in a formatted list.
-
-
-The Thumbprint parameter is a positional parameter so you can provide only the thumbprint value without the Thumbprint parameter name.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ExchangeCertificate 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List *
-```
-
-This example returns the properties of a specified certificate in a formatted list.
-
-
-The Thumbprint parameter is a positional parameter so you can provide only the thumbprint value without the Thumbprint parameter name.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List
 ```
 
 This example returns detailed information for the specified certificate.
 
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-ExchangeCertificate -DomainName mail.contoso.com
-```
-
-This example shows which certificate Exchange will select for the domain name mail.contoso.com. A Send or Receive connector selects the certificate to use based on the fully qualified domain name (FQDN) of the connector. If you have multiple certificates with the same FQDN, you can see which certificate Exchange will select by using the DomainName parameter to specify the FQDN. The first certificate returned is the certificate Exchange will select.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ExchangeCertificate -DomainName mail.contoso.com
-```
-
-This example shows which certificate Exchange will select for the domain name mail.contoso.com. A Send or Receive connector selects the certificate to use based on the fully qualified domain name (FQDN) of the connector. If you have multiple certificates with the same FQDN, you can see which certificate Exchange will select by using the DomainName parameter to specify the FQDN. The first certificate returned is the certificate Exchange will select.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-ExchangeCertificate -Thumbprint 0271A7F1CA9AD8A27152CCAE044F968F068B14B8 | Format-List *
 ```
 
 This example returns all available information for the specified certificate.
 
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Get-ExchangeCertificate -DomainName mail.contoso.com
 ```
@@ -235,17 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainName parameter specifies whether to return all certificates that contain the specified domain name in the Subject Name or the Subject Alternative Name fields.
-
-
-
-!!! Exchange Server 2016
-
 The DomainName parameter filters the results by the fully qualified domain name (FQDN) or server name values in the Subject Name or the Subject Alternative Name fields. You can specify multiple values separated by commas.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -277,22 +195,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the server name from which you want to get the certificate.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server from which you want to get the certificate. You can use any value that uniquely identifies the Exchange server.
-
-If you run Get-ExchangeCertificate on a Client Access server, and you don't use the Server parameter to specify the local server, the command returns the results from a Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -306,8 +208,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter with the Identity parameter, but you can use it with the Thumbprint parameter, or by itself.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -323,19 +223,9 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Thumbprint parameter specifies a certificate thumbprint. Each certificate contains a thumbprint, which is the digest of the certificate data.
-
-
-
-!!! Exchange Server 2016
-
 The Thumbprint parameter specifies the thumbprint value of the certificate that you want to view.
 
 The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-
 
 ```yaml
 Type: String
@@ -351,14 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the certificate ID.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the certificate that you want to view. Valid values are:
 
 - \<ServerNameorFQDN\>\\\<Thumbprint\>
@@ -368,8 +250,6 @@ The Identity parameter specifies the certificate that you want to view. Valid va
 You can't use this parameter with the Server parameter.
 
 The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-
 
 ```yaml
 Type: ExchangeCertificateIdParameter
@@ -402,4 +282,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e368589a-6510-4209-9f10-171d1990cd7d.aspx)
-

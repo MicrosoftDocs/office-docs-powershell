@@ -6,12 +6,6 @@ schema: 2.0.0
 # Add-RoleGroupMember
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-RoleGroupMember cmdlet to add members to a management role group.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Add-RoleGroupMember cmdlet to add members to a management role group.
@@ -26,32 +20,6 @@ Add-RoleGroupMember [-Identity] <RoleGroupIdParameter> -Member <SecurityPrincipa
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you add a member to a role group, that mailbox, universal security group (USG), or computer is given the effective permissions provided by the management roles assigned to the role group.
-
-If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
-
-If the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign USG that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
-
-For more information about role groups, see Understanding Management Role Groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role groups" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-When you add a member to a role group, that mailbox, universal security group (USG), or computer is given the effective permissions provided by the management roles assigned to the role group.
-
-If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
-
-If the role group is a linked role group, you can't use the Add-RoleGroupMember cmdlet to add members to the role group. Instead, you need to add members to the foreign USG that's linked to the linked role group. To find the foreign USG that's linked to a role group, use the Get-RoleGroup cmdlet.
-
-For more information about role groups, see Understanding management role groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role groups" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 When you add a member to a role group, that mailbox, universal security group (USG), or computer is given the effective permissions provided by the management roles assigned to the role group.
 
 If the ManagedBy property has been populated with role group managers, the user adding a role group member must be a role group manager. Alternately, if the user is a member of the Organization Management role group or is directly or indirectly assigned the Role Management role, the BypassSecurityGroupManagerCheck switch can be used to override the security group management check.
@@ -64,192 +32,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Add-RoleGroupMember "Recipient Management" -Member David
 ```
 
 This example adds the user David to the role group Recipient Management.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-RoleGroupMember "Recipient Management" -Member David
-```
-
-This example adds the user David to the role group Recipient Management.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Add-RoleGroupMember "Recipient Management" -Member David
-```
-
-This example adds the user David to the role group Recipient Management.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Add-RoleGroupMember "Recipient Management" -Member David
-```
-
-This example adds the user David to the role group Recipient Management.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Add-RoleGroupMember "Recipient Management" -Member David
-```
-
-This example adds the user David to the role group Recipient Management.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Add-RoleGroupMember "Recipient Management" -Member David
-```
-
-This example adds the user David to the role group Recipient Management.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
 ```
 
 This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
 
-
 After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
 
+For more information about pipelining and the WhatIf parameter, see the following topics:
 
-For more information about pipelining, and the WhatIf parameter, see the following topics:
+- Pipelining
 
+- WhatIf, Confirm and ValidateOnly switches
 
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly Switches
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
-```
-
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
-
-
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
-
-
-For more information about pipelining, and the WhatIf parameter, see the following topics:
-
-
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly switches
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
-```
-
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
-
-
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
-
-
-For more information about pipelining, and the WhatIf parameter, see the following topics:
-
-
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly switches
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
-```
-
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
-
-
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
-
-
-For more information about pipelining, and the WhatIf parameter, see the following topics:
-
-
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly switches
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
-```
-
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
-
-
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
-
-
-For more information about pipelining, and the WhatIf parameter, see the following topics:
-
-
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly switches
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-User -Filter { Department -Eq "Sales" -And RecipientType -Eq "UserMailbox" } | Get-Mailbox | Add-RoleGroupMember "Sales and Marketing Group" -WhatIf
-```
-
-This example finds all the mailboxes that are part of the Sales department and adds them to the Sales and Marketing Group role group. Because we're using the WhatIf switch, the changes aren't written to the role group, so you can verify that the correct members will be added.
-
-
-After you've verified that the correct members will be added to the role group, remove the WhatIf switch and run the command again.
-
-
-For more information about pipelining, and the WhatIf parameter, see the following topics:
-
-
-Pipelining
-
-WhatIf, Confirm, and ValidateOnly switches
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
-```
-
-This example adds the Training Assistants USG to the Training Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
-```
-
-This example adds the Training Assistants USG to the Training Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
-```
-
-This example adds the Training Assistants USG to the Training Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
-```
-
-This example adds the Training Assistants USG to the Training Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
-
-### Example 3 -------------------------- (Office 365 Security & Compliance Center)
-```
-Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
-```
-
-This example adds the Training Assistants USG to the Training Administrators role group. Because the user running the command wasn't added to the ManagedBy property of the role group, the BypassSecurityGroupManagerCheck switch must be used. The user is assigned the Role Management role, which enables the user to bypass the security group manager check.
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 Add-RoleGroupMember "Training Administrators" -Member "Training Assistants" -BypassSecurityGroupManagerCheck
 ```
@@ -327,19 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -355,19 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This parameter doesn't work in the Office 365 Security & Compliance Center.
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -400,4 +185,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ed53e269-a855-4066-88a7-1ba36086bd72.aspx)
-

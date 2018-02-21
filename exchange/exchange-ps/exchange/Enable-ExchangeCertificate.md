@@ -6,37 +6,9 @@ schema: 2.0.0
 # Enable-ExchangeCertificate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Enable-ExchangeCertificate cmdlet to enable an existing certificate in the local certificate store for Exchange services such as Internet Information Services (IIS), SMTP, POP, IMAP, and Unified Messaging (UM).
-
-There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You must understand how these factors may affect your overall configuration. Before you continue, read Understanding TLS Certificates.
-
-Don't use the Enable-ExchangeCertificate cmdlet to enable a wildcard certificate for POP and IMAP services. To enable a wildcard certificate, you must use the Set-ImapSettings or Set-PopSettings cmdlets with the fully qualified domain name (FQDN) of the service.
-
-Don't use the Enable-ExchangeCertificate cmdlet to enable a certificate for federation. Certificates used for federation trusts are managed by using the New-FederationTrust and Set-FederationTrust cmdlets.
-
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Enable-ExchangeCertificate cmdlet to enable an existing certificate in the local certificate store for Exchange services such as Internet Information Services (IIS), SMTP, POP, IMAP, and Unified Messaging (UM).
-
-After you run the Enable-ExchangeCertificate cmdlet, you might need to restart Internet Information Services (IIS). In some scenarios, Exchange might continue to use the previous certificate for encrypting and decrypting the cookie that's used for Outlook Web App authentication. We recommend restarting IIS in environments that use Layer 4 load balancing.
-
-There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You must understand how these factors may affect your overall configuration.
-
-Don't use the Enable-ExchangeCertificate cmdlet to enable a wildcard certificate for POP and IMAP services. To enable a wildcard certificate, you must use the Set-ImapSettings or Set-PopSettings cmdlets with the fully qualified domain name (FQDN) of the service.
-
-Don't use the Enable-ExchangeCertificate cmdlet to enable a certificate for federation. Certificates used for federation trusts are managed by using the New-FederationTrust and Set-FederationTrust cmdlets.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Enable-ExchangeCertificate cmdlet to enable an existing certificate on the Exchange server for Exchange services such as Internet Information Services (IIS), SMTP, POP, IMAP, and Unified Messaging (UM). Once you enable a certificate for a service, you can't disable it.
+Use the Enable-ExchangeCertificate cmdlet to enable an existing certificate on the Exchange server for Exchange services such as Internet Information Services (IIS), SMTP, POP, IMAP and Unified Messaging (UM). Once you enable a certificate for a service, you can't disable it.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -65,28 +37,6 @@ Enable-ExchangeCertificate [[-Identity] <ExchangeCertificateIdParameter>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Enable-ExchangeCertificate cmdlet enables certificates by updating the metadata stored with the certificate. To enable an existing certificate to work with additional Exchange services, use the Enable-ExchangeCertificate cmdlet and specify the additional services.
-
-The Enable-ExchangeCertificate cmdlet is additive. When you specify a subset of services for which a certificate is enabled, the services that aren't specified aren't removed from the Services property. If you don't want to use an existing enabled certificate for Exchange services, you must enable another certificate, and then remove the certificate you don't want to use.
-
-Different services have different certificate requirements. For example, some services may only require a server name in the Subject Name or Subject Alternative Name fields of a certificate, whereas other services may require an FQDN. Make sure that the certificate name can support the uses required by the services you enable it for.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-The Enable-ExchangeCertificate cmdlet enables certificates by updating the metadata stored with the certificate. To enable an existing certificate to work with additional Exchange services, use the Enable-ExchangeCertificate cmdlet and specify the additional services.
-
-The Enable-ExchangeCertificate cmdlet is additive. When you specify a subset of services for which a certificate is enabled, the services that aren't specified aren't removed from the Services property. If you don't want to use an existing enabled certificate for Exchange services, you must enable another certificate, and then remove the certificate you don't want to use.
-
-Different services have different certificate requirements. For example, some services may only require a server name in the Subject Name or Subject Alternative Name fields of a certificate, whereas other services may require an FQDN. Make sure that the certificate name can support the uses required by the services you enable it for.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The Enable-ExchangeCertificate cmdlet enables certificates by updating the metadata that's stored with the certificate. To enable an existing certificate to work with additional Exchange services, use this cmdlet to specify the services.
 
 After you run the Enable-ExchangeCertificate cmdlet, you might need to restart Internet Information Services (IIS). In some scenarios, Exchange might continue to use the previous certificate for encrypting and decrypting the cookie that's used for Outlook on the web (formerly known as Outlook Web App) authentication. We recommend restarting IIS in environments that use Layer 4 load balancing.
@@ -99,82 +49,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services POP,IMAP,SMTP,IIS
 ```
 
-This example enables a certificate for POP, IMAP, SMTP, and IIS services.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services POP,IMAP,SMTP,IIS
-```
-
-This example enables a certificate for POP, IMAP, SMTP, and IIS services.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-ExchangeCertificate -Thumbprint 5113ae0233a72fccb75b1d0198628675333d010e -Services POP,IMAP,SMTP,IIS
-```
-
-This example enables a certificate for POP, IMAP, SMTP, and IIS services.
+This example enables a certificate for POP, IMAP, SMTP and IIS services.
 
 ## PARAMETERS
 
 ### -Services
-!!! Exchange Server 2010
-
-The Services parameter specifies the services that use the certificate. Valid entries include one or more of the following:
-
-- IIS
-
-- IMAP
-
-- POP
-
-- SMTP
-
-- UM
-
-- Federation
-
-- None
-
-To enable a certificate for multiple services, separate each value by using a comma. For example: -Services IMAP,POP,IIS
-
-You can't use the Enable-ExchangeCertificate cmdlet to enable a certificate for federation. Creating or modifying a federation trust enables or modifies the manner in which certificates are used for federation.
-
-
-
-!!! Exchange Server 2013
-
-The Services parameter specifies the services that use the certificate. Valid entries include one or more of the following:
-
-- IIS
-
-- IMAP
-
-- POP
-
-- SMTP
-
-- UM
-
-- UMCallRouter
-
-- Federation
-
-- None
-
-To enable a certificate for multiple services, separate each value with a comma, for example: -Services IMAP,POP,IIS
-
-You can't use the Enable-ExchangeCertificate cmdlet to enable a certificate for federation. Creating or modifying a federation trust enables or modifies how certificates are used for federation.
-
-
-
-!!! Exchange Server 2016
-
 The Services parameter specifies the Exchange services that the certificate is enabled for. Valid values are:
 
 - Federation: Don't use this command to enable a certificate for federation. Creating or modifying a federation trust enables or modifies how certificates are used for federation. You manage the certificates that used for federation trusts with the New-FederationTrust and Set-FederationTrust cmdlets.
@@ -193,11 +77,9 @@ The Services parameter specifies the Exchange services that the certificate is e
 
 You can specify multiple values separated by commas.
 
-The values that you specify with this parameter are additive. When you enable a certificate for one or more services, any existing services remain in the Services property, and you can't remove the existing services. Instead, configure another certificate for the services, and then remove the certificate that you don't want to use.
+The values that you specify with this parameter are additive. When you enable a certificate for one or more services, any existing services remain in the Services property and you can't remove the existing services. Instead, configure another certificate for the services and then remove the certificate that you don't want to use.
 
 Different services have different certificate requirements. For example, some services may require a server name in the certificate's Subject Name or Subject Alternative Name fields, but other services may require an FQDN. Verify that the certificate supports the services that you want to configure.
-
-
 
 ```yaml
 Type: None | IMAP | POP | UM | IIS | SMTP | Federation
@@ -213,19 +95,9 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Thumbprint parameter specifies the certificate that you're enabling. Each certificate contains a thumbprint, which is the digest of the certificate data. To view the thumbprint of a certificate, use the Get-ExchangeCertificate cmdlet.
-
-
-
-!!! Exchange Server 2016
-
 The Thumbprint parameter specifies the certificate that you want to configure. You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 
 The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-
 
 ```yaml
 Type: String
@@ -279,25 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotRequireSsl
-!!! Exchange Server 2010
-
-The DoNotRequireSsl switch specifies whether to leave IIS settings unchanged when IIS is one of the enabled services. If IIS is one of the enabled services, the cmdlet changes the default Web site settings to require SSL. Set the DoNotRequireSSL switch to $true to override this behavior and leave IIS settings unchanged.
-
-
-
-!!! Exchange Server 2013
-
-The DoNotRequireSsl switch specifies whether to leave IIS settings unchanged when IIS is one of the enabled services. If IIS is one of the enabled services, the cmdlet changes the default website settings to require SSL. Set the DoNotRequireSsl switch to $true to override this behavior and leave IIS settings unchanged.
-
-
-
-!!! Exchange Server 2016
-
 The DoNotRequireSsl switch prevents the command from enabling the "require SSL" setting on the default web site when you enable the certificate for IIS. You don't need to specify a value with this switch.
 
 If you don't use this switch, and you use the Services parameter to enable the certificate for IIS, the command enables the "require SSL" setting for the default web site in IIS.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -313,19 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Force switch specifies whether to override the confirmation prompt and set the new certificate as the default certificate for TLS for internal SMTP communication. By default, when you enable a certificate for SMTP, the command prompts for confirmation.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 By default, when you enable a certificate for SMTP, the command prompts you to replace the existing certificate that's enabled for SMTP, which is likely the default Exchange self-signed certificate.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -341,17 +187,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkServiceAllowed
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NetworkServiceAllowed switch specifies that the Network Service be allowed permissions to access the certificate specified, without enabling the certificate for SMTP.
-
-
-
-!!! Exchange Server 2016
-
 The NetworkServiceAllowed switch gives the built-in Network Service account permission to read the certificate's private key without enabling the certificate for SMTP. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -367,14 +203,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the server name on which you want to enable the certificate.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -388,8 +216,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter with the Identity parameter, but you can use it with the Thumbprint parameter.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -421,14 +247,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the certificate ID.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the certificate that you want to configure. Valid values are:
 
 - \<ServerNameorFQDN\>\\\<Thumbprint\>
@@ -440,8 +258,6 @@ You can find the thumbprint value by using the Get-ExchangeCertificate cmdlet.
 You can't use this parameter with the Server parameter.
 
 The Thumbprint parameter, not the Identity parameter, is the positional parameter for this cmdlet. Therefore, when you specify a thumbprint value by itself, the command uses that value for the Thumbprint parameter.
-
-
 
 ```yaml
 Type: ExchangeCertificateIdParameter
@@ -474,4 +290,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3536f005-d0c4-4745-aec2-55836d86f5a0.aspx)
-

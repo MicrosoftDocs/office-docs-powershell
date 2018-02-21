@@ -6,12 +6,6 @@ schema: 2.0.0
 # Add-MailboxPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-MailboxPermission cmdlet to add permissions to a mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Add-MailboxPermission cmdlet to add permissions to a mailbox.
@@ -55,18 +49,6 @@ Add-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainContro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Permissions and delegation" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-Running this cmdlet updates the Active Directory object specified by the Identity parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Permissions and delegation" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet updates the mailbox object that's specified by the Identity parameter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
@@ -187,84 +169,6 @@ In Office 365, this example assigns the administrator account admin@contoso.com 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the mailbox that's getting permissions added.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the mailbox that's getting permissions added.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox where you want to assign permissions to the user. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -290,8 +194,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -320,26 +222,6 @@ Accept wildcard characters: False
 ```
 
 ### -AccessRights
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AccessRights parameter specifies the rights needed to perform the operation. Valid values include:
-
-- FullAccess
-
-- ExternalAccount
-
-- DeleteItem
-
-- ReadPermission
-
-- ChangePermission
-
-- ChangeOwner
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AccessRights parameter specifies the permission that you want to assign to the user on the mailbox. Valid values are:
 
 - ChangeOwner
@@ -355,8 +237,6 @@ The AccessRights parameter specifies the permission that you want to assign to t
 - ReadPermission
 
 You can specify multiple values separated by commas.
-
-
 
 ```yaml
 Type: MailboxRights[]
@@ -401,14 +281,6 @@ Accept wildcard characters: False
 ```
 
 ### -Owner
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Owner parameter specifies the owner of the mailbox object.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Owner parameter specifies the owner of the mailbox object. The default mailbox owner is NT AUTHORITY\\SELF.
 
 The owner that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the owner. For example:
@@ -425,8 +297,6 @@ For example:
 
 - GUID
 
-
-
 ```yaml
 Type: SecurityPrincipalIdParameter
 Parameter Sets: Set2
@@ -441,14 +311,6 @@ Accept wildcard characters: False
 ```
 
 ### -User
-!!! Exchange Server 2010, Exchange Server 2013
-
-The User parameter specifies the user mailbox that the permissions are being granted to on the other mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The User parameter specifies the user that you're assigning the permission to.
 
 The user that you specify for this parameter must be a user or security group (a security principal that can have permissions assigned). You can use any value that uniquely identifies the user. For example:
@@ -464,8 +326,6 @@ For example:
 - Canonical DN
 
 - GUID
-
-
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -494,20 +354,6 @@ Accept wildcard characters: False
 ```
 
 ### -AutoMapping
-!!! Exchange Server 2010
-
-The Automapping parameter specifies whether to ignore the auto-mapping feature in Outlook. If a user is granted Full Access permissions to another user's mailbox or to a shared mailbox, Outlook, through Autodiscover, automatically loads all mailboxes to which the user has full access. This parameter accepts $true or $false values. For more information about auto-mapping, see Disable Outlook Auto-Mapping with Full Access Mailboxes.
-
-
-
-!!! Exchange Server 2013
-
-The AutoMapping parameter specifies whether to ignore the auto-mapping feature in Microsoft Outlook. If a user is granted Full Access permissions to another user's mailbox or to a shared mailbox, Outlook, through Autodiscover, automatically loads all mailboxes to which the user has full access. This parameter accepts $true or $false values.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AutoMapping parameter specifies whether to enable or disable the auto-mapping feature in Microsoft Outlook that uses Autodiscover to automatically open other mailboxes for the user. Valid values are:
 
 - $true: Outlook automatically opens the mailbox where the user is assigned Full Access permission. This is the default value.
@@ -515,8 +361,6 @@ The AutoMapping parameter specifies whether to enable or disable the auto-mappin
 - $false: Outlook doesn't automatically open the mailbox where the user is assigned Full Access permission.
 
 If you've already assign the user Full Access to the mailbox, and you want to prevent the mailbox from automatically opening in the user's Outlook, you need to remove the user's Full Access permission by using the Remove-MailboxPermission cmdlet, and then assign the permission to the user on the mailbox again, but this time include -AutoMapping $false in the command.
-
-
 
 ```yaml
 Type: $true | $false
@@ -532,25 +376,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -566,17 +396,7 @@ Accept wildcard characters: False
 ```
 
 ### -Deny
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Deny switch specifies whether to deny permissions to the user on the mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Deny switch specifies whether to deny the specified permissions to the user on the mailbox. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -592,19 +412,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -620,18 +430,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
@@ -639,8 +437,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -656,14 +452,6 @@ Accept wildcard characters: False
 ```
 
 ### -InheritanceType
-!!! Exchange Server 2010, Exchange Server 2013
-
-The InheritanceType parameter specifies whether permissions are inherited by folders within the mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The InheritanceType parameter specifies how permissions are inherited by folders in the mailbox. Valid values are:
 
 - All
@@ -673,8 +461,6 @@ The InheritanceType parameter specifies how permissions are inherited by folders
 - Descendents[sic]
 
 - SelfAndChildren
-
-
 
 ```yaml
 Type: None | All | Descendents | SelfAndChildren | Children
@@ -723,4 +509,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a9aacbf5-5e6c-47ef-95d6-e24547e95d01.aspx)
-

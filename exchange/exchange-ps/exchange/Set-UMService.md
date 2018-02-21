@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-UMService
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-UMService cmdlet to set the properties on a Microsoft Exchange Server 2013 Mailbox server or Exchange Server 2007 or Exchange Server 2010 Unified Messaging server that's running the Microsoft Exchange Unified Messaging (UM) service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMService cmdlet to modify the properties of the Microsoft Exchange Unified Messaging service on Exchange servers in your organization. The Unified Messaging service exists on Exchange Server 2016 and Exchange Server 2013 Mailbox servers, and on Exchange Server 2010 Unified Messaging servers.
@@ -35,99 +25,46 @@ Set-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DialPlans <MultiVal
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Set-UMService cmdlet sets specific properties on an Exchange 2013 Mailbox server or Exchange 2007 or Exchange 2010 Unified Messaging server that's running the Microsoft Exchange Unified Messaging service. This cmdlet can be used to set individual Unified Messaging parameters for a specified Mailbox or Unified Messaging server. After this task is completed, the cmdlet sets the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox server (UM service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-UMService -Identity MyUMServer -IPAddressFamily Any -UMStartupMode Dual
 ```
 
 This example performs the following actions:
 
+- Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to accept both IPv4 and IPv6 data packets.
 
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to accept both IPv4 and IPv6 data packets.
+- Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up using both TCP and TLS mode.
 
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up using both TCP and TLS mode.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMService -Identity MyUMServer -IPAddressFamily Any -UMStartupMode Dual
-```
-
-This example performs the following actions:
-
-
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to accept both IPv4 and IPv6 data packets.
-
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up using both TCP and TLS mode.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-UMService -Identity MyUMServer -DialPlans $null
 ```
 
 This example removes the Mailbox server MyUMServer from all UM dial plans.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMService -Identity MyUMServer -DialPlans $null
-```
-
-This example removes the Mailbox server MyUMServer from all UM dial plans.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com -UMStartupMode TLS
 ```
 
 This example performs the following actions:
 
+- Adds the Mailbox server MyUMServer to the UM dial plan MySIPDialPlan.
 
-Adds the Mailbox server MyUMServer to the UM dial plan MySIPDialPlan.
+- Sets the maximum number of incoming calls to 50.
 
-Sets the maximum number of incoming calls to 50.
+- Sets northamerica.lyncpoolna.contoso.com as the FQDN for the SIP access service that is used by Microsoft Lync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
 
-Sets northamerica.lyncpoolna.contoso.com as the FQDN for the SIP access service that is used by MicrosoftLync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
-
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up in TLS mode.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UMService -Identity MyUMServer -DialPlans MySIPDialPlan -MaxCallsAllowed 50 -SipAccessService northamerica.lyncpoolna.contoso.com -UMStartupMode TLS
-```
-
-This example performs the following actions:
-
-
-Adds the Mailbox server MyUMServer to the UM dial plan MySIPDialPlan.
-
-Sets the maximum number of incoming calls to 50.
-
-Sets northamerica.lyncpoolna.contoso.com as the FQDN for the SIP access service that is used by Microsoft Lync Server or Skype for Business Server for inbound and outbound calling from remote Lync or Skype for Business clients.
-
-Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up in TLS mode.
+- Enables the Microsoft Exchange Unified Messaging service on the Mailbox server MyUMServer to start up in TLS mode.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the ID for the Exchange 2013 Mailbox or Exchange 2007 or Exchange 2010 Unified Messaging server object to be configured that's running the Microsoft Exchange Unified Messaging service. This parameter specifies the directory object ID for the Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange server that hosts the Unified Messaging service that you want to modify. For example:
 
 You can use any value that uniquely identifies the Exchange server. For example:
@@ -139,8 +76,6 @@ You can use any value that uniquely identifies the Exchange server. For example:
 - ExchangeLegacyDN
 
 - GUID
-
-
 
 ```yaml
 Type: UMServerIdParameter
@@ -176,18 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -DialPlans
-!!! Exchange Server 2013
-
-The DialPlans parameter specifies all dial plans for which an Exchange 2013 Client Access server or Mailbox server or Exchange 2007 or Exchange 2010 Unified Messaging server handles incoming calls. Exchange 2013 Client Access servers and Mailbox servers can't be associated with a TelExt or E.164 UM dial plan but can be associated or added to SIP dial plans. If you're integrating Unified Messaging with Microsoft Office Communications Server 2007 R2, Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015 you must associate or add all Client Access servers and Mailbox servers to SIP dial plans. This parameter can also be used to associate Exchange 2007 or Exchange 2010 Unified Messaging servers to a UM dial plan.
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
-
-!!! Exchange Server 2016
-
 The DialPlans parameter specifies all dial plans that the Unified Messaging service handles incoming calls for.
 
 Exchange 2016 and Exchange 2013 servers can't be associated with a TelExt or E.164 UM dial plan, but can be associated or added to SIP dial plans. If you're integrating Unified Messaging with Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015, you need to associate or add all Exchange 2016 and Exchange 2013 servers to SIP dial plans.
@@ -197,8 +120,6 @@ You can also use this parameter to associate Exchange 2010 Unified Messaging ser
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -246,23 +167,13 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressFamily
-!!! Exchange Server 2013
-
-The IPAddressFamily parameter specifies whether the UM IP gateway will use Internet Protocol version 4 (IPv4), IPv6, or both to communicate. If set to IPv4Only, the UM IP gateway only uses IPv4 to communicate. If set to IPv6Only, the UM IP gateway only uses IPv6. If set to Any, IPv6 is used first, and then if necessary, it falls back to IPv4. The default is IPv4Only.
-
-
-
-!!! Exchange Server 2016
-
 The IPAddressFamily parameter specifies whether the UM IP gateway will use IPv4, IPv6, or both to communicate. Valid values are:
 
 - IPv4
 
 - IPv6
 
-- Any: IPv6 is used first, and if necessary, the UM IP gateway falls back to IPv4. This is the default value.
-
-
+- Any: IPv6 is used first and if necessary, the UM IP gateway falls back to IPv4. This is the default value.
 
 ```yaml
 Type: IPv4Only | IPv6Only | Any
@@ -294,25 +205,11 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
-!!! Exchange Server 2013
-
-The IrmLogEnabled parameter specifies whether to enable logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
-
-- $true Enable IRM logging
-
-- $false Disable IRM logging
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogEnabled parameter specifies whether to enable logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Valid values are:
 
 - $true: Enable IRM logging
 
 - $false: Disable IRM logging
-
-
 
 ```yaml
 Type: $true | $false
@@ -328,25 +225,11 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
-!!! Exchange Server 2013
-
-The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the IrmLogMaxAge parameter to 00:00:00 prevents the automatic removal of IRM log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the IrmLogMaxAge parameter to 00:00:00 prevents the automatic removal of IRM log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -362,30 +245,6 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 megabytes (MB).
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 megabytes (MB).
 
 When you enter a value, qualify the value with one of the following units:
@@ -403,8 +262,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -420,30 +277,6 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
-!!! Exchange Server 2013
-
-The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -462,8 +295,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -478,19 +309,9 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogPath
-!!! Exchange Server 2013
-
-The IrmLogPath parameter specifies the default IRM log directory location. The default value is C:\\Program Files\\Microsoft\\Exchange Server\\V15. If you set the value of the IrmLogPath parameter to $null, you effectively disable IRM logging. However, if you set the value of the IrmLogPath parameter to $null when the value of the IrmLogEnabled attribute is $true, Exchange will log errors in the Application event log. The preferred way for disabling IRM logging is to set the IrmLogEnabled parameter to $false.
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogPath parameter specifies the default IRM log directory location. The default location is %ExchangeInstallPath%IRMLogs.
 
 If you set the value of this parameter to $null, you effectively disable IRM logging. However, setting this parameter to $null when the value of the IrmLogEnabledparameter is $true, generates errors in the Application event log. The preferred way to disable IRM logging is to set the IrmLogEnabled parameter to $false.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -506,17 +327,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaxCallsAllowed
-!!! Exchange Server 2013
-
-The MaxCallsAllowed parameter specifies the maximum number of concurrent voice calls that an Exchange 2013 Mailbox server or Exchange 2013 Mailbox or Exchange 2007 or Exchange 2010 Unified Messaging server that's running the Microsoft Exchange Unified Messaging service allows.
-
-
-
-!!! Exchange Server 2016
-
 The MaxCallsAllowed parameter specifies the maximum number of concurrent voice calls that the Unified Messaging service allows. The default value is 100.
-
-
 
 ```yaml
 Type: Int32
@@ -532,21 +343,9 @@ Accept wildcard characters: False
 ```
 
 ### -SIPAccessService
-!!! Exchange Server 2013
-
-The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server pool or Skype for Business Server pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network. When this parameter isn't set, the Mailbox server running the Microsoft Exchange Unified Messaging service may select a Lync Server pool or Skype for Business Server pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
-
-This parameter is optional when you're configuring Unified Messaging with single Lync Server pool or Skype for Business Server pool deployments. However, for Lync Server or Skype for Business Server deployments that span multiple geographic regions, it's recommended that you specify this parameter. This parameter is set on a per-Mailbox server running the Microsoft Exchange Unified Messaging service basis and must point to the Lync Server pool or Skype for Business Server pool that is located the closest geographically to the Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The SIPAccessService parameter specifies the FQDN and TCP port of the nearest Lync Server pool or Skype for Business Server pool location for inbound and outbound calls from remote Lync or Skype for Business users located outside of the network. When this parameter isn't set, the Microsoft Exchange Unified Messaging service may select a Lync Server pool or Skype for Business Server pool for Real-Time Transport Protocol (RTP) media traffic that isn't the closest geographically to the remote user.
 
 This parameter is optional when you're configuring Unified Messaging with single Lync Server pool or Skype for Business Server pool deployments. However, for Lync Server or Skype for Business Server deployments that span multiple geographic regions, it's recommended that you specify this parameter. This parameter is set on a per-Unfined Messaging service basis and must point to the Lync Server pool or Skype for Business Server pool that is located the closest geographically to the Exchange server.
-
-
 
 ```yaml
 Type: ProtocolConnectionSettings
@@ -578,14 +377,6 @@ Accept wildcard characters: False
 ```
 
 ### -UMStartupMode
-!!! Exchange Server 2013
-
-The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging service on an Exchange 2013 Mailbox server or Exchange 2007 or Exchange 2010 Unified Messaging server will start up in TCP, TLS, or Dual mode. If the Mailbox or Unified Messaging server is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Mailbox or Unified Messaging server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging service must be restarted.
-
-
-
-!!! Exchange Server 2016
-
 The UMStartupMode parameter specifies the startup mode for the Unified Messaging service. Valid values are:
 
 - TCP (This is the default value)
@@ -595,8 +386,6 @@ The UMStartupMode parameter specifies the startup mode for the Unified Messaging
 - Dual: The service can listen on ports 5060 and 5061 at the same time. If you add the Exchange server to UM dial plans that have different security settings, you should use this value.
 
 If you change the value of this parameter, you need to restart the Unified Messaging service.
-
-
 
 ```yaml
 Type: TCP | TLS | Dual
@@ -645,4 +434,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/daa3a3f4-fff6-407e-b83e-496728f0f1e4.aspx)
-

@@ -6,22 +6,6 @@ schema: 2.0.0
 # test-ActiveSyncConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-ActiveSyncConnectivity cmdlet to perform a full synchronization against a specified mailbox to test the configuration of Microsoft Exchange ActiveSync.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Test-ActiveSyncConnectivity cmdlet to perform a full synchronization against a specified mailbox to test the configuration of MicrosoftExchange ActiveSync.
-
-This cmdlet works best in Exchange 2010. In Exchange 2013 or later, the functionality of this cmdlet has been replaced by Managed Availability. For the best results, use the Invoke-MonitoringProbe cmdlet and specify the relevant active monitor probe instead of using this cmdlet.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ActiveSyncConnectivity cmdlet to test connectivity to Microsoft Exchange ActiveSync virtual directories.
@@ -41,20 +25,6 @@ test-ActiveSyncConnectivity [[-ClientAccessServer] <ServerIdParameter>] [[-URL] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-ActiveSyncConnectivity cmdlet performs a full synchronization between a mobile device and a specified mailbox to test the functionality of Exchange ActiveSync. If the synchronization fails, a message is displayed in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync server settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-ActiveSyncConnectivity cmdlet performs a full synchronization between a mobile device and a specified mailbox to test the functionality of Exchange ActiveSync. If the synchronization fails, a message is displayed in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync server settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-ActiveSyncConnectivity cmdlet tests Exchange ActiveSync connectivity by connecting to a specified Exchange ActiveSync virtual directory, to any Exchange ActiveSync virtual directories on a specified Exchange server, or to any Exchange ActiveSync virtual directories that are available in the local Active Directory site.
 
 The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
@@ -86,69 +56,24 @@ Test-ActiveSyncConnectivity -ClientAccessServer contoso\CAS01 -URL "http://conto
 
 This example tests the Exchange ActiveSync connectivity for the mailbox PaulS on the Client Access server computer CAS01.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-ActiveSyncConnectivity -ClientAccessServer contoso\CAS01 -URL "http://contoso.com/mail" -MailboxCredential "PaulS"
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS on the Client Access server computer CAS01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Test-ActiveSyncConnectivity -ClientAccessServer MBX01
 ```
 
 This example tests Exchange ActiveSync client connectivity for the server named MBX01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "http://contoso.com/mail" -MailboxCredential (get-credential PaulS@contoso.com)
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS using the Autodiscover URL.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "http://contoso.com/mail" -MailboxCredential "pauls@contoso.com"
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS using the Autodiscover URL.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-ActiveSyncConnectivity -UseAutodiscoverForClientAccessServer $true -URL "http://contoso.com/mail" -MailboxCredential (Get-Credential pauls@contoso.com)
 ```
 
 This example tests the Exchange ActiveSync connectivity for the mailbox PaulS using the Autodiscover URL.
 
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Test-ActiveSyncConnectivity -AllowUnsecureAccess $true -URL "http://contoso.com/mail" -MailboxCredential (get-credential contoso\pauls)
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Test-ActiveSyncConnectivity -AllowUnsecureAccess $true -URL "http://contoso.com/mail" -MailboxCredential "contoso\pauls"
-```
-
-This example tests the Exchange ActiveSync connectivity for the mailbox PaulS.
-
 ## PARAMETERS
 
 ### -AllowUnsecureAccess
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AllowUnsecureAccess parameter allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL).
-
-
-
-!!! Exchange Server 2016
-
 The AllowUnsecureAccess switch allows the test to continue over an unsecured channel that doesn't require Secure Sockets Layer (SSL). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -164,15 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClientAccessServer
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ClientAccessServer parameter specifies the Client Access server computer that the device uses to synchronize.
-
-
-
-!!! Exchange Server 2016
-
-The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
+The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed and is responsible for accepting client connections.
 
 You can use any value that uniquely identifies the server. For example:
 
@@ -185,8 +102,6 @@ You can use any value that uniquely identifies the server. For example:
 - GUID
 
 You can't use this parameter with the Url parameter.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -238,21 +153,11 @@ Accept wildcard characters: False
 ```
 
 ### -LightMode
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LightMode parameter instructs the command to perform only a subset of the connectivity tests. The tests performed are the Options and FolderSync commands.
-
-
-
-!!! Exchange Server 2016
-
 The LightMode switch tells the command to perform only a subset of the tests. You don't need to specify a value with this switch.
 
 When you use this switch, only the Options test is run.
 
 If you don't use this switch, the First Sync, GetItemEstimate, Sync Data, Ping and Sync Test Item tests are also run.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -268,19 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxCredential
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailboxCredential parameter specifies the mailbox that the device synchronizes with.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxCredential parameter specifies the mailbox credential to use for a single mailbox test.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -296,14 +191,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailboxServer parameter specifies the Mailbox server computer that contains the associated mailbox.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxServer parameter specifies the Exchange 2016 or Exchange 2013 Mailbox server that you want to test. This parameter identifies the backend server that accepts proxied connections from the frontend server where clients connect.
 
 You can use any value that uniquely identifies the server. For example:
@@ -317,8 +204,6 @@ You can use any value that uniquely identifies the server. For example:
 - GUID
 
 If you don't use this parameter, connections to all Mailbox servers in the local Active Directory site are tested.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -334,23 +219,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether the test result is passed to Microsoft System Center Operations Manager 2007. If this parameter is set to $true, the test result is passed to System Center Operations Manager 2007. If this parameter is set to $false, the test result appears only on the command line.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -366,23 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringInstance
-!!! Exchange Server 2010
-
-The MonitoringInstance parameter specifies whether the task is to be run against the mailbox of the user currently running the task. It's only used when this task is run from System Center Operations Manager 2007.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringInstance parameter specifies whether the task is to be run against the mailbox of the user currently running the task. It's only used when this task is run from System Center Operations Manager 2007 or Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringInstance parameter specifies an identifier for this task when the test is run from Microsoft System Center Operations Manager (SCOM). This parameter is important because SCOM may run multiple instances of the test from the same server at the same time.
-
-
 
 ```yaml
 Type: String
@@ -430,25 +283,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-!!! Exchange Server 2010
-
-The TrustAnySSLCertificate parameter allows the test to use any available SSL certificate to run the test.
-
-
-
-!!! Exchange Server 2013
-
-The TrustAnySSLCertificate parameter specifies whether the test uses any available SSL certificate to run the test.
-
-
-
-!!! Exchange Server 2016
-
 The TrustAnySSLCertificate switch specifies whether to ignore Secure Sockets Layer (SSL) certificate validation failures. You don't need to specify a value with this switch.
 
 This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -464,19 +301,9 @@ Accept wildcard characters: False
 ```
 
 ### -URL
-!!! Exchange Server 2010, Exchange Server 2013
-
-The URL parameter specifies the external URL for Exchange ActiveSync.
-
-
-
-!!! Exchange Server 2016
-
 The URL parameter specifies the URL that's used to connect to the Exchange ActiveSync virtual directory.
 
 You can't use this parameter with the ClientAccessServer parameter.
-
-
 
 ```yaml
 Type: String
@@ -492,17 +319,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseAutodiscoverForClientAccessServer
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UseAutodiscoverForClientAccessServer parameter specifies whether the test should use the Autodiscover service to locate the Client Access server.
-
-
-
-!!! Exchange Server 2016
-
 The UseAutodiscoverForClientAccessServer switch specifies whether the test should use the Autodiscover service to locate the Exchange ActiveSync virtual directory. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -551,4 +368,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/83f7b578-496e-4903-aeb7-95517a28a9f4.aspx)
-

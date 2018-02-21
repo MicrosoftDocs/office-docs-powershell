@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MailPublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailPublicFolder cmdlet to retrieve mail-related information about mail-enabled public folders. If you want information about the basic (not mail-related) settings of mail-enabled public folders, use the Get-PublicFolder cmdlet instead.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailPublicFolder cmdlet to retrieve mail-related information about mail-enabled public folders. If you want information about the basic (not mail-related) settings of mail-enabled public folders, use the Get-PublicFolder cmdlet instead.
@@ -23,111 +17,38 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set2
 ```
 Get-MailPublicFolder [-Anr <String>] [-Credential <PSCredential>] [-DomainController <Fqdn>] [-Filter <String>]
- [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>] [-ReadFromDomainController]
+ [-IgnoreDefaultScope] [-ReadFromDomainController]
  [-ResultSize <Unlimited>] [-Server <ServerIdParameter>] [-SortBy <String>] [<CommonParameters>]
 ```
 
 ### Set1
 ```
 Get-MailPublicFolder [[-Identity] <MailPublicFolderIdParameter>] [-Credential <PSCredential>]
- [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-Organization <OrganizationIdParameter>]
- [-ReadFromDomainController] [-ResultSize <Unlimited>] [-Server <ServerIdParameter>] [-SortBy <String>]
+ [-DomainController <Fqdn>] [-Filter <String>] [-IgnoreDefaultScope] [-ReadFromDomainController] 
+ [-ResultSize <Unlimited>] [-Server <ServerIdParameter>] [-SortBy <String>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mail-enabled public folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders, mail-enabled" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailPublicFolder -ResultSize 100 | Format-List
 ```
 
 This example returns the information for up to 100 mail-enabled public folders. In this example, the output of the Get-MailPublicFolder command is piped to the Format-List command so that all the available information is displayed in the result.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailPublicFolder -ResultSize 100 | Format-List
-```
-
-This example returns the information for up to 100 mail-enabled public folders. In this example, the output of the Get-MailPublicFolder command is piped to the Format-List command so that all the available information is displayed in the result.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailPublicFolder -ResultSize 100 | Format-List
-```
-
-This example returns the information for up to 100 mail-enabled public folders. In this example, the output of the Get-MailPublicFolder command is piped to the Format-List command so that all the available information is displayed in the result.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailPublicFolder -ResultSize 100 | Format-List
-```
-
-This example returns the information for up to 100 mail-enabled public folders. In this example, the output of the Get-MailPublicFolder command is piped to the Format-List command so that all the available information is displayed in the result.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailPublicFolder -Identity \Marketing\Reports
 ```
 
 This example returns information for the mail-enabled public folder Reports that resides in the Marketing top-level public folder.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailPublicFolder -Identity \Marketing\Reports
-```
-
-This example returns information for the mail-enabled public folder Reports that resides in the Marketing top-level public folder.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailPublicFolder -Identity \Marketing\Reports
-```
-
-This example returns information for the mail-enabled public folder Reports that resides in the Marketing top-level public folder.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailPublicFolder -Identity \Marketing\Reports
-```
-
-This example returns information for the mail-enabled public folder Reports that resides in the Marketing top-level public folder.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailPublicFolder -Anr Marketing
-```
-
-This example returns all mail-enabled public folders that begin with the word Marketing by using the Anr parameter.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailPublicFolder -Anr Marketing*
-```
-
-This example returns all mail-enabled public folders that begin with the word Marketing by using the Anr parameter.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MailPublicFolder -Anr Marketing*
-```
-
-This example returns all mail-enabled public folders that begin with the word Marketing by using the Anr parameter.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailPublicFolder -Anr Marketing*
 ```
@@ -163,29 +84,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2010
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-
-
-!!! Exchange Server 2013
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
 This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -201,19 +102,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -229,29 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-!!! Exchange Server 2010
-
-The Filter parameter indicates the OPath filter used to filter recipients.
-
-For more information about the filterable properties, see Filterable Properties for the -Filter Parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Filter parameter indicates the OPath filter used to filter recipients.
-
-For more information about the filterable properties, see Filterable properties for the -Filter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Filter parameter indicates the OPath filter used to filter recipients.
 
 For more information about the filterable properties, see Filterable properties for the -Filter parameter (https://technet.microsoft.com/library/bb738155.aspx).
-
-
 
 ```yaml
 Type: String
@@ -285,20 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can't use the Anr and Identity parameters together.
-
-- You can't use the Credential parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
@@ -306,8 +163,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -322,50 +177,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -ReadFromDomainController
-!!! Exchange Server 2010
-
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest, and if you don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
-
-By default, the recipient scope is set to the domain that hosts your servers that run Microsoft Exchange.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest, and if you don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
-
-By default, the recipient scope is set to the domain that hosts your servers that run Microsoft Exchange.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. If you run the command Set-AdServerSettings -ViewEntireForest $true to include all objects in the forest and you don't use the ReadFromDomainController switch, it's possible that information will be read from a global catalog that has outdated information. When you use the ReadFromDomainController switch, multiple reads might be necessary to get the information. You don't have to specify a value with this switch.
 
 By default, the recipient scope is set to the domain that hosts your Exchange servers.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -381,17 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -423,14 +230,6 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SortBy parameter specifies the attribute by which to sort the results. Sorting is done one attribute at a time. The results are sorted in ascending order.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
 If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
@@ -444,8 +243,6 @@ You can sort by the following properties:
 - Alias
 
 - Id
-
-
 
 ```yaml
 Type: String
@@ -478,4 +275,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/da05e6cb-8ab1-4ba9-ae42-d0f631daec85.aspx)
-

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Test-UMConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-UMConnectivity cmdlet to test the operation of a computer that has the Unified Messaging (UM) server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Test-UMConnectivity cmdlet to test the operation of a Mailbox server computer running the Microsoft Exchange Unified Messaging service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-UMConnectivity cmdlet to test the operation of the Microsoft Exchange Unified Messaging service on an Exchange Server 2016 Mailbox server.
@@ -79,35 +65,9 @@ Test-UMConnectivity [-CertificateThumbprint <String>] [-Confirm] [-DomainControl
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Two diagnostic tests are designed to test the operation of the Microsoft Exchange Server 2010 Unified Messaging server software (mode 1) and the operation of the whole system that includes the connected telephony components (mode 2).
-
-The Test-UMConnectivity cmdlet can be used to test the operation of a Unified Messaging server and related connected telephony equipment. When you run this cmdlet and include the UMIPGateway parameter, the Unified Messaging server tests the full end-to-end operation of the Unified Messaging system. This test includes the telephony components connected to the Unified Messaging server, such as IP gateways, Private Branch eXchanges (PBXs), and cabling. If the UMIPGateway parameter isn't specified, the Unified Messaging server tests only the operation of the Unified Messaging components that are installed and configured on the server.
-
-When you run this cmdlet in an on-premises Unified Messaging deployment, you need to create a UM IP gateway object for the computer or server that the cmdlet is testing. When you create the UM IP gateway object, you must configure it with a fully qualified domain name (FQDN) and that FQDN must match the name of the computer that will be running this cmdlet.
-
-After this task is complete, the cmdlet will have tested the operation of the Unified Messaging server and related telephony components.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-Two diagnostic tests are designed to test the operation of the Microsoft Exchange Server 2013 Mailbox server software (mode 1) and the operation of the whole system that includes the connected telephony components (mode 2).
-
-The Test-UMConnectivity cmdlet can be used to test the operation of a Mailbox server and related connected telephony equipment. When you run this cmdlet and include the UMIPGateway parameter, the Mailbox server tests the full end-to-end operation of the Unified Messaging system. This test includes the telephony components connected to the Mailbox server, such as IP gateways, Private Branch eXchanges (PBXs), and cabling. If the UMIPGateway parameter isn't specified, the Mailbox server tests only the operation of the Unified Messaging components that are installed and configured on the server.
-
-When you run this cmdlet in an on-premises Unified Messaging deployment, you need to create a UM IP gateway object for the computer or server that the cmdlet is testing. When you create the UM IP gateway object, you must configure it with a fully qualified domain name (FQDN) and that FQDN must match the name of the computer running this cmdlet.
-
-After this task is complete, the cmdlet will have tested the operation of the Mailbox server and related telephony components.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM server" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 Two diagnostic tests are designed to test the operation of the Mailbox server software (mode 1) and the operation of the whole system that includes the connected telephony components (mode 2).
 
-The Test-UMConnectivity cmdlet can be used to test the operation of a Mailbox server and related connected telephony equipment. When you run this cmdlet and include the UMIPGateway parameter, the Mailbox server tests the full end-to-end operation of the Unified Messaging system. This test includes the telephony components connected to the Mailbox server, such as IP gateways, Private Branch eXchanges (PBXs), and cabling. If the UMIPGateway parameter isn't specified, the Mailbox server tests only the operation of the Unified Messaging components that are installed and configured on the server.
+The Test-UMConnectivity cmdlet can be used to test the operation of a Mailbox server and related connected telephony equipment. When you run this cmdlet and include the UMIPGateway parameter, the Mailbox server tests the full end-to-end operation of the Unified Messaging system. This test includes the telephony components connected to the Mailbox server, such as IP gateways, Private Branch eXchanges (PBXs) and cabling. If the UMIPGateway parameter isn't specified, the Mailbox server tests only the operation of the Unified Messaging components that are installed and configured on the server.
 
 When you run this cmdlet in an on-premises Unified Messaging deployment, you need to create a UM IP gateway object for the computer or server that the cmdlet is testing. When you create the UM IP gateway object, you must configure it with a fully qualified domain name (FQDN) and that FQDN must match the name of the computer running this cmdlet.
 
@@ -117,63 +77,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-UMConnectivity
-```
-
-This example performs connectivity and operational tests on the local Unified Messaging server, and then displays the Voice over IP (VoIP) connectivity information.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-UMConnectivity
 ```
 
 This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-UMConnectivity
-```
-
-This example performs connectivity and operational tests on the local Mailbox server, and then displays the Voice over IP (VoIP) connectivity information.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
-```
-
-This example tests the ability of the local Unified Messaging server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through a UM IP gateway named MyUMIPGateway by using the telephone number 56780.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
 ```
 
 This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through the UM IP gateway MyUMIPGateway by using the telephone number 56780.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Test-UMConnectivity -UMIPGateway MyUMIPGateway -Phone 56780 -Secured $false
-```
-
-This example tests the ability of the local Mailbox server to use an unsecured TCP connection instead of a secured mutual TLS connection to place a call through the UM IP gateway MyUMIPGateway by using the telephone number 56780.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
-```
-
-This example tests a SIP dial plan by using a SIP URI. This example can be used in an environment that includes Microsoft Office Communications Server 2007 R2 or Microsoft Lync Server 2010.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
-```
-
-This example tests a SIP dial plan by using a SIP URI. This example can be used in an environment that includes Microsoft Office Communications Server 2007 R2, Lync Server, or Skype for Business Server.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Test-UMConnectivity -Phone sip:sipdp.contoso.com@contoso.com -UMIPGateway MyUMIPGateway -Secured $true -From sip:user1@contoso.com -MediaSecured $true
 ```
@@ -231,17 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -TUILogon
-!!! Exchange Server 2010
-
-The TUILogon parameter specifies whether the cmdlet will try to log on to one or more UM-enabled mailboxes. The mailboxes must be UM-enabled and associated with the UM dial plan to which the Unified Messaging server belongs. The default setting is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TUILogon parameter specifies whether the cmdlet tries to log on to one or more UM-enabled mailboxes. The mailboxes must be UM-enabled and associated with the UM dial plan to which the Mailbox server running the Microsoft Exchange Unified Messaging service belongs. The default setting is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -257,17 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -TUILogonAll
-!!! Exchange Server 2010
-
-The TUILogonAll parameter specifies whether to try to connect to all test mailboxes in the current Active Directory site. The default setting is $false. The accounts that are tested must be generated by calling the New-TestCasConnectivityUser.ps1 script, and the corresponding mailboxes must be UM-enabled. Otherwise, no action will be taken.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TUILogonAll parameter specifies whether to try to connect to all test mailboxes in the current Active Directory site. The default setting is $false. The accounts that are tested must be generated by calling the New-TestCasConnectivityUser.ps1 script, and the corresponding mailboxes must be UM-enabled. Otherwise, no action is taken.
-
-
 
 ```yaml
 Type: $true | $false
@@ -495,23 +393,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether you run the cmdlet at a command prompt or whether the output object is passed to Microsoft System Center Operations Manager 2007. By default, you run the cmdlet from a command prompt.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -591,17 +473,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallRouter
-!!! Exchange Server 2013
-
-The CallRouter parameter specifies the Client Access server that runs the Microsoft Exchange Unified Messaging Call Router service used for testing the functionality of Unified Messaging.
-
-
-
-!!! Exchange Server 2016
-
 The CallRouter switch specifies whether to test the Microsoft Exchange Unified Messaging Call Router service (front-end). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -634,4 +506,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4e8f5561-a098-4bfe-94e1-baf7c24b01bb.aspx)
-

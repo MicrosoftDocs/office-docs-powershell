@@ -25,26 +25,6 @@ Set-MigrationBatch [-Identity] <MigrationBatchIdParameter> [-AllowIncrementalSyn
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Set-MigrationBatch cmdlet configures your existing migration batches to migrate mailboxes and mailbox data in one of the following scenarios:
-
-- Local move
-
-- Cross-forest move
-
-- Remote move
-
-- Cutover Exchange migration
-
-- Staged Exchange migration
-
-- IMAP migration
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-MigrationBatch cmdlet configures your existing migration batches to migrate mailboxes and mailbox data in one of the following scenarios:
 
 - Local move
@@ -63,21 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MigrationBatch -Identity MigrationBatch01 -AutoRetryCount 5 -AllowIncrementalSyncs $true
-```
-
-This example updates MigrationBatch01 with new AutoRetryCount and AllowIncrementalSyncs parameter settings.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MigrationBatch -Identity MigrationBatch01 -AutoRetryCount 5 -AllowIncrementalSyncs $true
-```
-
-This example updates MigrationBatch01 with new AutoRetryCount and AllowIncrementalSyncs parameter settings.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-MigrationBatch -Identity MigrationBatch01 -AutoRetryCount 5 -AllowIncrementalSyncs $true
 ```
@@ -87,21 +53,11 @@ This example updates MigrationBatch01 with new AutoRetryCount and AllowIncrement
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the name of the migration batch that you want to update configuration settings for.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the migration batch that you want to modify. You can use any value that uniquely identifies the migration batch. For example:
 
 - Name (the Identity property value)
 
 - GUID (the BatchGuid property value)
-
-
 
 ```yaml
 Type: MigrationBatchIdParameter
@@ -117,21 +73,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIncrementalSyncs
-!!! Exchange Server 2013
-
-The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental syncs on mailbox moves and migrations.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AllowIncrementalSyncs parameter specifies whether to enable or disable incremental synchronization. Valid values are:
 
 - $true: Incremental synchronization is enabled. Any new messages that are sent to the source mailbox are copied to the corresponding target mailbox once every 24 hours.
 
 - $false: Incremental synchronization is disabled. The migration batch will go into the Stopped state after the initial synchronization is complete. To complete a migration batch for local moves, cross-forest moves, or remote move migrations, you need to enable incremental synchronization.
-
-
 
 ```yaml
 Type: $true | $false
@@ -147,21 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -AllowUnknownColumnsInCsv
-!!! Exchange Server 2013
-
-The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid input for this parameter is $true or $false. The default value is $false. The default behavior means that any extra columns in the CSV file will cause the migration to fail, but it protects against accidental spelling errors in the column headers of optional columns. If you set the value of this parameter to $true, and the CSV contains an optional column that's incorrectly labeled, the migration will silently skip that column (it's treated like an extra column that's not used by migration).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AllowUnknownColumnsInCsv parameter specifies whether to allow extra columns in the CSV file that aren't used by migration. Valid values are:
 
 - $true: The migration ignores (silently skips) unknown columns in the CSV file (including optional columns with misspelled column headers). All unknown columns are treated like extra columns that aren't used by migration.
 
 - $false: The migration fails if there are any unknown columns in the CSV file. This setting protects against spelling errors in column headers. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -247,17 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -CSVData
-!!! Exchange Server 2013
-
-The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). The following is an example: CSVData:([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The CSVData parameter specifies the CSV file that contains information about the user mailboxes to be moved or migrated. The required attributes in the header row of the CSV file vary depending on the type of migration. Use the following format for the value of this parameter: ([System.IO.File]::ReadAllBytes(\<path of the CSV migration file\>)). For example: -CSVData ([System.IO.File]::ReadAllBytes("C:\\Users\\Administrator\\Desktop\\MigrationBatch\_1.csv"))
-
-
 
 ```yaml
 Type: Byte[]
@@ -273,23 +199,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2013
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-This parameter is available only in on-premises Exchange.
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -305,22 +217,6 @@ Accept wildcard characters: False
 ```
 
 ### -LargeItemLimit
-!!! Exchange Server 2013
-
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2013 Message size limits
-
-- Exchange Online Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the migration request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
 For more information about maximum message size values, see the following topics:
@@ -330,8 +226,6 @@ For more information about maximum message size values, see the following topics
 - Exchange Online: Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the migration request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the migration request can proceed.
-
-
 
 ```yaml
 Type: Unlimited
@@ -347,16 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmails
-!!! Exchange Server 2013
-
-The NotificationEmails parameter specifies one or more email addresses that migration status reports are sent to. Specify the value as a string array, and separate multiple email addresses with commas.
-
-If you don't use this parameter, the status report isn't sent.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The NotificationEmails parameter specifies one or more email addresses that migration status reports are sent to.
 
 If you don't use this parameter, the status report isn't sent.
@@ -364,8 +248,6 @@ If you don't use this parameter, the status report isn't sent.
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -582,4 +464,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/730ebc07-298f-46a1-b424-dc404ef21fdf.aspx)
-
