@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-RetentionPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-RetentionPolicy cmdlet to create a retention policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-RetentionPolicy cmdlet to create a retention policy.
@@ -22,97 +16,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-RetentionPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-RetentionId <Guid>]
- [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>] [-WhatIf] [-IsDefault]
- [-IsDefaultArbitrationMailbox] [<CommonParameters>]
+ [-RetentionId <Guid>] [-RetentionPolicyTagLinks <RetentionPolicyTagIdParameter[]>] 
+ [-WhatIf] [-IsDefault] [-IsDefaultArbitrationMailbox] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Retention policy tags are associated with a retention policy. When a retention policy is applied to a mailbox, tags associated with the policy are available to the mailbox user.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Retention policy tags are associated with a retention policy. When a retention policy is applied to a mailbox, tags associated with the policy are available to the mailbox user.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Retention policy tags are associated with a retention policy. When a retention policy is applied to a mailbox, tags associated with the policy are available to the mailbox user.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-RetentionPolicy "Business General"
 ```
 
 This example creates the retention policy Business General without associating any retention policy tags.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-RetentionPolicy "Business General"
-```
-
-This example creates the retention policy Business General without associating any retention policy tags.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-RetentionPolicy "Business General"
-```
-
-This example creates the retention policy Business General without associating any retention policy tags.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-RetentionPolicy "Business General"
-```
-
-This example creates the retention policy Business General without associating any retention policy tags.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-RetentionPolicy "Business General" -RetentionPolicyTagLinks "General Business","Legal"
 ```
 
 This example creates the retention policy Business General and uses the RetentionPolicyTagLinks parameter to associate two retention policy tags with this policy. You can enter multiple retention policy tags, separated by commas. If a tag name includes a space, enclose the name in quotation marks.
-
-
-The second retention tag, which is named Legal, is also enclosed in quotation marks for consistency. Values that don't include a space can be enclosed in quotation marks without any change to how the command is interpreted.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-RetentionPolicy "Business General" -RetentionPolicyTagLinks "General Business","Legal"
-```
-
-This example creates the retention policy Business General and uses the RetentionPolicyTagLinks parameter to associate two retention policy tags with this policy. You can enter multiple retention policy tags, separated by commas. If a tag name includes a space, enclose the name in quotation marks.
-
-
-The second retention tag, which is named Legal, is also enclosed in quotation marks for consistency. Values that don't include a space can be enclosed in quotation marks without any change to how the command is interpreted.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-RetentionPolicy "Business General" -RetentionPolicyTagLinks "General Business","Legal"
-```
-
-This example creates the retention policy Business General and uses the RetentionPolicyTagLinks parameter to associate two retention policy tags with this policy. You can enter multiple retention policy tags, separated by commas. If a tag name includes a space, enclose the name in quotation marks.
-
-
-The second retention tag, which is named Legal, is also enclosed in quotation marks for consistency. Values that don't include a space can be enclosed in quotation marks without any change to how the command is interpreted.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-RetentionPolicy "Business General" -RetentionPolicyTagLinks "General Business","Legal"
-```
-
-This example creates the retention policy Business General and uses the RetentionPolicyTagLinks parameter to associate two retention policy tags with this policy. You can enter multiple retention policy tags, separated by commas. If a tag name includes a space, enclose the name in quotation marks.
-
 
 The second retention tag, which is named Legal, is also enclosed in quotation marks for consistency. Values that don't include a space can be enclosed in quotation marks without any change to how the command is interpreted.
 
@@ -155,43 +82,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -249,21 +148,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-This parameter isn't available in on-premises deployments.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
 
 To set the default retention policy for new mailboxes, use the RetentionPolicy parameter on the Set-MailboxPlan cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -279,23 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultArbitrationMailbox
-!!! Exchange Server 2013
-
 This parameter is available only in the cloud-based service.
 
 The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
-
-This parameter isn't available in on-premises deployments.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-This parameter is available only in the cloud-based service.
-
-The IsDefaultArbitrationMailbox switch configures this policy as the default retention policy for arbitration mailboxes in your Exchange Online organization.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -328,4 +201,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4cdd6f20-5bca-4269-ac21-0a4cde0d54d6.aspx)
-
