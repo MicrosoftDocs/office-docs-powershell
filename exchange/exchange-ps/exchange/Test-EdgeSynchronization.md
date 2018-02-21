@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-EdgeSynchronization
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-EdgeSynchronization cmdlet to diagnose whether the subscribed Edge Transport servers have a current and accurate synchronization status.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-EdgeSynchronization cmdlet to diagnose whether the subscribed Edge Transport servers have a current and accurate synchronization status.
@@ -32,24 +26,6 @@ Test-EdgeSynchronization [-Confirm] [-DomainController <Fqdn>] [-ExcludeRecipien
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a report of the synchronization status of subscribed Edge Transport servers. You can use the VerifyRecipient parameter with this cmdlet to verify that a single recipient has been synchronized to the Active Directory Lightweight Directory Services (AD LDS) instance. The Edge Subscription process establishes one-way replication of recipient and configuration information from Active Directory to AD LDS.
-
-This cmdlet compares the data stored in Active Directory and the data stored in AD LDS. Any inconsistencies in data are reported in the results output by this cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a report of the synchronization status of subscribed Edge Transport servers. You can use the VerifyRecipient parameter with this cmdlet to verify that a single recipient has been synchronized to the Active Directory Lightweight Directory Services (AD LDS) instance. The Edge Subscription process establishes one-way replication of recipient and configuration information from Active Directory to AD LDS.
-
-This cmdlet compares the data stored in Active Directory and the data stored in AD LDS. Any inconsistencies in data are reported in the results output by this cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-EdgeSynchronization cmdlet is a diagnostic cmdlet that provides a report of the synchronization status of subscribed Edge Transport servers. You can use the VerifyRecipient parameter with this cmdlet to verify that a single recipient has been synchronized to the Active Directory Lightweight Directory Services (AD LDS) instance. The Edge Subscription process establishes one-way replication of recipient and configuration information from Active Directory to AD LDS.
 
 This cmdlet compares the data stored in Active Directory and the data stored in AD LDS. Any inconsistencies in data are reported in the results output by this cmdlet.
@@ -58,42 +34,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-EdgeSynchronization -MaxReportSize 500 -MonitoringContext $true
 ```
 
 This example diagnoses the synchronization status of subscribed Edge Transport servers, outputs only the first 500 data inconsistencies, and generates events and performance counters for use by System Center Operations Manager 2007.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-EdgeSynchronization -MaxReportSize 500 -MonitoringContext $true
-```
-
-This example diagnoses the synchronization status of subscribed Edge Transport servers, outputs only the first 500 data inconsistencies, and generates events and performance counters for use by System Center Operations Manager 2007.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-EdgeSynchronization -MaxReportSize 500 -MonitoringContext $true
-```
-
-This example diagnoses the synchronization status of subscribed Edge Transport servers, outputs only the first 500 data inconsistencies, and generates events and performance counters for use by System Center Operations Manager 2007.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
-```
-
-This example verifies the synchronization status of the single recipient kate@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
-```
-
-This example verifies the synchronization status of the single recipient kate@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-EdgeSynchronization -VerifyRecipient kate@contoso.com
 ```
@@ -103,17 +51,7 @@ This example verifies the synchronization status of the single recipient kate@co
 ## PARAMETERS
 
 ### -VerifyRecipient
-!!! Exchange Server 2010
-
-The VerifyRecipient parameter specifies a single recipient with which to verify the synchronization status. You identify the recipient by specifying a proxy address assigned to the recipient. The proxy address is the recipient's e-mail address. The recipient verification test is mutually exclusive of the test that verifies synchronization of configuration data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The VerifyRecipient parameter specifies a single recipient with which to verify the synchronization status. You identify the recipient by specifying a proxy address assigned to the recipient. The proxy address is the recipient's email address. The recipient verification test is mutually exclusive of the test that verifies synchronization of configuration data.
-
-
 
 ```yaml
 Type: ProxyAddress
@@ -165,17 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeRecipientTest
-!!! Exchange Server 2010
-
-The ExcludeRecipientTest parameter specifies whether to exclude validation of recipient data synchronization. If you include this parameter, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExcludeRecipientTest switch specifies whether to exclude validation of recipient data synchronization. If you include this switch, only the synchronization of configuration objects is validated. Validating that recipient data is synchronized takes longer than validating only configuration data. You don't have to include a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -191,17 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -FullCompareMode
-!!! Exchange Server 2010
-
-The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge server is performed. If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The FullCompareMode switch specifies whether a full comparison of the configuration data between Active Directory and AD LDS instance on the target Edge Transport server is performed. If you don't use this switch, a full comparison of replicated configuration data is skipped and the command only tests the Edge synchronization by verifying the replication cookie.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -233,23 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether Microsoft System Center Operations Manager 2007 is being used for server monitoring. If you set the value to $true, the command populates the MonitoringContext object with events and performance counters that are used by System Center Operations Manager 2007. The default value of this parameter is $false.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -316,4 +218,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2d6bc8d2-aa4c-497a-beaf-ec99b10a6a96.aspx)
-

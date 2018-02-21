@@ -6,18 +6,6 @@ schema: 2.0.0
 # Test-ImapConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-ImapConnectivity cmdlet to verify that the IMAP4 service is running as expected. The Test-ImapConnectivity cmdlet can be used to test the IMAP4 functionality for a specified Client Access server for all mailboxes on servers running Microsoft Exchange Server 2010 in the same Active Directory site.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Test-ImapConnectivity cmdlet to verify that the IMAP4 service is running as expected. The Test-ImapConnectivity cmdlet can be used to test the IMAP4 functionality for a specified Client Access server for all mailboxes on servers running Microsoft Exchange Server 2013 in the same Active Directory site.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ImapConnectivity cmdlet to verify that connectivity to the Microsoft Exchange IMAP4 service is working as expected.
@@ -33,16 +21,6 @@ Test-ImapConnectivity [[-ClientAccessServer] <ServerIdParameter>] [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test IMAP4 settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test IMAP4 settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-ImapConnectivity cmdlet tests IMAP4 connectivity by connecting to the specified mailbox, the specified Exchange server, or all Exchange servers that are available in the local Active Directory site.
 
 The first time you use this cmdlet, you might be required to create a test user. To create a test user, run the following command.
@@ -53,9 +31,9 @@ The test results are displayed on-screen. The cmdlet returns the following infor
 
 - LocalSite: The name of the local Active Directory site.
 
-- Scenario: The operations that are tested. Test IMAP4 Connectivity connects to the server using the IMAP4 protocol, searches for the test message, and deletes it along with any messages that are older than 24 hours.
+- Scenario: The operations that are tested. Test IMAP4 Connectivity connects to the server using the IMAP4 protocol, searches for the test message and deletes it along with any messages that are older than 24 hours.
 
-- Result: The values returned are typically Success, Skipped, or Failure.
+- Result: The values returned are typically Success, Skipped or Failure.
 
 - Latency(MS): The time required to complete the test in milliseconds.
 
@@ -67,42 +45,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-ImapConnectivity -ClientAccessServer:Contoso12 -MailboxCredential:(Get-Credential contoso\kweku)
-```
-
-This example tests the IMAP4 connectivity for the Client Access server Contoso12 by using the credentials for the user contoso\\kweku.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-ImapConnectivity -ClientAccessServer:Contoso12 -MailboxCredential:(Get-Credential contoso\kweku)
-```
-
-This example tests the IMAP4 connectivity for the Client Access server Contoso12 by using the credentials for the user contoso\\kweku.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Test-ImapConnectivity -ClientAccessServer Contoso12 -MailboxCredential (Get-Credential contoso\kweku)
 ```
 
 This example tests the client IMAP4 connectivity for the server named Contoso12 by using the credentials for the user contoso\\kweku.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-ImapConnectivity -ClientAccessServer:Contoso12
-```
-
-This example tests the IMAP4 connectivity of the specific Client Access server Contoso12 and tests all Exchange mailboxes.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-ImapConnectivity -ClientAccessServer:Contoso12
-```
-
-This example tests the IMAP4 connectivity of the specific Client Access server Contoso12 and tests all Exchange mailboxes.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-ImapConnectivity -ClientAccessServer Contoso12
 ```
@@ -112,14 +62,6 @@ This example tests the client IMAP4 connectivity of the server named Contoso12 a
 ## PARAMETERS
 
 ### -ClientAccessServer
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ClientAccessServer parameter specifies the name of the Client Access server to test.
-
-
-
-!!! Exchange Server 2016
-
 The ClientAccessServer parameter specifies the Exchange server to test. This server has the Client Access server role installed, and is responsible for accepting client connections.
 
 You can use any value that uniquely identifies the server. For example:
@@ -131,8 +73,6 @@ You can use any value that uniquely identifies the server. For example:
 - ExchangeLegacyDN
 
 - GUID
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -168,14 +108,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectionType
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConnectionType parameter specifies the type of connection used to connect to the Client Access server. This setting can be set to Plaintext, Tls, or Ssl.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectionType parameter specifies the type of connection that's used to connect to the IMAP4 service. Valid values are:
 
 - Plaintext
@@ -183,8 +115,6 @@ The ConnectionType parameter specifies the type of connection that's used to con
 - Ssl
 
 - Tls
-
-
 
 ```yaml
 Type: Plaintext | Tls | Ssl
@@ -216,19 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -LightMode
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LightMode parameter instructs the command to perform only a test logon to the server using the IMAP4 protocol. If you don't use this parameter, the test also tests the sending and receiving of a message using the IMAP4 protocol.
-
-
-
-!!! Exchange Server 2016
-
 The LightMode switch tells the command to perform only a test logon to the server by using the IMAP4 protocol. You don't need to specify a value with this switch.
 
 If you don't use this switch, the command also tests sending and receiving a message using the IMAP4 protocol.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -244,19 +164,9 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxCredential
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailboxCredential parameter specifies the mailbox credential for a single mailbox test.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxCredential parameter specifies the mailbox credential to use for a single mailbox test.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -272,14 +182,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailboxServer parameter specifies the name of the Mailbox server to test. If not specified, all Mailbox servers in the local Active Directory site are tested.
-
-
-
-!!! Exchange Server 2016
-
 The MailboxServer parameter specifies the Exchange 2016 or Exchange 2013 Mailbox server that you want to test. This parameter identifies the backend server that accepts proxied connections from the frontend server where clients connect.
 
 You can use any value that uniquely identifies the server. For example:
@@ -293,8 +195,6 @@ You can use any value that uniquely identifies the server. For example:
 - GUID
 
 If you don't use this parameter, connections to all Mailbox servers in the local Active Directory site are tested.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -310,23 +210,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether the command is run by Microsoft System Center Operations Manager 2007. Using this parameter without Operations Manager 2007 causes the command to fail. If this parameter is excluded, you must run the task interactively.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -342,19 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -PerConnectionTimeout
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PerConnectionTimeout parameter specifies the amount of time, in seconds, to wait per connection for the test operation to finish. The default value for the PerConnectionTimeout parameter is 120 seconds. You must specify a time-out value greater than 0 seconds and less than 120 seconds. We recommend that you configure this parameter with a value of 5 seconds or more.
-
-
-
-!!! Exchange Server 2016
-
 The PerConnectionTimeout parameter specifies the amount of time, in seconds, to wait per connection for the test operation to finish. Valid values are between 0 and 120 seconds. The default value is 120 seconds.
 
 We recommend that you configure this parameter with a value of 5 seconds or more.
-
-
 
 ```yaml
 Type: Int32
@@ -402,19 +276,9 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Timeout parameter specifies the amount of time, in seconds, to wait for the test operation to finish. The default value for the Timeout parameter is 180 seconds. You must specify a time-out value greater than 0 seconds and less than 1 hour (3,600 seconds). We recommend that you configure this parameter with a value of 5 seconds or more.
-
-
-
-!!! Exchange Server 2016
-
 The Timeout parameter specifies the amount of time, in seconds, to wait for the test operation to finish. Valid values are between 0 and 3600 seconds (1 hour). The default value is 180 seconds (3 minutes).
 
 We recommend that you configure this parameter with a value of 5 seconds or more.
-
-
 
 ```yaml
 Type: UInt32
@@ -430,19 +294,9 @@ Accept wildcard characters: False
 ```
 
 ### -TrustAnySSLCertificate
-!!! Exchange Server 2010, Exchange Server 2013
-
-The TrustAnySSLCertificate parameter specifies whether Secure Sockets Layer (SSL) certificate validation failures are reported. This parameter instructs the command to check the IMAP4 service without generating an error when the certificate doesn't match the URL of the Client Access server.
-
-
-
-!!! Exchange Server 2016
-
 The TrustAnySSLCertificate switch specifies whether to ignore Secure Sockets Layer (SSL) certificate validation failures. You don't need to specify a value with this switch.
 
 This switch is useful for testing internal URLs, because a URL that has an associated certificate is typically an external URL. This switch lets the task check an internal URL without generating an error when the certificate doesn't match the URL.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -491,4 +345,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/273690c8-4e0d-4f05-8786-11d71868dae0.aspx)
-

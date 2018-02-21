@@ -6,12 +6,6 @@ schema: 2.0.0
 # Add-ManagementRoleEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-ManagementRoleEntry cmdlet to add management role entries to an existing management role.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Add-ManagementRoleEntry cmdlet to add management role entries to an existing management role.
@@ -34,28 +28,6 @@ Add-ManagementRoleEntry [-ParentRoleEntry] <RoleEntryIdParameter> -Role <RoleIdP
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The cmdlet and its parameters that you add to a role entry must exist in the parent role. You can't add role entries to built-in roles.
-
-You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you'll receive an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a new role that's a child of the Mailbox Import Export role, which does contain the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
-
-For more information about management role entries, see Understanding Management Roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-The cmdlet and its parameters that you add to a role entry must exist in the parent role. You can't add role entries to built-in roles.
-
-You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you'll receive an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a role that's a child of the Mailbox Import Export role, which contains the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
-
-For more information about management role entries, see Understanding management roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The cmdlet and its parameters that you add to a role entry must exist in the parent role. You can't add role entries to built-in roles.
 
 You can only add a role entry to a management role if the role entry exists in the role's parent role. For example, if you try to add the Search-Mailbox role entry to a role that's a child of the Mail Recipients role, you'll receive an error. This error occurs because the Search-Mailbox role entry doesn't exist in the Mail Recipients role. To add the Search-Mailbox role entry to a role, you need to create a role that's a child of the Mailbox Import Export role, which contains the Search-Mailbox role entry. Then you can use the Add-ManagementRoleEntry cmdlet to add the Search-Mailbox role entry to the new child role.
@@ -66,140 +38,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
 ```
 
 This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox"
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators management role. The role entry for the Get-Mailbox cmdlet is added exactly as it's configured in the Recipient Administrators parent role.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
 ```
 
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server, and Filter parameters are added to the new role entry.
+This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server and Filter parameters are added to the new role entry.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server, and Filter parameters are added to the new role entry.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server, and Filter parameters are added to the new role entry.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server, and Filter parameters are added to the new role entry.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Add-ManagementRoleEntry "Recipient Administrators\Get-Mailbox" -Parameters Identity, Anr, Server, Filter
-```
-
-This example adds a new role entry for the Get-Mailbox cmdlet to the Recipient Administrators role. Only the Identity, Anr, Server, and Filter parameters are added to the new role entry.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
 ```
 
-This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name, and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
+This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
-```
-
-This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name, and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
-```
-
-This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name, and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
-```
-
-This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name, and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry "Mail Recipients\*Mailbox*" | Add-ManagementRoleEntry -Role "Mailbox Administrators"
-```
-
-This example uses the Get-ManagementRoleEntry cmdlet to retrieve a list of all the role entries that exist on the Mail Recipients management role that contain the string "Mailbox" in the cmdlet name, and then adds them to the Mailbox Administrators role using the Add-ManagementRoleEntry cmdlet. The role entries are added to the child role exactly as they're configured on the parent role.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
-```
-
-This example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
-```
-
-This example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
-```
-
-This example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
-```
-
-This example adds the MailboxAudit script with the Department and Location parameters to the IT Scripts unscoped top-level role.
-
-### Example 4 -------------------------- (Exchange Online Protection)
+### Example 4
 ```
 Add-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Department, Location -UnScopedTopLevel
 ```
@@ -209,35 +69,11 @@ This example adds the MailboxAudit script with the Department and Location param
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the role entry to add. You must specify the value of the Identity parameter in the format: \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding Management Roles.
-
-The role entry you want to add must exist in the parent role. If the role entry name contains spaces, you must enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the role entry to add. You must specify the value of the Identity parameter in the format: \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding management roles.
-
-The role entry you want to add must exist in the parent role. If the role entry name contains spaces, you must enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the role entry to add. You must specify the value of the Identity parameter in the format: \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
 For more information about how management role entries work, see Understanding management roles (Exchange 2016).
 
 The role entry you want to add must exist in the parent role. If the role entry name contains spaces, you must enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: RoleEntryIdParameter
@@ -305,19 +141,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -365,19 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -PSSnapinName
-!!! Exchange Server 2010
-
-The PSSnapinName parameter specifies the Windows PowerShell snap-in that contains the cmdlet associated with the role being added. Use the Get-PSSnapin cmdlet to retrieve a list of available Windows PowerShell snap-ins.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The PSSnapinName parameter specifies the Windows PowerShell snap-in that contains the cmdlet associated with the role being added. Use the Get-PSSnapin cmdlet to retrieve a list of available Windows PowerShell snap-ins.
-
-
 
 ```yaml
 Type: String
@@ -393,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script, and ApplicationPermission.
+The Type parameter specifies the type of role entry being added. The valid values are Cmdlet, Script and ApplicationPermission.
 
 ```yaml
 Type: Cmdlet | Script | ApplicationPermission | All
@@ -474,4 +290,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ece406f2-a6d6-4b5d-94f0-2819a7672088.aspx)
-

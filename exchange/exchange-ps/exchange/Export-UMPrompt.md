@@ -6,12 +6,6 @@ schema: 2.0.0
 # Export-UMPrompt
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-UMPrompt cmdlet to export an audio file being used as a greeting prompt for Unified Messaging (UM) dial plans and auto attendants.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Export-UMPrompt cmdlet to export an audio file being used as a greeting prompt for Unified Messaging (UM) dial plans and auto attendants.
@@ -73,24 +67,6 @@ Export-UMPrompt -PromptFileName <String> -UMDialPlan <UMDialPlanIdParameter> [-C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Export-UMPrompt cmdlet exports prompts that belong to existing UM dial plan and UM auto attendant objects. After the Export-UMPrompt cmdlet exports a prompt, you can save a copy of the prompt to a local drive as an audio file. You can then play the audio file using a media player.
-
-After this task is completed, the UM prompts are displayed or saved.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Export-UMPrompt cmdlet exports prompts that belong to existing UM dial plan and UM auto attendant objects. After the Export-UMPrompt cmdlet exports a prompt, you can save a copy of the prompt to a local drive as an audio file. You can then play the audio file using a media player.
-
-After this task is completed, the UM prompts are displayed or saved.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailboxes" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Export-UMPrompt cmdlet exports prompts that belong to existing UM dial plan and UM auto attendant objects. After the Export-UMPrompt cmdlet exports a prompt, you can save a copy of the prompt to a local drive as an audio file. You can then play the audio file using a media player.
 
 After this task is completed, the UM prompts are displayed or saved.
@@ -99,75 +75,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-$prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan; set-content -Path "d:\DialPlanPrompts\welcomegreeting.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports the welcome greeting for the UM dial plan MyUMDialPlan and saves it as the file welcomegreeting.mp3.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-$prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan; set-content -Path "d:\DialPlanPrompts\welcomegreeting.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports the welcome greeting for the UM dial plan MyUMDialPlan and saves it as the file welcomegreeting.mp3.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 $prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan; Set-Content -Path "d:\DialPlanPrompts\welcomegreeting.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
 This example exports the welcome greeting for the UM dial plan MyUMDialPlan and saves it as the file welcomegreeting.mp3.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-$prompt = Export-UMPrompt -PromptFileName "customgreeting.mp3" -UMDialPlan MyUMDialPlan; Set-Content -Path "d:\DialPlanPrompts\welcomegreeting.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports the welcome greeting for the UM dial plan MyUMDialPlan and saves it as the file welcomegreeting.mp3.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-$prompt = Export-UMPrompt -BusinessHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant; set-content -Path "d:\UMPrompts\BusinessHoursWelcomeGreeting.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports the business hours welcome greeting used for the UM auto attendant MYUMAutoAttendant and saves it as the file BusinessHoursWelcomeGreeting.mp3.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; set-content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; Set-Content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
 This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; Set-Content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Export-UMPrompt -PromptFileName "welcomegreeting.mp3" -UMAutoAttendant MyUMAutoAttendant; set-content -Path "e:\UMPromptsBackup\welcomegreetingbackup.mp3" -Value $prompt.AudioData -Encoding Byte
-```
-
-This example exports a custom greeting for the UM auto attendant MyUMAutoAttendant and saves it to the file welcomegreetingbackup.mp3.
-
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Export-UMPrompt -AfterHoursWelcomeGreeting -UMAutoAttendant MyUMAutoAttendant -TestBusinessName "Northwind Traders"; set-content -Path "d:\ AfterHoursWelcomeGreeting.mp3" -Value $prompt.AudioData -Encoding Byte
 ```
 
-This example exports the after hours welcome greeting for the UM auto attendant MyUMAutoAttendant, saves it as the file AfterHoursWelcomeGreeting.mp3, and uses Northwind Traders as the test business name.
+In Exchange Server 2010, this example exports the after hours welcome greeting for the UM auto attendant MyUMAutoAttendant, saves it as the file AfterHoursWelcomeGreeting.mp3 and uses Northwind Traders as the test business name.
 
 ## PARAMETERS
 
@@ -316,25 +243,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -350,19 +263,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -459,4 +362,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4bf35665-1643-4fec-bdb5-3aa27ff9984f.aspx)
-

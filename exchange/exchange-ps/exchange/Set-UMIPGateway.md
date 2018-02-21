@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-UMIPGateway
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-UMIPGateway cmdlet to modify the configuration settings for a single Unified Messaging (UM) IP gateway or to return a list of configuration settings that can be modified on a specified UM IP gateway.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UMIPGateway cmdlet to modify the configuration settings for a single Unified Messaging (UM) IP gateway or to return a list of configuration settings that can be modified on a specified UM IP gateway.
@@ -29,28 +23,6 @@ Set-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Address <UMSmartHost>] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-UMIPGateway cmdlet modifies configuration settings for a specific UM IP gateway, for example, the IP address to the IP gateway. These modifications include allowing outgoing calls and controlling communications with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
-
-It's possible that modifications to the UM IP gateway settings may disrupt communication between Unified Messaging servers and the SIP-enabled IP PBX or IP gateway. Modifications to a UM IP gateway should be performed only by an administrator who fully understands the implications of making configuration changes to the UM IP gateway.
-
-After this task is completed, the parameters and values specified are configured on the UM IP gateway.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-UMIPGateway cmdlet modifies configuration settings for a specific UM IP gateway, for example, the IP address to the IP gateway. These modifications include allowing outgoing calls and controlling communications with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
-
-It's possible that modifications to the UM IP gateway settings may disrupt communication between Mailbox servers and the SIP-enabled IP PBX or IP gateway. Modifications to a UM IP gateway should be performed only by an administrator who fully understands the implications of making configuration changes to the UM IP gateway.
-
-After this task is completed, the parameters and values specified are configured on the UM IP gateway.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-UMIPGateway cmdlet modifies configuration settings for a specific UM IP gateway, for example, the IP address to the IP gateway. These modifications include allowing outgoing calls and controlling communications with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
 
 It's possible that modifications to the UM IP gateway settings may disrupt communication between Mailbox servers and the SIP-enabled IP PBX or IP gateway. Modifications to a UM IP gateway should be performed only by an administrator who fully understands the implications of making configuration changes to the UM IP gateway.
@@ -61,105 +33,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
-```
-
-This example modifies the IP address of a UM IP gateway named MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
 ```
 
 This example modifies the IP address of the UM IP gateway MyUMIPGateway.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
-```
-
-This example modifies the IP address of the UM IP gateway MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
-```
-
-This example modifies the IP address of the UM IP gateway MyUMIPGateway.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1 -Status Disabled -OutcallsAllowed $false
 ```
 
 This example prevents the UM IP gateway from accepting incoming calls and prevents outgoing calls.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1 -Status Disabled -OutcallsAllowed $false
-```
-
-This example prevents the UM IP gateway from accepting incoming calls and prevents outgoing calls.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1 -Status Disabled -OutcallsAllowed $false
-```
-
-This example prevents the UM IP gateway from accepting incoming calls and prevents outgoing calls.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1 -Status Disabled -OutcallsAllowed $false
-```
-
-This example prevents the UM IP gateway from accepting incoming calls and prevents outgoing calls.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
-```
-
-This example enables the UM IP gateway to function as an IP gateway simulator and can be used with the Test-UMConnectivity cmdlet.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
 ```
 
 This example prevents the UM IP gateway MyUMIPGateway from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPv6 addresses.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
-```
-
-This example prevents the UM IP gateway MyUMIPGateway from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPv6 addresses.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
-```
-
-This example prevents the UM IP gateway MyUMIPGateway from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPv6 addresses.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
-```
-
-This example enables the UM IP gateway to function as an IP gateway simulator and can be used with the Test-UMConnectivity cmdlet.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
-```
-
-This example enables the UM IP gateway to function as an IP gateway simulator and can be used with the Test-UMConnectivity cmdlet.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Set-UMIPGateway -Identity MyUMIPGateway -Simulator $true
 ```
@@ -185,17 +80,7 @@ Accept wildcard characters: False
 ```
 
 ### -Address
-!!! Exchange Server 2010
-
-The Address parameter specifies the IP address or the fully qualified domain name (FQDN) configured on the UM IP gateway or SIP-enabled IP PBX. An FQDN is required if the UM dial plan that is associated with the UM IP gateway is operating in SIP Secured or Secured mode. If an FQDN is used, verify that the Domain Name System (DNS) has been configured correctly.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Address parameter specifies the IP address or the fully qualified domain name (FQDN) configured on the UM IP gateway or SIP-enabled IP PBX. An FQDN is required if the UM dial plan associated with the UM IP gateway is operating in SIP Secured or Secured mode. If an FQDN is used, verify that the Domain Name System (DNS) has been configured correctly.
-
-
 
 ```yaml
 Type: UMSmartHost
@@ -247,19 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -275,19 +150,9 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-!!! Exchange Server 2010
-
-The ForceUpgrade parameter specifies whether you're prompted for confirmation before a UM IP gateway object is upgraded.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM IP gateway object is upgraded.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -367,17 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -Simulator
-!!! Exchange Server 2010
-
-The Simulator parameter specifies the simulator used for the UM IP gateway being viewed. A simulator allows a client to connect to the Unified Messaging server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Simulator parameter specifies the simulator used for the UM IP gateway being viewed. A simulator allows a client to connect to the Mailbox server.
-
-
 
 ```yaml
 Type: $true | $false
@@ -458,4 +313,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1c9ecde5-36ec-42af-be9e-10eacdc98458.aspx)
-

@@ -33,14 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-OutboundConnector "Contoso Outbound Connector" -UseMxRecord $false -SmartHosts 192.168.0.1
-```
-
-This example changes the settings of the existing Outbound connector named Contoso Outbound Connector to route to a smart host at IP address 192.168.0.1.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-OutboundConnector "Contoso Outbound Connector" -UseMxRecord $false -SmartHosts 192.168.0.1
 ```
@@ -477,4 +470,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/beba3ca3-6f93-49c5-9ddf-505260655bed.aspx)
-

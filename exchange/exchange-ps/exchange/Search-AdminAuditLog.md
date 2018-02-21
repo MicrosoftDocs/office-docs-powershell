@@ -6,12 +6,6 @@ schema: 2.0.0
 # Search-AdminAuditLog
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Search-AdminAuditLog cmdlet to search the contents of the administrator audit log.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Search-AdminAuditLog cmdlet to search the contents of the administrator audit log.
@@ -21,7 +15,7 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Search-AdminAuditLog [[-Identity] <OrganizationIdParameter>] [-Cmdlets <MultiValuedProperty>]
+Search-AdminAuditLog [[-Cmdlets <MultiValuedProperty>]
  [-DomainController <Fqdn>] [-EndDate <ExDateTime>] [-IsSuccess <$true | $false>]
  [-ObjectIds <MultiValuedProperty>] [-Parameters <MultiValuedProperty>] [-ResultSize <Int32>]
  [-StartDate <ExDateTime>] [-StartIndex <Int32>] [-UserIds <MultiValuedProperty>]
@@ -29,22 +23,6 @@ Search-AdminAuditLog [[-Identity] <OrganizationIdParameter>] [-Cmdlets <MultiVal
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
-
-The Search-AdminAuditLog cmdlet searches the Microsoft Exchange Server 2010 Service Pack 1 (SP1) audit log only. You can't use this cmdlet to search the Exchange 2010 release to manufacturing (RTM) audit log. You must continue to access the Exchange 2010 RTM audit log using an e-mail client, such as Microsoft Outlook, or use Microsoft Office Outlook Web App.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "View-only administrator audit logging" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "View-only administrator audit logging" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you run the Search-AdminAuditLog cmdlet without any parameters, up to 1,000 log entries are returned by default.
 
 Note: In Exchange Online, if you don't use the StartDate or EndDate parameters, only results from the last 14 days are returned.
@@ -53,127 +31,31 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Search-AdministratorAuditLog -Cmdlets New-RoleGroup, New-ManagementRoleAssignment
-```
-
-This example finds all of the administrator audit log entries that contain either the New-RoleGroup or New-ManagementRoleAssignment cmdlets.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Search-AdminAuditLog -Cmdlets New-RoleGroup, New-ManagementRoleAssignment
 ```
 
 This example finds all the administrator audit log entries that contain either the New-RoleGroup or the New-ManagementRoleAssignment cmdlet.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Search-AdminAuditLog -Cmdlets New-RoleGroup, New-ManagementRoleAssignment
-```
-
-This example finds all the administrator audit log entries that contain either the New-RoleGroup or the New-ManagementRoleAssignment cmdlet.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Search-AdminAuditLog -Cmdlets New-RoleGroup, New-ManagementRoleAssignment
-```
-
-This example finds all the administrator audit log entries that contain either the New-RoleGroup or the New-ManagementRoleAssignment cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2010 -EndDate 02/12/2010 -IsSuccess $true
-```
-
-This example finds all of the administrator audit log entries that match the following criteria:
-
-
-CmdletsSet-Mailbox
-
-ParametersUseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
-
-StartDate 01/24/2010
-
-EndDate 02/12/2010
-
-The command completed successfully
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2012 -EndDate 02/12/2012 -IsSuccess $true
-```
-
-This example finds all the administrator audit log entries that match the following criteria:
-
-
-CmdletsSet-Mailbox
-
-ParametersUseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
-
-StartDate 01/24/2012
-
-EndDate 02/12/2012
-
-The command completed successfully
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2015 -EndDate 02/12/2015 -IsSuccess $true
 ```
 
 This example finds all the administrator audit log entries that match the following criteria:
 
+- Cmdlets: Set-Mailbox
 
-Cmdlets: Set-Mailbox
+- Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
 
-Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
+- StartDate: 01/24/2015
 
-StartDate: 01/24/2015
-
-EndDate: 02/12/2015
-
-The command completed successfully
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Search-AdminAuditLog -Cmdlets Set-Mailbox -Parameters UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota -StartDate 01/24/2015 -EndDate 02/12/2015 -IsSuccess $true
-```
-
-This example finds all the administrator audit log entries that match the following criteria:
-
-
-Cmdlets: Set-Mailbox
-
-Parameters: UseDatabaseQuotaDefaults, ProhibitSendReceiveQuota, ProhibitSendQuota
-
-StartDate: 01/24/2015
-
-EndDate: 02/12/2015
+- EndDate: 02/12/2015
 
 The command completed successfully
 
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
-```
-
-This example displays all of the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.
-
-
-The first command stores the audit log entries in a temporary variable. The second command iterates through all the audit log entries returned and displays the Parameters property.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
-```
-
-This example displays all the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.
-
-
-The first command stores the audit log entries in a temporary variable. The second command iterates through all the audit log entries returned and displays the Parameters property.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 $LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
 ```
@@ -183,31 +65,7 @@ This example displays all the comments written to the administrator audit log by
 
 First, store the audit log entries in a temporary variable. Then, iterate through all the audit log entries returned and display the Parameters property.
 
-### Example 3 -------------------------- (Exchange Online)
-```
-$LogEntries = Search-AdminAuditLog -Cmdlets Write-AdminAuditLog; $LogEntries | ForEach { $_.CmdletParameters }
-```
-
-This example displays all the comments written to the administrator audit log by the Write-AdminAuditLog cmdlet.
-
-
-First, store the audit log entries in a temporary variable. Then, iterate through all the audit log entries returned and display the Parameters property.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2013 -EndDate 10/02/2013
-```
-
-This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 17, 2013 and October 2, 2013.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2015 -EndDate 10/02/2015
-```
-
-This example returns entries in the administrator audit log of an Exchange Online organization for cmdlets run by Microsoft datacenter administrators between September 17, 2015 and October 2, 2015.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Search-AdminAuditLog -ExternalAccess $true -StartDate 09/17/2015 -EndDate 10/02/2015
 ```
@@ -235,19 +93,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -263,21 +111,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-!!! Exchange Server 2010, Exchange Server 2013
-
-The EndDate parameter specifies the scope of the administrator audit log results to log entries that occurred on or before the specified date.
-
-Specify the day, month, and year in the format specified in your regional settings.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: ExDateTime
@@ -289,24 +125,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Identity
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Identity parameter specifies the name of the tenant organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: 1
-Default value: None
-Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
@@ -363,17 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of administrator audit log entries to return. The minimum value is 1 and the maximum value is 250000. The default value is 1000.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Int32
@@ -389,21 +197,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-!!! Exchange Server 2010, Exchange Server 2013
-
-The StartDate parameter specifies the scope of the administrator audit log results to log entries that occurred on or after the specified date.
-
-Specify the day, month, and year in the format specified in your regional settings.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: ExDateTime
@@ -486,4 +282,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/87a0cd2d-dd59-4098-b740-75f0cc7bf8e7.aspx)
-

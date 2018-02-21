@@ -22,78 +22,27 @@ Set-SiteMailboxProvisioningPolicy [-Identity] <MailboxPolicyIdParameter> [-Alias
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailbox provisioning policy" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Site mailbox provisioning policies apply settings to new site mailboxes that you create. You can create multiple site mailbox provisioning policies, but only the default policy is followed when users create site mailboxes. The default site mailbox provisioning policy is named Default.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
-```
-
-This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB. When you install Exchange, a provisioning policy is created with the name Default.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
 ```
 
 This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SiteMailboxProvisioningPolicy -Identity Default -MaxReceiveSize 25MB
-```
-
-This example changes the site mailbox provisioning policy named Default to allow the maximum size of email messages that can be received by the site mailbox to 25 MB.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-SiteMailboxProvisioningPolicy -Identity Default -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB
 ```
 
 This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-SiteMailboxProvisioningPolicy -Identity Default -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB
-```
-
-This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-SiteMailboxProvisioningPolicy -Identity Default -IssueWarningQuota 9GB -ProhibitSendReceiveQuota 10GB
-```
-
-This example changes the warning quota to 9.5 GB and the prohibit send and receive quota to 10 GB.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
-```
-
-This example changes the default provisioning policy SM\_DefaultPolicy and sets the AliasPrefix parameter to Project. When site mailboxes are created, they are prepended with the prefix Project-.
-
-
-By default, the DefaultAliasPrefixEnabled parameter is set to $true and all on-premises site mailboxes are created with the prefix SM- and all cloud-based site mailboxes are created with the prefix SMO-. The AliasPrefix parameter takes precedence over the DefaultAliasPrefixEnabled parameter.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
-```
-
-This example changes the default provisioning policy named SM\_DefaultPolicy and sets the AliasPrefix value to Project. When you create new site mailboxes, the prefix Project- is automatically added to the alias.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-SiteMailboxProvisioningPolicy -Identity SM_DefaultPolicy -AliasPrefix Project
 ```
@@ -103,14 +52,6 @@ This example changes the default provisioning policy named SM\_DefaultPolicy and
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the site mailbox provisioning policy that you want to edit.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the site mailbox provisioning policy that you want to edit. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -118,8 +59,6 @@ The Identity parameter specifies the identity of the site mailbox provisioning p
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -135,21 +74,11 @@ Accept wildcard characters: False
 ```
 
 ### -AliasPrefix
-!!! Exchange Server 2013
-
-The AliasPrefix parameter allows you to configure a custom prefix that you want added to site mailbox aliases. If the AliasPrefix parameter is set to a valid, non-null string, each new site mailbox will have that string prepended to the alias. If the AliasPrefix parameter is set to $null and the DefaultAliasPrefixEnabled parameter is set to $true, the default prefix will be used. If AliasPrefix parameter is set to $null and the DefaultAliasPrefixEnabled parameter is set to $false, no prefix will be used.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AliasPrefix parameter specifies the custom text prefix to add to the aliases of new site mailboxes. Valid values are:
 
 - A text string that's 8 characters or less. When you specify a text value, the value of the DefaultAliasPrefixEnabled parameter ignored and aliases get the text prefix you specified.
 
 - The value $null. This is the default value. The results of this value depend on the DefaultAliasPrefixEnabled parameter value. When it's $true, aliases get the default prefix text. When it's $false, aliases don't get any prefix text.
-
-
 
 ```yaml
 Type: String
@@ -185,18 +114,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultAliasPrefixEnabled
-!!! Exchange Server 2013
-
-The DefaultAliasPrefixEnabled parameter specifies whether all new site mailboxes will have SM- prepended to the alias if the site mailbox is in an on-premises organization or will have SMO- prepended to the alias if the site mailbox is in an Exchange Online or Office365 organization. However, if a value has been specified for the AliasPrefix parameter, that value will be used even if this parameter is set to $true.
-
-For example, if the DefaultAliasPrefixEnabled parameter is set to $true, the AliasPrefix parameter is set to $null, and an on-premises site mailbox is created named BugBash\_2013, the alias for that site mailbox will be SM-BugBash\_2013. If the AliasPrefix parameter is $null and the DefaultAliasPrefixEnabled parameter is $false, no prefix will be added for new site mailboxes.
-
-This parameter accepts $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes have the default prefix text added to the alias. Valid values are:
 
 - $true: Aliases get the default prefix text. This is the default value. In Office 365, the default prefix text is SMO- (for example, the alias value BugBash\_2016 becomes SMO-BugBash\_2016). In on-premises Exchange, the the default prefix text is SM- (for example, the alias value BugBash\_2016 becomes SM-BugBash\_2016).
@@ -204,8 +121,6 @@ The DefaultAliasPrefixEnabled parameter specifies whether new site mailboxes hav
 - $false: Aliases don't get the default prefix text.
 
 The value of this parameter is related to the value of the AliasPrefix parameter. If you specify a text string for AliasPrefix, the DefaultAliasPrefixEnabled value is ignored. Specifying a text value for AliasPrefix automatically sets the value to $false, but even if you set it to $true, the default alias prefix text isn't used.
-
-
 
 ```yaml
 Type: $true | $false
@@ -239,23 +154,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IsDefault switch specifies that the site mailbox provisioning policy is the default policy. You can have multiple policies, but only the default policy is followed when users create site mailboxes.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The IsDefault switch specifies that the site mailbox provisioning policy is the default policy. You don't need to specify a value with this switch.
 
 You can have multiple policies, but only the default policy is followed when users create site mailboxes.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -271,30 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -IssueWarningQuota
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IssueWarningQuota parameter specifies the site mailbox size that triggers a warning message to the site mailbox. The default value is 4.5 gigabytes (GB).
-
-When you enter the value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 B to unlimited. If you enter a value of unlimited, no size limit is imposed on the site mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The IssueWarningQuota parameter specifies the warning threshold for the size of the mailbox. If the mailbox reaches or exceeds this size, the user receives a descriptive warning message.
@@ -317,8 +196,6 @@ The IssueWarningQuota value must be less than or equal to the ProhibitSendReceiv
 
 The default value is 49 GB.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -333,30 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MaxReceiveSize parameter specifies the maximum size of email messages that can be received by the site mailbox. The default value is 36 MB.
-
-When you enter the value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 B to unlimited. If you enter a value of unlimited, no size limit is imposed on the site mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxReceiveSize parameter specifies the maximum size of a message that can be sent to the site mailbox. Messages larger than the maximum size are rejected.
@@ -377,8 +230,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 A valid value is a number up to 1.999999 gigabytes (2147482624 bytes) or the value unlimited. The default value is 36 MB.
 
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
@@ -393,21 +244,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Name parameter allows you to change the name of the site mailbox provisioning policy.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Name parameter specifies the unique name of the site mailbox provisioning policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -423,30 +262,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProhibitSendReceiveQuota
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ProhibitSendReceiveQuota parameter specifies the size at which the site mailbox can no longer send or receive messages. The default value is 5 GB.
-
-When you enter the value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 1 B to unlimited. If you enter a value of unlimited, no size limit is imposed on the site mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ProhibitSendReceiveQuota parameter specifies a size limit for the mailbox. If the mailbox reaches or exceeds this size, the mailbox can't send or receive new messages. Messages sent to the mailbox are returned to the sender with a descriptive error message. This value effectively determines the maximum size of the mailbox.
@@ -468,8 +283,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 The value must be greater than or equal to the ProhibitSendQuota or IssueWarningQuota values.
 
 The default value is 50 GB.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -518,4 +331,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2a53ae55-9f2c-4dbd-b476-19bacacad3bb.aspx)
-
