@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-UMAutoAttendant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-UMAutoAttendant cmdlet to create a new Unified Messaging (UM) auto attendant.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-UMAutoAttendant cmdlet to create a Unified Messaging (UM) auto attendant.
@@ -22,30 +16,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-UMAutoAttendant [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-Organization <OrganizationIdParameter>]
- [-PilotIdentifierList <MultiValuedProperty>] [-SharedUMDialPlan] [-SpeechEnabled <$true | $false>]
+ [-DTMFFallbackAutoAttendant <UMAutoAttendantIdParameter>] [-PilotIdentifierList <MultiValuedProperty>] [-SharedUMDialPlan] [-SpeechEnabled <$true | $false>]
  [-Status <Enabled | Disabled>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-UMAutoAttendant cmdlet creates one or more UM auto attendants. UM auto attendants have a forest-wide scope in the configuration container in Active Directory. When you create a new UM auto attendant, it's linked to a single UM dial plan that contains a list of extension numbers. Linking the UM auto attendant to the UM dial plan enables the associated Unified Messaging servers to answer incoming calls using the UM auto attendant.
-
-After this task is completed, a new UM auto attendant is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-UMAutoAttendant cmdlet creates one or more UM auto attendants. UM auto attendants have a forest-wide scope in the configuration container in Active Directory. When you create a UM auto attendant, the auto attendant isn't speech-enabled or able to answer incoming calls by default. The auto attendant is linked to a single UM dial plan that contains a list of extension numbers. Linking the UM auto attendant to the UM dial plan enables the associated Mailbox servers to answer incoming calls using the UM auto attendant.
-
-After this task is completed, a UM auto attendant is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-UMAutoAttendant cmdlet creates one or more UM auto attendants. UM auto attendants have a forest-wide scope in the configuration container in Active Directory. When you create a UM auto attendant, the auto attendant isn't speech-enabled or able to answer incoming calls by default. The auto attendant is linked to a single UM dial plan that contains a list of extension numbers. Linking the UM auto attendant to the UM dial plan enables the associated Mailbox servers to answer incoming calls using the UM auto attendant.
 
 After this task is completed, a UM auto attendant is created.
@@ -54,56 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 55000 -Status Enabled
-```
-
-This example creates a new UM auto attendant named MyUMAutoAttendant that can accept incoming calls but isn't speech-enabled.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 55000 -Status Enabled
 ```
 
 This example creates the UM auto attendant MyUMAutoAttendant that can accept incoming calls using the extension number 55000 but isn't speech-enabled.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 55000 -Status Enabled
-```
-
-This example creates the UM auto attendant MyUMAutoAttendant that can accept incoming calls using the extension number 55000 but isn't speech-enabled.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 55000 -Status Enabled
-```
-
-This example creates the UM auto attendant MyUMAutoAttendant that can accept incoming calls using the extension number 55000 but isn't speech-enabled.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true
-```
-
-This example creates a new speech-enabled UM auto attendant named MyUMAutoAttendant.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
-```
-
-This example creates the speech-enabled UM auto attendant MyUMAutoAttendant using the extension numbers 56000 and 56100 that can accept incoming calls.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
-```
-
-This example creates the speech-enabled UM auto attendant MyUMAutoAttendant using the extension numbers 56000 and 56100 that can accept incoming calls.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 New-UMAutoAttendant -Name MyUMAutoAttendant -UMDialPlan MyUMDialPlan -PilotIdentifierList 56000,56100 -SpeechEnabled $true -Status Enabled
 ```
@@ -113,17 +46,7 @@ This example creates the speech-enabled UM auto attendant MyUMAutoAttendant usin
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies the display name for the UM auto attendant. The display name for the new UM auto attendant can contain as many as 64 characters.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Name parameter specifies the display name for the UM auto attendant. The display name for the UM auto attendant can contain as many as 64 characters.
-
-
 
 ```yaml
 Type: String
@@ -175,19 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -218,34 +131,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PilotIdentifierList
-!!! Exchange Server 2010
-
-The PilotIdentifierList parameter specifies a list of one or more pilot numbers. Pilot numbers route incoming calls to Unified Messaging servers. The calls are then answered by the UM auto attendant.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The PilotIdentifierList parameter specifies a list of one or more pilot numbers. Pilot numbers route incoming calls to Mailbox servers. The calls are then answered by the UM auto attendant.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -342,4 +229,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d439154c-eba7-4783-a7a3-0e73556eedef.aspx)
-
