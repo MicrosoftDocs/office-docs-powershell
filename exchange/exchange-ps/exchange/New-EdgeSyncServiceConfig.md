@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-EdgeSyncServiceConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-EdgeSyncServiceConfig cmdlet to create edge synchronization service settings that control the general synchronization behavior shared by all EdgeSync services.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-EdgeSyncServiceConfig cmdlet to create edge synchronization service settings that control the general synchronization behavior shared by all EdgeSync services.
@@ -28,92 +22,31 @@ New-EdgeSyncServiceConfig [-ConfigurationSyncInterval <EnhancedTimeSpan>] [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-EdgeSyncServiceConfig -LogEnabled $true -LogPath "\\Server01\EdgeSyncLog" -LogMaxFileSize 5MB -LogMaxAge 3
 ```
 
 This example creates EdgeSync service settings with the following configuration:
 
+- EdgeSync logging is enabled.
 
-EdgeSync logging is enabled.
+- The log files are stored in the EdgeSyncLog share on Server01.
 
-The log files are stored in the EdgeSyncLog share on Server01.
+- The maximum individual log file size is 5 megabytes (MB).
 
-The maximum individual log file size is 5 megabytes (MB).
-
-The log files are kept for 3 days.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-EdgeSyncServiceConfig -LogEnabled $true -LogPath "\\Server01\EdgeSyncLog" -LogMaxFileSize 5MB -LogMaxAge 3
-```
-
-This example creates EdgeSync service settings with the following configuration:
-
-
-EdgeSync logging is enabled.
-
-The log files are stored in the EdgeSyncLog share on Server01.
-
-The maximum individual log file size is 5 megabytes (MB).
-
-The log files are kept for 3 days.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-EdgeSyncServiceConfig -LogEnabled $true -LogPath "\\Server01\EdgeSyncLog" -LogMaxFileSize 5MB -LogMaxAge 3
-```
-
-This example creates EdgeSync service settings with the following configuration:
-
-
-EdgeSync logging is enabled.
-
-The log files are stored in the EdgeSyncLog share on Server01.
-
-The maximum individual log file size is 5 megabytes (MB).
-
-The log files are kept for 3 days.
+- The log files are kept for 3 days.
 
 ## PARAMETERS
 
 ### -ConfigurationSyncInterval
-!!! Exchange Server 2010
-
-The ConfigurationSyncInterval parameter specifies how frequently the EdgeSync service synchronizes configuration data.
-
-
-
-!!! Exchange Server 2013
-
 The ConfigurationSyncInterval parameter specifies how frequently the EdgeSync service synchronizes configuration data. The default value is 3 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The ConfigurationSyncInterval parameter specifies how frequently the EdgeSync service synchronizes configuration data. The default value is 3 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -149,27 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -CookieValidDuration
-!!! Exchange Server 2010
-
-The CookieValidDuration parameter specifies how long a cookie record is valid.
-
-
-
-!!! Exchange Server 2013
-
 The CookieValidDuration parameter specifies how long a cookie record is valid. The default value is 21 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The CookieValidDuration parameter specifies how long a cookie record is valid. The default value is 21 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -201,27 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -FailoverDCInterval
-!!! Exchange Server 2010
-
-The FailoverDCInterval parameter specifies how long EdgeSync waits before failing over to another domain controller if it can't read configuration data from Active Directory.
-
-
-
-!!! Exchange Server 2013
-
 The FailoverDCInterval parameter specifies how long EdgeSync waits before failing over to another domain controller if it can't read configuration data from Active Directory. The default value is 5 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The FailoverDCInterval parameter specifies how long EdgeSync waits before failing over to another domain controller if it can't read configuration data from Active Directory. The default value is 5 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -237,27 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -LockDuration
-!!! Exchange Server 2010
-
-The LockDuration parameter specifies how long an instance of the EdgeSync service can maintain an exclusive lock on the synchronization rights. While an EdgeSync service maintains an exclusive lock on synchronization rights, no other EdgeSync service can take over synchronization.
-
-
-
-!!! Exchange Server 2013
-
 The LockDuration parameter specifies how long an instance of the EdgeSync service can maintain an exclusive lock on the synchronization rights. While an EdgeSync service maintains an exclusive lock on synchronization rights, no other EdgeSync service can take over synchronization. The default value is 6 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The LockDuration parameter specifies how long an instance of the EdgeSync service can maintain an exclusive lock on the synchronization rights. While an EdgeSync service maintains an exclusive lock on synchronization rights, no other EdgeSync service can take over synchronization. The default value is 6 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -273,27 +152,9 @@ Accept wildcard characters: False
 ```
 
 ### -LockRenewalDuration
-!!! Exchange Server 2010
-
-The LockRenewalDuration parameter specifies how long before the expiry of an exclusive lock an EdgeSync service can renew the lock.
-
-
-
-!!! Exchange Server 2013
-
 The LockRenewalDuration parameter specifies how long before the expiry of an exclusive lock an EdgeSync service can renew the lock. The default value is 4 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The LockRenewalDuration parameter specifies how long before the expiry of an exclusive lock an EdgeSync service can renew the lock. The default value is 4 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -309,17 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogEnabled
-!!! Exchange Server 2010
-
-The LogEnabled parameter specifies whether EdgeSyncLog is enabled.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The LogEnabled parameter enables or disables the EdgeSync log. Valid input for this parameter is $true or $false. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -335,17 +186,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-!!! Exchange Server 2010
-
-The LogLevel parameter specifies the logging level used.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The LogLevel parameter specifies the EdgeSync logging level. Valid values for this parameter are None, Low, Medium and High. The default value is None.
-
-
 
 ```yaml
 Type: None | Low | Medium | High
@@ -361,27 +202,9 @@ Accept wildcard characters: False
 ```
 
 ### -LogMaxAge
-!!! Exchange Server 2010
-
-The LogMaxAge parameter specifies the maximum duration in days to keep EdgeSyncLog before it can be overwritten.
-
-
-
-!!! Exchange Server 2013
-
 The LogMaxAge parameter specifies the maximum duration in days to keep the EdgeSyncLog files. Log files older than the specified value can be overwritten. The default value is 30 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The LogMaxAge parameter specifies the maximum duration in days to keep the EdgeSyncLog files. Log files older than the specified value can be overwritten. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -397,36 +220,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogMaxDirectorySize
-!!! Exchange Server 2010
-
-The LogMaxDirectorySize parameter specifies the cap on the amount of disk space the EdgeSyncLog directory can use.
-
-
-
-!!! Exchange Server 2013
-
-The LogMaxDirectorySize parameter specifies the maximum amount of disk space the EdgeSyncLog directory can use. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the LogMaxFileSize parameter must be less than or equal to the value of the LogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the EdgeSyncLLog directory.
-
-
-
-!!! Exchange Server 2016
-
 The LogMaxDirectorySize parameter specifies the maximum amount of disk space the EdgeSyncLog directory can use. The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -444,8 +237,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the LogMaxFileSize parameter must be less than or equal to the value of the LogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the EdgeSyncLLog directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -461,36 +252,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogMaxFileSize
-!!! Exchange Server 2010
-
-The LogMaxFileSize parameter specifies the maximum log file size for the EdgeSyncLog files.
-
-
-
-!!! Exchange Server 2013
-
-The LogMaxFileSize parameter specifies the maximum log file size for the EdgeSyncLog files. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the LogMaxFileSize parameter must be less than or equal to the value of the LogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the EdgeSyncLog files.
-
-
-
-!!! Exchange Server 2016
-
 The LogMaxFileSize parameter specifies the maximum log file size for the EdgeSyncLog files. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -509,8 +270,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The value of the LogMaxFileSize parameter must be less than or equal to the value of the LogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the EdgeSyncLog files.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -525,17 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -LogPath
-!!! Exchange Server 2010
-
-The LogPath parameter specifies the disk location to store the EdgeSyncLog files.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The LogPath parameter specifies the default location for the EdgeSyncLog files. The default value is TransportRoles\\Logs\\EdgeSync\\.
-
-
 
 ```yaml
 Type: String
@@ -551,27 +300,9 @@ Accept wildcard characters: False
 ```
 
 ### -OptionDuration
-!!! Exchange Server 2010
-
-The OptionDuration parameter specifies how long an instance of the EdgeSync service can maintain an optional lock on synchronization rights. While an EdgeSync service maintains an optional lock on synchronization rights, another EdgeSync service can take over synchronization after the optional lock has expired if it's initiated using the Start-EdgeSynchronization command.
-
-
-
-!!! Exchange Server 2013
-
 The OptionDuration parameter specifies how long an instance of the EdgeSync service can maintain an optional lock on synchronization rights. While an EdgeSync service maintains an optional lock on synchronization rights, another EdgeSync service can take over synchronization after the optional lock has expired if it's initiated using the Start-EdgeSynchronization command. The default value is 30 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The OptionDuration parameter specifies how long an instance of the EdgeSync service can maintain an optional lock on synchronization rights. While an EdgeSync service maintains an optional lock on synchronization rights, another EdgeSync service can take over synchronization after the optional lock has expired if it's initiated using the Start-EdgeSynchronization command. The default value is 30 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -587,27 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientSyncInterval
-!!! Exchange Server 2010
-
-The RecipientSyncInterval parameter specifies how frequently the EdgeSync service synchronizes recipient data from the global catalog.
-
-
-
-!!! Exchange Server 2013
-
 The RecipientSyncInterval parameter specifies how frequently the EdgeSync service synchronizes recipient data from the global catalog. The default value is 5 minutes.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
-The RecipientSyncInterval parameter specifies how frequently the EdgeSync service synchronizes recipient data from the global catalog. The default value is 5 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -672,4 +385,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/721a0666-1830-4072-9aff-1b54ee53080b.aspx)
-
