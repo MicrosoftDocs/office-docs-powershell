@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-ExchangeSearch
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-ExchangeSearch cmdlet to test that Exchange Search is currently enabled and is indexing new e-mail messages in a timely manner.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ExchangeSearch cmdlet to test that Exchange Search is currently enabled and is indexing new email messages in a timely manner.
@@ -39,24 +33,6 @@ Test-ExchangeSearch [-Confirm] [-DomainController <Fqdn>] [-IndexingTimeoutInSec
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-ExchangeSearch cmdlet creates a hidden message and an attachment visible only to Exchange Search. Unless a mailbox is specified in the Identity parameter, the hidden message is stored in the System Attendant mailbox. The command waits for the message to be indexed and then searches for the content. It reports success or failure depending on whether the message is found after the interval set in the IndexingTimeoutInSeconds parameter has elapsed.
-
-You can use the Verbose switch to get detailed information about each step performed by the cmdlet as part of the test.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Search" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-ExchangeSearch cmdlet creates a hidden message and an attachment in the specified mailbox that's visible only to Exchange Search. The command waits for the message to be indexed and then searches for the content. It reports success or failure depending on whether the message is found after the interval set in the IndexingTimeoutInSeconds parameter has elapsed.
-
-You can use the Verbose switch to get detailed information about each step performed by the cmdlet as part of the test.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Search" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-ExchangeSearch cmdlet creates a hidden message and an attachment in the specified mailbox that's visible only to Exchange Search. The command waits for the message to be indexed and then searches for the content. It reports success or failure depending on whether the message is found after the interval set in the IndexingTimeoutInSeconds parameter has elapsed.
 
 You can use the Verbose switch to get detailed information about each step performed by the cmdlet as part of the test.
@@ -65,49 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-ExchangeSearch -Identity john@contoso.com
 ```
 
 This example tests Exchange Search results for the mailbox database on which the specified mailbox resides.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-ExchangeSearch -Identity john@contoso.com
-```
-
-This example tests Exchange Search results for the mailbox database on which the specified mailbox resides.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-ExchangeSearch -Identity john@contoso.com
-```
-
-This example tests Exchange Search results for the mailbox database on which the specified mailbox resides.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-ExchangeSearch -MailboxDatabase "EXCH01-SG1-MDB1" -IndexingTimeoutInSeconds 30
-```
-
-This example tests Exchange Search against the mailbox database EXCH01-SG1-MDB1 with an indexing time-out of 30 seconds.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-ExchangeSearch -Identity john@contoso.com -Verbose
-```
-
-This example tests Exchange Search results for the mailbox database on which the specified mailbox resides. The Verbose switch is used to display detailed information.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Test-ExchangeSearch -Identity john@contoso.com -Verbose
-```
-
-This example tests Exchange Search results for the mailbox database on which the specified mailbox resides. The Verbose switch is used to display detailed information.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Test-ExchangeSearch -Identity john@contoso.com -Verbose
 ```
@@ -169,17 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the mailbox that you want to test Exchange Search against. If this parameter isn't specified, the System Attendant mailbox is used. The Identity and MailboxDatabase parameters can't be used together.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the mailbox that you want to test Exchange Search against.
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -195,17 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -IndexingTimeoutInSeconds
-!!! Exchange Server 2010
-
-The IndexingTimeoutInSeconds parameter specifies, in seconds, the maximum amount of time to wait between adding the new e-mail message to the test mailbox and waiting for it to be returned in a search result. The default value is 120 seconds. If this parameter isn't specified, the default interval is used.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IndexingTimeoutInSeconds parameter specifies, in seconds, the maximum amount of time to wait between adding the new email message to the test mailbox and waiting for it to be returned in a search result. The default value is 120 seconds. If this parameter isn't specified, the default interval is used.
-
-
 
 ```yaml
 Type: Int32
@@ -221,25 +142,9 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDatabase
-!!! Exchange Server 2010
+This parameter is available or functional only in Exchange Server 2010 and 2013.
 
 The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. The MailboxDatabase and Identity parameters can't be used together.
-
-
-
-!!! Exchange Server 2013
-
-This parameter doesn't work in Exchange 2013 Cumulative Update 6 (CU6) or later.
-
-The MailboxDatabase parameter specifies the mailbox database to test Exchange Search against. The MailboxDatabase and Identity parameters can't be used together.
-
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -255,23 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext switch specifies an event log entry to be written to the Application event log for use by Microsoft System Center Operations Manager 2007. The switch should be used only if invoking this command from within System Center Operations Manager 2007.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -287,25 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
+This parameter is available or functional only in Exchange Server 2010 and 2013.
 
 The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
-
-
-
-!!! Exchange Server 2013
-
-This parameter doesn't work in Exchange 2013 CU6 or later.
-
-The Server parameter specifies the Exchange server for the recipient that you want to test Exchange Search against.
-
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -354,4 +227,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d50b8f0b-7b79-45d5-b1a4-8a5bc84d0724.aspx)
-

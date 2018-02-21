@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-StoreMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-StoreMailbox cmdlet to purge the mailbox and all of its message content from the mailbox database. This results in permanent data loss for the mailbox being purged. You can only run this cmdlet against disconnected or soft-deleted mailboxes. Running this command against an active mailbox fails, and you receive an error.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-StoreMailbox cmdlet to purge the mailbox and all of its message content from the mailbox database. This results in permanent data loss for the mailbox being purged. You can only run this cmdlet against disconnected or soft-deleted mailboxes. Running this command against an active mailbox fails, and you receive an error.
@@ -26,32 +20,6 @@ Remove-StoreMailbox -Database <DatabaseIdParameter> -Identity <StoreMailboxIdPar
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When mailboxes are moved from a Microsoft Exchange Server 2010 Service Pack 1 (SP1) database to any other database, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until the deleted mailbox retention period expires.
-
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database using the property DisconnectReason with a value of SoftDeleted.
-
-A mailbox is marked as Disabled immediately after the Disable-Mailbox or Remove-Mailbox command completes. Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
-
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database using the property DisconnectReason with a value of Disabled.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remove Store Mailbox" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-When mailboxes are moved from a Microsoft Exchange Server 2013 database to any other database, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until the deleted mailbox retention period expires.
-
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database using the property DisconnectReason with a value of SoftDeleted.
-
-A mailbox is marked as Disabled immediately after the Disable-Mailbox or Remove-Mailbox command completes. Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
-
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database using the property DisconnectReason with a value of Disabled.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remove store mailbox" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 When mailboxes are moved between databases, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until the deleted mailbox retention period expires.
 
 To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database using the property DisconnectReason with a value of SoftDeleted.
@@ -64,63 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-StoreMailbox -Database MBD01 -Identity Ayla -MailboxState SoftDeleted
 ```
 
 This example purges the soft-deleted mailbox for Ayla Kol from mailbox database MBD01.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-StoreMailbox -Database MBD01 -Identity Ayla -MailboxState SoftDeleted
-```
-
-This example purges the soft-deleted mailbox for Ayla Kol from mailbox database MBD01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-StoreMailbox -Database MBD01 -Identity Ayla -MailboxState SoftDeleted
-```
-
-This example purges the soft-deleted mailbox for Ayla Kol from mailbox database MBD01.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
 ```
 
 This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
-```
-
-This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-StoreMailbox -Database MBD01 -Identity "2ab32ce3-fae1-4402-9489-c67e3ae173d3" -MailboxState Disabled
-```
-
-This example permanently purges the disconnected mailbox with the GUID 2ab32ce3-fae1-4402-9489-c67e3ae173d3 from mailbox database MBD01.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
-```
-
-This example permanently purges all soft-deleted mailboxes from mailbox database MBD01.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
-```
-
-This example permanently purges all soft-deleted mailboxes from mailbox database MBD01.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MailboxStatistics -Database MBD01 | where {$_.DisconnectReason -eq "SoftDeleted"} | foreach {Remove-StoreMailbox -Database $_.database -Identity $_.mailboxguid -MailboxState SoftDeleted}
 ```
@@ -198,25 +124,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -265,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d5cb00f2-f475-45cf-b72e-0962e5eed070.aspx)
-
