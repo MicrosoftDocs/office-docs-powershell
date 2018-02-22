@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-SmtpConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-SmtpConnectivity cmdlet to diagnose whether an SMTP connection can successfully be established to the Receive connectors on a specific server. Although you can run this cmdlet manually to verify SMTP connectivity for a specified server, it's primarily used by Microsoft System Center Operations Manager 2007 to test your transport servers' ability to receive SMTP connections to each of the bindings on all the Receive connectors on those servers.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-SmtpConnectivity cmdlet to diagnose whether an SMTP connection can successfully be established to the Receive connectors on a specific server. Although you can run this cmdlet manually to verify SMTP connectivity for a specified server, it's primarily used by Microsoft System Center Operations Manager 2007 to test your transport servers' ability to receive SMTP connections to each of the bindings on all the Receive connectors on those servers.
@@ -24,46 +18,6 @@ Test-SmtpConnectivity [[-Identity] <ServerIdParameter>] [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you run the Test-SmtpConnectivity cmdlet against a Hub Transport server, the cmdlet attempts to establish an SMTP connection to all bindings of all Receive connectors hosted on that server. For each attempt, the cmdlet returns the following information:
-
-- Server The name of the server that hosts the Receive connector.
-
-- ReceiveConnector The name of the Receive connector to which the SMTP connection was attempted.
-
-- Binding The binding that was configured on the Receive connector.
-
-- EndPoint The actual IP address and port to which the SMTP connection was attempted.
-
-- StatusCode The result of the connection attempt. This can be one of the following: Success, Unable to connect, Transient error, Permanent error, External error.
-
-- Details The actual response received from the server being tested. If the connection attempt isn't successful, this field contains an error string.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Testing mail flow" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-When you run the Test-SmtpConnectivity cmdlet against a Mailbox server, the cmdlet attempts to establish an SMTP connection to all bindings of all Receive connectors hosted on that server. For each attempt, the cmdlet returns the following information:
-
-- Server: The name of the server that hosts the Receive connector.
-
-- ReceiveConnector: The name of the Receive connector to which the SMTP connection was attempted.
-
-- Binding: The binding that was configured on the Receive connector.
-
-- EndPoint: The actual IP address and port to which the SMTP connection was attempted.
-
-- StatusCode: The result of the connection attempt. This can be one of the following values: Success, Unable to connect, Transient error, Permanent error, External error.
-
-- Details: The actual response received from the server being tested. If the connection attempt isn't successful, this field contains an error string.
-
-The Test-SmtpConnectivity results are displayed on-screen. You can write the results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Testing mail flow" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 When you run the Test-SmtpConnectivity cmdlet against a Mailbox server, the cmdlet attempts to establish an SMTP connection to all bindings of all Receive connectors hosted on that server. For each attempt, the cmdlet returns the following information:
 
 - Server: The name of the server that hosts the Receive connector.
@@ -84,42 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-SmtpConnectivity -Identity Hub01
-```
-
-This example verifies SMTP connectivity for all Receive connectors on server Hub01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-SmtpConnectivity Mailbox01
 ```
 
 This example verifies SMTP connectivity for all Receive connectors on the Mailbox server named Mailbox01.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-SmtpConnectivity Mailbox01
-```
-
-This example verifies SMTP connectivity for all Receive connectors on the Mailbox server named Mailbox01.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-TransportServer | Test-SmtpConnectivity
-```
-
-This example verifies SMTP connectivity for all Receive connectors on all Hub Transport servers in the organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-TransportService | Test-SmtpConnectivity
-```
-
-This example verifies SMTP connectivity for all Receive connectors on all Mailbox servers in the organization.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-TransportService | Test-SmtpConnectivity
 ```
@@ -167,17 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the transport server for which the cmdlet verifies SMTP connectivity. The cmdlet verifies SMTP connectivity for all Receive connectors hosted on the specified server. If no server is specified, the cmdlet attempts to perform the SMTP connectivity test against all Receive connectors on the local server. If the local server isn't a Hub Transport or Edge Transport server, the cmdlet returns the error: "Server \<servername\> is not a Transport server".
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the transport server for which the cmdlet verifies SMTP connectivity. The cmdlet verifies SMTP connectivity for all Receive connectors hosted on the specified server. If no server is specified, the cmdlet attempts to perform the SMTP connectivity test against all Receive connectors on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -193,25 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether the results of the test are written to the monitoring event log using the monitoring infrastructure. If you set this parameter to $true, the cmdlet generates events for the monitoring infrastructure. If you set this parameter to $false, the cmdlet only displays the results in the Exchange Management Shell.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -260,4 +158,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/40e81fee-c9ce-472d-8626-b1d3fa85d365.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Move-DatabasePath
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Move-DatabasePath cmdlet to set a new path to the location of a database on the specified Mailbox server and to move the related files to that location.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Move-DatabasePath cmdlet to set a new path to the location of a database on the specified Mailbox server and to move the related files to that location.
@@ -27,36 +21,6 @@ Move-DatabasePath [-Identity] <DatabaseIdParameter> [-ConfigurationOnly] [-Confi
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you use the Move-DatabasePath cmdlet, consider the following:
-
-- This cmdlet fails if it's run while the database is being backed up.
-
-- If the specified database is mounted when this cmdlet is run, the database is automatically dismounted and then remounted, and is unavailable to users while it's dismounted.
-
-- This cmdlet normally can be run on the affected Mailbox server only. An exception is that this cmdlet can be run on an administrator's workstation when using the ConfigurationOnly parameter with a value of $true.
-
-- This cmdlet can't be run against replicated mailbox databases. To move the path of a replicated database, you must first remove all replicated copies, and then you can perform the move operation. After the move operation is complete, you can add copies of the mailbox database.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-When you use the Move-DatabasePath cmdlet, consider the following:
-
-- This cmdlet fails if it's run while the database is being backed up.
-
-- If the specified database is mounted when this cmdlet is run, the database is automatically dismounted and then remounted, and is unavailable to users while it's dismounted.
-
-- This cmdlet normally can be run on the affected Mailbox server only. An exception is that this cmdlet can be run on an administrator's workstation when using the ConfigurationOnly parameter with a value of $true.
-
-- This cmdlet can't be run against replicated mailbox databases. To move the path of a replicated database, you must first remove all replicated copies, and then you can perform the move operation. After the move operation is complete, you can add copies of the mailbox database.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 When you use the Move-DatabasePath cmdlet, consider the following:
 
 - This cmdlet fails if it's run while the database is being backed up.
@@ -71,21 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Move-DatabasePath -Identity MyDatabase01 -EdbFilePath C:\NewFolder\MyDatabase01.edb
-```
-
-This example sets a new path for the mailbox database specified by the mailbox database name. To perform the move operation, the database must be temporarily dismounted, making it inaccessible to all users. If the database is currently dismounted, it isn't remounted upon completion.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Move-DatabasePath -Identity MyDatabase01 -EdbFilePath C:\NewFolder\MyDatabase01.edb
-```
-
-This example sets a new path for the mailbox database specified by the mailbox database name. To perform the move operation, the database must be temporarily dismounted, making it inaccessible to all users. If the database is currently dismounted, it isn't remounted upon completion.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Move-DatabasePath -Identity MyDatabase01 -EdbFilePath C:\NewFolder\MyDatabase01.edb
 ```
@@ -95,7 +45,7 @@ This example sets a new path for the mailbox database specified by the mailbox d
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the GUID, distinguished name (DN), or name of the database.
+The Identity parameter specifies the GUID, distinguished name (DN) or name of the database.
 
 ```yaml
 Type: DatabaseIdParameter
@@ -163,17 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-!!! Exchange Server 2010
-
-The EDBFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
-
-
 
 ```yaml
 Type: EdbFilePath
@@ -189,23 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force switch specifies whether to force the command to execute without asking for user confirmation. Use the Force switch to force the command to execute without asking for user confirmation.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -253,17 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -EDBFilePath
-!!! Exchange Server 2010
-
-The EDBFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EdbFilePath parameter specifies a new file path for the database. All current database files are moved to this location. The default location is \<ExchangeInstallDirectory\>\\Mailbox\\LocalCopies\\MBDatabase.edb. This file path can't be the same as the path for the backup copy of the database.
-
-
 
 ```yaml
 Type: EdbFilePath
@@ -296,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d6873ded-d521-428f-821f-d10ea2c44b7e.aspx)
-

@@ -6,26 +6,6 @@ schema: 2.0.0
 # Remove-MailboxExportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailboxExportRequest cmdlet to remove fully or partially completed export requests. You can create multiple export requests for a specified mailbox provided that you specify a distinct name. Completed export requests aren't cleared automatically; they need to be removed by using this cmdlet.
-
-When a partially completed export request is removed, content already exported isn't removed from the PST file. If you want to start a new export request to the same file name and start with an empty PST file, you need to rename or delete the previous PST file.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-MailboxExportRequest cmdlet to remove fully or partially completed export requests. You can create multiple export requests for a specified mailbox provided that you specify a distinct name. Completed export requests aren't cleared automatically; they need to be removed by using this cmdlet.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-When a partially completed export request is removed, content already exported isn't removed from the PST file. If you want to start a new export request to the same file name and start with an empty PST file, you need to rename or delete the previous PST file.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-MailboxExportRequest cmdlet to remove fully or partially completed export requests. You can create multiple export requests for a specified mailbox provided that you specify a distinct name. Completed export requests aren't cleared automatically; they need to be removed by using this cmdlet.
@@ -51,24 +31,6 @@ Remove-MailboxExportRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParamet
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed export request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed export request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The parameter set that requires the Identity parameter allows you to remove a fully or partially completed export request.
 
 The parameter set that requires the RequestGuid and RequestQueue parameters is used for Microsoft Exchange Mailbox Replication service (MRS) debugging purposes only.
@@ -77,63 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-MailboxExportRequest -Identity "Ayla\MailboxExport1"
 ```
 
 This example removes the second export request Ayla\\MailboxExport1.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxExportRequest -Identity "Ayla\MailboxExport1"
-```
-
-This example removes the second export request Ayla\\MailboxExport1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxExportRequest -Identity "Ayla\MailboxExport1"
-```
-
-This example removes the second export request Ayla\\MailboxExport1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest
 ```
 
 This example removes all export requests that have the status of Completed.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest
-```
-
-This example removes all export requests that have the status of Completed.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest
-```
-
-This example removes all export requests that have the status of Completed.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Remove-MailboxExportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the export request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxExportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the export request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Remove-MailboxExportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
@@ -177,18 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2010
-
-The RequestQueue parameter specifies the mailbox database on which the request is being performed. This parameter accepts the following values:
-
-- GUID of the database
-
-- Database name
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Database GUID
@@ -196,8 +104,6 @@ The RequestQueue parameter identifies the request based on the mailbox database 
 - Database name
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -298,4 +204,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a5b99fcc-1f79-4a31-b04a-610ff020450d.aspx)
-

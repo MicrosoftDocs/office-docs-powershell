@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-EdgeSubscription
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-EdgeSubscription cmdlet to export an Edge Subscription file from a computer that has the Edge Transport server role installed and to import the Edge Subscription file to a computer that has the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-EdgeSubscription cmdlet to export an Edge Subscription file from an Edge Transport server and to import the Edge Subscription file to a Mailbox server.
@@ -26,92 +20,29 @@ New-EdgeSubscription [-AccountExpiryDuration <TimeSpan>] [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Edge Transport server role doesn't have access to Active Directory. All configuration and recipient information is stored in the Active Directory Lightweight Directory Services (AD LDS) instance. The New-EdgeSubscription cmdlet creates the Edge Subscription file that will be imported on a Hub Transport server in the Active Directory site to which you want to subscribe this Edge Transport server. For more information about this process, see Understanding Edge Subscriptions.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Edge Transport server doesn't have access to Active Directory. All configuration and recipient information is stored in the Active Directory Lightweight Directory Services (AD LDS) instance. The New-EdgeSubscription cmdlet creates the Edge Subscription file that will be imported on a Mailbox server in the Active Directory site to which you want to subscribe this Edge Transport server..
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Edge Transport server doesn't have access to Active Directory. All configuration and recipient information is stored in the Active Directory Lightweight Directory Services (AD LDS) instance. The New-EdgeSubscription cmdlet creates the Edge Subscription file that will be imported on a Mailbox server in the Active Directory site to which you want to subscribe this Edge Transport server..
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
 ```
 
 This example creates the Edge Subscription file. It should be run on your Edge Transport server.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
-```
-
-This example creates the Edge Subscription file. It should be run on your Edge Transport server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-EdgeSubscription -FileName "c:\EdgeServerSubscription.xml"
-```
-
-This example creates the Edge Subscription file. It should be run on your Edge Transport server.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site"
-```
-
-This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Hub Transport server.
-
-
-The first command reads the data from the Edge Subscription file and stores it in a temporary variable as a byte-encoded data object. The second command completes the Edge subscription process.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 [byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
 ```
 
 This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Mailbox server.
 
-
 The first command reads the data from the Edge Subscription file and stores it in a temporary variable as a byte-encoded data object. The second command completes the Edge subscription process.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-[byte[]]$Temp = Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0; New-EdgeSubscription -FileData $Temp -Site "Default-First-Site-Name"
-```
-
-This example imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name. Importing the Edge Subscription file completes the Edge Subscription process. You must run this command on the Mailbox server.
-
-
-The first command reads the data from the Edge Subscription file and stores it in a temporary variable as a byte-encoded data object. The second command completes the Edge subscription process.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site"
-```
-
-This example also imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name; however, the end result is accomplished in a single line of code. You must run this command on the Hub Transport server.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
-```
-
-This example also imports the Edge Subscription file generated in Example 1 to the Active Directory site Default-First-Site-Name; however, the end result is accomplished in a single line of code. You must run this command on the Mailbox server.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 New-EdgeSubscription -FileData ([byte[]]$(Get-Content -Path "C:\EdgeServerSubscription.xml" -Encoding Byte -ReadCount 0)) -Site "Default-First-Site-Name"
 ```
@@ -121,33 +52,11 @@ This example also imports the Edge Subscription file generated in Example 1 to t
 ## PARAMETERS
 
 ### -AccountExpiryDuration
-!!! Exchange Server 2010
-
 The AccountExpiryDuration parameter specifies how soon the bootstrap account created by this command will expire.
 
-The value for this parameter must be a minimum of 2 minutes.
-
-
-
-!!! Exchange Server 2013
-
-The AccountExpiryDuration parameter specifies how soon the bootstrap account created by this command will expire.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 The value for this parameter must be a minimum of 00:02:00 or 2 minutes.
-
-
-
-!!! Exchange Server 2016
-
-The AccountExpiryDuration parameter specifies how soon the bootstrap account created by this command will expire.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-The value for this parameter must be a minimum of 00:02:00 or 2 minutes.
-
-
 
 ```yaml
 Type: TimeSpan
@@ -183,7 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -CreateInboundSendConnector
-The CreateInboundSendConnector parameter specifies whether to create the Send connector to connect the Edge Transport server and the Hub Transport servers. The default value is $true. The Send connector address space is set to "--", the smart hosts are set to "--", the Edge Transport server is set as the source server, and Domain Name System (DNS) routing is disabled. This parameter is only used when you run the command on the Hub Transport server.
+The CreateInboundSendConnector parameter specifies whether to create the Send connector to connect the Edge Transport server and the Hub Transport servers. The default value is $true. The Send connector address space is set to "--", the smart hosts are set to "--", the Edge Transport server is set as the source server and Domain Name System (DNS) routing is disabled. This parameter is only used when you run the command on the Hub Transport server.
 
 ```yaml
 Type: $true | $false
@@ -233,35 +142,11 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-!!! Exchange Server 2010
-
-The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
-
-The Remote PowerShell in Exchange 2010 doesn't support file paths for cmdlets. Therefore, you need to read the contents of the Edge Subscription file to a byte-encoded object using the Get-Content cmdlet and then pass this object to the New-EdgeSubscription cmdlet to import the Edge Subscription on a Hub Transport server. For more information about the syntax required to use this parameter, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-You can only use this parameter when you're running this command on a Hub Transport server.
-
-
-
-!!! Exchange Server 2013
-
-The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
-
-For more information about the syntax required to use this parameter, see Exchange Management Shell quick reference for Exchange 2013.
-
-You can only use this parameter when you're running this command on a Mailbox server.
-
-
-
-!!! Exchange Server 2016
-
 The FileData parameter specifies the byte-encoded data object that contains the Edge Subscription file information.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
 
 You can only use this parameter when you're running this command on a Mailbox server.
-
-
 
 ```yaml
 Type: Byte[]
@@ -295,27 +180,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force parameter specifies whether to bypass the confirmation prompt when you run the command on an Edge Transport server. This parameter also causes the command to overwrite an existing Edge Subscription file with the same name as the file you're creating. This parameter is useful when you use a script with the Edge Subscription command because it bypasses confirmation. Another scenario in which this parameter is useful is when you have to subscribe an Edge Transport server again, and you want to overwrite the existing configuration information.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-This switch is useful when you use a script with the Edge Subscription command because it bypasses confirmation. Another scenario in which this switch is useful is when you have to subscribe an Edge Transport server again, and you want to overwrite the existing configuration information.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
-This switch is useful when you use a script with the Edge Subscription command because it bypasses confirmation. Another scenario in which this switch is useful is when you have to subscribe an Edge Transport server again, and you want to overwrite the existing configuration information.
-
-
+This switch is useful when you use a script with the Edge Subscription command because it bypasses confirmation. Another scenario in which this switch is useful is when you have to subscribe an Edge Transport server again and you want to overwrite the existing configuration information.
 
 ```yaml
 Type: SwitchParameter
@@ -331,17 +198,7 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-!!! Exchange Server 2010
-
-The Site parameter specifies the name of the Active Directory site that contains the Hub Transport servers with which the Edge Transport servers are associated. This parameter is used only when you run the command on a Hub Transport server and it's a required parameter when the command is run on a Hub Transport server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Site parameter specifies the name of the Active Directory site that contains the Mailbox servers with which the Edge Transport servers are associated. This parameter is used and required only when you run the command on a Mailbox server.
-
-
 
 ```yaml
 Type: AdSiteIdParameter
@@ -390,4 +247,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/94c4a829-0ef4-4623-aeb9-b362f66f4a71.aspx)
-

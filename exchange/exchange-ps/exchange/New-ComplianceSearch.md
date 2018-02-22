@@ -38,42 +38,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-ComplianceSearch -Name "Hold Project X" -ExchangeLocation "Finance Department"
 ```
 
 This example creates a new compliance search named Hold-Project X that searches all members of the distribution group named Finance Department. Because the search doesn't use the ContentMatchQuery parameter, all items in the mailboxes are searched.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-New-ComplianceSearch -Name "Hold Project X" -ExchangeLocation "Finance Department"
-```
-
-This example creates a new compliance search named Hold-Project X that searches all members of the distribution group named Finance Department. Because the search doesn't use the ContentMatchQuery parameter, all items in the mailboxes are searched.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-ComplianceSearch -Name "Hold-Tailspin Toys" -ExchangeLocation "Research Department" -ContentMatchQuery "'Patent' AND 'Project Tailspin Toys'"
 ```
 
 This example creates a new compliance search named Hold-Tailspin Toys that searches all member of the distribution group named Research Department. Because the search uses the ContentMatchQuery parameter, only messages that match the query are searched.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
-```
-New-ComplianceSearch -Name "Hold-Tailspin Toys" -ExchangeLocation "Research Department" -ContentMatchQuery "'Patent' AND 'Project Tailspin Toys'"
-```
-
-This example creates a new compliance search named Hold-Tailspin Toys that searches all member of the distribution group named Research Department. Because the search uses the ContentMatchQuery parameter, only messages that match the query are searched.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-ComplianceSearch -Name "AnnBeebe-InactiveMailbox" -ExchangeLocation .annb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true
-```
-
-This example creates a new compliance search named AnnBeebe-InactiveMailbox that searches an inactive mailbox and returns all items in the mailbox. To search inactive mailboxes, you need to use the primary SMTP address of the inactive mailbox, prepended with a period ("."). You also need to include the AllowNotFoundExchangeLocationsEnabled parameter so the search doesn't try to validate the existence of the inactive mailbox.
-
-### Example 3 -------------------------- (Office 365 Security & Compliance Center)
+### Example 3
 ```
 New-ComplianceSearch -Name "AnnBeebe-InactiveMailbox" -ExchangeLocation .annb@contoso.onmicrosoft.com -AllowNotFoundExchangeLocationsEnabled $true
 ```
@@ -504,4 +483,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/433d1602-a026-4d63-be5e-605dd6b7b0d0.aspx)
-

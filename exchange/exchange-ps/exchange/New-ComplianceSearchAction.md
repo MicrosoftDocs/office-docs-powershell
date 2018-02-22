@@ -51,7 +51,7 @@ New-ComplianceSearchAction [[-SearchName] <String[]>] [-ActionName <String>] [-C
 ```
 
 ## DESCRIPTION
-After you create a compliance search using the New-ComplianceSearch cmdlet, and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
+After you create a compliance search using the New-ComplianceSearch cmdlet and run it using the Start-ComplianceSearch cmdlet, you assign a search action to the search using the New-ComplianceSearchAction cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -61,42 +61,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Preview
 ```
 
 This example creates a preview search action for the compliance search named Project X.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-New-ComplianceSearchAction -SearchName "Project X" -Preview
-```
-
-This example creates a preview search action for the compliance search named Project X.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-ComplianceSearchAction -SearchName "Project X" -Export
 ```
 
 This example creates an export search action for the compliance search named Project X.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
-```
-New-ComplianceSearchAction -SearchName "Project X" -Export
-```
-
-This example creates an export search action for the compliance search named Project X.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
-```
-
-This example deletes the search results returned by a compliance search named Remove Phishing Message. Note that unindexed items aren't deleted when you use the Purge parameter.
-
-### Example 3 -------------------------- (Office 365 Security & Compliance Center)
+### Example 3
 ```
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 ```
@@ -729,4 +708,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a3a2897c-07a8-41d6-99cd-f2440613fbce.aspx)
-

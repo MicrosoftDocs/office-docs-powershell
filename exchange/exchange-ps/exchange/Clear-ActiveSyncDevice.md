@@ -6,22 +6,6 @@ schema: 2.0.0
 # Clear-ActiveSyncDevice
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Clear-ActiveSyncDevice cmdlet to delete all data from a mobile phone.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Clear-ActiveSyncDevice cmdlet to delete all data from a mobile phone.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-The Clear-ActiveSyncDevice cmdlet will be removed in a future version of Exchange. Use the Clear-MobileDevice cmdlet instead. If you have any scripts that use the Clear-ActiveSyncDevice cmdlet, update them to use the Clear-MobileDevice cmdlet.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Clear-ActiveSyncDevice cmdlet to delete all data from a mobile device.
@@ -38,24 +22,6 @@ Clear-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Cancel] [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Clear-ActiveSyncDevice cmdlet deletes all user data from a mobile phone the next time that the device receives data from the server running Microsoft Exchange Server 2010. This cmdlet sets the DeviceWipeStatus parameter to $true. The mobile phone acknowledges the cmdlet and records the time stamp in the DeviceWipeAckTime parameter.
-
-After you run this cmdlet, you receive a warning that states: "This command will force all the data on the device to be permanently deleted. Do you want to continue?" You must respond to the warning for the cmdlet to run on the mobile phone.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync user settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Clear-ActiveSyncDevice cmdlet deletes all user data from a mobile device the next time the device receives data from the server running Microsoft Exchange Server 2013. This cmdlet sets the DeviceWipeStatus parameter to $true. The mobile device acknowledges the cmdlet and records the time stamp in the DeviceWipeAckTime parameter.
-
-After you run this cmdlet, you receive a warning that states: "This command will force all the data on the device to be permanently deleted. Do you want to continue?" You must respond to the warning for the cmdlet to run on the mobile phone.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Clear-ActiveSyncDevice cmdlet deletes all user data from a mobile device the next time the device receives data from the Microsoft Exchange server. This cmdlet sets the DeviceWipeStatus parameter to $true. The mobile device acknowledges the cmdlet and records the time stamp in the DeviceWipeAckTime parameter.
 
 After you run this cmdlet, you receive a warning that states: "This command will force all the data on the device to be permanently deleted. Do you want to continue?" You must respond to the warning for the cmdlet to run on the mobile phone.
@@ -64,84 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Clear-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example clears all data from the mobile phone with the Identity WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Clear-ActiveSyncDevice -Identity WM_JeffHay
 ```
 
 This example clears all data from the mobile device with the identity WM\_JeffHay.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Clear-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example clears all data from the mobile device with the identity WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Clear-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example clears all data from the mobile device with the identity WM\_JeffHay.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
-```
-
-This example clears all data from the mobile phone for Tony Smith and sends a confirmation e-mail message to tony@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Clear-ActiveSyncDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
 ```
 
 This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
-```
-
-This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
-```
-
-This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -Cancel $true
-```
-
-This example cancels a previously sent Clear-ActiveSyncDevice command request for Tony Smith's mobile phone.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -Cancel $true
-```
-
-This example cancels a previously sent Clear-ActiveSyncDevice command request for Tony Smith's mobile device.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Clear-ActiveSyncDevice -Identity WM_TonySmith -Cancel $true
-```
-
-This example cancels a previously sent Clear-ActiveSyncDevice command request for Tony Smith's mobile device.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Clear-ActiveSyncDevice -Identity WM_TonySmith -Cancel $true
 ```
@@ -167,17 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cancel
-!!! Exchange Server 2010
-
-The Cancel parameter specifies whether the command should be canceled. If you use the Cancel parameter, a cancellation request is issued for the remote device wipe.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Cancel switch specifies whether the command should be canceled. If you use the Cancel switch, a cancellation request is issued for the remote device wipe.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -213,19 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -241,17 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-!!! Exchange Server 2010
-
-The NotificationEmailAddresses parameter specifies the notification e-mail address for the remote device wipe confirmation.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -300,4 +173,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/016768f2-98b3-4f71-b15a-830285a6feac.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-ManagementRoleEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ManagementRoleEntry cmdlet to retrieve management role entries that have been configured on management roles.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-ManagementRoleEntry cmdlet to retrieve management role entries that have been configured on management roles.
@@ -26,24 +20,6 @@ Get-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-DomainController <F
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-ManagementRoleEntry cmdlet retrieves role entries that have been configured on roles. You can retrieve specific role entries that match specific criteria such as role name, cmdlet name, parameter name, or a combination of each, or role entry type or the associated Windows PowerShell snap-in.
-
-For more information about management role entries, see Understanding Management Roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-ManagementRoleEntry cmdlet retrieves role entries that have been configured on roles. You can retrieve specific role entries that match specific criteria such as role name, cmdlet name, parameter name, or a combination of each, or role entry type or the associated Windows PowerShell snap-in.
-
-For more information about management role entries, see Understanding management roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Get-ManagementRoleEntry cmdlet retrieves role entries that have been configured on roles. You can retrieve specific role entries that match specific criteria such as role name, cmdlet name, parameter name, or a combination of each, or role entry type or the associated Windows PowerShell snap-in.
 
 For more information about management role entries, see Understanding management roles (Exchange 2016).
@@ -52,149 +28,37 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ManagementRoleEntry "Transport Rules\*"
 ```
 
 This example retrieves a list of all the role entries that exist on the Transport Rules management role.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry "Transport Rules\*"
-```
-
-This example retrieves a list of all the role entries that exist on the Transport Rules management role.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry "Transport Rules\*"
-```
-
-This example retrieves a list of all the role entries that exist on the Transport Rules management role.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry "Transport Rules\*"
-```
-
-This example retrieves a list of all the role entries that exist on the Transport Rules management role.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry "Transport Rules\*"
-```
-
-This example retrieves a list of all the role entries that exist on the Transport Rules management role.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagementRoleEntry *\Get-Recipient
 ```
 
 This example retrieves a list of all the role entries that contain the Get-Recipient cmdlet.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry *\Get-Recipient
-```
-
-This example retrieves a list of all the role entries that contain the Get-Recipient cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry *\Get-Recipient
-```
-
-This example retrieves a list of all the role entries that contain the Get-Recipient cmdlet.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry *\Get-Recipient
-```
-
-This example retrieves a list of all the role entries that contain the Get-Recipient cmdlet.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry *\Get-Recipient
-```
-
-This example retrieves a list of all the role entries that contain the Get-Recipient cmdlet.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
 ```
 
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role, and Type properties from the role entry.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
-```
-
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role, and Type properties from the role entry.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
-```
-
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role, and Type properties from the role entry.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
-```
-
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role, and Type properties from the role entry.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry "Tier 2 Help Desk\Set-Mailbox" | Format-List Name, Parameters, Role, Type
-```
-
-This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role, and Type properties from the role entry.
+This example retrieves the Tier 2 Help Desk\\Set-Mailbox role entry and pipes the output of the Get-ManagementRoleEntry cmdlet to the Format-List cmdlet. The Format-List cmdlet then outputs only the Name, Parameters, Role and Type properties from the role entry.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding Management Roles.
-
-You can use the wildcard character (\*) instead of the role, cmdlet name, or both.
-
-If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding management roles.
-
-You can use the wildcard character (\*) instead of the role, cmdlet name, or both.
-
-If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the role entry to retrieve. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
 For more information about how management role entries work, see Understanding management roles (Exchange 2016).
 
-You can use the wildcard character (\*) instead of the role, cmdlet name, or both.
+You can use the wildcard character (\*) instead of the role, cmdlet name or both.
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: RoleEntryIdParameter
@@ -210,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -272,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-The Type parameter specifies the type of role entry to return. The valid values for the Type parameter are any combination of the following parameters, separated by commas: Cmdlet, Script, and ApplicationPermission.
+The Type parameter specifies the type of role entry to return. The valid values for the Type parameter are any combination of the following parameters, separated by commas: Cmdlet, Script and ApplicationPermission.
 
 ```yaml
 Type: ManagementRoleEntryType[]
@@ -305,4 +159,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3b58e5dc-0e57-4998-82cb-94dc081f6420.aspx)
-

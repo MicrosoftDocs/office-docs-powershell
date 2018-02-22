@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-ADPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ADPermission cmdlet to remove permissions from an Active Directory object.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ADPermission cmdlet to remove permissions from an Active Directory object.
@@ -53,62 +47,20 @@ Remove-ADPermission [[-Identity] <ADRawEntryIdParameter>] -Instance <ADAcePresen
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange Server 2010 features may continue to use the ADPermission cmdlets to manage permissions, for example transport Send and Receive connectors, Exchange no longer uses customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2010, you must use the Role Based Access Control (RBAC) management cmdlets. For more information about RBAC, see Understanding Role Based Access Control.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Legacy permissions" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange Server 2013 features may continue to use the ADPermission cmdlets to manage permissions, for example transport Send and Receive connectors, Exchange 2013 no longer uses customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013, you must use Role Based Access Control (RBAC). For more information about RBAC, see Permissions.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Legacy permissions" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016
-
 The ADPermission cmdlets can be used to directly modify Active Directory access control lists (ACLs). Although some Microsoft Exchange features may continue to use the ADPermission cmdlets to manage permissions (for example Send and Receive connectors) Exchange 2013 and later versions no longer use customized ACLs to manage administrative permissions. If you want to grant or deny administrative permissions in Exchange 2013 or later, you need to use Role Based Access Control (RBAC). For more information about RBAC, see Permissions.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ADPermission -Identity Administrator -User Kim -ExtendedRights "send as"
-```
-
-This example removes the Send As permissions from user Kim on the user Administrator.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-ADPermission -Identity Administrator -User Kim -ExtendedRights "Send As"
 ```
 
 This example removes the Send As permissions from user Kim on the user Administrator.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ADPermission -Identity Administrator -User Kim -ExtendedRights "Send As"
-```
-
-This example removes the Send As permissions from user Kim on the user Administrator.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-ADPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
-```
-
-This example removes the ability for anonymous users to send messages through the Receive connector IP Secured Inbound.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-ADPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
-```
-
-This example removes the ability for anonymous users to send messages through the Receive connector IP Secured Inbound.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-ADPermission "IP Secured Inbound" -User "NT AUTHORITY\ANONYMOUS LOGON" -ExtendedRights ms-Exch-SMTP-Submit,ms-Exch-SMTP-Accept-Any-Recipient,ms-Exch-Bypass-Anti-Spam
 ```
@@ -266,25 +218,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -316,19 +254,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -344,23 +272,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedRights
-!!! Exchange Server 2010
-
-The ExtendedRights parameter specifies the extended rights to remove. Valid values include:
-
-- Send-As
-
-- Receive-As
-
-- View Information Store status
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExtendedRights parameter specifies the extended rights to remove.
-
-
 
 ```yaml
 Type: ExtendedRightIdParameter[]
@@ -459,4 +371,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0e45951a-2b5a-4aa9-a709-def61d7d4972.aspx)
-
