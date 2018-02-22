@@ -6,20 +6,6 @@ schema: 2.0.0
 # Import-ExchangeCertificate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Import-ExchangeCertificate cmdlet to import a certificate or chain of certificates.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Import-ExchangeCertificate cmdlet to import a certificate or chain of certificates.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Import-ExchangeCertificate cmdlet to import certificates on Exchange servers. You use this cmdlet to install certificates that were exported from other servers, and to complete pending certification requests (also known as certificate signing requests or CSRs) from certification authorities (CAs).
@@ -50,64 +36,6 @@ Import-ExchangeCertificate -FileName <String> [-Confirm] [-DomainController <Fqd
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Import-ExchangeCertificate cmdlet for the following purposes:
-
-- To import a certificate or chain of certificates from a PKCS #7 file that has been issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates.
-
-- To import an existing certificate and private key from a PKCS #12 (.pfx or .p12) file to the certificate store on the local computer. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys protected with a password. The standard is specified by RSA Laboratories. For more information, see the PKCS #12: Personal Information Exchange Syntax Standard (https://www.rsasecurity.com/rsalabs/node.asp?id=2138) Web site.
-
-  There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You must understand how these factors may affect your overall configuration. Before you continue, see Understanding TLS Certificates.
-
-  In Microsoft Exchange Server 2010, to import data from a file, you must use the Get-Content cmdlet to retrieve file data and use the FileData parameter to specify the retrieved data. This can be done in a two-step process, or in a single step. Examples shown in this cmdlet use the single-step approach. For more information about importing and exporting files in Exchange 2010, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-The certificate may be published in Active Directory for the purposes of direct trust by using mutual TLS if the following conditions are true:
-
-- The certificate is marked as an SMTP TLS certificate.
-
-- The Subject Name on the certificate matches the fully qualified domain name (FQDN) of the local computer.
-
-The certificate may be published in Active Directory by Edge Subscription if the following conditions are true:
-
-- You import the certificate to an Edge Transport server.
-
-- The certificate has an FQDN that matches the server FQDN.
-
-The Import-ExchangeCertificate cmdlet imports either a certificate that's issued from an outstanding request or a PKCS #12 file.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Import-ExchangeCertificate cmdlet for the following purposes:
-
-- To import a certificate or chain of certificates from a PKCS #7 file that has been issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates.
-
-- To import an existing certificate and private key from a PKCS #12 (.pfx or .p12) file to the certificate store on the local computer. PKCS #12 is the Personal Information Exchange Syntax Standard, a file format used to store certificates with corresponding private keys protected with a password. The standard is specified by RSA Laboratories. For more information, see the PKCS #12: Personal Information Exchange Syntax Standard (https://www.emc.com/emc-plus/rsa-labs/standards-initiatives/pkcs12-personal-information-exchange-syntax-standard.htm) website.
-
-  There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You must understand how these factors may affect your overall configuration.
-
-  In Microsoft Exchange Server 2013, to import data from a file, you must use the Get-Content cmdlet to retrieve file data and use the FileData parameter to specify the retrieved data. This can be done in a two-step process, or in a single step. Examples shown in this cmdlet use the single-step approach.
-
-The certificate may be published in Active Directory for the purposes of direct trust by using mutual TLS if the following conditions are true:
-
-- The certificate is marked as an SMTP TLS certificate.
-
-- The Subject Name on the certificate matches the fully qualified domain name (FQDN) of the local computer.
-
-The certificate may be published in Active Directory by Edge Subscription if the following conditions are true:
-
-- You import the certificate to an Edge Transport server.
-
-- The certificate has an FQDN that matches the server FQDN.
-
-The Import-ExchangeCertificate cmdlet imports either a certificate that's issued from an outstanding request or a PKCS #12 file.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Certificate management" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You can use the Import-ExchangeCertificate cmdlet to import the following types of certificate files on an Exchange server:
 
 - APKCS #7 certificate or chain of certificates file (.p7b or .p7c) that was issued by a certification authority (CA). PKCS #7 is the Cryptographic Message Syntax Standard, a syntax used for digitally signing or encrypting data using public key cryptography, including certificates. For more information, see PKCS #7: Cryptographic Message Syntax Standard (https://go.microsoft.com/fwlink/p/?LinkID=510681).
@@ -118,48 +46,20 @@ After you import a certificate on an Exchange server, you need to assign the cer
 
 There are many factors to consider when you configure certificates for Transport Layer Security (TLS) and Secure Sockets Layer (SSL) services. You need to understand how these factors might affect your overall configuration. For more information, see Digital certificates and encryption in Exchange 2016.
 
-Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center, and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out Protecting you against the SSL 3.0 vulnerability (https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
+Secure Sockets Layer (SSL) is being replaced by Transport Layer Security (TLS) as the protocol that's used to encrypt data sent between computer systems. They're so closely related that the terms "SSL" and "TLS" (without versions) are often used interchangeably. Because of this similarity, references to "SSL" in Exchange topics, the Exchange admin center and the Exchange Management Shell have often been used to encompass both the SSL and TLS protocols. Typically, "SSL" refers to the actual SSL protocol only when a version is also provided (for example, SSL 3.0). To find out why you should disable the SSL protocol and switch to TLS, check out Protecting you against the SSL 3.0 vulnerability (https://blogs.office.com/2014/10/29/protecting-ssl-3-0-vulnerability/).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path c:\certificates\ExportedCert.pfx -Encoding byte -ReadCount 0)) -Password:(Get-Credential).password
-```
-
-This example imports an existing certificate and private key from the PKCS #12 file ExportedCert.pfx.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path c:\certificates\ExportedCert.pfx -Encoding byte -ReadCount 0)) -Password:(Get-Credential).password
-```
-
-This example imports an existing certificate and private key from the PKCS #12 file ExportedCert.pfx.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Import-ExchangeCertificate -Server Mailbox01 -FileName" \\FileServer01\Data\Exported Fabrikam Cert.pfx" -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
 This example imports the certificate from the PKCS #12 file from \\\\FileServer01\\Data\\Exported Fabrikam Cert.pfx to the Exchange server named Mailbox01. This file requires the password P@ssw0rd1. This certificate could have been exported from another server, or issued by a certification authority.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path c:\certificates\IssuedCert.p7b -Encoding byte -ReadCount 0))
-```
-
-This example imports a chain of certificates from the PKCS #7 file IssuedCert.p7b.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Import-ExchangeCertificate -FileData ([Byte[]]$(Get-Content -Path c:\certificates\IssuedCert.p7b -Encoding byte -ReadCount 0))
-```
-
-This example imports a chain of certificates from the PKCS #7 file IssuedCert.p7b.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Import-ExchangeCertificate -FileData ([Byte[]](Get-Content -Path "C:\Certificates\Fabrikam IssuedCert.p7b" -Encoding byte -ReadCount 0))
 ```
@@ -169,22 +69,6 @@ This example imports a chain of certificates from the PKCS #7 file C:\\Certifica
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2010
-
-The FileData parameter specifies the content retrieved from the certificate file using the Get-Content cmdlet, as shown in "Examples" later in this topic.
-
-For more information about the syntax required to use this parameter, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The FileData parameter specifies the content retrieved from the certificate file using the Get-Content cmdlet. For implementation details, see the section.
-
-
-
-!!! Exchange Server 2016
-
 The FileData parameter specifies the contents of the certificate file that you want to import. Typically, you use this parameter for PKCS #7 text certificate files that have .p7b or .p7c filename extensions. These text files contain the text: -----BEGIN CERTIFICATE----- and -----END CERTIFICATE----- or -----BEGIN PKCS7----- and -----END PKCS7-----.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
@@ -192,8 +76,6 @@ A valid value for this parameter requires you to read the file to a byte-encoded
 You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>).
 
 If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: Byte[]
@@ -209,17 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Instance parameter specifies whether to pass a whole object to the command to be processed. This parameter is mainly used in scripts where a whole object must be passed to the command.
-
-
-
-!!! Exchange Server 2016
-
 The Instance parameter is no longer used and will be deprecated.
-
-
 
 ```yaml
 Type: String[]
@@ -273,21 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -FriendlyName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The FriendlyName parameter specifies a friendly name for the resulting certificate. The friendly name must be less than 64 characters.
-
-The default friendly name is Microsoft Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The FriendlyName parameter specifies a friendly name for the certificate. The value must be less than 64 characters.
 
-The friendly name value is descriptive text, and doesn't affect the functionality of the certificate.
-
-
+The friendly name value is descriptive text and doesn't affect the functionality of the certificate.
 
 ```yaml
 Type: String
@@ -303,29 +163,9 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-!!! Exchange Server 2010
-
-The Password parameter specifies the password for the private key that's imported with this command. Use the Get-Credential cmdlet to store the password variable.
-
-The Get-Credential cmdlet prompts you for a user name and password, but only the password field is used to import the certificate. You don't have to use a real domain name or user name in the Name field. For implementation details, see "Examples" later in this topic.
-
-
-
-!!! Exchange Server 2013
-
-The Password parameter specifies the password for the private key that's imported with this command. Use the Get-Credential cmdlet to store the password variable.
-
-The Get-Credential cmdlet prompts you for a user name and password, but only the password field is used to import the certificate. You don't have to use a real domain name or user name in the Name field. For implementation details, see the section.
-
-
-
-!!! Exchange Server 2016
-
 The Password parameter specifies the password that's required to import the certificate.
 
 This parameter uses the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force). Or, to be prompted to enter the password and store it as a variable, run the command $password = Read-Host "Enter password" -AsSecureString, and then use the value $password for this parameter.
-
-
 
 ```yaml
 Type: SecureString
@@ -341,21 +181,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrivateKeyExportable
-!!! Exchange Server 2010, Exchange Server 2013
-
-The PrivateKeyExportable parameter specifies whether the private key of the certificate can be exported.
-
-
-
-!!! Exchange Server 2016
-
-The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key, and controls whether you can export the certificate from this server. Valid values are:
+The PrivateKeyExportable parameter specifies whether the certificate has an exportable private key and controls whether you can export the certificate from this server. Valid values are:
 
 - $true: The private key is exportable, so you can export the certificate from this server.
 
 - $false: The private key isn't exportable, so you can't export the certificate from this server. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -371,14 +201,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the server name to which you want to import the certificate.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -390,8 +212,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -436,21 +256,11 @@ Accept wildcard characters: False
 ```
 
 ### -FileName
-!!! Exchange Server 2013
-
-The FileName parameter specifies the name of the file that contains the certificate you want to import.
-
-
-
-!!! Exchange Server 2016
-
 The FileName parameter specifies the certificate file that you want to import. Typically, you use this parameter for PKCS #12 binary certificate files that have .cer, .crt, .der, .p12, or .pfx filename extensions. This type of binary certificate file is protected by a password when the file contains the private key or chain of trust.
 
 You can use a local path if the certificate file is located on the Exchange server where you're running the command, and this is the same server where you want to install the certificate. Otherwise, use a UNC path (\\\\\<Server\>\\\<Share\>).
 
 If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -483,4 +293,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c1a98e97-e58a-49c8-a44d-948b2fc07876.aspx)
-

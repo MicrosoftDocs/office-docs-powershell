@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-SharingPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-SharingPolicy cmdlet to modify an existing sharing policy to regulate how users inside your organization can share free/busy and contact information with users outside the organization. Users can only share this information after federation has been configured in Microsoft Exchange. After federation is configured, users can send sharing invitations that comply with a sharing policy to external recipients in other Exchange Server 2010 organizations that have federation enabled. A sharing policy needs to be assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the level of sharing permitted for this mailbox.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-SharingPolicy cmdlet to modify an existing sharing policy to regulate how users inside your organization can share free/busy and contact information with users outside the organization. Users can only share this information after federation has been configured in Exchange. After federation is configured, users can send sharing invitations that comply with a sharing policy to external recipients in other Microsoft Exchange Server 2010 and Exchange Server 2013 organizations that have federation enabled. A sharing policy needs to be assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the level of sharing permitted for this mailbox.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-SharingPolicy cmdlet to modify existing sharing policies that control how users inside your organization can share free/busy and contact information with users outside your organization.
@@ -34,100 +20,27 @@ Set-SharingPolicy [-Identity] <SharingPolicyIdParameter> [-Confirm] [-Default] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Sharing policies" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Sharing policies" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Users can only share free/busy and contact information after federation has been configured between Exchange organizations. After that, users can send sharing invitations to the external recipients as long as those invitations comply with the sharing policy. A sharing policy needs to be assigned to a mailbox to be effective. If a mailbox doesn't have a specific sharing policy assigned, a default policy enforces the lsharing options for the mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-SharingPolicy -Identity Contoso -Domains 'mail.contoso.com: CalendarSharingFreeBusySimple'
-```
-
-This example modifies the sharing policy Contoso for contoso.com, which is a domain outside your organization. This policy allows users in the Contoso domain to see simple free/busy information.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-SharingPolicy -Identity Contoso -Domains 'mail.contoso.com: CalendarSharingFreeBusySimple'
-```
-
-This example modifies the sharing policy Contoso for contoso.com, which is a domain outside your organization. This policy allows users in the Contoso domain to see simple free/busy information.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-SharingPolicy -Identity Contoso -Domains "mail.contoso.com: CalendarSharingFreeBusySimple"
 ```
 
 This example modifies the sharing policy Contoso for contoso.com, which is a domain outside your organization. This policy allows users in the Contoso domain to see simple free/busy information.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SharingPolicy -Identity Contoso -Domains "mail.contoso.com: CalendarSharingFreeBusySimple"
-```
-
-This example modifies the sharing policy Contoso for contoso.com, which is a domain outside your organization. This policy allows users in the Contoso domain to see simple free/busy information.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-SharingPolicy -Identity SharingPolicy01 -Domains 'contoso.com: CalendarSharingFreeBusySimple', 'atlanta.contoso.com: CalendarSharingFreeBusyReviewer', 'beijing.contoso.com: CalendarSharingFreeBusyReviewer'
-```
-
-This example adds a second domain to the sharing policy SharingPolicy01. When you're adding a domain to an existing policy, you must include any previously included domains.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-SharingPolicy -Identity SharingPolicy01 -Domains 'contoso.com: CalendarSharingFreeBusySimple', 'atlanta.contoso.com: CalendarSharingFreeBusyReviewer', 'beijing.contoso.com: CalendarSharingFreeBusyReviewer'
-```
-
-This example adds a second domain to the sharing policy SharingPolicy01. When you're adding a domain to an existing policy, you must include any previously included domains.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-SharingPolicy -Identity SharingPolicy01 -Domains "contoso.com: CalendarSharingFreeBusySimple", "atlanta.contoso.com: CalendarSharingFreeBusyReviewer", "beijing.contoso.com: CalendarSharingFreeBusyReviewer"
 ```
 
 This example adds a second domain to the sharing policy SharingPolicy01. When you're adding a domain to an existing policy, you must include any previously included domains.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-SharingPolicy -Identity SharingPolicy01 -Domains "contoso.com: CalendarSharingFreeBusySimple", "atlanta.contoso.com: CalendarSharingFreeBusyReviewer", "beijing.contoso.com: CalendarSharingFreeBusyReviewer"
-```
-
-This example adds a second domain to the sharing policy SharingPolicy01. When you're adding a domain to an existing policy, you must include any previously included domains.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-SharingPolicy -Identity "SharingPolicy01" -Enabled $false
-```
-
-This example disables the sharing policy SharingPolicy01.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-SharingPolicy -Identity "SharingPolicy01" -Enabled $false
-```
-
-This example disables the sharing policy SharingPolicy01.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-SharingPolicy -Identity "SharingPolicy01" -Enabled $false
-```
-
-This example disables the sharing policy SharingPolicy01.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-SharingPolicy -Identity "SharingPolicy01" -Enabled $false
 ```
@@ -181,29 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -Default
-!!! Exchange Server 2010
-
-The Default parameter specifies that this sharing policy is the default sharing policy for all mailboxes. If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy to be disabled.
-
-You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Default switch specifies that this sharing policy is the default sharing policy for all mailboxes. If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you can set the default policy to be disabled.
-
-You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Default switch specifies that the sharing policy is the default sharing policy for all mailboxes. You don't need to specify a value with this switch.
 
 If no sharing policy has been applied to a mailbox, the default policy is automatically applied. If you want to disable sharing across your organization, you disable the default policy.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -219,19 +112,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -247,28 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -Domains
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format Domain: SharingPolicyAction.
-
-The following sharing policy action values can be used:
-
-- CalendarSharingFreeBusySimple Share free/busy hours only
-
-- CalendarSharingFreeBusyDetail Share free/busy hours, subject, and location
-
-- CalendarSharingFreeBusyReviewer Share free/busy hours, subject, location, and the body of the message or calendar item
-
-- ContactsSharing Share contacts only
-
-The following is an example: 'Contoso.com: CalendarSharingFreeBusySimple', 'Fabrikam.com: CalendarSharingFreeBusyDetail, ContactsSharing'
-
-Adding a domain doesn't include subdomains. You must configure each subdomain separately.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Domains parameter specifies domains to which this policy applies and the sharing policy action. Values for this parameter use the format \<Domain\>: \<SharingPolicyAction\>.
 
 The following sharing policy action values can be used:
@@ -286,8 +147,6 @@ To enter multiple values and overwrite any existing entries, use the following s
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
 A domain doesn't include subdomains. You need to configure each subdomain separately.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -321,23 +180,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter allows you to change the name of the sharing policy.
-
-
-
-!!! Exchange Server 2013
-
-The Name parameter specifies the name of the sharing policy.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies the unique name of the sharing policy. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -386,4 +229,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/42bab80c-62af-4b37-bb41-fa0173b27d86.aspx)
-

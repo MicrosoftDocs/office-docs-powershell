@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-ManagementRoleEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ManagementRoleEntry cmdlet to remove existing management role entries.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ManagementRoleEntry cmdlet to remove existing management role entries.
@@ -26,24 +20,6 @@ Remove-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-ManagementRoleEntry cmdlet removes existing role entries. However, you can't remove role entries from built-in management roles.
-
-For more information about management role entries, see Understanding Management Roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-ManagementRoleEntry cmdlet removes existing role entries. However, you can't remove role entries from built-in management roles.
-
-For more information about management role entries, see Understanding management roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Remove-ManagementRoleEntry cmdlet removes existing role entries. However, you can't remove role entries from built-in management roles.
 
 For more information about management role entries, see Understanding management roles (Exchange 2016).
@@ -52,123 +28,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
 ```
 
 This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
-```
-
-This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
-```
-
-This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
-```
-
-This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Remove-ManagementRoleEntry "Tier 1 Help Desk\New-Mailbox"
-```
-
-This example removes the New-Mailbox role entry from the Tier 1 Help Desk role.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
 ```
 
 This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
-
-
-After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
-
-
-After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
-
-
-After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
-
-
-After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry "Tier 1 Help Desk\New-*" | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example removes all the role entries that have the verb New on the Tier 1 Help Desk role by piping the output of the Get-ManagementRoleEntry cmdlet to the Remove-ManagementRoleEntry cmdlet. Because the WhatIf switch has been specified along with the Remove-ManagementRoleEntry cmdlet, the cmdlet lists what changes would have been made but doesn't commit any changes.
-
 
 After you verify that the correct role entries will be removed, run the same command without the WhatIf switch to remove the role entries.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the role entry to remove. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding Management Roles.
-
-If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the role entry to remove. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding management roles.
-
-If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the role entry to remove. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
 For more information about how management role entries work, see Understanding management roles (Exchange 2016).
 
 If the role entry name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: RoleEntryIdParameter
@@ -184,25 +67,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -218,19 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -246,25 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -313,4 +154,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dcd62514-a541-4385-859a-c8503a33d2e5.aspx)
-

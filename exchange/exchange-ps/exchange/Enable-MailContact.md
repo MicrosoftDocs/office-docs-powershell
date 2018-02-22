@@ -6,20 +6,6 @@ schema: 2.0.0
 # Enable-MailContact
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Enable-MailContact cmdlet to mail-enable an existing contact in Active Directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Enable-MailContact cmdlet to mail-enable an existing contact in Active Directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-MailContact cmdlet to add email capabilities to existing contacts that aren't already mail-enabled.
@@ -37,41 +23,13 @@ Enable-MailContact [-Identity] <ContactIdParameter> -ExternalEmailAddress <Proxy
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Enable-MailContact cmdlet mail-enables an existing contact in Active Directory by adding the attributes required by Microsoft Exchange. The contact's identity, associated alias, and target e-mail address are required to mail-enable a contact.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Enable-MailContact cmdlet mail-enables an existing contact in Active Directory by adding the attributes required by MicrosoftExchange. The contact's identity, associated alias, and target email address are required to mail-enable a contact.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Enable-MailContact cmdlet mail-enables existing contacts by adding the email attributes that are required by Exchange. Mail contacts are visible to the other \*-MailContact cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Enable-MailContact -Identity Roland -ExternalEmailAddress "roland@tailspintoys.com"
-```
-
-This example mail-enables an existing contact in Active Directory and provides the contact with the external e-mail address roland@tailspintoys.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-MailContact -Identity Roland -ExternalEmailAddress "roland@tailspintoys.com"
-```
-
-This example mail-enables an existing contact in Active Directory and provides the contact with the external email address roland@tailspintoys.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Enable-MailContact -Identity Roland -ExternalEmailAddress "roland@tailspintoys.com"
 ```
@@ -81,25 +39,9 @@ This example mail-enables an existing contact that isn't mail-enabled.
 ## PARAMETERS
 
 ### -ExternalEmailAddress
-!!! Exchange Server 2010
-
-The ExternalEmailAddress parameter specifies the target e-mail address.
-
-
-
-!!! Exchange Server 2013
-
-The ExternalEmailAddress parameter specifies the target email address.
-
-
-
-!!! Exchange Server 2016
-
 The ExternalEmailAddress parameter specifies the target email address of the mail contact or mail user. By default, this value is used as the primary email address of the mail contact or mail user.
 
 In on-premises environments, you can use the PrimarySMTPAddress parameter to set the primary email address to a different value. However, we recommend this only in cross-forest environments.
-
-
 
 ```yaml
 Type: ProxyAddress
@@ -115,84 +57,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the contact.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the contact.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the non-mail-enabled contact that you want to mail-enable. You can use any value that uniquely identifies the contact.
 
 For example:
@@ -206,8 +70,6 @@ For example:
 - Canonical DN
 
 - GUID
-
-
 
 ```yaml
 Type: ContactIdParameter
@@ -223,14 +85,6 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Alias parameter specifies the alias of the mail-enabled contact.
-
-
-
-!!! Exchange Server 2016
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -241,13 +95,11 @@ If you don't use the Alias parameter when you create a recipient, the value of a
 
 - Recipients with user accounts (for example, user mailboxes, and mail users): The left side of the MicrosoftOnlineServicesID or UserPrincipalName parameter is used. For example, helpdesk@contoso.com results in the Alias property value helpdesk.
 
-- Recipeints without user accounts (for example, room mailboxes, mail contacts, and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
+- Recipeints without user accounts (for example, room mailboxes, mail contacts and distribution groups): The value of the Name parameter is used. Spaces are removed and unsupported characters are converted to question marks (?).
 
 If you modify the Alias value of an existing recipient, the primary email address is automatically updated only in on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is True for the recipient).
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
-
-
 
 ```yaml
 Type: String
@@ -283,17 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DisplayName parameter specifies the contact's display name.
-
-
-
-!!! Exchange Server 2016
-
 The DisplayName parameter specifies the display name of the mail contact. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -325,26 +167,6 @@ Accept wildcard characters: False
 ```
 
 ### -MacAttachmentFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format for messages sent to the mail contact. The valid values for this parameter are:
-
-- BinHex
-
-- UuEncode
-
-- AppleSingle
-
-- AppleDouble
-
-By default, this parameter is set to BinHex.
-
-The acceptable values for the MacAttachmentFormat parameter are dependent on the MessageFormat parameter. If the MessageFormat parameter is set to Text, you can only use BinHex or UuEncode values for this parameter. If the MessageFormat parameter is set to Mime, you can only use BinHex, AppleSingle, or AppleDouble values for this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
 - BinHex (This is the default value)
@@ -361,8 +183,6 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
-
-
 ```yaml
 Type: BinHex | UuEncode | AppleSingle | AppleDouble
 Parameter Sets: (All)
@@ -377,24 +197,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageBodyFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MessageBodyFormat parameter specifies the message body format for messages sent to the mail contact. The valid values for this parameter are:
-
-- Text
-
-- Html
-
-- TextAndHtml
-
-By default, this parameter is set to TextAndHtml.
-
-The MessageFormat and MessageBodyFormat parameters are interdependent.If the MessageFormat parameter is set to Mime, the MessageBodyFormat parameter can be set to any valid value. However, if the MessageFormat parameter is set to Text, the MessageBodyFormat parameter can only be set to Text. Therefore, if you want to set this parameter to Html or TextAndHtml, you must also set the MessageFormat parameter to Mime.
-
-
-
-!!! Exchange Server 2016
-
 The MessageBodyFormat parameter specifies the message body format for messages sent to the mail contact or mail user. Valid values are:
 
 - Text
@@ -405,11 +207,9 @@ The MessageBodyFormat parameter specifies the message body format for messages s
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
-- MessageFormat is Mime: MessageBodyFormat can be Text, Html, or TextAndHtml.
+- MessageFormat is Mime: MessageBodyFormat can be Text, Html or TextAndHtml.
 
 - MessageFormat is Text: MessageBodyFormat can only be Text.
-
-
 
 ```yaml
 Type: Text | Html | TextAndHtml
@@ -425,24 +225,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MessageFormat parameter specifies the message format for messages sent to the mail contact.
-
-The valid values for this parameter are:
-
-- Text
-
-- Mime
-
-By default, this parameter is set to Mime.
-
-The MessageFormat and MessageBodyFormat parameters are interdependent. If the MessageFormat parameter is set to Mime, the MessageBodyFormat parameter can be set to any valid value. However, if the MessageFormat parameter is set to Text, the MessageBodyFormat parameter can only be set to Text. Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
-
-
-
-!!! Exchange Server 2016
-
 The MessageFormat parameter specifies the message format for messages sent to the mail contact or mail user. Valid values are:
 
 - Text
@@ -451,13 +233,11 @@ The MessageFormat parameter specifies the message format for messages sent to th
 
 The MessageFormat and MessageBodyFormat parameters are interdependent:
 
-- MessageFormat is Mime: MessageBodyFormat can be Text, Html, or TextAndHtml.
+- MessageFormat is Mime: MessageBodyFormat can be Text, Html or TextAndHtml.
 
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
-
-
 
 ```yaml
 Type: Text | Mime
@@ -473,27 +253,11 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-!!! Exchange Server 2010
-
-The PrimarySmtpAddress parameter specifies the Reply to address for the mail user. By default, the primary SMTP address is the same as the ExternalEmailAddress parameter value. We recommend that you don't set this parameter unless you're in a cross-forest scenario. If you want to set the primary SMTP address to be a different address from the external e-mail address, you need to set the EmailAddressPolicyEnabled parameter to $false by using the Set-MailContact cmdlet, otherwise the mail user's primary SMTP address will use the ExternalEmailAddress parameter value, regardless of the value in the PrimarySMTPAddress parameter.
-
-
-
-!!! Exchange Server 2013
-
-The PrimarySmtpAddress parameter specifies the Reply to address for the mail user. By default, the primary SMTP address is the same as the ExternalEmailAddress parameter value. We recommend that you don't set this parameter unless you're in a cross-forest scenario. If you want to set the primary SMTP address to be a different address from the external email address, you need to set the EmailAddressPolicyEnabled parameter to $false by using the Set-MailContact cmdlet, otherwise the mail user's primary SMTP address will use the ExternalEmailAddress parameter value, regardless of the value in the PrimarySMTPAddress parameter.
-
-
-
-!!! Exchange Server 2016
-
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
 
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 
 If you use the PrimarySmtpAddress parameter to specify the primary email address, the command sets the EmailAddressPolicyEnabled property of the mail contact to False, which means the email addresses of the mail contact aren't automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -509,21 +273,11 @@ Accept wildcard characters: False
 ```
 
 ### -UsePreferMessageFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UsePreferMessageFormat parameter specifies whether the recipient-preferred message format settings override the global settings for mail sent to this user. When set to $true, this parameter specifies that the recipient-preferred message format settings override the global settings for mail sent to this user.
-
-
-
-!!! Exchange Server 2016
-
 The UsePreferMessageFormat specifies whether the message format settings configured for the mail user or mail contact override the global settings configured for the remote domain or configured by the message sender. Valid value are:
 
 - $true: Messages sent to the mail user or mail contact use the message format that's configured for the mail user or mail contact.
 
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -572,4 +326,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0accff85-3a03-4068-81e2-0508a4df21ec.aspx)
-

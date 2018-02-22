@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-UMDialPlan
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-UMDialplan cmdlet to create a new Unified Messaging (UM) dial plan to establish a link between UM IP gateways, UM hunt groups, and Unified Messaging servers to enable communication between Unified Messaging components.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-UMDialplan cmdlet to create a Unified Messaging (UM) dial plan to establish a link between UM IP gateways, UM hunt groups, and Mailbox servers to enable communication between Unified Messaging components.
@@ -26,34 +20,12 @@ New-UMDialPlan [-Name] <String> -CountryOrRegionCode <String> -NumberOfDigitsInE
  [-DefaultOutboundCallingLineId <String>] [-DomainController <Fqdn>] [-FaxEnabled <$true | $false>]
  [-GenerateUMMailboxPolicy <$true | $false>]
  [-GlobalCallRoutingScheme <None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3>]
- [-Organization <OrganizationIdParameter>] [-SipResourceIdentifierRequired <$true | $false>]
+ [-SipResourceIdentifierRequired <$true | $false>]
  [-SubscriberType <Enterprise | Consumer>] [-URIType <TelExtn | E164 | SipName>]
  [-VoIPSecurity <SIPSecured | Unsecured | Secured>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-UMDialplan cmdlet creates a new UM dial plan in Active Directory. A UM dial plan object has an organization-wide scope and contains all configuration information related to a telephony dial plan. A UM dial plan is a required component for establishing Unified Messaging communications with Microsoft Exchange Server 2010. When you create a new UM dial plan, an understanding of telephony configurations and the implications of adding to or modifying a UM configuration is required.
-
-After the new UM dial plan is created, a UM IP gateway and a Unified Messaging server must be associated with the UM dial plan to enable Unified Messaging operations.
-
-After this task is completed, a new UM dial plan is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-UMDialplan cmdlet creates a UM dial plan in Active Directory. A UM dial plan object has an organization-wide scope and contains all configuration information related to a telephony dial plan. A UM dial plan is a required component for establishing Unified Messaging communications with Microsoft Exchange Server 2013. When you create a UM dial plan, an understanding of telephony configurations and the implications of adding to or modifying a UM configuration is required.
-
-After the new UM dial plan is created, a UM IP gateway and a Mailbox server must be associated with the UM dial plan to enable Unified Messaging operations.
-
-After this task is completed, a new UM dial plan is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-UMDialplan cmdlet creates a UM dial plan in Active Directory. A UM dial plan object has an organization-wide scope and contains all configuration information related to a telephony dial plan. A UM dial plan is a required component for establishing Unified Messaging communications with Microsoft Exchange. When you create a UM dial plan, an understanding of telephony configurations and the implications of adding to or modifying a UM configuration is required.
 
 After the new UM dial plan is created, a UM IP gateway and a Mailbox server must be associated with the UM dial plan to enable Unified Messaging operations.
@@ -64,84 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-UMDialplan -Name MyUMDialPlan -NumberOfDigitsInExtension 4
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses four-digit extension numbers.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
 ```
 
 This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType SipName -NumberOfDigitsInExtension 5
-```
-
-This example creates the UM dial plan MyUMDialPlan that uses five-digit extension numbers that support SIP URIs.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
-```
-
-This example creates the unsecured UM dial plan MyUMDialPlan that supports E.164 numbers.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
-```
-
-This example creates the unsecured UM dial plan MyUMDialPlan that supports E.164 numbers and that uses five-digit extension numbers.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
-```
-
-This example creates the unsecured UM dial plan MyUMDialPlan that supports E.164 numbers and that uses five-digit extension numbers.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 New-UMDialplan -Name MyUMDialPlan -URIType E164 -NumberOfDigitsInExtension 5 -VoIPSecurity Unsecured
 ```
@@ -151,7 +60,7 @@ This example creates the unsecured UM dial plan MyUMDialPlan that supports E.164
 ## PARAMETERS
 
 ### -CountryOrRegionCode
-The CountryOrRegionCode parameter specifies the country or region code that precedes a telephone number used to place calls from other countries or regions to the country or region in which the UM dial plan is located. For example, 1 is the code used for North America, and 44 is the code used for the United Kingdom.
+The CountryOrRegionCode parameter specifies the country or region code that precedes a telephone number used to place calls from other countries or regions to the country or region in which the UM dial plan is located. For example, 1 is the code used for North America and 44 is the code used for the United Kingdom.
 
 ```yaml
 Type: String
@@ -267,19 +176,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -295,17 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -FaxEnabled
-!!! Exchange Server 2010
-
-The FaxEnabled parameter specifies whether the Unified Messaging servers associated with the dial plan answer and process incoming fax calls. The default is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The FaxEnabled parameter specifies whether the Mailbox servers associated with the dial plan answer and process incoming fax calls. The default is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -352,22 +241,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -SipResourceIdentifierRequired
 The SipResourceIdentifierRequired parameter specifies whether the SIP resource identifier is required to be specified when mailboxes are UM-enabled and associated with the dial plan. The default is $false but it can only be set to $true if the URI type of the dial plan is E.164.
 
@@ -401,17 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -URIType
-!!! Exchange Server 2010
-
-The URIType parameter specifies the Uniform Resource Identifier (URI) type to be sent and received with Session Initiation Protocol (SIP) messages from the Private Branch eXchange (PBX).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The URIType parameter specifies the URI type to be sent and received with SIP messages from the Private Branch eXchange (PBX).
-
-
 
 ```yaml
 Type: TelExtn | E164 | SipName
@@ -427,19 +290,9 @@ Accept wildcard characters: False
 ```
 
 ### -VoIPSecurity
-!!! Exchange Server 2010
-
-The VoIPSecurity parameter specifies whether the signaling channel is encrypted using mutual Transport Layer Security (TLS). The default setting is Unsecured.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The VoIPSecurity parameter specifies whether the signaling channel is encrypted using mutual Transport Layer Security (TLS). The default setting is Unsecured.
-
-
 
 ```yaml
 Type: SIPSecured | Unsecured | Secured
@@ -488,4 +341,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/21b8a099-92d0-49cf-b492-a052e0f23135.aspx)
-

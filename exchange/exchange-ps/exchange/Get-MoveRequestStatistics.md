@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MoveRequestStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MoveRequestStatistics cmdlet to view detailed information about move requests.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MoveRequestStatistics cmdlet to view detailed information about move requests.
@@ -43,194 +37,50 @@ Get-MoveRequestStatistics -MRSInstance <Fqdn> [-DomainController <Fqdn>] [-Mailb
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The MoveRequestQueue and MRSInstance parameter syntax sets are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The MoveRequestQueue parameter syntax set is for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The MoveRequestQueue parameter syntax set is for debugging purposes only.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MoveRequestStatistics -Identity Tony@contoso.com
 ```
 
 This example returns the default statistics for Tony Smith's mailbox, which include the status, mailbox size, archive mailbox size, and the percentage complete.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com
-```
-
-This example returns the default statistics for Tony Smith's mailbox, which include the status, mailbox size, archive mailbox size, and the percentage complete.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com
-```
-
-This example returns the default statistics for Tony Smith's mailbox, which include the status, mailbox size, archive mailbox size, and the percentage complete.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com
-```
-
-This example returns the default statistics for Tony Smith's mailbox, which include the status, mailbox size, archive mailbox size, and the percentage complete.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MoveRequestStatistics -Identity "contoso\tony" | Format-List
 ```
 
 This example returns the detailed statistics for Tony Smith's mailbox by pipelining the results to the Format-List command.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MoveRequestStatistics -Identity "contoso\tony" | Format-List
-```
-
-This example returns the detailed statistics for Tony Smith's mailbox by pipelining the results to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MoveRequestStatistics -Identity "contoso\tony" | Format-List
-```
-
-This example returns the detailed statistics for Tony Smith's mailbox by pipelining the results to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MoveRequestStatistics -Identity "contoso\tony" | Format-List
-```
-
-This example returns the detailed statistics for Tony Smith's mailbox by pipelining the results to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com -IncludeReport | Export-CSV C:\MRStats.csv
-```
-
-This example returns additional information about the mailbox move for Tony Smith's mailbox and exports the report to a CSV file.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Get-MoveRequestStatistics -Identity Tony@contoso.com -IncludeReport | Export-CSV C:\MRStats.csv
 ```
 
 This example returns additional information about the mailbox move for Tony Smith's mailbox and exports the report to a .csv file.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com -IncludeReport | Export-CSV C:\MRStats.csv
-```
-
-This example returns additional information about the mailbox move for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-MoveRequestStatistics -Identity Tony@contoso.com -IncludeReport | Export-CSV C:\MRStats.csv
-```
-
-This example returns additional information about the mailbox move for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Get-MoveRequestStatistics -MoveRequestQueue "MBXDB02"
 ```
 
 This example returns default statistics for all mailboxes whose move requests are in progress or haven't been cleared for the database MBXDB02.
 
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-MoveRequestStatistics -MoveRequestQueue "MBXDB02"
-```
-
-This example returns default statistics for all mailboxes whose move requests are in progress or haven't been cleared for the database MBXDB02.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-MoveRequestStatistics -MoveRequestQueue "MBXDB02"
-```
-
-This example returns default statistics for all mailboxes whose move requests are in progress or haven't been cleared for the database MBXDB02.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-MoveRequestStatistics -MoveRequestQueue "MBXDB02"
-```
-
-This example returns default statistics for all mailboxes whose move requests are in progress or haven't been cleared for the database MBXDB02.
-
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Get-MoveRequestStatistics -MRSInstance CAS01.contoso.com -MailboxGuid b6a6795c-a010-4f67-aaaa-da372d56fcb9
 ```
 
-This example returns default statistics for a mailbox that has been moved by the instance of the Microsoft Exchange Mailbox Replication service running on the server CAS01.
+In Exchange Server 2010, this example returns default statistics for a mailbox that has been moved by the instance of the Microsoft Exchange Mailbox Replication service running on the server CAS01.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the mailbox or mail user. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
-
-- Alias
-
-This parameter can't be used in conjunction with the MoveRequestQueue, MRSInstance, or MailboxGuid parameters.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the mailbox or mail user. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
-
-- Alias
-
-This parameter can't be used with the MoveRequestQueue or MailboxGuid parameters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the mailbox or mail user. You can use one of the following values:
 
 - GUID
@@ -249,8 +99,6 @@ The Identity parameter specifies the identity of the mailbox or mail user. You c
 
 You can use this parameter with the MoveRequestQueue or MailboxGuid parameters.
 
-
-
 ```yaml
 Type: MoveRequestIdParameter
 Parameter Sets: Set1
@@ -265,34 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -MoveRequestQueue
-!!! Exchange Server 2010
-
-The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-This parameter can't be used in conjunction with the Identity or MRSInstance parameters.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-This parameter can't be used with the Identity or MRSInstance parameters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MoveRequestQueue parameter specifies the mailbox database on which the move request resides. You can use one of the following values:
@@ -302,8 +122,6 @@ The MoveRequestQueue parameter specifies the mailbox database on which the move 
 - Database name
 
 You can't use this parameter can't be used with the Identity or MRSInstance parameters.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -337,19 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -365,17 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-!!! Exchange Server 2010
-
-The IncludeReport switch specifies whether to return additional details about the request, which can be used for troubleshooting.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -391,23 +189,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxGuid
-!!! Exchange Server 2010
-
-The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the move request statistics.
-
-This parameter can't be used in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of a mailbox for which you want to view the move request statistics.
 
 This parameter can't be used with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -530,4 +316,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1baf0fd7-40e1-4d91-bab7-beff28b89e99.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-DatabaseAvailabilityGroupNetwork
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-DatabaseAvailabilityGroupNetwork cmdlet to display configuration and state information for a database availability group (DAG) network.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-DatabaseAvailabilityGroupNetwork cmdlet to display configuration and state information for a database availability group (DAG) network.
@@ -26,68 +20,6 @@ Get-DatabaseAvailabilityGroupNetwork [[-Identity] <DatabaseAvailabilityGroupNetw
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-State information is returned for subnets and for network interfaces. The valid states for Internet Protocol Version 4 (IPv4) subnets are described in the following list:
-
-- Up: All defined network interfaces in the DAG are functional and available for communication. This is the expected and normal operational state.
-
-- Down: All defined network interfaces in the DAG are nonfunctional and have lost communication with each other and all external hosts. All connected network interfaces are in a Failed or Unreachable state.
-
-- Partitioned: One or more network interfaces in the DAG are in an Unreachable state, but at least two interfaces can communicate with each other or an external host.
-
-- Misconfigured: All subnets in a network in a DAG must have the same values for ReplicationEnabled and IgnoreNetwork. If any one of the subnets is not configured with the same values for these parameters as all other subnets on the network, all subnets are in a Misconfigured state.
-
-- Unavailable: The network is not enabled for replication or use by the DAG, or all DAG members attached to the network are inactive or unavailable.
-
-- Unknown: The system was unable to determine the state of the subnet.
-
-State information is returned for subnets and for network interfaces. The valid states for network interfaces are described in the following list:
-
-- Up: The network interface is functional and can communicate with all other network interfaces. This is the expected and normal operational state.
-
-- Failed: The network interface is unable to communicate with other network interfaces or external hosts, although other network interfaces on the local area network (LAN) are able to communicate with each other and external hosts.
-
-- Unreachable: The system was unable to communicate with at least one network interface whose state is Up.
-
-- Unavailable: The network interface is not enabled for replication or use by the DAG, or the DAG member associated with this network interface is inactive or unavailable.
-
-- Unknown: The system was unable to determine the state of the network interface.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-State information is returned for subnets and for network interfaces. The valid states for Internet Protocol Version 4 (IPv4) subnets are described in the following list:
-
-- Up: All defined network interfaces in the DAG are functional and available for communication. This is the expected and normal operational state.
-
-- Down: All defined network interfaces in the DAG are nonfunctional and have lost communication with each other and all external hosts. All connected network interfaces are in a Failed or Unreachable state.
-
-- Partitioned: One or more network interfaces in the DAG are in an Unreachable state, but at least two interfaces can communicate with each other or an external host.
-
-- Misconfigured: All subnets in a network in a DAG must have the same values for ReplicationEnabled and IgnoreNetwork. If any one of the subnets is not configured with the same values for these parameters as all other subnets on the network, all subnets are in a Misconfigured state.
-
-- Unavailable: The network is not enabled for replication or use by the DAG, or all DAG members attached to the network are inactive or unavailable.
-
-- Unknown: The system was unable to determine the state of the subnet.
-
-State information is returned for subnets and for network interfaces. The valid states for network interfaces are described in the following list:
-
-- Up: The network interface is functional and can communicate with all other network interfaces. This is the expected and normal operational state.
-
-- Failed: The network interface is unable to communicate with other network interfaces or external hosts, although other network interfaces on the local area network (LAN) are able to communicate with each other and external hosts.
-
-- Unreachable: The system was unable to communicate with at least one network interface whose state is Up.
-
-- Unavailable: The network interface is not enabled for replication or use by the DAG, or the DAG member associated with this network interface is inactive or unavailable.
-
-- Unknown: The system was unable to determine the state of the network interface.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 State information is returned for subnets and for network interfaces, as described in the following lists.
 
 Valid states for Internet Protocol version 4 (IPv4) subnets
@@ -120,63 +52,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG1
-```
-
-This example gets basic configuration and status information for all networks in a DAG named DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1
 ```
 
 This example gets basic configuration and status information for all networks in the DAG DAG1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG1
-```
-
-This example gets basic configuration and status information for all networks in the DAG DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG1 | fl
-```
-
-This example gets complete configuration and status information for all networks in a DAG named DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG1 | Format-List
 ```
 
 This example gets complete configuration and status information for all networks in the DAG DAG1.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG1 | Format-List
-```
-
-This example gets complete configuration and status information for all networks in the DAG DAG1.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -Server E14EX1 | fl
-```
-
-This example gets complete configuration and status information for a network named DAGNetwork02 in a DAG named DAG2 from a Mailbox server named E14EX1.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -Server MBX1 | Format-List
-```
-
-This example gets complete configuration and status information for the network DAGNetwork02 in the DAG DAG2 from the Mailbox server MBX1.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -Server MBX1 | Format-List
 ```
@@ -218,17 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter is used to obtain health information for the DAG network from a specific Mailbox server in the DAG.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Server parameter specifies health information for the DAG network from a specific Mailbox server in the DAG.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -261,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/43f57126-a685-4208-ac63-4e3aba4a3e00.aspx)
-

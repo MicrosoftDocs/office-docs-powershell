@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-MailboxRestoreRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxRestoreRequest cmdlet to change restore request options after the request has been created. You can use this cmdlet to recover from failed restore requests.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-MailboxRestoreRequest cmdlet to change restore request options after the request has been created. You can use this cmdlet to recover from failed restore requests.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxRestoreRequest cmdlet to change restore request options after the request has been created. You can use this cmdlet to recover from failed restore requests.
@@ -52,70 +38,18 @@ Set-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Accep
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1" -BadItemLimit 10
 ```
 
 This example changes the second restore request for Ayla\\MailboxRestore1 to skip 10 corrupt mailbox items.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1" -BadItemLimit 10
-```
-
-This example changes the second restore request for Ayla\\MailboxRestore1 to skip 10 corrupt mailbox items.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1" -BadItemLimit 10
-```
-
-This example changes the second restore request for Ayla\\MailboxRestore1 to skip 10 corrupt mailbox items.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxRestoreRequest -Identity "Ayla\MailboxRestore1" -BadItemLimit 10
-```
-
-This example changes the second restore request for Ayla\\MailboxRestore1 to skip 10 corrupt mailbox items.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxRestoreRequest -Identity "Kweku\MailboxRestore" -BadItemLimit 100 -AcceptLargeDataLoss
-```
-
-This example changes the first restore request for Kweku's mailbox to skip 100 corrupt items. Because the BadItemLimit is greater than 50, the AcceptLargeDataLoss parameter must be specified.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxRestoreRequest -Identity "Kweku\MailboxRestore" -BadItemLimit 100 -AcceptLargeDataLoss
-```
-
-This example changes the first restore request for Kweku's mailbox to skip 100 corrupt items. Because the BadItemLimit is greater than 50, the AcceptLargeDataLoss parameter must be specified.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxRestoreRequest -Identity "Kweku\MailboxRestore" -BadItemLimit 100 -AcceptLargeDataLoss
-```
-
-This example changes the first restore request for Kweku's mailbox to skip 100 corrupt items. Because the BadItemLimit is greater than 50, the AcceptLargeDataLoss parameter must be specified.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-MailboxRestoreRequest -Identity "Kweku\MailboxRestore" -BadItemLimit 100 -AcceptLargeDataLoss
 ```
@@ -125,21 +59,9 @@ This example changes the first restore request for Kweku's mailbox to skip 100 c
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>.
-
-If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the restore request. The Identity parameter consists of the alias of the mailbox to be restored and the name that was specified when the restore request was created. The identity of the restore request uses the following syntax: \<alias\>\\\<name\>
 
 If you didn't specify a name for the restore request when it was created, Exchange automatically generated the default name MailboxRestore. Exchange generates up to 10 names, starting with MailboxRestore and then MailboxRestoreX (where X = 1-9).
-
-
 
 ```yaml
 Type: MailboxRestoreRequestIdParameter
@@ -155,17 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-!!! Exchange Server 2010
-
-The AcceptLargeDataLoss parameter specifies that a large amount of data loss is acceptable if the BadItemLimit is set to 51 or higher. Items are considered corrupted if the item can't be read from the source database or can't be written to the target database. Corrupted items won't be available in the destination mailbox or .pst file.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -181,23 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -BadItemLimit
-!!! Exchange Server 2010
-
-The BadItemLimit parameter specifies the number of bad items to skip if the request encounters corruption in the mailbox. Use 0 to not skip bad items. The valid input range for this parameter is from 0 through 2147483647. The default value is 0. We recommend that you keep the default value 0 and only change the BadItemLimit parameter value if the request fails.
-
-If you set the BadItemLimit parameter to more than 50, the command fails, and you receive a warning stating: "Please confirm your intention to accept a large amount of data loss by specifying AcceptLargeDataLoss." If you receive this warning, you need to run the command again, this time using the AcceptLargeDataLoss parameter. No further warnings appear, and any corrupted items aren't available after the process is complete.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -213,21 +113,9 @@ Accept wildcard characters: False
 ```
 
 ### -BatchName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The BatchName parameter specifies the name of the batch. Use this parameter to change, create, or remove a batch name.
-
-To remove a batch name,set the BatchName parameter value to an empty string or to null, for example, -BatchName "" or -BatchName $null.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The BatchName parameter specifies the name of the batch. Use this parameter to change, create, or remove a batch name.
 
 To remove a batch name, set the BatchName parameter value to an empty string or to null, for example, -BatchName "" or -BatchName $null.
-
-
 
 ```yaml
 Type: String
@@ -263,19 +151,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -291,36 +169,6 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010
-
-The Priority parameter specifies the position in the request queue in which to put this request for processing. Requests are processed in order, based on server health, status, priority, and last update time.
-
-
-
-!!! Exchange Server 2013
-
-The Priority parameter specifies the priority of the mailbox restore request. Use one of the following values:
-
-- Emergency
-
-- Highest
-
-- Higher
-
-- High
-
-- Normal
-
-- Low
-
-- Lower
-
-- Lowest
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
@@ -340,8 +188,6 @@ The Priority parameter specifies the order in which the request should be proces
 - Highest
 
 - Emergency
-
-
 
 ```yaml
 Type: Normal | High
@@ -373,19 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### -RehomeRequest
-!!! Exchange Server 2013
-
-The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RehomeRequest switch specifies that the mailbox restore request be moved to a different mailbox database. Use this parameter to edit a mailbox restore request in the case where the source mailbox database from the original move request has to be removed.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -417,19 +253,9 @@ Accept wildcard characters: False
 ```
 
 ### -InternalFlags
-!!! Exchange Server 2013
-
-The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The InternalFlags parameter specifies the optional steps in the request. This parameter is used primarily for debugging purposes.
-
-
 
 ```yaml
 Type: InternalMrsFlag[]
@@ -445,24 +271,6 @@ Accept wildcard characters: False
 ```
 
 ### -LargeItemLimit
-!!! Exchange Server 2013
-
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2013 Message size limits
-
-- Exchange Online Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
 For more information about maximum message size values, see the following topics:
@@ -474,8 +282,6 @@ For more information about maximum message size values, see the following topics
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -537,7 +343,7 @@ The RequestExpiryInterval parameter specifies an age limit for a completed or fa
 
 - If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 When you use the value Unlimited, the completed request isn't automatically removed.
 
@@ -572,4 +378,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9290eac1-2701-499f-a7a3-f150d28945c3.aspx)
-

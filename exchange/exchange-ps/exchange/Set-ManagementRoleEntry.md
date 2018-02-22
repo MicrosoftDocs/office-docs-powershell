@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-ManagementRoleEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ManagementRoleEntry cmdlet to change the available parameters on an existing management role entry.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ManagementRoleEntry cmdlet to change the available parameters on an existing management role entry.
@@ -27,24 +21,6 @@ Set-ManagementRoleEntry [-Identity] <RoleEntryIdParameter> [-AddParameter] [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-ManagementRoleEntry cmdlet changes the available parameters on an existing role entry. If you want to add parameters to a role entry, the parameters must exist in the role entry in the parent management role. If you want to remove parameters from a role entry, there can be no role entries in child roles that inherit those parameters from the role entry you want to change. You can't change role entries associated with built-in roles.
-
-For more information about management role entries, see Understanding Management Roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-ManagementRoleEntry cmdlet changes the available parameters on an existing role entry. If you want to add parameters to a role entry, the parameters must exist in the role entry in the parent management role. If you want to remove parameters from a role entry, there can be no role entries in child roles that inherit those parameters from the role entry you want to change. You can't change role entries associated with built-in roles.
-
-For more information about management role entries, see Understanding management roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management role entries" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Set-ManagementRoleEntry cmdlet changes the available parameters on an existing role entry. If you want to add parameters to a role entry, the parameters must exist in the role entry in the parent management role. If you want to remove parameters from a role entry, there can be no role entries in child roles that inherit those parameters from the role entry you want to change. You can't change role entries associated with built-in roles.
 
 For more information about management role entries, see Understanding management roles (Exchange 2016).
@@ -53,140 +29,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
 ```
 
 This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
-```
-
-This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
-```
-
-This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
-```
-
-This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementRoleEntry "Help Desk Personnel\Get-Mailbox" -Parameters Anr, Database -RemoveParameter
-```
-
-This example removes the Anr and Database parameters from the Get-Mailbox role entry on the Help Desk Personnel role.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
 ```
 
 This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
-```
-
-This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
-```
-
-This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
-```
-
-This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleEntry "Help Desk Personnel\*" | Set-ManagementRoleEntry -Parameters WhatIf -AddParameter
-```
-
-This example retrieves a list of role entries on the Help Desk Personnel role and adds the WhatIf switch to each role entry using the Set-ManagementRoleEntry cmdlet.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
 ```
 
 This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
-```
-
-This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
-```
-
-This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
-```
-
-This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementRoleEntry "Tier 1 Help Desk\Set-Mailbox" -Parameters DisplayName, ForwardingAddress
-```
-
-This example adds the DisplayName and ForwardingAddress parameters to the Set-Mailbox role entry on the Tier 1 Help Desk role and removes all other parameters from the role entry.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
-```
-
-This example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
-```
-
-This example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
-```
-
-This example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
-```
-
-This example adds the Location parameter to the MailboxAudit custom script on the IT Scripts unscoped top level role.
-
-### Example 4 -------------------------- (Exchange Online Protection)
+### Example 4
 ```
 Set-ManagementRoleEntry "IT Scripts\MailboxAudit" -Parameters Location -AddParameter -UnScopedTopLevel
 ```
@@ -196,35 +60,11 @@ This example adds the Location parameter to the MailboxAudit custom script on th
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the role entry to change. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding Management Roles.
-
-If the role entry name contains spaces, enclose it in quotation marks (").
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the role entry to change. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
-
-For more information about how management role entries work, see Understanding management roles.
-
-If the role entry name contains spaces, enclose it in quotation marks (").
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the role entry to change. You must specify the value of the Identity parameter in the format, \<management role\>\\\<role entry name\>, for example, ExampleRole\\Set-Mailbox.
 
 For more information about how management role entries work, see Understanding management roles (Exchange 2016).
 
 If the role entry name contains spaces, enclose it in quotation marks (").
-
-
 
 ```yaml
 Type: RoleEntryIdParameter
@@ -276,19 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -378,17 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -421,4 +241,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d4438459-d8b6-4214-b0d0-e374ef75c29e.aspx)
-

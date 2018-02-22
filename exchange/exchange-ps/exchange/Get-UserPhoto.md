@@ -6,19 +6,9 @@ schema: 2.0.0
 # Get-UserPhoto
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Get-UserPhoto cmdlet to view information about the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as MicrosoftOutlook Web App, Lync, Skype for Business, and SharePoint.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-UserPhoto cmdlet to view information about the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business, and SharePoint.
+Use the Get-UserPhoto cmdlet to view information about the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business and SharePoint.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -41,60 +31,20 @@ Get-UserPhoto [[-Identity] <MailboxIdParameter>] [-Credential <PSCredential>] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In on-premises Exchange, the user photo is stored in the user's Active Directory account. In Exchange Online the user photo is stored in the root directory of the user's mailbox.
-
-For Exchange Online mailboxes, you need to manage user photos by using the Set-UserPhoto and Remove-UserPhoto cmdlets, or by accessing the user's Outlook Web App Options page.Outlook. User photos are synchronized from Active Directory to the cloud only once during a mailbox migration. Therefore, even in hybrid environments, don't try to manage user photos in Active Directory.
-
-If you use this cmdlet on a user who has never had a user photo configured, you'll get an error message saying the user photo doesn't exist
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient provisioning permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. The user photo feature must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you get an error message saying the user photo doesn't exist for the specified users. Administrators use the Set-UserPhoto cmdlet or the Exchange admin center (EAC) to configure user photos. Users can upload, preview, and save a user photo to their account by using the Outlook on the web Options page.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-UserPhoto "Susan Burk"
 ```
 
 This example displays information about the user photo configured for Susan Burk.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UserPhoto "Susan Burk"
-```
-
-This example displays information about the user photo configured for Susan Burk.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UserPhoto "Susan Burk"
-```
-
-This example displays information about the user photo configured for Susan Burk.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UserPhoto "Pilar Pinilla" -Preview
-```
-
-This example displays information about the user photo that was uploaded to Pilar Pinilla's account, but wasn't saved.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UserPhoto "Pilar Pinilla" -Preview
-```
-
-This example displays information about the user photo that was uploaded to Pilar Pinilla's account, but wasn't saved.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-UserPhoto "Pilar Pinilla" -Preview
 ```
@@ -130,21 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2013
-
-The Credential parameter specifies the account used to read Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credential parameter specifies the user name and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
 This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -178,16 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-!!! Exchange Server 2013
-
-The Filter parameter indicates the OPath filter used to filter recipients.
-
-For more information about the filterable properties, see Filterable properties for the -Filter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
 
 - \<Property\> is a filterable property.
@@ -197,8 +125,6 @@ The Filter parameter uses OPATH filter syntax to filter the results by the speci
 - \<Value\> is the property value. Text values with or without spaces need to be enclosed in quotation marks ('\<Value\>'). Don't use quotation marks with integers or the system values $true, $false, or $null.
 
 You can chain multiple search criteria together using the logical operators -and and -or. For example, {\<Criteria1\>) -and \<Criteria2\>} or {(\<Criteria1\> -and \<Criteria2\>) -or \<Criteria3\>}.
-
-
 
 ```yaml
 Type: String
@@ -214,30 +140,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the user. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Display name
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the user account. You can use any value that uniquely identifies the user account.
 
 For example:
@@ -263,8 +165,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -302,14 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
-!!! Exchange Server 2013
-
-The OrganizationalUnit parameter returns objects only from the specified organizational unit (OU).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
@@ -319,8 +211,6 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -336,21 +226,9 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-!!! Exchange Server 2013
-
-The Preview switch retrieves information about the preview photo for the user account. You don't need to specify a value with this switch.
-
-The preview photo is the photo object that was uploaded to the user's account, but wasn't saved, for example, if a user uploads a photo in Outlook Web App Options, but doesn't save it. If you use the Preview parameter after a user photo is saved, this cmdlet returns an error saying the preview photo doesn't exist.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Preview switch filters the results by preview photos. You don't need to specify a value with this switch.
 
 A preview photo is a photo that was uploaded to the user's account, but wasn't saved, for example, if a user uploads a photo in Outlook on the web Options, but doesn't save it. If you use the Preview switch after a user photo is saved, this cmdlet returns an error saying the preview photo doesn't exist.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -400,21 +278,11 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-!!! Exchange Server 2013
-
-The SortBy parameter specifies the attribute by which to sort the results. You can sort by only one attribute at a time. The results are sorted in ascending order.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
 If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
 
 You can sort by the Id property.
-
-
 
 ```yaml
 Type: String
@@ -479,4 +347,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a9b22e66-a511-4a47-ba50-a0fc9c204fcc.aspx)
-

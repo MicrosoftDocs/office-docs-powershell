@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-FailedContentIndexDocuments
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-FailedContentIndexDocuments cmdlet to retrieve a list of documents for a mailbox, mailbox database, or Mailbox server that couldn't be indexed by Exchange Search.
@@ -42,28 +36,6 @@ Get-FailedContentIndexDocuments -Server <ServerIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-FailedContentIndexDocuments cmdlet returns a list of documents that couldn't be indexed. The most common reason is that there was no filter available for that document type or there was an attachment within the document. For example, the PDF filter isn't available by default. If an e-mail message contains a PDF document, because there is no PDF filter, the document is marked as failed content indexing.
-
-After a new filter is installed, only new messages with attachments of the type for which the filter is installed are indexed. If you want to index older messages for the document type, the mailbox has to be moved.
-
-The cmdlet output provides details about items in a mailbox that couldn't be indexed, including an error code and the reason for failure.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Get unsearchable items" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-FailedContentIndexDocuments cmdlet returns a list of documents that couldn't be indexed. The most common reason is that there was no filter available for that document type or there was an attachment within the document. For example, the PDF filter isn't available by default. If an email message contains a PDF document, because there is no PDF filter, the document is marked as failed content indexing.
-
-After a new filter is installed, only new messages with attachments of the type for which the filter is installed are indexed. If you want to index older messages for the document type, the mailbox has to be moved.
-
-The cmdlet output provides details about items in a mailbox that couldn't be indexed, including an error code and the reason for failure.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Get unsearchable items" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-FailedContentIndexDocuments cmdlet returns a list of documents that couldn't be indexed. The most common reason is that there was no filter available for that document type or there was an attachment within the document. For example, the PDF filter isn't available by default. If an email message contains a PDF document, because there is no PDF filter, the document is marked as failed content indexing.
 
 After a new filter is installed, only new messages with attachments of the type for which the filter is installed are indexed. If you want to index older messages for the document type, the mailbox has to be moved.
@@ -74,56 +46,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-FailedContentIndexDocuments -Identity "Terry Adams"
 ```
 
 This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-FailedContentIndexDocuments -Identity "Terry Adams"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-FailedContentIndexDocuments -Identity "Terry Adams"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-FailedContentIndexDocuments -Identity "Terry Adams"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox of user Terry Adams.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database Mailbox Database MDB2.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database Mailbox Database MDB2.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
-```
-
-This example retrieves a list of items that couldn't be indexed by Exchange Search from the mailbox database Mailbox Database MDB2.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-FailedContentIndexDocuments -MailboxDatabase "Mailbox Database MDB2"
 ```
@@ -163,20 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxDatabase
-!!! Exchange Server 2010
-
-The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use the following values:
-
-- GUID of the database
-
-- Database name
-
-- Distinguished name (DN)
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The MailboxDatabase parameter specifies the database from which to get the mailbox. You can use the following values:
 
 - GUID of the database
@@ -184,8 +100,6 @@ The MailboxDatabase parameter specifies the database from which to get the mailb
 - Database name
 
 - DN
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -291,21 +205,9 @@ Accept wildcard characters: False
 ```
 
 ### -EndDate
-!!! Exchange Server 2013
-
-The EndDate parameter specifies the end date of the date range.
-
-Use the short date format defined in the Regional Options settings for the computer on which the command is run. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The EndDate parameter specifies the end date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: DateTime
@@ -337,20 +239,6 @@ Accept wildcard characters: False
 ```
 
 ### -FailureMode
-!!! Exchange Server 2013
-
-The FailureMode parameter specifies the type of error. Use the following values.
-
-- Transient Returns items that couldn't be indexed due to transient errors. Exchange Search attempts to index these items again.
-
-- Permanent Returns items that couldn't be indexed due to a permanent error. Exchange Search does not attempt to index these items again.
-
-- All Returns items that couldn't be indexed regardless of nature of failure.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FailureMode parameter specifies the type of error. Use the following values.
 
 - Transient: Returns items that couldn't be indexed due to transient errors. Exchange Search attempts to index these items again.
@@ -358,8 +246,6 @@ The FailureMode parameter specifies the type of error. Use the following values.
 - Permanent: Returns items that couldn't be indexed due to a permanent error. Exchange Search does not attempt to index these items again.
 
 - All: Returns items that couldn't be indexed regardless of nature of failure.
-
-
 
 ```yaml
 Type: Transient | Permanent | All
@@ -391,21 +277,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-!!! Exchange Server 2013
-
-The StartDate parameter specifies the start date of the date range.
-
-Use the short date format defined in the Regional Options settings for the computer on which the command is run. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: DateTime
@@ -438,4 +312,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d128ec5f-f805-4bc0-982b-b9adceb8eca8.aspx)
-

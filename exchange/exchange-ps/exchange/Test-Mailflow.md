@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-Mailflow
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-Mailflow cmdlet to diagnose whether mail can be successfully sent from and delivered to the system mailbox on a computer that has the Mailbox server role installed. You can also use this cmdlet to verify that e-mail is sent between Mailbox servers within a defined latency threshold.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-Mailflow cmdlet to diagnose whether mail can be successfully sent from and delivered to the system mailbox on a Mailbox server. You can also use this cmdlet to verify that email is sent between Mailbox servers within a defined latency threshold.
@@ -66,32 +60,6 @@ Test-Mailflow [[-Identity] <ServerIdParameter>] [-ActiveDirectoryTimeout <Int32>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Test-Mailflow cmdlet tests mail submission, transport, and delivery. The cmdlet verifies that each Mailbox server can successfully send itself a message. You can also use this cmdlet to verify that the system mailbox on one Mailbox server can successfully send a message to the system mailbox on another Mailbox server.
-
-If more than one of these parameters is specified, the AutoDiscoverTargetMailboxServer parameter takes precedence over the TargetEmailAddress and TargetMailboxServer parameters. The TargetMailboxServer parameter takes precedence over the TargetEmailAddress parameter. A system mailbox must be present on all servers involved in the test.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Testing mail flow" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-Mailflow cmdlet tests mail submission, transport, and delivery. The cmdlet verifies that each Mailbox server can successfully send itself a message. You can also use this cmdlet to verify that the system mailbox on one Mailbox server can successfully send a message to the system mailbox on another Mailbox server. A system mailbox is required on all servers that are involved in the test.
-
-The test messages are available in the target user or system mailbox. The message subject is Test-Mailflow \<GUID\>, and the message body contains the text This is a Test-Mailflow probe message.
-
-The Test-Mailflow results are displayed on-screen. The interesting values in the results are:
-
-- TestMailflowResult The values returned are typically Success or \*FAILURE\*.
-
-- MessageLatencyTime The time required to complete the test (deliver the test message). The value uses the syntax hh:mm:ss.ffff where hh = hours, mm = minutes, ss = seconds and ffff = fractions of a second.
-
-You can write the Test-Mailflow results to a file by piping the output to ConvertTo-Html or ConvertTo-Csv and adding "\> \<filename\>" to the command. For example:
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Testing mail flow" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Test-Mailflow cmdlet tests mail submission, transport, and delivery. The cmdlet verifies that each Mailbox server can successfully send itself a message. You can also use this cmdlet to verify that the system mailbox on one Mailbox server can successfully send a message to the system mailbox on another Mailbox server. A system mailbox is required on all servers that are involved in the test.
 
 The test messages are available in the target user or system mailbox. The message subject is Test-Mailflow \<GUID\>, and the message body contains the text This is a Test-Mailflow probe message.
@@ -108,42 +76,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
-```
-
-This example tests message flow from the server Mailbox1 to the server Mailbox2.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
 ```
 
 This example tests message flow from the server name Mailbox1 to the server named Mailbox2. Note that you need to run this command while connected to Mailbox1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-Mailflow Mailbox1 -TargetMailboxServer Mailbox2
-```
-
-This example tests message flow from the server name Mailbox1 to the server named Mailbox2. Note that you need to run this command while connected to Mailbox1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-Mailflow Mailbox1 -TargetEmailAddress john@contoso.com
-```
-
-This example tests message flow from the server Mailbox1 to the e-mail address john@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-Mailflow -TargetEmailAddress john@contoso.com
-```
-
-This example tests message flow from the local Mailbox server where you're running this command to the email address john@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-Mailflow -TargetEmailAddress john@contoso.com
 ```
@@ -153,19 +93,9 @@ This example tests message flow from the local Mailbox server where you're runni
 ## PARAMETERS
 
 ### -AutoDiscoverTargetMailboxServer
-!!! Exchange Server 2010
-
-The AutoDiscoverTargetMailboxServer parameter specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AutoDiscoverTargetMailboxServer switch specifies whether to automatically populate a list of target Mailbox servers to which to send a test message. The task queries Active Directory to discover all Mailbox servers and then sends each server a test message.
 
 When you use this switch, you can't use the CrossPremises, TargetDatabase, TargetEmailAddress or TargetMailboxServer parameters.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -181,23 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -CrossPremises
-!!! Exchange Server 2010
-
-The CrossPremises parameter specifies whether the mail flow test will be conducted in cross-premises mode.
-
-Set this parameter to $true if your organization is using a cross-premises deployment and you want to verify cross-premises mail flow.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CrossPremises parameter specifies whether the mail flow test will be conducted in cross-premises mode.
 
 Set this parameter to $true if your organization is using a cross-premises deployment and you want to verify cross-premises mail flow.
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, TargetDatabase, TargetEmailAddress or TargetMailboxServer parameters.
-
-
 
 ```yaml
 Type: $true | $false
@@ -213,19 +131,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetDatabase
-!!! Exchange Server 2010
-
-The TargetDatabase parameter specifies the mailbox database to which test messages are sent.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TargetDatabase parameter specifies the mailbox database to which test messages are sent.
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetEmailAddress or TargetMailboxServer parameters.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -241,19 +149,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetEmailAddress
-!!! Exchange Server 2010
-
-The TargetEmailAddress parameter specifies the SMTP address of the mailbox to which test messages are sent. Use this parameter to send test messages to a Mailbox server in a remote forest. If this parameter is used, the test is always a remote test.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TargetEmailAddress parameter specifies the SMTP address of the mailbox to which test messages are sent. Use this parameter to send test messages to a Mailbox server in a remote forest. If this parameter is used, the test is always a remote test.
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetDatabase or TargetMailboxServer parameters.
-
-
 
 ```yaml
 Type: String
@@ -269,19 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMailboxServer
-!!! Exchange Server 2010
-
-The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to which test messages are sent.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TargetMailboxServer parameter specifies one or more Mailbox servers in the local Exchange organization to which test messages are sent.
 
 When you use this parameter, you can't use the AutoDiscoverTargetMailboxServer, CrossPremises, TargetDatabase or TargetEmailAddress parameters.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -333,17 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossPremisesExpirationTimeout
-!!! Exchange Server 2010
-
-The CrossPremisesExpirationTimeout parameter is used when this cmdlet is executed by Microsoft System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CrossPremisesExpirationTimeout parameter is used when this cmdlet is run by Microsoft System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -359,17 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -CrossPremisesPendingErrorCount
-!!! Exchange Server 2010
-
-The CrossPremisesPendingErrorCount parameter is used when this cmdlet is executed by System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The CrossPremisesPendingErrorCount parameter is used when this cmdlet is run by System Center Operations Manager 2007 agents for asynchronous monitoring. We don't recommend using this parameter when running this cmdlet manually.
-
-
 
 ```yaml
 Type: Int32
@@ -433,17 +301,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the source Mailbox server name from which a test message is sent. The default value is the local Mailbox server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the source Mailbox server name from which a test message is sent. If you don't use this parameter, the local Mailbox server is used.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -459,23 +317,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter is used only when System Center Operations Manager 2007 is being used for server monitoring. If you set the value to $true, the command populates the MonitoringContext object with events and performance counters used by System Center Operations Manager 2007. The default value of this parameter is $false.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -491,19 +333,9 @@ Accept wildcard characters: False
 ```
 
 ### -TargetEmailAddressDisplayName
-!!! Exchange Server 2010
-
-The TargetEmailAddressDisplayName parameter specifies the display name of the mailbox to which test messages are sent.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The TargetEmailAddressDisplayName parameter specifies a custom display name that's used on events and reports in Microsoft System Center Operations Manager 2007 when the TargetEmailAddress parameter is used. If you don't use the TargetEmailAddressDisplayName parameter, the events and reports use the email address value specified by the TargetEmailAddress parameter.
 
-This parameter is available only with the TargetEmailAddress parameter, and has no effect on the output of the cmdlet outside of Microsoft System Center Operations Manager.
-
-
+This parameter is available only with the TargetEmailAddress parameter and has no effect on the output of the cmdlet outside of Microsoft System Center Operations Manager.
 
 ```yaml
 Type: String
@@ -552,4 +384,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/00acaba4-66ee-454a-b9db-fe6d80c13f28.aspx)
-

@@ -6,26 +6,6 @@ schema: 2.0.0
 # Remove-MailboxImportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailboxImportRequest cmdlet to remove fully or partially completed import requests. Completed import request aren't automatically cleared. Requests must be removed by using the Remove-MailboxImportRequest cmdlet. Multiple import requests can exist against the same mailbox if you provide a distinct import request name.
-
-Removing a partially completed import request removes the request from the Microsoft Exchange Mailbox Replication service (MRS) job queue. Any import progress that was made before the removal won't be reverted.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-MailboxImportRequest cmdlet to remove fully or partially completed import requests. Completed import requests aren't automatically cleared. Requests need to be removed by using the Remove-MailboxImportRequest cmdlet. Multiple import requests can exist against the same mailbox if you provide a distinct import request name.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-Removing a partially completed import request removes the request from the Microsoft Exchange Mailbox Replication service (MRS) job queue. Any import progress that was made until the removal won't be reverted.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MailboxImportRequest cmdlet to remove fully or partially completed import requests. Completed import requests aren't automatically cleared. Requests need to be removed by using the Remove-MailboxImportRequest cmdlet. Multiple import requests can exist against the same mailbox if you provide a distinct import request name.
@@ -51,24 +31,6 @@ Remove-MailboxImportRequest -RequestGuid <Guid> -RequestQueue <DatabaseIdParamet
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed import request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The parameter set that requires the Identity parameter allows you to remove a fully or partially completed import request.
-
-The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The parameter set that requires the Identity parameter allows you to remove a fully or partially completed import request.
 
 The parameter set that requires the RequestGuid and RequestQueue parameters is used for MRS debugging purposes only.
@@ -77,84 +39,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
 ```
 
 This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
-```
-
-This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
-```
-
-This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MailboxImportRequest -Identity "Ayla\MailboxImport1"
-```
-
-This example removes the second import request for Ayla's mailbox Ayla\\MailboxImport1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Remove-MailboxImportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 
 This example cancels the import request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxImportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the import request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxImportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the import request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-MailboxImportRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels the import request by using the RequestGuid parameter for a mailbox or archive on MBXDB01.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxImportRequest -Status Completed | Remove-MailboxImportRequest
-```
-
-This example removes all completed import requests.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxImportRequest -Status Completed | Remove-MailboxImportRequest
-```
-
-This example removes all completed import requests.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequest -Status Completed | Remove-MailboxImportRequest
-```
-
-This example removes all completed import requests.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailboxImportRequest -Status Completed | Remove-MailboxImportRequest
 ```
@@ -164,21 +63,9 @@ This example removes all completed import requests.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
-
-You can't use this parameter in conjunction with the RequestGuid parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the import request. By default, import requests are named \<alias\>\\MailboxImportX (where X = 0-9). If you created the request using the Name parameter, use the following syntax: \<alias\>\\\<name\>.
 
 You can't use this parameter with the RequestGuid parameter.
-
-
 
 ```yaml
 Type: MailboxImportRequestIdParameter
@@ -194,21 +81,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequestGuid parameter specifies the unique identifier for the import request. To find the import request GUID, use the Get-MailboxImportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter (together with the RequestQueue parameter) specifies the unique identifier for the import request. To find the import request GUID, use the Get-MailboxImportRequest cmdlet.
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -224,32 +101,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2010
-
-The RequestQueue parameter specifies the mailbox database on which the request is being performed.
-
-This parameter accepts the following values:
-
-- GUID of the database
-
-- Database name
-
-
-
-!!! Exchange Server 2013
-
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
-
-- Database GUID
-
-- Database name
-
-You can't use this parameter with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
@@ -259,8 +110,6 @@ The RequestQueue parameter identifies the request based on the mailbox database 
 - Database name
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -296,19 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -373,4 +212,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4e8deb88-b078-4032-a47a-702ac0efe4eb.aspx)
-

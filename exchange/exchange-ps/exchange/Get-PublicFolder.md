@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-PublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-PublicFolder cmdlet to retrieve the attributes of a public folder or a set of public folders.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-PublicFolder cmdlet to retrieve the attributes of a public folder or a set of public folders.
@@ -48,182 +42,46 @@ Get-PublicFolder [[-Identity] <PublicFolderIdParameter>] [-DomainController <Fqd
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-PublicFolder
 ```
 
 This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolder
-```
-
-This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder
-```
-
-This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PublicFolder
-```
-
-This example uses the Get-PublicFolder command without parameters to return the root public folder object (IPM\_SUBTREE).
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
 ```
 
 This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
-```
-
-This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
-```
-
-This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-PublicFolder -Identity \NON_IPM_SUBTREE -Recurse | Format-List Name
-```
-
-This example returns the names of all the system folders (which aren't shown by default), starting at the system folder root (\\NON\_IPM\_SUBTREE).
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolder -Identity <long-term entry identifier of a public folder>
-```
-
-This example returns the public folder with the specified long-term entry identifier.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation"
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
-
-### Example 5 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ under the Pending Litigation public folder. Because the result size isn't specified, the command returns up to the maximum number of public folders, which is 10,000.
-
-### Example 5 -------------------------- (Exchange Server 2013)
+### Example 5
 ```
 Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
 ```
 
 This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
 
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
-
-### Example 5 -------------------------- (Exchange Online)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under the Pending Litigation public folder, without a limit on the number returned.
-
-### Example 6 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolder -Identity "\Legal\Documents\Pending Litigation" -Recurse -ResultSize Unlimited
-```
-
-This example returns the Pending Litigation public folder from \\Legal\\Documents\\ and all the public folders under it, without a limit on the number returned.
-
-### Example 6 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
-```
-
-This example returns the public folders that reside in the public folder content mailbox Legal Department.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
-```
-
-This example returns the public folders that reside in the public folder content mailbox Legal Department.
-
-### Example 6 -------------------------- (Exchange Online)
+### Example 6
 ```
 Get-PublicFolder -Mailbox "Legal Department" -ResidentFolders
 ```
@@ -233,19 +91,9 @@ This example returns the public folders that reside in the public folder content
 ## PARAMETERS
 
 ### -GetChildren
-!!! Exchange Server 2010, Exchange Server 2013
-
-The GetChildren parameter specifies whether to retrieve only the children of the folder specified by the Identity parameter. You can't use the GetChildren parameter with the Recurse parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The GetChildren switch specifies whether to return only the children of the folder specified by the Identity parameter. You don't need to specify a value with this switch.
 
 You can't use this switch with the Recurse or LostAndFound switches.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -261,21 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recurse
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Recurse parameter specifies that the command must return the specified public folder and all its children. You don't need to specify a value with this parameter.
-
-You can't use the GetChildren parameter with the Recurse parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Recurse switch specifies whether to return the specified public folder and all its children. You don't need to specify a value with this switch.
 
 You can't use this switch with the GetChildren or LostAndFound switches.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -291,19 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -319,21 +145,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format TopLevelPublicFolder\\PublicFolder.
-
-You can omit the parameter label Identity so that only the public folder name or GUID is supplied.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the GUID or public folder name that represents a specific public folder. You can also include the path using the format \\TopLevelPublicFolder\\PublicFolder.
 
 You can omit the parameter label Identity so that only the public folder name or GUID is supplied.
-
-
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -349,17 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Organization parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -407,36 +211,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-!!! Exchange Server 2013
-
-The Mailbox parameter specifies the identity of the hierarchy public folder mailbox.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the identity of the hierarchy public folder mailbox. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -462,8 +236,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -532,4 +304,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/409711bc-6249-41d4-bf86-50e01240e69f.aspx)
-

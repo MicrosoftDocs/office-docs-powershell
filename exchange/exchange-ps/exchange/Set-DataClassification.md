@@ -21,110 +21,39 @@ Set-DataClassification [-Identity] <DataClassificationIdParameter> [-Confirm] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-DataClassification "Contoso Confidential" -Locale fr -Name "Contoso Confidentiel" -Description "Ce message contient des informations confidentielles." -IsDefault
 ```
 
 This example adds a French translation to the existing data classification rule named "Contoso Confidential", and sets this French translation as the default.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-DataClassification "Contoso Confidential" -Locale fr -Name "Contoso Confidentiel" -Description "Ce message contient des informations confidentielles." -IsDefault
-```
-
-This example adds a French translation to the existing data classification rule named "Contoso Confidential", and sets this French translation as the default.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-DataClassification "Contoso Confidential" -Locale fr -Name "Contoso Confidentiel" -Description "Ce message contient des informations confidentielles." -IsDefault
-```
-
-This example adds a French translation to the existing data classification rule named "Contoso Confidential", and sets this French translation as the default.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-DataClassification "Contoso Confidential" -Locale es -Name $null -Description $null
 ```
 
 This example removes the existing Spanish translation from the data classification rule named "Contoso Confidential".
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-DataClassification "Contoso Confidential" -Locale es -Name $null -Description $null
-```
-
-This example removes the existing Spanish translation from the data classification rule named "Contoso Confidential".
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-DataClassification "Contoso Confidential" -Locale es -Name $null -Description $null
-```
-
-This example removes the existing Spanish translation from the data classification rule named "Contoso Confidential".
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 $Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte; $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DataClassification "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint); Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
 ```
 
 This example modifies the existing data classification rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte; $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DataClassification "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint); Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
-```
-
-This example modifies the existing data classification rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-$Benefits_Template = Get-Content "C:\My Documents\Contoso Benefits Template.docx" -Encoding byte; $Benefits_Fingerprint = New-Fingerprint -FileData $Benefits_Template -Description "Contoso Benefits Template"; $Contoso_Confidential = Get-DataClassification "Contoso Confidential"; $Array = [System.Collections.ArrayList]($Contoso_Confidential.Fingerprints); $Array.Add($Benefits_FingerPrint); Set-DataClassification $Contoso_Confidential.Identity -FingerPrints $Array
-```
-
-This example modifies the existing data classification rule named "Contoso Confidential" by adding a new document fingerprint for the file C:\\My Documents\\Contoso Benefits Template.docx without affecting any existing document fingerprints that are already defined.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-$cc = Get-DataClassification "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DataClassification $cc.Identity -FingerPrints $Array
-```
-
-This example modifies the data classification rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.
-
-
-The first three commands return the list of document fingerprints in the data classification rule. The first document fingerprint in the list has the index number 0, the second has the index number 1, and so on. You use the index number to specify the document fingerprint that you want to remove. The last two commands remove the first document fingerprint that's displayed in the list.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 $cc = Get-DataClassification "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DataClassification $cc.Identity -FingerPrints $a
 ```
 
 This example modifies the data classification rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.
-
-
-The first three commands return the list of document fingerprints in the data classification. The first document fingerprint in the list has the index number 0, the second has the index number 1, and so on. You use the index number to specify the document fingerprint that you want to remove. The last two commands remove the first document fingerprint that's displayed in the list.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-$cc = Get-DataClassification "Contoso Confidential"; $a = [System.Collections.ArrayList]($cc.Fingerprints); $a; $a.RemoveAt(0); Set-DataClassification $cc.Identity -FingerPrints $a
-```
-
-This example modifies the data classification rule named "Contoso Confidential" by removing an existing document fingerprint without affecting other document fingerprints that are already defined.
-
 
 The first three commands return the list of document fingerprints in the data classification. The first document fingerprint in the list has the index number 0, the second has the index number 1, and so on. You use the index number to specify the document fingerprint that you want to remove. The last two commands remove the first document fingerprint that's displayed in the list.
 
@@ -241,23 +170,11 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-!!! Exchange Server 2013
-
-The Locale parameter adds or removes languages that are associated with the data classification rule. Valid input for this parameter is a Microsoft .NET Framework CultureInfo class culture code value. For example, en for English or fr for French.
-
-Typically, you use the Locale parameter with the Name and Description parameters to add or remove translated names and descriptions for the data classification rule. You can also use the Locale parameter with the IsDefault switch to designate an existing translated name and description as the default. Before you can remove the default translation, you need to set another translation as the default.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Locale parameter adds or removes languages that are associated with the data classification rule.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 Typically, you use the Locale parameter with the Name and Description parameters to add or remove translated names and descriptions for the data classification rule. You can also use the Locale parameter with the IsDefault switch to designate an existing translated name and description as the default. Before you can remove the default translation, you need to set another translation as the default.
-
-
 
 ```yaml
 Type: CultureInfo
@@ -273,25 +190,11 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2013
-
-The Name parameter specifies a name for the data classification rule. The value must be less than 256 characters.
-
-You use the Name parameter with the Locale and Description parameters to specify names for the data classification rule in different languages. The localized values of Name appear in the AllLocalizedNames property of the data classification rule.
-
-The value of the Name parameter is used in the Policy Tip that's presented to users in Outlook Web App. When a translated value of the Name parameter matches the client's language, the Policy Tip is displayed in the client's language. If no translated values of the Name parameter match the client's language, the default translation that's specified by the IsDefault parameter is used for the Policy Tip.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies a name for the data classification rule. The value must be less than 256 characters.
 
 You use the Name parameter with the Locale and Description parameters to specify names for the data classification rule in different languages. The localized values of Name appear in the AllLocalizedNames property of the data classification rule.
 
 The value of the Name parameter is used in the Policy Tip that's presented to users in Outlook on the web. When a translated value of the Name parameter matches the client's language, the Policy Tip is displayed in the client's language. If no translated values of the Name parameter match the client's language, the default translation that's specified by the IsDefault parameter is used for the Policy Tip.
-
-
 
 ```yaml
 Type: String
@@ -340,4 +243,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d40df36-18c7-46f5-b373-69c840a5599b.aspx)
-

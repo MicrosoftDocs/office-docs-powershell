@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-ExchangeAssistanceConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ExchangeAssistanceConfig cmdlet to modify the Microsoft Exchange Help configurations for your organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ExchangeAssistanceConfig cmdlet to modify the Microsoft Exchange Help configurations for your organization.
@@ -31,35 +25,11 @@ Set-ExchangeAssistanceConfig [[-Identity] <OrganizationIdParameter>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Help settings" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Help settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'http://exhelponline'
-```
-
-This example changes the Help location for the Exchange Management Console.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'http://exhelponline'
-```
-
-This example changes the Help location for the Exchange Administration Center.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-ExchangeAssistanceConfig -ExchangeHelpAppOnline $false -ManagementConsoleHelpURL 'http://exhelponline'
 ```
@@ -153,23 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControlPanelHelpURL
-!!! Exchange Server 2010
-
-The ControlPanelHelpURL parameter specifies the URL for where Help is being hosted for the Web management interface.
-
-
-
-!!! Exchange Server 2013
-
-The ControlPanelHelpURL parameter specifies the URL for where Help is being hosted for the web management interface.
-
-
-
-!!! Exchange Server 2016
-
 The ControlPanelHelpURL parameter specifies the URL where help for the Exchange admin center (EAC) is hosted.
-
-
 
 ```yaml
 Type: Uri
@@ -185,19 +139,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -213,29 +157,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeHelpAppOnline
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExchangeHelpAppOnline specifies whether to indicate that your organization is using the Exchange Help online that's hosted on Microsoft TechNet. The default value is $true. If set to $false, you need to change the following parameters' URLs to point to the location where your Help is hosted:
-
-- ControlPanelHelpURL
-
-- ManagementConsoleHelpURL
-
-- OWAHelpURL
-
-- OWALightHelpURL
-
-
-
-!!! Exchange Server 2016
-
 The ExchangeHelpAppOnline specifies whether your organization uses the public help that's hosted by Microsoft. Valid values are:
 
 - $true: Your organization uses the help that's hosted by Microsoft. This is the default value.
 
 - $false: Your organization doesn't use the help that's hosted by Microsoft. You need to use the ControlPanelHelpURL, ManagementConsoleHelpURL, OWAHelpURL, and OWALightHelpURL parameters to configure the URLs where the help files are hosted.
-
-
 
 ```yaml
 Type: $true | $false
@@ -299,17 +225,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManagementConsoleHelpURL
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ManagementConsoleHelpURL parameter specifies the URL for where Help is being hosted.
-
-
-
-!!! Exchange Server 2016
-
 The ManagementConsoleHelpURL parameter specifies the URL where help for the Exchange Management Console (EMC) is hosted.
-
-
 
 ```yaml
 Type: Uri
@@ -357,23 +273,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAHelpURL
-!!! Exchange Server 2010
-
-The OWAHelpURL parameter specifies the URL for where Help is being hosted for the standard version of Microsoft Office Outlook Web App.
-
-
-
-!!! Exchange Server 2013
-
-The OWAHelpURL parameter specifies the URL for where Help is being hosted for the standard version of Microsoft OfficeOutlook Web App.
-
-
-
-!!! Exchange Server 2016
-
 The OWAHelpURL parameter specifies the URL for where help for the standard version of Outlook on the web is hosted.
-
-
 
 ```yaml
 Type: Uri
@@ -421,17 +321,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWALightHelpURL
-!!! Exchange Server 2010, Exchange Server 2013
-
-The OWALightHelpURL parameter specifies the URL for where Help is being hosted for the light version of Outlook Web App.
-
-
-
-!!! Exchange Server 2016
-
 The OWALightHelpURL parameter specifies the URL for where help for the light version of Outlook on the web is hosted.
-
-
 
 ```yaml
 Type: Uri
@@ -512,4 +402,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/75a38090-d854-4138-9b78-c514f85eb76c.aspx)
-
