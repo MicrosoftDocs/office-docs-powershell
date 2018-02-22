@@ -6,14 +6,6 @@ schema: 2.0.0
 # Add-DatabaseAvailabilityGroupServer
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-DatabaseAvailabilityGroupServer cmdlet to add a Mailbox server to a database availability group (DAG). A DAG is a set of Mailbox servers that provide automatic database-level recovery from a database, server, or network failure. When a Mailbox server with replicated databases is added to a DAG, it works with the other servers in the DAG to provide automatic, database-level recovery from database, server, and network failures.
-
-To add a Mailbox server to a DAG, the Mailbox server ust be running Windows Server 2008 Enterprise or Datacenter Edition or Windows Server 2008 R2 Enterprise or Datacenter Edition and it must not belong to any other DAG. The Mailbox server must be in the same Active Directory domain as all other Mailbox servers in the DAG. In addition, the Mailbox server must not be configured as an Active Directory directory server.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Add-DatabaseAvailabilityGroupServer cmdlet to add a Mailbox server to a database availability group (DAG). A DAG is a set of Mailbox servers that use continuous replication and managed availability to provide automatic database-level recovery from database, server, or network failures.
@@ -29,26 +21,6 @@ Add-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdPara
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-A computer object for a DAG is created in Active Directory when the first server is added to the DAG. This object is used to authenticate servers to each other within a DAG.
-
-To add the first server to a DAG and create a computer object for the DAG, the Exchange Windows Permissions security group must have the appropriate rights to add computer accounts to the domain. Alternatively, a computer account can be created and disabled prior to adding the server. Adding the first server to the DAG enables the computer account for the DAG. Thus, the account used for the task doesn't need permissions to add a computer account to the domain. If you are pre-creating the computer account, the name of the account must match the name for the DAG. For example, if the DAG is named DAG1, the computer account must be named DAG1.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-A computer object for a DAG is created in Active Directory when the first server is added to the DAG. This object is used to authenticate servers to each other within a DAG.
-
-To add a Mailbox server to a DAG, the Mailbox server must be running the Windows Server 2008 R2 Enterprise or Datacenter operating system, the Windows Server 2012 Standard or Datacenter operating system, or the Windows Server 2012 R2 operating system, and it must not belong to any other DAG. The Mailbox server must be running the same versions of the Windows operating system and Microsoft Exchange, and be in the same Active Directory domain as all other Mailbox servers in the DAG. In addition, the Mailbox server must not be configured as an Active Directory domain controller or global catalog server.
-
-To add the first server to a DAG and create a computer object for the DAG, the Exchange Windows Permissions security group must have the appropriate rights to add computer accounts to the domain. Alternatively, a computer account can be created and disabled prior to adding the server. Adding the first server to the DAG enables the computer account for the DAG. Thus, the account used for the task doesn't need permissions to add a computer account to the domain. If you're pre-creating the computer account, the name of the account must match the name for the DAG. For example, if the DAG is named DAG1, the computer account must be named DAG1.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 A computer object for a DAG is created in Active Directory when the first server is added to the DAG. This object is used to authenticate servers to each other within a DAG.
 
 To add a Mailbox server to a DAG, the Mailbox server must be running the Windows Server 2008 R2 Enterprise or Datacenter operating system, the Windows Server 2012 Standard or Datacenter operating system, or the Windows Server 2012 R2 operating system, and it must not belong to any other DAG. The Mailbox server must be running the same versions of the Windows operating system and Microsoft Exchange, and be in the same Active Directory domain as all other Mailbox servers in the DAG. In addition, the Mailbox server must not be configured as an Active Directory domain controller or global catalog server.
@@ -59,21 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
-```
-
-This example adds a Mailbox server named MBX1 to a DAG named DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
-```
-
-This example adds the Mailbox server MBX1 to the DAG DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-DatabaseAvailabilityGroupServer -Identity DAG1 -MailboxServer MBX1
 ```
@@ -232,4 +190,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6bd0a3fe-dec6-47c2-b9a3-8dffb60e4aad.aspx)
-

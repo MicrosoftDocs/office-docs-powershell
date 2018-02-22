@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-DeliveryAgentConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-The New-DeliveryAgentConnector cmdlet creates a delivery agent connector in your organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 The New-DeliveryAgentConnector cmdlet creates a delivery agent connector in your organization.
@@ -27,63 +21,26 @@ New-DeliveryAgentConnector [-Name] <String> -AddressSpaces <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't utilize the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in the Drop and Pickup directories. For more information, see Understanding Delivery Agents.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't utilize the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in the Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Delivery agent connectors are used to route messages addressed to foreign systems that don't utilize the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in the Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-DeliveryAgentConnector -Name "Contoso X.400 Connector" -AddressSpaces "X400:c=US;a=Fabrikam;p=Contoso;1" -DeliveryProtocol "X.400" -SourceTransportServers Hub01,Hub02,Hub05
-```
-
-This example creates a delivery agent connector Contoso X.400 Connector with the following configuration:
-
-
-The delivery agent connector is hosted on the following Hub Transport servers:
-
-The delivery agent connector is designed to handle X.400 connections to a company called Contoso that uses the carrier Fabrikam.
-
-The address space for the connector is c=US;a=Fabrikam;p=Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-DeliveryAgentConnector -Name "Contoso X.400 Connector" -AddressSpaces "X400:c=US;a=Fabrikam;p=Contoso;1" -DeliveryProtocol "X.400" -SourceTransportServers Hub01,Hub02,Hub05
 ```
 
 This example creates a delivery agent connector named Contoso X.400 Connector with the following configuration:
 
-
 The delivery agent connector is hosted on the following servers:
 
-The delivery agent connector is designed to handle X.400 connections to a company called Contoso that uses the carrier Fabrikam.
+- Hub01
 
-The address space for the connector is c=US;a=Fabrikam;p=Contoso.
+- Hub02
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-DeliveryAgentConnector -Name "Contoso X.400 Connector" -AddressSpaces "X400:c=US;a=Fabrikam;p=Contoso;1" -DeliveryProtocol "X.400" -SourceTransportServers Hub01,Hub02,Hub05
-```
-
-This example creates a delivery agent connector named Contoso X.400 Connector with the following configuration:
-
-
-The delivery agent connector is hosted on the following servers:
+- Hub05
 
 The delivery agent connector is designed to handle X.400 connections to a company called Contoso that uses the carrier Fabrikam.
 
@@ -140,17 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-!!! Exchange Server 2010
-
-The Comment parameter specifies an optional comment. This parameter is used to add administrative comments about the delivery agent connector.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Comment parameter specifies an optional comment. If you specify a value that contains spaces, enclose the value in quotation marks ("), for example: "This is an admin note".
-
-
 
 ```yaml
 Type: String
@@ -186,19 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -232,17 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsScopedConnector
-!!! Exchange Server 2010
-
-The IsScopedConnector parameter specifies the availability of the connector to other Hub Transport servers. If the value of this parameter is $false, the connector can be used by all Hub Transport servers in your organization. If the value of this parameter is $true, the connector can only be used by Hub Transport servers in the same Active Directory site. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IsScopedConnector parameter specifies the availability of the connector to other Mailbox servers. If the value of this parameter is $false, the connector can be used by all Mailbox servers in your organization. If the value of this parameter is $true, the connector can only be used by Mailbox servers in the same Active Directory site. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -316,21 +243,9 @@ Accept wildcard characters: False
 ```
 
 ### -SourceTransportServers
-!!! Exchange Server 2010
-
-The SourceTransportServers parameter specifies the list of Hub Transport servers that host this connector. You can specify more than one Hub Transport server by separating their names with commas.
-
-By default, only the local server on which the command is executed is added to this parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The SourceTransportServers parameter specifies the list of Mailbox servers that host this connector. You can specify more than one server by separating their names with commas.
 
 By default, only the local server on which the command is executed is added to this parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -379,4 +294,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b09ac95b-ea07-41cf-9c69-95c215bfa02c.aspx)
-

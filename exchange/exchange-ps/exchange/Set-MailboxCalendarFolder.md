@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-MailboxCalendarFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-The Set-MailboxCalendarFolder cmdlet configures publishing or sharing settings on a calendar folder of a specified mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxCalendarFolder cmdlet to configure calendar publishing or sharing settings on a mailbox for the visibility of calendar information to external users. To add or modify the permissions so internal users can access the calendar, use the Add-MailboxFolderPermission or Set-MailboxFolderPermission cmdlets.
@@ -30,38 +24,6 @@ Set-MailboxCalendarFolder [-Identity] <MailboxFolderIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-MailboxCalendarFolder cmdlet configures publishing information. The calendar folder can be configured as follows:
-
-- Whether the calendar folder is enabled for publishing
-
-- Range of start and end calendar days to publish
-
-- Level of detail to publish for the calendar
-
-- Whether the published URL of the calendar is enabled for search on the Web
-
-- Published URL to display for the calendar
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User options" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-MailboxCalendarFolder cmdlet configures publishing information. The calendar folder can be configured as follows:
-
-- Whether the calendar folder is enabled for publishing
-
-- Range of start and end calendar days to publish
-
-- Level of detail to publish for the calendar
-
-- Whether the published URL of the calendar is enabled for search on the web
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Calendar configuration" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-MailboxCalendarFolder cmdlet configures publishing information. The calendar folder can be configured as follows:
 
 - Whether the calendar folder is enabled for publishing
@@ -76,68 +38,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
 ```
 
 This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
-```
-
-This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
-```
-
-This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -DetailLevel LimitedDetails
-```
-
-This example sets the level of details to publish for Kai's shared calendar to LimitedDetails, which means limited details are displayed.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
-```
-
-This example enables the calendar in Kai's mailbox to be searchable on the Web.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
 ```
 
 This example enables the calendar in Kai's mailbox to be searchable on the web.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
-```
-
-This example enables the calendar in Kai's mailbox to be searchable on the web.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -SearchableUrlEnabled $true
-```
-
-This example enables the calendar in Kai's mailbox to be searchable on the web.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxCalendarFolder -Identity kai:\Calendar -PublishedCalendarUrl "http://www.contoso.com/kai/calendar"
-```
-
-This example sets the published URL for the calendar folder of Kai's mailbox.
 
 ## PARAMETERS
 
@@ -194,22 +107,6 @@ Accept wildcard characters: False
 ```
 
 ### -DetailLevel
-!!! Exchange Server 2010
-
-The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. Accepted values are:
-
-- AvailabilityOnly
-
-- LimitedDetails
-
-- FullDetails
-
-The default value is AvailabilityOnly.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The DetailLevel parameter specifies the level of calendar detail that's published and available to anonymous users. You can use the following values:
 
 - AvailabilityOnly
@@ -221,8 +118,6 @@ The DetailLevel parameter specifies the level of calendar detail that's publishe
 - Editor
 
 The default value is AvailabilityOnly.
-
-
 
 ```yaml
 Type: AvailabilityOnly | LimitedDetails | FullDetails
@@ -238,19 +133,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -266,34 +151,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeFrom
-!!! Exchange Server 2010
-
-The PublishDateRangeFrom parameter specifies the number of days of calendar information to publish before the current date. You can use the following values:
-
-- OneDay
-
-- ThreeDays
-
-- OneWeek
-
-- ThreeWeeks
-
-- OneMonth
-
-- ThreeMonths
-
-- SixMonths
-
-- OneYear
-
-- Whole
-
-The default value is ThreeMonths.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The PublishDateRangeFrom parameter specifies the number of days of calendar information to publish before the current date. You can use the following values:
 
 - OneDay
@@ -311,8 +168,6 @@ The PublishDateRangeFrom parameter specifies the number of days of calendar info
 - OneYear
 
 The default value is ThreeMonths.
-
-
 
 ```yaml
 Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
@@ -328,34 +183,6 @@ Accept wildcard characters: False
 ```
 
 ### -PublishDateRangeTo
-!!! Exchange Server 2010
-
-The PublishDateRangeTo parameter specifies the number of days of calendar information to publish after the current date. You can use the following values:
-
-- OneDay
-
-- ThreeDays
-
-- OneWeek
-
-- ThreeWeeks
-
-- OneMonth
-
-- ThreeMonths
-
-- SixMonths
-
-- OneYear
-
-- Whole
-
-The default value is ThreeMonths.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The PublishDateRangeTo parameter specifies the number of days of calendar information to publish after the current date. You can use the following values:
 
 - OneDay
@@ -373,8 +200,6 @@ The PublishDateRangeTo parameter specifies the number of days of calendar inform
 - OneYear
 
 The default value is ThreeMonths.
-
-
 
 ```yaml
 Type: OneDay | ThreeDays | OneWeek | OneMonth | ThreeMonths | SixMonths | OneYear
@@ -422,17 +247,7 @@ Accept wildcard characters: False
 ```
 
 ### -SearchableUrlEnabled
-!!! Exchange Server 2010
-
-The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the Web. The default value is $false.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The SearchableUrlEnabled parameter specifies whether the published calendar URL can be searched on the web. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -513,4 +328,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8afa2ed8-43aa-4cb4-9907-93144c976427.aspx)
-

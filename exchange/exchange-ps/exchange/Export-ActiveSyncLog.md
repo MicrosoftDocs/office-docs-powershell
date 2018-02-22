@@ -6,12 +6,6 @@ schema: 2.0.0
 # Export-ActiveSyncLog
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-ActiveSyncLog cmdlet to parse the Internet Information Services (IIS) logs and return information about Microsoft Exchange ActiveSync usage, either on the screen or in an output file.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Export-ActiveSyncLog cmdlet to parse the Internet Information Services (IIS) logs and return information about Microsoft Exchange ActiveSync usage, either on the screen or in an output file.
@@ -26,83 +20,27 @@ Export-ActiveSyncLog -Filename <String> [-Confirm] [-EndDate <DateTime>] [-Force
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Export-ActiveSyncLog cmdlet parses the IIS log files and returns information about Exchange ActiveSync usage. This cmdlet can export the output to a file or display it in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync server settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Export-ActiveSyncLog cmdlet parses the IIS log files and returns information about Exchange ActiveSync usage. This cmdlet can export the output to a file or display it in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync server settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Export-ActiveSyncLog cmdlet parses the IIS log files and returns information about Exchange ActiveSync usage. This cmdlet can export the output to a file or display it in the Exchange Management Shell.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex060809.log" -StartDate:"06/08/09" -EndDate:"06/09/10" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 06/08/09 to 06/09/10. The times on the report are in Coordinated Universal Time (UTC), and the report is saved in c:\\exreports\\easreports.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060812.log" -StartDate:"06/08/12" -EndDate:"06/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
 
-This example exports the Exchange ActiveSync log for the date range 06/08/12 to 06/09/12. The times on the report are in Coordinated Universal Time (UTC), and the report is saved in c:\\exreports\\easreports.
+This example exports the Exchange ActiveSync log for the date range 06/08/12 to 06/09/12. The times on the report are in Coordinated Universal Time (UTC) and the report is saved in c:\\exreports\\easreports.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex060812.log" -StartDate:"06/08/12" -EndDate:"06/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 06/08/12 to 06/09/12. The times on the report are in Coordinated Universal Time (UTC), and the report is saved in c:\\exreports\\easreports.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex102008.log" -StartDate:"09/20/08" -EndDate:"10/20/08" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 09/20/08 to 10/20/08 by reading all log files in the D:\\logs directory. All prompts are suppressed when running the report and a confirmation message is displayed. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex072012.log" -StartDate:"06/20/12" -EndDate:"07/20/12" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
 ```
 
-This example exports the Exchange ActiveSync log for the date range 06/20/12 to 07/20/12 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report, and a confirmation message is displayed. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
+This example exports the Exchange ActiveSync log for the date range 06/20/12 to 07/20/12 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report and a confirmation message is displayed. The times on the report are in UTC and the report is saved in c:\\exreports\\easreports.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Dir D:\Logs\*.log | Export-ActiveSyncLog -Filename:"c:\Windows\System32\LogFiles\W2SVC1\ex072012.log" -StartDate:"06/20/12" -EndDate:"07/20/12" -UseGMT:$true -Force $true -Confirm -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 06/20/12 to 07/20/12 by reading all log files in the D:\\logs directory. All prompts are suppressed while running the report, and a confirmation message is displayed. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020909.log" -StartDate:"02/01/09" -EndDate:"02/09/09" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 02/01/09 to 02/09/09. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020912.log" -StartDate:"02/01/12" -EndDate:"02/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
-```
-
-This example exports the Exchange ActiveSync log for the date range 02/01/12 to 02/09/12. The times on the report are in UTC, and the report is saved in c:\\exreports\\easreports.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Export-ActiveSyncLog -Filename: "c:\Windows\System32\LogFiles\W2SVC1\ex020912.log" -StartDate:"02/01/12" -EndDate:"02/09/12" -UseGMT:$true -OutputPath:"c:\exreports\easreports"
 ```
@@ -164,23 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force parameter suppresses the warning or confirmation messages that appear during specific configuration changes.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -244,17 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseGMT
-!!! Exchange Server 2010
-
-The UseGMT parameter specifies that Coordinated Universal Time (Greenwich Mean Time) is used for the time in the report output. By default, if this parameter isn't specified, local time is used.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The UseGMT switch specifies that Coordinated Universal Time (Greenwich Mean Time) is used for the time in the report output. By default, if this parameter isn't specified, local time is used.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -303,4 +215,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/96488cda-9d33-4b67-9e86-2d03e89b1a20.aspx)
-

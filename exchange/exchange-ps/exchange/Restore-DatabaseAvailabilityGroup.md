@@ -6,12 +6,6 @@ schema: 2.0.0
 # Restore-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Restore-DatabaseAvailabilityGroup cmdlet as part of a datacenter switchover.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Restore-DatabaseAvailabilityGroup cmdlet as part of a datacenter switchover of a database availability group (DAG).
@@ -28,38 +22,6 @@ Restore-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParame
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see Understanding Datacenter Activation Coordination Mode. For more information about datacenter switchovers, see Datacenter Switchovers.
-
-You can use the Set-DatabaseAvailabilityGroup cmdlet to configure the value for the DatacenterActivationMode parameter.
-
-The Restore-DatabaseAvailabilityGroup cmdlet performs several operations that affect the structure and membership of the DAG's cluster. This task will:
-
-- Forcibly evict the servers listed on the StoppedServersList from the DAG's cluster, thereby reestablishing quorum for the cluster enabling the surviving DAG members to start and provide service.
-
-- Configure the DAG to use the alternate witness server if there is an even number of surviving DAG members.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Database Availability Group Permissions" section in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You can also use this cmdlet for disaster recovery purposes to restore functionality to a DAG that has lost quorum due to one or more DAG members being offline for an extended period. Before running this cmdlet, you must first run the Stop-DatabaseAvailabilityGroup cmdlet.
-
-The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see Datacenter Activation Coordination mode.
-
-You can use the Set-DatabaseAvailabilityGroup cmdlet to configure the value for the DatacenterActivationMode parameter.
-
-The Restore-DatabaseAvailabilityGroup cmdlet performs several operations that affect the structure and membership of the DAG's cluster. This task does the following:
-
-- Forcibly evicts the servers listed on the StoppedMailboxServers list from the DAG's cluster, thereby reestablishing quorum for the cluster enabling the surviving DAG members to start and provide service.
-
-- Configures the DAG to use the alternate witness server if there is an even number of surviving DAG members, or a single surviving DAG member.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 You can also use this cmdlet for disaster recovery purposes to restore functionality to a DAG that has lost quorum due to one or more DAG members being offline for an extended period. Before running this cmdlet, you must first run the Stop-DatabaseAvailabilityGroup cmdlet.
 
 The Restore-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode parameter value of DagOnly. For more information about the DatacenterActivationMode parameter, see Datacenter Activation Coordination mode.
@@ -76,42 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Portland
-```
-
-This example activates member servers in a DAG named DAG1 for an Active Directory site named Portland. In this example, the values for the AlternateWitnessServer parameter and the AlternateWitnessDirectory parameter had been previously set by using the Set-DatabaseAvailabilityGroup cmdlet. Thus, there is no need to specify them here.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Portland
 ```
 
 This example activates member servers in the DAG DAG1 for the Active Directory site Portland. In this example, the values for the AlternateWitnessServer parameter and the AlternateWitnessDirectory parameter had been previously set by using the Set-DatabaseAvailabilityGroup cmdlet. Thus, there is no need to specify them here.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Portland
-```
-
-This example activates member servers in the DAG DAG1 for the Active Directory site Portland. In this example, the values for the AlternateWitnessServer parameter and the AlternateWitnessDirectory parameter had been previously set by using the Set-DatabaseAvailabilityGroup cmdlet. Thus, there is no need to specify them here.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond -AlternateWitnessServer EXHUB1 -AlternateWitnessDirectory D:\DAG1
-```
-
-This example activates member servers in a DAG named DAG1 for an Active Directory site named Redmond. In this example, the values for the AlternateWitnessServer parameter and the AlternateWitnessDirectory parameter are being set as part of the activation process.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond -AlternateWitnessServer CAS4 -AlternateWitnessDirectory D:\DAG1
-```
-
-This example activates member servers in the DAG DAG1 for the Active Directory site Redmond. In this example, the values for the AlternateWitnessServer parameter and the AlternateWitnessDirectory parameter are being set as part of the activation process.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Restore-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond -AlternateWitnessServer CAS4 -AlternateWitnessDirectory D:\DAG1
 ```
@@ -153,17 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateWitnessDirectory
-!!! Exchange Server 2010
-
-The AlternateWitnessDirectory parameter specifies the name of an alternate directory that's used to store witness data. The specified directory must not be in use by any other DAGs or used for any other purpose. This value can be populated ahead of time by using the Set-DatabaseAvailabilityGroup cmdlet.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AlternateWitnessDirectory parameter specifies the name of an alternate directory used to store witness data. The specified directory must not be in use by any other DAGs or used for any other purpose. This value can be populated ahead by using the Set-DatabaseAvailabilityGroup cmdlet.
-
-
 
 ```yaml
 Type: NonRootLocalLongFullPath
@@ -179,17 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateWitnessServer
-!!! Exchange Server 2010
-
-The AlternateWitnessServer parameter specifies the name of a new witness server for the DAG as part of a site activation process. This value can be populated ahead of time by using the Set-DatabaseAvailabilityGroup cmdlet.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AlternateWitnessServer parameter specifies the name of a new witness server for the DAG as part of a site activation process. This value can be populated ahead by using the Set-DatabaseAvailabilityGroup cmdlet.
-
-
 
 ```yaml
 Type: FileShareWitnessServerName
@@ -290,4 +204,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d65394ad-9680-423d-9a93-0b46906123e5.aspx)
-

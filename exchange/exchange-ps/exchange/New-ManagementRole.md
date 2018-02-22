@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-ManagementRole
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-ManagementRole cmdlet to create a management role based on an existing role or create an unscoped management role.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-ManagementRole cmdlet to create a management role based on an existing role or create an unscoped management role.
@@ -23,47 +17,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ### Set1
 ```
 New-ManagementRole [-Name] <String> -Parent <RoleIdParameter> [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-Organization <OrganizationIdParameter>] [-WhatIf]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf]
  [-EnabledCmdlets <String[]>] [<CommonParameters>]
 ```
 
 ### Set2
 ```
 New-ManagementRole [-Name] <String> [-UnScopedTopLevel] [-Confirm] [-Description <String>]
- [-DomainController <Fqdn>] [-Force] [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-Force] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can either create a management role based on an existing role, or you can create an unscoped role that's empty. If you create a role based on an existing role, you start with the management role entries that exist on the existing role. You can then remove entries to customize the role. If you create an unscoped role, the role can contain custom scripts or cmdlets that are not part of Exchange.
-
-An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
-
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an Unscoped Role.
-
-After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
-
-For more information about management roles, see Understanding Management Roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management roles" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-You can either create a management role based on an existing role, or you can create an unscoped role that's empty. If you create a role based on an existing role, you start with the management role entries that exist on the existing role. You can then remove entries to customize the role. If you create an unscoped role, the role can contain custom scripts or cmdlets that aren't part of Exchange.
-
-An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
-
-The ability to create an unscoped management role isn't granted by default. To create an unscoped management role, you must assign the Unscoped Role Management management role to a role group you're a member of. For more information about how to create an unscoped management role, see Create an unscoped role.
-
-After you create a role, you can change the management role entries on the role and assign the role with a management scope to a user or universal security group (USG).
-
-For more information about management roles, see Understanding management roles.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management roles" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You can either create a management role based on an existing role, or you can create an unscoped role that's empty. If you create a role based on an existing role, you start with the management role entries that exist on the existing role. You can then remove entries to customize the role. If you create an unscoped role, the role can contain custom scripts or cmdlets that aren't part of Exchange.
 
 An unscoped role doesn't have any scope restrictions applied. Scripts or third-party cmdlets included in an unscoped role can view or modify any object in the Exchange organization.
@@ -78,140 +42,24 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
 ```
 
 This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
 
-
 After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-
-After confirmation that the command removes the correct role entries, run the second command again without the WhatIf switch.
-
-
-For more information about pipelining and the Where cmdlet, see the following topics:
-
-
-Pipelining
-
-Working with Command Output
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
-
-
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-
-After confirmation that the command removes the correct role entries, run the second command again without the WhatIf switch.
-
-
-For more information about pipelining and the Where cmdlet, see the following topics:
-
-
-Pipelining
-
-Working with command output
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
-
-
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
 
 After confirmation that the command removes the correct role entries, the second command is run again without the WhatIf switch.
 
-
 For more information about pipelining and the Where cmdlet, see the following topics:
 
+- Pipelining
 
-Pipelining
+- Working with command output
 
-Working with command output
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
-
-
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-
-After confirmation that the command removes the correct role entries, the second command is run again without the WhatIf switch.
-
-
-For more information about pipelining and the Where cmdlet, see the following topics:
-
-
-Pipelining
-
-Working with command output
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-ManagementRole -Name "Redmond Journaling View-Only" -Parent Journaling; Get-ManagementRoleEntry "Redmond Journaling View-Only\*" | Where { $_.Name -NotLike "Get*" } | Remove-ManagementRoleEntry -WhatIf
-```
-
-This example creates the management role Redmond Journaling View-Only based on the Journaling parent role.
-
-
-After the role is created, the Remove-ManagementRoleEntry cmdlet is used along with the Where cmdlet to remove all the management role entries that aren't needed on the role. You can't add role entries to the newly created role because it already has all the role entries that exist on its parent role, Journaling. The WhatIf switch is used to verify that the correct role entries are removed.
-
-
-After confirmation that the command removes the correct role entries, the second command is run again without the WhatIf switch.
-
-
-For more information about pipelining and the Where cmdlet, see the following topics:
-
-
-Pipelining
-
-Working with command output
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
-```
-
-This example creates the unscoped management role In-house scripts. The user running the command, or the role group the user is a member of, is assigned the Unscoped Role Management management role. This assignment is required to use the UnScopedTopLevel switch.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
-```
-
-This example creates the unscoped management role In-house scripts. The user running the command, or the role group the user is a member of, is assigned the Unscoped Role Management management role. This assignment is required to use the UnScopedTopLevel switch.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
-```
-
-This example creates the unscoped management role In-house scripts. The user running the command, or the role group the user is a member of, is assigned the Unscoped Role Management management role. This assignment is required to use the UnScopedTopLevel switch.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
-```
-
-This example creates the unscoped management role In-house scripts. The user running the command, or the role group the user is a member of, is assigned the Unscoped Role Management management role. This assignment is required to use the UnScopedTopLevel switch.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 New-ManagementRole -Name "In-house scripts" -UnScopedTopLevel
 ```
@@ -305,19 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -333,49 +171,13 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -436,4 +238,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/76367e39-a387-430f-b3a5-1df20dd31201.aspx)
-

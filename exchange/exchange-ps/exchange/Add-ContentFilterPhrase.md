@@ -6,12 +6,6 @@ schema: 2.0.0
 # Add-ContentFilterPhrase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-ContentFilterPhrase cmdlet to define custom words for the Content Filter agent. A custom word is a word or phrase that the administrator sets for the Content Filter agent to evaluate the content of an e-mail message and apply appropriate filter processing.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Add-ContentFilterPhrase cmdlet to define custom words for the Content Filter agent. A custom word is a word or phrase that the administrator sets for the Content Filter agent to evaluate the content of an e-mail message and apply appropriate filter processing.
@@ -24,41 +18,13 @@ Add-ContentFilterPhrase [-Phrase] <String> -Influence <GoodWord | BadWord> [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Add-ContentFilterPhrase cmdlet adds phrases to the Allow or Block phrases list. To learn more about how the Content Filter agent uses the Allow and Block phrases lists, see Understanding Content Filtering.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Add-ContentFilterPhrase cmdlet adds phrases to the Allow or Block phrases list.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 The Add-ContentFilterPhrase cmdlet adds phrases to the Allow or Block phrases list.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
-```
-
-This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase will be marked as spam by the Content Filtering agent.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
-```
-
-This example adds the phrase Free credit report to the Block phrase list. Any messages that contain this phrase will be marked as spam by the Content Filtering agent.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-ContentFilterPhrase -Phrase "Free credit report" -Influence BadWord
 ```
@@ -173,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ac73d6e0-f64a-4a49-99cf-ac8cfa349b5c.aspx)
-

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-MailboxSpellingConfiguration
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxSpellingConfiguration cmdlet to modify Microsoft Office Outlook Web App spell checking options for a specified user. For example, you can set the dictionary language and configure the spelling checker to ignore mixed digits or words in all uppercase.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-MailboxSpellingConfiguration cmdlet to modify Microsoft Office Outlook Web App spelling checker options for a specified user. For example, you can set the dictionary language and configure the spelling checker to ignore mixed digits or words in all uppercase.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxSpellingConfiguration cmdlet to modify Outlook on the web spelling checker options for a specified user. For example, you can set the dictionary language and configure the spelling checker to ignore mixed digits or words in all uppercase.
@@ -37,98 +23,25 @@ Set-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-CheckBeforeS
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder administrative permissions" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Spelling configuration" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-MailboxSpellingConfiguration -Identity Peter -IgnoreUppercase $true
 ```
 
 This example sets the spelling checker of user Peter to ignore words in all uppercase letters.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxSpellingConfiguration -Identity Peter -IgnoreUppercase $true
-```
-
-This example sets the spelling checker of user Peter to ignore words in all uppercase letters.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxSpellingConfiguration -Identity Peter -IgnoreUppercase $true
-```
-
-This example sets the spelling checker of user Peter to ignore words in all uppercase letters.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxSpellingConfiguration -Identity Peter -IgnoreUppercase $true
-```
-
-This example sets the spelling checker of user Peter to ignore words in all uppercase letters.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
 ```
 
 This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
-```
-
-This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
-```
-
-This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-MailboxSpellingConfiguration -Identity kai -IgnoreUppercase $true
-```
-
-This example sets the spelling checker to ignore words that contain only uppercase letters for messages sent from Kai's mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
-```
-
-This example sets the spelling checker to ignore words containing numbers for messages sent from Kai's mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
-```
-
-This example sets the spelling checker to ignore words containing numbers for messages sent from Kai's mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
-```
-
-This example sets the spelling checker to ignore words containing numbers for messages sent from Kai's mailbox.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-MailboxSpellingConfiguration -IgnoreMixedDigits $true -Identity kai
 ```
@@ -138,30 +51,6 @@ This example sets the spelling checker to ignore words containing numbers for me
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the mailbox. You can use the following values:
-
-- GUID
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -188,8 +77,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -204,17 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -CheckBeforeSend
-!!! Exchange Server 2010, Exchange Server 2013
-
-The CheckBeforeSend parameter specifies whether Outlook Web App checks the spelling for every message when the user clicks Send in the new message form. The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The CheckBeforeSend parameter specifies whether Outlook on the web checks the spelling for every message when the user clicks Send in the new message form. Valid values are$true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -250,56 +127,6 @@ Accept wildcard characters: False
 ```
 
 ### -DictionaryLanguage
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DictionaryLanguage parameter specifies the dictionary language to use when the spelling checker checks the spelling in messages. You can use the following values:
-
-- Arabic
-
-- Catalan
-
-- Danish
-
-- Dutch
-
-- EnglishAustralia
-
-- EnglishCanada
-
-- EnglishUnitedKingdom
-
-- EnglishUnitedStates
-
-- Finnish
-
-- French
-
-- GermanPreReform
-
-- GermanPostReform
-
-- Hebrew
-
-- Italian
-
-- Korean
-
-- NorwegianBokMal
-
-- NorwegianNyorsk
-
-- PortuguesePortugal
-
-- PortugueseBrasil
-
-- Spanish
-
-- Swedish
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DictionaryLanguage parameter specifies the dictionary language to use when the spelling checker checks the spelling in messages. Valid values are:
 
 - Arabic
@@ -344,8 +171,6 @@ The DictionaryLanguage parameter specifies the dictionary language to use when t
 
 - Swedish
 
-
-
 ```yaml
 Type: Spanish | Arabic | Danish | Dutch | EnglishAustralia | EnglishCanada | EnglishUnitedKingdom | EnglishUnitedStates | Finnish | French | GermanPostReform | GermanPreReform | Hebrew | Italian | Korean | NorwegianBokmal | NorwegianNynorsk | PortuguesePortugal | PortugueseBrasil | Swedish | Catalan
 Parameter Sets: (All)
@@ -360,19 +185,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -388,17 +203,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreMixedDigits
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreMixedDigits parameter specifies whether the spelling checker ignores words that contain numbers. The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IgnoreMixedDigits parameter specifies whether the spelling checker ignores words that contain numbers. Valid values are $true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -414,21 +219,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreUppercase
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreUppercase parameter specifies whether the spelling checker ignores words that contain only uppercase letters, for example, acronyms.
-
-The two possible values for this parameter are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IgnoreUppercase parameter specifies whether the spelling checker ignores words that contain only uppercase letters, for example, acronyms.
 
 Valid values are $true or $false. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -477,4 +270,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/63447637-44f7-4857-9606-f9c71287ca49.aspx)
-

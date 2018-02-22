@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-UMAutoAttendant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-UMAutoAttendant cmdlet to modify an existing Unified Messaging (UM) auto attendant.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UMAutoAttendant cmdlet to modify an existing Unified Messaging (UM) auto attendant.
@@ -49,24 +43,6 @@ Set-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-AfterHoursKeyMapp
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-UMAutoAttendant cmdlet changes or modifies the settings of an existing UM auto attendant. By default, some UM auto attendant parameters are required and are created. However, after a UM auto attendant is created, not all properties for the UM auto attendant are writable. Therefore, some values for the UM auto attendant can't be changed or modified unless the UM auto attendant is deleted and a new UM auto attendant is created.
-
-After this task is completed, the parameters and values specified are configured on the UM auto attendant.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-UMAutoAttendant cmdlet changes or modifies the settings of an existing UM auto attendant. By default, some UM auto attendant parameters are required and are created. However, after a UM auto attendant is created, not all properties for the UM auto attendant are writable. Therefore, some values for the UM auto attendant can't be changed or modified unless the UM auto attendant is deleted and a new UM auto attendant is created.
-
-After this task is completed, the parameters and values specified are configured on the UM auto attendant.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-UMAutoAttendant cmdlet changes or modifies the settings of an existing UM auto attendant. By default, some UM auto attendant parameters are required and are created. However, after a UM auto attendant is created, not all properties for the UM auto attendant are writable. Therefore, some values for the UM auto attendant can't be changed or modified unless the UM auto attendant is deleted and a new UM auto attendant is created.
 
 After this task is completed, the parameters and values specified are configured on the UM auto attendant.
@@ -75,84 +51,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true
-```
-
-This example configures a UM auto attendant named MySpeechEnabledAA to fall back to the MyDTMFAA, sets the operator's extension to 50100, and enables transfers to this extension number after business hours.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
 ```
 
 This example configures the UM auto attendant MySpeechEnabledAA to fall back to the MyDTMFAA, sets the operator's extension to 50100, enables transfers to this extension number after business hours and enables a caller to press the \* button on a telephone keypad to get to the Outlook Voice Access welcome greeting when a UM auto attendant menu is being played.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
-```
-
-This example configures the UM auto attendant MySpeechEnabledAA to fall back to the MyDTMFAA, sets the operator's extension to 50100, enables transfers to this extension number after business hours and enables a caller to press the \* button on a telephone keypad to get to the Outlook Voice Access welcome greeting when a UM auto attendant menu is being played.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMAutoAttendant -Identity MySpeechEnabledAA -DTMFFallbackAutoAttendant MyDTMFAA -OperatorExtension 50100 -AfterHoursTransferToOperatorEnabled $true -StaroutToDialPlanEnabled $true
-```
-
-This example configures the UM auto attendant MySpeechEnabledAA to fall back to the MyDTMFAA, sets the operator's extension to 50100, enables transfers to this extension number after business hours and enables a caller to press the \* button on a telephone keypad to get to the Outlook Voice Access welcome greeting when a UM auto attendant menu is being played.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-UMAutoAttendant -Identity MyUMAutoAttendant -BusinessHoursSchedule 0.10:45-0.13:15,1.09:00-1.17:00,6.09:00-6.16:30 -HolidaySchedule "New Year,newyrgrt.wav,1/2/2010","Building Closed for Construction,construction.wav,4/24/2010,4/28/2010"
-```
-
-This example configures a UM auto attendant named MyUMAutoAttendant that has business hours configured to be 10:45 to 13:15 (Sunday), 09:00 to 17:00 (Monday), and 09:00 to 16:30 (Saturday) and holiday times and their associated greetings configured to be "New Year" on January 2, 2010, and "Building Closed for Construction" from April 24, 2010 through April 28, 2010.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-UMAutoAttendant -Identity MyUMAutoAttendant -BusinessHoursSchedule 0.10:45-0.13:15,1.09:00-1.17:00,6.09:00-6.16:30 -HolidaySchedule "New Year,newyrgrt.wav,1/2/2013","Building Closed for Construction,construction.wav,4/24/2013,4/28/2013"
 ```
 
 This example configures the UM auto attendant MyUMAutoAttendant that has business hours configured to be 10:45 to 13:15 (Sunday), 09:00 to 17:00 (Monday), and 09:00 to 16:30 (Saturday) and holiday times and their associated greetings configured to be "New Year" on January 2, 2013, and "Building Closed for Construction" from April 24, 2013 through April 28, 2013.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMAutoAttendant -Identity MyUMAutoAttendant -BusinessHoursSchedule 0.10:45-0.13:15,1.09:00-1.17:00,6.09:00-6.16:30 -HolidaySchedule "New Year,newyrgrt.wav,1/2/2013","Building Closed for Construction,construction.wav,4/24/2013,4/28/2013"
-```
-
-This example configures the UM auto attendant MyUMAutoAttendant that has business hours configured to be 10:45 to 13:15 (Sunday), 09:00 to 17:00 (Monday), and 09:00 to 16:30 (Saturday) and holiday times and their associated greetings configured to be "New Year" on January 2, 2013, and "Building Closed for Construction" from April 24, 2013 through April 28, 2013.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UMAutoAttendant -Identity MyUMAutoAttendant -BusinessHoursSchedule 0.10:45-0.13:15,1.09:00-1.17:00,6.09:00-6.16:30 -HolidaySchedule "New Year,newyrgrt.wav,1/2/2013","Building Closed for Construction,construction.wav,4/24/2013,4/28/2013"
-```
-
-This example configures the UM auto attendant MyUMAutoAttendant that has business hours configured to be 10:45 to 13:15 (Sunday), 09:00 to 17:00 (Monday), and 09:00 to 16:30 (Saturday) and holiday times and their associated greetings configured to be "New Year" on January 2, 2013, and "Building Closed for Construction" from April 24, 2013 through April 28, 2013.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-UMAutoAttendant -Identity MyAutoAttendant - BusinessHoursKeyMappingEnabled $true -BusinessHoursKeyMapping "1,Sales,,SalesAutoAttendant","2,Support,12345","3,Directions,,,directions.wav"
-```
-
-This example configures a UM auto attendant named MyAutoAttendant and enables business hours key mappings so that when callers press 1, they are forwarded to another UM auto attendant named SalesAutoAttendant. When they press 2, they are forwarded to extension number 12345 for Support, and when they press 3, they are sent to another auto attendant that plays an audio file.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-UMAutoAttendant -Identity MyAutoAttendant -BusinessHoursKeyMappingEnabled $true -BusinessHoursKeyMapping "1,Sales,,SalesAutoAttendant","2,Support,12345","3,Directions,,,directions.wav"
-```
-
-This example configures the UM auto attendant MyAutoAttendant and enables business hours key mappings so that when callers press 1, they're forwarded to another UM auto attendant named SalesAutoAttendant. When they press 2, they're forwarded to extension number 12345 for Support, and when they press 3, they're sent to another auto attendant that plays an audio file.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UMAutoAttendant -Identity MyAutoAttendant -BusinessHoursKeyMappingEnabled $true -BusinessHoursKeyMapping "1,Sales,,SalesAutoAttendant","2,Support,12345","3,Directions,,,directions.wav"
-```
-
-This example configures the UM auto attendant MyAutoAttendant and enables business hours key mappings so that when callers press 1, they're forwarded to another UM auto attendant named SalesAutoAttendant. When they press 2, they're forwarded to extension number 12345 for Support, and when they press 3, they're sent to another auto attendant that plays an audio file.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-UMAutoAttendant -Identity MyAutoAttendant -BusinessHoursKeyMappingEnabled $true -BusinessHoursKeyMapping "1,Sales,,SalesAutoAttendant","2,Support,12345","3,Directions,,,directions.wav"
 ```
@@ -498,17 +411,7 @@ Accept wildcard characters: False
 ```
 
 ### -BusinessLocation
-!!! Exchange Server 2010
-
-The BusinessLocation parameter specifies what the Unified Messaging server should read to the caller who selected the business location option on a UM auto attendant menu.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The BusinessLocation parameter specifies what the Mailbox server should read to the caller who selected the business location option on a UM auto attendant menu.
-
-
 
 ```yaml
 Type: String
@@ -640,19 +543,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -684,17 +577,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-!!! Exchange Server 2010
-
-The ForceUpgrade parameter specifies whether you're prompted for confirmation before a UM auto attendant object is upgraded.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM auto attendant object is upgraded.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -726,24 +609,6 @@ Accept wildcard characters: False
 ```
 
 ### -HolidaySchedule
-!!! Exchange Server 2010
-
-The HolidaySchedule parameter specifies the holiday schedule for the organization. The schedule is formatted as an array of strings. Each string contains three parts:
-
-- Name, which is limited to 64 characters
-
-- Day (date) of the holiday
-
-- File name for the audio prompt, which is in the .wma format
-
-The following is an example:
-
-"Christmas, Christmas.wav, 12/25/2010".
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The HolidaySchedule parameter specifies the holiday schedule for the organization. The schedule is formatted as an array of strings. Each string contains three parts:
 
 - Name, which is limited to 64 characters
@@ -755,8 +620,6 @@ The HolidaySchedule parameter specifies the holiday schedule for the organizatio
 The following is an example:
 
 "Christmas, Christmas.wav, 12/25/2013".
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -896,17 +759,7 @@ Accept wildcard characters: False
 ```
 
 ### -PilotIdentifierList
-!!! Exchange Server 2010
-
-The PilotIdentifierList parameter specifies a list of one or more pilot numbers. Pilot numbers are used to route incoming calls to Unified Messaging servers. The calls are then answered by the auto attendant.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The PilotIdentifierList parameter specifies a list of one or more pilot numbers. Pilot numbers are used to route incoming calls to Mailbox servers. The calls are then answered by the UM auto attendant.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -938,17 +791,7 @@ Accept wildcard characters: False
 ```
 
 ### -SpeechEnabled
-!!! Exchange Server 2010
-
-The SpeechEnabled parameter specifies whether the auto attendant is speech-enabled. The default setting on the auto attendant is DTMF.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The SpeechEnabled parameter specifies whether the auto attendant is speech-enabled. The default setting on the UM auto attendant is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -980,17 +823,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timezone
-!!! Exchange Server 2010
-
-The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting that's on the server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting on the server.
-
-
 
 ```yaml
 Type: String
@@ -1006,17 +839,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZoneName
-!!! Exchange Server 2010, Exchange Server 2016, Exchange Online
-
-The TimeZoneName parameter specifies all or part of a Microsoft Windows time zone display name. The string is compared to the display names in the local system registry to determine a simple contains match. An error is returned if the time zone name isn't correct.
-
-
-
-!!! Exchange Server 2013
-
 The TimeZoneName parameter specifies all or part of a MicrosoftWindows time zone display name. The string is compared to the display names in the local system registry to determine a simple contains match. An error is returned if the time zone name isn't correct.
-
-
 
 ```yaml
 Type: UMTimeZone
@@ -1032,17 +855,7 @@ Accept wildcard characters: False
 ```
 
 ### -WeekStartDay
-!!! Exchange Server 2010
-
-The WeekStartDay parameter specifies the starting day of the each week. The valid values for this parameter are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The WeekStartDay parameter specifies the starting day of the week. The valid values for this parameter are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.
-
-
 
 ```yaml
 Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
@@ -1074,17 +887,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timezone
-!!! Exchange Server 2010
-
-The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting that's on the server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Timezone parameter specifies the time zone used with the auto attendant. The default time zone is the time zone setting on the server.
-
-
 
 ```yaml
 Type: String
@@ -1117,4 +920,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7c7dbe5a-adc0-419a-89f7-7a0ef1482790.aspx)
-

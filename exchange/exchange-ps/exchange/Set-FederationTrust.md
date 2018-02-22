@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-FederationTrust
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-FederationTrust cmdlet to modify an existing federation trust.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-FederationTrust cmdlet to modify an existing federation trust.
@@ -39,74 +33,25 @@ Set-FederationTrust [-Identity] <FederationTrustIdParameter> [-Confirm] [-Domain
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Set-FederationTrust cmdlet to manage the certificates used for the federation trust. The Set-FederationTrust cmdlet can also be used to refresh the metadata document from the Microsoft Federation Gateway and download its certificate.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Set-FederationTrust cmdlet to manage the certificates used for the federation trust. You can also use the Set-FederationTrust cmdlet to refresh the metadata document from the Microsoft Federation Gateway and download its certificate.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You can use the Set-FederationTrust cmdlet to manage the certificates used for the federation trust. You can also use the Set-FederationTrust cmdlet to refresh the metadata document from the Microsoft Federation Gateway and download its certificate.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
 
 This example configures the federation trust Microsoft Federation Gateway to use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the next certificate.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
-```
-
-This example configures the federation trust Microsoft Federation Gateway to use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the next certificate.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
-```
-
-This example configures the federation trust Microsoft Federation Gateway to use the certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17 as the next certificate.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
 ```
 
 This example configures the federation trust Microsoft Federation Gateway to use the next certificate as the current certificate.
-
-
-Before you configure a federation trust to use the next certificate as the current certificate, you must use the Test-FederationTrust cmdlet or the Manage Federation wizard to verify that the certificate is available on all Hub Transport servers and Client Access servers.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
-```
-
-This example configures the federation trust Microsoft Federation Gateway to use the next certificate as the current certificate.
-
-
-Before you configure a federation trust to use the next certificate as the current certificate, you must use the Test-FederationTrust cmdlet to verify that the certificate is available on all Mailbox and Client Access servers.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-FederationTrust -Identity "Microsoft Federation Gateway" -PublishFederationCertificate
-```
-
-This example configures the federation trust Microsoft Federation Gateway to use the next certificate as the current certificate.
-
 
 Before you configure a federation trust to use the next certificate as the current certificate, you need to use the Test-FederationTrust cmdlet to verify that the certificate is available on all Exchange servers.
 
@@ -129,19 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApplicationUri
-!!! Exchange Server 2010
-
 The ApplicationUri parameter specifies the primary domain used for the federation organization identifier.
-
-
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-The ApplicationUri parameter specifies the primary domain used for the federation organization identifier.
-
-
 
 ```yaml
 Type: String
@@ -157,31 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -PublishFederationCertificate
-!!! Exchange Server 2010
-
-The PublishFederationCertificate switch specifies the next certificate as the current certificate for the federation trust and publishes it to the Microsoft Federation Gateway. The certificate is used to encrypt tokens with the Microsoft Federation Gateway.
-
-Before setting the next certificate to be used as the current certificate, ensure that the certificate is deployed on all Hub Transport servers and Client Access servers. Use the Test-FederationCertificate cmdlet or the Managed Federation wizard to check the deployment status of the certificate.
-
-
-
-!!! Exchange Server 2013
-
-The PublishFederationCertificate switch specifies the next certificate as the current certificate for the federation trust and publishes it to the Microsoft Federation Gateway. The certificate is used to encrypt tokens with the Microsoft Federation Gateway.
-
-Before setting the next certificate to be used as the current certificate, ensure that the certificate is deployed on all Mailbox and Client Access servers. Use the Test-FederationCertificate cmdlet to check the deployment status of the certificate.
-
-
-
-!!! Exchange Server 2016
-
 The PublishFederationCertificate switch specifies the next certificate as the current certificate for the federation trust and publishes it to the Microsoft Federation Gateway. You don't need to specify a value with this switch.
 
 The certificate is used to encrypt tokens with the Microsoft Federation Gateway.
 
 Before setting the next certificate to be used as the current certificate, ensure that the certificate is deployed on all Exchange servers. Use the Test-FederationCertificate cmdlet to check the deployment status of the certificate.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -281,23 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-!!! Exchange Server 2010
-
-The Thumbprint parameter specifies the thumbprint of the X.509 certificate to be configured as the next certificate for the federation trust. After the certificate is deployed on all Hub Transport servers and Client Access servers in the Exchange organization, you can use the PublishFederationCertificate switch to configure the trust to use this certificate.
-
-
-
-!!! Exchange Server 2013
-
-The Thumbprint parameter specifies the thumbprint of the X.509 certificate to be configured as the next certificate for the federation trust. After the certificate is deployed on all Mailbox and Client Access servers in the Exchange organization, you can use the PublishFederationCertificate switch to configure the trust to use this certificate.
-
-
-
-!!! Exchange Server 2016
-
 The Thumbprint parameter specifies the thumbprint of the X.509 certificate to be configured as the next certificate for the federation trust. After the certificate is deployed on all Exchange servers in the organization, you can use the PublishFederationCertificate switch to configure the trust to use this certificate.
-
-
 
 ```yaml
 Type: String
@@ -346,4 +243,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/67b2ab23-e868-448f-b5c6-f73c2136223c.aspx)
-

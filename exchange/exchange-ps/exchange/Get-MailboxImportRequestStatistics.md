@@ -6,22 +6,6 @@ schema: 2.0.0
 # Get-MailboxImportRequestStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxImportRequestStatistics cmdlet to view detailed information about import requests.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-MailboxImportRequestStatistics cmdlet to view detailed information about import requests.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxImportRequestStatistics cmdlet to view detailed information about import requests.
@@ -52,24 +36,6 @@ Get-MailboxImportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can pipeline the Get-MailboxImportRequestStatistics cmdlet from the Get-MailboxImportRequest cmdlet.
-
-The RequestQueue and MRSInstance parameter syntax sets are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You can pipeline the Get-MailboxImportRequestStatistics cmdlet from the Get-MailboxImportRequest cmdlet.
-
-The RequestQueue parameter syntax set is for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can pipeline the Get-MailboxImportRequestStatistics cmdlet from the Get-MailboxImportRequest cmdlet.
 
 The RequestQueue parameter syntax set is for debugging purposes only.
@@ -78,84 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1
 ```
 
-This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
+This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox and status.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1
-```
-
-This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1
-```
-
-This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1
-```
-
-This example returns the default statistics for the second import request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1 | Export-CSV \\SERVER01\ImportRequest_Reports\Tony_Importstats.csv
-```
-
-This example returns the detailed statistics for the second import request for Tony Smith's mailbox and exports the report to a CSV file.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1 | Export-CSV \\SERVER01\ImportRequest_Reports\Tony_Importstats.csv
 ```
 
 This example returns the detailed statistics for the second import request for Tony Smith's mailbox and exports the report to a .csv file.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1 | Export-CSV \\SERVER01\ImportRequest_Reports\Tony_Importstats.csv
-```
-
-This example returns the detailed statistics for the second import request for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\MailboxImport1 | Export-CSV \\SERVER01\ImportRequest_Reports\Tony_Importstats.csv
-```
-
-This example returns the detailed statistics for the second import request for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
-```
-
-This example returns additional information about the import request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
-```
-
-This example returns additional information about the import request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
-```
-
-This example returns additional information about the import request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
 ```
@@ -167,30 +70,9 @@ This example returns additional information about the import request for Tony Sm
 Get-MailboxImportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
-This example returns default statistics for an import request that was processed by the instance of MRS running on the server CAS01.
+In Exchange Server 2010, this example returns default statistics for an import request that was processed by the instance of MRS running on the server CAS01.
 
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxImportRequest -Status Failed | Get-MailboxImportRequestStatistics -IncludeReport | Format-List > AllImportReports.txt
-```
-
-This example returns additional information for all the import requests that have a status of Failed by using the IncludeReport parameter, and then saves the information to the text file AllImportReports.txt.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxImportRequest -Status Failed | Get-MailboxImportRequestStatistics -IncludeReport | Format-List > AllImportReports.txt
-```
-
-This example returns additional information for all the import requests that have a status of Failed by using the IncludeReport parameter, and then saves the information to the text file AllImportReports.txt.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-MailboxImportRequest -Status Failed | Get-MailboxImportRequestStatistics -IncludeReport | Format-List > AllImportReports.txt
-```
-
-This example returns additional information for all the import requests that have a status of Failed by using the IncludeReport parameter, and then saves the information to the text file AllImportReports.txt.
-
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Get-MailboxImportRequest -Status Failed | Get-MailboxImportRequestStatistics -IncludeReport | Format-List > AllImportReports.txt
 ```
@@ -234,32 +116,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2010
-
-The RequestQueue parameter specifies the mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-This parameter can't be used in conjunction with the Identity or MRSInstance parameters.
-
-
-
-!!! Exchange Server 2013
-
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
-
-- Database GUID
-
-- Database name
-
-You can't use this parameter with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
@@ -269,8 +125,6 @@ The RequestQueue parameter identifies the request based on the mailbox database 
 - Database name
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -286,19 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -314,17 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-!!! Exchange Server 2010
-
-The IncludeReport switch specifies whether to return additional details about the request, which can be used for troubleshooting.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -340,21 +174,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RequestGuid parameter specifies the unique identifier for the import request. To find the import request GUID, use the Get-MailboxImportRequest cmdlet. If you specify the RequestGuid parameter, you must also specify the RequestQueue parameter. You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter (together with the RequestQueue parameter) specifies the unique identifier for the import request. To find the import request GUID, use the Get-MailboxImportRequest cmdlet.
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -435,4 +259,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/678ffbbb-469d-4681-ba2e-33d4e0afe94f.aspx)
-

@@ -6,18 +6,6 @@ schema: 2.0.0
 # Set-RpcClientAccess
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-RpcClientAccess cmdlet to manage the settings for the Exchange RPC Client Access service that's running on a Microsoft Exchange Server 2010 Client Access server.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-RpcClientAccess cmdlet to manage the settings for the Exchange RPC Client Access service that's running on a Microsoft Exchange Server 2010 Client Access server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-RpcClientAccess cmdlet to modify the settings of the Microsoft Exchange RPC Client Access service on Exchange servers that have the Client Access server role installed. These settings affect Outlook clients that connect by using Outlook Anywhere (RPC over HTTP).
@@ -31,20 +19,6 @@ Set-RpcClientAccess -Server <ServerIdParameter> [-BlockedClientVersions <String>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can run the Set-RpcClientAccess cmdlet for a single Client Access server that has the Exchange RPC Client Access service installed or for all Exchange Client Access servers that have the Exchange RPC Client Access service installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "RPC Client Access settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You can run the Set-RpcClientAccess cmdlet for a single Client Access server that has the Exchange RPC Client Access service installed or for all Exchange Client Access servers that have the Exchange RPC Client Access service installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "RPC Client Access settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 Outlook 2007 isn't supported in Exchange 2016, so you shouldn't see Outlook connections at or below version 12.Y.Z. However, you should monitor the RPC Client Access log to see the client versions that are connecting to your Exchange servers before you block any client versions.
 
 To block Outlook versions for specific mailboxes, use the Set-CASMailbox cmdlet.
@@ -53,54 +27,25 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.6535.6535;7.0.0;8.02.4-11.6535.6535"
-```
-
-This example restricts clients that aren't running Office Outlook 2007 from connecting to the Client Access server CAS01.
-
-
-The values used with the BlockedClientVersions parameter are examples. You can determine the correct client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-RpcClientAccess -Server CAS01 -BlockedClientVersions "0.0.0-5.6535.6535;7.0.0;8.02.4-11.6535.6535"
-```
-
-This example restricts clients that aren't running Office Outlook 2007 from connecting to the Client Access server CAS01.
-
-
-The values used with the BlockedClientVersions parameter are examples. You can determine the correct client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 14.0.0-14.32767.65535
 ```
 
 This example prevents Outlook Anywhere connections by Outlook 2010 clients on the server named MBX01.
 
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-RpcClientAccess -Server MBX01 -BlockedClientVersions 15.0.0-15.4737.999
 ```
 
 This example prevents Outlook Anywhere connections by Outlook 2013 clients that don't have KB3054940 installed (version 15.0.4737.1000) on the server named MBX01.
 
-
 Note: You can determine specific client software versions by parsing the RPC Client Access log files located at %ExchangeInstallPath%Logging\\RPC Client Access.
 
 ## PARAMETERS
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the Client Access server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server that you want to modify.
 
 You can use any value that uniquely identifies the server. For example:
@@ -112,8 +57,6 @@ You can use any value that uniquely identifies the server. For example:
 - Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
 
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -129,24 +72,6 @@ Accept wildcard characters: False
 ```
 
 ### -BlockedClientVersions
-!!! Exchange Server 2010
-
-The BlockedClientVersions parameter specifies which versions of Microsoft Outlook are restricted from connecting. The Exchange RPC Client Access service rejects Outlook connections if versions are in the range specified. This setting affects MAPI and Outlook Anywhere client connections. The value must be less than 256 characters in length.
-
-Versions should be single numbers in the format X.Y.Z where X is a major version number, Y is the minor revision number, and Z specifies the build, and ranges should be delimited by semicolons (for example, 0.0.0-5.9.9; 7.0.0-65535.65535.65535). For more information, see Configure Outlook Client Blocking.
-
-
-
-!!! Exchange Server 2013
-
-The BlockedClientVersions parameter specifies which versions of Microsoft Outlook are restricted from connecting. The Exchange RPC Client Access service rejects Outlook connections if versions are in the range specified. This setting affects MAPI and Outlook Anywhere client connections. The value must be less than 256 characters in length.
-
-Versions should be single numbers in the format X.Y.Z where X is a major version number, Y is the minor revision number, and Z specifies the build, and ranges should be delimited by semicolons (for example, 0.0.0-5.9.9; 7.0.0-65535.65535.65535). For more information, see Configure Outlook client blocking.
-
-
-
-!!! Exchange Server 2016
-
 The BlockedClientVersions parameter specifies the RPC client versions that aren't allowed to connect to the specified Exchange server. For example, the Microsoft Exchange RPC Client Access service rejects an Outlook Anywhere connection if the version of Outlook is the specified value, or is in the specified range.
 
 Valid version values are in the format X.Y.Z. RPC client versions are typically reported in format X.0.Y.Z format, but for this parameter, you need to specify the value as X.Y.Z.
@@ -162,8 +87,6 @@ You can specify ranges. For example, -13.32767.65535, 14.0.0-14.32767.65535, or 
 You can specify multiple individual values or range values separated by semicolons (;).
 
 Be careful when you restrict client access, because Exchange server components might also use RPC to log on. Some components may report their client version as a text string, while others may report the Exchange build number. Monitor the RPC Client Access log to see the client versions that are connecting to your Exchange server before you block any client versions.
-
-
 
 ```yaml
 Type: String
@@ -215,21 +138,11 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionRequired
-!!! Exchange Server 2010, Exchange Server 2013
-
-The EncryptionRequired parameter specifies whether to require Outlook connections to be encrypted. The Exchange RPC Client Access service rejects unencrypted Outlook connections if this parameter is set to $true.
-
-
-
-!!! Exchange Server 2016
-
 The EncryptionRequired parameter specifies whether encryption is required for RPC client connections. Valid values are:
 
 - $true: Unencrypted RPC client connections are rejected. This is the default value.
 
 - $false: Unencrypted RPC client connections are allowed.
-
-
 
 ```yaml
 Type: $true | $false
@@ -245,23 +158,9 @@ Accept wildcard characters: False
 ```
 
 ### -MaximumConnections
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MaximumConnections parameter specifies the maximum number of concurrent connections allowed. The Exchange RPC Client Access service reads and limits connections based on this property.
-
-This parameter has a range from 1 through 65535.
-
-Although you can configure a non-default value for this parameter, changes to this setting aren't enforced in this version of Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The MaximumConnections parameter specifies the maximum number of concurrent client connections that are allowed by the Microsoft Exchange RPC Client Access service. The default value is 65536.
 
 Note: Although you can configure a non-default value for this parameter, changes to this setting aren't enforced.
-
-
 
 ```yaml
 Type: Int32
@@ -326,4 +225,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b606d241-aecd-4bb9-a34f-6dd6b02a712c.aspx)
-

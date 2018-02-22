@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-UserPhoto
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-UserPhoto cmdlet to configure the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as MicrosoftOutlook Web App, Lync, Skype for Business, and SharePoint.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UserPhoto cmdlet to configure the user photos feature that allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business, and SharePoint.
@@ -56,20 +46,6 @@ Set-UserPhoto [-Identity] <MailboxIdParameter> [-Save] [-Confirm] [-DomainContro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In on-premises Exchange, the user photo is stored in the user's Active Directory account. In Exchange Online the user photo is stored in the root directory of the user's mailbox.
-
-For Exchange Online mailboxes, you need to manage user photos by using this cmdlet, or by accessing the user's Outlook Web App Options page. User photos are synchronized from Active Directory to the cloud only once during a mailbox migration. Therefore, even in hybrid environments, don't try to manage user photos in Active Directory.
-
-On a user's Outlook Web App Options page, when you upload a photo, a preview is displayed before you click Save or Cancel. This is the preview state, and is the same as running Set-UserPhoto with the Preview switch. If you click Save, the preview photo is saved as the user's photo. This is the same as running Set-UserPhoto with the Save switch. If you click Cancel, the preview photo is deleted. This is the same as running Set-UserPhoto with the Cancel switch.
-
-A user photo must be set before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient provisioning permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The user photos feature allows users to associate a picture with their account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox. Administrators use the Set-UserPhoto cmdlet to configure user photos. Users can upload, preview, and save a user photo to their account by using the Outlook on the web Options page. When a user uploads a photo, a preview of the photo is displayed on the Outlook on the web Options page. This is the preview state, and creates the same result as running the Set-UserPhoto cmdlet using the Preview parameter. If the user clicks Save, the preview photo is saved as the user's photo. This is the same result as running the Set-UserPhoto -Save command or running both the Set-UserPhoto -Preview and Set-UserPhoto -Save commands. If the user cancels the preview photo on the Outlook on the web Options page, then the Set-UserPhoto -Cancel command is called.
 
 A user photo must be set for a user before you can run the Get-UserPhoto cmdlet to view information about the user's photo. Otherwise, you'll get an error message saying the user photo doesn't exist for the specified user. Alternatively, you can run the Get-UserPhoto -Preview command to view information about a preview photo.
@@ -78,63 +54,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-UserPhoto "Paul Cannon" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\PaulCannon.jpg"))
-```
-
-This example uploads and saves a photo to Paul Cannon's user account using a single command.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-UserPhoto -Identity "Paul Cannon" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\PaulCannon.jpg"))
 ```
 
 This example uploads and saves a photo to Paul Cannon's user account using a single command.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UserPhoto -Identity "Paul Cannon" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\PaulCannon.jpg"))
-```
-
-This example uploads and saves a photo to Paul Cannon's user account using a single command.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview; Set-UserPhoto "Ann Beebe" -Save
 ```
 
 This example shows how to use two commands to upload and save a preview photo to Ann Beebe's user account. The first command uploads a preview photo to Ann Beebe's user account, and the second command saves the uploaded photo as the preview photo.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview; Set-UserPhoto "Ann Beebe" -Save
-```
-
-This example shows how to use two commands to upload and save a preview photo to Ann Beebe's user account. The first command uploads a preview photo to Ann Beebe's user account, and the second command saves the uploaded photo as the preview photo.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UserPhoto -Identity "Ann Beebe" -PictureData ([System.IO.File]::ReadAllBytes("C:\Users\Administrator\Desktop\AnnBeebe.jpg")) -Preview; Set-UserPhoto "Ann Beebe" -Save
-```
-
-This example shows how to use two commands to upload and save a preview photo to Ann Beebe's user account. The first command uploads a preview photo to Ann Beebe's user account, and the second command saves the uploaded photo as the preview photo.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-UserPhoto -Identity "Ann Beebe" -Cancel
-```
-
-This example deletes the preview photo that was uploaded in the previous example.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UserPhoto -Identity "Ann Beebe" -Cancel
-```
-
-This example deletes the preview photo that was uploaded in the previous example.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-UserPhoto -Identity "Ann Beebe" -Cancel
 ```
@@ -144,21 +78,9 @@ This example deletes the preview photo that was uploaded in the previous example
 ## PARAMETERS
 
 ### -Cancel
-!!! Exchange Server 2013
-
-The Cancel switch deletes the photo currently uploaded as the preview photo. You don't need to specify a value with this switch.
-
-To delete the photo currently associated with a user's account, use the Remove-UserPhoto command. The Cancel switch only deletes the preview photo.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Cancelswitch parameter deletes the photo that's currently uploaded as the preview photo. You don't need to specify a value with this switch.
 
 To delete the photo that's currently associated with a user's account, use the Remove-UserPhotocmdlet. The Cancelswitch only deletes the preview photo.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -174,30 +96,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the user. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Display name
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user.
 
 For example:
@@ -224,8 +122,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -240,19 +136,9 @@ Accept wildcard characters: False
 ```
 
 ### -PictureData
-!!! Exchange Server 2013
-
-The PictureData parameter specifies the photo file that will be uploaded to the user's account. Use the following syntax for this parameter. ([System.IO.File]::ReadAllBytes("\<file name and path\>")). The following is an example. ([System.IO.File]::ReadAllBytes("C:\\Documents\\Pictures\\MyPhoto.jpg")).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PictureData parameter specifies the photo file that will be uploaded to the user's account.
 
 This parameter uses the syntax ([System.IO.File]::ReadAllBytes("\<file name and path\>")). The following is an example. ([System.IO.File]::ReadAllBytes("C:\\Documents\\Pictures\\MyPhoto.jpg")).
-
-
 
 ```yaml
 Type: Byte[]
@@ -281,17 +167,7 @@ Accept wildcard characters: False
 ```
 
 ### -PictureStream
-!!! Exchange Server 2013
-
-The PictureStream parameter specifies the photo that will be uploaded to the user's account. This parameter is used by client applications such as Outlook Web App when users add a photo. To upload a photo using Windows PowerShell, use the PictureData parameter to specify the photo file.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PictureStream parameter specifies the photo that will be uploaded to the user's account. This parameter is used by client applications such as Outlook on the web when users add a photo. To upload a photo using PowerShell, use the PictureData parameter to specify the photo file.
-
-
 
 ```yaml
 Type: Stream
@@ -320,21 +196,9 @@ Accept wildcard characters: False
 ```
 
 ### -Preview
-!!! Exchange Server 2013
-
-The Preview switch uploads a preview photo for the user account. You don't need to specify a value with this switch.
-
-A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook Web App Options to preview before saving it. If you use the Preview parameter to upload a preview photo, you have to run the Set-UserPhoto \<UserIdentity\> -Save command to save it as the user's photo.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Previewswitch uploads a preview photo for the user account. You don't need to specify a value with this switch.
 
 A preview photo is the photo object that is uploaded to the user's account, but isn't saved. For example, if a user uploads a photo in Outlook on the web Options to preview before saving it. If you use the Previewswitch to upload a preview photo, you need to run the command Set-UserPhoto -Save to save it as the user's photo.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -350,17 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -Save
-!!! Exchange Server 2013
-
-The Save switch specifies that the photo that's uploaded to the user's account will be saved as the user's photo. You don't need to specify a value with this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Saveswitch specifies that the photo that's uploaded to the user's account will be saved as the user's photo. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -414,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
@@ -501,4 +355,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b4990d83-79c1-4b75-9271-4fa69757195e.aspx)
-

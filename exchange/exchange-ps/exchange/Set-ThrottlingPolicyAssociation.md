@@ -6,15 +6,9 @@ schema: 2.0.0
 # Set-ThrottlingPolicyAssociation
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact, or a computer account.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact, or a computer account.
+Use the Set-ThrottlingPolicyAssociation cmdlet to associate a throttling policy with a specific object. The object can be a user with a mailbox, a user without a mailbox, a contact or a computer account.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -27,28 +21,6 @@ Set-ThrottlingPolicyAssociation [-Identity] <ThrottlingPolicyAssociationIdParame
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific objects. For example, if you notice that a user or other object is using excessive bandwidth, you can associate that object with a throttling policy that's more restrictive.
-
-In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
-
-For more information, see Understanding Client Throttling Policies and Managing Performance with Client Throttling Policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client throttling settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific objects. For example, if you notice that a user or other object is using excessive bandwidth, you can associate that object with a throttling policy that's more restrictive.
-
-In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
-
-For more information about how to control the resources consumed by individual users, see Exchange workload management.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 The Set-ThrottlingPolicyAssociation cmdlet defines quota limits for specific objects. For example, if you notice that a user or other object is using excessive bandwidth, you can associate that object with a throttling policy that's more restrictive.
 
 In data center deployments, the object referred to by the Identity and ThrottlingPolicy parameters must be in the same tenant.
@@ -59,37 +31,17 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy <Throttling Policy Name>
-```
-
-This example associates a user with a user name of tonysmith to a throttling policy that has higher limits.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
 ```
 
 This example associates a user with a user name of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
-Set-ThrottlingPolicyAssociation -Identity tonysmith -ThrottlingPolicy ITStaffPolicy
-```
-
-This example associates a user with a user name of tonysmith to the throttling policy ITStaffPolicy that has higher limits.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-$b = Get-ThrottlingPolicy ITStaffPolicy; Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
-```
-
-You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following example shows another way to associate tonysmith to the throttling policy ITStaffPolicy.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-$b = Get-ThrottlingPolicy ITStaffPolicy; Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
+$b = Get-ThrottlingPolicy ITStaffPolicy;
+Set-Mailbox -Identity tonysmith -ThrottlingPolicy $b
 ```
 
 You don't need to use the Set-ThrottlingPolicyAssociation cmdlet to associate a user with a policy. The following commands show another way to associate tonysmith to the throttling policy ITStaffPolicy.
@@ -133,19 +85,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -230,4 +172,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1d007408-e00d-48da-89aa-5994f490fbae.aspx)
-

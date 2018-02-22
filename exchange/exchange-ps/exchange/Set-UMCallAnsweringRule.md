@@ -23,32 +23,6 @@ Set-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-CallerIds
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Set-UMCallAnsweringRule cmdlet changes the properties of an existing UM call answering rule stored in a UM enabled user's mailbox. You can use the Set-UMCallAnsweringRule cmdlet to specify the following conditions:
-
-- Who the incoming call is from
-
-- Time of day
-
-- Calendar free/busy status
-
-- Whether automatic replies are turned on for email
-
-You can also specify the following actions:
-
-- Find me
-
-- Transfer the caller to someone else
-
-- Leave a voice message
-
-After this task is completed, the cmdlet sets the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call answering rules" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-UMCallAnsweringRule cmdlet changes the properties of an existing UM call answering rule stored in a UM enabled user's mailbox. You can use the Set-UMCallAnsweringRule cmdlet to specify the following conditions:
 
 - Who the incoming call is from
@@ -73,218 +47,71 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-UMCallAnsweringRule -Mailbox tonysmith -Name MyCallAnsweringRule -Priority 2
 ```
 
 This example sets the priority to 2 on the existing call answering rule MyCallAnsweringRule that exists in the mailbox for tonysmith.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Mailbox tonysmith -Name MyCallAnsweringRule -Priority 2
-```
-
-This example sets the priority to 2 on the existing call answering rule MyCallAnsweringRule that exists in the mailbox for tonysmith.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Mailbox tonysmith -Name MyCallAnsweringRule -Priority 2
-```
-
-This example sets the priority to 2 on the existing call answering rule MyCallAnsweringRule that exists in the mailbox for tonysmith.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1,4255550123,," -Priority 2 -CallersCanInterruptGreeting $true -Mailbox tonysmith
 ```
 
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
 
+- Sets the call answering rule to two caller IDs.
 
-Sets the call answering rule to two caller IDs.
+- Sets the priority of the call answering rule to 2.
 
-Sets the priority of the call answering rule to 2.
+- Sets the call answering rule to allow callers to interrupt the greeting.
 
-Sets the call answering rule to allow callers to interrupt the greeting.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1,4255550123,," -Priority 2 -CallersCanInterruptGreeting $true -Mailbox tonysmith
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
-
-
-Sets the call answering rule to two caller IDs.
-
-Sets the priority of the call answering rule to 2.
-
-Sets the call answering rule to allow callers to interrupt the greeting.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -CallerIds "1,4255550100,,","1,4255550123,," -Priority 2 -CallersCanInterruptGreeting $true -Mailbox tonysmith
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
-
-
-Sets the call answering rule to two caller IDs.
-
-Sets the priority of the call answering rule to 2.
-
-Sets the call answering rule to allow callers to interrupt the greeting.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith@contoso.com -ScheduleStatus 0x8
 ```
 
 This example changes the free/busy status to Out of Office on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and sets the priority to 2.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith@contoso.com -ScheduleStatus 0x8
-```
-
-This example changes the free/busy status to Out of Office on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and sets the priority to 2.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith@contoso.com -ScheduleStatus 0x8
-```
-
-This example changes the free/busy status to Out of Office on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and sets the priority to 2.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -ScheduleStatus 0x4 -KeyMappings "1,1,Receptionist,,,,,45678,","5,2,Urgent Issues,23456,23,45671,50,,"
 ```
 
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox tonysmith:
 
+- Sets the priority of the call answering rule to 2.
 
-Sets the priority of the call answering rule to 2.
-
-Creates key mappings for the call answering rule.
-
-If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
-
-
-Press the 1 key and be transferred to a receptionist at extension 45678.
-
-Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first, and then 45671.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -ScheduleStatus 0x4 -KeyMappings "1,1,Receptionist,,,,,45678,","5,2,Urgent Issues,23456,23,45671,50,,"
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox tonysmith:
-
-
-Sets the priority of the call answering rule to 2.
-
-Creates key mappings for the call answering rule.
+- Creates key mappings for the call answering rule.
 
 If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
 
+- Press the 1 key and be transferred to a receptionist at extension 45678.
 
-Press the 1 key and be transferred to a receptionist at extension 45678.
+- Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first and then 45671.
 
-Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first, and then 45671.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -ScheduleStatus 0x4 -KeyMappings "1,1,Receptionist,,,,,45678,","5,2,Urgent Issues,23456,23,45671,50,,"
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox tonysmith:
-
-
-Sets the priority of the call answering rule to 2.
-
-Creates key mappings for the call answering rule.
-
-If the caller reaches the voice mail for the user and the status of the user is set to Busy, the caller can:
-
-
-Press the 1 key and be transferred to a receptionist at extension 45678.
-
-Press the 2 key and the Find Me feature will be used for urgent issues and ring extension 23456 first, and then 45671.
-
-### Example 5 -------------------------- (Exchange Server 2013)
+### Example 5
 ```
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "1,0,,"
 ```
 
 This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
 
+- Sets the priority of the call answering rule to 2.
 
-Sets the priority of the call answering rule to 2.
+- If the caller reaches voice mail during working hours, the caller is asked to call back later.
 
-If the caller reaches voice mail during working hours, the caller is asked to call back later.
-
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "1,0,,"
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
-
-
-Sets the priority of the call answering rule to 2.
-
-If the caller reaches voice mail during working hours, the caller is asked to call back later.
-
-### Example 5 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "1,0,,"
-```
-
-This example performs the following actions on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith:
-
-
-Sets the priority of the call answering rule to 2.
-
-If the caller reaches voice mail during working hours, the caller is asked to call back later.
-
-### Example 6 -------------------------- (Exchange Server 2013)
+### Example 6
 ```
 Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "3,4,8:00,12:00"
 ```
 
 This example sets a custom period for the time of day on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and performs the following actions:
 
+- Sets the priority of the call answering rule to 2.
 
-Sets the priority of the call answering rule to 2.
-
-If the caller reaches voice mail and the time is between 8:00 A.M. and 12:00 P.M. on Tuesday, ask the caller to call back later.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "3,4,8:00,12:00"
-```
-
-This example sets a custom period for the time of day on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and performs the following actions:
-
-
-Sets the priority of the call answering rule to 2.
-
-If the caller reaches voice mail and the time is between 8:00 A.M. and 12:00 P.M. on Tuesday, ask the caller to call back later.
-
-### Example 6 -------------------------- (Exchange Online)
-```
-Set-UMCallAnsweringRule -Name MyCallAnsweringRule -Priority 2 -Mailbox tonysmith -TimeOfDay "3,4,8:00,12:00"
-```
-
-This example sets a custom period for the time of day on the call answering rule MyCallAnsweringRule in the mailbox for tonysmith and performs the following actions:
-
-
-Sets the priority of the call answering rule to 2.
-
-If the caller reaches voice mail and the time is between 8:00 A.M. and 12:00 P.M. on Tuesday, ask the caller to call back later.
+- If the caller reaches voice mail and the time is between 8:00 A.M. and 12:00 P.M. on Tuesday, ask the caller to call back later.
 
 ## PARAMETERS
 
@@ -471,7 +298,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleStatus
-The ScheduleStatus parameter specifies an entry for the "If my Schedule show that I am" condition. Users can specify their free/busy status to be checked. This parameter can be set from 0 through 15 and is interpreted as a 4-bit mask that represents the calendar status including Free, Tentative, Busy, and Out of Office. The following settings can be used to set the schedule status:
+The ScheduleStatus parameter specifies an entry for the "If my Schedule show that I am" condition. Users can specify their free/busy status to be checked. This parameter can be set from 0 through 15 and is interpreted as a 4-bit mask that represents the calendar status including Free, Tentative, Busy and Out of Office. The following settings can be used to set the schedule status:
 
 - None = 0x0
 
@@ -499,7 +326,7 @@ Accept wildcard characters: False
 ```
 
 ### -TimeOfDay
-The TimeOfDay parameter specifies an entry for the "If the Call Arrives During" condition for the call answering rule. You can specify working hours, non-working hours, or custom hours. The default is $null.
+The TimeOfDay parameter specifies an entry for the "If the Call Arrives During" condition for the call answering rule. You can specify working hours, non-working hours or custom hours. The default is $null.
 
 ```yaml
 Type: TimeOfDay
@@ -548,4 +375,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/82f55e63-5770-433b-9a14-38f350aa5405.aspx)
-

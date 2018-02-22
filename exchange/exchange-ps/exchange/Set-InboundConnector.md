@@ -32,19 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example -------------------------- (Exchange Online)
-```
-Set-InboundConnector "Contoso Inbound Connector" -RequireTls $true -TlsSenderCertificateName contoso.com
-```
-
-This example makes the following configuration changes to the existing Inbound connector named Contoso.com Inbound Connector.
-
-
-Require TLS transmission for all incoming messages on the connector.
-
-Require that the TLS certificate that is used to encrypt communications contain the domain name contoso.com
-
-### Example -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-InboundConnector "Contoso Inbound Connector" -RequireTls $true -TlsSenderCertificateName contoso.com
 ```
@@ -375,4 +363,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d21f091-def4-49a8-ab44-d36b9a12499d.aspx)
-

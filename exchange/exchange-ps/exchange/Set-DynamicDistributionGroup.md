@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-DynamicDistributionGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-DynamicDistributionGroup cmdlet to modify the settings of an existing dynamic distribution group.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-DynamicDistributionGroup cmdlet to modify the settings of an existing dynamic distribution group.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-DynamicDistributionGroup cmdlet to modify existing dynamic distribution groups.
@@ -69,20 +55,6 @@ Set-DynamicDistributionGroup [-Identity] <DynamicGroupIdParameter>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-A dynamic distribution group queries Active Directory mail-enabled objects and builds the group membership based on the results. The group membership is recalculated whenever an e-mail message is sent to a group. You can use the Set-DynamicDistributionGroup cmdlet to overwrite existing settings or to add new settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Dynamic distribution groups" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-A dynamic distribution group queries Active Directory mail-enabled objects and builds the group membership based on the results. The group membership is recalculated whenever an email message is sent to a group. You can use the Set-DynamicDistributionGroup cmdlet to overwrite existing settings or to add new settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Dynamic distribution groups" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 A dynamic distribution group queries mail-enabled objects and builds the group membership based on the results. The group membership is recalculated whenever an email message is sent to a group. You can use the Set-DynamicDistributionGroup cmdlet to overwrite existing settings or to add new settings.
 
 The Conditional parameters that are used with the IncludedRecipients parameter are subject to the following limitations:
@@ -99,55 +71,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-DynamicDistributionGroup -Identity "Developers" -ConditionalCompany "Contoso" -IncludedRecipients MailboxUsers -ConditionalCustomAttribute1 "Internal"
-```
-
-This example applies the following changes to the existing dynamic distribution group Developers:
-
-
-Change the ConditionalCompany query filter to Contoso.
-
-Change the IncludedRecipients query filter to MailboxUsers.
-
-Add a Conditional Custom Attribute 1 value of Internal.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-DynamicDistributionGroup -Identity "Developers" -ConditionalCompany "Contoso" -IncludedRecipients MailboxUsers -ConditionalCustomAttribute1 "Internal"
-```
-
-This example applies the following changes to the existing dynamic distribution group Developers:
-
-
-Change the ConditionalCompany query filter to Contoso.
-
-Change the IncludedRecipients query filter to MailboxUsers.
-
-Add the value Internal to the ConditionalCustomAttribute1 attribute.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-DynamicDistributionGroup -Identity Developers -IncludedRecipients MailboxUsers -ConditionalCompany "Contoso" -ConditionalCustomAttribute1 "Internal"
 ```
 
 This example applies the following changes to the existing dynamic distribution group named Developers:
-
-
-Change the ConditionalCompany query filter to Contoso.
-
-Change the IncludedRecipients query filter to MailboxUsers.
-
-Add the value Internal to the ConditionalCustomAttribute1 attribute.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-DynamicDistributionGroup -Identity Developers -IncludedRecipients MailboxUsers -ConditionalCompany "Contoso" -ConditionalCustomAttribute1 "Internal"
-```
-
-This example applies the following changes to the existing dynamic distribution group named Developers:
-
 
 Change the ConditionalCompany query filter to Contoso.
 
@@ -158,84 +87,6 @@ Add the value Internal to the ConditionalCustomAttribute1 attribute.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the object that you want to modify.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the object that you want to modify.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the dynamic distribution group that you want to modify. You can use any value that uniquely identifies the dynamic distribution group.
 
 For example:
@@ -254,8 +105,6 @@ For example:
 
 - GUID
 
-
-
 ```yaml
 Type: DynamicGroupIdParameter
 Parameter Sets: (All)
@@ -270,88 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFrom
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFrom parameter specifies the mailbox users, mail users, and mail contacts that can send e-mail messages to this dynamic distribution group. You can also specify Microsoft Exchange as a valid recipient for this parameter. If you configure a dynamic distribution group to accept messages only from the Microsoft Exchange recipient, the dynamic distribution group only receives system-generated messages.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, this parameter is blank, which enables the dynamic distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFrom parameter specifies the mailbox users, mail users, and mail contacts that can send email messages to this dynamic distribution group. You can also specify Microsoft Exchange as a valid recipient for this parameter. If you configure a dynamic distribution group to accept messages only from the Microsoft Exchange recipient, the dynamic distribution group only receives system-generated messages.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, this parameter is blank, which enables the dynamic distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AcceptMessagesOnlyFrom parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
@@ -378,8 +145,6 @@ The senders you specify for this parameter are automatically copied to the Accep
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -394,88 +159,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFromDLMembers
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFromDLMembers parameter specifies the distribution groups whose members are allowed to send e-mail messages to this dynamic distribution group.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, this parameter is blank, which enables the dynamic distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFromDLMembers parameter specifies the distribution groups whose members are allowed to send email messages to this dynamic distribution group.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, this parameter is blank, which enables the dynamic distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AcceptMessagesOnlyFromDLMembers parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group are allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
@@ -502,8 +185,6 @@ The groups you specify for this parameter are automatically copied to the Accept
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all groups.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -518,92 +199,6 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptMessagesOnlyFromSendersOrMembers
-!!! Exchange Server 2010
-
-The AcceptMessagesOnlyFromSendersOrMembers parameter specifies the recipients who can send e-mail messages to this dynamic distribution group. You can specify users, contacts, or distribution groups. If you specify a distribution group, messages are accepted from all recipients that are members of that distribution group. You can also specify Microsoft Exchange as a valid recipient for this parameter. If you configure a distribution group to accept messages only from the Microsoft Exchange recipient, the dynamic distribution group only receives system-generated messages.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, the value of this parameter is blank, which enables the distribution group to accept messages from all senders.
-
-This parameter can't be used in conjunction with the AcceptMessagesOnlyFrom or AcceptMessagesOnlyFromDLMembers parameters.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptMessagesOnlyFromSendersOrMembers parameter specifies the recipients who can send email messages to this dynamic distribution group. You can specify users, contacts, or distribution groups. If you specify a distribution group, messages are accepted from all recipients that are members of that distribution group. You can also specify Microsoft Exchange as a valid recipient for this parameter. If you configure a distribution group to accept messages only from the Microsoft Exchange recipient, the dynamic distribution group only receives system-generated messages.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, the value of this parameter is blank, which enables the distribution group to accept messages from all senders.
-
-This parameter can't be used in conjunction with the AcceptMessagesOnlyFrom or AcceptMessagesOnlyFromDLMembers parameters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AcceptMessagesOnlyFromSendersOrMembers parameter specifies who is allowed to send messages to this recipient. Messages from other senders are rejected.
 
 Valid values for this parameter are individual senders and groups in your organization. Individual senders are mailboxes, mail users, and mail contacts. Groups are distribution groups, mail-enabled security groups, and dynamic distribution groups. Specifying a group means all members of the group are allowed to send messages to this recipient.
@@ -632,8 +227,6 @@ The individual senders and groups you specify for this parameter are automatical
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -648,14 +241,6 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Alias parameter specifies the alias of the object. The value of the Alias parameter can't contain spaces.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -672,8 +257,6 @@ If you modify the Alias value of an existing recipient, the primary email addres
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -688,86 +271,6 @@ Accept wildcard characters: False
 ```
 
 ### -ArbitrationMailbox
-!!! Exchange Server 2010
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
@@ -796,8 +299,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -812,86 +313,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassModerationFromSendersOrMembers
-!!! Exchange Server 2010
-
-The BypassModerationFromSendersOrMembers parameter specifies the list of senders for whom moderation is bypassed. You can specify users or distribution groups. If you specify a distribution group, the moderation is bypassed for all recipients that are members of that distribution group. Separate multiple values by using a comma.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-You cannot use the @{add=""} syntax together with the BypassModerationFromSendersOrMembers parameter. Instead, you must use the Microsoft Exchange Server 2007 procedure. For more information, see Modifying Multivalued Properties (https://technet.microsoft.com/en-us/library/bb684908(v=EXCHG.80).aspx).
-
-
-
-!!! Exchange Server 2013
-
-The BypassModerationFromSendersOrMembers parameter specifies the list of senders for whom moderation is bypassed. You can specify users or distribution groups. If you specify a distribution group, the moderation is bypassed for all recipients that are members of that distribution group. Separate multiple values with a comma.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The BypassModerationFromSendersOrMembers parameter specifies who is allowed to send messages to this moderated recipient without approval from a moderator. Valid values for this parameter are individual senders and groups in your organization. Specifying a group means all members of the group are allowed to send messages to this recipient without approval from a moderator.
 
 To specify senders for this parameter, you can use any value that uniquely identifies the sender. For example:
@@ -916,8 +337,6 @@ To add or remove one or more senders without affecting any existing entries, use
 
 This parameter is meaningful only when moderation is enabled for the recipient. By default, this parameter is blank ($null), which means messages from all senders other than the designated moderators are moderated. When a moderator sends a message to this recipient, the message is isn't moderated. In other words, you don't need to use this parameter to include the moderators.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -932,23 +351,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCompany
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCompany parameter filters the mailbox users or mail-enabled contacts used to build the dynamic distribution group.
-
-When multiple values of the ConditionalCompany parameter are separated by commas, the OR Boolean operator is applied. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ConditionalCompany parameter specifies a filter that's based on the value of the recipient's Company property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -964,21 +371,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute1
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -994,21 +391,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute10
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1024,21 +411,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute11
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1054,21 +431,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute12
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1084,21 +451,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute13
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1114,21 +471,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute14
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1144,21 +491,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute15
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1174,21 +511,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute2
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1204,21 +531,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute3
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1234,21 +551,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute4
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1264,21 +571,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute5
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1294,21 +591,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute6
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1324,21 +611,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute7
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1354,21 +631,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute8
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1384,21 +651,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalCustomAttribute9
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalCustomAttribute1 to ConditionalCustomAttribute15 parameters specify filters for recipients' custom attributes. For example, if you set the ConditionalCustomAttribute1 value to Marketing, all included recipients whose CustomAttribute1 value is Marketing are included in this filter. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter specifies a filter that's based on the value of the recipient's CustomAttribute1 to CustomAttribute15 property. For example, if you set the ConditionalCustomAttribute1 parameter to the value Marketing, all recipients whose CustomAttribute1 value is Marketing are included in this filter. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1414,23 +671,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalDepartment
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalDepartment parameter filters the mailbox users or mail-enabled contacts used to build the dynamic distribution group.
-
-When multiple values of the ConditionalDepartment parameter are separated by commas, the OR Boolean operator is applied. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ConditionalDepartment parameter specifies a filter that's based on the value of the recipient's Department property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1446,23 +691,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConditionalStateOrProvince
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConditionalStateOrProvince parameter filters the mailbox users or mail-enabled contacts used to build the dynamic distribution group.
-
-When multiple values of the ConditionalStateOrProvince parameter are separated by commas, the OR Boolean operator is applied. You must use the IncludedRecipients parameter if you use a Conditional parameter. You can't use this parameter if you use the RecipientFilter parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ConditionalStateOrProvince parameter specifies a filter that's based on the value of the recipient's StateOrProvince property. You can specify multiple values separated by commas.
 
 When you use multiple values for this parameter, the OR Boolean operator is applied. For more information about how Conditional parameters work, see the Detailed Description section of this topic.
 
 You can't use this parameter with the RecipientFilter parameter. You need to use the IncludedRecipients parameter with a Conditional parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1498,27 +731,11 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
-!!! Exchange Server 2010
-
-The CreateDTMFMap parameter specifies that a dual tone multi-frequency (DTMF) map be created for the dynamic distribution group.
-
-
-
-!!! Exchange Server 2013
-
-The CreateDTMFMap parameter specifies that a dual-tone multiple-frequency (DTMF) map be created for the dynamic distribution group.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
 
 - $false: A DTMF map isn't created for the recipient.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1774,23 +991,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010
-
-The DisplayName parameter specifies the name of the distribution group in the Exchange Management Console and in the Exchange global address list (GAL).
-
-
-
-!!! Exchange Server 2013
-
-The DisplayName parameter specifies the name of the distribution group in the Exchange Administration Center and in the Exchange global address list (GAL).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DisplayName parameter specifies the display name of the dynamic distribution group. The display name is visible in the Exchange admin center and in address lists. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -1806,19 +1007,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -1834,24 +1025,6 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddresses
-!!! Exchange Server 2010
-
-The EmailAddresses parameter specifies the e-mail addresses of the distribution group. All Microsoft Exchange Server 2010 e-mail address types are valid. You can specify multiple values for the EmailAddresses parameter. Separate multiple values by using commas.
-
-Exchange doesn't validate custom addresses for proper formatting. You must ensure that the custom address you specify complies with the format requirements for that address type. Because X.400 addresses are considered custom addresses in Exchange, they also aren't validated and you must provide the correct syntax when specifying an X.400 address.
-
-
-
-!!! Exchange Server 2013
-
-The EmailAddresses parameter specifies the email addresses of the distribution group. All Microsoft Exchange email address types are valid. You can specify multiple values for the EmailAddresses parameter. Separate multiple values by using commas.
-
-Exchange doesn't validate custom addresses for proper formatting. You must ensure that the custom address you specify complies with the format requirements for that address type. Because X.400 addresses are considered custom addresses in Exchange, they also aren't validated and you must provide the correct syntax when specifying an X.400 address.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The EmailAddresses parameter specifies all the email addresses (proxy addresses) for the recipient, including the primary SMTP address. In on-premises Exchange organizations, the primary SMTP address and other proxy addresses are typically set by email address policies. However, you can use this parameter to configure other proxy addresses for the recipient. For more information, see Email address policies in Exchange 2016 (https://technet.microsoft.com/library/bb232171.aspx).
 
 Valid syntax for this parameter is \<Type\>:\<emailaddress1\>,\<Type\>:\<emailaddress2\>.... The optional \<Type\> value specifies the type of email address. Some examples of valid values include:
@@ -1878,8 +1051,6 @@ To replace all existing proxy email addresses with the values you specify, use t
 
 To add or remove specify proxy addresses without affecting other existing values, use the following syntax: @{Add="\<Type\>:\<emailaddress1\>","\<Type\>:\<emailaddress2\>"...; Remove="\<Type\>:\<emailaddress2\>","\<Type\>:\<emailaddress2\>"...}.
 
-
-
 ```yaml
 Type: ProxyAddressCollection
 Parameter Sets: (All)
@@ -1894,22 +1065,6 @@ Accept wildcard characters: False
 ```
 
 ### -EmailAddressPolicyEnabled
-!!! Exchange Server 2010
-
-The EmailAddressPolicyEnabled parameter specifies the application of e-mail address policies to this dynamic distribution group. Valid values are $true or $false. The default value is $true. By default, all applicable e-mail address policies are applied to this distribution group.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The EmailAddressPolicyEnabled parameter specifies the application of email address policies to this dynamic distribution group. Valid values are $true or $false. The default value is $true. By default, all applicable email address policies are applied to this distribution group.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The EmailAddressPolicyEnabled parameter specifies whether to apply email address policies to this recipient. Valid values are:
@@ -1917,8 +1072,6 @@ The EmailAddressPolicyEnabled parameter specifies whether to apply email address
 - $true: Email address policies are applied to this recipient. This is the default value.
 
 - $false: Email address policies aren't applied to this recipient.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1934,22 +1087,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExpansionServer
-!!! Exchange Server 2010
-
-The ExpansionServer parameter specifies the Exchange server used to expand the distribution group. Enter the expansion server as a Legacy Exchange DN value. The default behavior is to use the closest Exchange server that has the Hub Transport server role installed.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ExpansionServer parameter specifies the Exchange server used to expand the distribution group. Enter the expansion server as a Legacy Exchange DN value. The default behavior is to use the closest Exchange server that has the Mailbox server role installed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ExpansionServer parameter specifies the Exchange server that's used to expand the distribution group. The default value is blank ($null), which means expansion happens on the closest available Exchange 2016 Mailbox server. If you specify an expansion server, and that server is unavailable, any messages that are sent to the distribution group can't be delivered. Therefore, you should consider implementing a high availability solution for an expansion server.
@@ -1963,8 +1100,6 @@ You can specify the following types of servers as expansion servers:
 - An Exchange 2010 Hub Transport server.
 
 When you specify an expansion server, use the ExchangeLegacyDN. You can find this value by running the command: Get-ExchangeServer \<ServerName\> | Format-List ExchangeLegacyDN. An example value for this parameter is "/o=Contoso/ou=Exchange Administrative Group(FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Mailbox01".
-
-
 
 ```yaml
 Type: String
@@ -1980,35 +1115,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute1
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2024,35 +1135,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute2
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2068,35 +1155,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute3
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2112,35 +1175,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute4
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2156,35 +1195,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtensionCustomAttribute5
-!!! Exchange Server 2010
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Understanding Custom Attributes.
-
-For more information about using multivalued properties, see Modifying Multivalued Properties.
-
-
-
-!!! Exchange Server 2013
-
-The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
-
-For more information about custom attributes, see Custom attributes.
-
-For more information about using multivalued properties, see Modifying multivalued properties.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExtensionCustomAttribute1-5 parameters specify custom attributes that store additional information. You can specify multiple values for these parameters as a comma delimited list. Each ExtensionCustomAttribute parameter can hold up to 1,300 values.
 
 For more information about custom attributes, see Custom attributes (https://technet.microsoft.com/library/ee423541.aspx).
 
 For more information about using multivalued properties, see Modifying multivalued properties (https://technet.microsoft.com/library/bb684908.aspx).
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2200,23 +1215,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-!!! Exchange Server 2010
-
-The ForceUpgrade parameter specifies whether to suppress the following confirmation: "To save changes on object, the object must be upgraded to the current Exchange version. After upgrade, this object cannot be managed by a previous version of Exchange System Manager. Do you want to continue to upgrade and save the object?" This confirmation occurs when you upgrade a dynamic distribution group that was created in Microsoft Exchange Server 2003. You can't manage an Exchange 2003 dynamic distribution group by using the Exchange Management Console until you update the object's version and change the recipient filter by using either the RecipientFilter or IncludedRecipients parameters.
-
-
-
-!!! Exchange Server 2013
-
-The ForceUpgrade parameter specifies whether to suppress the following confirmation: "To save changes on object, the object must be upgraded to the current Exchange version. After upgrade, this object cannot be managed by a previous version of Exchange System Manager. Do you want to continue to upgrade and save the object?" This confirmation occurs when you upgrade a dynamic distribution group that was created in Microsoft Exchange Server 2003. You can't manage an Exchange 2003 dynamic distribution group by using the Exchange Administration Center until you update the object's version and change the recipient filter by using either the RecipientFilter or IncludedRecipients parameters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ForceUpgrade switch specifies whether to suppress the confirmation message that appears if the object was created in a previous version of Exchange. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -2232,88 +1231,6 @@ Accept wildcard characters: False
 ```
 
 ### -GrantSendOnBehalfTo
-!!! Exchange Server 2010
-
-The GrantSendOnBehalfTo parameter specifies a mailbox user who can send on behalf of this dynamic distribution group.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, the GrantSendOnBehalfTo parameter is blank, which means that no other mailbox user has permission to send on behalf of this distribution group.
-
-
-
-!!! Exchange Server 2013
-
-The GrantSendOnBehalfTo parameter specifies a mailbox user who can send on behalf of this dynamic distribution group.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, the GrantSendOnBehalfTo parameter is blank, which means that no other mailbox user has permission to send on behalf of this distribution group.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The GrantSendOnBehalfTo parameter specifies who can send on behalf of this dynamic distribution group. Although messages send on behalf of the group clearly show the sender in the From field (\<Sender\> on behalf of \<Group\>), replies to these messages are delivered to the group, not the sender.
 
 The sender you specify for this parameter must a mailbox, mail user or mail-enabled security group (a mail-enabled security principal that can have permissions assigned). You can use any value that uniquely identifies the sender.
@@ -2348,8 +1265,6 @@ To add or remove one or more values without affecting any existing entries, use 
 
 By default, this parameter is blank, which means no one else has permission to send on behalf of this group.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -2364,21 +1279,11 @@ Accept wildcard characters: False
 ```
 
 ### -HiddenFromAddressListsEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The HiddenFromAddressListsEnabled parameter specifies whether to hide the distribution group from any Exchange address lists. Valid values are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The HiddenFromAddressListsEnabled parameter specifies whether this recipient is visible in address lists. Valid values are:
 
 - $true: The recipient isn't visible in address lists.
 
 - $false: The recipient is visible in address lists. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2394,30 +1299,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
@@ -2427,8 +1308,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -2444,30 +1323,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludedRecipients
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IncludedRecipients parameter filters the recipient types used to build the dynamic distribution group. The available values for the IncludedRecipients parameter are:
-
-- None
-
-- AllRecipients
-
-- MailboxUsers
-
-- Resources
-
-- MailContacts
-
-- MailUsers
-
-- MailGroups
-
-The AllRecipients value can be used only by itself. When multiple values of the IncludedRecipients parameter are separated by commas, the OR Boolean operator is applied.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludedRecipients parameter specifies a filter that's based on the recipient type. Valid values are:
 
 - AllRecipients: This value can be used only by itself.
@@ -2486,8 +1341,6 @@ You can specify multiple values separated by commas. When you use multiple value
 
 You need to use this parameter when you use any of the Conditional parameters. You can't use this parameter with the RecipientFilter parameter.
 
-
-
 ```yaml
 Type: None | MailboxUsers | Resources | MailContacts | MailGroups | MailUsers | AllRecipients
 Parameter Sets: (All)
@@ -2502,20 +1355,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailTip
-!!! Exchange Server 2010
-
-The MailTip parameter specifies the message displayed to senders when they start drafting an e-mail message to this dynamic distribution group. The MailTip parameter message must be less than or equal to 250 characters.
-
-
-
-!!! Exchange Server 2013
-
-The MailTip parameter specifies the message displayed to senders when they start drafting an email message to this dynamic distribution group. The MailTip parameter message must be less than or equal to 250 characters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MailTip parameter specifies the custom MailTip text for this recipient. The MailTip is shown to senders when they start drafting an email message to this recipient. If the value contains spaces, enclose the value in quotation marks (").
 
 When you add a MailTip to a recipient, two things happen:
@@ -2523,8 +1362,6 @@ When you add a MailTip to a recipient, two things happen:
 - HTML tags are automatically added to the text. For example, if you enter the text: "This mailbox is not monitored", the MailTip automatically becomes: \<html\>\<body\>This mailbox is not monitored\</body\>\</html\>. Additional HTML tags aren't supported, and the length of the MailTip can't exceed 175 displayed characters.
 
 - The text is automatically added to the MailTipTranslations property of the recipient as the default value: default:\<MailTip text\>. If you modify the MailTip text, the default value is automatically updated in the MailTipTranslations property, and vice-versa.
-
-
 
 ```yaml
 Type: String
@@ -2540,14 +1377,6 @@ Accept wildcard characters: False
 ```
 
 ### -MailTipTranslations
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MailTipTranslations parameter specifies additional languages when you want to provide the MailTip parameter information for this recipient in multiple languages. For each language, you must provide the locale, followed by a colon and the specific MailTip parameter message in that language. Each MailTip parameter message must be less than or equal to 250 characters. Multiple languages can be separated by commas.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MailTipTranslations parameter specifies additional languages for the custom MailTip text that's defined by the MailTip parameter. HTML tags are automatically added to the MailTip translation, additional HTML tags aren't supported, and the length of the MailTip translation can't exceed 175 displayed characters.
 
 To add or remove MailTip translations without affecting the default MailTip or other MailTip translations, use the following syntax:
@@ -2557,8 +1386,6 @@ To add or remove MailTip translations without affecting the default MailTip or o
 \<culture\> is a valid ISO 639 two-letter culture code that's associated with the language.
 
 For example, suppose this recipient currently has the MailTip text: "This mailbox is not monitored." To add the Spanish translation, use the following value for this parameter: @{Add="ES:Esta caja no se supervisa."}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -2574,88 +1401,6 @@ Accept wildcard characters: False
 ```
 
 ### -ManagedBy
-!!! Exchange Server 2010
-
-The ManagedBy parameter specifies the name of the mailbox user, mail-enabled group, or mail-enabled contact that appears on the Managed by tab of the Active Directory object.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-Don't set this parameter to be managed by a recipient that's not mail-enabled because, if you try to edit this dynamic distribution group at a later time, you'll receive an error message stating that the object couldn't be found.
-
-
-
-!!! Exchange Server 2013
-
-The ManagedBy parameter specifies the name of the mailbox user, mail-enabled group, or mail-enabled contact that appears on the Managed by tab of the Active Directory object.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-Don't set this parameter to be managed by a recipient that's not mail-enabled because, if you try to edit this dynamic distribution group at a later time, you'll receive an error message stating that the object couldn't be found.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ManagedBy parameter specifies an owner for the group. A group must have at least one owner. If you don't use this parameter to specify the owner when you create the group, the user account that created the group is the owner. The group owner is able to:
 
 - Modify the properties of the group
@@ -2696,11 +1441,7 @@ To enter multiple owners and overwrite all existing entries, use the following s
 
 To add or remove owners without affecting other existing entries, use the following syntax: @{Add="\<owner1\>","\<owner2\>"...; Remove="\<owner3\>","\<owner4\>"...}.
 
-
-
 An owner that you specify with this parameter isn't automatically a member of the group. You need to manually add the owner as a member.
-
-
 
 ```yaml
 Type: GeneralRecipientIdParameter
@@ -2716,50 +1457,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxReceiveSize
-!!! Exchange Server 2010
-
-The MaxReceiveSize parameter specifies the maximum allowed e-mail message size that can be sent to this distribution group. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. Valid values are from 0 through 2147482624 bytes.
-
-By default, the MaxReceiveSize parameter is set to unlimited.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MaxReceiveSize parameter specifies the maximum allowed email message size that can be sent to this distribution group. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. Valid values are from 0 through 2147482624 bytes.
-
-By default, the MaxReceiveSize parameter is set to unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxReceiveSize parameter specifies the maximum allowed email message size that can be sent to this group.
@@ -2784,8 +1481,6 @@ By default, the MaxReceiveSize parameter is set to the value unlimited. This ind
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2800,50 +1495,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxSendSize
-!!! Exchange Server 2010
-
-The MaxSendSize parameter specifies the maximum allowed e-mail message size that can be sent from this distribution group. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. Valid values are from 0 through 2147482624 bytes.
-
-By default, the MaxSendSize parameter is set to unlimited.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The MaxSendSize parameter specifies the maximum allowed email message size that can be sent from this distribution group. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes. Valid values are from 0 through 2147482624 bytes.
-
-By default, the MaxSendSize parameter is set to unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MaxSendSize parameter specifies the maximum allowed email message size that can be sent from this group.
@@ -2868,8 +1519,6 @@ By default, the MaxSendSize parameter is set to the value unlimited. This indica
 
 For any message size limit, you need to set a value that's larger than the actual size you want enforced. This accounts for the Base64 encoding of attachments and other binary data. Base64 encoding increases the size of the message by approximately 33%, so the value you specify should be approximately 33% larger than the actual message size you want enforced. For example, if you specify a maximum message size value of 64 MB, you can expect a realistic maximum message size of approximately 48 MB.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2884,16 +1533,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModeratedBy parameter specifies the users who are responsible for moderating the messages sent to this dynamic distribution group. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true. If you leave this parameter blank and there's a user who's already specified as the manager of this mailbox, the ModeratedBy parameter is automatically set by the ManagedBy parameter of the mailbox. Otherwise, an error is returned.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
 
 For example:
@@ -2918,8 +1557,6 @@ To add or remove one or more values without affecting any existing entries, use 
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -2934,16 +1571,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModerationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModerationEnabled parameter specifies whether to enable moderation for the dynamic distribution group. To enable moderation, set this parameter to $true. To disable moderation, set this parameter to $false.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
@@ -2951,8 +1578,6 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
-
-
 
 ```yaml
 Type: $true | $false
@@ -2968,23 +1593,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies the name of the dynamic distribution group. The Name parameter specifies the distribution group name in Active Directory Users and Computers and also in the Group Name field in the Exchange Management Console.
-
-
-
-!!! Exchange Server 2013
-
-The Name parameter specifies the name of the dynamic distribution group. The Name parameter specifies the distribution group name in Active Directory Users and Computers.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies the unique name of the dynamic distribution group. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -3000,17 +1609,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Notes parameter specifies comments about the distribution group.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -3026,27 +1625,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneticDisplayName
-!!! Exchange Server 2010
-
-The PhoneticDisplayName parameter specifies a phonetic pronunciation of the DisplayName parameter.
-
-The maximum length of this parameter value is 255 characters. For more information about the PhoneticDisplayName parameter and speech recognition, see Understanding Automatic Speech Recognition Directory Lookups.
-
-
-
-!!! Exchange Server 2013
-
-The PhoneticDisplayName parameter specifies a phonetic pronunciation of the DisplayName parameter.
-
-The maximum length of this parameter value is 255 characters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PhoneticDisplayName parameter specifies an alternate spelling of the user's name that's used for text to speech in Unified Messaging (UM) environments. Typically, you use this parameter when the pronunciation and spelling of the user's name don't match. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -3062,23 +1641,7 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-!!! Exchange Server 2010
-
-The PrimarySmtpAddress parameter specifies the primary return SMTP e-mail address for the distribution group. This parameter has meaning only if the distribution group has multiple SMTP e-mail addresses.
-
-
-
-!!! Exchange Server 2013
-
-The PrimarySmtpAddress parameter specifies the primary return SMTP email address for the distribution group. This parameter has meaning only if the distribution group has multiple SMTP email addresses.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -3094,22 +1657,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientContainer
-!!! Exchange Server 2010
-
-The RecipientContainer parameter filters the recipients used to build the dynamic distribution group based on their location in Active Directory. The value of the RecipientContainer parameter can be the canonical name of an organizational unit (OU) or a domain. If a value for the RecipientContainer parameter isn't specified, the cmdlet will default to use the local container.
-
-
-
-!!! Exchange Server 2013
-
-The RecipientContainer parameter filters the recipients used to build the dynamic distribution group based on their location in Active Directory. The value of the RecipientContainer parameter can be the canonical name of an organizational unit (OU) or a domain. If a value for the RecipientContainer parameter isn't specified, the cmdlet will default to use the local container.
-
-Note that the RecipientContainer property can't be blank. The group is always limited to looking for recipients in a specific location (the value you specify for this parameter, or the location where the group was created).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RecipientContainer parameter specifies a filter that's based on the recipient's location in Active Directory. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
@@ -3123,8 +1670,6 @@ The RecipientContainer parameter specifies a filter that's based on the recipien
 If you don't use this parameter, the default value is the OU where the object was created.
 
 Note that the RecipientContainer property can't be blank. The group is always limited to looking for recipients in a specific location (the value you specify for this parameter, or the location where the group was created).
-
-
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -3140,60 +1685,6 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientFilter
-!!! Exchange Server 2010
-
-The RecipientFilter parameter filters the mail-enabled recipients used to build the dynamic distribution group. The RecipientFilter parameter can't be used if any of the following parameters are specified:
-
-- IncludedRecipients
-
-- ConditionalCompany
-
-- ConditionalDepartment
-
-- ConditionalStateorProvince
-
-The RecipientFilter parameter uses OPath syntax to query Active Directory and filter recipients. For more information about the filterable properties, see Filterable Properties for the -RecipientFilter Parameter.
-
-The RecipientFilter parameter can use any combination of the following object types as filters:
-
-- RecipientType
-
-- ConditionalCompany
-
-- ConditionalDepartment
-
-- ConditionalStateorProvince
-
-
-
-!!! Exchange Server 2013
-
-The RecipientFilter parameter filters the mail-enabled recipients used to build the dynamic distribution group. The RecipientFilter parameter can't be used if any of the following parameters are specified:
-
-- IncludedRecipients
-
-- ConditionalCompany
-
-- ConditionalDepartment
-
-- ConditionalStateOrProvince
-
-The RecipientFilter parameter uses OPath syntax to query Active Directory and filter recipients.
-
-The RecipientFilter parameter can use any combination of the following object types as filters:
-
-- RecipientType
-
-- ConditionalCompany
-
-- ConditionalDepartment
-
-- ConditionalStateOrProvince
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RecipientFilter parameter specifies an OPath filter that's based on the value of any available recipient property. You can use any available Windows PowerShell operator, and wildcards and partial matches are supported. When you use this parameter, remember the following OPath filter rules:
 
 - Use braces { } around the whole OPath syntax string.
@@ -3205,8 +1696,6 @@ The RecipientFilter parameter specifies an OPath filter that's based on the valu
 For more information, see Filterable properties for the -RecipientFilter parameter (https://technet.microsoft.com/library/bb738157.aspx).
 
 You can't use this parameter with the IncludedRecipients parameter or any of the Conditional parameters.
-
-
 
 ```yaml
 Type: String
@@ -3222,88 +1711,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFrom
-!!! Exchange Server 2010
-
-The RejectMessagesFrom parameter specifies mailbox users and mail-enabled contacts that aren't allowed to send e-mail messages to this distribution group.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, this parameter is blank, which enables the distribution group to accept messages from all mailbox users and all mail-enabled contacts.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFrom parameter specifies mailbox users and mail-enabled contacts that aren't allowed to send email messages to this distribution group.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, this parameter is blank, which enables the distribution group to accept messages from all mailbox users and all mail-enabled contacts.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RejectMessagesFrom parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are individual senders in your organization (mailboxes, mail users, and mail contacts). You can use any value that uniquely identifies the sender. For example:
@@ -3330,8 +1737,6 @@ The senders you specify for this parameter are automatically copied to the Rejec
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -3346,88 +1751,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFromDLMembers
-!!! Exchange Server 2010
-
-The RejectMessagesFromDLMembers parameter specifies the distribution groups who aren't allowed to send e-mail messages to the distribution group.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, this parameter is blank, which enables the distribution group to accept messages from all distribution groups.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFromDLMembers parameter specifies the distribution groups who aren't allowed to send email messages to the distribution group.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, this parameter is blank, which enables the distribution group to accept messages from all distribution groups.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RejectMessagesFromDLMembers parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are groups in your organization (distribution groups, mail-enabled security groups, and dynamic distribution groups). Specifying a group means all members of the group aren't allowed to send messages to this recipient. You can use any value that uniquely identifies the group. For example:
@@ -3454,8 +1777,6 @@ The groups you specify for this parameter are automatically copied to the Reject
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all groups.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -3470,88 +1791,6 @@ Accept wildcard characters: False
 ```
 
 ### -RejectMessagesFromSendersOrMembers
-!!! Exchange Server 2010
-
-The RejectMessagesFromSendersOrMembers parameter specifies the recipients who aren't allowed to send e-mail messages to this distribution group. You can specify users, contacts, or distribution groups. If you specify a distribution group, messages from any recipient that is a member of that distribution group is rejected.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-By default, the value of this parameter is blank, which enables the distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2013
-
-The RejectMessagesFromSendersOrMembers parameter specifies the recipients who aren't allowed to send email messages to this distribution group. You can specify users, contacts, or distribution groups. If you specify a distribution group, messages from any recipient that's a member of that distribution group is rejected.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-By default, the value of this parameter is blank, which enables the distribution group to accept messages from all senders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RejectMessagesFromSendersOrMembers parameter specifies who isn't allowed to send messages to this recipient. Messages from these senders are rejected.
 
 Valid values for this parameter are individual senders and groups in your organization. Individual senders are mailboxes, mail users, and mail contacts. Groups are distribution groups, mail-enabled security groups, and dynamic distribution groups. Specifying a group means all members of the group aren't allowed to send messages to this recipient.
@@ -3580,8 +1819,6 @@ The individual senders and groups you specify for this parameter are automatical
 
 By default, this parameter is blank ($null), which allows this recipient to accept messages from all senders.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -3596,20 +1833,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToManagerEnabled
-!!! Exchange Server 2010
-
-The ReportToManagerEnabled parameter enables delivery reports to be sent to the distribution group manager. Valid values are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-The ReportToManagerEnabled parameter specifies whether to enable delivery reports to be sent to the distribution group manager. Valid values are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ReportToManagerEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to the owners of the group (defined by the ManagedBy property). Valid values are:
 
 - $true: Delivery status notifications are sent to the owners of the group.
@@ -3617,8 +1840,6 @@ The ReportToManagerEnabled parameter specifies whether delivery status notificat
 - $false: Delivery status notifications aren't sent to the owners of the group. This is the default value.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -3634,20 +1855,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReportToOriginatorEnabled
-!!! Exchange Server 2010
-
-The ReportToOriginatorEnabled parameter specifies whether to enable delivery reports to be sent to the sender of e-mail messages that are sent to this distribution group. Valid values are $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2013
-
-The ReportToOriginatorEnabled parameter specifies whether to enable delivery reports to be sent to the sender of email messages that are sent to this distribution group. Valid values are $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ReportToOriginatorEnabled parameter specifies whether delivery status notifications (also known as DSNs, non-delivery reports, NDRs, or bounce messages) are sent to senders who send messages to this group. Valid values are:
 
 - $true: Delivery status notifications are sent to the message senders. This is the default value.
@@ -3655,8 +1862,6 @@ The ReportToOriginatorEnabled parameter specifies whether delivery status notifi
 - $false: Delivery status notifications aren't sent to the message senders.
 
 The ReportToManagerEnabled and ReportToOriginatorEnabled parameters affect the return path for messages sent to the group. Some email servers reject messages that don't have a return path. Therefore, you should set one parameter to $false and one to $true, but not both to $false or both to $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -3672,27 +1877,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequireSenderAuthenticationEnabled
-!!! Exchange Server 2010
-
-The RequireSenderAuthenticationEnabled parameter specifies whether to require e-mail message delivery from authenticated senders. Valid values are $true or $false. The default value is $true. If the value is $true, messages are accepted only from authenticated senders.
-
-
-
-!!! Exchange Server 2013
-
-The RequireSenderAuthenticationEnabled parameter specifies whether to require email message delivery from authenticated senders. Valid values are $true or $false. The default value is $true. If the value is $true, messages are accepted only from authenticated senders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RequireSenderAuthenticationEnabled parameter specifies whether to accept messages only from authenticated (internal) senders. Valid values are:
 
 - $true: Messages are accepted only from authenticated (internal) senders. Messages from unauthenticated (external) senders are rejected.
 
 - $false: Messages are accepted from authenticated (internal) and unauthenticated (external) senders.
-
-
 
 ```yaml
 Type: $true | $false
@@ -3708,28 +1897,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendModerationNotifications
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SendModerationNotifications parameter specifies whether status notifications are sent to users when a message they sent to the moderated distribution group is rejected by one of the moderators. You can specify one of the following values:
-
-- Always
-
-- Internal
-
-- Never
-
-If you want notifications to be sent to all senders, set this parameter to Always.
-
-If you want notifications to be sent to only the senders that are internal to your organization, set this parameter to Internal.
-
-To disable all status notifications, set this parameter to Never.
-
-The default value is Never.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
@@ -3739,8 +1906,6 @@ The SendModerationNotifications parameter specifies when moderation notification
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
-
-
 
 ```yaml
 Type: Never | Internal | Always
@@ -3756,27 +1921,11 @@ Accept wildcard characters: False
 ```
 
 ### -SendOofMessageToOriginatorEnabled
-!!! Exchange Server 2010
-
-The SendOofMessageToOriginatorEnabled parameter specifies whether to enable out-of-office messages to be delivered to the sender of e-mail messages that are sent to this distribution group. Valid values are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-The SendOofMessageToOriginatorEnabled parameter specifies whether to enable out-of-office messages to be delivered to the sender of email messages that are sent to this distribution group. Valid values are $true or $false. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SendOofMessageToOriginatorEnabled parameter specifies how to handle out of office (OOF) messages for members of the group. Valid values are:
 
 - $true: When messages are sent to the group, OOF messages for any of the group members are sent to the message sender. This is the default value.
 
 - $false: When messages are sent to the group, OOF messages for any of the group members aren't sent to the message sender.
-
-
 
 ```yaml
 Type: $true | $false
@@ -3816,14 +1965,6 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UMDtmfMap parameter specifies whether you want to create a user-defined DTMF map for the Unified Messaging (UM)-enabled dynamic distribution group.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - emailAddress:\<integers\>
@@ -3839,8 +1980,6 @@ If you use this syntax and you omit any of the DTMF map values, those values are
 To add or remove values without affecting other existing entries, use the following syntax: @{Add="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"; Remove="emailAddress:\<integers\>","lastNameFirstName:\<integers\>","firstNameLastName:\<integers\>"}.
 
 If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -3872,14 +2011,6 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsEmailAddress
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WindowsEmailAddress parameter specifies the value of the E-mail field of the Active Directory object.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
@@ -3887,8 +2018,6 @@ The WindowsEmailAddress parameter specifies the Windows email address for this r
 - In cloud environments or in on-premises environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -3921,4 +2050,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/943626ad-8455-4867-ab9a-855bab62c9c3.aspx)
-

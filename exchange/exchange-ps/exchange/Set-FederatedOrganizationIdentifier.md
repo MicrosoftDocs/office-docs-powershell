@@ -6,14 +6,6 @@ schema: 2.0.0
 # Set-FederatedOrganizationIdentifier
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-FederatedOrganizationIdentifier cmdlet to configure the federated organization identifier for the Exchange organization.
-
-For more details, see Understanding Federation.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-FederatedOrganizationIdentifier cmdlet to configure the federated organization identifier for the Exchange organization.
@@ -32,25 +24,7 @@ Set-FederatedOrganizationIdentifier [[-Identity] <OrganizationIdParameter>] [-Ac
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-A federated organization identifier is created as an account namespace for your Exchange organization with the Microsoft Federation Gateway and enables federation for the purpose of sharing calendars or contacts, accessing free/busy information across Exchange organizations, and securing cross-premises e-mail delivery using federated delivery. An organization's federated organization identifier is automatically created that uses a unique sub-domain for your organization. This sub-domain uses a combination of a well-known string "FYDIBOHF25SPDLT" and one of the federated domains for your organization. For example, if one of your organization's federated domains is "contoso.com", the "FYDIBOHF25SPDLT.contoso.com" account namespace will be created automatically as the OrgID for the federation trust. The only purpose of this subdomain is to serve as the federated namespace for the Microsoft Federation Gateway to maintain unique identifiers for recipients that request SAML delegation tokens. Additional domain names can be added and removed later by using the Add-FederatedDomain and Remove-FederatedDomain cmdlets.
-
-You can temporarily disable federation by disabling the organization identifier.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You must configure a federated organization identifier to create an account namespace for your Exchange organization with the Microsoft Federation Gateway and enable federation for the purpose of sharing calendars or contacts, accessing free/busy information across Exchange organizations, and securing cross-premises email delivery using federated delivery. When you create a federation trust, a value for the AccountNamespace parameter is automatically created with the Microsoft Federation Gateway. The AccountNamespace parameter is a combination of a pre-defined string and the domain specified. For example, if you specify the federated domain contoso.com as the domain, "FYDIBOHF25SPDLT.contoso.com" is automatically created as the value for the AccountNamespace parameter. You can add and remove Additional domain names later by using the Add-FederatedDomain and Remove-FederatedDomain cmdlets.
-
-You can temporarily disable federation by disabling the organization identifier.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-You must configure a federated organization identifier to create an account namespace for your Exchange organization with the Microsoft Federation Gateway and enable federation for the purpose of sharing calendars or contacts, accessing free/busy information across Exchange organizations, and securing cross-premises email delivery using federated delivery. When you create a federation trust, a value for the AccountNamespace parameter is automatically created with the Microsoft Federation Gateway. The AccountNamespace parameter is a combination of a pre-defined string and the domain specified. For example, if you specify the federated domain contoso.com as the domain, "FYDIBOHF25SPDLT.contoso.com" is automatically created as the value for the AccountNamespace parameter. You can add and remove Additional domain names later by using the Add-FederatedDomain and Remove-FederatedDomain cmdlets.
+You must configure a federated organization identifier to create an account namespace for your Exchange organization with the Microsoft Federation Gateway and enable federation for the purpose of sharing calendars or contacts, accessing free/busy information across Exchange organizations and securing cross-premises email delivery using federated delivery. When you create a federation trust, a value for the AccountNamespace parameter is automatically created with the Microsoft Federation Gateway. The AccountNamespace parameter is a combination of a pre-defined string and the domain specified. For example, if you specify the federated domain contoso.com as the domain, "FYDIBOHF25SPDLT.contoso.com" is automatically created as the value for the AccountNamespace parameter. You can add and remove Additional domain names later by using the Add-FederatedDomain and Remove-FederatedDomain cmdlets.
 
 You can temporarily disable federation by disabling the organization identifier.
 
@@ -58,84 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-FederatedOrganizationIdentifier -DelegationFederationTrust "Microsoft Federation Gateway" -AccountNamespace "contoso.com" -Enabled $true
-```
-
-This example configures a federated organization identifier for the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-FederatedOrganizationIdentifier -DelegationFederationTrust "Microsoft Federation Gateway" -AccountNamespace "Contoso.com" -Enabled $true
 ```
 
 This example configures a federated organization identifier for the Exchange organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-FederatedOrganizationIdentifier -DelegationFederationTrust "Microsoft Federation Gateway" -AccountNamespace "Contoso.com" -Enabled $true
-```
-
-This example configures a federated organization identifier for the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-FederatedOrganizationIdentifier -DelegationFederationTrust "Microsoft Federation Gateway" -AccountNamespace "Contoso.com" -Enabled $true
-```
-
-This example configures a federated organization identifier for the Exchange organization.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-FederatedOrganizationIdentifier -Enabled $false
 ```
 
 This example temporarily disables federation for the Exchange organization.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-FederatedOrganizationIdentifier -Enabled $false
-```
-
-This example temporarily disables federation for the Exchange organization.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-FederatedOrganizationIdentifier -Enabled $false
-```
-
-This example temporarily disables federation for the Exchange organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-FederatedOrganizationIdentifier -Enabled $false
-```
-
-This example temporarily disables federation for the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-FederatedOrganizationIdentifier -Enabled $true
-```
-
-This example enables the organization identifier. This enables federation for the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-FederatedOrganizationIdentifier -Enabled $true
-```
-
-This example enables the organization identifier. This enables federation for the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-FederatedOrganizationIdentifier -Enabled $true
-```
-
-This example enables the organization identifier. This enables federation for the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-FederatedOrganizationIdentifier -Enabled $true
 ```
@@ -145,17 +56,7 @@ This example enables the organization identifier. This enables federation for th
 ## PARAMETERS
 
 ### -AccountNamespace
-!!! Exchange Server 2010
-
-The AccountNamespace parameter specifies the federated domain to be used to establish the organization identifier with the Microsoft Federation Gateway. This is unique to your organization and is formatted as FYDIBOHF25SPDLT.\<your domain\>.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AccountNamespace parameter specifies the federated domain to be used to establish the organization identifier with the Microsoft Federation Gateway.
-
-
 
 ```yaml
 Type: SmtpDomain
@@ -207,19 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -334,4 +225,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a7b8c08e-8c8c-4566-b92a-2731cca66ada.aspx)
-

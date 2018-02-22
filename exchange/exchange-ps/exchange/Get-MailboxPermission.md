@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MailboxPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxPermission cmdlet to get permissions on a mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxPermission cmdlet to retrieve permissions on a mailbox.
@@ -34,23 +28,13 @@ Get-MailboxPermission [-Identity] <MailboxIdParameter> [-Credential <PSCredentia
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox permissions and delegation" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Permissions and delegation" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The output of this cmdlet shows the following information:
 
 - Identity: The mailbox in question.
 
 - User: The security principal (user, security group, Exchange management role group, etc.) that has permission to the mailbox.
 
-- AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail), and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
+- AccessRights: The permission that the security principal has on the mailbox. The available values are ChangeOwner (change the owner of the mailbox), ChangePermission (change the permissions on the mailbox), DeleteItem (delete the mailbox), ExternalAccount (indicates the account isn't in the same domain), FullAccess (open the mailbox, access its contents, but can't send mail) and ReadPermission (read the permissions on the mailbox). Whether the permissions are allowed or denied is indicated in the Deny column.
 
 - IsInherited: Whether the permission is inherited (True) or directly assigned to the mailbox (False). Permissions are inherited from the mailbox database and/or Active Directory. Typically, directly assigned permissions override inherited permissions.
 
@@ -60,13 +44,13 @@ By default, the following permissions are assigned to user mailboxes:
 
 - FullAccess and ReadPermission are directly assigned to NT AUTHORITY\\SELF. This entry gives a user permission to their own mailbox.
 
-- FullAccess is denied to Administrator, Domain Admins, Enterprise Admins, and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
+- FullAccess is denied to Administrator, Domain Admins, Enterprise Admins and Organization Management. These inherited permissions prevent these users and group members from opening other users' mailboxes.
 
-- ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins, and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
+- ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are allowed for Administrator, Domain Admins, Enterprise Admins and Organization Management. Note that these inherited permission entries also appear to allow FullAccess. However, these users and groups do not have FullAccess to the mailbox because the inherited Deny permission entries override the inherited Allow permission entries.
 
 - FullAccess is inherited by NT AUTHORITY\\SYSTEM and ReadPermission is inherited by NT AUTHORITY\\NETWORK.
 
-- FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem, and ReadPermission is inherited by Managed Availability Servers.
+- FullAccess and ReadPermission are inherited by Exchange Servers, ChangeOwner, ChangePermission, DeleteItem, and ReadPermission are inherited by Exchange Trusted Subsystem and ReadPermission is inherited by Managed Availability Servers.
 
 By default, other security groups and role groups inherit permissions to mailboxes based on their location (on-premises Exchange or Office 365).
 
@@ -74,84 +58,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxPermission -Identity john@contoso.com | Format-List
 ```
 
 This example returns permissions on the mailbox by its SMTP address john@contoso.com.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxPermission -Identity john@contoso.com | Format-List
-```
-
-This example returns permissions on the mailbox by its SMTP address john@contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxPermission -Identity john@contoso.com | Format-List
-```
-
-This example returns permissions on the mailbox by its SMTP address john@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxPermission -Identity john@contoso.com | Format-List
-```
-
-This example returns permissions on the mailbox by its SMTP address john@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
 ```
 
 This example returns permissions that the user Ayla has on John's mailbox.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
-```
-
-This example returns permissions that the user Ayla has on John's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
-```
-
-This example returns permissions that the user Ayla has on John's mailbox.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxPermission -Identity john@contoso.com -User "Ayla"
-```
-
-This example returns permissions that the user Ayla has on John's mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxPermission -Identity Room222 -Owner
-```
-
-This example returns the owner information for the resource mailbox Room222.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxPermission -Identity Room222 -Owner
-```
-
-This example returns the owner information for the resource mailbox Room222.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxPermission -Identity Room222 -Owner
-```
-
-This example returns the owner information for the resource mailbox Room222.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailboxPermission -Identity Room222 -Owner
 ```
@@ -193,29 +114,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2010
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-
-
-!!! Exchange Server 2013
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credential parameter specifies the user name and password to use to access Active Directory.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -231,19 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -315,19 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -User
-!!! Exchange Server 2010
-
-The User parameter specifies the UPN, domain\\user, or the alias of the user.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The User parameter specifies the UPN, domain\\user, or the alias of the user.
 
 This parameter can't be used with the Owner parameter.
-
-
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -360,4 +241,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/56bcc678-1598-4c9b-8b4f-4fa11c89ec41.aspx)
-

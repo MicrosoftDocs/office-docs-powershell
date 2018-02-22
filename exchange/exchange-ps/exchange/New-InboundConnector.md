@@ -31,38 +31,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true
 ```
 
 This example creates the Inbound connector named Contoso Inbound Connector with the following properties:
 
+- It listens for incoming connections from the domain contoso.com and all subdomains.
 
-It listens for incoming connections from the domain contoso.com and all subdomains.
+- It only accepts mail from contoso.com, and from the IP range 192.168.0.1/25. It rejects mail from contoso.com if it originates from any other IP address.
 
-It only accepts mail from contoso.com, and from the IP range 192.168.0.1/25. It rejects mail from contoso.com if it originates from any other IP address.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-InboundConnector -Name "Contoso Inbound Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true
-```
-
-This example creates the Inbound connector named Contoso Inbound Connector with the following properties:
-
-
-It listens for incoming connections from the domain contoso.com and all subdomains.
-
-It only accepts mail from contoso.com, and from the IP range 192.168.0.1/25. It rejects mail from contoso.com if it originates from any other IP address.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-InboundConnector -Name "Contoso Inbound Secure Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true -RequireTLS $true -TlsSenderCertificateName *.contoso.com
-```
-
-This example creates the Inbound connector named Contoso Inbound Secure Connector and requires TLS transmission for all messages.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 New-InboundConnector -Name "Contoso Inbound Secure Connector" -SenderDomains *.contoso.com -SenderIPAddresses 192.168.0.1/25 -RestrictDomainstoIPAddresses $true -RequireTLS $true -TlsSenderCertificateName *.contoso.com
 ```
@@ -370,4 +350,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c8d0cba8-a8cb-41dc-b3fe-11d5882e425b.aspx)
-

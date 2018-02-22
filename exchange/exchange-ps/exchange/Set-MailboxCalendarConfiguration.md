@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-MailboxCalendarConfiguration
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxCalendarConfiguration cmdlet to apply calendar settings for users using Microsoft Office Outlook Web App calendars. This affects how the user's calendar looks and how reminders work in Outlook Web App. This also affects settings that define how meeting invitations, responses, and notifications are sent to the user.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-MailboxCalendarConfiguration cmdlet to apply calendar settings for users using Microsoft Office Outlook Web App calendars. This affects how the user's calendar looks and how reminders work in Outlook Web App. This also affects settings that define how meeting invitations, responses, and notifications are sent to the user.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxCalendarConfiguration cmdlet to modify mailbox calendar settings for Outlook on the web. This affects how the user's calendar looks and how reminders work in Outlook on the web. This also affects settings that define how meeting invitations, responses, and notifications are sent to the user.
@@ -53,104 +39,27 @@ Set-MailboxCalendarConfiguration [-Identity] <MailboxIdParameter> [-Confirm] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-MailboxCalendarConfiguration cmdlet was created primarily to allow users to manage their calendar settings. However, administrators who have the Organization Management or Recipient Management management roles may configure the calendar settings for users by using the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Calendar configuration" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-MailboxCalendarConfiguration cmdlet was created primarily to allow users to manage their calendar settings. However, administrators who have the Organization Management or Recipient Management management roles may configure the calendar settings for users by using the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Calendar configuration" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-MailboxCalendarConfiguration cmdlet primarily allows users to manage their own calendar settings in Outlook on the web Options. However, administrators who have the Organization Management or Recipient Management management roles may configure the calendar settings for users by using this cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxCalendarConfiguration -Identity Peter -RemindersEnabled $false
-```
-
-This example disables the calendar reminders for the user Peter.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxCalendarConfiguration -Identity Peter -RemindersEnabled $false
-```
-
-This example disables the calendar reminders for the user Peter.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -RemindersEnabled $false
 ```
 
 This example disables the calendar reminders for the calendar of the user peter@contoso.com.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxCalendarConfiguration -Identity peter@contoso.com -RemindersEnabled $false
-```
-
-This example disables the calendar reminders for the calendar of the user peter@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxCalendarConfiguration -Identity Peter -WorkingHoursTimeZone "Pacific Standard Time"
-```
-
-This example sets the time zone of the work hours' start and ends times to Pacific Standard Time for the user Peter.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxCalendarConfiguration -Identity Peter -WorkingHoursTimeZone "Pacific Standard Time"
-```
-
-This example sets the time zone of the work hours' start and end times to Pacific Standard Time for the user Peter.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-MailboxCalendarConfiguration -Identity peter@contoso.com -WorkingHoursTimeZone "Pacific Standard Time"
 ```
 
 This example sets the time zone of the work hours' start and end times to Pacific Standard Time for the calendar of the user peter@contoso.com.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-MailboxCalendarConfiguration -Identity peter@contoso.com -WorkingHoursTimeZone "Pacific Standard Time"
-```
-
-This example sets the time zone of the work hours' start and end times to Pacific Standard Time for the calendar of the user peter@contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxCalendarConfiguration -Identity tony -WorkingHoursStartTime 07:00:00
-```
-
-This example sets the working day's starting hour in Tony's calendar to the specified time.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxCalendarConfiguration -Identity tony -WorkingHoursStartTime 07:00:00
-```
-
-This example sets the working day's starting hour in Tony's calendar to the specified time.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxCalendarConfiguration -Identity Tony -WorkingHoursStartTime 07:00:00
-```
-
-This example sets the working day's starting hour to 7 A.M. for the calendar of the user Tony.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Set-MailboxCalendarConfiguration -Identity Tony -WorkingHoursStartTime 07:00:00
 ```
@@ -160,14 +69,6 @@ This example sets the working day's starting hour to 7 A.M. for the calendar of 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the user account to be set.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox that you want to modify. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -193,8 +94,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -230,18 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultReminderTime
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DefaultReminderTime parameter specifies the length of time before each meeting or appointment that Outlook Web App should show the reminder. Values are expressed in "DD.HH:MM:SS" time span format within quotation marks, where DD refers to days, HH refers to hours, MM refers to minutes, and SS refers to seconds.
-
-Valid values are as follows:
-
-00:00:00, 00:05:00, 00:10:00, 00:15:00, 00:30:00, 01:00:00, 02:00:00, 03:00:00, 04:00:00, 08:00:00, 12:00:00, 1.00:00:00, 2.00:00:00, 3.00:00:00, 7.00:00:00, 14.00:00:00
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DefaultReminderTime parameter specifies the length of time before a meeting or appointment whenthe reminder is first displayed.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -282,8 +169,6 @@ Note that the value can't contain seconds. Valid values are:
 
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
 
-
-
 ```yaml
 Type: TimeSpan
 Parameter Sets: (All)
@@ -298,19 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -326,38 +201,6 @@ Accept wildcard characters: False
 ```
 
 ### -FirstWeekOfYear
-!!! Exchange Server 2010
-
-The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
-
-- FirstDay Week numbers start on the first day of the year. This is the default value.
-
-- FirstFourDayWeek Week numbers start on the first week that has at least four days.
-
-- FirstFullWeek Week numbers start on the first week that has seven days.
-
-- LegacyNotSet You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
-
-You configure the first day of the week by using the WeekStartDay parameter.
-
-!!! Exchange Server 2013
-
-The FirstWeekOfYear parameter specifies when the first week of the year will start when show week numbers has been turned on in Outlook Web App by the user, or by using the Shell to set the ShowWeekNumbers parameter to $true. The FirstWeekOfYear parameter can have the following values:
-
-- LegacyNotSet A null value that appears only when the mailbox has been moved from an earlier version of Exchange. It can't be set using the Shell.
-
-- FirstDay Causes the week numbers to start on the first day of the year.
-
-- FirstFourDayWeek Causes the week numbers to start on the first week that has at least four days.
-
-- FirstFullWeek Causes the week numbers to start on the first seven day week.
-
-The first day of the week can be set by using the WeekStartDay parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FirstWeekOfYear parameter specifies the first week of the year. Valid values are:
 
 - FirstDay: Week numbers start on the first day of the year. This is the default value.
@@ -369,8 +212,6 @@ The FirstWeekOfYear parameter specifies the first week of the year. Valid values
 - LegacyNotSet: You can't set this value. This is a null value that appears only when the mailbox has been moved from an earlier version of Exchange.
 
 You configure the first day of the week by using the WeekStartDay parameter.
-
-
 
 ```yaml
 Type:
@@ -386,14 +227,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemindersEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The RemindersEnabled parameter specifies whether Outlook Web App provides a visual indicator when a calendar reminder is due. Reminders are enabled by default ($true).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RemindersEnabled parameter enables or disables reminders for calendar items. Valid values are:
 
 - $true: Reminders are enabled. This is the default value.
@@ -401,8 +234,6 @@ The RemindersEnabled parameter enables or disables reminders for calendar items.
 - $false: Reminders are disabled.
 
 When the reminder is first displayed is controlled by the DefaultReminderTime parameter.
-
-
 
 ```yaml
 Type: $true | $false
@@ -418,14 +249,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReminderSoundEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ReminderSoundEnabled parameter specifies whether a sound is played when a reminder is due. The reminder sound is enabled by default ($true).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ReminderSoundEnabled parameter specifies whether a sound is played along with the reminder. Valid values are:
 
 - $true: A sound is played with the reminder. This is the default value.
@@ -433,8 +256,6 @@ The ReminderSoundEnabled parameter specifies whether a sound is played along wit
 - $false: No sound is played with the reminder.
 
 This parameter is ignored when the RemindersEnabled parameter is set to $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -450,21 +271,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowWeekNumbers
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ShowWeekNumbers parameter specifies whether the date picker in the Outlook Web App calendar shows the week number.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ShowWeekNumbers parameter specifies whether the week number is displayed in the Outlook on the web calendar. Valid values are:
 
 - $true: The week number is displayed.
 
 - $false: The week number isn't displayed. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -480,21 +291,11 @@ Accept wildcard characters: False
 ```
 
 ### -TimeIncrement
-!!! Exchange Server 2010, Exchange Server 2013
-
-The TimeIncrement parameter specifies the minutes in which the Outlook Web App calendar shows time. For example, FifteenMinutes is mapped to 15 minutes.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The TimeIncrement parameter specifies the scale that the Outlook on the web calendar uses to show time. Valid values are:
 
 - FifteenMinutes
 
 - ThirtyMinutes (This is the default value)
-
-
 
 ```yaml
 Type: FifteenMinutes | ThirtyMinutes
@@ -510,14 +311,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeekStartDay
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WeekStartDay parameter specifies the first day of the work week. The valid values for this parameter are Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WeekStartDay parameter specifies the first day of the week. Valid values are:
 
 - Sunday (This is the default value)
@@ -533,8 +326,6 @@ The WeekStartDay parameter specifies the first day of the week. Valid values are
 - Friday
 
 - Saturday
-
-
 
 ```yaml
 Type: Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday
@@ -566,24 +357,6 @@ Accept wildcard characters: False
 ```
 
 ### -WorkDays
-!!! Exchange Server 2010
-
-The WorkDays parameter specifies the days that appear in the Outlook Web App calendar as work days.
-
-
-
-!!! Exchange Server 2013
-
-The WorkDays parameter specifies the work days in the calendar.
-
-Valid values for this parameter are Weekdays, AllDays, WeekEndDays, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday and None. The default value is Weekdays.
-
-You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WorkDays parameter specifies the work days in the calendar. Valid values are:
 
 - None
@@ -610,8 +383,6 @@ The WorkDays parameter specifies the work days in the calendar. Valid values are
 
 You can specify multiple values separated by commas, but redundant values are ignored. For example, entering Weekdays,Monday results in the value Weekdays.
 
-
-
 ```yaml
 Type: None | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Weekdays | WeekendDays | AllDays
 Parameter Sets: (All)
@@ -626,23 +397,11 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingHoursEndTime
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WorkingHoursEndTime parameter specifies the time in hours, minutes, and seconds (hh:mm:ss) that the work day ends.
-
-For example, to state the time as 5:00 P.M., use 17:00:00.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WorkingHoursEndTime parameter specifies the time that the work day ends.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is 17:00:00 (5:00 P.M.).
-
-
 
 ```yaml
 Type: TimeSpan
@@ -658,23 +417,11 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingHoursStartTime
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WorkingHoursStartTime parameter specifies the time in hours, minutes, and seconds (hh:mm:ss) that the work day starts.
-
-For example, to state the time as 8:00 A.M., use 08:00:00.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WorkingHoursStartTime parameter specifies the time that the work day starts.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is 08:00:00(8:00 A.M.).
-
-
 
 ```yaml
 Type: TimeSpan
@@ -690,20 +437,6 @@ Accept wildcard characters: False
 ```
 
 ### -WorkingHoursTimeZone
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WorkingHoursTimeZone parameter specifies the time zone used by the user's working hour start and end times.
-
-Two types of formats are supported as follows:
-
-- GMT (Greenwich Mean Time), for example, GMT-08:00
-
-- Time zone key name, for example, Pacific Standard Time (PST)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The WorkingHoursTimeZone parameter specifies the time zone that's used by the WorkingHoursStartTime and WorkingHoursEndTime parameters.
 
 A valid value for this parameter is a supported time zone key name (for example, "Pacific Standard Time").
@@ -711,8 +444,6 @@ A valid value for this parameter is a supported time zone key name (for example,
 To see the available values, run the following command: $TimeZone = Get-ChildItem "HKLM:\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Time zones" | foreach {Get-ItemProperty $\_.PSPath}; $TimeZone | sort Display | Format-Table -Auto PSChildname,Display
 
 If the value contains spaces, enclose the value in quotation marks ("). The default value is the time zone setting of the Exchange server.
-
-
 
 ```yaml
 Type: ExTimeZoneValue
@@ -728,14 +459,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherEnabled
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The WeatherEnabled specifies whether weather is displayed in the calendar in Outlook on the web. Valid values are:
@@ -745,8 +468,6 @@ The WeatherEnabled specifies whether weather is displayed in the calendar in Out
 - Disabled: Hide weather on the calendar.
 
 - Enabled: Show weather on the calendar.
-
-
 
 ```yaml
 Type: $true | $false
@@ -762,14 +483,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherLocations
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The WeatherLocations parameter specifies one or more locations to display the weather for in the calendar in Outlook on the web.
@@ -783,8 +496,6 @@ To add or remove one or more values without affecting any existing entries, use 
 For this parameter, "\<value1\>" is "LocationId:\<LocationID1\>;Name:\<Name1\>;Latitude:\<Latitude1\>;Longitude:\<Longitude1\>", and "\<value2\>" is "LocationId:\<LocationID2\>;Name:\<Name2\>;Latitude:\<Latitude2\>;Longitude:\<Longitude2\>"
 
 You can configure a maximum of 5 weather locations.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -800,14 +511,6 @@ Accept wildcard characters: False
 ```
 
 ### -WeatherUnit
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The WeatherUnit parameter specifies the temperature scale that's used to display the weather in the calendar in Outlook on the web. Valid values are:
@@ -817,8 +520,6 @@ The WeatherUnit parameter specifies the temperature scale that's used to display
 - Celsius
 
 - Fahrenheit
-
-
 
 ```yaml
 Type: Default | Celsius | Fahrenheit
@@ -1323,4 +1024,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/092aa4db-3f0f-4b17-b7b1-1987a8268760.aspx)
-

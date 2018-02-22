@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-RemoteDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain. When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy, and specify acceptable character sets for messages sent to or received from the remote domain.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-RemoteDomain cmdlet to configure a managed connection for a remote domain.
@@ -35,19 +29,7 @@ Set-RemoteDomain [-Identity] <RemoteDomainIdParameter>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote domains" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy, and specify acceptable character sets for messages sent to or received from the remote domain.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote domains" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy, and specify acceptable character sets for messages sent to or received from the remote domain.
+When you set a remote domain, you can control mail flow with more precision, specify message formatting and policy and specify acceptable character sets for messages sent to or received from the remote domain.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
@@ -62,33 +44,11 @@ This example performs the following actions:
 
 - It disables out-of-office notifications to the remote domain.
 
-- It suppresses delivery receipts sent from clients in your organization to the remote domain.
+- It suppresses read receipts sent from clients in your organization to the remote domain.
 
 - It enables TNEF message data on messages sent to the remote domain.
 
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
-```
-
-This example queries Active Directory for all remote domains for which auto replies are disabled. Using the pipelining feature, it also disables auto forwards and NDRs to those domains.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
-```
-
-This example queries Active Directory for all remote domains for which auto replies are disabled. Using the pipelining feature, it also disables auto forwards and NDRs to those domains.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
-```
-
-This example queries Active Directory for all remote domains for which auto replies are disabled. Using the pipelining feature, it also disables auto forwards and NDRs to those domains.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-RemoteDomain | Where {$_.AutoReplyEnabled -eq $false} | Set-RemoteDomain -AutoForwardEnabled $false -NDREnabled $false
 ```
@@ -116,7 +76,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedOOFType
-The AllowedOOFType parameter specifies the type of out-of-office notification returned to users at the remote domain. Valid values are External, ExternalLegacy, None, and InternalLegacy. The default value is External.
+The AllowedOOFType parameter specifies the type of out-of-office notification returned to users at the remote domain. Valid values are External, ExternalLegacy, None and InternalLegacy. The default value is External.
 
 ```yaml
 Type: External | InternalLegacy | ExternalLegacy | None
@@ -132,21 +92,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoForwardEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AutoForwardEnabled parameter specifies whether to allow messages that are auto-forwarded by client e-mail programs in your organization. Setting this parameter to $true enables auto-forwarded messages to be delivered to the remote domain. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AutoForwardEnabled parameter specifies whether to allow messages that are auto-forwarded by client email programs in your organization. Valid values are:
 
-- $true: Auto-forwarded messages are delivered to the remote domain. This is the default value for new remote domains that you create, and the built-in remote domain named Default in Exchange Online.
+- $true: Auto-forwarded messages are delivered to the remote domain. This is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
 
 - $false: Auto-forwarded messages aren't delivered to the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
-
-
 
 ```yaml
 Type: $true | $false
@@ -162,27 +112,11 @@ Accept wildcard characters: False
 ```
 
 ### -AutoReplyEnabled
-!!! Exchange Server 2010
-
-The AutoReplyEnabled parameter specifies whether to allow messages that are automatic replies from client e-mail programs in your organization. The default value is $false.
-
-
-
-!!! Exchange Server 2013
-
-The AutoReplyEnabled parameter specifies whether to allow messages that are automatic replies from client e-mail programs in your organization. Setting this parameter to $true enables automatic replies to be delivered to the remote domain. The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AutoReplyEnabled parameter specifies whether to allow messages that are automatic replies from client email programs in your organization. Valid values are:
 
-- $true: Automatic replies are delivered to the remote domain. This is the default value for new remote domains that you create, and the built-in remote domain named Default in Exchange Online.
+- $true: Automatic replies are delivered to the remote domain. This is the default value for new remote domains that you create and the built-in remote domain named Default in Exchange Online.
 
 - $false: Automatic replies aren't delivered to the remote domain. This is the default value for the built-in remote domain named Default in on-premises Exchange.
-
-
 
 ```yaml
 Type: $true | $false
@@ -198,54 +132,6 @@ Accept wildcard characters: False
 ```
 
 ### -ByteEncoderTypeFor7BitCharsets
-!!! Exchange Server 2010
-
-The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. The valid values for this parameter are:
-
-- 0: Always use default 7-bit transfer encoding for HTML and plain text.
-
-- 1: Always use QP (quoted-printable) encoding for HTML and for plain text.
-
-- 2: Always use Base64 encoding for HTML and for plain text.
-
-- 5: Use QP encoding for HTML and for plain text unless line wrapping is enabled in plain text. If line wrapping is enabled, use 7-bit encoding for plain text.
-
-- 6: Use Base64 encoding for HTML and for plain text, unless line wrapping is enabled in plain text. If line wrapping is enabled in plain text, use Base64 encoding for HTML, and use 7-bit encoding for plain text.
-
-- 13: Always use QP encoding for HTML. Always use 7-bit encoding for plain text.
-
-- 14: Always use Base64 encoding for HTML. Always use 7-bit encoding for plain text.
-
-If no value is specified, Exchange always uses QP encoding for HTML and plain text.
-
-
-
-!!! Exchange Server 2013
-
-The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. The valid values for this parameter are:
-
-- Use7Bit Always use default 7-bit transfer encoding for HTML and plain text.
-
-- UseQP Always use QP (quoted-printable) encoding for HTML and for plain text.
-
-- UseBase64 Always use Base64 encoding for HTML and for plain text.
-
-- UseQPHtmlDetectTextPlain Use QP encoding for HTML and for plain text unless line wrapping is enabled in plain text. If line wrapping is enabled, use 7-bit encoding for plain text.
-
-- UseBase64HtmlDetectTextPlain Use Base64 encoding for HTML and for plain text, unless line wrapping is enabled in plain text. If line wrapping is enabled in plain text, use Base64 encoding for HTML, and use 7-bit encoding for plain text.
-
-- UseQPHtml7BitTextPlain Always use QP encoding for HTML. Always use 7-bit encoding for plain text.
-
-- UseBase64Html7BitTextPlain Always use Base64 encoding for HTML. Always use 7-bit encoding for plain text.
-
-- Undefined Always use QP encoding for HTML and plain text.
-
-The default value is Undefined.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encoding method for MIME format for messages sent to this remote domain. The valid values for this parameter are:
 
 - Use7Bit: Always use default 7-bit transfer encoding for HTML and plain text.
@@ -266,8 +152,6 @@ The ByteEncoderTypeFor7BitCharsets parameter specifies the 7-bit transfer encodi
 
 The default value is Undefined.
 
-
-
 ```yaml
 Type: Use7Bit | UseQP | UseBase64 | UseQPHtmlDetectTextPlain | UseBase64HtmlDetectTextPlain | UseQPHtml7BitTextPlain | UseBase64Html7BitTextPlain | Undefined
 Parameter Sets: (All)
@@ -282,17 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -CharacterSet
-!!! Exchange Server 2010
-
-The CharacterSet parameter specifies a character set for this remote domain. The character set that you specify is only used for MIME messages that don't have their own character set specified. Setting this parameter doesn't overwrite character sets already specified in the outbound mail. For a list of valid character set names, see Supported Character Sets for Remote Domain Configuration. To remove the character set value, set the value to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The CharacterSet parameter specifies a character set for this remote domain. The character set that you specify is only used for MIME messages that don't have their own character set specified. Setting this parameter doesn't overwrite character sets already specified in the outbound mail. To remove the character set value, set the value to $null.
-
-
 
 ```yaml
 Type: String
@@ -328,7 +202,7 @@ Accept wildcard characters: False
 ```
 
 ### -ContentType
-The ContentType parameter specifies the outbound message content type and formatting. Valid values for this parameter are MimeHtmlText, MimeText, or MimeHtml:
+The ContentType parameter specifies the outbound message content type and formatting. Valid values for this parameter are MimeHtmlText, MimeText or MimeHtml:
 
 - MimeHtmlText converts messages to MIME messages that use HTML formatting, unless the original message is a text message. If the original message is a text message, the outbound message is a MIME message that uses text formatting.
 
@@ -384,21 +258,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -414,7 +278,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCoexistenceDomain
-The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Microsoft Office 365 organization.The default value is $false.
+The IsCoexistenceDomain parameter specifies whether this remote domain is used to represent your Microsoft Office 365 organization. The default value is $false.
 
 ```yaml
 Type: $true | $false
@@ -484,17 +348,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies a unique name for a remote domain object.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Name parameter specifies a unique name for the remote domain object.
-
-
 
 ```yaml
 Type: String
@@ -510,18 +364,6 @@ Accept wildcard characters: False
 ```
 
 ### -NDRDiagnosticInfoEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NDRDiagnosticInfoEnabled parameter specifies whether the diagnostic information is included in NDRs sent to the remote domain.
-
-The diagnostic information of an NDR includes details that help administrators troubleshoot delivery problems. This detailed information includes internal server names. You may not want to expose this information to NDRs sent to external users. If you set this parameter to $false, the diagnostic information section in the NDR body as well as internal server headers from the attached original message headers are removed from the NDR.
-
-The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The NDRDiagnosticInfoEnabled parameter specifies whether the diagnostic information is included in NDRs sent to the remote domain.
@@ -529,8 +371,6 @@ The NDRDiagnosticInfoEnabled parameter specifies whether the diagnostic informat
 The diagnostic information of an NDR includes details that help administrators troubleshoot delivery problems. This detailed information includes internal server names. You may not want to expose this information to NDRs sent to external users. If you set this parameter to $false, the diagnostic information section in the NDR body as well as internal server headers from the attached original message headers are removed from the NDR.
 
 The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -546,19 +386,9 @@ Accept wildcard characters: False
 ```
 
 ### -NDREnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NDREnabled parameter specifies whether to allow non-delivery reports (NDRs) from your organization. Setting this parameter to $false suppresses NDRs to the remote domain. The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The NDREnabled parameter specifies whether to allow non-delivery reports (NDRs) from your organization. Setting this parameter to $false suppresses NDRs to the remote domain. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -574,17 +404,7 @@ Accept wildcard characters: False
 ```
 
 ### -NonMimeCharacterSet
-!!! Exchange Server 2010
-
-The NonMimeCharacterSet parameter specifies a character set for this remote domain. The character set that you specify is only used for non-MIME (RFC 822 text) messages that don't have their own character set specified. Setting this parameter doesn't overwrite character sets already specified in the outbound mail. For a list of valid character set names, see Supported Character Sets for Remote Domain Configuration. To remove the character set value, set the value to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The NonMimeCharacterSet parameter specifies a character set for this remote domain. The character set that you specify is only used for non-MIME (RFC 822 text) messages that don't have their own character set specified. Setting this parameter doesn't overwrite character sets already specified in the outbound mail. To remove the character set value, set the value to $null.
-
-
 
 ```yaml
 Type: String
@@ -622,23 +442,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequiredCharsetCoverage
-!!! Exchange Server 2010
-
-The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection. For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the UNICODE characters and automatically determines the best matching character set to use.
-
-If users in this remote domain use characters that span character sets, you may want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The RequiredCharsetCoverage parameter specifies a percentage threshold for characters in a message that must match to apply your organization's preferred character set before switching to automatic character set detection.
 
 For example, if you set this parameter to 60, the preferred character sets will still be used during content conversion for messages that contain characters from non-preferred character sets as long as the percentage of those characters is 40 percent or less. If the percentage of characters in a message doesn't belong to preferred character sets, Exchange analyzes the UNICODE characters and automatically determines the best matching character set to use.
 
 If users in this remote domain use characters that span character sets, you may want to specify a lower percentage to ensure that your organization's preferred character set is used during content conversion.
-
-
 
 ```yaml
 Type: Int32
@@ -670,48 +478,6 @@ Accept wildcard characters: False
 ```
 
 ### -TNEFEnabled
-!!! Exchange Server 2010
-
-The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values for this parameter are $true, $false, or $null. The action associated with each value is as follows:
-
-$true TNEF encoding is used on all messages sent to the remote domain.
-
-$false TNEF encoding isn't used on any messages sent to the remote domain.
-
-$null TNEF encoding isn't specified for the remote domain. TNEF encoding for recipients in the remote domain may be specified by the following:
-
-- Value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects
-
-- Sender's per-recipient settings in Microsoft Office Outlook
-
-- Sender's default Internet message settings in Outlook
-
-The default value is $null.
-
-
-
-!!! Exchange Server 2013
-
-The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values for this parameter are $true, $false, or $null. The action associated with each value is as follows:
-
-$true TNEF encoding is used on all messages sent to the remote domain.
-
-$false TNEF encoding isn't used on any messages sent to the remote domain.
-
-$null TNEF encoding isn't specified for the remote domain. TNEF encoding for recipients in the remote domain may be specified by the following:
-
-- Value of the UseMapiRichTextFormat parameter for any mail user or mail contact objects
-
-- Sender's per-recipient settings in Microsoft Outlook
-
-- Sender's default Internet message settings in Outlook
-
-The default value is $null.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The TNEFEnabled parameter specifies whether Transport Neutral Encapsulation Format (TNEF) message encoding is used on messages sent to the remote domain. Valid values for this parameter are $true, $false, or $null. The action associated with each value is as follows:
 
 $true: TNEF encoding is used on all messages sent to the remote domain.
@@ -727,8 +493,6 @@ $null: TNEF encoding isn't specified for the remote domain. TNEF encoding for re
 - Sender's default Internet message settings in Outlook
 
 The default value is $null.
-
-
 
 ```yaml
 Type: $true | $false
@@ -851,4 +615,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4738bf25-39b8-4433-bd64-1d60252c2832.aspx)
-

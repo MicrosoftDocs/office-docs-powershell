@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-MailboxRestoreRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-MailboxRestoreRequest cmdlet to restore a soft-deleted or disconnected mailbox. This cmdlet starts the process of moving content from the soft-deleted mailbox, disabled mailbox, or any mailbox in a recovery database into a connected primary or archive mailbox.
@@ -83,40 +77,6 @@ New-MailboxRestoreRequest -SourceMailbox <MailboxLocationIdParameter>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When mailboxes are moved from a Microsoft Exchange Server 2010 Service Pack 1 (SP1) database to any other database, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until either the deleted mailbox retention period expires or you use the Remove-StoreMailbox cmdlet to purge the mailbox.
-
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this topic.
-
-A mailbox is marked as Disabled a short time after the Disable-Mailbox or Remove-Mailbox command completes.
-
-The mailbox won't be marked as Disabled until the Microsoft Exchange Information Store service determines that Active Directory has been updated with the disabled mailbox's information. You can expedite the process by running Clean-MailboxDatabase cmdlet against that database.
-
-Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
-
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Example 1 later in this topic.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-When mailboxes are moved from a Microsoft Exchange Server 2013 or Exchange Server 2010 Service Pack 1 or later versions database to any other database, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until either the deleted mailbox retention period expires or you use the Remove-StoreMailbox cmdlet to purge the mailbox.
-
-To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this topic.
-
-A mailbox is marked as Disabled a short time after the Disable-Mailbox or Remove-Mailbox command completes.
-
-The mailbox won't be marked as Disabled until the Microsoft Exchange Information Store service determines that Active Directory has been updated with the disabled mailbox's information. You can expedite the process by running the Update-StoreMailboxState cmdlet against that database.
-
-Exchange retains disabled mailboxes in the mailbox database based on the deleted mailbox retention settings configured for that mailbox database. After the specified period of time, the mailbox is permanently deleted.
-
-To view disabled mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of Disabled. For more information, see Example 1 later in this topic.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When mailboxes are moved from one database to another, Exchange doesn't fully delete the mailbox from the source database immediately upon completion of the move. Instead, the mailbox in the source mailbox database is switched to a soft-deleted state, which allows mailbox data to be accessed during a mailbox restore operation by using the new MailboxRestoreRequest cmdlet set. The soft-deleted mailboxes are retained in the source database until either the deleted mailbox retention period expires or you use the Remove-StoreMailbox cmdlet to purge the mailbox.
 
 To view soft-deleted mailboxes, run the Get-MailboxStatistics cmdlet against a database and look for results that have a DisconnectReason with a value of SoftDeleted. For more information, see Example 1 later in this topic.
@@ -133,27 +93,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxStatistics -Database MBD01 | Where { $_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled" } | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason; New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
-```
-
-To create a restore request, you must provide the DisplayName, LegacyDN, or MailboxGUID for the soft deleted or disabled mailbox. This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
-
-
-This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxStatistics -Database MBD01 | Where { $_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled" } | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason; New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
-```
-
-To create a restore request, you must provide the DisplayName, LegacyDN, or MailboxGUID for the soft-deleted or disabled mailbox. This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
-
-
-This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
 ```
@@ -163,52 +103,14 @@ To create a restore request, you must provide the DisplayName, LegacyDN, or Mail
 
 This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxStatistics -Database MBD01 | Where {$_.DisconnectReason -eq "SoftDeleted" -or $_.DisconnectReason -eq "Disabled"} | Format-List LegacyDN, DisplayName, MailboxGUID, DisconnectReason
-```
-
-To create a restore request, you must provide the DisplayName, LegacyDN, or MailboxGUID for the soft-deleted or disabled mailbox.
-
-
-This example uses the Get-MailboxStatistics cmdlet to return the DisplayName, LegacyDN, MailboxGUID, and DisconnectReason for all mailboxes on mailbox database MBD01 that have a disconnect reason of SoftDeleted or Disabled.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-MaiboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
-```
-
-This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-MaiboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
-```
-
-This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
 ```
 
 This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-New-MailboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox 1d20855f-fd54-4681-98e6-e249f7326ddd -TargetMailbox Ayla
-```
-
-This example restores the source mailbox with the MailboxGUID 1d20855f-fd54-4681-98e6-e249f7326ddd on mailbox database MBD01 to the target mailbox with the alias Ayla.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-MaiboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
-```
-
-This example restores the content of the source mailbox with the DisplayName of Tony Smith on mailbox database MBD01 to the archive mailbox for Tony@contoso.com.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 New-MaiboxRestoreRequest -SourceDatabase "MBD01" -SourceStoreMailbox "Tony Smith" -TargetMailbox Tony@contoso.com -TargetIsArchive
 ```
@@ -218,19 +120,9 @@ This example restores the content of the source mailbox with the DisplayName of 
 ## PARAMETERS
 
 ### -SourceDatabase
-!!! Exchange Server 2010
-
-The SourceDatabase parameter specifies the identity of the database from which you're restoring the soft-deleted or disconnected mailbox.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The SourceDatabase parameter specifies the identity of the database from which you're restoring the soft-deleted or disconnected mailbox.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -246,22 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -SourceStoreMailbox
-!!! Exchange Server 2010
-
-The SourceStoreMailbox parameter specifies the identity of the mailbox from which you want to restore content. This parameter accepts the following values:
-
-- MailboxGUID
-
-- LegacyExchangeDN
-
-- DisplayName
-
-You can find this information by running the Get-MailboxStatistics cmdlet.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The SourceStoreMailbox parameter specifies the identity of the mailbox from which you want to restore content. This parameter accepts the following values:
@@ -273,8 +149,6 @@ The SourceStoreMailbox parameter specifies the identity of the mailbox from whic
 - DisplayName
 
 You can find this information by running the Get-MailboxStatistics cmdlet.
-
-
 
 ```yaml
 Type: StoreMailboxIdParameter
@@ -316,17 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptLargeDataLoss
-!!! Exchange Server 2010
-
-The AcceptLargeDataLoss parameter specifies that a large amount of data loss is acceptable if the BadItemLimit is set to 51 or higher. Items are considered corrupted if the item can't be read from the source database or can't be written to the target database. Corrupted items won't be available in the destination mailbox or .pst file.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AcceptLargeDataLoss switch specifies the request should continue even if a large number of items in the source mailbox can't be copied to the target mailbox. You need to use this switch if you set either the BadItemLimit or LargeItemLimit parameters to a value of 51 or higher. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -342,21 +206,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowLegacyDNMismatch
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AllowLegacyDNMismatch parameter specifies that if the LegacyExchangeDN of the source physical mailbox and the target mailbox don't match, continue the operation. By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
-
-You don't have to provide a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AllowLegacyDNMismatch switch specifies that the operation should continue if the LegacyExchangeDN of the source physical mailbox and the target mailbox don't match. You don't need to specify a value with this switch.
 
 By default, this cmdlet checks to make sure that the LegacyExchangeDN on the source physical mailbox is present on the target user in the form of the LegacyExchangeDN or an X500 proxy address that corresponds to the LegacyExchangeDN. This check prevents you from accidentally restoring a source mailbox into the incorrect target mailbox.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -372,36 +224,6 @@ Accept wildcard characters: False
 ```
 
 ### -AssociatedMessagesCopyOption
-!!! Exchange Server 2010
-
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages aren't copied. This parameter accepts the following values:
-
-- DoNotCopy The associated messages aren't copied. This is the default option.
-
-- MapByMessageClass This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-
-- Copy This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated.
-
-Content filtering doesn't apply to associated messages.
-
-
-
-!!! Exchange Server 2013
-
-The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
-
-- DoNotCopy The associated messages aren't copied.
-
-- MapByMessageClass This option finds the corresponding associated message by looking up the MessageClass attribute of the source message. If there's an associated message of this class in both source and target folders, it overwrites the associated message in the target. If there isn't an associated message in the target, it creates a copy in the target.
-
-- Copy This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
-
-Content filtering doesn't apply to associated messages.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AssociatedMessagesCopyOption parameter specifies whether associated messages are copied when the request is processed. Associated messages are special messages that contain hidden data with information about rules, views, and forms. By default, associated messages are copied. This parameter accepts the following values:
 
 - DoNotCopy: The associated messages aren't copied.
@@ -411,8 +233,6 @@ The AssociatedMessagesCopyOption parameter specifies whether associated messages
 - Copy: This option copies associated messages from the source to the target. If the same message type exists both in the source and the target location, these associated messages are duplicated. This is the default option.
 
 Content filtering doesn't apply to associated messages.
-
-
 
 ```yaml
 Type: DoNotCopy | MapByMessageClass | Copy
@@ -428,23 +248,11 @@ Accept wildcard characters: False
 ```
 
 ### -BadItemLimit
-!!! Exchange Server 2010
-
-The BadItemLimit parameter specifies the number of bad items to skip if the request encounters corruption in the mailbox. Use 0 to not skip bad items. The valid input range for this parameter is from 0 through 2147483647. The default value is 0. We recommend that you keep the default value 0 and only change the BadItemLimit parameter value if the request fails.
-
-If you set the BadItemLimit parameter to more than 50, the command fails, and you receive a warning stating: "Please confirm your intention to accept a large amount of data loss by specifying AcceptLargeDataLoss." If you receive this warning, you need to run the command again, this time using the AcceptLargeDataLoss parameter. No further warnings appear, and any corrupted items aren't available after the process is complete.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The BadItemLimit parameter specifies the maximum number of bad items that are allowed before the request fails. A bad item is a corrupt item in the source mailbox that can't be copied to the target mailbox. Also included in the bad item limit are missing items. Missing items are items in the source mailbox that can't be found in the target mailbox when the request is ready to complete.
 
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any bad items are detected. If you are OK with leaving a few bad items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed. If too many bad items are detected, consider using the New-MailboxRepairRequest cmdlet to attempt to fix corrupted items in the source mailbox, and try the request again.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -496,22 +304,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConflictResolutionOption
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ConflictResolutionOption parameter specifies the action for the Microsoft Exchange Mailbox Replication service (MRS) to take if there are multiple matching messages in the target. This parameter takes the following values:
-
-- KeepSourceItem
-
-- KeepLatestItem
-
-- KeepAll
-
-The default value is KeepSourceItem.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ConflictResolutionOption parameter specifies what to do if there are multiple matching messages in the target. Valid values are:
 
 - ForceCopy
@@ -525,8 +317,6 @@ The ConflictResolutionOption parameter specifies what to do if there are multipl
 - KeepTargetItem
 
 - UpdateFromSource
-
-
 
 ```yaml
 Type: KeepSourceItem | KeepLatestItem | KeepAll
@@ -542,19 +332,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -592,58 +372,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExcludeFolders
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExcludeFolders parameter specifies the list of folders to exclude during the restore request.
-
-Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
-
-\<FolderName\>/\* Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
-
-\#\<FolderName\>\#/\* Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
-
-- Inbox
-
-- SentItems
-
-- DeletedItems
-
-- Calendar
-
-- Contacts
-
-- Drafts
-
-- Journal
-
-- Tasks
-
-- Notes
-
-- JunkEmail
-
-- CommunicationHistory
-
-- Voicemail
-
-- Fax
-
-- Conflicts
-
-- SyncIssues
-
-- LocalFailures
-
-- ServerFailures
-
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
-
-Wildcard characters can't be used in folder names.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ExcludeFolders parameter specifies the list of folders to exclude during the restore request.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
@@ -689,8 +417,6 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
 
 Wildcard characters can't be used in folder names.
-
-
 
 ```yaml
 Type: String[]
@@ -706,58 +432,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeFolders
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IncludeFolders parameter specifies the list of folder to include during the restore request.
-
-Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
-
-\<FolderName\>/\* Use this syntax to denote a personal folder under the folder specified in the SourceRootFolder parameter, for example, "MyProjects" or "MyProjects/FY2010".
-
-\#\<FolderName\>\#/\* Use this syntax to denote a well-known folder regardless of the folder's name in another language. For example, \#Inbox\# denotes the Inbox folder even if the Inbox is localized in Turkish, which is Gelen Kutusu. Well-known folders include the following types:
-
-- Inbox
-
-- SentItems
-
-- DeletedItems
-
-- Calendar
-
-- Contacts
-
-- Drafts
-
-- Journal
-
-- Tasks
-
-- Notes
-
-- JunkEmail
-
-- CommunicationHistory
-
-- Voicemail
-
-- Fax
-
-- Conflicts
-
-- SyncIssues
-
-- LocalFailures
-
-- ServerFailures
-
-If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
-
-Wildcard characters can't be used in folder names.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeFolders parameter specifies the list of folder to include during the restore request.
 
 Folder names aren't case-sensitive, and there are no character restrictions. Use the following syntax:
@@ -803,8 +477,6 @@ Folder names aren't case-sensitive, and there are no character restrictions. Use
 If the user creates a personal folder with the same name as a well-known folder and the \# symbol surrounding it, you can use a back slash (\\) as an escape character to specify that folder. For example, if a user creates a folder named \#Notes\# and you want to specify that folder, but not the well-known Notes folder, use the following syntax: \\\#Notes\\\#.
 
 Wildcard characters can't be used in folder names.
-
-
 
 ```yaml
 Type: String[]
@@ -854,38 +526,6 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010
-
-The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Priority parameter specifies the priority of the mailbox restore request. Use one of the following values:
-
-- Emergency
-
-- Highest
-
-- Higher
-
-- High
-
-- Normal
-
-- Low
-
-- Lower
-
-- Lowest
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
@@ -905,8 +545,6 @@ The Priority parameter specifies the order in which the request should be proces
 - Highest
 
 - Emergency
-
-
 
 ```yaml
 Type: Normal | High
@@ -938,17 +576,7 @@ Accept wildcard characters: False
 ```
 
 ### -Suspend
-!!! Exchange Server 2010
-
-The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request. You don't have to specify a value with this switch.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Suspend switch specifies whether to suspend the request. If you use this switch, the request is queued, but the request won't reach the status of InProgress until you resume the request with the relevant resume cmdlet. You don't have to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1110,24 +738,6 @@ Accept wildcard characters: False
 ```
 
 ### -LargeItemLimit
-!!! Exchange Server 2013
-
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2013 Message size limits
-
-- Exchange Online Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
 For more information about maximum message size values, see the following topics:
@@ -1139,8 +749,6 @@ For more information about maximum message size values, see the following topics
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1198,19 +806,9 @@ Accept wildcard characters: False
 ```
 
 ### -WorkloadType
-!!! Exchange Server 2013
-
-The WorkloadType parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The WorkloadType parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: None | Local | Onboarding | Offboarding | TenantUpgrade | LoadBalancing | Emergency | RemotePstIngestion | SyncAggregation | RemotePstExport
@@ -1323,4 +921,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0b67defd-3c6c-4470-acfa-7f22a6c1d2bd.aspx)
-

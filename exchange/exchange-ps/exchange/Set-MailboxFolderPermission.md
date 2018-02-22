@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-MailboxFolderPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxFolderPermission cmdlet to update folder-level permissions for all folders within a user's mailbox. The cmdlet differs from the Add-MailboxFolderPermission cmdlet in that it edits an existing permission entry.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-MailboxFolderPermission cmdlet to modify folder-level permissions for users in mailboxes. The cmdlet differs from the Add-MailboxFolderPermission cmdlet in that it modifies existing permission entries. To configure calendar publishing or sharing settings for a mailbox so calendar information is visible to external users, use the Set-MailboxCalendarFolder cmdlet.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxFolderPermission cmdlet to modify folder-level permissions for users in mailboxes. This cmdlet differs from the Add-MailboxFolderPermission cmdlet in that it modifies existing permission entries. To configure calendar publishing or sharing settings for a mailbox so calendar information is visible to external users, use the Set-MailboxCalendarFolder cmdlet.
@@ -30,118 +16,53 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Set-MailboxFolderPermission [-Identity] <MailboxFolderIdParameter> -AccessRights <MailboxFolderAccessRight[]>
- -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+ -User <MailboxFolderUserIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [-SendNotificationToUser <$true | $false>] [-SharingPermissionFlags <None | Delegate | CanViewPrivateItems>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folders" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 In Office 365, if you don't use the SendNotificationToUser or SharingPermissionFlags parameters, there are no changes to the functionality of the cmdlet. For example, if the user is an existing delegate, and you change their permissions to Editor without using the SendNotificationToUser or SharingPermissionFlags parameters, the user remains a delegate. But, if you use the SendNotificationToUser parameter ($true or $false), the SharingPermissionFlags parameter has the default value None, which can affect delegate access for existing users. For example, you change an existing delegate's permission to Editor, and you use SendNotificationToUser with the value $true. The user will no longer be a delegate and will only have Editor permissions to the folder.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User Ed@contoso.com -AccessRights Owner
-```
-
-This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to his access of that folder.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User Ed@contoso.com -AccessRights Owner
-```
-
-This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to his access of that folder.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User ed@contoso.com -AccessRights Owner
 ```
 
 This example overwrites Ed's existing permissions for the Marketing folder in Ayla's mailbox. Ed is now granted the Owner role on the folder.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User ed@contoso.com -AccessRights Owner
-```
-
-This example overwrites Ed's existing permissions for the Marketing folder in Ayla's mailbox. Ed is now granted the Owner role on the folder.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate -SendNotificationToUser $true
 ```
 
 In Office 365, this example resends the sharing invitation to an existing delegate without changing their effective permissions (Ed is already a delegate with Editor permissions to Ayla's mailbox).
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate -SendNotificationToUser $true
-```
-
-In Office 365, this example resends the sharing invitation to an existing delegate without changing their effective permissions (Ed is already a delegate with Editor permissions to Ayla's mailbox).
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
 ```
 
 In Office 365, this example removes access to private items for an existing delegate.
 
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags Delegate
-```
-
-In Office 365, this example removes access to private items for an existing delegate.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 4
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags None
 ```
 
 In Office 365, this example changes an existing calendar delegate to Editor.
 
-### Example 4 -------------------------- (Exchange Online)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SharingPermissionFlags None
-```
-
-In Office 365, this example changes an existing calendar delegate to Editor.
-
-### Example 5 -------------------------- (Exchange Server 2016)
+### Example 5
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor
 ```
 
 In Office 365, this example changes an existing user's permissions to Editor without changing their current delegate status.
 
-### Example 5 -------------------------- (Exchange Online)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor
-```
-
-In Office 365, this example changes an existing user's permissions to Editor without changing their current delegate status.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SendNotificationToUser $false
-```
-
-In Office 365, this example changes an existing user's permissions to Editor and removes their current delegate status.
-
-### Example 6 -------------------------- (Exchange Online)
+### Example 6
 ```
 Set-MailboxFolderPermission -Identity ayla@contoso.com:\Calendar -User ed@contoso.com -AccessRights Editor -SendNotificationToUser $false
 ```
@@ -151,60 +72,6 @@ In Office 365, this example changes an existing user's permissions to Editor and
 ## PARAMETERS
 
 ### -AccessRights
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AccessRights parameter specifies the permissions for the user with the following access rights:
-
-- ReadItems The user has the right to read items within the specified folder.
-
-- CreateItems The user has the right to create items within the specified folder.
-
-- EditOwnedItems The user has the right to edit the items that the user owns in the specified folder.
-
-- DeleteOwnedItems The user has the right to delete items that the user owns in the specified folder.
-
-- EditAllItems The user has the right to edit all items in the specified folder.
-
-- DeleteAllItems The user has the right to delete all items in the specified folder.
-
-- CreateSubfolders The user has the right to create subfolders in the specified folder.
-
-- FolderOwner The user is the owner of the specified folder. The user has the right to view and move the folder and create subfolders. The user can't read items, edit items, delete items, or create items.
-
-- FolderContact The user is the contact for the specified folder.
-
-- FolderVisible The user can view the specified folder, but can't read or edit items within the specified folder.
-
-The AccessRights parameter also specifies the permissions for the user with the following roles, which are a combination of the rights listed previously:
-
-- None FolderVisible
-
-- Owner CreateItems, ReadItems, CreateSubfolders, FolderOwner, FolderContact, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-
-- PublishingEditor CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-
-- Editor CreateItems, ReadItems, FolderVisible, EditOwnedItems, EditAllItems, DeleteOwnedItems, DeleteAllItems
-
-- PublishingAuthor CreateItems, ReadItems, CreateSubfolders, FolderVisible, EditOwnedItems, DeleteOwnedItems
-
-- Author CreateItems, ReadItems, FolderVisible, EditOwnedItems, DeleteOwnedItems
-
-- NonEditingAuthor CreateItems, ReadItems, FolderVisible
-
-- Reviewer ReadItems, FolderVisible
-
-- Contributor CreateItems, FolderVisible
-
-The following roles apply specifically to calendar folders:
-
-- AvailabilityOnly View only availability data
-
-- LimitedDetails View availability data with subject and location
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AccessRights parameter specifies the permissions that you want to modify for the user on the mailbox folder. The values that you specify replace the existing permissions for the user on the folder.
 
 You can specify individual folder permissions or roles, which are combinations of permissions. You can specify multiple permissions and roles separated by commas.
@@ -257,8 +124,6 @@ The following roles apply specifically to calendar folders:
 
 - LimitedDetails: View availability data with subject and location
 
-
-
 ```yaml
 Type: MailboxFolderAccessRight[]
 Parameter Sets: (All)
@@ -273,14 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the recipient and folder that you want to change the permissions for. This parameter takes the following format: \<SMTP Address or Alias of Recipient\>:\<Folder path\>. The following is an example: john@contoso.com:\\Calendar
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the target mailbox and folder. The syntax is \<Mailbox\>:\\\<Folder\>. For the value of \<Mailbox\>, you can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -309,8 +166,6 @@ For example:
 
 Example values for the Identity parameter are john@contoso.com:\\Calendar or John:\\Marketing\\Reports.
 
-
-
 ```yaml
 Type: MailboxFolderIdParameter
 Parameter Sets: (All)
@@ -325,18 +180,6 @@ Accept wildcard characters: False
 ```
 
 ### -User
-!!! Exchange Server 2010, Exchange Server 2013
-
-The User parameter specifies who's granted permission to view or modify the folder contents of the user specified in the Identity parameter. The following values are acceptable:
-
-- Alias
-
-- SMTP address
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The User parameter specifies the mailbox, mail user, or mail-enabled security group (security principal) that's granted permission to the mailbox folder. You can use any value that uniquely identifies the user or group.
 
 For example:
@@ -354,8 +197,6 @@ For example:
 - Email address
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxFolderUserIdParameter
@@ -391,19 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -443,7 +274,7 @@ The SendNotificationToUser parameter specifies whether to send a sharing invitat
 
 - $false: No sharing invitation is sent. This is the default value.
 
-This parameter only applies to calendar folders, and can only be used with the following AccessRights parameter values:
+This parameter only applies to calendar folders and can only be used with the following AccessRights parameter values:
 
 - AvailabilityOnly
 
@@ -451,7 +282,22 @@ This parameter only applies to calendar folders, and can only be used with the f
 
 - Reviewer
 
-- Editor### -SharingPermissionFlags
+- Editor
+
+```yaml
+Type: $true | $false
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharingPermissionFlags
 This parameter is available only in the cloud-based service.
 
 The SharingPermissionFlags parameter assigns calendar delegate permissions. This parameter only applies to calendar folders and can only be used when the AccessRights parameter value is Editor. Valid values are:
@@ -462,7 +308,22 @@ The SharingPermissionFlags parameter assigns calendar delegate permissions. This
 
 - CanViewPrivateItems: The user can access private items on the calendar. You must use this value with the Delegate value.
 
-You can specify multiple values separated by commas.### CommonParameters
+You can specify multiple values separated by commas.
+
+```yaml
+Type: None | Delegate | CanViewPrivateItems
+Parameter Sets: (All)
+Aliases:
+Applicable: Exchange Online
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/p/?LinkID=113216).
 
 ## INPUTS
@@ -480,4 +341,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ca5dc7ba-5aa7-4fbc-945a-c5d06b9a1065.aspx)
-
