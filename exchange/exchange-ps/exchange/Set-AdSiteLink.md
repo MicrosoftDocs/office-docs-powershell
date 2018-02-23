@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-AdSiteLink
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to an Active Directory IP site link. You can also use this cmdlet to configure the maximum message size that can pass across an Active Directory IP site link.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to an Active Directory IP site link. You can also use this cmdlet to configure the maximum message size that can pass across an Active Directory IP site link.
@@ -24,41 +18,13 @@ Set-AdSiteLink [-Identity] <AdSiteLinkIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-By default, Microsoft Exchange Server 2010 determines the least cost routing path by using the cost assigned to the Active Directory IP site link. You can use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to the Active Directory IP site link. The Exchange-specific cost is a separate attribute used instead of the Active Directory-assigned cost to determine the least cost routing path.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-By default, Microsoft Exchange determines the least cost routing path by using the cost assigned to the Active Directory IP site link. You can use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to the Active Directory IP site link. The Exchange-specific cost is a separate attribute used instead of the Active Directory-assigned cost to determine the least cost routing path.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 By default, Microsoft Exchange determines the least cost routing path by using the cost assigned to the Active Directory IP site link. You can use the Set-AdSiteLink cmdlet to assign an Exchange-specific cost to the Active Directory IP site link. The Exchange-specific cost is a separate attribute used instead of the Active Directory-assigned cost to determine the least cost routing path.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-AdSiteLink -Identity DEFAULT_IP_SITE_LINK -ExchangeCost 25 -MaxMessageSize 10MB
-```
-
-This example assigns an Exchange-specific cost of 25 to the IP site link DEFAULT\_IP\_SITE\_LINK and configures a maximum message size limit of 10 MB on the IP site link.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AdSiteLink DEFAULT_IP_SITE_LINK -ExchangeCost 25 -MaxMessageSize 10MB
-```
-
-This example assigns an Exchange-specific cost of 25 to the IP site link DEFAULT\_IP\_SITE\_LINK and configures a maximum message size limit of 10 MB on the IP site link.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-AdSiteLink DEFAULT_IP_SITE_LINK -ExchangeCost 25 -MaxMessageSize 10MB
 ```
@@ -68,17 +34,7 @@ This example assigns an Exchange-specific cost of 25 to the IP site link DEFAULT
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name or GUID of the IP site link for which you want to set an Exchange-specific cost.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the name or GUID of the IP site link you want to modify.
-
-
 
 ```yaml
 Type: AdSiteLinkIdParameter
@@ -114,19 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -142,17 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExchangeCost
-!!! Exchange Server 2010
-
-The ExchangeCost parameter specifies an Exchange-specific cost for the IP site link. This cost is used instead of the Active Directory-assigned cost when the Hub Transport servers calculate the least cost routing paths. To clear the value of the ExchangeCost parameter and revert to using the cost of the IP site link specified in Active Directory, set the ExchangeCost parameter to $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExchangeCost parameter specifies an Exchange-specific cost for the IP site link. This cost is used instead of the Active Directory-assigned cost. To clear the value of the ExchangeCost parameter and revert to using the cost of the IP site link specified in Active Directory, set the value of the ExchangeCost parameter to $null.
-
-
 
 ```yaml
 Type: Int32
@@ -168,46 +104,6 @@ Accept wildcard characters: False
 ```
 
 ### -MaxMessageSize
-!!! Exchange Server 2010
-
-The MaxMessageSize parameter specifies the maximum size of a message that can pass across the Active Directory IP site link. The default value is unlimited. When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-Unqualified values are treated as bytes. The valid input range for this parameter is from 64KB through Int64. To remove the message size limit on an Active Directory IP site link, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2013
-
-The MaxMessageSize parameter specifies the maximum size of a message that can pass across the Active Directory IP site link. The default value is unlimited.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 64 KB through Int64. To remove the message size limit on an Active Directory IP site link, enter a value of unlimited.
-
-
-
-!!! Exchange Server 2016
-
 The MaxMessageSize parameter specifies the maximum size of a message that can pass across the Active Directory IP site link. The default value is unlimited.
 
 When you enter a value, qualify the value with one of the following units:
@@ -226,8 +122,6 @@ Unqualified values are typically treated as bytes, but small values may be round
 
 The valid input range for this parameter is from 64 KB through Int64. To remove the message size limit on an Active Directory IP site link, enter a value of unlimited.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -242,17 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies a name for the IP site link. The name that you assign overwrites the current identity of the IP site link.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Name parameter specifies a unique name for the IP site link. The name that you assign overwrites the current identity of the IP site link.
-
-
 
 ```yaml
 Type: String
@@ -301,4 +185,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8c1853fd-e5d8-47d9-b603-33a6c7cec87c.aspx)
-
