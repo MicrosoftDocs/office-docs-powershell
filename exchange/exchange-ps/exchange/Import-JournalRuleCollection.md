@@ -6,12 +6,6 @@ schema: 2.0.0
 # Import-JournalRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Import-JournalRuleCollection cmdlet to import journal rules exported to an XML file, including legacy journal rules exported from Microsoft Exchange Server 2007 to an Exchange Server 2010 organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Import-JournalRuleCollection cmdlet to import journal rules from an XML file. You can import a journal rule collection you previously exported as a backup, or import rules you exported from an older version of Exchange.
@@ -22,32 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Import-JournalRuleCollection [-FileData] <Byte[]> [[-Identity] <RuleIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Import-JournalRuleCollection cmdlet imports a previously exported journal rule collection for use by the Journaling agent.
-
-Importing a journal rule collection from an XML file removes or overwrites all pre-existing journal rules that were defined for the Journaling agent. Make sure that you have a backup of your current journal rule collection before you import and overwrite your current journal rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The Import-JournalRuleCollection cmdlet imports a journal rule collection you previously exported.
-
-Importing a journal rule collection from an XML file removes or overwrites all pre-existing journal rules in your organization. Make sure that you have a backup of your current journal rule collection before you import and overwrite your current journal rules.
-
-Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
-
-For more information about how to export a journal rule collection to an XML file, see Export-JournalRuleCollection.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016
-
 The Import-JournalRuleCollection cmdlet imports a journal rule collection you previously exported.
 
 Importing a journal rule collection from an XML file removes or overwrites all pre-existing journal rules in your organization. Make sure that you have a backup of your current journal rule collection before you import and overwrite your current journal rules.
@@ -60,60 +32,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 [Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0; Import-JournalRuleCollection -FileData $Data
 ```
 
 This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
-
-
-The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to the Exchange 2010 organization, overwriting existing journal rules.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0; Import-JournalRuleCollection -FileData $Data
-```
-
-This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
-
-
-The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and then stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to your organization, overwriting existing journal rules.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-[Byte[]]$Data = Get-Content -Path "C:\JournalRules\ExportedJournalRules.xml" -Encoding Byte -ReadCount 0; Import-JournalRuleCollection -FileData $Data
-```
-
-This example imports journal rules from the XML file ExportedJournalRules.xml in a two-step process.
-
 
 The first step retrieves journal rules from the previously exported XML file ExportedJournalRules.xml using the Get-Content cmdlet, and then stores the results in the variable $Data. The second step retrieves data from the variable $Data and imports journal rules to your organization, overwriting existing journal rules.
 
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2010
-
-The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet in the first step of the two-step process used to import file content.
-
-For more information about the syntax required to use this parameter, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet in the first step of the two-step process used to import file content.
-
-
-
-!!! Exchange Server 2016
-
 The FileData parameter specifies the variable name that contains the content of the XML file.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -129,25 +62,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -194,24 +113,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -246,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89ecb780-0998-4c61-ba43-7d17b49df363.aspx)
-
