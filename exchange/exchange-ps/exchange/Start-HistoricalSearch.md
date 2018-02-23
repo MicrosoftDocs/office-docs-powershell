@@ -30,37 +30,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2016 -EndDate 1/7/2016 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
 ```
 
 This example starts a new historical search named "Fabirkam Search" that has the following properties:
 
+- Date range: January 1, 2016 to January 7, 2016
 
-Date range: January 1, 2016 to January 7, 2016
+- Report type: Message trace
 
-Report type: Message trace
+- Sender address: michelle@fabrikam.com
 
-Sender address: michelle@fabrikam.com
-
-Internal notification email address: chris@contoso.com
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2016 -EndDate 1/7/2016 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
-```
-
-This example starts a new historical search named "Fabirkam Search" that has the following properties:
-
-
-Date range: January 1, 2016 to January 7, 2016
-
-Report type: Message trace
-
-Sender address: michelle@fabrikam.com
-
-Internal notification email address: chris@contoso.com
+- Internal notification email address: chris@contoso.com
 
 ## PARAMETERS
 
@@ -338,4 +321,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9688689c-2953-49de-bb38-eeea10b7f08e.aspx)
-
