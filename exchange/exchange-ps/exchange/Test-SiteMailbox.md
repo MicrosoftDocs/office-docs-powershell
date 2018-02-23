@@ -21,77 +21,27 @@ Test-SiteMailbox [[-Identity] <RecipientIdParameter>] [-BypassOwnerCheck] [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-If you don't specify the RequestorIdentity parameter, the command uses the identification of the user running this command.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you don't specify the RequestorIdentity parameter, the command uses the identification of the user running this command.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-SiteMailbox -BypassOwnerCheck -SharePointUrl "https://myserver/teams/edu"
 ```
 
 The example tests a SharePoint site's connectivity only. You can use this command before creating a site mailbox or if you're having a problem creating a site mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-SiteMailbox -BypassOwnerCheck -SharePointUrl "https://myserver/teams/edu"
-```
-
-The example tests a SharePoint site's connectivity only. You can use this command before creating a site mailbox or if you're having a problem creating a site mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Test-SiteMailbox -BypassOwnerCheck -SharePointUrl "https://myserver/teams/edu"
-```
-
-The example tests a SharePoint site's connectivity only. You can use this command before creating a site mailbox or if you're having a problem creating a site mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Test-SiteMailbox -BypassOwnerCheck -Identity mysitemailbox@contoso.com -UseAppTokenOnly
 ```
 
-This example tests the Exchange server connectivity with an existing site mailbox using the Identity and UseAppTokenOnly parameters. The Identity parameter specifies the site mailbox, and the UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. Run this command for troubleshooting documentation synchronization issues.
+This example tests the Exchange server connectivity with an existing site mailbox using the Identity and UseAppTokenOnly parameters. The Identity parameter specifies the site mailbox and the UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. Run this command for troubleshooting documentation synchronization issues.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Test-SiteMailbox -BypassOwnerCheck -Identity mysitemailbox@contoso.com -UseAppTokenOnly
-```
-
-This example tests the Exchange server connectivity with an existing site mailbox using the Identity and UseAppTokenOnly parameters. The Identity parameter specifies the site mailbox, and the UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. Run this command for troubleshooting documentation synchronization issues.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Test-SiteMailbox -BypassOwnerCheck -Identity mysitemailbox@contoso.com -UseAppTokenOnly
-```
-
-This example tests the Exchange server connectivity with an existing site mailbox using the Identity and UseAppTokenOnly parameters. The Identity parameter specifies the site mailbox, and the UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. Run this command for troubleshooting documentation synchronization issues.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Test-SiteMailbox -BypassOwnerCheck -RequestorIdentity "kweku@contoso.com" -SharePointUrl "https://myserver/teams/edu"
-```
-
-This example tests a specific user's ability to access a SharePoint site by using the RequestorIdentity parameter.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Test-SiteMailbox -BypassOwnerCheck -RequestorIdentity "kweku@contoso.com" -SharePointUrl "https://myserver/teams/edu"
-```
-
-This example tests a specific user's ability to access a SharePoint site by using the RequestorIdentity parameter.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Test-SiteMailbox -BypassOwnerCheck -RequestorIdentity "kweku@contoso.com" -SharePointUrl "https://myserver/teams/edu"
 ```
@@ -101,21 +51,9 @@ This example tests a specific user's ability to access a SharePoint site by usin
 ## PARAMETERS
 
 ### -BypassOwnerCheck
-!!! Exchange Server 2013
-
-The BypassOwnerCheck parameter specifies that the user running this command isn't the owner of the site mailbox being tested. If you're running this command and you aren't the owner of the site mailbox, you must use this parameter for the command to complete successfully.
-
-You don't have to supply a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
 
-If you run the command without this parameter, and you aren't a member or owner of the site mailbox, then the command will fail.
-
-
+If you run the command without this parameter and you aren't a member or owner of the site mailbox, then the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -151,28 +89,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the site mailbox. You can use any of the following values:
-
-- Distinguished name (DN)
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Primary SMTP address
-
-You can't use this parameter in conjunction with the SharePointUrl parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the site mailbox. You can use any of the following values:
 
 - Distinguished name (DN)
@@ -189,8 +105,6 @@ The Identity parameter specifies the identity of the site mailbox. You can use a
 
 You can't use this parameter with the SharePointUrl parameter.
 
-
-
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
@@ -205,28 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestorIdentity
-!!! Exchange Server 2013
-
-The RequestorIdentity parameter specifies the identity of a user for whom you want to test to make sure that they have the correct permissions to connect to the SharePoint site mailbox. If you don't specify this parameter, the command uses the identification of the user running this command. You can use any of the following values:
-
-- DN
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Primary SMTP address
-
-You can't use this parameter in conjunction with the UseAppTokenOnly parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The RequestorIdentity parameter specifies the identity of a user for whom you want to test to make sure that they have the correct permissions to connect to the SharePoint site mailbox. If you don't specify this parameter, the command uses the identification of the user running this command. You can use any of the following values:
 
 - DN
@@ -243,8 +135,6 @@ The RequestorIdentity parameter specifies the identity of a user for whom you wa
 
 You can't use this parameter with the UseAppTokenOnly parameter.
 
-
-
 ```yaml
 Type: RecipientIdParameter
 Parameter Sets: (All)
@@ -259,25 +149,11 @@ Accept wildcard characters: False
 ```
 
 ### -SharePointUrl
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The SharePointUrl parameter specifies the SharePoint URL where the site mailbox is hosted, for example, "https://myserver/teams/edu".
-
-You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The SharePointUrl parameter specifies the SharePoint URL where the site mailbox is hosted, for example, "https://myserver/teams/edu".
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: Uri
@@ -293,19 +169,9 @@ Accept wildcard characters: False
 ```
 
 ### -UseAppTokenOnly
-!!! Exchange Server 2013
-
-The UseAppTokenOnly parameter specifies that you want to test under the identity of the Exchange server. You can't use this cmdlet in conjunction with the RequestorIdentity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The UseAppTokenOnlyswitch specifies that you want to test the site mailbox by using the identity of the Exchange server. You don't need to specify a value with this switch.
 
 You can't use this parameter with the RequestorIdentity parameter.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -354,4 +220,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a0b6ebfd-f424-44a3-a971-1790f8e5d643.aspx)
-
