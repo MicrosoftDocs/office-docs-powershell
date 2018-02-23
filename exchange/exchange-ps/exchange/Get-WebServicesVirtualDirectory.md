@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-WebServicesVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-WebServicesVirtualDirectory cmdlet to retrieve information in Active Directory for the virtual directory EWS from a computer running Microsoft Exchange Server 2010 with the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-WebServicesVirtualDirectory cmdlet to retrieve information in Active Directory for the Exchange Web Services virtual directory from a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-WebServicesVirtualDirectory cmdlet to view Exchange Web Services (EWS) virtual directories that are used in Internet Information Services (IIS) on Microsoft Exchange servers.
@@ -41,24 +27,6 @@ Get-WebServicesVirtualDirectory [[-Identity] <VirtualDirectoryIdParameter>] [-AD
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-WebServicesVirtualDirectory cmdlet can be run on a local server or run remotely if the server name is specified in the Identity or Server parameters. It can also be run without parameters to retrieve the configuration settings from all Microsoft Office Outlook Web App virtual directories on all Internet Information Services (IIS) Web sites located on the Client Access servers in the organization.
-
-The Get-WebServicesVirtualDirectory cmdlet can be run on any server that has the Exchange administration tools installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Web Services settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-WebServicesVirtualDirectory cmdlet can be run on a local server or run remotely if the server name is specified in the Identity or Server parameters. It can also be run without parameters to retrieve the configuration settings from all Microsoft OfficeOutlook Web App virtual directories on all Internet Information Services (IIS) websites located on the Client Access servers in the organization.
-
-The Get-WebServicesVirtualDirectory cmdlet can be run on any server that has the Exchange administration tools installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Web Services virtual directory settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-WebServicesVirtualDirectory cmdlet can be run on a local server or run remotely if the server name is specified in the Identity or Server parameters.
 
 The Get-WebServicesVirtualDirectory cmdlet can be run on any server that has the Exchange administration tools installed.
@@ -67,49 +35,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-WebServicesVirtualDirectory -Identity EWS(default Web site)
-```
-
-This example returns the settings for the Exchange Web Services virtual directory EWS under the default Web site in IIS.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-WebServicesVirtualDirectory -Identity "EWS (Default Web Site)"
-```
-
-This example returns the settings for the Exchange Web Services virtual directory EWS under the default website in IIS.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-WebServicesVirtualDirectory -ServerMBX01
 ```
 
 This example returns a summary list of all EWS virtual directories on the server named MBX01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-WebServicesVirtualDirectory -Identity CAS01
-```
-
-This example uses the Identity parameter to retrieve all settings for the Exchange Web Services virtual directories on the server CAS01.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-WebServicesVirtualDirectory -Identity CAS01
-```
-
-This example uses the Identity parameter to retrieve all settings for the Exchange Web Services virtual directories on the server CAS01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-WebServicesVirtualDirectory -Identity "MBX01\EWS*" | Format-List
 ```
 
 This example returns detailed information for the EWS virtual directory named "EWS (Default Web Site)" on the server named MBX01.
 
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-WebServicesVirtualDirectory
 ```
@@ -119,14 +59,6 @@ This example returns a summary list of all virtual directories in the client acc
 ## PARAMETERS
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the name or GUID of the server that hosts the virtual directories that you want to display.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server that hosts the virtual directory. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -138,8 +70,6 @@ The Server parameter specifies the Exchange server that hosts the virtual direct
 - ExchangeLegacyDN
 
 You can't use the Server and Identity parameters in the same command.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -187,20 +117,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies either the GUID of the server, the name of the Web site, or the name of the virtual directory that you want to display.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the GUID of the server, the name of the website, or the name of the virtual directory that you want to display.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the virtual directory that you want to view.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -214,8 +130,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
 You can't use the Identity and Server parameters in the same command.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -231,21 +145,11 @@ Accept wildcard characters: False
 ```
 
 ### -ShowMailboxVirtualDirectories
-!!! Exchange Server 2013
-
-The ShowMailboxVirtualDirectories switch specifies whether the virtual directories on the Mailbox servers within the organization are shown.
-
-
-
-!!! Exchange Server 2016
-
 The ShowMailboxVirtualDirectories switch shows information about backend virtual directories on Mailbox servers. You don't need to specify a value with this switch.
 
 By default, this cmdlet shows information about virtual directories in the Client Access services on Mailbox servers. Client connections are proxied from the Client Access services on Mailbox servers to the backend services on Mailbox servers. Clients don't connect directly to the backend services.
 
 We recommend that you use this parameter only under the direction of Microsoft Customer Service and Support.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -278,4 +182,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d8babcc-ed3f-4f6a-9b34-e332996dc74a.aspx)
-
