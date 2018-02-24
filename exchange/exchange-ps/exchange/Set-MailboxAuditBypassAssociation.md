@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-MailboxAuditBypassAssociation
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxAuditBypassAssociation cmdlet to configure mailbox audit logging bypass for user or computer accounts such as service accounts for applications that access mailboxes frequently.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-MailboxAuditBypassAssociation cmdlet to configure mailbox audit logging bypass for user or computer accounts such as service accounts for applications that access mailboxes frequently.
@@ -26,24 +20,6 @@ Set-MailboxAuditBypassAssociation [-Identity] <MailboxAuditBypassAssociationIdPa
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you configure a user or computer account to bypass mailbox audit logging, access or actions taken by the user or computer account to any mailbox isn't logged. By bypassing trusted user or computer accounts that need to access mailboxes frequently, you can reduce the noise in mailbox audit logs.
-
-If you use mailbox audit logging to audit mailbox access and actions, you must monitor mailbox audit bypass associations at regular intervals. If a mailbox audit bypass association is added for an account, the account can access any mailbox in the organization to which it has been assigned access permissions, without any mailbox audit logging entries being generated for such access, or any actions taken such as message deletions.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox audit logging" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-When you configure a user or computer account to bypass mailbox audit logging, access or actions taken by the user or computer account to any mailbox isn't logged. By bypassing trusted user or computer accounts that need to access mailboxes frequently, you can reduce the noise in mailbox audit logs.
-
-If you use mailbox audit logging to audit mailbox access and actions, you must monitor mailbox audit bypass associations at regular intervals. If a mailbox audit bypass association is added for an account, the account can access any mailbox in the organization to which it has been assigned access permissions, without any mailbox audit logging entries being generated for such access, or any actions taken such as message deletions.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox audit logging" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When you configure a user or computer account to bypass mailbox audit logging, access or actions taken by the user or computer account to any mailbox isn't logged. By bypassing trusted user or computer accounts that need to access mailboxes frequently, you can reduce the noise in mailbox audit logs.
 
 If you use mailbox audit logging to audit mailbox access and actions, you must monitor mailbox audit bypass associations at regular intervals. If a mailbox audit bypass association is added for an account, the account can access any mailbox in the organization to which it has been assigned access permissions, without any mailbox audit logging entries being generated for such access, or any actions taken such as message deletions.
@@ -52,56 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $true
 ```
 
 This example bypasses the Svc-MyApplication account from mailbox audit logging.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $true
-```
-
-This example bypasses the Svc-MyApplication account from mailbox audit logging.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $true
-```
-
-This example bypasses the Svc-MyApplication account from mailbox audit logging.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $true
-```
-
-This example bypasses the Svc-MyApplication account from mailbox audit logging.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $false
-```
-
-This example removes the bypass association for the Svc-MyApplication account.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $false
-```
-
-This example removes the bypass association for the Svc-MyApplication account.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $false
-```
-
-This example removes the bypass association for the Svc-MyApplication account.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-MailboxAuditBypassAssociation -Identity "Svc-MyApplication" -AuditBypassEnabled $false
 ```
@@ -111,25 +45,11 @@ This example removes the bypass association for the Svc-MyApplication account.
 ## PARAMETERS
 
 ### -AuditBypassEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AuditBypassEnabled parameter specifies whether audit bypass is enabled for the user or computer. Valid values include the following:
-
-- $true Enables mailbox audit logging bypass
-
-- $false Disables mailbox audit logging bypass
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AuditBypassEnabled parameter specifies whether audit bypass is enabled for the user or computer. Valid values include the following:
 
 - $true: Enables mailbox audit logging bypass
 
 - $false: Disables mailbox audit logging bypass
-
-
 
 ```yaml
 Type: $true | $false
@@ -181,19 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -242,4 +152,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c925a5ef-ed07-4c31-b074-7ac04aa709f6.aspx)
-
