@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-X400AuthoritativeDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-X400AuthoritativeDomain cmdlet to edit an existing X.400 authoritative domain for the Microsoft Exchange Server 2010 organization. The X.400 authoritative domain defines the standard fields for the namespace appended to the recipient identity for all mailboxes assigned an X.400 address.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-X400AuthoritativeDomain cmdlet to edit an existing X.400 authoritative domain for your organization. The X.400 authoritative domain defines the standard fields for the namespace appended to the recipient identity for all mailboxes assigned an X.400 address.
@@ -25,60 +19,6 @@ Set-X400AuthoritativeDomain [-Identity] <X400AuthoritativeDomainIdParameter> [-C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-X.400 domain names can include only the following ASCII characters:
-
-- A to Z
-
-- a to z
-
-- 0-9
-
-- These punctuation marks and special characters: (space) ' () + , - . / : = ?
-
-You can use the following X.400 attributes (1 each per address):
-
-- NamecountryAbbreviation C Maximum character length 2
-
-- Nameadministrative domainAbbreviation A Maximum character length 16
-
-- Nameprivate domainAbbreviation P Maximum character length 16
-
-- Nameorganization nameAbbreviation O Maximum character length 64
-
-- Nameorganizational unit nameAbbreviation Ou1-4 Maximum character length 32
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "X.400 domains" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-X.400 domain names can include only the following ASCII characters:
-
-- A to Z
-
-- a to z
-
-- 0-9
-
-- These punctuation marks and special characters: (space) ' () + , - . / : = ?
-
-You can use the following X.400 attributes (1 each per address):
-
-- NamecountryAbbreviation C Maximum character length 2
-
-- Nameadministrative domainAbbreviation A Maximum character length 16
-
-- Nameprivate domainAbbreviation P Maximum character length 16
-
-- Nameorganization nameAbbreviation O Maximum character length 64
-
-- Nameorganizational unit nameAbbreviation Ou1-4 Maximum character length 32
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "X.400 domains" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 X.400 domain names can include only the following ASCII characters:
 
 - A to Z
@@ -125,53 +65,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-X400AuthoritativeDomain Sales -X400DomainName "C=US;A=att,P=Contoso;O=Sales and Marketing" -Name "Sales and Marketing"
 ```
 
 This example makes the following changes to an existing X.400 authoritative domain:
 
+- It changes the domain name from Sales to Sales and Marketing.
 
-It changes the domain name from Sales to Sales and Marketing.
-
-It updates the organizational attribute to SalesandMarketing.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-X400AuthoritativeDomain Sales -X400DomainName "C=US;A=att,P=Contoso;O=Sales and Marketing" -Name "Sales and Marketing"
-```
-
-This example makes the following changes to an existing X.400 authoritative domain:
-
-
-It changes the domain name from Sales to Sales and Marketing.
-
-It updates the organizational attribute to Sales and Marketing.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-X400AuthoritativeDomain Sales -X400DomainName "C=US;A=att,P=Contoso;O=Sales and Marketing" -Name "Sales and Marketing"
-```
-
-This example makes the following changes to an existing X.400 authoritative domain:
-
-
-It changes the domain name from Sales to Sales and Marketing.
-
-It updates the organizational attribute to Sales and Marketing.
+- It updates the organizational attribute to Sales and Marketing.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the display name of the X.400 authoritative domain.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the X.400 authoritative domain tht you want to modify. You can use any value that uniquely identifies the domain. For example:
 
 - Name
@@ -179,8 +86,6 @@ The Identity parameter specifies the X.400 authoritative domain tht you want to 
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: X400AuthoritativeDomainIdParameter
@@ -234,17 +139,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies a unique name for an X.400 authoritative domain object. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Display Name". The Name parameter must contain a maximum of 64 characters.
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name for the X.400 authoritative domain. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -276,34 +171,6 @@ Accept wildcard characters: False
 ```
 
 ### -X400DomainName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The X400DomainName parameter specifies the X.400 namespace that can only include the X.400 organizational components. Specifically, only the following attribute types are supported:
-
-- Label (Abbreviation)
-
-- C (Country)
-
-- A (ADMD)
-
-- P (PRMD)
-
-- O (Organization)
-
-- OU1 (Organization unit 1)
-
-- OU2 (Organization unit 2)
-
-- OU3 (Organization unit 3)
-
-- OU4 (Organization unit 4)
-
-The address attributes must be separated by semicolons and the address must be enclosed in quotation marks ("), for example, "C=US;A=att;P=Contoso;O=Sales".
-
-
-
-!!! Exchange Server 2016
-
 The X400DomainName parameter specifies the X.400 namespace that can only include the X.400 organizational components. Specifically, only the following attribute types are supported:
 
 - C (Country)
@@ -323,8 +190,6 @@ The X400DomainName parameter specifies the X.400 namespace that can only include
 - OU4 (Organization unit 4)
 
 Separate the address attributes with semicolons and enclose the entire address in quotation marks (for example, "C=US;A=att;P=Contoso;O=Sales").
-
-
 
 ```yaml
 Type: X400Domain
@@ -373,4 +238,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/188bd7f3-a88c-411a-a4ef-16697d7f8c7b.aspx)
-
