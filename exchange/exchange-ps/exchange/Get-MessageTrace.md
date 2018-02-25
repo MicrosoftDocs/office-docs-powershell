@@ -30,14 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MessageTrace -SenderAddress john@contoso.com -StartDate 06/13/2015 -EndDate 06/15/2015
-```
-
-This example retrieves message trace information for messages sent by john@contoso.com between June 13, 2015 and June 15, 2015.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MessageTrace -SenderAddress john@contoso.com -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
@@ -241,7 +234,7 @@ The Status parameter filters the results by the delivery status of the message. 
 
 - Delivered: The message was delivered to its destination.
 
-- Expanded: There was no message delivery because the message was addressed to a distribution group, and the membership of the distribution was expanded.
+- Expanded: There was no message delivery because the message was addressed to a distribution group and the membership of the distribution was expanded.
 
 ```yaml
 Type: MultiValuedProperty
@@ -290,4 +283,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5e5134f2-b887-4840-9dff-cea9ec8fde72.aspx)
-
