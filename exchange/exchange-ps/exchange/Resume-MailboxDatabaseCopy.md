@@ -6,12 +6,6 @@ schema: 2.0.0
 # Resume-MailboxDatabaseCopy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Resume-MailboxDatabaseCopy cmdlet to resume activation, replication and replay activities (log copying and replay) for a mailbox database.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Resume-MailboxDatabaseCopy cmdlet to unblock activation or resume log copying and replay for a passive mailbox database copy.
@@ -39,62 +33,20 @@ Resume-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Resume-MailboxDatabaseCopy cmdlet resumes replication and replay from a suspended state. If a database copy was suspended without administrator intervention, it is because the database copy is in a bad state. You can use the Get-MailboxDatabaseCopyStatus cmdlet to see if there are any messages indicating a failure. If the copy of the database is in a bad state, resuming the copy causes replication to fail and the mailbox database copy to return to a suspended state.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"mailbox database copy" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-The Resume-MailboxDatabaseCopy cmdlet resumes replication and replay from a suspended state. If a database copy was suspended without administrator intervention, it's because the database copy is in a bad state. You can use the Get-MailboxDatabaseCopyStatus cmdlet to see if there are any messages indicating a failure. If the copy of the database is in a bad state, resuming the copy causes replication to fail and the mailbox database copy to return to a suspended state.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 The Resume-MailboxDatabaseCopy cmdlet resumes replication and replay from a suspended state. If a database copy was suspended without administrator intervention, it's because the database copy is in a bad state. You can use the Get-MailboxDatabaseCopyStatus cmdlet to see if there are any messages indicating a failure. If the copy of the database is in a bad state, resuming the copy causes replication to fail and the mailbox database copy to return to a suspended state.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Resume-MailboxDatabaseCopy -Identity DB1\MBX3
-```
-
-This example resumes replication and replay activity for the copy of a database named DB1 that is hosted on a Mailbox server named MBX3.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Resume-MailboxDatabaseCopy -Identity DB1\MBX3
 ```
 
 This example resumes replication and replay activity for the copy of the database DB1 hosted on the Mailbox server MBX3.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Resume-MailboxDatabaseCopy -Identity DB1\MBX3
-```
-
-This example resumes replication and replay activity for the copy of the database DB1 hosted on the Mailbox server MBX3.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Resume-MailboxDatabaseCopy -Identity DB2\MBX4 -ReplicationOnly
-```
-
-This example resumes replication and replay activity for the copy of a database named DB2 that is hosted on a Mailbox server named MBX4. After the copy is resumed, it remains administratively blocked for activation.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Resume-MailboxDatabaseCopy -Identity DB2\MBX4 -ReplicationOnly
-```
-
-This example resumes replication and replay activity for the copy of the database DB2 hosted on the Mailbox server MBX4. After the copy is resumed, it remains administratively blocked for activation.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Resume-MailboxDatabaseCopy -Identity DB2\MBX4 -ReplicationOnly
 ```
@@ -156,17 +108,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationOnly
-!!! Exchange Server 2010
-
-The ReplicationOnly parameter is used resume replication without affecting the activation setting (for example, the ActivationSuspended property for the database copy remains set to True).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ReplicationOnly switch specifies whether to resume replication without affecting the activation setting (for example, the ActivationSuspended property for the database copy remains set to True).
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -247,4 +189,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3d90b006-9914-415b-9a1f-730bd91c8548.aspx)
-
