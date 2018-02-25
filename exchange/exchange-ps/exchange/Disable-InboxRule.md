@@ -6,20 +6,6 @@ schema: 2.0.0
 # Disable-InboxRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-InboxRule cmdlet to disable an Inbox rule.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Disable-InboxRule cmdlet to disable an Inbox rule.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-InboxRule cmdlet to disable existing Inbox rules in mailboxes.
@@ -34,48 +20,13 @@ Disable-InboxRule [-Identity] <InboxRuleIdParameter> [-AlwaysDeleteOutlookRulesB
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you create, modify, remove, enable, or disable an Inbox rule on Microsoft Exchange Server 2010, any client-side rules created by Microsoft Office Outlook are removed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Inbox rules" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-When you create, modify, remove, enable, or disable an Inbox rule on Microsoft Exchange Server 2013, any client-side rules created by Microsoft Outlook are removed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Inbox rules" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When you create, modify, remove, enable, or disable an Inbox rule in Exchange PowerShell, any client-side rules created by MicrosoftOutlook are removed.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
-```
-
-This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
-```
-
-This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
-```
-
-This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Disable-InboxRule -Identity "MoveAnnouncements" -Mailbox "Joe@Contoso.com"
 ```
@@ -85,17 +36,7 @@ This example disables the Inbox rule MoveAnnoncements in the mailbox Joe@Contoso
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the identity of the Inbox rule to be disabled.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the name of the Inbox rule to be disabled.
-
-
 
 ```yaml
 Type: InboxRuleIdParameter
@@ -147,19 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -175,25 +106,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force switch specifies whether to suppress the confirmation prompt produced if rules created by Outlook exist on the mailbox. When taking an action using Inbox rules on Exchange 2010, any client-side rules are removed.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress the confirmation prompt produced if rules created by Outlook exist on the mailbox. When taking an action using Inbox rules on Exchange 2013, any client-side rules are removed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 A confirmation prompt warns you if the mailbox contains rules that were created by Outlook, because any client-side rules will be removed by the actions of this cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -209,14 +124,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Mailbox parameter specifies the identity of the mailbox to which the Inbox rule belongs.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the mailbox that contains the Inbox rule. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -242,8 +149,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -292,4 +197,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89ac946b-575e-460c-8a9f-a775d22c87e9.aspx)
-
