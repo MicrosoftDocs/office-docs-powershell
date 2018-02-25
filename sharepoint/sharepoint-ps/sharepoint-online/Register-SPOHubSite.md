@@ -18,7 +18,7 @@ Register-SPOHubSite [-Site] <SpoSitePipeBind>  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to register an existing site collection as a hub site. If the site doesn’t exist, the cmdlet returns a "File not found" error.
+Use this cmdlet to register an existing site collection as a hub site.
 
 If the site doesn’t exist, this cmdlet returns a “File not found” error.
 
