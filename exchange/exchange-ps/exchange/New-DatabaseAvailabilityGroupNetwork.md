@@ -6,14 +6,6 @@ schema: 2.0.0
 # New-DatabaseAvailabilityGroupNetwork
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-DatabaseAvailabilityGroupNetwork cmdlet to manually create a network for a database availability group (DAG). After you create DAG networks, you can use them for log shipping and seeding for mailbox databases hosted on servers in the DAG, or use them for client access to mailbox databases in the DAG.
-
-Support for network encryption and network compression in a DAG is configured at the DAG level, and not at the network level. You can use the Set-DatabaseAvailabilityGroup cmdlet to configure network encryption and compression settings for the DAG.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-DatabaseAvailabilityGroupNetwork cmdlet to create a database availability group (DAG) network.
@@ -30,35 +22,11 @@ New-DatabaseAvailabilityGroupNetwork [-Name] <String>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name DAGNetwork1 -Subnets 10.0.0.0/8 -ReplicationEnabled:$true
-```
-
-This example creates a new DAG network named DAGNetwork1 for a DAG named DAG1. A subnet of 10.0.0.0 that has a bitmask of 8 is assigned to the DAG network, and the DAG network is also enabled for replication activity.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name DAG1Repl -Subnets 10.0.0.0/8 -ReplicationEnabled:$true
-```
-
-This example creates the DAG network DAG1Repl in the DAG DAG1. A subnet of 10.0.0.0 with a bitmask of 8 is assigned to DAG1Repl, and DAG1Repl is also enabled for continuous replication.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-DatabaseAvailabilityGroupNetwork -DatabaseAvailabilityGroup DAG1 -Name DAG1Repl -Subnets 10.0.0.0/8 -ReplicationEnabled:$true
 ```
@@ -84,17 +52,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies the name of the network being created.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Name parameter specifies the name of the DAG network being created.
-
-
 
 ```yaml
 Type: String
@@ -130,17 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-!!! Exchange Server 2010
-
-The Description parameter specifies an optional description of up to 256 characters for the network being created.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Description parameter specifies an optional description of up to 256 characters for the DAG network being created.
-
-
 
 ```yaml
 Type: String
@@ -172,17 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreNetwork
-!!! Exchange Server 2010
-
-The IgnoreNetwork parameter excludes a network from use by the DAG.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IgnoreNetwork parameter excludes the DAG network from use by the DAG.
-
-
 
 ```yaml
 Type: $true | $false
@@ -198,17 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReplicationEnabled
-!!! Exchange Server 2010
-
-The ReplicationEnabled parameter specifies whether the network being created is enabled for continuous replication.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ReplicationEnabled parameter specifies whether the DAG network being created is enabled for continuous replication.
-
-
 
 ```yaml
 Type: $true | $false
@@ -224,17 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subnets
-!!! Exchange Server 2010
-
-The Subnets parameter is used to manually specify the subnets that make up the network being created.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Subnets parameter specifies the subnets for the DAG network being created.
-
-
 
 ```yaml
 Type: DatabaseAvailabilityGroupSubnetId[]
@@ -283,4 +201,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3ef8d42f-9da0-456a-b4e8-6f7d99a1fa0f.aspx)
-
