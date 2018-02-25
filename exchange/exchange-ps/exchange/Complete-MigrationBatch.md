@@ -21,24 +21,6 @@ Complete-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-After a migration batch for a local or cross-forest move has successfully run and has a status state of Synced, use the Complete-MigrationBatch cmdlet to finalize the migration batch. Finalization is the last phase performed during a local or cross-forest move. When you finalize a migration batch, the cmdlet does the following for each mailbox in the migration batch:
-
-- Runs a final incremental synchronization.
-
-- Configures the user's Microsoft Outlook profile to point to the new target domain.
-
-- Converts the source mailbox to a mail-enabled user in the source domain.
-
-When the finalization process is complete, you can remove the batch by using the Remove-MigrationBatch cmdlet.
-
-If a migration batch has a status of Completed with Errors, you can rerun the Complete-MigrationBatch cmdlet. The cmdlet will attempt to finalize the failed users.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 After a migration batch for a local or cross-forest move has successfully run and has a status state of Synced, use the Complete-MigrationBatch cmdlet to finalize the migration batch. Finalization is the last phase performed during a local or cross-forest move. When you finalize a migration batch, the cmdlet does the following for each mailbox in the migration batch:
 
 - Runs a final incremental synchronization.
@@ -55,21 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.com,lucio@contoso.com
-```
-
-This example completes the migration batch LocalMove1 and sends a notification email message to the specified users.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.com,lucio@contoso.com
-```
-
-This example completes the migration batch LocalMove1 and sends a notification email message to the specified users.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Complete-MigrationBatch -Identity LocalMove1 -NotificationEmails admin@contoso.com,lucio@contoso.com
 ```
@@ -117,17 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter identifies the name of the migration batch. The value for this parameter is specified by the Name parameter for the New-MigrationBatch cmdlet. Use the Get-MigrationBatch cmdlet to determine the value of this parameter for the migration batch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the name of the migration batch that you want to complete. The value for this parameter is specified by the Name parameter for the New-MigrationBatch cmdlet. Use the Get-MigrationBatch cmdlet to determine the value of this parameter for the migration batch.
-
-
 
 ```yaml
 Type: MigrationBatchIdParameter
@@ -143,21 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmails
-!!! Exchange Server 2013
-
-The NotificationEmails parameter specifies one or more email addresses that status reports are sent to after the migration batch is completed. Specify the value as a string array and separate multiple email addresses with commas.
-
-If you don't use this parameter, the final status report is sent to the administrator who runs the Complete-MigrationBatch cmdlet.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The NotificationEmails parameter specifies one or more email addresses that status reports are sent to after the migration batch is completed. You can specify multiple email addresses separated by commas.
 
 If you don't use this parameter, the final status report is sent to the administrator who runs the Complete-MigrationBatch cmdlet.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -238,4 +184,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/572077f0-5457-48ad-b78a-7bd945997300.aspx)
-
