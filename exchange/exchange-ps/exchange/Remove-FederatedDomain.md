@@ -6,16 +6,6 @@ schema: 2.0.0
 # Remove-FederatedDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-FederatedDomain cmdlet to remove a federated domain from the federated organization identifier.
-
-If you remove the domain used for the account namespace, federation is disabled for the Exchange organization. (The first domain specified with the organization identifier is the account namespace.) Use the Get-FederatedOrganizationIdentifier cmdlet to retrieve the domain name used for the account namespace.
-
-For more information, see Understanding Federation.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-FederatedDomain cmdlet to remove a federated domain from the federated organization identifier in the federation trust for the Exchange organization.
@@ -34,41 +24,13 @@ Remove-FederatedDomain [[-Identity] <OrganizationIdParameter>] -DomainName <Smtp
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-An Exchange organization's federated organization identifier is generally created using the organization's primary domain name. Additional domain names can be added and removed. The Remove-FederatedDomain cmdlet removes a federated domain from the federated organization identifier.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-An Exchange organization's federated organization identifier is generally created using the organization's primary domain name. Additional domain names can be added and removed. The Remove-FederatedDomain cmdlet removes a federated domain from the federated organization identifier.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 An Exchange organization's federated organization identifier is generally created using the organization's primary domain name. Additional domain names can be added and removed. The Remove-FederatedDomain cmdlet removes a federated domain from the federated organization identifier.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-FederatedDomain -DomainName contoso.co.uk
-```
-
-This example removes the federated domain contoso.co.uk from the federated organization identifier.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-FederatedDomain -DomainName contoso.co.uk
-```
-
-This example removes the federated domain contoso.co.uk from the federated organization identifier.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-FederatedDomain -DomainName contoso.co.uk
 ```
@@ -94,25 +56,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -144,17 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force parameter specifies whether to suppress warning or confirmation messages when removing a federated domain. This parameter can be used when the removal of the federated domain from Windows Live fails, but the configuration of this domain as a federated domain in Exchange should be removed regardless. The result of running this task with the Force parameter is that the Exchange configuration is removed but the domain may not be released in Windows Live. We recommend that you not use the Force parameter unless the release of the domain from Windows Live continues to fail.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages when removing a federated domain. This parameter can be used when the removal of the federated domain from Windows Live fails, but the configuration of this domain as a federated domain in Exchange should be removed regardless. The result of running this task with the Force switch is that the Exchange configuration is removed but the domain may not be released in Windows Live. We recommend that you not use the Force switch unless the release of the domain from Windows Live continues to fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -219,4 +157,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8cd3096e-79ca-4af8-bfb2-48bb8cee5208.aspx)
-

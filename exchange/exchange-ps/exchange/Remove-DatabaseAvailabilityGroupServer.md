@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-DatabaseAvailabilityGroupServer
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-DatabaseAvailabilityGroupServer cmdlet to remove a Mailbox server from a database availability group (DAG). To remove a Mailbox server from a DAG, the Mailbox server must not host any replicated mailbox databases.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-DatabaseAvailabilityGroupServer cmdlet to remove a Mailbox server from a database availability group (DAG). To remove a Mailbox server from a DAG, the Mailbox server must not host any replicated databases.
@@ -27,56 +21,18 @@ Remove-DatabaseAvailabilityGroupServer [-Identity] <DatabaseAvailabilityGroupIdP
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-DatabaseAvailabilityGroupServer -Identity DAG3 -MailboxServer MBX1
-```
-
-This example removes a Mailbox server named MBX1 from a DAG named DAG3.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-DatabaseAvailabilityGroupServer -Identity DAG3 -MailboxServer MBX1
 ```
 
 This example removes the Mailbox server MBX1 from the DAG DAG3.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-DatabaseAvailabilityGroupServer -Identity DAG3 -MailboxServer MBX1
-```
-
-This example removes the Mailbox server MBX1 from the DAG DAG3.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
-```
-
-This example removes the configuration settings for Mailbox server named MBX4 from a DAG named DAG2. MBX4 is expected to be offline for an extended period, so its configuration is being removed from the DAG while it is offline in order to establish quorum with the remaining online DAG members.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
-```
-
-This example removes the configuration settings for the Mailbox server MBX4 from the DAG DAG2. MBX4 is currently offline and expected to be offline for an extended period, so its configuration is being removed from the DAG to establish quorum for the DAG or to reduce the number of members needed for quorum by the DAG.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-DatabaseAvailabilityGroupServer -Identity DAG2 -MailboxServer MBX4 -ConfigurationOnly
 ```
@@ -86,17 +42,7 @@ This example removes the configuration settings for the Mailbox server MBX4 from
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name of the DAG from which you are removing the server.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the name of the DAG from which you're removing the server.
-
-
 
 ```yaml
 Type: DatabaseAvailabilityGroupIdParameter
@@ -128,17 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-!!! Exchange Server 2010
-
-The ConfigurationOnly parameter should only be used if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server will not be restored to operational service before the messaging service is needed. When used, it removes the Mailbox server from the DAG object in Active Directory. If the Mailbox server is offline but the DAG has quorum, the Mailbox server will be evicted from the DAG's cluster and removed from the DAG object in Active Directory.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ConfigurationOnly switch should only be used if the Mailbox server has been lost and can no longer be contacted, or in situations when the Mailbox server can't be restored to operational service before the messaging service is needed. When used, it removes the Mailbox server from the DAG object in Active Directory. If the Mailbox server is offline but the DAG has quorum, the Mailbox server is evicted from the DAG's cluster and removed from the DAG object in Active Directory.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -255,4 +191,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/49290be7-9d3d-4bc3-80ea-f1992fdd1d12.aspx)
-
