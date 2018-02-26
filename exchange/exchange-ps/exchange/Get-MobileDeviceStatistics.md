@@ -29,77 +29,27 @@ Get-MobileDeviceStatistics -Mailbox <MailboxIdParameter> [-ActiveSync] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-MobileDeviceStatistics cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile Device user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MobileDeviceStatistics cmdlet returns a list of statistics about each mobile device. Additionally, it allows you to retrieve logs and send those logs to a recipient for troubleshooting purposes.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MobileDeviceStatistics -Identity TonySmith
 ```
 
 This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDeviceStatistics -Identity TonySmith
-```
-
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MobileDeviceStatistics -Identity TonySmith
-```
-
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-$UserList = Get-CASMailbox -Filter {hasactivesyncdevicepartnership -eq $true -and -not displayname -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_}
-```
-
-This example uses the Get-CASMailbox cmdlet to determine who in the organization has a Microsoft Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 $UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_}
 ```
 
 This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-$UserList = Get-CASMailbox -Filter {HasActiveSyncDevicePartnership -eq $true -and -not DisplayName -like "CAS_{*"} | Get-Mailbox; $UserList | foreach {Get-MobileDeviceStatistics -Mailbox $_}
-```
-
-This example uses the Get-CASMailbox cmdlet to determine who in the organization has an Exchange ActiveSync mobile device. For each mobile device, the Exchange ActiveSync device statistics are retrieved.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
-```
-
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the Exchange ActiveSync log file and sends it to the System Administrator at admin@contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
-```
-
-This example retrieves the statistics for the mobile phone configured to synchronize with the mailbox that belongs to the user Tony Smith. It also outputs the Exchange ActiveSync log file and sends it to the System Administrator at admin@contoso.com.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MobileDeviceStatistics -Mailbox TonySmith -GetMailboxLog $true -NotificationEmailAddresses "admin@contoso.com"
 ```
@@ -207,17 +157,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAforDevices
-!!! Exchange Server 2013
-
-The OWAforDevices parameter specifies whether Outlook Web App for Mobile Devices is enabled for the mobile device.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OWAforDevices parameter specifies whether Outlook on the web for devices is enabled for the mobile device.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -298,4 +238,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6a74c20a-d4e5-40f8-8921-9e416125c305.aspx)
-

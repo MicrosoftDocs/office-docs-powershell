@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-Notification
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-Notification cmdlet to configure the notification messages that appear in the Exchange Administration Center (EAC). This cmdlet is primarily for use by the EAC and shouldn't be run in the Exchange Management Shell, unless running for certificate expiry information.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-Notification cmdlet to modify notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notification events are related to:
@@ -38,45 +28,18 @@ Set-Notification -NotificationEmails <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Administration Center configuration settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-Notification -NotificationEmails john@contoso.com,kweku@contoso.com -ProcessType CertExpiry
-```
-
-This example creates a notification rule that sends emails to john@contoso.com and kweku@contoso.com when bulk provisioning is being performed.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-Notification -NotificationEmails john@contoso.com,kweku@contoso.com -ProcessType CertExpiry
 ```
 
 This example configures all expiring and expired certificate notification events to send notification email messages to john@contoso.com and kweku@contoso.com.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-Notification -NotificationEmails john@contoso.com,kweku@contoso.com -ProcessType CertExpiry
-```
-
-This example configures all expiring and expired certificate notification events to send notification email messages to john@contoso.com and kweku@contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf -NotificationEmails laura@contoso.com,julia@contoso.com
-```
-
-This example configures the specified notification event to send notification email messages to laura@contoso.com and julia@contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf -NotificationEmails laura@contoso.com,julia@contoso.com
 ```
@@ -86,21 +49,11 @@ This example configures the specified notification event to send notification em
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the notification event that you want to modify. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command: Get-Notification | Format-List DisplayName,AlternateID,StartTime,Status,Type.
 
 Typically, it only makes sense to modify notification recipients for events that haven't completed (if the event has completed, no more notification messages will be sent).
 
 You can't use this parameter with the ProcessType parameter.
-
-
 
 ```yaml
 Type: EwsStoreObjectIdParameter
@@ -116,18 +69,6 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmails
-!!! Exchange Server 2013
-
-The NotificationEmails parameter specifies the email addresses of recipients to whom email should be sent. The recipients will be sent emails in the following instances:
-
-- Move request Start, complete, and fail
-
-- Certificates When about to expire within 30 days, or have already expired
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The NotificationEmails parameter specifies the recipients for notification emails related to notification events. You can specify multiple recipients separated by commas.
 
 You need to use this parameter with either the ProcessType or Identity parameters:
@@ -136,9 +77,7 @@ You need to use this parameter with either the ProcessType or Identity parameter
 
 - Identity: You can modify the notification recipients for all types of notification events (CertExpiry, ExportPST, ImportPST, MailboxRestore, and Migration).
 
-For Migration events, you can also use the NotificationEmails parameter on the New-MigrationBatch, Set-MigrationBatch, and Complete-MigrationBatch cmdlets to specify the notification email recipients.
-
-
+For Migration events, you can also use the NotificationEmails parameter on the New-MigrationBatch, Set-MigrationBatch and Complete-MigrationBatch cmdlets to specify the notification email recipients.
 
 ```yaml
 Type: MultiValuedProperty
@@ -154,35 +93,11 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessType
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ProcessType parameter specifies the types of processes that trigger emails to be sent. This parameter accepts the following values:
-
-- Unknown
-
-- ImportPST
-
-- ExportPST
-
-- Migration
-
-- MailboxRestore
-
-- CertExpiry
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The ProcessType parameter specifies the notification event type that sends notification emails to users (specified by the required NotificationEmails parameter). The users receive email notification messages for all events of the specified type. The only valid value for this is parameter is CertExpiry.
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
@@ -269,4 +184,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/56275c13-8c86-42e6-ab3f-2e0aa100983a.aspx)
-

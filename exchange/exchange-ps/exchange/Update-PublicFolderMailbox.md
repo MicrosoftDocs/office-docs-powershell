@@ -35,56 +35,20 @@ Update-PublicFolderMailbox [-Identity] <MailboxIdParameter> [-InvokeSynchronizer
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-This cmdlet only needs to be used if you want to manually invoke the hierarchy synchronizer and the mailbox assistant. Both these are invoked at least once every 24 hours for each public folder mailbox in the organization. The hierarchy synchronizer is invoked every 15 minutes if any users are logged on to a secondary mailbox through Microsoft Outlook or a Microsoft Exchange Web Services client.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet only needs to be used if you want to manually invoke the hierarchy synchronizer and the mailbox assistant. Both these are invoked at least once every 24 hours for each public folder mailbox in the organization. The hierarchy synchronizer is invoked every 15 minutes if any users are logged on to a secondary mailbox through Outlook or a Exchange Web Services client.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Update-PublicFolderMailbox -Identity PF_marketing -SuppressStatus
 ```
 
 This example updates the public folder hierarchy on the public folder mailbox PF\_marketing and suppresses the command's output.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Update-PublicFolderMailbox -Identity PF_marketing -SuppressStatus
-```
-
-This example updates the public folder hierarchy on the public folder mailbox PF\_marketing and suppresses the command's output.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Update-PublicFolderMailbox -Identity PF_marketing -SuppressStatus
-```
-
-This example updates the public folder hierarchy on the public folder mailbox PF\_marketing and suppresses the command's output.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox -PublicFolder | Update-PublicFolderMailbox -SuppressStatus
-```
-
-This example updates all public folder mailboxes and suppresses the command's output.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-Mailbox -PublicFolder | Update-PublicFolderMailbox -SuppressStatus
-```
-
-This example updates all public folder mailboxes and suppresses the command's output.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-Mailbox -PublicFolder | Update-PublicFolderMailbox -SuppressStatus
 ```
@@ -124,25 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -338,4 +288,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/36a24f50-89d9-4976-884d-f46eacd0f4d4.aspx)
-

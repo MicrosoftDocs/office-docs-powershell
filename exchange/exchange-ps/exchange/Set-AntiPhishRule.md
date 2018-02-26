@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
-```
-
-This example modifies the existing antiphishing rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```

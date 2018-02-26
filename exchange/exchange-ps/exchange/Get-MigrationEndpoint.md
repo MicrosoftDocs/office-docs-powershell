@@ -36,32 +36,6 @@ Get-MigrationEndpoint [[-Identity] <MigrationEndpointIdParameter>] [-Diagnostic]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-MigrationEndpoint cmdlet retrieves settings for different types of migration:
-
-- Cross-forest move Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
-
-- Remote move In a hybrid deployment, a remote move involves onboarding or offboarding migrations. Remote moves require the use of a RemoteMove endpoint. Onboarding moves mailboxes from an on-premises Exchange organization to Exchange Online in Office 365, and uses a RemoteMove endpoint as the source endpoint of the migration batch. Offboarding moves mailboxes from Exchange Online in Office 365 to an on-premises Exchange organization and uses a RemoteMove endpoint as the target endpoint of the migration batch.
-
-- Cutover Exchange migration Migrate all mailboxes in an on-premises Exchange organization to Exchange Online in Office 365. Cutover Exchange migration requires the use of an Exchange endpoint.
-
-- Staged Exchange migration Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online in Office 365. Staged Exchange migration requires the use of an Exchange endpoint.
-
-- IMAP migration Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online in Office 365. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-
-- Local Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
-
-For more information about the different move and migration scenarios, see:
-
-- Mailbox moves in Exchange 2013
-
-- Manage on-premises moves
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MigrationEndpoint cmdlet retrieves settings for different types of migration:
 
 - Cross-forest move: Move mailboxes between two different on-premises Exchange forests. Cross-forest moves require the use of a RemoteMove endpoint.
@@ -86,21 +60,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationEndpoint -Identity OnboardingME01
-```
-
-This example retrieves the settings for the migration endpoint, OnboardingME01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationEndpoint -Identity OnboardingME01
-```
-
-This example retrieves the settings for the migration endpoint, OnboardingME01.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MigrationEndpoint -Identity OnboardingME01
 ```
@@ -126,22 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-!!! Exchange Server 2013
-
-The Type parameter filters the results by the type of migration. Valid values for this parameter are:
-
-- ExchangeOutlookAnywhere Cutover or staged Exchange migrations
-
-- ExchangeRemoteMove Remote moves and migrations
-
-- IMAP IMAP migrations
-
-- PublicFolder Public folder migrations
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Type parameter filters the results by the type of migration. Valid values for this parameter are:
 
 - ExchangeOutlookAnywhere: Cutover or staged Exchange migrations
@@ -151,8 +95,6 @@ The Type parameter filters the results by the type of migration. Valid values fo
 - IMAP: IMAP migrations
 
 - PublicFolder: Public folder migrations
-
-
 
 ```yaml
 Type: None | IMAP | XO1 | ExchangeOutlookAnywhere | BulkProvisioning | ExchangeRemoteMove | ExchangeLocalMove | PSTImport | PublicFolder
@@ -203,8 +145,6 @@ Accept wildcard characters: False
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -269,4 +209,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3576e65b-4b64-46a5-a95a-7045daf4893e.aspx)
-

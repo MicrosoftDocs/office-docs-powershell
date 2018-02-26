@@ -6,14 +6,6 @@ schema: 2.0.0
 # Stop-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Stop-DatabaseAvailabilityGroup cmdlet to stop a member of a database availability group (DAG) or to stop an entire Active Directory site. The Stop-DatabaseAvailabilityGroup cmdlet is used during a datacenter switchover. This cmdlet is used to mark the members of the DAG in a failed datacenter as stopped.
-
-The Stop-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode value of DagOnly. For more information about DatacenterActivationMode, see Understanding Datacenter Activation Coordination Mode. You can use the Set-DatabaseAvailabilityGroup cmdlet to configure the value for DatacenterActivationMode.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Stop-DatabaseAvailabilityGroup cmdlet to mark a member of a database availability group (DAG) as failed, or to mark all DAG members in a specific Active Directory site as failed.
@@ -37,81 +29,27 @@ Stop-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-The Stop-DatabaseAvailabilityGroup cmdlet is used during a datacenter switchover. This cmdlet is used to mark one or members of the DAG as failed (also known as stopped).The Stop-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode value of DagOnly.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 The Stop-DatabaseAvailabilityGroup cmdlet is used during a datacenter switchover. This cmdlet is used to mark one or members of the DAG as failed (also known as stopped).The Stop-DatabaseAvailabilityGroup cmdlet can be run against a DAG only when the DAG is configured with a DatacenterActivationMode value of DagOnly.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer E14EX2
-```
-
-This example stops the Mailbox server E14EX2 in the DAG DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
 ```
 
 This example stops the Mailbox server MBX2 in the DAG DAG1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
-```
-
-This example stops the Mailbox server MBX2 in the DAG DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
 ```
 
 This example stops all members in the DAG DAG1 in the Active Directory site Redmond.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
-```
-
-This example stops all members in the DAG DAG1 in the Active Directory site Redmond.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
-```
-
-This example stops all members in the DAG DAG1 in the Active Directory site Redmond.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer E14EX3 -ConfigurationOnly
-```
-
-This example stops the Mailbox server E14EX3, which is currently offline, in the DAG DAG2.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Stop-DatabaseAvailabilityGroup -Identity DAG2 -MailboxServer MBX3 -ConfigurationOnly
-```
-
-This example stops the Mailbox server MBX3, which is currently offline, in the DAG DAG2.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Stop-DatabaseAvailabilityGroup -Identity DAG2 -MailboxServer MBX3 -ConfigurationOnly
 ```
@@ -121,17 +59,7 @@ This example stops the Mailbox server MBX3, which is currently offline, in the D
 ## PARAMETERS
 
 ### -ActiveDirectorySite
-!!! Exchange Server 2010
-
-The ActiveDirectorySite parameter specifies the Active Directory site containing the DAG to stop (for example, stop all members of the DAG in a particular Active Directory site).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ActiveDirectorySite parameter specifies the Active Directory site containing the DAG members to stop (for example, stop all DAG members in a particular Active Directory site).
-
-
 
 ```yaml
 Type: AdSiteIdParameter
@@ -163,17 +91,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-!!! Exchange Server 2010
-
-The MailboxServer parameter specifies a single member of the DAG to stop. If Datacenter Activation Coordination mode is enabled for the DAG and all DAG members are in the same Active Directory site, use the MailboxServer parameter to stop individual DAG members instead of the ActiveDirectorySite parameter when stopping failed DAG members.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The MailboxServer parameter specifies a single DAG member to stop. If Datacenter Activation Coordination mode is enabled for the DAG and all DAG members are in the same Active Directory site, use the MailboxServer parameter to stop individual DAG members instead of the ActiveDirectorySite parameter when stopping failed DAG members.
-
-
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -290,4 +208,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1e167fe5-b1c5-48d9-b3d8-4cf823d1c43c.aspx)
-

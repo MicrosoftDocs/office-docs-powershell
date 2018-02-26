@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-StoreUsageStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-StoreUsageStatistics cmdlet to aid in diagnosing performance issues with your servers or databases. The Microsoft Exchange Information Store collects per-user information on latency, input/output (I/O), page counts, processor usage, and TimeInServer. The TimeInServer metric represents the total time that synchronous and asynchronous requests spend in the Microsoft Exchange Information Store for a user's mailbox. You can retrieve this resource information in the Microsoft Exchange Information Store for the 25 highest usage accounts on a specified database. Usage of a mailbox is defined as the amount of server time spent in performing operations for that mailbox. The cmdlet reports the top 25 users for every one-minute period for the last 10 minutes (250 objects per ten-minute interval). The resource usage is an indicator of the load that different users are placing on the server.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-StoreUsageStatistics cmdlet to aid in diagnosing performance issues with your servers or databases.
@@ -45,72 +39,32 @@ Get-StoreUsageStatistics -Server <ServerIdParameter> [-DomainController <Fqdn>] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Microsoft Exchange Information Store collects per-user information on latency, input/output (I/O), page counts, processor usage, and TimeInServer. The TimeInServer metric represents the total time that synchronous and asynchronous requests spend in the Microsoft Exchange Information Store for a user's mailbox. You can retrieve this resource information in the Microsoft Exchange Information Store for the 25 highest usage accounts on a specified database. Usage of a mailbox is defined as the amount of server time spent in performing operations for that mailbox. The cmdlet reports the top 25 users for every one-minute period for the last 10 minutes (250 objects per ten-minute interval). The resource usage is an indicator of the load that different users are placing on the server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Microsoft Exchange Information Store collects per-user information on latency, input/output (I/O), page counts, processor usage, and TimeInServer. The TimeInServer metric represents the total time that synchronous and asynchronous requests spend in the Microsoft Exchange Information Store for a user's mailbox. You can retrieve this resource information in the Microsoft Exchange Information Store for the 25 highest usage accounts on a specified database. Usage of a mailbox is defined as the amount of server time spent in performing operations for that mailbox. The cmdlet reports the top 25 users for every one-minute period for the last 10 minutes (250 objects per ten-minute interval). The resource usage is an indicator of the load that different users are placing on the server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-StoreUsageStatistics -Database MyDatabase01
-```
-
-This example retrieves resource store statistics for the database MyDatabase01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-StoreUsageStatistics -Server EX1 | ft -auto
 ```
 
 This example retrieves store usage statistics for all active databases on server EX1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-StoreUsageStatistics -Server EX1 | ft -auto
-```
-
-This example retrieves store usage statistics for all active databases on server EX1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-StoreUsageStatistics -Server EX1 -IncludePassive | ft -auto
 ```
 
 This example retrieves store usage statistics for all active and passive databases on server EX1.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-StoreUsageStatistics -Server EX1 -IncludePassive | ft -auto
-```
-
-This example retrieves store usage statistics for all active and passive databases on server EX1.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Get-StoreUsageStatistics -Database DB1 | Sort-Object LogRecordBytes -desc | Select-Object -First 10 | ft DigestCategory, *guid, LogRecordBytes, *time* -auto
 ```
 
-This example retrieves store usage statistics for database DB1, and sorts the output by the 10 highest log file generators.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-StoreUsageStatistics -Database DB1 | Sort-Object LogRecordBytes -desc | Select-Object -First 10 | ft DigestCategory, *guid, LogRecordBytes, *time* -auto
-```
-
-This example retrieves store usage statistics for database DB1, and sorts the output by the 10 highest log file generators.
+This example retrieves store usage statistics for database DB1 and sorts the output by the 10 highest log file generators.
 
 ## PARAMETERS
 
@@ -283,4 +237,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0fd00fe0-de0e-48d2-b9fd-44220455cb8e.aspx)
-

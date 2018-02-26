@@ -27,16 +27,6 @@ Reset-ProvisioningCache [-Server] <Fqdn> -Application <String> [-CacheKeys <Mult
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Reset-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators need to run this cmdlet only if incorrect links or properties are stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache. This is a rare occurrence because the provisioning cache has invalidation notification logic.
-
-The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. To reduce Active Directory requests, a provisioning cache is initialized in each Windows PowerShell runspace and is used to cache common objects that are frequently used by cmdlets and provisioning handlers. During Exchange cmdlet execution, the provisioning cache loads configuration objects from Active Directory to help run a cmdlet. For example, when you create a mailbox, the New-Mailbox cmdlet obtains properties from Active Directory. When running cmdlets, configuration objects such as database containers, administrative role groups, and LegacyDNs are retrieved from Active Directory. Because these types of objects are stable and don't change for months or years after they're created, they're stored in the provisioning cache used by Windows PowerShell. This increases provisioning efficiency and significantly improves cmdlet performance.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange server configuration settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The Reset-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators need to run this cmdlet only if incorrect links or properties are stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache. This is a rare occurrence because the provisioning cache has invalidation notification logic.
 
 The Reset-ProvisioningCache cmdlet clears the Windows PowerShell provisioning cache of frequently used Active Directory objects. To reduce Active Directory requests, a provisioning cache is initialized in each Windows PowerShell runspace and is used to cache common objects that are frequently used by cmdlets and provisioning handlers. During Exchange cmdlet execution, the provisioning cache loads configuration objects from Active Directory to help run a cmdlet. For example, when you create a mailbox, the New-Mailbox cmdlet obtains properties from Active Directory. When running cmdlets, configuration objects such as database containers, administrative role groups, and LegacyDNs are retrieved from Active Directory. Because these types of objects are stable and don't change for months or years after they're created, they're stored in the provisioning cache used by Windows PowerShell. This increases provisioning efficiency and significantly improves cmdlet performance.
@@ -45,28 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Reset-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell -GlobalCache
 ```
 
 This example resets the provisioning cache for Windows PowerShell running on the server EXSRV1.contoso.com in an on-premises Exchange organization and specifies that all cache keys are cleared.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Reset-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell -GlobalCache
-```
-
-This example resets the provisioning cache for Windows PowerShell running on the server EXSRV1.contoso.com in an on-premises Exchange organization and specifies that all cache keys are cleared.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum.com -GlobalCache
-```
-
-This example runs in a multi-tenant deployment by a data center administrator to reset the provisioning cache for Windows PowerShell for the adatum.com tenant and clear all cache keys.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Reset-ProvisioningCache -Application Powershell-Proxy -Server datacenter1.adatum.com -GlobalCache
 ```
@@ -154,25 +130,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -253,4 +215,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/687309c9-150e-4cdf-9639-3247eb6608a4.aspx)
-

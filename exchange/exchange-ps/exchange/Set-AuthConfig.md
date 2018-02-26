@@ -40,42 +40,20 @@ Set-AuthConfig [-Confirm] [-DomainController <Fqdn>] [-Realm <String>] [-Service
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Set-AuthConfig parameter defines Microsoft Exchange as a partner application for server-to-server authentication with other partner applications such as Microsoft SharePoint 2013 and Microsoft Lync 2013 or Skype for Business Server 2015, including the certificate used for signing tokens. It's generally not required for this configuration to be modified except in some cases where you must use a different certificate instead of the self-signed certificate created by Exchange Setup or to use a new certificate after the old one has expired.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 The Set-AuthConfig parameter defines Microsoft Exchange as a partner application for server-to-server authentication with other partner applications such as Microsoft SharePoint 2013 and Microsoft Lync 2013 or Skype for Business Server 2015, including the certificate used for signing tokens. It's generally not required for this configuration to be modified except in some cases where you must use a different certificate instead of the self-signed certificate created by Exchange Setup or to use a new certificate after the old one has expired.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-AuthConfig -NewCertificateThumbprint DB821B4FCA2A5DA9593B9DE00C86BC5EA35D0FC0 -NewCertificateEffectiveDate 4/17/2013
 ```
 
 This example specifies a new certificate and a date when the certificate will become effective.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-AuthConfig -NewCertificateThumbprint DB821B4FCA2A5DA9593B9DE00C86BC5EA35D0FC0 -NewCertificateEffectiveDate 4/17/2013
-```
-
-This example specifies a new certificate and a date when the certificate will become effective.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-AuthConfig -PublishCertificate
-```
-
-This example immediately rolls over the certificate configured as the next certificate and makes it the current certificate. You must have installed a certificate marked as the next certificate.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-AuthConfig -PublishCertificate
 ```
@@ -153,17 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -326,4 +294,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dfc5be21-3a9c-4888-b1e9-8a308262eb67.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Export-TransportRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-TransportRuleCollection cmdlet to export a transport rule collection used by the Transport Rules agent on a computer running Microsoft Exchange Server 2010 that has the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Export-TransportRuleCollection cmdlet to export the transport rules in your organization.
@@ -22,32 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Export-TransportRuleCollection [[-Identity] <RuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-ExportLegacyRules] [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-ExportLegacyRules] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Export-TransportRuleCollection cmdlet can be used to export the transport rule collection on an Exchange 2010 Hub Transport server, export legacy transport rules created in Exchange Server 2007 for import to Exchange 2010, or export transport rules on an Exchange 2010 Edge Transport server.
-
-For information about how to import a transport rule collection from an XML file, see Import-TransportRuleCollection.
-
-For information about the Transport Rules agent, see Overview of Transport Rules.
-
-In Exchange 2010, you must export the rules collection to a variable and then use the Set-Content cmdlet to write the data to an XML file. For more information, see Set-Content (https://go.microsoft.com/fwlink/p/?linkid=156132).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The Export-TransportRuleCollection cmdlet can be used to export the transport rule collection in your organization. The format of the exported transport rule collection has changed in Exchange Server 2013. The new format can only be imported into Exchange Server 2013: it can't be imported into older versions of Exchange.
-
-Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see Set-Content (https://go.microsoft.com/fwlink/p/?linkId=156132).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Export-TransportRuleCollection cmdlet can be used to export the transport rule collection in your organization. The format of the exported transport rule collection changed in Exchange Server 2013. The new format can't be imported into Exchange Server 2010.
 
 Exporting the rules collection is a two-step process. You first export the rules collection to a variable, and then use the Set-Content cmdlet to write the data to an XML file. For more information, see Set-Content (https://go.microsoft.com/fwlink/p/?linkId=156132).
@@ -56,47 +28,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports transport rules on an Exchange 2010 Hub Transport or Edge Transport server. Rule data is exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 $file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-$file = Export-TransportRuleCollection; Set-Content -Path "C:\MyDocs\Rules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports transport rules. Rule data is first exported to the variable $file, and then written to the XML file Rules.xml in the C:\\MyDocs folder.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 $file = Export-TransportRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\LegacyRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
-This example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
+In Exchange Server 2010, this example exports legacy transport rules created in Exchange 2007 using the ExportLegacyRules switch. The cmdlet should be run from an Exchange 2010 Hub Transport server. The exported rules collection can then be imported to Exchange 2010 using the Import-TransportRuleCollection cmdlet.
 
 ## PARAMETERS
 
@@ -121,23 +65,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -169,17 +101,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
+This parameter is functional or available only on Exchange Server 2010.
 
 The Identity parameter specifies the name or GUID of a transport rule to be exported.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-This parameter has been deprecated and is no longer used.
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -191,24 +115,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -246,4 +152,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bfdb6ced-cd81-49f1-a929-4d76dbaf5590.aspx)
-

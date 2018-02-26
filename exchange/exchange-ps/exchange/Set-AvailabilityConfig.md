@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-AvailabilityConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-AvailabilityConfig cmdlet to set the access level for free/busy information.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-AvailabilityConfig cmdlet to set the access level for free/busy information.
@@ -26,24 +20,6 @@ Set-AvailabilityConfig [-Confirm] [-DomainController <Fqdn>] [-OrgWideAccount <S
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per-user free/busy proxy account or group, and an organization-wide free/busy proxy account or group. These accounts and groups are trusted by all availability services in the current organization for availability proxy requests.
-
-For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a user name and password for one of the specified accounts or security groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Availability configuration settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per-user free/busy proxy account or group, and an organization-wide free/busy proxy account or group. These accounts and groups are trusted by all availability services in the current organization for availability proxy requests.
-
-For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a user name and password for one of the specified accounts or security groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Availability service configuration settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-AvailabilityConfig cmdlet defines two accounts or security groups: a per-user free/busy proxy account or group, and an organization-wide free/busy proxy account or group. These accounts and groups are trusted by all availability services in the current organization for availability proxy requests.
 
 For cross-forest availability services to retrieve free/busy information in the current forest, they must be using one of the specified accounts, belong to one of the specified security groups, or have a user name and password for one of the specified accounts or security groups.
@@ -52,56 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-AvailabilityConfig -PerUserAccount <>
 ```
 
 This example is useful with a trusted cross-forest Availability service. If the remote forest is trusted, and a per-user free/busy proxy account or group in the remote forest is configured to use the service account, the configuration is added to the current forest to authorize the Microsoft ActiveSync request from the remote forest.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AvailabilityConfig -PerUserAccount <>
-```
-
-This example is useful with a trusted cross-forest Availability service. If the remote forest is trusted, and a per-user free/busy proxy account or group in the remote forest is configured to use the service account, the configuration is added to the current forest to authorize the Microsoft ActiveSync request from the remote forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-AvailabilityConfig -PerUserAccount <>
-```
-
-This example is useful with a trusted cross-forest Availability service. If the remote forest is trusted, and a per-user free/busy proxy account or group in the remote forest is configured to use the service account, the configuration is added to the current forest to authorize the Microsoft ActiveSync request from the remote forest.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-AvailabilityConfig -PerUserAccount <>
-```
-
-This example is useful with a trusted cross-forest Availability service. If the remote forest is trusted, and a per-user free/busy proxy account or group in the remote forest is configured to use the service account, the configuration is added to the current forest to authorize the Microsoft ActiveSync request from the remote forest.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
-```
-
-This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the user name and password.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
-```
-
-This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the user name and password.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
-```
-
-This example is useful if the remote forest isn't trusted. Because this account is used for a cross-forest free/busy proxy account or group, minimize security vulnerabilities by using the credentials of a user who doesn't have an Exchange mailbox. When you're prompted, type the user name and password.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-AvailabilityConfig -OrgWideAccount <ExampleCredentials>
 ```
@@ -131,19 +65,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -175,19 +99,9 @@ Accept wildcard characters: False
 ```
 
 ### -PerUserAccount
-!!! Exchange Server 2010
-
-The PerUserAccount parameter specifies an account or security group that has permission to issue proxy Availability service requests on a per-user basis.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The PerUserAccount parameter specifies an account or security group that has permission to issue proxy Availability service requests on a per-user basis.
-
-
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -236,4 +150,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/aa3c55f3-d29a-443e-b248-e1779516dfe1.aspx)
-

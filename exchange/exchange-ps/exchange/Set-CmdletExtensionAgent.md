@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-CmdletExtensionAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-CmdletExtensionAgent cmdlet on a server running Microsoft Exchange Server 2010 to modify a cmdlet extension agent.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-CmdletExtensionAgent cmdlet on a server running Microsoft Exchange Server 2013 to modify a cmdlet extension agent.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-CmdletExtensionAgent cmdlet to modify cmdlet extension agents. To enable or disable cmdlet extension agents, use the Enable-CmdletExtensionAgent and Disable-CmdletExtensionAgent cmdlets.
@@ -34,20 +20,6 @@ Set-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter> [-Confirm
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The changes applied to an agent are applied to every Exchange 2010 server in the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Cmdlet extension agents" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-The changes applied to an agent are applied to every Exchange 2013 server in the organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Cmdlet extension agents" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
 
 The changes that you make by using the Set-CmdletExtensionAgent cmdlet are applied to every Exchange server in the organization.
@@ -56,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-CmdletExtensionAgent "Validation Agent" -Priority 9
-```
-
-This example changes the priority of the fictitious "Validation Agent" cmdlet extension agent to 9.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-CmdletExtensionAgent "Validation Agent" -Priority 9
-```
-
-This example changes the priority of the fictitious "Validation Agent" cmdlet extension agent to 9.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-CmdletExtensionAgent "Validation Agent" -Priority 9
 ```
@@ -80,14 +38,6 @@ This example changes the priority of the fictitious "Validation Agent" cmdlet ex
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the cmdlet extension agent to modify. If the name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the cmdlet extension agent that you want to modify. You can use any value that uniquely identifies the agent. For example:
 
 - Name
@@ -95,8 +45,6 @@ The Identity parameter specifies the cmdlet extension agent that you want to mod
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: CmdletExtensionAgentIdParameter
@@ -148,17 +96,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the name of the cmdlet extension agent. The maximum length of the agent name is 64 characters. If the name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name of the cmdlet extension agent. The maximum length of the agent name is 64 characters. If the name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -174,17 +112,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Priority parameter specifies where in the priority order of the cmdlet extension agent list the agent should be placed. The priority must be between 0 and the maximum number of agents. Agents with a priority closest to 0 have a higher priority and are run first.
-
-
-
-!!! Exchange Server 2016
-
 The Priority parameter specifies the priority of the cmdlet extension agent. Higher priority agents are applied before lower priority agents. A valid value is an integer from 0 to 255. Lower integer values indicate higher priority.
-
-
 
 ```yaml
 Type: Byte
@@ -233,4 +161,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2eebd4fc-0496-46e3-a3c1-60f75d680b4d.aspx)
-
