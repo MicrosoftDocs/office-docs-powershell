@@ -6,18 +6,6 @@ schema: 2.0.0
 # Remove-EdgeSubscription
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-EdgeSubscription cmdlet to remove Edge Subscription from the Exchange organization and from the subscribed computer that has the Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-EdgeSubscription cmdlet to remove Edge Subscriptions from the Exchange organization and from the subscribed Edge Transport server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-EdgeSubscription cmdlet to remove Edge Subscription from the Exchange organization and from the subscribed Edge Transport server.
@@ -30,28 +18,6 @@ Remove-EdgeSubscription [-Identity] <TransportServerIdParameter> [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-EdgeSubscription cmdlet removes Edge Subscription. After you remove Edge Subscription, synchronization of information from Active Directory to the Active Directory Lightweight Directory Services (AD LDS) instance stops. All the accounts stored in AD LDS are removed, and the Edge Transport server is removed from the source server list of any Send connector.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-When you remove an Edge Subscription, the following changes are made:
-
-- Synchronization of information from Active Directory to the Active Directory Lightweight Directory Services (AD LDS) instance stops.
-
-- All the accounts stored in AD LDS are removed.
-
-- The Edge Transport server is removed from the list of source servers for any Send connector.
-
-- If the Edge Transport server is the only source server for any Send connector, the Send connector is removed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 When you remove an Edge Subscription, the following changes are made:
 
 - Synchronization of information from Active Directory to the Active Directory Lightweight Directory Services (AD LDS) instance stops.
@@ -66,21 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-EdgeSubscription -Identity Edge1
-```
-
-This example removes Edge Subscription for the Edge Transport server Edge1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-EdgeSubscription -Identity Edge1
-```
-
-This example removes Edge Subscription for the Edge Transport server.Edge1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-EdgeSubscription -Identity Edge1
 ```
@@ -106,25 +58,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -158,27 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force parameter forces the recipient data that has been replicated to AD LDS be deleted. If omitted, the command will inform you that the removal of the replicated recipient data from AD LDS can take a long time and will give you the option to cancel the operation.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-If you don't specify the Force switch, the command will inform you that the removal of the replicated recipient data from AD LDS can take a long time and will give you the option to cancel the operation.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 If you don't specify the Force switch, the command will inform you that the removal of the replicated recipient data from AD LDS can take a long time and will give you the option to cancel the operation.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -227,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dce6cec3-9fb5-4c5e-b80c-9f9c40de3177.aspx)
-

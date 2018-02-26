@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMMailboxPolicy cmdlet to display the properties and values of a Unified Messaging (UM) mailbox policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-UMMailboxPolicy cmdlet to display the properties and values of a Unified Messaging (UM) mailbox policy.
@@ -22,28 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UMMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+ [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-UMMailboxPolicy cmdlet retrieves the configuration properties and values for a UM mailbox policy or returns a list of UM mailbox policies.
-
-After this task is completed, if the Identity parameter is supplied, the properties and values for the specified UM mailbox policy object are returned. If no parameter is specified at the command prompt, all UM mailbox policies in the Active Directory forest are returned.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMMailboxPolicy cmdlet retrieves the configuration properties and values for a UM mailbox policy or returns a list of UM mailbox policies.
-
-After this task is completed, if the Identity parameter is supplied, the properties and values for the specified UM mailbox policy object are returned. If no parameter is specified at the command prompt, all UM mailbox policies in the Active Directory forest are returned.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-UMMailboxPolicy cmdlet retrieves the configuration properties and values for a UM mailbox policy or returns a list of UM mailbox policies.
 
 After this task is completed, if the Identity parameter is supplied, the properties and values for the specified UM mailbox policy object are returned. If no parameter is specified at the command prompt, all UM mailbox policies in the Active Directory forest are returned.
@@ -52,84 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-UMMailboxPolicy | Format-List
 ```
 
 This example returns a formatted list of all UM mailbox policies in the Active Directory forest.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMMailboxPolicy | Format-List
-```
-
-This example returns a formatted list of all UM mailbox policies in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMMailboxPolicy | Format-List
-```
-
-This example returns a formatted list of all UM mailbox policies in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UMMailboxPolicy | Format-List
-```
-
-This example returns a formatted list of all UM mailbox policies in the Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-UMMailboxPolicy -Identity MyUMMailboxPolicy
 ```
 
 This example returns the properties and values for the UM mailbox policy MyUMMailboxPolicy.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example returns the properties and values for the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example returns the properties and values for the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example returns the properties and values for the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-UMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM mailbox policies that are associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-UMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM mailbox policies associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-UMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM mailbox policies associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-UMMailboxPolicy -UMDialPlan MyUMDialPlan
 ```
@@ -139,19 +52,9 @@ This examples displays all the UM mailbox policies associated with the UM dial p
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -182,34 +85,8 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -UMDialPlan
-!!! Exchange Server 2010
-
-The UMDialPlan parameter displays all the UM mailbox policies that are associated with the UM dial plan that's specified.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The UMDialPlan parameter specifies that all UM mailbox policies associated with the UM dial plan are displayed.
-
-
 
 ```yaml
 Type: UMDialPlanIdParameter
@@ -242,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f3a09cda-c1b9-4d7c-b1a5-eefc3603ebe7.aspx)
-
