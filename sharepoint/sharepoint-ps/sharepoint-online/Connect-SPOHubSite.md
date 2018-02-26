@@ -32,13 +32,13 @@ Connect-SPOHubSite https://contoso.sharepoint.com/sites/Research `
 -HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
-This example connects the research site with the marketing hub.
+This example connects the research site with the marketing hub site.
 
 ## PARAMETERS
 
 ### -Site
 
-URL of the site to join to the hub.
+URL of the site to join to the hub site.
 
 ```yaml
 Type: SpoSitePipeBind
