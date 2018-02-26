@@ -22,47 +22,25 @@ Set-ActiveSyncDeviceAutoblockThreshold [-Identity] <ActiveSyncDeviceAutoblockThr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Microsoft Exchange and Microsoft Exchange ActiveSync can block Exchange ActiveSync mobile devices if these devices display any of a defined list of behaviors that can potentially cause issues with the server. The Set-ActiveSyncDeviceAutoblockThreshold cmdlet can modify an existing autoblock threshold rule and change a variety of settings including the duration of blocking.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync Autoblock settings" entry in the \<Clients and mobile devices permissions\> topic.
-
-!!! Exchange Server 2016
-
 Microsoft Exchange and Microsoft Exchange ActiveSync can block Exchange ActiveSync mobile devices if these devices display any of a defined list of behaviors that can potentially cause issues with the server. The Set-ActiveSyncDeviceAutoblockThreshold cmdlet can modify an existing autoblock threshold rule and change a variety of settings including the duration of blocking.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges" BehaviorTypeIncidenceLimit 2 -BehaviorTypeIncidenceDuration 1440 -DeviceBlockDuration 1440 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
-This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes, and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
+This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ActiveSyncDeviceAutoblockThreshold -Identity "UserAgentChanges" BehaviorTypeIncidenceLimit 2 -BehaviorTypeIncidenceDuration 1440 -DeviceBlockDuration 1440 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
-```
-
-This example sets the autoblock threshold rule UserAgentChanges with several settings. It limits the number of accepted UserAgent changes to 2, specifies that the incidence duration is 1440 minutes, and blocks the mobile device for 1440 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-ActiveSyncDeviceAutoblockThreshold -Identity "RecentCommands" BehaviorTypeIncidenceLimit 5 -BehaviorTypeIncidenceDuration 720 -DeviceBlockDuration 720 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
 ```
 
-This example sets the autoblock threshold rule RecentCommands with several settings. It limits the number of accepted RecentCommands changes to 5, specifies that the incidence duration is 720 minutes, and blocks the mobile device for 720 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-ActiveSyncDeviceAutoblockThreshold -Identity "RecentCommands" BehaviorTypeIncidenceLimit 5 -BehaviorTypeIncidenceDuration 720 -DeviceBlockDuration 720 -AdminEmailInsert "<B>Your device has been blocked.</B> "]
-```
-
-This example sets the autoblock threshold rule RecentCommands with several settings. It limits the number of accepted RecentCommands changes to 5, specifies that the incidence duration is 720 minutes, and blocks the mobile device for 720 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
+This example sets the autoblock threshold rule RecentCommands with several settings. It limits the number of accepted RecentCommands changes to 5, specifies that the incidence duration is 720 minutes and blocks the mobile device for 720 minutes. Lastly, it inserts a message into the administrative email message sent to the user.
 
 ## PARAMETERS
 
@@ -216,4 +194,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2710ccb0-9e18-4906-acd1-e97be05d57cd.aspx)
-
