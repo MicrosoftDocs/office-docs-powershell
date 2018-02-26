@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-RecipientFilterConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-RecipientFilterConfig cmdlet to enable and configure the Recipient Filter agent on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-RecipientFilterConfig cmdlet to enable and configure the Recipient Filter agent.
@@ -26,76 +20,27 @@ Set-RecipientFilterConfig [-BlockedRecipients <MultiValuedProperty>] [-BlockList
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-RecipientFilterConfig -RecipientValidationEnabled $true
 ```
 
 This example modifies the Recipient Filter agent configuration so that recipient validation is enabled.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-RecipientFilterConfig -RecipientValidationEnabled $true
-```
-
-This example modifies the Recipient Filter agent configuration so that recipient validation is enabled.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-RecipientFilterConfig -RecipientValidationEnabled $true
-```
-
-This example modifies the Recipient Filter agent configuration so that recipient validation is enabled.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-RecipientFilterConfig -BlockListEnabled $true -BlockedRecipients user1@contoso.com,user2@contoso.com
 ```
 
 This example makes the following changes to the Recipient Filter agent configuration:
 
+- Enables the Blocked Recipients list.
 
-Enables the Blocked Recipients list.
-
-Adds two users to the Blocked Recipients list.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-RecipientFilterConfig -BlockListEnabled $true -BlockedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following changes to the Recipient Filter agent configuration:
-
-
-Enables the Blocked Recipients list.
-
-Adds two users to the Blocked Recipients list.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-RecipientFilterConfig -BlockListEnabled $true -BlockedRecipients user1@contoso.com,user2@contoso.com
-```
-
-This example makes the following changes to the Recipient Filter agent configuration:
-
-
-Enables the Blocked Recipients list.
-
-Adds two users to the Blocked Recipients list.
+- Adds two users to the Blocked Recipients list.
 
 ## PARAMETERS
 
@@ -267,4 +212,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/678ef60d-a2ab-4c03-9854-f43727b9123a.aspx)
-

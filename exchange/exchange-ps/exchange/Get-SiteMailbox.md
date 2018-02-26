@@ -20,77 +20,27 @@ Get-SiteMailbox [[-Identity] <RecipientIdParameter>] [-Anr <String>] [-BypassOwn
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-If you aren't a member or owner of the site mailbox that you want to view the diagnostics information for, you must use the BypassOwnerCheck parameter when running this cmdlet. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you aren't a member or owner of the site mailbox that you want to view the diagnostics information for, you must use the BypassOwnerCheck parameter when running this cmdlet. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite
 ```
 
 This example returns the default information about the site mailbox ContentSite, which includes the site name, when the site mailbox was closed, and the SharePoint URL.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite
-```
-
-This example returns the default information about the site mailbox ContentSite, which includes the site name, when the site mailbox was closed, and the SharePoint URL.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite
-```
-
-This example returns the default information about the site mailbox ContentSite, which includes the site name, when the site mailbox was closed, and the SharePoint URL.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite | Format-List
 ```
 
 This example returns the full information about the site mailbox ContentSite.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite | Format-List
-```
-
-This example returns the full information about the site mailbox ContentSite.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SiteMailbox -BypassOwnerCheck -Identity ContentSite | Format-List
-```
-
-This example returns the full information about the site mailbox ContentSite.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailbox -BypassOwnerCheck -DeletedSiteMailbox | Remove-Mailbox -Confirm:$false
-```
-
-This example queries for site mailboxes that are marked for deletion and removes them from the mailbox database by pipelining the Remove-Mailbox cmdlet.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-SiteMailbox -BypassOwnerCheck -DeletedSiteMailbox | Remove-Mailbox -Confirm:$false
-```
-
-This example queries for site mailboxes that are marked for deletion and removes them from the mailbox database by pipelining the Remove-Mailbox cmdlet.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-SiteMailbox -BypassOwnerCheck -DeletedSiteMailbox | Remove-Mailbox -Confirm:$false
 ```
@@ -100,22 +50,6 @@ This example queries for site mailboxes that are marked for deletion and removes
 ## PARAMETERS
 
 ### -Anr
-!!! Exchange Server 2013
-
-The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches the string. The default attributes searched are:
-
-- CommonName (CN)
-
-- DisplayName
-
-- Name
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Anr parameter specifies a string on which to perform an ambiguous name resolution (ANR) search. You can specify a partial string and search for objects with an attribute that matches that string. The default attributes searched are:
 
 - CommonName (CN)
@@ -127,8 +61,6 @@ The Anr parameter specifies a string on which to perform an ambiguous name resol
 - LastName
 
 - Alias
-
-
 
 ```yaml
 Type: String
@@ -144,19 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassOwnerCheck
-!!! Exchange Server 2013
-
-The BypassOwnerCheck parameter is used by administrators who aren't members or owners of the site mailbox. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
 
 If you run the command without this parameter, and you aren't a member or owner of the site mailbox, then the command will fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -172,25 +94,11 @@ Accept wildcard characters: False
 ```
 
 ### -DeletedSiteMailbox
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The DeletedSiteMailbox parameter returns site mailboxes that have been marked for pending deletion.
-
-When the lifecycle application in SharePoint closes a site mailbox, the site mailbox is retained for the period specified in the lifecycle policy in the closed state. The mailbox can then be reactivated by an end user or by a SharePoint administrator. After the retention period, the Exchange site mailbox that's housed in the mailbox database will have its name prepended with MDEL: to indicate that it has been marked for deletion. To free storage space and the alias, use the Remove-Mailbox cmdlet to manually remove these site mailboxes from the mailbox database.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DeletedSiteMailboxswitch returns site mailboxes that have been marked for pending deletion. You don't need to specify a value with this switch.
 
 When the lifecycle application in SharePoint closes a site mailbox, the site mailbox is retained for the period specified in the lifecycle policy in the closed state. The mailbox can then be reactivated by an end user or by a SharePoint administrator. After the retention period, the Exchange site mailbox that's housed in the mailbox database will have its name prepended with MDEL: to indicate that it has been marked for deletion. To free storage space and the alias, use the Remove-Mailbox cmdlet to manually remove these site mailboxes from the mailbox database.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -274,17 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all site mailboxes that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -317,4 +215,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/51d2ee4b-4065-4328-86fd-6ca3c9c6912e.aspx)
-

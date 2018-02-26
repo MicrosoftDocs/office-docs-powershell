@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-MailContact
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailContact cmdlet to delete an existing mail-enabled contact from Active Directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-MailContact cmdlet to delete an existing mail-enabled contact from Active Directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MailContact cmdlet to delete existing mail contacts.
@@ -34,49 +20,11 @@ Remove-MailContact [-Identity] <MailContactIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-MailContact -Identity contoso.com/john
-```
-
-This example removes the mail-enabled contact John from Active Directory.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailContact -Identity contoso.com/john
-```
-
-This example removes the mail-enabled contact John from Active Directory.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailContact -Identity contoso.com/john
-```
-
-This example removes the mail contact named John.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MailContact -Identity contoso.com/john
-```
-
-This example removes the mail contact named John.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-MailContact -Identity contoso.com/john
 ```
@@ -86,36 +34,6 @@ This example removes the mail contact named John.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identityof the mail contact. You can use the following values:
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- GUID
-
-- Alias
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the mail contact. You can use the following values:
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- GUID
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the mail contact that you want to remove. You can use any value that uniquely identifies the mail contact.
 
 For example:
@@ -133,8 +51,6 @@ For example:
 - Email address
 
 - GUID
-
-
 
 ```yaml
 Type: MailContactIdParameter
@@ -170,19 +86,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -198,41 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013
-
 This parameter is available only in on-premises Exchange.
 
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-This parameter is available only in on-premises Exchange.
-
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -297,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/86b8ea84-5111-489e-a320-003b429d8131.aspx)
-

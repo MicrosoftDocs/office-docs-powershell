@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-X400AuthoritativeDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-X400AuthoritativeDomain cmdlet to create and specify the X.400 authoritative domain for the Microsoft Exchange Server 2010 organization. The X.400 authoritative domain defines the standard fields for the namespace appended to the recipient identity for all mailboxes assigned an X.400 address.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-X400AuthoritativeDomain cmdlet to create and specify the X.400 authoritative domain for the organization. The X.400 authoritative domain defines the standard fields for the namespace appended to the recipient identity for all mailboxes assigned an X.400 address.
@@ -24,60 +18,6 @@ New-X400AuthoritativeDomain [-Name] <String> -X400DomainName <X400Domain> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-X.400 domain names can only include the following ASCII characters:
-
-- A to Z
-
-- a to z
-
-- 0-9
-
-- These punctuation and special characters: (space) ' () + , - . / : = ?
-
-You can use the following X.400 attributes (one each per address):
-
-- NamecountryAbbreviation C Maximum character length 2
-
-- Nameadministrative domainAbbreviation A Maximum character length 16
-
-- Nameprivate domainAbbreviation P Maximum character length 16
-
-- Nameorganization nameAbbreviation O Maximum character length 64
-
-- Nameorganizational unit nameAbbreviation Ou1-4 Maximum character length 32
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "X.400 domains" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-X.400 domain names can only include the following ASCII characters:
-
-- A to Z
-
-- a to z
-
-- 0-9
-
-- These punctuation and special characters: (space) ' () + , - . / : = ?
-
-You can use the following X.400 attributes (one each per address):
-
-- NamecountryAbbreviation C Maximum character length 2
-
-- Nameadministrative domainAbbreviation A Maximum character length 16
-
-- Nameprivate domainAbbreviation P Maximum character length 16
-
-- Nameorganization nameAbbreviation O Maximum character length 64
-
-- Nameorganizational unit nameAbbreviation Ou1-4 Maximum character length 32
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "X.400 domains" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 X.400 domain names can only include the following ASCII characters:
 
 - A to Z
@@ -124,42 +64,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-X400AuthoritativeDomain -Name Sales -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales"
 ```
 
 This example creates the X.400 authoritative domain Sales in the private domain Contoso, which is under the administrative domain Fabrikam.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-X400AuthoritativeDomain -Name Sales -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales"
-```
-
-This example creates the X.400 authoritative domain Sales in the private domain Contoso, which is under the administrative domain Fabrikam.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-X400AuthoritativeDomain -Name Sales -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales"
-```
-
-This example creates the X.400 authoritative domain Sales in the private domain Contoso, which is under the administrative domain Fabrikam.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-X400AuthoritativeDomain -Name "Sales Europe" -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales;OU1=Europe" -X400ExternalRelay: $true
-```
-
-This example creates an external relay domain for the X.400 namespace Europe organizational unit (OU) under the Sales organization in the private domain Contoso, which is under the administrative domain Fabrikam.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-X400AuthoritativeDomain -Name "Sales Europe" -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales;OU1=Europe" -X400ExternalRelay: $true
-```
-
-This example creates an external relay domain for the X.400 namespace Europe organizational unit (OU) under the Sales organization in the private domain Contoso, which is under the administrative domain Fabrikam.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-X400AuthoritativeDomain -Name "Sales Europe" -X400DomainName "C=US;A=Fabrikam;P=Contoso;O=Sales;OU1=Europe" -X400ExternalRelay: $true
 ```
@@ -169,17 +81,7 @@ This example creates an external relay domain for the X.400 namespace Europe org
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies a unique name for an X.400 authoritative domain object. When you specify a name that includes spaces, you must enclose the name in quotation marks ("), for example, "Display Name". The Name parameter can't exceed 64 characters.
-
-
-
-!!! Exchange Server 2016
-
 The Name parameter specifies the unique name for the X.400 authoritative domain. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -195,36 +97,6 @@ Accept wildcard characters: False
 ```
 
 ### -X400DomainName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The X400DomainName parameter specifies the X.400 namespace, which can only include the X.400 organizational components. Specifically, only the following attribute types are supported:
-
-- Label (Abbreviation)
-
-- C (Country)
-
-- A (ADMD)
-
-- P (PRMD)
-
-- O (Organization)
-
-- OU1 (Organization unit 1)
-
-- OU2 (Organization unit 2)
-
-- OU3 (Organization unit 3)
-
-- OU4 (Organization unit 4)
-
-The address attributes must be separated by semicolons, and the address must be enclosed in quotation marks ("), for example,
-
-"C=US;A=ATT;P=Contoso;O=Sales"
-
-
-
-!!! Exchange Server 2016
-
 The X400DomainName parameter specifies the X.400 namespace, which can only include the X.400 organizational components. Specifically, only the following attribute types are supported:
 
 - C (Country)
@@ -244,8 +116,6 @@ The X400DomainName parameter specifies the X.400 namespace, which can only inclu
 - OU4 (Organization unit 4)
 
 Separate the address attributes with semicolons and enclose the entire address in quotation marks (for example, "C=US;A=att;P=Contoso;O=Sales").
-
-
 
 ```yaml
 Type: X400Domain
@@ -315,23 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -X400ExternalRelay
-!!! Exchange Server 2010
-
-The X400ExternalRelay parameter specifies this authoritative domain as an external relay domain. If you set the X400ExternalRelay parameter to $true, Microsoft Exchange routes e-mail to the external address and doesn't treat resolution failures to this subdomain as an error.
-
-
-
-!!! Exchange Server 2013
-
-The X400ExternalRelay parameter specifies this authoritative domain as an external relay domain. If you set the X400ExternalRelay parameter to $true, Microsoft Exchange routes email to the external address and doesn't treat resolution failures to this subdomain as an error.
-
-
-
-!!! Exchange Server 2016
-
 The X400ExternalRelay parameter specifies authoritative domain an external relay domain. If you set the X400ExternalRelay parameter to $true, Microsoft Exchange routes email to the external address and doesn't treat resolution failures to this subdomain as an error.
-
-
 
 ```yaml
 Type: $true | $false
@@ -364,4 +218,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/999d149b-0e68-4f19-9d40-06d21b3fb1c0.aspx)
-

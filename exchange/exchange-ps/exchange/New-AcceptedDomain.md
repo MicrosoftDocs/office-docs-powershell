@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-AcceptedDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-AcceptedDomain cmdlet to create an accepted domain in your organization. An accepted domain is any SMTP namespace for which an Exchange organization sends and receives e-mail.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-AcceptedDomain cmdlet to create an accepted domain in your organization. An accepted domain is any SMTP namespace for which an Exchange organization sends and receives email.
@@ -20,42 +14,16 @@ Use the New-AcceptedDomain cmdlet to create an accepted domain in your organizat
 
 ```
 New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
- [-AuthenticationType <Managed | Federated>] [-Confirm] [-DomainController <Fqdn>]
- [-DomainType <Authoritative | ExternalRelay | InternalRelay>] [-LiveIdInstanceType <Consumer | Business>]
- [-MailFlowPartner <MailFlowPartnerIdParameter>] [-Organization <OrganizationIdParameter>]
+ [-Confirm] [-DomainController <Fqdn>] [-DomainType <Authoritative | ExternalRelay | InternalRelay>]  
  [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Accepted domains" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Accepted domains" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-AcceptedDomain -DomainName Contoso.com -DomainType Authoritative -Name Contoso
-```
-
-This example creates the new authoritative accepted domain Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-AcceptedDomain -DomainName Contoso.com -DomainType Authoritative -Name Contoso
-```
-
-This example creates the new authoritative accepted domain Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-AcceptedDomain -DomainName Contoso.com -DomainType Authoritative -Name Contoso
 ```
@@ -93,22 +61,6 @@ Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AuthenticationType
-The AuthenticationType parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Managed | Federated
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -153,81 +105,17 @@ Accept wildcard characters: False
 ```
 
 ### -DomainType
-!!! Exchange Server 2010
-
-The DomainType parameter specifies the type of accepted domain that you want to configure. Valid values are Authoritative, InternalRelay, or ExternalRelay. You must set at least one value.
-
-In an authoritative domain, messages are delivered to a recipient that has a domain account in your Exchange organization. In an internal relay domain, messages are relayed to a server outside your Exchange organization, but still under the authority of your company or IT department. Use the internal relay domain if you want to treat the messages to this domain as internal messages. In an external relay domain, messages are relayed to an e-mail server, outside your organization, which you don't control.
-
-The default value is Authoritative.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-The DomainType parameter specifies the type of accepted domain that you want to configure. Valid values are Authoritative, InternalRelay, or ExternalRelay. You must set at least one value.
+The DomainType parameter specifies the type of accepted domain that you want to configure. Valid values are Authoritative, InternalRelay or ExternalRelay. You must set at least one value.
 
 In an authoritative domain, messages are delivered to a recipient that has a domain account in your Exchange organization. In an internal relay domain, messages are relayed to a server outside your Exchange organization, but still under the authority of your company or IT department. Use the internal relay domain if you want to treat the messages to this domain as internal messages. In an external relay domain, messages are relayed to an email server, outside your organization, which you don't control.
 
 The default value is Authoritative.
-
-
 
 ```yaml
 Type: Authoritative | ExternalRelay | InternalRelay
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LiveIdInstanceType
-The LiveIdInstanceType parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Consumer | Business
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MailFlowPartner
-The MailFlowPartner parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MailFlowPartnerIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -288,4 +176,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/08bcaaec-51e3-447d-b3bf-406a705c64b4.aspx)
-

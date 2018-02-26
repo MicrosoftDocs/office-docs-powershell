@@ -30,33 +30,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
 ```
 
 This example creates a new Safe Links policy named Marketing Block URL with the following options:
 
+- The policy is enabled.
 
-The policy is enabled.
+- Users aren't allowed to click through to the original URL. This is the default value of the AllowClickThrough parameter, so you don't need to specify it.
 
-Users aren't allowed to click through to the original URL. This is the default value of the AllowClickThrough parameter, so you don't need to specify it.
-
-User clicks on URLs are tracked in URL trace.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-SafeLinksPolicy -Name "Marketing Block URL" -IsEnabled $true -TrackClicks $true
-```
-
-This example creates a new Safe Links policy named Marketing Block URL with the following options:
-
-
-The policy is enabled.
-
-Users aren't allowed to click through to the original URL. This is the default value of the AllowClickThrough parameter, so you don't need to specify it.
-
-User clicks on URLs are tracked in URL trace.
+- User clicks on URLs are tracked in URL trace.
 
 ## PARAMETERS
 
@@ -340,4 +325,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/663f218e-c19a-4e42-9861-b192255ea3eb.aspx)
-

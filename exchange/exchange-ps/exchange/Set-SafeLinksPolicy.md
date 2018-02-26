@@ -30,14 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SafeAttachmentsPolicy -Identity "Engineering Block URL" -TrackClicks $true
-```
-
-This example modifies the existing Safe Links policy named Engineering Block URL to track user clicks on URLs in URL trace.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-SafeAttachmentsPolicy -Identity "Engineering Block URL" -TrackClicks $true
 ```
@@ -336,4 +329,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3fd35540-61a3-4ad3-b66f-2d5a1aeda6dc.aspx)
-

@@ -21,136 +21,46 @@ Get-MigrationUserStatistics [-Identity] <MigrationUserIdParameter> [-Diagnostic]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | Format-List Status,Error,Report
-```
-
-This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | FL Status,Error,Report
 ```
 
 This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -IncludeReport | FL Status,Error,Report
-```
-
-This example uses the IncludeReport parameter to display detailed information about the migration status for the user.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | Format-List SkippedItemCount,SkippedItems
-```
-
-This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | FL SkippedItemCount,SkippedItems
 ```
 
 This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com | FL SkippedItemCount,SkippedItems
-```
-
-This example displays the number of mailbox items that failed to migrate, which are called skipped items, and information about each skipped item.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | Format-List SkippedItemCount,SkippedItems
-```
-
-This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | FL SkippedItemCount,SkippedItems
 ```
 
 This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
 
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -LimitSkippedItemsTo 20 | FL SkippedItemCount,SkippedItems
-```
-
-This example displays results information in the SkippedItems property for a maximum of 20 skipped items.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Get-MigrationUser -BatchId StagedBatch1 | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users in the migration batch named StagedBatch1.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationUser -BatchId StagedBatch1 | Get-MigrationUserStatistics
-```
-
-This example displays detailed information about users in the migration batch named StagedBatch1.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-MigrationUser -BatchId StagedBatch1 | Get-MigrationUserStatistics
-```
-
-This example displays detailed information about users in the migration batch named StagedBatch1.
-
-### Example 5 -------------------------- (Exchange Server 2013)
+### Example 5
 ```
 Get-MigrationUser | Get-MigrationUserStatistics
 ```
 
 This example displays detailed information about users from all current migration batches.
 
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationUser | Get-MigrationUserStatistics
-```
-
-This example displays detailed information about users from all current migration batches.
-
-### Example 5 -------------------------- (Exchange Online)
-```
-Get-MigrationUser | Get-MigrationUserStatistics
-```
-
-This example displays detailed information about users from all current migration batches.
-
-### Example 6 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | FL Status,Error,DiagnosticInfo
-```
-
-This example uses the Diagnostic parameter to display detailed troubleshooting information about the migration for the user.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | FL Status,Error,DiagnosticInfo
-```
-
-This example uses the Diagnostic parameter to display detailed troubleshooting information about the migration for the user.
-
-### Example 6 -------------------------- (Exchange Online)
+### Example 6
 ```
 Get-MigrationUserStatistics -Identity davidp@corp.contoso.com -Diagnostic | FL Status,Error,DiagnosticInfo
 ```
@@ -160,17 +70,7 @@ This example uses the Diagnostic parameter to display detailed troubleshooting i
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the user that you want to retrieve information about. Use an email address as the value for the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the user that you want to retrieve migration information about. Use an email address as the value for this parameter.
-
-
 
 ```yaml
 Type: MigrationUserIdParameter
@@ -333,4 +233,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b771bb31-7f5a-462f-b5e2-ce49fde9bfe5.aspx)
-

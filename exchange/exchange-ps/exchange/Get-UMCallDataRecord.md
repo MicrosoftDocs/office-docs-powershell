@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMCallDataRecord
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMCallDataRecord cmdlet to display Unified Messaging (UM) call data records for a specific UM-enabled user's mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-UMCallDataRecord cmdlet to display Unified Messaging (UM) call data records for a specific UM-enabled user's mailbox.
@@ -22,89 +16,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UMCallDataRecord -Mailbox <MailboxIdParameter> [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
 The Get-UMCallDataRecord cmdlet displays UM call data records for the last 90 days for a UM-enabled mailbox that you specify. Each UM call data record provides detailed information about all calls either placed to or received by the specified user. The following list details each of the properties that are returned:
-
-- 
-
-- Date: Date and time of the Unified Messaging server that took the call in the Coordinated Universal Time (UTC) format.
-
-- Duration: Total duration of this call. For Find Me calls, this will always be zero because the call is being transferred and won't be handled by Unified Messaging any longer.
-
-- AudioCodec: Audio codec used for the call including G.711 or Group System Mobile (GSM).
-
-- DialPlan: Name of the UM dial plan handling the call.
-
-- CallType: Type of the call (localized in the user's language): Call Answering Voice Message, Call Answering Missed Call, , Auto Attendant, Subscriber Access, Fax, PlayOnPhone, Find Me, None, UnauthenticatedPilotNumber, or PromptProvisioning.
-
-- CallingNumber: Phone number or address of the caller.
-
-- CalledNumber: Phone number or address of the intended recipient of the call.
-
-- Gateway: Fully qualified domain name (FQDN) of the UM IP gateway handling the call.
-
-- Network MOS (NMOS): Mean opinion score for the network performance.
-
-- NMOSDegradation: Total NMOS degradation, which is how far the NMOS reported value was from its top value for the corresponding audio codec.
-
-- PercentagePacketLoss: Percentage that reflects the average network packet loss during the call.
-
-- Jitter: Average jitter of the network.
-
-- RoundTripMilliseconds: Round trip time for Real Time Control Protocol (RTCP) statistics in milliseconds.
-
-- BurstLossDurationMilliseconds: Average duration of packet loss during bursts during the call.
-
-After this task is completed, a report is generated that contains UM call data records for a specific UM-enabled mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call data and summary reports" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMCallDataRecord cmdlet displays UM call data records for the last 90 days for a UM-enabled mailbox that you specify. Each UM call data record provides detailed information about all calls either placed to or received by the specified user. The following list details each of the properties that are returned:
-
-- 
-
-- Date: Date and time of the Mailbox server running the Microsoft Exchange Unified Messaging service that took the call in the Coordinated Universal Time (UTC) format.
-
-- Duration: Total duration of this call. For Find Me calls, this will always be zero because the call is being transferred and won't be handled by Unified Messaging any longer.
-
-- AudioCodec: Audio codec used for the call including G.711 or Group System Mobile (GSM).
-
-- DialPlan: Name of the UM dial plan handling the call.
-
-- CallType: Type of the call (localized in the user's language): Call Answering Voice Message, Call Answering Missed Call, , Auto Attendant, Subscriber Access, Fax, PlayOnPhone, Find Me, None, UnauthenticatedPilotNumber, or PromptProvisioning.
-
-- CallingNumber: Phone number or address of the caller.
-
-- CalledNumber: Phone number or address of the intended recipient of the call.
-
-- Gateway: Fully qualified domain name (FQDN) of the UM IP gateway handling the call.
-
-- Network MOS (NMOS): Mean opinion score for the network performance.
-
-- NMOSDegradation: Total NMOS degradation, which is how far the NMOS reported value was from its top value for the corresponding audio codec.
-
-- PercentagePacketLoss: Percentage that reflects the average network packet loss during the call.
-
-- Jitter: Average jitter of the network.
-
-- RoundTripMilliseconds: Round trip time for Real Time Control Protocol (RTCP) statistics in milliseconds.
-
-- BurstLossDurationMilliseconds: Average duration of packet loss during bursts during the call.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call data and summary reports" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-The Get-UMCallDataRecord cmdlet displays UM call data records for the last 90 days for a UM-enabled mailbox that you specify. Each UM call data record provides detailed information about all calls either placed to or received by the specified user. The following list details each of the properties that are returned:
-
-- 
 
 - Date: Date and time of the Mailbox server running the Microsoft Exchange Unified Messaging service that took the call in the Coordinated Universal Time (UTC) format.
 
@@ -138,28 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-UMCallDataRecord -Mailbox tony@contoso.com
-```
-
-This example displays the UM call data records for the UM-enabled user Tony.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMCallDataRecord -Mailbox tony@contoso.com
-```
-
-This example displays the UM call data records for the UM-enabled user Tony.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMCallDataRecord -Mailbox tony@contoso.com
-```
-
-This example displays the UM call data records for the UM-enabled user Tony.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-UMCallDataRecord -Mailbox tony@contoso.com
 ```
@@ -169,20 +64,6 @@ This example displays the UM call data records for the UM-enabled user Tony.
 ## PARAMETERS
 
 ### -Mailbox
-!!! Exchange Server 2010
-
-The Mailbox parameter specifies the UM-enabled mailbox that UM call data records will be displayed.
-
-
-
-!!! Exchange Server 2013
-
-The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the UM-enabled mailbox that UM call data records are displayed for. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -209,8 +90,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -225,41 +104,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -286,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7b75c817-820e-4863-9865-e17ad9ade903.aspx)
-

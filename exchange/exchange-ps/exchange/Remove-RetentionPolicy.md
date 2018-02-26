@@ -6,14 +6,6 @@ schema: 2.0.0
 # remove-RetentionPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-RetentionPolicy cmdlet to remove a retention policy.
-
-Removing a retention policy that's assigned to users results in those users not having any retention policy assigned. If another retention policy isn't assigned to those users, messages in those mailboxes may never expire. This may be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange Server 2010 displays a confirmation message indicating that the policy is assigned to users. Note that this message is in addition to the confirmation prompt displayed when removing a retention policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-RetentionPolicy cmdlet to remove a retention policy.
@@ -28,22 +20,6 @@ remove-RetentionPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Retention policies are used to apply message retention settings to folders and items in a mailbox. The Remove-RetentionPolicy cmdlet removes an existing retention policy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Retention policies are used to apply message retention settings to folders and items in a mailbox. The Remove-RetentionPolicy cmdlet removes an existing retention policy.
-
-If you remove a retention policy that's assigned to users and they don't have another retention policy assigned, messages in those mailboxes may never expire. This may be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange displays a confirmation message indicating that the policy is assigned to users. Note that this message is in addition to the confirmation prompt displayed when removing a retention policy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Retention policies are used to apply message retention settings to folders and items in a mailbox. The Remove-RetentionPolicy cmdlet removes an existing retention policy.
 
 If you remove a retention policy that's assigned to users and they don't have another retention policy assigned, messages in those mailboxes may never expire. This may be a violation of the organization's messaging retention policies. When you attempt to remove a policy that's assigned to users, Microsoft Exchange displays a confirmation message indicating that the policy is assigned to users. Note that this message is in addition to the confirmation prompt displayed when removing a retention policy.
@@ -52,89 +28,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-RetentionPolicy -Identity "Business Critical"
 ```
 
 This example removes the retention policy Business Critical.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-RetentionPolicy -Identity "Business Critical"
-```
-
-This example removes the retention policy Business Critical.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-RetentionPolicy -Identity "Business Critical"
-```
-
-This example removes the retention policy Business Critical.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-RetentionPolicy -Identity "Business Critical"
-```
-
-This example removes the retention policy Business Critical.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
 ```
 
 This example removes the retention policy Business Critical and suppresses the confirmation prompt.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
-```
-
-This example removes the retention policy Business Critical and suppresses the confirmation prompt.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
-```
-
-This example removes the retention policy Business Critical and suppresses the confirmation prompt.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false
-```
-
-This example removes the retention policy Business Critical and suppresses the confirmation prompt.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
 ```
 
-This example removes the retention policy Business Critical, which is assigned to users, and suppresses the confirmation prompt.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
-```
-
-This example removes the retention policy Business Critical, which is assigned to users, and suppresses the confirmation prompt.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
-```
-
-This example removes the retention policy Business Critical, which is assigned to users, and suppresses the confirmation prompt.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Remove-RetentionPolicy -Identity "Business Critical" -Confirm:$false -Force
-```
-
-This example removes the retention policy Business Critical, which is assigned to users, and suppresses the confirmation prompt.
+This example removes the retention policy Business Critical, which is assigned to users and suppresses the confirmation prompt.
 
 ## PARAMETERS
 
@@ -155,25 +68,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -189,19 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -266,4 +155,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4af0ae71-cdfa-4db4-9473-21c25fd6e351.aspx)
-

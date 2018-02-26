@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-PublicFolderMailboxMigrationRequestStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-PublicFolderMailboxMigrationRequestStatistics cmdlet to view the detailed status of individual jobs in a public folder migration batch created using New-MigrationBatch cmdlet.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-PublicFolderMailboxMigrationRequestStatistics cmdlet to view the detailed status of individual jobs in a public folder migration batch created using New-MigrationBatch cmdlet.
@@ -39,22 +29,6 @@ Get-PublicFolderMailboxMigrationRequestStatistics -RequestQueue <DatabaseIdParam
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-PublicFolderMailboxMigrationRequestStatistics cmdlet displays the following properties by default.
-
-- Name The name assigned by the system to a specific mailbox migration job.
-
-- StatusDetail The current status of the job.
-
-- TargetMailbox The mailbox being migrated.
-
-- PercentComplete The percentage of job completion.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-PublicFolderMailboxMigrationRequestStatistics cmdlet displays the following properties by default.
 
 - Name: The name assigned by the system to a specific mailbox migration job.
@@ -69,21 +43,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderMailboxMigrationRequestStatistics -Identity \PublicFolderMailboxMigration4ce124b0-d760-4364-94bc-40d7918fd171
-```
-
-This example uses the Identity parameter to specify the target job.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMailboxMigrationRequestStatistics -Identity \PublicFolderMailboxMigration4ce124b0-d760-4364-94bc-40d7918fd171
-```
-
-This example uses the Identity parameter to return information about the specified target job.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-PublicFolderMailboxMigrationRequestStatistics -Identity \PublicFolderMailboxMigration4ce124b0-d760-4364-94bc-40d7918fd171
 ```
@@ -111,20 +71,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2013
-
-The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
-
-- Database GUID
-
-- Database name
-
-You can't use this parameter with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
@@ -134,8 +80,6 @@ The RequestQueue parameter identifies the request based on the mailbox database 
 - Database name
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -183,19 +127,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -227,23 +161,11 @@ Accept wildcard characters: False
 ```
 
 ### -RequestGuid
-!!! Exchange Server 2013
-
-The RequestGuid parameter specifies the unique RequestGuid identifier of the request that you want to remove. To find the RequestGuid value, use the Get-PublicFolderMailboxMigrationRequest cmdlet.
-
-If you use this parameter, you also need to use the RequestQueue parameter. You can't use either of these parameters with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The RequestGuid parameter specifies the unique RequestGuid identifier of the request that you want to remove. To find the RequestGuid value, use the Get-PublicFolderMailboxMigrationRequest cmdlet.
 
 If you use this parameter, you also need to use the RequestQueue parameter. You can't use either of these parameters with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -292,4 +214,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0c34d326-5a8c-426e-bbb6-eab477f2aab7.aspx)
-

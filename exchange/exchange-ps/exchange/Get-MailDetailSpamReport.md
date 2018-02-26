@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailDetailSpamReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
-```
-
-This example retrieves the details of spam messages sent by john@contoso.com between June 13, 2015 and June 15, 2015.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailDetailSpamReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
 ```
@@ -293,4 +286,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4ef5c903-03a4-4461-a8c8-930e424bbcf5.aspx)
-

@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-HostedContentFilterRule -Name "Contoso Recipients" -HostedContentFilterPolicy "Contoso Content Filter Policy" -RecipientDomainIs contoso.com
-```
-
-This example creates a new content filter rule named Contoso Recipients with the following settings: If the recipient is in the domain contoso.com, apply the content filter policy named Contoso Content Filter Policy.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 New-HostedContentFilterRule -Name "Contoso Recipients" -HostedContentFilterPolicy "Contoso Content Filter Policy" -RecipientDomainIs contoso.com
 ```
@@ -206,7 +199,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority, and rules can't have the same priority value.
+The Priority parameter specifies a priority value for the rule that determines the order of rule processing. A lower integer value indicates a higher priority, the value 0 is the highest priority and rules can't have the same priority value.
 
 Valid values and the default value for this parameter depend on the number of existing rules. For example, if there are 8 existing rules:
 
@@ -339,4 +332,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2df13ba9-1eb0-4da3-bd72-a79d5fa15e26.aspx)
-

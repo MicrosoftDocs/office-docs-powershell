@@ -34,24 +34,11 @@ Enable-MailboxQuarantine [-Identity] <GeneralMailboxOrMailUserIdParameter> [-All
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-MailboxQuarantine "Brian Johnson"
-```
-
-This example quarantines the mailbox for the user Brian Johnson.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Enable-MailboxQuarantine "Brian Johnson"
 ```
@@ -61,36 +48,6 @@ This example quarantines the mailbox for the user Brian Johnson.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the mailbox. You can use any value that uniquely identifies the mailbox.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the mailbox that you want to quarantine. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -120,7 +77,6 @@ For example:
 You can't use this parameter with the Database parameter.
 
 
-
 ```yaml
 Type: GeneralMailboxIdParameter
 Parameter Sets: (All), Set1
@@ -135,19 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowMigration
-!!! Exchange Server 2013
-
-The AllowMigration switch allows a quarantined mailbox to be moved to another mailbox database or to the cloud. Moving a mailbox is one method of correcting data corruption that's required before releasing the mailbox from quarantine. You don't have to specify a value with the AllowMigration switch.
-
-
-
-!!! Exchange Server 2016
-
 The AllowMigration switch allows a quarantined mailbox to be moved to another mailbox database or to the cloud. You don't have to specify a value with this switch.
 
 Moving a mailbox is one method of correcting data corruption that's required before releasing the mailbox from quarantine.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -163,25 +109,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -197,21 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -Duration
-!!! Exchange Server 2013
-
-The Duration parameter specifies how long the mailbox should remain quarantined. The default duration is 24 hours.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-
-
-!!! Exchange Server 2016
-
 The Duration parameter specifies how long the mailbox should remain quarantined. The default value is 24 hours.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
-
-
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -322,4 +242,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/68bb689f-10e4-4fd0-9db4-6f00a55278d2.aspx)
-

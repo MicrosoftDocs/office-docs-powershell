@@ -6,22 +6,6 @@ schema: 2.0.0
 # Remove-ActiveSyncDevice
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ActiveSyncDevice cmdlet to remove the mobile phone partnership information that you specify from a user's device list stored in a mailbox on a computer running Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-ActiveSyncDevice cmdlet to remove the mobile device partnership information that you specify from a user's mobile device list stored in a mailbox on a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-The Remove-ActiveSyncDevice cmdlet will be removed in a future version of Exchange. Use the Remove-MobileDevice cmdlet instead. If you have any scripts that use the Remove-ActiveSyncDevice cmdlet, update them to use the Remove-MobileDevice cmdlet.
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ActiveSyncDevice cmdlet to remove mobile device partnerships that identify the devices that are configured to synchronize with user mailboxes.
@@ -38,104 +22,27 @@ Remove-ActiveSyncDevice [-Identity] <ActiveSyncDeviceIdParameter> [-Confirm] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-ActiveSyncDevice cmdlet is useful for removing devices that no longer synchronize successfully with the server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync user settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-ActiveSyncDevice cmdlet is useful for removing mobile devices that no longer synchronize successfully with the server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-ActiveSyncDevice cmdlet is useful for removing mobile devices that no longer synchronize successfully with the server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example removes the device partnership for the device WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example removes the mobile device partnership for the device WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-ActiveSyncDevice -Identity WM_JeffHay
 ```
 
 This example removes the mobile device partnership for the device named WM\_JeffHay.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-ActiveSyncDevice -Identity WM_JeffHay
-```
-
-This example removes the mobile device partnership for the device named WM\_JeffHay.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
-```
-
-This example removes the device partnership for the device iPhone\_TonySmith after displaying the confirm prompt.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
-```
-
-This example removes the mobile device partnership for the device iPhone\_TonySmith after displaying the confirm prompt.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
 ```
 
 This example removes the mobile device partnership for the device named iPhone\_TonySmith after displaying the confirm prompt.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-ActiveSyncDevice -Identity iPhone_TonySmith -Confirm $true
-```
-
-This example removes the mobile device partnership for the device named iPhone\_TonySmith after displaying the confirm prompt.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncDevice -Identity WM_JeffHay -Confirm $true
-```
-
-This example removes the device partnership for the device WM\_JeffHay after displaying the confirm prompt.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncDevice -Identity Tablet_JeffHay -Confirm $true
-```
-
-This example removes the mobile device partnership for the device Tablet\_JeffHay after displaying the confirm prompt.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Remove-ActiveSyncDevice -Identity Tablet_JeffHay -Confirm $true
-```
-
-This example removes the mobile device partnership for the device named Tablet\_JeffHay after displaying the confirm prompt.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Remove-ActiveSyncDevice -Identity Tablet_JeffHay -Confirm $true
 ```
@@ -181,19 +88,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -242,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e84728e4-7948-459f-8151-5e5fc156bf19.aspx)
-

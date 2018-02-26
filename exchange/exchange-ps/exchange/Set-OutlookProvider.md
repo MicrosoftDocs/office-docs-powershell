@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-OutlookProvider
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-OutlookProvider cmdlet to set specific global settings using the msExchOutlookProvider attribute on the msExchAutoDiscoverConfig object in Active Directory.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-OutlookProvider cmdlet to set specific global settings using the msExchOutlookProvider attribute on the msExchAutoDiscoverConfig object in Active Directory.
@@ -27,60 +21,18 @@ Set-OutlookProvider [-Identity] <OutlookProviderIdParameter> [-CertPrincipalName
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-OutlookProvider cmdlet creates the global settings for the Autodiscover service. It sets the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified in the parameters listed in the Parameters section.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-OutlookProvider cmdlet creates the global settings for the Autodiscover service. It sets the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified in the parameters listed in the Parameters section.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Set-OutlookProvider cmdlet creates the global settings for the Autodiscover service. It sets the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified in the parameters listed in the Parameters section.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-OutlookProvider -Identity msExchAutoDiscoverConfig -TTL 2
 ```
 
 This example changes the duration that the Autodiscover service settings are valid for the Microsoft Outlook provider msExchAutoDiscoverConfig.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-OutlookProvider -Identity msExchAutoDiscoverConfig -TTL 2
-```
-
-This example changes the duration that the Autodiscover service settings are valid for the Microsoft Outlook provider msExchAutoDiscoverConfig.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-OutlookProvider -Identity msExchAutoDiscoverConfig -TTL 2
-```
-
-This example changes the duration that the Autodiscover service settings are valid for the Microsoft Outlook provider msExchAutoDiscoverConfig.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-OutlookProvider EXPR -OutlookProviderFlags:ServerExclusiveConnect
-```
-
-This example causes Outlook 2010 clients to connect exclusively through RPC over HTTP (Outlook Anywhere) before trying RPC over TCP connections when connecting over the Internet.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-OutlookProvider EXPR -OutlookProviderFlags:None
-```
-
-This example makes a change to the global settings for the Autodiscover service attribute in Active Directory. The change clears the flags that cause Outlook clients to connect exclusively through RPC over HTTP (Outlook Anywhere) before trying RPC over TCP connections when connecting over the Internet.
 
 ## PARAMETERS
 
@@ -171,17 +123,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutlookProviderFlags
-!!! Exchange Server 2010
-
-The OutlookProviderFlags parameter specifies that Outlook 2010 clients should connect using RPC over HTTP (Outlook Anywhere) before trying RPC over TCP connections. This increases the speed at which Outlook 2010 clients will connect when clients are primarily accessing Exchange over the Internet. The value can be set to ServerExclusiveConnect or to None to clear the flags. For Outlook 2010 clients that access Exchange over both organization intranets and the Internet, the recommended value is None, which is also the default setting.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-The OutlookProviderFlags parameter specifies how Outlook clients should connect to the Exchange server. The value can be set to ServerExclusiveConnect, ExternalClientsRequireSSL, InternalClientsRequireSSL, or to None to clear the flags. The recommended value is None, which is also the default setting.
-
-
+The OutlookProviderFlags parameter specifies how Outlook clients should connect to the Exchange server. The value can be set to ServerExclusiveConnect, ExternalClientsRequireSSL, InternalClientsRequireSSL or to None to clear the flags. The recommended value is None, which is also the default setting.
 
 ```yaml
 Type: None | ServerExclusiveConnect
@@ -251,7 +193,7 @@ The RequiredClientVersions parameter specifies the minimum version of Microsoft 
 
 \<MinimumVersion\> is the version of Outlook in the format xx.x.xxxx.xxxx. For example, to specify Outlook 2010 Service Pack 2 (SP2), use the value 14.0.7012.1000.
 
-\<ExpirationDate\> is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second, and Z signifies Zulu, which is another way to denote UTC.
+\<ExpirationDate\> is the UTC date-time when connections by older versions of Outlook will be blocked. The UTC date-time is represented in the ISO 8601 date-time format: yyyy-mm-ddThh:mm:ss.fffZ, where yyyy = year, mm = month, dd = day, T indicates the beginning of the time component, hh = hour, mm = minute, ss = second, fff = fractions of a second and Z signifies Zulu, which is another way to denote UTC.
 
 An example of a valid value for this parameter is "14.0.7012.1000, 2014-01-01T12:00:00Z".
 
@@ -286,4 +228,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8a3d7245-528d-4501-9fc4-92ce0616cff9.aspx)
-

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-TransportRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-TransportRule cmdlet to remove a transport rule from a Hub Transport server or an Edge Transport server.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-TransportRule cmdlet to remove a transport rule from your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-TransportRule cmdlet to remove transport rules (mail flow rules) from your organization.
@@ -34,26 +20,6 @@ Remove-TransportRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-TransportRule cmdlet permanently removes a transport rule that's no longer required. On Hub Transport servers, the cmdlet removes the rule from Active Directory. On an Edge Transport server, the cmdlet removes the rule from the local Active Directory Lightweight Directory Services (AD LDS) instance.
-
-To temporarily disable a transport rule without removing it, use the Disable-TransportRule cmdlet instead.
-
-For information about the Transport Rules agent, see Overview of Transport Rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-On Mailbox servers, the cmdlet removes the rule from Active Directory. On an Edge Transport server, the cmdlet removes the rule from the local Active Directory Lightweight Directory Services (AD LDS) instance.
-
-To temporarily disable a transport rule without removing it, use the Disable-TransportRule cmdlet instead.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 On Mailbox servers, this cmdlet removes the rule from Active Directory. On an Edge Transport server, the cmdlet removes the rule from the local Active Directory Lightweight Directory Services (AD LDS) instance.
 
 To temporarily disable a transport rule without removing it, use the Disable-TransportRule cmdlet instead.
@@ -62,35 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-TransportRule "Redirect messages from kim@contoso.com to legal@contoso.com" -WhatIf
-```
-
-This example removes a single transport rule. The WhatIf parameter is used to display what changes are about to be applied without committing those changes. If you remove the WhatIf parameter and run the command again, the transport rule is removed.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-TransportRule "Redirect messages from kim@contoso.com to legal@contoso.com"
-```
-
-This example removes a single transport rule.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-TransportRule -Identity "Redirect messages from kim@contoso.com to legal@contoso.com"
-```
-
-This example removes the rule named "Redirect messages from kim@contoso.com to legal@contoso.com".
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-TransportRule -Identity "Redirect messages from kim@contoso.com to legal@contoso.com"
-```
-
-This example removes the rule named "Redirect messages from kim@contoso.com to legal@contoso.com".
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-TransportRule -Identity "Redirect messages from kim@contoso.com to legal@contoso.com"
 ```
@@ -100,24 +38,6 @@ This example removes the rule named "Redirect messages from kim@contoso.com to l
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the transport rule to be removed. Enter either the GUID or the name of the rule.
-
-You can omit the parameter label.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the transport rule you want to remove. Enter either the name or the GUID of the rule.
-
-You can omit the parameter label.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the rule that you want to remove. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -125,8 +45,6 @@ The Identity parameter specifies the rule that you want to remove. You can use a
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -162,23 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -227,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f4628cfd-3628-4015-8e9e-274f4a331d01.aspx)
-

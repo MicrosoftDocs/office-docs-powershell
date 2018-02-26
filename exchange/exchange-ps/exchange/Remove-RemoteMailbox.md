@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-RemoteMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-RemoteMailbox cmdlet to remove a mail-enabled user in the on-premises Active Directory and its associated mailbox in the cloud-based service.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-RemoteMailbox cmdlet to remove a mail-enabled user in the on-premises Active Directory and the associated mailbox in the cloud-based service.
@@ -26,26 +20,6 @@ Remove-RemoteMailbox [-Identity] <RemoteMailboxIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Use the Remove-RemoteMailbox cmdlet if you want to remove an on-premises mail-enabled user and its mailbox from the service. If you want only to remove the mailbox from the service and keep the associated on-premises user, use the Disable-RemoteMailbox cmdlet.
-
-Directory synchronization must be configured correctly for a mailbox to be removed from the service. Removal of the mailbox from the service isn't immediate. It depends on the directory synchronization schedule.
-
-For more information about remote mailboxes, see Understanding Recipients.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-With the Remove-RemoteMailbox cmdlet, you can remove an on-premises mail-enabled user and the mailbox from the service. If you only want to remove the mailbox from the service and keep the associated on-premises user, use the Disable-RemoteMailbox cmdlet.
-
-Directory synchronization must be configured correctly for a mailbox to be removed from the service. Removal of the mailbox from the service isn't immediate and depends on the directory synchronization schedule.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remote mailboxes" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 With the Remove-RemoteMailbox cmdlet, you can remove an on-premises mail-enabled user and the mailbox from the service. If you only want to remove the mailbox from the service and keep the associated on-premises user, use the Disable-RemoteMailbox cmdlet.
 
 Directory synchronization must be configured correctly for a mailbox to be removed from the service. Removal of the mailbox from the service isn't immediate and depends on the directory synchronization schedule.
@@ -54,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-RemoteMailbox "Kim Akers"
-```
-
-This example removes the on-premises mail-enabled user Kim Akers and the associated mailbox from the service. This example assumes directory synchronization has been configured.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-RemoteMailbox "Kim Akers"
-```
-
-This example removes the on-premises mail-enabled user Kim Akers and the associated mailbox from the service. This example assumes directory synchronization has been configured.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-RemoteMailbox "Kim Akers"
 ```
@@ -78,30 +38,6 @@ This example removes the on-premises mail-enabled user Kim Akers and the associa
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter identifies the mail-enabled user and its associated mailbox in the service that you want to remove. You can use one of the following values:
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- Legacy DN
-
-- GUID
-
-- Domain\\Account name
-
-- User principal name (UPN)
-
-- E-mail address
-
-- Alias
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter identifies the mail-enabled user and the associated mailbox in the service that you want to remove. You can use one of the following values:
 
 - ADObjectID
@@ -119,8 +55,6 @@ The Identity parameter identifies the mail-enabled user and the associated mailb
 - Email address
 
 - Alias
-
-
 
 ```yaml
 Type: RemoteMailboxIdParameter
@@ -172,27 +106,13 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016
-
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -208,21 +128,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-!!! Exchange Server 2010
-
-The IgnoreLegalHold switch ignores the legal hold status of the mailbox user and allows you to remove the cloud mailbox that's on legal hold.
-
-After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. To learn more, see Understanding Disconnected Mailboxes. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IgnoreLegalHold switch ignores the legal hold status of the mailbox user and allows you to remove the cloud-based mailbox on legal hold.
 
 After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -271,4 +179,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1fce0235-9a87-44ba-a3c1-7305bd73626a.aspx)
-

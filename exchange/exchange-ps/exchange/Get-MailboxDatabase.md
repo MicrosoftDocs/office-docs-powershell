@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MailboxDatabase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxDatabase cmdlet to retrieve one or more mailbox database objects from a server or organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-MailboxDatabase cmdlet to retrieve one or more mailbox database objects from a server or organization.
@@ -33,32 +27,6 @@ Get-MailboxDatabase [[-Identity] <DatabaseIdParameter>] [-DomainController <Fqdn
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If you use the Get-MailboxDatabase cmdlet with no parameters, it gets information about all mailbox databases in the Exchange organization.
-
-If you use the Get-MailboxDatabase cmdlet with the Server parameter, it gets information about all mailbox databases on the server that you specify.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-If you use the Get-MailboxDatabase cmdlet with no parameters, it retrieves information about all mailbox databases in the Exchange organization. If you use the Get-MailboxDatabase cmdlet with the Server parameter, it retrieves information about all mailbox databases on the server that you specify.
-
-The following list describes the properties that are returned in the results.
-
-- Name Name of the database.
-
-- Server Server hosting the database.
-
-- Recovery Specifies whether the new database is designated as a recovery database.
-
-- ReplicationType Replication type of the database.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 If you use the Get-MailboxDatabase cmdlet with no parameters, it retrieves information about all mailbox databases in the Exchange organization. If you use the Get-MailboxDatabase cmdlet with the Server parameter, it retrieves information about all mailbox databases on the server that you specify.
 
 The following list describes the properties that are returned in the results.
@@ -75,42 +43,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxDatabase -IncludePreExchange2010
 ```
 
-This example retrieves information about all the mailbox databases in the Exchange organization, including the mailbox databases that reside on computers running Exchange 2010 and earlier versions of Exchange.
+In Exchange Server 2010, this example retrieves information about all the mailbox databases in the Exchange organization, including the mailbox databases that reside on computers running Exchange 2010 and earlier versions of Exchange.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxDatabase -IncludePreExchange2013
-```
-
-This example retrieves information about all the mailbox databases in the Exchange organization, including the mailbox databases that reside on computers running Exchange 2013 and earlier versions of Exchange.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MailboxDatabase -IncludePreExchange2013
 ```
 
 This example retrieves information about all the mailbox databases in the Exchange organization, including Exchange 2010 mailbox databases.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxDatabase -Identity MailboxDatabase01 -Status | Format-List
-```
-
-This example retrieves information about MailboxDatabase01 on Server01. This example also retrieves the status information, and pipes the output to the Format-List cmdlet so that you can view all the information about the mailbox database.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxDatabase -Identity MailboxDatabase01 -Server Server01 -Status | Format-List
-```
-
-This example retrieves information about MailboxDatabase01 on Server01. This example also retrieves the status information, and pipes the output to the Format-List cmdlet so that you can view all the information about the mailbox database.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MailboxDatabase -Identity MailboxDatabase01 -Server Server01 -Status | Format-List
 ```
@@ -152,23 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -DumpsterStatistics
-!!! Exchange Server 2010
-
-The DumpsterStatistics parameter specifies that transport dumpster statistics be returned with the database status.
-
-
-
-!!! Exchange Server 2013
-
-The DumpsterStatistics switch specifies that transport dumpster statistics be returned with the database status.
-
-
-
-!!! Exchange Server 2016
-
 The DumpsterStatistics switch specifies that transport dumpster statistics be returned with the database status. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -224,28 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-!!! Exchange Server 2010
-
-The Status parameter specifies whether to get information about the following attributes:
-
-- BackupInProgress
-
-- Mounted
-
-- OnlineMaintenanceInProgress
-
-- AvailableNewMailboxSpace
-
-You don't have to specify any value for this parameter.
-
-If you specify this parameter, you should format the output in such a way that you can view the additional attributes. For example, pipe the output to the Format-List cmdlet.
-
-TheAvailableNewMailboxSpace parameter provides information about the free space that is used to create new mailboxes. This parameter does not represent the total white space in the database.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Status switch specifies whether to retrieve the available free space in the database root and information about the following attributes:
 
 - BackupInProgress
@@ -257,8 +166,6 @@ The Status switch specifies whether to retrieve the available free space in the 
 You don't need to specify a value with this switch.
 
 If you specify this switch, you should format the output in such a way that you can view the additional attributes, for example, pipe the output to the Format-List cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -274,17 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludePreExchange2013
-!!! Exchange Server 2013
-
-The IncludePreExchange2013 switch parameter specifies whether to return information about the mailbox databases that reside on computers running Microsoft Exchange Server 2013 and earlier versions of Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The IncludePreExchange2013 switch parameter specifies whether to return information about Exchange 2010 mailbox databases. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -333,4 +230,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e12bd6d3-3793-49cb-9ab6-948d42dd409e.aspx)
-

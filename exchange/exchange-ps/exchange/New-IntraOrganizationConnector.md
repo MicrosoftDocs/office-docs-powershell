@@ -6,16 +6,6 @@ schema: 2.0.0
 # New-IntraOrganizationConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-IntraOrganizationConnector cmdlet to create an Intra-Organization connector between two on-premises Microsoft Exchange Server 2013 forests in an organization, between an Exchange 2013 on-premises organization and an Exchange Online organization, or between two Exchange Online organizations. This connector enables feature availability and service connectivity across the organizations using a common connector and connection endpoints.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-IntraOrganizationConnector cmdlet to create an Intra-Organization connector between two on-premises Exchange forests in an organization, between an Exchange on-premises organization and an Exchange Online organization, or between two Exchange Online organizations. This connector enables feature availability and service connectivity across the organizations using a common connector and connection endpoints.
@@ -31,16 +21,6 @@ New-IntraOrganizationConnector [-Name] <String> -DiscoveryEndpoint <Uri>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The New-IntraOrganizationConnector cmdlet is used to create a connection for features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
-
-For hybrid deployments between on-premises Exchange 2013 and Exchange Online organizations, the New-IntraOrganizationConnector cmdlet is used by the Hybrid Configuration wizard. Typically, the Intra-Organization connector is configured when the hybrid deployment is initially created by the wizard. We strongly recommend that you use the Hybrid Configuration wizard to create the Intra-Organization connector when configuring a hybrid deployment with an Exchange Online organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Intra-Organization connectors" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-IntraOrganizationConnector cmdlet is used to create a connection for features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
 
 For hybrid deployments between on-premises Exchange and Exchange Online organizations, the New-IntraOrganizationConnector cmdlet is used by the Hybrid Configuration wizard. Typically, the Intra-Organization connector is configured when the hybrid deployment is initially created by the wizard. We strongly recommend that you use the Hybrid Configuration wizard to create the Intra-Organization connector when configuring a hybrid deployment with an Exchange Online organization.
@@ -49,21 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
-```
-
-This example creates an Intra-Organization connector named "MainCloudConnector" between an on-premises Exchange 2013 organization and an Exchange Online organization containing two domains, Cloud1.contoso.com and Cloud2.contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
-```
-
-This example creates an Intra-Organization connector named "MainCloudConnector" between an on-premises Exchange organization and an Exchange Online organization containing two domains, Cloud1.contoso.com and Cloud2.contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-IntraorganizationConnector -DiscoveryEndpoint http://ExternalDiscovery.Contoso.com -Name MainCloudConnector -TargetAddressDomains Cloud1.contoso.com,Cloud2.contoso.com
 ```
@@ -212,4 +178,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/34af9609-b018-4eee-8c77-e1f0dcd5b4a7.aspx)
-

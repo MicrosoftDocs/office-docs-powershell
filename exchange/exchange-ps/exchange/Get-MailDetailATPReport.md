@@ -32,14 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailDetailATPReport -StartDate 7/1/2017 -EndDate 7/31/2017
-```
-
-This example returns the Advanced Threat Protection actions for July, 2017.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailDetailATPReport -StartDate 7/1/2017 -EndDate 7/31/2017
 ```
@@ -338,4 +331,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/52658220-2d64-4d55-a679-fbbfd6f0c8a0.aspx)
-

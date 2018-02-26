@@ -28,20 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-New-AntiPhishRule -Name "Research Department Phishing Rule" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
-```
-
-This example creates an antiphishing rule named Research Department Phishing Rule with the following conditions:
-
-- The rule is associated with the antiphishing policy named Research Quarantine.
-
-- The rule applies to members of the group named Research Department.
-
-- The rule doesn't apply to members of the group named Research Department Managers.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 New-AntiPhishRule -Name "Research Department Phishing Rule" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```

@@ -33,33 +33,18 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-SafeAttachmentRule -Name "Research Department Attachment Rule" -SafeAttachmentPolicy "Research Block Attachments" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
 
 This example creates a new Safe Attachments rule named Research Department Attachment Rule with the following conditions:
 
+- The rule is associated with the Safe Attachments policy named Research Block Attachments.
 
-The rule is associated with the Safe Attachments policy named Research Block Attachments.
+- The rule applies to members of the group named Research Department.
 
-The rule applies to members of the group named Research Department.
-
-The rule doesn't apply to members of the group named Research Department Managers.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-SafeAttachmentRule -Name "Research Department Attachment Rule" -SafeAttachmentPolicy "Research Block Attachments" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
-```
-
-This example creates a new Safe Attachments rule named Research Department Attachment Rule with the following conditions:
-
-
-The rule is associated with the Safe Attachments policy named Research Block Attachments.
-
-The rule applies to members of the group named Research Department.
-
-The rule doesn't apply to members of the group named Research Department Managers.
+- The rule doesn't apply to members of the group named Research Department Managers.
 
 ## PARAMETERS
 
@@ -373,4 +358,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/05e1f1c0-801b-4534-b138-3a0522f36a26.aspx)
-
