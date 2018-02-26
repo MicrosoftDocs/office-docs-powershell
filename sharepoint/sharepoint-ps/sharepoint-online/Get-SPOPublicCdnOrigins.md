@@ -23,10 +23,13 @@ Get-SPOPublicCdnOrigins [<CommonParameters>]
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\WINDOWS\system32> Get-SPOPublicCdnOrigins | Fl
+
+Id  : 16530053476cf3efe88b499076356d0205504b2451688c20a65d561c951783e0859ac590
+Url : HTTPS:/CONTOSO.SHAREPOINT.COM/SITES/CDN/CDNFILESLIBRARY
 ```
 
-{{ Add example description here }}
+This example return a list of CDN Origins.
 
 ## PARAMETERS
 
