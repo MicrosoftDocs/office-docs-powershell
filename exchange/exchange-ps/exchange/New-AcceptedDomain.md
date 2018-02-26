@@ -15,7 +15,7 @@ Use the New-AcceptedDomain cmdlet to create an accepted domain in your organizat
 ```
 New-AcceptedDomain [-Name] <String> -DomainName <SmtpDomainWithSubdomains>
  [-Confirm] [-DomainController <Fqdn>] [-DomainType <Authoritative | ExternalRelay | InternalRelay>]  
- [-OutboundOnly <$true | $false>] [-WhatIf] [<CommonParameters>]
+ [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -116,24 +116,6 @@ Type: Authoritative | ExternalRelay | InternalRelay
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -OutboundOnly
-The OutboundOnly parameter specifies whether this accepted domain is an internal relay domain for the on-premises deployment for organizations that have coexistence with a cloud-based organization.
-
-The authoritative accepted domain for the on-premises deployment is configured as an internal relay accepted domain on the cloud side. If the on-premises deployment is using Microsoft Forefront Online Protection for Exchange, you must set this parameter to $true for the accepted domain that represents your on-premises deployment. This parameter is used only if the DomainType parameter is set to Authoritative or InternalRelay. The default value is $false.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
