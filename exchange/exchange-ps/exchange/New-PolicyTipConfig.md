@@ -20,73 +20,24 @@ New-PolicyTipConfig [-Name] <String> -Value <String> [-Confirm] [-DomainControll
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-PolicyTipConfig -Name en\NotifyOnly -Value "This message contains content that is restricted by Contoso company policy."
 ```
 
 This example creates a custom Policy Tip with the following settings:
 
+- Locale: English
 
-Locale: English
+- Action: NotifyOnly
 
-Action: NotifyOnly
+- Policy Tip text: "This message contains content that is restricted by Contoso company policy."
 
-Policy Tip text: "This message contains content that is restricted by Contoso company policy."
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-PolicyTipConfig -Name en\NotifyOnly -Value "This message contains content that is restricted by Contoso company policy."
-```
-
-This example creates a custom Policy Tip with the following settings:
-
-
-Locale: English
-
-Action: NotifyOnly
-
-Policy Tip text: "This message contains content that is restricted by Contoso company policy."
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-PolicyTipConfig -Name en\NotifyOnly -Value "This message contains content that is restricted by Contoso company policy."
-```
-
-This example creates a custom Policy Tip with the following settings:
-
-
-Locale: English
-
-Action: NotifyOnly
-
-Policy Tip text: "This message contains content that is restricted by Contoso company policy."
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-PolicyTipConfig Url -Value "http://www.contoso.com/PolicyTipInformation"
-```
-
-This example sets the informational URL in Policy Tips to the value http://www.contoso.com/PolicyTipInformation.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-PolicyTipConfig Url -Value "http://www.contoso.com/PolicyTipInformation"
-```
-
-This example sets the informational URL in Policy Tips to the value http://www.contoso.com/PolicyTipInformation.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 New-PolicyTipConfig Url -Value "http://www.contoso.com/PolicyTipInformation"
 ```
@@ -96,20 +47,6 @@ This example sets the informational URL in Policy Tips to the value http://www.c
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2013
-
-The Name parameter specifies the custom Policy Tip you want to modify. Valid input for this parameter is one of the following values:
-
-- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for system messages. Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
-
-- Url
-
-There can be only one custom Policy Tip with the value Url for the Name parameter. For the remaining Policy Tip actions, there can be only one custom Policy Tip for each combination of locale and action. For example, there can be only one custom Policy Tip with the Name value en\\NotifyOnly, but you can create additional custom Policy Tips with the values de\\NotifyOnly and fr\\NotifyOnly for the Name parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies the custom Policy Tip you want to modify. Valid input for this parameter is one of the following values:
 
 - \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for system messages (https://technet.microsoft.com/library/bb124759.aspx). Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
@@ -117,8 +54,6 @@ The Name parameter specifies the custom Policy Tip you want to modify. Valid inp
 - Url
 
 There can be only one custom Policy Tip with the value Url for the Name parameter. For the remaining Policy Tip actions, there can be only one custom Policy Tip for each combination of locale and action. For example, there can be only one custom Policy Tip with the Name value en\\NotifyOnly, but you can create additional custom Policy Tips with the values de\\NotifyOnly and fr\\NotifyOnly for the Name parameter.
-
-
 
 ```yaml
 Type: String
@@ -221,4 +156,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0882bc55-0297-4d22-a141-1eb7187f5ea2.aspx)
-
