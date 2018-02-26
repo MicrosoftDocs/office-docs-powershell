@@ -30,57 +30,23 @@ Get-PublicFolderMigrationRequest [[-Identity] <PublicFolderMigrationRequestIdPar
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PublicFolderMigrationRequest
 ```
 
 This example returns the status of in-progress migration requests.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMigrationRequest
-```
-
-This example returns the status of in-progress migration requests.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PublicFolderMigrationRequest
-```
-
-This example returns the status of in-progress migration requests.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
 ```
 
-This example returns all migration requests that have the name PFMigrate10\_11\_12, and the request has been suspended.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
-```
-
-This example returns all migration requests that have the name PFMigrate10\_11\_12, and the request has been suspended.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-PublicFolderMigrationRequest -Identity "PFMigrate10_11_12" | Format-List Suspended,AutoSuspended
-```
-
-This example returns all migration requests that have the name PFMigrate10\_11\_12, and the request has been suspended.
+This example returns all migration requests that have the name PFMigrate10\_11\_12 and the request has been suspended.
 
 ## PARAMETERS
 
@@ -304,4 +270,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/df474db6-7408-4aac-b703-424c9f36560e.aspx)
-

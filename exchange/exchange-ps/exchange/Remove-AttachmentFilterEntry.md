@@ -6,18 +6,6 @@ schema: 2.0.0
 # remove-attachmentfilterentry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-AttachmentFilterEntry cmdlet to remove an entry on the attachment filter list that's configured on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Remove-AttachmentFilterEntry cmdlet to remove an entry from the attachment filter list that's used by the Attachment Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Remove-AttachmentFilterEntry cmdlet to remove an entry from the attachment filter list that's used by the Attachment Filtering agent on Edge Transport servers.
@@ -30,62 +18,20 @@ remove-attachmentfilterentry [-Identity] <String> [-Confirm] [-DomainController 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Attachment Filter agent can block attachments from entering the Microsoft Exchange Server 2010 organization based on the content type or the file name of the attachment. You can use the Remove-AttachmentFilterEntry cmdlet to remove an entry on an attachment filter list configured on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Attachment Filtering agent blocks attachments in messages based on the content type and the file name of the attachment. The configuration of the Attachment Filtering agent determines how messages that contain the specified attachments are processed. For more information about how to configure the Attachment Filtering agent, see Set-AttachmentFilterListConfig.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-AttachmentFilterEntry -Identity FileName:*.txt
 ```
 
 This example removes the attachment filter entry that filters file names with a .txt extension.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AttachmentFilterEntry -Identity FileName:*.txt
-```
-
-This example removes the attachment filter entry that filters file names with a .txt extension.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-AttachmentFilterEntry -Identity FileName:*.txt
-```
-
-This example removes the attachment filter entry that filters file names with a .txt extension.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-AttachmentFilterEntry -Identity ContentType:image/jpeg
-```
-
-This example removes the attachment filter entry that filters attachments that have the MIME content type image/jpeg.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-AttachmentFilterEntry -Identity ContentType:image/jpeg
-```
-
-This example removes the attachment filter entry that filters attachments that have the MIME content type image/jpeg.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-AttachmentFilterEntry -Identity ContentType:image/jpeg
 ```
@@ -95,20 +41,6 @@ This example removes the attachment filter entry that filters attachments that h
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the type of attachment that this filter entry removes. The Identity parameter accepts values in the format Type:Name, where Type is one of the following two values:
-
-- ContentType This value matches the attachment filter entry against the MIME content type.
-
-- FileName This value matches the attachment filter entry against the simple file name.
-
-In Type:Name, Name can be either the file name of the attachment filter entry to be removed, or the content type of the attachment filter entry to be removed.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the type of attachment that this filter entry removes. The Identity parameter accepts values in the format Type:Name, where Type is one of the following two values:
 
 - ContentType: This value matches the attachment filter entry against the MIME content type.
@@ -116,8 +48,6 @@ The Identity parameter specifies the type of attachment that this filter entry r
 - FileName: This value matches the attachment filter entry against the simple file name.
 
 In Type:Name, Name can be either the file name of the attachment filter entry to be removed, or the content type of the attachment filter entry to be removed.
-
-
 
 ```yaml
 Type: String
@@ -133,25 +63,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -218,4 +134,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/80a97c84-2b7f-41a8-a1dd-acd791eeb8c4.aspx)
-

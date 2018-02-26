@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMAutoAttendant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMAutoAttendant cmdlet to retrieve the properties and the values for a Unified Messaging (UM) auto attendant.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-UMAutoAttendant cmdlet to retrieve the properties and the values for a Unified Messaging (UM) auto attendant.
@@ -22,28 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UMAutoAttendant [[-Identity] <UMAutoAttendantIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+ [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-UMAutoAttendant cmdlet retrieves the properties for a single UM auto attendant or for a list of UM auto attendants.
-
-After this task is completed, if no parameter is supplied with the cmdlet, the cmdlet returns all UM auto attendants in the Active Directory forest. Or, if the UM dial plan ID is supplied but no name is supplied, the cmdlet returns all UM auto attendants linked to the UM dial plan.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMAutoAttendant cmdlet retrieves the properties for a single UM auto attendant or for a list of UM auto attendants.
-
-After this task is completed, if no parameter is supplied with the cmdlet, the cmdlet returns all UM auto attendants in the Active Directory forest. Or, if the UM dial plan ID is supplied but no name is supplied, the cmdlet returns all UM auto attendants linked to the UM dial plan.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-UMAutoAttendant cmdlet retrieves the properties for a single UM auto attendant or for a list of UM auto attendants.
 
 After this task is completed, if no parameter is supplied with the cmdlet, the cmdlet returns all UM auto attendants in the Active Directory forest. Or, if the UM dial plan ID is supplied but no name is supplied, the cmdlet returns all UM auto attendants linked to the UM dial plan.
@@ -52,84 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-UMAutoAttendant | Format-List
 ```
 
 This example returns a formatted list of all UM auto attendants in the Active Directory forest.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMAutoAttendant | Format-List
-```
-
-This example returns a formatted list of all UM auto attendants in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMAutoAttendant | Format-List
-```
-
-This example returns a formatted list of all UM auto attendants in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UMAutoAttendant | Format-List
-```
-
-This example returns a formatted list of all UM auto attendants in the Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-UMAutoAttendant -Identity MyUMAutoAttendant
 ```
 
 This example displays the properties of the UM auto attendant MyUMAutoAttendant.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example displays the properties of the UM auto attendant MyUMAutoAttendant.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example displays the properties of the UM auto attendant MyUMAutoAttendant.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example displays the properties of the UM auto attendant MyUMAutoAttendant.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-UMAutoAttendant -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM auto attendants associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-UMAutoAttendant -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM auto attendants associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-UMAutoAttendant -UMDialPlan MyUMDialPlan
-```
-
-This examples displays all the UM auto attendants associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-UMAutoAttendant -UMDialPlan MyUMDialPlan
 ```
@@ -139,19 +52,9 @@ This examples displays all the UM auto attendants associated with the UM dial pl
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -179,22 +82,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -232,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7e577b3a-184d-4533-b1c9-c2c8884a442a.aspx)
-

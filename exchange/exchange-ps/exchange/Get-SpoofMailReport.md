@@ -47,14 +47,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SpoofMailReport -StartDate 03/01/2016 -EndDate 03/31/2016
-```
-
-This example shows the insider spoofing detections in your organization during the month of March 2016.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-SpoofMailReport -StartDate 03/01/2016 -EndDate 03/31/2016
 ```
@@ -237,4 +230,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bda4c4d6-d28d-4741-a13b-63c95e183340.aspx)
-

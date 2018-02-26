@@ -31,24 +31,6 @@ Get-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Diagnostic] [-Dia
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-MigrationBatch cmdlet displays status information about the current migration batch. This information includes the following information:
-
-- Status of the migration batch
-
-- Total number of mailboxes being migrated
-
-- Number of successfully completed migrations
-
-- Migration errors
-
-- Date and time when the migration was started
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MigrationBatch cmdlet displays status information about the current migration batch. This information includes the following information:
 
 - Status of the migration batch
@@ -65,42 +47,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MigrationBatch -Identity LocalMove2
 ```
 
 This example displays status information for the migration batch LocalMove2.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationBatch -Identity LocalMove2
-```
-
-This example displays status information for the migration batch LocalMove2.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MigrationBatch -Identity LocalMove2
-```
-
-This example displays status information for the migration batch LocalMove2.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationBatch -Endpoint exsrv1.contoso.com
-```
-
-This example displays information about all migration batches associated with the migration endpoint exsrv1.contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationBatch -Endpoint exsrv1.contoso.com
-```
-
-This example displays information about all migration batches associated with the migration endpoint exsrv1.contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MigrationBatch -Endpoint exsrv1.contoso.com
 ```
@@ -291,4 +245,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3a4d27c4-712b-40e8-b5a8-a4f1b8e5a3c6.aspx)
-

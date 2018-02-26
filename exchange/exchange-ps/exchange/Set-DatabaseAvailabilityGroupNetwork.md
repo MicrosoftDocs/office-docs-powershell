@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-DatabaseAvailabilityGroupNetwork
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-DatabaseAvailabilityGroupNetwork cmdlet to configure a network for a database availability group (DAG). You can configure a variety of network properties, such as the name for the network, a description of the network, a list of one or more subnets that comprise the network, and whether the network can be used for replication activity (log shipping and seeding).
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-DatabaseAvailabilityGroupNetwork cmdlet to configure a network for a database availability group (DAG).
@@ -28,60 +22,20 @@ Set-DatabaseAvailabilityGroupNetwork [-Identity] <DatabaseAvailabilityGroupNetwo
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-You can configure a variety of network properties, such as the name for the network, a description of the network, a list of one or more subnets that comprise the network, and whether the network is enabled for replication (log shipping and seeding).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
-You can configure a variety of network properties, such as the name for the network, a description of the network, a list of one or more subnets that comprise the network, and whether the network is enabled for replication (log shipping and seeding).
+You can configure a variety of network properties, such as the name for the network, a description of the network, a list of one or more subnets that comprise the network and whether the network is enabled for replication (log shipping and seeding).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\DAGNetwork01 -ReplicationEnabled:$true
-```
-
-This example enables a DAG network named DAGNetwork01 in a DAG named DAG1 for replication.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\DAGNetwork01 -ReplicationEnabled:$true
 ```
 
 This example enables the DAG network DAGNetwork01 in the DAG DAG1 for replication.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroupNetwork -Identity DAG1\DAGNetwork01 -ReplicationEnabled:$true
-```
-
-This example enables the DAG network DAGNetwork01 in the DAG DAG1 for replication.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
-```
-
-This example disables a DAG network named DAGNetwork02 in a DAG named DAG2 for replication, and configures the DAG to ignore the network.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
-```
-
-This example disables the DAG network DAGNetwork02 in the DAG DAG2 for replication and configures the DAG to ignore the network.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-DatabaseAvailabilityGroupNetwork -Identity DAG2\DAGNetwork02 -ReplicationEnabled:$false -IgnoreNetwork:$true
 ```
@@ -256,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5c6add57-eef9-4af5-9cf3-54fd910dfe93.aspx)
-

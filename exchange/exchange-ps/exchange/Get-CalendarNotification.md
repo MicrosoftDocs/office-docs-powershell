@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-CalendarNotification
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-CalendarNotification cmdlet to return a list of all calendar notification settings for a user.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-CalendarNotification cmdlet to return a list of all calendar notification settings for a user.
@@ -26,104 +20,27 @@ Get-CalendarNotification [-Identity] <MailboxIdParameter> [-Credential <PSCreden
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-CalendarNotification cmdlet retrieves and then displays the rules used to trigger the calendar agenda notification, reminder notification, or update notification.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-CalendarNotification cmdlet retrieves and displays the rules used to trigger the calendar agenda notification, reminder notification, or update notification.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-CalendarNotification cmdlet retrieves and displays the rules used to trigger the calendar agenda notification, reminder notification, or update notification.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-CalendarNotification -Identity "TonySmith"
 ```
 
 This example returns the calendar notification settings for the user Tony Smith using the user's alias.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-CalendarNotification -Identity "TonySmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's alias.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-CalendarNotification -Identity "TonySmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's alias.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-CalendarNotification -Identity "TonySmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's alias.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
 ```
 
 This example returns the calendar notification settings for the user Tony Smith.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
-```
-
-This example returns the calendar notification settings for the user Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
-```
-
-This example returns the calendar notification settings for the user Tony Smith.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-CalendarNotification -Identity tony@contoso.com -ReadFromDomainController
-```
-
-This example returns the calendar notification settings for the user Tony Smith.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-CalendarNotification -Identity "contoso\tonysmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's domain and name.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-CalendarNotification -Identity "contoso\tonysmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's domain and name.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-CalendarNotification -Identity "contoso\tonysmith"
-```
-
-This example returns the calendar notification settings for the user Tony Smith using the user's domain and name.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-CalendarNotification -Identity "contoso\tonysmith"
 ```
@@ -149,23 +66,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2010
-
-The Credential parameter specifies the user credentials used to run the command.
-
-
-
-!!! Exchange Server 2013
-
-The Credential parameter specifies the user credentials used to run the command. This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credential parameter specifies the user credentials used to run the command. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -181,19 +82,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -258,4 +149,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/62a20bc1-1e3c-43c5-8a33-94781e24baed.aspx)
-

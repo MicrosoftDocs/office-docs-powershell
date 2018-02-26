@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-App
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-App cmdlet to return information about the installed app.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-App cmdlet to view installed apps.
@@ -30,89 +20,32 @@ Get-App [[-Identity] <AppIdParameter>] [-DomainController <Fqdn>] [-Mailbox <Mai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-App cmdlet returns information about all installed apps or the details of a specific installed app.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Apps for Outlook" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-App cmdlet returns information about all installed apps or the details of a specific installed app.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-App -Mailbox Tony
-```
-
-This example returns the list of apps installed for user Tony. The Exchange Management Shell returns the name of the app, whether the app is enabled, and the app version number.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-App -Mailbox Tony
 ```
 
 This example returns the summary list of apps installed for user Tony. The command returns the name of the app, whether the app is enabled, and the app version number.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-App -Mailbox Tony
-```
-
-This example returns the summary list of apps installed for user Tony. The command returns the name of the app, whether the app is enabled, and the app version number.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b
-```
-
-This example displays the version of the Bing Maps app for the currently logged on user.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b | Format-List
 ```
 
 This example displays detailed information for the Bing Maps app for the currently logged on user.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b | Format-List
-```
-
-This example displays detailed information for the Bing Maps app for the currently logged on user.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-App -OrganizationApp $true
-```
-
-This example displays the apps installed by administrators for the entire organization.
-
-
-For information about installing or removing apps for Outlook, see Install or remove add-ins for Outlook for your organization.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-App -OrganizationApp
 ```
 
 This example displays the summary list of apps installed by administrators for the entire organization.
-
-
-For information about installing or removing apps for Outlook, see Install or remove apps for Outlook for your organization.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-App -OrganizationApp
-```
-
-This example displays the summary list of apps installed by administrators for the entire organization.
-
 
 For information about installing or removing apps for Outlook, see Install or remove apps for Outlook for your organization.
 
@@ -137,17 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the GUID of the app.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the GUID of the app that you want to view. To find the GUID value of an app, run the command Get-App | Format-Table -Auto DisplayName,AppId.
-
-
 
 ```yaml
 Type: AppIdParameter
@@ -163,30 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-!!! Exchange Server 2013
-
-The Mailbox parameter specifies the identity of the mailbox or mail user. You can use the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
-
-- Alias
-
-You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the identity of the mailbox where the apps are installed. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -215,8 +114,6 @@ For example:
 
 You can't use this parameter with the Identity parameter.
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -231,17 +128,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-!!! Exchange Server 2013
-
-The OrganizationApp parameter specifies the apps installed for the organization (not bound to a specific user). This is set to $false by default.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OrganizationAppswitch includes apps that are installed for the organization (not bound to a specific user) in the results. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -292,4 +179,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/85dfb69d-d637-410e-931c-36685dda84c7.aspx)
-

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-OwaMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-OwaMailboxPolicy cmdlet to retrieve all Microsoft Office Outlook Web App mailbox policies in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-OwaMailboxPolicy cmdlet to retrieve all Microsoft OfficeOutlook Web App mailbox policies in a MicrosoftExchange Server 2013 organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-OwaMailboxPolicy cmdlet to view Outlook on the web mailbox policies in the organization.
@@ -29,107 +15,30 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-OwaMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-OwaMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] 
+[-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-OwaMailboxPolicy cmdlet retrieves information about existing Outlook Web App mailbox policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App mailbox policies" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-OwaMailboxPolicy cmdlet retrieves information about existing Outlook Web App mailbox policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App mailbox policies" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-OwaMailboxPolicy -Organization Contoso
-```
-
-This example retrieves the properties of all mailbox policies for the organization Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-OwaMailboxPolicy -Organization Contoso
-```
-
-This example retrieves the properties of all mailbox policies for the organization Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-OwaMailboxPolicy
 ```
 
 This example retrieves a summary list of all mailbox policies in the organization.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-OwaMailboxPolicy
-```
-
-This example retrieves a summary list of all mailbox policies in the organization.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-OwaMailboxPolicy -Identity Fabrikam\Executives
-```
-
-This example retrieves the properties of the Outlook Web App mailbox policy Executives in the organization Fabrikam.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-OwaMailboxPolicy -Identity Fabrikam\Executives
-```
-
-This example retrieves the properties of the Outlook Web App mailbox policy Executives in the organization Fabrikam.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-OwaMailboxPolicy -Identity Executives | Format-List
 ```
 
 This example retrieves detailed information for the mailbox policy named Executives.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-OwaMailboxPolicy -Identity Executives | Format-List
-```
-
-This example retrieves detailed information for the mailbox policy named Executives.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
-```
-
-This example retrieves the information for the Outlook Web App mailbox policy Corporate for the tenant Contoso in the organization Proseware.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
-```
-
-This example retrieves the information for the Outlook Web App mailbox policy Corporate for the tenant Contoso in the organization Proseware.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
-```
-
-This example retrieves the information for the mailbox policy named Corporate for the tenant Contoso in the organization Proseware.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-OwaMailboxPolicy -Identity Proseware\Contoso\Corporate
 ```
@@ -139,19 +48,9 @@ This example retrieves the information for the mailbox policy named Corporate fo
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -167,14 +66,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the policy or path to the policy including the name, for example, \<Organization\>\\\<ResellerA\>\\\<Reseller…n\>\\\<Tenant\>\\\<Object Name\>.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -184,8 +75,6 @@ The Identity parameter specifies the mailbox policy that you want to view. You c
 - GUID
 
 In multi-tenant environments, you can use the path to the policy including the name, for example, \<Organization\>\\\<ResellerA\>\\\<Reseller…n\>\\\<Tenant\>\\\<Policy Name\>.
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -197,24 +86,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -236,4 +107,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bdd580d3-8812-4b4a-93e8-c6401b0d2f0f.aspx)
-

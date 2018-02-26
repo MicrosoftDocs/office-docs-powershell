@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-RMSTemplate
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-RMSTemplate cmdlet to retrieve the current list of active rights policy templates from the Active Directory Rights Management Services (AD RMS) deployment for the organization.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-RMSTemplate cmdlet to retrieve the current list of active rights policy templates from the Active Directory Rights Management Services (AD RMS) deployment for the organization.
@@ -22,82 +16,26 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-RMSTemplate [[-Identity] <RmsTemplateIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-ResultSize <Unlimited>]
- [-TrustedPublishingDomain <RmsTrustedPublishingDomainIdParameter>] [-Type <Archived | Distributed | All>]
+ [-ResultSize <Unlimited>] [-TrustedPublishingDomain <RmsTrustedPublishingDomainIdParameter>] 
+ [-Type <Archived | Distributed | All>]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-RMSTemplate cmdlet doesn't return any active rights policy templates if internal licensing isn't enabled. Use the Get-IRMConfiguration cmdlet to check the InternalLicensingEnabled parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Rights protection" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-RMSTemplate cmdlet doesn't return any active rights policy templates if internal licensing isn't enabled. Use the Get-IRMConfiguration cmdlet to check the InternalLicensingEnabled parameter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Information Rights Management (IRM) configuration" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-RMSTemplate cmdlet doesn't return any active rights policy templates if internal licensing isn't enabled. Use the Get-IRMConfiguration cmdlet to check the InternalLicensingEnabled parameter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-RMSTemplate -ResultSize unlimited
 ```
 
 This example retrieves all RMS templates available from the RMS deployment.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-RMSTemplate -ResultSize unlimited
-```
-
-This example retrieves all RMS templates available from the RMS deployment.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-RMSTemplate -ResultSize unlimited
-```
-
-This example retrieves all RMS templates available from the RMS deployment.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-RMSTemplate -ResultSize unlimited
-```
-
-This example retrieves all RMS templates available from the RMS deployment.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-RMSTemplate -Identity "Company Confidential"
-```
-
-This example retrieves the Company Confidential RMS template.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-RMSTemplate -Identity "Company Confidential"
-```
-
-This example retrieves the Company Confidential RMS template.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-RMSTemplate -Identity "Company Confidential"
-```
-
-This example retrieves the Company Confidential RMS template.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-RMSTemplate -Identity "Company Confidential"
 ```
@@ -107,19 +45,9 @@ This example retrieves the Company Confidential RMS template.
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -150,34 +78,8 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: True
-Accept wildcard characters: False
-```
-
 ### -ResultSize
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return. The default value is 1000. To return all results, use unlimited.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -193,22 +95,6 @@ Accept wildcard characters: False
 ```
 
 ### -TrustedPublishingDomain
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The TrustedPublishingDomain parameter specifies the trusted publishing domain you want to search for RMS templates. You can use any value that uniquely identifies the trusted publishing domain, for example:
-
-- Name
-
-- Distinguished name (DN)
-
-- GUID
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The TrustedPublishingDomain parameter specifies the trusted publishing domain you want to search for RMS templates. You can use any value that uniquely identifies the trusted publishing domain, for example:
@@ -218,8 +104,6 @@ The TrustedPublishingDomain parameter specifies the trusted publishing domain yo
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: RmsTrustedPublishingDomainIdParameter
@@ -235,22 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The Type parameter specifies the type of RMS template. Use one of the following values:
-
-- All
-
-- Archived
-
-- Distributed
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The Type parameter specifies the type of RMS template. Use one of the following values:
@@ -260,8 +128,6 @@ The Type parameter specifies the type of RMS template. Use one of the following 
 - Archived
 
 - Distributed
-
-
 
 ```yaml
 Type: Archived | Distributed | All
@@ -294,4 +160,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4a5066e8-b770-4aa2-b464-0d2190914f71.aspx)
-

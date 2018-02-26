@@ -6,12 +6,6 @@ schema: 2.0.0
 # Send-TextMessagingVerificationCode
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Send-TextMessagingVerificationCode cmdlet to send a text messaging verification code to the user's mobile phone.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Send-TextMessagingVerificationCode cmdlet to send a text messaging verification code to the user's mobile phone.
@@ -26,24 +20,6 @@ Send-TextMessagingVerificationCode [[-Identity] <MailboxIdParameter>] [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Send-TextMessagingVerificationCode cmdlet generates a verification code and sends it to a user's mobile phone.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Client Access Permissions topic.
-
-This cmdlet returns an error if the user requests a verification code more than three times within a 24-hour period.
-
-!!! Exchange Server 2013
-
-The Send-TextMessagingVerificationCode cmdlet generates a verification code and sends it to a user's mobile phone.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Clients and mobile devices permissions topic.
-
-This cmdlet returns an error if the user requests a verification code more than three times within a 24-hour period.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Send-TextMessagingVerificationCode cmdlet generates a verification code and sends it to a user's mobile phone.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
@@ -52,84 +28,21 @@ This cmdlet returns an error if the user requests a verification code more than 
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith"
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
 ```
 
 This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Send-TextMessagingVerificationCode -Identity "TonySmith" -Confirm $true
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone after confirmation is given.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
-```
-
-This example sends the text messaging verification code to Tony Smith's mobile phone.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Send-TextMessagingVerificationCode -Identity "tony@contoso.com"
 ```
@@ -159,19 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -236,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2807693e-cc82-44bc-a670-e8ae4dd7429b.aspx)
-
