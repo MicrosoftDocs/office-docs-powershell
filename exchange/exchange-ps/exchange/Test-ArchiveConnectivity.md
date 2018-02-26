@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-ArchiveConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-ArchiveConnectivity cmdlet to verify archive functionality for a mailbox user.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ArchiveConnectivity cmdlet to verify archive functionality for a mailbox user.
@@ -26,64 +20,20 @@ Test-ArchiveConnectivity [-UserSmtp] <SmtpAddress> [-Confirm] [-WhatIf] [-Includ
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Running the Test-ArchiveConnectivity cmdlet validates connectivity to a user's archive mailbox. End-to-end verification includes testing whether an on-premises or cloud-based archive is provisioned for the on-premises mailbox user and whether it's enabled and logging on to the archive mailbox on behalf of the user. Successful completion of the command indicates that processes such as the Managed Folder Assistant and Outlook Web App are able to successfully access the archive mailbox.
-
-To test connectivity to a user's archive mailbox in the user's context, use the Test-OutlookConnectivity cmdlet with the Archive switch.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Archive connectivity" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-Running the Test-ArchiveConnectivity cmdlet validates connectivity to a user's archive mailbox. End-to-end verification includes testing whether an on-premises or cloud-based archive is provisioned for the on-premises mailbox user and whether it's enabled and logging on to the archive mailbox on behalf of the user. Successful completion of the command indicates that processes such as the Managed Folder Assistant and Microsoft Office Outlook Web App are able to successfully access the archive mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "In-Place Archive - Test connectivity" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016
-
 Running the Test-ArchiveConnectivity cmdlet validates connectivity to a user's archive mailbox. End-to-end verification includes testing whether an on-premises or cloud-based archive is provisioned for the on-premises mailbox user and whether it's enabled and logging on to the archive mailbox on behalf of the user. Successful completion of the command indicates that processes such as the Managed Folder Assistant and Outlook on the web are able to successfully access the archive mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-ArchiveConnectivity -UserSmtp gsingh@contoso.com
 ```
 
 This example tests archive connectivity to Gurinder Singh's archive.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-ArchiveConnectivity -UserSmtp gsingh@contoso.com
-```
-
-This example tests archive connectivity to Gurinder Singh's archive.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-ArchiveConnectivity -UserSmtp gsingh@contoso.com
-```
-
-This example tests archive connectivity to Gurinder Singh's archive.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-Mailbox -Filter {ArchiveGuid -ne $null -and ArchiveDomain -ne $null} -ResultSize Unlimited | Test-ArchiveConnectivity
-```
-
-This command retrieves mailboxes that have a cloud-based archive provisioned and tests archive connectivity for each mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox -Filter {ArchiveGuid -ne $null -and ArchiveDomain -ne $null} -ResultSize Unlimited | Test-ArchiveConnectivity
-```
-
-This command retrieves mailboxes that have a cloud-based archive provisioned and tests archive connectivity for each mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-Mailbox -Filter {ArchiveGuid -ne $null -and ArchiveDomain -ne $null} -ResultSize Unlimited | Test-ArchiveConnectivity
 ```
@@ -145,17 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeArchiveMRMConfiguration
-!!! Exchange Server 2013
-
-The IncludeArchiveMRMConfiguration switch retrieves retention tags provisioned in the user's archive mailbox and the last time the archive was processed by the Managed Folder Assistant.
-
-
-
-!!! Exchange Server 2016
-
 The IncludeArchiveMRMConfiguration switch retrieves retention tags that are provisioned in the user's archive mailbox and the last time the archive was processed by the Managed Folder Assistant. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -204,4 +144,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0db98a12-8cbb-4e9a-add4-c1847b057a44.aspx)
-

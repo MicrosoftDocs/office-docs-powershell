@@ -6,20 +6,6 @@ schema: 2.0.0
 # New-OwaMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-OwaMailboxPolicy cmdlet to create a Microsoft Office Outlook Web App mailbox policy.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-OwaMailboxPolicy cmdlet to create MicrosoftOutlook Web App mailbox policies.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-OwaMailboxPolicy cmdlet to create Outlook on the web mailbox policies.
@@ -30,26 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-OwaMailboxPolicy [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-WhatIf] [-IsDefault] [<CommonParameters>]
+ [-WhatIf] [-IsDefault] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Use the Set-OwaMailboxPolicy cmdlet to configure the new policy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App mailbox policies" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-Use the Set-OwaMailboxPolicy cmdlet to configure the new policy.
-
-Changes to Outlook Web App mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange 2013, you can force an update by running the command IISRESET /noforce.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App mailbox policies" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Use the Set-OwaMailboxPolicy cmdlet to configure the new policy.
 
 Changes to Outlook on the web mailbox polices may take up to 60 minutes to take effect. In on-premises Exchange, you can force an update by running the command IISRESET /noforce.
@@ -58,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-OwaMailboxPolicy -Name Corporate
-```
-
-This example creates the Outlook Web App mailbox policy Corporate for the default organization.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-OwaMailboxPolicy -Name Corporate
-```
-
-This example creates the Outlook Web App mailbox policy Corporate for the default organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-OwaMailboxPolicy -Name Corporate
-```
-
-This example creates the Outlook on the web mailbox policy named Corporate.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-OwaMailboxPolicy -Name Corporate
 ```
@@ -125,43 +74,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -187,23 +108,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The IsDefault parameter specifies whether this policy is the default policy. The default value is $false. If another policy is currently set as the default, setting this parameter replaces the old default policy with this policy.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The IsDefaultswitch specifies whether the policy is the default policy. You don't need to specify a value with this switch.
 
 If another policy is currently set as the default, using this switch replaces the old default policy with this policy.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -236,4 +145,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b2e46c22-7e99-4d04-b5ef-81ef64bf7445.aspx)
-

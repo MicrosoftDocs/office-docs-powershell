@@ -6,19 +6,9 @@ schema: 2.0.0
 # Set-IntraOrganizationConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Set-IntraOrganizationConnector cmdlet to modify an existing Intra-Organization connector between two on-premises Microsoft Exchange Server 2013 forests in an organization, or between an Exchange 2013 on-premises organization and an Exchange Online organization, or between two Exchange Online organizations.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-IntraOrganizationConnector cmdlet to modify an existing Intra-Organization connector between two on-premises Exchange forests in an organization, between an on-premises Exchange organization and an Exchange Online organization, or between two Exchange Online organizations.
+Use the Set-IntraOrganizationConnector cmdlet to modify an existing Intra-Organization connector between two on-premises Exchange forests in an organization, between an on-premises Exchange organization and an Exchange Online organization or between two Exchange Online organizations.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -31,35 +21,13 @@ Set-IntraOrganizationConnector [-Identity] <IntraOrganizationConnectorIdParamete
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Intra-Organization connectors" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
+Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations or between tenants hosted in the same or different datacenters.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-IntraOrganizationConnector "MainCloudConnector" -Enabled $false
-```
-
-This example disables the Intra-Organization connector named "MainCloudConnector".
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-IntraOrganizationConnector "MainCloudConnector" -Enabled $false
-```
-
-This example disables the Intra-Organization connector named "MainCloudConnector".
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-IntraOrganizationConnector "MainCloudConnector" -Enabled $false
 ```
@@ -212,4 +180,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2f8176a8-c685-4be1-a2f3-b5e4ee4ae55c.aspx)
-

@@ -6,16 +6,6 @@ schema: 2.0.0
 # New-SiteMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-The New-SiteMailbox cmdlet is used by Microsoft SharePoint and Microsoft Exchange user interfaces to create site mailboxes. We recommend that you don't use this cmdlet in the ExchangeManagement Shell; instead use SharePoint to create the site mailbox. This cmdlet should only be used for diagnostic and troubleshooting purposes.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 The New-SiteMailbox cmdlet is used by Microsoft SharePoint and Microsoft Exchange user interfaces to create site mailboxes. We recommend that you don't use this cmdlet in the Exchange Management Shell; instead use SharePoint to create the site mailbox. This cmdlet should only be used for diagnostic and troubleshooting purposes.
@@ -32,24 +22,11 @@ New-SiteMailbox [[-DisplayName] <String>] -SharePointUrl <Uri> [-Alias <String>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-SiteMailbox
-```
-
-You can't run this cmdlet from the Shell. Use SharePoint to create a site mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-SiteMailbox
 ```
@@ -163,21 +140,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-This parameter specifies whether to test that the site mailbox provisioning is working independently of the SharePoint deployment. We recommend that you never use this parameter for production site mailboxes.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 This parameter specifies whether to test that the site mailbox provisioning is working independently of the SharePoint deployment. We recommend that you never use this parameter for production site mailboxes.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -274,4 +239,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/90a1639f-b5d1-4512-a506-a4c3953865ae.aspx)
-

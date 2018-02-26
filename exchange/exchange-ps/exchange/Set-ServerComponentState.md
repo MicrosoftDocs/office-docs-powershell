@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-ServerComponentState
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-ServerComponentState cmdlet to configure and update Microsoft Exchange Server 2013 components and endpoints on servers you specify.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-ServerComponentState cmdlet to configure and update Microsoft Exchange components and endpoints on servers you specify.
@@ -31,24 +21,11 @@ Set-ServerComponentState [-Identity] <ServerIdParameter> -Component <String> -Re
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requester Maintenance -State Active
-```
-
-This example sets the Unified Messaging (UM) component state to Active, as requested by maintenance mode.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-ServerComponentState -Component UMCallRouter -Identity MailboxServer01 -Requester Maintenance -State Active
 ```
@@ -90,24 +67,6 @@ Accept wildcard characters: False
 ```
 
 ### -Requester
-!!! Exchange Server 2013
-
-The Requester parameter specifies the system requesting this state change. The string can be one of the following:
-
-- HealthAPI
-
-- Maintenance
-
-- Sidelined
-
-- Functional
-
-- Deployment
-
-
-
-!!! Exchange Server 2016
-
 The Requester parameter specifies the system requesting this state change. Valid values are:
 
 - HealthAPI
@@ -119,8 +78,6 @@ The Requester parameter specifies the system requesting this state change. Valid
 - Functional
 
 - Deployment
-
-
 
 ```yaml
 Type: String
@@ -136,20 +93,6 @@ Accept wildcard characters: False
 ```
 
 ### -State
-!!! Exchange Server 2013
-
-The State parameter specifies the state that you want for the component. The state can be one of the following:
-
-- Active
-
-- Inactive
-
-- Draining
-
-
-
-!!! Exchange Server 2016
-
 The State parameter specifies the state that you want for the component. Valid values are:
 
 - Active
@@ -157,8 +100,6 @@ The State parameter specifies the state that you want for the component. Valid v
 - Inactive
 
 - Draining
-
-
 
 ```yaml
 Type: Inactive | Active | Draining
@@ -212,17 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalOnly
-!!! Exchange Server 2013
-
-The LocalOnly parameter specifies that the cmdlet changes should be written to the Windows registry only.
-
-
-
-!!! Exchange Server 2016
-
-The LocalOnlyswitch specifies that the changes are written to the registry of the Exchange server only, and not to Active Directory. You don't need to specify a value with this switch.
-
-
+The LocalOnlyswitch specifies that the changes are written to the registry of the Exchange server only and not to Active Directory. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -238,17 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteOnly
-!!! Exchange Server 2013
-
-The RemoteOnly parameter specifies that the cmdlet changes should be written to Active Directory only.
-
-
-
-!!! Exchange Server 2016
-
-The RemoteOnlyswitch specifies that the changes are written to Active Directory only, and not to the registry of the Exchange server. You don't need to specify a value with this switch.
-
-
+The RemoteOnlyswitch specifies that the changes are written to Active Directory only and not to the registry of the Exchange server. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -313,4 +234,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bf0a92ce-9bcf-476e-b92b-8279c141f361.aspx)
-

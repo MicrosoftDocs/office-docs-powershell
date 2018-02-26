@@ -27,68 +27,25 @@ Remove-PublicFolderMigrationRequest -RequestGuid <Guid> -RequestQueue <DatabaseI
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The RequestQueue and RequestGuid parameters are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The RequestQueue and RequestGuid parameters are for debugging purposes only.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
 ```
 
 This example cancels any public folder migration request that's actively running.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
-```
-
-This example cancels any public folder migration request that's actively running.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PublicFolderMigrationRequest | Remove-PublicFolderMigrationRequest
-```
-
-This example cancels any public folder migration request that's actively running.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Remove-PublicFolderMigrationRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
 
 This example cancels a migration request by using the RequestGuid parameter for a mailbox on MBXDB01.
-
-
-The RequestGuid and RequestQueue parameters are for debugging purposes only.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-PublicFolderMigrationRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels a migration request by using the RequestGuid parameter for a mailbox on MBXDB01.
-
-
-The RequestGuid and RequestQueue parameters are for debugging purposes only.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-PublicFolderMigrationRequest -RequestQueue MBXDB01 -RequestGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels a migration request by using the RequestGuid parameter for a mailbox on MBXDB01.
-
 
 The RequestGuid and RequestQueue parameters are for debugging purposes only.
 
@@ -244,4 +201,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2f884fb1-2b00-428c-994a-66b8d82deea4.aspx)
-

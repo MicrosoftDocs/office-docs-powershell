@@ -6,20 +6,6 @@ schema: 2.0.0
 # Disable-TransportRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-TransportRule cmdlet to instruct the Transport Rules agent to disable the processing of a specific transport rule for all e-mail messages that pass through a Hub Transport or Edge Transport server.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Disable-TransportRule cmdlet to disable a specific transport rule for messages that pass through the Transport service on a Mailbox server.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-TransportRule cmdlet to disable transport rules (mail flow rules) in your organization.
@@ -34,55 +20,13 @@ Disable-TransportRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-For information about how to enable the processing of transport rules against e-mail messages in a Microsoft Exchange Server 2010 organization, see Enable-TransportRule. For information about the Transport Rules agent, see Overview of Transport Rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-You can enable or disable specific transport rules at any time using the Disable-TransportRule and Enable-TransportRule cmdlets. To learn more about transport rules, see Mail flow rules (transport rules) in Exchange 2013.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 To enable rules that are disabled, use the Enable-TransportRule cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-TransportRule "Sales-Disclaimer"
-```
-
-This example disables the Sales-Disclaimer rule.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-TransportRule "Sales-Disclaimer"
-```
-
-This example disables the transport rule Sales-Disclaimer.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-TransportRule -Identity "Sales Disclaimer"
-```
-
-This example disables the rule named Sales Disclaimer.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-TransportRule -Identity "Sales Disclaimer"
-```
-
-This example disables the rule named Sales Disclaimer.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Disable-TransportRule -Identity "Sales Disclaimer"
 ```
@@ -92,22 +36,6 @@ This example disables the rule named Sales Disclaimer.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the rule to be disabled. Enter either the GUID or the name of the rule.
-
-You can omit the parameter label.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the rule you want to disable. Enter either the name or the GUID of the rule. You can omit the parameter label.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the rule that you want to disable. You can use any value that uniquely identifies the rule. For example:
 
 - Name
@@ -115,8 +43,6 @@ The Identity parameter specifies the rule that you want to disable. You can use 
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -152,23 +78,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -217,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f1b5c2d6-cfcd-4180-89f5-13723d87a1b4.aspx)
-
