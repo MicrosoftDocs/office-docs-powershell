@@ -6,22 +6,6 @@ schema: 2.0.0
 # Remove-OutlookProtectionRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-OutlookProtectionRule cmdlet to remove an Outlook protection rule. Outlook protection rules use an RMS template to automatically make messages rights-protected before the messages are sent.
-
-For more information, see Understanding Outlook Protection Rules.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-OutlookProtectionRule cmdlet to remove an Outlook protection rule.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-OutlookProtectionRule cmdlet to remove Outlook protection rules.
@@ -36,74 +20,20 @@ Remove-OutlookProtectionRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainCo
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Rights protection" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Outlook protection rules use an Active Directory Rights Management Services (AD RMS) rights template to automatically apply Information Rights Management (IRM) protection to messages before they're sent. For more information, see Outlook protection rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Information Rights Management (IRM) configuration" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Outlook protection rules use an Active Directory Rights Management Services (AD RMS) rights template to automatically apply Information Rights Management (IRM) protection to messages before they're sent. For more information, see Outlook protection rules.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example removes the Outlook protection rule Project Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example removes the Outlook protection rule Project Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-OutlookProtectionRule -Identity "Project Contoso"
 ```
 
 This example removes the Outlook protection rule named Project Contoso.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example removes the Outlook protection rule named Project Contoso.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-OutlookProtectionRule | Remove-OutlookProtectionRule
-```
-
-This example disabled all Outlook protection rules in the organization. The Get-OutlookProtectionRule cmdlet is used to retrieve all Outlook protection rules in the Microsoft Exchange Server 2010 organization, and the results are pipelined to the Remove-OutlookProtectionRule cmdlet to disable them.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-OutlookProtectionRule | Remove-OutlookProtectionRule
-```
-
-This example removes all Outlook protection rules in the organization. The Get-OutlookProtectionRule cmdlet is used to retrieve all Outlook protection rules in the Microsoft Exchange Server 2013 organization, and the results are pipelined to the Remove-OutlookProtectionRule cmdlet to remove them.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-OutlookProtectionRule | Remove-OutlookProtectionRule
-```
-
-This example removes all Outlook protection rules from the organization.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-OutlookProtectionRule | Remove-OutlookProtectionRule
 ```
@@ -113,17 +43,7 @@ This example removes all Outlook protection rules from the organization.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the rule being removed.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the name of the Outlook protection rule that you want to remove.
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -159,19 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -220,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4a7df5b7-6380-4c2d-9a35-8d310bb6801d.aspx)
-
