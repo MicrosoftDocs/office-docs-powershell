@@ -6,14 +6,6 @@ schema: 2.0.0
 # Add-FederatedDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-FederatedDomain cmdlet to configure a secondary domain with the federated organization identifier.
-
-The domains being added to the federation trust must exist as accepted domains in the Exchange organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Add-FederatedDomain cmdlet to configure a secondary domain with the federated organization identifier in the federation trust for the Exchange organization.
@@ -30,24 +22,6 @@ Add-FederatedDomain [[-Identity] <OrganizationIdParameter>] -DomainName <SmtpDom
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can add any registered Internet domain to the federated organization identifier. You must prove domain ownership by creating a TXT record in the DNS zone of each domain you add.
-
-For more details, see Understanding Federation.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation Trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You can add any registered Internet domain to the federated organization identifier. You must prove domain ownership by creating a TXT record in the Domain Name System (DNS) zone of each domain you add.
-
-For more details, see Federation.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You can add any registered Internet domain to the federated organization identifier. You must prove domain ownership by creating a TXT record in the Domain Name System (DNS) zone of each domain you add.
 
 For more details, see Federation.
@@ -56,21 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-FederatedDomain -DomainName Contoso.co.uk
-```
-
-This example adds the domain Contoso.co.uk to the existing federation trust.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-FederatedDomain -DomainName Contoso.co.uk
-```
-
-This example adds the domain Contoso.co.uk to the existing federation trust.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-FederatedDomain -DomainName Contoso.co.uk
 ```
@@ -96,25 +56,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -195,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e44906ce-efa7-431c-a65f-b8489de1da33.aspx)
-
