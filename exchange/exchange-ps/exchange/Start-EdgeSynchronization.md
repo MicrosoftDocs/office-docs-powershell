@@ -6,12 +6,6 @@ schema: 2.0.0
 # Start-EdgeSynchronization
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Start-EdgeSynchronization cmdlet to immediately start synchronization of configuration data from Active Directory to the subscribed computers that have the Edge Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Start-EdgeSynchronization cmdlet to immediately start synchronization of configuration data from Active Directory to the subscribed Edge Transport servers.
@@ -24,41 +18,13 @@ Start-EdgeSynchronization [-Confirm] [-ForceFullSync] [-ForceUpdatecookie] [-Ser
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Microsoft Exchange EdgeSync service that runs on Hub Transport servers replicates data stored in Active Directory to the local Active Directory Lightweight Directory Services (AD LDS) store on the Edge Transport server. After the initial replication, one-way synchronization of changed data in Active Directory to AD LDS keeps this data up to date.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Microsoft Exchange EdgeSync service that runs on Mailbox servers replicates data stored in Active Directory to the local Active Directory Lightweight Directory Services (AD LDS) store on the Edge Transport server. After the initial replication, one-way synchronization of changed data in Active Directory to AD LDS keeps this data up to date.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "EdgeSync" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Microsoft Exchange EdgeSync service that runs on Mailbox servers replicates data stored in Active Directory to the local Active Directory Lightweight Directory Services (AD LDS) store on the Edge Transport server. After the initial replication, one-way synchronization of changed data in Active Directory to AD LDS keeps this data up to date.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Start-EdgeSynchronization -Server Hub1
-```
-
-This example starts edge synchronization on the Hub Transport server Hub1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Start-EdgeSynchronization -Server Mailbox01
-```
-
-This example starts edge synchronization on the Mailbox server named Mailbox01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Start-EdgeSynchronization -Server Mailbox01
 ```
@@ -120,30 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the identity of a Hub Transport server on which to run the command when you initiate the task from a remote computer. If the Server parameter isn't used, the task runs on the local server.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -155,8 +97,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -239,4 +179,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7f8240bb-05fa-47c5-adcf-c843dbced0e8.aspx)
-

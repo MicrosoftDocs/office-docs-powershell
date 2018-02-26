@@ -20,56 +20,27 @@ Update-StoreMailboxState -Database <DatabaseIdParameter> -Identity <StoreMailbox
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Update-StoreMailboxState cmdlet forces the mailbox store state in the Exchange store to be synchronized with Active Directory. In some cases, it's possible that the store state for a mailbox to become out-of-sync with the state of the corresponding Active Directory user account. This can result from Active Directory replication latency. For example, if a mailbox-enabled user account is disabled in Active Directory but isn't marked as disabled in the Exchange mailbox store. In this case, running the Update-StoreMailboxState will synchronize the mailbox store state with the state of the Active Directory user account and mark the mailbox as disabled in the mailbox store. You can use this command to troubleshoot issues that may be a result when the store state for a mailbox is unexpected or if you suspect that the store state is different than the state for the corresponding Active Directory account.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Remove store mailbox" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Update-StoreMailboxState cmdlet forces the mailbox store state in the Exchange store to be synchronized with Active Directory. In some cases, it's possible that the store state for a mailbox to become out-of-sync with the state of the corresponding Active Directory user account. This can result from Active Directory replication latency. For example, if a mailbox-enabled user account is disabled in Active Directory but isn't marked as disabled in the Exchange mailbox store. In this case, running the Update-StoreMailboxState will synchronize the mailbox store state with the state of the Active Directory user account and mark the mailbox as disabled in the mailbox store. You can use this command to troubleshoot issues that may be a result when the store state for a mailbox is unexpected or if you suspect that the store state is different than the state for the corresponding Active Directory account.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Update-StoreMailboxState -Database MDB01 -Identity 4a830e3f-fd07-4629-baa1-8bce16b86d88
 ```
 
 This example updates the mailbox state for a mailbox located on the mailbox database MDB01 and whose GUID is 4a830e3f-fd07-4629-baa1-8bce16b86d88.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Update-StoreMailboxState -Database MDB01 -Identity 4a830e3f-fd07-4629-baa1-8bce16b86d88
-```
-
-This example updates the mailbox state for a mailbox located on the mailbox database MDB01 and whose GUID is 4a830e3f-fd07-4629-baa1-8bce16b86d88.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-MailboxStatistics -Database MDB02 | ForEach { Update-StoreMailboxState -Database $_.Database -Identity $_.MailboxGuid -Confirm:$false }
 ```
 
 This example updates the mailbox state for all mailboxes on the mailbox database MDB02.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxStatistics -Database MDB02 | ForEach { Update-StoreMailboxState -Database $_.Database -Identity $_.MailboxGuid -Confirm:$false }
-```
-
-This example updates the mailbox state for all mailboxes on the mailbox database MDB02.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxStatistics -Database MDB03 | Where { $_.DisconnectReason -ne $null } | ForEach { Update-StoreMailboxState -Database $_.Database -Identity $_.MailboxGuid -Confirm:$false }
-```
-
-This example updates the mailbox state for all disconnected mailboxes on the mailbox database MDB03.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MailboxStatistics -Database MDB03 | Where { $_.DisconnectReason -ne $null } | ForEach { Update-StoreMailboxState -Database $_.Database -Identity $_.MailboxGuid -Confirm:$false }
 ```
@@ -117,25 +88,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -184,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5e24a849-4961-4a7b-840e-0aede87a2bf1.aspx)
-

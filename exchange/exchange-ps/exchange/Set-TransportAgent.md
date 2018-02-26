@@ -6,18 +6,6 @@ schema: 2.0.0
 # Set-TransportAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-TransportAgent cmdlet to modify a transport agent on a computer that has the Edge Transport server role or the Hub Transport server role installed in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-TransportAgent cmdlet to modify a transport agent.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-TransportAgent cmdlet to modify existing transport agents.
@@ -31,35 +19,11 @@ Set-TransportAgent [-Identity] <TransportAgentObjectId> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-TransportAgent -Identity "Antivirus for Exchange" -Priority 3
-```
-
-This example modifies the priority of a fictitious antivirus agent.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-TransportAgent "Test App" -Priority 3 -TransportService -FrontEnd
-```
-
-This example modifies the priority of a fictitious agent named Test App in the Front End Transport service on a Client Access server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-TransportAgent "Test App" -Priority 3 -TransportService -FrontEnd
 ```
@@ -69,17 +33,7 @@ This example modifies the priority of a fictitious agent named Test App in the F
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the display name of the transport agent to be modified. The length of the name can't exceed 64 characters.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the name (Identity property value) of the transport agent that you want to modify. If the name contains spaces, enclose the name in quotation marks (").
-
-
 
 ```yaml
 Type: TransportAgentObjectId
@@ -133,17 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010
-
-The Priority parameter specifies the priority of the transport agent. The priority of the transport agent controls the order in which the transport agents process e-mail messages. The priority must be a value between 0 and the maximum number of transport agents. The default behavior is to append a new transport agent to the end of the priority list. Transport agents with a priority closest to 0 process e-mail messages first.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Priority parameter specifies the priority of the transport agent. The priority of the transport agent controls the order in which the transport agents process email messages. The priority must be a value between 0 and the maximum number of transport agents. The default behavior is to append a new transport agent to the end of the priority list. Transport agents with a priority closest to 0 process email messages first.
-
-
 
 ```yaml
 Type: Int32
@@ -175,24 +119,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransportService
-!!! Exchange Server 2013
-
-The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
-
-- Hub for the Transport service on Mailbox servers.
-
-- MailboxSubmission for the Mailbox Transport Submission service on Mailbox servers.
-
-- MailboxDelivery for the Mailbox Transport Delivery service on Mailbox servers.
-
-- FrontEnd for the Front End Transport service on Client Access servers.
-
-- Edge on Edge Transport servers.
-
-
-
-!!! Exchange Server 2016
-
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
 - Hub for the Transport service on Mailbox servers.
@@ -204,8 +130,6 @@ The TransportService parameter specifies the transport service that you want to 
 - FrontEnd for the Front End Transport service on Mailbox servers.
 
 - Edge on Edge Transport servers.
-
-
 
 ```yaml
 Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
@@ -238,4 +162,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/467ee0fb-b418-4b91-9115-2c96d97a1c55.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Suspend-MoveRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Suspend-MoveRequest cmdlet to suspend a move request any time after the move request was created, but before it reaches the status of CompletionInProgress. You can resume the move request by using the Resume-MoveRequest cmdlet.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Suspend-MoveRequest cmdlet to suspend a move request any time after the move request was created, but before it reaches the status of CompletionInProgress. You can resume the move request by using the Resume-MoveRequest cmdlet.
@@ -26,75 +20,23 @@ Suspend-MoveRequest [-Identity] <MoveRequestIdParameter> [-Confirm] [-DomainCont
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Suspend-MoveRequest -Identity "Ayla@humongousinsurance.com"
 ```
 
 This example suspends the move request for Ayla's mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Suspend-MoveRequest -Identity "Ayla@humongousinsurance.com"
-```
-
-This example suspends the move request for Ayla's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Suspend-MoveRequest -Identity "Ayla@humongousinsurance.com"
-```
-
-This example suspends the move request for Ayla's mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Suspend-MoveRequest -Identity "Ayla@humongousinsurance.com"
-```
-
-This example suspends the move request for Ayla's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MoveRequest -MoveStatus InProgress | Suspend-MoveRequest
 ```
 
-This example suspends all move requests that are in progress by using the Get-MoveRequest cmdlet to retrieve all move requests with a MoveStatus value of InProgress, and then pipelining the output to the Suspend-MoveRequest cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MoveRequest -MoveStatus InProgress | Suspend-MoveRequest
-```
-
-This example suspends all move requests that are in progress by using the Get-MoveRequest cmdlet to retrieve all move requests with a MoveStatus value of InProgress, and then pipelining the output to the Suspend-MoveRequest cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MoveRequest -MoveStatus InProgress | Suspend-MoveRequest
-```
-
-This example suspends all move requests that are in progress by using the Get-MoveRequest cmdlet to retrieve all move requests with a MoveStatus value of InProgress, and then pipelining the output to the Suspend-MoveRequest cmdlet.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MoveRequest -MoveStatus InProgress | Suspend-MoveRequest
-```
-
-This example suspends all move requests that are in progress by using the Get-MoveRequest cmdlet to retrieve all move requests with a MoveStatus value of InProgress, and then pipelining the output to the Suspend-MoveRequest cmdlet.
+This example suspends all move requests that are in progress by using the Get-MoveRequest cmdlet to retrieve all move requests with a MoveStatus value of InProgress and then pipelining the output to the Suspend-MoveRequest cmdlet.
 
 ## PARAMETERS
 
@@ -149,19 +91,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -268,4 +200,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/078dd2f7-2562-4a33-aa9f-e5e2fb0f908b.aspx)
-

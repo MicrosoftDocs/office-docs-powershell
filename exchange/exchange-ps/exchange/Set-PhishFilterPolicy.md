@@ -26,67 +26,29 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList | Export-CSV "C:\My Documents\Summary Spoofed Senders.csv"; $UpdateSummarySpoofedSenders = Get-Content -Raw "C:\My Documents\Summary Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSummarySpoofedSenders
 ```
 
 This configures the phish filter policy to block or allow all spoofed email messages from a source messaging server.
 
-
 Step 1: Write the summary output of the Get-PhishFilterPolicy cmdlet to a CSV file.
-
 
 Step 2: Add or modify the TrueSender, and AllowedToSpoof values in the CSV file, save the file, and then read the file and store it as a variable named $UpdateSummarySpoofedSenders.
 
-
 Step 3: Use the $UpdateSummarySpoofedSenders variable to configure the phish filter policy.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList | Export-CSV "C:\My Documents\Summary Spoofed Senders.csv"; $UpdateSummarySpoofedSenders = Get-Content -Raw "C:\My Documents\Summary Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateSummarySpoofedSenders
-```
-
-This configures the phish filter policy to block or allow all spoofed email messages from a source messaging server.
-
-
-Step 1: Write the summary output of the Get-PhishFilterPolicy cmdlet to a CSV file.
-
-
-Step 2: Add or modify the TrueSender, and AllowedToSpoof values in the CSV file, save the file, and then read the file and store it as a variable named $UpdateSummarySpoofedSenders.
-
-
-Step 3: Use the $UpdateSummarySpoofedSenders variable to configure the phish filter policy.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed | Export-CSV "C:\My Documents\Detailed Spoofed Senders.csv"; $UpdateDetailedSpoofedSenders = Get-Content -Raw "C:\My Documents\Detailed Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateDetailedSpoofedSenders
 ```
 
 This example configures the phish filter policy to selectively block or allow some spoofed email messages from a source messaging server.
 
-
 Step 1: Write the detailed output of the Get-PhishFilterPolicy cmdlet to a CSV file.
 
-
 Step 2: Add or modify the TrueSender, SpoofedSender, and AllowedToSpoof values in the CSV file, save the file, and then read the CSV file and store it as a variable named $UpdateDetailedSpoofedSenders.
-
-
-Step 3: Use the $UpdateDetailedSpoofedSenders variable to configure the phish filter policy.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed | Export-CSV "C:\My Documents\Detailed Spoofed Senders.csv"; $UpdateDetailedSpoofedSenders = Get-Content -Raw "C:\My Documents\Detailed Spoofed Senders.csv"; Set-PhishFilterPolicy -Identity Default -SpoofAllowBlockList $UpdateDetailedSpoofedSenders
-```
-
-This example configures the phish filter policy to selectively block or allow some spoofed email messages from a source messaging server.
-
-
-Step 1: Write the detailed output of the Get-PhishFilterPolicy cmdlet to a CSV file.
-
-
-Step 2: Add or modify the TrueSender, SpoofedSender, and AllowedToSpoof values in the CSV file, save the file, and then read the CSV file and store it as a variable named $UpdateDetailedSpoofedSenders.
-
 
 Step 3: Use the $UpdateDetailedSpoofedSenders variable to configure the phish filter policy.
 
@@ -192,4 +154,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ed0f903a-6b05-4e84-a362-c10d0e9117c4.aspx)
-
