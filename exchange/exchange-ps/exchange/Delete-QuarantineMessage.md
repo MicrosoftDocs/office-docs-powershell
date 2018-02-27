@@ -30,42 +30,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Delete-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
 ```
 
 This example deletes the quarantined message with the specified Identity value.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Delete-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
-```
-
-This example deletes the quarantined message with the specified Identity value.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identity $ids[4]
 ```
 
-This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1, and so on).
+This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1 and so on).
 
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identity $ids[4]
-```
-
-This example deletes the 5th quarantined message in the list of results from Get-QuarantineMessage. The first message has the index number 0, the second has the index number 1, and so on).
-
-### Example 3 -------------------------- (Exchange Online)
-```
-$ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identities $ids -Identity 000
-```
-
-This example deletes all quarantined messages. The Identity parameter is required, but the value 000 is ignored.
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 $ids = Get-QuarantineMessage | select -ExpandProperty Identity; Delete-QuarantineMessage -Identities $ids -Identity 000
 ```
@@ -179,4 +158,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9f54e202-2a8a-4e98-a7ab-a944d6dde6d5.aspx)
-

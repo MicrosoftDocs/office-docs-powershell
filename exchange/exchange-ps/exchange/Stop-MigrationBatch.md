@@ -20,56 +20,20 @@ Stop-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Stop-MigrationBatch cmdlet stops the migration batch that's being processed in your on-premises Exchange organization or by the cloud-based migration service running in Microsoft Office 365. You can only stop migration batches that have mailboxes that are still in the process of being migrated or are waiting to be migrated. Stopping a migration won't affect mailboxes that have been migrated already. The migration of mailboxes that are being actively migrated is stopped immediately. If all migration requests in a migration batch are completed or failed, this cmdlet won't run.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Stop-MigrationBatch cmdlet stops the migration batch that's being processed in your on-premises Exchange organization or by the cloud-based migration service running in Microsoft Office 365. You can only stop migration batches that have mailboxes that are still in the process of being migrated or are waiting to be migrated. Stopping a migration won't affect mailboxes that have been migrated already. The migration of mailboxes that are being actively migrated is stopped immediately. If all migration requests in a migration batch are completed or failed, this cmdlet won't run.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Stop-MigrationBatch
 ```
 
 This example stops the migration batch that's currently being processed by the migration service.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Stop-MigrationBatch
-```
-
-This example stops the migration batch that's currently being processed by the migration service.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Stop-MigrationBatch
-```
-
-This example stops the migration batch that's currently being processed by the migration service.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Stop-MigrationBatch -Identity MigrationBatch1
-```
-
-This example stops the migration batch MigrationBatch1.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Stop-MigrationBatch -Identity MigrationBatch1
-```
-
-This example stops the migration batch MigrationBatch1.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Stop-MigrationBatch -Identity MigrationBatch1
 ```
@@ -182,4 +146,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/92d2f432-2bc0-469d-86b3-b82de8d3241c.aspx)
-

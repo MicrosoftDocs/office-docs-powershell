@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-DeliveryAgentConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-DeliveryAgentConnector cmdlet to retrieve information about a specific delivery agent connector in your organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-DeliveryAgentConnector cmdlet to retrieve information about a specific delivery agent connector in your organization.
@@ -24,62 +18,20 @@ Get-DeliveryAgentConnector [[-Identity] <DeliveryAgentConnectorIdParameter>] [-D
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Understanding Delivery Agents.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-DeliveryAgentConnector "Contoso X.400 Connector" | Format-List
-```
-
-This example reads the configuration of the delivery agent connector Contoso X.400 Connector from Active Directory and displays all of its properties in a list format.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-DeliveryAgentConnector "Contoso X.400 Connector" | Format-List
 ```
 
 This example reads the configuration of the delivery agent connector named Contoso X.400 Connector from Active Directory and displays all of its properties in a list format.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DeliveryAgentConnector "Contoso X.400 Connector" | Format-List
-```
-
-This example reads the configuration of the delivery agent connector named Contoso X.400 Connector from Active Directory and displays all of its properties in a list format.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-DeliveryAgentConnector | Format-Table Name,DeliveryProtocol
-```
-
-This example retrieves a list of all delivery agent connectors in your organization and displays their names and delivery protocols in a table format.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-DeliveryAgentConnector | Format-Table Name,DeliveryProtocol
-```
-
-This example retrieves a list of all delivery agent connectors in your organization and displays their names and delivery protocols in a table format.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-DeliveryAgentConnector | Format-Table Name,DeliveryProtocol
 ```
@@ -89,19 +41,9 @@ This example retrieves a list of all delivery agent connectors in your organizat
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -150,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c7b369b6-fce1-4e60-ba6b-183fec700660.aspx)
-
