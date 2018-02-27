@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available only in on-premises Exchange.
 
-Use the Remove-ServerMonitoringOverride cmdlet to remove a managed availability local server override that has been configured for a probe, monitor, or responder.
+Use the Remove-ServerMonitoringOverride cmdlet to remove a managed availability local server override that has been configured for a probe, monitor or responder.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -20,38 +20,18 @@ Remove-ServerMonitoringOverride [-Identity] <String> -ItemType <Probe | Monitor 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell Infrastructure Permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-ServerMonitoringOverride -Server EX1 -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
 ```
 
 This example removes a server monitoring override of the ActiveDirectoryConnectivityConfigDCServerReboot responder in the Exchange health set from server EX1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ServerMonitoringOverride -Server EX1 -Identity Exchange\ActiveDirectoryConnectivityConfigDCServerReboot -ItemType Responder -PropertyName Enabled
-```
-
-This example removes a server monitoring override of the ActiveDirectoryConnectivityConfigDCServerReboot responder in the Exchange health set from server EX1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-ServerMonitoringOverride -Server EX2 -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
-```
-
-This example removes a server monitoring override of the ExtensionAttributes property of the OnPremisesInboundProxy probe in the FrontEndTransport health set from server EX2.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-ServerMonitoringOverride -Server EX2 -Identity FrontEndTransport\OnPremisesInboundProxy -ItemType Probe -PropertyName ExtensionAttributes
 ```
@@ -61,7 +41,7 @@ This example removes a server monitoring override of the ExtensionAttributes pro
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the monitoring item that was overridden. The value is in the form of HealthSet\\MonitoringItem, or HealthSet\\MonitoringItem\\TargetResource.
+The Identity parameter specifies the monitoring item that was overridden. The value is in the form of HealthSet\\MonitoringItem or HealthSet\\MonitoringItem\\TargetResource.
 
 ```yaml
 Type: String
@@ -184,4 +164,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dff63523-52a1-43c9-8ae2-beb93411b7e5.aspx)
-
