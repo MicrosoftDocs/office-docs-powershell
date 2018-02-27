@@ -20,77 +20,27 @@ Disable-App [-Identity] <AppIdParameter> [-Confirm] [-DomainController <Fqdn>] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Disable-App cmdlet requires that the specified app has already been installed (for example, that the app has been installed with the New-App cmdlet, or that it's a default app for Microsoft Outlook).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Apps for Outlook" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Disable-App cmdlet requires that the specified app has already been installed (for example, that the app has been installed with the New-App cmdlet, or that it's a default app for Microsoft Outlook).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Disable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
 ```
 
 This example disables the Bing Maps app for user Tony.
 
-
-For more information, see Manage user access to add-ins for Outlook.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
-```
-
-This example disables the Bing Maps app for user Tony.
-
-
 For more information, see Manage user access to apps for Outlook.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
-```
-
-This example disables the Bing Maps app for user Tony.
-
-
-For more information, see Manage user access to apps for Outlook.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Disable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 ```
 
 This example disables the administrator-installed app FinanceTestApp for user Tony.
-
-
-For more information, see Manage user access to add-ins for Outlook.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Disable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
-```
-
-This example disables the administrator-installed app FinanceTestApp for user Tony.
-
-
-For more information, see Manage user access to apps for Outlook.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Disable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
-```
-
-This example disables the administrator-installed app FinanceTestApp for user Tony.
-
 
 For more information, see Manage user access to apps for Outlook.
 
@@ -216,4 +166,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1e78ce38-eebf-4460-92d1-1296edb81983.aspx)
-

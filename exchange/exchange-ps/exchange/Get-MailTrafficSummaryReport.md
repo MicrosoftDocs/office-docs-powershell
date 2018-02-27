@@ -26,14 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailTrafficSummaryReport -Category TopSpamRecipient -StartDate 06/13/2015 -EndDate 06/15/2015
-```
-
-This example shows the top spam recipient statistics between June 13, 2015 and June 15, 2015.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailTrafficSummaryReport -Category TopSpamRecipient -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
@@ -43,7 +36,7 @@ This example shows the top spam recipient statistics between June 13, 2015 and J
 ## PARAMETERS
 
 ### -Category
-The Category parameter filters the report by category. Value values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient, or TopMalware.
+The Category parameter filters the report by category. Value values for this parameter are: InboundDLPHits, OutboundDLPHits, InboundTransportRuleHits, OutboundTransportRuleHits, InboundDLPPolicyRuleHits, OutboundDLPPolicyRuleHits, TopSpamRecipient, TopMailSender, TopMailRecipient, TopMalwareRecipient or TopMalware.
 
 ```yaml
 Type: String
@@ -224,4 +217,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/58c279cd-d548-46b2-90b9-d7be69241421.aspx)
-

@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-ClassificationRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-ClassificationRuleCollection cmdlet to update existing classification rule collections in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ClassificationRuleCollection cmdlet to update existing classification rule collections in your organization.
@@ -32,31 +22,11 @@ Set-ClassificationRuleCollection [-FileData] <Byte[]> [-Confirm] [-DomainControl
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the classification rule collection file C:\\My Documents\\External Classification Rule Collection.xml.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the classification rule collection file C:\\My Documents\\External Classification Rule Collection.xml.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-ClassificationRuleCollection -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External Classification Rule Collection.xml" -Encoding Byte -ReadCount 0))
 ```
@@ -66,21 +36,9 @@ This example imports the classification rule collection file C:\\My Documents\\E
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2013
-
-The FileData parameter specifies the classification rule collection file you want to import.
-
-For more information about the syntax required to use this parameter, see Syntax.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FileData parameter specifies the classification rule collection file you want to import.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -167,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d0058d0e-7f9c-4dba-b358-fb9adf21c1e3.aspx)
-

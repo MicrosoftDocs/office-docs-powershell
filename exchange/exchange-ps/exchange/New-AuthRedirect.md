@@ -6,19 +6,9 @@ schema: 2.0.0
 # New-AuthRedirect
 
 ## SYNOPSIS
-!!! Exchange Server 2010, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-AuthRedirect cmdlet to create OAuth redirection objects that are used for legacy Microsoft Exchange 2010 Client Access servers in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-AuthRedirect cmdlet to create OAuth redirection settings for Microsoft Exchange 2010 Client Access servers in your Microsoft Exchange 2013 organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -30,21 +20,13 @@ New-AuthRedirect -AuthScheme <Unknown | Bearer> -TargetUrl <String> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010, Exchange Server 2016
-
 Exchange 2010 Client Access servers don't support OAuth authentication requests. Use this cmdlet to redirect OAuth authentication requests to Exchange servers that are running later versions of Exchange. This cmdlet is only useful if your organization has Exchange 2010 Client Access servers.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-!!! Exchange Server 2013
-
-Exchange 2010 Client Access servers don't support OAuth authentication requests. Use this cmdlet to redirect OAuth authentication requests to an Exchange 2013 Client Access server. This cmdlet is only useful if your organization has Exchange 2010 Client Access servers.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "OAuth authentication redirection settings" entry in the Clients and mobile devices permissions topic.
-
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-AuthRedirect -AuthScheme Bearer -TargetURL http://mbx01.contoso.com
 ```
@@ -54,30 +36,6 @@ This example creates an OAuth redirection object with the following settings:
 - AuthScheme: Bearer
 
 - TargetURL: http://mbx01.contoso.com
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-AuthRedirect -AuthScheme Bearer -TargetURL http://cas.contoso.com
-```
-
-This example creates an OAuth redirection object with the following settings:
-
-
-AuthScheme Bearer
-
-TargetURL http://cas.contoso.com
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-AuthRedirect -AuthScheme Bearer -TargetURL http://mbx01.contoso.com
-```
-
-This example creates an OAuth redirection object with the following settings:
-
-
-AuthScheme: Bearer
-
-TargetURL: http://mbx01.contoso.com
 
 ## PARAMETERS
 
@@ -98,17 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUrl
-!!! Exchange Server 2010, Exchange Server 2016
-
 The TargetUrl parameter specifies the FQDN of the Exchange 2013 or later server that has the Client Access server role installed that's responsible for processing the redirected OAuth authentication requests.
-
-
-
-!!! Exchange Server 2013
-
-The TargetUrl parameter specifies the FQDN of the Exchange 2013 Client Access server that will process the Oauth request.
-
-
 
 ```yaml
 Type: String
@@ -193,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/66fc6568-469f-4f06-9864-841cdbf7d367.aspx)
-
