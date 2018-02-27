@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UrlTrace -RecipientAddress "michelle@contoso.com" -StartDate "5/9/2016" -EndDate "5/11/2016"
-```
-
-This example returns the results of Safe Links actions during the specified time period for the user michelle@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-UrlTrace -RecipientAddress "michelle@contoso.com" -StartDate "5/9/2016" -EndDate "5/11/2016"
 ```
@@ -217,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/979c93e6-e3f3-44eb-b4ce-663718c19f2b.aspx)
-
