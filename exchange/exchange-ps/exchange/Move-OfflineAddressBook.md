@@ -6,20 +6,6 @@ schema: 2.0.0
 # Move-OfflineAddressBook
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Move-OfflineAddressBook cmdlet to designate a new server responsible for generating the offline address book (OAB).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Move-OfflineAddressBook cmdlet to designate a new server that's responsible for generating the offline address book (OAB) in previous versions of Exchange. This cmdlet isn't used on OABs in Exchange Server 2013. To perform this task in Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Move-OfflineAddressBook cmdlet to designate a new server responsible for generating the offline address book (OAB) in Exchange Server 2010. This cmdlet isn't used on OABs in Exchange Server 2016 or Exchange Server 2013. To perform this task in Exchange 2016 or Exchange 2013, use the Set-OfflineAddressBook cmdlet with the GeneratingMailbox parameter.
@@ -34,37 +20,11 @@ Move-OfflineAddressBook [-Identity] <OfflineAddressBookIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Some situations require the OAB to be moved. For example, if you purchase new hardware to replace your computer running Microsoft Exchange Server 2010 that has the Mailbox server role installed and is responsible for generating the OAB, you run the Move-OfflineAddressBook cmdlet to move the OAB generating task to another server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Offline address books" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Offline address books" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Move-OfflineAddressBook -Identity "My OAB" -Server "Server1"
-```
-
-This example moves OAB generation to the server SERVER1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Move-OfflineAddressBook -Identity "My OAB" -Server "Server1"
-```
-
-This example moves OAB generation in Exchange 2007 or Exchange 2010 to the server named Server1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Move-OfflineAddressBook -Identity "My OAB" -Server "Server1"
 ```
@@ -92,25 +52,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -142,14 +88,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Server parameter specifies the Mailbox server on which to perform the selected operation.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -161,8 +99,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -211,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/54ddf362-af4f-402f-8d70-aaf81d074b16.aspx)
-
