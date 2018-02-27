@@ -20,17 +20,7 @@ Remove-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-Dom
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted, and any object related to the migration batch is also deleted.
-
-If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You have to remove the individual migration user requests with the Remove-MigrationUser \<Identity\> -Force command.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted, and any object related to the migration batch is also deleted.
+The Remove-MigrationBatch cmdlet removes a migration batch. All subscriptions are deleted and any object related to the migration batch is also deleted.
 
 If you use the Force parameter with this cmdlet, the individual user requests and subscriptions that were part of the removed migration batch aren't removed. You have to remove the individual migration user requests with the Remove-MigrationUser \<Identity\> -Force command.
 
@@ -38,42 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-MigrationBatch -Identity Cutover1
 ```
 
 This example removes the migration batch Cutover1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MigrationBatch -Identity Cutover1
-```
-
-This example removes the migration batch Cutover1.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MigrationBatch -Identity Cutover1
-```
-
-This example removes the migration batch Cutover1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-MigrationBatch -Identity LocalMove1 -Force
-```
-
-This example removes the corrupted migration batch LocalMove1.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-MigrationBatch -Identity LocalMove1 -Force
-```
-
-This example removes the corrupted migration batch LocalMove1.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-MigrationBatch -Identity LocalMove1 -Force
 ```
@@ -204,4 +166,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/59eb82ed-8210-41c1-a74b-8d783af3c391.aspx)
-
