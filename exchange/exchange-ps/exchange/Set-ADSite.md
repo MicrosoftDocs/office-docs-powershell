@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-AdSite
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-AdSite cmdlet to configure an Active Directory site as a hub site to override the default message routing behavior of a computer that has the Hub Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-AdSite cmdlet to configure the Exchange settings of Active Directory sites.
@@ -20,41 +14,16 @@ Use the Set-AdSite cmdlet to configure the Exchange settings of Active Directory
 
 ```
 Set-AdSite [-Identity] <AdSiteIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-HubSiteEnabled <$true | $false>] [-MinorPartnerId <Int32>] [-PartnerId <Int32>]
- [-ResponsibleForSites <MultiValuedProperty>] [-WhatIf] [-InboundMailEnabled <$true | $false>]
- [<CommonParameters>]
+ [-HubSiteEnabled <$true | $false>] [-PartnerId <Int32>]
+ [-WhatIf] [-InboundMailEnabled <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport configuration" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-AdSite -Identity Default-First-Site-Name -HubSiteEnabled $true
-```
-
-This example sets the Active Directory site Default-First-Site-Name as a hub site.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AdSite Default-First-Site-Name -HubSiteEnabled $true
-```
-
-This example configures the Active Directory site named Default-First-Site-Name as a hub site.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-AdSite Default-First-Site-Name -HubSiteEnabled $true
 ```
@@ -64,17 +33,7 @@ This example configures the Active Directory site named Default-First-Site-Name 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the Active Directory site that you want to modify. The identity can be expressed as a GUID or by using the Active Directory site name. If the site name includes spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the identity of the Active Directory site you want to modify. You can use any value that uniquely identifies the site. For example, you can use the name, GUID or distinguished name (DN) of the Active Directory site.
-
-
 
 ```yaml
 Type: AdSiteIdParameter
@@ -141,56 +100,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MinorPartnerId
-The MinorPartnerId parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: Int32
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -PartnerId
-!!! Exchange Server 2010
-
-The PartnerId parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: Int32
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ResponsibleForSites
-The ResponsibleForSites parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -251,4 +168,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c9bb1fab-4d0f-43e3-ad4a-36643baa6553.aspx)
-

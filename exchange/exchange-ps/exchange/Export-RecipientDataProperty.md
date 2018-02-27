@@ -6,20 +6,6 @@ schema: 2.0.0
 # Export-RecipientDataProperty
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook 2010 and Microsoft Office Outlook Web App.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Microsoft Office Outlook Web App.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Export-RecipientDataProperty cmdlet to download a user's picture or spoken name sound file. The picture and audio files display in the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Outlook on the web.
@@ -41,58 +27,18 @@ Export-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> [-Confi
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Importing and exporting files requires a specific syntax because remote Shell is used. For more information, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient data properties" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient data properties" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
 ```
 
 This example exports Tony Smith's spoken name audio file and saves it to the local computer.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
-```
-
-This example exports Tony Smith's spoken name audio file and saves it to the local computer.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Export-RecipientDataProperty -Identity tony@contoso.com -SpokenName | ForEach { $_.FileData | Add-Content C:\tonysmith.wma -Encoding Byte}
-```
-
-This example exports Tony Smith's spoken name audio file and saves it to the local computer.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
-```
-
-This example exports Ayla Kol's picture file to the local computer.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
-```
-
-This example exports Ayla Kol's picture file to the local computer.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Export-RecipientDataProperty -Identity "Ayla" -Picture | ForEach { $_.FileData | Add-Content C:\aylakol.jpg -Encoding Byte}
 ```
@@ -102,52 +48,6 @@ This example exports Ayla Kol's picture file to the local computer.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the mailbox or mail contact from which you want to export the recipient data. You can use the following values:
-
-- Distinguished name (DN)
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Exchange DN
-
-- Primary SMTP e-mail address
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the mailbox or mail contact from which you want to export the recipient data. You can use the following values:
-
-- Distinguished name (DN)
-
-- Canonical name
-
-- GUID
-
-- Name
-
-- Display name
-
-- Alias
-
-- Exchange DN
-
-- Primary SMTP email address
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the mailbox or mail contact from which you want to export the recipient data. You can use any value that uniquely identifies the user.
 
 For example:
@@ -166,8 +66,6 @@ For example:
 
 - GUID
 
-
-
 ```yaml
 Type: MailboxUserContactIdParameter
 Parameter Sets: (All)
@@ -182,25 +80,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -232,19 +116,9 @@ Accept wildcard characters: False
 ```
 
 ### -Picture
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Picture switch specifies that the file you're exporting is the user's picture file. You can't use this parameter in conjunction with the SpokenName switch. You can only export one file type at a time.
-
-
-
-!!! Exchange Server 2016
-
 The Picture switch specifies that the file you're exporting is the user's picture file. You don't need to specify a value with this switch.
 
 You can't use this switch with the SpokenName switch. You can only export one file type at a time.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -260,25 +134,9 @@ Accept wildcard characters: False
 ```
 
 ### -SpokenName
-!!! Exchange Server 2010
-
-The SpokenName switch specifies that the file you're exporting is the user's audio file. This cmdlet exports a WMA 9-voice format. You can't use this parameter in conjunction with the Picture switch. You can only export one file type at a time.
-
-
-
-!!! Exchange Server 2013
-
-The SpokenName switch specifies that the file you're exporting is the user's audio file. This cmdlet exports the WMA 9-voice format. You can't use this parameter in conjunction with the Picture switch. You can only export one file type at a time.
-
-
-
-!!! Exchange Server 2016
-
 The SpokenName switch specifies that the file you're exporting is the user's audio file. You don't need to specify a value with this switch.
 
 This cmdlet exports the WMA 9-voice format. You can't use this switch with the Picture switch. You can only export one file type at a time.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -327,4 +185,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/95ad02a9-8874-455e-b697-e39a47b4a032.aspx)
-

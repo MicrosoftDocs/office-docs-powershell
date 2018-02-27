@@ -28,28 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-SweepRule -Name "From Michelle" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender michelle@fabrikam.com -KeepLatest 1
 ```
 
 This example creates a new Sweep rule named "From Michelle" in Felipe Apodaca's mailbox that keeps the latest message from michelle@fabrikam.com in the Inbox folder, and moves older messages to the Deleted Items folder.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-SweepRule -Name "From Michelle" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender michelle@fabrikam.com -KeepLatest 1
-```
-
-This example creates a new Sweep rule named "From Michelle" in Felipe Apodaca's mailbox that keeps the latest message from michelle@fabrikam.com in the Inbox folder, and moves older messages to the Deleted Items folder.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender lila@fabrikam.com -KeepForDays 10
-```
-
-This example creates a new Sweep rule named "From Lila" in Felipe Apodaca's mailbox that moves messages from lila@fabrikam.com in the Inbox folder that are older than 10 days to the Deleted Items folder.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 New-SweepRule -Name "From Lila" -Mailbox "Felipe Apodaca" -Provider Exchange16 -Sender lila@fabrikam.com -KeepForDays 10
 ```
@@ -237,7 +223,7 @@ Accept wildcard characters: False
 ### -KeepForDays
 The KeepForDays parameter specifies an action for the Sweep rule that specifies the number of days to keep messages that match the conditions of the rule. After the number of days have passed, the messages are moved to the location that's specified by the DestinationFolder parameter (by default, the Deleted Items folder).
 
-You can't use this parameter with the KeepLatest parameter, and the Sweep rule must contain a KeepForDays or KeepLatest parameter value.
+You can't use this parameter with the KeepLatest parameter and the Sweep rule must contain a KeepForDays or KeepLatest parameter value.
 
 ```yaml
 Type: Int32
@@ -255,7 +241,7 @@ Accept wildcard characters: False
 ### -KeepLatest
 The KeepLatest parameter specifies an action for the Sweep rule that specifies the number of messages to keep that match the conditions of the rule. After the number of messages is exceeded, the oldest messages are moved to the location that's specified by the DestinationFolder parameter (by default, the Deleted Items folder).
 
-You can't use this parameter with the KeepForDays parameter, and the Sweep rule must contain a KeepForDays or KeepLatest parameter value.
+You can't use this parameter with the KeepForDays parameter and the Sweep rule must contain a KeepForDays or KeepLatest parameter value.
 
 ```yaml
 Type: Int32
@@ -460,4 +446,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9e2053be-cf79-4b49-9e0a-af16c7f4e3dc.aspx)
-

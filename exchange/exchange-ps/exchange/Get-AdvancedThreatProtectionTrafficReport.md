@@ -44,14 +44,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-AdvancedThreatProtectionTrafficReport -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
-```
-
-This example returns the results of Safe Attachments and Safe Links actions during the specified date range.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-AdvancedThreatProtectionTrafficReport -StartDate "4/26/2016" -EndDate "4/28/2016" | Format-Table
 ```
@@ -95,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregateBy
-The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day, or Summary. The default value is Day.
+The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day or Summary. The default value is Day.
 
 ```yaml
 Type: String
@@ -330,4 +323,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/57611e70-ed1e-46e1-8750-8c20ecf605f7.aspx)
-

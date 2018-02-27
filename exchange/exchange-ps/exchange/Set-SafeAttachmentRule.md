@@ -29,14 +29,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SafeAttachmentRule -Identity "Engineering Department Attachment Rule" -ExceptIfRecipientDomainIs fabrikam.com
-```
-
-This example modifies the existing Safe Attachments Rule named Engineering Department Attachment Rule to exclude messages sent to the fabrikam.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-SafeAttachmentRule -Identity "Engineering Department Attachment Rule" -ExceptIfRecipientDomainIs fabrikam.com
 ```
@@ -355,4 +348,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6fd1cf1a-bbf7-4480-a896-06e2ed9a5c1b.aspx)
-

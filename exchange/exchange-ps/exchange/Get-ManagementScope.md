@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-ManagementScope
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ManagementScope cmdlet to return a list of management scopes.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-ManagementScope cmdlet to return a list of management scopes.
@@ -22,28 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-ManagementScope [[-Identity] <ManagementScopeIdParameter>] [-DomainController <Fqdn>]
- [-Exclusive <$true | $false>] [-Organization <OrganizationIdParameter>] [-Orphan] [<CommonParameters>]
+ [-Exclusive <$true | $false>] [-Orphan] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can retrieve one scope or many, retrieve only scopes that aren't associated with management role assignments, or retrieve scopes that are exclusive or regular scopes.
-
-For more information about regular and exclusive scopes, see Understanding Management Role Scopes.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management scopes" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-You can retrieve one scope or many, retrieve only scopes that aren't associated with management role assignments, or retrieve scopes that are exclusive or regular scopes.
-
-For more information about regular and exclusive scopes, see Understanding management role scopes.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management scopes" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You can retrieve one scope or many, retrieve only scopes that aren't associated with management role assignments, or retrieve scopes that are exclusive or regular scopes.
 
 For more information about regular and exclusive scopes, see Understanding management role scopes.
@@ -52,140 +28,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ManagementScope Redmond*
 ```
 
 This example retrieves all the management scopes that start with the string Redmond.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementScope Redmond*
-```
-
-This example retrieves all the management scopes that start with the string Redmond.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementScope Redmond*
-```
-
-This example retrieves all the management scopes that start with the string Redmond.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ManagementScope Redmond*
-```
-
-This example retrieves all the management scopes that start with the string Redmond.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementScope Redmond*
-```
-
-This example retrieves all the management scopes that start with the string Redmond.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementScope "Redmond Servers Scope" | Format-List
-```
-
-This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with Command Output.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-ManagementScope "Redmond Servers Scope" | Format-List
 ```
 
 This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementScope "Redmond Servers Scope" | Format-List
-```
-
-This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementScope "Redmond Servers Scope" | Format-List
-```
-
-This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementScope "Redmond Servers Scope" | Format-List
-```
-
-This example retrieves the Redmond Servers Scope using the Get-ManagementScope cmdlet and pipes the output to the Format-List cmdlet. For more information about the Format-List cmdlet, see Working with command output.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagementScope -Orphan
 ```
 
 This example retrieves a list of management scopes that aren't associated with any role assignments.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementScope -Orphan
-```
-
-This example retrieves a list of management scopes that aren't associated with any role assignments.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementScope -Orphan
-```
-
-This example retrieves a list of management scopes that aren't associated with any role assignments.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-ManagementScope -Orphan
-```
-
-This example retrieves a list of management scopes that aren't associated with any role assignments.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementScope -Orphan
-```
-
-This example retrieves a list of management scopes that aren't associated with any role assignments.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-ManagementScope -Exclusive $True
-```
-
-This example retrieves a list of exclusive scopes.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementScope -Exclusive $True
-```
-
-This example retrieves a list of exclusive scopes.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementScope -Exclusive $True
-```
-
-This example retrieves a list of exclusive scopes.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-ManagementScope -Exclusive $True
-```
-
-This example retrieves a list of exclusive scopes.
-
-### Example 4 -------------------------- (Exchange Online Protection)
+### Example 4
 ```
 Get-ManagementScope -Exclusive $True
 ```
@@ -195,19 +59,9 @@ This example retrieves a list of exclusive scopes.
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -254,24 +108,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Orphan
 The Orphan parameter returns only the management scopes that aren't associated with role assignments.
 
@@ -306,4 +142,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a14e4ca3-2035-4959-a55f-efc50685a224.aspx)
-

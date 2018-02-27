@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-UMIPGateway
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-UMIPGateway cmdlet to disable a Unified Messaging (UM) IP gateway.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-UMIPGateway cmdlet to disable a Unified Messaging (UM) IP gateway.
@@ -26,76 +20,20 @@ Disable-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainCont
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The status variable for a UM IP gateway can be used to enable or disable call answering that's destined for the IP gateway. The Disable-UMIPGateway cmdlet disables a UM IP gateway in Active Directory by modifying its status variable. After this task is completed, the UM IP gateway no longer answers incoming calls or makes outgoing calls.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The status variable for a UM IP gateway can be used to enable or disable call answering destined for the IP gateway. The Disable-UMIPGateway cmdlet disables a UM IP gateway in Active Directory by modifying its status variable. After this task is completed, the UM IP gateway no longer answers incoming calls or makes outgoing calls.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The status variable for a UM IP gateway can be used to enable or disable call answering destined for the IP gateway. The Disable-UMIPGateway cmdlet disables a UM IP gateway in Active Directory by modifying its status variable. After this task is completed, the UM IP gateway no longer answers incoming calls or makes outgoing calls.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example disables a UM IP gateway named MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Disable-UMIPGateway -Identity MyUMIPGateway
 ```
 
 This example disables the UM IP gateway MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example disables the UM IP gateway MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example disables the UM IP gateway MyUMIPGateway and stops it from accepting incoming calls from the IP gateway.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
-```
-
-This example disables a UM IP gateway named MyUMIPGateway and disconnects all current calls immediately.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
-```
-
-This example disables the UM IP gateway MyUMIPGateway and disconnects all current calls immediately.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
-```
-
-This example disables the UM IP gateway MyUMIPGateway and disconnects all current calls immediately.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Disable-UMIPGateway -Identity MyUMIPGateway -Immediate $true
 ```
@@ -105,17 +43,7 @@ This example disables the UM IP gateway MyUMIPGateway and disconnects all curren
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identifier for the UM IP gateway that's being disabled. This is the directory object ID for the UM IP gateway.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identifier for the UM IP gateway being disabled. This is the directory object ID for the UM IP gateway.
-
-
 
 ```yaml
 Type: UMIPGatewayIdParameter
@@ -151,19 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -179,17 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Immediate
-!!! Exchange Server 2010
-
-The Immediate parameter specifies whether the UM server drops calls associated with this UM IP gateway immediately or waits for the current calls to finish processing.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Immediate parameter specifies whether the Mailbox server running the Microsoft Exchange Unified Messaging service drops incoming calls associated with this UM IP gateway immediately or waits for the current calls to finish processing.
-
-
 
 ```yaml
 Type: $true | $false
@@ -238,4 +146,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b6e0627a-0063-4e1d-bff0-0b35e8d146a2.aspx)
-

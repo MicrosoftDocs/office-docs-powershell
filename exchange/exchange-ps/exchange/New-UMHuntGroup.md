@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-UMHuntGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-UMHuntGroup cmdlet to create a new Unified Messaging (UM) hunt group used to link incoming calls to a specific UM dial plan.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-UMHuntGroup cmdlet to create a Unified Messaging (UM) hunt group used to link incoming calls to a specific UM dial plan.
@@ -22,29 +16,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-UMHuntGroup [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> -UMIPGateway <UMIPGatewayIdParameter>
- [-Confirm] [-DomainController <Fqdn>] [-Organization <OrganizationIdParameter>] [-PilotIdentifier <String>]
+ [-Confirm] [-DomainController <Fqdn>] [-PilotIdentifier <String>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-UMHuntGroup cmdlet creates a new UM hunt group in Active Directory. Running this cmdlet enables all Unified Messaging servers associated with UM dial plans to communicate with an IP gateway. A UM hunt group must be created to allow communication between a UM IP gateway and a UM dial plan.
-
-After this task is completed, a new UM hunt group is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-UMHuntGroup cmdlet creates a UM hunt group in Active Directory. Running this cmdlet enables all Mailbox servers associated with UM dial plans to communicate with an IP gateway. A UM hunt group must be created to allow communication between a UM IP gateway and a UM dial plan.
-
-After this task is completed, a new UM hunt group is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-UMHuntGroup cmdlet creates a UM hunt group in Active Directory. Running this cmdlet enables all Mailbox servers associated with UM dial plans to communicate with an IP gateway. A UM hunt group must be created to allow communication between a UM IP gateway and a UM dial plan.
 
 After this task is completed, a new UM hunt group is created.
@@ -53,56 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 12345 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
 ```
 
 This example creates the UM hunt group MyUMHuntGroup that has a pilot identifier of 12345.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 12345 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has a pilot identifier of 12345.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 12345 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has a pilot identifier of 12345.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 12345 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has a pilot identifier of 12345.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has multiple pilot identifiers.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has multiple pilot identifiers.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
-```
-
-This example creates the UM hunt group MyUMHuntGroup that has multiple pilot identifiers.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 New-UMHuntGroup -Name MyUMHuntGroup -PilotIdentifier 5551234,55555 -UMDialPlan MyUMDialPlan -UMIPGateway MyUMIPGateway
 ```
@@ -112,7 +46,7 @@ This example creates the UM hunt group MyUMHuntGroup that has multiple pilot ide
 ## PARAMETERS
 
 ### -Name
-The Name parameter specifies the UM hunt group name used for display purposes. This string can contain as many as 64 characters, and it must be unique.
+The Name parameter specifies the UM hunt group name used for display purposes. This string can contain as many as 64 characters and it must be unique.
 
 ```yaml
 Type: String
@@ -180,41 +114,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -273,4 +181,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4aaad0e7-7125-42d5-a51c-78f872f56594.aspx)
-

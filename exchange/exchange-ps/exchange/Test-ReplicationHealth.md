@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-ReplicationHealth
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-ReplicationHealth cmdlet to check all aspects of the replication and replay status to provide a complete overview of a specific Mailbox server in a database availability group (DAG). The Test-ReplicationHealth cmdlet is designed for the proactive monitoring of continuous replication and the continuous replication pipeline, the availability of the Active Manager, and the health and status of the underlying cluster service, quorum and network components. Test-ReplicationHealth can be run locally on or remotely against any Mailbox server in a DAG.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-ReplicationHealth cmdlet to check all aspects of replication and replay, or to provide status for a specific Mailbox server in a database availability group (DAG).
@@ -28,39 +22,13 @@ Test-ReplicationHealth [[-Identity] <ServerIdParameter>] [-ActiveDirectoryTimeou
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-The Test-ReplicationHealth cmdlet is designed for the proactive monitoring of continuous replication and the continuous replication pipeline, the availability of Active Manager, and the health and status of the underlying cluster service, quorum, and network components. The Test-ReplicationHealth cmdlet can be run locally or remotely against any Mailbox server in a DAG.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
-The Test-ReplicationHealth cmdlet is designed for the proactive monitoring of continuous replication and the continuous replication pipeline, the availability of Active Manager, and the health and status of the underlying cluster service, quorum, and network components. The Test-ReplicationHealth cmdlet can be run locally or remotely against any Mailbox server in a DAG.
+The Test-ReplicationHealth cmdlet is designed for the proactive monitoring of continuous replication and the continuous replication pipeline, the availability of Active Manager and the health and status of the underlying cluster service, quorum and network components. The Test-ReplicationHealth cmdlet can be run locally or remotely against any Mailbox server in a DAG.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-ReplicationHealth -Identity EXMBX1
-```
-
-This example tests the health of replication for a Mailbox server named EXMBX1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-ReplicationHealth -Identity MBX1
-```
-
-This example tests the health of replication for the Mailbox server MBX1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Test-ReplicationHealth -Identity MBX1
 ```
@@ -70,17 +38,7 @@ This example tests the health of replication for the Mailbox server MBX1.
 ## PARAMETERS
 
 ### -ActiveDirectoryTimeout
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ActiveDirectoryTimeout parameter specifies the amount of time, in seconds, allowed for each directory service operation to complete before the operation times out. The default value is 15 seconds.
-
-
-
-!!! Exchange Server 2016
-
 The ActiveDirectoryTimeout parameter specifies the time interval in seconds that's allowed for each directory service operation before the operation times out. The default value is 15 seconds.
-
-
 
 ```yaml
 Type: Int32
@@ -132,23 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter specifies whether the results of the command includes monitoring events and performance counters. The two possible values for this parameter are $true or $false. If you specify $true, the results include monitoring events and performance counters in addition to the information about services.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext parameter includes or excludes the associated monitoring events and performance counters in the results. Valid input for this parameter is $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext parameter specifies whether to include the associated monitoring events and performance counters in the results. Valid values for this parameter are $true or $false. The default value is $false. If you specify the value $true, the monitoring events and performance counters are included in the command results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM).
-
-
 
 ```yaml
 Type: $true | $false
@@ -164,23 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputObjects
-!!! Exchange Server 2010
-
-The OutputObjects parameter enables the command to output an array of information regarding failures.
-
-
-
-!!! Exchange Server 2013
-
-The OutputObjects switch specifies whether to output an array of information regarding failures.
-
-
-
-!!! Exchange Server 2016
-
 The OutputObjects switch specifies whether to output an array of information regarding failures. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -228,14 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the Mailbox server that you want to test.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the the Mailbox server that you want to test.
 
 You can use any value that uniquely identifies the server. For example:
@@ -249,8 +167,6 @@ You can use any value that uniquely identifies the server. For example:
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
 
 You can't use this parameter with the DatabaseAvailabilityGroup parameter.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -307,4 +223,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/da55fa0f-e100-44b1-b9b4-bf14e55a5b4d.aspx)
-

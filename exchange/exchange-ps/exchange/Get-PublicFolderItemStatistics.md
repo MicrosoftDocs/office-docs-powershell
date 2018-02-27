@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-PublicFolderItemStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-PublicFolderItemStatistics cmdlet to view information about items within a specified public folder. Information returned includes subject, last modification time, last access time, creation time, attachments, message size, and the type of item. You can use this raw information to better understand the distribution of items and item characteristics across public folders.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-PublicFolderItemStatistics cmdlet to view information about items within a specified public folder. Information returned includes subject, last modification time, last access time, creation time, attachments, message size, and the type of item. You can use this raw information to better understand the distribution of items and item characteristics across public folders.
@@ -26,147 +20,40 @@ Get-PublicFolderItemStatistics [-Identity] <PublicFolderIdParameter> [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2010\Pamphlets"
-```
-
-This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2010 path. Default information includes item identity, creation time, and subject.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets"
 ```
 
-This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2013 path. Default information includes item identity, creation time, and subject.
+This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2013 path. Default information includes item identity, creation time and subject.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets"
-```
-
-This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2013 path. Default information includes item identity, creation time, and subject.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets"
-```
-
-This example returns default statistics for all items in the Pamphlets public folder under the \\Marketing\\2013 path. Default information includes item identity, creation time, and subject.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2010\Pamphlets" | Format-List
-```
-
-This example returns additional information about the items within the public folder, such as subject, last modification time, creation time, attachments, message size, and the type of item by piping the results of the Get-PublicFolderItemStatistics command to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets" | Format-List
 ```
 
-This example returns additional information about the items within the public folder, such as subject, last modification time, creation time, attachments, message size, and the type of item by piping the results of the Get-PublicFolderItemStatistics command to the Format-List command.
+This example returns additional information about the items within the public folder, such as subject, last modification time, creation time, attachments, message size and the type of item by piping the results of the Get-PublicFolderItemStatistics command to the Format-List command.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets" | Format-List
-```
-
-This example returns additional information about the items within the public folder, such as subject, last modification time, creation time, attachments, message size, and the type of item by piping the results of the Get-PublicFolderItemStatistics command to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\2013\Pamphlets" | Format-List
-```
-
-This example returns additional information about the items within the public folder, such as subject, last modification time, creation time, attachments, message size, and the type of item by piping the results of the Get-PublicFolderItemStatistics command to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,LastModificationTime,HasAttachments,ItemType,MessageSize | Export-CSV C:\PFItemStats.csv
 ```
 
 This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
 
+- Subject of the message (Subject)
 
-Subject of the message (Subject)
+- Date and time when the item was last modified (LastModificationTime)
 
-Date and time when the item was last modified (LastModificationTime)
+- If the item has attachments (HasAttachments)
 
-If the item has attachments (HasAttachments)
+- Type of item (ItemType)
 
-Type of item (ItemType)
-
-Size of the item (MessageSize)
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,LastModificationTime,HasAttachments,ItemType,MessageSize | Export-CSV C:\PFItemStats.csv
-```
-
-This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
-
-
-Subject of the message (Subject)
-
-Date and time when the item was last modified (LastModificationTime)
-
-If the item has attachments (HasAttachments)
-
-Type of item (ItemType)
-
-Size of the item (MessageSize)
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,LastModificationTime,HasAttachments,ItemType,MessageSize | Export-CSV C:\PFItemStats.csv
-```
-
-This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
-
-
-Subject of the message (Subject)
-
-Date and time when the item was last modified (LastModificationTime)
-
-If the item has attachments (HasAttachments)
-
-Type of item (ItemType)
-
-Size of the item (MessageSize)
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-PublicFolderItemStatistics -Identity "\Marketing\Reports" | Select Subject,LastModificationTime,HasAttachments,ItemType,MessageSize | Export-CSV C:\PFItemStats.csv
-```
-
-This example exports the output of the Get-PublicFolderItemStatistics command to the PFItemStats.csv file that includes the following information for all items within the public folder \\Marketing\\Reports:
-
-
-Subject of the message (Subject)
-
-Date and time when the item was last modified (LastModificationTime)
-
-If the item has attachments (HasAttachments)
-
-Type of item (ItemType)
-
-Size of the item (MessageSize)
+- Size of the item (MessageSize)
 
 ## PARAMETERS
 
@@ -187,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -264,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b978c72d-6c0d-428f-a4ea-b17e39aef408.aspx)
-

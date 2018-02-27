@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-UMIPGateway
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-UMIPGateway cmdlet to create a new Unified Messaging (UM) IP gateway. A UM IP gateway is used to connect Unified Messaging servers to an IP gateway or a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX).
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-UMIPGateway cmdlet to create a Unified Messaging (UM) IP gateway. A UM IP gateway is used to connect Unified Messaging servers to an IP gateway or a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX).
@@ -23,104 +17,32 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-UMIPGateway [-Name] <String> -Address <UMSmartHost> [-Confirm] [-DomainController <Fqdn>]
  [-GlobalCallRoutingScheme <None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3>]
- [-Organization <OrganizationIdParameter>] [-UMDialPlan <UMDialPlanIdParameter>] [-WhatIf]
+ [-UMDialPlan <UMDialPlanIdParameter>] [-WhatIf]
  [-IPAddressFamily <IPv4Only | IPv6Only | Any>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-UMIPGateway cmdlet creates a new UM IP gateway. A UM IP gateway has organization-wide scope and references a single physical IP gateway. The new UM IP gateway that's created is used to establish a connection to an IP gateway or a SIP-enabled IP PBX.
-
-After this task is completed, a new UM IP gateway is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-UMIPGateway cmdlet creates a UM IP gateway. A UM IP gateway has organization-wide scope and references a single physical IP gateway. The UM IP gateway that's created is used to establish a connection to an IP gateway or a SIP-enabled IP PBX. After this task is completed, a new UM IP gateway is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-UMIPGateway cmdlet creates a UM IP gateway. A UM IP gateway has organization-wide scope and references a single physical IP gateway. The UM IP gateway that's created is used to establish a connection to an IP gateway or a SIP-enabled IP PBX. After this task is completed, a new UM IP gateway is created.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-UMIPGateway -Name MyUMIPGateway -Address 10.10.10.1
-```
-
-This example creates a new UM IP gateway named MyUMIPGateway that enables a Unified Messaging server to start accepting calls from an IP gateway with an IP address of 10.10.10.1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
 ```
 
 This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an IP address of 10.10.10.1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
-```
-
-This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an IP address of 10.10.10.1.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address 10.10.10.1
-```
-
-This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an IP address of 10.10.10.1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-New-UMIPGateway -Name MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
-```
-
-This example creates a new UM IP gateway named MyUMIPGateway that enables a Unified Messaging server to start accepting calls from an IP gateway with an FQDN of MyUMIPGateway.contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
 ```
 
-This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPV6 addresses.
+This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address and allows the UM IP gateway to use IPv4 and IPV6 addresses.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
-```
-
-This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPV6 addresses.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address fe80::39bd:88f7:6969:d223%11 -IPAddressFamily Any -Status Disabled -OutcallsAllowed $false
-```
-
-This example creates the UM IP gateway MyUMIPGateway and prevents it from accepting incoming calls and outgoing calls, sets an IPv6 address, and allows the UM IP gateway to use IPv4 and IPV6 addresses.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
-```
-
-This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an FQDN of MyUMIPGateway.contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
-```
-
-This example creates the UM IP gateway MyUMIPGateway that enables a Mailbox server to start accepting calls from an IP gateway with an FQDN of MyUMIPGateway.contoso.com.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 New-UMIPGateway -Identity MyUMIPGateway -Address "MyUMIPGateway.contoso.com"
 ```
@@ -182,19 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -214,22 +126,6 @@ The GlobalCallRoutingScheme parameter specifies whether the IP gateway can accep
 
 ```yaml
 Type: None | E164 | GatewayGuid | Reserved1 | Reserved2 | Reserved3
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010
@@ -307,4 +203,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/598774bf-2a38-4779-be5a-9955c6b5ef4b.aspx)
-

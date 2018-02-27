@@ -20,77 +20,27 @@ Enable-App [-Identity] <AppIdParameter> [-Confirm] [-DomainController <Fqdn>] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Enable-App cmdlet requires that the specified app has already been installed (for example, that it has been installed with the New-App cmdlet, or that it's a default app for Microsoft Outlook).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Apps for Outlook" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Enable-App cmdlet requires that the specified app has already been installed (for example, that it has been installed with the New-App cmdlet, or that it's a default app for Microsoft Outlook).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
 ```
 
 This example enables the default Bing Maps app installed for user Tony.
 
-
-For more information, see Manage user access to add-ins for Outlook.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
-```
-
-This example enables the default Bing Maps app installed for user Tony.
-
-
 For more information, see Manage user access to apps for Outlook.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Enable-App -Identity 7a774f0c-7a6f-11e0-85ad-07fb4824019b -Mailbox Tony
-```
-
-This example enables the default Bing Maps app installed for user Tony.
-
-
-For more information, see Manage user access to apps for Outlook.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
 ```
 
 This example enables the administrator-installed app FinanceTestApp for user Tony.
-
-
-For more information, see Manage user access to add-ins for Outlook.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
-```
-
-This example enables the administrator-installed app FinanceTestApp for user Tony.
-
-
-For more information, see Manage user access to apps for Outlook.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Enable-App -Identity <GUID for FinanceTestApp> -Mailbox Tony
-```
-
-This example enables the administrator-installed app FinanceTestApp for user Tony.
-
 
 For more information, see Manage user access to apps for Outlook.
 
@@ -214,4 +164,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/616079e2-3cbd-43e9-8e71-098374943cf0.aspx)
-

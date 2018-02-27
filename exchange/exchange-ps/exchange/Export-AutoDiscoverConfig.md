@@ -6,20 +6,6 @@ schema: 2.0.0
 # Export-AutoDiscoverConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-AutoDiscoverConfig cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Export-AutoDiscoverConfig cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest on a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Export-AutoDiscoverConfig cmdlet to create or update a service connection point for an Autodiscover service pointer in a target Exchange forest on an Exchange Server 2016 server.
@@ -36,62 +22,20 @@ Export-AutoDiscoverConfig -TargetForestDomainController <String> [-Confirm] [-De
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Autodiscover service connection point pointer resides in Active Directory and contains the names of the Exchange Web Services URLs.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Autodiscover service connection point pointer resides in Active Directory and contains the names of the Exchange Web Services URLs.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Autodiscover service connection point pointer resides in Active Directory and contains the names of the Exchange Web Services URLs.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName
-```
-
-This example creates a service connection point object to connect to another Active Directory forest so that Outlook 2010 or Outlook 2007 clients can automatically connect to their mailbox without having to set up a profile.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName
-```
-
-This example creates a service connection point object to connect to another Active Directory forest so that Outlook 2010 or Outlook 2007 clients can automatically connect to their mailbox without having to set up a profile.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController targetForestName
 ```
 
 This example creates a service connection point object to connect to another Active Directory forest so that Outlook 2010 clients can automatically connect to their mailbox without having to set up a profile.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName -MultipleExchangeDeployments $true
-```
-
-This example specifies that Exchange 2010 is deployed in more than one Active Directory forest while establishing an Autodiscover service connection point to the target domain controller in another Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Export-AutoDiscoverConfig -TargetForestDomainController targetForestName -MultipleExchangeDeployments $true
-```
-
-This example specifies that Exchange 2013 is deployed in more than one Active Directory forest while establishing an Autodiscover service connection point to the target domain controller in another Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Export-AutoDiscoverConfig -TargetForestDomainController targetForestName -MultipleExchangeDeployments $true
 ```
@@ -169,23 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -MultipleExchangeDeployments
-!!! Exchange Server 2010
-
-The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2010 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Microsoft Outlook 2010 and Office Outlook 2007 clients use this object to select the most appropriate forest to search for the Autodiscover service.
-
-
-
-!!! Exchange Server 2013
-
-The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2013 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Microsoft Outlook 2010 and Office Outlook 2007 clients use this object to select the most appropriate forest to search for the Autodiscover service.
-
-
-
-!!! Exchange Server 2016
-
 The MultipleExchangeDeployments parameter specifies whether multiple Exchange deployments exist. This setting should be set to $true only if Exchange 2016 is deployed in more than one Active Directory forest, and the forests are connected. If set to $true, the list of authoritative accepted domains for the source forest is written to the Autodiscover service connection point object. Outlook 2010 clients use this object to select the most appropriate forest to search for the Autodiscover service.
-
-
 
 ```yaml
 Type: $true | $false
@@ -282,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/70733d70-7e35-4c60-b0f8-47a00b894fd1.aspx)
-

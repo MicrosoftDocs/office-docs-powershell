@@ -6,16 +6,6 @@ schema: 2.0.0
 # Clear-MobileDevice
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Clear-MobileDevice cmdlet to delete all data from a mobile phone.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Clear-MobileDevice cmdlet to delete all data from a mobile phone. This action is often called a remote device wipe.
@@ -30,16 +20,6 @@ Clear-MobileDevice [-Identity] <MobileDeviceIdParameter> [-Cancel] [-Confirm] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Clear-MobileDevice cmdlet deletes all user data from a mobile device the next time that the device receives data from the server running Microsoft Exchange Server 2013. This cmdlet sets the DeviceWipeStatus parameter to $true. The mobile device acknowledges the cmdlet and records the time stamp in the DeviceWipeAckTime parameter.
-
-After you run this cmdlet, you receive a warning that states: "This command will force all the data on the device to be permanently deleted. Do you want to continue?" You must respond to the warning for the cmdlet to run on the mobile phone.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Clear-MobileDevice cmdlet deletes all user data from a mobile device the next time that the device receives data from the Microsoft Exchange server. This cmdlet sets the DeviceWipeStatus parameter to $true. The mobile device acknowledges the cmdlet and records the time stamp in the DeviceWipeAckTime parameter.
 
 After you run this cmdlet, you receive a warning that states: "This command will force all the data on the device to be permanently deleted. Do you want to continue?" You must respond to the warning for the cmdlet to run on the mobile phone.
@@ -48,63 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Clear-MobileDevice -Identity WM_JeffHay
 ```
 
 This example clears all data from the mobile device with the Identity WM\_JeffHay.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Clear-MobileDevice -Identity WM_JeffHay
-```
-
-This example clears all data from the mobile device with the Identity WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Clear-MobileDevice -Identity WM_JeffHay
-```
-
-This example clears all data from the mobile device with the Identity WM\_JeffHay.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Clear-MobileDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
 ```
 
 This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Clear-MobileDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
-```
-
-This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Clear-MobileDevice -Identity WM_TonySmith -NotificationEmailAddresses "tony@contoso.com"
-```
-
-This example clears all data from the mobile device for Tony Smith and sends a confirmation email message to tony@contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Clear-MobileDevice -Identity WM_TonySmith -Cancel $true
-```
-
-This example cancels a previously sent Clear-MobileDevice command request for Tony Smith's mobile device.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Clear-MobileDevice -Identity WM_TonySmith -Cancel
-```
-
-This example cancels a previously sent Clear-MobileDevice command request for Tony Smith's mobile device.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Clear-MobileDevice -Identity WM_TonySmith -Cancel
 ```
@@ -130,17 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Cancel
-!!! Exchange Server 2013
-
-The Cancel parameter specifies whether the command should be canceled. If you use the Cancel parameter, a cancellation request is issued for the remote device wipe.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Cancelswitchcancels a pending remote device wipe request. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -194,17 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationEmailAddresses
-!!! Exchange Server 2013
-
-The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The NotificationEmailAddresses parameter specifies the notification email address for the remote device wipe confirmation. You can specify multiple values separated by commas.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -269,4 +187,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6a1d971d-923d-41cf-9612-ab466bb2bcbf.aspx)
-

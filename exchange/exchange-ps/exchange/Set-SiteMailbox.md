@@ -22,52 +22,18 @@ Set-SiteMailbox [-Identity] <RecipientIdParameter> [-Active <$true | $false>] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-SiteMailbox -Identity "MarketingEvents 2013" -SharePointUrl "https://myserver/teams/marketing"
 ```
 
 This example changes the SharePoint URL for the MarketingEvents 2013 site mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-SiteMailbox -Identity "MarketingEvents 2013" -SharePointUrl "https://myserver/teams/marketing"
-```
-
-This example changes the SharePoint URL for the MarketingEvents 2013 site mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SiteMailbox -Identity "MarketingEvents 2013" -SharePointUrl "https://myserver/teams/marketing"
-```
-
-This example changes the SharePoint URL for the MarketingEvents 2013 site mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-SiteMailbox -Identity SMO_ContosoSales -RemoveDuplicateMessages $true
-```
-
-This example disables the duplication of email messages in the site mailbox SMO\_ContosoSales.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-SiteMailbox -Identity SMO_ContosoSales -RemoveDuplicateMessages $true
-```
-
-This example disables the duplication of email messages in the site mailbox SMO\_ContosoSales.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-SiteMailbox -Identity SMO_ContosoSales -RemoveDuplicateMessages $true
 ```
@@ -175,17 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force parameter specifies that the command should run immediately and bypass confirmation prompts.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -334,4 +290,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7e4482c0-8ff6-40ab-a315-c460a6f7eeec.aspx)
-

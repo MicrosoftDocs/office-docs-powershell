@@ -26,53 +26,27 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-HostedConnectionFilterPolicy "Contoso Connection Filter Policy" -IPAllowList 192.168.1.10,192.168.1.23 -IPBlockList 10.10.10.0/25,172.17.17.0/24
 ```
 
 This example modifies the connection filter policy named Contoso Connection Filter Policy with the following settings:
 
+- Messages from 192.168.1.10 and 192.168.1.23 are never identified as spam.
 
-Messages from 192.168.1.10 and 192.168.1.23 are never identified as spam.
+- Messages from 10.10.10.0/25 and 172.17.17.0/24 are always identified as spam.
 
-Messages from 10.10.10.0/25 and 172.17.17.0/24 are always identified as spam.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-HostedConnectionFilterPolicy "Contoso Connection Filter Policy" -IPAllowList 192.168.1.10,192.168.1.23 -IPBlockList 10.10.10.0/25,172.17.17.0/24
-```
-
-This example modifies the connection filter policy named Contoso Connection Filter Policy with the following settings:
-
-
-Messages from 192.168.1.10 and 192.168.1.23 are never identified as spam.
-
-Messages from 10.10.10.0/25 and 172.17.17.0/24 are always identified as spam.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-HostedConnectionFilterPolicy "Contoso Connection Filter Policy" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
 ```
 
 This example modifies the connection filter policy named Contoso Connection Filter Policy with the following settings:
 
+- The following IP addresses are added to the existing values in the IP allow list: 192.168.2.10, 192.169.3.0/24 and 192.168.4.1-192.168.4.5.
 
-The following IP addresses are added to the existing values in the IP allow list: 192.168.2.10, 192.169.3.0/24, and 192.168.4.1-192.168.4.5.
-
-The IP address 192.168.1.10 is removed from the existing values in the IP allow list.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Set-HostedConnectionFilterPolicy "Contoso Connection Filter Policy" -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
-```
-
-This example modifies the connection filter policy named Contoso Connection Filter Policy with the following settings:
-
-
-The following IP addresses are added to the existing values in the IP allow list: 192.168.2.10, 192.169.3.0/24, and 192.168.4.1-192.168.4.5.
-
-The IP address 192.168.1.10 is removed from the existing values in the IP allow list.
+- The IP address 192.168.1.10 is removed from the existing values in the IP allow list.
 
 ## PARAMETERS
 
@@ -262,4 +236,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ccb5731b-3fca-4d69-a91f-5049ea963fac.aspx)
-

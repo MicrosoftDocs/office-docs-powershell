@@ -21,51 +21,20 @@ New-DlpPolicy [[-Name] <String>] [-Confirm] [-Description <String>] [-DomainCont
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-DlpPolicy -Name "Contoso PII" -Template "U.S. Personally Identifiable Information (PII) Data"
 ```
 
 This example creates a new DLP policy named Contoso PII with the following values:
 
+- The DLP policy is enabled and set to audit only.
 
-The DLP policy is enabled and set to audit only.
-
-The DLP policy is based on the existing "U.S. Personally Identifiable Information (PII) Data" DLP policy template.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-DlpPolicy -Name "Contoso PII" -Template "U.S. Personally Identifiable Information (PII) Data"
-```
-
-This example creates a new DLP policy named Contoso PII with the following values:
-
-
-The DLP policy is enabled and set to audit only.
-
-The DLP policy is based on the existing "U.S. Personally Identifiable Information (PII) Data" DLP policy template.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-DlpPolicy -Name "Contoso PII" -Template "U.S. Personally Identifiable Information (PII) Data"
-```
-
-This example creates a new DLP policy named Contoso PII with the following values:
-
-
-The DLP policy is enabled and set to audit only.
-
-The DLP policy is based on the existing "U.S. Personally Identifiable Information (PII) Data" DLP policy template.
+- The DLP policy is based on the existing "U.S. Personally Identifiable Information (PII) Data" DLP policy template.
 
 ## PARAMETERS
 
@@ -214,21 +183,9 @@ Accept wildcard characters: False
 ```
 
 ### -TemplateData
-!!! Exchange Server 2013
-
-The TemplateData parameter specifies an external DLP policy template file from which you can create a new DLP policy. You can't use the TemplateData and Template parameters in the same command.
-
-For more information about the syntax required to use this parameter, see Syntax.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The TemplateData parameter specifies an external DLP policy template file from which you can create a new DLP policy. You can't use the TemplateData and Template parameters in the same command.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -277,4 +234,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6fac5dca-be09-4296-aebf-b12bb55ce4d3.aspx)
-

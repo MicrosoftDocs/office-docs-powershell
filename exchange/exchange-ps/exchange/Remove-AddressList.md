@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-AddressList
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-AddressList cmdlet to remove an existing address list.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-AddressList cmdlet to remove an existing address list.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-AddressList cmdlet to remove existing address lists.
@@ -34,30 +20,6 @@ Remove-AddressList [-Identity] <AddressListIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-AddressList cmdlet can be used in conjunction with the Get-AddressList cmdlet as follows:
-
-- Use the Get-AddressList cmdlet to get address list information, and then pipe the output to the Format-List cmdlet to get the GUID, distinguished name (DN), or path and name of an existing address list.
-
-- Use the Get-AddressList cmdlet to get a specific existing address list, and then pipe the output directly to the Remove-AddressList cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address lists" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-AddressList cmdlet can be used in conjunction with the Get-AddressList cmdlet as follows:
-
-- Use the Get-AddressList cmdlet to get address list information, and then pipe the output to the Format-List cmdlet to get the GUID, distinguished name (DN), or path and name of an existing address list.
-
-- Use the Get-AddressList cmdlet to get a specific existing address list, and then pipe the output directly to the Remove-AddressList cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address lists" entry in the Email address and address book permissions topic.
-
-By default in Exchange Online, the Address List role isn't assigned to any role groups. To use any cmdlets that require the Address List role, you need to add the role to a role group. For more information, see the "Add a role to a role group" section in the topic, Manage role groups.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-AddressList cmdlet can be used in conjunction with the Get-AddressList cmdlet as follows:
 
 - Use the Get-AddressList cmdlet to get address list information, and then pipe the output to the Format-List cmdlet to get the GUID, distinguished name (DN), or path and name of an existing address list.
@@ -70,28 +32,7 @@ By default in Exchange Online, the Address List role isn't assigned to any role 
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-AddressList -Identity "Address_List_1" -Recursive
-```
-
-This example removes the address list Address\_List\_1 and all of its child address lists.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AddressList -Identity "Address_List_1" -Recursive
-```
-
-This example removes the address list Address\_List\_1 and all of its child address lists.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-AddressList -Identity "AddressList1" -Recursive
-```
-
-This example removes the address list named AddressList1 and all of its child address lists.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-AddressList -Identity "AddressList1" -Recursive
 ```
@@ -101,24 +42,6 @@ This example removes the address list named AddressList1 and all of its child ad
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID, DN, or address list name that represents a specific address list. You can also include the path by using the format Path\\AddressListName.
-
-You can omit the parameter label so that only the address list name or GUID is supplied.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the GUID, distinguished name (DN), or address list name that represents a specific address list. You can also include the path by using the format Path\\AddressListName.
-
-You can omit the parameter label so that only the address list name or GUID is supplied.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the address list that you want to remove. You can use any value that uniquely identifies the address list. For example:
 
 - Name
@@ -132,8 +55,6 @@ The Identity parameter specifies the address list that you want to remove. You c
 - Path: (\\\<Name\>) or [\<Container\>\\\<Name\>)
 
 If the address list has child address lists that you also want to remove, you need to use the Recursive switch.
-
-
 
 ```yaml
 Type: AddressListIdParameter
@@ -169,19 +90,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -197,19 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recursive
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Recursive switch specifies whether the command removes all child address lists of the address list specified by the Identity parameter. If you don't specify this parameter and the address list to remove has child address lists, the command fails.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Recursive switch specifies whether to remove all child address lists. You don't need to specify a value for this switch.
 
 If you don't use this switch, and the address list has child address lists, the command will fail.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -258,4 +159,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b628738c-ebbf-4116-ba85-b1dbd273df40.aspx)
-

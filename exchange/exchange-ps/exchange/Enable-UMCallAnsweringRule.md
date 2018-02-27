@@ -20,16 +20,6 @@ Enable-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-Confir
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Enable-UMCallAnsweringRule cmdlet enables the call answering rule by modifying its status variable. When the call answering rule is created, it's enabled. This cmdlet allows you to enable a previously disabled call answering rule. Enabling a call answering rule enables the cmdlet to retrieve the call answering rule including the conditions and actions for a specified call answering rule.
-
-After this task is completed, the cmdlet sets the parameters and values specified. When you enable a call answering rule, the call answering rule is processed when an incoming call is received.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call answering rules" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Enable-UMCallAnsweringRule cmdlet enables the call answering rule by modifying its status variable. When the call answering rule is created, it's enabled. This cmdlet allows you to enable a previously disabled call answering rule. Enabling a call answering rule enables the cmdlet to retrieve the call answering rule including the conditions and actions for a specified call answering rule.
 
 After this task is completed, the cmdlet sets the parameters and values specified. When you enable a call answering rule, the call answering rule is processed when an incoming call is received.
@@ -38,63 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
 ```
 
 This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
 ```
 
 The example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be enabled and if there are any errors within the command.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
-```
-
-The example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be enabled and if there are any errors within the command.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -WhatIf
-```
-
-The example uses the WhatIf switch to test whether the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith is ready to be enabled and if there are any errors within the command.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
-```
-
-This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith and prompts the logged-on user to confirm that the call answering rule is to be enabled.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
-```
-
-This example enables the call answering rule MyUMCallAnsweringRule in the mailbox for Tony Smith and prompts the logged-on user to confirm that the call answering rule is to be enabled.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Enable-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith -Confirm
 ```
@@ -207,4 +155,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/23b31348-7055-4328-887e-46e7792b0e25.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-PublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-PublicFolder cmdlet to create a public folder with the specified name.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-PublicFolder cmdlet to create a public folder with the specified name.
@@ -22,96 +16,37 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-PublicFolder [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-EformsLocaleId <CultureInfo>]
- [-Organization <OrganizationIdParameter>] [-Path <PublicFolderIdParameter>] [-Server <ServerIdParameter>]
+ [-Path <PublicFolderIdParameter>] [-Server <ServerIdParameter>]
  [-WhatIf] [-Mailbox <MailboxIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-PublicFolder -Name Marketing
-```
-
-This example creates the public folder Marketing in the root of the public folder tree on the local server of the closest Mailbox server with a public folder database.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-PublicFolder -Name Marketing
 ```
 
 This example creates the public folder Marketing in the root of the public folder.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-PublicFolder -Name Marketing
-```
-
-This example creates the public folder Marketing in the root of the public folder.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-PublicFolder -Name Marketing
-```
-
-This example creates the public folder Marketing in the root of the public folder.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-PublicFolder -Name FY2010 -Path \Legal\Cases -Server MBXSVR01
 ```
 
-This example creates the public folder FY2010 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2010 on the server MBXSVR01.
+In Exchange Server 2010, this example creates the public folder FY2010 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2010 on the server MBXSVR01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 New-PublicFolder -Name FY2013 -Path \Legal\Cases
 ```
 
 This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-PublicFolder -Name FY2013 -Path \Legal\Cases
-```
-
-This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-PublicFolder -Name FY2013 -Path \Legal\Cases
-```
-
-This example creates the public folder FY2013 under the existing folders \\Legal\\Cases. The path to the new folder is \\Legal\\Cases\\FY2013.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-PublicFolder -Name Support -Mailbox North_America
-```
-
-This example creates the public folder Support in the North\_America hierarchy public folder mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-PublicFolder -Name Support -Mailbox North_America
-```
-
-This example creates the public folder Support in the North\_America hierarchy public folder mailbox.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 4
 ```
 New-PublicFolder -Name Support -Mailbox North_America
 ```
@@ -121,17 +56,7 @@ This example creates the public folder Support in the North\_America hierarchy p
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameterspecifies the name for the public folder.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Name parameter specifies the name for the public folder.
-
-
 
 ```yaml
 Type: String
@@ -167,19 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -195,17 +110,7 @@ Accept wildcard characters: False
 ```
 
 ### -EformsLocaleId
-!!! Exchange Server 2010
-
-The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkid=184859).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The EformsLocaleId parameter specifies the locale-specific version of the e-forms library. The valid input for the EformsLocaleId parameter is the string names listed in the Culture Name column in the Microsoft .NET Class Library class reference available at CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
 
 ```yaml
 Type: CultureInfo
@@ -220,34 +125,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Path
-!!! Exchange Server 2010
-
-The Path parameterspecifies the location of the folder in the folder hierarchy, for example, \\Legal\\Cases.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Path parameter specifies the location of the folder in the folder hierarchy, for example, \\Legal\\Cases.
-
-
 
 ```yaml
 Type: PublicFolderIdParameter
@@ -344,4 +223,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/18b837bf-9ef7-4edf-8728-7f6bd346e75d.aspx)
-

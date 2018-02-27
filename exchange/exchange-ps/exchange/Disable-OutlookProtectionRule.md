@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-OutlookProtectionRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-OutlookProtectionRule cmdlet to disable an existing Microsoft Outlook protection rule.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-OutlookProtectionRule cmdlet to disable an existing Microsoft Outlook protection rule.
@@ -26,24 +20,6 @@ Disable-OutlookProtectionRule [-Identity] <RuleIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook protection rules are used to automatically rights-protect e-mail messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules.
-
-For more information, see Understanding Outlook Protection Rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Rights protection" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook protection rules are used to automatically Information Rights Management (IRM)-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules.
-
-For more information, see Outlook protection rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Information Rights Management (IRM) configuration" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook protection rules are used to automatically Information Rights Management (IRM)-protect email messages using a Rights Management Services (RMS) template before the message is sent. However, Outlook protection rules don't inspect message content. To rights-protect messages based on message content, use transport protection rules.
 
 For more information, see Outlook protection rules.
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example disables the Outlook protection rule Project Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example disables the Outlook protection rule Project Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-OutlookProtectionRule -Identity "Project Contoso"
-```
-
-This example disables the Outlook protection rule Project Contoso.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Disable-OutlookProtectionRule -Identity "Project Contoso"
 ```
@@ -119,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f6be04e8-bd1c-41ee-b410-e832de66048f.aspx)
-

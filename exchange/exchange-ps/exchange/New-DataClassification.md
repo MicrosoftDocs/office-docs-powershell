@@ -21,35 +21,13 @@ New-DataClassification [-Name] <String> -Description <String> -Fingerprints <Mul
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-$Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte; $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"; $Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte; $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"; New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
-```
-
-This example creates a new data classification rule named "Contoso Employee-Customer Confidential" that uses the document fingerprints of the files C:\\My Documents\\Contoso Employee Template.docx and D:\\Data\\Contoso Customer Template.docx.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-$Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte; $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"; $Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte; $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"; New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
-```
-
-This example creates a new data classification rule named "Contoso Employee-Customer Confidential" that uses the document fingerprints of the files C:\\My Documents\\Contoso Employee Template.docx and D:\\Data\\Contoso Customer Template.docx.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 $Employee_Template = Get-Content "C:\My Documents\Contoso Employee Template.docx" -Encoding byte; $Employee_Fingerprint = New-Fingerprint -FileData $Employee_Template -Description "Contoso Employee Template"; $Customer_Template = Get-Content "D:\Data\Contoso Customer Template.docx" -Encoding byte; $Customer_Fingerprint = New-Fingerprint -FileData $Customer_Template -Description "Contoso Customer Template"; New-DataClassification -Name "Contoso Employee-Customer Confidential" -Fingerprints $Employee_Fingerprint,$Customer_Fingerprint -Description "Message contains Contoso employee or customer information."
 ```
@@ -91,21 +69,9 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2013
-
-The Name parameter specifies a name for the data classification rule. The value must be less than 256 characters.
-
-The value of this parameter is used in the Policy Tip that's presented to users in Outlook Web App.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Name parameter specifies a name for the data classification rule. The value must be less than 256 characters.
 
 The value of this parameter is used in the Policy Tip that's presented to users in Outlook on the web.
-
-
 
 ```yaml
 Type: String
@@ -177,23 +143,11 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-!!! Exchange Server 2013
-
-The Locale parameter specifies the language that's associated with the data classification rule. Valid input for this parameter is a Microsoft .NET FrameworkCultureInfo class culture code value. For example, en for English or fr for French. If you don't specify a value for the Locale parameter, the default language of your Exchange organization is used when you create the data classification rule.
-
-You can add additional language translations to the data classification rule by using the Set-DataClassification cmdlet.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Locale parameter specifies the language that's associated with the data classification rule.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
 
 You can add additional language translations to the data classification rule by using the Set-DataClassification cmdlet.
-
-
 
 ```yaml
 Type: CultureInfo
@@ -242,4 +196,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3c1e90e7-cf49-4a8b-a0c4-c189ab8ab166.aspx)
-

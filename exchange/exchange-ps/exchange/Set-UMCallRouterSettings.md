@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-UMCallRouterSettings
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-UMCallRouterSettings cmdlet to set specific properties on a Client Access server running the Microsoft Exchange Unified Messaging Call Router service. This cmdlet can be used to set individual parameters for a specified Client Access server.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-UMCallRouterSettings cmdlet to modify the configuration of the Microsoft Exchange Unified Messaging Call Router service. This service exists on Exchange servers that have the Client Access server role installed, and is used by telephony clients to connect to Exchange.
@@ -32,60 +22,26 @@ Set-UMCallRouterSettings [[-Server] <ServerIdParameter>] [-Confirm] [-DialPlans 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Set-UMCallRouterSettings cmdlet sets specific properties on a Client Access server running the Microsoft Exchange Unified Messaging Call Router service. This cmdlet can be used to set individual Unified Messaging parameters for a specified Client Access server.
-
-After this task is completed, the cmdlet sets the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access Server (UM call router service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-UMCallRouterSettings -DialPlans MySIPDialPlan -IPAddressFamily Any -Server MyUMCallRouter.northwindtraders.com -UMStartupMode TLS
-```
-
-This example creates the following configuration on the Client Access server MyUMCallRouter:
-
-
-Adds the Client Access server to the UM SIP dial plan MySIPDialPlan.
-
-Enables the Microsoft Exchange Unified Messaging Call Router service on the Client Access server to accept both IPv4 and IPv6 data packets.
-
-Sets the maximum number of incoming voice, fax, auto attendant, and Outlook Voice Access calls to 150.
-
-Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-UMCallRouterSettings -DialPlans MySIPDialPlan -IPAddressFamily Any -Server MyUMCallRouter.northwindtraders.com -UMStartupMode TLS
 ```
 
 This example creates the following configuration on the Exchange server named MyUMCallRouter:
 
+- Adds the server to the UM SIP dial plan MySIPDialPlan.
 
-Adds the server to the UM SIP dial plan MySIPDialPlan.
+- Enables the Microsoft Exchange Unified Messaging Call Router service to accept both IPv4 and IPv6 data packets.
 
-Enables the Microsoft Exchange Unified Messaging Call Router service to accept both IPv4 and IPv6 data packets.
+- Sets the maximum number of incoming voice, fax, auto attendant and Outlook Voice Access calls to 150.
 
-Sets the maximum number of incoming voice, fax, auto attendant, and Outlook Voice Access calls to 150.
+- Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
 
-Enables the Microsoft Exchange Unified Messaging Call Router service to start up using TLS mode.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-UMCallRouterSettings -DialPlans $null -Server UMCallRouter001.contoso.com
-```
-
-This example removes the Client Access server UMCallRouter001 from all UM SIP dial plans.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-UMCallRouterSettings -DialPlans $null -Server UMCallRouter001.contoso.com
 ```
@@ -115,25 +71,11 @@ Accept wildcard characters: False
 ```
 
 ### -DialPlans
-!!! Exchange Server 2013
-
-The DialPlans parameter specifies the dial plan used by the Microsoft Exchange Unified Messaging Call Router service on a Client Access server. The Client Access server only needs to be associated with a UM dial plan if Microsoft Office Communications Server 2007 R2, Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015 is used in your organization. To remove a Client Access server from a dial plan, use $null. The default is no dial plans assigned.
-
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
-
-!!! Exchange Server 2016
-
 The DialPlans parameter specifies the dial plan used by the Microsoft Exchange Unified Messaging Call Router service. The Exchange server only needs to be associated with a UM dial plan if Lync Server 2010, Lync Server 2013, or Skype for Business Server 2015 is used in your organization. To remove an Exchange server from a dial plan, use $null. The default is no dial plans assigned.
 
 To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -213,14 +155,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the name of the Client Access server that runs the Microsoft Exchange Unified Messaging Call Router service that will be changed. This parameter specifies the directory object ID for the Client Access server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -232,8 +166,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -249,17 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipTcpListeningPort
-!!! Exchange Server 2013
-
-The SipTcpListeningPort parameter specifies the TCP port used by the Client Access server running the Microsoft Exchange Unified Messaging Call Router service to receive incoming calls. This TCP port is used by a Client Access server when a UM dial plan isn't configured to use SIP Secured or Secured mode. The default is port 5060.
-
-
-
-!!! Exchange Server 2016
-
 The SipTcpListeningPort parameter specifies the TCP port that's used by the Microsoft Exchange Unified Messaging Call Router service to receive incoming calls. This TCP port is used when a UM dial plan isn't configured to use SIP Secured or Secured mode. The default is port 5060.
-
-
 
 ```yaml
 Type: Int32
@@ -275,17 +197,7 @@ Accept wildcard characters: False
 ```
 
 ### -SipTlsListeningPort
-!!! Exchange Server 2013
-
-The SipTlsListeningPort parameter specifies the Transport Layer Security (TLS) port used by a Client Access server running the Microsoft Exchange Unified Messaging Call Router service to receive incoming calls. This TLS port is used by a Client Access server when a UM dial plan is configured to use SIP Secured or Secured mode. The default is port 5061.
-
-
-
-!!! Exchange Server 2016
-
 The SipTlsListeningPort parameter specifies the Transport Layer Security (TLS) port that's used by the Microsoft Exchange Unified Messaging Call Router service to receive incoming calls. This TLS port is used when a UM dial plan is configured to use SIP Secured or Secured mode. The default is port 5061.
-
-
 
 ```yaml
 Type: Int32
@@ -301,17 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -UMStartupMode
-!!! Exchange Server 2013
-
-The UMStartupMode parameter specifies whether the Client Access server running the Microsoft Exchange Unified Messaging Call Router service starts up in TCP, TLS, or Dual mode. If the Client Access server isn't associated with any UM dial plans or is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Client Access server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging Call Router service must be restarted.
-
-
-
-!!! Exchange Server 2016
-
 The UMStartupMode parameter specifies whether the Microsoft Exchange Unified Messaging Call Router service starts up in TCP, TLS, or Dual mode. If the Exchange server isn't associated with any UM dial plans or is being added to UM dial plans that have different security settings, you should choose Dual mode. In Dual mode, the Microsoft server can listen on ports 5060 and 5061 at the same time. If the startup mode is changed, the Microsoft Exchange Unified Messaging Call Router service must be restarted.
-
-
 
 ```yaml
 Type: TCP | TLS | Dual
@@ -360,4 +262,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d7436ccb-4efd-465f-981a-f487e158cbf3.aspx)
-

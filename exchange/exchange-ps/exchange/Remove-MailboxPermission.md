@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-MailboxPermission
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailboxPermission cmdlet to remove permissions from a user's mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MailboxPermission cmdlet to remove permissions from a user's mailbox.
@@ -60,48 +54,13 @@ Remove-MailboxPermission [-Identity] <MailboxIdParameter> [-Confirm] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-MailboxPermission cmdlet allows you to remove permissions from a user's mailbox, for example, removing full access to another user's mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Permissions and delegation" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-MailboxPermission cmdlet allows you to remove permissions from a user's mailbox, for example, removing full access to another user's mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Permissions and delegation" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-MailboxPermission cmdlet allows you to remove permissions from a user's mailbox, for example, removing full access to another user's mailbox.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
-```
-
-This example removes user Test2's full access rights to Test1's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
-```
-
-This example removes user Test2's full access rights to Test1's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
-```
-
-This example removes user Test2's full access rights to Test1's mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-MailboxPermission -Identity Test1 -User Test2 -AccessRights FullAccess -InheritanceType All
 ```
@@ -154,52 +113,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter identifies the mailbox. You can use the following values:
-
-- GUID
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox:
-
-For example:
-
-- Alias
-
-- Distinguished name (DN)
-
-- GUID
-
-- Name
-
-- Display name
-
-- LegacyExchangeDN
-
-- Email address
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox where you are removing permissions. You can use any value that uniquely identifies the mailbox:
 
 For example:
@@ -225,8 +138,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -255,19 +166,9 @@ Accept wildcard characters: False
 ```
 
 ### -Instance
-!!! Exchange Server 2010
-
-The Instance parameter enables you to pass an entire object to the command to be processed. It's mainly used in scripts where an entire object must be passed to the command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Instance parameter enables you to pass an entire object to the command to be processed. It's mainly used in scripts where an entire object must be passed to the command.
-
-
 
 ```yaml
 Type: MailboxAcePresentationObject
@@ -283,17 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -User
-!!! Exchange Server 2010
-
-The User parameter specifies the user mailbox that will get permissions added.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The User parameter specifies the user mailbox that will get permissions removed.
-
-
 
 ```yaml
 Type: SecurityPrincipalIdParameter
@@ -358,21 +249,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -388,18 +267,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
@@ -407,8 +274,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -480,8 +345,6 @@ This parameter is available only in the cloud-based service.
 
 The ResetDefault switch resets the default security descriptor of the mailbox. Permissions on the mailbox are reset so only the mailbox owner has FullAccess permission to the mailbox. The following types of permissions are not affected:
 
-
-
 - Recipient permissions (for example, SendAs, SendOnBehalf and delegates).
 
 - Mailbox folder permissions assigned using the MailboxFolderPermission cmdlets.
@@ -521,4 +384,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/eda30705-6070-413a-88c5-db262fbad8d3.aspx)
-

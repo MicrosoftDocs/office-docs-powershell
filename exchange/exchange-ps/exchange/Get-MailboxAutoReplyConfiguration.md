@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MailboxAutoReplyConfiguration
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve Automatic Replies settings for a specific mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve Automatic Replies settings for a specific mailbox.
@@ -26,40 +20,6 @@ Get-MailboxAutoReplyConfiguration [-Identity] <MailboxIdParameter> [-Credential 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve all the mailboxes enabled for Automatic Replies. When run, the cmdlet returns Automatic Replies settings for the specified mailbox that include the following:
-
-- Mailbox identity value
-
-- Whether Automatic Replies is enabled, scheduled, or disabled for the mailbox
-
-- Start and end date, time during which Automatic Replies will be sent
-
-- Whether external senders receive Automatic Replies (none, known senders, or all)
-
-- Automatic Replies message to be sent to internal and external senders
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User options" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve all the mailboxes enabled for Automatic Replies. When run, the cmdlet returns Automatic Replies settings for the specified mailbox that include the following:
-
-- Mailbox identity value
-
-- Whether Automatic Replies is enabled, scheduled, or disabled for the mailbox
-
-- Start and end date, time during which Automatic Replies will be sent
-
-- Whether external senders receive Automatic Replies (none, known senders, or all)
-
-- Automatic Replies message to be sent to internal and external senders
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Automatic replies" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can use the Get-MailboxAutoReplyConfiguration cmdlet to retrieve all the mailboxes enabled for Automatic Replies. When run, the cmdlet returns Automatic Replies settings for the specified mailbox that include the following:
 
 - Mailbox identity value
@@ -76,84 +36,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-Mailbox | Get-MailboxAutoReplyConfiguration
 ```
 
 This example returns Automatic Replies settings for all mailboxes in the Exchange organization.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration
-```
-
-This example returns Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration
-```
-
-This example returns Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration
-```
-
-This example returns Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxAutoReplyConfiguration -Identity 'contoso.com/Users/Tony Smith'
 ```
 
 This example retrieves Automatic Replies settings for Tony's mailbox at contoso.com.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxAutoReplyConfiguration -Identity 'contoso.com/Users/Tony Smith'
-```
-
-This example retrieves Automatic Replies settings for Tony's mailbox at contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxAutoReplyConfiguration -Identity 'contoso.com/Users/Tony Smith'
-```
-
-This example retrieves Automatic Replies settings for Tony's mailbox at contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxAutoReplyConfiguration -Identity 'contoso.com/Users/Tony Smith'
-```
-
-This example retrieves Automatic Replies settings for Tony's mailbox at contoso.com.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration -ResultSize unlimited
-```
-
-This example retrieves all Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration -ResultSize unlimited
-```
-
-This example retrieves all Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-Mailbox | Get-MailboxAutoReplyConfiguration -ResultSize unlimited
-```
-
-This example retrieves all Automatic Replies settings for all mailboxes in the Exchange organization.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-Mailbox | Get-MailboxAutoReplyConfiguration -ResultSize unlimited
 ```
@@ -195,23 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2010
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-
-
-!!! Exchange Server 2013
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -227,19 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -255,7 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest, and if you don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
+The ReadFromDomainController parameter specifies that the user information is read from a domain controller in the user's domain. If you set the recipient scope to include all recipients in the forest and if you don't use this parameter, it's possible that the user information is read from a global catalog with outdated information. If you use this parameter, multiple reads might be necessary to get the information.
 
 By default, the recipient scope is set to the domain that hosts your servers that run Microsoft Exchange.
 
@@ -306,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0963eab0-8bc8-4f06-b6f7-7dd88b1559f5.aspx)
-

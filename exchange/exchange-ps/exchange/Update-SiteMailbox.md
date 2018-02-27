@@ -21,56 +21,20 @@ Update-SiteMailbox [-Identity] <RecipientIdParameter> [-BypassOwnerCheck] [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-If you are running this command against a site mailbox in which you aren't the owner, you need to use the BypassOwnerCheck parameter to run this cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you are running this command against a site mailbox in which you aren't the owner, you need to use the BypassOwnerCheck parameter to run this cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Update-SiteMailbox -BypassOwnerCheck -Identity "MarketingEvents 2013"
 ```
 
 This example updates the site mailbox MarketingEvents 2013. If you don't specify the target, this triggers both document and membership synchronization. Because the BypassOwnerCheck parameter is used, it isn't necessary to be an owner or member of the site mailbox to run this cmdlet.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Update-SiteMailbox -BypassOwnerCheck -Identity "MarketingEvents 2013"
-```
-
-This example updates the site mailbox MarketingEvents 2013. If you don't specify the target, this triggers both document and membership synchronization. Because the BypassOwnerCheck parameter is used, it isn't necessary to be an owner or member of the site mailbox to run this cmdlet.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Update-SiteMailbox -BypassOwnerCheck -Identity "MarketingEvents 2013"
-```
-
-This example updates the site mailbox MarketingEvents 2013. If you don't specify the target, this triggers both document and membership synchronization. Because the BypassOwnerCheck parameter is used, it isn't necessary to be an owner or member of the site mailbox to run this cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Update-SiteMailbox -BypassOwnerCheck -Identity WinterHoliday@tailspintoys.com -FullSync
-```
-
-This example updates the site mailbox WinterHoliday@tailspintoys.com and performs a full synchronization. By default, the update only occurs for synchronization from the last synchronization. This is only applicable to document synchronization
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Update-SiteMailbox -BypassOwnerCheck -Identity WinterHoliday@tailspintoys.com -FullSync
-```
-
-This example updates the site mailbox WinterHoliday@tailspintoys.com and performs a full synchronization. By default, the update only occurs for synchronization from the last synchronization. This is only applicable to document synchronization
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Update-SiteMailbox -BypassOwnerCheck -Identity WinterHoliday@tailspintoys.com -FullSync
 ```
@@ -156,17 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-!!! Exchange Server 2013
-
-The Organization parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -257,4 +211,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b0b73d6f-be39-4c36-8eeb-7774d08c19cb.aspx)
-

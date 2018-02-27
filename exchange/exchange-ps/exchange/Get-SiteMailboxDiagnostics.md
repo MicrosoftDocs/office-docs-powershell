@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-SiteMailboxDiagnostics
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-SiteMailboxDiagnosticscmdlet to view important event-related data for each site mailbox. This information can be used to troubleshoot site mailbox issues.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-SiteMailboxDiagnostics cmdlet to view important event-related data for each site mailbox. This information can be used to troubleshoot site mailbox issues.
@@ -30,56 +20,20 @@ Get-SiteMailboxDiagnostics [-Identity] <RecipientIdParameter> [-BypassOwnerCheck
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-If you aren't a member or owner of the site mailbox that you want to view the diagnostics information for, you must use the BypassOwnerCheck parameter when running this cmdlet. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailboxes" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you aren't a member or owner of the site mailbox that you want to view the diagnostics information for, you must use the BypassOwnerCheck parameter when running this cmdlet. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity "Marketing Events 2013"
-```
-
-This example returns the event information for the site mailbox by using its display name Marketing Events 2013.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity "Marketing Events 2015"
 ```
 
 This example returns the event information for the site mailbox by using its display name Marketing Events 2015.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity "Marketing Events 2015"
-```
-
-This example returns the event information for the site mailbox by using its display name Marketing Events 2015.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity events2013@contoso.com -SendMeEmail
-```
-
-This example returns the event information for the Marketing Events 2013 site mailbox and sends an email to the primary SMTP address of the user running this command.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity events2015@contoso.com -SendMeEmail
-```
-
-This example returns the event information for the Marketing Events 2015 site mailbox and sends an email to the primary SMTP address of the user running this command.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-SiteMailboxDiagnostics -BypassOwnerCheck -Identity events2015@contoso.com -SendMeEmail
 ```
@@ -121,19 +75,9 @@ Accept wildcard characters: False
 ```
 
 ### -BypassOwnerCheck
-!!! Exchange Server 2013
-
-The BypassOwnerCheck switch is used by administrators who aren't members or owners of the site mailbox. If you aren't a member or owner of the site mailbox and you run this cmdlet without using the BypassOwnerCheck parameter, the command fails with an "object not found" error.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The BypassOwnerCheck parameter is used when the account that's running the command isn't a member or owner of the site mailbox. You don't need to specify a value with this switch.
 
-If you run the command without this parameter, and you aren't a member or owner of the site mailbox, then the command will fail.
-
-
+If you run the command without this parameter and you aren't a member or owner of the site mailbox, then the command will fail.
 
 ```yaml
 Type: SwitchParameter
@@ -169,17 +113,7 @@ Accept wildcard characters: False
 ```
 
 ### -SendMeEmail
-!!! Exchange Server 2013
-
-The SendMeEmail parameter specifies that the diagnostic information is sent to the primary SMTP email address for whichever user is logged into Remote PowerShell.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SendMeEmailswitch specifies that the diagnostic information is sent to the primary SMTP email address of the user account that's running the command. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -228,4 +162,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4d6c7fb2-8b5c-44c8-add2-f862240b9da0.aspx)
-

@@ -6,18 +6,6 @@ schema: 2.0.0
 # Set-IPAllowListProvidersConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-IPAllowListProvidersConfig cmdlet to modify the configuration information for IP Allow list providers on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Set-IPAllowListProvidersConfig cmdlet to modify the settings that that affect all IP Allow list providers that are configured on an Edge Transport server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Set-IPAllowListProvidersConfig cmdlet to modify the settings that that affect all IP Allow list providers that are configured on an Edge Transport server.
@@ -30,41 +18,13 @@ Set-IPAllowListProvidersConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-IPAllowListProvidersConfig cmdlet sets the configuration used by the Connection Filter agent. The Connection Filter agent acts on the IP address of the remote server that initiates the SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, IP Allow list providers are used by the Connection Filtering agent. The Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, IP Allow list providers are used by the Connection Filtering agent. The Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-IPAllowListProvidersConfig -InternalMailEnabled $true
-```
-
-This example enables the IP Allow list providers on messages that come from internal domains.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-IPAllowListProvidersConfig -InternalMailEnabled $true
-```
-
-This example configures connection filtering to use IP Allow list providers on messages that come from internal connections.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-IPAllowListProvidersConfig -InternalMailEnabled $true
 ```
@@ -112,17 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether the use of IP Allow list providers is enabled on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true. When the Enabled parameter is set to $true, the use of the IP Allow list providers is enabled on the computer on which you're running the command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Enabled parameter specifies whether IP Allow list providers are used for content filtering. Valid input for this parameter is $true or $false. The default value is $true. The default value is $true. By default, IP Allow list providers are used for content filtering.
-
-
 
 ```yaml
 Type: $true | $false
@@ -138,17 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailEnabled
-!!! Exchange Server 2010
-
-The ExternalMailEnabled parameter specifies whether all messages from connections external to the Exchange organization are evaluated using the IP Allow list providers for processing. Valid input for the ExternalMailEnabled parameter is $true or $false. The default setting is $true. When the ExternalMailEnabled parameter is set to $true, all messages from connections external to the Exchange organization are evaluated using the IP Allow list providers for processing.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExternalMailEnabled parameter specifies whether messages from connections outside of the Exchange organization are evaluated by IP Allow list providers. Valid input for this parameter is $true or $false. The default value is $true. By default, messages from external connections are evaluated by IP Allow list providers.
-
-
 
 ```yaml
 Type: $true | $false
@@ -164,17 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalMailEnabled
-!!! Exchange Server 2010
-
-The InternalMailEnabled parameter specifies whether all messages from senders internal to the Exchange organization are evaluated using the IP Allow list providers for processing. Valid input for the InternalMailEnabled parameter is $true or $false. The default setting is $false. When the InternalMailEnabled parameter is set to $true, all messages from senders internal to the Exchange organization are evaluated using IP Allow list providers for processing. Authenticated partner messages aren't considered internal mail.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The InternalMailEnabled parameter specifies whether messages from connections inside the Exchange organization are evaluated by IP Allow list providers. Valid input for this parameter is $true or $false. The default value is $false. By default, messages from internal connections are not evaluated by IP Allow list providers. Authenticated partner messages aren't considered internal mail.
-
-
 
 ```yaml
 Type: $true | $false
@@ -223,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6253cf82-c4d4-4d30-8ea9-eab1a3ddb60a.aspx)
-

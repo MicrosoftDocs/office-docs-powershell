@@ -19,9 +19,9 @@ Unregister-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ```
 
 ## DESCRIPTION
-Disables the hub site feature on a site so that it is no longer a hub. 
+Disables the hub site feature on a site so that it is no longer a hub site.
 
-If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
+If the site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 

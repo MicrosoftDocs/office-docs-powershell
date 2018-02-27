@@ -28,14 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-HostedContentFilterRule "Contoso Recipients" -ExceptIfSentToMemberOf "Contoso Human Resources"
-```
-
-This example adds an exception to the content filter rule named Contoso Recipients for members of the distribution group named Contoso Human Resources.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-HostedContentFilterRule "Contoso Recipients" -ExceptIfSentToMemberOf "Contoso Human Resources"
 ```
@@ -340,4 +333,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ba259260-ffd3-43f3-8ef4-9d8659679d02.aspx)
-

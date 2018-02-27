@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-AdServerSettings
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-AdServerSettings cmdlet to manage the Active Directory Domain Services (AD DS) environment in the current Exchange Management Shell session. The Set-AdServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Microsoft Exchange Server 2007.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-AdServerSettings cmdlet to manage the Active Directory Domain Services (AD DS) environment in the current Exchange Management Shell session. The Set-AdServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Microsoft Exchange Server 2007.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-AdServerSettings cmdlet to manage the Active Directory Domain Services (AD DS) environment in the current Exchange Management Shell session. The Set-AdServerSettings cmdlet replaces the AdminSessionADSettings session variable that was used in Exchange Server 2007.
@@ -48,56 +34,18 @@ Set-AdServerSettings [-ConfigurationDomainController <Fqdn>] [-Confirm] [-Prefer
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Active Directory Domain Services server settings" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Active Directory Domain Services server settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
 ```
 
 This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
-```
-
-This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-AdServerSettings -RecipientViewRoot "contoso.com/Marketing Users"
-```
-
-This example sets the recipient scope to the Marketing Users OU in the contoso.com domain for the current session.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
-```
-
-This example sets the scope of the current session to the entire forest and designates gc1.contoso.com as the preferred global catalog server.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
-```
-
-This example sets the scope of the current session to the entire forest and designates gc1.contoso.com as the preferred global catalog server.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-AdServerSettings -ViewEntireForest $true -PreferredGlobalCatalog gc1.contoso.com
 ```
@@ -107,17 +55,7 @@ This example sets the scope of the current session to the entire forest and desi
 ## PARAMETERS
 
 ### -PreferredServer
-!!! Exchange Server 2010
-
-The PreferredServer parameter specifies the fully qualified domain name (FQDN) of the domain controller to be used for this session.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The PreferredServer parameter specifies the FQDN of the domain controller to be used for this session.
-
-
 
 ```yaml
 Type: Fqdn
@@ -133,17 +71,7 @@ Accept wildcard characters: False
 ```
 
 ### -RunspaceServerSettings
-!!! Exchange Server 2010
-
-The RunspaceServerSettings parameter enables you to pass an entire configuration object to the command to be processed. This parameter is useful in scripts where an entire object must be passed to the command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The RunspaceServerSettings parameter specifies whether to pass an entire configuration object to the command to be processed. This parameter is useful in scripts where an entire object must be passed to the command.
-
-
 
 ```yaml
 Type: RunspaceServerSettingsPresentationObject
@@ -159,17 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationDomainController
-!!! Exchange Server 2010
-
-The ConfigurationDomainController parameter specifies the FQDN of the configuration domain controller to be used for reading Exchange configuration information in this session.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ConfigurationDomainController parameter specifies the fully qualified domain name (FQDN) of the configuration domain controller to be used for reading Exchange configuration information in this session.
-
-
 
 ```yaml
 Type: Fqdn
@@ -304,4 +222,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/741b74a2-65ff-476f-aabf-1af42a3a2d6a.aspx)
-

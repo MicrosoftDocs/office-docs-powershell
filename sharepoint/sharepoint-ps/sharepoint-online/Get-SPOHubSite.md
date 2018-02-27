@@ -23,7 +23,7 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ## DESCRIPTION
 Lists all hub sites found on the SharePoint tenant. If you provide **-Identity** the cmdlet returns detailed information about the specific hub.
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 

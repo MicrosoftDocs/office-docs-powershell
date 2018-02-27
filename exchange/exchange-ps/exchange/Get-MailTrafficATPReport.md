@@ -44,47 +44,26 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2017 -EndDate 06/15/2017
 ```
 
 This example retrieves details for incoming messages between June 13, 2017 and June 15, 2017.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-MailTrafficATPReport -Direction Inbound -StartDate 06/13/2017 -EndDate 06/15/2017
-```
-
-This example retrieves details for incoming messages between June 13, 2017 and June 15, 2017.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
-This example retrieves the statistics for outgoing messages on July 20, 2017, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
+This example retrieves the statistics for outgoing messages on July 20, 2017 and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
-```
-
-This example retrieves the statistics for outgoing messages on July 20, 2017, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
-This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced, and values of MessageCount are correspondingly larger on each row.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-MailTrafficATPReport -StartDate 7/20/2017 -EndDate 7/20/2017 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
-```
-
-This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced, and values of MessageCount are correspondingly larger on each row.
+This example is similar to the previous example, but now the results are summarized. Because EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced and values of MessageCount are correspondingly larger on each row.
 
 ## PARAMETERS
 
@@ -283,7 +262,7 @@ Accept wildcard characters: False
 ```
 
 ### -SummarizeBy
-The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
+The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
 For the Get-MailTrafficATPReport cmdlet, valid values are Action, Direction, Domain, and EventType. You can specify multiple values separated by commas.
 
@@ -318,4 +297,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cc9c2cd8-0629-4aa8-bc60-bbd8b0ae9c57.aspx)
-

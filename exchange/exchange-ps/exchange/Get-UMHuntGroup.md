@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMHuntGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMHuntGroup cmdlet to display the properties and values for an existing Unified Messaging (UM) hunt group.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-UMHuntGroup cmdlet to display the properties and values for an existing Unified Messaging (UM) hunt group.
@@ -22,28 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Get-UMHuntGroup [[-Identity] <UMHuntGroupIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
+ [-UMDialPlan <UMDialPlanIdParameter>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-UMHuntGroup cmdlet retrieves the properties for a single UM hunt group or a list of UM hunt groups. When you're using the Get-UMHuntGroup cmdlet, you can't enter only the name of the UM hunt group. You must also include the name of the UM IP gateway that's associated with the UM hunt group. For example, Get-UMHuntGroupMyUMIPGateway\\MyUMHuntGroup1.
-
-After this task is completed, if the Identity parameter is specified, the properties for the UM hunt group are returned. If neither the Identity nor the UMDialPlan parameter is specified, all UM hunt groups in the Active Directory forest are returned.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMHuntGroup cmdlet retrieves the properties for a single UM hunt group or a list of UM hunt groups. When you're using the Get-UMHuntGroup cmdlet, you can't only enter the name of the UM hunt group. You must also include the name of the UM IP gateway associated with the UM hunt group, for example, Get-UMHuntGroup -Identity MyUMIPGateway\\MyUMHuntGroup1.
-
-After this task is completed, if the Identity parameter is specified, the properties for the UM hunt group are returned. If neither the Identity nor the UMDialPlan parameter is specified, all UM hunt groups in the Active Directory forest are returned.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-UMHuntGroup cmdlet retrieves the properties for a single UM hunt group or a list of UM hunt groups. When you're using the Get-UMHuntGroup cmdlet, you can't only enter the name of the UM hunt group. You must also include the name of the UM IP gateway associated with the UM hunt group, for example, Get-UMHuntGroup -Identity MyUMIPGateway\\MyUMHuntGroup1.
 
 After this task is completed, if the Identity parameter is specified, the properties for the UM hunt group are returned. If neither the Identity nor the UMDialPlan parameter is specified, all UM hunt groups in the Active Directory forest are returned.
@@ -52,84 +28,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-UMHuntGroup
 ```
 
 This example displays all the UM hunt groups in the Active Directory forest.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMHuntGroup
-```
-
-This example displays all the UM hunt groups in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMHuntGroup
-```
-
-This example displays all the UM hunt groups in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UMHuntGroup
-```
-
-This example displays all the UM hunt groups in the Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-UMHuntGroup -identity MyUMIPGateway\MyUMHuntGroup | Format-List
-```
-
-This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
 ```
 
 This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
-```
-
-This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-UMHuntGroup -Identity MyUMIPGateway\MyUMHuntGroup | Format-List
-```
-
-This example displays the details of the UM hunt group MyUMHuntGroup in a formatted list.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-UMHuntGroup -UMDialPlan MyUMDialPlan
-```
-
-This example displays all of the UM hunt groups that are associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-UMHuntGroup -UMDialPlan MyUMDialPlan
-```
-
-This example displays all of the UM hunt groups associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-UMHuntGroup -UMDialPlan MyUMDialPlan
-```
-
-This example displays all of the UM hunt groups associated with the UM dial plan MyUMDialPlan.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-UMHuntGroup -UMDialPlan MyUMDialPlan
 ```
@@ -139,19 +52,9 @@ This example displays all of the UM hunt groups associated with the UM dial plan
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -179,22 +82,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -232,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/89471543-4fae-42b0-a807-fd15bec97307.aspx)
-

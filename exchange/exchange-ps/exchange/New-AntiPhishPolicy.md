@@ -37,14 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-{ Add example code here }}
-```
-
-{{ Add example description here }}
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 { Add example code here }}
 ```
@@ -128,9 +121,9 @@ Accept wildcard characters: False
 ### -EnableMailboxIntelligence
 The EnableMailboxIntelligence parameter specifies whether to enable or disable mailbox intelligence (the first contact graph) in antiphishing protection. Valid values are:
 
-$true: Use mailbox intelligence in antiphishing protection.
+- $true: Use mailbox intelligence in antiphishing protection.
 
-$false: Don't use mailbox intelligence in antiphishing protection. This is the default value.
+- $false: Don't use mailbox intelligence in antiphishing protection. This is the default value.
 
 ```yaml
 Type: $true | $false

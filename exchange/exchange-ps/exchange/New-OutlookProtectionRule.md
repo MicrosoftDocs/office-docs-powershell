@@ -6,14 +6,6 @@ schema: 2.0.0
 # New-OutlookProtectionRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-OutlookProtectionRule cmdlet to create a Microsoft Outlook protection rule.
-
-Outlook protection rules created without a condition apply to all messages.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-OutlookProtectionRule cmdlet to create a Microsoft Outlook protection rule.
@@ -25,31 +17,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ```
 New-OutlookProtectionRule [-Name] <String> -ApplyRightsProtectionTemplate <RmsTemplateIdParameter> [-Confirm]
  [-DomainController <Fqdn>] [-Enabled <$true | $false>] [-Force] [-FromDepartment <String[]>]
- [-Organization <OrganizationIdParameter>] [-Priority <Int32>] [-SentTo <RecipientIdParameter[]>]
+ [-Priority <Int32>] [-SentTo <RecipientIdParameter[]>]
  [-SentToScope <All | InOrganization>] [-UserCanOverride <$true | $false>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook inspects message content and protects messages by applying Active Directory Rights Management Services (AD RMS) rights templates.
-
-For more information, see Understanding Outlook Protection Rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Rights protection" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook inspects message content and protects messages by applying Active Directory Rights Management Services (AD RMS) rights templates.
-
-For more information, see Outlook protection rules.
-
-Outlook protection rules created without a condition apply to all messages.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Information Rights Management (IRM) configuration" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Outlook protection rules are administrator-created rules applied before a user sends a message using Outlook. Outlook inspects message content and protects messages by applying Active Directory Rights Management Services (AD RMS) rights templates.
 
 For more information, see Outlook protection rules.
@@ -60,28 +32,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
-```
-
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
-```
-
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
-```
-
-This example applies the AD RMS template Template-Contoso to messages sent to the SMTP address Joe@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-OutlookProtectionRule -Name "Project Contoso" -SentTo Joe@contoso.com -ApplyRightsProtectionTemplate "Template-Contoso"
 ```
@@ -143,19 +94,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -218,22 +159,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Priority
 The Priority parameter specifies whether to set the order of processing of Outlook protection rules. Rules with a lower priority value are executed first.
 
@@ -269,25 +194,11 @@ Accept wildcard characters: False
 ```
 
 ### -SentToScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SentToScope parameter specifies the message scope as a condition. You can use one of the following values:
-
-- InOrganization This value is for messages sent to recipients within the organization.
-
-- All This value is for messages sent to all recipients.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SentToScope parameter specifies the message scope as a condition. You can use one of the following values:
 
 - InOrganization: This value is for messages sent to recipients within the organization.
 
 - All: This value is for messages sent to all recipients.
-
-
 
 ```yaml
 Type: All | InOrganization
@@ -303,17 +214,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserCanOverride
-!!! Exchange Server 2010
-
-The UserCanOverride parameter specifies whether users can override actions taken by Outlook Protection Rules. By default, users can override actions taken by Outlook protection rules. When set to $false, the UserCanOverride parameter prevents the user from overriding the rule when sending the message.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The UserCanOverride parameter specifies whether users can override actions taken by Outlook protection rules. By default, users can override actions taken by Outlook protection rules. When set to $false, the UserCanOverride parameter prevents the user from overriding the rule when sending the message.
-
-
 
 ```yaml
 Type: $true | $false
@@ -362,4 +263,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fd1ca109-ff80-492a-8112-62b3e9218594.aspx)
-

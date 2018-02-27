@@ -6,16 +6,6 @@ schema: 2.0.0
 # New-SettingOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-SettingsOverride cmdlet to create setting overrides that modify the default system workload management (system WLM) settings.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-SettingsOverride cmdlet to create setting overrides that store Exchange 2016 customizations in Active Directory instead of in text files on the server.
@@ -31,14 +21,6 @@ New-SettingOverride [-Name] <String> -Component <String> -Parameters <MultiValue
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-For more information about system WLM, see Exchange workload management.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange workload throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 You use setting overrides to configure and store Exchange 2016 server customizations in Active Directory. In previous versions of Exchange, these customizations were stored in web.config or exe.config XML application configuration files. The customizations in these files were lost when you installed the next Exchange Cumulative Update (CU) or Service Pack (SP). The customizations that are associated with the \*-SettingOverride cmdlets persist in Active Directory across Exchange 2016 CUs and SPs.
 
 Incorrect usage of the \*-SettingOverride cmdlets can cause serious damage to your Exchange organization. This damage could require you to reinstall Exchange. Only use these cmdlets as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
@@ -47,61 +29,32 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-SettingOverride -Name "Change Processor Discretionary Values" -Component WorkloadManagement -Section Processor -Parameters @("DiscretionaryUnderloaded=60","DiscretionaryOverloaded=75","DiscretionaryCritical=90") -Reason Testing
-```
-
-This example creates a new setting override named Change Processor Discretionary Values. This override changes the Discretionary parameter threshold values for the Processor section of the WorkloadManagement component.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-SettingOverride -Name "IM Override" -Component OwaServer -Section IMSettings -Parameters @("IMServerName=skype01.contoso.com","IMCertificateThumbprint=CDF34A740E9D225A1A06193A9D44B2CE22775308") -Reason "Configure IM"
 ```
 
 This example creates a new setting override named IM Server Integration. This override specifies the Skype for Business Server 2015 pool and a certificate thumbprint that allows instant messaging (IM) integration between Outlook on the web and Skype for Business. Because the Server parameter isn't used, the override applies to all Exchange 2016 servers in the Active Directory forest.
 
-
 For more information, see the topic Configure instant messaging integration with Outlook on the web in Exchange 2016.
 
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-SettingOverride -Name "Change OAB Generation" -Server Mailbox01 -Component TimeBasedAssistants -Section OABGeneratorAssistant -Parameters @("WorkCycle=02:00:00") -Reason "Generate OAB Every 2 hours"
 ```
 
 This example creates a new setting override named Change OAB Generation. This override specifies a 2 hour OAB generation interval. Because the Server parameter is used, the override applies only to the specified server named Mailbox01.
 
-
 For more information, see the topic Change the offline address book generation schedule in Exchange 2016.
 
 ## PARAMETERS
 
 ### -Component
-!!! Exchange Server 2013
-
-The Component parameter specifies the component that the setting override is applied to. Valid values are:
-
-- ActiveSync
-
-- AutoDiscover
-
-- MailboxAssistants
-
-- Search
-
-- WorkloadManagement
-
-
-
-!!! Exchange Server 2016
-
 The Component parameter specifies the component that the setting override is applied to. For example:
 
 - TimeBasedAssistants
 
 - OwaServer
-
-
 
 ```yaml
 Type: String
@@ -133,22 +86,6 @@ Accept wildcard characters: False
 ```
 
 ### -Parameters
-!!! Exchange Server 2013
-
-The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
-
-For example:
-
-- @("Enabled=true")
-
-- @("Classification=InternalMaintenance")
-
-- @("DiscretionaryUnderloaded=60","DiscretionaryOverloaded=75","DiscretionaryCritical=90")
-
-
-
-!!! Exchange Server 2016
-
 The Parameters parameter specifies one or more parameters for the override that are available for the combination of the Component and Section parameter values. This parameter uses the syntax @("\<parameter1\>=\<value1\>","\<parameter2\>=\<value2\>"...).
 
 For example:
@@ -156,8 +93,6 @@ For example:
 - @("Enabled=true")
 
 - @("IMServerName=\<SkypePoolFQDN\>","IMCertificateThumbprint=\<ThumbprintGUID\>")
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -257,19 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-We don't recommend using this parameter. The only useful scenario for this parameter is when you're creating an override for an Exchange build that you haven't fully deployed in your organization.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -285,21 +208,11 @@ Accept wildcard characters: False
 ```
 
 ### -MaxVersion
-!!! Exchange Server 2013
-
-The MaxVersion parameter specifies the latest version of Exchange that this override applies to (up to and including the specified value). Valid input for this parameter is a number in the format 15.0.xxxx.x. The default value is blank ($null), which means the override applies to all versions of Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The MaxVersion parameter specifies the latest version of Exchange 2016 that this override applies to (up to and including the specified value).
 
 Valid input for this parameter is an Exchange 2016 version value in the format 15.1.xxx.xx. You can use values with leading zeros, but the leading zeros are removed from the results. For example, 15.01.0225.042 is stored as 15.1.225.42.
 
 The default value is blank ($null), which means the override applies to all versions of Exchange 2016.
-
-
 
 ```yaml
 Type: Version
@@ -315,21 +228,11 @@ Accept wildcard characters: False
 ```
 
 ### -MinVersion
-!!! Exchange Server 2013
-
-The MinVersion parameter specifies the earliest version of Exchange that this override applies to (up to and including the specified value). Valid input for this parameter is a number in the format 15.0.xxxx.x. The default value is blank ($null), which means the override applies to all versions of Exchange.
-
-
-
-!!! Exchange Server 2016
-
 The MinVersion parameter specifies the earliest version of Exchange 2016 that this override applies to (up to and including the specified value).
 
 Valid input for this parameter is an Exchange 2016 version value in the format 15.1.xxx.xx. You can use values with leading zeros, but the leading zeros are removed from the results. For example, 15.01.0225.042 is stored as 15.1.225.42.
 
 The default value is blank ($null), which means the override applies to all versions of Exchange 2016.
-
-
 
 ```yaml
 Type: Version
@@ -345,19 +248,9 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the name of the Exchange where you want the override applied. You can specify a single Exchange name, or an array of Exchange server name wildcards. For example, if you have 3 exExchangeNoVersion servers named Exchange01, Exchange02, and Exchange03, specify the value Exchange\* to apply the override to all of them.
-
-
-
-!!! Exchange Server 2016
-
-The Server parameter specifies the name of the Exchange 2016 server where you want the override applied. You can specify a single Exchange 2016 server name, or an array of Exchange 2016 server name wildcards. For example, if you have three Exchange 2016 servers named Exchange01, Exchange02, and Exchange03, specify the value Exchange\* to apply the override to all of them.
+The Server parameter specifies the name of the Exchange 2016 server where you want the override applied. You can specify a single Exchange 2016 server name, or an array of Exchange 2016 server name wildcards. For example, if you have three Exchange 2016 servers named Exchange01, Exchange02 and Exchange03, specify the value Exchange\* to apply the override to all of them.
 
 If you don't use this parameter to specify a server, the override applies to all Exchange 2016 servers in the Active Directory forest.
-
-
 
 ```yaml
 Type: String[]
@@ -406,4 +299,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/29be9ee9-d9c7-4aef-b068-8ab44ceecd0a.aspx)
-

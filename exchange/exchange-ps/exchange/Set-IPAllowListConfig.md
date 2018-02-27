@@ -6,18 +6,6 @@ schema: 2.0.0
 # Set-IPAllowListConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-IPAllowListConfig cmdlet to modify the IP Allow list configuration on a computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Set-IPAllowListConfig cmdlet to modify the IP Allow list configuration that's used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Set-IPAllowListConfig cmdlet to modify the IP Allow list configuration that's used by the Connection Filtering agent on Edge Transport servers.
@@ -30,41 +18,13 @@ Set-IPAllowListConfig [-Confirm] [-DomainController <Fqdn>] [-Enabled <$true | $
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The IP Allow list is used by the Connection Filter agent. The Connection Filter agent acts on the IP address of the remote server that initiates the SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-IPAllowListConfig -InternalMailEnabled $true
-```
-
-This example enables the IP Allow list on messages that come from internal domains.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-IPAllowListConfig -InternalMailEnabled $true
-```
-
-This example configures connection filtering to use the IP Allow list on messages that come from internal connections.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-IPAllowListConfig -InternalMailEnabled $true
 ```
@@ -112,17 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether the IP Allow list is used for content filtering on the computer on which you're running the command. Valid input for the Enabled parameter is $true or $false. The default setting is $true. When the Enabled parameter is set to $true, the IP Allow list is used for content filtering on the computer on which you're running this command.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Enabled parameter specifies whether the IP Allow list is used for content filtering. Valid input for this parameter is $true or $false. The default value is $true. By default, the IP Allow list is used for content filtering.
-
-
 
 ```yaml
 Type: $true | $false
@@ -138,17 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalMailEnabled
-!!! Exchange Server 2010
-
-The ExternalMailEnabled parameter specifies whether the IP Allow list is used for content filtering for all messages from connections external to the Exchange organization. Valid input for the ExternalMailEnabled parameter is $true or $false. The default setting is $true. When the ExternalMailEnabled parameter is set to $true, the IP Allow list is used for content filtering for all messages from connections external to the Exchange organization.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ExternalMailEnabled parameter specifies whether messages from connections outside of the Exchange organization are evaluated by the IP Allow list. Valid input for this parameter is $true or $false. The default value is $true. By default, messages from external connections are evaluated by the IP Allow list.
-
-
 
 ```yaml
 Type: $true | $false
@@ -164,17 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -InternalMailEnabled
-!!! Exchange Server 2010
-
-The InternalMailEnabled parameter specifies whether the IP Allow list is used for content filtering for all messages from senders internal to the Exchange organization. Valid input for the InternalMailEnabled parameter is $true or $false. The default setting is $false. When the InternalMailEnabled parameter is set to $true, the IP Allow list is used for content filtering for all messages from senders internal to the Exchange organization. Authenticated partner messages aren't considered internal mail.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The InternalMailEnabled parameter specifies whether messages from connections inside the Exchange organization are evaluated by the IP Allow list. Valid input for this parameter is $true or $false. The default value is $false. By default, messages from internal connections are not evaluated by the IP Allow list. Authenticated partner messages aren't considered internal mail.
-
-
 
 ```yaml
 Type: $true | $false
@@ -223,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bc258d2f-9a5d-4e45-a408-b31ce1260b83.aspx)
-

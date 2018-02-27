@@ -27,16 +27,6 @@ New-PublicFolderMoveRequest -Folders <PublicFolderIdParameter[]> -TargetMailbox 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox will be locked. As a result, public folders already residing in the target public folder mailbox will be inaccessible until the move request is complete. Therefore, before you begin the move request, you should make sure no users are accessing public folder data in that target public folder mailbox.
-
-To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 The New-PublicFolderMoveRequest cmdlet moves public folders from a source public folder mailbox to a target public folder mailbox. While the move request is active, the target public folder mailbox will be locked. As a result, public folders already residing in the target public folder mailbox will be inaccessible until the move request is complete. Therefore, before you begin the move request, you should make sure no users are accessing public folder data in that target public folder mailbox.
 
 To move the public folder mailbox to another mailbox database, use the New-MoveRequest cmdlet. To ensure that this folder is already in the target public folder mailbox, run the Update-PublicFolderMailbox cmdlet against the target public folder mailbox. You can only perform one move request at a time. You can also move public folders by using the Move-PublicFolderBranch.ps1 script.
@@ -45,48 +35,23 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-PublicFolderMoveRequest -Folders \DeveloperReports\CustomerEngagements -TargetMailbox DeveloperReports01
 ```
 
 This example begins the move request for the public folder \\CustomerEngagements from public folder mailbox DeveloperReports to DeveloperReports01.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-PublicFolderMoveRequest -Folders \DeveloperReports\CustomerEngagements -TargetMailbox DeveloperReports01
-```
-
-This example begins the move request for the public folder \\CustomerEngagements from public folder mailbox DeveloperReports to DeveloperReports01.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-PublicFolderMoveRequest -Folders \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability -TargetMailbox DeveloperReports01
 ```
 
 This example begins the move request for public folders under the \\Dev public folder branch to the target public folder mailbox DeveloperReports01.
 
-
 You can also move a branch of public folders by using the Move-PublicFolderBranch.ps1 script.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-PublicFolderMoveRequest -Folders \Dev\CustomerEngagements,\Dev\RequestsforChange,\Dev\Usability -TargetMailbox DeveloperReports01
-```
-
-This example begins the move request for public folders under the \\Dev public folder branch to the target public folder mailbox DeveloperReports01.
-
-
-You can also move a branch of public folders by using the Move-PublicFolderBranch.ps1 script.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-$folders = Get-PublicFolder \ -Recurse -mailbox -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity};New-PublicFolderMoveRequest -TargetMailbox -Folders $folders
-```
-
-This example moves all public folders from the public folder mailbox Pub1 to the public folder mailbox Pub2 .
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 $folders = Get-PublicFolder \ -Recurse -mailbox -ResidentFolders | ?{$_.Name -ne "IPM_SUBTREE"} | %{$_.Identity};New-PublicFolderMoveRequest -TargetMailbox -Folders $folders
 ```
@@ -282,32 +247,6 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2013
-
-The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time.
-
-This parameter accepts the following:
-
-- Lowest
-
-- Lower
-
-- Low
-
-- Normal
-
-- High
-
-- Higher
-
-- Highest
-
-- Emergency
-
-
-
-!!! Exchange Server 2016
-
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
 
 - Lowest
@@ -325,8 +264,6 @@ The Priority parameter specifies the order in which the request should be proces
 - Highest
 
 - Emergency
-
-
 
 ```yaml
 Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
@@ -463,4 +400,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d046e950-ac45-4cfd-99ae-d09b8d725615.aspx)
-

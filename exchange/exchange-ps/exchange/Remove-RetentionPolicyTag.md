@@ -6,16 +6,6 @@ schema: 2.0.0
 # Remove-RetentionPolicyTag
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-RetentionPolicyTag cmdlet to remove a retention tag.
-
-When you use the Remove-RetentionPolicyTag cmdlet to remove a retention tag, it removes the tag definition stored in Active Directory. The next time the Managed Folder Assistant runs, it processes all items that have the removed tag applied and restamps them. Depending on the number of mailboxes and messages, this process may result in significant resource consumption on all Mailbox servers that contain mailboxes with a retention policy that included the removed tag.
-
-For more information about retention tags, see Understanding Retention Tags and Retention Policies.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-RetentionPolicyTag cmdlet to remove a retention tag.
@@ -30,24 +20,6 @@ Remove-RetentionPolicyTag [-Identity] <RetentionPolicyTagIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Retention tags are added to a retention policy, which is applied to a mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Retention tags are added to a retention policy, which is applied to a mailbox.
-
-When you use the Remove-RetentionPolicyTag cmdlet to remove a retention tag, it removes the tag definition stored in Active Directory. The next time the Managed Folder Assistant runs, it processes all items that have the removed tag applied and restamps them. Depending on the number of mailboxes and messages, this process may result in significant resource consumption on all Mailbox servers that contain mailboxes with a retention policy that includes the removed tag.
-
-For more information about retention tags, see Retention tags and retention policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Retention tags are added to a retention policy, which is applied to a mailbox.
 
 When you use the Remove-RetentionPolicyTag cmdlet to remove a retention tag, it removes the tag definition stored in Active Directory. The next time the Managed Folder Assistant runs, it processes all items that have the removed tag applied and restamps them. Depending on the number of mailboxes and messages, this process may result in significant resource consumption on all Mailbox servers that contain mailboxes with a retention policy that includes the removed tag.
@@ -58,28 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-RetentionPolicyTag -Identity "Finance-DeletedItems"
-```
-
-This example removes the retention tag Finance-DeletedItems.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-RetentionPolicyTag -Identity "Finance-DeletedItems"
-```
-
-This example removes the retention tag Finance-DeletedItems.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-RetentionPolicyTag -Identity "Finance-DeletedItems"
-```
-
-This example removes the retention tag Finance-DeletedItems.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-RetentionPolicyTag -Identity "Finance-DeletedItems"
 ```
@@ -125,19 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -186,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0db7cb8a-83aa-4843-b7fb-d562b837294a.aspx)
-
