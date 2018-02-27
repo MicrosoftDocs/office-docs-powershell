@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-AuthRedirect
 
 ## SYNOPSIS
-!!! Exchange Server 2010, Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-AuthRedirect cmdlet to modify existing OAuth redirection objects that are used for legacy Microsoft Exchange 2010 Client Access servers in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-AuthRedirect cmdlet to modify the existing OAuth redirection settings for Microsoft Exchange 2010 Client Access servers in your Microsoft Exchange 2013 organization.
@@ -30,52 +20,18 @@ Set-AuthRedirect [-Identity] <AuthRedirectIdParameter> [-Confirm] [-DomainContro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010, Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "OAuth authentication redirection settings" entry in the Clients and mobile devices permissions topic.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl http://mbx01.contoso.com
 ```
 
 This example sets the TargetURL value to http://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl http://cas01.contoso.com
-```
-
-This example sets the TargetURL value to http://cas01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE -TargetUrl http://mbx01.contoso.com
-```
-
-This example sets the TargetURL value to http://mbx01.contoso.com for the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-AuthRedirect | Set-AuthRedirect -TargetUrl http://mbx01.contoso.com
-```
-
-This example sets the TargetURL value for all existing OAuth redirection objects in your organization. However, if you have only one object in your organization, this example has the same result as the first example.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-AuthRedirect | Set-AuthRedirect -TargetUrl http://cas01.contoso.com
-```
-
-This example is the same as the first example. However, if you have only one authentication redirection object in your organization, you can use Get-AuthRedirect to pipe the Identity value to the Set-AuthRedirect cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-AuthRedirect | Set-AuthRedirect -TargetUrl http://mbx01.contoso.com
 ```
@@ -85,17 +41,7 @@ This example sets the TargetURL value for all existing OAuth redirection objects
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax AuthRedirect-Bearer-\<GUID>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the existing OAuth redirection object that you want to modify. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
-
-
 
 ```yaml
 Type: AuthRedirectIdParameter
@@ -147,17 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetUrl
-!!! Exchange Server 2010, Exchange Server 2016
-
-The TargetUrl parameter specifies the FQDN of the Exchange 2013 or later server that has the Client Access server role installed that'sresponsible for processing the redirected OAuth authentication requests.
-
-
-
-!!! Exchange Server 2013
-
 The TargetUrl parameter specifies the FQDN of the Exchange 2013 Client Access server that will process the Oauth request.
-
-
 
 ```yaml
 Type: String
@@ -206,4 +142,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/73b1fd66-2783-4b8c-a704-9dc8ec810f29.aspx)
-
