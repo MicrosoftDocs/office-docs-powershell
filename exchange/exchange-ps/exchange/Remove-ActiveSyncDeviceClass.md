@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-ActiveSyncDeviceClass
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ActiveSyncDeviceClass cmdlet to clean up the list of mobile phones or devices synchronizing with Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-ActiveSyncDeviceClass cmdlet to clean up the list of mobile devices synchronizing with Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ActiveSyncDeviceClass cmdlet to clean up the list of mobile devices synchronizing with Microsoft Exchange.
@@ -34,46 +20,18 @@ Remove-ActiveSyncDeviceClass [-Identity] <ActiveSyncDeviceClassIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-ActiveSyncDeviceClass cmdlet cleans up the list of devices associated with the Exchange 2010 organization. Mobile phones and devices that are inactive or have been remote wiped are removed from the list, and the Microsoft Exchange ActiveSync process regenerates the list with the current mobile phones and devices that are connecting to Exchange 2010.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-ActiveSyncDeviceClass cmdlet cleans up the list of devices associated with the Exchange 2013 organization. Mobile phones and devices that are inactive or have been remote wiped are removed from the list, and the Microsoft Exchange ActiveSync process regenerates the list with the current mobile phones and devices that are connecting to Exchange 2013.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
-The Remove-ActiveSyncDeviceClass cmdlet cleans up the list of devices that are associated with your organization. Mobile phones and devices that are inactive or have been remote wiped are removed from the list, and the Microsoft Exchange ActiveSync process regenerates the list with the current mobile phones and devices.
+The Remove-ActiveSyncDeviceClass cmdlet cleans up the list of devices that are associated with your organization. Mobile phones and devices that are inactive or have been remote wiped are removed from the list and the Microsoft Exchange ActiveSync process regenerates the list with the current mobile phones and devices.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ActiveSyncDeviceClass | RemoveActiveSyncDeviceClass
 ```
 
-This example retrieves the list of devices connecting to Exchange 2010, and then removes all inactive devices from the list.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ActiveSyncDeviceClass | RemoveActiveSyncDeviceClass
-```
-
-This example retrieves the list of devices connecting to Exchange 2013, and then removes all inactive mobile devices from the list.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ActiveSyncDeviceClass | RemoveActiveSyncDeviceClass
-```
-
-This example retrieves the list of devices connecting to Microsoft Exchange, and then removes all mobile devices from the list.
+This example retrieves the list of devices connecting to Microsoft Exchange and then removes all mobile devices from the list.
 
 ## PARAMETERS
 
@@ -163,4 +121,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ccfd43d1-991c-4936-adb3-fbda792ca707.aspx)
-
