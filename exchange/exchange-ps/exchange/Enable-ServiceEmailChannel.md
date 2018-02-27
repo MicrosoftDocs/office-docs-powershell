@@ -6,12 +6,6 @@ schema: 2.0.0
 # Enable-ServiceEmailChannel
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Enable-ServiceEmailChannel cmdlet to enable the .NET service channel for a specific user.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-ServiceEmailChannel cmdlet to enable the .NET service channel for a specific user.
@@ -26,83 +20,27 @@ Enable-ServiceEmailChannel [-Identity] <MailboxIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The .NET service channel enables Microsoft Exchange to store information that it later forwards to applications or devices that aren't permanently connected to the server running Exchange. This cmdlet creates a receive folder in the user's mailbox under the root folder named Service E-mail.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access service email channel settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The .NET service channel enables Microsoft Exchange to store information that it later forwards to applications or devices that aren't permanently connected to the server running Exchange. This cmdlet creates a receive folder in the user's mailbox under the root folder named Service E-mail.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access service email channel settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The .NET service channel enables Microsoft Exchange to store information that it later forwards to applications or devices that aren't permanently connected to the server running Exchange. This cmdlet creates a receive folder in the user's mailbox under the root folder named Service E-mail.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Enable-ServiceEmailChannel -Identity "fourthcoffee\tony"
 ```
 
 This example enables the .NET service channel for the user Tony Smith.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-ServiceEmailChannel -Identity "fourthcoffee\tony"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-ServiceEmailChannel -Identity "fourthcoffee\tony"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Enable-ServiceEmailChannel -Identity "tony@contoso.com"
 ```
 
 This example enables the .NET service channel for the user Tony Smith.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Enable-ServiceEmailChannel -Identity "tony@contoso.com"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Enable-ServiceEmailChannel -Identity "tony@contoso.com"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Enable-ServiceEmailChannel -Identity "TonySmith"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Enable-ServiceEmailChannel -Identity "TonySmith"
-```
-
-This example enables the .NET service channel for the user Tony Smith.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Enable-ServiceEmailChannel -Identity "TonySmith"
 ```
@@ -197,4 +135,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e1cdca04-2d84-49dd-8a64-e19b8ab52ca3.aspx)
-
