@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-UMDialPlan
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-UMDialplan cmdlet to delete an existing Unified Messaging (UM) dial plan.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-UMDialplan cmdlet to delete an existing Unified Messaging (UM) dial plan.
@@ -26,25 +20,7 @@ Remove-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-Confirm] [-DomainControl
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-UMDialplan cmdlet deletes an existing UM dial plan from Active Directory. You need to make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Unified Messaging server, UM IP gateway, or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
-
-After this task is completed, the UM dial plan is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-UMDialplan cmdlet deletes an existing UM dial plan from Active Directory. Make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Mailbox server, UM IP gateway, or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
-
-After this task is completed, the UM dial plan is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-The Remove-UMDialplan cmdlet deletes an existing UM dial plan from Active Directory. Make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Mailbox server, UM IP gateway, or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
+The Remove-UMDialplan cmdlet deletes an existing UM dial plan from Active Directory. Make sure the UM dial plan isn't being used by other UM objects such as UM mailbox policies or UM IP gateways. When you delete an existing UM dial plan, the cmdlet verifies that the specified UM dial plan isn't referenced by a Mailbox server, UM IP gateway or UM mailbox policies. The only benefit gained from deleting an obsolete UM dial plan is to reuse the name or perform general Active Directory housekeeping.
 
 After this task is completed, the UM dial plan is removed from Active Directory.
 
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-UMDialplan -Identity MyUMDialPlan
-```
-
-This example deletes an existing UM dial plan named MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UMDialplan -Identity MyUMDialPlan
-```
-
-This example deletes the existing UM dial plan MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMDialplan -Identity MyUMDialPlan
-```
-
-This example deletes the existing UM dial plan MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UMDialplan -Identity MyUMDialPlan
 ```
@@ -119,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b513bb62-ed81-4f90-bff4-39d4e6d3dfaf.aspx)
-

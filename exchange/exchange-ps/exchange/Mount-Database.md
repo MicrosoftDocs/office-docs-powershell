@@ -6,27 +6,9 @@ schema: 2.0.0
 # Mount-Database
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Mount-Database cmdlet to mount mailbox databases on Exchange servers. The cmdlet mounts the database only if the Microsoft Exchange Information Store service and the Microsoft Exchange Replication service are running.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Mount-Database cmdlet to mount a database on a server running Microsoft Exchange Server 2013 with the Mailbox server role installed. The cmdlet mounts the database only if the Microsoft Exchange Information Store service and Microsoft Exchange Replication service are running.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Mount-Database cmdlet to mount mailbox databases on Exchange servers.. The cmdlet mounts the database only if the Microsoft Exchange Information Store service and the Microsoft Exchange Replication service are running.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,31 +20,11 @@ Mount-Database [-Identity] <DatabaseIdParameter> [-AcceptDataLoss] [-Confirm] [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010, Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Mount-Database -Identity ExchangeServer1.Contoso.com\MyDatabase
-```
-
-This example mounts the database MyDatabase.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Mount-Database -Identity ExchangeServer1.Contoso.com\MyDatabase
-```
-
-This example mounts the database MyDatabase.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Mount-Database -Identity ExchangeServer1.Contoso.com\MyDatabase
 ```
@@ -72,8 +34,6 @@ This example mounts the database MyDatabase.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2016
-
 The Identity parameter specifies mailbox database that you want to mount. You can use any value that uniquely identifies the database. For example:
 
 - Name
@@ -81,14 +41,6 @@ The Identity parameter specifies mailbox database that you want to mount. You ca
 - Distinguished name (DN)
 
 - GUID
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the GUID or distinguished name (DN) that represents a specific database. The Identity parameter label is optional.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -104,17 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -AcceptDataLoss
-!!! Exchange Server 2010, Exchange Server 2016
-
 The AcceptDataLossswitch specifies that you accept the data loss caused by missing committed transaction log files without asking for confirmation. You don't need to specify a value with this switch.
-
-
-
-!!! Exchange Server 2013
-
-The AcceptDataLoss parameter specifies that the command accepts the data loss caused by missing committed transaction log files without asking for user confirmation.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -166,19 +108,9 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010, Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
 
 Use this parameter to mount an empty database, or to override any errors or warnings that are encountered during the database mount.
-
-
-
-!!! Exchange Server 2013
-
-The Force parameter specifies a forced mount of an empty database. The parameter also overrides any errors or warnings during the database mount.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -243,4 +175,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/76a57f6a-a6c6-4c65-abf8-190522d47037.aspx)
-

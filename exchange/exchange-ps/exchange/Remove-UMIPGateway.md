@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-UMIPGateway
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-UMIPGateway cmdlet to delete a Unified Messaging (UM) IP gateway.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-UMIPGateway cmdlet to delete a Unified Messaging (UM) IP gateway.
@@ -26,28 +20,6 @@ Remove-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-UMIPGateway cmdlet deletes a specified UM IP gateway. After the UM IP gateway is deleted, Unified Messaging servers no longer accept new call requests from the IP gateway.
-
-The Remove-UMIPGateway cmdlet should be run only by an administrator who fully understands the implications of disabling communication with a Session Initiation Protocol-enabled IP Private Branch eXchange or IP gateway.
-
-After this task is completed, the UM IP gateway is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-UMIPGateway cmdlet deletes a specified UM IP gateway. After the UM IP gateway is deleted, Mailbox servers no longer accept new call requests from the IP gateway.
-
-The Remove-UMIPGateway cmdlet should be run only by an administrator who fully understands the implications of disabling communication with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
-
-After this task is completed, the UM IP gateway is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-UMIPGateway cmdlet deletes a specified UM IP gateway. After the UM IP gateway is deleted, Mailbox servers no longer accept new call requests from the IP gateway.
 
 The Remove-UMIPGateway cmdlet should be run only by an administrator who fully understands the implications of disabling communication with a Session Initiation Protocol (SIP)-enabled IP Private Branch eXchange (PBX) or IP gateway.
@@ -58,28 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example deletes a UM IP gateway named MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example deletes the UM IP gateway MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example deletes the UM IP gateway MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UMIPGateway -Identity MyUMIPGateway
 ```
@@ -89,17 +40,7 @@ This example deletes the UM IP gateway MyUMIPGateway.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identifier for the UM IP gateway being deleted. This parameter is the directory object ID for the UM IP gateway.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identifier for the UM IP gateway being deleted.
-
-
 
 ```yaml
 Type: UMIPGatewayIdParameter
@@ -135,19 +76,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -196,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8f49a018-e49b-40ed-ad4a-40e89fbafa89.aspx)
-

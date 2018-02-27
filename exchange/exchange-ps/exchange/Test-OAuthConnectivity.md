@@ -21,35 +21,13 @@ Test-OAuthConnectivity -Service <EWS | AutoD | Generic> -TargetUri <Uri> [-AppOn
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Exchange 2013 creates the SharePoint 2013, Lync 2013, and Skype for Business Server 2015 partner applications in on-premises Exchange 2013 deployments. For the Test-OAuthConnectivity cmdlet to succeed for other partner applications, you must have created the partner application first using the Configure-EnterpriseApplication.ps1 script.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-SharePoint, Lync, and Skype for Business partner applications are automatically created in on-premises Exchange deployments. For the Test-OAuthConnectivity cmdlet to succeed for other partner applications, you first need to create the partner application by using the Configure-EnterpriseApplication.ps1 script.
+SharePoint, Lync and Skype for Business partner applications are automatically created in on-premises Exchange deployments. For the Test-OAuthConnectivity cmdlet to succeed for other partner applications, you first need to create the partner application by using the Configure-EnterpriseApplication.ps1 script.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Test-OAuthConnectivity -Service EWS -TargetUri https://cas.contoso.com/ews/ -Mailbox "Gurinder Singh"
-```
-
-This example tests OAuth connectivity with Exchange for Gurinder Singh.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-OAuthConnectivity -Service EWS -TargetUri https://cas.contoso.com/ews/ -Mailbox "Gurinder Singh"
-```
-
-This example tests OAuth connectivity with Exchange for Gurinder Singh.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Test-OAuthConnectivity -Service EWS -TargetUri https://cas.contoso.com/ews/ -Mailbox "Gurinder Singh"
 ```
@@ -232,4 +210,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/26aa9772-aa31-4765-b2a4-d0dd78d77fc8.aspx)
-

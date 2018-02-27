@@ -6,12 +6,6 @@ schema: 2.0.0
 # Stop-ManagedFolderAssistant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Stop-ManagedFolderAssistant cmdlet to immediately stop messaging records management (MRM) from processing users' mailboxes on the specified servers.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Stop-ManagedFolderAssistant cmdlet to immediately stop messaging records management (MRM) from processing users' mailboxes on the specified servers.
@@ -26,62 +20,20 @@ Stop-ManagedFolderAssistant [[-Identity] <ServerIdParameter>] [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The managed folder assistant uses the managed folder mailbox policy settings of users to process mailbox items for retention and journaling as needed. Use the Stop-ManagedFolderAssistant cmdlet to stop the managed folder assistant as soon as processing of the current mailbox is completed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The Managed Folder Assistant uses the managed folder mailbox policy settings of users to process mailbox items for retention and journaling as needed. Use the Stop-ManagedFolderAssistant cmdlet to stop the Managed Folder Assistant as soon as processing of the current mailbox is completed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016
-
 The Managed Folder Assistant uses the managed folder mailbox policy settings of users to process mailbox items for retention and journaling as needed. Use the Stop-ManagedFolderAssistant cmdlet to stop the Managed Folder Assistant as soon as processing of the current mailbox is completed.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Stop-ManagedFolderAssistant
-```
-
-This example executes the Stop-ManagedFolderAssistant command without parameters. The managed folder assistant is stopped as soon as processing of the current mailbox is completed on the current server.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Stop-ManagedFolderAssistant
 ```
 
 This example executes the Stop-ManagedFolderAssistant command without parameters. The Managed Folder Assistant is stopped as soon as processing of the current mailbox is completed on the current server.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Stop-ManagedFolderAssistant
-```
-
-This example executes the Stop-ManagedFolderAssistant command without parameters. The Managed Folder Assistant is stopped as soon as processing of the current mailbox is completed on the current server.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Stop-ManagedFolderAssistant -Identity ExchSrvr1, Exchsrvr2
-```
-
-This example stops the managed folder assistant on the servers ExchSrvr1 and Exchsrvr2.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Stop-ManagedFolderAssistant -Identity ExchSrvr1, Exchsrvr2
-```
-
-This example stops the Managed Folder Assistant on the servers ExchSrvr1 and Exchsrvr2.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Stop-ManagedFolderAssistant -Identity ExchSrvr1, Exchsrvr2
 ```
@@ -127,17 +79,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the names of servers on which the managed folder assistant is to be stopped. If a server isn't specified, the managed folder assistant on the local server is stopped.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the names of servers on which the Managed Folder Assistant is to be stopped. If a server isn't specified, the Managed Folder Assistant on the local server is stopped.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -186,4 +128,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/82c2215b-88ec-4c20-a2e8-245b915d8394.aspx)
-

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Enable-CmdletExtensionAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Enable-CmdletExtensionAgent on a server running Microsoft Exchange Server 2010 to enable a cmdlet extension agent.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Enable-CmdletExtensionAgent cmdlet on a server running Microsoft Exchange Server 2013 to enable a cmdlet extension agent.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Enable-CmdletExtensionAgent cmdlet to enable existing cmdlet extension agents.
@@ -34,24 +20,6 @@ Enable-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you enable a cmdlet extension agent, the agent is run on every Exchange 2010 server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
-
-Before you enable agents, be sure that you're aware of how the agent works and what impact the agent will have on your organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Cmdlet extension agents" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-When you enable a cmdlet extension agent, the agent is run on every Exchange 2013 server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
-
-Before you enable agents, be sure that you're aware of how the agent works and what impact the agent will have on your organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Cmdlet extension agents" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Cmdlet extension agents are used by Exchange cmdlets in Exchange Server 2010 and later. Cmdlets provided by other Microsoft or third-party products can't use cmdlet extension agents.
 
 When you enable a cmdlet extension agent, the agent is run on every Exchange server in the organization. When an agent is enabled, it's made available to cmdlets that can then use the agent to perform additional operations.
@@ -62,21 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Enable-CmdletExtensionAgent "Scripting Agent"
-```
-
-This example enables the Scripting Agent cmdlet extension agent. Before you enable the Scripting Agent, you need to make sure that you've first deployed the ScriptingAgentConfig.xml configuration file to all the servers in your organization. If you don't deploy the configuration file first and you enable the Scripting Agent, all non-Get cmdlets will fail when they are run. For more information about the Scripting Agent, see Understanding the Scripting Agent.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-CmdletExtensionAgent "Scripting Agent"
-```
-
-This example enables the Scripting Agent cmdlet extension agent. Before you enable the Scripting Agent, you need to make sure that you've first deployed the ScriptingAgentConfig.xml configuration file to all the servers in your organization. If you don't deploy the configuration file first and you enable the Scripting Agent, all non-Get cmdlets fail when they're run.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Enable-CmdletExtensionAgent "Scripting Agent"
 ```
@@ -86,14 +40,6 @@ This example enables the cmdlet extension agent named Scripting Agent. Before yo
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the cmdlet extension agent to enable. If the name contains spaces, enclose the name in quotation marks (").
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the disabled cmdlet extension agent that you want to enable. You can use any value that uniquely identifies the agent. For example:
 
 - Name
@@ -101,8 +47,6 @@ The Identity parameter specifies the disabled cmdlet extension agent that you wa
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: CmdletExtensionAgentIdParameter
@@ -187,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/349823d2-55cb-46d5-b658-ea15d2bbebaa.aspx)
-
