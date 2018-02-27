@@ -6,23 +6,11 @@ schema: 2.0.0
 # Set-SearchDocumentFormat
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-SearchDocumentFormat cmdlet to enable or disable the file format for Exchange Search.
 
-When you disable a file format for content indexing by Exchange Search, contents of the file become unsearchable by Exchange Search clients such as Microsoft Office Outlook Web App, Microsoft Outlook in online mode, and In-Place eDiscovery.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-SearchDocumentFormat cmdlet to enable or disable the file format for Exchange Search.
-
-When you disable a file format for content indexing by Exchange Search, contents of the file become unsearchable by Exchange Search clients such as Outlook on the web, Microsoft Outlook in online mode, and In-Place eDiscovery.
+When you disable a file format for content indexing by Exchange Search, contents of the file become unsearchable by Exchange Search clients such as Outlook on the web, Microsoft Outlook in online mode and In-Place eDiscovery.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -34,28 +22,13 @@ Set-SearchDocumentFormat [-Identity] <SearchDocumentFormatId> -Enabled <$true | 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Microsoft Exchange Server 2013, Exchange Search includes built-in support for indexing many file formats. If you disable indexing for a supported file format, items containing an attachment of that file type aren't considered unsearchable. When you perform an In-Place eDiscovery search, and you select the option to include unsearchable items, only items that are actually unsearchable are returned. Items that weren't searched because the associated file format is set as unsearchable aren't returned.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Search - diagnostics" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
-Exchange Search includes built-in support for indexing many file formats. If you disable indexing for a supported file format, items containing an attachment of that file type aren't considered unsearchable. When you perform an In-Place eDiscovery in Exchange 2016 search, and you select the option to include unsearchable items, only items that are actually unsearchable are returned. Items that weren't searched because the associated file format is set as unsearchable aren't returned.
+Exchange Search includes built-in support for indexing many file formats. If you disable indexing for a supported file format, items containing an attachment of that file type aren't considered unsearchable. When you perform an In-Place eDiscovery in Exchange 2016 search and you select the option to include unsearchable items, only items that are actually unsearchable are returned. Items that weren't searched because the associated file format is set as unsearchable aren't returned.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-SearchDocumentFormat ZIP -Enabled $false
-```
-
-This command disables the Zip file format for indexing by Exchange Search.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-SearchDocumentFormat ZIP -Enabled $false
 ```
@@ -117,14 +90,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the name of the server against which the command is executed.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -136,8 +101,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -186,4 +149,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d4aa8525-32de-4816-82d5-dfa3396d5006.aspx)
-
