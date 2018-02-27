@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-WebServicesVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-WebServicesVirtualDirectory cmdlet to remove an existing virtual directory from a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-WebServicesVirtualDirectory cmdlet to remove an existing virtual directory from a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-WebServicesVirtualDirectory cmdlet to remove existing Exchange Web Services virtual directories from Internet Information Services (IIS) on Microsoft Exchange servers.
@@ -34,41 +20,13 @@ Remove-WebServicesVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can remove the default Exchange Web Services virtual directory or another Exchange Web Services virtual directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Web Services settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You can remove the default Exchange Web Services virtual directory or another Exchange Web Services virtual directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Web Services virtual directory settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You can remove the default Exchange Web Services virtual directory or another Exchange Web Services virtual directory.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-WebServicesVirtualDirectory -Identity CAS01\Sales
-```
-
-This example removes the virtual directory Sales from the server CAS01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-WebServicesVirtualDirectory -Identity CAS01\Sales
-```
-
-This example removes the virtual directory Sales from the server CAS01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-WebServicesVirtualDirectory -Identity MBX01\Sales
 ```
@@ -78,14 +36,6 @@ This example removes the Exchange Web Services virtual directory named Sales fro
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies a virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies Exchange Web Services virtual directory that you want to remove.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -97,8 +47,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -150,23 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-The Force parameter specifies whether to force the command to execute without asking for user confirmation. If set to $true, this parameter forces the command to execute without asking for user confirmation.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to force the command to execute without asking for user confirmation. If set to $true, this parameter forces the command to execute without asking for user confirmation.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -215,4 +147,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ae2ac9a4-1951-4176-baa6-06839cdd64a0.aspx)
-
