@@ -6,12 +6,6 @@ schema: 2.0.0
 # disable-journalrule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-JournalRule cmdlet to disable an existing journal rule on a Hub Transport server.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-JournalRule cmdlet to disable a journal rule on a Mailbox server.
@@ -21,81 +15,25 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-disable-journalrule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-LawfulInterception]
+disable-journalrule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Disable-JournalRule cmdlet disables an existing rule used by the Journaling agent.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-You can enable or disable specific journal rules in your organization at any time using the Disable-JournalRule and Enable-JournalRule cmdlets.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can enable or disable specific journal rules in your organization at any time using the Disable-JournalRule and Enable-JournalRule cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-JournalRule "Brokerage Communications"
-```
-
-This example disables the existing journal rule Brokerage Communications.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Disable-JournalRule "Brokerage Communications"
 ```
 
 This example disables the journal rule Brokerage Communications.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-JournalRule "Brokerage Communications"
-```
-
-This example disables the journal rule Brokerage Communications.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-JournalRule "Brokerage Communications"
-```
-
-This example disables the journal rule Brokerage Communications.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-JournalRule | Disable-JournalRule
-```
-
-This example disables all journal rules. The Get-JournalRule cmdlet is used to add all journal rules to the pipeline. The results are piped to the Disable-JournalRule cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-JournalRule | Disable-JournalRule
-```
-
-This example disables all journal rules. The Get-JournalRule cmdlet is used to add all journal rules to the pipeline. The results are piped to the Disable-JournalRule cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-JournalRule | Disable-JournalRule
-```
-
-This example disables all journal rules. The Get-JournalRule cmdlet is used to add all journal rules to the pipeline. The results are piped to the Disable-JournalRule cmdlet.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-JournalRule | Disable-JournalRule
 ```
@@ -105,17 +43,7 @@ This example disables all journal rules. The Get-JournalRule cmdlet is used to a
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the rule to be disabled. Enter either the GUID or the name of the journal rule. You can omit the parameter label.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the journal rule you want to disable. Enter either the name or the GUID of the journal rule. You can omit this parameter label.
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -151,41 +79,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LawfulInterception
-The LawfulInterception parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -228,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0324144b-2818-4e7f-a483-d6d6a19f8276.aspx)
-

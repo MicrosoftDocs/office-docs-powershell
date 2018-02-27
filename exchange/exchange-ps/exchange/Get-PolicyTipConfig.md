@@ -26,73 +26,25 @@ Get-PolicyTipConfig [[-Identity] <PolicyTipConfigIdParameter>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PolicyTipConfig -Action NotifyOnly
 ```
 
 This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PolicyTipConfig -Action NotifyOnly
-```
-
-This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PolicyTipConfig -Action NotifyOnly
-```
-
-This example returns a summary list of the custom Policy Tips in all languages that have the action value NotifyOnly.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-PolicyTipConfig -Original -Locale fr
 ```
 
 This example returns a summary list of all built-in French Policy Tips.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PolicyTipConfig -Original -Locale fr
-```
-
-This example returns a summary list of all built-in French Policy Tips.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-PolicyTipConfig -Original -Locale fr
-```
-
-This example returns a summary list of all built-in French Policy Tips.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-PolicyTipConfig en\RejectOverride | Format-List
-```
-
-This example returns details about the custom English Policy Tip for the action value RejectOverride.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-PolicyTipConfig en\RejectOverride | Format-List
-```
-
-This example returns details about the custom English Policy Tip for the action value RejectOverride.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-PolicyTipConfig en\RejectOverride | Format-List
 ```
@@ -146,24 +98,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the custom Policy Tip you want to view. You can use any value that uniquely identifies the custom Policy Tip. For example:
-
-- \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for system messages. Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
-
-- The value Url
-
-- GUID
-
-- Distinguished name (DN)
-
-You can't use the Identity parameter with the Action, Locale, or Original parameters.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the custom Policy Tip you want to view. You can use any value that uniquely identifies the custom Policy Tip. For example:
 
 - \<Locale\>\\\<Action\>: Locale is a supported locale code. For example, en for English or fr for French. For more information about supported locales, see Supported languages for DSNs and NDRs in Exchange 2016. Action is one of the following Policy Tip actions: NotifyOnly, RejectOverride or Reject.
@@ -174,9 +108,7 @@ The Identity parameter specifies the custom Policy Tip you want to view. You can
 
 - Distinguished name (DN)
 
-You can't use the Identity parameter with the Action, Locale, or Original parameters.
-
-
+You can't use the Identity parameter with the Action, Locale or Original parameters.
 
 ```yaml
 Type: PolicyTipConfigIdParameter
@@ -192,25 +124,11 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-!!! Exchange Server 2013
-
-The Locale parameter specifies a locale-specific version of the Policy Tip.
-
-Valid values for this parameter are supported locale codes. For example, en for English or fr for French. For more information about supported locales, see Supported languages for system messages.
-
-You can't use the Locale parameter with the Identity parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Locale parameter specifies a locale-specific version of the Policy Tip.
 
 Valid values for this parameter are supported locale codes. For example, en for English or fr for French. For more information about supported locales, see Supported languages for DSNs and NDRs in Exchange 2016.
 
 You can't use the Locale parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: CultureInfo
@@ -259,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/103ad92b-d56d-4568-9b30-35aea82cf0eb.aspx)
-

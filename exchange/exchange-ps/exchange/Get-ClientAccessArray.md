@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-ClientAccessArray
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ClientAccessArray cmdlet to return an object that represents a load-balanced array of Client Access servers.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-ClientAccessArray cmdlet to return an object that represents a load-balanced array of Client Access servers.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ClientAccessArray cmdlet to view legacy RPC Client Access arrays that exist in your Exchange organization.
@@ -34,23 +20,11 @@ Get-ClientAccessArray [[-Identity] <ClientAccessArrayIdParameter>] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-To use the Get-ClientAccessArray cmdlet, the Mailbox server role can't be installed on the same computer as a Client Access server within an array.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access server array settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access server array settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
-Client Access arrays were introduced in Exchange Server 2010 so Outlook clients in an Active Directory site could access the Client Access servers in the array by using RPC over TCP to a single, unified fully qualified domain name (FQDN). The RpcClientAccessServer property of new mailbox databases was automatically populated with the FQDN of the Client Access array, and this value was used during the creation of Outlook profiles for mailboxes in those databases.
+Client Access arrays were introduced in Exchange Server 2010 so Outlook clients in an Active Directory site could access the Client Access servers in the array by using RPC over TCP to a single, unified fully qualified domain name (FQDN). The RpcClientAccessServer property of new mailbox databases was automatically populated with the FQDN of the Client Access array and this value was used during the creation of Outlook profiles for mailboxes in those databases.
 
 Changes in the Exchange server architecture that were introduced in Exchange Server 2013 removed the need for RPC Client Access arrays:
 
-- Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions, and RPC Client Access arrays only work with RPC over TCP.
+- Outlook clients can't use RPC over TCP to access mailboxes on Exchange Server 2013 or later versions and RPC Client Access arrays only work with RPC over TCP.
 
 - Because the Client Access server role is now a stateless proxy, you use different and less complex methods to configure load balancing and high availability for internal and external client connections. For more information, see Load balancing in Exchange 2016.
 
@@ -58,61 +32,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ClientAccessArray -Identity "CASArray01"
-```
-
-This example returns the array of Client Access servers with the unique identifier CASArray01 in the current Active Directory site.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ClientAccessArray -Identity "CASArray01"
-```
-
-This example returns the array of Client Access servers with the unique identifier CASArray01 in the current Active Directory site.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ClientAccessArray
 ```
 
 This example returns a summary list of all Client Access arrays that exist in the local Active Directory site.
 
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ClientAccessArray -Identity "CASArray01" -Site "eur.contoso.com"
-```
-
-This example returns the array of Client Access servers with the unique identifier CASArray01 in the Active Directory site eur.contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ClientAccessArray -Identity "CASArray01" -Site "eur.contoso.com"
-```
-
-This example returns the array of Client Access servers with the unique identifier CASArray01 in the Active Directory site eur.contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ClientAccessArray -Identity CASArray01 | Format-List
 ```
 
 This example returns detailed information for the Client Access array named CASArray01.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-ClientAccessArray -Identity "Array12032"
-```
-
-This example returns the array of Client Access servers with the unique identifier Array12032 in the current Active Directory site.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-ClientAccessArray -Identity "Array12032"
-```
-
-This example returns the array of Client Access servers with the unique identifier Array12032 in the current Active Directory site.
 
 ## PARAMETERS
 
@@ -133,14 +65,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies a unique identifier for the array of Client Access servers.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Client Access that you want to view. You can use any value that uniquely identifies the array. For example:
 
 - Name
@@ -148,8 +72,6 @@ The Identity parameter specifies the Client Access that you want to view. You ca
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: ClientAccessArrayIdParameter
@@ -165,14 +87,6 @@ Accept wildcard characters: False
 ```
 
 ### -Site
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Site parameter specifies the Active Directory site that contains the specified array of Client Access servers.
-
-
-
-!!! Exchange Server 2016
-
 The Site parameter filters the results by Active Directory site. You can use any value that uniquely identifies the site. For example:
 
 - Name
@@ -180,8 +94,6 @@ The Site parameter filters the results by Active Directory site. You can use any
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: AdSiteIdParameter
@@ -214,4 +126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4d366fb0-58b9-4730-9c67-8d4a0d47e19a.aspx)
-

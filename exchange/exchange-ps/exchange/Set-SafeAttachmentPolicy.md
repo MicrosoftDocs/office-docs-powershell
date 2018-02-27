@@ -28,14 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
-```
-
-This example modifies the existing Safe Attachments policy named Engineering Block Attachments to redirect detected malware attachments to admin@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-SafeAttachmentsPolicy -Identity "Engineering Block Attachments" -Redirect $true -RedirectAddress admin@contoso.com
 ```
@@ -238,4 +231,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8f116c29-438d-45f7-bc43-d73e9d16057b.aspx)
-

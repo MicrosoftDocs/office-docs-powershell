@@ -29,37 +29,20 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Enable $true -Redirect $true -RedirectAddress admin@contoso.com
 ```
 
 This example creates a new Safe Attachments policy named Marketing Block Attachments with the following options:
 
+- The policy is enabled.
 
-The policy is enabled.
+- The action is Block. This is the default value of the Action parameter, so you don't need to specify it.
 
-The action is Block. This is the default value of the Action parameter, so you don't need to specify it.
+- If Safe Attachments scanning isn't available or encounters errors, deliver the message as normal. The default value of the ActionOnError parameter is $false, so you don't need to specify it.
 
-If Safe Attachments scanning isn't available or encounters errors, deliver the message as normal. The default value of the ActionOnError parameter is $false, so you don't need to specify it.
-
-Redirect detected malware messages to admin@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-SafeAttachmentPolicy -Name "Marketing Block Attachments" -Enable $true -Redirect $true -RedirectAddress admin@contoso.com
-```
-
-This example creates a new Safe Attachments policy named Marketing Block Attachments with the following options:
-
-
-The policy is enabled.
-
-The action is Block. This is the default value of the Action parameter, so you don't need to specify it.
-
-If Safe Attachments scanning isn't available or encounters errors, deliver the message as normal. The default value of the ActionOnError parameter is $false, so you don't need to specify it.
-
-Redirect detected malware messages to admin@contoso.com.
+- Redirect detected malware messages to admin@contoso.com.
 
 ## PARAMETERS
 
@@ -251,4 +234,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ef3b8cad-176b-485f-833d-73cba4cfa3f3.aspx)
-

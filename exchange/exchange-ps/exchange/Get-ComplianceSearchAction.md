@@ -49,28 +49,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ComplianceSearchAction
 ```
 
 This example shows a summary list of all compliance search actions.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-ComplianceSearchAction
-```
-
-This example shows a summary list of all compliance search actions.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
-```
-
-This example shows details about the compliance search action named "Case 1234\_Preview"
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-ComplianceSearchAction -Identity "Case 1234_Preview" | Format-List
 ```
@@ -247,4 +233,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d28d2ac9-4c15-4813-9c63-385533d64e99.aspx)
-

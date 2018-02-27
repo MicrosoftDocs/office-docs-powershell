@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-UMMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-UMMailboxPolicy cmdlet to delete a Unified Messaging (UM) mailbox policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-UMMailboxPolicy cmdlet to delete a Unified Messaging (UM) mailbox policy.
@@ -26,24 +20,6 @@ Remove-UMMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-UMMailboxPolicy cmdlet deletes or removes a UM mailbox policy. If the UM mailbox policy is deleted from Active Directory, the UM mailbox policy can't be used when configuring UM-enabled users. The UM mailbox policy can't be deleted if the UM mailbox policy is referenced by any UM-enabled mailboxes.
-
-After this task is completed, the UM mailbox policy is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-UMMailboxPolicy cmdlet deletes or removes a UM mailbox policy. If the UM mailbox policy is deleted from Active Directory, the UM mailbox policy can't be used when configuring UM-enabled users. The UM mailbox policy can't be deleted if the UM mailbox policy is referenced by any UM-enabled mailboxes.
-
-After this task is completed, the UM mailbox policy is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-UMMailboxPolicy cmdlet deletes or removes a UM mailbox policy. If the UM mailbox policy is deleted from Active Directory, the UM mailbox policy can't be used when configuring UM-enabled users. The UM mailbox policy can't be deleted if the UM mailbox policy is referenced by any UM-enabled mailboxes.
 
 After this task is completed, the UM mailbox policy is removed from Active Directory.
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example deletes a UM mailbox policy named MyUMMailboxPolicy.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example deletes the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMMailboxPolicy -Identity MyUMMailboxPolicy
-```
-
-This example deletes the UM mailbox policy MyUMMailboxPolicy.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UMMailboxPolicy -Identity MyUMMailboxPolicy
 ```
@@ -83,17 +38,7 @@ This example deletes the UM mailbox policy MyUMMailboxPolicy.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identifier for the UM dial plan being deleted. This parameter is the directory object ID for the UM dial plan.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identifier for the UM mailbox policy being deleted. This parameter is the directory object ID for the UM mailbox policy.
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -129,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -190,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ac387332-c110-4540-b550-86467ddc91b6.aspx)
-

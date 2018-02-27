@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-ActiveSyncDeviceAccessRule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ActiveSyncDeviceAccessRule to remove any existing device access rule.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ActiveSyncDeviceAccessRule cmdlet to remove any existing device access rule.
@@ -26,76 +20,20 @@ Remove-ActiveSyncDeviceAccessRule [-Identity] <ActiveSyncDeviceAccessRuleIdParam
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If you've created device access rules for groups of devices, you can use the Remove-ActiveSyncDeviceAccessRule cmdlet to remove any access rule.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-If you've created device access rules for groups of devices, you can use the Remove-ActiveSyncDeviceAccessRule cmdlet to remove any access rule.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If you've created device access rules for groups of devices, you can use the Remove-ActiveSyncDeviceAccessRule cmdlet to remove any access rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ActiveSyncDeviceAccessRule | Remove-ActiveSyncDeviceAccessRule
 ```
 
 This example removes all device access rules.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ActiveSyncDeviceAccessRule | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ActiveSyncDeviceAccessRule | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ActiveSyncDeviceAccessRule | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-ActiveSyncDeviceAccessRule | where {$_.Name -like 'Contoso*'} | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules that have a name that starts with Contoso.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ActiveSyncDeviceAccessRule | where {$_.Name -like 'Contoso*'} | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules that have a name that starts with Contoso.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ActiveSyncDeviceAccessRule | where {$_.Name -like 'Contoso*'} | Remove-ActiveSyncDeviceAccessRule
-```
-
-This example removes all device access rules that have a name that starts with Contoso.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-ActiveSyncDeviceAccessRule | where {$_.Name -like 'Contoso*'} | Remove-ActiveSyncDeviceAccessRule
 ```
@@ -141,19 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -202,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8ef19f4b-c792-4410-af6c-62b0bdfb99bd.aspx)
-
