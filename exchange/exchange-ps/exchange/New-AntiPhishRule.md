@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
+### Example 1
 ```
 New-AntiPhishRule -Name "Research Department Phishing Rule" -AntiPhishPolicy "Research Quarantine" -SentToMemberOf "Research Department" -ExceptIfSentToMemberOf "Research Department Managers"
 ```
