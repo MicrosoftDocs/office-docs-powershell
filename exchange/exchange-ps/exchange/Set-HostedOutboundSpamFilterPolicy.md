@@ -26,34 +26,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-HostedOutboundSpamFilterPolicy Default -NotifyOutboundSpam $true -NotifyOutboundSpamRecipients chris@contoso.com
 ```
 
 This example configures the following settings in the outbound spam filter policy named Default:
 
+- Notification messages are sent when an outgoing message is determined to be spam.
 
-Notification messages are sent when an outgoing message is determined to be spam.
-
-Notification messages are sent to chris@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-HostedOutboundSpamFilterPolicy Default -NotifyOutboundSpam $true -NotifyOutboundSpamRecipients chris@contoso.com
-```
-
-This example configures the following settings in the outbound spam filter policy named Default:
-
-
-Notification messages are sent when an outgoing message is determined to be spam.
-
-Notification messages are sent to chris@contoso.com.
+- Notification messages are sent to chris@contoso.com.
 
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the outbound spam filter policy you want to modify. You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID, or distinguished name (DN) of the outbound spam filter policy.
+The Identity parameter specifies the outbound spam filter policy you want to modify. You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID or distinguished name (DN) of the outbound spam filter policy.
 
 ```yaml
 Type: HostedOutboundSpamFilterPolicyIdParameter
@@ -206,4 +193,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/665d1b04-d4b5-4a0e-811a-4e37096ccbfd.aspx)
-
