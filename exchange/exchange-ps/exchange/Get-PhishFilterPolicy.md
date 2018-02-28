@@ -30,62 +30,34 @@ The Get-PhishFilterPolicy with the SpoofAllowBlockList switch returns the follow
 
 - UserComplaints: The number of junk submissions from your users about mail from the source messaging server in the last 30 days.
 
-- AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source messaging server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source messaging server), and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source messaging server. Use the Detailed switch to see the specific sender email addresses.).
+- AllowedToSpoof: The three possible values are Yes (messages that contain any spoofed sender email addresses in your organization are allowed from the source messaging server), No (messages that contain any spoofed sender email addresses in your organization are not allowed from the source messaging server) and Partial (messages that contain some spoofed sender email addresses in your organization are allowed from the source messaging server. Use the Detailed switch to see the specific sender email addresses.).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList
 ```
 
 This example returns a summary list of senders that appear to be spoofing your organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList
-```
-
-This example returns a summary list of senders that appear to be spoofing your organization.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList | Export-CSV "C:\My Documents\Summary Spoofed Senders.csv"
 ```
 
 This example exports the summary list of spoofed senders to a CSV file.
 
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList | Export-CSV "C:\My Documents\Summary Spoofed Senders.csv"
-```
-
-This example exports the summary list of spoofed senders to a CSV file.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed
 ```
 
 This example returns a detailed list of senders that appear to be spoofing your organization.
 
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed
-```
-
-This example returns a detailed list of senders that appear to be spoofing your organization.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed | Export-CSV "C:\My Documents\Detailed Spoofed Senders.csv"
-```
-
-This example exports the detailed list of spoofed senders to a CSV file.
-
-### Example 4 -------------------------- (Exchange Online Protection)
+### Example 4
 ```
 Get-PhishFilterPolicy -Identity Default -SpoofAllowBlockList -Detailed | Export-CSV "C:\My Documents\Detailed Spoofed Senders.csv"
 ```
@@ -97,7 +69,7 @@ This example exports the detailed list of spoofed senders to a CSV file.
 ### -Detailed
 The Detailed switch specifies whether to return detailed information in the results. You don't need to specify a value with this switch.
 
-When you use this switch, the following additional information is returned in the results.
+When you use this switch, the following additional information is returned in the results:
 
 - SpoofedSender: The visible spoofed sender email address that the message appears to be from.
 
@@ -168,4 +140,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d3ef544f-de92-4563-8603-3990b8939453.aspx)
-

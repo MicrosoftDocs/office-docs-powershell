@@ -6,20 +6,6 @@ schema: 2.0.0
 # update-GlobalAddressList
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Update-GlobalAddressList cmdlet to update a global address list (GAL).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Update-GlobalAddressList cmdlet to update a global address list (GAL).
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Update-GlobalAddressList cmdlet to update the recipients included ina global address list (GAL).
@@ -34,39 +20,13 @@ update-GlobalAddressList [-Identity] <GlobalAddressListIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Global address lists" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address lists" entry in the Email address and address book permissions topic.
-
-By default in Exchange Online, the Address List role isn't assigned to any role groups. To use any cmdlets that require the Address List role, you need to add the role to a role group. For more information, see the "Add a role to a role group" section in the topic, Manage role groups.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 By default in Exchange Online, the Address List role isn't assigned to any role groups. To use any cmdlets that require the Address List role, you need to add the role to a role group. For more information, see the "Add a role to a role group" section in the topic, Manage role groups.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Update-GlobalAddressList -Identity "Global Address List"
-```
-
-This example updates the default GAL.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Update-GlobalAddressList -Identity "Global Address List"
-```
-
-This example updates the default GAL.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Update-GlobalAddressList -Identity "Default Global Address List"
 ```
@@ -76,14 +36,6 @@ This example updates the recipients in the default GAL.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies a unique identifier of the GAL being updated. These unique identifiers include the common name (CN), GUID, or distinguished name (DN).
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the global address list that you want to update. You can use any value that uniquely identifies the GAL. For example:
 
 - Name
@@ -91,8 +43,6 @@ The Identity parameter specifies the global address list that you want to update
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: GlobalAddressListIdParameter
@@ -108,25 +58,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -191,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d3ee7f3-1205-4f04-a833-c5c47f2b774c.aspx)
-

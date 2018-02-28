@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-TransportServer
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-TransportServer cmdlet to view the transport configuration information for computers that have the Hub Transport server role or the Edge Transport server role installed.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-TransportServer cmdlet to view the transport configuration information for the Transport service on Mailbox servers or for Edge Transport servers.
@@ -23,62 +17,20 @@ Get-TransportServer [[-Identity] <TransportServerIdParameter>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-TransportServer cmdlet displays configuration information for all transport-related parameters on a Hub Transport server or an Edge Transport server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Hub Transport server" or "Edge Transport server" entries in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-TransportServer cmdlet will be removed in a future version of Exchange. You should use the Get-TransportService cmdlet instead.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport service" or "Edge Transport server" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-TransportServer cmdlet will be removed in a future version of Exchange. You should use the Get-TransportService cmdlet instead.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-TransportServer
-```
-
-This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Hub Transport servers in your organization.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-TransportServer
 ```
 
 This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Mailbox servers in your organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-TransportServer
-```
-
-This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Mailbox servers in your organization.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-TransportServer Hub1 | Format-List
-```
-
-This example retrieves the detailed transport configuration information for the Hub Transport server Hub1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-TransportServer Mailbox01 | Format-List
-```
-
-This example retrieves the detailed transport configuration information for the Transport service on the Mailbox server named Mailbox01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-TransportServer Mailbox01 | Format-List
 ```
@@ -106,17 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the server from which to retrieve the transport configuration information. When you use this parameter on a Hub Transport server, the parameter returns the transport configuration of the specified server. You can't use this parameter when you run the command on an Edge Transport server. You can omit the Identity parameter label.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the server you want to view. When you use this parameter on a Mailbox server, the parameter returns the transport configuration of the Transport service on specified server. You can't use this parameter on an Edge Transport server.
-
-
 
 ```yaml
 Type: TransportServerIdParameter
@@ -149,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fd4f9f4a-338d-44de-b5e8-e91bae697d4f.aspx)
-

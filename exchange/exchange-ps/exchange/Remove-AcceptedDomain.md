@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-AcceptedDomain
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-AcceptedDomain cmdlet to remove an accepted domain. When you remove an accepted domain, the accepted domain object is deleted. For more information about how to configure an accepted domain, see Set-AcceptedDomain.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-AcceptedDomain cmdlet to remove an accepted domain. When you remove an accepted domain, the accepted domain object is deleted.
@@ -24,35 +18,11 @@ Remove-AcceptedDomain [-Identity] <AcceptedDomainIdParameter> [-Confirm] [-Domai
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Accepted domains" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Accepted domains" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-AcceptedDomain -Identity Contoso
-```
-
-This example removes the accepted domain Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AcceptedDomain Contoso
-```
-
-This example removes the accepted domain Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-AcceptedDomain Contoso
 ```
@@ -62,17 +32,7 @@ This example removes the accepted domain Contoso.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies a string value for the accepted domain. Enter either the GUID or the name of the remote domain.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the accepted domain you want to remove. Enter either the GUID or the name of the remote domain.
-
-
 
 ```yaml
 Type: AcceptedDomainIdParameter
@@ -88,25 +48,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -173,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/79bedc01-7b50-4127-ba54-06bf55c3f43d.aspx)
-

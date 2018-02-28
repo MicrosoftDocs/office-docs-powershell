@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-eventloglevel
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-EventLogLevel cmdlet to set the event log level registry value for the specified category.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-EventLogLevel cmdlet to set the event log level registry value for the specified category.
@@ -26,64 +20,23 @@ Set-eventloglevel [-Identity] <ECIdParameter> -Level <Lowest | Low | Medium | Hi
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-EventLogLevel -Identity "MSExchangeFDS\FileReplication" -Level High
-```
-
-This example sets the event log level to High on the local Exchange server for the MSExchangeFDS\\FileReplication event logging category.
-
-
-Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level High
 ```
 
 This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
-
-
-Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-EventLogLevel -Identity "Exchange01\MSExchangeTransport\SmtpReceive" -Level High
-```
-
-This example sets the event log level to High for the MSExchangeTransport\\SmtpReceive event logging category on the Exchange server Exchange01.
-
 
 Note: Run the Get-EventLogLevel cmdlet to retrieve a list of the event categories on your server. For more information, see Get-EventLogLevel.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name of the event logging category to display.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the name of the event logging category for which you want to set the event logging level.
-
-
 
 ```yaml
 Type: ECIdParameter
@@ -99,14 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -Level
-!!! Exchange Server 2010
-
-The Level parameter specifies the log level for a specified server running Microsoft Exchange.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Level parameter specifies the log level for the specific event logging category. The valid values are:
 
 - Lowest
@@ -118,8 +63,6 @@ The Level parameter specifies the log level for the specific event logging categ
 - High
 
 - Expert
-
-
 
 ```yaml
 Type: Lowest | Low | Medium | High | Expert
@@ -188,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/797f1691-32b7-4752-bb01-fea54cc28e1c.aspx)
-

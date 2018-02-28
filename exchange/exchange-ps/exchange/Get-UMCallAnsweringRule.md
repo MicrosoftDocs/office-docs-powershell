@@ -20,16 +20,6 @@ Get-UMCallAnsweringRule [[-Identity] <UMCallAnsweringRuleIdParameter>] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-UMCallAnsweringRule cmdlet enables you to view the properties of a call answering rule that has been created in a UM-enabled user's mailbox. It allows you to retrieve the properties for a single call answering rule or a list of call answering rules in a UM-enabled user's mailbox.
-
-After this task is completed, the cmdlet returns the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call answering rules" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-UMCallAnsweringRule cmdlet enables you to view the properties of a call answering rule that has been created in a UM-enabled user's mailbox. It allows you to retrieve the properties for a single call answering rule or a list of call answering rules in a UM-enabled user's mailbox.
 
 After this task is completed, the cmdlet returns the parameters and the values specified.
@@ -38,42 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith | Format-List
 ```
 
 This example returns a formatted list of call answering rules in a user's UM-enabled mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith | Format-List
-```
-
-This example returns a formatted list of call answering rules in a user's UM-enabled mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith | Format-List
-```
-
-This example returns a formatted list of call answering rules in a user's UM-enabled mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
-```
-
-This example displays the properties of the call answering rule MyUMCallAnsweringRule.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
-```
-
-This example displays the properties of the call answering rule MyUMCallAnsweringRule.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
 ```
@@ -150,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a6e08530-97b8-4a27-b84f-d362f274ce37.aspx)
-
