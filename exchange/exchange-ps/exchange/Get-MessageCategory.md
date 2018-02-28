@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MessageCategory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MessageCategory cmdlet to retrieve a message category from the specified mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MessageCategory cmdlet to retrieve a message category from the specified mailbox.
@@ -26,48 +20,13 @@ Get-MessageCategory [[-Identity] <MessageCategoryIdParameter>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-MessageCategory cmdlet is used by the Web management interface in Microsoft Exchange Server 2010 to populate fields that display message category information.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Message categories" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-MessageCategory cmdlet is used by the web management interface in Microsoft Exchange to populate fields that display message category information.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Message categories" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MessageCategory cmdlet is used by the web management interface in Microsoft Exchange to populate fields that display message category information.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-MessageCategory -Mailbox "User1"
-```
-
-This example retrieves message categories from the mailbox User1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MessageCategory -Mailbox "User1"
-```
-
-This example retrieves message categories from the mailbox User1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MessageCategory -Mailbox "User1"
-```
-
-This example retrieves message categories from the mailbox User1.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MessageCategory -Mailbox "User1"
 ```
@@ -93,19 +52,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -154,4 +103,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/62d403c8-d1cf-4507-a0d7-342bdfb17a9a.aspx)
-
