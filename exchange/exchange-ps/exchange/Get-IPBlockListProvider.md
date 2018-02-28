@@ -6,18 +6,6 @@ schema: 2.0.0
 # Get-IPBlockListProvider
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-IPBlockListProvider cmdlet to view the configuration for a specific IP Block list provider on a computer that has the Hub Transport server role or Edge Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-IPBlockListProvider cmdlet to view IP Block list providers that are used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-IPBlockListProvider cmdlet to view IP Block list providers that are used by the Connection Filtering agent on Edge Transport servers.
@@ -30,58 +18,18 @@ Get-IPBlockListProvider [[-Identity] <IPBlockListProviderIdParameter>] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The IP Block list provider configuration is used by the Connection Filter agent. The Connection Filter agent acts on the IP address of the remote server that initiates the SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-IPBlockListProvider
-```
-
-This example returns all IP Block list providers configured on the computer.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-IPBlockListProvider
 ```
 
 This example returns a summary list of all IP Block list providers configured on the local Edge Transport server.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-IPBlockListProvider
-```
-
-This example returns a summary list of all IP Block list providers configured on the local Edge Transport server.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-IPBlockListProvider -Identity Contoso.com
-```
-
-This example returns the configuration for the IP Block list provider Contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-IPBlockListProvider -Identity Contoso.com
-```
-
-This example returns detailed information for the existing IP Block list provider named Contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-IPBlockListProvider -Identity Contoso.com
 ```
@@ -109,14 +57,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the IP Block list provider. This parameter can be assigned a string value, which is theProviderName value, or a GUID.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the IP Block list provider that you want to view. You can use any value that uniquely identifies the IP Block list provider. For example:
 
 - Name
@@ -124,8 +64,6 @@ The Identity parameter specifies the IP Block list provider that you want to vie
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: IPBlockListProviderIdParameter
@@ -158,4 +96,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1dc8521f-df9b-4408-8acf-9a31d9f4151b.aspx)
-
