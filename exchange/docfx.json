@@ -55,6 +55,7 @@
     "globalMetadata": {
       "author" : "kenwith",
       "ms.author" : "kenwith",
+      "manager" : "serdars",
       "ms.date" : "09/25/2017",
       "ms.topic" : "reference",
       "ms.service" : "exchange-powershell",

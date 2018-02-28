@@ -55,6 +55,7 @@
     "globalMetadata": {
       "author" : "techwriter40",
       "ms.author" : "kirks",
+      "manager" : "pamgreen",
       "ms.date" : "11/28/2017",
       "ms.topic" : "reference",
       "ms.devlang" : "powershell"
