@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-MailPublicFolder
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-MailPublicFolder cmdlet to mail-disable a public folder.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-MailPublicFolder cmdlet to mail-disable a public folder.
@@ -26,42 +20,11 @@ Disable-MailPublicFolder [-Identity] <PublicFolderIdParameter> [-Confirm] [-Doma
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mail-enabled public folders" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders, mail-enabled" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-MailPublicFolder -Identity "\Help Desk"
-```
-
-This example mail-disables the public folder Help Desk.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-MailPublicFolder -Identity "\Help Desk"
-```
-
-This example mail-disables the public folder Help Desk.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-MailPublicFolder -Identity "\Help Desk"
-```
-
-This example mail-disables the public folder Help Desk.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Disable-MailPublicFolder -Identity "\Help Desk"
 ```
@@ -89,25 +52,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -123,19 +72,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -200,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/92d6c890-a96a-469a-b864-99d9656b12e0.aspx)
-
