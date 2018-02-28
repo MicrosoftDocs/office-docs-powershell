@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-MailboxDatabase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailboxDatabase cmdlet to delete a mailbox database object.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-MailboxDatabase cmdlet to delete a mailbox database object.
@@ -26,24 +20,6 @@ Remove-MailboxDatabase [-Identity] <DatabaseIdParameter> [-Confirm] [-DomainCont
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If the mailbox database has a database copy, the Remove-MailboxDatabase cmdlet also removes the copy.
-
-The Remove-MailboxDatabase cmdlet removes only the database object from Active Directory. It doesn't remove the physical database files. You must remove the database files manually after you run the Remove-MailboxDatabase cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-If the mailbox database has a database copy, the Remove-MailboxDatabase cmdlet also removes the copy.
-
-The Remove-MailboxDatabase cmdlet removes only the database object from Active Directory. It doesn't remove the physical database files. You must remove the database files manually after you run the Remove-MailboxDatabase cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 If the mailbox database has a database copy, the Remove-MailboxDatabase cmdlet also removes the copy.
 
 The Remove-MailboxDatabase cmdlet removes only the database object from Active Directory. It doesn't remove the physical database files. You must remove the database files manually after you run the Remove-MailboxDatabase cmdlet.
@@ -52,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-MailboxDatabase -Identity MailboxDatabase01
-```
-
-This example removes the mailbox database MailboxDatabase01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailboxDatabase -Identity MailboxDatabase01
-```
-
-This example removes the mailbox database MailboxDatabase01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-MailboxDatabase -Identity MailboxDatabase01
 ```
@@ -167,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4d07d736-1dd7-43af-9f54-37d7c648572e.aspx)
-

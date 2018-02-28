@@ -6,18 +6,6 @@ schema: 2.0.0
 # get-addressrewriteentry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-AddressRewriteEntry cmdlet to view an existing address rewrite entry that rewrites sender and recipient e-mail addresses in e-mail messages sent to or from an e-mail organization.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-AddressRewriteEntry cmdlet to view an existing address rewrite entry that rewrites sender and recipient email addresses in messages sent to or sent from your organization through an Edge Transport server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-AddressRewriteEntry cmdlet to view an existing address rewrite entry that rewrites sender and recipient email addresses in messages sent to or sent from your organization through an Edge Transport server.
@@ -30,58 +18,18 @@ get-addressrewriteentry [[-Identity] <AddressRewriteEntryIdParameter>] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-With Microsoft Exchange Server 2010 address rewriting, you can modify the addresses of senders and recipients on messages that enter and leave an Exchange organization. You configure Address Rewriting agents on the Receive connector or Send connector on a computer that has the Edge Transport server role installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address rewriting agent" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address Rewriting - Edge Transport" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-AddressRewriteEntry
-```
-
-This example shows how to view a summary listing of all address rewrite entries.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-AddressRewriteEntry
 ```
 
 This example returns a summary listing of all address rewrite entries.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-AddressRewriteEntry
-```
-
-This example returns a summary listing of all address rewrite entries.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-AddressRewriteEntry "Address rewrite entry for contoso.com" | Format-List
-```
-
-This example shows how to view the detailed configuration of a single address rewrite entry by piping the results of the Get-AddressRewriteEntry command to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-AddressRewriteEntry "Address rewrite entry for contoso.com" | Format-List
-```
-
-This example returns the detailed configuration of a single address rewrite entry by piping the results to the Format-List command.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-AddressRewriteEntry "Address rewrite entry for contoso.com" | Format-List
 ```
@@ -142,4 +90,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/633abc53-1719-42cb-bf56-077f38dd942e.aspx)
-

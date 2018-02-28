@@ -6,87 +6,38 @@ schema: 2.0.0
 # New-OutlookProvider
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-OutlookProvider cmdlet to create the AutoDiscoverConfig object, and then populate the object with relevant settings.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the New-OutlookProvider cmdlet to create the AutoDiscoverConfig object, and then populate the object with relevant settings.
+Use the New-OutlookProvider cmdlet to create the AutoDiscoverConfig object and then populate the object with relevant settings.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
 ```
-New-OutlookProvider [-Name] <String> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+New-OutlookProvider [-Name] <String> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-OutlookProvider cmdlet creates the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-OutlookProvider cmdlet creates the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service configuration settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The New-OutlookProvider cmdlet creates the AutoDiscoverConfig object under the Global Settings object in Active Directory and sets the attributes specified.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-OutlookProvider -Name MyOABUrl
 ```
 
 This example creates the AutoDiscoverConfig object MyOABUrl.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-OutlookProvider -Name MyOABUrl
-```
-
-This example creates the AutoDiscoverConfig object MyOABUrl.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-OutlookProvider -Name MyOABUrl
-```
-
-This example creates the AutoDiscoverConfig object MyOABUrl.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-OutlookProvider -DomainController DC1 -Name Autodiscover1
 ```
 
-This example creates the AutoDiscoverConfig object Autodiscover1, and the specified domain controller writes the change to Active Directory.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-OutlookProvider -DomainController DC1 -Name Autodiscover1
-```
-
-This example creates the AutoDiscoverConfig object Autodiscover1, and the specified domain controller writes the change to Active Directory.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-OutlookProvider -DomainController DC1 -Name Autodiscover1
-```
-
-This example creates the AutoDiscoverConfig object Autodiscover1, and the specified domain controller writes the change to Active Directory.
+This example creates the AutoDiscoverConfig object Autodiscover1 and the specified domain controller writes the change to Active Directory.
 
 ## PARAMETERS
 
@@ -142,24 +93,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -194,4 +127,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3e80fb04-531f-4044-b957-9ba4fc712e4b.aspx)
-

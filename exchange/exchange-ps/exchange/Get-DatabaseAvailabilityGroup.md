@@ -6,15 +6,9 @@ schema: 2.0.0
 # Get-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-DatabaseAvailabilityGroup cmdlet to obtain the list of servers that are members of a database availability group (DAG).
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-DatabaseAvailabilityGroup cmdlet to obtain a variety of configuration settings, status, and other information about a database availability group (DAG).
+Use the Get-DatabaseAvailabilityGroup cmdlet to obtain a variety of configuration settings, status and other information about a database availability group (DAG).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -26,42 +20,6 @@ Get-DatabaseAvailabilityGroup [[-Identity] <DatabaseAvailabilityGroupIdParameter
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-In addition to obtaining a list of DAG members, the Get-DatabaseAvailabilityGroup cmdlet can also be used to view real-time status information about a DAG, such as:
-
-- OperationalServers
-
-- PrimaryActiveManager
-
-- ReplicationPort
-
-- NetworkNames
-
-Use the Status parameter with the command to include the values for these properties. Without the Status parameter, the values returned for these properties are blank.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-In addition to obtaining a list of DAG members, the Get-DatabaseAvailabilityGroup cmdlet can also be used to view real-time status information about a DAG, such as:
-
-- OperationalServers
-
-- PrimaryActiveManager
-
-- ReplicationPort
-
-- NetworkNames
-
-- WitnessShareInUse
-
-Use the Status parameter with the command to include the values for these listed properties. Without the Status parameter, the values returned for these properties are blank.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability group properties" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 In addition to obtaining a list of DAG members, the Get-DatabaseAvailabilityGroup cmdlet can also be used to view real-time status information about a DAG, such as:
 
 - OperationalServers
@@ -80,40 +38,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-DatabaseAvailabilityGroup DAG1 -Status | fl
-```
-
-This example displays the list of servers in a DAG named DAG1. It also displays real-time status information for DAG1. In addition, several properties of the DAG, such as the file share witness directory and share configuration information are also displayed. The output for the command is formatted as a list.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-DatabaseAvailabilityGroup DAG1 | Format-List
 ```
 
 This example displays the basic properties of the DAG DAG1. The output for the command is formatted as a list.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-DatabaseAvailabilityGroup DAG1 | Format-List
-```
-
-This example displays the basic properties of the DAG DAG1. The output for the command is formatted as a list.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-DatabaseAvailabilityGroup DAG2 -Status | Format-List
 ```
 
-This example displays the properties of the DAG DAG2. Because it includes the Status parameter, the task also displays real-time status information for DAG2, such as the current list of operational servers, and the server currently holding the Primary Active Manager role. In addition, several properties of the DAG, such as the witness server and directory configuration information are also displayed. The output for the command is formatted as a list.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-DatabaseAvailabilityGroup DAG2 -Status | Format-List
-```
-
-This example displays the properties of the DAG DAG2. Because it includes the Status parameter, the task also displays real-time status information for DAG2, such as the current list of operational servers, and the server currently holding the Primary Active Manager role. In addition, several properties of the DAG, such as the witness server and directory configuration information are also displayed. The output for the command is formatted as a list.
+This example displays the properties of the DAG DAG2. Because it includes the Status parameter, the task also displays real-time status information for DAG2, such as the current list of operational servers and the server currently holding the Primary Active Manager role. In addition, several properties of the DAG, such as the witness server and directory configuration information are also displayed. The output for the command is formatted as a list.
 
 ## PARAMETERS
 
@@ -150,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-The Status parameter instructs the command to query Active Directory for additional information, and to include real-time status information in the output.
+The Status parameter instructs the command to query Active Directory for additional information and to include real-time status information in the output.
 
 ```yaml
 Type: SwitchParameter
@@ -183,4 +120,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ea64d731-55ae-4a39-9eec-a72aa36d6dad.aspx)
-

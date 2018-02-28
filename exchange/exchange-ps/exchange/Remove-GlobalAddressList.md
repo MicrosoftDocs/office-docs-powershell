@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-GlobalAddressList
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-GlobalAddressList cmdlet to remove an existing global address list (GAL).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-GlobalAddressList cmdlet to remove an existing global address list (GAL).
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-GlobalAddressList cmdlet to remove an existing global address list (GAL).
@@ -36,44 +22,11 @@ Remove-GlobalAddressList [-Identity] <GlobalAddressListIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address lists" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Address lists" entry in the Email address and address book permissions topic.
-
-By default in Exchange Online, the Address List role isn't assigned to any role groups. To use any cmdlets that require the Address List role, you need to add the role to a role group. For more information, see the "Add a role to a role group" section in the topic, Manage role groups.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-GlobalAddressList OldGAL
-```
-
-This example removes the GAL OldGAL.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-GlobalAddressList OldGAL
-```
-
-This example removes the GAL OldGAL.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-GlobalAddressList -Identity OldGAL
-```
-
-This example removes the GAL named OldGAL.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-GlobalAddressList -Identity OldGAL
 ```
@@ -83,16 +36,6 @@ This example removes the GAL named OldGAL.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the GUID, distinguished name (DN), or GAL name that represents a specific address list. You can also include the path by using the format Path\\GlobalAddressListName.
-
-You can omit the parameter label so that only the GAL name or GUID is supplied.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the global address list that you want to remove. You can use any value that uniquely identifies the GAL. For example:
 
 - Name
@@ -100,8 +43,6 @@ The Identity parameter specifies the global address list that you want to remove
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: GlobalAddressListIdParameter
@@ -137,19 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -198,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b9d537c9-6a50-4f61-9cb7-bdedc7e7e0c8.aspx)
-

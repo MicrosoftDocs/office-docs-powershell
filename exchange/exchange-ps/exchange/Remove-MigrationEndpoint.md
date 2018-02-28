@@ -8,7 +8,7 @@ schema: 2.0.0
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Remove-MigrationEndpoint cmdlet to remove existing migration endpoints for source or destination servers for cutover or staged Exchange migrations, IMAP migrations, and remote moves.
+Use the Remove-MigrationEndpoint cmdlet to remove existing migration endpoints for source or destination servers for cutover or staged Exchange migrations, IMAP migrations and remote moves.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -20,16 +20,6 @@ Remove-MigrationEndpoint [-Identity] <MigrationEndpointIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Use the Remove-MigrationEndpoint cmdlet to remove an existing migration endpoint.
-
-For more information about migration endpoints, see Set-MigrationEndpoint and New-MigrationEndpoint.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Use the Remove-MigrationEndpoint cmdlet to remove an existing migration endpoint.
 
 For more information about migration endpoints, see Set-MigrationEndpoint and New-MigrationEndpoint.
@@ -38,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MigrationEndpoint -Identity CrossForestME01
-```
-
-This example removes the migration endpoint CrossForestME01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MigrationEndpoint -Identity CrossForestME01
-```
-
-This example removes the migration endpoint CrossForestME01.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-MigrationEndpoint -Identity CrossForestME01
 ```
@@ -165,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/11e5d978-5e9f-4694-b29a-e63314f626c4.aspx)
-
