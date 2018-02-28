@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Add-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links chris@contoso.com,michelle@contoso.com
-```
-
-This example adds members chris@contoso.com and michelle@contoso.com to the Office 365 Group named Legal Department.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Add-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links chris@contoso.com,michelle@contoso.com
 ```
@@ -76,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Links
-The Links parameter specifies the recipients to add to the Office 365 Group. You specify whether these recipients are members, owners, or subscribers by using the LinkType parameter.
+The Links parameter specifies the recipients to add to the Office 365 Group. You specify whether these recipients are members, owners or subscribers by using the LinkType parameter.
 
 You can use any value that uniquely identifies the recipient.
 
@@ -189,4 +182,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0d7e03d4-b2dc-4a0b-865a-9ff33e53e221.aspx)
-
