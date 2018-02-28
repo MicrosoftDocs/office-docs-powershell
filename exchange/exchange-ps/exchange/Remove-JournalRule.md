@@ -6,12 +6,6 @@ schema: 2.0.0
 # remove-journalrule
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-JournalRule cmdlet to remove an existing journal rule on a Hub Transport server.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-JournalRule cmdlet to remove an existing journal rule.
@@ -21,53 +15,18 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-remove-journalrule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>] [-LawfulInterception]
+remove-journalrule [-Identity] <RuleIdParameter> [-Confirm] [-DomainController <Fqdn>]
  [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-JournalRule cmdlet removes the specified journal rule from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-JournalRule cmdlet removes the specified journal rule from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-JournalRule cmdlet removes the specified journal rule from Active Directory.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-JournalRule "Brokerage Communications"
-```
-
-This example removes the journal rule Brokerage Communications that's no longer needed.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-JournalRule "Brokerage Communications"
-```
-
-This example removes the journal rule Brokerage Communications that's no longer needed.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-JournalRule "Brokerage Communications"
-```
-
-This example removes the journal rule Brokerage Communications that's no longer needed.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-JournalRule "Brokerage Communications"
 ```
@@ -77,17 +36,7 @@ This example removes the journal rule Brokerage Communications that's no longer 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the rule to be removed. Enter either the GUID or the name of the journal rule. You can omit the parameter label.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the rule you want to remove. Enter either name or the GUID of the journal rule. You can omit the parameter label.
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -123,43 +72,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LawfulInterception
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The LawfulInterception parameter specifies that the rule to be removed has lawful interception enabled. If a journal rule has lawful interception enabled, you can't remove that rule unless you specify this parameter.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -202,4 +123,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7cb9d691-2b0c-4f64-982d-ce69f3c3e757.aspx)
-
