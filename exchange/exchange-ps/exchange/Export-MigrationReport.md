@@ -165,7 +165,7 @@ This parameter is reserved for internal Microsoft use.
 Type:
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Online
 
 Required: False
 Position: Named
