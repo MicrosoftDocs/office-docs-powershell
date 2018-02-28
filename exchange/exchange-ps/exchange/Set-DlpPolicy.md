@@ -21,31 +21,11 @@ Set-DlpPolicy [-Identity] <DlpPolicyIdParameter> [-Confirm] [-Description <Strin
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-DlpPolicy "Employee Numbers" -State Disabled
-```
-
-This example disables the DLP policy named Employee Numbers.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-DlpPolicy "Employee Numbers" -State Disabled
-```
-
-This example disables the DLP policy named Employee Numbers.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-DlpPolicy "Employee Numbers" -State Disabled
 ```
@@ -55,7 +35,7 @@ This example disables the DLP policy named Employee Numbers.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the DLP policy you want to modify. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID, or distinguished name (DN) of the DLP policy.
+The Identity parameter specifies the DLP policy you want to modify. You can use any value that uniquely identifies the DLP policy. For example, you can specify the name, GUID or distinguished name (DN) of the DLP policy.
 
 ```yaml
 Type: DlpPolicyIdParameter
@@ -127,11 +107,11 @@ Accept wildcard characters: False
 ### -Mode
 The Mode parameter specifies the action and notification level of the DLP policy. Valid values for this parameter are:
 
-- Audit: When a message matches the conditions specified by the DLP policy, the actions specified by the policy aren't enforced, and no notification emails are sent.
+- Audit: When a message matches the conditions specified by the DLP policy, the actions specified by the policy aren't enforced and no notification emails are sent.
 
 - AuditAndNotify: When a message matches the conditions specified by the DLP policy, the actions specified by the policy aren't enforced, but notification emails are sent.
 
-- Enforce: When a message matches the conditions specified by the DLP policy, the actions specified by the policy are enforced, and notification emails are sent.
+- Enforce: When a message matches the conditions specified by the DLP policy, the actions specified by the policy are enforced and notification emails are sent.
 
 If the State parameter is set to Disabled, the value of the Mode parameter is irrelevant.
 
@@ -214,4 +194,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f44e276c-b9cb-4bfc-a815-ab866446ffdd.aspx)
-

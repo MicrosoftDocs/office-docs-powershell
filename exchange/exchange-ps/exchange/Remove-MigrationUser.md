@@ -20,31 +20,11 @@ Remove-MigrationUser [-Identity] <MigrationUserIdParameter> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Move and Migration Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MigrationUser -Identity TonySmith
-```
-
-This example removes the migration user Tony Smith from a migration batch.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MigrationUser -Identity TonySmith
-```
-
-This example removes the migration user Tony Smith from a migration batch.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-MigrationUser -Identity TonySmith
 ```
@@ -173,4 +153,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/db6a2233-c413-42a0-a264-f65a2733ad09.aspx)
-

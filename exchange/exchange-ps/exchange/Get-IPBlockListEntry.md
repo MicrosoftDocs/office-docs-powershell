@@ -6,18 +6,6 @@ schema: 2.0.0
 # Get-IPBlockListEntry
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-IPBlockListEntry cmdlet to obtain information about the IP address configuration for the Connection Filter agent for the computer on which the command is run.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-IPBlockListEntry cmdlet to view the IP Block list entries that are used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-IPBlockListEntry cmdlet to view the IP Block list entries that are used by the Connection Filtering agent on Edge Transport servers.
@@ -37,56 +25,18 @@ Get-IPBlockListEntry -IPAddress <IPAddress> [-ResultSize <Unlimited>] [-Server <
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-IPBlockListEntry
-```
-
-This example returns a list of all IP addresses in the IP Block list.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-IPBlockListEntry
 ```
 
 This example returns a list of all IP address entries in the IP Block list.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-IPBlockListEntry
-```
-
-This example returns a list of all IP address entries in the IP Block list.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-IPBlockListEntry | where { $_.IsMachineGenerated }
-```
-
-This example returns machine-generated entries in the IP Block list that are inserted by sender reputation.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-IPBlockListEntry | where {$_.IsMachineGenerated}
-```
-
-This example returns machine-generated entries in the IP Block list that are inserted by sender reputation.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-IPBlockListEntry | where {$_.IsMachineGenerated}
 ```
@@ -96,17 +46,7 @@ This example returns machine-generated entries in the IP Block list that are ins
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies a configuration number to view a specific IP Block list entry. When you add an IP address to the IP Block list, the Identity parameter is automatically incremented.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the identity integer value of the IP Block list entry that you want to view. When you add an entry to the IP Block list, the Identity value is automatically assigned.
-
-
 
 ```yaml
 Type: IPListEntryIdentity
@@ -138,17 +78,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2010
-
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all entries, use unlimited for the value of this parameter. The default value is 1000.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -164,32 +94,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies a Hub Transport server on which to run this command. If you don't use the Server parameter, the command is run on the local server.You can't use this command to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-You can't use this parameter to configure other Edge Transport servers remotely.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -203,8 +107,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 If you don't use this parameter, the command is run on the local server.
 
 You can't use this parameter to configure other Edge Transport servers remotely.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -237,4 +139,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/efdf2bc1-5571-417e-810a-b690bf5c8044.aspx)
-

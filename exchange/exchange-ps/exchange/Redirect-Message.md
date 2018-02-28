@@ -20,20 +20,6 @@ Redirect-Message -Server <ServerIdParameter> -Target <MultiValuedProperty> [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-When a message queue is drained, the active messages in the queues on the source Mailbox server are routed to the target Mailbox server. After the messages are received and queued by the target Mailbox server, the messages are made redundant. Other considerations include the following:
-
-- Only active messages are drained. Shadow queues aren't drained.
-
-- Messages in the poison message queue aren't drained.
-
-- The source server won't accept new messages while the queues are drained.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Queues" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 When a message queue is drained, the active messages in the queues on the source Mailbox server are routed to the target Mailbox server. After the messages are received and queued by the target Mailbox server, the messages are made redundant. Other considerations include the following:
 
 - Only active messages are drained. Shadow queues aren't drained.
@@ -46,42 +32,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Redirect-Message -Server Mailbox01 -Target Mailbox02
 ```
 
-This example drains the active messages from the delivery queues on the Mailbox server named Mailbox01, and transfers the messages to the server named Mailbox02.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Redirect-Message -Server Mailbox01 -Target Mailbox02
-```
-
-This example drains the active messages from the delivery queues on the Mailbox server named Mailbox01, and transfers the messages to the server named Mailbox02.
+This example drains the active messages from the delivery queues on the Mailbox server named Mailbox01 and transfers the messages to the server named Mailbox02.
 
 ## PARAMETERS
 
 ### -Server
-
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -93,8 +53,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -179,4 +137,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/248138e5-6da4-4652-9cde-f8060c4a854c.aspx)
-

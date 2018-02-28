@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-OrganizationRelationship
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-OrganizationRelationship cmdlet to remove the organization relationship with an external organization.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-OrganizationRelationship cmdlet to remove the organization relationship with an external Exchange organization.
@@ -26,48 +20,13 @@ Remove-OrganizationRelationship [-Identity] <OrganizationRelationshipIdParameter
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-OrganizationRelationship cmdlet removes the organization relationship objects. To stop sharing information without removing the organization relationship objects, disable the organization relationship by using the Set-OrganizationRelationship cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Organization relationships" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-OrganizationRelationship cmdlet removes the organization relationship objects. To stop sharing information without removing the organization relationship objects, disable the organization relationship by using the Set-OrganizationRelationship cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Organization relationships" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-OrganizationRelationship cmdlet removes the organization relationship objects. To stop sharing information without removing the organization relationship objects, disable the organization relationship by using the Set-OrganizationRelationship cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-OrganizationRelationship -Identity Contoso
-```
-
-This example removes the organization relationship Contoso using the Identity parameter.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-OrganizationRelationship -Identity Contoso
-```
-
-This example removes the organization relationship Contoso using the Identity parameter.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-OrganizationRelationship -Identity Contoso
-```
-
-This example removes the organization relationship Contoso using the Identity parameter.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-OrganizationRelationship -Identity Contoso
 ```
@@ -119,19 +78,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fd646344-c783-45b2-b666-f50e823cba58.aspx)
-

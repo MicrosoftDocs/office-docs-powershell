@@ -28,14 +28,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Start-ComplianceSearch -Identity "Case 1234"
-```
-
-This example starts the compliance search named Case 1234
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Start-ComplianceSearch -Identity "Case 1234"
 ```
@@ -172,4 +165,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/17ef8cc9-d716-446c-a8b9-b9109a6cab5a.aspx)
-

@@ -24,14 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
-```
-
-This example removes the specified user configuration item from the mailbox lila@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-MailboxUserConfiguration -Mailbox julia@contoso.com -Identity Configuration\IPM.Configuration.Aggregated.OwaUserConfiguration
 ```
@@ -172,4 +165,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5b85049e-1437-4308-9694-c412bc835bcf.aspx)
-

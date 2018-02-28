@@ -24,63 +24,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SweepRule
 ```
 
 This example returns a summary list of all Sweep rules.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SweepRule
-```
-
-This example returns a summary list of all Sweep rules.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-SweepRule
-```
-
-This example returns a summary list of all Sweep rules.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-SweepRule -Mailbox julia@contoso.com
 ```
 
 This example returns a summary list of all Sweep rules in the specified mailbox.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SweepRule -Mailbox julia@contoso.com
-```
-
-This example returns a summary list of all Sweep rules in the specified mailbox.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-SweepRule -Mailbox julia@contoso.com
-```
-
-This example returns a summary list of all Sweep rules in the specified mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
-```
-
-This example returns detailed information for the Sweep rule with the specified RuleId property value.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
-```
-
-This example returns detailed information for the Sweep rule with the specified RuleId property value.
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 Get-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
@@ -219,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3893ff38-931d-49f8-b34d-d7666b629d54.aspx)
-
