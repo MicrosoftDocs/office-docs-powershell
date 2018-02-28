@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-ClassificationRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-ClassificationRuleCollection cmdlet to view the classification rule collections in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-ClassificationRuleCollection cmdlet to view the classification rule collections in your organization.
@@ -32,52 +22,18 @@ Get-ClassificationRuleCollection [[-Identity] <ClassificationRuleCollectionIdPar
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-ClassificationRuleCollection
 ```
 
 This example returns a summary list of all classification rule collections.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ClassificationRuleCollection
-```
-
-This example returns a summary list of all classification rule collections.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ClassificationRuleCollection
-```
-
-This example returns a summary list of all classification rule collections.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ClassificationRuleCollection "Microsoft Rule Pack" | Format-List
-```
-
-This example returns detailed information about the classification rule collection named Microsoft Rule Pack. The command is piped to the Format-List cmdlet to display the detailed configuration of the specified classification rule collection.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ClassificationRuleCollection "Microsoft Rule Pack" | Format-List
-```
-
-This example returns detailed information about the classification rule collection named Microsoft Rule Pack. The command is piped to the Format-List cmdlet to display the detailed configuration of the specified classification rule collection.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-ClassificationRuleCollection "Microsoft Rule Pack" | Format-List
 ```
@@ -138,4 +94,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bb740ed7-6af4-4053-ad9c-6688ca42b481.aspx)
-
