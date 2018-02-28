@@ -27,14 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-DkimSigningConfig -DomainName contoso.com -Enabled $true
-```
-
-This example enables DKIM message signing for the contoso.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 New-DkimSigningConfig -DomainName contoso.com -Enabled $true
 ```
@@ -209,4 +202,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d33f240d-2bea-47d9-98d7-ce84bb75bc78.aspx)
-
