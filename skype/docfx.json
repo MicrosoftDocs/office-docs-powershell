@@ -2,15 +2,13 @@
   "build": {
     "content": [
       {
-        "files": ["**/*.md", "**/*.yml"],
+        "files": ["**/*.md"],
         "src": "docs-conceptual",
         "version": "skype-ps",
         "dest": "skype",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "**/_themes/**",
-          "**/_themes.pdf/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
