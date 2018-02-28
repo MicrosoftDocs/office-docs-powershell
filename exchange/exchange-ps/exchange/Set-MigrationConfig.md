@@ -6,16 +6,6 @@ schema: 2.0.0
 # Set-MigrationConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-MigrationConfig cmdlet to edit migration configurations for a server running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MigrationConfig cmdlet to edit migration configurations on Exchange servers.
@@ -31,52 +21,18 @@ Set-MigrationConfig [-Confirm] [-DomainController <Fqdn>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-MigrationConfig -MaxNumberOfBatches 50
 ```
 
 This example sets the migration system to have a maximum of 50 batches at any time.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MigrationConfig -MaxNumberOfBatches 50
-```
-
-This example sets the migration system to have a maximum of 50 batches at any time.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-MigrationConfig -MaxNumberOfBatches 50
-```
-
-This example sets the migration system to have a maximum of 50 batches at any time.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MigrationConfig -MaxConcurrentMigrations 100
-```
-
-This example sets the migration system to only allow 100 concurrent migrations.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-MigrationConfig -MaxConcurrentMigrations 100
-```
-
-This example sets the migration system to only allow 100 concurrent migrations.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-MigrationConfig -MaxConcurrentMigrations 100
 ```
@@ -227,4 +183,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/641aaeb0-3a1b-4cc8-9092-07c9013d77e5.aspx)
-
