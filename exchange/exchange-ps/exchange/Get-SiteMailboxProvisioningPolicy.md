@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-SiteMailboxProvisioningPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-SiteMailboxProvisioningPolicy cmdlet to view information about site mailbox provisioning policies.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-SiteMailboxProvisioningPolicy cmdlet to view site mailbox provisioning policies.
@@ -30,66 +20,25 @@ Get-SiteMailboxProvisioningPolicy [[-Identity] <MailboxPolicyIdParameter>] [-Dom
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Site mailbox provisioning policy" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Site mailboxes allow access to both Microsoft SharePoint documents and Exchange email using the same client interface. Site mailbox provisioning policies apply settings to new site mailboxes that you create. You can create multiple site mailbox provisioning policies, but only the default policy is followed when users create site mailboxes. The default site mailbox provisioning policy is named Default.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailboxProvisioningPolicy
-```
-
-This example returns the default information about all site mailbox provisioning policies in your organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SiteMailboxProvisioningPolicy
 ```
 
 This example returns a summary list of all site mailbox provisioning policies in your organization.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SiteMailboxProvisioningPolicy
-```
-
-This example returns a summary list of all site mailbox provisioning policies in your organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
-```
-
-This example returns detailed information about the provisioning policy with the identity SM\_NewPolicy
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
 ```
 
 This example returns detailed information about the site mailbox provisioning policy named SM\_NewPolicy
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SiteMailboxProvisioningPolicy -Identity SM_NewPolicy | Format-List
-```
-
-This example returns detailed information about the site mailbox provisioning policy named SM\_NewPolicy
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-SiteMailboxProvisioningPolicy | Format-List IsDefault
-```
-
-This example returns all policies in your organization, but only displays the IsDefault information to identify which policy is the default policy.
 
 ## PARAMETERS
 
@@ -112,14 +61,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the site mailbox provisioning policy.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the site mailbox provisioning policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -127,8 +68,6 @@ The Identity parameter specifies the site mailbox provisioning policy that you w
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxPolicyIdParameter
@@ -161,4 +100,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/159f050b-c015-4fc5-b6b0-2aceaecb71ac.aspx)
-
