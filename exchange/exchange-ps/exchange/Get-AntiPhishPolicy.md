@@ -23,7 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
+### Example 1
 ```
 Get-AntiPhishPolicy
 ```
@@ -37,7 +37,7 @@ Get-AntiPhishPolicy
 
 This example shows a summary list of all antiphish policies.
 
-### Example 1 (Exchange Online)
+### Example 1
 ```
 Get-AntiPhishPolicy  -Identity Default | Format-List
 ```
