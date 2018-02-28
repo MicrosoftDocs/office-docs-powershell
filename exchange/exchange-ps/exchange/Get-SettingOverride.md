@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-SettingOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-SettingOverride cmdlet to view existing setting overrides.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-SettingOverride cmdlet to view existing setting overrides that store Exchange 2016 customizations in Active Directory instead of in text files on the server.
@@ -29,14 +19,6 @@ Get-SettingOverride [[-Identity] <SettingOverrideIdParameter>] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You use setting overrides to modify the default system workload management (system WLM) settings. System WLM automatically throttles specific Exchange workloads by monitoring the health of key server resources. For more information, see Exchange workload management.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange workload throttling" entry in the Server health and performance permissions topic.
-
-!!! Exchange Server 2016
-
 You use setting overrides to configure and store Exchange 2016 server customizations in Active Directory. In previous versions of Exchange, these customizations were stored in web.config or exe.config XML application configuration files. The customizations in these files were lost when you installed the next Exchange Cumulative Update (CU) or Service Pack (SP). The customizations that are associated with the \*-SettingOverride cmdlets persist in Active Directory across Exchange 2016 CUs and SPs.
 
 Incorrect usage of the \*-SettingOverride cmdlets can cause serious damage to your Exchange organization. This damage could require you to reinstall Exchange. Only use these cmdlets as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
@@ -45,28 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-SettingOverride | Format-Table -Auto Name,ComponentName,SectionName,Parameters,Reason
-```
-
-This example displays a summary list of all setting override objects.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-SettingOverride | Format-List Name,Reason,ComponentName,SectionName,Parameters,Server
 ```
 
 This example displays a summary list of all setting override objects.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-SettingOverride -Identity "Change OAB"
-```
-
-This example displays a detailed information for the setting override object named Change OAB.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-SettingOverride -Identity "IM Server Integration"
 ```
@@ -131,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3052da37-a77c-423b-a4ce-3022a6dbf19e.aspx)
-
