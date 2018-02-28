@@ -10,6 +10,8 @@ schema: 2.0.0
 ## SYNOPSIS
 Connects a site to a hub site.
 
+This cmdlet is removed in the February 2018 Release of SharePoint Online management shell (16.0.7414.1200).
+
 ## SYNTAX
 
 ```
