@@ -6,12 +6,6 @@ schema: 2.0.0
 # Enable-UMIPGateway
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Enable-UMIPGateway cmdlet to enable a Unified Messaging (UM) IP gateway.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Enable-UMIPGateway cmdlet to enable a Unified Messaging (UM) IP gateway.
@@ -26,24 +20,6 @@ Enable-UMIPGateway [-Identity] <UMIPGatewayIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The status variable for a UM IP gateway can be used to enable or disable call answering destined for the IP gateway. The Enable-UMIPGateway cmdlet enables a UM IP gateway in Active Directory by modifying its status variable.
-
-After this task is completed, the UM IP gateway answers incoming calls and makes outgoing calls through the IP gateway or IP Private Branch eXchange.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The status variable for a UM IP gateway can be used to enable or disable call answering destined for the IP gateway. The Enable-UMIPGateway cmdlet enables a UM IP gateway in Active Directory by modifying its status variable.
-
-After this task is completed, the UM IP gateway answers incoming calls and makes outgoing calls through the IP gateway or IP Private Branch eXchange (PBX).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM IP gateways" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The status variable for a UM IP gateway can be used to enable or disable call answering destined for the IP gateway. The Enable-UMIPGateway cmdlet enables a UM IP gateway in Active Directory by modifying its status variable.
 
 After this task is completed, the UM IP gateway answers incoming calls and makes outgoing calls through the IP gateway or IP Private Branch eXchange (PBX).
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Enable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example enables a UM IP gateway named MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example enables the UM IP gateway MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-UMIPGateway -Identity MyUMIPGateway
-```
-
-This example enables the UM IP gateway MyUMIPGateway.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Enable-UMIPGateway -Identity MyUMIPGateway
 ```
@@ -119,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4a94d6a0-0eb3-4426-b263-58b3db0de7e2.aspx)
-
