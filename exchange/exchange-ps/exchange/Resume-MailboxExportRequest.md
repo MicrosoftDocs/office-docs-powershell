@@ -6,27 +6,11 @@ schema: 2.0.0
 # Resume-MailboxExportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Resume-MailboxExportRequest cmdlet to resume an export request that was suspended or failed.
-
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Resume-MailboxExportRequest cmdlet to resume an export request that was suspended or failed.
 
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Resume-MailboxExportRequest cmdlet to resume an export request that was suspended or failed.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
+This cmdlet is available only in the Mailbox Import Export role and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups (https://technet.microsoft.com/library/jj657480.aspx).
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,62 +22,20 @@ Resume-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-Conf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-This cmdlet can be pipelined with the Get-MailboxExportRequest cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Resume-MailboxExportRequest cmdlet can be pipelined with the Get-MailboxExportRequest cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Resume-MailboxExportRequest cmdlet can be pipelined with the Get-MailboxExportRequest cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Resume-MailboxExportRequest -Identity kweku\export
 ```
 
 This example resumes the export request kweku\\export.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Resume-MailboxExportRequest -Identity kweku\export
-```
-
-This example resumes the export request kweku\\export.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Resume-MailboxExportRequest -Identity kweku\export
-```
-
-This example resumes the export request kweku\\export.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxExportRequest -Status Failed | Resume-MailboxExportRequest
-```
-
-This example resumes any failed export move requests.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequest -Status Failed | Resume-MailboxExportRequest
-```
-
-This example resumes any failed export move requests.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MailboxExportRequest -Status Failed | Resume-MailboxExportRequest
 ```
@@ -188,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dba2880f-ac7c-40d4-8792-1bf30262142e.aspx)
-

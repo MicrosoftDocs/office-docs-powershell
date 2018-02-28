@@ -6,20 +6,6 @@ schema: 2.0.0
 # New-RoleAssignmentPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-RoleAssignmentPolicy cmdlet to create a new management role assignment policy on a server running Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-RoleAssignmentPolicy cmdlet to create a management role assignment policy on a server running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-RoleAssignmentPolicy cmdlet to create management role assignment policies in your organization.
@@ -30,33 +16,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 New-RoleAssignmentPolicy [-Name] <String> [-Confirm] [-Description <String>] [-DomainController <Fqdn>]
- [-IsDefault] [-Organization <OrganizationIdParameter>] [-Roles <RoleIdParameter[]>] [-WhatIf]
+ [-IsDefault] [-Roles <RoleIdParameter[]>] [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you create a new assignment policy, you can assign it to users using the New-Mailbox, Set-Mailbox, or Enable-Mailbox cmdlets. If you make the new assignment policy the default assignment policy, it's assigned to all new mailboxes that don't have an explicit assignment policy assigned to them.
-
-You can add management roles to the new assignment policy when you create it, or you can create the assignment policy and add roles later. You must assign at least one management role to the new assignment policy for it to apply permissions to a mailbox. Without any roles assigned to the new assignment policy, users assigned to it won't be able to manage their mailbox configuration. To assign a management role after the assignment policy has been created, use the New-ManagementRoleAssignment cmdlet. For more information, see Add a Role to an Assignment Policy.
-
-For more information about assignment policies, see Understanding Management Role Assignment Policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Assignment policies" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-When you create an assignment policy, you can assign it to users using the New-Mailbox, Set-Mailbox, or Enable-Mailbox cmdlets. If you make the new assignment policy the default assignment policy, it's assigned to all new mailboxes that don't have an explicit assignment policy assigned to them.
-
-You can add management roles to the new assignment policy when you create it, or you can create the assignment policy and add roles later. You must assign at least one management role to the new assignment policy for it to apply permissions to a mailbox. Without any roles assigned to the new assignment policy, users assigned to it won't be able to manage their mailbox configuration. To assign a management role after the assignment policy has been created, use the New-ManagementRoleAssignment cmdlet. For more information, see Manage role assignment policies.
-
-For more information about assignment policies, see Understanding management role assignment policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Assignment policies" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 When you create an assignment policy, you can assign it to users using the New-Mailbox, Set-Mailbox, or Enable-Mailbox cmdlets. If you make the new assignment policy the default assignment policy, it's assigned to all new mailboxes that don't have an explicit assignment policy assigned to them.
 
 You can add management roles to the new assignment policy when you create it, or you can create the assignment policy and add roles later. You must assign at least one management role to the new assignment policy for it to apply permissions to a mailbox. Without any roles assigned to the new assignment policy, users assigned to it won't be able to manage their mailbox configuration. To assign a management role after the assignment policy has been created, use the New-ManagementRoleAssignment cmdlet. For more information, see Manage role assignment policies.
@@ -67,111 +31,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox Joe -RoleAssignmentPolicy "End User Policy"
-```
-
-This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
 ```
 
 This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
-```
-
-This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-RoleAssignmentPolicy -Name "End User Policy"; Set-Mailbox -Identity Joe -RoleAssignmentPolicy "End User Policy"
-```
-
-This example creates an assignment policy. After the assignment policy is created, you can assign the assignment policy to a mailbox using the Set-Mailbox cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-RoleAssignmentPolicy -Name "Default End User Policy" -IsDefault
 ```
 
 This example creates an assignment policy using the IsDefault switch.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-RoleAssignmentPolicy -Name "Default End User Policy" -IsDefault
-```
-
-This example creates an assignment policy using the IsDefault switch.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-RoleAssignmentPolicy -Name "Default End User Policy" -IsDefault
-```
-
-This example creates an assignment policy using the IsDefault switch.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-RoleAssignmentPolicy -Name "Default End User Policy" -IsDefault
-```
-
-This example creates an assignment policy using the IsDefault switch.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
 ```
 
 This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
 
-
 First, the new assignment policy is created and set as the new default assignment policy.
-
-
-Because setting the new role assignment as default applies only to new mailboxes or mailboxes moved to an Exchange 2010 server, the Set-Mailbox cmdlet is used to configure the new assignment policy on all existing mailboxes.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
-```
-
-This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
-
-
-First, the new assignment policy is created and set as the new default assignment policy.
-
-
-Because setting the new role assignment as default applies only to new mailboxes or mailboxes moved to an Exchange 2013 server, the Set-Mailbox cmdlet is used to configure the new assignment policy on all existing mailboxes.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
-```
-
-This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
-
-
-First, the new assignment policy is created and set as the new default assignment policy.
-
-
-Because setting the new role assignment as default applies only to new mailboxes or mailboxes moved from previous versions of Exchange, the Set-Mailbox cmdlet is used to configure the new assignment policy on all existing mailboxes.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-New-RoleAssignmentPolicy -Name "Limited End User Policy" -Roles "MyPersonalInformation", "MyDistributionGroupMembership", "MyVoiceMail" -IsDefault; Get-Mailbox -ResultSize Unlimited | Set-Mailbox -RoleAssignmentPolicy "Limited End User Policy"
-```
-
-This example creates an assignment policy that enables users to modify their personal information, manage their distribution group membership, and manage their voice mail. The new assignment policy is created as the new default assignment policy. Then, all existing mailboxes are configured to use the new assignment policy.
-
-
-First, the new assignment policy is created and set as the new default assignment policy.
-
 
 Because setting the new role assignment as default applies only to new mailboxes or mailboxes moved from previous versions of Exchange, the Set-Mailbox cmdlet is used to configure the new assignment policy on all existing mailboxes.
 
@@ -230,21 +111,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -260,31 +131,11 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-!!! Exchange Server 2010
-
-The IsDefault switch specifies whether the new assignment policy should become the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2010 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with this switch.
-
-Setting an assignment policy as default doesn't change the role assignment on existing mailboxes. To change the assignment policies on existing mailboxes, use the Set-Mailbox cmdlet.
-
-
-
-!!! Exchange Server 2013
-
-The IsDefault switch specifies whether the new assignment policy should become the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2013 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with this switch.
-
-Setting an assignment policy as default doesn't change the role assignment on existing mailboxes. To change the assignment policies on existing mailboxes, use the Set-Mailbox cmdlet.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IsDefault switch makes the assignment policy the default assignment policy. You don't have to specify a value with this switch.
 
 New mailboxes or mailboxes moved from previous versions of Exchange are assigned the default assignment policy when an explicit assignment policy isn't provided.
 
 Setting an assignment policy as default doesn't change the role assignment on existing mailboxes. To change the assignment policies on existing mailboxes, use the Set-Mailbox cmdlet.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -299,40 +150,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Roles
-!!! Exchange Server 2010
-
-The Roles parameter specifies the management roles to assign to the role assignment policy when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
-
-For a list of built-in management roles that you can assign to a role group, see Built-in Management Roles.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Roles parameter specifies the management roles to assign to the role assignment policy when it's created. If a role name contains spaces, enclose the name in quotation marks ("). If you want to assign more that one role, separate the role names with commas.
 
 For a list of built-in management roles that you can assign to a role group, see Built-in management roles.
-
-
 
 ```yaml
 Type: RoleIdParameter[]
@@ -381,4 +202,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/25a56027-2e25-4f98-842f-c671a1bf56f9.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-MailboxDatabase
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailboxDatabase cmdlet to create a mailbox database object in the database container in Active Directory.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-MailboxDatabase cmdlet to create a mailbox database, or a recovery database. Each database you create must have a unique name in the organization.
@@ -40,43 +34,11 @@ New-MailboxDatabase [[-Name] <String>] [-Recovery] -Server <ServerIdParameter> [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Mailboxes connect to Microsoft Exchange through a Client Access server or a Client Access server array. The Client Access server that the mailboxes connect to is determined by the mailbox database on which they reside. When you create a new mailbox database, Exchange assigns a Client Access server or Client Access server array to the mailbox database using the following logic:
-
-- Exchange determines if there is an array in the local site. If so, the Client Access server array is assigned to the mailbox database.
-
-- Exchange determines if the Mailbox server on which the database is being created is also a Client Access server. If so, that server is assigned to the mailbox database.
-
-- If neither of the preceding conditions are met, Exchange randomly selects a Client Access server from the local site.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Database Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox database permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-MailboxDatabase -Name "MailboxDatabase01" -EdbFilePath D:\DatabaseFiles\MailboxDatabase01.edb
-```
-
-This example creates the mailbox database MailboxDatabase01. This example also specifies where to create the .edb database file, which is different than the default location.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-MailboxDatabase -Name "DB1" -EdbFilePath D:\ExchangeDatabases\DB1\DB1.edb
-```
-
-This example creates the mailbox database DB1. This example also uses a non-default location for the database file.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-MailboxDatabase -Name "DB1" -EdbFilePath D:\ExchangeDatabases\DB1\DB1.edb
 ```
@@ -131,17 +93,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2010
-
-The Server parameter specifies the server you want to create the database on.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Server parameter specifies the server on which you want to create the database.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -193,17 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -EdbFilePath
-!!! Exchange Server 2010
-
-The EdbFilePath parameter specifies the path to the .edb file. The default value is %programfiles%\\Microsoft\\Exchange Server\\V14\\Mailbox\\\<Database name\>.edb.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The EdbFilePath parameter specifies the path to the database files. The default value is %programfiles%\\Microsoft\\Exchange Server\\V15\\Mailbox\\\<Database name\>.edb.
-
-
 
 ```yaml
 Type: EdbFilePath
@@ -396,4 +338,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5008090b-e776-4ff6-807c-208e00f4daab.aspx)
-

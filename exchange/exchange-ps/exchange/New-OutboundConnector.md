@@ -32,29 +32,16 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-OutboundConnector -Name "Contoso Outbound Connector" -RecipientDomains *.contoso.com -TlsSettings DomainValidation -TlsDomain *.contoso.com
 ```
 
 This example creates the Outbound connector named Contoso Outbound Connector with the following properties:
 
+- It sends messages to recipients in the contoso.com domain and all subdomains.
 
-It sends messages to recipients in the contoso.com domain and all subdomains.
-
-It uses TLS encryption and certificate verification for mail routed to the contoso.com domain and all subdomains
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-OutboundConnector -Name "Contoso Outbound Connector" -RecipientDomains *.contoso.com -TlsSettings DomainValidation -TlsDomain *.contoso.com
-```
-
-This example creates the Outbound connector named Contoso Outbound Connector with the following properties:
-
-
-It sends messages to recipients in the contoso.com domain and all subdomains.
-
-It uses TLS encryption and certificate verification for mail routed to the contoso.com domain and all subdomains
+- It uses TLS encryption and certificate verification for mail routed to the contoso.com domain and all subdomains
 
 ## PARAMETERS
 
@@ -422,4 +409,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ca73d195-542f-4acf-b2ff-84275e26a79a.aspx)
-

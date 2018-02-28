@@ -20,56 +20,20 @@ Get-IntraOrganizationConnector [[-Identity] <IntraOrganizationConnectorIdParamet
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Intra-Organization connectors" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Intra-Organizational connectors enable features and services between divisions in your Exchange organization. It allows for the expansion of organizational boundaries for features and services across different hosts and network boundaries, such as between Active Directory forests, between on-premises and cloud-based organizations, or between tenants hosted in the same or different datacenters.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-IntraOrganizationConnector
 ```
 
 This example returns a summary list of all Intra-Organization connectors.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-IntraOrganizationConnector
-```
-
-This example returns a summary list of all Intra-Organization connectors.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-IntraOrganizationConnector
-```
-
-This example returns a summary list of all Intra-Organization connectors.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-IntraOrganizationConnector "MainCloudConnector" | Format-List
-```
-
-This example returns details about the Intra-Organization connector named "MainCloudConnector".
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-IntraOrganizationConnector "MainCloudConnector" | Format-List
-```
-
-This example returns details about the Intra-Organization connector named "MainCloudConnector".
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-IntraOrganizationConnector "MainCloudConnector" | Format-List
 ```
@@ -136,4 +100,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/213b31c9-71b5-452e-9ead-401b87f6ce4e.aspx)
-

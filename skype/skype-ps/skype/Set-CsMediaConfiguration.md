@@ -98,6 +98,7 @@ Accept wildcard characters: False
 
 ### -EnableQoS
 QoS monitors the quality of voice signals over a network.
+The EnableIncallQoS attribute enables or disables the ability of Skype for Business clients to send the raw data that's required to generate IncallQuality messages.
 
 
 ```yaml

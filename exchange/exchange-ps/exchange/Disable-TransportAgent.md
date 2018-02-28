@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-TransportAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-TransportAgent cmdlet to disable a transport agent on a computer that has the Edge Transport server role or the Hub Transport server role installed in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Disable-TransportAgent cmdlet to disable a transport agent.
@@ -24,35 +18,11 @@ Disable-TransportAgent [-Identity] <TransportAgentObjectId> [-Confirm] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-TransportAgent -Identity "Antivirus for Exchange"
-```
-
-This example shows how a fictitious antivirus application is disabled on an Edge Transport server or a Hub Transport server.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-TransportAgent "Test App" -TransportService Hub
-```
-
-This example shows how a fictitious application named Test App is disabled in the Transport service on a Mailbox server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Disable-TransportAgent "Test App" -TransportService Hub
 ```
@@ -132,24 +102,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransportService
-!!! Exchange Server 2013
-
-The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
-
-- Hub for the Transport service on Mailbox servers.
-
-- MailboxSubmission for the Mailbox Transport Submission service on Mailbox servers.
-
-- MailboxDelivery for the Mailbox Transport Delivery service on Mailbox servers.
-
-- FrontEnd for the Front End Transport service on Client Access servers.
-
-- Edge on Edge Transport servers.
-
-
-
-!!! Exchange Server 2016
-
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
 - Hub for the Transport service on Mailbox servers.
@@ -161,8 +113,6 @@ The TransportService parameter specifies the transport service that you want to 
 - FrontEnd for the Front End Transport service on Mailbox servers.
 
 - Edge on Edge Transport servers.
-
-
 
 ```yaml
 Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
@@ -195,4 +145,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/48929018-619f-4b7a-aecc-af284df14125.aspx)
-

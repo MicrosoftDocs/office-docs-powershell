@@ -6,20 +6,6 @@ schema: 2.0.0
 # Test-OutlookConnectivity
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-OutlookConnectivity cmdlet to test end-to-end Microsoft Outlook client connectivity in the Microsoft Exchange Server 2010 organization. This includes testing for Outlook Anywhere (RPC/HTTP) and TCP-based connections.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Test-OutlookConnectivity cmdlet to test end-to-end Microsoft Outlook client connectivity in the Microsoft Exchange Server 2013 organization. This includes testing for both Outlook Anywhere (RPC/HTTP) and MAPI/HTTP connections.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-OutlookConnectivity cmdlet to test end-to-end Microsoft Outlook client connectivity in the Microsoft Exchange organization. This includes testing for both Outlook Anywhere (RPC over HTTP) and MAPI over HTTP connections.
@@ -77,36 +63,6 @@ Test-OutlookConnectivity [-ProbeIdentity] <String> [-Credential <PSCredential>] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Running the Test-OutlookConnectivity cmdlet validates a user's Outlook connection. End-to-end verification includes testing for Autodiscover connectivity, creating a user profile, and logging on to the user's primary mailbox, or primary and on-premises archive mailbox. This cmdlet can validate both types of client connections, TCP/IP and Outlook Anywhere. If the cmdlet fails, the output notes the step that failed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test Outlook Anywhere connectivity" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defined by the provided parameters. The command has been simplified in Exchange Server 2013 to validate a single mailbox.
-
-Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You must select one of the Outlook probe identities to run the test. Use the Get-MonitoringItemIdentity (https://go.microsoft.com/fwlink/p/?LinkId=510841) cmdlet to see what probes are active.
-
-This example lists the probes running on a mailbox server: Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook.protocol | ?{$\_.Name -like '\*probe'}.
-
-This example lists the probes running on a client access server: Get-MonitoringItemIdentity -Server MailboxServer1 -Identity outlook | ?{$\_.Name -like '\*probe'}.
-
-For more information on probes and the monitoring framework, see Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510838), Managed Availability and Server Health (https://go.microsoft.com/fwlink/p/?LinkId=510839), and Customizing Managed Availability (https://go.microsoft.com/fwlink/p/?LinkId=510840)
-
-By default, the cmdlet uses the test monitoring account attached to the specifed probe. You may enter a different mailbox instead via the MailboxId parameter. The options and results follow.
-
-- MailboxId and Credential are not specified: Generic connectivity test against a test mailbox using the system's test credentials.
-
-- MailboxId is specified, Credential is not: Connectivity test to the specific mailbox using the system's test credentials.
-
-- MailboxId and Credential are both specified: You get a connectivity test to the specific mailbox, and also a test that the credentials provided are valid for that mailbox
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test Outlook connectivity" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 Running the Test-OutlookConnectivity cmdlet validates an Outlook connection defined by the provided parameters. The command is able to validate a single mailbox.
 
 The Test-OutlookConnectivity cmdlet runs the same process as the monitoring probes. The Microsoft Exchange Health Manager (MSExchangeHM) service must be running and have created the Outlook probes on the machine that will be tested. You need to select one of the Outlook probe identities to run the test. Use the Get-MonitoringItemIdentity (https://go.microsoft.com/fwlink/p/?LinkId=510841) cmdlet to see what probes are active.
@@ -129,77 +85,50 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-OutlookConnectivity -Protocol:HTTP -GetDefaultsFromAutoDiscover:$true
 ```
 
-This example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
+In Exchange 2010, this example tests the most common end-to-end Outlook connectivity scenario for Outlook Anywhere. This includes testing for connectivity through the Autodiscover service, creating a user profile, and logging on to the user mailbox. All of the required values are retrieved from the Autodiscover service. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. This example command can be run to test TCP/IP connectivity by setting the Protocol parameter to RPC.
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcSelfTestProbe"
 ```
 
 This example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-OutlookConnectivity -ProbeIdentity "OutlookRpcSelfTestProbe"
-```
-
-This example runs an OutlookRpcSelfTestProbe on the mailbox server that you're currently connected to.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Test-OutlookConnectivity -RpcProxyTestType:Internal -RpcTestType:Server
 ```
 
-This example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
+In Exchange 2010, this example tests for Outlook Anywhere connectivity using the local server as the RpcProxy endpoint as well as the RPC endpoint. Because the Identity parameter isn't specified, the command uses the temporary test user that you've created using the New-TestCasConnectivityUser.ps1 script. Modify this example to use the public external URL by setting the RpcProxyTestType parameter to External. Additionally, the example command can use the Client Access server array as the RPC endpoint by setting the RpcTestType parameter to Array. To only validate TCP/IP connectivity, omit the RpcProxyTestType parameter.
 
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Test-OutlookConnectivity "OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
 ```
 
 This example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Test-OutlookConnectivity "OutlookRpcDeepTestProbe\Mailbox Database 1234512345" -RunFromServerId PrimaryMailbox -MailboxId johnd@contoso.com
-```
-
-This example runs the OutlookRpcDeepTestProbe from the "PrimaryMailbox" server for the mailbox "johnd@contoso.com" mounted on "Mailbox Database 1234512345". Because the Credential parameter is not specified, the probe will use the default testing credentials.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Test-OutlookConnectivity -RpcProxyServer:RpcProxySrv01 -RpcProxyAuthenticationType:Basic -RpcClientAccessServer:CAS01 -RpcAuthenticationType:NTLM
 ```
 
-This example validates Outlook connectivity through RpcProxy on one server to a different server running the Client Access server role with Basic for the outer authentication layer and NTLM for the inner authentication layer. Using these parameters should allow you to validate most types of Outlook connectivity configurations. This command can also be used with the GetDefaultsFromAutoDiscover parameter set to $true if you only need to override one or two parameters. This following command is similar to running a connectivity test using the RPC Ping utility but provides stronger validation.
+In Exchange 2010, this example validates Outlook connectivity through RpcProxy on one server to a different server running the Client Access server role with Basic for the outer authentication layer and NTLM for the inner authentication layer. Using these parameters should allow you to validate most types of Outlook connectivity configurations. This command can also be used with the GetDefaultsFromAutoDiscover parameter set to $true if you only need to override one or two parameters. This following command is similar to running a connectivity test using the RPC Ping utility but provides stronger validation.
 
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 6
 ```
-$TestCredentials = Get-Credential; Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
-```
-
-This example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-$TestCredentials = Get-Credential; Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
+$TestCredentials = Get-Credential; 
+Test-OutlookConnectivity -ProbeIdentity OutlookRpcCtpProbe -MailboxId johnd@contoso.com -Credential $TestCredentials
 ```
 
 This example runs the OutlookRpcCtpProbe and verifies the log-on credentials for the "johnd@contoso.com" mailbox.
 
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Test-OutlookConnectivity -ProbeIdentity "OutlookRpcCTPProbe" -MailboxID johnd@contoso.com
-```
-
-This example runs a logon test from a Client Access server for the mailbox johnd@contoso.com.
-
-### Example 4 -------------------------- (Exchange Server 2016)
+### Example 7
 ```
 Test-OutlookConnectivity -ProbeIdentity "OutlookRpcCTPProbe" -MailboxID johnd@contoso.com
 ```
@@ -521,16 +450,7 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2013
-
-The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016
-
 The Credential parameter specifies the credential used by the probe. The system's test credentials are used by default. This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
 
 
 ```yaml
@@ -547,17 +467,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hostname
-!!! Exchange Server 2013
-
-The Hostname parameter specifies the protocol endpoint target of the probe. You can use a specific Client Access server or route through Distributed Name Service server.
-
-
-
-!!! Exchange Server 2016
-
 TheHostname parameter specifies the protocol endpoint target of the probe. You can use a specific Mailbox server or route through Distributed Name Service server.
-
-
 
 ```yaml
 Type: String
@@ -638,4 +548,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/09d810f1-0550-4cd3-8feb-f524018a5d6b.aspx)
-

@@ -6,19 +6,9 @@ schema: 2.0.0
 # Remove-AuthRedirect
 
 ## SYNOPSIS
-!!! Exchange Server 2010, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-AuthRedirect cmdlet to remove OAuth redirection objects that are used for legacy Microsoft Exchange 2010 Client Access servers in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-AuthRedirect cmdlet to remove OAuth redirection settings for Microsoft Exchange 2010 Client Access servers in your Microsoft Exchange 2013 organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -30,52 +20,18 @@ Remove-AuthRedirect [-Identity] <AuthRedirectIdParameter> [-Confirm] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010, Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "OAuth authentication redirection settings" entry in the Clients and mobile devices permissions topic.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE
 ```
 
 This example removes the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE
-```
-
-This example removes the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE
-```
-
-This example removes the existing OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-AuthRedirect | Remove-AuthRedirect
-```
-
-This example removes all existing OAuth redirection objects from your organization. However, if you have only one object in your organization, this example has the same result as the first example.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-AuthRedirect | Remove-AuthRedirect
-```
-
-This example is the same as the first example. However, if you have only one authentication redirection object in your organization, you can use Get-AuthRedirect to pipe the Identity value to the Remove-AuthRedirect cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-AuthRedirect | Remove-AuthRedirect
 ```
@@ -85,17 +41,7 @@ This example removes all existing OAuth redirection objects from your organizati
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the existing OAuth redirection object that you want to remove. The object name uses the syntax AuthRedirect-Bearer-<GUID>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the existing OAuth redirection object that you want to remove. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>. The easiest way to find the name of the OAuth redirection object is to run Get-AuthRedirect.
-
-
 
 ```yaml
 Type: AuthRedirectIdParameter
@@ -111,25 +57,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -194,4 +126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a2b95e01-1adb-4707-b1bb-99131f05ae8b.aspx)
-

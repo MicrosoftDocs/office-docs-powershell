@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-DkimSigningConfig -Identity contoso.com -Enabled $false
-```
-
-This example disables the DKIM signing policy for the contoso.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Set-DkimSigningConfig -Identity contoso.com -Enabled $false
 ```
@@ -209,4 +202,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8065e93d-3600-4fab-b72c-d783ba354c9c.aspx)
-

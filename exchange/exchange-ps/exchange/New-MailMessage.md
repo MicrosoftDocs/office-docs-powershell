@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-MailMessage
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailMessage cmdlet to create an e-mail message for the specified user mailbox and place the e-mail message in the Drafts folder of the user's mailbox.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-MailMessage cmdlet to create an email message for the specified user mailbox and place the email message in the Drafts folder of the user's mailbox.
@@ -26,104 +20,48 @@ New-MailMessage [[-Body] <String>] -Mailbox <MailboxIdParameter> [-BodyFormat <P
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If the cmdlet is run without specifying the Subject or Body parameters, an empty e-mail message is placed in the user's Drafts folder.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User reporting" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-If the cmdlet is run without specifying the Subject or Body parameters, an empty email message is placed in the user's Drafts folder.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "User mailboxes" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If the cmdlet is run without specifying the Subject or Body parameters, an empty email message is placed in the user's Drafts folder.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report" -Mailbox tony
 ```
 
-This example creates an e-mail message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
+In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox, with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report"
 ```
 
 This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report"
-```
-
-This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-New-MailMessage -Subject "Delivery Report" -Body "Click here to view this report"
-```
-
-This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in plain text because no format for the message body is specified.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-MailMessage -Mailbox tony@contoso.com
 ```
 
-This example creates an empty e-mail message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
+In Exchange Server 2010, this example creates an empty e-mail message in the Drafts folder of Tony's mailbox because no subject or message body is specified.
 
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 New-MailMessage
 ```
 
 This example creates an empty email message in the Drafts folder because no subject or message body is specified.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-New-MailMessage
-```
-
-This example creates an empty email message in the Drafts folder because no subject or message body is specified.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-MailMessage
-```
-
-This example creates an empty email message in the Drafts folder because no subject or message body is specified.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -Mailbox tony -BodyFormat Html
 ```
 
-This example creates an e-mail message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
+In Exchange Server 2010, this example creates an e-mail message in the Drafts folder of Tony's mailbox with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -BodyFormat Html
-```
-
-This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -BodyFormat Html
-```
-
-This example creates an email message in the Drafts folder with the subject and body specified by the Subject and Body parameters. The message body is rendered in HTML format.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 6
 ```
 New-MailMessage -Subject "Delivery Information" -Body "Click here to see details" -BodyFormat Html
 ```
@@ -165,17 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Body
-!!! Exchange Server 2010
-
-The Body parameter specifies the content of the body section of the new e-mail message.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Body parameter specifies the content of the body section of the new email message.
-
-
 
 ```yaml
 Type: String
@@ -191,17 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -BodyFormat
-!!! Exchange Server 2010
-
-The BodyFormat parameter specifies the format of the message body. The values can be PlainText, Rtf (rich text format), or Html. By default if the BodyFormat parameter isn't specified when the Body parameter is used, the message body is rendered in plain text.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The BodyFormat parameter specifies the format of the message body. The values can be PlainText, Rtf (Rich Text Format), or Html. By default, if the BodyFormat parameter isn't specified when the Body parameter is used, the message body is rendered in plain text.
-
-
 
 ```yaml
 Type: PlainText | Html | Rtf
@@ -237,19 +155,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -265,17 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -Subject
-!!! Exchange Server 2010
-
-The Subject parameter specifies the content of the subject field of the new e-mail message.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Subject parameter specifies the content of the subject field of the new email message.
-
-
 
 ```yaml
 Type: String
@@ -324,4 +222,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3a3fbff6-a202-4d3e-b1df-dfd16ae95a44.aspx)
-

@@ -27,16 +27,6 @@ Dump-ProvisioningCache [-Server] <Fqdn> -Application <String> [-CacheKeys <Multi
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Dump-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators or Microsoft support personnel may need to run this cmdlet to troubleshoot problems resulting from incorrect links or properties stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache.
-
-The Dump-ProvisioningCache cmdlet displays a list of the Windows PowerShell provisioning cache keys. Use the value of these cache keys with the Reset-ProvisioningCache cmdlet to reset provisioning cache data.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange server configuration settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The Dump-ProvisioningCache cmdlet is for diagnostic purposes only and is rarely used. Exchange administrators or Microsoft support personnel may need to run this cmdlet to troubleshoot problems resulting from incorrect links or properties stamped on newly provisioned recipients, which can be caused by stale data in the provisioning cache.
 
 The Dump-ProvisioningCache cmdlet displays a list of the Windows PowerShell provisioning cache keys. Use the value of these cache keys with the Reset-ProvisioningCache cmdlet to reset provisioning cache data.
@@ -45,14 +35,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Dump-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell-Proxy -GlobalCache
-```
-
-This example displays all cache keys for the specified server and Windows PowerShell application.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Dump-ProvisioningCache -Server EXSRV1.contoso.com -Application Powershell-Proxy -GlobalCache
 ```
@@ -140,25 +123,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -239,4 +208,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d79009fc-4dea-44f9-89e0-732106ac67a0.aspx)
-

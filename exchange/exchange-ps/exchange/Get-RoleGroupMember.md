@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-RoleGroupMember
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-RoleGroupMember cmdlet to retrieve a list of members of a management role group.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-RoleGroupMember cmdlet to retrieve a list of members of a management role group.
@@ -26,104 +20,20 @@ Get-RoleGroupMember [-Identity] <RoleGroupMemberIdParameter> [-DomainController 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-For more information about role groups, see Understanding Management Role Groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role groups" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-For more information about role groups, see Understanding management role groups.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role groups" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 For more information about role groups, see Understanding management role groups.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-RoleGroupMember "Recipient Administrators"
-```
-
-This example retrieves a list of all of the members of the Recipient Administrators role group.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-RoleGroupMember "Recipient Administrators"
 ```
 
 This example retrieves a list of all the members of the Recipient Administrators role group.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-RoleGroupMember "Recipient Administrators"
-```
-
-This example retrieves a list of all the members of the Recipient Administrators role group.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-RoleGroupMember "Recipient Administrators"
-```
-
-This example retrieves a list of all the members of the Recipient Administrators role group.
-
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-RoleGroupMember "Recipient Administrators"
-```
-
-This example retrieves a list of all the members of the Recipient Administrators role group.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-RoleGroupMember "Recipient Administrators"
-```
-
-This example retrieves a list of all the members of the Recipient Administrators role group.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-RoleGroupMember "Recipient Administrators" -ReadFromDomainController
-```
-
-This example retrieves a list of all of the members of the Organization Administrators as seen by the domain controller closest to the user running the command.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
-```
-
-This example retrieves a list of all the members of the Organization Administrators role group as seen by the domain controller closest to the user running the command.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
-```
-
-This example retrieves a list of all the members of the Organization Administrators role group as seen by the domain controller closest to the user running the command.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
-```
-
-This example retrieves a list of all the members of the Organization Administrators role group as seen by the domain controller closest to the user running the command.
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
-```
-
-This example retrieves a list of all the members of the Organization Administrators role group as seen by the domain controller closest to the user running the command.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-RoleGroupMember "Organization Administrators" -ReadFromDomainController
 ```
@@ -149,19 +59,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -177,29 +77,11 @@ Accept wildcard characters: False
 ```
 
 ### -ReadFromDomainController
-!!! Exchange Server 2010
-
-The ReadFromDomainController switch specifies that the role group information should be read from a domain controller in the user's domain. If you use the Set-AdServerSettings cmdlet to include all role groups in the forest and don't use this parameter, it's possible that the role group information is read from a global catalog with outdated information.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ReadFromDomainController switch specifies that the role group information should be read from a domain controller in the user's domain. If you use the Set-AdServerSettings cmdlet to include all role groups in the forest and don't use this parameter, it's possible that the role group information is read from a global catalog with outdated information.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ReadFromDomainController switch specifies that information should be read from a domain controller in the user's domain. If you run the command Set-AdServerSettings -ViewEntireForest $true to include all objects in the forest and you don't use the ReadFromDomainController switch, it's possible that information will be read from a global catalog that has outdated information. When you use the ReadFromDomainController switch, multiple reads might be necessary to get the information. You don't have to specify a value with this switch.
 
 By default, the recipient scope is set to the domain that hosts your Exchange servers.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -215,17 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return. If you want to return all the members of a role group, use Unlimited for the value of this parameter. The default value is 1,000.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Office 365 Security & Compliance Center, Exchange Online Protection
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -258,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1ff116aa-1a62-4283-bc8e-5963d12958e1.aspx)
-

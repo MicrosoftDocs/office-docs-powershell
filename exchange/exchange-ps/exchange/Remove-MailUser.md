@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-MailUser
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MailUser cmdlet to remove an existing mail-enabled user from Active Directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-MailUser cmdlet to remove an existing mail-enabled user from Active Directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MailUser cmdlet to remove existing mail users.
@@ -35,49 +21,11 @@ Remove-MailUser [-Identity] <MailUserIdParameter> [-Confirm] [-DomainController 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-MailUser -Identity "Ed Meadows"
-```
-
-This example removes the mail-enabled user Ed Meadows from Active Directory.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MailUser -Identity "Ed Meadows"
-```
-
-This example removes the mail-enabled user Ed Meadows from Active Directory.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MailUser -Identity "Ed Meadows"
-```
-
-This example removes the mail user named Ed Meadows.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MailUser -Identity "Ed Meadows"
-```
-
-This example removes the mail user named Ed Meadows.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-MailUser -Identity "Ed Meadows"
 ```
@@ -87,84 +35,6 @@ This example removes the mail user named Ed Meadows.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identityof the mail user.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the mail user.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the mail user that you want to remove. You can use any value that uniquely identifies the mail user.
 
 For example:
@@ -182,8 +52,6 @@ For example:
 - Email address
 
 - GUID
-
-
 
 ```yaml
 Type: MailUserIdParameter
@@ -219,19 +87,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -247,30 +105,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name (DN) for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
@@ -280,8 +114,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -297,29 +129,9 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreLegalHold
-!!! Exchange Server 2010
-
-The IgnoreLegalHold switch ignores the legal hold status of the mail user and allows you to remove the user account that's on legal hold and the associated cloud mailbox.
-
-After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. To learn more, see Understanding Disconnected Mailboxes. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
-
-
-
-!!! Exchange Server 2013
-
-The IgnoreLegalHold switch ignores the legal hold status of the mail user and allows you to remove the user account that's on legal hold and the associated cloud mailbox.
-
-After you remove a mailbox, you can't include it in a discovery search. Depending on the command parameters you use, removed mailboxes are either purged immediately or when the deleted mailbox retention period expires. Check with your organization's legal or Human Resources department before disabling a mailbox that's on legal hold.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The IgnoreLegalHold switch specifies whether to ignore the legal hold status of the user. When you disable or remove the user, the user's cloud-based mailbox that's on legal hold is also disabled or removed. You don't need to specify a value with this switch.
 
 After you disable or remove a mailbox, you can't include it in a discovery search. When you disable a mailbox, the mailbox is disconnected from the user account. Disconnected mailboxes and removed mailboxes are permanently deleted from the mailbox database after the deleted mailbox retention period expires. However, you can also remove a mailbox and purge it immediately from the mailbox database. Check with your organization's legal or Human Resources department before you disable or remove a mailbox that's on legal hold.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -335,29 +147,9 @@ Accept wildcard characters: False
 ```
 
 ### -KeepWindowsLiveID
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The KeepWindowsLiveID parameter preserves the Windows Live ID associated with the deleted mail user.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The KeepWindowsLiveID parameter preserves the Microsoft account (formerly known as a Windows Live ID) associated with the deleted mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The KeepWindowsLiveID switch specifies whether to preserve the Microsoft account (formerly known as a Windows Live ID) that's associated with the deleted mail user. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -460,4 +252,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fed40622-ed94-4d71-a244-bf3331addc05.aspx)
-

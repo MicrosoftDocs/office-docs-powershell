@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-ManagementRoleAssignment
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ManagementRoleAssignment cmdlet to remove management role assignments.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-ManagementRoleAssignment cmdlet to remove management role assignments.
@@ -26,108 +20,25 @@ Remove-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confir
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you remove a role assignment, the management role group, management role assignment, user, or universal security group (USG) that was assigned the associated role can no longer access the cmdlets or parameters made available by the role. For more information about management role assignments, see Understanding Management Role Assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-When you remove a role assignment, the management role group, management role assignment, user, or universal security group (USG) that was assigned the associated role can no longer access the cmdlets or parameters made available by the role. For more information about management role assignments, see Understanding management role assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 When you remove a role assignment, the management role group, management role assignment, user, or universal security group (USG) that was assigned the associated role can no longer access the cmdlets or parameters made available by the role. For more information about management role assignments, see Understanding management role assignments.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
 ```
 
 This example removes the Recipients\_Seattle Recipient Management role assignment.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
-```
-
-This example removes the Recipients\_Seattle Recipient Management role assignment.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
-```
-
-This example removes the Recipients\_Seattle Recipient Management role assignment.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
-```
-
-This example removes the Recipients\_Seattle Recipient Management role assignment.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Remove-ManagementRoleAssignment "Recipients_Seattle Recipient Management"
-```
-
-This example removes the Recipients\_Seattle Recipient Management role assignment.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
 ```
 
 This example retrieves a list of role assignments that begin with the string "Detroit" and attempts to remove them with the Remove-ManagementRoleAssignment cmdlet. Because the WhatIf switch is included with the Remove-ManagementRoleAssignment command, the command displays the changes that would have occurred but doesn't commit any changes.
-
-
-After the list of role assignments to be removed is confirmed, remove the WhatIf switch and run the command again to remove the role assignments.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
-```
-
-This example retrieves a list of role assignments that begin with the string "Detroit" and attempts to remove them with the Remove-ManagementRoleAssignment cmdlet. Because the WhatIf switch is included with the Remove-ManagementRoleAssignment command, the command displays the changes that would have occurred but doesn't commit any changes.
-
-
-After the list of role assignments to be removed is confirmed, remove the WhatIf switch and run the command again to remove the role assignments.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
-```
-
-This example retrieves a list of role assignments that begin with the string "Detroit" and attempts to remove them with the Remove-ManagementRoleAssignment cmdlet. Because the WhatIf switch is included with the Remove-ManagementRoleAssignment command, the command displays the changes that would have occurred but doesn't commit any changes.
-
-
-After the list of role assignments to be removed is confirmed, remove the WhatIf switch and run the command again to remove the role assignments.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
-```
-
-This example retrieves a list of role assignments that begin with the string "Detroit" and attempts to remove them with the Remove-ManagementRoleAssignment cmdlet. Because the WhatIf switch is included with the Remove-ManagementRoleAssignment command, the command displays the changes that would have occurred but doesn't commit any changes.
-
-
-After the list of role assignments to be removed is confirmed, remove the WhatIf switch and run the command again to remove the role assignments.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-ManagementRoleAssignment Detroit* | Remove-ManagementRoleAssignment -WhatIf
-```
-
-This example retrieves a list of role assignments that begin with the string "Detroit" and attempts to remove them with the Remove-ManagementRoleAssignment cmdlet. Because the WhatIf switch is included with the Remove-ManagementRoleAssignment command, the command displays the changes that would have occurred but doesn't commit any changes.
-
 
 After the list of role assignments to be removed is confirmed, remove the WhatIf switch and run the command again to remove the role assignments.
 
@@ -170,19 +81,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -198,25 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -265,4 +148,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e2fd10e1-c0ae-48a6-992d-5b34bc73880b.aspx)
-

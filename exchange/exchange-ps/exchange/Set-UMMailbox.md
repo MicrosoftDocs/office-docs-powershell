@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-UMMailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-UMMailbox cmdlet to set the Unified Messaging (UM) properties for a user who is currently UM-enabled.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UMMailbox cmdlet to set the Unified Messaging (UM) properties for a user who is currently UM-enabled.
@@ -35,24 +29,6 @@ Set-UMMailbox [-Identity] <MailboxIdParameter> [-AirSyncNumbers <MultiValuedProp
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-UMMailbox cmdlet sets UM properties associated with a user who has been UM-enabled. Many of the UM properties for the user are stored on the user's mailbox, and other UM properties for the user are stored in Active Directory.
-
-After this task is completed, the parameters and values specified are configured on the UM mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailboxes" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-UMMailbox cmdlet sets UM properties associated with a user who has been UM-enabled. Many of the UM properties for the user are stored on the user's mailbox, and other UM properties for the user are stored in Active Directory.
-
-After this task is completed, the parameters and values specified are configured on the UM mailbox.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailboxes" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-UMMailbox cmdlet sets UM properties associated with a user who has been UM-enabled. Many of the UM properties for the user are stored on the user's mailbox, and other UM properties for the user are stored in Active Directory.
 
 After this task is completed, the parameters and values specified are configured on the UM mailbox.
@@ -61,13 +37,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
 ```
 
 This example configures a UM-enabled user, tony@contoso.com with the following settings:
-
 
 Changes the call answering audio codec to Wma
 
@@ -77,76 +52,7 @@ Prevents him from receiving incoming faxes
 
 Enables voice mail notifications but not missed call notifications using text messaging
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
-```
-
-This example configures a UM-enabled user, tony@contoso.com with the following settings:
-
-
-Changes the call answering audio codec to Wma
-
-Disables call answering rules
-
-Prevents him from receiving incoming faxes
-
-Enables voice mail notifications but not missed call notifications using text messaging
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
-```
-
-This example configures a UM-enabled user, tony@contoso.com with the following settings:
-
-
-Changes the call answering audio codec to Wma
-
-Disables call answering rules
-
-Prevents him from receiving incoming faxes
-
-Enables voice mail notifications but not missed call notifications using text messaging
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMMailbox -Identity tony@contoso.com -CallAnsweringAudioCodec Wma -CallAnsweringRulesEnabled $false -FaxEnabled $false -UMSMSNotificationOption VoiceMail
-```
-
-This example configures a UM-enabled user, tony@contoso.com with the following settings:
-
-
-Changes the call answering audio codec to Wma
-
-Disables call answering rules
-
-Prevents him from receiving incoming faxes
-
-Enables voice mail notifications but not missed call notifications using text messaging
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
-```
-
-This example prevents the user tony@contoso.com from accessing his calendar and e-mail when he is using Outlook Voice Access.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
-```
-
-This example prevents the user tony@contoso.com from accessing his calendar and email when he's using Outlook Voice Access.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
-```
-
-This example prevents the user tony@contoso.com from accessing his calendar and email when he's using Outlook Voice Access.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Set-UMMailbox -Identity tony@contoso.com -TUIAccessToCalendarEnabled $false -TUIAccessToEmailEnabled $false
 ```
@@ -156,30 +62,6 @@ This example prevents the user tony@contoso.com from accessing his calendar and 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the user to enable for Unified Messaging. The values for this parameter include the following:
-
-- ADObjectID
-
-- GUID
-
-- DN
-
-- Domain\\Account
-
-- UPN
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the user to enable for Unified Messaging. The values for this parameter include the following:
 
 - ADObjectID
@@ -198,8 +80,6 @@ The Identity parameter specifies the user to enable for Unified Messaging. The v
 
 - Alias
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -214,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -AirSyncNumbers
-The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined, and numbers must be in E.164 format.
+The AirSyncNumbers parameter specifies whether to register a mobile phone number with a hosted voice mail service. Each UM mailbox can have up to three numbers defined and numbers must be in E.164 format.
 
 ```yaml
 Type: MultiValuedProperty
@@ -262,23 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutomaticSpeechRecognitionEnabled
-!!! Exchange Server 2010
-
-The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use Automatic Speech Recognition (ASR) when they log on to their mailbox. This parameter can only be set to $true if there is ASR support for the language selected by the user in Microsoft Office Outlook Web App Options.
-
-
-
-!!! Exchange Server 2013
-
-The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use Automatic Speech Recognition (ASR) when they log on to their mailbox. This parameter can only be set to $true if there is ASR support for the language selected by the user in Microsoft OfficeOutlook Web AppOptions.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The AutomaticSpeechRecognitionEnabled parameter specifies whether users can use Automatic Speech Recognition (ASR) when they log on to their mailbox. This parameter can only be set to $true if there is ASR support for the language selected by the user in Microsoft Outlook on the web Options.
-
-
 
 ```yaml
 Type: $true | $false
@@ -294,17 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallAnsweringAudioCodec
-!!! Exchange Server 2010
-
-The CallAnsweringAudioCodec parameter specifies the audio codec used to encode voice mail messages that are left for the user. The audio codec that's used is the audio codec set on the UM dial plan. The default value is Mp3.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The CallAnsweringAudioCodec parameter specifies the audio codec used to encode voice mail messages left for the user. The audio codec used is the audio codec set on the UM dial plan. The default value is Mp3.
-
-
 
 ```yaml
 Type: G711 | Wma | Gsm | Mp3
@@ -356,19 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -400,30 +244,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the distinguished name for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
@@ -433,8 +253,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -450,27 +268,9 @@ Accept wildcard characters: False
 ```
 
 ### -MissedCallNotificationEnabled
-!!! Exchange Server 2010
-
-The MissedCallNotificationEnabled parameter specifies whether to send missed call notifications.
-
-
-
-!!! Exchange Server 2013
-
-The MissedCallNotificationEnabled parameter specifies whether to send missed call notifications.
-
-When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2007 or Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MissedCallNotificationEnabled parameter specifies whether to send missed call notifications.
 
 When you're integrating Unified Messaging and Lync Server or Skype for Business Server, missed call notifications aren't available to users who have mailboxes located on Exchange 2010 Mailbox servers. A missed call notification is generated when a user disconnects before the call is sent to a Mailbox server.
-
-
 
 ```yaml
 Type: $true | $false
@@ -518,21 +318,9 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneNumber
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The PhoneNumber parameter specifies whether to assign a phone number to a UM-enabled user. This is only used for E.164 consumer dial plans.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The PhoneNumber parameter specifies whether to assign a phone number to a UM-enabled user. This is only used for E.164 consumer dial plans.
-
-
 
 ```yaml
 Type: String
@@ -548,21 +336,9 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneProviderId
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The PhoneProviderId parameter specifies the user's phone number and mobile service provider. This information is used to provide custom call forwarding and cancelling voice mail setup instructions based on the mobile phone provider.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The PhoneProviderId parameter specifies the user's phone number and mobile service provider. This information is used to provide custom call forwarding and cancelling voice mail setup instructions based on the mobile phone provider.
-
-
 
 ```yaml
 Type: String
@@ -578,19 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -PinlessAccessToVoiceMailEnabled
-!!! Exchange Server 2010
-
-The PinlessAccessToVoiceMailEnabled parameter specifies whether UM-enabled users are required to use a PIN to access their voice mail. A PIN is still required to access e-mail and the calendar. The default value is $false.
-
-For more information, see Enable PIN-less Logons for UM-Enabled Users.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The PinlessAccessToVoiceMailEnabled parameter specifies whether UM-enabled users are required to use a PIN to access their voice mail. A PIN is still required to access email and the calendar. The default value is $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -622,17 +386,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriberAccessEnabled
-!!! Exchange Server 2010
-
-The SubscriberAccessEnabled parameter specifies whether the users are allowed subscriber access to their individual mailboxes. If it's set to $true, after users are authenticated, they are able to retrieve voice mail over the telephone. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The SubscriberAccessEnabled parameter specifies whether the users are allowed subscriber access to their individual mailboxes. If it's set to $true, after users are authenticated, they're able to retrieve voice mail over the telephone. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -648,17 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -TUIAccessToCalendarEnabled
-!!! Exchange Server 2010
-
-The TUIAccessToCalendarEnabled parameter specifies whether the UM-enabled user can access and manage their individual calendar using the Microsoft Outlook Voice Access telephone user interface (TUI) or touchtone interface. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The TUIAccessToCalendarEnabled parameter specifies whether UM-enabled users can access and manage their individual calendar using the Microsoft Outlook Voice Access telephone user interface (TUI) or touchtone interface. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -674,17 +418,7 @@ Accept wildcard characters: False
 ```
 
 ### -TUIAccessToEmailEnabled
-!!! Exchange Server 2010
-
-The TUIAccessToEmailEnabled parameter specifies whether users can access their individual e-mail messages over the telephone. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The TUIAccessToEmailEnabled parameter specifies whether users can access their individual email messages over the telephone. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -732,21 +466,9 @@ Accept wildcard characters: False
 ```
 
 ### -VerifyGlobalRoutingEntry
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The VerifyGlobalRoutingEntry parameter specifies the cmdlet will verify that the phone number has been successfully registered in the global routing database.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The VerifyGlobalRoutingEntry parameter specifies the phone number has been successfully registered in the global routing database.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -778,24 +500,6 @@ Accept wildcard characters: False
 ```
 
 ### -ImListMigrationCompleted
-!!! Exchange Server 2013
-
-The ImListMigrationCompleted parameter specifies whether the UM-enabled user's Lync or Skype for Business contact list is stored in their mailbox.
-
-Valid values are:
-
-- $true The user's Lync or Skype for Business contact list is stored in their Exchange 2013 mailbox. This prevents you from migrating the mailbox back to an Exchange 2010 or Exchange 2007 server.
-
-- $false The user's Lync or Skype for Business contact list is stored on a Lync or Skype for Business server. This doesn't prevent you from migrating the mailbox back to an Exchange 2010 or Exchange 2007 server. This is the default value.
-
-Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2013 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 and Exchange 2007 don't support the unified contact store. Therefore, before you migrate a user's Exchange 2013 mailbox back to Exchange 2010 or Exchange 2007, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see Configuring Microsoft Lync Server 2013 to use the unified contact store (https://go.microsoft.com/fwlink/p/?LinkID=313550).
-
-If you migrate an Exchange 2013 mailbox back to Exchange 2010 or Exchange 2007 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ImListMigrationCompleted parameter specifies whether the UM-enabled user's Lync or Skype for Business contact list is stored in their mailbox.
 
 Valid values are:
@@ -807,8 +511,6 @@ Valid values are:
 Lync Server 2013 and Skype for Business Server 2015 support storing the user's contact list in their Exchange 2016 mailbox. This feature is known as the unified contact store (UCS), and it allows applications to show a consistent, up-to-date contact list. However, Exchange 2010 doesn't support the unified contact store. Therefore, before you migrate a user's Exchange 2016 mailbox back to Exchange 2010, you need to move the user's Lync or Skype for Business contact list from the unified contact store back to a Lync 2013 or Skype for Business server. For more information, see Configuring Microsoft Lync Server 2013 to use the unified contact store (https://go.microsoft.com/fwlink/p/?LinkID=313550).
 
 If you migrate an Exchange 2013 mailbox back to Exchange 2010 while the user's Lync or Skype for Business contact list is stored in the unified contact store, the user could permanently lose access to those contacts. After you verify the user's Lync or Skype for Business contact list has been moved back to a Lync 2013 or Skype for Business server, you should be able to complete the mailbox migration. If you need to migrate the mailbox despite the potential for data loss, you can manually set the ImListMigrationCompleted parameter to $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -857,4 +559,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dd7b429d-53a8-46dd-b16b-3a8ca8424bbc.aspx)
-

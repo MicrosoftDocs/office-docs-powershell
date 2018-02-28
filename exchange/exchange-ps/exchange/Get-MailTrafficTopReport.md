@@ -26,14 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailTrafficTopReport -StartDate 06/13/2015 -EndDate 06/15/2015
-```
-
-This example shows the highest volume senders, recipients, malware recipients and spam recipients between June 13, 2015 and June 15, 2015.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailTrafficTopReport -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
@@ -43,7 +36,7 @@ This example shows the highest volume senders, recipients, malware recipients an
 ## PARAMETERS
 
 ### -Action
-The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering, or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
+The Action parameter filters the report by the action taken by DLP policies, transport rules, malware filtering or spam filtering. To view the complete list of valid values for this parameter, run the command Get-MailFilterListReport -SelectionTarget Actions. The action you specify must correspond to the report type. For example, you can only specify malware filter actions for malware reports.
 
 You can specify multiple values separated by commas.
 
@@ -61,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -AggregateBy
-The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day, or Summary. The default value is Day.
+The AggregateBy parameter specifies the reporting period. Valid values are Hour, Day or Summary. The default value is Day.
 
 ```yaml
 Type: String
@@ -93,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -Domain
-The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas, or the value All.
+The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas or the value All.
 
 ```yaml
 Type: MultiValuedProperty
@@ -227,7 +220,7 @@ Accept wildcard characters: False
 ```
 
 ### -SummarizeBy
-The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report, and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
+The SummarizeBy parameter returns totals based on the values you specify. If your report filters data using any of the values accepted by this parameter, you can use the SummarizeBy parameter to summarize the results based on those values. To decrease the number of rows returned in the report, consider using the SummarizeBy parameter. Summarizing reduces the amount of data that's retrieved for the report and delivers the report faster. For example, instead of seeing each instance of a specific value of EventType on an individual row in the report, you can use the SummarizeBy parameter to see the total number of instances of that value of EventType on one row in the report.
 
 For the Get-MailTopTrafficeReport cmdlet, the SummarizeBy parameter accepts the values Domain and EventType. You can specify multiple values separated by commas.
 
@@ -262,4 +255,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5357cc82-3224-4df5-ac0b-24b1afc90713.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-FederationTrust
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-FederationTrust cmdlet to set up a federation trust between your Microsoft Exchange Server 2010 organization and the Microsoft Federation Gateway.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-FederationTrust cmdlet to set up a federation trust between your Exchange organization and the Microsoft Federation Gateway.
@@ -34,24 +28,6 @@ New-FederationTrust [-Name] <String> -Thumbprint <String> [-Confirm] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Federation trusts are trusts created between a Microsoft Exchange 2010 organization and the Microsoft Federation Gateway. A federation trust is required to configure a federated organization identifier for federated delegation.
-
-For more information, see Understanding Federation.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-Federation trusts are trusts created between an Exchange organization and the Microsoft Federation Gateway. A federation trust is required to configure a federated organization identifier for federated sharing.
-
-For more information, see Federation.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Federation trusts are trusts created between an Exchange organization and the Microsoft Federation Gateway. A federation trust is required to configure a federated organization identifier for federated sharing.
 
 For more information, see Federation.
@@ -60,21 +36,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example1 -------------------------- (Exchange Server 2010)
-```
-New-FederationTrust -Name "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
-```
-
-This example creates the federation trust Microsoft Federation Gateway with a certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-FederationTrust -Name "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
-```
-
-This example creates the federation trust Microsoft Federation Gateway with a certificate with the thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example1
 ```
 New-FederationTrust -Name "Microsoft Federation Gateway" -Thumbprint AC00F35CBA8359953F4126E0984B5CCAFA2F4F17
 ```
@@ -118,29 +80,9 @@ Accept wildcard characters: False
 ```
 
 ### -SkipNamespaceProviderProvisioning
-!!! Exchange Server 2010
-
-The SkipNamespaceProviderProvisioning switch specifies that the trust and federated organization identifier are provisioned externally without using federation functionality in Exchange 2010.
-
-If you use this switch, you must specify the ApplicationIdentifier, ApplicationUri, and AdministratorProvisioningId parameters.
-
-
-
-!!! Exchange Server 2013
-
-The SkipNamespaceProviderProvisioning switch specifies that the trust and federated organization identifier are provisioned externally without using federation functionality in Microsoft Exchange Server 2013.
-
-If you use this switch, you must specify the ApplicationIdentifier, ApplicationUri, and AdministratorProvisioningId parameters.
-
-
-
-!!! Exchange Server 2016
-
 The SkipNamespaceProviderProvisioning switch specifies that the trust and federated organization identifier are provisioned externally without using federation functionality in Microsoft Exchange.
 
-If you use this switch, you must specify the ApplicationIdentifier, ApplicationUri, and AdministratorProvisioningId parameters.
-
-
+If you use this switch, you must specify the ApplicationIdentifier, ApplicationUri and AdministratorProvisioningId parameters.
 
 ```yaml
 Type: SwitchParameter
@@ -156,17 +98,7 @@ Accept wildcard characters: False
 ```
 
 ### -Thumbprint
-!!! Exchange Server 2010
-
-The Thumbprint parameter specifies the thumbprint of a certificate issued by a public certification authority (CA) trusted by the Microsoft Federation Gateway. For more details, see Understanding Federation.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Thumbprint parameter specifies the thumbprint of a certificate issued by a public certification authority (CA) trusted by the Microsoft Federation Gateway. For more details, see Federation.
-
-
 
 ```yaml
 Type: String
@@ -335,4 +267,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ab3bb2d0-c346-480d-93b2-be563aebc261.aspx)
-

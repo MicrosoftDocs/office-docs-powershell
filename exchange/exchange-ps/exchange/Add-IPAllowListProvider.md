@@ -6,18 +6,6 @@ schema: 2.0.0
 # Add-IPAllowListProvider
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Add-IPAllowListProvider cmdlet to create a new IP Allow list provider configuration on the computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Add-IPAllowListProvider cmdlet to create IP Allow list providers that are used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Add-IPAllowListProvider cmdlet to create IP Allow list providers that are used by the Connection Filtering agent on Edge Transport servers.
@@ -31,51 +19,18 @@ Add-IPAllowListProvider [-Name] <String> -LookupDomain <SmtpDomain> [-AnyMatch <
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The IP Allow list provider configuration is used by the Connection Filter agent.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-IPAllowListProvider -Name Contoso -LookupDomain Fabrikam.com -AnyMatch $true
-```
-
-This example adds a new IP Allow list provider and configures the Connection Filter agent to treat any IP address status code returned from the IP Allow list provider as a match and allow the connection.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Add-IPAllowListProvider -Name "Contoso.com Allow List" -LookupDomain allowlist.contoso.com -AnyMatch $true
 ```
 
 This example adds a new IP Allow list provider and configures connection filtering to treat any IP address status code returned from the IP Allow list provider as a match and allow the connection. You get the value for the LookupDomain parameter from the allow list provider.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Add-IPAllowListProvider -Name "Contoso.com Allow List" -LookupDomain allowlist.contoso.com -AnyMatch $true
-```
-
-This example adds a new IP Allow list provider and configures connection filtering to treat any IP address status code returned from the IP Allow list provider as a match and allow the connection. You get the value for the LookupDomain parameter from the allow list provider.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Add-IPAllowListProvider -Name "Fabrikam.com Allow List" -LookupDomain allowlist.fabrikam.com -BitmaskMatch 127.1.0.1
-```
-
-This example adds an IP Allow list provider and configures a bitmask return value from the provider. You get the values for the LookupDomain and BitmaskMatch parameters from the allow list provider.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Add-IPAllowListProvider -Name "Fabrikam.com Allow List" -LookupDomain allowlist.fabrikam.com -BitmaskMatch 127.1.0.1
 ```
@@ -85,17 +40,7 @@ This example adds an IP Allow list provider and configures a bitmask return valu
 ## PARAMETERS
 
 ### -LookupDomain
-!!! Exchange Server 2010
-
-The LookupDomain parameter specifies the domain name that the Connection Filter agent queries for updated IP Allow list data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The LookupDomain parameter specifies the host name that's required to use the allow list provider. Connection filtering sends the IP address of the connecting SMTP server to the host name value that you specify. An example value is allowlist.spamservice.com. The actual value you need to use is provided by the allow list provider.
-
-
 
 ```yaml
 Type: SmtpDomain
@@ -111,17 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010
-
-The Name parameter specifies the name of the IP Allow list provider service.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Name parameter specifies a descriptive name for the IP Allow list provider.
-
-
 
 ```yaml
 Type: String
@@ -137,17 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -AnyMatch
-!!! Exchange Server 2010
-
-The AnyMatch parameter specifies whether the Connection Filter agent treats any IP address status code returned by the IP Allow list provider service as a match. Valid input for the AnyMatch parameter is $true or $false. The default setting is $false. When the AnyMatch parameter is set to $true, the Connection Filter agent treats any IP address status code returned by the IP Allow list provider service as a match.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AnyMatch parameter specifies whether any response by the allow list provider is treated as a match. Valid input for this parameter is $true or $false. The default value is $false. When this parameter is set to $true, and connection filtering sends the IP address of the connecting SMTP server to the allow list provider, any response code returned by the allow list provider causes connection filtering to allow messages from that source.
-
-
 
 ```yaml
 Type: $true | $false
@@ -163,17 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -BitmaskMatch
-!!! Exchange Server 2010
-
-The BitmaskMatch parameter specifies the IP address status code bit mask. When you configure the BitmaskMatch parameter to use an IP address, the Connection Filter agent acts only on messages that match the IP address status code returned by the IP Allow list provider service.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The BitmaskMatch parameter specifies the bit mask status code that's returned by the allow list provider. Use this parameter if the allow list provider returns bitmask responses. Valid input for this parameter is a single IP address in the format 127.0.0.1.
-
-
 
 ```yaml
 Type: IPAddress
@@ -227,17 +142,7 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2010
-
-The Enabled parameter specifies whether the Connection Filter agent queries this IP Allow list provider service according to the priority set for this IP Allow list provider configuration. Valid input for the Enabled parameter is $true or $false. The default setting is $true. When the Enabled parameter is set to $true, the Connection Filter agent queries the IP Allow list provider service according to the priority set for this IP Allow list provider configuration.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Enabled parameter specifies whether the connection filtering uses this IP Allow List provider. Valid input for this parameter is $true or $false. The default value is $true. By default, connection filtering uses new IP Allow List providers that you create.
-
-
 
 ```yaml
 Type: $true | $false
@@ -253,17 +158,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAddressesMatch
-!!! Exchange Server 2010
-
-The IPAddressesMatch parameter specifies an IP address status code that the Connection Filter agent uses to compare to the IP address status code returned by the IP Allow list provider service. When you configure an IP address for the IPAddressesMatch parameter, the Connection Filter agent acts only on messages that match the IP address status code returned by the IP Allow list provider service.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IPAddressesMatch parameter specifies the IP address status codes that are returned by the allow list provider. Use this parameter if the allow list provider returns IP address or A record responses. Valid input for this parameter one or more IP addresses in the format 127.0.0.1. You can enter multiple IP addresses separated by commas.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -279,21 +174,9 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2010
-
-The Priority parameter specifies the order that the Connection Filter agent queries the IP Allow list provider services that you have configured. By default, every time that you add a new IP Allow list provider service, the entry is assigned a priority of N+1, where N is the number of IP Allow list provider services that you have configured.
-
-If you set the Priority parameter to a value that's the same as another IP Allow list provider service, the priority of the IP Allow list provider service that you add first is incremented by 1.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Priority parameter specifies the order that the Connection Filtering agent queries the IP Allow list providers that you have configured. A lower priority integer value indicates a higher priority. By default, every time that you add a new IP Allow list provider, the entry is assigned a priority of N+1, where N is the number of IP Allow list providers that you have configured.
 
 If you set the Priority parameter to a value that's the same as another IP Allow list provider, the priority of the IP Allow list provider that you add first is incremented by 1.
-
-
 
 ```yaml
 Type: Int32
@@ -342,4 +225,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f4aade29-19ba-434d-8da4-45af0a5ddaff.aspx)
-

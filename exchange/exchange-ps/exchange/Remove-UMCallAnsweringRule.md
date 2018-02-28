@@ -20,16 +20,6 @@ Remove-UMCallAnsweringRule [-Identity] <UMCallAnsweringRuleIdParameter> [-Confir
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Remove-UMCallAnsweringRule cmdlet removes an existing UM call answering rule that has been created and stored in a UM-enabled user's mailbox. When you remove an existing call answering rule, all of the remaining call answering rules are still processed in order of their priority.
-
-After this task is completed, the cmdlet sets the parameters and the values specified.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM call answering rules" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-UMCallAnsweringRule cmdlet removes an existing UM call answering rule that has been created and stored in a UM-enabled user's mailbox. When you remove an existing call answering rule, all of the remaining call answering rules are still processed in order of their priority.
 
 After this task is completed, the cmdlet sets the parameters and the values specified.
@@ -38,42 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
 ```
 
 This example removes the call answering rule MyUMCallAnsweringRule from a user's mailbox. The user's mailbox is the mailbox of the user running the cmdlet.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
-```
-
-This example removes the call answering rule MyUMCallAnsweringRule from a user's mailbox. The user's mailbox is the mailbox of the user running the cmdlet.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule
-```
-
-This example removes the call answering rule MyUMCallAnsweringRule from a user's mailbox. The user's mailbox is the mailbox of the user running the cmdlet.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example removes the call answering rule MyUMCallAnsweringRule from the mailbox of tonysmith.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
-```
-
-This example removes the call answering rule MyUMCallAnsweringRule from the mailbox of tonysmith.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-UMCallAnsweringRule -Identity MyUMCallAnsweringRule -Mailbox tonysmith
 ```
@@ -186,4 +148,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e438298f-aa96-473e-9f21-03b4ef9bc796.aspx)
-

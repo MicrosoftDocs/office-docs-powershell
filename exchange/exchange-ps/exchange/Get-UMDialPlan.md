@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-UMDialPlan
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-UMDialplan cmdlet to display the properties of a single Unified Messaging (UM) dial plan or to return a list of all UM dial plans associated with a Unified Messaging server.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-UMDialplan cmdlet to display the properties of a single Unified Messaging (UM) dial plan or to return a list of all UM dial plans associated with Mailbox servers running the Microsoft Exchange Unified Messaging service.
@@ -21,29 +15,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Get-UMDialPlan [[-Identity] <UMDialPlanIdParameter>] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [<CommonParameters>]
+Get-UMDialPlan [[-Identity] <UMDialPlanIdParameter>] 
+[-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-UMDialplan cmdlet displays all properties for a UM dial plan.
-
-After this task is completed, when you specify the Identity parameter, you can view the values set. When the Get-UMDialplan cmdlet is run, if no parameter is supplied, the cmdlet returns all UM dial plans in the Active Directory forest.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-UMDialplan cmdlet displays all properties for a UM dial plan.
-
-After this task is completed, when you specify the Identity parameter, you can view the values set. When the Get-UMDialplan cmdlet is run, if no parameter is supplied, the cmdlet returns all UM dial plans in the Active Directory forest.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-UMDialplan cmdlet displays all properties for a UM dial plan.
 
 After this task is completed, when you specify the Identity parameter, you can view the values set. When the Get-UMDialplan cmdlet is run, if no parameter is supplied, the cmdlet returns all UM dial plans in the Active Directory forest.
@@ -52,56 +28,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-UMDialplan
 ```
 
 This example displays a list of all the UM dial plans in the Active Directory forest.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMDialplan
-```
-
-This example displays a list of all the UM dial plans in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-UMDialplan
-```
-
-This example displays a list of all the UM dial plans in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-UMDialplan
-```
-
-This example displays a list of all the UM dial plans in the Active Directory forest.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-UMDialplan -Identity MyUMDialPlan | Format-List
-```
-
-This example displays a formatted list of properties for a UM dial plan named MyUMDialPlan.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UMDialplan -Identity MyUMDialPlan | Format-List
-```
-
-This example displays a formatted list of properties for the UM dial plan MyUMDialPlan.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-UMDialplan -Identity MyUMDialPlan | Format-List
-```
-
-This example displays a formatted list of properties for the UM dial plan MyUMDialPlan.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-UMDialplan -Identity MyUMDialPlan | Format-List
 ```
@@ -111,19 +45,9 @@ This example displays a formatted list of properties for the UM dial plan MyUMDi
 ## PARAMETERS
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -139,17 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the UM dial plan ID. This parameter specifies the directory object identifier for the UM dial plan.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the UM dial plan ID.
-
-
 
 ```yaml
 Type: UMDialPlanIdParameter
@@ -161,22 +75,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -198,4 +96,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/23a33037-1572-424e-adc8-3edc26e1a895.aspx)
-

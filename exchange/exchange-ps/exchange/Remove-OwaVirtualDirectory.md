@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-OwaVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-OwaVirtualDirectory cmdlet to remove Microsoft Office Outlook Web App virtual directories located in the Internet Information Services (IIS) Web site on a server running Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-OwaVirtualDirectory cmdlet to remove Microsoft Office Outlook Web App virtual directories located in the Internet Information Services (IIS) website on a server running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-OwaVirtualDirectory cmdlet to remove Outlook on the web virtual directories from Internet Information Services (IIS) on Exchange servers.
@@ -34,67 +20,19 @@ Remove-OwaVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Confirm] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-To run the Remove-OwaVirtualDirectory cmdlet, you must specify the name of the Outlook Web App virtual directory that you want to remove. You might be required to use the Remove-OwaVirtualDirectory cmdlet in the following situations:
-
-- The Get-OwaVirtualDirectory cmdlet detects an Outlook Web App virtual directory deleted in IIS but not deleted in Active Directory. These abandoned Outlook Web App virtual directory objects are known as Active Directory orphans. We recommend that you remove this kind of Outlook Web App virtual directory in Active Directory by using the Remove-OwaVirtualDirectory cmdlet.
-
-- You are troubleshooting an Outlook Web App configuration issue that requires you to delete the existing Outlook Web App virtual directory and then re-create the Outlook Web App virtual directory.
-
-  The Remove-OwaVirtualDirectory cmdlet permanently removes an Outlook Web App virtual directory or directories. When you use the Remove-OwaVirtualDirectory cmdlet, make sure that you don't accidentally delete the default Outlook Web App virtual directory. There are no default values for the Remove-OwaVirtualDirectory cmdlet.
-
-  The Remove-OwaVirtualDirectory cmdlet supports the Confirm flag.
-
-The Remove-OwaVirtualDirectory cmdlet can be run on any server that has the Exchange Server administration tools installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App virtual directories" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-To run the Remove-OwaVirtualDirectory cmdlet, you must specify the name of the Outlook Web App virtual directory that you want to remove. You might be required to use the Remove-OwaVirtualDirectory cmdlet in the following situations:
-
-- The Get-OwaVirtualDirectory cmdlet detects an Outlook Web App virtual directory deleted in IIS but not deleted in Active Directory. These abandoned Outlook Web App virtual directory objects are known as Active Directory orphans. We recommend that you remove this kind of Outlook Web App virtual directory in Active Directory by using the Remove-OwaVirtualDirectory cmdlet.
-
-- You are troubleshooting an Outlook Web App configuration issue that requires you to delete the existing Outlook Web App virtual directory and then re-create the Outlook Web App virtual directory.
-
-  The Remove-OwaVirtualDirectory cmdlet permanently removes an Outlook Web App virtual directory or directories. When you use the Remove-OwaVirtualDirectory cmdlet, make sure that you don't accidentally delete the default Outlook Web App virtual directory. There are no default values for the Remove-OwaVirtualDirectory cmdlet.
-
-  The Remove-OwaVirtualDirectory cmdlet supports the Confirm flag.
-
-The Remove-OwaVirtualDirectory cmdlet can be run on any server that has the Exchange Server administration tools installed.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App virtual directories" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You might be required to use the Remove-OwaVirtualDirectory cmdlet in the following situations:
 
 - The Get-OwaVirtualDirectory cmdlet detects an Outlook on the web virtual directory deleted in IIS but not deleted in Active Directory. These abandoned Outlook on the web virtual directory objects are known as Active Directory orphans. We recommend that you remove these orphans by using the Remove-OwaVirtualDirectory cmdlet.
 
 - You are troubleshooting an Outlook on the web configuration issue that requires you to delete the existing Outlook on the web virtual directory and then re-create the Outlook on the web virtual directory.
 
-  Remove-OwaVirtualDirectory permanently removes an Outlook on the web virtual directory or directories. When you use this cmdlet, make sure that you don't accidentally delete the default Outlook on the web virtual directory.
+Remove-OwaVirtualDirectory permanently removes an Outlook on the web virtual directory or directories. When you use this cmdlet, make sure that you don't accidentally delete the default Outlook on the web virtual directory.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-OwaVirtualDirectory -Identity "Contoso\owa (default Web site)"
-```
-
-This example removes the specified Outlook Web App virtual directory owa located on the default IIS Web site on the Exchange server Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-OwaVirtualDirectory -Identity "Contoso\owa (default Web site)"
-```
-
-This example removes the specified Outlook Web App virtual directory owa located on the default IIS website on the Exchange server Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-OwaVirtualDirectory -Identity "EXCH01\owa (Default Web site)"
 ```
@@ -104,14 +42,6 @@ This example removes the specified Outlook on the web virtual directory from the
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name or GUID of an Outlook Web App virtual directory. It's represented as: ServerName\\VirtualDirectoryName (WebsiteName).
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Outlook on the web virtual directory that you want to remove.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -123,8 +53,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -209,4 +137,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5842b6a4-aa87-4ca2-94db-87b36fd90e7e.aspx)
-

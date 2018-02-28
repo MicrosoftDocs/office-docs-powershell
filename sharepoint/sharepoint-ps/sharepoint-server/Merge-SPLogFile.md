@@ -63,7 +63,7 @@ This example merges the log data of level High or higher.
 
 ### --------------EXAMPLE 5----------------- 
 ```
-C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" - EndTime "06/09/2008 16:15"
+C:\PS>Merge-SPLogFile -Path "C:\Logs\FarmMergedLog.log" -Overwrite -StartTime "06/09/2008 16:00" -EndTime "06/09/2008 16:15"
 ```
 
 This example merges the log data for events in a particular time range, which is culture-specific to the United States.

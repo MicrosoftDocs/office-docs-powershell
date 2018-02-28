@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-UMDialPlan
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-UMDialplan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-UMDialplan cmdlet to set various properties on a Unified Messaging (UM) dial plan.
@@ -49,28 +43,6 @@ Set-UMDialPlan [-Identity] <UMDialPlanIdParameter> [-AccessTelephoneNumbers <Mul
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-UMDialplan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
-
-UM dial plans are important to the operation of Unified Messaging. Modifications to an existing UM dial plan should be performed by an administrator who understands the implications of changes to UM dial plans.
-
-After this task is completed, the parameters and values specified are configured on the UM dial plan.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-UMDialplan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
-
-UM dial plans are important to the operation of Unified Messaging. Modifications to an existing UM dial plan should be performed by an administrator who understands the implications of changes to UM dial plans.
-
-After this task is completed, the parameters and values specified are configured on the UM dial plan.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM dial plans" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-UMDialplan cmdlet changes or modifies the properties of an existing UM dial plan. Some UM dial plan properties are required and are created by default. However, in some cases, after the UM dial plan is created, not all properties for the UM dial plan are writable. Therefore, some of the properties can't be changed unless the existing UM dial plan is deleted and a new one is created.
 
 UM dial plans are important to the operation of Unified Messaging. Modifications to an existing UM dial plan should be performed by an administrator who understands the implications of changes to UM dial plans.
@@ -81,84 +53,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
 ```
 
 This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
-```
-
-This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
-```
-
-This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-UMDialplan -Identity MyDialPlan -OutsideLineAccessCode 9
-```
-
-This example configures the UM dial plan MyDialPlan to use 9 for the outside line access code.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
 ```
 
 This example configures the UM dial plan MyDialPlan to use a welcome greeting.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
-```
-
-This example configures the UM dial plan MyDialPlan to use a welcome greeting.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
-```
-
-This example configures the UM dial plan MyDialPlan to use a welcome greeting.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-UMDialplan -Identity MyDialPlan -WelcomeGreetingEnabled $true -WelcomeGreetingFilename welcome.wav
-```
-
-This example configures the UM dial plan MyDialPlan to use a welcome greeting.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-$csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
-```
-
-This example configures the UM dial plan MyDialPlan with dialing rules.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-$csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
-```
-
-This example configures the UM dial plan MyDialPlan with dialing rules.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-$csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
-```
-
-This example configures the UM dial plan MyDialPlan with dialing rules.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 $csv=import-csv "C:\MyInCountryGroups.csv"; Set-UMDialPlan -Identity MyDialPlan -ConfiguredInCountryOrRegionGroups $csv; Set-UMDialPlan -Identity MyDialPlan -AllowedInCountryOrRegionGroups "local, long distance"
 ```
@@ -168,17 +77,7 @@ This example configures the UM dial plan MyDialPlan with dialing rules.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the UM dial plan ID. This parameter is the directory object identifier for the UM dial plan. This parameter is used to link mailboxes and Unified Messaging servers to dial plans.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the UM dial plan ID. This parameter is the directory object identifier for the UM dial plan. This parameter is used to link mailboxes and Mailbox and Client Access servers to dial plans.
-
-
 
 ```yaml
 Type: UMDialPlanIdParameter
@@ -210,17 +109,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowDialPlanSubscribers
-!!! Exchange Server 2010
-
-The AllowDialPlanSubscribers parameter specifies whether to let subscribers dial numbers that resolve to a subscriber within the same dial plan. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowDialPlanSubscribers parameter specifies whether to allow subscribers dial numbers that resolve to a subscriber within the same dial plan. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -284,17 +173,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowHeuristicADCallingLineIdResolution
-!!! Exchange Server 2010
-
-The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that may be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You may want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Unified Messaging server may not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The AllowHeuristicADCallingLineIdResolution parameter specifies whether to allow calling line ID resolution using telephone number fields that may be configured in Active Directory. When this parameter is set to $true, the telephone numbers such as those defined in the Mobile or Home telephone number fields in Active Directory are used. Setting this parameter to $true allows for resolution of calling IDs for both UM-enabled and non-UM-enabled users. The default is $true. You may want to set this parameter to $false if the telephone numbers for users aren't in a standard format. If the telephone numbers aren't in a standard format, the Mailbox server may not be able to correctly resolve the caller ID to a name of a user in a consistent manner.
-
-
 
 ```yaml
 Type: $true | $false
@@ -342,17 +221,7 @@ Accept wildcard characters: False
 ```
 
 ### -CallAnsweringRulesEnabled
-!!! Exchange Server 2010
-
-The CallAnsweringRulesEnabled parameter specifies whether Call Answering Rules are enabled for UM-enabled users that are associated with the UM dial plan.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The CallAnsweringRulesEnabled parameter specifies whether Call Answering Rules are enabled for UM-enabled users associated with the UM dial plan.
-
-
 
 ```yaml
 Type: $true | $false
@@ -580,19 +449,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -640,17 +499,7 @@ Accept wildcard characters: False
 ```
 
 ### -FaxEnabled
-!!! Exchange Server 2010
-
-The FaxEnabled parameter specifies whether the Unified Messaging servers associated with the UM dial plan will answer and process incoming fax calls. The default value is $true.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The FaxEnabled parameter specifies whether the Mailbox servers associated with the UM dial plan answers and processes incoming fax calls. The default value is $true.
-
-
 
 ```yaml
 Type: $true | $false
@@ -666,17 +515,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceUpgrade
-!!! Exchange Server 2010
-
-The ForceUpgrade parameter specifies whether you're prompted for confirmation before a UM dial plan object is upgraded
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The ForceUpgrade switch specifies whether you're prompted for confirmation before a UM dial plan object is upgraded.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -708,17 +547,7 @@ Accept wildcard characters: False
 ```
 
 ### -InfoAnnouncementEnabled
-!!! Exchange Server 2010
-
-The InfoAnnouncementEnabled parameter specifies whether an informational announcement is enabled. This parameter can be set to True, False, or Uninterruptible. The default value is Disabled.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The InfoAnnouncementEnabled parameter specifies whether an informational announcement is enabled. This parameter can be set to True, False, or Uninterruptible. The default value is False.
-
-
 
 ```yaml
 Type: True | False | Uninterruptible
@@ -798,17 +627,7 @@ Accept wildcard characters: False
 ```
 
 ### -LegacyPromptPublishingPoint
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LegacyPromptPublishingPoint parameter specifies the location of the prompt publishing point for Microsoft Exchange Server 2007 Unified Messaging servers. In coexistence scenarios, this parameter is used when Exchange 2007 and Exchange Server 2010 Unified Messaging servers are added to the same Exchange 2010 UM dial plan.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LegacyPromptPublishingPoint parameter was used to specify the location of the prompt publishing point for Exchange Server 2007 Unified Messaging servers. This parameter was used in coexistence scenarios when Exchange 2007 Unified Messaging servers were also included in the UM dial plan.
-
-
 
 ```yaml
 Type: String
@@ -1058,19 +877,9 @@ Accept wildcard characters: False
 ```
 
 ### -VoIPSecurity
-!!! Exchange Server 2010
-
-The VoIPSecurity parameter specifies whether the Voice over IP (VoIP) traffic is encrypted or that the signaling channel or the signaling and the media channels are encrypted by using mutual Transport Layer Security (TLS). The default setting is Unsecured.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The VoIPSecurity parameter specifies whether the Voice over IP (VoIP) traffic is encrypted or that the signaling channel or the signaling and the media channels are encrypted by using mutual Transport Layer Security (TLS). The default setting is Unsecured.
-
-
 
 ```yaml
 Type: SIPSecured | Unsecured | Secured
@@ -1151,4 +960,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bf6cbfde-35aa-4a03-86b0-50e2c3664eeb.aspx)
-

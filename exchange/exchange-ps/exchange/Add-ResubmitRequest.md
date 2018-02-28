@@ -30,24 +30,11 @@ Add-ResubmitRequest -EndTime <DateTime> -StartTime <DateTime> [-Confirm] [-Corre
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Queues" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-ResubmitRequest -Destination 5364aeea-6e6b-4055-8258-229b2c6ac9a2 -StartTime "06/01/2012 6:00 PM" -EndTime "06/02/2012 5:00 AM"
-```
-
-This example replays the redundant copies of messages delivered from 6:00 PM June 1, 2012 to 5:00 AM June 2 2012 to the recovered mailbox database 5364aeea-6e6b-4055-8258-229b2c6ac9a2.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-ResubmitRequest -Destination 5364aeea-6e6b-4055-8258-229b2c6ac9a2 -StartTime "06/01/2012 6:00 PM" -EndTime "06/02/2012 5:00 AM"
 ```
@@ -57,25 +44,11 @@ This example replays the redundant copies of messages delivered from 6:00 PM Jun
 ## PARAMETERS
 
 ### -EndTime
-!!! Exchange Server 2013
-
-The EndTime parameter specifies the delivery time of the latest messages that need to be resubmitted from Safety Net.
-
-Use the short date format defined in the Regional Options settings for the computer on which the command is run. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
-
-The date and time specified by the EndTime parameter must be later than the date and time specified by the StartTime parameter. The date and time specified by both parameters must be in the past.
-
-
-
-!!! Exchange Server 2016
-
 The EndTime parameter specifies the delivery time of the latest messages that need to be resubmitted from Safety Net.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
 
 The date and time specified by the EndTime parameter must be later than the date and time specified by the StartTime parameter. The date and time specified by both parameters must be in the past.
-
-
 
 ```yaml
 Type: DateTime
@@ -91,25 +64,11 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-!!! Exchange Server 2013
-
-The StartTime parameter specifies the delivery time of the oldest messages that need to be resubmitted from Safety Net.
-
-Use the short date format defined in the Regional Options settings for the computer on which the command is run. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
-
-The date and time specified by the StartTime parameter must be earlier than the date and time specified by the EndTime parameter. The date and time specified by both parameters must be in the past.
-
-
-
-!!! Exchange Server 2016
-
 The StartTime parameter specifies the delivery time of the oldest messages that need to be resubmitted from Safety Net.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
 
 The date and time specified by the StartTime parameter must be earlier than the date and time specified by the EndTime parameter. The date and time specified by both parameters must be in the past.
-
-
 
 ```yaml
 Type: DateTime
@@ -161,19 +120,9 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
-!!! Exchange Server 2013
-
-The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: Get-MailboxDatabase -Server \<servername\> | Format-List Name,GUID.
-
-
-
-!!! Exchange Server 2016
-
 The Destination parameter specifies the GUID of the destination mailbox database. To find the GUID of the mailbox database, run the command: Get-MailboxDatabase -Server \<servername\> | Format-List Name,GUID.
 
 You can't use this parameter with the Recipient, ResubmitTo, or Sender parameters.
-
-
 
 ```yaml
 Type: Guid
@@ -189,19 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -Recipient
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016
-
 The Recipient parameter filters the messages to resubmit from Safety Net by the specified recipient's email address.
 
 You can't use this parameter with the Destination parameter.
-
-
 
 ```yaml
 Type: String
@@ -217,19 +156,9 @@ Accept wildcard characters: False
 ```
 
 ### -Sender
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016
-
 The Sender parameter filters the messages to resubmit from Safety Net by the specified sender's email address.
 
 You can't use this parameter with the Destination parameter.
-
-
 
 ```yaml
 Type: String
@@ -245,24 +174,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -274,8 +185,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -388,4 +297,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7d6f8a28-2f23-4139-b44f-2a6d57ee912a.aspx)
-

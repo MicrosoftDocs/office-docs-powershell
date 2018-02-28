@@ -6,20 +6,6 @@ schema: 2.0.0
 # update-EmailAddressPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Update-EmailAddressPolicy cmdlet to apply an e-mail address policy to all recipients.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Update-EmailAddressPolicy cmdlet to apply an email address policy to all recipients.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Update-EmailAddressPolicy cmdlet to apply new or updated email address policies to the affected recipients in an on-premises Exchange organization.
@@ -34,39 +20,11 @@ update-EmailAddressPolicy [-Identity] <EmailAddressPolicyIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Update-EmailAddressPolicy cmdlet queries for all recipients that match the specified e-mail address policy and saves the objects to Active Directory. Use the Update-EmailAddressPolicy cmdlet after you use the Set-EmailAddressPolicy cmdlet to apply all changes. For more information about the Set-EmailAddressPolicy cmdlet, see Set-EmailAddressPolicy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "E-mail address policy" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Update-EmailAddressPolicy cmdlet queries for all recipients that match the specified email address policy and saves the objects to Active Directory. Use the Update-EmailAddressPolicy cmdlet after you use the Set-EmailAddressPolicy cmdlet to apply all changes. For more information about the Set-EmailAddressPolicy cmdlet, see Set-EmailAddressPolicy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Email address policies" entry in the Email address and address book permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Update-EmailAddressPolicy -Identity EMAIL_ADDRESS_POLICY01
-```
-
-This example applies the e-mail address policy named EMAIL\_ADDRESS\_POLICY01 to all affected recipients.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Update-EmailAddressPolicy -Identity EMAIL_ADDRESS_POLICY01
-```
-
-This example applies the email address policy EMAIL\_ADDRESS\_POLICY01 to all affected recipients.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Update-EmailAddressPolicy -Identity "Northwest Executives"
 ```
@@ -76,24 +34,6 @@ This example applies the email address policy named Northwest Executives to all 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the GUID, distinguished name (DN), or e-mail address policy name that represents a specific e-mail address policy. You can also include the path by using the format Path\\EmailAddressPolicy.
-
-You can omit the parameter label Identity so that only the e-mail address policy name or GUID is supplied.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the GUID, distinguished name (DN), or email address policy name that represents a specific email address policy. You can also include the path by using the format Path\\EmailAddressPolicy.
-
-You can omit the parameter label Identity so that only the email address policy name or GUID is supplied.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the email address policy that you want to apply to recipients. You can use any value that uniquely identifies the policy. For example:
 
 - Name
@@ -101,8 +41,6 @@ The Identity parameter specifies the email address policy that you want to apply
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: EmailAddressPolicyIdParameter
@@ -154,25 +92,9 @@ Accept wildcard characters: False
 ```
 
 ### -FixMissingAlias
-!!! Exchange Server 2010
-
-The FixMissingAlias parameter repairs recipients that don't have an alias. The alias is generated based on the name of the recipient. You need to use the FixMissingAlias parameter if you receive an error message when you attempt to update an e-mail address policy, global address list, or address list.
-
-
-
-!!! Exchange Server 2013
-
-The FixMissingAlias switch repairs recipients that don't have an alias. The alias is generated based on the name of the recipient. You need to use the FixMissingAlias parameter if you receive an error message when you attempt to update an email address policy, global address list, or address list.
-
-
-
-!!! Exchange Server 2016
-
 The FixMissingAlias switch repairs recipients that don't have an alias. The alias is generated based on the Name property of the recipient. You don't need to specify a value with this switch.
 
 You need to use this switch if you receive an error message when you attempt to update the email address policy, global address list, or address list.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -204,17 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -UpdateSecondaryAddressesOnly
-!!! Exchange Server 2013
-
-The UpdateSecondaryAddressesOnly switch parameter specifies to update the secondary email addresses only. If you specify this parameter, the primary proxy email address isn't updated.
-
-
-
-!!! Exchange Server 2016
-
 The UpdateSecondaryAddressesOnly switch parameter specifies that only the proxy email addresses are updated for the recipients. The recipient's primary email address isn't updated. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -247,4 +159,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/283081a2-14bb-46cd-918e-e2dd168c43ab.aspx)
-

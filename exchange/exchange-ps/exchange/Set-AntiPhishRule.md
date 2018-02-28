@@ -34,13 +34,6 @@ Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfReci
 
 This example modifies the existing antiphishing rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
 
-### Example 1 (Exchange Online Protection)
-```
-Set-AntiPhishRule -Identity "Engineering Department Phishing Rule" -ExceptIfRecipientDomainIs fabrikam.com
-```
-
-This example modifies the existing antiphishing rule named Engineering Department Phishing Rule to exclude messages sent to the fabrikam.com domain.
-
 ## PARAMETERS
 
 ### -Identity

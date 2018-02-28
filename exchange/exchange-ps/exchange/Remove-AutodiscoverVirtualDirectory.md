@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-AutodiscoverVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-AutodiscoverVirtualDirectory cmdlet to remove the Autodiscover virtual directory associated with the Autodiscover service on a computer running Microsoft Exchange Server 2010 that has the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-AutodiscoverVirtualDirectory cmdlet to remove the Autodiscover virtual directory associated with the Autodiscover service on a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-AutodiscoverVirtualDirectory cmdlet to remove the an existing Autodiscover virtual directory from Internet Information Services (IIS).
@@ -34,35 +20,11 @@ Remove-AutodiscoverVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover service virtual directory settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Autodiscover virtual directory settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-AutodiscoverVirtualDirectory -Identity "CAS01\autodiscover(autodiscover.contoso.com)"
-```
-
-This example removes the Autodiscover virtual directory from the site autodiscover.contoso.com on the Client Access server named CAS01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-AutodiscoverVirtualDirectory -Identity "CAS01\autodiscover(autodiscover.contoso.com)"
-```
-
-This example removes the Autodiscover virtual directory from the site autodiscover.contoso.com on the Client Access server CAS01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-AutodiscoverVirtualDirectory -Identity "MBX01\autodiscover(autodiscover.contoso.com)"
 ```
@@ -72,14 +34,6 @@ This example removes the Autodiscover virtual directory from the site autodiscov
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name or GUID of an Autodiscover virtual directory. The Identity parameter is represented as: ServerName\\VirtualDirectoryName (WebsiteName).
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Autodiscover virtual directory that you want to remove.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -91,8 +45,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -177,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/aa76264c-249c-4999-8a00-a3704a21d7f4.aspx)
-

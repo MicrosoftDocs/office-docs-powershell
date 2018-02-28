@@ -6,14 +6,6 @@ schema: 2.0.0
 # Set-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-DatabaseAvailabilityGroup cmdlet to configure some of the properties of a database availability group (DAG). The Set-DatabaseAvailabilityGroup cmdlet enables you to manage DAG properties that can't be managed from the Exchange Management Console, such as enabling and disabling cross-site RPC client access, configuring network discovery, selecting the TCP port used for replication, and enabling datacenter activation coordination (DAC) mode.
-
-DAG property values are stored in both Active Directory and the cluster database. However, some properties are stored in the cluster database. As a result, the underlying cluster for the DAG must be running and have quorum to set the properties for:
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-DatabaseAvailabilityGroup cmdlet to configure properties of a database availability group (DAG).
@@ -38,8 +30,7 @@ Set-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
  [-AutoDagTotalNumberOfDatabases <Int32>] [-AutoDagTotalNumberOfServers <Int32>]
  [-AutoDagVolumesRootFolderPath <NonRootLocalLongFullPath>]
  [-DagConfiguration <DatabaseAvailabilityGroupConfigurationIdParameter>]
- [-MailboxLoadBalanceEnabled <$true | $false>] [-MailboxLoadBalanceMaximumEdbFileSize <ByteQuantifiedSize>]
- [-MailboxLoadBalanceOverloadedThreshold <Int32>] [-MailboxLoadBalanceRelativeLoadCapacity <Int32>]
+ [-MailboxLoadBalanceEnabled <$true | $false>] [-MailboxLoadBalanceOverloadedThreshold <Int32>] [-MailboxLoadBalanceRelativeLoadCapacity <Int32>]
  [-MailboxLoadBalanceUnderloadedThreshold <Int32>] [-ManualDagNetworkConfiguration <$true | $false>]
  [-ReplayLagManagerEnabled <$true | $false>] [-SkipDagValidation]
  [-ActivityState <NewDeployment | DotBuildUpgrade | Decom | PendingDotBuildUpgrade | DecomRemoveMailboxes | DecomNoUpgrades | Discovered | Allocated | ReadyForAllocation | Spare>]
@@ -53,29 +44,7 @@ Set-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParameter>
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Database Availability Group Permissions" section in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-DatabaseAvailabilityGroup cmdlet enables you to manage DAG properties that can't be managed from the Exchange Administration Center (EAC), such as configuring network discovery, selecting the TCP port used for replication, and enabling datacenter activation coordination (DAC) mode.
-
-DAG property values are stored in both Active Directory and the cluster database. Because some properties are stored in the cluster database, the underlying cluster for the DAG must have quorum to set the properties for:
-
-- ReplicationPort
-
-- NetworkCompression
-
-- NetworkEncryption
-
-- DiscoverNetworks
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
-The Set-DatabaseAvailabilityGroup cmdlet enables you to manage DAG properties that can't be managed from the Exchange admin center (EAC), such as configuring network discovery, selecting the TCP port used for replication, and enabling datacenter activation coordination (DAC) mode.
+The Set-DatabaseAvailabilityGroup cmdlet enables you to manage DAG properties that can't be managed from the Exchange admin center (EAC), such as configuring network discovery, selecting the TCP port used for replication and enabling datacenter activation coordination (DAC) mode.
 
 DAG property values are stored in both Active Directory and the cluster database. Because some properties are stored in the cluster database, the underlying cluster for the DAG must have quorum to set the properties for:
 
@@ -91,170 +60,58 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
 ```
 
 This example sets the witness directory to C:\\DAG1DIR for the DAG DAG1.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
-```
-
-This example sets the witness directory to C:\\DAG1DIR for the DAG DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -WitnessDirectory C:\DAG1DIR
-```
-
-This example sets the witness directory to C:\\DAG1DIR for the DAG DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -AlternateWitnessDirectory C:\DAGFileShareWitnesses\DAG1.contoso.com -AlternateWitnessServer EXHUB3
-```
-
-This example preconfigures an alternate witness server of EXHUB3 and an alternate witness directory of C:\\DAGFileShareWitnesses\\DAG1.contoso.com for the DAG DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -AlternateWitnessDirectory C:\DAGFileShareWitnesses\DAG1.contoso.com -AlternateWitnessServer CAS3
 ```
 
 This example preconfigures an alternate witness server of CAS3 and an alternate witness directory of C:\\DAGFileShareWitnesses\\DAG1.contoso.com for the DAG DAG1.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -AlternateWitnessDirectory C:\DAGFileShareWitnesses\DAG1.contoso.com -AlternateWitnessServer CAS3
-```
-
-This example preconfigures an alternate witness server of CAS3 and an alternate witness directory of C:\\DAGFileShareWitnesses\\DAG1.contoso.com for the DAG DAG1.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 0.0.0.0
 ```
 
 This example configures the DAG DAG1 to use DHCP to obtain an IP address.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 0.0.0.0
-```
-
-This example configures the DAG DAG1 to use DHCP to obtain an IP address.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 0.0.0.0
-```
-
-This example configures the DAG DAG1 to use DHCP to obtain an IP address.
-
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8
 ```
 
 This example configures the DAG DAG1 to use a static IP address of 10.0.0.8.
 
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8
-```
-
-This example configures the DAG DAG1 to use a static IP address of 10.0.0.8.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8
-```
-
-This example configures the DAG DAG1 to use a static IP address of 10.0.0.8.
-
-### Example 5 -------------------------- (Exchange Server 2010)
+### Example 5
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,10.0.1.8
 ```
 
 This example configures the multi-subnet DAG DAG1 with multiple static IP addresses.
 
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,10.0.1.8
-```
-
-This example configures the multi-subnet DAG DAG1 with multiple static IP addresses.
-
-### Example 5 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatabaseAvailabilityGroupIpAddresses 10.0.0.8,10.0.1.8
-```
-
-This example configures the multi-subnet DAG DAG1 with multiple static IP addresses.
-
-### Example 6 -------------------------- (Exchange Server 2010)
+### Example 6
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
 ```
 
 This example configures TCP port 63132 as the port used by replication for the DAG DAG1.
 
-
 After changing the default replication port for a DAG, you must manually modify the Windows Firewall exceptions on each member of the DAG to allow communication to occur over the specified port.
 
-### Example 6 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
-```
-
-This example configures TCP port 63132 as the port used by replication for the DAG DAG1.
-
-
-After changing the default replication port for a DAG, you must manually modify the Windows Firewall exceptions on each member of the DAG to allow communication to occur over the specified port.
-
-### Example 6 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -ReplicationPort 63132
-```
-
-This example configures TCP port 63132 as the port used by replication for the DAG DAG1.
-
-
-After changing the default replication port for a DAG, you must manually modify the Windows Firewall exceptions on each member of the DAG to allow communication to occur over the specified port.
-
-### Example 7 -------------------------- (Exchange Server 2010)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
-```
-
-This example configures the DAG DAG1 for data center activation mode.
-
-### Example 7 -------------------------- (Exchange Server 2013)
+### Example 7
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
 ```
 
 This example configures the DAG DAG1 for DAC mode.
 
-### Example 7 -------------------------- (Exchange Server 2016)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -DatacenterActivationMode DagOnly
-```
-
-This example configures the DAG DAG1 for DAC mode.
-
-### Example 8 -------------------------- (Exchange Server 2013)
-```
-Set-DatabaseAvailabilityGroup -Identity DAG1 -AutoDagVolumesRootFolderPath C:\ExchVols -AutoDagDatabasesRootFolderPath C:\ExchDBs -AutoDagDatabaseCopiesPerVolume 4
-```
-
-This example configures the DAG DAG1 for AutoReseed using custom mount point paths and 4 databases per volume.
-
-### Example 8 -------------------------- (Exchange Server 2016)
+### Example 8
 ```
 Set-DatabaseAvailabilityGroup -Identity DAG1 -AutoDagVolumesRootFolderPath C:\ExchVols -AutoDagDatabasesRootFolderPath C:\ExchDBs -AutoDagDatabaseCopiesPerVolume 4
 ```
@@ -264,17 +121,7 @@ This example configures the DAG DAG1 for AutoReseed using custom mount point pat
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the DAG to be modified.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the name of the DAG that you want to modify.
-
-
 
 ```yaml
 Type: DatabaseAvailabilityGroupIdParameter
@@ -290,17 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowCrossSiteRpcClientAccess
-!!! Exchange Server 2010
-
-The AllowCrossSiteRpcClientAccess parameter specifies the client access endpoint used by Outlook clients after a cross-site database \*over event. The default value is False, which disables cross-site RPC client access. Thus, when a cross-site database \*over event occurs, the affected user's Outlook profile will be updated to use the RPC Client Access Server array in the Active Directory site containing the mounted database. If configured with a value of True, the affected user's Outlook profile will not be updated, and the user will continue to connect to the same RPC Client Access Server array. In order to use this parameter, all Mailbox servers in the DAG must be running Exchange Server 2010 Service Pack 2 Rollup Update 3 or later.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -316,17 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateWitnessDirectory
-!!! Exchange Server 2010
-
-The AlternateWitnessDirectory parameter specifies the name of the directory on the alternate witness server that's used to store file share witness data. The specified directory must not be in use by any other DAGs or used for any other purpose. This parameter is used only as part of a datacenter switchover process.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AlternateWitnessDirectory parameter specifies the name of an alternate directory that's used to store file share witness data. The specified directory must not be in use by any other DAGs or used for any other purpose. This parameter is used only as part of a datacenter switchover process. If the DAG is extended across multiple datacenters in a site resilience configuration, we recommend preconfiguring the alternate witness server and directory.
-
-
 
 ```yaml
 Type: NonRootLocalLongFullPath
@@ -342,17 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -AlternateWitnessServer
-!!! Exchange Server 2010
-
-The AlternateWitnessServer parameter specifies the name of the server that will be used as the Witness Server after a datacenter switchover. The specified server must not be a member of the DAG that's configured to use it. This parameter is used only as part of a datacenter switchover process.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The AlternateWitnessServer parameter specifies the name of an alternate server that's used to store file share witness data. The specified server must not be a member of the DAG that's configured to use it. This parameter is used only as part of a datacenter switchover process. If the DAG is extended across multiple datacenters in a site resilience configuration, we recommend preconfiguring the alternate witness server and directory.
-
-
 
 ```yaml
 Type: FileShareWitnessServerName
@@ -404,21 +221,11 @@ Accept wildcard characters: False
 ```
 
 ### -DatacenterActivationMode
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DatacenterActivationMode parameter specifies whether datacenter activation mode is disabled (Off) or enabled for the DAG (DagOnly).
-
-
-
-!!! Exchange Server 2016
-
 The DatacenterActivationMode parameter specifies the datacenter activation mode for the DAG. Valid values are:
 
 - Off: Datacenter activation mode is disabled.
 
 - DagOnly: Datacenter activation mode is enabled.
-
-
 
 ```yaml
 Type: Off | DagOnly
@@ -434,19 +241,9 @@ Accept wildcard characters: False
 ```
 
 ### -DiscoverNetworks
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DiscoverNetworks parameter specifies whether to force a rediscovery of the network and network interfaces. By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworks parameter.
-
-
-
-!!! Exchange Server 2016
-
 The DiscoverNetworksswitch specifies whether to force a rediscovery of the network and network interfaces. You don't need to specify a value with this switch.
 
 By default, internal network heartbeats are sent between DAG members on the same subnet. If there's no response to the heartbeats, network discovery is performed automatically by the system. If you add or remove networks or change DAG network subnets, you can force rediscovery of all DAG networks by using the DiscoverNetworksswitch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -478,14 +275,6 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkCompression
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NetworkCompression parameter specifies whether network compression is disabled on all networks (Disabled), enabled on all networks (Enabled), enabled for inter-subnet communication only (InterSubnetOnly), or enabled only for seeding (SeedOnly).
-
-
-
-!!! Exchange Server 2016
-
 The NetworkCompression parameter specifies the network compression option for the DAG. Valid values are:
 
 - Disabled: Network compression is disabled on all networks.
@@ -495,8 +284,6 @@ The NetworkCompression parameter specifies the network compression option for th
 - InterSubnetOnly: Network compression is enabled only for inter-subnet communication.
 
 - SeedOnly: Network compression is enabled only for seeding.
-
-
 
 ```yaml
 Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
@@ -512,14 +299,6 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkEncryption
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NetworkEncryption parameter specifies whether network encryption is disabled on all networks (Disabled), enabled on all networks (Enabled), enabled for inter-subnet communication only (InterSubnetOnly), or enabled only for seeding (SeedOnly).
-
-
-
-!!! Exchange Server 2016
-
 The NetworkEncryption parameter specifies the network encryption option for the DAG. Valid values are:
 
 - Disabled: Network encryption is disabled on all networks.
@@ -529,8 +308,6 @@ The NetworkEncryption parameter specifies the network encryption option for the 
 - InterSubnetOnly: Network encryption is enabled only for inter-subnet communication.
 
 - SeedOnly: Network encryption is enabled only for seeding.
-
-
 
 ```yaml
 Type: Disabled | Enabled | InterSubnetOnly | SeedOnly
@@ -578,17 +355,7 @@ Accept wildcard characters: False
 ```
 
 ### -WitnessDirectory
-!!! Exchange Server 2010
-
-The WitnessDirectory parameter specifies the name of the directory on the witness server that's used to store file share witness data. The specified directory must not be in use by any other DAGs.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The WitnessDirectory parameter specifies the name of the directory on the server that's used to store file share witness data. The specified directory must not be in use by any other DAGs.
-
-
 
 ```yaml
 Type: NonRootLocalLongFullPath
@@ -604,17 +371,7 @@ Accept wildcard characters: False
 ```
 
 ### -WitnessServer
-!!! Exchange Server 2010
-
-The WitnessServer parameter specifies the name of a server that will act as a witness for the DAG if the DAG has an even number of members. The server specified can't be a member of the DAG.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The WitnessServer parameter specifies the name of a server that will act as a witness for the DAG. The server specified can't be a member of the DAG.
-
-
 
 ```yaml
 Type: FileShareWitnessServerName
@@ -646,17 +403,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagAutoReseedEnabled
-!!! Exchange Server 2013
-
-The AutoDagAutoReseedEnabled is used to enable or disable Autoreseed. The default value is True (enabled).
-
-
-
-!!! Exchange Server 2016
-
 The AutoDagAutoReseedEnabled is used to enable or disable Autoreseed. The default value is $true (enabled).
-
-
 
 ```yaml
 Type: $true | $false
@@ -736,17 +483,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoDagDiskReclaimerEnabled
-!!! Exchange Server 2013
-
-The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is True (enabled). If you set this to False, you will need to manually format the volume before the database(s) can be reseeded.
-
-
-
-!!! Exchange Server 2016
-
 The AutoDagDiskReclaimerEnabled is used to enable or disable the volume formatting functions used by Autoreseed. The default value is $true (enabled). If you set this to $false, you will need to manually format the volume before the database(s) can be reseeded.
-
-
 
 ```yaml
 Type: $true | $false
@@ -857,22 +594,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -MailboxLoadBalanceMaximumEdbFileSize
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: ByteQuantifiedSize
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -MailboxLoadBalanceOverloadedThreshold
 This parameter is reserved for internal Microsoft use.
 
@@ -922,17 +643,7 @@ Accept wildcard characters: False
 ```
 
 ### -ManualDagNetworkConfiguration
-!!! Exchange Server 2013
-
-The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to False, DAG networks are automatically configured. If this parameter is set to True, you must manually configure DAG networks.
-
-
-
-!!! Exchange Server 2016
-
 The ManualDagNetworkConfiguration parameter specifies whether DAG networks should be automatically configured. If this parameter is set to $false, DAG networks are automatically configured. If this parameter is set to $true, you must manually configure DAG networks.
-
-
 
 ```yaml
 Type: $true | $false
@@ -964,17 +675,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipDagValidation
-!!! Exchange Server 2013
-
-The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when configuring the DAG.
-
-
-
-!!! Exchange Server 2016
-
 The SkipDagValidation switch specifies whether to bypass the validation of the DAG's quorum model and the health check on the DAG's witness when configuring the DAG. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1188,7 +889,7 @@ Accept wildcard characters: False
 ### -PreferenceMoveFrequency
 The PreferenceMoveFrequency parameter specifies how frequently the Microsoft Exchange Replication service inspects and automatically rebalances the database copies. If the most preferred database copy (ActivationPreference value of 1) isn't the active copy, the most preferred database copy is activated by performing a lossless switchover.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 The default value is 01:00:00 (1 hour). To disable this feature, specify the value ([System.Threading.Timeout]::InfiniteTimeSpan).
 
@@ -1255,4 +956,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4353c3ab-75b7-485e-89ae-d4b09b44b646.aspx)
-

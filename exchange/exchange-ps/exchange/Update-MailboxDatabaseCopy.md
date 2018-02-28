@@ -6,14 +6,6 @@ schema: 2.0.0
 # Update-MailboxDatabaseCopy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Update-MailboxDatabaseCopy cmdlet to seed or reseed a mailbox database copy. Seeding is the process in which a copy of a mailbox database is added to another Mailbox server. This becomes the baseline database for the copy.
-
-The Update-MailboxDatabaseCopy cmdlet can also be used to seed a content index catalog for a mailbox database copy.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Update-MailboxDatabaseCopy cmdlet to seed or reseed a mailbox database copy.
@@ -59,24 +51,6 @@ Update-MailboxDatabaseCopy -Server <MailboxServerIdParameter> [-CatalogOnly] [-C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You must suspend a database copy before you can update it using the Update-MailboxDatabaseCopy cmdlet. For detailed steps about how to suspend a database copy, see Suspend or Resume a Mailbox Database Copy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"mailbox database copy" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-Seeding is the process in which a copy of a mailbox database is added to another Mailbox server. This becomes the database copy into which copied log files and data are replayed.
-
-The Update-MailboxDatabaseCopy cmdlet can also be used to seed a content index catalog for a mailbox database copy. When you do this, the MAPI network is used, regardless of the value you specify with the Network parameter.
-
-You must suspend a database copy before you can update it using the Update-MailboxDatabaseCopy cmdlet. For detailed steps about how to suspend a database copy, see Suspend or resume a mailbox database copy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 Seeding is the process in which a copy of a mailbox database is added to another Mailbox server. This becomes the database copy into which copied log files and data are replayed.
 
 The Update-MailboxDatabaseCopy cmdlet can also be used to seed a content index catalog for a mailbox database copy. When you do this, the MAPI network is used, regardless of the value you specify with the Network parameter.
@@ -87,98 +61,35 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1
-```
-
-This example shows how to seed a copy of a database named DB1 on MBX1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1
-```
-
-This example seeds a copy of the database DB1 on the Mailbox server MBX1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
-```
-
-This example shows how to seed a copy of a database named DB1 on MBX1 using MBX2 as the source Mailbox server for the seed.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 using MBX2 as the source Mailbox server for the seed.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -SourceServer MBX2
-```
-
-This example seeds a copy of the database DB1 on the Mailbox server MBX1 using MBX2 as the source Mailbox server for the seed.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
-```
-
-This example shows how to seed a copy of a database named DB1 on MBX1 without seeding the content index catalog.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
 ```
 
 This example seeds a copy of the database DB1 on the Mailbox server MBX1 without seeding the content index catalog.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -DatabaseOnly
-```
-
-This example seeds a copy of the database DB1 on the Mailbox server MBX1 without seeding the content index catalog.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
-```
-
-This example shows how to seed the content index catalog for the copy of a database named DB1 on MBX1 without seeding the database file.
-
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 4
 ```
 Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
 ```
 
 This example seeds the content index catalog for the copy of the database DB1 on the Mailbox server MBX1 without seeding the database file. The content index catalog seeding occurs over the MAPI network.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Update-MailboxDatabaseCopy -Identity DB1\MBX1 -CatalogOnly
-```
-
-This example seeds the content index catalog for the copy of the database DB1 on the Mailbox server MBX1 without seeding the database file. The content index catalog seeding occurs over the MAPI network.
-
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-Update-MailboxDatabaseCopy -Server MBX1
-```
-
-This example performs a full server reseed of all of the databases on the Mailbox server MBX1.
-
-### Example 5 -------------------------- (Exchange Server 2016)
+### Example 5
 ```
 Update-MailboxDatabaseCopy -Server MBX1
 ```
@@ -204,23 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogOnly
-!!! Exchange Server 2010
-
-The CatalogOnly parameter specifies that only the content index catalog for the database copy should be seeded. The database copy is not seeded. By default, both the database and catalog are seeded.
-
-
-
-!!! Exchange Server 2013
-
-The CatalogOnly parameter specifies that only the content index catalog for the database copy should be seeded.
-
-
-
-!!! Exchange Server 2016
-
 The CatalogOnlyswitch specifies that only the content index catalog for the database copy should be seeded. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -256,23 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -DatabaseOnly
-!!! Exchange Server 2010
-
-The DatabaseOnly parameter specifies that only the database copy should be seeded. The content index catalog is not seeded.
-
-
-
-!!! Exchange Server 2013
-
-The DatabaseOnly parameter specifies that only the database copy should be seeded. The content index catalog isn't seeded.
-
-
-
-!!! Exchange Server 2016
-
 The DatabaseOnlyswitch specifies that only the database copy should be seeded. The content index catalog isn't seeded. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -288,25 +167,9 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteExistingFiles
-!!! Exchange Server 2010
-
-The DeleteExistingFiles parameter causes the command to remove the existing log files at the target location. This parameter removes only the files that it checks for and fails if other files are present. No action is taken on other files at the target location. Therefore, if database-related files are present, you must manually remove them.
-
-
-
-!!! Exchange Server 2013
-
-The DeleteExistingFiles switch specifies whether to remove the existing log files at the target location. This parameter removes only the files that it checks for and fails if other files are present. No action is taken on other files at the target location. Therefore, if database-related files are present, you must manually remove them.
-
-
-
-!!! Exchange Server 2016
-
 The DeleteExistingFiles switch specifies whether to remove the existing log files at the target location. You don't need to specify a value with this switch.
 
 This switch removes only the files that it checks for and fails if other files are present. No action is taken on other files at the target location. Therefore, if database-related files are present, you must manually remove them.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -338,23 +201,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-Use the Force parameter when the task is run programmatically and prompting for administrative input is inappropriate. If Force is not provided in the command, administrative input is prompted. If Force is provided in the command, but the value is omitted, its default value is $true.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -370,25 +217,9 @@ Accept wildcard characters: False
 ```
 
 ### -ManualResume
-!!! Exchange Server 2010
-
-Use the ManualResume parameter when you don't want the command to automatically resume replication on the database copy. This parameter allows you to manually resume replication to the database copy.
-
-
-
-!!! Exchange Server 2013
-
-The ManualResume switch specifies whether to automatically resume replication on the database copy. With this parameter, you can manually resume replication to the database copy.
-
-
-
-!!! Exchange Server 2016
-
 The ManualResume switch specifies whether to automatically resume replication on the database copy. You don't need to specify a value with this switch.
 
 With this switch, you can manually resume replication to the database copy.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -404,17 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Network
-!!! Exchange Server 2010
-
-The Network parameter specifies which DAG network should be used for seeding.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Network parameter specifies which DAG network should be used for seeding. Note that content index catalog seeding always occurs over the MAPI network, even if you use this parameter to specify the DAG network.
-
-
 
 ```yaml
 Type: DatabaseAvailabilityGroupNetworkIdParameter
@@ -430,17 +251,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkCompressionOverride
-!!! Exchange Server 2010
-
-The NetworkCompressionOverride parameter is used to override the compression setting for seeding and the database availability group (DAG).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The NetworkCompressionOverride parameter specifies whether to override the current DAG network compression settings.
-
-
 
 ```yaml
 Type: UseDagDefault | Off | On
@@ -456,17 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkEncryptionOverride
-!!! Exchange Server 2010
-
-The NetworkEncryptionOverride parameter is used to override the encryption setting for seeding and the DAG.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The NetworkEncryptionOverride parameter specifies whether to override the current DAG encryption settings.
-
-
 
 ```yaml
 Type: UseDagDefault | Off | On
@@ -498,17 +299,7 @@ Accept wildcard characters: False
 ```
 
 ### -SourceServer
-!!! Exchange Server 2010
-
-The SourceServer parameter is used to specify the name of a Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The SourceServer parameter specifies the name of a Mailbox server with a passive copy of the mailbox database to be used as the source for the seed operation.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -524,17 +315,7 @@ Accept wildcard characters: False
 ```
 
 ### -CancelSeed
-!!! Exchange Server 2013
-
-The CancelSeed switch specifies whether to cancel an in-progress seeding operation.
-
-
-
-!!! Exchange Server 2016
-
 The CancelSeed switch specifies whether to cancel an in-progress seeding operation. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -566,19 +347,9 @@ Accept wildcard characters: False
 ```
 
 ### -BeginSeed
-!!! Exchange Server 2013
-
-The BeginSeed parameter is useful for scripting reseeds, because with this parameter, the task asynchronously starts the seeding operation and then exits the cmdlet.
-
-
-
-!!! Exchange Server 2016
-
 The BeginSeed switch asynchronously starts the seeding operation and then exits the cmdlet. You don't need to specify a value with this switch.
 
 This switch is useful for scripting reseeds.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -610,19 +381,9 @@ Accept wildcard characters: False
 ```
 
 ### -SafeDeleteExistingFiles
-!!! Exchange Server 2013
-
-The SafeDeleteExistingFiles parameter is used to perform a seeding operation with a single copy redundancy pre-check prior to the seed. Because this parameter includes the redundancy safety check, it requires a lower level of permissions than the DeleteExistingFiles parameter, enabling a limited permission administrator to perform the seeding operation.
-
-
-
-!!! Exchange Server 2016
-
 The SafeDeleteExistingFilesswitch specifies a seeding operation with a single copy redundancy pre-check prior to the seed. You don't need to specify a value with this switch.
 
 Because this switch includes the redundancy safety check, it requires a lower level of permissions than the DeleteExistingFiles parameter. Limited permission administrators can perform the seeding operation by using this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -703,4 +464,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/37ebb66a-382e-4fd9-81f8-795f776a87b1.aspx)
-

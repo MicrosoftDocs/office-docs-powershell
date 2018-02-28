@@ -6,22 +6,6 @@ schema: 2.0.0
 # Get-MailboxExportRequestStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxExportRequestStatistics cmdlet to view detailed information about export requests.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-MailboxExportRequestStatistics cmdlet to view detailed information about export requests.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-MailboxExportRequestStatistics cmdlet to view detailed information about export requests.
@@ -52,24 +36,6 @@ Get-MailboxExportRequestStatistics -RequestQueue <DatabaseIdParameter> [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can pipeline the Get-MailboxExportRequestStatistics cmdlet from the Get-MailboxExportRequest cmdlet.
-
-The RequestQueue and MRSInstance parameter syntax sets are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You can pipeline the Get-MailboxExportRequestStatistics cmdlet from the Get-MailboxExportRequest cmdlet.
-
-The RequestQueue parameter syntax set is for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You can pipeline the Get-MailboxExportRequestStatistics cmdlet from the Get-MailboxExportRequest cmdlet.
 
 The RequestQueue parameter syntax set is for debugging purposes only.
@@ -78,63 +44,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport1
 ```
 
 This example returns the default statistics for the second export request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport1
-```
-
-This example returns the default statistics for the second export request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport1
-```
-
-This example returns the default statistics for the second export request for Tony Smith. The type of information returned by default includes name, mailbox, and status.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport | Export-CSV \\SERVER01\ExportRequest_Reports\Tony_Exportstats.csv
 ```
 
 This example returns statistics for Tony Smith's mailbox and exports the report to a .csv file.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport | Export-CSV \\SERVER01\ExportRequest_Reports\Tony_Exportstats.csv
-```
-
-This example returns statistics for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\MailboxExport | Export-CSV \\SERVER01\ExportRequest_Reports\Tony_Exportstats.csv
-```
-
-This example returns statistics for Tony Smith's mailbox and exports the report to a .csv file.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
-```
-
-This example returns additional information about the export request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
-```
-
-This example returns additional information about the export request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command. (The export request was created using the New-MailboxExportRequest.)
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MailboxExportRequestStatistics -Identity Tony\LegalHold -IncludeReport | Format-List
 ```
@@ -146,37 +70,16 @@ This example returns additional information about the export request for Tony Sm
 Get-MailboxExportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
 
-This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests that are currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
+In Exchange Server 2010, this example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests that are currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
 
-### Example 4 -------------------------- (Exchange Server 2013)
+### Example 5
 ```
 Get-MailboxExportRequestStatistics -RequestQueue MailboxDatabase01
 ```
 
 This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
 
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxExportRequestStatistics -RequestQueue MailboxDatabase01
-```
-
-This example returns default statistics for an export request being processed by the instance of MRS running on the server CAS01. This command only returns information for export requests currently being processed by an instance of MRS. If the request is already finished, it won't be returned.
-
-### Example 5 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxExportRequest -Status Failed | Get-MailboxExportRequestStatistics -IncludeReport | Format-List > AllExportReports.txt
-```
-
-This example returns additional information for all the export requests that have a status of Failed by using the IncludeReport parameter, and then saves the information to the text file AllExportReports.txt.
-
-### Example 5 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequest -Status Failed | Get-MailboxExportRequestStatistics -IncludeReport | Format-List > AllExportReports.txt
-```
-
-This example returns additional information for all the export requests that have a status of Failed by using the IncludeReport parameter, and then saves the information to the text file AllExportReports.txt.
-
-### Example 5 -------------------------- (Exchange Server 2016)
+### Example 6
 ```
 Get-MailboxExportRequest -Status Failed | Get-MailboxExportRequestStatistics -IncludeReport | Format-List > AllExportReports.txt
 ```
@@ -186,21 +89,9 @@ This example returns additional information for all the export requests that hav
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
 The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
 
-This parameter can't be used in conjunction with the MRSInstance or RequestQueue parameters.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-The Identity parameter specifies the identity of the export request. By default, export requests are named \<alias\>\\MailboxExportX (where X = 0-9). If you specified a name for the export request when it was created by using the New-MailboxExportRequest cmdlet, use the following syntax: \<alias\>\\\<name\>.
-
-This parameter can't be used with the RequestGuid, or RequestQueue parameters.
-
-
+This parameter can't be used with the RequestGuid or RequestQueue parameters.
 
 ```yaml
 Type: MailboxExportRequestIdParameter
@@ -234,20 +125,6 @@ Accept wildcard characters: False
 ```
 
 ### -RequestQueue
-!!! Exchange Server 2010
-
-The RequestQueue parameter specifies the mailbox database on which the mailbox or archive of the request resides. You can use one of the following values:
-
-- GUID of the database
-
-- Database name
-
-This parameter can't be used in conjunction with the Identity or MRSInstance parameters.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The RequestQueue parameter identifies the request based on the mailbox database where the request is being run. You can use any value that uniquely identifies the database. For example:
 
 - Database GUID
@@ -255,8 +132,6 @@ The RequestQueue parameter identifies the request based on the mailbox database 
 - Database name
 
 You can't use this parameter with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -288,17 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeReport
-!!! Exchange Server 2010
-
-The IncludeReport switch specifies whether to return additional details about the request, which can be used for troubleshooting.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IncludeReport switch specifies whether to return additional details, which can be used for troubleshooting.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -395,4 +260,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/73c79d8c-d8c0-4389-a5ad-520c2c94909e.aspx)
-

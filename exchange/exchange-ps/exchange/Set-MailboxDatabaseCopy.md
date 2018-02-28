@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-MailboxDatabaseCopy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-MailboxDatabaseCopy cmdlet to configure the properties of a database copy. Using this cmdlet, you can configure the replay lag time, truncation lag time, and activation preference value for a mailbox database copy. For information about these parameters, see Managing Mailbox Database Copies.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-MailboxDatabaseCopy cmdlet to configure the properties of a database copy.
@@ -44,60 +38,20 @@ Set-MailboxDatabaseCopy [-Identity] <DatabaseCopyIdParameter> [-ClearHostServer]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"mailbox database copy" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-With this cmdlet, you can configure the replay lag time, truncation lag time, and activation preference value for a mailbox database copy.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 With this cmdlet, you can configure the replay lag time, truncation lag time, and activation preference value for a mailbox database copy.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxDatabaseCopy -Identity DB2\MBX1 -ReplayLagTime 3.0:0:0
-```
-
-This example configures the replay lag time with a value of 3 days for a copy of a database named DB2 that is hosted on a Mailbox server named MBX1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-MailboxDatabaseCopy -Identity DB2\MBX1 -ReplayLagTime 3.0:0:0
 ```
 
 This example configures the replay lag time with a value of 3 days for a copy of the database DB2 hosted on the Mailbox server MBX1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-MailboxDatabaseCopy -Identity DB2\MBX1 -ReplayLagTime 3.0:0:0
-```
-
-This example configures the replay lag time with a value of 3 days for a copy of the database DB2 hosted on the Mailbox server MBX1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Set-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationPreference 3
-```
-
-This example configures an activation preference of 3 for the copy of a database DB1 hosted on a Mailbox server MBX2.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationPreference 3
-```
-
-This example configures an activation preference of 3 for the copy of the database DB1 hosted on the Mailbox server MBX2.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-MailboxDatabaseCopy -Identity DB1\MBX2 -ActivationPreference 3
 ```
@@ -123,17 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActivationPreference
-!!! Exchange Server 2010
-
-The ActivationPreference parameter value is used as part of Active Manager's best copy selection process and to redistribute active mailbox databases throughout the DAG when using the RedistributeActiveDatabases.ps1 script. The value for ActivationPreference is a number equal to or greater than 1, where 1 is at the top of the preference order. The position number cannot be larger than the number of database copies of the mailbox database.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ActivationPreference parameter value is used as part of Active Manager's best copy selection process and to redistribute active mailbox databases throughout the database availability group (DAG) when using the RedistributeActiveDatabases.ps1 script. The value for the ActivationPreference parameter is a number equal to or greater than 1, where 1 is at the top of the preference order. The position number can't be larger than the number of database copies of the mailbox database.
-
-
 
 ```yaml
 Type: UInt32
@@ -185,26 +129,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReplayLagTime
-!!! Exchange Server 2010
-
-The ReplayLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before replaying log files that have been copied to the passive database copy. Setting this parameter to a value greater than 0 creates a lagged database copy. The format for this parameter is (Days.Hours:Minutes:Seconds). The default setting for this value is 0 seconds. The maximum allowable setting for this value is 14 days. The minimum allowable setting is 0 seconds, although setting this value to 0 seconds effectively eliminates any delay in log replay activity.
-
-
-
-!!! Exchange Server 2013
-
-The ReplayLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before replaying log files that have been copied to the passive database copy. Setting this parameter to a value greater than 0 creates a lagged database copy.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The maximum allowable setting for this value is 14 days. The minimum allowable setting is 0 seconds, and setting this value to 0 seconds eliminates any delay in log replay activity.
-
-For example, to specify a 14-day replay lag period, enter 14.00:00:00. The default value is 00.00:00:00, which specifies that there's no replay lag.
-
-
-
-!!! Exchange Server 2016
-
 The ReplayLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before replaying log files that have been copied to the passive database copy. Setting this parameter to a value greater than 0 creates a lagged database copy.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -212,8 +136,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 The maximum allowable setting for this value is 14 days. The minimum allowable setting is 0 seconds, and setting this value to 0 seconds eliminates any delay in log replay activity.
 
 For example, to specify a 14-day replay lag period, enter 14.00:00:00. The default value is 00.00:00:00, which specifies that there's no replay lag.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -229,33 +151,11 @@ Accept wildcard characters: False
 ```
 
 ### -TruncationLagTime
-!!! Exchange Server 2010
-
-The TruncationLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before truncating log files that have replayed into the passive copy of the database. The time period begins after the log has been successfully replayed into the copy of the database. The format for this parameter is (Days.Hours:Minutes:Seconds). The maximum allowable setting for this value is 14 days. The minimum allowable setting is 0 seconds, although setting this value to 0 seconds effectively eliminates any delay in log truncation activity.
-
-
-
-!!! Exchange Server 2013
-
-The TruncationLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before truncating log files that have replayed into the passive copy of the database. The time period begins after the log has been successfully replayed into the copy of the database.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The maximum allowable setting for this value is 14 days. The minimum allowable setting is 0 seconds, and setting this value to 0 seconds eliminates any delay in log truncation activity.
-
-For example, to specify a 14-day truncation lag period, enter 14.00:00:00. The default value is 00.00:00:00, which specifies that there's no truncation lag.
-
-
-
-!!! Exchange Server 2016
-
 The TruncationLagTime parameter specifies the amount of time that the Microsoft Exchange Replication service should wait before truncating log files that have replayed into the passive copy of the database. The time period begins after the log has been successfully replayed into the copy of the database.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The default value is 00.00:00:00, which specifies that there's no truncation lag. The maximum value is 14.00:00:00 (14 days).
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -321,7 +221,7 @@ Accept wildcard characters: False
 ### -ReplayLagMaxDelay
 The ReplayLagMaxDelay parameter specifies the maximum delay for lagged database copy play down (also known as deferred lagged copy play down). If the disk read IO latency is greater than 25 ms, lagged copy play down is delayed up to the value of this parameter.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 The default value is 24:00:00 (24 hours). To disable deferred lagged copy play down, specify the value ([TimeSpan]::Zero).
 
@@ -358,4 +258,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/839f8781-2eb1-47bd-85ff-a31c8773998a.aspx)
-

@@ -24,42 +24,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Server 2010)
+### Example 1
 ```
 Get-ExchangeDiagnosticInfo
 ```
 
 This example returns a summary list of all Exchange processes that are running on the server.
 
-### Example 1 (Exchange Server 2013)
-```
-Get-ExchangeDiagnosticInfo
-```
-
-This example returns a summary list of all Exchange processes that are running on the server.
-
-### Example 1 (Exchange Server 2016)
-```
-Get-ExchangeDiagnosticInfo
-```
-
-This example returns a summary list of all Exchange processes that are running on the server.
-
-### Example 2 (Exchange Server 2010)
-```
-[xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
-```
-
-This example display the XML output of the command in format that's easier to read.
-
-### Example 2 (Exchange Server 2013)
-```
-[xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
-```
-
-This example display the XML output of the command in format that's easier to read.
-
-### Example 2 (Exchange Server 2016)
+### Example 2
 ```
 [xml]$edi = Get-ExchangeDiagnosticInfo; $edi.Diagnostics.Processlocator.Process | Format-Table -Auto Name,ID,Guid
 ```
@@ -111,7 +83,6 @@ The Process parameter provides details for the specified Exchange process. Valid
 
 To see the list of available Exchange processes, run the command Get-ExchangeDiagnosticInfo.
 
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -137,7 +108,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
 
 ```yaml
 Type: ServerIdParameter

@@ -6,20 +6,6 @@ schema: 2.0.0
 # Import-RecipientDataProperty
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook 2010 and Microsoft Office Outlook Web App.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Microsoft Office Outlook Web App.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Import-RecipientDataProperty cmdlet to add a picture or an audio file of a spoken name to a mailbox or contact. The picture and audio files display on the Global Address List property dialog box, contact card, reading pane, and meeting requests in Microsoft Outlook and Outlook on the web.
@@ -41,76 +27,20 @@ Import-RecipientDataProperty [-Identity] <MailboxUserContactIdParameter> -FileDa
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Importing and exporting files require a specific syntax because importing and exporting use Remote PowerShell. For more information, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient data properties" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-Importing and exporting files require a specific syntax because importing and exporting use Remote PowerShell.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient data properties" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Importing and exporting files require a specific syntax because importing and exporting use Remote PowerShell.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
 ```
 
 This example imports the audio file for Tony Smith's spoken name.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the audio file for Tony Smith's spoken name.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the audio file for Tony Smith's spoken name.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Import-RecipientDataProperty -Identity "Tony Smith" -SpokenName -FileData ([Byte[]]$(Get-Content -Path "M:\AudioFiles\TonySmith.wma" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the audio file for Tony Smith's spoken name.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the picture file for Ayla Kol.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the picture file for Ayla Kol.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the picture file for Ayla Kol.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Import-RecipientDataProperty -Identity Ayla -Picture -FileData ([Byte[]]$(Get-Content -Path "M:\Employee Photos\AylaKol.jpg" -Encoding Byte -ReadCount 0))
 ```
@@ -120,25 +50,9 @@ This example imports the picture file for Ayla Kol.
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2010
-
-The FileData parameter specifies the location and file name of the picture or audio file. For more information about the syntax required to use this parameter, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The FileData parameter specifies the location and file name of the picture or audio file.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FileData parameter specifies the location and file name of the picture or audio file.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -154,52 +68,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the mailbox or contact that you add the picture or spoken name file to. You can use one of the following values:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- Distinguished name (DN)
-
-- Exchange DN
-
-- GUID
-
-- Name
-
-- Primary SMTP e-mail address
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use one of the following values:
-
-- Alias
-
-- Canonical name
-
-- Display name
-
-- Distinguished name (DN)
-
-- Exchange DN
-
-- GUID
-
-- Name
-
-- Primary SMTP email address
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox or contact that you're adding the picture or spoken name file to. You can use any value that uniquely identifies the user.
 
 For example:
@@ -213,8 +81,6 @@ For example:
 - Canonical DN
 
 - GUID
-
-
 
 ```yaml
 Type: MailboxUserContactIdParameter
@@ -266,25 +132,9 @@ Accept wildcard characters: False
 ```
 
 ### -Picture
-!!! Exchange Server 2010
-
-The Picture switch specifies that the file you're importing is a picture file. The picture must be a jpeg file and shouldn't be larger than 10 kilobytes (KB). You can't use this parameter in conjunction with the SpokenName switch. You can only import one file type at a time.
-
-
-
-!!! Exchange Server 2013
-
-The Picture switch specifies that the file you're importing is a picture file. The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). You can't use this parameter in conjunction with the SpokenName switch. You can only import one file type at a time.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Picture switch specifies that the file you're importing is a picture file. You don't need to specify a value with this switch.
 
 The picture must be a JPEG file and shouldn't be larger than 10 kilobytes (KB). You can't use this switch with the SpokenName switch. You can only import one file type at a time.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -300,20 +150,6 @@ Accept wildcard characters: False
 ```
 
 ### -SpokenName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SpokenName switch specifies that the file you're importing is an audio file. The maximum file size should be less than 32 KB. You can use one of the following formats:
-
-- WMA 9-voice
-
-- PCM 8-KHz, 16-bits, mono format
-
-You can't use this switch in conjunction with the Picture switch. You can only import one file type at a time.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SpokenName switch specifies that the file you're importing is an audio file. You don't need to specify a value with this switch.
 
 The maximum file size should be less than 32 KB. You can use one of the following formats:
@@ -323,8 +159,6 @@ The maximum file size should be less than 32 KB. You can use one of the followin
 - PCM 8-KHz, 16-bits, mono format
 
 You can't use this switch with the Picture switch. You can only import one file type at a time.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -373,4 +207,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f3baf354-3d7d-4909-b4fa-754d1e44bf1f.aspx)
-

@@ -90,52 +90,25 @@ Set-TransportService [-Identity] <ServerIdParameter> [-ActiveUserStatisticsLogMa
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport service" and "Edge Transport server" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Set-TransportService Mailbox01 -DelayNotificationTimeout 13:00:00
 ```
 
 This example sets the DelayNotificationTimeout parameter to 13 hours for the Transport service on a Mailbox server named Mailbox01.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-TransportService Mailbox01 -DelayNotificationTimeout 13:00:00
-```
-
-This example sets the DelayNotificationTimeout parameter to 13 hours for the Transport service on a Mailbox server named Mailbox01.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Set-TransportService Mailbox01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
 ```
 
 This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Transport service on a Mailbox server named Mailbox01.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-TransportService Mailbox01 -TransientFailureRetryCount 3 -TransientFailureRetryInterval 00:00:30
-```
-
-This example sets the TransientFailureRetryCount parameter to 3 and sets the TransientFailureRetryInterval parameter to 30 seconds for the Transport service on a Mailbox server named Mailbox01.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-TransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
-```
-
-This example sets the ReceiveProtocolLogPath parameter to C:\\SMTP Protocol Logs\\Receive.log for the Transport service on a Mailbox server named Mailbox01.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Set-TransportService Mailbox01 -ReceiveProtocolLogPath "C:\SMTP Protocol Logs\Receive.log"
 ```
@@ -161,25 +134,11 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogMaxAge
-!!! Exchange Server 2013
-
-The ActiveUserStatisticsLogMaxAge parameter specifies the maximum duration that the per user activity statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of this parameter to 00:00:00 prevents the automatic removal of server statistics log files.
-
-
-
-!!! Exchange Server 2016
-
 The ActiveUserStatisticsLogMaxAge parameter specifies the maximum duration that the per user activity statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of this parameter to 00:00:00 prevents the automatic removal of server statistics log files.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -195,30 +154,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The ActiveUserStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the per user activity statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 megabyte (MB). The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ActiveUserStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log directory.
-
-
-
-!!! Exchange Server 2016
-
 The ActiveUserStatisticsLogMaxDirectorySize parameter specifies the cap on the size of the per user activity statistics log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 megabyte (MB). The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -236,8 +171,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ActiveUserStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log directory.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -253,30 +186,6 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveUserStatisticsLogMaxFileSize
-!!! Exchange Server 2013
-
-The ActiveUserStatisticsLogMaxFileSize parameter specifies the maximum file size for the per user activity statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ActiveUserStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log files.
-
-
-
-!!! Exchange Server 2016
-
 The ActiveUserStatisticsLogMaxFileSize parameter specifies the maximum file size for the per user activity statistics log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -294,8 +203,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ActiveUserStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ActiveUserStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log files.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -343,25 +250,11 @@ Accept wildcard characters: False
 ```
 
 ### -AgentLogMaxAge
-!!! Exchange Server 2013
-
-The AgentLogMaxAge parameter specifies the maximum age for the agent log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The AgentLogMaxAge parameter specifies the maximum age for the agent log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Setting the value of the AgentLogMaxAge parameter to 00:00:00 prevents the automatic removal of agent log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -377,30 +270,6 @@ Accept wildcard characters: False
 ```
 
 ### -AgentLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
-
-!!! Exchange Server 2016
-
 The AgentLogMaxDirectorySize parameter specifies the maximum size of all agent logs in the agent log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -418,8 +287,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -435,30 +302,6 @@ Accept wildcard characters: False
 ```
 
 ### -AgentLogMaxFileSize
-!!! Exchange Server 2013
-
-The AgentLogMaxFileSize parameter specifies the maximum size of each agent log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
-
-!!! Exchange Server 2016
-
 The AgentLogMaxFileSize parameter specifies the maximum size of each agent log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -476,8 +319,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the AgentLogMaxFileSize parameter must be less than or equal to the value of the AgentLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the agent log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -563,25 +404,11 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxAge
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ConnectivityLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxAge parameter specifies the maximum age for the connectivity log file. Log files older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ConnectivityLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -597,30 +424,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxDirectorySize parameter specifies the maximum size of all connectivity logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 1000 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -638,8 +441,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -655,30 +456,6 @@ Accept wildcard characters: False
 ```
 
 ### -ConnectivityLogMaxFileSize
-!!! Exchange Server 2013
-
-The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log files.
-
-
-
-!!! Exchange Server 2016
-
 The ConnectivityLogMaxFileSize parameter specifies the maximum size of each connectivity log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -696,8 +473,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the ConnectivityLogMaxFileSize parameter must be less than or equal to the value of the ConnectivityLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the connectivity log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -751,25 +526,11 @@ Accept wildcard characters: False
 ```
 
 ### -DelayNotificationTimeout
-!!! Exchange Server 2013
-
-The DelayNotificationTimeout parameter specifies how long the server waits before it generates a delayed delivery status notification (DSN) message. The default value is 4 hours.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 3.5 hours for this parameter, use 03:30:00. The valid input range for this parameter is from 00:00:01 through 30.00:00:00. The value of the DelayNotificationTimeout parameter should always be greater than the value of the TransientFailureRetryCount parameter multiplied by the value of the TransientFailureRetryInterval parameter.
-
-
-
-!!! Exchange Server 2016
-
 The DelayNotificationTimeout parameter specifies how long the server waits before it generates a delayed delivery status notification (DSN) message. The default value is 4 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 3.5 hours for this parameter, use 03:30:00. The valid input range for this parameter is from 00:00:01 through 30.00:00:00. The value of the DelayNotificationTimeout parameter should always be greater than the value of the TransientFailureRetryCount parameter multiplied by the value of the TransientFailureRetryInterval parameter.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -801,25 +562,11 @@ Accept wildcard characters: False
 ```
 
 ### -DnsLogMaxAge
-!!! Exchange Server 2013
-
-The DnsLogMaxAge parameter specifies the maximum age for the DNS log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automatic removal of DNS log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The DnsLogMaxAge parameter specifies the maximum age for the DNS log file. Log files older than the specified value are deleted. The default value is 7.00:00:00 or 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 Setting the value of the DnsLogMaxAge parameter to 00:00:00 prevents the automatic removal of DNS log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -835,30 +582,6 @@ Accept wildcard characters: False
 ```
 
 ### -DnsLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs in the DNS log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 100 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log directory.
-
-
-
-!!! Exchange Server 2016
-
 The DnsLogMaxDirectorySize parameter specifies the maximum size of all DNS logs in the DNS log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 100 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -876,8 +599,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -893,30 +614,6 @@ Accept wildcard characters: False
 ```
 
 ### -DnsLogMaxFileSize
-!!! Exchange Server 2013
-
-The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log files.
-
-
-
-!!! Exchange Server 2016
-
 The DnsLogMaxFileSize parameter specifies the maximum size of each DNS log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -934,8 +631,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the DnsLogMaxFileSize parameter must be less than or equal to the value of the DnsLogMaxDirectorySize parameter. If you enter a value of unlimited, no size limit is imposed on the DNS log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1145,16 +840,6 @@ Accept wildcard characters: False
 ```
 
 ### -IntraOrgConnectorProtocolLoggingLevel
-!!! Exchange Server 2013
-
-The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging on the implicit and invisible intra-organization Send connectors that are used to transmit messages between Exchange servers in the Exchange organization.
-
-Valid values for this parameter are None or Verbose. The value Verbose enables protocol logging for the connector. The value None disables protocol logging for the connector. The default value is None. When the IntraOrgConnectorProtocolLoggingLevel parameter is set to Verbose, the information is written to the Send connector protocol log specified by the SendProtocolLog parameters.
-
-
-
-!!! Exchange Server 2016
-
 The IntraOrgConnectorProtocolLoggingLevel parameter enables or disables SMTP protocol logging for the implicit and invisible intra-organization Send connector in the following transport services on the server:
 
 - The Transport service.
@@ -1166,8 +851,6 @@ Valid values are:
 - None: Protocol logging is disabled for the intra-organization Send connector in the Transport service and in the Mailbox Transport Submission service. This is the default value.
 
 - Verbose: Protocol logging is enabled for the intra-organization Send connector in the Transport service and in the Mailbox Transport Submission service. The location of the log files is controlled by the SendProtocolLogPath parameter.
-
-
 
 ```yaml
 Type: None | Verbose
@@ -1183,19 +866,9 @@ Accept wildcard characters: False
 ```
 
 ### -IntraOrgConnectorSmtpMaxMessagesPerConnection
-!!! Exchange Server 2013
-
-The IntraOrgConnectorSmtpMaxMessagesPerConnection parameter specifies the maximum number of messages per connection limit on the implicit and invisible intra-organization Send connectors that are used to transmit messages between Exchange servers in the Exchange organization.
-
-
-
-!!! Exchange Server 2016
-
 The IntraOrgConnectorSmtpMaxMessagesPerConnection parameter specifies the maximum number of messages per connection that are allowed on the implicit and invisible intra-organization Send connector in the Transport service on the server.
 
 A valid value is an integer from 0 to 2147483647. The default value is 20.
-
-
 
 ```yaml
 Type: Int32
@@ -1211,25 +884,11 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogEnabled
-!!! Exchange Server 2013
-
-The IrmLogEnabled parameter enables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
-
-- $true Enable IRM logging
-
-- $false Disable IRM logging
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogEnabled parameter enables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
 
 - $true: Enable IRM logging
 
 - $false: Disable IRM logging
-
-
 
 ```yaml
 Type: $true | $false
@@ -1245,25 +904,11 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxAge
-!!! Exchange Server 2013
-
-The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-The valid input range for this parameter is 00:00:00 to 24855.03:14:07. Setting the value of the IrmLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 The valid input range for this parameter is 00:00:00 to 24855.03:14:07. Setting the value of the IrmLogMaxAge parameter to 00:00:00 prevents the automatic removal of connectivity log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1279,30 +924,6 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxDirectorySize
-!!! Exchange Server 2013
-
-This IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log directory.
-
-
-
-!!! Exchange Server 2016
-
 This IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -1320,8 +941,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1337,30 +956,6 @@ Accept wildcard characters: False
 ```
 
 ### -IrmLogMaxFileSize
-!!! Exchange Server 2013
-
-This IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
-
-
-
-!!! Exchange Server 2016
-
 This IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -1378,8 +973,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the IrmLogMaxFileSize parameter must be less than or equal to the value of the IrmLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the IRM log files.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1571,25 +1164,11 @@ Accept wildcard characters: False
 ```
 
 ### -MessageExpirationTimeout
-!!! Exchange Server 2013
-
-The MessageExpirationTimeout parameter specifies the maximum time that a particular message can remain in a queue. If a message remains in the queue for longer than this period of time, the message is returned to the sender as a permanent failure. The default value is 2 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 3 days for this parameter, use 3.00:00:00. The valid input range for this parameter is from 00:00:05 through 90.00:00:00.
-
-
-
-!!! Exchange Server 2016
-
 The MessageExpirationTimeout parameter specifies the maximum time that a particular message can remain in a queue. If a message remains in the queue for longer than this period of time, the message is returned to the sender as a permanent failure. The default value is 2 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 3 days for this parameter, use 3.00:00:00. The valid input range for this parameter is from 00:00:05 through 90.00:00:00.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1605,25 +1184,11 @@ Accept wildcard characters: False
 ```
 
 ### -MessageRetryInterval
-!!! Exchange Server 2013
-
-The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 15 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 20 minutes for this parameter, use 00:20:00. The valid input range for this parameter is from 00:00:01 through 1.00:00:00. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
-
-
-
-!!! Exchange Server 2016
-
 The MessageRetryInterval parameter specifies the retry interval for individual messages after a connection failure with a remote server. The default value is 15 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 20 minutes for this parameter, use 00:20:00. The valid input range for this parameter is from 00:00:01 through 1.00:00:00. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1655,25 +1220,11 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxAge
-!!! Exchange Server 2013
-
-The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 20 days for this parameter, use 20.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the MessageTrackingLogMaxAge parameter to 00:00:00 prevents the automatic removal of message tracking log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 20 days for this parameter, use 20.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the MessageTrackingLogMaxAge parameter to 00:00:00 prevents the automatic removal of message tracking log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1689,36 +1240,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The MessageTrackingLogMaxDirectorySize parameter specifies the maximum size of the message tracking log directory. When the maximum directory size is reached, the server deletes the oldest log files first.
-
-The maximum size of the message tracking log directory is calculated as the total size of all log files that have the same name prefix. Other files that don't follow the name prefix convention aren't counted in the total directory size calculation. Renaming old log files or copying other files into the message tracking log directory could cause the directory to exceed its specified maximum size.
-
-For Mailbox servers, the maximum size of the message tracking log directory isn't the specified maximum size because the message tracking log files generated by the Transport service and the Mailbox Transport service have different name prefixes. Message tracking log files for the Transport service or for Edge Transport servers begin with the name prefix MSGTRK. Message tracking log files for the Mailbox Transport service begin with the name prefix MSGTRKM. For Mailbox servers, the maximum size of the message tracking log directory is two times the specified value.
-
-The default value is 1000 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the message tracking log directory.
-
-
-
-!!! Exchange Server 2016
-
 The MessageTrackingLogMaxDirectorySize parameter specifies the maximum size of the message tracking log directory. When the maximum directory size is reached, the server deletes the oldest log files first.
 
 The maximum size of the message tracking log directory is calculated as the total size of all log files that have the same name prefix. Other files that don't follow the name prefix convention aren't counted in the total directory size calculation. Renaming old log files or copying other files into the message tracking log directory could cause the directory to exceed its specified maximum size.
@@ -1742,8 +1263,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the message tracking log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -1759,30 +1278,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageTrackingLogMaxFileSize
-!!! Exchange Server 2013
-
-The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB). If you enter a value of unlimited, no size limit is imposed on the message tracking log files.
-
-
-
-!!! Exchange Server 2016
-
 The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -1800,8 +1295,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the MessageTrackingLogMaxFileSize parameter must be less than or equal to the value of the MessageTrackingLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 4294967296 bytes (4 GB). If you enter a value of unlimited, no size limit is imposed on the message tracking log files.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -1849,25 +1342,11 @@ Accept wildcard characters: False
 ```
 
 ### -OutboundConnectionFailureRetryInterval
-!!! Exchange Server 2013
-
-The OutboundConnectionFailureRetryInterval parameter specifies the retry interval for subsequent connection attempts to a remote server where previous connection attempts have failed. The previously failed connection attempts are controlled by the TransientFailureRetryCount and TransientFailureRetryInterval parameters. For the Transport service on a Mailbox server, the default value of the OutboundConnectionFailureRetryInterval parameter is 10 minutes. On an Edge Transport server, the default value is 30 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 15 minutes for this parameter, use 00:15:00. The valid input range for this parameter is from 00:00:01 through 20.00:00:00.
-
-
-
-!!! Exchange Server 2016
-
 The OutboundConnectionFailureRetryInterval parameter specifies the retry interval for subsequent connection attempts to a remote server where previous connection attempts have failed. The previously failed connection attempts are controlled by the TransientFailureRetryCount and TransientFailureRetryInterval parameters. For the Transport service on a Mailbox server, the default value of the OutboundConnectionFailureRetryInterval parameter is 10 minutes. On an Edge Transport server, the default value is 30 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 15 minutes for this parameter, use 00:15:00. The valid input range for this parameter is from 00:00:01 through 20.00:00:00.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -1883,30 +1362,6 @@ Accept wildcard characters: False
 ```
 
 ### -PickupDirectoryMaxHeaderSize
-!!! Exchange Server 2013
-
-The PickupDirectoryMaxHeaderSize parameter specifies the maximum message header size that can be submitted to the Pickup directory. The default value is 64 KB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 32768 through 2147483647 bytes.
-
-
-
-!!! Exchange Server 2016
-
 The PickupDirectoryMaxHeaderSize parameter specifies the maximum message header size that can be submitted to the Pickup directory. The default value is 64 KB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -1924,8 +1379,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 32768 through 2147483647 bytes.
-
-
 
 ```yaml
 Type: ByteQuantifiedSize
@@ -2075,25 +1528,11 @@ Accept wildcard characters: False
 ```
 
 ### -QueueLogMaxAge
-!!! Exchange Server 2013
-
-The QueueLogMaxAge parameter specifies the maximum age of the queue log files. Log files that are older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the QueueLogMaxAge parameter to 00:00:00 prevents the automatic removal of queue log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The QueueLogMaxAge parameter specifies the maximum age of the queue log files. Log files that are older than the specified value are deleted. The default value is 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 10 days for this parameter, use 10.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the QueueLogMaxAge parameter to 00:00:00 prevents the automatic removal of queue log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2109,30 +1548,6 @@ Accept wildcard characters: False
 ```
 
 ### -QueueLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The QueueLogMaxDirectorySize parameter specifies the maximum size of the queue log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 200 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log directory.
-
-
-
-!!! Exchange Server 2016
-
 The QueueLogMaxDirectorySize parameter specifies the maximum size of the queue log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 200 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -2150,8 +1565,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2167,30 +1580,6 @@ Accept wildcard characters: False
 ```
 
 ### -QueueLogMaxFileSize
-!!! Exchange Server 2013
-
-The QueueLogMaxFileSize parameter specifies the maximum size of the queue log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log files.
-
-
-
-!!! Exchange Server 2016
-
 The QueueLogMaxFileSize parameter specifies the maximum size of the queue log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -2208,8 +1597,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The value of the QueueLogMaxFileSize parameter must be less than or equal to the value of the QueueLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the queue log files.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2241,25 +1628,11 @@ Accept wildcard characters: False
 ```
 
 ### -QueueMaxIdleTime
-!!! Exchange Server 2013
-
-The QueueMaxIdleTime parameter specifies the period of time an empty delivery queue can exist before the queue is removed. The default value is 3 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 5 minutes for this parameter, use 00:05:00. The valid input range for this parameter is from 00:00:05 through 01:00:00. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
-
-
-
-!!! Exchange Server 2016
-
 The QueueMaxIdleTime parameter specifies the period of time an empty delivery queue can exist before the queue is removed. The default value is 3 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 5 minutes for this parameter, use 00:05:00. The valid input range for this parameter is from 00:00:05 through 01:00:00. We recommend that you don't modify the default value unless Customer Service and Support advises you to do this.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2275,18 +1648,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxAge
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxAge parameter specifies the maximum age of the Receive connector protocol log file. Log files that are older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 20 days for this parameter, use 20.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the ReceiveProtocolLogMaxAge parameter to 00:00:00 prevents the automatic removal of Receive connector protocol log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxAge parameter specifies the maximum age of a protocol log file that's shared by all Receive connectors in the Transport service on the server. Log files that are older than the specified value are automatically deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -2294,8 +1655,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Valid values are 00:00:00 to 24855.03:14:07. The default value is 30.00:00:00 (30 days). The value 00:00:00 prevents the automatic removal of Receive connector protocol log files in the Transport service because of their age.
 
 This parameter is only meaningful when protocol logging is enabled for at least one Receive connector in the Transport service on the server.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2311,30 +1670,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the Receive connector protocol log directory shared by all the Receive connectors that exist on the server. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ReceiveProtocolLogMaxFileSize parameter must be less than or equal to the value of the ReceiveProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Receive connector protocol log directory.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory that's shared by all Receive connectors in the Transport service on the server. When the maximum directory size is reached, the server deletes the oldest log files first.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 250 megabytes (262144000 bytes).
@@ -2357,8 +1692,6 @@ The value of this parameter must be greater than or equal to the value of the Re
 
 This parameter is only meaningful when protocol logging is enabled for at least one Receive connector in the Transport service on the server.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2373,30 +1706,6 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogMaxFileSize
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of the Receive connector protocol log files shared by all the Receive connectors that exist on the server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the ReceiveProtocolLogMaxFileSize parameter must be less than or equal to the value of the ReceiveProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Receive connector protocol log files.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file that's shared by all Receive connectors in the Transport on the server. When a log file reaches its maximum file size, a new log file is created.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 10 megabytes (10485760 bytes).
@@ -2419,8 +1728,6 @@ The value of this parameter must be less than or equal to the value of the Recei
 
 This parameter is only meaningful when protocol logging is enabled for at least one Receive connector in the Transport service on the server.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2435,19 +1742,9 @@ Accept wildcard characters: False
 ```
 
 ### -ReceiveProtocolLogPath
-!!! Exchange Server 2013
-
-The ReceiveProtocolLogPath parameter specifies the path of the protocol log directory for all the Receive connectors that exist on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive. Setting the value of this parameter to $null disables protocol logging for all Receive connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel attribute for any Receive connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-ReceiveConnector cmdlet to set the ProtocolLoggingLevel to None on each Receive connector.
-
-
-
-!!! Exchange Server 2016
-
 The ReceiveProtocolLogPath parameter specifies the location of the protocol log directory for all Receive connectors in the Transport service on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpReceive.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for any Receive connector in the Transport service. To disable protocol logging for these Receive connectors, use the value None for the ProtocolLoggingLevel parameter on the Set-ReceiveConnector cmdlet for each Receive connector in the Transport service.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -2591,25 +1888,11 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogMaxAge
-!!! Exchange Server 2013
-
-The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the RoutingTableLogMaxAge parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The RoutingTableLogMaxAge parameter specifies the maximum routing table log age. Log files older than the specified value are deleted. The default value is 7 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 5 days for this parameter, use 5.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the RoutingTableLogMaxAge parameter to 00:00:00 prevents the automatic removal of routing table log files because of their age.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2625,30 +1908,6 @@ Accept wildcard characters: False
 ```
 
 ### -RoutingTableLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 50 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-
-
-!!! Exchange Server 2016
-
 The RoutingTableLogMaxDirectorySize parameter specifies the maximum size of the routing table log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The default value is 50 MB.
 
 When you enter a value, qualify the value with one of the following units:
@@ -2666,8 +1925,6 @@ When you enter a value, qualify the value with one of the following units:
 Unqualified values are typically treated as bytes, but small values may be rounded up to the nearest kilobyte.
 
 The valid input range for this parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the routing table log directory.
-
-
 
 ```yaml
 Type: Unlimited
@@ -2699,18 +1956,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxAge
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxAge parameter specifies the Send connector protocol log file maximum age. Log files older than the specified value are deleted. The default value is 30 days.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 25 days for this parameter, use 25.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of the SendProtocolLogMaxAge parameter to 00:00:00 prevents the automatic removal of Send connector protocol log files because of their age.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxAge parameter specifies the maximum age of a protocol log file that's shared by all Send connectors in the Transport service that have this server configured as a source server. Log files that are older than the specified value are automatically deleted.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
@@ -2718,8 +1963,6 @@ To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = h
 Valid values are 00:00:00 to 24855.03:14:07. The default value is 30.00:00:00 (30 days). The value 00:00:00 prevents the automatic removal of Send connector protocol log files in the Transport service because of their age.
 
 This parameter is only meaningful when protocol logging is enabled for at least one Send connector in the Transport service on the server.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -2735,30 +1978,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxDirectorySize
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the Send connector protocol log directory. When the maximum directory size is reached, the server deletes the oldest log files first. The minimum value is 1 MB. The default value is 250 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the SendProtocolLogMaxFileSize parameter must be less than or equal to the value of the SendProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Send connector protocol log directory.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxDirectorySize parameter specifies the maximum size of the protocol log directory that's shared by all Send connectors in the Transport service that have this server configured as a source server. When the maximum directory size is reached, the server deletes the oldest log files first.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 250 megabytes (262144000 bytes).
@@ -2781,8 +2000,6 @@ The value of this parameter must be greater than or equal to the value of the Se
 
 This parameter is only meaningful when protocol logging is enabled for at least one Send connector in the Transport service on the server.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2797,30 +2014,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogMaxFileSize
-!!! Exchange Server 2013
-
-The SendProtocolLogMaxFileSize parameter specifies the maximum size of the Send connector protocol log files shared by all the Send connectors that exist on a server. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB.
-
-When you enter a value, qualify the value with one of the following units:
-
-- B (bytes)
-
-- KB (kilobytes)
-
-- MB (megabytes)
-
-- GB (gigabytes)
-
-- TB (terabytes)
-
-Unqualified values are treated as bytes.
-
-The value of the SendProtocolLogMaxFileSize parameter must be less than or equal to the value of the SendProtocolLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the Send connector protocol log files.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogMaxFileSize parameter specifies the maximum size of a protocol log file that's shared by all Send connectors in the Transport service that have this server configured as a source server. When a log file reaches its maximum file size, a new log file is created.
 
 A valid value is a number up to 909.5 terabytes (999999999999999 bytes) or the value unlimited. The default value is 10 megabytes (10485760 bytes).
@@ -2843,8 +2036,6 @@ The value of this parameter must be less than or equal to the value of the SendP
 
 This parameter is only meaningful when protocol logging is enabled for at least one Send connector in the Transport service on the server.
 
-
-
 ```yaml
 Type: Unlimited
 Parameter Sets: (All)
@@ -2859,14 +2050,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendProtocolLogPath
-!!! Exchange Server 2013
-
-The SendProtocolLogPath parameter specifies the location of protocol log storage for the Send connectors. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend. Setting the value of this parameter to $null disables protocol logging for all Send connectors on the server. However, setting this parameter to $null when the value of the ProtocolLoggingLevel or IntraOrgConnectorProtocolLoggingLevel attribute for any Send connector on the server is Verbose generates event log errors. The preferred method of disabling protocol logging is to use the Set-SendConnector cmdlet to set the ProtocolLoggingLevel parameter to None on each Send connector and to set the IntraOrgConnectorProtocolLoggingLevel parameter to None.
-
-
-
-!!! Exchange Server 2016
-
 The SendProtocolLogPath parameter specifies the location of the protocol log directory for all Send connectors in the Transport service on the server. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ProtocolLog\\SmtpSend.
 
 Don't use the value $null for this parameter, because event log errors are generated if protocol logging is enabled for any Send connector in the Transport service that has this server configured as a source server. To disable protocol logging for these Send connectors, use the value None for the following parameters:
@@ -2874,8 +2057,6 @@ Don't use the value $null for this parameter, because event log errors are gener
 - The IntraOrgConnectorProtocolLoggingLevel parameter.
 
 - The ProtocolLoggingLevel parameter on the Set-SendConnector cmdlet for each Send connector in the Transport service.
-
-
 
 ```yaml
 Type: LocalLongFullPath
@@ -2891,29 +2072,21 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxAge
-!!! Exchange Server 2013
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 Cumulative Update 7 (CU7) or later, so this parameter has no effect in those versions of Exchange 2013.
 
 The ServerStatisticsLogMaxAge parameter specifies the maximum duration that the server statistics log files are kept. Log files older than the specified value are deleted. The default value is 30 days.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
 
 For example, to specify 60 days for this parameter, use 60.00:00:00. The valid input range for this parameter is from 00:00:00 through 24855.03:14:07. Setting the value of this parameter to 00:00:00 prevents the automatic removal of server statistics log files.
-
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -2923,7 +2096,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxDirectorySize
-!!! Exchange Server 2013
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2945,19 +2118,11 @@ Unqualified values are treated as bytes.
 
 The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log directory.
 
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -2967,7 +2132,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogMaxFileSize
-!!! Exchange Server 2013
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
@@ -2989,19 +2154,11 @@ Unqualified values are treated as bytes.
 
 The value of the ServerStatisticsLogMaxFileSize parameter must be less than or equal to the value of the ServerStatisticsLogMaxDirectorySize parameter. The valid input range for either parameter is from 1 through 9223372036854775807 bytes. If you enter a value of unlimited, no size limit is imposed on the server statistics log files.
 
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
-
 ```yaml
 Type: ByteQuantifiedSize
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -3011,25 +2168,17 @@ Accept wildcard characters: False
 ```
 
 ### -ServerStatisticsLogPath
-!!! Exchange Server 2013
+This parameter is available or functional only in Exchange Server 2013.
 
 Server statistics aren't available in Exchange 2013 CU7 or later, so this parameter has no effect in those versions of Exchange 2013.
 
 The ServerStatisticsLogPath parameter specifies the location of server statistics log storage. The default location is %ExchangeInstallPath%TransportRoles\\Logs\\Hub\\ServerStats. Setting the value of this parameter to $null disables server statistics logging.
 
-
-
-!!! Exchange Server 2016
-
-This parameter has been deprecated and is no longer used.
-
-
-
 ```yaml
 Type: LocalLongFullPath
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Applicable: Exchange Server 2013
 
 Required: False
 Position: Named
@@ -3055,25 +2204,11 @@ Accept wildcard characters: False
 ```
 
 ### -TransientFailureRetryInterval
-!!! Exchange Server 2013
-
-The TransientFailureRetryInterval parameter controls the connection interval between each connection attempt specified by the TransientFailureRetryCount parameter. For the Transport service on a Mailbox server, the default value of the TransientFailureRetryInterval parameter is 5 minutes. On an Edge Transport server, the default value is 10 minutes.
-
-To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes, and s = seconds.
-
-For example, to specify 8 minutes for this parameter, use 00:08:00. The valid input range for this parameter is from 00:00:01 through 12:00:00.
-
-
-
-!!! Exchange Server 2016
-
 The TransientFailureRetryInterval parameter controls the connection interval between each connection attempt specified by the TransientFailureRetryCount parameter. For the Transport service on a Mailbox server, the default value of the TransientFailureRetryInterval parameter is 5 minutes. On an Edge Transport server, the default value is 10 minutes.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
 
 For example, to specify 8 minutes for this parameter, use 00:08:00. The valid input range for this parameter is from 00:00:01 through 12:00:00.
-
-
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -3830,4 +2965,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/42fb2dce-2300-45c6-ac8f-d7647ecf6d2c.aspx)
-

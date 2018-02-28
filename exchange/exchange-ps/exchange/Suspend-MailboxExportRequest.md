@@ -6,22 +6,6 @@ schema: 2.0.0
 # Suspend-MailboxExportRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Suspend-MailboxExportRequest cmdlet to suspend an export request any time after the request was created, but before the request reaches the status of Completed. You can resume the move request by using the Resume-MoveRequest cmdlet.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Suspend-MailboxExportRequest cmdlet to suspend an export request any time after the request was created, but before the request reaches the status of Completed. You can resume the request by using the Resume-MailboxExportRequest cmdlet.
-
-This cmdlet is available only in the Mailbox Import Export role, and by default, that role isn't assigned to a role group. To use this cmdlet, you need to add the Mailbox Import Export role to a role group (for example, to the Organization Management role group). For more information, see the "Add a role to a role group" section in Manage role groups.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Suspend-MailboxExportRequest cmdlet to suspend an export request any time after the request was created, but before the request reaches the status of Completed. You can resume the request by using the Resume-MailboxExportRequest cmdlet.
@@ -38,56 +22,18 @@ Suspend-MailboxExportRequest [-Identity] <MailboxExportRequestIdParameter> [-Con
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Import Export" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Suspend-MailboxExportRequest -Identity "Ayla\MailboxExport1"
 ```
 
 This example suspends the second export request for Ayla's mailbox with the identity Ayla\\MailboxExport1.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Suspend-MailboxExportRequest -Identity "Ayla\MailboxExport1"
-```
-
-This example suspends the second export request for Ayla's mailbox with the identity Ayla\\MailboxExport1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Suspend-MailboxExportRequest -Identity "Ayla\MailboxExport1"
-```
-
-This example suspends the second export request for Ayla's mailbox with the identity Ayla\\MailboxExport1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxExportRequest -Status InProgress | Suspend-MailboxExportRequest -SuspendComment "Resume after 10 p.m."
-```
-
-This example suspends all export requests that are in progress by using the Get-MailboxExportRequest cmdlet to retrieve all requests with a Status of InProgress, and then pipelining the output to the Suspend-MailboxExportRequest cmdlet with the suspend comment "Resume after 10 p.m."
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxExportRequest -Status InProgress | Suspend-MailboxExportRequest -SuspendComment "Resume after 22:00 (10 P.M.)"
-```
-
-This example suspends all export requests that are in progress by using the Get-MailboxExportRequest cmdlet to retrieve all requests with a status of InProgress, and then pipelining the output to the Suspend-MailboxExportRequest cmdlet with the suspend comment "Resume after 22:00 (10 P.M.)".
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MailboxExportRequest -Status InProgress | Suspend-MailboxExportRequest -SuspendComment "Resume after 22:00 (10 P.M.)"
 ```
@@ -198,4 +144,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3779c7b2-a25d-4213-bd20-fb58ba9d6925.aspx)
-

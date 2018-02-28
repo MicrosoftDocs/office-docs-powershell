@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-MobileDevice
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-MobileDevice cmdlet to get the list of devices in your organization that have active Microsoft Exchange ActiveSync partnerships.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MobileDevice cmdlet to get the list of devices in your organization that have active Exchange ActiveSync partnerships.
@@ -39,56 +29,20 @@ Get-MobileDevice [[-Identity] <MobileDeviceIdParameter>] [-ActiveSync] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-MobileDevice cmdlet returns identification, configuration, and status information for each mobile device.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile devices user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MobileDevice cmdlet returns identification, configuration, and status information for each mobile device.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MobileDevice -Identity "TonySmith"
 ```
 
 This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDevice -Identity "TonySmith"
-```
-
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MobileDevice -Identity "TonySmith"
-```
-
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MobileDevice -Mailbox "Redmond\TonySmith"
-```
-
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDevice -Mailbox "Redmond\TonySmith"
-```
-
-This example returns all the Exchange ActiveSync mobile devices that Tony Smith has used that are associated with his mailbox.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MobileDevice -Mailbox "Redmond\TonySmith"
 ```
@@ -98,14 +52,6 @@ This example returns all the Exchange ActiveSync mobile devices that Tony Smith 
 ## PARAMETERS
 
 ### -Mailbox
-!!! Exchange Server 2013
-
-The Mailbox parameter specifies the user whose mobile devices you want to retrieve.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter filters the results by mailbox. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -132,8 +78,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: Set2
@@ -148,17 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -ActiveSync
-!!! Exchange Server 2013
-
-The ActiveSync switch specifies whether to include mobile devices that synchronize with Exchange ActiveSync.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ActiveSync switch specifies whether to include mobile devices that synchronize with Exchange ActiveSync. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -192,14 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-!!! Exchange Server 2013
-
-The Filter parameter specifies a set of attributes used to filter the list of returned mobile devices.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Filter parameter uses OPATH filter syntax to filter the results by the specified properties and values. The search criteria uses the syntax {\<Property\> -\<Comparison operator\> '\<Value\>'}.
 
 - \<Property\> is a filterable property.
@@ -248,8 +174,6 @@ You can filter by the following properties:
 
 - UserDisplayName
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -264,20 +188,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the device to retrieve. One of the following values is used to identify a mobile device in Active Directory:
-
-- GUID
-
-- DeviceIdentity
-
-- Multi-TenantID
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mobile device that you want to view. You can use any value that uniquely identifies the mobile device. For example:
 
 - GUID
@@ -285,8 +195,6 @@ The Identity parameter specifies the mobile device that you want to view. You ca
 - DeviceIdentity
 
 - Multi-TenantID
-
-
 
 ```yaml
 Type: MobileDeviceIdParameter
@@ -320,14 +228,6 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
-!!! Exchange Server 2013
-
-The OrganizationalUnit parameter specifies the organizational unit (OU) where the task is run.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OrganizationalUnit parameter filters the results based on the object's location in Active Directory. Only objects that exist in the specified location are returned. Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
 
 - Name
@@ -337,8 +237,6 @@ The OrganizationalUnit parameter filters the results based on the object's locat
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -354,17 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -OWAforDevices
-!!! Exchange Server 2013
-
-The OWAforDevices parameter specifies whether OWA for Devices is enabled for the specific mobile phone or device.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OWAforDevices switch filters the results by whether Outlook on the web for devices is enabled for the device. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -380,17 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResultSize
-!!! Exchange Server 2013
-
-The ResultSize parameter specifies the maximum number of results to return.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
-
-
 
 ```yaml
 Type: Unlimited
@@ -406,14 +284,6 @@ Accept wildcard characters: False
 ```
 
 ### -SortBy
-!!! Exchange Server 2013
-
-The SortBy parameter specifies the attribute to sort by.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The SortBy parameter specifies the property to sort the results by. You can sort by only one property at a time. The results are sorted in ascending order.
 
 If the default view doesn't include the property you're sorting by, you can append the command with | Format-Table -Auto \<Property1\>,\<Property2\>... to create a new view that contains all of the properties that you want to see. Wildcards (\*) in the property names are supported.
@@ -449,8 +319,6 @@ You can sort by the following properties:
 - FriendlyName
 
 - UserDisplayName
-
-
 
 ```yaml
 Type: String
@@ -515,4 +383,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ce8a4142-23c1-47d5-89c5-961bd6e9d162.aspx)
-

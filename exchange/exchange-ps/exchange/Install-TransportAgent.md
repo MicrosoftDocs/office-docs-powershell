@@ -6,18 +6,6 @@ schema: 2.0.0
 # Install-TransportAgent
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Install-TransportAgent cmdlet to register a transport agent on a computer that has the Edge Transport server role or the Hub Transport server role installed in a Microsoft Exchange Server 2010 organization.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Install-TransportAgent cmdlet to register a transport agent in the Transport service on a Mailbox server, in the Front End Transport service on a Client Access server, or on an Edge Transport server.
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Install-TransportAgent cmdlet to register transport agents on Exchange servers.
@@ -32,43 +20,13 @@ Install-TransportAgent [-Name] <String> -AssemblyPath <String> -TransportAgentFa
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Install-TransportAgent cmdlet is used to register a transport agent for use on an Edge Transport server or a Hub Transport server.
-
-Transport agents have full access to all e-mail messages that they encounter. Exchange puts no restrictions on a transport agent's behavior. Transport agents that are unstable or contain security flaws may affect the stability and security of Exchange. Therefore, you must only install transport agents that you fully trust and that have been fully tested in a test environment.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Transport agents have full access to all email messages that they encounter. Exchange puts no restrictions on a transport agent's behavior. Transport agents that are unstable or contain security flaws may affect the stability and security of Exchange. Therefore, you must only install transport agents that you fully trust and that have been fully tested in a test environment.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport agents" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Transport agents have full access to all email messages that they encounter. Exchange puts no restrictions on a transport agent's behavior. Transport agents that are unstable or contain security flaws may affect the stability and security of Exchange. Therefore, you need to only install transport agents that you fully trust and that have been fully tested.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Install-TransportAgent -Name "Antivirus for Exchange" -TransportAgentFactory "vendor.exchange.avTransportAgentfactory" -AssemblyPath "c:\Program Files\Vendor\TransportAgent\AvTransportAgentFactory.dll"
-```
-
-This example shows how a fictitious antivirus application is installed on an Edge Transport server or a Hub Transport server.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Install-TransportAgent -Name "Test App" -TransportAgentFactory "vendor.exchange.avTransportAgentfactory" -AssemblyPath "c:\Program Files\Vendor\TransportAgent\AvTransportAgentFactory.dll" -TransportService Hub
-```
-
-This example shows how a fictitious application named Test App is installed in the Transport service on a Mailbox server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Install-TransportAgent -Name "Test App" -TransportAgentFactory "vendor.exchange.avTransportAgentfactory" -AssemblyPath "c:\Program Files\Vendor\TransportAgent\AvTransportAgentFactory.dll" -TransportService Hub
 ```
@@ -78,17 +36,7 @@ This example shows how a fictitious application named Test App is installed in t
 ## PARAMETERS
 
 ### -AssemblyPath
-!!! Exchange Server 2010, Exchange Server 2013
-
-The AssemblyPath parameter specifies the location of the transport agent Microsoft .NET assembly. Universal Naming Convention (UNC) file paths can't be used.
-
-
-
-!!! Exchange Server 2016
-
 The AssemblyPath parameter specifies the location of the transport agent Microsoft.NET assembly. Universal Naming Convention (UNC) file paths can't be used.
-
-
 
 ```yaml
 Type: String
@@ -120,17 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -TransportAgentFactory
-!!! Exchange Server 2010, Exchange Server 2013
-
-The TransportAgentFactory parameter specifies the Microsoft .NET class type of the transport agent factory. The developer of the transport agent being installed provides the transport agent factory and related information. For more information, see the documentation provided by the developer of the transport agent.
-
-
-
-!!! Exchange Server 2016
-
 The TransportAgentFactory parameter specifies the Microsoft.NET class type of the transport agent factory. The developer of the transport agent being installed provides the transport agent factory and related information. For more information, see the documentation provided by the developer of the transport agent.
-
-
 
 ```yaml
 Type: String
@@ -200,24 +138,6 @@ Accept wildcard characters: False
 ```
 
 ### -TransportService
-!!! Exchange Server 2013
-
-The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
-
-- Hub for the Transport service on Mailbox servers.
-
-- MailboxSubmission for the Mailbox Transport Submission service on Mailbox servers.
-
-- MailboxDelivery for the Mailbox Transport Delivery service on Mailbox servers.
-
-- FrontEnd for the Front End Transport service on Client Access servers.
-
-- Edge on Edge Transport servers.
-
-
-
-!!! Exchange Server 2016
-
 The TransportService parameter specifies the transport service that you want to view or modify. Valid values for this parameter are:
 
 - Hub for the Transport service on Mailbox servers.
@@ -229,8 +149,6 @@ The TransportService parameter specifies the transport service that you want to 
 - FrontEnd for the Front End Transport service on Mailbox servers.
 
 - Edge on Edge Transport servers.
-
-
 
 ```yaml
 Type: Hub | Edge | FrontEnd | MailboxSubmission | MailboxDelivery
@@ -279,4 +197,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/520bfa38-f51a-400c-9ff3-46fa50222092.aspx)
-

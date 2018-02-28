@@ -33,42 +33,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-QuarantineMessage -StartReceivedDate 06/13/2016 -EndReceivedDate 06/15/2016
 ```
 
 This example returns a summary list of messages quarantined between June 13, 2016 and June 15, 2016.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessage -StartReceivedDate 06/13/2016 -EndReceivedDate 06/15/2016
-```
-
-This example returns a summary list of messages quarantined between June 13, 2016 and June 15, 2016.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-QuarantineMessage -MessageID <5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>
 ```
 
 This example returns the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\>.
 
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessage -MessageID <5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com>
-```
-
-This example returns the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\>.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7 | Format-List
-```
-
-This example returns detailed information for the quarantined message with the specified Identity value.
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 Get-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7 | Format-List
 ```
@@ -132,7 +111,7 @@ The EndExpiresDate parameter specifies the latest messages that will automatical
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
 
-For example, if you specify the StartExpiresDate value of today's date, and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
+For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
 ```yaml
 Type: DateTime
@@ -314,7 +293,7 @@ The StartExpiresDate parameter specifies the earliest messages that will automat
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
 
-For example, if you specify the StartExpiresDate value of today's date, and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
+For example, if you specify the StartExpiresDate value of today's date and the EndExpiresDate value of the date three days from today, you will only see messages that will expire from the quarantine in the next three days.
 
 ```yaml
 Type: DateTime
@@ -407,4 +386,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/88026da1-8dbc-49e7-80e8-112a32773c34.aspx)
-

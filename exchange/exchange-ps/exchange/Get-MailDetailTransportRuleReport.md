@@ -28,14 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailDetailTransportRuleReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
-```
-
-This example retrieves the details of messages sent by john@contoso.com that matched the conditions defined by a transport rule between June 13, 2015 and June 15, 2015.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MailDetailTransportRuleReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
 ```
@@ -310,4 +303,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/26484f90-7063-4c95-a1c2-3792926b3e79.aspx)
-

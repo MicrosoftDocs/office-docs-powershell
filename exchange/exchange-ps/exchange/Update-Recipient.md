@@ -6,12 +6,6 @@ schema: 2.0.0
 # Update-Recipient
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Update-Recipient cmdlet to add Microsoft Exchange Server 2010 attributes to recipient objects created by the global address list (GAL) synchronization management agent in Identity Lifecycle Manager (ILM) 2007. The recipient objects you modify using this cmdlet must reside on a server running Exchange 2010.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Update-Recipient cmdlet to add Microsoft Exchange attributes to recipient objects created by the global address list (GAL) synchronization management agent in Microsoft Forefront Identity Manager (FIM) 2010. The recipient objects you modify using this cmdlet must reside on a server running Microsoft Exchange Server 2010 or later.
@@ -26,48 +20,6 @@ Update-Recipient [-Identity] <RecipientIdParameter> [-Confirm] [-Credential <PSC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Because of mergers, acquisitions, or legal requirements, customers may need to deploy Exchange in a multiple Exchange forest topology. These deployments require the synchronization of recipient objects across disparate Active Directory forests.
-
-Microsoft provides the GAL synchronization management agent for synchronizing recipient objects. The version of the GAL synchronization management agent included in Microsoft Identity Integration Server (MIIS) 2003 was designed to work with Exchange Server 2003 and relied on the Recipient Update Service (RUS). Because RUS is a deprecated feature and is no longer required, the new GAL synchronization management agent included in ILM 2007 is designed to function without RUS.
-
-As part of the synchronization process, the ILM 2007 GAL synchronization management agent creates recipient objects in both Active Directory forests. After the recipients are created, the management agent uses the Update-Recipient cmdlet to add the attributes required by Exchange 2010 or Exchange 2007 to complete the provisioning of these recipients.
-
-In Exchange 2010, before you can run the Update-Recipient cmdlet to convert an Active Directory user object into an Exchange 2010 mailbox, you must stamp the user object with the following three mandatory Exchange attributes:
-
-- homeMDB
-
-- mailNickname
-
-- msExchHomeServerName
-
-If you're using MIIS 2003, you must run various cmdlets to complete the provisioning process of the mail contacts created by the GAL synchronization management agent. The Update-Recipient cmdlet provides an alternate and more efficient method to do this. You can run the Update-Recipient cmdlet against the recipient objects created by the MIIS 2003 GAL synchronization management agent to complete the provisioning process.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-Because of mergers, acquisitions, or legal requirements, customers may need to deploy Exchange in a multiple Exchange forest topology. These deployments require the synchronization of recipient objects across disparate Active Directory forests.
-
-Microsoft provides the GAL synchronization management agent for synchronizing recipient objects. The version of the GAL synchronization management agent included in Microsoft Identity Integration Server (MIIS) 2003 was designed to work with Exchange Server 2003 and relied on the Recipient Update Service. Because the Recipient Update Service is a deprecated feature and is no longer required, the new GAL synchronization management agent included in FIM 2010 is designed to function without the Recipient Update Service.
-
-As part of the synchronization process, the FIM 2010 GAL synchronization management agent creates recipient objects in both Active Directory forests. After the recipients are created, the management agent uses the Update-Recipient cmdlet to add the attributes required by Microsoft Exchange to complete the provisioning of these recipients.
-
-In Exchange, before you can run the Update-Recipient cmdlet to convert an Active Directory user object into an Exchange mailbox, you must stamp the user object with the following three mandatory Exchange attributes:
-
-- homeMDB
-
-- mailNickname
-
-- msExchHomeServerName
-
-If you're using MIIS 2003, you must run various cmdlets to complete the provisioning process of the mail contacts created by the GAL synchronization management agent. The Update-Recipient cmdlet provides an alternate and more efficient method to do this. You can run the Update-Recipient cmdlet against the recipient objects created by the MIIS 2003 GAL synchronization management agent to complete the provisioning process.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Because of mergers, acquisitions, or legal requirements, customers may need to deploy Exchange in a multiple Exchange forest topology. These deployments require the synchronization of recipient objects across disparate Active Directory forests.
 
 Microsoft provides the GAL synchronization management agent for synchronizing recipient objects. The version of the GAL synchronization management agent included in Microsoft Identity Integration Server (MIIS) 2003 was designed to work with Exchange Server 2003 and relied on the Recipient Update Service. Because the Recipient Update Service is a deprecated feature and is no longer required, the new GAL synchronization management agent included in FIM 2010 is designed to function without the Recipient Update Service.
@@ -88,56 +40,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Update-Recipient -Identity "John Smith"
-```
-
-This example adds Exchange 2010 attributes to the mail contact that represents John Smith's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Update-Recipient -Identity "John Smith"
 ```
 
 This example adds Exchange attributes to the mail contact that represents John Smith's mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Update-Recipient -Identity "John Smith"
-```
-
-This example adds Exchange attributes to the mail contact that represents John Smith's mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Update-Recipient -Identity "John Smith"
-```
-
-This example adds Exchange attributes to the mail contact that represents John Smith's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
-```
-
-This example updates all contacts in a specific organizational unit (OU). This example assumes that recipients are synchronized between two forests, contoso.com and fabrikam.com, and all the synchronized recipients from the fabrikam.com domain are stored in a specific OU called fabrikam.com Users in the contoso.com domain.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
-```
-
-This example updates all contacts in a specific organizational unit (OU). This example assumes that recipients are synchronized between two forests, contoso.com and fabrikam.com, and all the synchronized recipients from the fabrikam.com domain are stored in a specific OU called fabrikam.com Users in the contoso.com domain.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
-```
-
-This example updates all contacts in a specific organizational unit (OU). This example assumes that recipients are synchronized between two forests, contoso.com and fabrikam.com, and all the synchronized recipients from the fabrikam.com domain are stored in a specific OU called fabrikam.com Users in the contoso.com domain.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailContact -OrganizationalUnit "contoso.com/fabrikam.com Users" | Update-Recipient
 ```
@@ -147,84 +57,6 @@ This example updates all contacts in a specific organizational unit (OU). This e
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameterspecifies the recipient.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameterspecifies the recipient.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the recipient that you want to update. You can use any value that uniquely identifies the recipient.
 
 For example:
@@ -242,8 +74,6 @@ For example:
 - Email address
 
 - GUID
-
-
 
 ```yaml
 Type: RecipientIdParameter
@@ -279,29 +109,9 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-!!! Exchange Server 2010
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-
-
-!!! Exchange Server 2013
-
-The Credential parameter specifies the user name and password to use to access Active Directory.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Credential parameter specifies the user name and password to use to access Active Directory.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -366,4 +176,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/969b33b6-5165-4f9c-bcca-08923df4add6.aspx)
-

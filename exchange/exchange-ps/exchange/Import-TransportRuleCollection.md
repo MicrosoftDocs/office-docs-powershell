@@ -6,12 +6,6 @@ schema: 2.0.0
 # Import-TransportRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Import-TransportRuleCollection cmdlet to import a previously exported transport rule collection for use by the Transport Rules agent on a Microsoft Exchange Server 2010 Hub Transport or Edge Transport server. On Exchange 2010 Hub Transport servers, you can also use the cmdlet to import legacy transport rules exported from Exchange Server 2007 Hub Transport servers.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Import-TransportRuleCollection cmdlet to import a transport rule collection. You can import a rule collection you previously exported as a backup, or import rules that you've exported from an older version of Exchange.
@@ -22,34 +16,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Import-TransportRuleCollection [-FileData] <Byte[]> [[-Identity] <RuleIdParameter>] [-Confirm]
- [-DomainController <Fqdn>] [-Organization <OrganizationIdParameter>] [-WhatIf] [-Force] [<CommonParameters>]
+ [-DomainController <Fqdn>] [-WhatIf] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined for the Transport Rules agent. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
-
-On Hub Transport servers, the Import-TransportRuleCollection command overwrites all transport rules configured in the Exchange 2010 organization, except for transport rules on Edge Transport servers. On Edge Transport servers, this command overwrites transport rules configured on the local computer only.
-
-In Exchange 2010, importing file data is a two-step process on all server roles except the Edge Transport server. For more information, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-For information about how to export a transport rule collection to an XML file, see Export-TransportRuleCollection.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined in your organization. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
-
-Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
-
-For information about how to export a transport rule collection to an XML file, see Export-TransportRuleCollection.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport rules" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 Importing a transport rule collection from an XML file removes or overwrites all pre-existing transport rules that were defined in your organization. Make sure that you have a backup of your current transport rule collection before you import and overwrite your current transport rules.
 
 Importing file data is a two-step process. First you must load the data to a variable using the Get-Content cmdlet, and then use that variable to transmit the data to the cmdlet.
@@ -60,35 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
-```
-
-This example imports a transport rule collection from the XML file ExportedRules.xml.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
-```
-
-This example imports a transport rule collection from the XML file ExportedRules.xml.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
-```
-
-This example imports a transport rule collection from the XML file ExportedRules.xml.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-[Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
-```
-
-This example imports a transport rule collection from the XML file ExportedRules.xml.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 [Byte[]]$Data = Get-Content -Path "C:\TransportRules\ExportedRules.xml" -Encoding Byte -ReadCount 0; Import-TransportRuleCollection -FileData $Data
 ```
@@ -98,19 +40,7 @@ This example imports a transport rule collection from the XML file ExportedRules
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2010
-
-The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet in the first step of the two-step process used to import file content on a Hub Transport server.
-
-For more information about the syntax required to use this parameter, see Understanding Importing and Exporting Files in the Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The FileData parameter specifies the variable name that contains the content of the XML file. The content is retrieved using the Get-Content cmdlet.
-
-
 
 ```yaml
 Type: Byte[]
@@ -146,23 +76,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -178,17 +96,9 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
+This cmdlet is available only in on-premises Exchange, and is only functional in Exchange Server 2010.
 
 The Identity parameter specifies the transport rule to be imported. Enter either the GUID or the name of the rule. You can omit the parameter label.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-The Identity parameter is no longer used and will be deprecated.
-
-
 
 ```yaml
 Type: RuleIdParameter
@@ -200,24 +110,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
@@ -271,4 +163,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/880b3124-76c5-4212-a8b9-8f4523f8cbe6.aspx)
-

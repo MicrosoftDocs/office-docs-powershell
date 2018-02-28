@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-ServiceEmailChannel
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-ServiceEmailChannel cmdlet to disable the .NET service channel for a specific user. The .NET service channel enables Microsoft Exchange to store information that it later forwards to applications or devices that aren't permanently connected to the server running Exchange.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Disable-ServiceEmailChannel cmdlet to disable the .NET service channel for a specific user. The .NET service channel enables Microsoft Exchange to store information that it later forwards to applications or devices that aren't permanently connected to the server running Exchange.
@@ -26,83 +20,27 @@ Disable-ServiceEmailChannel [-Identity] <MailboxIdParameter> [-Confirm] [-Domain
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Disable-ServiceEmailChannel cmdlet deletes the receive folder in the user's mailbox under the root folder.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access service email channel settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Disable-ServiceEmailChannel cmdlet deletes the receive folder in the user's mailbox under the root folder.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access service email channel settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The Disable-ServiceEmailChannel cmdlet deletes the receive folder in the user's mailbox under the root folder.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Disable-ServiceEmailChannel -Identity JeffHay
 ```
 
 This example disables the .NET service channel for the user Jeff Hay.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-ServiceEmailChannel -Identity JeffHay
-```
-
-This example disables the .NET service channel for the user Jeff Hay.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-ServiceEmailChannel -Identity JeffHay
-```
-
-This example disables the .NET service channel for the user Jeff Hay.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Disable-ServiceEmailChannel -Identity JeffHay -Confirm $true
 ```
 
 This example disables the .NET service channel for the user Jeff Hay after confirmation is given.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Disable-ServiceEmailChannel -Identity JeffHay -Confirm $true
-```
-
-This example disables the .NET service channel for the user Jeff Hay after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Disable-ServiceEmailChannel -Identity JeffHay -Confirm $true
-```
-
-This example disables the .NET service channel for the user Jeff Hay after confirmation is given.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Disable-ServiceEmailChannel -Identity JeffHay -Confirm $false
-```
-
-This example disables the .NET service channel for the user Jeff Hay without requiring confirmation.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Disable-ServiceEmailChannel -Identity JeffHay -Confirm $false
-```
-
-This example disables the .NET service channel for the user Jeff Hay without requiring confirmation.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Disable-ServiceEmailChannel -Identity JeffHay -Confirm $false
 ```
@@ -197,4 +135,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dbaf487e-c303-4e16-b0ad-12e1321b00a5.aspx)
-

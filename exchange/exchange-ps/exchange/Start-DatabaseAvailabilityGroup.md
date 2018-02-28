@@ -6,14 +6,6 @@ schema: 2.0.0
 # Start-DatabaseAvailabilityGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Start-DatabaseAvailabilityGroup cmdlet to start a member of a database availability group (DAG) or to start an entire Active Directory site. The Start-DatabaseAvailabilityGroup cmdlet is used to activate member Mailbox servers in a recovered datacenter after a datacenter switchover, as part of the switchback process to the recovered datacenter. The Start-DatabaseAvailabilityGroup cmdlet manipulates configuration and state so that the server(s) is incorporated into the operating DAG, and joined to the DAG's underlying cluster.
-
-The cmdlet can also be used to re-activate servers from a previously failed datacenter that has been restored to service. Before you can reactivate member Mailbox servers in a primary data center, the servers must first be integrated back into the operational DAG. The reintegration is achieved by running the Start-DatabaseAvailabilityGroup cmdlet. The Move-ActiveMailboxDatabase cmdlet is then used to activate databases in the primary data center.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Start-DatabaseAvailabilityGroup cmdlet to reincorporate one or more previously failed members of a database availability group (DAG).
@@ -37,60 +29,20 @@ Start-DatabaseAvailabilityGroup [-Identity] <DatabaseAvailabilityGroupIdParamete
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the"database availability group" entry in the High Availability Permissions topic.
-
-!!! Exchange Server 2013
-
-The Start-DatabaseAvailabilityGroup cmdlet is used to activate DAG members in a recovered datacenter after a datacenter switchover, as part of the switchback process to the recovered datacenter. The Start-DatabaseAvailabilityGroup cmdlet manipulates configuration and state so that the servers are incorporated into the operating DAG, and joined to the DAG's underlying cluster. The Move-ActiveMailboxDatabase cmdlet is then used to activate databases in the primary datacenter.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Database availability groups" entry in the High availability and site resilience permissions topic.
-
-!!! Exchange Server 2016
-
 The Start-DatabaseAvailabilityGroup cmdlet is used to activate DAG members in a recovered datacenter after a datacenter switchover, as part of the switchback process to the recovered datacenter. The Start-DatabaseAvailabilityGroup cmdlet manipulates configuration and state so that the servers are incorporated into the operating DAG, and joined to the DAG's underlying cluster. The Move-ActiveMailboxDatabase cmdlet is then used to activate databases in the primary datacenter.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Start-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer E14EX2
-```
-
-This example starts a Mailbox server named E14EX2 in a DAG named DAG1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Start-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
 ```
 
 This example starts the Mailbox server MBX2 in the DAG DAG1.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Start-DatabaseAvailabilityGroup -Identity DAG1 -MailboxServer MBX2
-```
-
-This example starts the Mailbox server MBX2 in the DAG DAG1.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Start-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
-```
-
-This example starts the members of a DAG named DAG1 in an Active Directory site named Redmond.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Start-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
-```
-
-This example starts the members of the DAG DAG1 in the Active Directory site Redmond.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Start-DatabaseAvailabilityGroup -Identity DAG1 -ActiveDirectorySite Redmond
 ```
@@ -100,17 +52,7 @@ This example starts the members of the DAG DAG1 in the Active Directory site Red
 ## PARAMETERS
 
 ### -ActiveDirectorySite
-!!! Exchange Server 2010
-
-The ActiveDirectorySite parameter is used to start the DAG (for example, start all members of the DAG).
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ActiveDirectorySite parameter specifies whether to start all DAG members in the specified site.
-
-
 
 ```yaml
 Type: AdSiteIdParameter
@@ -142,17 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxServer
-!!! Exchange Server 2010
-
-The MailboxServer parameter is used to start a single member of the DAG.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The MailboxServer parameter specifies whether to start a single DAG member.
-
-
 
 ```yaml
 Type: MailboxServerIdParameter
@@ -220,17 +152,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigurationOnly
-!!! Exchange Server 2010
-
-The ConfigurationOnly parameter updates the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The ConfigurationOnly switch specifies whether to update the Active Directory properties with the start action, but doesn't perform a start of the DAG or any members.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -279,4 +201,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0a0fdf34-d657-4875-9a97-b48014f93ed7.aspx)
-

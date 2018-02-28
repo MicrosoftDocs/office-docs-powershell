@@ -51,25 +51,12 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-HostedContentFilterPolicy -Identity "Contoso Content Filter Policy" -HighConfidenceSpamAction Redirect -SpamAction Redirect -RedirectToRecipients chris@contoso.com -FalsePositiveAdditionalRecipients michelle@contoso.com
 ```
 
 This example modifies the content filter policy named Contoso Content Filter Policy with the following settings:
-
-
-Redirect messages that are definitely spam or that may be spam to chris@contoso.com.
-
-Send copies of spam quarantine false positive submissions to michelle@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-HostedContentFilterPolicy -Identity "Contoso Content Filter Policy" -HighConfidenceSpamAction Redirect -SpamAction Redirect -RedirectToRecipients chris@contoso.com -FalsePositiveAdditionalRecipients michelle@contoso.com
-```
-
-This example modifies the content filter policy named Contoso Content Filter Policy with the following settings:
-
 
 Redirect messages that are definitely spam or that may be spam to chris@contoso.com.
 
@@ -78,9 +65,7 @@ Send copies of spam quarantine false positive submissions to michelle@contoso.co
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the content filter policy you want to modify. You can use any value that uniquely identifies the policy. For example, you can specify the
-
-name, GUID or distinguished name (DN) of the content filter policy.
+The Identity parameter specifies the content filter policy you want to modify. You can use any value that uniquely identifies the policy. For example, you can specify the name, GUID or distinguished name (DN) of the content filter policy.
 
 ```yaml
 Type: HostedContentFilterPolicyIdParameter
@@ -1073,4 +1058,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f597aa65-baa7-49d0-8832-2a300073f211.aspx)
-

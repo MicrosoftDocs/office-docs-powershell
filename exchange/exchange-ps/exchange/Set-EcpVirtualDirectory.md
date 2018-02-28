@@ -6,22 +6,6 @@ schema: 2.0.0
 # Set-EcpVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-EcpVirtualDirectory cmdlet to modify the properties of an Exchange Control Panel virtual directory on a computer that's running Microsoft Exchange Server 2010 that has the Client Access server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-EcpVirtualDirectory cmdlet to modify the properties of an Exchange Control Panel (ECP) virtual directory. The ECP virtual directory manages the Exchange Administration Center (EAC).
-
-The ECP is the web-based user interface developed for Microsoft Exchange Server 2010. The Exchange Server 2013Exchange Administration Center cmdlets for virtual directory still use ECP in the name, and the ECP cmdlets can be used to manage Exchange 2010 and Exchange 2013 ECP virtual directories.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-EcpVirtualDirectory cmdlet to modify Exchange Control Panel (ECP) virtual directories that are used in Internet Information Services (IIS) on Microsoft Exchange servers. The ECP virtual directory manages the Exchange admin center.
@@ -45,49 +29,18 @@ Set-EcpVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-BasicAuthent
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Control Panel virtual directory settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Administration Center connectivity" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-EcpVirtualDirectory -Identity "Server01\ecp (default Web site)" -BasicAuthentication:$false
-```
-
-This example disables Basic authentication on the default Exchange Control Panel virtual directory on the server Server01.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-EcpVirtualDirectory -Identity "Server01\ecp (default Web site)" -BasicAuthentication:$false
-```
-
-This example disables Basic authentication on the default ECP virtual directory on the server Server01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -BasicAuthentication:$false
 ```
 
 This example disables Basic authentication on the default ECP virtual directory on the server named Server01.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-EcpVirtualDirectory -Identity "CAS01\ecp (default Web site)" -AdminEnabled $false
-```
-
-This example turns off the Internet access to the EAC on server CAS01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Set-EcpVirtualDirectory -Identity "Server01\ecp (Default Web site)" -AdminEnabled $false
 ```
@@ -97,20 +50,6 @@ This example turns off the Internet access to the EAC on server named SErver01.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the name or GUID of an Exchange Control Panel virtual directory. The Identity parameter is represented as: ServerName\\ECP (WebsiteName). To manage the first Exchange Control Panel virtual directory created in an Exchange organization, you must run the Set-EcpVirtualDiretory cmdlet on the computer that includes the first Exchange Control Panel virtual directory. If you create additional Exchange Control Panel virtual directories, you can manage those remotely.
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the name or GUID of an ECP virtual directory. The Identity parameter is represented as: ServerName\\ECP (WebsiteName). To manage the first ECP virtual directory created in an Exchange organization, you must run the Set-EcpVirtualDirectory cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the virtual directory that you want to modify.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -124,8 +63,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
 
 To manage the first ECP virtual directory created in an Exchange organization, you need touse this cmdlet on the computer that includes the first ECP virtual directory. If you create additional ECP virtual directories, you can manage those remotely.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -141,20 +78,6 @@ Accept wildcard characters: False
 ```
 
 ### -BasicAuthentication
-!!! Exchange Server 2010
-
-The BasicAuthentication parameter specifies whether Basic authentication is enabled on the Exchange Control Panel virtual directory. This parameter can be used with the FormsAuthentication parameter or with the DigestAuthentication and WindowsAuthentication parameters.
-
-
-
-!!! Exchange Server 2013
-
-The BasicAuthentication parameter specifies whether Basic authentication is enabled on the ECP virtual directory. This parameter can be used with the FormsAuthentication parameter or with the DigestAuthentication and WindowsAuthentication parameters.
-
-
-
-!!! Exchange Server 2016
-
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Basic authentication is enabled. This is the default value.
@@ -162,8 +85,6 @@ The BasicAuthentication parameter specifies whether Basic authentication is enab
 - $false: Basic authentication is disabled.
 
 This parameter can be used with the FormsAuthentication parameter or with the DigestAuthentication and WindowsAuthentication parameters.
-
-
 
 ```yaml
 Type: $true | $false
@@ -199,27 +120,11 @@ Accept wildcard characters: False
 ```
 
 ### -DigestAuthentication
-!!! Exchange Server 2010
-
-The DigestAuthentication parameter specifies whether Digest authentication is enabled on the Exchange Control Panel virtual directory
-
-
-
-!!! Exchange Server 2013
-
-The DigestAuthentication parameter specifies whether Digest authentication is enabled on the ECP virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The DigestAuthentication parameter specifies whether Digest authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Digest authentication is enabled.
 
 - $false: Digest authentication is disabled. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -251,24 +156,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionFlags
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExtendedProtectionFlags parameter is used to customize the options you use if you're using Extended Protection for Authentication. The possible values are:
-
-- None Default setting.
-
-- Proxy Specifies that a proxy is terminating the SSL channel. A Service Principal Name (SPN) must be registered in the ExtendedProtectionSPNList parameter if proxy mode is configured.
-
-- ProxyCoHosting Specifies that both HTTP and HTTPS traffic may be accessing the Client Access server and that a proxy is located between at least some of the clients and the Client Access server.
-
-- AllowDotlessSPN Specifies whether you want to support valid SPNs that aren't in the fully qualified domain name (FQDN) format, for example ContosoMail. You specify valid SPNs with the ExtendedProtectionSPNList parameter. This option makes extended protection less secure because dotless certificates aren't unique, so it isn't possible to ensure that the client-to-proxy connection was established over a secure channel.
-
-- NoServiceNameCheck Specifies that the SPN list won't be checked to validate a channel binding token. This option makes Extended Protection for Authentication less secure. We generally don't recommend this setting.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionFlags parameter specifies custom settings for Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - None: This is the default setting.
@@ -280,8 +167,6 @@ The ExtendedProtectionFlags parameter specifies custom settings for Extended Pro
 - Proxy: A proxy server is responsible for terminating the SSL channel. To use this setting, you need to register an SPN by using the ExtendedProtectionSPNList parameter.
 
 - ProxyCoHosting: HTTP and HTTPS traffic may be accessing the virtual directory, and a proxy server is located between at least some of the clients and the Client Access services on the Exchange server.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -297,27 +182,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionSPNList
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the specified virtual directory.
-
-The possible values are:
-
-- Null This is the default value.
-
-- Single SPN or comma delimited list of valid SPNs By default, you must specify the fully qualified domain name (FQDN) (for example mail.contoso.com) for each SPN. If you want to add an SPN that's not an FQDN (for example, ContosoMail), you must also use the ExtendedProtectionTokenChecking parameter with the AllowDotlessSPN value. You specify the domain in SPN format. The SPN format is \<protocol\>/\<FQDN\>. For example, a valid entry could be HTTP/mail.contoso.com.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionSPNList parameter specifies a list of valid Service Principal Names (SPNs) if you're using Extended Protection for Authentication on the virtual directory. Valid values are:
 
 - $null: This is the default value.
 
 - Single SPN or comma delimited list of valid SPNs: The SPN value format is \<protocol\>/\<FQDN\>. For example, HTTP/mail.contoso.com. To add an SPN that's not an FQDN (for example, HTTP/ContosoMail), you also need to use the AllowDotlessSPN value for the ExtendedProtectionFlags parameter.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -333,42 +202,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedProtectionTokenChecking
-!!! Exchange Server 2010
-
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
-
-- None Extended Protection for Authentication won't be used. Connections between the client and Exchange won't use Extended Protection for Authentication on this virtual directory. This is the default setting.
-
-- Allow Extended Protection for Authentication will be used for connections between the client and Exchange on this virtual directory if both the client and server support Extended Protection for Authentication. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-- Require Extended Protection for Authentication will be used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support Extended Protection for Authentication, the connection between the client and server will fail. If you set this option, you must also set a value for the ExtendedProtectionSPNList parameter.
-
-If you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you must also configure one or more SPNs using the parameter ExtendedProtectionSPNList.
-
-To learn more about Extended Protection for Authentication, see Understanding Extended Protection for Authentication.
-
-
-
-!!! Exchange Server 2013
-
-The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the specified Exchange virtual directory. Extended Protection for Authentication isn't enabled by default. The available settings are:
-
-- None: Extended Protection for Authentication isn't used. Connections between the client and Exchange don't use Extended Protection for Authentication on the virtual directory. This is the default value.
-
-- Allow: Extended Protection for Authentication is used for connections between the client and Exchange on the virtual directory if both the client and server support it. Connections that don't support Extended Protection for Authentication on the client and server will work, but may not be as secure as a connection using Extended Protection for Authentication.
-
-- Require: Extended Protection for Authentication is used for all connections between clients and Exchange servers for this virtual directory. If either the client or server doesn't support it, the connection between the client and server will fail. If you use this value, you also need to set a value for the ExtendedProtectionSPNList parameter.
-
-Note:
-
-If you use the value Allow or Require, and you have a proxy server between the client and the Client Access server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) using the ExtendedProtectionSPNList parameter.
-
-
-
-!!! Exchange Server 2016
-
 The ExtendedProtectionTokenChecking parameter defines how you want to use Extended Protection for Authentication on the virtual directory. Extended Protection for Authentication isn't enabled by default. Valid values are:
 
 - None: Extended Protection for Authentication isn't be used on the virtual directory. This is the default value.
@@ -380,8 +213,6 @@ The ExtendedProtectionTokenChecking parameter defines how you want to use Extend
 Note:
 
 If you use the value Allow or Require, and you have a proxy server between the client and the Client Access services on the Mailbox server that's configured to terminate the client-to-proxy SSL channel, you also need to configure one or more Service Principal Names (SPNs) by using the ExtendedProtectionSPNList parameter.
-
-
 
 ```yaml
 Type: None | Allow | Require
@@ -413,25 +244,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUrl
-!!! Exchange Server 2010
-
-The ExternalUrl parameter specifies the host name used to connect to the Exchange server from outside the firewall. This setting is also important when Secure Sockets Layer (SSL) is used. This parameter must be set to allow the Autodiscover service to return the URL for the Exchange Control Panel virtual directory.
-
-
-
-!!! Exchange Server 2013
-
-The ExternalUrl parameter specifies the host name used to connect to the Exchange server from outside the firewall. This setting is also important when Secure Sockets Layer (SSL) is used. This parameter must be set to allow the Autodiscover service to return the URL for the ECP virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
 
 This setting is also important when Secure Sockets Layer (SSL) is used. You need to set this parameter to allow the Autodiscover service to return the URL for the ECP virtual directory.
-
-
 
 ```yaml
 Type: Uri
@@ -447,31 +262,11 @@ Accept wildcard characters: False
 ```
 
 ### -FormsAuthentication
-!!! Exchange Server 2010
-
-The FormsAuthentication parameter specifies whether forms-based authentication is enabled on the Exchange Control Panel virtual directory.
-
-If the FormsAuthentication parameter is set to $true, the BasicAuthentication parameter is set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
-
-
-
-!!! Exchange Server 2013
-
-The FormsAuthentication parameter specifies whether forms-based authentication is enabled on the ECP virtual directory.
-
-If the FormsAuthentication parameter is set to $true, the BasicAuthentication parameter is set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
-
-
-
-!!! Exchange Server 2016
-
 The FormsAuthentication parameter specifies whether forms-based authentication is enabled on the ECP virtual directory. Valid values are:
 
 - $true: Forms authentication is enabled. The BasicAuthentication parameter is set to $true, and the DigestAuthentication and WindowsAuthentication parameters are set to $false.
 
 - $false: Forms authentication is disabled.
-
-
 
 ```yaml
 Type: $true | $false
@@ -487,17 +282,7 @@ Accept wildcard characters: False
 ```
 
 ### -GzipLevel
-!!! Exchange Server 2010
-
-The GzipLevel parameter sets Gzip configuration information for the Exchange Control Panel virtual directory.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The GzipLevel parameter sets Gzip configuration information for the ECP virtual directory.
-
-
 
 ```yaml
 Type: Off | Low | High | Error
@@ -513,25 +298,9 @@ Accept wildcard characters: False
 ```
 
 ### -InternalUrl
-!!! Exchange Server 2010
-
-The InternalUrl parameter specifies the host name of the Exchange server for connections from inside the firewall. This setting is also important when SSL is used. This parameter must be set to allow the Autodiscover service to return the URL for the Exchange Control Panel virtual directory.
-
-
-
-!!! Exchange Server 2013
-
-The InternalUrl parameter specifies the host name of the Exchange server for connections from inside the firewall. This setting is also important when SSL is used. This parameter must be set to allow the Autodiscover service to return the URL for the ECP virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
 
 This setting is also important when SSL is used. You need to set this parameter to allow the Autodiscover service to return the URL for the ECP virtual directory.
-
-
 
 ```yaml
 Type: Uri
@@ -579,27 +348,11 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsAuthentication
-!!! Exchange Server 2010
-
-The WindowsAuthentication parameter specifies whether Integrated Windows authentication is permitted on the Exchange Control Panel virtual directory.
-
-
-
-!!! Exchange Server 2013
-
-The WindowsAuthentication parameter specifies whether Integrated Windows authentication is permitted on the ECP virtual directory.
-
-
-
-!!! Exchange Server 2016
-
 The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Integrated Windows authentication is enabled. This is the default value.
 
 - $false: Integrated Windows authentication is disabled.
-
-
 
 ```yaml
 Type: $true | $false
@@ -649,17 +402,7 @@ Accept wildcard characters: False
 ```
 
 ### -OwaOptionsEnabled
-!!! Exchange Server 2013
-
-The OwaOptionsEnabled parameter specifies that Outlook Web Access Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook Web Access Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
-
-
-
-!!! Exchange Server 2016
-
 The OwaOptionsEnabled parameter specifies that Outlook on the web Options is enabled for end users. If this parameter is set to $false, users aren't able to access Outlook on the web Options. You may want to disable access if your organization uses third-party provider tools. This parameter accepts $true or $false.
-
-
 
 ```yaml
 Type: $true | $false
@@ -692,4 +435,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5341a329-71db-4180-ac0e-83515035ae2f.aspx)
-

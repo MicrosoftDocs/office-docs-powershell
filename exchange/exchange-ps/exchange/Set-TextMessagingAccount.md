@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-TextMessagingAccount
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-TextMessagingAccount cmdlet to configure text messaging notification settings for a user.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 The Set-TextMessagingAccount cmdlet allows a user to configure the text messaging settings on their own mailbox. An administrator can't use this cmdlet to configure the text messaging settings on another user's mailbox.
@@ -27,93 +21,29 @@ Set-TextMessagingAccount [-Identity] <MailboxIdParameter> [-Confirm] [-CountryRe
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Set-TextMessagingAccount cmdlet configures a user's account for text messaging notifications. You can configure several settings, including the mobile phone number and country or region ID.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-The Set-TextMessagingAccount cmdlet configures a user's account for text messaging notifications. You can configure several settings, including the mobile phone number and country or region ID.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Text messaging user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Set-TextMessagingAccount cmdlet configures a user's account for text messaging notifications. You can configure several settings, including the mobile phone number and country or region ID.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
 ```
 
 This example sets the notification phone number for the text messaging account for Jeff Hay.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
-```
-
-This example sets the notification phone number for the text messaging account for Jeff Hay.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
-```
-
-This example sets the notification phone number for the text messaging account for Jeff Hay.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -NotificationPhoneNumber 4255550100
-```
-
-This example sets the notification phone number for the text messaging account for Jeff Hay.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
 ```
 
-This example sets the region, mobile operator, and notification phone number for the text messaging account for Jeff Hay.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
-```
-
-This example sets the region, mobile operator, and notification phone number for the text messaging account for Jeff Hay.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
-```
-
-This example sets the region, mobile operator, and notification phone number for the text messaging account for Jeff Hay.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-TextMessagingAccount -Identity 'JeffHay' -CountryRegionId US -MobileOperatorId 15001 -NotificationPhoneNumber +14255550199
-```
-
-This example sets the region, mobile operator, and notification phone number for the text messaging account for Jeff Hay.
+This example sets the region, mobile operator and notification phone number for the text messaging account for Jeff Hay.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the mailbox identity.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the target mailbox. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -139,8 +69,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -176,19 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -CountryRegionId
-!!! Exchange Server 2010, Exchange Server 2013
-
-The CountryRegionId parameter specifies the country or region in which the user's mobile operator resides.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The CountryRegionId parameter specifies the country or region in which the user's mobile operator resides.
 
 Valid input for this parameter is a supported culture code value from the Microsoft .NET Framework CultureInfo class. For example, da-DK for Danish or ja-JP for Japanese. For more information, see CultureInfo Class (https://go.microsoft.com/fwlink/p/?linkId=184859).
-
-
 
 ```yaml
 Type: RegionInfo
@@ -204,19 +122,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -232,23 +140,13 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010, Exchange Server 2013
-
-The IgnoreDefaultScope parameter isn't yet implemented.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -280,17 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -NotificationPhoneNumber
-!!! Exchange Server 2010, Exchange Server 2013
-
-The NotificationPhoneNumber parameter specifies the phone number to use for notifications.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The NotificationPhoneNumber parameter specifies the telephone number to use for text messaging notifications.
-
-
 
 ```yaml
 Type: E164Number
@@ -339,4 +227,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/dea91ccf-5572-40f1-a133-859c6aa58095.aspx)
-

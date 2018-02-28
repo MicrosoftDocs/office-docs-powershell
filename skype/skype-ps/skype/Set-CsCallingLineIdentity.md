@@ -181,6 +181,8 @@ Accept wildcard characters: False
 ### -ServiceNumber
 PARAMVALUE: String
 
+Note: Do not add ‘+’ to the Service number. For example, if the Service number is +1425-xxx-xxxx then valid input is 1425xxxxxxx
+
 ```yaml
 Type: Object
 Parameter Sets: (All)

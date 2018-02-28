@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-Notification
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-Notification cmdlet to view Exchange Administration Center notifications. This cmdlet is used by the Exchange Administration Center to display notification messages and shouldn't be run in the Exchange Management Shell.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-Notification cmdlet to view notification events that are shown in the notification viewer in the Exchange admin center (EAC). These notification events are related to:
@@ -44,59 +34,25 @@ Get-Notification [-DomainController <Fqdn>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Administration Center configuration settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-Notification
-```
-
-This example displays the current notifications that would display in the Exchange Administration Center.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-Notification
 ```
 
 This example displays a summary list of all notification events.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-Notification
-```
-
-This example displays a summary list of all notification events.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-Notification -ProcessType Migration
 ```
 
 This example displays a summary list of all mailbox move and migration notification events.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-Notification -ProcessType Migration
-```
-
-This example displays a summary list of all mailbox move and migration notification events.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf | Format-List
-```
-
-This example displays detailed information for the specified notification event.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3 
 ```
 Get-Notification -Identity 0259ec74-3539-4195-ab4f-de93e654ceaf | Format-List
 ```
@@ -106,16 +62,6 @@ This example displays detailed information for the specified notification event.
 ## PARAMETERS
 
 ### -Settings
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Settings parameter specifies that the command returns the values for the ProcessType and NotificationEmail parameters on the Set-Notification cmdlet. You can only use this switch when the ProcessType parameter value is set to CertExpiry.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Settings switch includes the ProcessType and NotificationEmail property values in the results. You don't need to specify a value with this switch.
@@ -123,8 +69,6 @@ The Settings switch includes the ProcessType and NotificationEmail property valu
 You can only use this switch with the ProcessType parameter value CertExpiry.
 
 You can't use this switch with the Summary switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -158,17 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the notification event that you want to view. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command Get-Notification | Format-List DisplayName,AlternateID,StartTime,Status,Type.
-
-
 
 ```yaml
 Type: EwsStoreObjectIdParameter
@@ -184,26 +118,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessType
-!!! Exchange Server 2013
-
-The ProcessType parameter specifies the type of process that you want to view notifications for. This parameter accepts the following values:
-
-- Unknown
-
-- ImportPST
-
-- ExportPST
-
-- Migration
-
-- MailboxRestore
-
-- CertExpiry
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ProcessType parameter filters the results by the type of notification event. Valid values are:
 
 - CertExpiry
@@ -215,8 +129,6 @@ The ProcessType parameter filters the results by the type of notification event.
 - MailboxRestore
 
 - Migration
-
-
 
 ```yaml
 Type: Unknown | ImportPST | ExportPST | Migration | MailboxRestore | CertExpiry
@@ -261,21 +173,9 @@ Accept wildcard characters: False
 ```
 
 ### -StartDate
-!!! Exchange Server 2013
-
-The StartDate parameter specifies the start date and time for the query.
-
-Use the short date format defined in the Regional Options settings for the computer on which the command is run. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 03/01/2010 to specify March 1, 2010. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, you must enclose the argument in quotation marks ("), for example, "10/05/2010 5:00 PM".
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The StartDate parameter specifies the start date of the date range.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format mm/dd/yyyy, enter 09/01/2015 to specify September 1, 2015. You can enter the date only, or you can enter the date and time of day. If you enter the date and time of day, enclose the value in quotation marks ("), for example, "09/01/2015 5:00 PM".
-
-
 
 ```yaml
 Type: ExDateTime
@@ -291,19 +191,9 @@ Accept wildcard characters: False
 ```
 
 ### -Summary
-!!! Exchange Server 2013
-
-This parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Summary switch includes only the ProcessType and Status property values in the results. You don't need to specify a value with this switch.
 
 You can't use this switch with the Settings switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -336,4 +226,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/702ee419-4521-4c89-a3ff-75b1f01dd037.aspx)
-

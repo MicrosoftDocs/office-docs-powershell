@@ -6,16 +6,6 @@ schema: 2.0.0
 # Remove-MobileDevice
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-MobileDevice cmdlet to remove the mobile device partnership information that you specify from a user's mobile device list stored in a mailbox on a computer running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MobileDevice cmdlet to remove mobile device partnerships that identify the devices that are configured to synchronize with user mailboxes.
@@ -30,68 +20,25 @@ Remove-MobileDevice [-Identity] <MobileDeviceIdParameter> [-Confirm] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Remove-MobileDevice cmdlet is useful for removing mobile devices that no longer synchronize successfully with the server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile Device user settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-MobileDevice cmdlet is useful for removing mobile devices that no longer synchronize successfully with the server.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MobileDevice -Identity WM_JeffHay
-```
-
-This example removes the mobile device partnership for the device WM\_JeffHay.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-MobileDevice -Identity WM_JeffHay
 ```
 
 This example removes the mobile device partnership for the device named WM\_JeffHay.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MobileDevice -Identity WM_JeffHay
-```
-
-This example removes the mobile device partnership for the device named WM\_JeffHay.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-MobileDevice -Identity iPhone_TonySmith -Confirm $true
-```
-
-This example removes the mobile device partnership for the device iPhone\_TonySmith after displaying the confirm prompt.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Remove-MobileDevice -Identity iPhone_TonySmith -Confirm:$false
 ```
 
 This example removes the mobile device partnership for the device named iPhone\_TonySmith and doesn't display the confirm prompt.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Remove-MobileDevice -Identity iPhone_TonySmith -Confirm:$false
-```
-
-This example removes the mobile device partnership for the device named iPhone\_TonySmith and doesn't display the confirm prompt.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-MobileDevice -Identity Tablet_JeffHay -Confirm $true
-```
-
-This example removes the mobile device partnership for the device Tablet\_JeffHay after displaying the confirm prompt.
 
 ## PARAMETERS
 
@@ -183,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8b3ddb29-03d3-4269-8a61-73db15adaa24.aspx)
-

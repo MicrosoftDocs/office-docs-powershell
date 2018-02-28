@@ -6,20 +6,6 @@ schema: 2.0.0
 # New-MailUser
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-MailUser cmdlet to create a mail-enabled user.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the New-MailUser cmdlet to create a mail-enabled user.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-MailUser cmdlet to create mail users. Mail users (also known as mail-enabled users) have email addresses and accounts in the Exchange organization, but they don't have Exchange mailboxes. Email messages sent to mail users are delivered to the specified external email address.
@@ -196,82 +182,18 @@ New-MailUser [-Name] <String> [-MicrosoftOnlineServicesID <WindowsLiveId>] [-Ali
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -Password $password -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -OrganizationalUnit contoso.com
-```
-
-The following example consists of two commands.
-
-
-In the first command, a password ($password) of the type System.Security.SecureString is created. When the command is executed, the prompt "Enter password" is displayed. The string entered by the user becomes the new password string, $password.
-
-
-The second command creates the mail-enabled user object Ed Meadows and assigns the newly created password to the object by means of the Password parameter. Ed is an employee at Tailspin Toys, but because he works closely with employees at Contoso, Ltd, he's being given an e-mail address at contoso.com. Ed doesn't have a mailbox on the server running Exchange at Contoso. E-mail messages sent to Ed's contoso.com e-mail address are sent to his external e-mail address, Ed@tailspintoys.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -Password $password -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -OrganizationalUnit contoso.com
-```
-
-This example consists of two commands.
-
-
-In the first command, the password $password of the type System.Security.SecureString is created. When the command is executed, the prompt "Enter password" is displayed. The string entered by the user becomes the new password string, $password.
-
-
-The second command creates the mail-enabled user object Ed Meadows and assigns the newly created password to the object by means of the Password parameter. Ed is an employee at Tailspin Toys, but because he works closely with employees at Contoso, Ltd, he's being given an email address at contoso.com. Ed doesn't have a mailbox on the server running Exchange at Contoso. Email messages sent to Ed's contoso.com email address are sent to his external email address, Ed@tailspintoys.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@tailspintoys -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
 ```
 
 This example creates a new mail user for Ed Meadows in the contoso.com cloud-based organization. The mail user gives Ed an account and email address in the contoso.com domain, but messages sent to Ed are delivered to his tailspintoys.com email address.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@tailspintoys -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
-```
-
-This example creates a new mail user for Ed Meadows in the contoso.com cloud-based organization. The mail user gives Ed an account and email address in the contoso.com domain, but messages sent to Ed are delivered to his tailspintoys.com email address.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -MicrosoftOnlineServicesID ed@tailspintoys -Password (ConvertTo-SecureString -String 'P@ssw0rd1' -AsPlainText -Force)
-```
-
-This example creates a new mail user for Ed Meadows in the contoso.com cloud-based organization. The mail user gives Ed an account and email address in the contoso.com domain, but messages sent to Ed are delivered to his tailspintoys.com email address.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
-```
-
-This example is similar to the first, except contoso.com is now an on-premises Exchange organization, and you use a separate command to enter the password so it isn't stored in clear text.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-$password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
-```
-
-This example is similar to the first, except contoso.com is now an on-premises Exchange organization, and you use a separate command to enter the password so it isn't stored in clear text.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 $password = Read-Host "Enter password" -AsSecureString; New-MailUser -Name "Ed Meadows" -ExternalEmailAddress ed@tailspintoys.com -UserPrincipalName ed@contoso.com -Password $password
 ```
@@ -281,19 +203,9 @@ This example is similar to the first, except contoso.com is now an on-premises E
 ## PARAMETERS
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the common name (CN) of the mail-enabled user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Name parameter specifies the unique name of the mail user. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 This value is also used for the DisplayName property if you don't use the DisplayName parameter.
-
-
 
 ```yaml
 Type: String
@@ -309,25 +221,9 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalEmailAddress
-!!! Exchange Server 2010
-
-The ExternalEmailAddress parameter specifies an e-mail address outside of the organization. E-mail messages sent to the mail-enabled user are sent to this external address.
-
-
-
-!!! Exchange Server 2013
-
-The ExternalEmailAddress parameter specifies an email address outside of the organization. Email messages sent to the mail-enabled user are sent to this external address.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The ExternalEmailAddress parameter specifies the target email address of the mail contact or mail user. By default, this value is used as the primary email address of the mail contact or mail user.
 
 In on-premises environments, you can use the PrimarySMTPAddress parameter to set the primary email address to a different value. However, we recommend this only in cross-forest environments.
-
-
 
 ```yaml
 Type: ProxyAddress
@@ -356,21 +252,9 @@ Accept wildcard characters: False
 ```
 
 ### -FederatedIdentity
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The FederatedIdentity parameter associates an on-premises Active Directory user with a user in the cloud.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The FederatedIdentity parameter associates an on-premises Active Directory user with a user in the cloud.
-
-
 
 ```yaml
 Type: String
@@ -386,35 +270,11 @@ Accept wildcard characters: False
 ```
 
 ### -ImportLiveId
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The ImportLiveID parameter imports an unmanaged Windows Live ID into the cloud-based domain. An unmanaged Windows Live ID was created in the domain before the domain was enrolled in the cloud-based service.
-
-Importing a Windows Live ID into the domain lets you save any settings that are associated with the Windows Live ID, like instant messaging contacts. However, the Windows Live ID is now subject to the security and privacy policies of the organization.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The ImportLiveID parameter imports an unmanaged Microsoft account (formerly known as a Windows Live ID) into the cloud-based domain. An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service.
-
-Importing a Microsoft account into the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts. However, the Microsoft account is now subject to the security and privacy policies of the organization.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The ImportLiveID switch specifies whether to import an unmanaged Microsoft account (formerly known as a Windows Live ID) into the cloud-based domain. You don't need to specify a value with this switch.
 
 An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Importing a Microsoft account into the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts. However, the Microsoft account is now subject to the security and privacy policies of the organization.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -430,17 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Password parameter specifies the password used by the mail user to secure his or her account.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Password parameter specifies the password for the user's account. Valid values for this parameter use the syntax (ConvertTo-SecureString -String '\<password\>' -AsPlainText -Force).
-
-
 
 ```yaml
 Type: SecureString
@@ -456,31 +306,11 @@ Accept wildcard characters: False
 ```
 
 ### -UseExistingLiveId
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The UseExistingLiveId parameter uses the specified Windows Live ID that already exists in the cloud-based domain. The specified Windows Live ID can't have a mail user associated with it.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The UseExistingLiveId parameter uses the specified Microsoft account (formerly known as a Windows Live ID) that already exists in the cloud-based domain. The specified Microsoft account can't have a mail user associated with it.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The UseExistingLiveId switch specifies whether to use the specified Microsoft account (formerly known as a Windows Live ID) that already exists in the cloud-based domain. The specified Microsoft account can't have a mail user associated with it.
 
 You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -496,25 +326,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-!!! Exchange Server 2010
-
-The UserPrincipalName parameter defines the name of a system user in an e-mail address format (for example, ed@contoso.com).
-
-
-
-!!! Exchange Server 2013
-
 This parameter is available only in on-premises Exchange.
 
 The UserPrincipalName parameter specifies the name of a system user in an email address format (for example, ed@contoso.com).
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-This parameter is available only in on-premises Exchange.
-
-
 
 ```yaml
 Type: String
@@ -530,29 +344,9 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsLiveID
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The WindowsLiveID parameter creates a Windows Live ID that's associated with the mail user.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The WindowsLiveID parameter creates a Microsoft account (formerly known as a Windows Live ID) associated with the mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The WindowsLiveID parameter creates a Microsoft account (formerly known as a Windows Live ID) for the mail user.
-
-
 
 ```yaml
 Type: WindowsLiveId
@@ -568,50 +362,6 @@ Accept wildcard characters: False
 ```
 
 ### -Alias
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Alias parameter specifies the alias of the user. An alias can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- \*
-
-- +
-
-- -
-
-- .
-
-- /
-
-- =
-
-- ?
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Alias parameter specifies the Exchange alias (also known as the mail nickname) for the recipient. This value identifies the recipient as a mail-enabled object, and shouldn't be confused with multiple email addresses for the same recipient (also known as proxy addresses). A recipient can have only one Alias value.
 
 The value of Alias can contain letters, numbers and the characters !, #, $, %, &, ', \*, +, -, /, =, ?, ^, \_, `, {, |, } and ~. Periods (.) are allowed, but each period must be surrounded by other valid characters (for example, help.desk). Unicode characters from U+00A1 to U+00FF are also allowed. The maximum length of the Alias value is 64 characters.
@@ -628,8 +378,6 @@ If you modify the Alias value of an existing recipient, the primary email addres
 
 The Alias parameter never generates or updates the primary email address of a mail contact or a mail user.
 
-
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -644,86 +392,6 @@ Accept wildcard characters: False
 ```
 
 ### -ArbitrationMailbox
-!!! Exchange Server 2010
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ArbitrationMailbox parameter specifies the mailbox used to manage the moderation process.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ArbitrationMailbox parameter specifies the arbitration mailbox that's used to manage the moderation process for this recipient. You can use any value that uniquely identifies the arbitration mailbox.
@@ -751,8 +419,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -788,25 +454,9 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010
-
-The DisplayName parameter specifies the name displayed in Microsoft Outlook for the mail user.
-
-
-
-!!! Exchange Server 2013
-
-The DisplayName parameter specifies the name displayed in MicrosoftOutlook for the mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The DisplayName parameter specifies the display name of the mail user. The display name is visible in the Exchange admin center, in address lists, and in Outlook. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
 
 If you don't use the DisplayName parameter, the value of the Name parameter is used for the display name.
-
-
 
 ```yaml
 Type: String
@@ -822,19 +472,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -850,31 +490,11 @@ Accept wildcard characters: False
 ```
 
 ### -EvictLiveId
-!!! Exchange Server 2010
-
-This parameter applies to objects in the cloud-based service. It isn't available for on-premises deployments.
-
-The EvictLiveId parameter removes an unmanaged Windows Live ID from the cloud-based domain. An unmanaged Windows Live ID was created in the domain before the domain was enrolled in the cloud-based service. Evicting a Windows Live ID from the domain lets you save any settings that are associated with the Windows Live ID, like instant messaging contacts.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The EvictLiveId parameter removes an unmanaged Microsoft account (formerly known as a Windows Live ID) from the cloud-based domain. An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Evicting a Microsoft account from the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in the cloud-based service.
 
 The EvictLiveId switch specifies whether to remove an unmanaged Microsoft account (formerly known as a Windows Live ID) from the cloud-based domain. An unmanaged Microsoft account was created in the domain before the domain was enrolled in the cloud-based service. Evicting a Microsoft account from the domain lets you save any settings associated with the Microsoft account, like instant messaging contacts.
 
 You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -890,17 +510,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The FirstName parameter specifies the first name of the mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The FirstName parameter specifies the user's first name.
-
-
 
 ```yaml
 Type: String
@@ -916,25 +526,9 @@ Accept wildcard characters: False
 ```
 
 ### -ImmutableId
-!!! Exchange Server 2010
-
-The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox that's used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange will create the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premise Exchange deployment scenario.
-
-
-
-!!! Exchange Server 2013
-
-The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com. You must set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The ImmutableId parameter is used by GAL synchronization (GALSync) and specifies a unique and immutable identifier in the form of an SMTP address for an Exchange mailbox used for federated delegation when requesting Security Assertion Markup Language (SAML) tokens. If federation is configured for this mailbox and you don't set this parameter when you create the mailbox, Exchange creates the value for the immutable ID based upon the mailbox's ExchangeGUID and the federated account namespace, for example, 7a78e7c8-620e-4d85-99d3-c90d90f29699@mail.contoso.com.
 
 You need to set the ImmutableId parameter if Active Directory Federation Services (AD FS) is deployed to allow single sign-on into an off-premises mailbox and AD FS is configured to use a different attribute than ExchangeGUID for sign-on token requests. Both, Exchange and AD FS must request the same token for the same user to ensure proper functionality for a cross-premises Exchange deployment scenario.
-
-
 
 ```yaml
 Type: String
@@ -950,17 +544,7 @@ Accept wildcard characters: False
 ```
 
 ### -Initials
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Initials parameter specifies the initials of the mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Initials parameter specifies the user's middle initials.
-
-
 
 ```yaml
 Type: String
@@ -976,17 +560,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LastName parameter specifies the last name of the mail user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The LastName parameter specifies the user's last name.
-
-
 
 ```yaml
 Type: String
@@ -1002,24 +576,6 @@ Accept wildcard characters: False
 ```
 
 ### -MacAttachmentFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format for messages sent to the mail user. The valid values for this parameter are:
-
-- BinHex
-
-- UuEncode
-
-- AppleSingle
-
-- AppleDouble
-
-By default, this parameter is set to BinHex. The acceptable values for the MacAttachmentFormat parameter are dependent on the MessageFormat parameter. If the MessageFormat parameter is set to Text, you can only use BinHex or UuEncode values for this parameter. If the MessageFormat parameter is set to Mime, you can only use BinHex, AppleSingle, or AppleDouble values for this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The MacAttachmentFormat parameter specifies the Apple Macintosh operating system attachment format to use for messages sent to the mail contact or mail user. Valid values are:
 
 - BinHex (This is the default value)
@@ -1036,8 +592,6 @@ The MacAttachmentFormat and MessageFormat parameters are interdependent:
 
 - MessageFormat is Mime: MacAttachmentFormat can be BinHex, AppleSingle, or AppleDouble.
 
-
-
 ```yaml
 Type: BinHex | UuEncode | AppleSingle | AppleDouble
 Parameter Sets: Set1, Set3, Set2
@@ -1052,40 +606,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageBodyFormat
-!!! Exchange Server 2010
-
-The MessageBodyFormat parameter specifies the message body format for messages sent to the mail user. The valid values for this parameter are:
-
-- Text
-
-- Html
-
-- TextAndHtml
-
-By default, this parameter is set to TextAndHtml.
-
-The MessageFormat and MessageBodyFormat parameters are interdependent.If the MessageFormat parameter is set to Mime, the MessageBodyFormat parameter can be set to any valid value. However, if the MessageFormat parameter is set to Text, the MessageBodyFormat parameter can only be set to Text. Therefore, if you want to set this parameter to Html or TextAndHtml, you must also set the MessageFormat parameter to Mime.
-
-
-
-!!! Exchange Server 2013
-
-The MessageBodyFormat parameter specifies the message body format for messages sent to the mail user. The valid values for this parameter are:
-
-- Text
-
-- Html
-
-- TextAndHtml
-
-By default, this parameter is set to TextAndHtml.
-
-The MessageFormat and MessageBodyFormat parameters are interdependent. If the MessageFormat parameter is set to Mime, the MessageBodyFormat parameter can be set to any valid value. However, if the MessageFormat parameter is set to Text, the MessageBodyFormat parameter can only be set to Text. Therefore, if you want to set this parameter to Html or TextAndHtml, you must also set the MessageFormat parameter to Mime.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The MessageBodyFormat parameter specifies the message body format for messages sent to the mail contact or mail user. Valid values are:
 
 - Text
@@ -1099,8 +619,6 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Mime: MessageBodyFormat can be Text, Html, or TextAndHtml.
 
 - MessageFormat is Text: MessageBodyFormat can only be Text.
-
-
 
 ```yaml
 Type: Text | Html | TextAndHtml
@@ -1116,24 +634,6 @@ Accept wildcard characters: False
 ```
 
 ### -MessageFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The MessageFormat parameter specifies the message format for messages sent to the mail user.
-
-The valid values for this parameter are:
-
-- Text
-
-- Mime
-
-By default, this parameter is set to Mime.
-
-The MessageFormat and MessageBodyFormat parameters are interdependent. If the MessageFormat parameter is set to Mime, the MessageBodyFormat parameter can be set to any valid value. However, if the MessageFormat parameter is set to Text, the MessageBodyFormat parameter can only be set to Text. Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The MessageFormat parameter specifies the message format for messages sent to the mail contact or mail user. Valid values are:
 
 - Text
@@ -1147,8 +647,6 @@ The MessageFormat and MessageBodyFormat parameters are interdependent:
 - MessageFormat is Text: MessageBodyFormat can only be Text.
 
 Therefore, if you want to change the MessageFormat parameter from Mime to Text, you must also change the MessageBodyFormat parameter to Text.
-
-
 
 ```yaml
 Type: Text | Mime
@@ -1164,24 +662,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModeratedBy
-!!! Exchange Server 2010
-
-The ModeratedBy parameter specifies the users responsible for moderating the messages sent to this mail user. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true. If you leave this parameter blank and there is a user already specified as the manager of this mail user, the ModeratedBy parameter is automatically set by the ManagedBy parameter of the mail user. Otherwise, an error is returned.
-
-
-
-!!! Exchange Server 2013
-
-The ModeratedBy parameter specifies the users responsible for moderating the messages sent to this mail user. To designate more than one user, separate the users with commas.
-
-This parameter is required if you set the ModerationEnabled parameter to $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The ModeratedBy parameter specifies one or more moderators for this recipient. A moderator approves messages sent to the recipient before the messages are delivered. A moderator must be a mailbox, mail user, or mail contact in your organization. You can use any value that uniquely identifies the moderator.
 
 For example:
@@ -1204,8 +684,6 @@ To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<v
 
 You need to use this parameter to specify at least one moderator when you set the ModerationEnabled parameter to the value $true.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1220,16 +698,6 @@ Accept wildcard characters: False
 ```
 
 ### -ModerationEnabled
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ModerationEnabled parameter specifies whether to enable or disable moderation for the mail user. The two possible values for this parameter are $true or $false. To enable moderation, set this parameter to $true. To disable moderation, set this parameter to $false.
-
-The default value is $false.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The ModerationEnabled parameter specifies whether moderation is enabled for this recipient. Valid value are:
 
 - $true: Moderation is enabled for this recipient. Messages sent to this recipient must be approved by a moderator before the messages are delivered.
@@ -1237,8 +705,6 @@ The ModerationEnabled parameter specifies whether moderation is enabled for this
 - $false: Moderation is disabled for this recipient. Messages sent to this recipient are delivered without the approval of a moderator. This is the default value.
 
 You use the ModeratedBy parameter to specify the moderators.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1254,25 +720,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-
-
-!!! Exchange Server 2013
-
-The Organization parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -1288,14 +736,6 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationalUnit
-!!! Exchange Server 2010, Exchange Server 2013
-
-The OrganizationalUnit parameter specifies the organizational unit (OU) in which the new user is added (for example, redmond.contoso.com/contacts).
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The OrganizationalUnit parameter specifies the location in Active Directory where the new mail user is created.
 
 Valid input for this parameter is an organizational unit (OU) or domain that's visible using the Get-OrganizationalUnit cmdlet. You can use any value that uniquely identifies the OU or domain. For example:
@@ -1307,8 +747,6 @@ Valid input for this parameter is an organizational unit (OU) or domain that's v
 - Distinguished name (DN)
 
 - GUID
-
-
 
 ```yaml
 Type: OrganizationalUnitIdParameter
@@ -1324,17 +762,7 @@ Accept wildcard characters: False
 ```
 
 ### -OverrideRecipientQuotas
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1350,22 +778,6 @@ Accept wildcard characters: False
 ```
 
 ### -PrimarySmtpAddress
-!!! Exchange Server 2010
-
-The PrimarySmtpAddress parameter specifies the primary SMTP address for the mail user. By default, the primary SMTP address is generated based on the default e-mail address policy. If you specify a primary SMTP address by using this parameter, the command sets the EmailAddressPolicyEnabled attribute of the mail user to $false, and the e-mail addresses of this mail user aren't automatically updated based on e-mail address policies.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The PrimarySmtpAddress parameter specifies the primary SMTP address for the mail user. By default, the primary SMTP address is generated based on the default email address policy. If you specify a primary SMTP address by using this parameter, the command sets the EmailAddressPolicyEnabled attribute of the mail user to $false, and the email addresses of this mail user aren't automatically updated based on email address policies.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The PrimarySmtpAddress parameter specifies the primary return email address that's used for the recipient. If it's available on this cmdlet, you can't use the EmailAddresses and PrimarySmtpAddress parameters in the same command.
@@ -1373,8 +785,6 @@ The PrimarySmtpAddress parameter specifies the primary return email address that
 By default, the primary address is the same as the ExternalEmailAddress parameter value.
 
 If you use the PrimarySmtpAddress parameter to specify the primary email address, the command sets the EmailAddressPolicyEnabled property of the mail user to False, which means the email addresses of the mail user aren't automatically updated by email address policies. We recommend that you don't set the primary email address to a value other than the ExternalEmailAddress unless you're in a cross-forest scenario.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -1390,31 +800,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-!!! Exchange Server 2010
-
-The RemotePowerShellEnabled parameter specifies whether the user can use Remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell or the Exchange Management Console on Mailbox, Hub Transport, Unified Messaging, and Client Access servers. Access to Remote PowerShell is required even if you're trying to open the Shell or the console on the local server.
-
-The valid values are $True and $False. The default value depends on the management role groups assigned to the user. For more information, see Overview of Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The RemotePowerShellEnabled parameter specifies whether the user can use remote Windows PowerShell. Remote Windows PowerShell is required to open the Exchange Management Shell on Mailbox and Client Access servers. Access to remote Windows PowerShell is required even if you're trying to open the Shell on the local server.
-
-The valid values are $True and $False. The default value is $True.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The RemotePowerShellEnabled parameter specifies whether the user can connect to Exchange using remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell on Exchange servers, or to use Windows PowerShell open and import a remote PowerShell session to Exchange. Access to remote PowerShell is required even if you're trying to open the Exchange Management Shell on the local Exchange server. Valid values are:
 
 - $true: The user can use remote PowerShell. This is the default value.
 
 - $false: The user can't use remote PowerShell.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1430,22 +820,6 @@ Accept wildcard characters: False
 ```
 
 ### -ResetPasswordOnNextLogon
-!!! Exchange Server 2010
-
-The ResetPasswordOnNextLogon parameter specifies whether the user must change the password at the next logon. If this parameter is set to $true, the user must change the password at the next logon.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The ResetPasswordOnNextLogon parameter specifies whether the user must change the password at the next logon. If this parameter is set to $true, the user must change the password at the next logon.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
@@ -1453,8 +827,6 @@ The ResetPasswordOnNextLogon parameter specifies whether the user must change th
 - $true: The user is required to change their password the next time they log on.
 
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1470,79 +842,9 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-!!! Exchange Server 2010
-
-The SamAccountName parameter defines the logon name used to support clients and servers running older versions of the operating system. This attribute must contain fewer than 20 characters. An account name can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- -
-
-- .
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The SamAccountName parameter defines the logon name used to support clients and servers running older versions of the operating system. This attribute must contain fewer than 20 characters. An account name can contain letters, numbers, and the following punctuation marks and symbols:
-
-- !
-
-- #
-
-- $
-
-- %
-
-- ^
-
-- &
-
-- -
-
-- .
-
-- \_
-
-- {
-
-- }
-
-- |
-
-- ~
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
-
-
 
 ```yaml
 Type: String
@@ -1558,30 +860,6 @@ Accept wildcard characters: False
 ```
 
 ### -SendModerationNotifications
-!!! Exchange Server 2010, Exchange Server 2013
-
-The SendModerationNotifications parameter specifies whether status notifications are sent to users when they send a message to the moderated distribution group. You can specify one of the following values:
-
-- Always
-
-- Internal
-
-- Never
-
-Set this parameter to Always if you want notifications to be sent to all senders.
-
-Set this parameter to Internal if you want notifications to be sent only to the senders who are internal to your organization.
-
-Set this parameter to Never to disable all status notifications.
-
-The default value is Never.
-
-The sender is always notified if the message is rejected by the moderators, regardless of the value of this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The SendModerationNotifications parameter specifies when moderation notification messages are sent. Valid values are:
 
 - Always: Notify all senders when their messages aren't approved. This is the default value.
@@ -1591,8 +869,6 @@ The SendModerationNotifications parameter specifies when moderation notification
 - Never: Don't notify anyone when a message isn't approved.
 
 This parameter is only meaningful when moderation is enabled (the ModerationEnabled parameter has the value $true).
-
-
 
 ```yaml
 Type: Never | Internal | Always
@@ -1608,21 +884,11 @@ Accept wildcard characters: False
 ```
 
 ### -UsePreferMessageFormat
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UsePreferMessageFormat parameter specifies whether the message format settings configured for the mailbox override the global settings configured for the domain. Set this parameter to $true to have the message format settings configured for the mailbox to override any global settings.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The UsePreferMessageFormat specifies whether the message format settings configured for the mail user or mail contact override the global settings configured for the remote domain or configured by the message sender. Valid value are:
 
 - $true: Messages sent to the mail user or mail contact use the message format that's configured for the mail user or mail contact.
 
 - $false: Messages sent to the mail user or mail contact use the message format that's configured for the remote domain (the default remote domain or a specific remote domain) or configured by the message sender. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1860,4 +1126,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/128467a7-b8b8-4fa6-bca9-1131301f18ce.aspx)
-

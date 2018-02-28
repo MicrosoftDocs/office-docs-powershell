@@ -6,20 +6,6 @@ schema: 2.0.0
 # Remove-ActiveSyncVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-ActiveSyncVirtualDirectory cmdlet to delete an existing Microsoft Exchange ActiveSync virtual directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Remove-ActiveSyncVirtualDirectory cmdlet to delete an existing Microsoft Exchange ActiveSync virtual directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-ActiveSyncVirtualDirectory cmdlet to remove existing Exchange ActiveSync virtual directories from Internet Information Services (IIS) virtual directories on Exchange servers.
@@ -34,83 +20,27 @@ Remove-ActiveSyncVirtualDirectory [-Identity] <VirtualDirectoryIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When the Exchange ActiveSync virtual directory is removed from a specified server and Web site, the virtual directory is also removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync virtual directory settings" entry in the Client Access Permissions topic.
-
-!!! Exchange Server 2013
-
-When the Exchange ActiveSync virtual directory is removed from a specified server and website, the virtual directory is also removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange ActiveSync virtual directory settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 When the Exchange ActiveSync virtual directory is removed from a specified server and website, the virtual directory is also removed from Active Directory.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync
-```
-
-This example removes the default Exchange ActiveSync virtual directory from the server named Contoso.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync
-```
-
-This example removes the default Exchange ActiveSync virtual directory from the server Contoso.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync -Confirm $true
-```
-
-This example removes the default Exchange ActiveSync virtual directory from the server named Contoso after confirmation is given.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync -Confirm $true
 ```
 
 This example removes the default Exchange ActiveSync virtual directory from the server Contoso after confirmation is given.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-ActiveSyncVirtualDirectory contoso\Microsoft-Server-ActiveSync -Confirm $true
-```
-
-This example removes the default Exchange ActiveSync virtual directory from the server Contoso after confirmation is given.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Remove-ActiveSyncVirtualDirectory contoso\EAS
-```
-
-This example removes a custom Exchange ActiveSync virtual directory from the server named Contoso.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Remove-ActiveSyncVirtualDirectory contoso\EAS
-```
-
-This example removes a custom Exchange ActiveSync virtual directory from the server Contoso.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Remove-ActiveSyncVirtualDirectory contoso\EAS
 ```
@@ -120,14 +50,6 @@ This example removes a custom Exchange ActiveSync virtual directory from the ser
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter uniquely identifies the Exchange ActiveSync virtual directory to be deleted.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange ActiveSync virtual directory that you want to remove.
 
 You can use any value that uniquely identifies the virtual directory. For example:
@@ -139,8 +61,6 @@ You can use any value that uniquely identifies the virtual directory. For exampl
 - GUID
 
 The Name value uses the syntax "\<VirtualDirectoryName\> (\<WebsiteName\>)" from the properties of the virtual directory. You can specify the wildcard character (\*) instead of the default website by using the syntax \<VirtualDirectoryName\>\*.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -225,4 +145,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2c46293a-7703-48cc-872a-6a7065ab26db.aspx)
-

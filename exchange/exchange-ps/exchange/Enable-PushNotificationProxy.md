@@ -21,42 +21,20 @@ Enable-PushNotificationProxy [-Confirm] [-Organization <String>] [-Uri <String>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to OWA for Devices on the user's device.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Push notification proxy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016
-
 The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to Outlook on the web for devices on the user's device.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Enable-PushNotificationProxy -WhatIf
 ```
 
 This example displays the status of the push notification proxy in the on-premises Exchange organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Enable-PushNotificationProxy -WhatIf
-```
-
-This example displays the status of the push notification proxy in the on-premises Exchange organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Enable-PushNotificationProxy -Organization contoso.com
-```
-
-This example enables the push notification proxy in the on-premises Exchange organization by using the Office 365 organization contoso.com.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Enable-PushNotificationProxy -Organization contoso.com
 ```
@@ -151,4 +129,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fe3df1ee-a02c-4b9d-ab7a-706cfa7f765c.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-MailboxFolderStatistics
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxFolderStatistics cmdlet to retrieve information about the folders in a specified mailbox, including the number and size of items in the folder, the folder name and ID, and other information.
@@ -44,138 +38,36 @@ Get-MailboxFolderStatistics [[-Identity] <MailboxOrMailUserIdParameter>] [-Audit
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folder" entry in the Mailbox Permissions topic.
-
-A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder, and ItemsInFolderAndSubfolders.
-
-The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-MailboxStatistics cmdlet. For more information, see Get-MailboxStatistics.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox folder permissions" entry in the Recipients Permissions topic.
-
-A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder, and ItemsInFolderAndSubfolders.
-
-The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-MailboxStatistics cmdlet. For more information, see Get-MailboxStatistics.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder, and ItemsInFolderAndSubfolders.
+A mailbox can have hidden items that are never visible to the user and are only used by applications. The Get-MailboxFolderStatistics cmdlet can return hidden items for the following values: FolderSize, FolderAndSubfolderSize, ItemsInFolder and ItemsInFolderAndSubfolders.
 
 The Get-MailboxFolderStatistics cmdlet shouldn't be confused with the Get-MailboxStatistics cmdlet. For more information, see Get-MailboxStatistics.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-MailboxFolderStatistics -Identity contoso\chris
 ```
 
 This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderStatistics -Identity contoso\chris
-```
-
-This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxFolderStatistics -Identity contoso\chris
-```
-
-This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxFolderStatistics -Identity contoso\chris
-```
-
-This example doesn't specify the FolderScope parameter and retrieves all the information about the user Chris in the Contoso domain.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
 ```
 
 This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
-```
-
-This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
-```
-
-This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxFolderStatistics -Identity Chris -FolderScope Calendar
-```
-
-This example uses the FolderScope parameter to view the statistics for calendar folders for the user Chris.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
-```
-
-This example uses the Archive parameter to view the statistics for Ayla's archive.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
-```
-
-This example uses the Archive switch to view the statistics for Ayla's archive.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
 ```
 
 This example uses the Archiveswitch to view the statistics for Ayla's archive.
 
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-MailboxFolderStatistics -Identity Ayla@contoso.com -Archive
-```
-
-This example uses the Archiveswitch to view the statistics for Ayla's archive.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
-```
-
-This example uses the IncludeAnalysis parameter to view the statistics of Tony's Recoverable Items folder.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
-```
-
-This example uses the IncludeAnalysis switch to view the statistics of Tony's Recoverable Items folder.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
-```
-
-This example uses the IncludeAnalysisswitch to view the statistics of Tony's Recoverable Items folder.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Get-MailboxFolderStatistics -Identity "Tony" -FolderScope RecoverableItems -IncludeAnalysis
 ```
@@ -185,30 +77,6 @@ This example uses the IncludeAnalysisswitch to view the statistics of Tony's Rec
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the identity of the mailbox or mail-enabled user. You can use one of the following values:
-
-- GUID
-
-- ADObjectID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SMTP address
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the mailbox or mail user. You can use any value that uniquely identifies the mailbox or mail user.
 
 For example:
@@ -234,8 +102,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
@@ -264,23 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Archive
-!!! Exchange Server 2010
-
-The Archive parameter specifies whether to return the usage statistics of the archive associated with the mailbox or mail-enabled user. You don't need to provide a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Archive switch specifies whether to return the usage statistics of the archive associated with the mailbox or mail-enabled user. You don't need to specify a value with this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Archiveswitch specifies whether to return the usage statistics of the archive associated with the mailbox or mail user. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -296,19 +146,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -324,100 +164,6 @@ Accept wildcard characters: False
 ```
 
 ### -FolderScope
-!!! Exchange Server 2010
-
-The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
-
-- All
-
-- Calendar
-
-- Contacts
-
-- ConversationHistory
-
-- DeletedItems
-
-- Drafts
-
-- Inbox
-
-- JunkEmail
-
-- Journal
-
-- ManagedCustomFolder
-
-- Notes
-
-- Outbox
-
-- Personal
-
-- RecoverableItems
-
-- RssSubscriptions
-
-- SentItems
-
-- SyncIssues
-
-- Tasks
-
-If the ManagedCustomFolder value is entered, the command returns the output for all managed custom folders. If the RecoverableItems value is entered, the command returns the output for the Recoverable Items folder and the Deletions, Purges, and Versions subfolders.
-
-
-
-!!! Exchange Server 2013
-
-The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
-
-- All
-
-- Calendar
-
-- Contacts
-
-- ConversationHistory
-
-- DeletedItems
-
-- Drafts
-
-- Inbox
-
-- JunkEmail
-
-- Journal
-
-- LegacyArchiveJournals
-
-- ManagedCustomFolder
-
-- NonIpmRoot
-
-- Notes
-
-- Outbox
-
-- Personal
-
-- RecoverableItems
-
-- RssSubscriptions
-
-- SentItems
-
-- SyncIssues
-
-- Tasks
-
-The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FolderScope parameter specifies the scope of the search by folder type. Valid parameter values include:
 
 - All
@@ -464,8 +210,6 @@ The FolderScope parameter specifies the scope of the search by folder type. Vali
 
 The ManagedCustomFolder value returns output for all managed custom folders. The RecoverableItems value returns output for the Recoverable Items folder and the Deletions, DiscoveryHolds, Purges, and Versions subfolders.
 
-
-
 ```yaml
 Type: Calendar | Contacts | DeletedItems | Drafts | Inbox | JunkEmail | Journal | Notes | Outbox | SentItems | Tasks | All | ManagedCustomFolder | RssSubscriptions | SyncIssues | ConversationHistory | Personal | RecoverableItems
 Parameter Sets: (All)
@@ -480,29 +224,9 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeAnalysis
-!!! Exchange Server 2010
-
-The IncludeAnalysis parameter specifies whether to scan all items within a folder and return statistics related to the folder and item size. This parameter should be used for troubleshooting purposes and it may take a long time to complete.
-
-You don't need to provide a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The IncludeAnalysis parameter specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
-
-You should use this switch for troubleshooting purposes, because the command might take a long time to complete.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeAnalysisswitch specifies whether to scan all items within a folder and return statistics related to the folder and item size. You don't need to specify a value with this switch.
 
 You should use this switch for troubleshooting purposes, because the command might take a long time to complete.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -518,23 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeOldestAndNewestItems
-!!! Exchange Server 2010
-
-The IncludeOldestAndNewestItems parameter specifies whether to return the dates of the oldest and newest items in each folder.
-
-
-
-!!! Exchange Server 2013
-
-The IncludeOldestAndNewestItems switch specifies whether to return the dates of the oldest and newest items in each folder. You don't need to specify a value with this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeOldestAndNewestItemsswitch specifies whether to return the dates of the oldest and newest items in each folder. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -615,4 +323,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/212ca564-435e-4af6-8673-5564732bf118.aspx)
-

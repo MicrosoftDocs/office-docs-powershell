@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-User
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-User cmdlet to modify user attributes in Active Directory.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-User cmdlet to modify user attributes in Active Directory.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-User cmdlet to modify user attributes. You can use this cmdlet to modify all objects that have user accounts (for example, user mailboxes, mail users, and user accounts).
@@ -49,188 +35,31 @@ Set-User [-Identity] <UserIdParameter> [-AllowUMCallsFromNonUsers <None | Search
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient Provisioning Permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Set-User cmdlet contains no mail-related properties for mailboxes or mail users. To modify the mail-related properties for a user, you need to use the corresponding cmdlet based on the object type (for example, Set-Mailbox or Set-MailUser).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
 ```
 
 This example sets the display name for user Jill Frank.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
-```
-
-This example sets the display name for user Jill Frank.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
-```
-
-This example sets the display name for user Jill Frank.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
-```
-
-This example sets the display name for user Jill Frank.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-User -Identity Contoso\Jill -DisplayName "Jill Frank"
-```
-
-This example sets the display name for user Jill Frank.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
 ```
 
 This example unlinks the linked mailbox Kweku@fabrikam.com and converts it to a user mailbox by setting the LinkedMasterAccount parameter to $null.
 
-
-Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder, and calendar delegation.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
-```
-
-This example unlinks the linked mailbox Kweku@fabrikam.com and converts it to a user mailbox by setting the LinkedMasterAccount parameter to $null.
-
-
-Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder, and calendar delegation.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
-```
-
-This example unlinks the linked mailbox Kweku@fabrikam.com and converts it to a user mailbox by setting the LinkedMasterAccount parameter to $null.
-
-
-Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder, and calendar delegation.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
-```
-
-This example unlinks the linked mailbox Kweku@fabrikam.com and converts it to a user mailbox by setting the LinkedMasterAccount parameter to $null.
-
-
-Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder, and calendar delegation.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Set-User -Identity Kweku@fabrikam.com -LinkedMasterAccount $null
-```
-
-This example unlinks the linked mailbox Kweku@fabrikam.com and converts it to a user mailbox by setting the LinkedMasterAccount parameter to $null.
-
-
-Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder, and calendar delegation.
+Performing this procedure on a linked mailbox removes all permissions on the mailbox such as Send As, Full Access, folder and calendar delegation.
 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the user.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the user.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Identity parameter specifies the user that you want to modify. You can use any value that uniquely identifies the user.
 
 For example:
@@ -244,8 +73,6 @@ For example:
 - Canonical DN
 
 - GUID
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -277,19 +104,9 @@ Accept wildcard characters: False
 ```
 
 ### -Arbitration
-!!! Exchange Server 2010
-
-The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The Arbitration parameter specifies that the mailbox for which you are executing the command is an arbitration mailbox. Arbitration mailboxes are used for managing approval workflow. For example, an arbitration mailbox is used for handling moderated recipients and distribution group membership approval.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -321,19 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -CertificateSubject
-!!! Exchange Server 2010
-
-The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The CertificateSubject parameter specifies the value of the subject field of the user's digital certificate.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -417,21 +224,11 @@ Accept wildcard characters: False
 ```
 
 ### -CreateDTMFMap
-!!! Exchange Server 2010, Exchange Server 2013
-
-The CreateDTMFMap parameter specifies that a dual-tone multiple-frequency (DTMF) map be created for the user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The CreateDTMFMap parameter specifies whether to create a dual-tone multiple-frequency (DTMF) map for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Valid values are:
 
 - $true: A DTMF map is created for the recipient. This is the default value.
 
 - $false: A DTMF map isn't created for the recipient.
-
-
 
 ```yaml
 Type: $true | $false
@@ -463,17 +260,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisplayName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DisplayName parameter specifies the user's display name.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The DisplayName parameter specifies the display name of the user. The display name is visible in the Exchange admin center and in Active Directory. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -489,19 +276,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -533,17 +310,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirstName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The FirstName parameter specifies the user's given name.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The FirstName parameter specifies the user's first name.
-
-
 
 ```yaml
 Type: String
@@ -575,30 +342,6 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-!!! Exchange Server 2010
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The IgnoreDefaultScope parameter instructs the command to ignore the default recipient scope setting for the Exchange Management Shell session and use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently in the default scope. Using the IgnoreDefaultScope parameter introduces the following restrictions:
-
-- You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
-
-- You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
@@ -608,8 +351,6 @@ Using the IgnoreDefaultScope switch introduces the following restrictions:
 - You can't use the DomainController parameter. The command uses an appropriate global catalog server automatically.
 
 - You can only use the DN for the Identity parameter. Other forms of identification, such as alias or GUID, aren't accepted.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -625,17 +366,7 @@ Accept wildcard characters: False
 ```
 
 ### -Initials
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Initials parameter specifies the user's initials.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Initials parameter specifies the user's middle initials.
-
-
 
 ```yaml
 Type: String
@@ -651,17 +382,7 @@ Accept wildcard characters: False
 ```
 
 ### -LastName
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LastName parameter specifies the user's surname.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The LastName parameter specifies the user's last name.
-
-
 
 ```yaml
 Type: String
@@ -677,30 +398,6 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedCredential
-!!! Exchange Server 2010
-
-The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter.
-
-You can only use the LinkedCredential parameter with a linked user.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkid=142122).
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter.
-
-You can only use the LinkedCredential parameter with a linked user.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The LinkedCredential parameter specifies credentials to use to access the domain controller specified by the LinkedDomainController parameter.
@@ -708,8 +405,6 @@ The LinkedCredential parameter specifies credentials to use to access the domain
 You can only use the LinkedCredential parameter with a linked user.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -725,23 +420,11 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedDomainController
-!!! Exchange Server 2010
-
-The LinkedDomainController parameter specifies the domain controller in the forest where the user account resides, if this user is a linked user. The domain controller in the forest where the user account resides is used to get security information for the account specified by the LinkedMasterAccount parameter.
-
-This parameter is required only if you're connecting a linked user.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The LinkedDomainController parameter specifies the domain controller in the forest where the user account resides, if this user is a linked user. The domain controller in the forest where the user account resides is used to get security information for the account specified by the LinkedMasterAccount parameter.
 
 This parameter is required only if you're connecting a linked user.
-
-
 
 ```yaml
 Type: String
@@ -757,34 +440,6 @@ Accept wildcard characters: False
 ```
 
 ### -LinkedMasterAccount
-!!! Exchange Server 2010
-
-The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this user is a linked user. The master account is the account to which the user links. The master account grants access to the user. You can use one of the following values:
-
-- GUID
-
-- DN
-
-- Domain\\Account
-
-- UPN
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-- $null
-
-If you set this parameter's value to $null, you will unlink the account and convert the linked mailbox into a non-linked user mailbox. The mailbox won't retain the permissions previously set on it such as Send As, full access, folder, and calendar delegation.
-
-This parameter is required only if you're connecting a linked user.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The LinkedMasterAccount parameter specifies the master account in the forest where the user account resides, if this user is a linked user. The master account is the account to which the user links. The master account grants access to the user. You can use one of the following values:
@@ -808,8 +463,6 @@ The LinkedMasterAccount parameter specifies the master account in the forest whe
 If you set this parameter's value to $null, you will unlink the account and convert the linked mailbox into a non-linked user mailbox. The mailbox won't retain the permissions previously set on it such as Send As, full access, folder, and calendar delegation.
 
 This parameter is required only if you're connecting a linked user.
-
-
 
 ```yaml
 Type: UserIdParameter
@@ -857,17 +510,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Name parameter specifies the user's common name.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Name parameter specifies the unique name of the user. The maximum length is 64 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -883,17 +526,7 @@ Accept wildcard characters: False
 ```
 
 ### -Notes
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Notes parameter specifies additional information about the user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -1005,27 +638,7 @@ Accept wildcard characters: False
 ```
 
 ### -PhoneticDisplayName
-!!! Exchange Server 2010
-
-The PhoneticDisplayName parameter specifies a phonetic pronunciation of the DisplayName parameter.
-
-The maximum length of this parameter value is 255 characters. For more information about the PhoneticDisplayName parameter and speech recognition, see Understanding Automatic Speech Recognition Directory Lookups.
-
-
-
-!!! Exchange Server 2013
-
-The PhoneticDisplayName parameter specifies a phonetic pronunciation of the DisplayName parameter.
-
-The maximum length of this parameter value is 255 characters.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The PhoneticDisplayName parameter specifies an alternate spelling of the user's name that's used for text to speech in Unified Messaging (UM) environments. Typically, you use this parameter when the pronunciation and spelling of the user's name don't match. The maximum length is 256 characters. If the value contains spaces, enclose the value in quotation marks (").
-
-
 
 ```yaml
 Type: String
@@ -1073,24 +686,6 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePowerShellEnabled
-!!! Exchange Server 2010
-
-The RemotePowerShellEnabled parameter specifies whether the user can use Remote PowerShell. Remote PowerShell is required to open the Exchange Management Shell or the Exchange Management Console on Mailbox, Hub Transport, Unified Messaging, and Client Access servers. Access to Remote PowerShell is required even if you're trying to open the Shell or the console on the local server.
-
-The valid values are $True and $False. The default value depends on the management role groups assigned to the user. For more information, see Overview of Exchange Management Shell.
-
-
-
-!!! Exchange Server 2013
-
-The RemotePowerShellEnabled parameter specifies whether the user can use remote PowerShell. remote PowerShell is required to open the Exchange Management Shell or the Exchange Administration Center. Access to remote PowerShell is required even if you're trying to open the Shell or the Exchange Administration Center on the local server.
-
-The valid values are $true and $false. The default value depends on the management roles assigned to the user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The RemotePowerShellEnabled parameter specifies whether the user has access to remote PowerShell. Remote PowerShell access is required to open the Exchange Management Shell or the Exchange admin center (EAC), even if you're trying to open the Exchange Management Shell or the EAC on the local Mailbox server. Valid values are:
 
 - $true: The user has access to remote PowerShell.
@@ -1098,8 +693,6 @@ The RemotePowerShellEnabled parameter specifies whether the user has access to r
 - $false: The user doesn't have access to remote PowerShell.
 
 The default value depends on the management roles that are assigned to the user.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1115,21 +708,11 @@ Accept wildcard characters: False
 ```
 
 ### -ResetPasswordOnNextLogon
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ResetPasswordOnNextLogon parameter specifies whether the user's password must be reset the next time the user logs on. The two possible values for this parameter are $true or $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The ResetPasswordOnNextLogon parameter specifies whether the user must change their password the next time they log on. Valid values are:
 
 - $true: The user is required to change their password the next time they log on.
 
 - $false: The user isn't required to change their password the next time they log on. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -1145,27 +728,9 @@ Accept wildcard characters: False
 ```
 
 ### -SamAccountName
-!!! Exchange Server 2010
-
-The SamAccountName parameter specifies the logon name used to support clients and servers running older versions of the operating system, such as Microsoft Windows NT 4.0, Windows 98, Windows 95, and LAN Manager. This attribute must contain fewer than 20 characters.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The SamAccountName parameter specifies the logon name used to support clients and servers running older versions of the operating system, such as MicrosoftWindows NT 4.0, Windows 98, Windows 95, and LAN Manager. This attribute must contain fewer than 20 characters.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The SamAccountName parameter (also known as the pre-Windows 2000 user account or group name) specifies an object identifier that's compatible with older versions of Microsoft Windows client and server operating systems. The value can contain letters, numbers, spaces, periods (.), and the characters !, #, $, %, ^, &, -, \_, {, }, and ~. The last character can't be a period. Unicode characters are allowed, but accented characters may generate collisions (for example, o and ö match). The maximum length is 20 characters.
-
-
 
 ```yaml
 Type: String
@@ -1253,19 +818,9 @@ Accept wildcard characters: False
 ```
 
 ### -TelephoneAssistant
-!!! Exchange Server 2010
-
-The TelephoneAssistant parameter specifies the telephone number of the user's assistant.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The TelephoneAssistant parameter specifies the telephone number of the user's assistant.
-
-
 
 ```yaml
 Type: String
@@ -1297,19 +852,9 @@ Accept wildcard characters: False
 ```
 
 ### -UMCallingLineIds
-!!! Exchange Server 2010
-
-The UMCallingLineIds parameter specifies telephone numbers or extensions that can be mapped to a Unified Messaging (UM)-enabled user. You can specify more than one telephone number for each user, separated by a comma. This parameter accepts digits less than 128 characters in length and may include an optional plus sign (+) preceding the numbers. Each UM-enabled user must have a unique UMCallingLineIds parameter value.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The UMCallingLineIds parameter specifies telephone numbers or extensions that can be mapped to a Unified Messaging (UM)-enabled user. You can specify more than one telephone number for each user, separated by a comma. This parameter accepts digits less than 128 characters in length and may include an optional plus sign (+) preceding the numbers. Each UM-enabled user must have a unique UMCallingLineIds parameter value.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -1325,14 +870,6 @@ Accept wildcard characters: False
 ```
 
 ### -UMDtmfMap
-!!! Exchange Server 2010, Exchange Server 2013
-
-The UMDtmfMap parameter specifies whether you want to create a user-defined DTMF map for the UM-enabled user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The UMDtmfMap parameter specifies the dual-tone multiple-frequency (DTMF) map values for the recipient. This allows the recipient to be identified by using a telephone keypad in Unified Messaging (UM) environments. Typically, these DTMF values are automatically created and updated, but you can use this parameter to make changes manually. This parameter uses the following syntax:
 
 - emailAddress:\<integers\>
@@ -1349,8 +886,6 @@ To add or remove values without affecting other existing entries, use the follow
 
 If you use this syntax, you don't need to specify all of the DTMF map values, and you can specify multiple DTMF map values. For example, you can use @{Add="emailAddress:\<integers1\>","emailAddress:\<intgers2\>} to add two new values for emailAddress without affecting the existing lastNameFirstName and firstNameLastName values.
 
-
-
 ```yaml
 Type: MultiValuedProperty
 Parameter Sets: (All)
@@ -1365,27 +900,9 @@ Accept wildcard characters: False
 ```
 
 ### -UserPrincipalName
-!!! Exchange Server 2010
-
-The UserPrincipalName parameter specifies the UPN of the user.
-
-
-
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The UserPrincipalName parameter specifies the UPN of the user.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The UserPrincipalName parameter specifies the logon name for the user account. The UPN uses an email address format \<username\>@\<domain\>. Typically, the \<domain\> value is the domain where the user account resides.
-
-
 
 ```yaml
 Type: String
@@ -1433,20 +950,6 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsEmailAddress
-!!! Exchange Server 2010
-
-The WindowsEmailAddress parameter specifies the e-mail address of the recipient.
-
-
-
-!!! Exchange Server 2013
-
-The WindowsEmailAddress parameter specifies the email address of the recipient.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The WindowsEmailAddress parameter specifies the Windows email address for this recipient. This is a common Active Directory attribute that's present in all environments, including environments without Exchange. Using the WindowsEmailAddress parameter on a recipient has one of the following results:
 
 - In on-premises environments where the recipient is subject to email address policies (the EmailAddressPolicyEnabled property is set to the value True for the recipient), the WindowsEmailAddress parameter has no effect on the WindowsEmailAddress property or the primary email address value.
@@ -1454,8 +957,6 @@ The WindowsEmailAddress parameter specifies the Windows email address for this r
 - In cloud environments or in on-premises environments where the recipient isn't subject to email address policies (the EmailAddressPolicyEnabled property is set to the value False for the recipient), the WindowsEmailAddress parameter updates the WindowsEmailAddress property and the primary email address to the same value.
 
 The WindowsEmailAddress property is visible for the recipient in Active Directory Users and Computers in the E-mail attribute. The attribute common name is E-mail-Addresses, and the Ldap-Display-Name is mail. If you modify this attribute in Active Directory, the recipient's primary email address is not updated to the same value.
-
-
 
 ```yaml
 Type: SmtpAddress
@@ -1471,11 +972,11 @@ Accept wildcard characters: False
 ```
 
 ### -GeoCoordinates
-The GeoCoordinates parameter specifies the user's physical location in latitude, longitude, and altitude coordinates. Use this parameter to specify the global position of physical resources, such as conference rooms. You have to specify one of the following sets of coordinates; use semicolons to separate the values.
+The GeoCoordinates parameter specifies the user's physical location in latitude, longitude and altitude coordinates. Use this parameter to specify the global position of physical resources, such as conference rooms. You have to specify one of the following sets of coordinates; use semicolons to separate the values.
 
 - Latitude and longitude; for example, "47.644125;-122.122411"
 
-- Latitude, longitude, and altitude; for example, "47.644125;-122.122411;161.432"
+- Latitude, longitude and altitude; for example, "47.644125;-122.122411;161.432"
 
 ```yaml
 Type: GeoCoordinates
@@ -1491,19 +992,9 @@ Accept wildcard characters: False
 ```
 
 ### -PublicFolder
-!!! Exchange Server 2013
-
-The PublicFolder parameter specifies that the user for which you're executing the command is a public folder mailbox. Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders. This parameter is required to change the settings for a public folder mailbox.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The PublicFolder switch specifies that the user is a public folder mailbox. This switch is required to only when you change the settings of public folder mailboxes. You don't need to specify a value with this switch.
 
 Public folder mailboxes are specially designed mailboxes to store the hierarchy and content of public folders.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -1586,4 +1077,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/56d7fc86-2ac3-4e28-bc7a-761e91ac655a.aspx)
-

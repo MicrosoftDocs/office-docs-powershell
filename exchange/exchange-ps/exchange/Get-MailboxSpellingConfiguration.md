@@ -6,20 +6,6 @@ schema: 2.0.0
 # Get-MailboxSpellingConfiguration
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-MailboxSpellingConfiguration cmdlet to retrieve the Microsoft Office Outlook Web App spell checking settings of a specified user. For example, users can set their dictionary language and configure the spelling checker to ignore mixed digits and words in all uppercase.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-MailboxSpellingConfiguration cmdlet to retrieve the Microsoft Office Outlook Web App spelling checker settings of a specified user. For example, users can set their dictionary language and configure the spelling checker to ignore mixed digits and words in all uppercase.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MailboxSpellingConfiguration cmdlet to retrieve the Outlook on the web spelling checker settings of a specified user. For example, users can set their dictionary language and configure the spelling checker to ignore mixed digits and words in all uppercase.
@@ -34,36 +20,6 @@ Get-MailboxSpellingConfiguration [-Identity] <MailboxIdParameter> [-DomainContro
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-MailboxSpellingConfiguration cmdlet is primarily used to populate the spell checking settings for end users in Outlook Web App. Administrators can also view users' settings by running this cmdlet in the Exchange Management Shell. The following spell checking settings are retrieved by the cmdlet for the specified mailbox:
-
-- Identity This setting specifies the mailbox identity.
-
-- CheckBeforeSend This setting specifies whether Outlook Web App checks the spelling of every message when the user clicks Send in the new message form.
-
-- DictionaryLanguage This setting specifies the dictionary language used when the spelling checker checks the spelling in messages.
-
-- IgnoreMixedDigits This setting specifies whether the spelling checker ignores words that contain numbers.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folder administrative permissions" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-MailboxSpellingConfiguration cmdlet is primarily used to populate the spelling checker settings for end users in Outlook Web App. Administrators can also view users' settings by running this cmdlet in the Exchange Management Shell. The following spelling checker settings are retrieved by the cmdlet for the specified mailbox:
-
-- Identity This setting specifies the mailbox identity.
-
-- CheckBeforeSend This setting specifies whether Outlook Web App checks the spelling of every message when the user clicks Send in the new message form.
-
-- DictionaryLanguage This setting specifies the dictionary language used when the spelling checker checks the spelling in messages.
-
-- IgnoreMixedDigits This setting specifies whether the spelling checker ignores words that contain numbers.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Spelling configuration" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Get-MailboxSpellingConfiguration cmdlet is primarily used to populate the spelling checker settings for end users in Outlook on the web. Administrators can also view users' settings by running this cmdlet. The following spelling checker settings are retrieved by the cmdlet for the specified mailbox:
 
 - Identity: This setting specifies the mailbox identity.
@@ -78,84 +34,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxSpellingConfiguration -Identity Tony
-```
-
-This example retrieves the Outlook Web App options of user Tony.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxSpellingConfiguration -Identity Tony
-```
-
-This example retrieves the Outlook Web App options of user Tony.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MailboxSpellingConfiguration -Identity Tony
 ```
 
 This example retrieves the Outlook on the web options of user Tony.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MailboxSpellingConfiguration -Identity Tony
-```
-
-This example retrieves the Outlook on the web options of user Tony.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
-```
-
-This example returns Outlook Web App spell checking options set on Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
-```
-
-This example returns the Outlook Web App spelling checker options for Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
 ```
 
 This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-MailboxSpellingConfiguration -Identity Tony -DomainController DC1
-```
-
-This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying domain controller DC1 to get the information from Active Directory.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxSpellingConfiguration -Identity contoso\tony
-```
-
-This example returns the Outlook Web App spell checking options for Tony's mailbox by specifying the identity of the mailbox in the format domain\\account.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxSpellingConfiguration -Identity contoso\tony
-```
-
-This example returns the Outlook Web App spelling checker options for Tony's mailbox by specifying the identity of the mailbox in the format domain\\account.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxSpellingConfiguration -Identity contoso\tony
-```
-
-This example returns the Outlook on the web spelling checker options for Tony's mailbox by specifying the identity of the mailbox in the format domain\\account.
-
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Get-MailboxSpellingConfiguration -Identity contoso\tony
 ```
@@ -165,28 +58,6 @@ This example returns the Outlook on the web spelling checker options for Tony's 
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the mailbox. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -213,8 +84,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -229,19 +98,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -274,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7695cde3-71d2-4523-8300-ada77cb8e7d4.aspx)
-

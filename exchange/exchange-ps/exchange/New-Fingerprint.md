@@ -19,35 +19,13 @@ New-Fingerprint [[-FileData] <Byte[]>] -Description <String> [-Confirm] [-WhatIf
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Classification rule packages are used by data loss prevention (DLP) to detect sensitive content in messages.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
-```
-
-This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DataClassification cmdlet in the same PowerShell session.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-$Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
-```
-
-This example creates a new document fingerprint based on the file C:\\My Documents\\Contoso Patent Template.docx. You store the new fingerprint as a variable so you can use it with the New-DataClassification cmdlet in the same PowerShell session.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 $Patent_Template = Get-Content "C:\My Documents\Contoso Patent Template.docx" -Encoding byte; $Patent_Fingerprint = New-Fingerprint -FileData $Patent_Template -Description "Contoso Patent Template"
 ```
@@ -144,4 +122,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b579682a-9922-4db0-b524-bcea0d2cef9b.aspx)
-

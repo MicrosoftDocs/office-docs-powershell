@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-PowerShellVirtualDirectory
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-PowerShellVirtualDirectory cmdlet to change an existing Windows PowerShell virtual directory in Internet Information Services (IIS).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Set-PowerShellVirtualDirectory cmdlet to change an existing Windows PowerShell virtual directory in Internet Information Services (IIS).
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Set-PowerShellVirtualDirectory cmdlet to modify existing Windows PowerShell virtual directoriesthat are use in Internet Information Services (IIS) on Exchange servers.
@@ -32,46 +18,17 @@ For information about the parameter sets in the Syntax section below, see Exchan
 Set-PowerShellVirtualDirectory [-Identity] <VirtualDirectoryIdParameter>
  [-BasicAuthentication <$true | $false>] [-CertificateAuthentication <$true | $false>] [-Confirm]
  [-DomainController <Fqdn>] [-ExternalUrl <Uri>] [-InternalUrl <Uri>]
- [-LiveIdBasicAuthentication <$true | $false>] [-LiveIdSpNegoAuthentication <$true | $false>]
  [-RequireSSL <$true | $false>] [-WhatIf] [-WindowsAuthentication <$true | $false>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Although it's possible to modify a Windows PowerShell virtual directory, we recommend that you only do so at the request of Microsoft support.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "PowerShell virtual directories" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-Although it's possible to modify a Windows PowerShell virtual directory, we recommend that you only do so at the request of Microsoft Customer Service and Support.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "PowerShell virtual directories" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Although it's possible to modify a Windows PowerShell virtual directory, we recommend that you only do so at the request of Microsoft Customer Service and Support.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
-```
-
-This example modifies the external URL of the Contoso Windows PowerShell virtual directory.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
-```
-
-This example modifies the external URL of the Contoso Windows PowerShell virtual directory.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-PowerShellVirtualDirectory "Contoso (default Web site)" -ExternalUrl "http://www.contoso.com/powershell"
 ```
@@ -81,17 +38,7 @@ This example modifies the external URL of the Contoso Windows PowerShell virtual
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Identity parameter specifies the name of the Windows PowerShell virtual directory that you want to modify.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Windows PowerShell virtual directory that you want to modify.
-
-
 
 ```yaml
 Type: VirtualDirectoryIdParameter
@@ -107,21 +54,11 @@ Accept wildcard characters: False
 ```
 
 ### -BasicAuthentication
-!!! Exchange Server 2010, Exchange Server 2013
-
-The BasicAuthentication parameter specifies whether Basic authentication is enabled on the Windows PowerShell virtual directory. The valid values are $true and $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016
-
 The BasicAuthentication parameter specifies whether Basic authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Basic authentication is enabled. This is the default value.
 
 - $false: Basic authentication is disabled.
-
-
 
 ```yaml
 Type: $true | $false
@@ -189,17 +126,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalUrl
-!!! Exchange Server 2010, Exchange Server 2013
-
-The ExternalUrl parameter specifies the external URL that the Windows PowerShell virtual directory points to.
-
-
-
-!!! Exchange Server 2016
-
 The ExternalURL parameter specifies the URL that's used to connect to the virtual directory from outside the firewall.
-
-
 
 ```yaml
 Type: Uri
@@ -215,55 +142,13 @@ Accept wildcard characters: False
 ```
 
 ### -InternalUrl
-!!! Exchange Server 2010, Exchange Server 2013
-
-The InternalUrl parameter specifies the internal URL that the Windows PowerShell virtual directory points to.
-
-
-
-!!! Exchange Server 2016
-
 The InternalURL parameter specifies the URL that's used to connect to the virtual directory from inside the firewall.
-
-
 
 ```yaml
 Type: Uri
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LiveIdBasicAuthentication
-The LiveIdBasicAuthentication parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -LiveIdSpNegoAuthentication
-The LiveIdSpNegoAuthentication parameter is reserved for Microsoft internal use only.
-
-```yaml
-Type: $true | $false
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -305,20 +190,11 @@ Accept wildcard characters: False
 ```
 
 ### -WindowsAuthentication
-!!! Exchange Server 2010, Exchange Server 2013
-
-The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the Windows PowerShell virtual directory. The valid values are $true and $false. The default value is $true.
-
-
-
-!!! Exchange Server 2016
-
 The WindowsAuthentication parameter specifies whether Integrated Windows authentication is enabled on the virtual directory. Valid values are:
 
 - $true: Integrated Windows authentication is enabled. This is the default value.
 
 - $false: Integrated Windows authentication is disabled.
-
 
 
 ```yaml
@@ -352,4 +228,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8546bd54-892f-422e-9fc9-2c4293e2fd01.aspx)
-

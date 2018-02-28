@@ -20,52 +20,18 @@ Get-PublicFolderMailboxDiagnostics [-Identity] <MailboxIdParameter> [-Confirm] [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-PublicFolderMailboxDiagnostics -Identity "Customer Escalations"
 ```
 
 This example returns the diagnostic information for the public folder mailbox Customer Escalations.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMailboxDiagnostics -Identity "Customer Escalations"
-```
-
-This example returns the diagnostic information for the public folder mailbox Customer Escalations.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-PublicFolderMailboxDiagnostics -Identity "Customer Escalations"
-```
-
-This example returns the diagnostic information for the public folder mailbox Customer Escalations.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-PublicFolderMailboxDiagnostics -Identity "Sales Forecasts" | Export-CSV C:\Diagnostics\SalesForecasts.csv
-```
-
-This example returns the diagnostic information for the public folder mailbox Sales Forecasts and exports the report to a CSV file.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMailboxDiagnostics -Identity "Sales Forecasts" | Export-CSV C:\Diagnostics\SalesForecasts.csv
-```
-
-This example returns the diagnostic information for the public folder mailbox Sales Forecasts and exports the report to a CSV file.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-PublicFolderMailboxDiagnostics -Identity "Sales Forecasts" | Export-CSV C:\Diagnostics\SalesForecasts.csv
 ```
@@ -145,34 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeHierarchyInfo
-!!! Exchange Server 2013
-
-The IncludeHierarchyInfo switch specifies whether to include folder hierarchy information in the results. This includes the following information:
-
-- TotalFolderCount The total number of public folders in the specified public folder mailbox.
-
-- MaxFolderChildCount The largest number of child folders in the public folder hierarchy.
-
-- HierarchyDepth The depth of the public folder hierarchy. The root folder is 0.
-
-- CalendarFolderCount The number of calendar public folders.
-
-- ContactFolderCount The number of calendar public folders.
-
-- MailPublicFolderCount The number of mail-enabled public folders.
-
-- NoteFolderCount The number of note public folders.
-
-- StickyNoteFolderCount The number of sticky note public folders.
-
-- TaskFolderCount The number of task public folders.
-
-- OtherFolderCount The number of public folders that don't match any of the previously defined public folder types.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IncludeHierarchyInfo switch specifies whether to include folder hierarchy information in the results. This includes the following information:
 
 - TotalFolderCount: The total number of public folders in the specified public folder mailbox.
@@ -194,8 +132,6 @@ The IncludeHierarchyInfo switch specifies whether to include folder hierarchy in
 - TaskFolderCount: The number of task public folders.
 
 - OtherFolderCount: The number of public folders that don't match any of the previously defined public folder types.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -244,4 +180,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e780d809-a408-4799-8175-46946835bee4.aspx)
-

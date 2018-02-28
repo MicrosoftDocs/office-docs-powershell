@@ -35,32 +35,15 @@ Set-AuthServer [-Identity] <AuthServerIdParameter> [-Confirm] [-DomainController
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Exchange 2013, partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange. You can use the New-AuthServer cmdlet to create a trusted authorization server object in Exchange 2013, which allows it to trust tokens issued by the authorization server.
-
-Use the Set-AuthServer cmdlet to enable or disable the authorization server, change the AuthMetadataUrl parameter, or refresh authorization metadata.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange. You can use the New-AuthServer cmdlet to create a trusted authorization server object in Exchange, which allows it to trust tokens issued by the authorization server.
 
-Use the Set-AuthServer cmdlet to enable or disable the authorization server, change the AuthMetadataUrl parameter, or refresh authorization metadata.
+Use the Set-AuthServer cmdlet to enable or disable the authorization server, change the AuthMetadataUrl parameter or refresh authorization metadata.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-AuthServer ACS -Enabled $false
-```
-
-This command disables the authorization server ACS.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Set-AuthServer ACS -Enabled $false
 ```
@@ -86,17 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AuthMetadataUrl
-!!! Exchange Server 2013
-
-The AuthMetadataUrl parameter specifies the URL of the authorization server. This can be the AuthMetadataUrl of your Microsoft Exchange Online organization.
-
-
-
-!!! Exchange Server 2016
-
 The AuthMetadataUrl parameter specifies the URL of the authorization server. This can be the AuthMetadataUrl of your Exchange Online organization.
-
-
 
 ```yaml
 Type: String
@@ -164,7 +137,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefaultAuthorizationEndpoint
-The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. This server's authorization URL is advertised to calling partner applications, and applications need to get their OAuth access tokens from this authorization server.
+The IsDefaultAuthorizationEndpoint parameter specifies whether this server is the default authorization endpoint. This server's authorization URL is advertised to calling partner applications and applications need to get their OAuth access tokens from this authorization server.
 
 Valid input for this parameter is $true or $false. The default value is $false.
 
@@ -263,4 +236,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0f0c328e-0316-4040-a54a-5efe2071edb5.aspx)
-

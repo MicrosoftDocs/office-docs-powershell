@@ -33,26 +33,6 @@ Get-MailboxRepairRequest [-Mailbox] <MailboxIdParameter> [-Archive] [-DomainCont
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-MailboxRepairRequest cmdlet displays information about mailbox repair requests. This information includes:
-
-- The mailbox GUID.
-
-- The type of corruption that was specified when the mailbox repair request was created.
-
-- The progress of the repair request in percentage of completion.
-
-- The number of corruptions detected and fixed.
-
-- The status of the repair request; values are Queued, Running, Succeeded and Failed.
-
-- The date and time when the mailbox repair request was created and when it finished.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox repair request" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-MailboxRepairRequest cmdlet displays information about mailbox repair requests. This information includes:
 
 - The mailbox GUID.
@@ -71,42 +51,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MailboxDatabase | Get-MailboxRepairRequest | Format-Table Identity; Get-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5\374289de-b899-42dc-8391-4f8579935f1f | Format-List
 ```
 
 This example displays the value of the Identity property for all mailbox repair requests for all mailbox servers in your organization; the second command displays information about a specific mailbox repair request that was returned by the first command.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxDatabase | Get-MailboxRepairRequest | Format-Table Identity; Get-MailboxRepairRequest -Identity 5b8ca3fa-8227-427f-af04-9b4f206d611f\335c2b06-321d-4e73-b2f7-3dc2b02d0df5\374289de-b899-42dc-8391-4f8579935f1f | Format-List
-```
-
-This example displays the value of the Identity property for all mailbox repair requests for all mailbox servers in your organization; the second command displays information about a specific mailbox repair request that was returned by the first command.
-
-### Example 2 -------------------------- (Exchange Server 2013)
+### Example 2
 ```
 Get-MailboxRepairRequest -Mailbox "Ann Beebe" | Format-List
 ```
 
 This example displays repair request information for the mailbox of Ann Beebe using the Mailbox parameter.
 
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxRepairRequest -Mailbox "Ann Beebe" | Format-List
-```
-
-This example displays repair request information for the mailbox of Ann Beebe using the Mailbox parameter.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-$MailboxGuid = Get-MailboxStatistics annb; Get-MailboxRepairRequest -Database $MailboxGuid.Database -StoreMailbox $MailboxGuid.MailboxGuid | Format-List Identity
-```
-
-This example uses the Database and StoreMailbox parameters to display the Identity property of the repair request for the mailbox of Ann Beebe.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 $MailboxGuid = Get-MailboxStatistics annb; Get-MailboxRepairRequest -Database $MailboxGuid.Database -StoreMailbox $MailboxGuid.MailboxGuid | Format-List Identity
 ```
@@ -138,7 +97,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID, and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>.
+The Identity parameter specifies the mailbox repair request to display information about. Mailbox repair requests are identified by a complex GUID that is created when a new mailbox repair request is created. This GUID consists of a database ID, a Request ID and a job ID. The format is \<DatabaseGuid\>\\\<RequestGuid\>\\\<JobGuid\>.
 
 ```yaml
 Type: StoreIntegrityCheckJobIdParameter
@@ -271,4 +230,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1b9d3047-8e4c-4847-af01-ce7513b7aa7b.aspx)
-

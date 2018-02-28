@@ -6,20 +6,6 @@ schema: 2.0.0
 # Set-RoleAssignmentPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-RoleAssignmentPolicy cmdlet to modify an existing management role assignment policy on a server running Microsoft Exchange Server 2010.
-
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Set-RoleAssignmentPolicy cmdlet to modify an existing management role assignment policy on a server running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-RoleAssignmentPolicy cmdlet to modify existing management role assignment policies in your organization.
@@ -34,24 +20,6 @@ Set-RoleAssignmentPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm] [-Des
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Set-RoleAssignmentPolicy cmdlet to change the name of an assignment policy or to set the assignment policy as the default assignment policy.
-
-For more information about assignment policies, see Understanding Management Role Assignment Policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Assignment policies" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Set-RoleAssignmentPolicy cmdlet to change the name of an assignment policy or to set the assignment policy as the default assignment policy.
-
-For more information about assignment policies, see Understanding management role assignment policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Assignment policies" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can use the Set-RoleAssignmentPolicy cmdlet to change the name of an assignment policy or to set the assignment policy as the default assignment policy.
 
 For more information about assignment policies, see Understanding management role assignment policies.
@@ -60,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Set-RoleAssignmentPolicy "End User Policy" -IsDefault
-```
-
-This example changes the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2010 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with the IsDefault switch.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-RoleAssignmentPolicy "End User Policy" -IsDefault
-```
-
-This example changes the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2013 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with the IsDefault switch.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-RoleAssignmentPolicy "End User Policy" -IsDefault
-```
-
-This example changes the default assignment policy. New mailboxes or mailboxes moved from previous versions of Exchange are assigned the default assignment policy when an explicit assignment policy isn't provided.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-RoleAssignmentPolicy "End User Policy" -IsDefault
 ```
@@ -143,21 +90,11 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -173,25 +110,9 @@ Accept wildcard characters: False
 ```
 
 ### -IsDefault
-!!! Exchange Server 2010
-
-The IsDefault switch makes the assignment policy the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2010 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with this switch.
-
-
-
-!!! Exchange Server 2013
-
-The IsDefault switch makes the assignment policy the default assignment policy. New mailboxes or mailboxes moved to an Exchange 2013 server are assigned the default assignment policy when an explicit assignment policy isn't provided. You don't have to specify a value with this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The IsDefault switch makes the assignment policy the default assignment policy. You don't have to specify a value with this switch.
 
 New mailboxes or mailboxes moved from previous versions of Exchange are assigned the default assignment policy when an explicit assignment policy isn't provided.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -256,4 +177,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1c7a9d2a-db55-4bfb-82d2-60c859b8646c.aspx)
-

@@ -1,6 +1,6 @@
-#SharePoint Patterns and Practices (PnP) Cmdlets
+# PnP PowerShell overview
 
-SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises. 
+SharePoint Patterns and Practices (PnP) contains a library of PowerShell commands (PnP PowerShell) that allows you to perform complex provisioning and artifact management actions towards SharePoint. The commands use CSOM and can work against both SharePoint Online as SharePoint On-Premises.
 
 ![SharePoint Patterns and Practices](https://devofficecdn.azureedge.net/media/Default/PnP/sppnp.png)
 
@@ -11,7 +11,7 @@ _**Applies to:** SharePoint Online | SharePoint 2016 | SharePoint 2013_
 There are 3 ways to install the cmdlets. We recommend, where possible, to install them from the [PowerShell Gallery](https://www.powershellgallery.com). Alternatively you can download the setup files or run a PowerShell script to download the PowerShellGet module and install the cmdlets subsequently.
 
 ### PowerShell Gallery ###
-If you main OS is Windows 10, of if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
+If you main OS is Windows 10, or if you have [PowerShellGet](https://github.com/powershell/powershellget) installed, you can run the following commands to install the PowerShell cmdlets:
 
 |**SharePoint Version**|**Command to install**|
 |------------------|------------------|
@@ -25,7 +25,7 @@ If you main OS is Windows 10, of if you have [PowerShellGet](https://github.com/
 In order to install the cmdlets when you get this error specify the -SkipPublisherCheck switch with the Install-Module cmdlet, e.g. ```Install-Module SharePointPnPPowerShellOnline -SkipPublisherCheck -AllowClobber```
 
 ### Setup files ##
-You can download setup files from the [releases](https://github.com/SharePoint/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
+You can download setup files from the [releases](https://github.com/sharepoint/pnp-powershell/releases) section of the PnP PowerShell repository. These files will up be updated on a monthly basis. Run the install and restart any open instances of PowerShell to use the cmdlets.
 
 ### Installation script ##
 This is an alternative for installation on machines that have at least PowerShell v3 installed. You can find the version of PowerShell  by opening PowerShell and running ```$PSVersionTable.PSVersion```. The value for ```Major``` should be above 3.
@@ -33,7 +33,7 @@ This is an alternative for installation on machines that have at least PowerShel
 To install the cmdlets you can run the below command which will install PowerShell Package Management and then install the PowerShell Modules from the PowerShell Gallery.
 
 ```powershell
-Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/OfficeDev/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
+Invoke-Expression (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/sharepoint/PnP-PowerShell/master/Samples/Modules.Install/Install-SharePointPnPPowerShell.ps1')
 ```
 
 ## Updating ##
@@ -82,7 +82,15 @@ See this [wiki page](https://github.com/SharePoint/PnP-PowerShell/wiki/How-to-us
 ### Apps 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance in the site|All
+**[Add&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Add-PnPApp.md)** |Add/uploads an available app to the app catalog|SharePoint Online
+**[Get&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Get-PnPApp.md)** |Returns the available apps from the app catalog|SharePoint Online
+**[Install&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Install-PnPApp.md)** |Installs an available app from the app catalog|SharePoint Online
+**[Publish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Publish-PnPApp.md)** |Publishes/Deploys/Trusts an available app in the app catalog|SharePoint Online
+**[Remove&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Remove-PnPApp.md)** |Removes an app from the app catalog|SharePoint Online
+**[Uninstall&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPApp.md)** |Uninstalls an available add-in from the site|All
+**[Unpublish&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Unpublish-PnPApp.md)** |Unpublishes/retracts an available add-in from the app catalog|SharePoint Online
+**[Update&#8209;PnPApp](../../sharepoint-ps/sharepoint-pnp/Update-PnPApp.md)** |Updates an available app from the app catalog|SharePoint Online
+**[Get&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppInstance.md)** |Returns a SharePoint AddIn Instance|All
 **[Uninstall&#8209;PnPAppInstance](../../sharepoint-ps/sharepoint-pnp/Uninstall-PnPAppInstance.md)** |Removes an app from a site|All
 **[Import&#8209;PnPAppPackage](../../sharepoint-ps/sharepoint-pnp/Import-PnPAppPackage.md)** |Adds a SharePoint Addin to a site|All
 
@@ -90,39 +98,40 @@ Cmdlet|Description|Platform
 ### Base Cmdlets 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPAppAuthAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppAuthAccessToken.md)** |Returns the access token from the current client context (In App authentication mode only)|All
-**[Get&#8209;PnPAuthenticationRealm](../../sharepoint-ps/sharepoint-pnp/Get-PnPAuthenticationRealm.md)** |Gets the authentication realm for the current web|All
-**[Get&#8209;PnPAzureADManifestKeyCredentials](../../sharepoint-ps/sharepoint-pnp/Get-PnPAzureADManifestKeyCredentials.md)** |Creates the JSON snippet that is required for the manifest JSON file for Azure WebApplication / WebAPI apps|All
-**[Get&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Get-PnPContext.md)** |Returns a Client Side Object Model context|All
-**[Set&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Set-PnPContext.md)** |Sets the Client Context to use by the cmdlets|All
-**[Get&#8209;PnPHealthScore](../../sharepoint-ps/sharepoint-pnp/Get-PnPHealthScore.md)** |Retrieves the current health score value of the server|All
-**[Connect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Connect-PnPOnline.md)** |Connects to a SharePoint site and creates a context that is required for the other PnP Cmdlets|All
+**[Get&#8209;PnPAppAuthAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAppAuthAccessToken.md)** |Returns the access token|All
+**[Get&#8209;PnPAuthenticationRealm](../../sharepoint-ps/sharepoint-pnp/Get-PnPAuthenticationRealm.md)** |Returns the authentication realm|All
+**[Get&#8209;PnPAzureADManifestKeyCredentials](../../sharepoint-ps/sharepoint-pnp/Get-PnPAzureADManifestKeyCredentials.md)** |Return the JSON Manifest snippet for Azure Apps|All
+**[Get&#8209;PnPConnection](../../sharepoint-ps/sharepoint-pnp/Get-PnPConnection.md)** |Returns the current context|All
+**[Get&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Get-PnPContext.md)** |Returns the current context|All
+**[Set&#8209;PnPContext](../../sharepoint-ps/sharepoint-pnp/Set-PnPContext.md)** |Set the ClientContext|All
+**[Get&#8209;PnPHealthScore](../../sharepoint-ps/sharepoint-pnp/Get-PnPHealthScore.md)** |Retrieves the healthscore|All
+**[Connect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Connect-PnPOnline.md)** |Connect to a SharePoint site|All
 **[Disconnect&#8209;PnPOnline](../../sharepoint-ps/sharepoint-pnp/Disconnect-PnPOnline.md)** |Disconnects the context|All
-**[Get&#8209;PnPProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPProperty.md)** |Will populate properties of an object and optionally, if needed, load the value from the server. If one property is specified its value will be returned to the output.|All
-**[Execute&#8209;PnPQuery](../../sharepoint-ps/sharepoint-pnp/Execute-PnPQuery.md)** |Executes any queued actions / changes on the SharePoint Client Side Object Model Context|All
-**[Get&#8209;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Get-PnPStoredCredential.md)** |Returns a stored credential from the Windows Credential Manager|All
-**[Set&#8209;PnPTraceLog](../../sharepoint-ps/sharepoint-pnp/Set-PnPTraceLog.md)** |Defines if tracing should be turned on. PnP Core, which is the foundation of these cmdlets uses the standard Trace functionality of .NET. With this cmdlet you can turn capturing of this trace to a log file on or off.|All
+**[Get&#8209;PnPProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPProperty.md)** |Returns a previously not loaded property of a ClientObject|All
+**[Execute&#8209;PnPQuery](../../sharepoint-ps/sharepoint-pnp/Execute-PnPQuery.md)** |Execute the current queued actions|All
+**[Get&#8209;PnPStoredCredential](../../sharepoint-ps/sharepoint-pnp/Get-PnPStoredCredential.md)** |Get a credential|All
+**[Set&#8209;PnPTraceLog](../../sharepoint-ps/sharepoint-pnp/Set-PnPTraceLog.md)** |Turn log tracing on or off|All
 
 
 ### Branding 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Add&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Add-PnPCustomAction.md)** |Adds a custom action to a web|All
-**[Get&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Get-PnPCustomAction.md)** |Returns all or a specific custom action(s)|All
+**[Add&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Add-PnPCustomAction.md)** |Adds a custom action|All
+**[Get&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Get-PnPCustomAction.md)** |Return user custom actions|All
 **[Remove&#8209;PnPCustomAction](../../sharepoint-ps/sharepoint-pnp/Remove-PnPCustomAction.md)** |Removes a custom action|All
-**[Get&#8209;PnPHomePage](../../sharepoint-ps/sharepoint-pnp/Get-PnPHomePage.md)** |Returns the URL to the home page|All
+**[Get&#8209;PnPHomePage](../../sharepoint-ps/sharepoint-pnp/Get-PnPHomePage.md)** |Return the homepage|All
 **[Set&#8209;PnPHomePage](../../sharepoint-ps/sharepoint-pnp/Set-PnPHomePage.md)** |Sets the home page of the current web.|All
 **[Add&#8209;PnPJavaScriptBlock](../../sharepoint-ps/sharepoint-pnp/Add-PnPJavaScriptBlock.md)** |Adds a link to a JavaScript snippet/block to a web or site collection|All
 **[Add&#8209;PnPJavaScriptLink](../../sharepoint-ps/sharepoint-pnp/Add-PnPJavaScriptLink.md)** |Adds a link to a JavaScript file to a web or sitecollection|All
 **[Get&#8209;PnPJavaScriptLink](../../sharepoint-ps/sharepoint-pnp/Get-PnPJavaScriptLink.md)** |Returns all or a specific custom action(s) with location type ScriptLink|All
 **[Remove&#8209;PnPJavaScriptLink](../../sharepoint-ps/sharepoint-pnp/Remove-PnPJavaScriptLink.md)** |Removes a JavaScript link or block from a web or sitecollection|All
 **[Get&#8209;PnPMasterPage](../../sharepoint-ps/sharepoint-pnp/Get-PnPMasterPage.md)** |Returns the URLs of the default Master Page and the custom Master Page.|All
-**[Set&#8209;PnPMasterPage](../../sharepoint-ps/sharepoint-pnp/Set-PnPMasterPage.md)** |Sets the default master page of the current web.|All
+**[Set&#8209;PnPMasterPage](../../sharepoint-ps/sharepoint-pnp/Set-PnPMasterPage.md)** |Set the masterpage|All
 **[Set&#8209;PnPMinimalDownloadStrategy](../../sharepoint-ps/sharepoint-pnp/Set-PnPMinimalDownloadStrategy.md)** |Activates or deactivates the minimal downloading strategy.|All
-**[Add&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Add-PnPNavigationNode.md)** |Adds a menu item to either the quicklaunch or top navigation|All
+**[Add&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Add-PnPNavigationNode.md)** |Adds an item to a navigation element|All
 **[Remove&#8209;PnPNavigationNode](../../sharepoint-ps/sharepoint-pnp/Remove-PnPNavigationNode.md)** |Removes a menu item from either the quicklaunch or top navigation|All
-**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Disables the PnP Responsive UI implementation on a classic SharePoint Site|All
-**[Enable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Enable-PnPResponsiveUI.md)** |Enables the PnP Responsive UI implementation on a classic SharePoint Site|All
+**[Disable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Disable-PnPResponsiveUI.md)** |Deactive the PnP Response UI add-on|All
+**[Enable&#8209;PnPResponsiveUI](../../sharepoint-ps/sharepoint-pnp/Enable-PnPResponsiveUI.md)** |Activates the PnP Response UI Add-on|All
 **[Get&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Get-PnPTheme.md)** |Returns the current theme/composed look of the current web.|All
 **[Set&#8209;PnPTheme](../../sharepoint-ps/sharepoint-pnp/Set-PnPTheme.md)** |Sets the theme of the current web.|All
 
@@ -131,13 +140,14 @@ Cmdlet|Description|Platform
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Get&#8209;PnPAvailableClientSideComponents](../../sharepoint-ps/sharepoint-pnp/Get-PnPAvailableClientSideComponents.md)** |Gets the available client side components on a particular page|SharePoint Online
+**[Move&#8209;PnPClientSideComponent](../../sharepoint-ps/sharepoint-pnp/Move-PnPClientSideComponent.md)** |Moves a Client-Side Component to a different section/column|SharePoint Online
 **[Add&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSidePage.md)** |Adds a Client-Side Page|SharePoint Online
 **[Get&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Get-PnPClientSidePage.md)** |Gets a Client-Side Page|SharePoint Online
 **[Remove&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Remove-PnPClientSidePage.md)** |Removes a Client-Side Page|SharePoint Online
 **[Set&#8209;PnPClientSidePage](../../sharepoint-ps/sharepoint-pnp/Set-PnPClientSidePage.md)** |Sets parameters of a Client-Side Page|SharePoint Online
 **[Add&#8209;PnPClientSidePageSection](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSidePageSection.md)** |Adds a new section to a Client-Side page|SharePoint Online
-**[Add&#8209;PnPClientSideText](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideText.md)** |Adds a Client-Side Page|SharePoint Online
-**[Add&#8209;PnPClientSideWebPart](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideWebPart.md)** |Adds a Client-Side Component to a page|SharePoint Online
+**[Add&#8209;PnPClientSideText](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideText.md)** |Adds a text element to a client-side page.|SharePoint Online
+**[Add&#8209;PnPClientSideWebPart](../../sharepoint-ps/sharepoint-pnp/Add-PnPClientSideWebPart.md)** |Adds a Client-Side Web Part to a client-side page|SharePoint Online
 
 
 ### Content Types 
@@ -154,6 +164,14 @@ Cmdlet|Description|Platform
 **[Add&#8209;PnPFieldToContentType](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldToContentType.md)** |Adds an existing site column to a content type|All
 
 
+### Diagnostic utilites 
+Cmdlet|Description|Platform
+:-----|:----------|:-------
+**[Measure&#8209;PnPList](../../sharepoint-ps/sharepoint-pnp/Measure-PnPList.md)** |Returns statistics on the list object|SharePoint Online, SharePoint 2016
+**[Measure&#8209;PnPResponseTime](../../sharepoint-ps/sharepoint-pnp/Measure-PnPResponseTime.md)** |Measures response time for the specified endpoint by sending probe requests and gathering stats.|All
+**[Measure&#8209;PnPWeb](../../sharepoint-ps/sharepoint-pnp/Measure-PnPWeb.md)** |Returns statistics on the web object|SharePoint Online, SharePoint 2016
+
+
 ### Document Sets 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
@@ -167,9 +185,9 @@ Cmdlet|Description|Platform
 ### Event Receivers 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Add&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Add-PnPEventReceiver.md)** |Adds a new event receiver|All
-**[Get&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Get-PnPEventReceiver.md)** |Returns all or a specific event receiver|All
-**[Remove&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Remove-PnPEventReceiver.md)** |Removes/unregisters a specific event receiver|All
+**[Add&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Add-PnPEventReceiver.md)** |Adds a new remote event receiver|All
+**[Get&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Get-PnPEventReceiver.md)** |Return registered eventreceivers|All
+**[Remove&#8209;PnPEventReceiver](../../sharepoint-ps/sharepoint-pnp/Remove-PnPEventReceiver.md)** |Remove an eventreceiver|All
 
 
 ### Features 
@@ -184,13 +202,13 @@ Cmdlet|Description|Platform
 ### Fields 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Add&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Add-PnPField.md)** |Adds a field to a list or as a site column|All
+**[Add&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Add-PnPField.md)** |Add a field|All
 **[Get&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Get-PnPField.md)** |Returns a field from a list or site|All
 **[Remove&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Remove-PnPField.md)** |Removes a field from a list or a site|All
 **[Set&#8209;PnPField](../../sharepoint-ps/sharepoint-pnp/Set-PnPField.md)** |Changes one or more properties of a field in a specific list or for the whole web|All
 **[Add&#8209;PnPFieldFromXml](../../sharepoint-ps/sharepoint-pnp/Add-PnPFieldFromXml.md)** |Adds a field to a list or as a site column based upon a CAML/XML field definition|All
-**[Add&#8209;PnPTaxonomyField](../../sharepoint-ps/sharepoint-pnp/Add-PnPTaxonomyField.md)** |Adds a taxonomy field to a list or as a site column.|All
-**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Changes one or more properties of a specific view|All
+**[Add&#8209;PnPTaxonomyField](../../sharepoint-ps/sharepoint-pnp/Add-PnPTaxonomyField.md)** |Add a taxonomy field|All
+**[Set&#8209;PnPView](../../sharepoint-ps/sharepoint-pnp/Set-PnPView.md)** |Change view properties|All
 
 
 ### Files and Folders 
@@ -251,11 +269,19 @@ Cmdlet|Description|Platform
 ### Microsoft Graph 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Connect&#8209;PnPMicrosoftGraph](../../sharepoint-ps/sharepoint-pnp/Connect-PnPMicrosoftGraph.md)** |Uses the Microsoft Authentication Library (Preview) to connect to Azure AD and to get an OAuth 2.0 Access Token to consume the Microsoft Graph API|All
-**[Get&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroup.md)** |Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|All
-**[New&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPUnifiedGroup.md)** |Creates a new Office 365 Group (aka Unified Group)|All
-**[Remove&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUnifiedGroup.md)** |Removes one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|All
-**[Set&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPUnifiedGroup.md)** |Sets Office 365 Group (aka Unified Group) properties|All
+**[Connect&#8209;PnPMicrosoftGraph](../../sharepoint-ps/sharepoint-pnp/Connect-PnPMicrosoftGraph.md)** |Connect to the Microsoft Graph|All
+**[Add&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteClassification.md)** |Adds one ore more site classification values to the list of possible values. Requires a connection to the Microsoft Graph.|SharePoint Online
+**[Disable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Disable-PnPSiteClassification.md)** |Disables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
+**[Enable&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Enable-PnPSiteClassification.md)** |Enables Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
+**[Get&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteClassification.md)** |Returns the defined Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
+**[Remove&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteClassification.md)** |Removes one or more existing site classification values from the list of available values. Requires a connection to the Microsoft Graph|SharePoint Online
+**[Update&#8209;PnPSiteClassification](../../sharepoint-ps/sharepoint-pnp/Update-PnPSiteClassification.md)** |Updates Site Classifications for the tenant. Requires a connection to the Microsoft Graph.|SharePoint Online
+**[Get&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroup.md)** |Gets one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|SharePoint Online
+**[New&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPUnifiedGroup.md)** |Creates a new Office 365 Group (aka Unified Group)|SharePoint Online
+**[Remove&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPUnifiedGroup.md)** |Removes one Office 365 Group (aka Unified Group) or a list of Office 365 Groups|SharePoint Online
+**[Set&#8209;PnPUnifiedGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPUnifiedGroup.md)** |Sets Office 365 Group (aka Unified Group) properties|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupMembers.md)** |Gets members of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
+**[Get&#8209;PnPUnifiedGroupOwners](../../sharepoint-ps/sharepoint-pnp/Get-PnPUnifiedGroupOwners.md)** |Gets owners of a paricular Office 365 Group (aka Unified Group)|SharePoint Online
 
 
 ### Provisioning 
@@ -297,7 +323,9 @@ Cmdlet|Description|Platform
 ### Records Management 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Set&#8209;PnPInPlaceRecordsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPInPlaceRecordsManagement.md)** |Activates or deactivates in place records management|SharePoint Online
+**[Set&#8209;PnPInPlaceRecordsManagement](../../sharepoint-ps/sharepoint-pnp/Set-PnPInPlaceRecordsManagement.md)** |Activates or deactivates in the place records management feature.|All
+**[Disable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Disable-PnPInPlaceRecordsManagementForSite.md)** |Disables in place records management for a site.|All
+**[Enable&#8209;PnPInPlaceRecordsManagementForSite](../../sharepoint-ps/sharepoint-pnp/Enable-PnPInPlaceRecordsManagementForSite.md)** |Enables in place records management for a site.|All
 **[Clear&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Clear-PnPListItemAsRecord.md)** |Undeclares a list item as a record|SharePoint Online
 **[Set&#8209;PnPListItemAsRecord](../../sharepoint-ps/sharepoint-pnp/Set-PnPListItemAsRecord.md)** |Declares a list item as a record|SharePoint Online
 **[Test&#8209;PnPListItemIsRecord](../../sharepoint-ps/sharepoint-pnp/Test-PnPListItemIsRecord.md)** |Checks if a list item is a record|SharePoint Online
@@ -315,10 +343,10 @@ Cmdlet|Description|Platform
 ### SharePoint Recycle Bin 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Clear&#8209;PnpRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Clear-PnpRecycleBinItem.md)** |Permanently deletes all or a specific recycle bin item|All
-**[Move&#8209;PnpRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Move-PnpRecycleBinItem.md)** |Moves all items or a specific item in the first stage recycle bin of the current site collection to the second stage recycle bin|SharePoint Online
-**[Restore&#8209;PnpRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Restore-PnpRecycleBinItem.md)** |Restores the provided recycle bin item to its original location|All
+**[Clear&#8209;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Clear-PnPRecycleBinItem.md)** |Permanently deletes all or a specific recycle bin item|All
 **[Get&#8209;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPRecycleBinItem.md)** |Returns the items in the recycle bin from the context|All
+**[Move&#8209;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Move-PnPRecycleBinItem.md)** |Moves all items or a specific item in the first stage recycle bin of the current site collection to the second stage recycle bin|SharePoint Online
+**[Restore&#8209;PnPRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Restore-PnPRecycleBinItem.md)** |Restores the provided recycle bin item to its original location|All
 **[Get&#8209;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantRecycleBinItem.md)** |Returns the items in the tenant scoped recycle bin|SharePoint Online
 
 
@@ -327,7 +355,7 @@ Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#8209;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Add-PnPWebhookSubscription.md)** |Adds a new Webhook subscription|SharePoint Online
 **[Remove&#8209;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWebhookSubscription.md)** |Removes a Webhook subscription from the resource|SharePoint Online
-**[Set&#8209;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebhookSubscription.md)** |Removes a Webhook subscription from the resource|SharePoint Online
+**[Set&#8209;PnPWebhookSubscription](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebhookSubscription.md)** |Updates a Webhook subscription|SharePoint Online
 **[Get&#8209;PnPWebhookSubscriptions](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebhookSubscriptions.md)** |Gets all the Webhook subscriptions of the resource|SharePoint Online
 
 
@@ -337,7 +365,9 @@ Cmdlet|Description|Platform
 **[Set&#8209;PnPAppSideLoading](../../sharepoint-ps/sharepoint-pnp/Set-PnPAppSideLoading.md)** |Enables the App SideLoading Feature on a site|All
 **[Get&#8209;PnPAuditing](../../sharepoint-ps/sharepoint-pnp/Get-PnPAuditing.md)** |Get the Auditing setting of a site|All
 **[Set&#8209;PnPAuditing](../../sharepoint-ps/sharepoint-pnp/Set-PnPAuditing.md)** |Set Auditing setting for a site|All
+**[Add&#8209;PnPOffice365GroupToSite](../../sharepoint-ps/sharepoint-pnp/Add-PnPOffice365GroupToSite.md)** |Groupifies a classic team site by creating a group for it and connecting the site with the newly created group|SharePoint Online
 **[Get&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPSite.md)** |Returns the current site collection from the context.|All
+**[Set&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPSite.md)** |Sets Site Collection properties.|SharePoint Online
 **[Add&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteCollectionAdmin.md)** |Adds one or more users as site collection administrators to the site collection in the current context|All
 **[Get&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteCollectionAdmin.md)** |Returns the current site collection administrators of the site colleciton in the current context|All
 **[Remove&#8209;PnPSiteCollectionAdmin](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteCollectionAdmin.md)** |Removes one or more users as site collection administrators from the site collection in the current context|All
@@ -370,13 +400,29 @@ Cmdlet|Description|Platform
 ### Tenant Administration 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
-**[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Gets the OAuth 2.0 Access Token to consume the Microsoft Graph API|All
+**[Get&#8209;PnPAccessToken](../../sharepoint-ps/sharepoint-pnp/Get-PnPAccessToken.md)** |Returns the current OAuth Access token|All
+**[New&#8209;PnPSite](../../sharepoint-ps/sharepoint-pnp/New-PnPSite.md)** |BETA: This cmdlet is using early release APIs. Notice that functionality and parameters can change. Creates a new site collection|SharePoint Online
+**[Add&#8209;PnPSiteDesign](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteDesign.md)** |Creates a new Site Design on the current tenant.|SharePoint Online
+**[Get&#8209;PnPSiteDesign](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteDesign.md)** |Retrieve Site Designs that have been registered on the current tenant.|SharePoint Online
+**[Remove&#8209;PnPSiteDesign](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteDesign.md)** |Removes a Site Design|SharePoint Online
+**[Set&#8209;PnPSiteDesign](../../sharepoint-ps/sharepoint-pnp/Set-PnPSiteDesign.md)** |Updates a Site Design on the current tenant.|SharePoint Online
+**[Get&#8209;PnPSiteDesignRights](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteDesignRights.md)** |Returns the principals with design rights on a specific Site Design|SharePoint Online
+**[Grant&#8209;PnPSiteDesignRights](../../sharepoint-ps/sharepoint-pnp/Grant-PnPSiteDesignRights.md)** |Grants the specified principals rights to use the site design.|SharePoint Online
+**[Revoke&#8209;PnPSiteDesignRights](../../sharepoint-ps/sharepoint-pnp/Revoke-PnPSiteDesignRights.md)** |Revokes the specified principals rights to use the site design.|SharePoint Online
+**[Add&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Add-PnPSiteScript.md)** |Creates a new Site Script on the current tenant.|SharePoint Online
+**[Get&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Get-PnPSiteScript.md)** |Retrieve Site Scripts that have been registered on the current tenant.|SharePoint Online
+**[Remove&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Remove-PnPSiteScript.md)** |Removes a Site Script|SharePoint Online
+**[Set&#8209;PnPSiteScript](../../sharepoint-ps/sharepoint-pnp/Set-PnPSiteScript.md)** |Updates an existing Site Script on the current tenant.|SharePoint Online
+**[Get&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Get-PnPStorageEntity.md)** |Retrieve Storage Entities / Farm Properties.|SharePoint Online
+**[Remove&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Remove-PnPStorageEntity.md)** |Remove Storage Entities / Farm Properties.|SharePoint Online
+**[Set&#8209;PnPStorageEntity](../../sharepoint-ps/sharepoint-pnp/Set-PnPStorageEntity.md)** |Set Storage Entities / Farm Properties.|SharePoint Online
+**[Get&#8209;PnPTenantAppCatalogUrl](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantAppCatalogUrl.md)** |Retrieves the url of the tenant scoped app catalog.|SharePoint Online
 **[Clear&#8209;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Clear-PnPTenantRecycleBinItem.md)** |Permanently deletes a site collection from the tenant scoped recycle bin|All
 **[Restore&#8209;PnPTenantRecycleBinItem](../../sharepoint-ps/sharepoint-pnp/Restore-PnPTenantRecycleBinItem.md)** |Restores a site collection from the tenant scoped recycle bin|SharePoint Online
-**[Get&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSite.md)** |Uses the tenant API to retrieve site information.|SharePoint Online
+**[Get&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Get-PnPTenantSite.md)** |Retrieve site information.|SharePoint Online
 **[New&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/New-PnPTenantSite.md)** |Creates a new site collection for the current tenant|All
-**[Remove&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTenantSite.md)** |Removes a site collection from the current tenant|SharePoint Online
-**[Set&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantSite.md)** |Uses the tenant API to set site information.|SharePoint Online
+**[Remove&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Remove-PnPTenantSite.md)** |Removes a site collection|SharePoint Online
+**[Set&#8209;PnPTenantSite](../../sharepoint-ps/sharepoint-pnp/Set-PnPTenantSite.md)** |Set site information.|SharePoint Online
 **[Get&#8209;PnPTimeZoneId](../../sharepoint-ps/sharepoint-pnp/Get-PnPTimeZoneId.md)** |Returns a time zone ID|All
 **[Get&#8209;PnPWebTemplates](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebTemplates.md)** |Returns the available web templates.|SharePoint Online
 
@@ -388,6 +434,7 @@ Cmdlet|Description|Platform
 **[New&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/New-PnPGroup.md)** |Adds group to the Site Groups List and returns a group object|All
 **[Remove&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Remove-PnPGroup.md)** |Removes a group from a web.|All
 **[Set&#8209;PnPGroup](../../sharepoint-ps/sharepoint-pnp/Set-PnPGroup.md)** |Updates a group|All
+**[Get&#8209;PnPGroupMembers](../../sharepoint-ps/sharepoint-pnp/Get-PnPGroupMembers.md)** |Retrieves all members of a group|All
 **[Get&#8209;PnPGroupPermissions](../../sharepoint-ps/sharepoint-pnp/Get-PnPGroupPermissions.md)** |Returns the permissions for a specific SharePoint group|All
 **[Set&#8209;PnPGroupPermissions](../../sharepoint-ps/sharepoint-pnp/Set-PnPGroupPermissions.md)** |Adds and/or removes permissions of a specific SharePoint group|All
 **[Get&#8209;PnPUser](../../sharepoint-ps/sharepoint-pnp/Get-PnPUser.md)** |Returns site users of current web|All
@@ -414,6 +461,10 @@ Cmdlet|Description|Platform
 ### Web Parts 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
+**[Get&#8209;PnPClientSideComponent](../../sharepoint-ps/sharepoint-pnp/Get-PnPClientSideComponent.md)** |Retrieve one or more Client-Side components from a page|SharePoint Online
+**[Remove&#8209;PnPClientSideComponent](../../sharepoint-ps/sharepoint-pnp/Remove-PnPClientSideComponent.md)** |Removes a Client-Side component from a page|SharePoint Online
+**[Set&#8209;PnPClientSideText](../../sharepoint-ps/sharepoint-pnp/Set-PnPClientSideText.md)** |Set Client-Side Text Component properties|SharePoint Online
+**[Set&#8209;PnPClientSideWebPart](../../sharepoint-ps/sharepoint-pnp/Set-PnPClientSideWebPart.md)** |Set Client-Side Web Part properties|SharePoint Online
 **[Get&#8209;PnPWebPart](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebPart.md)** |Returns a webpart definition object|All
 **[Remove&#8209;PnPWebPart](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWebPart.md)** |Removes a webpart from a page|All
 **[Get&#8209;PnPWebPartProperty](../../sharepoint-ps/sharepoint-pnp/Get-PnPWebPartProperty.md)** |Returns a web part property|All
@@ -442,20 +493,22 @@ Cmdlet|Description|Platform
 **[Remove&#8209;PnPWeb](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWeb.md)** |Removes a subweb in the current web|All
 **[Set&#8209;PnPWeb](../../sharepoint-ps/sharepoint-pnp/Set-PnPWeb.md)** |Sets properties on a web|All
 **[Invoke&#8209;PnPWebAction](../../sharepoint-ps/sharepoint-pnp/Invoke-PnPWebAction.md)** |Executes operations on web, lists and list items.|All
-**[Set&#8209;PnPWebPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebPermission.md)** |Sets web permissions|All
+**[Set&#8209;PnPWebPermission](../../sharepoint-ps/sharepoint-pnp/Set-PnPWebPermission.md)** |Set permissions|All
 
 
 ### Workflows 
 Cmdlet|Description|Platform
 :-----|:----------|:-------
 **[Add&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowDefinition.md)** |Adds a workflow definition|All
-**[Get&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowDefinition.md)** |Returns a workflow definition|All
+**[Get&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowDefinition.md)** |Return a workflow definition|All
 **[Remove&#8209;PnPWorkflowDefinition](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowDefinition.md)** |Removes a workflow definition|All
-**[Resume&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Resume-PnPWorkflowInstance.md)** |Resumes a previously stopped workflow instance|All
+**[Get&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowInstance.md)** |Get workflow instances|All
+**[Resume&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Resume-PnPWorkflowInstance.md)** |Resume a workflow|All
+**[Start&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Start-PnPWorkflowInstance.md)** |Starts a workflow instance on a list item|All
 **[Stop&#8209;PnPWorkflowInstance](../../sharepoint-ps/sharepoint-pnp/Stop-PnPWorkflowInstance.md)** |Stops a workflow instance|All
 **[Add&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Add-PnPWorkflowSubscription.md)** |Adds a workflow subscription to a list|All
-**[Get&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowSubscription.md)** |Returns a workflow subscriptions from a list|All
-**[Remove&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Removes a workflow subscription|All
+**[Get&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Get-PnPWorkflowSubscription.md)** |Return a workflow subscription|All
+**[Remove&#8209;PnPWorkflowSubscription](../../sharepoint-ps/sharepoint-pnp/Remove-PnPWorkflowSubscription.md)** |Remove workflow subscription|All
 
 
 ## Additional resources

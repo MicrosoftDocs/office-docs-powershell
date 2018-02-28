@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-MoveRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-MoveRequest cmdlet to cancel a mailbox move initiated using the New-MoveRequest cmdlet.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-MoveRequest cmdlet to cancel a mailbox move initiated using the New-MoveRequest cmdlet.
@@ -33,20 +27,6 @@ Remove-MoveRequest -MailboxGuid <Guid> -MoveRequestQueue <DatabaseIdParameter> [
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The MoveRequestQueue and MailboxGuid parameters are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The MoveRequestQueue and MailboxGuid parameters are for debugging purposes only.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox moves" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 In coexistence environments with Exchange 2010 and newer versions of Exchange, don't run newer versions of Remove-MoveRequest to clear completed Exchange 2010 move requests as documented in Clear or Remove Move Requests (https://technet.microsoft.com/library/dd351276.aspx). If you do, you could delete the mailbox that you just moved. Instead, only use the Exchange 2010 version of Remove-MoveRequest to clear completed Exchange 2010 move requests in coexistence environments.
 
 In Exchange 2010, you need to use the Remove-MoveRequest cmdlet on completed move requests to clear the InTransit flag from the mailbox. This step isn't required for mailbox moves in newer versions of Exchange where the Remove-MoveRequest is only used to cancel existing move requests.
@@ -57,65 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
 ```
 
 This example removes the mailbox move request for Ayla Kol's mailbox.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
-```
-
-This example removes the mailbox move request for Ayla Kol's mailbox.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
-```
-
-This example removes the mailbox move request for Ayla Kol's mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-MoveRequest -Identity 'Ayla@humongousinsurance.com'
-```
-
-This example removes the mailbox move request for Ayla Kol's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels a mailbox move for a mailbox by using the MailboxGuid parameter for a mailbox on MBXDB01.
-
-
-The MailboxGuid and MoveRequestQueue parameters are for debugging purposes only.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels a mailbox move for a mailbox by using the MailboxGuid parameter for a mailbox on MBXDB01.
-
-
-The MailboxGuid and MoveRequestQueue parameters are for debugging purposes only.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
-```
-
-This example cancels a mailbox move for a mailbox by using the MailboxGuid parameter for a mailbox on MBXDB01.
-
-
-The MailboxGuid and MoveRequestQueue parameters are for debugging purposes only.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-MoveRequest -MoveRequestQueue MBXDB01 -MailboxGuid 25e0eaf2-6cc2-4353-b83e-5cb7b72d441f
 ```
@@ -160,23 +89,11 @@ Accept wildcard characters: False
 ```
 
 ### -MailboxGuid
-!!! Exchange Server 2010
-
-The MailboxGuid parameter specifies the GUID of the mailbox for which you want to remove the move request. If you specify the MailboxGuid parameter, you must also specify the MoveRequestQueue parameter.
-
-You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MailboxGuid parameter specifies the GUID of the mailbox for which you want to remove the move request. If you specify the MailboxGuid parameter, you must also specify the MoveRequestQueue parameter.
 
 You can't use this parameter in conjunction with the Identity parameter.
-
-
 
 ```yaml
 Type: Guid
@@ -192,20 +109,6 @@ Accept wildcard characters: False
 ```
 
 ### -MoveRequestQueue
-!!! Exchange Server 2010
-
-The MoveRequestQueue parameter specifies the database on which the move request is queued. You can use the following values:
-
-- GUID of the database
-
-- Database name
-
-You can't use this parameter in conjunction with the Identity parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The MoveRequestQueue parameter specifies the database on which the move request is queued. You can use the following values:
@@ -215,8 +118,6 @@ The MoveRequestQueue parameter specifies the database on which the move request 
 - Database name
 
 You can't use this parameter in conjunction with the Identity parameter.
-
-
 
 ```yaml
 Type: DatabaseIdParameter
@@ -252,19 +153,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -371,4 +262,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/25e0eaf2-6cc2-4353-b83e-5cb7b72d441f.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Test-AssistantHealth
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Test-AssistantHealth cmdlet to verify that the Microsoft Exchange Mailbox Assistants service (MSExchangeMailboxAssistants) is healthy, to recover from health issues, and to report back the status of the diagnosis or recovery action.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Test-AssistantHealth cmdlet to verify that the Microsoft Exchange Mailbox Assistants service (MSExchangeMailboxAssistants) is healthy, to recover from health issues, and to report the status of the diagnosis or recovery action.
@@ -27,24 +21,6 @@ Test-AssistantHealth [[-ServerName] <ServerIdParameter>] [-Confirm] [-IncludeCra
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Mailbox Assistants service runs on all servers that have the Mailbox server role installed. This service is responsible for scheduling and dispatching several assistants that ensure mailboxes function correctly.
-
-By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Assistants" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-The Mailbox Assistants service runs on all servers that have the Mailbox server role installed. This service is responsible for scheduling and dispatching several assistants that ensure mailboxes function correctly.
-
-By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Assistants" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 The Mailbox Assistants service runs on all servers that have the Mailbox server role installed. This service is responsible for scheduling and dispatching several assistants that ensure mailboxes function correctly.
 
 By default, when you run this cmdlet, it returns the RunspaceId, events, and performance counters in a table format.
@@ -53,42 +29,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Test-AssistantHealth -ServerName MBXSVR01 -IncludeCrashDump -ResolveProblems | Format-List
-```
-
-This example detects and repairs the mailbox assistant's health on MBXSVR01, includes the Watson error information, and formats the output to a list.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Test-AssistantHealth -ServerName MBXSVR01 -IncludeCrashDump -ResolveProblems | Format-List
 ```
 
 This example detects and repairs the mailbox assistant's health on MBXSVR01, includes the error information, and formats the output to a list.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Test-AssistantHealth -ServerName MBXSVR01 -IncludeCrashDump -ResolveProblems | Format-List
-```
-
-This example detects and repairs the mailbox assistant's health on MBXSVR01, includes the error information, and formats the output to a list.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Test-AssistantHealth -MaxProcessingTimeinMinutes 30 | Format-List
-```
-
-This example detects the mailbox assistant's health on the local Mailbox server. The MaxProcessingTimeInMinutes parameter specifies 30 minutes as the maximum amount of time the service is allowed to process an event without responding.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Test-AssistantHealth -MaxProcessingTimeInMinutes 30 | Format-List
-```
-
-This example detects the mailbox assistant's health on the local Mailbox server. The MaxProcessingTimeInMinutes parameter specifies 30 minutes as the maximum amount of time the service is allowed to process an event without responding, and formats the output to a list.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Test-AssistantHealth -MaxProcessingTimeInMinutes 30 | Format-List
 ```
@@ -118,25 +66,11 @@ Accept wildcard characters: False
 ```
 
 ### -IncludeCrashDump
-!!! Exchange Server 2010
-
-The IncludeCrashDump parameter specifies that the command should take a Watson error report prior to taking any recovery actions. This parameter should only be used if running from a local machine. If you use the parameter while connected remotely, the command fails.
-
-The default value for this parameter is $false.
-
-You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The IncludeCrashDump parameter specifies that the command should take an error report prior to taking any recovery actions. This parameter should only be used if running from a local computer. If you use the parameter while connected remotely, the command fails.
 
 The default value for this parameter is $false.
 
 You don't have to specify a value with this parameter.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -168,23 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -MonitoringContext
-!!! Exchange Server 2010
-
-The MonitoringContext parameter is only used when Microsoft System Center Operations Manager 2007 is being used for server monitoring. If you set the value to $true, the command populates the MonitoringContext object with events and performance counters used by the System Center Operations Manager 2007. The default value for this parameter is $false.
-
-
-
-!!! Exchange Server 2013
-
-The MonitoringContext switch includes the associated monitoring events and performance counters in the results. You don't need to specify a value with this switch. Typically, you include the monitoring events and performance counters in the results when the output is passed to Microsoft System Center Operations Manager 2007 or System Center 2012 - Operations Manager.
-
-
-
-!!! Exchange Server 2016
-
 The MonitoringContext switch includes the associated monitoring events and performance counters in the results. Typically, you include the monitoring events and performance counters in the results when the output is passed to MicrosoftSystem Center Operations Manager (SCOM). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -291,4 +209,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b220cb2b-2206-42c7-8699-1f93300c45a7.aspx)
-

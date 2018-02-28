@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-ManagementScope
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ManagementScope cmdlet to change an existing management scope.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ManagementScope cmdlet to change an existing management scope.
@@ -40,28 +34,6 @@ Set-ManagementScope [-Identity] <ManagementScopeIdParameter> [-Confirm] [-Domain
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all of the associated role assignments. For more information about changing scopes, see Change a Role Scope.
-
-Microsoft Exchange Server 2010 Service Pack 1 (SP1) introduces database scopes in addition to server and recipient scopes. Database scopes are only enforced on servers running Exchange 2010 SP1. If a user connects to a server running the release to manufacturing (RTM) version of Exchange 2010, management role assignments associated with database scopes won't be applied. Also, database scopes won't be visible to the Get-ManagementScope cmdlet when it's run on an Exchange 2010 RTM server.
-
-For more information about regular and exclusive scopes, see Understanding Management Role Scopes.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management scopes" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see Change a role scope.
-
-Database scopes are only enforced on servers running Microsoft Exchange Server 2010 Service Pack 1 and Exchange Server 2013. If a user connects to a server running the release to manufacturing (RTM) version of Exchange 2010, management role assignments associated with database scopes won't be applied. Also, database scopes won't be visible to the Get-ManagementScope cmdlet when it's run on an Exchange 2010 RTM server.
-
-For more information about regular and exclusive scopes, see Understanding management role scopes.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Management scopes" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 If you change a scope that has been associated with management role assignments using the New-ManagementRoleAssignment cmdlet, the updated scope applies to all the associated role assignments. For more information about changing scopes, see Change a role scope.
 
 For more information about regular and exclusive scopes, see Understanding management role scopes.
@@ -70,105 +42,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
 ```
 
 This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
-```
-
-This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
-```
-
-This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
-```
-
-This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementScope "Seattle Mailboxes" -RecipientRestrictionFilter { City -Eq "Seattle" -And RecipientType -Eq "UserMailbox" }
-```
-
-This example changes the recipient restriction filter on the Seattle Mailboxes management scope to match all mailboxes that have Seattle in the City mailbox property.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
 ```
 
 This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
-```
-
-This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
-```
-
-This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
-```
-
-This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementScope "Sales Recipients" -RecipientRoot contoso.com/Sales
-```
-
-This example changes the recipient root for the Sales Recipients management scope to match only recipient objects contained under the contoso.com/Sales OU.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter { ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com" }
-```
-
-This example changes the Active Directory Domain Services (AD DS) site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter { ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com" }
-```
-
-This example changes the Active Directory Domain Services (AD DS) site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
-```
-
-This example changes the Active Directory site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
-```
-
-This example changes the Active Directory site used in the server restriction filter for the Vancouver Servers management scope to "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com".
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 Set-ManagementScope "Vancouver Servers" -ServerRestrictionFilter {ServerSite -Eq "NA-CDN-Vancouver,CN=Sites,CN=Configuration,DC=contoso,DC=com"}
 ```
@@ -178,19 +66,9 @@ This example changes the Active Directory site used in the server restriction fi
 ## PARAMETERS
 
 ### -DatabaseRestrictionFilter
-!!! Exchange Server 2010
-
-The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. When the DatabaseRestrictionFilter parameter is specified, only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the ServerRestrictionFilter, RecipientRestrictionFilter or RecipientRoot parameters. For a list of filterable database properties, see Understanding Management Role Scopes.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DatabaseRestrictionFilter parameter specifies the filter to apply to database objects. When the DatabaseRestrictionFilter parameter is specified, only database objects that match the filter are included in the scope. If you use the DatabaseRestrictionFilter parameter, you can't use the ServerRestrictionFilter, RecipientRestrictionFilter or RecipientRoot parameters. For a list of filterable database properties, see Understanding management role scopes.
-
-
 
 ```yaml
 Type: String
@@ -222,19 +100,9 @@ Accept wildcard characters: False
 ```
 
 ### -ServerRestrictionFilter
-!!! Exchange Server 2010
-
-The ServerRestrictionFilter parameter specifies the filter to apply to server objects. When the ServerRestrictionFilter parameter is specified, only recipient objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter, RecipientRestrictionFilter, or RecipientRoot parameters. For a list of filterable server properties, see Understanding Management Role Scopes.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ServerRestrictionFilter parameter specifies the filter to apply to server objects. When the ServerRestrictionFilter parameter is specified, only recipient objects that match the filter are included in the scope. If you use the ServerRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter, RecipientRestrictionFilter, or RecipientRoot parameters. For a list of filterable server properties, see Understanding management role scopes.
-
-
 
 ```yaml
 Type: String
@@ -270,19 +138,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -298,25 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2010
-
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -348,17 +188,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRestrictionFilter
-!!! Exchange Server 2010
-
-The RecipientRestrictionFilter parameter specifies the filter to apply to recipient objects. When the RecipientRestrictionFilter parameter is specified, only server objects that match the filter are included in the scope. If you use the RecipientRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter or ServerRestrictionFilter parameters. For more information about recipient filters, see Filterable Properties for the -Filter Parameter.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The RecipientRestrictionFilter parameter specifies the filter to apply to recipient objects. When the RecipientRestrictionFilter parameter is specified, only server objects that match the filter are included in the scope. If you use the RecipientRestrictionFilter parameter, you can't use the DatabaseRestrictionFilter or ServerRestrictionFilter parameters.
-
-
 
 ```yaml
 Type: String
@@ -423,4 +253,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/568aa7c5-4b59-4e10-9139-782d49cd0969.aspx)
-

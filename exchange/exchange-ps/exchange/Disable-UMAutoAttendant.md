@@ -6,12 +6,6 @@ schema: 2.0.0
 # Disable-UMAutoAttendant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Disable-UMAutoAttendant cmdlet to disable an existing Unified Messaging (UM) auto attendant that's enabled.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Disable-UMAutoAttendant cmdlet to disable an existing Unified Messaging (UM) auto attendant that's enabled.
@@ -26,24 +20,6 @@ Disable-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-Confirm] [-Do
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Disable-UMAutoAttendant cmdlet disables an existing UM auto attendant that's currently enabled. The Disable-UMAutoAttendant cmdlet disables the UM auto attendant by modifying its status variable. The Disable-UMAutoAttendant cmdlet can't disable the UM auto attendant if it's linked or associated to the UM hunt group associated with the default UM dial plan.
-
-After this task is completed, the UM auto attendant is disabled and won't accept incoming calls.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Disable-UMAutoAttendant cmdlet disables an existing UM auto attendant that's currently enabled. The Disable-UMAutoAttendant cmdlet disables the UM auto attendant by modifying its status variable. The Disable-UMAutoAttendant cmdlet can't disable the UM auto attendant if it's linked or associated to the UM hunt group associated with the default UM dial plan.
-
-After this task is completed, the UM auto attendant is disabled and won't accept incoming calls.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Disable-UMAutoAttendant cmdlet disables an existing UM auto attendant that's currently enabled. The Disable-UMAutoAttendant cmdlet disables the UM auto attendant by modifying its status variable. The Disable-UMAutoAttendant cmdlet can't disable the UM auto attendant if it's linked or associated to the UM hunt group associated with the default UM dial plan.
 
 After this task is completed, the UM auto attendant is disabled and won't accept incoming calls.
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Disable-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example disables a UM auto attendant named MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Disable-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example disables the UM auto attendant MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example disables the UM auto attendant MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Disable-UMAutoAttendant -Identity MyUMAutoAttendant
 ```
@@ -119,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3da890b5-8985-48a0-a5eb-2667394fe788.aspx)
-

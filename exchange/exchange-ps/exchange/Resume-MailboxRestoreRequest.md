@@ -6,20 +6,6 @@ schema: 2.0.0
 # Resume-MailboxRestoreRequest
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Resume-MailboxRestoreRequest cmdlet to resume a restore request that was suspended or failed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Resume-MailboxRestoreRequest cmdlet to resume a restore request that was suspended or failed.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Resume-MailboxRestoreRequest cmdlet to resume a restore request that was suspended or failed.
@@ -34,70 +20,18 @@ Resume-MailboxRestoreRequest [-Identity] <MailboxRestoreRequestIdParameter> [-Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Mailbox Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox restore request" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Resume-MailboxRestoreRequest -Identity "kweku\RestoreFromDB01"
 ```
 
 This example resumes the restore request with the identity kweku\\RestoreFromDB01.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Resume-MailboxRestoreRequest -Identity "kweku\RestoreFromDB01"
-```
-
-This example resumes the restore request with the identity kweku\\RestoreFromDB01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Resume-MailboxRestoreRequest -Identity "kweku\RestoreFromDB01"
-```
-
-This example resumes the restore request with the identity kweku\\RestoreFromDB01.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Resume-MailboxRestoreRequest -Identity "kweku\RestoreFromDB01"
-```
-
-This example resumes the restore request with the identity kweku\\RestoreFromDB01.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
-```
-
-This example resumes any restore request with the status of Failed.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
-```
-
-This example resumes any restore request with the status of Failed.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
-```
-
-This example resumes any restore request with the status of Failed.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailboxRestoreRequest -Status Failed | Resume-MailboxRestoreRequest
 ```
@@ -145,19 +79,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -206,4 +130,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/840c4a93-8c55-4ca3-b690-ad7523235c11.aspx)
-

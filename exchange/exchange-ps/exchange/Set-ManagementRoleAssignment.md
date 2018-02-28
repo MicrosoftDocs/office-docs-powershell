@@ -6,12 +6,6 @@ schema: 2.0.0
 # Set-ManagementRoleAssignment
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Set-ManagementRoleAssignment cmdlet to modify existing management role assignments.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Set-ManagementRoleAssignment cmdlet to modify existing management role assignments.
@@ -59,28 +53,6 @@ Set-ManagementRoleAssignment [-Identity] <RoleAssignmentIdParameter> [-Confirm] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-When you modify a role assignment, you can specify a new predefined or custom management scope or provide an organizational unit (OU) to scope the existing role assignment.
-
-You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, predefined scope, or custom scope, the implicit write scope of the role applies to the role assignment.
-
-For more information about management role assignments, see Understanding Management Role Assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role Management Permissions topic.
-
-!!! Exchange Server 2013
-
-When you modify a role assignment, you can specify a new predefined or custom management scope or provide an organizational unit (OU) to scope the existing role assignment.
-
-You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, predefined scope, or custom scope, the implicit write scope of the role applies to the role assignment.
-
-For more information about management role assignments, see Understanding management role assignments.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Role assignments" entry in the Role management permissions topic.
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 When you modify a role assignment, you can specify a new predefined or custom management scope or provide an organizational unit (OU) to scope the existing role assignment.
 
 You can create custom management scopes using the New-ManagementScope cmdlet and can view a list of existing scopes using the Get-ManagementScope cmdlet. If you choose not to specify an OU, predefined scope, or custom scope, the implicit write scope of the role applies to the role assignment.
@@ -91,140 +63,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
 ```
 
 This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
-```
-
-This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
-```
-
-This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
-```
-
-This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
-
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Denver Help Desk" -Enabled $false
-```
-
-This example disables the Mail Recipients\_Denver Help Desk role assignment. When a role assignment is disabled, the users assigned the role can no longer run cmdlets granted by the role.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
 ```
 
 This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
-```
-
-This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
-```
-
-This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
-```
-
-This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
-
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementRoleAssignment "MyGAL_KimA" -RecipientRelativeWriteScope MyGAL
-```
-
-This example changes the recipient scope for the MyGAL\_KimA role assignment to MyGAL. When the recipient scope is changed to a predefined value, any previously defined OUs or custom scopes are overwritten.
-
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
 ```
 
 This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
 
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
-```
-
-This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
-
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
-```
-
-This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
-```
-
-This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
-
-### Example 3 -------------------------- (Exchange Online Protection)
-```
-Set-ManagementRoleAssignment "Mail Recipients_Marketing Admins" -RecipientOrganizationalUnitScope "contoso.com/North America/Marketing/Users"
-```
-
-This example restricts the Mail Recipients\_Marketing Admins role assignment to the contoso.com/North America/Marketing/Users OU. Users who are members of the Marketing Admins role group assigned the role assignment can create, modify, and remove objects only in the specified OU. When the RecipientOrganizationalUnitScope parameter is used, any predefined or custom scopes on the role assignment are overwritten.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
-```
-
-This example restricts the Distribution Groups\_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
-```
-
-This example restricts the Distribution Groups\_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
-```
-
-This example restricts the Distribution Groups\_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Online)
-```
-Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
-```
-
-This example restricts the Distribution Groups\_Cairns Admins role assignment using the Cairns Recipients custom recipient management scope. Users that are members of the Cairns Admins role group assigned the role assignment can create, modify, and remove only the distribution group objects that match the Cairns Recipients custom recipient management scope.
-
-### Example 4 -------------------------- (Exchange Online Protection)
+### Example 4
 ```
 Set-ManagementRoleAssignment "Distribution Groups_Cairns Admins" -CustomRecipientWriteScope "Cairns Recipients"
 ```
@@ -270,18 +130,6 @@ Accept wildcard characters: False
 ```
 
 ### -CustomConfigWriteScope
-!!! Exchange Server 2010
-
-The CustomConfigWriteScope parameter specifies the existing configuration management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
-
-If you use the CustomConfigWriteScope parameter, you can't use the ExclusiveConfigWriteScope parameter.
-
-To remove a scope, specify a value of $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The CustomConfigWriteScope parameter specifies the existing configuration management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
@@ -289,8 +137,6 @@ The CustomConfigWriteScope parameter specifies the existing configuration manage
 If you use the CustomConfigWriteScope parameter, you can't use the ExclusiveConfigWriteScope parameter.
 
 To remove a scope, specify a value of $null.
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -326,19 +172,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -370,18 +206,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusiveConfigWriteScope
-!!! Exchange Server 2010
-
-The ExclusiveConfigWriteScope parameter specifies the existing configuration exclusive management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
-
-If you use the ExclusiveConfigWriteScope parameter, you can't use the CustomConfigWriteScope parameter.
-
-To remove a scope, specify a value of $null.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 This parameter is available only in on-premises Exchange.
 
 The ExclusiveConfigWriteScope parameter specifies the existing configuration exclusive management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
@@ -389,8 +213,6 @@ The ExclusiveConfigWriteScope parameter specifies the existing configuration exc
 If you use the ExclusiveConfigWriteScope parameter, you can't use the CustomConfigWriteScope parameter.
 
 To remove a scope, specify a value of $null.
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -406,25 +228,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusiveRecipientWriteScope
-!!! Exchange Server 2010, Exchange Server 2013
-
 The ExclusiveRecipientWriteScope parameter specifies the existing recipient-based exclusive management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
 
-If you use the ExclusiveRecipientWriteScope parameter, you can't use the CustomRecipientWriteScope, RecipientOrganizationalUnitScope,or RecipientRelativeWriteScope parameters, and any configured OU or predefined scope on the role assignment is overwritten.
+If you use the ExclusiveRecipientWriteScope parameter, you can't use the CustomRecipientWriteScope, RecipientOrganizationalUnitScope, or RecipientRelativeWriteScope parameters and any configured OU or predefined scope on the role assignment is overwritten.
 
 To remove a scope, specify a value of $null.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-The ExclusiveRecipientWriteScope parameter specifies the existing recipient-based exclusive management scope to associate with this management role assignment. If the management scope name contains spaces, enclose it in quotation marks (").
-
-If you use the ExclusiveRecipientWriteScope parameter, you can't use the CustomRecipientWriteScope, RecipientOrganizationalUnitScope, or RecipientRelativeWriteScope parameters, and any configured OU or predefined scope on the role assignment is overwritten.
-
-To remove a scope, specify a value of $null.
-
-
 
 ```yaml
 Type: ManagementScopeIdParameter
@@ -442,7 +250,7 @@ Accept wildcard characters: False
 ### -RecipientOrganizationalUnitScope
 The RecipientOrganizationalUnitScope parameter specifies the OU to scope the new role assignment to. If the OU name contains spaces, enclose the domain and OU in quotation marks (").
 
-If you use the RecipientOrganizationalUnitScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientRelativeWriteScope parameters, and any predefined scopes or custom scopes on the role assignment are overwritten.
+If you use the RecipientOrganizationalUnitScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientRelativeWriteScope parameters and any predefined scopes or custom scopes on the role assignment are overwritten.
 
 To specify an OU, use the syntax: domain/ou. To remove an OU, specify a value of $null.
 
@@ -460,31 +268,13 @@ Accept wildcard characters: False
 ```
 
 ### -RecipientRelativeWriteScope
-!!! Exchange Server 2010
-
 The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope.
 
 If you use the RecipientRelativeWriteScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientOrganizationalUnitScope parameters.
 
-The available types are: None, Organization, MyGAL, Self, and MyDistributionGroups. If you specify a predefined scope, any custom scope or configured OU on the role assignment is overwritten.
-
-Note Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They are used internally by the cmdlet.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online, Exchange Online Protection
-
-The RecipientRelativeWriteScope parameter specifies the type of restriction to apply to a recipient scope.
-
-If you use the RecipientRelativeWriteScope parameter, you can't use the CustomRecipientWriteScope, ExclusiveRecipientWriteScope, or RecipientOrganizationalUnitScope parameters.
-
-The available types are: None, Organization, MyGAL, Self, and MyDistributionGroups. If you specify a predefined scope, any custom scope or configured OU on the role assignment is overwritten.
+The available types are: None, Organization, MyGAL, Self and MyDistributionGroups. If you specify a predefined scope, any custom scope or configured OU on the role assignment is overwritten.
 
 Even though the NotApplicable, OU, MyDirectReports, CustomRecipientScope, MyExecutive, MailboxICanDelegate, and ExclusiveRecipientScope values appear in the syntax block for this parameter, they can't be used directly on the command line. They're used internally by the cmdlet.
-
-
-
-
 
 ```yaml
 Type: None | NotApplicable | Organization | MyGAL | Self | MyDirectReports | OU | CustomRecipientScope | MyDistributionGroups | MyExecutive | ExclusiveRecipientScope | MailboxICanDelegate
@@ -516,17 +306,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online, Exchange Online Protection
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -581,4 +361,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2e0659f9-dfb6-4d91-93fb-35a6a7f8a449.aspx)
-

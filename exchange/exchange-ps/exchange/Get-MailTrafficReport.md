@@ -84,42 +84,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MailTrafficReport -Direction Inbound -StartDate 06/13/2015 -EndDate 06/15/2015
 ```
 
 This example retrieves details for incoming messages between June 13, 2015 and June 15, 2015.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-MailTrafficReport -Direction Inbound -StartDate 06/13/2015 -EndDate 06/15/2015
-```
-
-This example retrieves details for incoming messages between June 13, 2015 and June 15, 2015.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
 
 This example retrieves the statistics for outgoing messages on December 12, 2015, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
 
-### Example 2 -------------------------- (Exchange Online Protection)
-```
-Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound | Format-Table Domain,Date,EventType,Action,MessageCount
-```
-
-This example retrieves the statistics for outgoing messages on December 12, 2015, and displays the results in a table. Every unique combination of EventType and Action is displayed on a separate row in the table.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
-```
-
-This example is similar to the previous example, but now the results are summarized. Because the EventType is one of the summarized values, the rows in the table now contain the unique values of Action. The total number of rows in the report is reduced, and values of MessageCount are correspondingly larger on each row.
-
-### Example 3 -------------------------- (Exchange Online Protection)
+### Example 3
 ```
 Get-MailTrafficReport -StartDate 12/12/2015 -EndDate 12/12/2015 -Direction Outbound -SummarizeBy Domain,EventType | Format-Table Domain,Date,EventType,Action,MessageCount
 ```
@@ -356,4 +335,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/28988896-893c-46c9-a174-8ab6f834d0c9.aspx)
-

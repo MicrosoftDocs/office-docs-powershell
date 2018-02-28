@@ -46,35 +46,13 @@ Set-PublicFolderMigrationRequest [-Identity] <PublicFolderMigrationRequestIdPara
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You can pipeline the Set-PublicFolderMigrationRequest cmdlet from the Get-PublicFolderMigrationRequestStatistics, Get-PublicFolderMigrationRequst, or the Get-PublicFolder cmdlets.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Public folders" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can pipeline the Set-PublicFolderMigrationRequest cmdlet from the Get-PublicFolderMigrationRequestStatistics, Get-PublicFolderMigrationRequst, or the Get-PublicFolder cmdlets.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Set-PublicFolderMigrationRequest -Identity PublicFolderMigration -BadItemLimit 5
-```
-
-This example changes the setting of the PublicFolderMigration migration request to accept up to five corrupted public folder items.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Set-PublicFolderMigrationRequest -Identity PublicFolderMigration -BadItemLimit 5
-```
-
-This example changes the setting of the PublicFolderMigration migration request to accept up to five corrupted public folder items.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-PublicFolderMigrationRequest -Identity PublicFolderMigration -BadItemLimit 5
 ```
@@ -118,25 +96,11 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteCredential
-!!! Exchange Server 2013
-
-This parameter is available only in the cloud-based service.
-
-The RemoteCredential parameter specifies an administrator who has permission to perform the migration request, for example, Administrator@humongousinsurance.com.
-
-This parameter requires the creation and passing of a credential object. This credential object is created by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in the cloud-based service.
 
 The RemoteCredential parameter specifies an administrator who has permission to perform the migration request, for example, Administrator@humongousinsurance.com.
 
 This parameter requires you to create a credentials object by using the Get-Credential cmdlet. For more information, see Get-Credential (https://go.microsoft.com/fwlink/p/?linkId=142122).
-
-
 
 ```yaml
 Type: PSCredential
@@ -236,25 +200,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -304,24 +254,6 @@ Accept wildcard characters: False
 ```
 
 ### -LargeItemLimit
-!!! Exchange Server 2013
-
-The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
-
-For more information about maximum message size values, see the following topics:
-
-- Exchange 2013 Message size limits
-
-- Exchange Online Exchange Online Limits (https://go.microsoft.com/fwlink/p/?LinkId=524926)
-
-Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
-
-If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LargeItemLimit parameter specifies the maximum number of large items that are allowed before the request fails. A large item is a message in the source mailbox that exceeds the maximum message size that's allowed in the target mailbox. If the target mailbox doesn't have a specifically configured maximum message size value, the organization-wide value is used.
 
 For more information about maximum message size values, see the following topics:
@@ -333,8 +265,6 @@ For more information about maximum message size values, see the following topics
 Valid input for this parameter is an integer or the value unlimited. The default value is 0, which means the request will fail if any large items are detected. If you are OK with leaving a few large items behind, you can set this parameter to a reasonable value (we recommend 10 or lower) so the request can proceed.
 
 If you set this value to 51 or higher, you also need to use the AcceptLargeDataLoss switch. Otherwise, the command will fail.
-
-
 
 ```yaml
 Type: Unlimited
@@ -366,25 +296,11 @@ Accept wildcard characters: False
 ```
 
 ### -PreventCompletion
-!!! Exchange Server 2013
-
-The PreventCompletion parameter specifies whether to run the migration request, but not allow it to complete. Valid values are:
-
-- $true The migration request is run, but is not allowed to complete. To complete the migration request, set this parameter to $false before you run the Resume-PublicFolderMigrationRequest cmdlet.
-
-- $false The migration request is run and allowed to complete. This is the default value.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The PreventCompletion parameter specifies whether to run the migration request, but not allow it to complete. Valid values are:
 
 - $true: The migration request is run, but is not allowed to complete. To complete the migration request, set this parameter to $false before you run the Resume-PublicFolderMigrationRequest cmdlet.
 
 - $false: The migration request is run and allowed to complete. This is the default value.
-
-
 
 ```yaml
 Type: $true | $false
@@ -400,34 +316,6 @@ Accept wildcard characters: False
 ```
 
 ### -Priority
-!!! Exchange Server 2013
-
-This parameter is available only in on-premises Exchange.
-
-The Priority parameter specifies the order in which this request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. This parameter accepts the following values:
-
-- Lowest
-
-- Lower
-
-- Low
-
-- Normal
-
-- High
-
-- Higher
-
-- Highest
-
-- Emergency
-
-If you don't specify a value, the default value is Normal, which means that the request is prioritized by the time and date it was accepted into the queue.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The Priority parameter specifies the order in which the request should be processed in the request queue. Requests are processed in order, based on server health, status, priority, and last update time. Valid priority values are:
@@ -447,8 +335,6 @@ The Priority parameter specifies the order in which the request should be proces
 - Highest
 
 - Emergency
-
-
 
 ```yaml
 Type: Lowest | Lower | Low | Normal | High | Higher | Highest | Emergency
@@ -538,7 +424,7 @@ The RequestExpiryInterval parameter specifies an age limit for a completed or fa
 
 - If the request fails, you need to manually remove it by using the corresponding Remove-\*Request cmdlet.
 
-To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes, and ss = seconds.
+To specify a value, enter it as a time span: dd.hh:mm:ss where dd = days, hh = hours, mm = minutes and ss = seconds.
 
 When you use the value Unlimited, the completed request isn't automatically removed.
 
@@ -573,4 +459,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/44fbc2af-e9a4-4fa7-9b04-709ab1bdda2c.aspx)
-

@@ -23,14 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-HostedOutboundSpamFilterPolicy | Format-List
-```
-
-This example retrieves details about the outbound spam filter policy.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-HostedOutboundSpamFilterPolicy | Format-List
 ```
@@ -57,4 +50,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/8f15c83c-c10a-4d9d-b135-35321430bdc2.aspx)
-

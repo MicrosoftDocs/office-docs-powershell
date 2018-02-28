@@ -6,12 +6,6 @@ schema: 2.0.0
 # New-UMMailboxPolicy
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the New-UMMailboxPolicy cmdlet to create a new Unified Messaging (UM) mailbox policy.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the New-UMMailboxPolicy cmdlet to create a Unified Messaging (UM) mailbox policy.
@@ -21,29 +15,11 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-New-UMMailboxPolicy [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] [-DomainController <Fqdn>]
- [-Organization <OrganizationIdParameter>] [-SharedUMDialPlan] [-WhatIf] [<CommonParameters>]
+New-UMMailboxPolicy [-Name] <String> -UMDialPlan <UMDialPlanIdParameter> [-Confirm] 
+[-DomainController <Fqdn>] [-SharedUMDialPlan] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The New-UMMailboxPolicy cmdlet creates a new UM mailbox policy that has organization-wide scope. UM mailbox policies provide a set of policy values to be applied to UM-enabled users associated with a particular UM dial plan. UM mailbox policies are directly associated with UM dial plans. Therefore, the settings contained within a UM mailbox policy apply only to UM-enabled users of the UM dial plan that the UM mailbox policy is associated with. You can also use the New-UMMailboxPolicy cmdlet to create a UM mailbox policy template that can be used to create additional UM mailbox policies.
-
-After this task is completed, a new UM mailbox policy is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The New-UMMailboxPolicy cmdlet creates a UM mailbox policy that has organization-wide scope. UM mailbox policies provide a set of policy values to be applied to UM-enabled users associated with a particular UM dial plan. UM mailbox policies are directly associated with UM dial plans. Therefore, the settings contained within a UM mailbox policy apply only to UM-enabled users of the UM dial plan that the UM mailbox policy is associated with. You can also use the New-UMMailboxPolicy cmdlet to create a UM mailbox policy template that can be used to create additional UM mailbox policies.
-
-After this task is completed, a new UM mailbox policy is created.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM mailbox policies" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The New-UMMailboxPolicy cmdlet creates a UM mailbox policy that has organization-wide scope. UM mailbox policies provide a set of policy values to be applied to UM-enabled users associated with a particular UM dial plan. UM mailbox policies are directly associated with UM dial plans. Therefore, the settings contained within a UM mailbox policy apply only to UM-enabled users of the UM dial plan that the UM mailbox policy is associated with. You can also use the New-UMMailboxPolicy cmdlet to create a UM mailbox policy template that can be used to create additional UM mailbox policies.
 
 After this task is completed, a new UM mailbox policy is created.
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This example creates a new UM mailbox policy named MyUMMailboxPolicy that's associated with a UM dial plan named MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This example creates the UM mailbox policy MyUMMailboxPolicy associated with the UM dial plan MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
-```
-
-This example creates the UM mailbox policy MyUMMailboxPolicy associated with the UM dial plan MyUMDialPlan.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 New-UMMailboxPolicy -Name MyUMMailboxPolicy -UMDialPlan MyUMDialPlan
 ```
@@ -135,41 +90,15 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
 Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Organization
-The Organization parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
 
 Required: False
 Position: Named
@@ -228,4 +157,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5c183eda-11e4-4e4e-a43e-7972eb899cec.aspx)
-

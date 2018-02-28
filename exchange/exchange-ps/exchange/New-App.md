@@ -49,77 +49,27 @@ New-App [-AllowReadWriteMailbox] [-Confirm] [-DefaultStateForUser <Enabled | Dis
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-If the app is enabled for the entire organization, users can activate the new app when viewing mail or calendar items within Microsoft Outlook or Microsoft OfficeOutlook Web App. If an installed app isn't enabled, users can enable the app from Outlook Web App Options. Similarly, if an app is installed, an administrator can enable the app from the Exchange Administration Center or by using the Enable-App or Set-App cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Apps for Outlook" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 If the app is enabled for the entire organization, users can activate the new app when viewing mail or calendar items within Microsoft Outlook or Outlook on the web. If an installed app isn't enabled, users can enable the app from Outlook on the web Options. Similarly, administrators can enable installed apps from the Exchange admin center or by using the Enable-App or Set-App cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-$Data=Get-Content -Path "C:\Apps\FinanceTestApp.xml" -Encoding Byte -ReadCount 0; New-App -FileData $Data
-```
-
-This example installs the Finance Test app manifest file that has been copied to the local hard disk.
-
-
-For more information, see Install or remove add-ins for Outlook for your organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
 ```
 
 This example installs the Finance Test app manifest file that has been copied to the local hard disk.
 
-
 For more information, see Install or remove apps for Outlook for your organization.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-New-App -FileData ([Byte[]](Get-Content -Encoding Byte -Path "C:\Apps\FinanceTestApp.xml" -ReadCount 0))
-```
-
-This example installs the Finance Test app manifest file that has been copied to the local hard disk.
-
-
-For more information, see Install or remove apps for Outlook for your organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-New-App -OrganizationApp -Url https://Server01.Contoso.com/apps/ContosoCRMApp/manifest.xml -ProvidedTo SpecificUsers -UserList "user1,user2,user3,user4,user5" -DefaultStateForUser Enabled
-```
-
-This example installs the Contoso CRM app manifest.xml from a URL on the Contoso corporate network. The Exchange server must be able to reach the target URL. This app is installed as an organization app and made available to a specific set of users in the organization, and is enabled for those users by default.
-
-
-For more information, see Install or remove add-ins for Outlook for your organization.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 New-App -OrganizationApp -Url https://Server01.Contoso.com/apps/ContosoCRMApp/manifest.xml -ProvidedTo SpecificUsers -UserList "user1,user2,user3,user4,user5" -DefaultStateForUser Enabled
 ```
 
 This example installs the Contoso CRM app manifest.xml from a URL on the Contoso corporate network. The Exchange server must be able to reach the target URL. This app is installed as an organization app,is made available to a specific list of users, and is enabled for those users by default.
-
-
-For more information, see Install or remove apps for Outlook for your organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-New-App -OrganizationApp -Url https://Server01.Contoso.com/apps/ContosoCRMApp/manifest.xml -ProvidedTo SpecificUsers -UserList "user1,user2,user3,user4,user5" -DefaultStateForUser Enabled
-```
-
-This example installs the Contoso CRM app manifest.xml from a URL on the Contoso corporate network. The Exchange server must be able to reach the target URL. This app is installed as an organization app,is made available to a specific list of users, and is enabled for those users by default.
-
 
 For more information, see Install or remove apps for Outlook for your organization.
 
@@ -162,33 +112,15 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultStateForUser
-!!! Exchange Server 2013
-
-The DefaultStateForUser parameter specifies the default initial state of the organization app for the provided users. This parameter is set to Disabled by default. If set to AlwaysEnabled, users can't disable the app for themselves. You must use the OrganizationApp parameter when you use this parameter.
-
-The possible values are:
-
-- Enabled
-
-- Disabled
-
-- AlwaysEnabled
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DefaultStateForUser parameter specifies the default initial state of an organization app. Valid values are:
 
 - Enabled: The organization app is enabled by default.
 
 - Disabled: The organization app is disabled by default. This is the default value.
 
-- AlwaysEnabled: The organization app is enabled, and users can't disable it.
+- AlwaysEnabled: The organization app is enabled and users can't disable it.
 
 You need to use the OrganizationApp switch when you use this parameter.
-
-
 
 ```yaml
 Type: Enabled | Disabled | AlwaysEnabled
@@ -222,19 +154,9 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadOnly
-!!! Exchange Server 2013
-
-The DownloadOnly switch specifies whether to get the app manifest file and prompt the user for confirmation before committing to actual installation. This is set to $false by default. If the DownloadOnly parameter is set to $true, the cmdlet only downloads the app manifest file (and displays the app properties) without installing the app.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DownloadOnly switch specifies whether to get the app manifest file and prompt the user for confirmation before committing to actual installation. You don't need to specify a value with this switch.
 
 When you use this switch, the cmdlet only downloads the app manifest file and displays the app properties without installing the app.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -250,31 +172,13 @@ Accept wildcard characters: False
 ```
 
 ### -Enabled
-!!! Exchange Server 2013
-
-The Enabled parameter specifies whether the app is made available to users in the organization. By default, this is set to $true.
-
-This setting overrides the ProvidedTo, UserList, and DefaultStateForUser settings.This setting doesn't prevent users from installing their own instance of the app if the user has install permissions.
-
-This parameter may be set to the following values:
-
-- $true The app is enabled for the specified users in the organization. This makes the app available for the specified users.
-
-- $false The app isn't enabled for any users in the organization. This hides the app from all users in the organization.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Enabled parameter specifies whether the app is available to users in the organization. Valid values are:
 
 - $true: The app is available to the specified users. This is the default value.
 
 - $false: The app is hidden from all users in the organization.
 
-This setting overrides the ProvidedTo, UserList, and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
-
-
+This setting overrides the ProvidedTo, UserList and DefaultStateForUser settings. This setting doesn't prevent users from installing their own instance of the app if they have install permissions.
 
 ```yaml
 Type: $true | $false
@@ -306,19 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -FileData
-!!! Exchange Server 2013
-
-The FileData parameter specifies the location of the app manifest file. You must specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter. If you use this parameter, use the Get-Content cmdlet and this cmdlet together as shown in the example.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FileData parameter specifies the location of the app manifest file. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -334,17 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileStream
-!!! Exchange Server 2013
-
-The FileStream parameter can't be used in the Exchange Management Shell. It's used to support the app uploader and is only used by the Exchange admin center.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-The FileStream parameter is used only by the Exchange admin center to support the app file uploader. Don't use this parameter to specify the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
-
-
+The FileStream parameter is used only by the Exchange admin center to support the app file uploader. Don't use this parameter to specify the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
 ```yaml
 Type: Stream
@@ -360,28 +244,6 @@ Accept wildcard characters: False
 ```
 
 ### -Mailbox
-!!! Exchange Server 2013
-
-The Mailbox parameter specifies the identity of the mailbox or mail user. You can use the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- Legacy Exchange DN
-
-- SMTP address
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Mailbox parameter specifies the mailbox where you want to install the app. You can use any value that uniquely identifies the mailbox. For example:
 
 For example:
@@ -408,8 +270,6 @@ For example:
 
 - User ID or user principal name (UPN)
 
-
-
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: (All)
@@ -424,17 +284,7 @@ Accept wildcard characters: False
 ```
 
 ### -MarketplaceAssetID
-!!! Exchange Server 2013
-
-The MarketplaceAssetID parameter specifies the office store identifier for the app. This parameter is required if the MarketplaceServicesUrl parameter is specified.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MarketplaceAssetID parameter specifies the Office Store identifier for the app. You need to use this parameter if you use theMarketplaceServicesUrl parameter.
-
-
 
 ```yaml
 Type: String
@@ -450,17 +300,7 @@ Accept wildcard characters: False
 ```
 
 ### -MarketplaceQueryMarket
-!!! Exchange Server 2013
-
-The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. If not specified, this value is set to en-US.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The MarketplaceQueryMarket parameter specifies the locale that an app is filed under at the office marketplace. For example, an app for the United States market in English uses the value en-US. The default value isen-US.
-
-
 
 ```yaml
 Type: String
@@ -476,17 +316,7 @@ Accept wildcard characters: False
 ```
 
 ### -MarketplaceServicesUrl
-!!! Exchange Server 2013
-
-The MarketplaceServicesUrl parameter specifies the full services URL for the app. You must specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-The MarketplaceServicesUrl parameter specifies the full services URL for the app. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
-
-
+The MarketplaceServicesUrl parameter specifies the full services URL for the app. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
 ```yaml
 Type: String
@@ -502,17 +332,7 @@ Accept wildcard characters: False
 ```
 
 ### -OrganizationApp
-!!! Exchange Server 2013
-
-The OrganizationApp parameter specifies the apps that are installed for the organization (not bound to a specific user). This is set to $false by default.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The OrganizationAppswitch specifies that the scope of the app is organizational (not bound to a specific user). You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -528,18 +348,6 @@ Accept wildcard characters: False
 ```
 
 ### -ProvidedTo
-!!! Exchange Server 2013
-
-The ProvidedTo parameter specifies the availability of an app in your organization. By default, new apps are available to all users in your organization. You must use the OrganizationApp parameter when you use this parameter. The following are the possible values:
-
-- Everyone This app is provided to every user in the organization. Every user sees this app listed in the installed apps list in Outlook Web App Options. When apps in the installed apps list display as enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
-
-- SpecificUsers This app is provided to only the users specified using the UserList parameter. Users that aren't specified don't see this organizational app in their management view, nor will it activate in their mail or calendar items. Specified users are also blocked from installing their own instance of this app. Users that aren't listed aren't blocked from installing their own instance of this app.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The ProvidedTo parameter specifies the availability of the app in your organization. Valid values are:
 
 - Everyone: This is the default value. This app is provided to every user in the organization. Every user sees this app listed in the installed apps list in Outlook on the web Options. When an app in the installed apps list is enabled, users can use the features of this app in their email. All users are blocked from installing their own instances of this app, including but not limited to users with install apps permissions.
@@ -547,8 +355,6 @@ The ProvidedTo parameter specifies the availability of the app in your organizat
 - SpecificUsers: This app is provided to only the users specified by the UserList parameter. All other users don't see this organizational app in their management view, nor will it activate in their mail or calendar items. The specified users are also blocked from installing their own instance of this app. Unlisted users aren't blocked from installing their own instance of this app.
 
 You use this parameter with the OrganizationApp switch.
-
-
 
 ```yaml
 Type: Everyone | SpecificUsers
@@ -564,17 +370,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-!!! Exchange Server 2013
-
-The Url parameter specifies the full URL location of the app manifest file you want to install. You must specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
-The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url, or FileData parameter.
-
-
+The Url parameter specifies the full URL location of the app manifest file that you want to install. You need to specify only one source location for the app manifest file. You can specify the app manifest file by using the MarketplaceServicesUrl, Url or FileData parameter.
 
 ```yaml
 Type: Uri
@@ -590,28 +386,6 @@ Accept wildcard characters: False
 ```
 
 ### -UserList
-!!! Exchange Server 2013
-
-The UserList parameter specifies the list of users that are granted access to the organizational app. Use the UserList parameter to specify the users that you want to use the app.You must use the OrganizationApp parameter when you use this parameter. You can use the following values:
-
-- GUID
-
-- DN
-
-- Domain\\account
-
-- UPN
-
-- Legacy Exchange DN
-
-- SMTP address
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The UserList parameter specifies who can usean organizational app. Valid values are mailboxes or mail users in your organization. You can use any value that uniquely identifies the user.
 
 For example:
@@ -641,8 +415,6 @@ For example:
 To enter multiple values, use the following syntax: \<value1\>,\<value2\>,...\<valueX\>. If the values contain spaces or otherwise require quotation marks, use the following syntax: "\<value1\>","\<value2\>",..."\<valueX\>".
 
 You use this parameter with the OrganizationApp switch.
-
-
 
 ```yaml
 Type: MultiValuedProperty
@@ -739,4 +511,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f05951d8-1e49-42b6-a341-66eb67b2870f.aspx)
-

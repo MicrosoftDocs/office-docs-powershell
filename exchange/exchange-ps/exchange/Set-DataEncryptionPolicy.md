@@ -41,28 +41,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-DataEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
 ```
 
 This example disabled the data encryption policy named US Mailboxes.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Set-DataEncryptionPolicy -Identity "US Mailboxes" -Enabled $false
-```
-
-This example disabled the data encryption policy named US Mailboxes.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
-```
-
-This example updates the data encryption policy named Europe Mailboxes after one of the associated keys has been rotated in the Azure Key Vault.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 ```
@@ -316,4 +302,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/55c089cd-1497-4660-94ed-847561e89734.aspx)
-

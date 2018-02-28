@@ -6,19 +6,9 @@ schema: 2.0.0
 # Remove-UserPhoto
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
-Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as MicrosoftOutlook Web App, Lync, Skype for Business, and SharePoint.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business, and SharePoint.
+Use the Remove-UserPhoto cmdlet to delete the photo associated with a user's account. The user photo feature allows users to associate a picture with their account. User photos appear in on-premises and cloud-based client applications, such as Outlook on the web, Lync, Skype for Business and SharePoint.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -38,37 +28,13 @@ Remove-UserPhoto [-Identity] <MailboxIdParameter> [-ClearMailboxPhotoRecord] [-C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In on-premises Exchange, the user photo is stored in the user's Active Directory account. In Exchange Online the user photo is stored in the root directory of the user's mailbox.
-
-For Exchange Online mailboxes, you need to manage user photos by using this cmdlet, or by accessing the user's Outlook Web App Options page.Outlook. User photos are synchronized from Active Directory to the cloud only once during a mailbox migration. Therefore, even in hybrid environments, don't try to manage user photos in Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Recipient provisioning permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 Use the Remove-UserPhoto cmdlet to delete the user photo currently associated with a user's account. User photos are stored in the user's Active Directory account and in the root directory of the user's Exchange mailbox, both of which are deleted when you run this cmdlet. Administrators can also use the Exchange admin center (EAC) to delete user photos by accessing the user's Outlook on the web Options page.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UserPhoto "Ann Beebe"
-```
-
-This example deletes the photo associated with Ann Beebe's user account.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UserPhoto "Ann Beebe"
-```
-
-This example deletes the photo associated with Ann Beebe's user account.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UserPhoto "Ann Beebe"
 ```
@@ -78,30 +44,6 @@ This example deletes the photo associated with Ann Beebe's user account.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the user. You can use one of the following values:
-
-- GUID
-
-- Distinguished name (DN)
-
-- Display name
-
-- Domain\\Account
-
-- User principal name (UPN)
-
-- LegacyExchangeDN
-
-- SmtpAddress
-
-- Alias
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the user. You can use any value that uniquely identifies the user.
 
 For example:
@@ -127,8 +69,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxIdParameter
@@ -182,7 +122,7 @@ Accept wildcard characters: False
 ```
 
 ### -IgnoreDefaultScope
-The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session, and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
+The IgnoreDefaultScope switch tells the command to ignore the default recipient scope setting for the Exchange Management Shell session and to use the entire forest as the scope. This allows the command to access Active Directory objects that aren't currently available in the default scope.
 
 Using the IgnoreDefaultScope switch introduces the following restrictions:
 
@@ -295,4 +235,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/016a380d-435b-4c5a-bd7c-f14c3ab2de98.aspx)
-

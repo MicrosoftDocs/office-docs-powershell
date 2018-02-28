@@ -6,12 +6,6 @@ schema: 2.0.0
 # Search-Mailbox
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Search-Mailbox cmdlet to search a mailbox and copy the results to a specified target mailbox, delete messages from the source mailbox, or both.
@@ -41,40 +35,6 @@ Search-Mailbox [-Identity] <MailboxOrMailUserIdParameter> [-Confirm] [-DeleteCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Search-Mailbox cmdlet to search messages in a specified mailbox and perform any of the following tasks:
-
-- Copy messages to a specified target mailbox.
-
-- Delete messages from the source mailbox. For more details, see Use Mailbox Search to Delete Messages.
-
-- Copy messages from the source mailbox and delete them from the target mailbox.
-
-- Perform single item recovery to recover items from a user's Recoverable Items folder. For more details, see Perform Single Item Recovery.
-
-- Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota. For more details, see Clean Up the Recoverable Items Folder.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Multi-Mailbox Search" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Search-Mailbox cmdlet to search messages in a specified mailbox and perform any of the following tasks:
-
-- Copy messages to a specified target mailbox.
-
-- Delete messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to delete messages.
-
-- Copy messages from the source mailbox and delete them from the target mailbox.
-
-- Perform single item recovery to recover items from a user's Recoverable Items folder.
-
-- Clean up the Recoverable Items folder for a mailbox when it has reached the Recoverable Items hard quota.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "In-Place eDiscovery" and "Delete mailbox content" entries in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can use the Search-Mailbox cmdlet to search messages in a specified mailbox and perform any of the following tasks:
 
 - Copy messages to a specified target mailbox.
@@ -93,112 +53,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Search-Mailbox -Identity "Joe Healy" -SearchQuery "Subject:Project Hamilton" -TargetMailbox "DiscoveryMailbox" -TargetFolder "JoeHealy-ProjectHamilton" -LogLevel Full
 ```
 
 This example searches the mailbox of Joe Healy and copies the search results to the DiscoveryMailbox in the folder JoeHealy-ProjectHamilton.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Search-Mailbox -Identity "Joe Healy" -SearchQuery "Subject:Project Hamilton" -TargetMailbox "DiscoveryMailbox" -TargetFolder "JoeHealy-ProjectHamilton" -LogLevel Full
-```
-
-This example searches the mailbox of Joe Healy and copies the search results to the DiscoveryMailbox in the folder JoeHealy-ProjectHamilton.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Search-Mailbox -Identity "Joe Healy" -SearchQuery "Subject:Project Hamilton" -TargetMailbox "DiscoveryMailbox" -TargetFolder "JoeHealy-ProjectHamilton" -LogLevel Full
-```
-
-This example searches the mailbox of Joe Healy and copies the search results to the DiscoveryMailbox in the folder JoeHealy-ProjectHamilton.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Search-Mailbox -Identity "Joe Healy" -SearchQuery "Subject:Project Hamilton" -TargetMailbox "DiscoveryMailbox" -TargetFolder "JoeHealy-ProjectHamilton" -LogLevel Full
-```
-
-This example searches the mailbox of Joe Healy and copies the search results to the DiscoveryMailbox in the folder JoeHealy-ProjectHamilton.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "administrator" -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
 ```
 
 This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and logs the result in the SearchAndDeleteLog folder in the administrator's mailbox. Messages aren't copied to the target mailbox.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "administrator" -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and logs the result in the SearchAndDeleteLog folder in the administrator's mailbox. Messages aren't copied to the target mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "administrator" -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and logs the result in the SearchAndDeleteLog folder in the administrator's mailbox. Messages aren't copied to the target mailbox.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -TargetMailbox "administrator" -TargetFolder "SearchAndDeleteLog" -LogOnly -LogLevel Full
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and logs the result in the SearchAndDeleteLog folder in the administrator's mailbox. Messages aren't copied to the target mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and deletes the messages from the source mailbox.
-
-### Example 3 -------------------------- (Exchange Server 2013)
+### Example 3
 ```
 Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
 ```
 
 This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and deletes the messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to use the DeleteContent switch.
 
-### Example 3 -------------------------- (Exchange Server 2016)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and deletes the messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to use the DeleteContent switch.
-
-### Example 3 -------------------------- (Exchange Online)
-```
-Search-Mailbox -Identity "April Stewart" -SearchQuery 'Subject:"Your bank statement"' -DeleteContent
-```
-
-This example searches April Stewart's mailbox for messages that contain the phrase "Your bank statement" in the subject and deletes the messages from the source mailbox. You have to be assigned the Mailbox Import Export management role to use the DeleteContent switch.
-
-### Example 4 -------------------------- (Exchange Server 2010)
-```
-Get-Mailbox | Search-Mailbox -SearchQuery 'election OR candidate OR vote' -TargetMailbox "Discovery Search Mailbox" -TargetFolder "AllMailboxes-Election" -LogLevel Full
-```
-
-This example searches all mailboxes in your organization for messages that contain the words "election", "candidate", or "vote". The search results are copied to the Discovery Search Mailbox in the folder AllMailboxes-Election.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox | Search-Mailbox -SearchQuery 'election OR candidate OR vote' -TargetMailbox "Discovery Search Mailbox" -TargetFolder "AllMailboxes-Election" -LogLevel Full
-```
-
-This example searches all mailboxes in your organization for messages that contain the words "election", "candidate", or "vote". The search results are copied to the Discovery Search Mailbox in the folder AllMailboxes-Election.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-Mailbox | Search-Mailbox -SearchQuery 'election OR candidate OR vote' -TargetMailbox "Discovery Search Mailbox" -TargetFolder "AllMailboxes-Election" -LogLevel Full
-```
-
-This example searches all mailboxes in your organization for messages that contain the words "election", "candidate", or "vote". The search results are copied to the Discovery Search Mailbox in the folder AllMailboxes-Election.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Get-Mailbox | Search-Mailbox -SearchQuery 'election OR candidate OR vote' -TargetMailbox "Discovery Search Mailbox" -TargetFolder "AllMailboxes-Election" -LogLevel Full
 ```
@@ -224,84 +100,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identity of the mailbox to search.
-
-This parameter accepts the following values:
-
-- Alias
-
-  Example: JPhillips
-
-- Canonical DN
-
-  Example: Atlanta.Corp.Contoso.Com/Users/JPhillips
-
-- Display Name
-
-  Example: Jeff Phillips
-
-- Distinguished Name (DN)
-
-  Example: CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com
-
-- Domain\\Account
-
-  Example: Atlanta\\JPhillips
-
-- GUID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2
-
-- Immutable ID
-
-  Example: fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com
-
-- Legacy Exchange DN
-
-  Example: /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips
-
-- SMTP Address
-
-  Example: Jeff.Phillips@contoso.com
-
-- User Principal Name
-
-  Example: JPhillips@contoso.com
-
-
-
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the mailbox to search.
-
-This parameter accepts the following values:
-
-- Alias (for example, JPhillips)
-
-- Canonical DN (for example, Atlanta.Corp.Contoso.Com/Users/JPhillips)
-
-- Display Name (for example, Jeff Phillips)
-
-- Distinguished Name (DN) (for example, CN=JPhillips,CN=Users,DC=Atlanta,DC=Corp,DC=contoso,DC=com)
-
-- Domain\\Account (for example, Atlanta\\JPhillips)
-
-- GUID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2)
-
-- Immutable ID (for example, fb456636-fe7d-4d58-9d15-5af57d0354c2@contoso.com)
-
-- Legacy Exchange DN (for example, /o=Contoso/ou=AdministrativeGroup/cn=Recipients/cn=JPhillips)
-
-- SMTP Address (for example, Jeff.Phillips@contoso.com)
-
-- User Principal Name (for example, JPhillips@contoso.com)
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identity of the mailbox to search. You can use any value that uniquely identifies the mailbox.
 
 For example:
@@ -327,8 +125,6 @@ For example:
 - SamAccountName
 
 - User ID or user principal name (UPN)
-
-
 
 ```yaml
 Type: MailboxOrMailUserIdParameter
@@ -414,26 +210,6 @@ Accept wildcard characters: False
 ```
 
 ### -DeleteContent
-!!! Exchange Server 2010
-
-The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. When used with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
-
-Before you use the DeleteContent switch to delete content, we recommend that you test search parameters by using the LogOnly parameter, as shown in Example 2.
-
-
-
-!!! Exchange Server 2013
-
-The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. When used with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
-
-You need to be assigned the Mailbox Import Export management role to use this switch. By default, this role isn't assigned to any role group. Typically, you assign a role to a built-in or custom role group. Or you can assign a role to a user, or a universal security group.
-
-Before you use the DeleteContent switch to delete content, we recommend that you test search parameters by using the LogOnly parameter, as shown in Example 2.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DeleteContent switch specifies that the messages returned by the search be permanently deleted from the source mailbox. When used with the TargetMailbox parameter, messages are copied to the target mailbox and removed from the source mailbox. If you set the logging level for the search to Basic or Full, you must specify a target mailbox and a target folder to place the log in. To delete messages from the source mailbox without copying them to the target mailbox, don't specify the TargetMailbox, TargetFolder, and LogLevel parameters.
 
 As previously stated, we recommend that you don't use the DeleteContent switch to delete messages in Exchange Online mailboxes that have auto-expanding archiving enabled because unexpected data loss may occur.
@@ -441,8 +217,6 @@ As previously stated, we recommend that you don't use the DeleteContent switch t
 You need to be assigned the Mailbox Import Export management role to use this switch. By default, this role isn't assigned to any role group. Typically, you assign a role to a built-in or custom role group. Or you can assign a role to a user, or a universal security group.
 
 Before you use the DeleteContent switch to delete content, we recommend that you test search parameters by using the LogOnly parameter, as shown in Example 2.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -458,19 +232,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -486,19 +250,9 @@ Accept wildcard characters: False
 ```
 
 ### -DoNotIncludeArchive
-!!! Exchange Server 2010, Exchange Server 2013
-
-The DoNotIncludeArchive switch specifies that the user's archive mailbox shouldn't be included in the search. You don't need to specify a value for this switch.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The DoNotIncludeArchive switch specifies that the user's archive mailbox shouldn't be included in the search. You don't need to specify a value for this switch. By default, the archive mailbox is always searched.
 
 If auto-expanding archiving is enabled for an Exchange Online mailbox, only the user's primary archive mailbox is searched. Auxiliary archive mailboxes aren't included in the search.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -546,22 +300,6 @@ Accept wildcard characters: False
 ```
 
 ### -LogLevel
-!!! Exchange Server 2010, Exchange Server 2013
-
-The LogLevel parameter specifies the logging level for the search. It can have one of the following values:
-
-- Suppress No logs are kept.
-
-- Basic Basic information about the query and who ran it is kept.
-
-- Full In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
-
-The default log level is Basic.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The LogLevel parameter specifies the logging level for the search. It can have one of the following values:
 
 - Suppress: No logs are kept.
@@ -571,8 +309,6 @@ The LogLevel parameter specifies the logging level for the search. It can have o
 - Full: In addition to the information kept by the Basic log level, the Full log level adds a complete list of search results.
 
 The default log level is Basic.
-
-
 
 ```yaml
 Type: Suppress | Basic | Full
@@ -636,21 +372,9 @@ Accept wildcard characters: False
 ```
 
 ### -SearchQuery
-!!! Exchange Server 2010
-
-The SearchQuery parameter specifies a search string or a query formatted using Advanced Query Syntax (AQS).
-
-If this parameter is empty, all messages are returned.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The SearchQuery parameter specifies a search string or a query formatted using Keyword Query Language (KQL). For more details about KQL, see Keyword Query Language syntax reference (https://go.microsoft.com/fwlink/p/?linkid=269603).
 
 If this parameter is empty, all messages are returned.
-
-
 
 ```yaml
 Type: String
@@ -699,4 +423,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9ee3b02c-d343-4816-a583-a90b1fad4b26.aspx)
-

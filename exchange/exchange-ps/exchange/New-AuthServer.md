@@ -6,16 +6,6 @@ schema: 2.0.0
 # New-AuthServer
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the New-AuthServer cmdlet to create an authorization server object in Microsoft Exchange Server 2013 and specify its AuthMetadataUrl. Exchange 2013 honors tokens issued by the authorization server for access by a partner application.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the New-AuthServer cmdlet to create an authorization server object in Microsoft Exchange and specify its AuthMetadataUrl. Exchange honors tokens issued by the authorization server for access by a partner application.
@@ -44,16 +34,6 @@ New-AuthServer [-Name] <String> -Type <Unknown | MicrosoftACS | Facebook | Linke
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Exchange 2013, partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange.
-
-The New-AuthServer cmdlet creates a trusted authorization server object in Exchange 2013, which allows it to trust tokens issued by the authorization server.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 Partner applications authorized by Exchange can access their resources after they're authenticated using server-to-server authentication. A partner application can authenticate by using self-issued tokens trusted by Exchange or by using an authorization server trusted by Exchange.
 
 The New-AuthServer cmdlet creates a trusted authorization server object in Exchange, which allows it to trust tokens issued by the authorization server.
@@ -62,14 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-New-AuthServer HRAppAuth -AuthMetadataUrl http://hrappauth.contoso.com/metadata/json/1
-```
-
-This command creates an authorization server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 New-AuthServer HRAppAuth -AuthMetadataUrl http://hrappauth.contoso.com/metadata/json/1
 ```
@@ -79,17 +52,7 @@ This command creates an authorization server.
 ## PARAMETERS
 
 ### -AuthMetadataUrl
-!!! Exchange Server 2013
-
-The AuthMetadataUrl parameter specifies the URL for the Microsoft Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
-
-
-
-!!! Exchange Server 2016
-
 The AuthMetadataUrl parameter specifies the URL for the Office 365 authorization server for your cloud-based organization. For details, see the Office 365 documentation.
-
-
 
 ```yaml
 Type: String
@@ -137,25 +100,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -252,4 +201,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/67539efd-309f-4155-8b8f-c370fe7681b6.aspx)
-
