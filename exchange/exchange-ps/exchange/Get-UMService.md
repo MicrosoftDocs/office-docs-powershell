@@ -6,19 +6,9 @@ schema: 2.0.0
 # Get-UMService
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-UMService cmdlet to display the properties for a single Mailbox server that's running the Microsoft Exchange Unified Messaging service or to display a list of Mailbox servers that are running the Microsoft Exchange Unified Messaging service.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-UMService cmdlet to view the properties of the Microsoft Exchange Unified Messaging service on Exchange servers in your organization. This service exists on Exchange Server 2016 and Exchange Server 2013 Mailbox servers, and on Exchange Server 2010 Unified Messaging servers.
+Use the Get-UMService cmdlet to view the properties of the Microsoft Exchange Unified Messaging service on Exchange servers in your organization. This service exists on Exchange Server 2016 and Exchange Server 2013 Mailbox servers and on Exchange Server 2010 Unified Messaging servers.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,19 +19,7 @@ Get-UMService [[-Identity] <UMServerIdParameter>] [-DomainController <Fqdn>] [<C
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Get-UMService cmdlet retrieves the properties for a Mailbox server that's running the Microsoft Exchange Unified Messaging service or returns a list of available Mailbox servers from Active Directory. When the cmdlet is used for a single Mailbox server, it returns the Mailbox server properties including MaxCalls, MaxFaxCalls, and UMDialPlans. The properties and their values for the Mailbox server are stored in the Unified Messaging section of the Exchange Server configuration object in Active Directory.
-
-The ExchangeVersion attribute that's returned is the minimum version of Microsoft Exchange you can use to manage the returned object. This attribute isn't the same as the version of Microsoft Exchange that's displayed in the Exchange Administration Center when you select Server Configuration.
-
-After this task is completed, you can view the parameters and values for a single Mailbox server or a list of all of the Mailbox servers in Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Server (UM service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
-When the cmdlet is used for a single Exchange server, it returns the Unified Messaging service properties, including MaxCalls, MaxFaxCalls, and UMDialPlans. The properties and their values for the Exchange server are stored in the Unified Messaging section of the Exchange Server configuration object in Active Directory.
+When the cmdlet is used for a single Exchange server, it returns the Unified Messaging service properties, including MaxCalls, MaxFaxCalls and UMDialPlans. The properties and their values for the Exchange server are stored in the Unified Messaging section of the Exchange Server configuration object in Active Directory.
 
 The ExchangeVersion attribute that's returned is the minimum version of Exchange you can use to manage the returned object. This attribute isn't the same as the version of Exchange that's displayed in the Exchange admin center when you select Server Configuration.
 
@@ -49,28 +27,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-UMService
-```
-
-This example displays a list of all the Mailbox servers in the Active Directory forest.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-UMService
 ```
 
 This example displays a summary list of the Microsoft Exchange Unified Messaging service settings on all Exchange servers in the Active Directory forest.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-UMService -Identity MyUMServer | Format-List
-```
-
-This example displays a formatted list of properties for the Mailbox server MyUMServer.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-UMService -Identity MBX01 | Format-List
 ```
@@ -96,14 +60,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the name of the Mailbox server that's running the Microsoft Exchange Unified Messaging service. If this parameter isn't supplied, a list of all Mailbox servers is returned.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -115,8 +71,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: UMServerIdParameter
@@ -149,4 +103,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/180f9243-719a-4c2b-ab4e-7c69c857473e.aspx)
-
