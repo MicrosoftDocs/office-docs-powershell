@@ -26,14 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-OutboundConnector "Contoso Outbound Connector" | Format-List
-```
-
-This example displays detailed information about the Outbound connector named Contoso Outbound Connector.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-OutboundConnector "Contoso Outbound Connector" | Format-List
 ```
@@ -126,4 +119,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f9140086-9f74-4446-b1e7-b195300da122.aspx)
-
