@@ -1,11 +1,11 @@
 ---
 external help file: 
 applicable: SharePoint Online
-title: Set-SPOHubSiteProperties
+title: Set-SPOHubSite
 schema: 2.0.0
 ---
 
-# Set-SPOHubSiteProperties
+# Set-SPOHubSite
 
 ## SYNOPSIS
 Sets the hub site information such as name, logo, and description.
@@ -23,7 +23,7 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ## DESCRIPTION
 Use this cmdlet to set properties such as name, logo, and description. These properties appear for the hub in the SharePoint user interface.
 
-If the site doesn’t exist, this cmdlet returns a “File not found” error.
+If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
 

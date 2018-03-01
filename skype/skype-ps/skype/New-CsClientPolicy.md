@@ -1882,7 +1882,6 @@ Accept wildcard characters: False
 ```
 
 ### -BypassDualWrite
-{{Fill BypassDualWrite Description}}
 
 ```yaml
 Type: Object
@@ -1898,7 +1897,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableClientAutoPopulateWithTeam
-{{Fill EnableClientAutoPopulateWithTeam Description}}
+
+When set to true, allows a user's Skype client to be autopopulated with members of his or her immediate team.
 
 ```yaml
 Type: Object
@@ -1914,7 +1914,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableExchangeContactsFolder
-{{Fill EnableExchangeContactsFolder Description}}
+
+When set to false, this allows admins to hide Skype for Business contacts from showing up in users' Outlook and Outlook on the Web clients.
 
 ```yaml
 Type: Object
@@ -1986,7 +1987,8 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedback
-{{Fill EnableOnlineFeedback Description}}
+
+When set to true, allows users to provide feedback through the "help->report a problem" menu options in the client.
 
 ```yaml
 Type: Object
@@ -2002,7 +2004,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableOnlineFeedbackScreenshots
-{{Fill EnableOnlineFeedbackScreenshots Description}}
+When set to true, allows users to provide screenshots of their clients when reporting problems.
 
 ```yaml
 Type: Object
@@ -2241,7 +2243,6 @@ Accept wildcard characters: False
 ```
 
 ### -AsJob
-{{Fill AsJob Description}}
 
 ```yaml
 Type: SwitchParameter
