@@ -23,28 +23,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-QuarantineMessage -MessageID <5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com> | Preview-QuarantineMessage
 ```
 
 This example previews the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\>.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessage -MessageID <5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com> | Preview-QuarantineMessage
-```
-
-This example previews the quarantined message with the Message-ID value \<5c695d7e-6642-4681-a4b0-9e7a86613cb7@contoso.com\>.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Preview-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
-```
-
-This example previews the quarantined message that has the specified Identity value.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Preview-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7
 ```
@@ -89,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0719a273-dc7e-4768-b83e-ec11c3acf833.aspx)
-
