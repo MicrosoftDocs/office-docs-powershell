@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-QuarantineMessageHeader 65ab8c7d-dcd3-4067-7c60-08d116c001c3\8b677327-0ef3-166b-e108-ff6cb380d191
 ```
 
 This example displays the message header of the quarantined message that has the specified Identity value.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-QuarantineMessageHeader 65ab8c7d-dcd3-4067-7c60-08d116c001c3\8b677327-0ef3-166b-e108-ff6cb380d191
-```
-
-This example displays the message header of the quarantined message that has the specified Identity value.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-$qMessages = Get-QuarantineMessage; Get-QuarantineMessageHeader $qMessages[0].Identity
-```
-
-This example displays the message header of the first message that's returned by Get-QuarantineMessage cmdlet.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 $qMessages = Get-QuarantineMessage; Get-QuarantineMessageHeader $qMessages[0].Identity
 ```
@@ -91,4 +77,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1ac639ba-97e5-4433-b2eb-c8386946a978.aspx)
-
