@@ -26,7 +26,12 @@ When a product team ships an update or new version they can use the PlatyPS tool
 
 The XML contains the latest version of the reference content on GitHub.
 Ideally the Online versions will always have the latest content from GitHub and the On Premises products will always have the latest help with Update-Help. 
-The work to make this happen is not yet done so the content is only refreshed on product team releases.
+The work to make this happen is not yet done so the content is only refreshed on product team releases. 
+
+NOTE: For now (3/1/2018) the XML is being placed in skype/update-help.
+This help is generated from the New-ExternalHelp command that is part of PlatyPS.
+The 2019 release is working towards pulling help from here with Update-Help.
+Stay tuned.
 
 ## What metadata do reference topics need to have?
 
