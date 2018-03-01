@@ -24,14 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-OutboundConnectorReport -Domain contoso.com
-```
-
-This example shows the Outbound connector that's used to deliver mail to the contoso.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-OutboundConnectorReport -Domain contoso.com
 ```
@@ -106,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/097223da-2189-4125-acab-f03cb1de4be2.aspx)
-
