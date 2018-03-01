@@ -20,56 +20,20 @@ Get-SearchDocumentFormat [[-Identity] <SearchDocumentFormatId>] [-Server <Server
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Microsoft Exchange Server 2013, Exchange Search includes built-in support for indexing many file formats. Output from the Get-SearchDocumentFormat cmdlet includes details about each supported file format, including whether content indexing is enabled for the file format, the format handler, and the file extension (such as .docx).
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange Search - diagnostics" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-Exchange Search includes built-in support for indexing many file formats. Output from the Get-SearchDocumentFormat cmdlet includes details about each supported file format, including whether content indexing is enabled for the file format, the format handler, and the file extension (such as .docx).
+Exchange Search includes built-in support for indexing many file formats. Output from the Get-SearchDocumentFormat cmdlet includes details about each supported file format, including whether content indexing is enabled for the file format, the format handler and the file extension (such as .docx).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-SearchDocumentFormat
 ```
 
 This example retrieves a list of all file formats supported by Exchange Search.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-SearchDocumentFormat
-```
-
-This example retrieves a list of all file formats supported by Exchange Search.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-SearchDocumentFormat
-```
-
-This example retrieves a list of all file formats supported by Exchange Search.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-SearchDocumentFormat docx | Format-List *
-```
-
-This example retrieves all properties of the docx file format.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-SearchDocumentFormat docx | Format-List *
-```
-
-This example retrieves all properties of the docx file format.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-SearchDocumentFormat docx | Format-List *
 ```
@@ -130,4 +94,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7e966dba-82ea-416f-b859-1ffb7bd7c713.aspx)
-
