@@ -1,24 +1,25 @@
 ---
 external help file: 
 applicable: SharePoint Online
-title: Disconnect-SPOHubSite
+title: Add-SPOHubSiteAssociation
 schema: 2.0.0
 ---
 
-# Disconnect-SPOHubSite
+# Add-SPOHubSiteAssociation
 
 ## SYNOPSIS
-Disconnects a site from a hub site.
+Associates a site with a hub site.
 
 ## SYNTAX
 
 ```
-Disconnect-SPOHubSite [-Site] <SpoSitePipeBind>
+Add-SPOHubSiteAssociation [-Site] <SpoSitePipeBind> `
+-HubSite <SpoHubSitePipeBind> `
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to disconnect a site from a hub site. The site will no longer be associated with the hub site.
+Use this cmdlet to associate a site with a hub site.
 
 If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
@@ -27,16 +28,34 @@ If the site or hub site doesn’t exist, this cmdlet returns a “File not found
 ### Example 1
 
 ```
-Disconnect-SPOHubSite https://contoso.sharepoint.com/sites/Research
+Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research `
+-HubSite https://contoso.sharepoint.com/sites/Marketing 
 ```
 
-This example disconnects the research site from the marketing hub site.
+This example associates the research site with the marketing hub site.
 
 ## PARAMETERS
 
 ### -Site
 
-URL of the site to disconnect from the hub site.
+URL of the site to join to the hub site.
+
+```yaml
+Type: SpoSitePipeBind
+Parameter Sets: (All)
+Aliases: 
+Applicable: SharePoint Online
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -HubSite
+
+URL of the hub site.
 
 ```yaml
 Type: SpoSitePipeBind

@@ -1,25 +1,24 @@
 ---
 external help file: 
 applicable: SharePoint Online
-title: Connect-SPOHubSite
+title: Remove-SPOHubSiteAssociation
 schema: 2.0.0
 ---
 
-# Connect-SPOHubSite
+# Remove-SPOHubSiteAssociation
 
 ## SYNOPSIS
-Connects a site to a hub site.
+Removes a site from its associated hub site.
 
 ## SYNTAX
 
 ```
-Connect-SPOHubSite [-Site] <SpoSitePipeBind> `
--HubSite <SpoHubSitePipeBind> `
+Remove-SPOHubSiteAssociation [-Site] <SpoSitePipeBind>
 [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use this cmdlet to connect a site to a hub site.
+Use this cmdlet to remove an association between a site and a hub site.
 
 If the site or hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
@@ -28,34 +27,16 @@ If the site or hub site doesn’t exist, this cmdlet returns a “File not found
 ### Example 1
 
 ```
-Connect-SPOHubSite https://contoso.sharepoint.com/sites/Research `
--HubSite https://contoso.sharepoint.com/sites/Marketing 
+Remove-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/Research
 ```
 
-This example connects the research site with the marketing hub site.
+This example removes the research site from the marketing hub site.
 
 ## PARAMETERS
 
 ### -Site
 
-URL of the site to join to the hub site.
-
-```yaml
-Type: SpoSitePipeBind
-Parameter Sets: (All)
-Aliases: 
-Applicable: SharePoint Online
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -HubSite
-
-URL of the hub site.
+URL of the site to remove from the hub site.
 
 ```yaml
 Type: SpoSitePipeBind
