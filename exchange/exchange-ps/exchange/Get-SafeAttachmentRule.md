@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SafeAttachmentRule
 ```
 
 This example returns a summary list of all Safe Attachments rules in your organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-SafeAttachmentRule
-```
-
-This example returns a summary list of all Safe Attachments rules in your organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SafeAttachmentRule -Identity "Research Department Attachment Rule" | Format-List
-```
-
-This example returns detailed information about the Safe Attachments rule named Research Department Attachment Rule.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-SafeAttachmentRule -Identity "Research Department Attachment Rule" | Format-List
 ```
@@ -113,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1e9ffcca-ad71-404a-8344-0c38b5cd0d34.aspx)
-
