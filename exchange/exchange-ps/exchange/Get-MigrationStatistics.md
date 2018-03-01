@@ -20,31 +20,11 @@ Get-MigrationStatistics [-Diagnostic] [-DiagnosticArgument <String>] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationStatistics -Identity MigBatch01 -Diagnostic
-```
-
-This example returns the default statistics for the migration batch MigBatch01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationStatistics
-```
-
-This example returns the default statistics for the migration batches.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MigrationStatistics
 ```
@@ -137,4 +117,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bf5d6d30-e3cf-46c1-b821-36b156e4a9d4.aspx)
-
