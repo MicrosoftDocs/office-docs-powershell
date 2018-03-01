@@ -30,13 +30,6 @@ Remove-AntiPhishRule -Identity "Research Department Phishing Rule"
 
 This examples removes the antiphishing rule named Research Department Phishing Rule.
 
-### Example 1 (Exchange Online Protection)
-```
-Remove-AntiPhishRule -Identity "Research Department Phishing Rule"
-```
-
-This examples removes the antiphishing rule named Research Department Phishing Rule.
-
 ## PARAMETERS
 
 ### -Identity
