@@ -30,21 +30,7 @@ Get-AntiPhishPolicy
 
 This example shows a summary list of all antiphish policies.
 
-### Example 1 (Exchange Online Protection)
-```
-Get-AntiPhishPolicy
-```
-
-This example shows a summary list of all antiphish policies.
-
-### Example 1
-```
-Get-AntiPhishPolicy  -Identity Default | Format-List
-```
-
-This example shows detailed information about the antiphish policy named Default.
-
-### Example 1 (Exchange Online Protection)
+### Example 2
 ```
 Get-AntiPhishPolicy  -Identity Default | Format-List
 ```

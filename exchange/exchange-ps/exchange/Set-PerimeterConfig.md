@@ -1,36 +1,37 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016
+applicable: Exchange Online
 schema: 2.0.0
 ---
 
-# Disable-PushNotificationProxy
+# Set-PerimeterConfig
 
 ## SYNOPSIS
-This cmdlet is available only in on-premises Exchange.
+This cmdlet is available only in the cloud-based service.
 
-Use the Disable-PushNotificationProxy cmdlet to disable the push notification proxy that's configured between an on-premises Microsoft Exchange organization and a Microsoft Office 365 organization.
+Use the Set-PerimeterConfig cmdlet to modify the list of gateway server IP addresses that have been added to the cloud-based safelists.
 
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
+### Set1
 ```
-Disable-PushNotificationProxy [-Confirm] [-WhatIf] [<CommonParameters>]
+Set-PerimeterConfig [-Confirm [<SwitchParameter>]] [-GatewayIPAddresses <MultiValuedProperty>] [-WhatIf [<SwitchParameter>]] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The push notification proxy relays event notifications (for example, new email or calendar updates) for on-premises mailboxes through Office 365 to Outlook on the web for devices on the user's device.
+If you have an on-premises email system, you can use the Set-PerimeterConfig cmdlet to add the IP addresses of your gateway servers to cloud-based safelists (also known as whitelists) to make sure that messages sent from your on-premises email system aren't treated as spam.
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
 ### Example 1
 ```
-Disable-PushNotificationProxy
+Set-PerimeterConfig -GatewayIPAddresses 123.0.0.1
 ```
 
-This example disables the push notification proxy in the on-premises Exchange organization.
+This example shows how to add an IP address to cloud-based safelists where the gateway server relays email to the cloud-based service from internal email servers only.
+
+
 
 ## PARAMETERS
 
@@ -44,9 +45,23 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
+Aliases: 
+Applicable: Exchange Online
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
+### -GatewayIPAddresses
+Use the GatewayIPAddresses parameter to create or modify a list of gateway server IP addresses to add to IP safelists. IP addresses are specified in IPv4 format, for example, 10.1.1.1. If you list more than one IP address, separate each entry with a comma.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases: 
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -60,9 +75,8 @@ The WhatIf switch simulates the actions of the command. You can use this switch 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2013, Exchange Server 2016
-
+Aliases: 
+Applicable: Exchange Online
 Required: False
 Position: Named
 Default value: None
@@ -75,16 +89,20 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-###  
+### 
 To see the input types that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Input Type field for a cmdlet is blank, the cmdlet doesn't accept input data.
+
 
 ## OUTPUTS
 
-###  
+### 
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
+
 
 ## NOTES
 
+
 ## RELATED LINKS
 
-[Online Version](https://technet.microsoft.com/library/917432cc-85d6-4505-9608-51ce0608eb6e.aspx)
+[Online Version](https://technet.microsoft.com/library/4f40a5fc-3275-42a0-b12f-a199bd42c8d5.aspx)
+

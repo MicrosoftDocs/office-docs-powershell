@@ -19,24 +19,11 @@ Get-AuthConfig [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-AuthConfig | Format-List
-```
-
-This example retrieves the authorization configuration for the Exchange organization and pipes the results to the Format-List command.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-AuthConfig | Format-List
 ```
@@ -79,4 +66,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/cef1b36e-78d8-4937-bdc3-7d99b1f349a4.aspx)
-

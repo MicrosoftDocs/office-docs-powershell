@@ -21,20 +21,13 @@ Get-AtpPolicyForO365 [[-Identity] <AtpPolicyForO365IdParameter>] [<CommonParamet
 ## DESCRIPTION
 Safe Links is a feature in Advanced Threat Protection that checks links in email messages to see if they lead to malicious web sites. For more information, see ATP safe links in Office 365 (https://go.microsoft.com/fwlink/p/?linkid=846016).
 
-ATP can also protect files in SharePoint Online, OneDrive for Business, and Microsoft Teams by preventing users from opening and downloading files that are identified as malicious. For more information, see Office 365 Advanced Threat Protection for SharePoint, OneDrive, and Teams (https://go.microsoft.com/fwlink/p/?linkid=857638).
+ATP can also protect files in SharePoint Online, OneDrive for Business and Microsoft Teams by preventing users from opening and downloading files that are identified as malicious. For more information, see Office 365 Advanced Threat Protection for SharePoint, OneDrive and Teams (https://go.microsoft.com/fwlink/p/?linkid=857638).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-AtpPolicyForO365
-```
-
-This example returns detailed information about the ATP policy named Default
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-AtpPolicyForO365
 ```
@@ -77,4 +70,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4649aa3a-e49d-42ba-84e8-ef2871fa2b58.aspx)
-
