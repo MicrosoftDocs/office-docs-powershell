@@ -30,21 +30,7 @@ Get-AntiPhishRule
 
 This example returns a summary list of all antiphishing rules in your organization.
 
-### Example 1 (Exchange Online Protection)
-```
-Get-AntiPhishRule
-```
-
-This example returns a summary list of all antiphishing rules in your organization.
-
-### Example 1
-```
-Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
-```
-
-This example returns detailed information about the antiphishing rule named Research Department Phishing Rule.
-
-### Example 1 (Exchange Online Protection)
+### Example 2
 ```
 Get-AntiPhishRule -Identity "Research Department Phishing Rule" | Format-List
 ```
