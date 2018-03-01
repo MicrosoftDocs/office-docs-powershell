@@ -55,7 +55,8 @@
     "globalMetadata": {
       "author" : "kenwith",
       "ms.author" : "kenwith",
-      "ms.date" : "01/01/2018",
+      "manager" : "serdars",
+      "ms.date" : "09/25/2017",
       "ms.topic" : "reference",
       "ms.service" : "staffhub-powershell",
       "ms.devlang" : "powershell"

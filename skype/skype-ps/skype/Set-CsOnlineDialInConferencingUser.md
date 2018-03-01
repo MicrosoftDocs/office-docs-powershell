@@ -407,7 +407,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowTollFreeDialIn
-{{Fill AllowTollFreeDialIn Description}}
+If toll-free numbers are available in your Microsoft Audio Conferencing bridge, this parameter controls if they can be used to join the meetings of a given user. Please note that making modifications to this value could trigger rescheduling all existing meetings organized by the given users, and all meeting invites will be resent to all participants. 
 
 ```yaml
 Type: Object

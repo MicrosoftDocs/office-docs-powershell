@@ -36,7 +36,7 @@ This example disconnects the research site from the marketing hub site.
 
 ### -Site
 
-URL of the site to disconnect from the hub.
+URL of the site to disconnect from the hub site.
 
 ```yaml
 Type: SpoSitePipeBind

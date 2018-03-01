@@ -31,10 +31,16 @@ Invoke-SPOMigrationEncryptUploadSubmit -Credentials <CredentialCmdletPipeBind> [
 
 ### Example 1 
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> $sourceFiles = "C:\sourceFiles"
+PS C:\> $spoPackagePath = "C:\packagePath"
+PS C:\> $credentials = Get-Credential
+PS C:\> $targetweburl = "https://contoso.sharepoint.com" 
+PS C:\> Invoke-SPOMigrationEncryptUploadSubmit -SourceFilesPath $sourceFiles -SourcePackagePath $spoPackagePath -Credentials $credentials -TargetWebUrl $targetweburl
 ```
 
-{{ Add example description here }}
+This example shows how to submit package data to create a new migration job. 
+
+This article contains the steps on how to create this package: https://support.office.com/en-us/article/upload-on-premises-content-to-sharepoint-online-using-powershell-cmdlets-555049c6-15ef-45a6-9a1f-a1ef673b867c
 
 ## PARAMETERS
 
