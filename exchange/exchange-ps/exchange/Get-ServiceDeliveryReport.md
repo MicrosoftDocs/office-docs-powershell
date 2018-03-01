@@ -24,14 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-ServiceDeliveryReport -Recipient chris@contoso.com
-```
-
-This example shows the delivery path information for the recipient chris@contoso.com.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-ServiceDeliveryReport -Recipient chris@contoso.com
 ```
@@ -106,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/27b11891-b4de-465f-88de-6357bcdbf86a.aspx)
-
