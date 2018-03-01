@@ -20,35 +20,13 @@ Get-PartnerApplication [[-Identity] <PartnerApplicationIdParameter>] [-DomainCon
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-In Microsoft Exchange Server 2013, you can configure partner applications such as Microsoft SharePoint to access Exchange resources. For details, see Integration with SharePoint and Lync.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner applications - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You can configure partner applications such as Microsoft SharePoint to access Exchange resources. For details, see Plan Exchange 2016 integration with SharePoint and Skype for Business.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-PartnerApplication | Format-List *
-```
-
-This example retrieves settings for all partner applications configured in Exchange and pipes them to the Format-List cmdlet to display all properties in a list view.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-PartnerApplication | Format-List *
-```
-
-This example retrieves settings for all partner applications configured in Exchange and pipes them to the Format-List cmdlet to display all properties in a list view.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-PartnerApplication | Format-List *
 ```
@@ -92,17 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-!!! Exchange Server 2013
-
-The Organization parameter is reserved for internal Microsoft use.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 This parameter is reserved for internal Microsoft use.
-
-
 
 ```yaml
 Type: OrganizationIdParameter
@@ -135,4 +103,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e6ce8128-f174-4bca-91e6-004fc94cf0f8.aspx)
-

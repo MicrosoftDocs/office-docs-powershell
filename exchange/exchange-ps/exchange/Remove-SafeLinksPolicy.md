@@ -28,14 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-SafeLinksPolicy -Identity "Engineering Department URL Policy"
-```
-
-This example remove the Safe Links policy named Engineering Department URL Policy.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-SafeLinksPolicy -Identity "Engineering Department URL Policy"
 ```
@@ -138,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ecc2a770-8352-4600-aa0e-3757f61b5d76.aspx)
-

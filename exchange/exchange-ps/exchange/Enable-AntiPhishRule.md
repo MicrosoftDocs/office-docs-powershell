@@ -30,13 +30,6 @@ Enable-AntiPhishRule -Identity "Marketing Department Phishing Rule"
 
 This example enables the antiphishing rule named Marketing Department Phishing Rule.
 
-### Example 1 (Exchange Online Protection)
-```
-Enable-AntiPhishRule -Identity "Marketing Department Phishing Rule"
-```
-
-This example enables the antiphishing rule named Marketing Department Phishing Rule.
-
 ## PARAMETERS
 
 ### -Identity

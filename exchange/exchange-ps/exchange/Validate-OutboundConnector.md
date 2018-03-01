@@ -30,14 +30,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Validate-OutboundConnector -Identity "Contoso.com Outbound Connector" -Recipients laura@contoso.com,julia@contoso.com
-```
-
-This example tests the Outbound connector named Contoso.com Outbound Connector.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Validate-OutboundConnector -Identity "Contoso.com Outbound Connector" -Recipients laura@contoso.com,julia@contoso.com
 ```
@@ -140,4 +133,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/49bbc944-c55d-4c85-bf6b-63669a601621.aspx)
-

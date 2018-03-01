@@ -28,14 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-SafeAttachmentPolicy -Identity "Block Attachments Policy"
-```
-
-This example removes the Safe Attachments policy named Block Attachments Policy.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-SafeAttachmentPolicy -Identity "Block Attachments Policy"
 ```
@@ -138,4 +131,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0d3b131c-e80f-426b-9140-7e674ab2b1ad.aspx)
-
