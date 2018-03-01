@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-SafeLinksRule -Identity "Research Department URL Rule"
-```
-
-This examples removes the Safe Links rule named Research Department URL Rule.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-SafeLinksRule -Identity "Research Department URL Rule"
 ```
@@ -119,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/32bd0520-7f88-4622-8686-0425f1317ec1.aspx)
-
