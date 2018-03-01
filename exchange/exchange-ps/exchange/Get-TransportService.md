@@ -19,38 +19,18 @@ Get-TransportService [[-Identity] <TransportServerIdParameter>] [-DomainControll
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Transport service" or "Edge Transport server" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-TransportService
 ```
 
 This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Mailbox servers in your organization.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-TransportService
-```
-
-This example provides different results depending on the server role on which it's run. When you run this command on an Edge Transport server, it provides a configuration summary for the local server. Otherwise, it displays a list of all Mailbox servers in your organization.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-TransportService Mailbox1 | Format-List
-```
-
-This example retrieves the detailed transport configuration information for the Transport service on the Mailbox server named Mailbox1.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-TransportService Mailbox1 | Format-List
 ```
@@ -111,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/bcedb558-4caf-482f-8be3-30e1793ba103.aspx)
-
