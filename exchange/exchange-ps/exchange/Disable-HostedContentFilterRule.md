@@ -23,14 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-HostedContentFilterRule "Contoso Recipients"
-```
-
-This example disables the enabled content filter rule named Contoso Recipients.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Disable-HostedContentFilterRule "Contoso Recipients"
 ```
@@ -40,7 +33,7 @@ This example disables the enabled content filter rule named Contoso Recipients.
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the content filter rule that you want to disable. You can use any value that uniquely identifies the rule. For example, you can specify the name, GUID, or distinguished name (DN) of the content filter rule.
+The Identity parameter specifies the content filter rule that you want to disable. You can use any value that uniquely identifies the rule. For example, you can specify the name, GUID or distinguished name (DN) of the content filter rule.
 
 ```yaml
 Type: RuleIdParameter
@@ -109,4 +102,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c1f8dafc-ef5d-47e3-b0fb-71a88e145fc5.aspx)
-
