@@ -23,28 +23,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-HostedContentFilterPolicy
 ```
 
 This example shows a summary list of all the content filter policies in your cloud-based organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-HostedContentFilterPolicy
-```
-
-This example shows a summary list of all the content filter policies in your cloud-based organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-HostedContentFilterPolicy Default | Format-List
-```
-
-This example retrieves details about the content filter policy named Default.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-HostedContentFilterPolicy Default | Format-List
 ```
@@ -87,4 +73,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d510471a-dda5-4df7-b3f8-2ee7a1948436.aspx)
-
