@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-Trust
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-Trust cmdlet to return external and forest trusts.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-Trust cmdlet to return external and forest trusts.
@@ -25,41 +19,13 @@ Get-Trust [-DomainName <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Get-Trust cmdlet is used by the Exchange Management Console and the Exchange Control Panel in Microsoft Exchange Server 2010 to populate fields that display recipient information.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Active Directory Domain Services server settings" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-The Get-Trust cmdlet is used by the Exchange Administration Center in Microsoft Exchange Server 2013 to populate fields that display recipient information.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Active Directory Domain Services server settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The Get-Trust cmdlet is used by the Exchange admin center in to populate fields that display recipient information.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-Trust -DomainName Contoso.com
-```
-
-This example enumerates all trusts for the domain Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-Trust -DomainName Contoso.com
-```
-
-This example enumerates all trusts for the domain Contoso.com.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-Trust -DomainName Contoso.com
 ```
@@ -102,4 +68,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/3261c1bd-bb8b-479d-af4d-48fee7b4b357.aspx)
-
