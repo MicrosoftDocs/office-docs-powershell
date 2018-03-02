@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-InboundConnector "Inbound Connector for Contoso.com" | Format-List
 ```
 
 This example displays detailed configuration information for the Inbound connector named Inbound Connector for Contoso.com.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-InboundConnector "Inbound Connector for Contoso.com" | Format-List
-```
-
-This example displays detailed configuration information for the Inbound connector named Inbound Connector for Contoso.com.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-InboundConnector
-```
-
-This example lists all the Inbound connectors configured in your cloud-based organization.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-InboundConnector
 ```
@@ -56,7 +42,7 @@ This example lists all the Inbound connectors configured in your cloud-based org
 ## PARAMETERS
 
 ### -Identity
-The Identity parameter specifies the name, or GUID of the Inbound connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label.
+The Identity parameter specifies the name or GUID of the Inbound connector. If the Identity name contains spaces, enclose the name in quotation marks ("). You can omit the Identity parameter label.
 
 ```yaml
 Type: InboundConnectorIdParameter
@@ -89,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ad72a9d6-4bac-4dd5-ae22-3246e05aac4e.aspx)
-

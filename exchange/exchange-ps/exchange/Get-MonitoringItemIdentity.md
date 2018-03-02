@@ -19,24 +19,11 @@ Get-MonitoringItemIdentity [-Identity] <String> -Server <ServerIdParameter> [<Co
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Exchange server configuration settings" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MonitoringItemIdentity -Identity HealthSet01 -Server ExchSrv01
-```
-
-This example retrieves monitoring information about the HealthSet01 monitoring item on the ExchSrv01 server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-MonitoringItemIdentity -Identity OutlookMapiHttp.Proxy -Server ExchSrv01
 ```
@@ -46,17 +33,7 @@ This example returns information about the health set named OutlookMapiHttp.Prox
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the monitoring item on a server running Microsoft Exchange Server 2013.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the health setthat you want to view. To see the list of available health sets, you can use the Get-ServerHealth or Get-HealthReport cmdlets.
-
-
 
 ```yaml
 Type: String
@@ -72,14 +49,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange 2013 server to query for health set information.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -91,8 +60,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -125,4 +92,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/7a4da080-0fe6-4dd7-85a2-cceeb68f95e0.aspx)
-

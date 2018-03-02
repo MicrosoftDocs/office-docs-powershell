@@ -31,13 +31,6 @@ Remove-AntiPhishPolicy -Identity "Quarantine Policy"
 
 This example removes the antiphishing policy named Quarantine Policy.
 
-### Example 1 (Exchange Online Protection)
-```
-Remove-AntiPhishPolicy -Identity "Quarantine Policy"
-```
-
-This example removes the antiphishing policy named Quarantine Policy.
-
 ## PARAMETERS
 
 ### -Identity

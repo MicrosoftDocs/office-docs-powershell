@@ -6,18 +6,6 @@ schema: 2.0.0
 # Get-IPAllowListConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-IPAllowListConfig cmdlet to view the configuration information for the IP Allow list configuration on the computer that has the Edge Transport server role or the Hub Transport server role installed.
-
-!!! Exchange Server 2013
-
-This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange Server 2013.
-
-Use the Get-IPAllowListConfig cmdlet to view the configuration information for the IP Allow list that's used by the Connection Filtering agent on Edge Transport servers.
-
-!!! Exchange Server 2016
-
 This cmdlet is available or effective only on Edge Transport servers in on-premises Exchange.
 
 Use the Get-IPAllowListConfig cmdlet to view the configuration information for the IP Allow list that's used by the Connection Filtering agent on Edge Transport servers.
@@ -29,41 +17,13 @@ Get-IPAllowListConfig [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The IP Allow list configuration is used by the Connection Filter agent. The Connection Filter agent acts on the IP address of the remote server that initiates the SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features - Edge Transport" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 On Edge Transport servers, the Connection Filtering agent acts on the IP address of the incoming SMTP connection to determine what action, if any, to take on an incoming message.
 
 On Edge Transport servers, you need to be a member of the local Administrators group to run this cmdlet.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-IPAllowListConfig | Format-List
-```
-
-This example returns detailed information about the IP Allow list configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-IPAllowListConfig | Format-List
-```
-
-This example returns detailed information about the IP Allow list configuration on the local Edge Transport server.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-IPAllowListConfig | Format-List
 ```
@@ -108,4 +68,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/66ce04e1-0170-4554-af72-a4bc5030ec74.aspx)
-

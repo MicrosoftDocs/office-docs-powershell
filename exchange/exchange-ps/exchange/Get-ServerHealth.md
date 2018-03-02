@@ -19,28 +19,6 @@ Get-ServerHealth [-Identity] <ServerIdParameter> [-HaImpactingOnly] [-HealthSet 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell infrastructure permissions topic.
-
-The cmdlet returns health values that you can use to determine the state of the server. See Server health and performance for related information.
-
-The cmdlet also returns an alert value that provides the specific state of your server. The following values may be returned:
-
-- Degraded
-
-- Unhealthy
-
-- Repairing
-
-- Disabled
-
-- Unavailable
-
-- UnInitialized
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 The cmdlet returns health values that you can use to determine the state of the server. See Server health and performance in Exchange 2016 for related information.
@@ -61,14 +39,7 @@ The cmdlet also returns an alert value that provides the specific state of your 
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ServerHealth -Identity Server01
-```
-
-This example returns the server health for server Server01.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ServerHealth -Identity Server01
 ```
@@ -143,4 +114,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/ca9cff3a-ecda-422d-abd7-b7d8da71a6c7.aspx)
-

@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-SafeAttachmentRule -Identity "Engineering Department Attachment Rule"
-```
-
-This example disables the Safe Attachments rule named Engineering Department Attachment Rule.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Disable-SafeAttachmentRule -Identity "Engineering Department Attachment Rule"
 ```
@@ -119,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d57d90fa-1e81-4c67-85a5-77b9ae58802f.aspx)
-

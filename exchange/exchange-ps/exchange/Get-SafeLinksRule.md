@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SafeLinksRule | Format-Table -Auto Name,State,Priority,SafeLinksPolicy,Comments
 ```
 
 This example returns a summary list of all Safe Links rules in your organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-SafeLinksRule | Format-Table -Auto Name,State,Priority,SafeLinksPolicy,Comments
-```
-
-This example returns a summary list of all Safe Links rules in your organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SafeLinksRule -Identity "Research Department URL Rule"
-```
-
-This example returns detailed information about the Safe Links rule named Research Department URL Rule.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-SafeLinksRule -Identity "Research Department URL Rule"
 ```
@@ -113,4 +99,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/57bed861-31c9-428d-bbd7-165ce7743ae6.aspx)
-
