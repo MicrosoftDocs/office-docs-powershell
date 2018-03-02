@@ -20,21 +20,7 @@ This cmdlet has been deprecated in Exchange Server 2010 Service Pack 1.
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Enable-AntispamUpdates
-```
-
-This cmdlet has been deprecated in Exchange Server 2010 Service Pack 1.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Enable-AntispamUpdates
-```
-
-This cmdlet has been deprecated in Exchange Server 2010 Service Pack 1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Enable-AntispamUpdates
 ```
@@ -125,4 +111,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/52626c5d-d455-4c6f-a875-418ba007a501.aspx)
-

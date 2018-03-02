@@ -23,14 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MxRecordReport -Domain contoso.com
-```
-
-This example shows the MX record information for the contoso.com domain.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Get-MxRecordReport -Domain contoso.com
 ```
@@ -105,4 +98,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/41cc58a9-25c2-4e04-b404-4e3afa71f79c.aspx)
-

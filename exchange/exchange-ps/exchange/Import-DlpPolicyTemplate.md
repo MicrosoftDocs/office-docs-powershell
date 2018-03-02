@@ -19,24 +19,11 @@ Import-DlpPolicyTemplate [-FileData] <Byte[]> [-Confirm] [-WhatIf] [<CommonParam
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Import-DlpPolicyTemplate -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External DLP Policy Template.xml" -Encoding Byte -ReadCount 0))
-```
-
-This example imports the DLP policy template file C:\\My Documents\\External DLP Policy Template.xml.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Import-DlpPolicyTemplate -FileData ([Byte[]]$(Get-Content -Path "C:\My Documents\External DLP Policy Template.xml" -Encoding Byte -ReadCount 0))
 ```
@@ -46,21 +33,9 @@ This example imports the DLP policy template file C:\\My Documents\\External DLP
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2013
-
-The FileData parameter specifies the DLP policy template file you want to import.
-
-For more information about the syntax required to use this parameter, see Syntax.
-
-
-
-!!! Exchange Server 2016
-
 The FileData parameter specifies the DLP policy template file you want to import.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -129,4 +104,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1e508447-a322-4a31-a80c-ab0471422fe2.aspx)
-

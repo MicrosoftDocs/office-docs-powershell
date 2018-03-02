@@ -22,21 +22,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -Name "CASArray"
 ```
 
 This example names the Client Access server array CASArray.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -FQDN "mail.contoso.com"
 ```
 
 This example returns the Client Access server array associated with the site for the FQDN mail.contoso.com.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-ClientAccessArray -Identity "ContosoArray" -Site "SiteEU"
 ```

@@ -23,14 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-Disable-AntiPhishRule -Identity "Engineering Department Phishing Rule"
-```
-
-This example disables the antiphishing rule named Engineering Department Phishing Rule.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 Disable-AntiPhishRule -Identity "Engineering Department Phishing Rule"
 ```

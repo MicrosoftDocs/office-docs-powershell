@@ -29,28 +29,28 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase
 ```
 
 This example restores a mailbox for user Scott from the database MyRecoveryDatabase.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -RecoveryMailbox John -TargetFolder Recovery
 ```
 
 This example restores John's mailbox content into Scott's mailbox under the Recovery folder.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Restore-Mailbox -Identity Scott -RecoveryDatabase MyRecoveryDatabase -SubjectKeywords "Meeting" -ContentKeywords "business" -IncludeFolders \Inbox,\Calendar
 ```
 
 This example restores only the mail with the subject Meeting, with the message body containing the word business, and with the message location either in the Inbox or Calendar folder. This example assumes that the mailbox is in English.
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Get-Mailbox -Database MyDatabase | Restore-Mailbox -RecoveryDatabase MyRecoveryDatabase
 ```

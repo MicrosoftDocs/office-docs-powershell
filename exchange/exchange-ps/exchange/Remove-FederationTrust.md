@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-FederationTrust
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-FederationTrust cmdlet to remove an existing federation trust.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-FederationTrust cmdlet to remove an existing federation trust from an Exchange organization.
@@ -26,41 +20,13 @@ Remove-FederationTrust [-Identity] <FederationTrustIdParameter> [-Confirm] [-Dom
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Federation trusts are set up with Microsoft Federation Gateway to enable calendar sharing and free/busy sharing with external organizations or individuals. The Remove-FederationTrust cmdlet removes a federation trust.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell Infrastructure Permissions topic.
-
-!!! Exchange Server 2013
-
-Federation trusts are set up with Microsoft Federation Gateway to enable calendar sharing and free/busy sharing with external Exchange organizations or individuals. The Remove-FederationTrust cmdlet removes a federation trust.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Federation trusts" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 Federation trusts are set up with Microsoft Federation Gateway to enable calendar sharing and free/busy sharing with external Exchange organizations or individuals. The Remove-FederationTrust cmdlet removes a federation trust.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-FederationTrust "Microsoft Federation Gateway"
-```
-
-This example removes the federation trust Microsoft Federation Gateway.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-FederationTrust "Microsoft Federation Gateway"
-```
-
-This example removes the federation trust Microsoft Federation Gateway.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-FederationTrust "Microsoft Federation Gateway"
 ```
@@ -155,4 +121,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d01fb4ba-4db4-4fbb-85ef-d14219fe0ad9.aspx)
-

@@ -31,21 +31,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-ManagedContentSettings | Format-List
 ```
 
 This example uses the Get-ManagedContentSettings cmdlet without parameters to obtain all managed content settings. The output of the Get-ManagedContentSettings cmdlet is piped to the Format-List cmdlet so that all the available information is displayed in the result.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-ManagedContentSettings -Identity "Inbox Settings"
 ```
 
 This example retrieves the managed content settings Inbox Settings.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-ManagedContentSettings -FolderName "Inbox"
 ```

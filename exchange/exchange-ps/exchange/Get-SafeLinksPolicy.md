@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SafeLinksPolicy | Format-Table Name,IsEnabled,IsDefault
 ```
 
 This example shows a summary list of all Safe Links policies.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-SafeLinksPolicy | Format-Table Name,IsEnabled,IsDefault
-```
-
-This example shows a summary list of all Safe Links policies.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SafeLinksPolicy -Identity Default
-```
-
-This example shows detailed information about the Safe Links policy named Default.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-SafeLinksPolicy -Identity Default
 ```
@@ -97,4 +83,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/d847809d-bdad-4d3b-b62e-be67411a6372.aspx)
-

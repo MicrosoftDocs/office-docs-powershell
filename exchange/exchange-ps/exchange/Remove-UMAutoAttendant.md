@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-UMAutoAttendant
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-UMAutoAttendant cmdlet to delete a Unified Messaging (UM) auto attendant.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-UMAutoAttendant cmdlet to delete a Unified Messaging (UM) auto attendant.
@@ -21,29 +15,10 @@ For information about the parameter sets in the Syntax section below, see Exchan
 ## SYNTAX
 
 ```
-Remove-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf]
- [<CommonParameters>]
+Remove-UMAutoAttendant [-Identity] <UMAutoAttendantIdParameter> [-Confirm] [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-The Remove-UMAutoAttendant cmdlet deletes an existing UM auto attendant from Active Directory. The Remove-UMAutoAttendant cmdlet deletes the UM auto attendant and also deletes instances of the UM auto attendant from any associated UM dial plans. When the UM auto attendant is deleted, incoming telephone calls to the configured extensions are no longer answered by the UM auto attendant.
-
-After this task is completed, the UM auto attendant is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-UMAutoAttendant cmdlet deletes an existing UM auto attendant from Active Directory. The Remove-UMAutoAttendant cmdlet deletes the UM auto attendant and also deletes instances of the UM auto attendant from any associated UM dial plans. When the UM auto attendant is deleted, incoming telephone calls to the configured extensions are no longer answered by the UM auto attendant.
-
-After this task is completed, the UM auto attendant is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM auto attendants" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Remove-UMAutoAttendant cmdlet deletes an existing UM auto attendant from Active Directory. The Remove-UMAutoAttendant cmdlet deletes the UM auto attendant and also deletes instances of the UM auto attendant from any associated UM dial plans. When the UM auto attendant is deleted, incoming telephone calls to the configured extensions are no longer answered by the UM auto attendant.
 
 After this task is completed, the UM auto attendant is removed from Active Directory.
@@ -52,28 +27,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example deletes a UM auto attendant named MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example deletes the UM auto attendant MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMAutoAttendant -Identity MyUMAutoAttendant
-```
-
-This example deletes the UM auto attendant MyUMAutoAttendant.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UMAutoAttendant -Identity MyUMAutoAttendant
 ```
@@ -83,17 +37,7 @@ This example deletes the UM auto attendant MyUMAutoAttendant.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the identifier for the UM auto attendant that's being deleted. This is the directory object ID for the UM auto attendant.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 The Identity parameter specifies the identifier for the UM auto attendant being deleted. This is the directory object ID for the UM auto attendant.
-
-
 
 ```yaml
 Type: UMAutoAttendantIdParameter
@@ -129,19 +73,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -190,4 +124,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1fc33dc2-df0f-451e-b6a1-5ca0a20bef5e.aspx)
-

@@ -26,14 +26,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-HostedContentFilterPolicy "Contoso Content Filter Policy"
-```
-
-This example removes the content filter policy named Contoso Content Filter Policy.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-HostedContentFilterPolicy "Contoso Content Filter Policy"
 ```
@@ -112,4 +105,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9fe1fe03-8f83-41e3-9bf5-084a392784d6.aspx)
-

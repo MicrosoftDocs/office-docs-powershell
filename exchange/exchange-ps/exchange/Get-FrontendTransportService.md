@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-FrontendTransportService
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-FrontEndTransportService cmdlet to view the transport configuration information for the Front End Transport service on Client Access servers.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-FrontEndTransportService cmdlet to view the transport configuration information for the Front End Transport service on Exchange servers that have the Client Access server role installed.
@@ -30,42 +20,20 @@ Get-FrontendTransportService [[-Identity] <FrontendTransportServerIdParameter>] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Front End Transport service runs on all Client Access servers and acts as a stateless proxy for all inbound and outbound external SMTP traffic for the Exchange organization. The Front End Transport service only communicates with the Transport service on a Mailbox server, and doesn't queue any messages locally.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Front End Transport service" entries in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 The Front End Transport service acts as a stateless proxy for all inbound and outbound external SMTP traffic for the Exchange organization.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-FrontEndTransportService
-```
-
-This example displays a list of all Client Access servers in your organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-FrontEndTransportService
 ```
 
 This example returns a list of all Exchange servers that have the Client Access server role installed.
 
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-FrontEndTransportService CAS01 | Format-List
-```
-
-This example retrieves the detailed configuration information for the Front End Transport service on the Client Access server named CAS01.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-FrontEndTransportService MBX01 | Format-List
 ```
@@ -91,14 +59,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the server that you want to view.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange server with the Client Access server role installed that you want to view.
 
 You can use any value that uniquely identifies the server. For example:
@@ -110,8 +70,6 @@ You can use any value that uniquely identifies the server. For example:
 - Exchange Legacy DN (for example, /o=First Organization/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Configuration/cn=Servers/cn=Exchange01)
 
 - GUID (for example, bc014a0d-1509-4ecc-b569-f077eec54942)
-
-
 
 ```yaml
 Type: FrontendTransportServerIdParameter
@@ -144,4 +102,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/12908079-b1ef-4a8b-82ba-fc92a342032e.aspx)
-

@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-UMHuntGroup
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Remove-UMHuntGroup cmdlet to remove and delete an existing Unified Messaging (UM) hunt group.
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Remove-UMHuntGroup cmdlet to remove and delete an existing Unified Messaging (UM) hunt group.
@@ -26,25 +20,7 @@ Remove-UMHuntGroup [-Identity] <UMHuntGroupIdParameter> [-Confirm] [-DomainContr
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
 The Remove-UMHuntGroup cmdlet deletes an existing UM hunt group from Active Directory. When the Remove-UMHuntGroup cmdlet is used, the UM hunt group is removed from the UM IP gateway and then deleted from Active Directory. If the operation leaves the UM IP gateway without any remaining configured UM hunt groups, the IP gateway can't handle or process Unified Messaging calls.
-
-After this task is completed, the UM hunt group is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging Permissions topic.
-
-!!! Exchange Server 2013
-
-The Remove-UMHuntGroup cmdlet deletes an existing UM hunt group from Active Directory. When the Remove-UMHuntGroup cmdlet is used, the UM hunt group is removed from the UM IP gateway, and then deleted from Active Directory. If the operation leaves the UM IP gateway without any remaining configured UM hunt groups, the IP gateway can't handle or process Unified Messaging calls.
-
-After this task is completed, the UM hunt group is removed from Active Directory.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "UM hunt groups" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-The Remove-UMHuntGroup cmdlet deletes an existing UM hunt group from Active Directory. When the Remove-UMHuntGroup cmdlet is used, the UM hunt group is removed from the UM IP gateway, and then deleted from Active Directory. If the operation leaves the UM IP gateway without any remaining configured UM hunt groups, the IP gateway can't handle or process Unified Messaging calls.
 
 After this task is completed, the UM hunt group is removed from Active Directory.
 
@@ -52,28 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-UMHuntGroup -Identity MyUMHuntGroup
-```
-
-This example deletes a UM hunt group named MyUMHuntGroup.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-UMHuntGroup -Identity MyUMHuntGroup
-```
-
-This example deletes the UM hunt group MyUMHuntGroup.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Remove-UMHuntGroup -Identity MyUMHuntGroup
-```
-
-This example deletes the UM hunt group MyUMHuntGroup.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-UMHuntGroup -Identity MyUMHuntGroup
 ```
@@ -119,19 +74,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016, Exchange Online
-
 This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
 
 ```yaml
 Type: Fqdn
@@ -180,4 +125,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/1d6ea6f3-d3ba-4b65-a46c-cfd3d0868e62.aspx)
-

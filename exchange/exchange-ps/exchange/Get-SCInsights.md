@@ -35,33 +35,19 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SCInsights
 ```
 
 This example returns all insights data.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-SCInsights
-```
-
-This example returns all insights data.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-SCInsights -EndDate (Get-Date "3/3/2017 9:30 AM").ToUniversalTime()
 ```
 
-This example return insights data for March 15, 2017
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-SCInsights -EndDate (Get-Date "3/3/2017 9:30 AM").ToUniversalTime()
-```
-
-This example return insights data for March 15, 2017
+This example return insights data for March 15, 2017.
 
 ## PARAMETERS
 
@@ -105,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e237daae-d2a7-4668-98a7-6c599f4a6545.aspx)
-

@@ -20,56 +20,20 @@ Get-MobileDeviceMailboxPolicy [[-Identity] <MailboxPolicyIdParameter>] [-DomainC
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-A Mobile Device mailbox policy is a group of settings that specifies how mobile devices enabled for Exchange ActiveSync connect to the computer running Exchange. Exchange supports multiple Mobile Device mailbox policies. The Get-MobileDeviceMailboxPolicy cmdlet displays all the policy settings for the specified policy. These settings include password settings, file access settings, and attachment settings.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mobile Device mailbox policy settings" entry in the Clients and mobile devices permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-A Mobile Device mailbox policy is a group of settings that specifies how mobile devices enabled for Exchange ActiveSync connect to the computer running Exchange. Exchange supports multiple Mobile Device mailbox policies. The Get-MobileDeviceMailboxPolicy cmdlet displays all the policy settings for the specified policy. These settings include password settings, file access settings, and attachment settings.
+A Mobile Device mailbox policy is a group of settings that specifies how mobile devices enabled for Exchange ActiveSync connect to the computer running Exchange. Exchange supports multiple Mobile Device mailbox policies. The Get-MobileDeviceMailboxPolicy cmdlet displays all the policy settings for the specified policy. These settings include password settings, file access settings and attachment settings.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-MobileDeviceMailboxPolicy -Identity "SalesPolicy"
 ```
 
 This example returns the policy settings for the Mobile Device mailbox policy SalesPolicy.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDeviceMailboxPolicy -Identity "SalesPolicy"
-```
-
-This example returns the policy settings for the Mobile Device mailbox policy SalesPolicy.
-
-### Example 1 -------------------------- (Exchange Online)
-```
-Get-MobileDeviceMailboxPolicy -Identity "SalesPolicy"
-```
-
-This example returns the policy settings for the Mobile Device mailbox policy SalesPolicy.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-MobileDeviceMailboxPolicy -Identity "Default"
-```
-
-This example returns the policy settings for the Mobile Device mailbox policy Default.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-MobileDeviceMailboxPolicy -Identity "Default"
-```
-
-This example returns the policy settings for the Mobile Device mailbox policy Default.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-MobileDeviceMailboxPolicy -Identity "Default"
 ```
@@ -130,4 +94,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5f0564eb-0219-4b4e-a400-8a771fb3f002.aspx)
-

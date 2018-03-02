@@ -6,12 +6,6 @@ schema: 2.0.0
 # Remove-DeliveryAgentConnector
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-The Remove-DeliveryAgentConnector cmdlet removes a specific delivery agent connector configured in your organization.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 The Remove-DeliveryAgentConnector cmdlet removes a specific delivery agent connector configured in your organization.
@@ -24,41 +18,13 @@ Remove-DeliveryAgentConnector [-Identity] <DeliveryAgentConnectorIdParameter> [-
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Understanding Delivery Agents.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Delivery agent connectors" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 Delivery agent connectors are used to route messages addressed to foreign systems that don't use the SMTP protocol. When a message is routed to a delivery agent connector, the associated delivery agent performs the content conversion and message delivery. Delivery agent connectors allow queue management of foreign connectors, thereby eliminating the need for storing messages on the file system in Drop and Pickup directories. For more information, see Delivery agents and Delivery Agent connectors.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Remove-DeliveryAgentConnector "Contoso Delivery Agent Connector"
-```
-
-This example removes the delivery agent connector Contoso Delivery Agent Connector.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Remove-DeliveryAgentConnector "Contoso Delivery Agent Connector"
-```
-
-This example removes the delivery agent connector named Contoso Delivery Agent Connector.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Remove-DeliveryAgentConnector "Contoso Delivery Agent Connector"
 ```
@@ -84,25 +50,11 @@ Accept wildcard characters: False
 ```
 
 ### -Confirm
-!!! Exchange Server 2010, Exchange Server 2013
-
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
-
-- Destructive cmdlets (for example, Remove-* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-
-- Most other cmdlets (for example, New-* and Set-* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
-
-!!! Exchange Server 2016
-
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
 
 - Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -118,19 +70,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-!!! Exchange Server 2010
-
-The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 The DomainController parameter isn't supported on Edge Transport servers. An Edge Transport server uses the local instance of Active Directory Lightweight Directory Services (AD LDS) to read and write data.
-
-
 
 ```yaml
 Type: Fqdn
@@ -179,4 +121,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/41c4859f-0a8d-41ff-8074-e3ea7f08df69.aspx)
-

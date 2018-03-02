@@ -24,14 +24,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-Remove-AntiPhishPolicy -Identity "Quarantine Policy"
-```
-
-This example removes the antiphishing policy named Quarantine Policy.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 Remove-AntiPhishPolicy -Identity "Quarantine Policy"
 ```

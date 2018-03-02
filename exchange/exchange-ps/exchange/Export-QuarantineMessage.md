@@ -23,24 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
-```
-$e=Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7; $e.BodyEncoding; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
-```
-
-This example exports the quarantined message with the specified Identity value.
-
-The first two commands determine the message encoding (the value of the BodyEncoding property in the output; for example, ascii).
-
-The third command exports the message to the specified file using the message encoding that you found in the previous commands.
-
-Notes:
-
-- The "| select -ExpandProperty Eml" part of the command specifies the whole message, including attachments.
-
-- You need to use the Out-File cmdlet to write the .eml message file with the required encoding. If you use the default PowerShell redirection operator ">" to write the output file, the default encoding is Unicode, which might not match the actual message encoding.
-
-### Example 1 (Exchange Online Protection)
+### Example 1
 ```
 $e=Export-QuarantineMessage -Identity c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7; $e.BodyEncoding; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii; $e | select -ExpandProperty Eml | Out-File "C:\My Documents\Export1_ascii.eml" -Encoding ascii
 ```
@@ -95,4 +78,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/91de3a29-120c-4332-a670-e078ba8d20e2.aspx)
-

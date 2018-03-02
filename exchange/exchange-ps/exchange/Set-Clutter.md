@@ -23,7 +23,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 (Exchange Online)
+### Example 1
 ```
 Set-Clutter -Identity "Alexander Martinez" -Enable $false
 ```
@@ -113,5 +113,5 @@ To see the return types, which are also known as output types, that this cmdlet 
 
 ## RELATED LINKS
 
-[Online version] (https://technet.microsoft.com/library/a4ba8627-b774-460f-9793-3d741c115b2e.aspx)
+[Online version](https://technet.microsoft.com/library/a4ba8627-b774-460f-9793-3d741c115b2e.aspx)
 

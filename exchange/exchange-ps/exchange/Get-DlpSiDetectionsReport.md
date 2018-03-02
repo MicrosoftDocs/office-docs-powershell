@@ -23,28 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Insert example commands for example 1.
 ```
 
 Insert descriptive text for example 1.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Insert example commands for example 1.
-```
-
-Insert descriptive text for example 1.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Insert example commands for example 2.
-```
-
-Insert descriptive text for example 2.
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Insert example commands for example 2.
 ```
@@ -105,4 +91,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4d8a40d2-95f7-48cf-9193-2ee0087079c6.aspx)
-

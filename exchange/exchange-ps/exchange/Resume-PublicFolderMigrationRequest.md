@@ -24,28 +24,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Resume-PublicFolderMigrationRequest -Identity "PublicFolderMigration"
 ```
 
 This example resumes the migration request PublicFolderMigration.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Resume-PublicFolderMigrationRequest -Identity "PublicFolderMigration"
-```
-
-This example resumes the migration request PublicFolderMigration.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-PublicFolderMigrationRequest -Status Failed | Resume-PublicFolderMigrationRequest
-```
-
-This example resumes any failed migration requests.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-PublicFolderMigrationRequest -Status Failed | Resume-PublicFolderMigrationRequest
 ```
@@ -146,4 +132,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/af8602ce-0dba-4f89-b993-0ba02624e567.aspx)
-

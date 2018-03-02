@@ -20,35 +20,13 @@ Start-MigrationBatch [[-Identity] <MigrationBatchIdParameter>] [-Confirm] [-Doma
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Start-MigrationBatch cmdlet starts a pending migration batch that was created, but not started, with the New-MigrationBatch cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Start-MigrationBatch cmdlet starts a pending migration batch that was created, but not started, with the New-MigrationBatch cmdlet.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Start-MigrationBatch -Identity SEM1
-```
-
-This example starts the migration batch SEM1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Start-MigrationBatch -Identity SEM1
-```
-
-This example starts the migration batch SEM1.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Start-MigrationBatch -Identity SEM1
 ```
@@ -177,4 +155,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/4c0758cc-754e-49cc-b236-7b3ad83e1048.aspx)
-

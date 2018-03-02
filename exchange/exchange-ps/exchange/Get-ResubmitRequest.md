@@ -20,38 +20,18 @@ Get-ResubmitRequest [[-Identity] <ResubmitRequestIdentityParameter>] [-Server <S
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Queues" entry in the Mail flow permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Get-ResubmitRequest
 ```
 
 This example returns the details of all resubmit requests.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-ResubmitRequest
-```
-
-This example returns the details of all resubmit requests.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-ResubmitRequest 1
-```
-
-This example returns details about the resubmit request with the identity 1.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-ResubmitRequest 1
 ```
@@ -77,24 +57,6 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-!!! Exchange Server 2013
-
-The Server parameter specifies the Exchange server on which you want to run this command. You can use any value that uniquely identifies the server. For example:
-
-- Name
-
-- FQDN
-
-- Distinguished name (DN)
-
-- Exchange Legacy DN
-
-If you don't use the Server parameter, the command is run on the local server.
-
-
-
-!!! Exchange Server 2016
-
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
 - Name
@@ -106,8 +68,6 @@ The Server parameter specifies the Exchange server where you want to run this co
 - Exchange Legacy DN
 
 If you don't use this parameter, the command is run on the local server.
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -140,4 +100,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/0233fee8-f61b-4ccd-9793-ecf6743abc3e.aspx)
-

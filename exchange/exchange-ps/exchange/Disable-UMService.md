@@ -6,16 +6,6 @@ schema: 2.0.0
 # Disable-UMService
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Disable-UMService cmdlet to set the status of an Exchange 2007 or Exchange 2010 Unified Messaging server to disabled. This prevents the UM server from processing UM incoming calls.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Disable-UMService cmdlet to set the status of an Exchange Server 2010 Unified Messaging server to disabled. This prevents the UM server from processing UM incoming calls.
@@ -32,26 +22,6 @@ Disable-UMService [-Identity] <UMServerIdParameter> [-Confirm] [-DomainControlle
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Disable-UMService cmdlet sets the status of a UM server. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server won't process any new calls unless it's in the enabled state. With this status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
-
-This cmdlet only is available for Exchange 2007 and Exchange 2010 servers running the Unified Messaging server role and is not available for Exchange 2013 Client Access and Mailbox servers.
-
-After this task is completed, the UM server can no longer:
-
-- Answer any incoming calls.
-
-- Respond to Play on Phone requests from a UM server.
-
-- Be used to manage UM-enabled mailboxes.
-
-- Be queried when a diagnostic task is used.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox Server (UM service)" entry in the Unified Messaging permissions topic.
-
-!!! Exchange Server 2016
-
 The Disable-UMService cmdlet sets the status of a UM server. A UM server has a logical status variable controlled using the enable and disable cmdlets. A UM server won't process any new calls unless it's in the enabled state. With this status variable, you can start or stop call processing on a UM server so the UM server can be brought online or taken offline in a controlled way.
 
 After this task is completed, the UM server can no longer:
@@ -68,28 +38,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 Disable-UMService -Identity MyUMServer
 ```
 
 This example disables Unified Messaging on the UM server MyUMServer but doesn't disconnect calls that are being processed.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Disable-UMService -Identity MyUMServer
-```
-
-This example disables Unified Messaging on the UM server MyUMServer but doesn't disconnect calls that are being processed.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Disable-UMService -Identity MyUMServer -Immediate $true
-```
-
-This example disables Unified Messaging on the UM server MyUMServer and disconnects all calls being processed.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Disable-UMService -Identity MyUMServer -Immediate $true
 ```
@@ -99,14 +55,6 @@ This example disables Unified Messaging on the UM server MyUMServer and disconne
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identifier for the UM server being disabled. This is the directory object ID for the UM server.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange 2010 UM server that you want to disable. You can use any value that uniquely identifies the UM server. For example:
 
 - Name
@@ -116,8 +64,6 @@ The Identity parameter specifies the Exchange 2010 UM server that you want to di
 - ExchangeLegacyDN
 
 - GUID
-
-
 
 ```yaml
 Type: UMServerIdParameter
@@ -218,4 +164,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/16e5df98-4875-42a2-a429-2c66ac6a2e32.aspx)
-

@@ -6,19 +6,9 @@ schema: 2.0.0
 # Get-GlobalMonitoringOverride
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-GlobalMonitoringOverride cmdlet to retrieve the thresholds and parameters used by the probes, monitors, and responders in a Microsoft Exchange Server 2013 environment.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-GlobalMonitoringOverride cmdlet to view the overrides of the thresholds and parameters of the managed availability probes, monitors, and responders that are configured for all Exchange 2013 or later servers in your organization.
+Use the Get-GlobalMonitoringOverride cmdlet to view the overrides of the thresholds and parameters of the managed availability probes, monitors and responders that are configured for all Exchange 2013 or later servers in your organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,31 +19,18 @@ Get-GlobalMonitoringOverride [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Shell infrastructure permissions" section in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-GlobalMonitoringOverride -DomainController Contoso.com
-```
-
-This example retrieves the override settings and values for the Contoso domain.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-GlobalMonitoringOverride
 ```
 
 This example returns a summary list of all global monitoring overrides that are configured in your organization.
 
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-GlobalMonitoringOverride | Format-List
 ```
@@ -98,4 +75,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/34e6e29d-e10b-4ed0-8393-d9f89c78fd9c.aspx)
-

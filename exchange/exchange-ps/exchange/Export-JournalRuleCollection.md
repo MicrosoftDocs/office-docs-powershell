@@ -6,12 +6,6 @@ schema: 2.0.0
 # Export-JournalRuleCollection
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Export-JournalRuleCollection cmdlet to export journal rules to an XML file.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Export-JournalRuleCollection cmdlet to export the journal rules in your organization to an XML file.
@@ -22,57 +16,29 @@ For information about the parameter sets in the Syntax section below, see Exchan
 
 ```
 Export-JournalRuleCollection [[-Identity] <RuleIdParameter>] [-Confirm] [-DomainController <Fqdn>]
- [-ExportLegacyRules] [-Organization <OrganizationIdParameter>] [-WhatIf] [<CommonParameters>]
+ [-ExportLegacyRules] [-WhatIf] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You can use the Export-JournalRuleCollection cmdlet to export journal rules from a Microsoft Exchange Server 2010 organization, or export legacy journal rules from Exchange Server 2007 and import them to Exchange 2010 using the Import-JournalRuleCollection cmdlet.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging Policy and Compliance Permissions topic.
-
-!!! Exchange Server 2013
-
-You can use the Export-JournalRuleCollection cmdlet to export journal rules in your organization to create a backup copy of your rules.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Journaling" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016
-
 You can use the Export-JournalRuleCollection cmdlet to export journal rules in your organization to create a backup copy of your rules.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-$file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports journal rules on an Exchange 2010 Hub Transport server in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet is used to export journal rules to the array $file. In the second step, the Set-Content cmdlet is used to save the exported data to the XML file JournalRules.xml.
-
-### Example 1 -------------------------- (Exchange Server 2013)
+### Example 1
 ```
 $file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
 This example exports journal rules in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet exports journal rules to the variable $file. In the second step, the Set-Content cmdlet saves the exported data to the XML file JournalRules.xml.
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-$file = Export-JournalRuleCollection; Set-Content -Path "C:\MyDocs\JournalRules.xml" -Value $file.FileData -Encoding Byte
-```
-
-This example exports journal rules in a two-step process. In the first step, the Export-JournalRuleCollection cmdlet exports journal rules to the variable $file. In the second step, the Set-Content cmdlet saves the exported data to the XML file JournalRules.xml.
-
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 $file = Export-JournalRuleCollection -ExportLegacyRules; Set-Content -Path "C:\MyDocs\Ex2007-JournalRules.xml" -Value $file.FileData -Encoding Byte
 ```
 
-This example exports legacy journal rules to an XML file using the two-step process similar to the preceding example. In the first step, the Export-JournalRuleCollection cmdlet is used with the ExportLegacyRules switch to export legacy rules to the array $file. In the second step, the exported data is saved to the XML file Ex2007-JournallRules.xml.
+In Exchange Server 2010, this example exports legacy journal rules to an XML file using the two-step process similar to the preceding example. In the first step, the Export-JournalRuleCollection cmdlet is used with the ExportLegacyRules switch to export legacy rules to the array $file. In the second step, the exported data is saved to the XML file Ex2007-JournallRules.xml.
 
 ## PARAMETERS
 
@@ -144,24 +110,6 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
-### -Organization
-This parameter is available for multi-tenant deployments. It isn't available for on-premises deployments. For more information about multi-tenant deployments, see Multi-Tenant Support.
-
-The Organization parameter specifies the organization in which you'll perform this action. This parameter doesn't accept wildcard characters, and you must use the exact name of the organization.
-
-```yaml
-Type: OrganizationIdParameter
-Parameter Sets: (All)
-Aliases:
-Applicable: Exchange Server 2010
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
@@ -196,4 +144,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/c6309ab0-77fe-4feb-b2ac-4844de841996.aspx)
-

@@ -20,24 +20,11 @@ Update-DatabaseSchema [-Identity] <DatabaseIdParameter> -MajorVersion <UInt16> -
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox databases" entry in the Recipients Permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Update-DatabaseSchema DB1
-```
-
-This example updates the database schema for database DB1.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Update-DatabaseSchema DB1
 ```
@@ -154,4 +141,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/2759a44b-d7ae-4ac3-8c79-6f019cecca45.aspx)
-

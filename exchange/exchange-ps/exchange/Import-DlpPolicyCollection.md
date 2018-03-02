@@ -20,16 +20,6 @@ Import-DlpPolicyCollection [-FileData] <Byte[]> [[-Identity] <DlpPolicyIdParamet
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The Import-DlpPolicyCollection cmdlet imports all the settings of the DLP policies and the associated transport rules. You use the Export-DlpPolicyCollection cmdlet to export the DLP policy collection.
-
-Importing a DLP policy collection from an XML file removes or overwrites all pre-existing DLP policies that were defined in your organization. Make sure that you have a backup of your current DLP policy collection before you import and overwrite your current DLP policies.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Data loss prevention (DLP)" entry in the Messaging policy and compliance permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 The Import-DlpPolicyCollection cmdlet imports all the settings of the DLP policies and the associated transport rules. You use the Export-DlpPolicyCollection cmdlet to export the DLP policy collection.
 
 Importing a DLP policy collection from an XML file removes or overwrites all pre-existing DLP policies that were defined in your organization. Make sure that you have a backup of your current DLP policy collection before you import and overwrite your current DLP policies.
@@ -38,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Import-DlpPolicyCollection -FileData ([Byte[]]$(Get-Content -Path " C:\My Documents\DLP Backup.xml " -Encoding Byte -ReadCount 0))
-```
-
-This example imports the DLP policy collection in the file C:\\My Documents\\DLP Backup.xml.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Import-DlpPolicyCollection -FileData ([Byte[]]$(Get-Content -Path " C:\My Documents\DLP Backup.xml " -Encoding Byte -ReadCount 0))
-```
-
-This example imports the DLP policy collection in the file C:\\My Documents\\DLP Backup.xml.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Import-DlpPolicyCollection -FileData ([Byte[]]$(Get-Content -Path " C:\My Documents\DLP Backup.xml " -Encoding Byte -ReadCount 0))
 ```
@@ -62,21 +38,9 @@ This example imports the DLP policy collection in the file C:\\My Documents\\DLP
 ## PARAMETERS
 
 ### -FileData
-!!! Exchange Server 2013
-
-The FileData parameter specifies the DLP policy collection file you want to import.
-
-For more information about the syntax required to use this parameter, see Syntax.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The FileData parameter specifies the DLP policy collection file you want to import.
 
 A valid value for this parameter requires you to read the file to a byte-encoded object using the Get-Content cmdlet. For example, ([Byte[]](Get-Content -Encoding Byte -Path "C:\\My Documents\\\<filename\>" -ReadCount 0)).
-
-
 
 ```yaml
 Type: Byte[]
@@ -130,17 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Force
-!!! Exchange Server 2013
-
-The Force switch specifies whether to suppress warning or confirmation messages. This switch can be used when the task is run programmatically and prompting for administrative input is inappropriate. If the Force switch isn't provided in the command, you're prompted for administrative input. You don't have to specify a value with this parameter.
-
-
-
-!!! Exchange Server 2016, Exchange Online
-
 The Force switch specifies whether to suppress warning or confirmation messages. You can use this switch to run tasks programmatically where prompting for administrative input is inappropriate. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -205,4 +159,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/5a110133-35f3-4d45-8437-b8fed1218ac2.aspx)
-

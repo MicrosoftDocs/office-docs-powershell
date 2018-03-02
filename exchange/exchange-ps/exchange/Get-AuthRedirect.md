@@ -6,19 +6,9 @@ schema: 2.0.0
 # Get-AuthRedirect
 
 ## SYNOPSIS
-!!! Exchange Server 2010, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-AuthRedirect cmdlet to view OAuth redirection objects that are used for legacy Microsoft Exchange 2010 Client Access servers in your organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2013
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-AuthRedirect cmdlet to view OAuth redirection settings for Microsoft Exchange 2010 Client Access servers in your Microsoft Exchange 2013 organization.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -29,54 +19,20 @@ Get-AuthRedirect [[-Identity] <AuthRedirectIdParameter>] [-DomainController <Fqd
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010, Exchange Server 2016
-
 Exchange 2010 Client Access servers don't support OAuth authentication requests. OAuth redirection objects redirect OAuth authentication requests to Exchange servers that are running later versions of Exchange. This cmdlet is only useful if your organization has Exchange 2010 Client Access servers.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "OAuth authentication redirection settings" entry in the Clients and mobile devices permissions topic.
-
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-AuthRedirect
 ```
 
 This example shows a summary list of all the OAuth redirection objects.
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-AuthRedirect
-```
-
-This example shows a summary list of all the OAuth redirection objects.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-AuthRedirect
-```
-
-This example shows a summary list of all the OAuth redirection objects.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Get-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE | Format-List
-```
-
-This example shows detailed information about the OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Get-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE | Format-List
-```
-
-This example retrieves details about the OAuth redirection object named AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Get-AuthRedirect AuthRedirect-Bearer-C0B7AC3F-FE64-4B4B-A907-9226F8027CCE | Format-List
 ```
@@ -102,17 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-!!! Exchange Server 2010
-
-The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax AuthRedirect-Bearer-<GUID>.
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 The Identity parameter specifies the existing OAuth redirection object that you want to view. The object name uses the syntax AuthRedirect-Bearer-\<GUID\>.
-
-
 
 ```yaml
 Type: AuthRedirectIdParameter
@@ -141,17 +87,7 @@ To see the input types that this cmdlet accepts, see Cmdlet Input and Output Typ
 To see the return types, which are also known as output types, that this cmdlet accepts, see Cmdlet Input and Output Types (https://go.microsoft.com/fwlink/p/?linkId=616387). If the Output Type field is blank, the cmdlet doesn't return data.
 
 ## NOTES
-!!! Exchange Server 2010
-
-[Online Version](https://technet.microsoft.com/library/531fc365-3b67-4fd8-abd2-d9795c82decb.aspx)
-
-
-
-!!! Exchange Server 2013, Exchange Server 2016
-
-
 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/531fc365-3b67-4fd8-abd2-d9795c82decb.aspx)
-

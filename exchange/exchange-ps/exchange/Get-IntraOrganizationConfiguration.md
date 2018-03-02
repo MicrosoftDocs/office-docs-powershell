@@ -20,17 +20,7 @@ Get-IntraOrganizationConfiguration [[-OrganizationGuid] <OnPremisesOrganizationI
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-A hybrid Exchange deployment results in one logical organization made up of a number of physical Exchange instances. Hybrid Exchange environments contain more than one Exchange instance and support topologies like two on-premises Microsoft Exchange Server 2013 forests in an organization, an Exchange 2013 on-premises organization and an Exchange Online organization, or two Exchange Online organizations.
-
-Hybrid environments are enabled by Intra-Organization connectors. The connectors can be created and managed by cmdlets like New-IntraOrganizationConnector, but we strongly recommend that you use the Hybrid Configuration wizard when configuring a hybrid deployment with an Exchange Online organization.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Intra-Organization connectors" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
-A hybrid Exchange deployment results in one logical organization made up of a number of physical Exchange instances. Hybrid Exchange environments contain more than one Exchange instance and support topologies like two on-premises Microsoft Exchange forests in an organization, an Exchange on-premises organization and an Exchange Online organization, or two Exchange Online organizations.
+A hybrid Exchange deployment results in one logical organization made up of a number of physical Exchange instances. Hybrid Exchange environments contain more than one Exchange instance and support topologies like two on-premises Microsoft Exchange forests in an organization, an Exchange on-premises organization and an Exchange Online organization or two Exchange Online organizations.
 
 Hybrid environments are enabled by Intra-Organization connectors. The connectors can be created and managed by cmdlets like New-IntraOrganizationConnector, but we strongly recommend that you use the Hybrid Configuration wizard when configuring a hybrid deployment with an Exchange Online organization.
 
@@ -38,21 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-IntraOrganizationConfiguration
-```
-
-This example returns the settings of the intra-organization configuration.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-IntraOrganizationConfiguration
-```
-
-This example returns the settings of the intra-organization configuration.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-IntraOrganizationConfiguration
 ```
@@ -97,4 +73,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/774d9f77-ecde-4c6f-ac4f-8068dcb4fb90.aspx)
-

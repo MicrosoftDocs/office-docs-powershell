@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example -------------------------- (Exchange Online)
-```
-Remove-InboundConnector "Contoso Inbound Connector"
-```
-
-This example deletes the Inbound connector named Contoso Inbound Connector.
-
-### Example -------------------------- (Exchange Online Protection)
+### Example
 ```
 Remove-InboundConnector "Contoso Inbound Connector"
 ```
@@ -111,4 +104,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/b96b4003-7c16-4039-a1f4-560ba6034cef.aspx)
-

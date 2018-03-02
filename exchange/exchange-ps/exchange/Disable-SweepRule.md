@@ -24,28 +24,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Disable-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
 ```
 
 This example disables the specified Sweep rule.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Disable-SweepRule -Identity "x2hlsdpGmUifjFgxxGIOJw=="
-```
-
-This example disables the specified Sweep rule.
-
-### Example 2 -------------------------- (Exchange Server 2016)
-```
-Get-SweepRule -Mailbox laura@contoso.com | Disable-SweepRule
-```
-
-This example disables all Sweep rules in the specified mailbox.
-
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Get-SweepRule -Mailbox laura@contoso.com | Disable-SweepRule
 ```
@@ -188,4 +174,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/a78c3b98-8fcf-40b9-95c0-0e27cbc5c7d5.aspx)
-

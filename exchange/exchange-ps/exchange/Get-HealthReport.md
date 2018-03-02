@@ -6,19 +6,9 @@ schema: 2.0.0
 # Get-HealthReport
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
 This cmdlet is available only in on-premises Exchange.
 
-Use the Get-HealthReport cmdlet to return health information related to the server you specify. You can use the health values to determine the state of the server.The cmdlet also returns an alert value that provides the specific state of your server.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016
-
-This cmdlet is available only in on-premises Exchange.
-
-Use the Get-HealthReport cmdlet to return health information for the Exchange server that you specify. You can use the health values to determine the state of the server.The cmdlet also returns an alert value that provides the specific state of your server.
+Use the Get-HealthReport cmdlet to return health information for the Exchange server that you specify. You can use the health values to determine the state of the server. The cmdlet also returns an alert value that provides the specific state of your server.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
@@ -30,26 +20,6 @@ Get-HealthReport [-Identity] <ServerIdParameter> [-GroupSize <Int32>] [-HaImpact
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-The following list contains the health values that are returned:
-
-- Online
-
-- Partially Online
-
-- Offline
-
-- Sidelined
-
-- Functional
-
-- Unavailable
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Test system health" entry in the Exchange and Shell infrastructure permissions topic.
-
-!!! Exchange Server 2016
-
 The following list contains the health values that are returned:
 
 - Online
@@ -68,14 +38,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-HealthReport -RollupGroup
-```
-
-This example retrieves health information about a server running Microsoft Exchange Server 2013.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-HealthReport -Identity Mailbox01-RollupGroup
 ```
@@ -85,14 +48,6 @@ This example retrieves health information for the server named Mailbox01.
 ## PARAMETERS
 
 ### -Identity
-!!! Exchange Server 2013
-
-The Identity parameter specifies the identity of the server you want health information for.
-
-
-
-!!! Exchange Server 2016
-
 The Identity parameter specifies the Exchange server that you want to view. You can use the following values to identify the server:
 
 - Name
@@ -100,8 +55,6 @@ The Identity parameter specifies the Exchange server that you want to view. You 
 - Distinguished name (DN)
 
 - FQDN
-
-
 
 ```yaml
 Type: ServerIdParameter
@@ -133,17 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -HaImpactingOnly
-!!! Exchange Server 2013
-
-The HaImpactingOnly switch specifies whether the cmdlet must roll up only the monitors that have HaImpacting set to True.
-
-
-
-!!! Exchange Server 2016
-
 The HaImpactingOnly switch filters the results to only the monitors that have HaImpacting set to True. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -159,17 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -HealthSet
-!!! Exchange Server 2013
-
-The HealthSet parameter returns the health state of a group of monitors. Monitors that are similar or are tied to a component's architecture are grouped to form a health set. You can determine the collection of monitors (and associated probes and responders) in a given health set by using the Get-MonitoringItemIdentity cmdlet.
-
-
-
-!!! Exchange Server 2016
-
 The HealthSet parameter filters the results by the specified health set. Monitors that are similar or are tied to a component's architecture are grouped to form a health set. You can determine the collection of monitors (and associated probes and responders) in a given health set by using the Get-MonitoringItemIdentity cmdlet.
-
-
 
 ```yaml
 Type: String
@@ -201,17 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -RollupGroup
-!!! Exchange Server 2013
-
-The RollupGroup parameter specifies that the health data is rolled up across servers with redundancy limits.
-
-
-
-!!! Exchange Server 2016
-
 The RollupGroupswitch specifies that the health data is rolled up across servers with redundancy limits. You don't need to specify a value with this switch.
-
-
 
 ```yaml
 Type: SwitchParameter
@@ -244,4 +167,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/f33fbed5-0e01-4d7e-a252-121b2afb6864.aspx)
-
