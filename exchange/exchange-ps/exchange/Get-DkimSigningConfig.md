@@ -19,34 +19,20 @@ Get-DkimSigningConfig [[-Identity] <DkimSigningConfigIdParameter>] [<CommonParam
 ```
 
 ## DESCRIPTION
-DKIM in Microsoft Office 365 is an email authentication method that uses a public key infrastructure (PKI), message headers, and CNAME records in DNS to authenticate the message sender, which is stamped in the DKIM-Signature header field. DKIM helps prevent forged sender email addresses (also known as spoofing) by verifying that the domain in the From address matches the domain in the DKIM-Signature header field.
+DKIM in Microsoft Office 365 is an email authentication method that uses a public key infrastructure (PKI), message headers and CNAME records in DNS to authenticate the message sender, which is stamped in the DKIM-Signature header field. DKIM helps prevent forged sender email addresses (also known as spoofing) by verifying that the domain in the From address matches the domain in the DKIM-Signature header field.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-DkimSigningConfig
 ```
 
 This example shows a summary list of all DKIM signing policies in your organization.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-DkimSigningConfig
-```
-
-This example shows a summary list of all DKIM signing policies in your organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-DkimSigningConfig -Identity contoso.com | Format-List
-```
-
-This example shows detailed information for the DKIM signing policy for contoso.com.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-DkimSigningConfig -Identity contoso.com | Format-List
 ```
@@ -95,4 +81,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/e8b68bd9-d14b-4fd4-8736-1681f4ee0457.aspx)
-

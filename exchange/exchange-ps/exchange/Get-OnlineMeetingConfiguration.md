@@ -39,14 +39,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-OnlineMeetingConfiguration -Identity carlam@fourthcoffee.com
-```
-
-This example gets the Skype Meetings configuration for the specified mailbox.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-OnlineMeetingConfiguration -Identity carlam@fourthcoffee.com
 ```
@@ -129,4 +122,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/76c698d3-7b0c-444e-bfdd-da4ecd906300.aspx)
-

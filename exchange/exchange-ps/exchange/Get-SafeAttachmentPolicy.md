@@ -25,28 +25,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-SafeAttachmentPolicy
 ```
 
 This example shows a summary list of all Safe Attachments policies.
 
-### Example 1 -------------------------- (Exchange Online Protection)
-```
-Get-SafeAttachmentPolicy
-```
-
-This example shows a summary list of all Safe Attachments policies.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-SafeAttachmentPolicy -Identity Default | Format-List
-```
-
-This example shows detailed information about the Safe Attachments policy named Default.
-
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 Get-SafeAttachmentPolicy -Identity Default | Format-List
 ```
@@ -97,4 +83,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/00b066b5-2066-4525-b368-d8b1815990b4.aspx)
-

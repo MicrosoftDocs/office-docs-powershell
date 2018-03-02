@@ -6,12 +6,6 @@ schema: 2.0.0
 # Get-ContentFilterConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2010
-
-Use the Get-ContentFilterConfig cmdlet to view the content filter configuration for the computer on which the cmdlet is run.
-
-!!! Exchange Server 2013, Exchange Server 2016
-
 This cmdlet is available only in on-premises Exchange.
 
 Use the Get-ContentFilterConfig cmdlet to view the content filter configuration for the computer on which the cmdlet is run.
@@ -23,35 +17,11 @@ Get-ContentFilterConfig [-DomainController <Fqdn>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2010
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Transport Permissions topic.
-
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Anti-spam features" entry in the Anti-spam and anti-malware permissions topic.
-
-!!! Exchange Server 2016
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Get-ContentFilterConfig | Format-List
-```
-
-This example returns detailed information about the content filter configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-ContentFilterConfig | Format-List
-```
-
-This example returns detailed information about the content filter configuration for the computer on which the command is run.
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Get-ContentFilterConfig | Format-List
 ```
@@ -96,4 +66,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/6d5aed4a-4d61-4723-831c-32da949bc6c4.aspx)
-

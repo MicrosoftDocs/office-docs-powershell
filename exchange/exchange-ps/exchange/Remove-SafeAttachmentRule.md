@@ -25,14 +25,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Remove-SafeAttachmentRule -Identity "Research Department Attachment Rule"
-```
-
-This examples removes the Safe Attachments rule named Research Department Attachment Rule.
-
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 Remove-SafeAttachmentRule -Identity "Research Department Attachment Rule"
 ```
@@ -119,4 +112,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/9fe610d6-969a-4369-aa9c-8a8ef5dfd9e3.aspx)
-

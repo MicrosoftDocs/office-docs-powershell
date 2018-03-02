@@ -26,28 +26,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-DlpSensitiveInformationTypeRulePackage
 ```
 
 This example returns a summary list of all sensitive information type rule packages in the organization.
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
-```
-Get-DlpSensitiveInformationTypeRulePackage
-```
-
-This example returns a summary list of all sensitive information type rule packages in the organization.
-
-### Example 2 -------------------------- (Exchange Online)
-```
-Get-DlpSensitiveInformationTypeRulePackage - Identity "Microsoft Rule Package" | Format-List
-```
-
-This example returns detailed information for the sensitive information type rule package named Microsoft Rule Package.
-
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DlpSensitiveInformationTypeRulePackage - Identity "Microsoft Rule Package" | Format-List
 ```
@@ -96,4 +82,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/18453823-70f8-409d-a165-0581b796895c.aspx)
-

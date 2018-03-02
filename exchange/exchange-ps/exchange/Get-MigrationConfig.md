@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-MigrationConfig
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-MigrationConfig cmdlet to retrieve migration configuration settings on a server running Microsoft Exchange Server 2013.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-MigrationConfig cmdlet to retrieve migration configuration settings on Exchange servers.
@@ -29,31 +19,11 @@ Get-MigrationConfig [-DomainController <Fqdn>] [-Partition <MailboxIdParameter>]
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Mailbox move and migration permissions" section in the Recipients Permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-MigrationConfig
-```
-
-This example retrieves the settings for the migration configuration.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-MigrationConfig
-```
-
-This example retrieves the settings for the migration configuration.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MigrationConfig
 ```
@@ -114,4 +84,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/fdf3e9f5-df3d-454d-9117-0565e3b430d2.aspx)
-

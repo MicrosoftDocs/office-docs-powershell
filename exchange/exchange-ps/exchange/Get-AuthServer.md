@@ -6,16 +6,6 @@ schema: 2.0.0
 # Get-AuthServer
 
 ## SYNOPSIS
-!!! Exchange Server 2013
-
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
-
-Use the Get-AuthServer cmdlet to retrieve settings of authorization servers configured in the Exchange organization.
-
-For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
-
-!!! Exchange Server 2016, Exchange Online
-
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
 
 Use the Get-AuthServer cmdlet to view the settings of authorization servers in the Exchange organization.
@@ -29,35 +19,13 @@ Get-AuthServer [[-Identity] <AuthServerIdParameter>] [-DomainController <Fqdn>] 
 ```
 
 ## DESCRIPTION
-!!! Exchange Server 2013
-
-An authorization server is a server or service that issues tokens trusted by Microsoft Exchange Server 2013 for access by partner applications.
-
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Partner application - configure" entry in the Sharing and collaboration permissions topic.
-
-!!! Exchange Server 2016, Exchange Online
-
 An authorization server is a server or service that issues tokens trusted by Microsoft Exchange for access by partner applications.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Get-AuthServer | Format-List *
-```
-
-This example retrieves all settings for all authorization servers in the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Server 2016)
-```
-Get-AuthServer | Format-List *
-```
-
-This example retrieves all settings for all authorization servers in the Exchange organization.
-
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-AuthServer | Format-List *
 ```
@@ -118,4 +86,3 @@ To see the return types, which are also known as output types, that this cmdlet 
 ## RELATED LINKS
 
 [Online Version](https://technet.microsoft.com/library/077acd5a-7af0-48f8-bc68-123aef416a93.aspx)
-

@@ -30,13 +30,6 @@ Disable-AntiPhishRule -Identity "Engineering Department Phishing Rule"
 
 This example disables the antiphishing rule named Engineering Department Phishing Rule.
 
-### Example 1 (Exchange Online Protection)
-```
-Disable-AntiPhishRule -Identity "Engineering Department Phishing Rule"
-```
-
-This example disables the antiphishing rule named Engineering Department Phishing Rule.
-
 ## PARAMETERS
 
 ### -Identity
