@@ -33,7 +33,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/2/2017
 ```
@@ -43,7 +43,7 @@ This example searches the unified audit log for all events from May 1, 201712:00
 
 Note: If you don't include a timestamp in the value for the StartDate or EndDate parameters, the default timestamp 12:00 AM (midnight) is used.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Search-UnifiedAuditLog -StartDate "6/1/2017 8:00 AM" -EndDate "6/1/2017 6:00 PM" -RecordType ExchangeAdmin
 ```
@@ -53,7 +53,7 @@ This example searches the unified audit log for all Exchange admin events from 8
 
 Note: If you use the same date for the StartDate and EndDate parameters, you have to include a timestamp; otherwise, no results will be returned because the date and time for the start and end dates will be the same.
 
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -SessionId "UnifiedAuditLogSearch 05/08/17" -SessionCommand ReturnNextPreviewPage
 ```
@@ -63,14 +63,14 @@ This example searches the unified audit log for all events from May 1, 2017 to M
 
 Note: If you use the SessionCommand value ReturnLargeSet, and then you use the value ReturnNextPreviewPage for the same session ID, the results are limited to 10,000 records (not 50,000).
 
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -RecordType SharePointFileOperation -Operations FileAccessed -SessionId "WordDocs_SharepointViews"-SessionCommand ReturnNextPreviewPage
 ```
 
 This example searches the unified audit log for any files accessed in SharePoint Online from May 1, 2017 to May 8, 2017. The data is returned in pages as the command is rerun sequentially while using the same SessionId value.
 
-### Example 5 -------------------------- (Exchange Online)
+### Example 5
 ```
 Search-UnifiedAuditLog -StartDate 5/1/2017 -EndDate 5/8/2017 -ObjectIDs "https://alpinehouse.sharepoint.com/sites/contoso/Departments/SM/International/Shared Documents/Sales Invoice - International.docx"
 ```

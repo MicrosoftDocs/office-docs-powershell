@@ -30,28 +30,28 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-UMServer -Identity MyUMServer -Status NoNewCalls
 ```
 
 This example prevents the Unified Messaging server MyUMServer from accepting new calls.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-UMServer -Identity MyUMServer -DialPlans $null
 ```
 
 This example removes the Unified Messaging server MyUMServer from all UM dial plans.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Set-UMServer -Identity MyUMServer -DialPlans MyUMDialPlanName -MaxCallsAllowed 50
 ```
 
 This example adds the Unified Messaging server MyUMServer to the UM dial plan MyUMDialPlanName and also sets the maximum number of incoming voice calls to 50.
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Set-UMServer -Identity MyUMServer -GrammarGenerationSchedule 0.02:30-1.03:00, 1.02:30-1.03:00, 2.02:30-2.03:00, 3.02:30-3.03:00, 4.02:30-4.03:00, 5.02:30-5.03:00, 6.02:30-6.03:00
 ```

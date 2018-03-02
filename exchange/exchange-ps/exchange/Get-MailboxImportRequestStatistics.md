@@ -65,7 +65,7 @@ Get-MailboxImportRequestStatistics -Identity Tony\LegalHold -IncludeReport | For
 
 This example returns additional information about the import request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command.
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Get-MailboxImportRequestStatistics -MRSInstance CAS01.contoso.com
 ```
