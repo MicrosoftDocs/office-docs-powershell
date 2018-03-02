@@ -55,111 +55,28 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
-```
-Add-MailboxPermission -Identity "Ellen Adams" -User KevinKelly -AccessRights FullAccess -InheritanceType All
-```
-
-This example grants Kevin Kelly full access to Ellen Adam's mailbox.
-
-
-The Identity parameter requires the full name of the user to be enclosed in quotation marks (").
-
-### Example 1 -------------------------- (Exchange Server 2013)
-```
-Add-MailboxPermission -Identity "Terry Adams" -User KevinKelly -AccessRights FullAccess -InheritanceType All
-```
-
-This example grants Kevin Kelly full access to Terry Adams's mailbox.
-
-
-The Identity parameter requires the full name of the user to be enclosed in quotation marks (").
-
-### Example 1 -------------------------- (Exchange Server 2016)
+### Example 1
 ```
 Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
 ```
 
 This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
 
-### Example 1 -------------------------- (Exchange Online)
-```
-Add-MailboxPermission -Identity "Terry Adams" -User "Kevin Kelly" -AccessRights FullAccess -InheritanceType All
-```
-
-This example assigns the user Kevin Kelly Full Access permission to Terry Adams's mailbox.
-
-### Example 2 -------------------------- (Exchange Server 2010)
-```
-Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
-```
-
-This example sets Tony Smith as the owner of the resource mailbox Room 222.
-
-### Example 2 -------------------------- (Exchange Server 2013)
-```
-Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
-```
-
-This example sets Tony Smith as the owner of the resource mailbox Room 222.
-
-### Example 2 -------------------------- (Exchange Server 2016)
+### Example 2
 ```
 Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
 ```
 
 This example sets the user Tony Smith as the owner of the resource mailbox named Room 222.
 
-### Example 2 -------------------------- (Exchange Online)
-```
-Add-MailboxPermission -Identity "Room 222" -Owner "Tony Smith"
-```
-
-This example sets the user Tony Smith as the owner of the resource mailbox named Room 222.
-
-### Example 3 -------------------------- (Exchange Server 2010)
-```
-Add-MailboxPermission -Identity JeroenC -User 'Mark Steele' -AccessRights FullAccess -InheritanceType All -Automapping $false
-```
-
-This example grants the user Mark Steele Full Access permission to Jeroen Cool's mailbox and disables the auto-mapping feature.
-
-### Example 3 -------------------------- (Exchange Server 2013)
-```
-Add-MailboxPermission -Identity JeroenC -User 'Mark Steele' -AccessRights FullAccess -InheritanceType All -AutoMapping $false
-```
-
-This example grants the user Mark Steele Full Access permission to Jeroen Cool's mailbox and disables the auto-mapping feature.
-
-### Example 3 -------------------------- (Exchange Server 2016)
+### Example 3
 ```
 Add-MailboxPermission -Identity "Jeroen Cool" -User "Mark Steele" -AccessRights FullAccess -InheritanceType All -AutoMapping $false
 ```
 
 This example assigns the user Mark Steele Full Access permission to Jeroen Cool's mailbox, prevents Outlook from opening Jeroen Cool's mailbox when Mark Steele opens Outlook.
 
-### Example 3 -------------------------- (Exchange Online)
-```
-Add-MailboxPermission -Identity "Jeroen Cool" -User "Mark Steele" -AccessRights FullAccess -InheritanceType All -AutoMapping $false
-```
-
-This example assigns the user Mark Steele Full Access permission to Jeroen Cool's mailbox, prevents Outlook from opening Jeroen Cool's mailbox when Mark Steele opens Outlook.
-
-### Example 4 -------------------------- (Exchange Server 2013)
-```
-Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')} | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
-```
-
-In Office 365, this example assigns the administrator account admin@contoso.com Full Access permission to all user mailboxes in the contoso.com Office 365 organization.
-
-### Example 4 -------------------------- (Exchange Server 2016)
-```
-Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')} | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
-```
-
-In Office 365, this example assigns the administrator account admin@contoso.com Full Access permission to all user mailboxes in the contoso.com Office 365 organization.
-
-### Example 4 -------------------------- (Exchange Online)
+### Example 4
 ```
 Get-Mailbox -ResultSize unlimited -Filter {(RecipientTypeDetails -eq 'UserMailbox') -and (Alias -ne 'Admin')} | Add-MailboxPermission -User admin@contoso.com -AccessRights FullAccess -InheritanceType All
 ```
@@ -420,7 +337,7 @@ The DomainController parameter specifies the domain controller that's used by th
 Type: Fqdn
 Parameter Sets: (All)
 Aliases:
-Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Online
+Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 Required: False
 Position: Named

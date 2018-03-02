@@ -24,21 +24,21 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DlpComplianceRuleV2
 ```
 
 This example displays summary information for all DLP rules in the Security & Compliance Center.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DlpComplianceRuleV2 -Identity "PII SS# Custom" | Format-List
 ```
 
 This example displays detailed information for the DLP rule named "PII SS# Custom".
 
-### Example 3 -------------------------- (Office 365 Security & Compliance Center)
+### Example 3
 ```
 Get-DlpComplianceRuleV2 -Policy "PII Limited"
 ```

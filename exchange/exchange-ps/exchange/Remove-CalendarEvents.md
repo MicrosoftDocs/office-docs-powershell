@@ -26,21 +26,21 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Remove-CalendarEvents -Identity chris@contoso.com -CancelOrganizedMeetings
 ```
 
 This example cancels every meeting in the mailbox chris@contoso.com that occurs on or after today's date. After you cancel the meetings, you can remove the mailbox.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Remove-CalendarEvents -Identity "Angela Gruber" -CancelOrganizedMeetings -QueryStartDate 11-1-2018 -QueryWindowInDays 120
 ```
 
 This example cancels the meetings in Angela Gruber's calendar for the specified date range. Angela is taking a temporary leave of absence from the company, so cancelling these meetings removes them from the user and resource calendars during her absence.
 
-### Example 3 -------------------------- (Exchange Online)
+### Example 3
 ```
 Remove-CalendarEvents -Identity "Jacob Berger" -CancelOrganizedMeetings -QueryStartDate 9-1-2018 -QueryWindowInDays 90 -PreviewOnly -Verbose
 ```

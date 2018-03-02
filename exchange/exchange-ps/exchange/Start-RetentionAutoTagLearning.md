@@ -29,21 +29,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Train
 ```
 
 This example sets user Joe Healy's mailbox to train.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -CrossValidate -NumberOfSegments 15
 ```
 
 This example sets user Joe Healy's mailbox to cross-validate and sets the number of segments for cross-validation to 15.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Start-RetentionAutoTagLearning -Identity "Joe Healy" -Clear
 ```

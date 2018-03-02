@@ -65,7 +65,7 @@ Get-MailboxExportRequestStatistics -Identity Tony\LegalHold -IncludeReport | For
 
 This example returns additional information about the export request for Tony Smith's mailbox by using the IncludeReport parameter and by pipelining the results to the Format-List command. (The export request was created using the New-MailboxExportRequest.)
 
-### Example 4 -------------------------- (Exchange Server 2010)
+### Example 4
 ```
 Get-MailboxExportRequestStatistics -MRSInstance CAS01.contoso.com
 ```

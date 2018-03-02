@@ -22,21 +22,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ClientAccessArray -Fqdn server.contoso.com -Site "Redmond" -Name "server.contoso.com"
 ```
 
 This example creates the Client Access server array server.contoso.com.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-ClientAccessArray -Fqdn ClientArray.contoso.com -Site "China" -Name "clientarray.contoso.com"
 ```
 
 This example creates a Client Access server array in the China site.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-ClientAccessArray -Fqdn server.contoso.com -Site "Japan" -Name "server.contoso.com" -Confirm
 ```

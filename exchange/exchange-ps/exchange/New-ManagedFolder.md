@@ -48,21 +48,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 New-ManagedFolder -Name NewFolder -FolderName "New Folder" -StorageQuota "1 MB"
 ```
 
 This example creates a managed folder that has a maximum capacity of 1 MB.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 New-ManagedFolder -Name MyFolder -FolderName "My Folder" -LocalizedFolderName Spanish:"Mi Carpeta", French:"Mon Dossier" -Comment "My comment" -LocalizedComment Spanish:"Mi comentario", French:"Mon annotation"
 ```
 
 This example creates a managed folder that has a default folder name and comment in English, localized folder name in Spanish and French, and localized comment in Spanish and French.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 New-ManagedFolder -Name AnotherInbox -DefaultFolderType Inbox
 ```

@@ -27,21 +27,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder"
 ```
 
 This example retrieves the administrative permissions for all users of the public folder My Public Folder.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -User Chris -Server "My Server" | Format-List
 ```
 
 This example retrieves the administrative permissions for the public folder My Public Folder, for the user Chris, on the server My Server. In this example, the output of the Get-PublicFolderAdministrativePermission command is piped to the Format-List command so that all the available information is displayed in the result.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Get-PublicFolderAdministrativePermission -Identity "\My Public Folder" -Owner
 ```

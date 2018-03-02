@@ -22,21 +22,21 @@ You need to be assigned permissions before you can run this cmdlet. Although all
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-ClientAccessArray -Identity "CASArray1"
 ```
 
 This example removes the existing client access array CASArray1.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Remove-ClientAccessArray -Identity "CASArray1" -Confirm $true
 ```
 
 This example removes the existing client access array CASArray1 after confirmation is specified.
 
-### Example 3 -------------------------- (Exchange Server 2010)
+### Example 3
 ```
 Remove-ClientAccessArray -Identity "NLBArray2"
 ```
