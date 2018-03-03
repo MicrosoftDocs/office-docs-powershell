@@ -6,6 +6,8 @@ schema: 2.0.0
 # Set-ClientAccessRule
 
 ## SYNOPSIS
+This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings may be exclusive to one environment or the other.
+
 Use the Set-ClientAccessRule cmdlet to modify existing client access rules. Client access rules help you control access to your cloud-based organization based on the properties of the connection.
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
@@ -24,7 +26,7 @@ Set-ClientAccessRule [-Identity] <ClientAccessRuleIdParameter> [-Action <AllowAc
 ```
 
 ## DESCRIPTION
-Client access rules are like transport rules for client connections to your organization. You use conditions and exceptions to identify the connections based on the user or properties of the client or the connection, and actions that define what to do with those connections.
+Client access rules are like mail flow rules (also known as transport rules) for client connections to your organization. You use conditions and exceptions to identify the connections based on their properties, and actions that allow or block the connections.
 
 Note: Not all authentication types are supported for all protocols. The supported authentication types per protocol are described in this list:
 
@@ -40,7 +42,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-ClientAccessRule "Allow IMAP4" -AnyOfClientIPAddressesOrRanges @{Add="172.17.17.27/16"}
 ```
@@ -226,7 +228,9 @@ Accept wildcard characters: False
 ```
 
 ### -DomainController
-This parameter is reserved for internal Microsoft use.
+This parameter is available only in on-premises Exchange.
+
+The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
 Type: Fqdn

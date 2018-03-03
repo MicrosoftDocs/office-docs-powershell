@@ -262,9 +262,9 @@ The Status parameter filters the results based on status. You can use the follow
 
 - InProgress
 
-- None
-
 - Queued
+
+- Retrying
 
 - Suspended
 
