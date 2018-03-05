@@ -23,6 +23,9 @@ Set-SPOHubSite [-Identity] <SpoHubSitePipeBind>
 ## DESCRIPTION
 Use this cmdlet to set properties such as name, logo, and description. These properties appear for the hub in the SharePoint user interface.
 
+> [!IMPORTANT]
+> This cmdlet is currently in preview and is subject to change. It is not currently supported for use in production environments.
+
 If the hub site doesn’t exist, this cmdlet returns a “File not found” error.
 
 ## EXAMPLES
