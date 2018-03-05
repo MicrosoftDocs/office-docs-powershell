@@ -60,15 +60,15 @@ This example releases the quarantined message with the specified Identity value 
 
 ### Example 3
 ```
-Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll -Delete
+Get-QuarantineMessage | Release-QuarantineMessage -ReleaseToAll
 ```
 
-This example releases all messages to all original recipients and deletes all released messages from quarantine.
+This example releases all messages to all original recipients.
 
 ## PARAMETERS
 
 ### -Identities
-The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2.... The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7.
+The Identities parameter identifies quarantined messages for bulk operations. You identify the messages by using the syntax: value1,value2,...valueN. The value is a unique quarantined message identifier in the format GUID1\\GUID2 (for example c14401cf-aa9a-465b-cfd5-08d0f0ca37c5\\4c2ca98e-94ea-db3a-7eb8-3b63657d4db7).
 
 You can find the identity value for a quarantined message by using the Get-QuarantineMessage cmdlet.
 
@@ -210,9 +210,9 @@ Accept wildcard characters: False
 ```
 
 ### -Delete
-The Delete switch specifies whether to delete a message from quarantine after it's been released to all original recipients. You don't need to specify a value with this switch.
+**This parameter has been deprecated and is no longer used.**
 
-You can only use this switch with the ReleaseToAll parameter.
+To delete quarantined messages, use the Delete-QuarantineMessage cmdlet.
 
 ```yaml
 Type: SwitchParameter
