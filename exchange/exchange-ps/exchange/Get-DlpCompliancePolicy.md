@@ -24,14 +24,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-DlpCompliancePolicy
 ```
 
 This example displays summary information for all DLP policies in the Security & Compliance Center.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-DlpCompliancePolicy -Identity "PII Limited" | Format-List
 ```

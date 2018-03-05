@@ -6,7 +6,11 @@ schema: 2.0.0
 # Test-OwaConnectivity
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Test-OwaConnectivity cmdlet to verify that Microsoft Office Outlook Web App is running as expected. The Test-OwaConnectivity cmdlet can be used to test Outlook Web App connectivity for all Microsoft Exchange Server 2010 virtual directories on a specified Client Access server for all mailboxes on servers running Exchange that are in the same Active Directory site. The Test-OwaConnectivity cmdlet can also be used to test the connectivity for an individual Exchange Outlook Web App URL.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -40,18 +44,18 @@ If the command encounters a virtual directory that doesn't require Secure Socket
 
 The Test-OwaConnectivity cmdlet can be run as a one-time interactive task or as a scheduled task under Microsoft System Center Operations Manager 2007 control. To run the Test-OwaConnectivity cmdlet as a System Center Operations Manager 2007 task, the Client Access test mailbox must be available on the Mailbox servers that the cmdlet tests against.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Web App virtual directories" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-OwaConnectivity -URL:https://mail.contoso.com/owa -MailboxCredential:(get-credential contoso\kweku)
 ```
 
 This example tests the connectivity for the URL https://mail.contoso.com/owa using the credentials for the user contoso\\kweku.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Test-OwaConnectivity -ClientAccessServer:Contoso12 -AllowUnsecureAccess
 ```

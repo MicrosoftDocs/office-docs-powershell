@@ -23,14 +23,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-ProtectionAlert | Format-List Name,Category,Comment,NotifyUser
 ```
 
 This example returns a summary list of all alert policies.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-ProtectionAlert -Identity "Malicious Email Campaign"
 ```

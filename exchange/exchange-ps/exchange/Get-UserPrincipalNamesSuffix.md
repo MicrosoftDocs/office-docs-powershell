@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Get-UserPrincipalNamesSuffix cmdlet to view the user principal name (UPN) suffixes in the Active Directory forest. The UPN suffixes are created in Active Directory Domains and Trusts.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

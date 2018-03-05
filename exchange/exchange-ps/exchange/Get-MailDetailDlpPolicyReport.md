@@ -28,7 +28,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Get-MailDetailDlpPolicyReport -StartDate 06/13/2015 -EndDate 06/15/2015 -SenderAddress john@contoso.com
 ```

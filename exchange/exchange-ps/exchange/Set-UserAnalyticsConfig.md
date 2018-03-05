@@ -31,7 +31,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Set-UserAnalyticsConfig -Identity "Kathleen Reiter" -PrivacyMode OptIn
 ```

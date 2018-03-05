@@ -25,14 +25,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-SupervisoryReviewReport -StartDate 03/01/2017 -EndDate 03/31/2017
 ```
 
 This example returns the supervisory review events for the month of March, 2017.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-SupervisoryReviewPolicyReport -Policies "US Brokers Policy"
 ```

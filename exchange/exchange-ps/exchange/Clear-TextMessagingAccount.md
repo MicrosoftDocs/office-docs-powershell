@@ -10,6 +10,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 The Clear-TextMessagingAccount cmdlet allows a user to remove the text messaging settings from their own mailbox. An administrator can't use this cmdlet to remove the text messaging settings from another user's mailbox.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

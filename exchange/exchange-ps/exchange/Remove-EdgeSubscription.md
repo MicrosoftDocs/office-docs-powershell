@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-EdgeSubscription cmdlet to remove Edge Subscription from the Exchange organization and from the subscribed Edge Transport server.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

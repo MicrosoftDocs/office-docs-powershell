@@ -6,7 +6,11 @@ schema: 2.0.0
 # Set-RoutingGroupConnector
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Set-RoutingGroupConnector cmdlet to modify the properties of an existing routing group connector between a Microsoft Exchange Server 2010 routing group and an Exchange Server 2003 routing group. You can also use this cmdlet to configure the maximum message size that can pass across a routing group connector.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -22,11 +26,11 @@ The Set-RoutingGroupConnector cmdlet modifies the properties of an existing rout
 
 The Exchange 2003 source servers specified in this cmdlet are automatically added to the ExchangeLegacyInterop universal security group. By default, the Exchange 2010 system grants Send to and Receive from permissions on the Hub Transport servers to members of this group. The source and target servers must be computers that have the Exchange 2010 Hub Transport server role installed, or Exchange 2003 bridgehead servers.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Routing group connectors" entry in the Transport Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-RoutingGroupConnector -Identity "Exchange Administrative Group (FYDIBOHF23SPDLT)\Exchange Routing Group (DWBGZMFD01QNBJR)\Ex2010 to Ex2003 RGC" -Cost 70 -MaxMessageSize 10MB -SourceTransportServers 2010Hub1.contoso.com -TargetTransportServers 2003BH1.contoso.com
 ```

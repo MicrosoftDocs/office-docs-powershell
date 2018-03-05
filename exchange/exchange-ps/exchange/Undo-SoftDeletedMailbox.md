@@ -35,14 +35,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online)
+### Example 1
 ```
 Undo-SoftDeletedMailbox -SoftDeletedObject florencef
 ```
 
 This example recovers the deleted mailbox for the user Florence Flipo. When this mailbox was deleted, the associated Windows Live ID was also deleted.
 
-### Example 2 -------------------------- (Exchange Online)
+### Example 2
 ```
 Undo-SoftDeletedMailbox bjohnson@contoso.edu -WindowsLiveID brianj@contoso.edu -Password (ConvertTo-SecureString -String 'Pa$$word1' -AsPlainText -Force)
 ```

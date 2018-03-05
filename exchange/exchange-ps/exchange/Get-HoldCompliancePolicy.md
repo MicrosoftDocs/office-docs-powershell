@@ -35,14 +35,14 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 Get-HoldCompliancePolicy
 ```
 
 This example displays summary information for all preservation policies in your organization.
 
-### Example 2 -------------------------- (Office 365 Security & Compliance Center)
+### Example 2
 ```
 Get-HoldCompliancePolicy -Identity "Regulation 123 Compliance" | Format-List
 ```

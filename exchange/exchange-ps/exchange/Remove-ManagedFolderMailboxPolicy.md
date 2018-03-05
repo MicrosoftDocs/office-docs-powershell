@@ -6,7 +6,11 @@ schema: 2.0.0
 # remove-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Remove-ManagedFolderMailboxPolicy cmdlet to delete managed folder mailbox policies.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -18,11 +22,11 @@ remove-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confi
 ## DESCRIPTION
 If you remove a managed folder mailbox policy that's applied to users' mailboxes, the affected mailboxes may no longer have retention settings. Therefore, before using this cmdlet to remove a policy, you should determine if the managed folder mailbox policy is applied to any users, and apply another policy to those users.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Remove-ManagedFolderMailboxPolicy -Identity "My Managed Folder Mailbox Policy"
 ```

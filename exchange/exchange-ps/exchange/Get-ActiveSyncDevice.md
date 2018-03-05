@@ -12,6 +12,8 @@ Use the Get-ActiveSyncDevice cmdlet to retrieve the list of devices in your orga
 
 The Get-ActiveSyncDevice cmdlet will be removed in a future version of Exchange. Use the Get-MobileDevice cmdlet instead. If you have any scripts that use the Get-ActiveSyncDevice cmdlet, update them to use the Get-MobileDevice cmdlet.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ### Set2

@@ -37,14 +37,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Online Protection)
+### Example 1
 ```
 New-EOPDistributionGroup -Name Managers -Type Security -ManagedBy "Kitty Petersen"
 ```
 
 This example creates a mail-enabled universal security group named Managers that's managed by Kitty Petersen.
 
-### Example 2 -------------------------- (Exchange Online Protection)
+### Example 2
 ```
 New-EOPDistributionGroup -Name "Security Team" -ManagedBy "Tyson Fawcett" -Alias SecurityTeamThree -DisplayName "Security Team" -Notes "Security leads from each division" -PrimarySmtpAddress SecTeamThree@contoso.com -Type Distribution -Members @("Tyson Fawcett","Kitty Petersen")
 ```

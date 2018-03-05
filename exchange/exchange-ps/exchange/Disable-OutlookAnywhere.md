@@ -6,7 +6,11 @@ schema: 2.0.0
 # Disable-OutlookAnywhere
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Disable-OutlookAnywhere cmdlet to disable Outlook Anywhere on a computer running Exchange Server 2010 that has the Client Access server role installed.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -29,18 +33,18 @@ When you run this cmdlet, it can take as long as an hour for the settings to bec
 
 After the Client Access server is disabled for Outlook Anywhere, you may want to remove the RPC over HTTP proxy Windows networking component.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Outlook Anywhere configuration settings" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Disable-OutlookAnywhere -Server:CAS01
 ```
 
 This example disables Outlook Anywhere on the Client Access server CAS01.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Disable-OutlookAnywhere -Identity: "exch01\rpc (Default Web Site)" -Confirm:$false
 ```

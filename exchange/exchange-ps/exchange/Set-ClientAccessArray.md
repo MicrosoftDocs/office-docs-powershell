@@ -6,7 +6,11 @@ schema: 2.0.0
 # Set-ClientAccessArray
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Set-ClientAccessArray cmdlet to specify an object that represents a load-balanced array of Client Access servers within a single Active Directory site.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -18,7 +22,7 @@ Set-ClientAccessArray [-Identity] <ClientAccessArrayIdParameter> [-Confirm] [-Do
 ## DESCRIPTION
 The Set-ClientAccessArray cmdlet configures a load-balanced array of Client Access servers within an Active Directory site.
 
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Client Access server array settings" entry in the Client Access Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 

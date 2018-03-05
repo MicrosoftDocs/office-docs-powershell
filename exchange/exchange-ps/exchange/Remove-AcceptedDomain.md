@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-AcceptedDomain cmdlet to remove an accepted domain. When you remove an accepted domain, the accepted domain object is deleted.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

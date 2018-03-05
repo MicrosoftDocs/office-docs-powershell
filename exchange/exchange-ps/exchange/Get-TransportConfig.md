@@ -10,6 +10,8 @@ This cmdlet is available in on-premises Exchange and in the cloud-based service.
 
 Use the Get-TransportConfig cmdlet to view organization-wide transport configuration settings.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

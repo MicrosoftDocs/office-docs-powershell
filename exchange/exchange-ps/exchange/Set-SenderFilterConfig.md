@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Set-SenderFilterConfig cmdlet to modify the Sender Filter agent configuration.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -77,7 +79,7 @@ The BlockedDomains parameter specifies the domain names to block. When the Sende
 
 Valid input for this parameter is one or more domains or subdomains. Wildcard characters aren't permitted. For example, if you specify the values contoso.com and marketing.contoso.com, only messages from those domains are blocked by the Sender Filter agent. Messages from sales.contoso.com aren't blocked by the Sender Filter agent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -101,7 +103,7 @@ The BlockedDomainsAndSubdomains parameter specifies the domain names to block. W
 
 Valid input for this parameter is one or more domains. Wildcard characters aren't permitted. For example, if you specify the value contoso.com, messages from contoso.com, sales.contoso.com, and all other subdomains of contoso.com are blocked by the Sender Filter agent.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 
@@ -123,7 +125,7 @@ Accept wildcard characters: False
 ### -BlockedSenders
 The BlockedSenders parameter specifies one or more SMTP email addresses to block. When the Sender Filter agent encounters a message from a sender on this list, the Sender Filter agent takes the action specified by the Action parameter.
 
-To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>.... If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>"....
+To enter multiple values and overwrite any existing entries, use the following syntax: \<value1\>,\<value2\>,...\<valueN\>. If the values contain spaces or otherwise require quotation marks, you need to use the following syntax: "\<value1\>","\<value2\>",..."\<valueN\">.
 
 To add or remove one or more values without affecting any existing entries, use the following syntax: @{Add="\<value1\>","\<value2\>"...; Remove="\<value1\>","\<value2\>"...}.
 

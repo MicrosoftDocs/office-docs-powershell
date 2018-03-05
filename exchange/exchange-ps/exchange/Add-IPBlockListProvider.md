@@ -10,6 +10,8 @@ This cmdlet is available or effective only on Edge Transport servers in on-premi
 
 Use the Add-IPBlockListProvider cmdlet to create IP Block list providers that are used by the Connection Filtering agent on Edge Transport servers.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```
@@ -24,7 +26,7 @@ On Edge Transport servers, you need to be a member of the local Administrators g
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Add-IPBlockListProvider -Name NewIpBlockListProvider -LookupDomain Contoso.com -RejectionResponse "Originating IP address matched to Contoso.com's IP Block List provider service"
 ```

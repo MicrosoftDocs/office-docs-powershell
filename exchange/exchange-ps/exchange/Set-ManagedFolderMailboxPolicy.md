@@ -6,7 +6,11 @@ schema: 2.0.0
 # set-ManagedFolderMailboxPolicy
 
 ## SYNOPSIS
+This cmdlet is available only in Exchange Server 2010.
+
 Use the Set-ManagedFolderMailboxPolicy cmdlet to change the settings of a managed folder mailbox policy.
+
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
 ## SYNTAX
 
@@ -16,11 +20,11 @@ set-ManagedFolderMailboxPolicy [-Identity] <MailboxPolicyIdParameter> [-Confirm]
 ```
 
 ## DESCRIPTION
-You need to be assigned permissions before you can run this cmdlet. Although all parameters for this cmdlet are listed in this topic, you may not have access to some parameters if they're not included in the permissions assigned to you. To see what permissions you need, see the "Messaging records management" entry in the Messaging Policy and Compliance Permissions topic.
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you may not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see Find the permissions required to run any Exchange cmdlet (https://technet.microsoft.com/library/mt432940.aspx).
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Set-ManagedFolderMailboxPolicy "PM Storage Template1" -Name "PM Storage Template2"
 ```
@@ -30,7 +34,7 @@ This example changes the name of the managed folder mailbox policy PM Storage Te
 
 The Identity parameter is a positional parameter. Positional parameters can be used without the label (Identity). For more information about positional parameters, see Parameters.
 
-### Example 2 -------------------------- (Exchange Server 2010)
+### Example 2
 ```
 Set-ManagedFolderMailboxPolicy -Identity "My Managed Folder Mailbox Policy" -ManagedFolderLinks "Custom Folder 1", "Custom Folder 2"
 ```

@@ -30,7 +30,7 @@ You need to be assigned permissions in the Office 365 Security & Compliance Cent
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Office 365 Security & Compliance Center)
+### Example 1
 ```
 New-HoldComplianceRule -Name SeptOneYear -Policy "Internal Company Policy" -ContentDateFrom "09/10/14 5:00 PM" -ContentDateTo "09/10/15 5:00 PM" -HoldContent Unlimited
 ```

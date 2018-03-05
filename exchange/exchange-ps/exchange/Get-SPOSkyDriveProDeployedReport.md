@@ -14,7 +14,6 @@ Use the Get-SPOSkyDriveProDeployedReport cmdlet to view the number of My Site si
 
 For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
 
-
 ## SYNTAX
 
 ### Set1

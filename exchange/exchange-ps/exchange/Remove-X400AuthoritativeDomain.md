@@ -10,6 +10,8 @@ This cmdlet is available only in on-premises Exchange.
 
 Use the Remove-X400AuthoritativeDomain cmdlet to remove an X.400 authoritative domain. When you remove an X.400 authoritative domain, the X.400 authoritative domain object is deleted from Active Directory.
 
+For information about the parameter sets in the Syntax section below, see Exchange cmdlet syntax (https://technet.microsoft.com/library/bb123552.aspx).
+
 ## SYNTAX
 
 ```

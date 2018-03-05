@@ -49,7 +49,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ## EXAMPLES
 
-### Example 1 -------------------------- (Exchange Server 2010)
+### Example 1
 ```
 Test-ActiveSyncConnectivity -ClientAccessServer contoso\CAS01 -URL "http://contoso.com/mail" -MailboxCredential (get-credential PaulS)
 ```
